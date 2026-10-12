@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CL-MPM Simulation Studio | Geotechnical & Materials Workbench</title>
+  <meta name="description" content="Modern graphical user interface for Material Point Method (CL-MPM) slope failure and chalk geomechanics simulation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Background Glow Effects -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <!-- Header -->
+  <header class="studio-header">
+    <div class="header-brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1>CL-MPM <span>Studio</span></h1>
+        <span class="brand-subtitle">Native Windows Simulation Engine</span>
+      </div>
+    </div>
+
+    <!-- Engine Status & Presets -->
+    <div class="header-controls">
+      <div class="preset-selector-wrap">
+        <label for="presetSelect">Preset Kasus:</label>
+        <select id="presetSelect" class="studio-select">
+          <option value="default">Chalk Cliff Failure (Default 50 Step)</option>
+          <option value="undercut">Steep Undercut Cliff (15° Notch)</option>
+          <option value="elastic">Elastic Gravity Settle (Tanpa Retak)</option>
+          <option value="quick">Preview Cepat (Low Res, 10 Step)</option>
+        </select>
+      </div>
+
+      <div class="status-indicator" id="statusBadge">
+        <span class="status-dot"></span>
+        <span class="status-label" id="statusText">Engine Ready</span>
+      </div>
+
+      <button id="btnHeaderVideo" class="btn btn-secondary" title="Konversi semua frame ke MP4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <span>Convert MP4</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="studio-workspace">
+    <!-- Left Panel: Parameter Control Studio -->
+    <aside class="panel parameter-panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="4" y1="21" x2="4" y2="14"></line>
+            <line x1="4" y1="10" x2="4" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12" y2="3"></line>
+            <line x1="20" y1="21" x2="20" y2="16"></line>
+            <line x1="20" y1="12" x2="20" y2="3"></line>
+            <line x1="1" y1="14" x2="7" y2="14"></line>
+            <line x1="9" y1="8" x2="15" y2="8"></line>
+            <line x1="17" y1="16" x2="23" y2="16"></line>
+          </svg>
+          <h2>Parameter & Geometri</h2>
+        </div>
+        <button id="btnResetDefaults" class="btn-text" title="Kembalikan nilai standar">Reset</button>
+      </div>
+
+      <div class="parameter-tabs">
+        <button class="param-tab active" data-tab="geo">📐 Geometri & Mesh</button>
+        <button class="param-tab" data-tab="mat">🪨 Material</button>
+        <button class="param-tab" data-tab="solver">⚙️ Solver & Tampilan</button>
+      </div>
+
+      <form id="configForm" class="parameter-form">
+        <!-- TAB 1: Geometri & Mesh -->
+        <div class="tab-content active" id="tab-geo">
+          <div class="form-group">
+            <div class="label-row">
+              <label for="shelfHeight">Tinggi Tebing (Shelf Height)</label>
+              <span class="unit-badge">meter</span>
+            </div>
+            <div class="slider-input-row">
+              <input type="range" id="shelfHeightRange" min="20" max="250" step="5" value="100">
+              <input type="number" id="shelfHeight" value="100" min="10" max="500" step="1">
+            </div>
+            <small>Ketinggian dinding tebing batuan.</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="shelfAspect">Rasio Aspek Tebing (L / H)</label>
+              <span class="unit-badge">rasio</span>
+            </div>
+            <div class="slider-input-row">
+              <input type="range" id="shelfAspectRange" min="0.5" max="4.0" step="0.1" value="2.0">
+              <input type="number" id="shelfAspect" value="2.0" min="0.5" max="5.0" step="0.1">
+            </div>
+            <small>Rasio panjang zona atas tebing terhadap ketinggian.</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="undercut">Sudut Undercut Lereng (&theta;)</label>
+              <span class="unit-badge">derajat (°)</span>
+            </div>
+            <div class="slider-input-row">
+              <input type="range" id="undercutRange" min="0" max="45" step="0.5" value="0">
+              <input type="number" id="undercut" value="0" min="0" max="60" step="0.5">
+            </div>
+            <small>Kemiringan torehan / erosi tebing pada bagian dasar.</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="soilBoundary">Batas Tanah Dasar (Soil Boundary)</label>
+              <span class="unit-badge">meter</span>
+            </div>
+            <input type="number" id="soilBoundary" value="20" min="0" max="100" step="1">
+            <small>Ketebalan lapisan dasar di bawah lereng tebing.</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="meshSize">Resolusi Mesh Grid (h)</label>
+              <span class="unit-badge">meter</span>
+            </div>
+            <select id="meshSize" class="studio-select">
+              <option value="10.0">10.0 m (Ultra Cepat / Draft)</option>
+              <option value="5.0" selected>5.0 m (Rekomendasi / Seimbang)</option>
+              <option value="2.5">2.5 m (Detail Tinggi / Lebih Lambat)</option>
+              <option value="1.0">1.0 m (Resolusi Riset)</option>
+            </select>
+            <small>Ukuran elemen grid Eulerian background MPM.</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="mpsPerCell">Partikel per Sel (MPs/Cell)</label>
+              <span class="unit-badge">partikel</span>
+            </div>
+            <select id="mpsPerCell" class="studio-select">
+              <option value="1">1 partikel / cell</option>
+              <option value="2" selected>2 partikel / cell (Standar)</option>
+              <option value="4">4 partikel / cell (Akurasi Tinggi)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- TAB 2: Material & Geomekanika -->
+        <div class="tab-content" id="tab-mat">
+          <div class="form-group">
+            <div class="label-row">
+              <label for="modulusE">Modulus Elastisitas (E)</label>
+              <span class="unit-badge">GPa</span>
+            </div>
+            <div class="slider-input-row">
+              <input type="range" id="modulusERange" min="0.1" max="10.0" step="0.1" value="1.0">
+              <input type="number" id="modulusE" value="1.0" min="0.05" max="50.0" step="0.1">
+            </div>
+            <small>Kekakuan elastis batuan kapur (default: 1.0 GPa = 1e9 Pa).</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="nu">Poisson's Ratio (&nu;)</label>
+              <span class="unit-badge">rasio</span>
+            </div>
+            <input type="number" id="nu" value="0.35" min="0.05" max="0.49" step="0.01">
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="frictionAngle">Sudut Gesek Dalam (&phi;)</label>
+              <span class="unit-badge">derajat (°)</span>
+            </div>
+            <input type="number" id="frictionAngle" value="40" min="10" max="60" step="1">
+            <small>Sudut friksi keruntuhan Mohr-Coulomb.</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="initStress">Tegangan Inisiasi Retak (&sigma;₀)</label>
+              <span class="unit-badge">kPa</span>
+            </div>
+            <input type="number" id="initStress" value="200" min="10" max="5000" step="10">
+            <small>Kuat tarik / kohesi awal batuan (default: 200 kPa).</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="fractureEnergy">Energi Fraktur (G_f)</label>
+              <span class="unit-badge">J/m²</span>
+            </div>
+            <input type="number" id="fractureEnergy" value="3000" min="100" max="20000" step="100">
+            <small>Energi pelepasan retakan (softening law).</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="density">Massa Jenis (&rho;)</label>
+              <span class="unit-badge">kg/m³</span>
+            </div>
+            <input type="number" id="density" value="1700" min="500" max="3000" step="50">
+          </div>
+
+          <div class="form-toggle-row">
+            <label class="toggle-switch">
+              <input type="checkbox" id="enableDamage" checked>
+              <span class="toggle-slider"></span>
+            </label>
+            <div class="toggle-text">
+              <span class="toggle-title">Model Kerusakan (Damage)</span>
+              <small>Aktifkan perambatan retak & degradasi modulus</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: Solver & Tampilan -->
+        <div class="tab-content" id="tab-solver">
+          <div class="form-group">
+            <div class="label-row">
+              <label for="maxSteps">Jumlah Langkah / Frame (Max Steps)</label>
+              <span class="unit-badge">step</span>
+            </div>
+            <div class="slider-input-row">
+              <input type="range" id="maxStepsRange" min="5" max="150" step="5" value="50">
+              <input type="number" id="maxSteps" value="50" min="1" max="500" step="1">
+            </div>
+            <small>Berapa banyak frame output hasil simulasi yang disimpan.</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="substeps">Substep Fisika per Frame</label>
+              <span class="unit-badge">substep</span>
+            </div>
+            <input type="number" id="substeps" value="10" min="1" max="100" step="1">
+            <small>Jumlah iterasi solver MPM antara setiap penyimpanan frame.</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="plotMode">Mode Pewarnaan Grafik Partikel</label>
+            </div>
+            <select id="plotMode" class="studio-select">
+              <option value="stress" selected>🔴 Tegangan Von Mises (Stress Field)</option>
+              <option value="damage">🟣 Kerusakan Material (Damage / Fracture)</option>
+              <option value="velocity">🔵 Magnitudo Kecepatan Partikel (Velocity)</option>
+            </select>
+            <small>Pilih kontur warna yang diplot pada setiap frame gambar.</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="workers">Thread CPU Paralel</label>
+              <span class="unit-badge">core</span>
+            </div>
+            <input type="number" id="workers" value="4" min="1" max="16" step="1">
+            <small>Jumlah thread OpenMP / lparallel worker.</small>
+          </div>
+
+          <div class="form-toggle-row">
+            <label class="toggle-switch">
+              <input type="checkbox" id="clearFrames" checked>
+              <span class="toggle-slider"></span>
+            </label>
+            <div class="toggle-text">
+              <span class="toggle-title">Bersihkan Frame Lama</span>
+              <small>Hapus file PNG di outframes sebelum mulai baru</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky Action Bar in Panel -->
+        <div class="form-actions">
+          <div class="progress-container" id="progressBarWrap">
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" id="progressBarFill" style="width: 0%"></div>
+            </div>
+            <div class="progress-stats">
+              <span id="progressText">0% (0 / 50 steps)</span>
+              <span id="etaText">Idle</span>
+            </div>
+          </div>
+
+          <button type="submit" id="btnRun" class="btn btn-primary btn-large">
+            <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <svg class="icon-spinner hide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+              <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
+            </svg>
+            <span id="btnRunText">Jalankan Simulasi</span>
+          </button>
+
+          <button type="button" id="btnStop" class="btn btn-danger hide">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <rect x="6" y="6" width="12" height="12"></rect>
+            </svg>
+            <span>Hentikan Simulasi</span>
+          </button>
+        </div>
+      </form>
+    </aside>
+
+    <!-- Right Panel: Visualizer & Results Studio -->
+    <section class="panel visualizer-panel">
+      <!-- Top Navigation Tabs of Viewport -->
+      <div class="viewport-header">
+        <div class="viewport-tabs">
+          <button class="vtab active" data-vtab="frames">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <span>Live Frames</span>
+          </button>
+          <button class="vtab" data-vtab="video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="23 7 16 12 23 17 23 7"></polygon>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+            </svg>
+            <span>Video Animasi</span>
+          </button>
+          <button class="vtab" data-vtab="vtk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+            <span>File 3D VTK</span>
+          </button>
+        </div>
+
+        <div class="viewport-quick-tools">
+          <button id="btnRefreshFrames" class="btn-icon" title="Perbarui Frame">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Viewport Display Container -->
+      <div class="viewport-display">
+        <!-- TAB CONTENT: Frames Player -->
+        <div class="vtab-pane active" id="pane-frames">
+          <div class="frame-viewer-wrap">
+            <div class="frame-canvas" id="frameCanvas">
+              <img id="currentFrameImg" src="" alt="Menunggu simulasi atau frame..." class="hide">
+              <div class="empty-state" id="emptyFramesState">
+                <div class="empty-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <h3>Belum Ada Frame Hasil Simulasi</h3>
+                <p>Klik tombol <strong>"Jalankan Simulasi"</strong> di sebelah kiri untuk mulai kalkulasi partikel.</p>
+              </div>
+            </div>
+
+            <!-- Frame Scrubber & Playback Controls -->
+            <div class="playback-bar" id="playbackBar">
+              <div class="playback-controls">
+                <button id="btnPlayPause" class="btn-icon playback-btn" title="Play/Pause Animasi">
+                  <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <svg class="icon-pause hide" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="6" y="4" width="4" height="16"></rect>
+                    <rect x="14" y="4" width="4" height="16"></rect>
+                  </svg>
+                </button>
+                <div class="frame-counter">
+                  Frame <strong id="currentFrameNum">0</strong> / <span id="totalFramesNum">0</span>
+                </div>
+              </div>
+
+              <div class="scrubber-wrap">
+                <input type="range" id="frameScrubber" min="0" max="0" value="0" step="1">
+              </div>
+
+              <div class="playback-speed">
+                <label for="playbackFps">Speed:</label>
+                <select id="playbackFps" class="mini-select">
+                  <option value="5">5 FPS</option>
+                  <option value="10" selected>10 FPS</option>
+                  <option value="15">15 FPS</option>
+                  <option value="25">25 FPS</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB CONTENT: Video MP4 Player -->
+        <div class="vtab-pane" id="pane-video">
+          <div class="video-container">
+            <video id="videoPlayer" controls loop>
+              <source src="/api/video" type="video/mp4">
+              Browser Anda tidak mendukung pemutar video HTML5.
+            </video>
+            <div class="video-actions">
+              <button id="btnGenerateVideo" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Render Ulang Video (FFmpeg)</span>
+              </button>
+              <a id="btnDownloadVideo" href="/api/video" download="simulation_video.mp4" class="btn btn-secondary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Unduh MP4</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB CONTENT: 3D VTK Export & ParaView -->
+        <div class="vtab-pane" id="pane-vtk">
+          <div class="vtk-info-wrap">
+            <div class="vtk-guide-card">
+              <div class="guide-badge">ParaView Ready</div>
+              <h3>Visualisasi Partikel 3D & Tensor Tegangan</h3>
+              <p>Rangkaian file <code>.vtk</code> disimpan di folder <code>D:\MPM\output\</code>. Anda dapat membukanya secara interaktif di ParaView untuk melihat pemodelan 3D, memotong bidang slice, atau menganalisis medan strain tensor.</p>
+              <ol class="guide-steps">
+                <li>Buka ParaView lalu pilih <strong>File &rarr; Open</strong>.</li>
+                <li>Buka folder <code>D:\MPM\output\</code> dan pilih sequence <strong><code>sim_..vtk</code></strong>.</li>
+                <li>Klik tombol <strong>Apply</strong>, lalu ubah pewarnaan menjadi <code>damage</code> atau <code>velocity</code>.</li>
+              </ol>
+            </div>
+
+            <div class="vtk-files-header">
+              <h4>Daftar File VTK yang Dihasilkan</h4>
+              <button id="btnRefreshVtk" class="btn-text">Refresh List</button>
+            </div>
+            <div class="vtk-file-list" id="vtkFileList">
+              <div class="empty-hint">Memuat file VTK...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Collapsible Console Log Terminal -->
+      <div class="terminal-panel" id="terminalPanel">
+        <div class="terminal-header">
+          <div class="terminal-title">
+            <span class="term-dot red"></span>
+            <span class="term-dot yellow"></span>
+            <span class="term-dot green"></span>
+            <span class="term-name">SBCL / Engine Output Log</span>
+          </div>
+          <div class="terminal-tools">
+            <label class="autoscroll-toggle">
+              <input type="checkbox" id="autoScrollCheck" checked>
+              <span>Auto-scroll</span>
+            </label>
+            <button id="btnClearLog" class="btn-text">Bersihkan</button>
+          </div>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <pre id="logOutput">// Engine initialized. Ready to execute CL-MPM simulations.</pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
