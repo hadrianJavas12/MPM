@@ -74,10 +74,10 @@
 (format t "  Young's Modulus: ~E Pa, Poisson: ~F, Friction: ~F deg~%" *cfg-E* *cfg-nu* *cfg-friction-angle*)
 (format t "  Max Steps: ~D, Substeps/Frame: ~D, Mode: ~A~%" *cfg-max-steps* *cfg-substeps* *cfg-plot-mode*)
 
-;; Setup simulation with custom geometry and materials
+;; Setup simulation using chalk example infrastructure
 (in-package :cl-mpm/examples/chalk)
 
-(defun setup-custom ()
+(defun run-studio-setup ()
   (let* ((mesh-size cl-user::*cfg-mesh-size*)
          (mps-per-cell cl-user::*cfg-mps-per-cell*)
          (shelf-height cl-user::*cfg-shelf-height*)
@@ -86,25 +86,20 @@
          (runout-aspect 2.00)
          (shelf-length (* shelf-height shelf-aspect))
          (domain-length (+ shelf-length (* runout-aspect shelf-height)))
-         (shelf-height (+ shelf-height soil-boundary))
-         (offset (list 0 0))
-         (e-scale (/ 1d0 mesh-size))
-         (mp-scale mps-per-cell))
-    (defparameter *sim*
-      (setup-test-column (list domain-length (+ shelf-height (* 5 mesh-size)))
-                         (list domain-length shelf-height)
-                         offset
-                         e-scale mp-scale))
-    ;; Update material properties
+         (total-shelf-height (+ shelf-height soil-boundary))
+         (offset (list 0 0)))
+    (setf *sim*
+          (setup-test-column (list domain-length (+ total-shelf-height (* 5 mesh-size)))
+                             (list domain-length total-shelf-height)
+                             offset
+                             (/ 1d0 mesh-size) mps-per-cell))
     (loop for mp across (cl-mpm:sim-mps *sim*)
           do (setf (cl-mpm/particle::mp-E mp) cl-user::*cfg-E*
                    (cl-mpm/particle::mp-nu mp) cl-user::*cfg-nu*
-                   (cl-mpm/particle::mp-friction-angle mp) cl-user::*cfg-friction-angle*
                    (cl-mpm/particle::mp-initiation-stress mp) cl-user::*cfg-initiation-stress*
-                   (cl-mpm/particle::mp-fracture-energy mp) cl-user::*cfg-fracture-energy*
-                   (cl-mpm/particle::mp-delay-time mp) cl-user::*cfg-delay-time*))
-
-    ;; Apply slope undercut geometry
+                   (cl-mpm/particle::mp-delay-time mp) cl-user::*cfg-delay-time*
+                   (cl-mpm/particle::mp-split-depth mp) 0))
+    ;; Apply undercut if angle > 0
     (let* ((undercut-angle cl-user::*cfg-undercut*)
            (normal (magicl:from-list (list (cos (- (* pi (/ undercut-angle 180d0))))
                                            (sin (- (* pi (/ undercut-angle 180d0))))) '(2 1))))
@@ -118,14 +113,16 @@
                                         normal
                                         (magicl:from-list (list shelf-length soil-boundary)
                                                           '(2 1) :type 'double-float))
-                                       1d0))))))
-  (format t "Custom setup complete! Total Particles: ~D~%" (length (cl-mpm:sim-mps *sim*))))
+                                       1d0)))))
+    *sim*))
 
-(setup-custom)
-(when cl-user::*cfg-enable-damage*
-  (setf (cl-mpm::sim-enable-damage *sim*) t))
+(run-studio-setup)
+
+(setf (cl-mpm::sim-enable-damage *sim*) cl-user::*cfg-enable-damage*)
 
 (cl-mpm/output:save-vtk-mesh #P"D:/MPM/output/mesh.vtk" *sim*)
+
+(format t "Setup complete! Total Particles: ~D~%" (length (cl-mpm:sim-mps *sim*)))
 
 ;; Time loop
 (format t "~%========================================~%")
@@ -153,10 +150,7 @@
           :plot :deformed
           :colour-func (lambda (mp) (cl-mpm/fastmaths::mag (cl-mpm/particle:mp-velocity mp)))))
         (t
-         (cl-mpm/plotter:simple-plot
-          *sim*
-          :plot :deformed
-          :colour-func (lambda (mp) (cl-mpm/particle::mp-damage mp)))))
+         (plot *sim*)))
       (vgplot:title (format nil "Step ~D/~D (~A)" (1+ step) cl-user::*cfg-max-steps* cl-user::*cfg-plot-mode*))
       (vgplot:print-plot (pathname png-path) :terminal "png size 1280,720")
       (format t "  -> Saved Frame ~D: ~A~%" (1+ step) png-path)

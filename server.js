@@ -225,6 +225,7 @@ const server = http.createServer((req, res) => {
 
         const sbclArgs = [
           '--dynamic-space-size', '4000',
+          '--disable-debugger',
           '--no-userinit',
           '--load', 'D:\\MPM\\init.lisp',
           '--load', 'D:\\MPM\\simulation_config.lisp',

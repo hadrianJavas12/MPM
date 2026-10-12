@@ -335,29 +335,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // --- Run Simulation Form Submission ---
-  configForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    if (isRunning) return;
+  // --- Run Simulation Trigger ---
+  async function handleRunSimulation() {
+    console.log('[CL-MPM] handleRunSimulation triggered');
+    if (isRunning) {
+      console.warn('[CL-MPM] Simulation already running');
+      return;
+    }
 
     const payload = {
-      shelfHeight: parseFloat(shelfHeight.value),
-      shelfAspect: parseFloat(shelfAspect.value),
-      soilBoundary: parseFloat(soilBoundary.value),
-      meshSize: parseFloat(meshSize.value),
-      mpsPerCell: parseInt(mpsPerCell.value),
-      undercut: parseFloat(undercut.value),
-      E: parseFloat(modulusE.value) * 1e9,
-      nu: parseFloat(nu.value),
-      frictionAngle: parseFloat(frictionAngle.value),
-      initiationStress: parseFloat(initStress.value) * 1e3,
-      fractureEnergy: parseFloat(fractureEnergy.value),
-      density: parseFloat(density.value),
+      shelfHeight: parseFloat(shelfHeight.value) || 100,
+      shelfAspect: parseFloat(shelfAspect.value) || 2.0,
+      soilBoundary: parseFloat(soilBoundary.value) || 20,
+      meshSize: parseFloat(meshSize.value) || 5.0,
+      mpsPerCell: parseInt(mpsPerCell.value) || 2,
+      undercut: parseFloat(undercut.value) || 0,
+      E: (parseFloat(modulusE.value) || 1.0) * 1e9,
+      nu: parseFloat(nu.value) || 0.35,
+      frictionAngle: parseFloat(frictionAngle.value) || 40,
+      initiationStress: (parseFloat(initStress.value) || 200) * 1e3,
+      fractureEnergy: parseFloat(fractureEnergy.value) || 3000,
+      density: parseFloat(density.value) || 1700,
       enableDamage: enableDamage.checked,
-      maxSteps: parseInt(maxSteps.value),
-      substeps: parseInt(substeps.value),
-      plotMode: plotMode.value,
-      workers: parseInt(workers.value),
+      maxSteps: parseInt(maxSteps.value) || 10,
+      substeps: parseInt(substeps.value) || 10,
+      plotMode: plotMode.value || 'stress',
+      workers: parseInt(workers.value) || 4,
       clearFrames: clearFrames.checked
     };
 
@@ -365,13 +368,14 @@ document.addEventListener('DOMContentLoaded', () => {
     lastLogCount = 0;
     progressBarFill.style.width = '0%';
     progressText.textContent = `0% (0 / ${payload.maxSteps} steps)`;
-    etaText.textContent = 'Starting...';
+    etaText.textContent = 'Memulai proses...';
 
     // Switch to Live Frames tab
-    document.querySelector('.vtab[data-vtab="frames"]').click();
+    const framesTab = document.querySelector('.vtab[data-vtab="frames"]');
+    if (framesTab) framesTab.click();
 
     try {
-      appendLog(`[Client] Submitting simulation request...`);
+      appendLog(`[Client] Mengirim parameter simulasi ke server...`);
       const res = await fetch('/api/run', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -379,18 +383,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       const data = await res.json();
       if (!res.ok) {
-        throw new Error(data.error || 'Failed to start simulation');
+        throw new Error(data.error || 'Gagal memulai simulasi di server');
       }
-      appendLog(`[Client] Simulation started successfully on SBCL engine.`);
+      appendLog(`[Client] Simulasi berhasil dimulai pada engine SBCL.`);
       
       // Start polling
       if (pollTimer) clearInterval(pollTimer);
       pollTimer = setInterval(pollStatus, 800);
     } catch (err) {
-      alert(`Error starting simulation: ${err.message}`);
+      alert(`Error saat menjalankan simulasi: ${err.message}`);
       setRunningUI(false);
       appendLog(`[Client Error] ${err.message}`);
     }
+  }
+
+  btnRun.addEventListener('click', handleRunSimulation);
+  configForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    handleRunSimulation();
   });
 
   // --- Stop Simulation ---
