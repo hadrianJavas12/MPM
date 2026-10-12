@@ -20,8 +20,7 @@
 
 
 (defsystem "cl-mpm/magicl"
-  :depends-on ("magicl"
-               "magicl/ext-expokit")
+  :depends-on ("magicl")
   :description "Dummy package that can be used to prune magicl dependancies, i.e. lisp only implementation")
 
 (defsystem "cl-mpm/utils"
