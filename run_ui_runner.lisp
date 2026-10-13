@@ -15,6 +15,10 @@
 (ql:quickload :cl-mpm/penalty :silent t)
 (ql:quickload :cl-mpm/eigenerosion :silent t)
 (ql:quickload :cl-mpm/plotter :silent t)
+(ql:quickload :vgplot :silent t)
+(setf vgplot:*gnuplot-binary*
+      (or (uiop:getenv "GNUPLOT")
+          "C:/Users/ASUS/AppData/Local/Microsoft/WinGet/Packages/gnuplot.gnuplot_Microsoft.Winget.Source_8wekyb3d8bbwe/gnuplot/bin/gnuplot.exe"))
 
 ;; Ensure directories
 (ensure-directories-exist #P"D:/MPM/output/")
@@ -49,6 +53,9 @@
 ;; Default parameters if not injected by simulation_config.lisp
 (defparameter *cfg-shelf-height* (if (boundp '*ui-shelf-height*) *ui-shelf-height* 100d0))
 (defparameter *cfg-shelf-aspect* (if (boundp '*ui-shelf-aspect*) *ui-shelf-aspect* 2.0d0))
+(defparameter *cfg-cliff-slope* (if (boundp '*ui-cliff-slope*) *ui-cliff-slope* 90d0))
+(defparameter *cfg-notch-height* (if (boundp '*ui-notch-height*) *ui-notch-height* 0d0))
+(defparameter *cfg-notch-depth* (if (boundp '*ui-notch-depth*) *ui-notch-depth* 0d0))
 (defparameter *cfg-soil-boundary* (if (boundp '*ui-soil-boundary*) *ui-soil-boundary* 20d0))
 (defparameter *cfg-mesh-size* (if (boundp '*ui-mesh-size*) *ui-mesh-size* 5d0))
 (defparameter *cfg-mps-per-cell* (if (boundp '*ui-mps-per-cell*) *ui-mps-per-cell* 2))
@@ -69,7 +76,9 @@
 (cl-mpm/utils:set-workers *cfg-workers*)
 
 (format t "Parameters configured:~%")
-(format t "  Shelf Height: ~F m, Aspect: ~F, Undercut: ~F deg~%" *cfg-shelf-height* *cfg-shelf-aspect* *cfg-undercut*)
+(format t "  Shelf Height: ~F m, Aspect: ~F~%" *cfg-shelf-height* *cfg-shelf-aspect*)
+(format t "  Cliff Slope: ~F deg, Undercut Angle: ~F deg~%" *cfg-cliff-slope* *cfg-undercut*)
+(format t "  Toe Notch: Height=~F m, Depth=~F m~%" *cfg-notch-height* *cfg-notch-depth*)
 (format t "  Mesh Resolution: ~F m, MPs/Cell: ~D~%" *cfg-mesh-size* *cfg-mps-per-cell*)
 (format t "  Young's Modulus: ~E Pa, Poisson: ~F, Friction: ~F deg~%" *cfg-E* *cfg-nu* *cfg-friction-angle*)
 (format t "  Max Steps: ~D, Substeps/Frame: ~D, Mode: ~A~%" *cfg-max-steps* *cfg-substeps* *cfg-plot-mode*)
@@ -99,21 +108,42 @@
                    (cl-mpm/particle::mp-initiation-stress mp) cl-user::*cfg-initiation-stress*
                    (cl-mpm/particle::mp-delay-time mp) cl-user::*cfg-delay-time*
                    (cl-mpm/particle::mp-split-depth mp) 0))
-    ;; Apply undercut if angle > 0
-    (let* ((undercut-angle cl-user::*cfg-undercut*)
-           (normal (magicl:from-list (list (cos (- (* pi (/ undercut-angle 180d0))))
-                                           (sin (- (* pi (/ undercut-angle 180d0))))) '(2 1))))
-      (when (> (abs undercut-angle) 0.01)
-        (cl-mpm/setup:remove-sdf *sim*
-                                 (lambda (p)
-                                   (if (> (magicl:tref p 1 0) soil-boundary)
-                                       (cl-mpm/setup::plane-point-sdf
-                                        (magicl:from-list (list (magicl:tref p 0 0)
-                                                                (magicl:tref p 1 0)) '(2 1))
-                                        normal
-                                        (magicl:from-list (list shelf-length soil-boundary)
-                                                          '(2 1) :type 'double-float))
-                                       1d0)))))
+
+    ;; 1. Cut cliff face according to cliff slope angle and undercut angle
+    (let* ((angle-dev (+ (- cl-user::*cfg-cliff-slope* 90d0) cl-user::*cfg-undercut*))
+           (rad-normal (- (* pi (/ angle-dev 180d0))))
+           (normal (magicl:from-list (list (cos rad-normal)
+                                           (sin rad-normal)) '(2 1))))
+      (cl-mpm/setup:remove-sdf
+       *sim*
+       (lambda (p)
+         (if (> (magicl:tref p 1 0) soil-boundary)
+             (cl-mpm/setup::plane-point-sdf
+              (magicl:from-list (list (magicl:tref p 0 0)
+                                      (magicl:tref p 1 0)) '(2 1))
+              normal
+              (magicl:from-list (list shelf-length soil-boundary)
+                                '(2 1) :type 'double-float))
+             1d0))))
+
+    ;; 2. Cut toe undercut notch if notch height > 0
+    (when (> cl-user::*cfg-notch-height* 0.01d0)
+      (let* ((notch-h cl-user::*cfg-notch-height*)
+             (notch-d (if (> cl-user::*cfg-notch-depth* 0.01d0)
+                          cl-user::*cfg-notch-depth*
+                          (* 1.5d0 notch-h)))
+             (half-h (* 0.5d0 notch-h))
+             (half-w notch-d))
+        (cl-mpm/setup:remove-sdf
+         *sim*
+         (lambda (p)
+           (if (> (magicl:tref p 1 0) (- soil-boundary 1d-3))
+               (funcall
+                (cl-mpm/setup::rectangle-sdf
+                 (list shelf-length (+ soil-boundary half-h))
+                 (list half-w half-h))
+                p)
+               1d0)))))
     *sim*))
 
 (run-studio-setup)
@@ -137,24 +167,28 @@
   (let ((vtk-path (format nil "D:/MPM/output/sim_~5,'0d.vtk" (1+ step)))
         (png-path (format nil "D:/MPM/outframes/frame_~5,'0d.png" (1+ step))))
     (cl-mpm/output:save-vtk (pathname vtk-path) *sim*)
-    (ignore-errors
-      (cond
-        ((eq cl-user::*cfg-plot-mode* :stress)
-         (cl-mpm/plotter:simple-plot
-          *sim*
-          :plot :deformed
-          :colour-func (lambda (mp) (cl-mpm/fastmaths::voigt-von-mises (cl-mpm/particle:mp-stress mp)))))
-        ((eq cl-user::*cfg-plot-mode* :velocity)
-         (cl-mpm/plotter:simple-plot
-          *sim*
-          :plot :deformed
-          :colour-func (lambda (mp) (cl-mpm/fastmaths::mag (cl-mpm/particle:mp-velocity mp)))))
-        (t
-         (plot *sim*)))
-      (vgplot:title (format nil "Step ~D/~D (~A)" (1+ step) cl-user::*cfg-max-steps* cl-user::*cfg-plot-mode*))
-      (vgplot:print-plot (pathname png-path) :terminal "png size 1280,720")
-      (format t "  -> Saved Frame ~D: ~A~%" (1+ step) png-path)
-      (finish-output))))
+    (handler-case
+        (progn
+          (cond
+            ((eq cl-user::*cfg-plot-mode* :stress)
+             (cl-mpm/plotter:simple-plot
+              *sim*
+              :plot :deformed
+              :colour-func (lambda (mp) (cl-mpm/fastmaths::voigt-von-mises (cl-mpm/particle:mp-stress mp)))))
+            ((eq cl-user::*cfg-plot-mode* :velocity)
+             (cl-mpm/plotter:simple-plot
+              *sim*
+              :plot :deformed
+              :colour-func (lambda (mp) (cl-mpm/fastmaths::mag (cl-mpm/particle:mp-velocity mp)))))
+            (t
+             (plot *sim*)))
+          (vgplot:title (format nil "Step ~D/~D (~A)" (1+ step) cl-user::*cfg-max-steps* cl-user::*cfg-plot-mode*))
+          (vgplot:print-plot (pathname png-path) :terminal "png size 1280,720")
+          (format t "  -> Saved Frame ~D: ~A~%" (1+ step) png-path)
+          (finish-output))
+      (error (c)
+        (format t "  -> Plot error: ~A~%" c)
+        (finish-output)))))
 
 (format t "~%========================================~%")
 (format t "SUCCESS: Simulation completed successfully!~%")

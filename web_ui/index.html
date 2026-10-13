@@ -37,7 +37,8 @@
         <label for="presetSelect">Preset Kasus:</label>
         <select id="presetSelect" class="studio-select">
           <option value="default">Chalk Cliff Failure (Default 50 Step)</option>
-          <option value="undercut">Steep Undercut Cliff (15° Notch)</option>
+          <option value="sloped">Sloped Cliff Failure (Kemiringan 75°)</option>
+          <option value="undercut">Steep Undercut Cliff (10m Notch + 15° Angle)</option>
           <option value="elastic">Elastic Gravity Settle (Tanpa Retak)</option>
           <option value="quick">Preview Cepat (Low Res, 10 Step)</option>
         </select>
@@ -114,14 +115,50 @@
 
           <div class="form-group">
             <div class="label-row">
-              <label for="undercut">Sudut Undercut Lereng (&theta;)</label>
+              <label for="cliffSlope">Kemiringan Tebing (Cliff Slope Angle)</label>
+              <span class="unit-badge">derajat (°)</span>
+            </div>
+            <div class="slider-input-row">
+              <input type="range" id="cliffSlopeRange" min="50" max="90" step="1" value="90">
+              <input type="number" id="cliffSlope" value="90" min="45" max="90" step="any">
+            </div>
+            <small>Sudut kemiringan lereng muka tebing dari horizontal (90° = tegak lurus, &lt;90° = lereng miring).</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="notchHeight">Tinggi Undercut (Notch Height)</label>
+              <span class="unit-badge">meter</span>
+            </div>
+            <div class="slider-input-row">
+              <input type="range" id="notchHeightRange" min="0" max="30" step="0.5" value="0">
+              <input type="number" id="notchHeight" value="0" min="0" max="50" step="any">
+            </div>
+            <small>Ketinggian takik / rongga erosi gelombang laut di kaki tebing (0 = tanpa takik).</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="notchDepth">Kedalaman Undercut (Notch Depth)</label>
+              <span class="unit-badge">meter</span>
+            </div>
+            <div class="slider-input-row">
+              <input type="range" id="notchDepthRange" min="0" max="30" step="0.5" value="0">
+              <input type="number" id="notchDepth" value="0" min="0" max="50" step="any">
+            </div>
+            <small>Kedalaman torehan horizontal masuk ke dalam tebing (0 = otomatis 2x tinggi).</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="undercut">Sudut Torehan Undercut (&theta;)</label>
               <span class="unit-badge">derajat (°)</span>
             </div>
             <div class="slider-input-row">
               <input type="range" id="undercutRange" min="0" max="45" step="0.5" value="0">
               <input type="number" id="undercut" value="0" min="0" max="60" step="any">
             </div>
-            <small>Kemiringan torehan / erosi tebing pada bagian dasar.</small>
+            <small>Sudut kemiringan bidang torehan erosi pada bagian dasar tebing.</small>
           </div>
 
           <div class="form-group">

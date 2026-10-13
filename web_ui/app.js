@@ -22,6 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const shelfHeight = document.getElementById('shelfHeight');
   const shelfAspectRange = document.getElementById('shelfAspectRange');
   const shelfAspect = document.getElementById('shelfAspect');
+  const cliffSlopeRange = document.getElementById('cliffSlopeRange');
+  const cliffSlope = document.getElementById('cliffSlope');
+  const notchHeightRange = document.getElementById('notchHeightRange');
+  const notchHeight = document.getElementById('notchHeight');
+  const notchDepthRange = document.getElementById('notchDepthRange');
+  const notchDepth = document.getElementById('notchDepth');
   const undercutRange = document.getElementById('undercutRange');
   const undercut = document.getElementById('undercut');
   const soilBoundary = document.getElementById('soilBoundary');
@@ -85,6 +91,31 @@ document.addEventListener('DOMContentLoaded', () => {
     default: {
       shelfHeight: 100,
       shelfAspect: 2.0,
+      cliffSlope: 90,
+      notchHeight: 0,
+      notchDepth: 0,
+      undercut: 0,
+      soilBoundary: 20,
+      meshSize: "5.0",
+      mpsPerCell: "2",
+      modulusE: 1.0,
+      nu: 0.35,
+      frictionAngle: 40,
+      initStress: 200,
+      fractureEnergy: 3000,
+      density: 1700,
+      enableDamage: true,
+      maxSteps: 50,
+      substeps: 10,
+      plotMode: 'stress',
+      workers: 4
+    },
+    sloped: {
+      shelfHeight: 100,
+      shelfAspect: 2.0,
+      cliffSlope: 75,
+      notchHeight: 0,
+      notchDepth: 0,
       undercut: 0,
       soilBoundary: 20,
       meshSize: "5.0",
@@ -104,6 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
     undercut: {
       shelfHeight: 100,
       shelfAspect: 2.0,
+      cliffSlope: 90,
+      notchHeight: 10,
+      notchDepth: 15,
       undercut: 15,
       soilBoundary: 20,
       meshSize: "5.0",
@@ -123,6 +157,9 @@ document.addEventListener('DOMContentLoaded', () => {
     elastic: {
       shelfHeight: 80,
       shelfAspect: 2.0,
+      cliffSlope: 85,
+      notchHeight: 0,
+      notchDepth: 0,
       undercut: 0,
       soilBoundary: 20,
       meshSize: "5.0",
@@ -142,6 +179,9 @@ document.addEventListener('DOMContentLoaded', () => {
     quick: {
       shelfHeight: 60,
       shelfAspect: 1.5,
+      cliffSlope: 80,
+      notchHeight: 5,
+      notchDepth: 8,
       undercut: 0,
       soilBoundary: 15,
       meshSize: "10.0",
@@ -174,6 +214,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   syncInputs(shelfHeightRange, shelfHeight);
   syncInputs(shelfAspectRange, shelfAspect);
+  syncInputs(cliffSlopeRange, cliffSlope);
+  syncInputs(notchHeightRange, notchHeight);
+  syncInputs(notchDepthRange, notchDepth);
   syncInputs(undercutRange, undercut);
   syncInputs(modulusERange, modulusE);
   syncInputs(maxStepsRange, maxSteps);
@@ -213,6 +256,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     shelfHeight.value = p.shelfHeight; shelfHeightRange.value = p.shelfHeight;
     shelfAspect.value = p.shelfAspect; shelfAspectRange.value = p.shelfAspect;
+    cliffSlope.value = p.cliffSlope; cliffSlopeRange.value = p.cliffSlope;
+    notchHeight.value = p.notchHeight; notchHeightRange.value = p.notchHeight;
+    notchDepth.value = p.notchDepth; notchDepthRange.value = p.notchDepth;
     undercut.value = p.undercut; undercutRange.value = p.undercut;
     soilBoundary.value = p.soilBoundary;
     meshSize.value = p.meshSize;
@@ -346,6 +392,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const payload = {
       shelfHeight: parseFloat(shelfHeight.value) || 100,
       shelfAspect: parseFloat(shelfAspect.value) || 2.0,
+      cliffSlope: parseFloat(cliffSlope.value) || 90,
+      notchHeight: parseFloat(notchHeight.value) || 0,
+      notchDepth: parseFloat(notchDepth.value) || 0,
       soilBoundary: parseFloat(soilBoundary.value) || 20,
       meshSize: parseFloat(meshSize.value) || 5.0,
       mpsPerCell: parseInt(mpsPerCell.value) || 2,

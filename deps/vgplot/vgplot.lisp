@@ -656,7 +656,8 @@ It is possible to give additional parameters inside the terminal parameter, e.g.
 "
     (assert (pathnamep filename))
     (let* ((filename-string (namestring filename))
-           (extension (cl-ppcre:scan-to-strings "\\w+$" filename-string))
+           (clean-path (cl-ppcre:regex-replace-all "\\\\" filename-string "/"))
+           (extension (cl-ppcre:scan-to-strings "\\w+$" clean-path))
            (terminals '(("gif" . "gif")
                         ("pdf" . "pdfcairo")
                         ("png" . "png"))))
@@ -665,7 +666,7 @@ It is possible to give additional parameters inside the terminal parameter, e.g.
                           (or terminal
                               (cdr (assoc extension terminals :test #'string=))
                               (error "Provide a terminal to print to (no terminal given and guessing failed)!")))
-      (vgplot:format-plot *debug* "set output \"~A\"" filename-string)
+      (vgplot:format-plot *debug* "set output '~A'" clean-path)
       (vgplot:format-plot *debug* "refresh")
       (vgplot:format-plot *debug* "unset output")
       ;; and back to original terminal:
