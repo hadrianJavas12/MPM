@@ -49,6 +49,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const delayTime = document.getElementById('delayTime');
   const density = document.getElementById('density');
   const enableDamage = document.getElementById('enableDamage');
+  const constitutiveModel = document.getElementById('constitutiveModel');
+  const customModelTemplate = document.getElementById('customModelTemplate');
+  const customModelSource = document.getElementById('customModelSource');
+  const customModelFile = document.getElementById('customModelFile');
+  const customModelNotice = document.getElementById('customModelNotice');
+  const btnLoadModelTemplate = document.getElementById('btnLoadModelTemplate');
+  const btnValidateModel = document.getElementById('btnValidateModel');
+  const btnDownloadModel = document.getElementById('btnDownloadModel');
+  const btnExportSimulation = document.getElementById('btnExportSimulation');
+  const modelWorkspace = window.StudioModelWorkspace;
   const maxStepsRange = document.getElementById('maxStepsRange');
   const maxSteps = document.getElementById('maxSteps');
   const substeps = document.getElementById('substeps');
@@ -345,6 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
     delayTime.value = p.delayTime;
     density.value = p.density;
     enableDamage.checked = p.enableDamage;
+    constitutiveModel.value = 'chalk';
     maxSteps.value = p.maxSteps; maxStepsRange.value = p.maxSteps;
     substeps.value = p.substeps;
     plotMode.value = p.plotMode;
@@ -456,15 +467,65 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // --- Run Simulation Trigger ---
-  async function handleRunSimulation() {
-    console.log('[CL-MPM] handleRunSimulation triggered');
-    if (isRunning) {
-      console.warn('[CL-MPM] Simulation already running');
-      return;
+  // --- Local Lisp workspace: editing and export never execute model code.
+  function setModelNotice(message) {
+    customModelNotice.textContent = message;
+  }
+  function downloadText(filename, content) {
+    const url = URL.createObjectURL(new Blob([content], { type: 'text/plain;charset=utf-8' }));
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  btnLoadModelTemplate.addEventListener('click', () => {
+    if (customModelSource.value.trim() &&
+        !confirm('Ganti kode editor dengan template? Kode lama di editor akan tertimpa.')) return;
+    customModelSource.value = modelWorkspace.TEMPLATES[customModelTemplate.value];
+    setModelNotice('Template berhasil dimuat. Ini belum divalidasi oleh compiler SBCL.');
+  });
+  customModelFile.addEventListener('change', async () => {
+    const file = customModelFile.files && customModelFile.files[0];
+    if (!file) return;
+    if (!file.name.toLowerCase().endsWith('.lisp') ||
+        file.size > modelWorkspace.MAX_SOURCE_BYTES) {
+      return setModelNotice('Hanya file .lisp berukuran maksimal 32 KiB yang diterima.');
     }
+    if (customModelSource.value.trim() &&
+        !confirm('Import akan menimpa kode editor. Lanjutkan?')) return;
+    customModelSource.value = await file.text();
+    constitutiveModel.value = 'custom';
+    setModelNotice('File dimuat ke editor lokal; belum dieksekusi atau diunggah.');
+  });
+  btnValidateModel.addEventListener('click', () => {
+    const result = modelWorkspace.validateSource(customModelSource.value);
+    setModelNotice(result.message);
+  });
+  btnDownloadModel.addEventListener('click', () => {
+    if (!customModelSource.value.trim()) return setModelNotice('Kode .lisp masih kosong.');
+    downloadText('custom-model.lisp', customModelSource.value);
+    setModelNotice('custom-model.lisp berhasil disiapkan untuk download.');
+  });
+  btnExportSimulation.addEventListener('click', () => {
+    try {
+      downloadText('simulation.lisp', modelWorkspace.exportRunScript(collectSimulationParams()));
+      setModelNotice('simulation.lisp diekspor. Jika memilih custom, ekspor custom-model.lisp juga.');
+    } catch (err) {
+      setModelNotice('Gagal export: ' + err.message);
+    }
+  });
+  fetch('/api/custom-model-capabilities').then(r => r.json()).then(data => {
+    if (!data.enabled) {
+      setModelNotice('Editor dan export aktif; eksekusi custom dinonaktifkan (STUDIO_ALLOW_CUSTOM_LISP=1 untuk localhost).');
+    }
+  }).catch(() => {});
 
-    const payload = {
+  // --- Run Simulation Trigger ---
+  function collectSimulationParams() {
+    return {
       shelfHeight: parseFloat(shelfHeight.value) || 100,
       shelfAspect: parseFloat(shelfAspect.value) || 2.0,
       cliffSlope: parseFloat(cliffSlope.value) || 90,
@@ -491,8 +552,22 @@ document.addEventListener('DOMContentLoaded', () => {
       substeps: parseInt(substeps.value) || 10,
       plotMode: plotMode.value || 'stress',
       workers: parseInt(workers.value) || 4,
-      delayTime: Number(delayTime.value)
+      delayTime: Number(delayTime.value),
+      constitutiveModel: constitutiveModel.value
     };
+  }
+
+  async function handleRunSimulation() {
+    console.log('[CL-MPM] handleRunSimulation triggered');
+    if (isRunning) return;
+    const payload = collectSimulationParams();
+    if (payload.constitutiveModel === 'custom') {
+      const check = modelWorkspace.validateSource(customModelSource.value);
+      if (!check.ok) return setModelNotice(check.message);
+      if (!confirm('Custom Lisp akan dieksekusi dengan hak akses OS user lokal, TANPA sandbox. Jalankan kode ini?')) return;
+      payload.customModelSource = customModelSource.value;
+      payload.confirmCustomExecution = true;
+    }
 
     setRunningUI(true);
     lastLogSeq = 0;
