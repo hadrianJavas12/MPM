@@ -15,7 +15,9 @@ Open **Import / Export Modul .lisp & Preset** in the left-side Studio panel.
    **Export Preset Lengkap** to download every currently supported module
    in one file.
 3. To import, select a supported `.lisp` file. Studio stages its contents
-   and shows the module names and **before -> after** differences.
+   and shows the module names and **before -> after** differences. For a full
+   or multi-module file, turn on **Import hanya modul yang dicentang** and
+   select which declared modules to apply; unchecked modules are ignored.
 4. Choose **Merge** (only fields explicitly present in imported modules
    change) or **Replace** (missing fields of imported modules reset to their
    schema defaults). **Other modules are never reset.**
@@ -108,7 +110,7 @@ values. It never calls `load`, `eval` or a Lisp reader.
 ## Testing, limitations and roadmap
 
 The Node regression tests are in `studio/test/preset-modules.test.js`.
-Run `cd studio && npm run check && npm test`. They cover partial/module
+Run `cd studio && npm run check && npm test`. They cover selective import from a full file, partial/module
 isolation, merge/replace, all-module Unicode source round-trip, malicious
 reader syntax, bounds and staged rollback. GitHub Actions is currently
 blocked by an account billing issue; its failure must not be conflated with
