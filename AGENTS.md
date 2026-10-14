@@ -36,17 +36,21 @@ simulation.
 7. Be exact about evidence. Clearly distinguish code review, lexical/static
    checks, actual Node tests, actual SBCL runs and scientific validation.
 8. Update `docs/AI_HANDOVER.md` (dated progress, open risks, next actions)
-   when handing work to another AI.
+   when handing work to another AI. Also update the Obsidian/LLM Wiki after significant work: read `wiki-vault/AGENTS.md` and the repository llm-wiki/obsidian skills, maintain linked pages, index and append-only log, and preserve immutable raw sources.
 
 ## Fast navigation
 
 - `docs/AI_HANDOVER.md` — **operational source of truth for AI handover**
+- `wiki-vault/wiki/index.md` — Obsidian/LLM Wiki knowledge index
 - `studio/GEOMETRY.md` — cliff/notch coordinates, preview limitations
 - `studio/MATERIAL.md` — constitutive parameters and units
 - `studio/CUSTOM_MODELS.md` — CLOS extension contract, editor, export, security
 - `studio/schema.json` — shared param keys/defaults/units
 - `studio/lisp/scenario.lisp` and `runner.lisp` — actual simulation creation/run
 - `studio/public/app.js` and `model-workspace.js` — frontend workflow
+- `studio/public/config.js` — shared API/export normalization against schema
+- `studio/lisp/custom-model.lisp` — loader, dedicated class and stress contract
+- `docs/testing.md` — test levels, repeatable commands and CI blocker
 - `studio/server.js` — HTTP, simulation lifecycle, optional custom execution
 - `studio/test/` — JS tests; `.github/workflows/studio-node.yml` — CI
 - `docs/windows-setup.md` and `docs/development.md` — Windows setup/tests
@@ -61,5 +65,5 @@ npm test
 
 For physics or custom model updates, additionally **run SBCL on Windows**,
 check the VTK output and compare against a reference case. GitHub Actions was
-observed failing on predecessor branches as of 2026-10-14; root cause unknown.
+blocked as of 2026-10-14 by an account billing lock (confirmed check annotations).
 See the handover for the full verification checklist.

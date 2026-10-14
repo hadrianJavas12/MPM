@@ -24,12 +24,6 @@
 
 (defun deg->rad (deg) (* deg (/ pi 180d0)))
 
-;; A distinct particle class allows a user-provided method to affect only
-;; custom Studio runs.  The existing chalk method remains unchanged.
-(defclass studio-custom-chalk (cl-mpm/particle::particle-chalk-delayed) ()
-  (:documentation "Extension point for a user-authored constitutive model."))
-
-
 (defun make-chalk-mps (config block-size h)
   "Material points filling BLOCK-SIZE with particle-chalk-delayed."
   (let* ((mps-per-cell (param config "mpsPerCell"))
@@ -47,6 +41,7 @@
       :E (param config "E")
       :nu (param config "nu")
       :enable-plasticity (param config "enablePlasticity")
+      :enable-damage (param config "enableDamage")
       :friction-angle friction
       :phi (deg->rad friction)
       :psi (deg->rad (param config "dilatancyAngle"))
@@ -151,6 +146,7 @@ The tip fraction affects triangular notches only."
                1d0)))))))
 (defun make-cliff-sim (config)
   "Build the cliff-collapse simulation described by CONFIG."
+  (when (eq (param config "constitutiveModel") :custom) (ensure-custom-model))
   (let* ((h (param config "meshSize"))
          (height (param config "shelfHeight"))
          (soil (param config "soilBoundary"))

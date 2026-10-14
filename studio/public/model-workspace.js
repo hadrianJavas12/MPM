@@ -5,10 +5,12 @@
  * Validation here is LEXICAL only and MUST NOT be treated as a Lisp sandbox.
  */
 (function (root, factory) {
-  const api = factory();
+  const node = typeof module === 'object' && module.exports;
+  const api = factory(node ? require('./config.js') : root.StudioConfig,
+    node ? require('../schema.json').parameters : null);
   if (typeof module === 'object' && module.exports) module.exports = api;
   if (root) root.StudioModelWorkspace = api;
-}(typeof window !== 'undefined' ? window : null, function () {
+}(typeof window !== 'undefined' ? window : null, function (configApi, defaultSchema) {
   const MAX_SOURCE_BYTES = 32 * 1024;
 
   const TEMPLATES = Object.freeze({
@@ -23,16 +25,23 @@
 `,
     elastic: `;;;; Experimental elastic constitutive update for Studio chalk particles.
 ;;;; CAUTION: replaces the standard chalk plastic stress update.
-;;;; Damage evolution elsewhere may still be active unless disabled in Studio.
+;;;; Use only with plasticity and damage disabled and zero initial damage.
 (in-package :cl-mpm-studio)
 (defmethod cl-mpm/particle:constitutive-model
     ((mp studio-custom-chalk) strain dt)
-  (let ((stress (cl-mpm/particle::mp-stress mp))
+  (declare (ignore dt))
+  (when (or (cl-mpm/particle::mp-enable-plasticity mp)
+            (cl-mpm/particle::mp-enable-damage mp)
+            (plusp (cl-mpm/particle:mp-damage mp)))
+    (error "Elastic template requires plasticity/damage off and zero damage."))
+  (let ((stress (cl-mpm/particle::mp-stress-kirchoff mp))
+        (undamaged (cl-mpm/particle::mp-undamaged-stress mp))
         (elastic (cl-mpm/particle::mp-elastic-matrix mp)))
-    ;; STRESS and STRAIN are Voigt matrices supplied by CL-MPM.
+    ;; STRAIN is elastic trial Hencky strain, not a strain increment.
+    ;; Return Kirchhoff stress; the engine converts it to Cauchy stress.
+    (cl-mpm/constitutive::linear-elastic-mat strain elastic undamaged)
     (cl-mpm/utils:voigt-copy-into
-     (cl-mpm/constitutive::linear-elastic-mat strain elastic)
-     stress)
+     undamaged stress)
     stress))
 `
   });
@@ -43,61 +52,70 @@
       return { ok: false, message: 'Source melewati batas 32 KiB.' };
     if (source.includes('\0')) return { ok: false, message: 'NUL byte tidak diizinkan.' };
     // Check balanced delimiters outside strings, line comments and #|...|# comments.
-    let depth = 0, inString = false, escaped = false, inLineComment = false, blockDepth = 0;
+    let depth = 0, inString = false, inSymbol = false, escaped = false, inLineComment = false, blockDepth = 0;
     for (let i = 0; i < source.length; i++) {
       const c = source[i], next = source[i + 1];
-      if (inLineComment) { if (c === '\n') inLineComment = false; continue; }
+      if (inLineComment) { if (c === '\n' || c === '\r') inLineComment = false; continue; }
       if (blockDepth) {
         if (c === '#' && next === '|') { blockDepth++; i++; }
         else if (c === '|' && next === '#') { blockDepth--; i++; }
         continue;
       }
-      if (inString) {
+      if (inString || inSymbol) {
         if (escaped) escaped = false;
         else if (c === '\\') escaped = true;
-        else if (c === '"') inString = false;
+        else if (inString && c === '"') inString = false;
+        else if (inSymbol && c === '|') inSymbol = false;
         continue;
       }
       if (c === ';') { inLineComment = true; continue; }
       if (c === '#' && next === '|') { blockDepth++; i++; continue; }
+      // #\ followed by a delimiter is a character, not a string/comment/paren.
+      if (c === '#' && next === '\\') {
+        i += 2;
+        if (i >= source.length) return { ok: false, message: 'Literal karakter #\\ belum lengkap.' };
+        while (i + 1 < source.length && !/[\s()";|]/.test(source[i + 1])) i++;
+        continue;
+      }
+      if (c === '\\') {
+        if (++i >= source.length) return { ok: false, message: 'Escape simbol belum lengkap.' };
+        continue;
+      }
+      if (c === '|') { inSymbol = true; continue; }
       if (c === '"') { inString = true; continue; }
       if (c === '(') depth++;
       if (c === ')') { depth--; if (depth < 0) return { ok: false, message: 'Terdapat kurung tutup berlebih.' }; }
     }
-    if (inString || blockDepth || depth)
+    if (inString || inSymbol || blockDepth || depth)
       return { ok: false, message: 'String, komentar blok, atau tanda kurung belum tertutup.' };
     return { ok: true, message: 'Pemeriksaan leksikal lolos; kompilasi Lisp belum diuji.' };
   }
 
-  function lispValue(value, key) {
+  function lispValue(value, spec, key) {
     if (typeof value === 'boolean') return value ? 't' : 'nil';
     if (typeof value === 'number' && Number.isFinite(value)) {
-      if (['maxSteps', 'substeps', 'workers', 'mpsPerCell'].includes(key)) {
-        return String(Math.round(value));
-      }
+      if (spec.type === 'integer') return String(value);
       const decimal = String(value);
       return (decimal.includes('e') ? decimal.replace(/e/i, 'd') : decimal + 'd0');
     }
-    if (key === 'constitutiveModel' && ['chalk', 'custom'].includes(value)) return ':' + value;
-    if (key === 'notchShape' && ['rectangle', 'ellipse', 'triangle'].includes(value)) return ':' + value;
-    if (key === 'plotMode' && ['stress', 'damage', 'velocity'].includes(value)) return ':' + value;
+    if (spec.type === 'enum' && spec.values.includes(value) && /^[a-z][a-z0-9-]*$/i.test(value))
+      return ':' + value;
     throw new Error('Parameter tidak dapat diekspor: ' + key);
   }
 
-  const ALLOWED_KEYS = new Set([
-    'shelfHeight', 'shelfAspect', 'cliffSlope', 'undercut', 'notchHeight',
-    'notchDepth', 'notchShape', 'notchTipFraction', 'soilBoundary', 'meshSize',
-    'mpsPerCell', 'density', 'E', 'nu', 'frictionAngle', 'ductility',
-    'initiationStress', 'delayTime', 'enableDamage', 'maxSteps',
-    'substeps', 'plotMode', 'workers', 'enablePlasticity', 'cohesion',
-    'dilatancyAngle', 'nonlocalLength', 'constitutiveModel'
-  ]);
-
-  function exportRunScript(params) {
-    const lines = [];
+  function exportRunScript(params, schema = defaultSchema) {
     for (const [key, value] of Object.entries(params || {})) {
-      if (!ALLOWED_KEYS.has(key)) continue;
-      lines.push('  (setf (gethash "' + key + '" config) ' + lispValue(value, key) + ')');
+      const spec = schema && schema[key];
+      if (!spec) continue;
+      if ((typeof value === 'number' && !Number.isFinite(value)) ||
+          (spec.type === 'enum' && !spec.values.includes(value)))
+        throw new Error('Parameter tidak dapat diekspor: ' + key);
+    }
+    const config = configApi.normalize(params || {}, schema);
+    const lines = [];
+    for (const [key, value] of Object.entries(config)) {
+      if (!/^[A-Za-z][A-Za-z0-9]*$/.test(key)) throw new Error('Invalid schema key: ' + key);
+      lines.push('  (setf (gethash "' + key + '" config) ' + lispValue(value, schema[key], key) + ')');
     }
     return `;;;; Exported from CL-MPM Studio. Requires the CL-MPM / Quicklisp environment.
 ;;;; Run from repository root; keep custom-model.lisp beside this script
@@ -107,7 +125,7 @@
 (let ((config (cl-mpm-studio:load-config)))
 ${lines.join('\n')}
   (when (eq (gethash "constitutiveModel" config) :custom)
-    (load (merge-pathnames "custom-model.lisp"
+    (cl-mpm-studio:load-custom-model (merge-pathnames "custom-model.lisp"
                            (uiop:pathname-directory-pathname *load-truename*))))
   (cl-mpm-studio:run config (uiop:ensure-directory-pathname #p"output/studio-export/")))
 `;

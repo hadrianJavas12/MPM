@@ -36,8 +36,29 @@ test('simulation exporter encodes numbers, booleans, allowed keywords and custom
   assert.match(script, /\(gethash "enableDamage" config\) nil/);
   assert.match(script, /\(gethash "workers" config\) 4/);
   assert.match(script, /\(gethash "constitutiveModel" config\) :custom/);
-  assert.match(script, /load \(merge-pathnames "custom-model.lisp"/);
+  assert.match(script, /cl-mpm-studio:load-custom-model \(merge-pathnames "custom-model.lisp"/);
   assert.doesNotMatch(script, /undefined|NaN|Infinity/);
+});
+
+test('valid Lisp character literals and escaped symbols are not mistaken for delimiters', () => {
+  for (const source of ['(list #\\( #\\) #\\" #\\; #\\Space)', '(quote |name(with)delimiters|)', '(quote a\\(b)', '; comment\r(foo)'])
+    assert.equal(workspace.validateSource(source).ok, true, source);
+  assert.equal(workspace.validateSource('(quote |unfinished)').ok, false);
+  assert.equal(workspace.validateSource('#\\').ok, false);
+});
+
+test('exported configuration uses the same schema defaults, limits and rounding as HTTP runs', () => {
+  const { normalize } = require('../public/config.js');
+  const schema = require('../schema.json').parameters;
+  const input = { soilBoundary: 0, cohesion: 0, maxSteps: 99999, workers: 2.5, enableDamage: false, E: '1e9' };
+  const config = normalize(input, schema);
+  const script = workspace.exportRunScript(input);
+  assert.match(script, /\(gethash "maxSteps" config\) 2000/);
+  assert.match(script, /\(gethash "workers" config\) 3/);
+  assert.equal((script.match(/\(setf \(gethash /g) || []).length, Object.keys(config).length);
+  assert.equal(config.soilBoundary, 0);
+  assert.equal(config.cohesion, 0);
+  assert.throws(() => workspace.exportRunScript({}, null), /schema/i);
 });
 
 test('unsafe export values fail closed; unknown keys are ignored', () => {

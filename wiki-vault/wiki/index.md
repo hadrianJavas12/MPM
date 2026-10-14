@@ -9,8 +9,12 @@
 - [[windows-port]] — native Windows layout, overrides, gotchas
 - [[serial-mpi-standin]] — `cl-mpm/mpi` replacement without MPI
 - [[magicl-patches]] — patched vendored dependencies
+- [[studio-custom-models]] — trusted CLOS law/editor/export contract and execution policy
+- [[studio-geometry-material]] — notch/base conventions, material controls and SI units
 
 ## Sources
+- [[studio-hardening-2026-10-14]] — immutable hardening-session evidence and CI diagnosis
 
 ## Synthesis
 - [[refactor-2026-10-14]] — decisions and results of the Windows-port refactor
+- [[studio-verification-2026-10-14]] — current tests, attributed historical evidence and next gates

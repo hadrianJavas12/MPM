@@ -13,7 +13,7 @@ prediction.
 | Cohesion | `cohesion` | `:c` | Pa (UI displays kPa) |
 | Dilation angle | `dilatancyAngle` | `:psi` | degrees (converted to radians) |
 | Plasticity enabled | `enablePlasticity` | `:enable-plasticity` | boolean |
-| Damage enabled | `enableDamage` | simulation damage flag | boolean |
+| Damage enabled | `enableDamage` | `:enable-damage` and simulation damage flag | boolean |
 | Damage onset | `initiationStress` | `:initiation-stress` | Pa (UI displays kPa) |
 | Damage delay time | `delayTime` | `:delay-time` | s |
 | Post-peak ductility | `ductility` | `:ductility` | dimensionless |
@@ -25,6 +25,10 @@ All new parameter defaults match the earlier hardcoded scenario values:
 The `Elastic Gravity Settle` preset now disables **both plasticity and
 damage**, so the pre-existing chalk constitutive model follows its elastic
 branch. It does **not** switch the particle class.
+
+`enableDamage` also sets each particle's `:enable-damage` flag. Custom elastic
+templates require both damage and plasticity off; they do not replace the
+separate damage-evolution API. See [CUSTOM_MODELS.md](CUSTOM_MODELS.md).
 
 ## Practical cautions
 

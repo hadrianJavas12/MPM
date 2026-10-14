@@ -20,5 +20,6 @@
   :serial t
   :components ((:file "package")
                (:file "config")
+               (:file "custom-model")
                (:file "scenario")
                (:file "runner")))

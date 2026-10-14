@@ -7,6 +7,7 @@
    #:*schema-path*
    ;; scenario
    #:make-cliff-sim
+   #:load-custom-model
    ;; runner
    #:run
    #:main))

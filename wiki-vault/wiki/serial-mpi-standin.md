@@ -2,7 +2,7 @@
 title: Serial MPI stand-in
 type: concept
 tags: [mpi, windows]
-sources: [[[refactor-2026-10-14]]]
+sources: ["[[refactor-2026-10-14]]"]
 updated: 2026-10-14
 ---
 

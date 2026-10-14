@@ -8,5 +8,6 @@
 | [studio.md](studio.md) | Use CL-MPM Studio (web UI), its parameters and HTTP API |
 | [architecture.md](architecture.md) | Understand how the code base and the MPM algorithm are organised |
 | [development.md](development.md) | Change the code, run the checks, troubleshoot, see what the Windows port patched |
+| [testing.md](testing.md) | Repeat automated checks; distinguish SBCL contract tests, full-engine checks and CI blockers |
 
 New to coding on this project as an AI agent? Read root [AGENTS.md](../AGENTS.md) and [AI_HANDOVER.md](AI_HANDOVER.md) first. For running the software, follow [windows-setup.md](windows-setup.md), then run the smoke test and open Studio.

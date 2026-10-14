@@ -64,26 +64,6 @@ Prints one \"Step k/N\" line per frame; studio/server.js parses these."
       (sleep 1)
       sim)))
 
-(defun load-custom-model (path)
-  "Load an explicitly approved user Lisp file from disk.
-This is NOT a sandbox. Studio's HTTP server must opt in and run locally."
-  (unless (and path (probe-file path))
-    (error "Missing custom-model.lisp source file."))
-  (format t "~&Loading USER-SUPPLIED Lisp: ~A~%" (namestring path))
-  (finish-output)
-  (load path)
-  (let ((method (find-method
-                 #'cl-mpm/particle:constitutive-model
-                 '()
-                 (list (find-class 'studio-custom-chalk)
-                       (find-class 't)
-                       (find-class 't))
-                 nil)))
-    (unless method
-      (error "Custom file must define constitutive-model (studio-custom-chalk strain dt).")))
-  (format t "~&Custom constitutive model installed.~%")
-  (finish-output))
-
 (defun default-output-dir ()
   (asdf:system-relative-pathname "cl-mpm" "output/cliff/"))
 

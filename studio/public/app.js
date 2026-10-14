@@ -59,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnDownloadModel = document.getElementById('btnDownloadModel');
   const btnExportSimulation = document.getElementById('btnExportSimulation');
   const modelWorkspace = window.StudioModelWorkspace;
+  const schemaReady = fetch('/api/schema').then(async response => {
+    if (!response.ok) throw new Error('Schema parameter tidak tersedia.');
+    return response.json();
+  }).catch(err => { setModelNotice(err.message); return null; });
   const maxStepsRange = document.getElementById('maxStepsRange');
   const maxSteps = document.getElementById('maxSteps');
   const substeps = document.getElementById('substeps');
@@ -485,7 +489,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (customModelSource.value.trim() &&
         !confirm('Ganti kode editor dengan template? Kode lama di editor akan tertimpa.')) return;
     customModelSource.value = modelWorkspace.TEMPLATES[customModelTemplate.value];
-    setModelNotice('Template berhasil dimuat. Ini belum divalidasi oleh compiler SBCL.');
+    constitutiveModel.value = 'custom';
+    if (customModelTemplate.value === 'elastic') {
+      enablePlasticity.checked = false;
+      enableDamage.checked = false;
+    }
+    setModelNotice('Template dimuat; belum diuji oleh SBCL.' +
+      (customModelTemplate.value === 'elastic' ? ' Plastisitas dan damage dinonaktifkan untuk template elastis.' : ''));
   });
   customModelFile.addEventListener('change', async () => {
     const file = customModelFile.files && customModelFile.files[0];
@@ -496,9 +506,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (customModelSource.value.trim() &&
         !confirm('Import akan menimpa kode editor. Lanjutkan?')) return;
-    customModelSource.value = await file.text();
-    constitutiveModel.value = 'custom';
-    setModelNotice('File dimuat ke editor lokal; belum dieksekusi atau diunggah.');
+    try {
+      const source = await file.text();
+      if (source.includes('\0')) throw new Error('NUL byte tidak diizinkan.');
+      customModelSource.value = source;
+      constitutiveModel.value = 'custom';
+      setModelNotice('File dimuat ke editor lokal; belum dieksekusi atau diunggah.');
+    } catch (err) {
+      setModelNotice('Gagal import: ' + err.message);
+    } finally {
+      customModelFile.value = ''; // The same file may be selected again after editing it.
+    }
   });
   btnValidateModel.addEventListener('click', () => {
     const result = modelWorkspace.validateSource(customModelSource.value);
@@ -509,9 +527,15 @@ document.addEventListener('DOMContentLoaded', () => {
     downloadText('custom-model.lisp', customModelSource.value);
     setModelNotice('custom-model.lisp berhasil disiapkan untuk download.');
   });
-  btnExportSimulation.addEventListener('click', () => {
+  btnExportSimulation.addEventListener('click', async () => {
     try {
-      downloadText('simulation.lisp', modelWorkspace.exportRunScript(collectSimulationParams()));
+      const schema = await schemaReady;
+      if (!schema) throw new Error('Schema parameter tidak tersedia. Muat ulang Studio.');
+      if (constitutiveModel.value === 'custom') {
+        const check = modelWorkspace.validateSource(customModelSource.value);
+        if (!check.ok) return setModelNotice(check.message);
+      }
+      downloadText('simulation.lisp', modelWorkspace.exportRunScript(collectSimulationParams(), schema));
       setModelNotice('simulation.lisp diekspor. Jika memilih custom, ekspor custom-model.lisp juga.');
     } catch (err) {
       setModelNotice('Gagal export: ' + err.message);
@@ -526,41 +550,48 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Run Simulation Trigger ---
   function collectSimulationParams() {
     return {
-      shelfHeight: parseFloat(shelfHeight.value) || 100,
-      shelfAspect: parseFloat(shelfAspect.value) || 2.0,
-      cliffSlope: parseFloat(cliffSlope.value) || 90,
-      notchHeight: parseFloat(notchHeight.value) || 0,
-      notchDepth: parseFloat(notchDepth.value) || 0,
+      shelfHeight: numericInput(shelfHeight),
+      shelfAspect: numericInput(shelfAspect),
+      cliffSlope: numericInput(cliffSlope),
+      notchHeight: numericInput(notchHeight),
+      notchDepth: numericInput(notchDepth),
       notchShape: notchShape.value,
-      notchTipFraction: Number(notchTipFraction.value),
-      soilBoundary: Number(soilBoundary.value),
-      meshSize: parseFloat(meshSize.value) || 5.0,
-      mpsPerCell: parseInt(mpsPerCell.value) || 2,
-      undercut: parseFloat(undercut.value) || 0,
-      E: (parseFloat(modulusE.value) || 1.0) * 1e9,
-      nu: parseFloat(nu.value) || 0.35,
-      frictionAngle: parseFloat(frictionAngle.value) || 40,
-      cohesion: Number(cohesion.value) * 1e3,
-      dilatancyAngle: Number(dilatancyAngle.value),
-      nonlocalLength: Number(nonlocalLength.value),
+      notchTipFraction: numericInput(notchTipFraction),
+      soilBoundary: numericInput(soilBoundary),
+      meshSize: numericInput(meshSize),
+      mpsPerCell: numericInput(mpsPerCell),
+      undercut: numericInput(undercut),
+      E: numericInput(modulusE, 1e9),
+      nu: numericInput(nu),
+      frictionAngle: numericInput(frictionAngle),
+      cohesion: numericInput(cohesion, 1e3),
+      dilatancyAngle: numericInput(dilatancyAngle),
+      nonlocalLength: numericInput(nonlocalLength),
       enablePlasticity: enablePlasticity.checked,
-      initiationStress: (parseFloat(initStress.value) || 200) * 1e3,
-      ductility: parseFloat(ductility.value) || 10,
-      density: parseFloat(density.value) || 1700,
+      initiationStress: numericInput(initStress, 1e3),
+      ductility: numericInput(ductility),
+      density: numericInput(density),
       enableDamage: enableDamage.checked,
-      maxSteps: parseInt(maxSteps.value) || 10,
-      substeps: parseInt(substeps.value) || 10,
+      maxSteps: numericInput(maxSteps),
+      substeps: numericInput(substeps),
       plotMode: plotMode.value || 'stress',
-      workers: parseInt(workers.value) || 4,
-      delayTime: Number(delayTime.value),
+      workers: numericInput(workers),
+      delayTime: numericInput(delayTime),
       constitutiveModel: constitutiveModel.value
     };
+  }
+
+  function numericInput(element, scale = 1) {
+    return element.value.trim() === '' ? undefined : Number(element.value) * scale;
   }
 
   async function handleRunSimulation() {
     console.log('[CL-MPM] handleRunSimulation triggered');
     if (isRunning) return;
-    const payload = collectSimulationParams();
+    const schema = await schemaReady;
+    if (!schema) return setModelNotice('Schema parameter tidak tersedia. Muat ulang Studio.');
+    if (isRunning) return; // Two clicks may have awaited the schema together.
+    const payload = window.StudioConfig.normalize(collectSimulationParams(), schema);
     if (payload.constitutiveModel === 'custom') {
       const check = modelWorkspace.validateSource(customModelSource.value);
       if (!check.ok) return setModelNotice(check.message);

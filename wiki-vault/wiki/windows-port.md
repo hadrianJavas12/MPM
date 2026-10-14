@@ -2,7 +2,7 @@
 title: Windows port
 type: concept
 tags: [windows, toolchain]
-sources: [[[refactor-2026-10-14]]]
+sources: ["[[refactor-2026-10-14]]"]
 updated: 2026-10-14
 ---
 

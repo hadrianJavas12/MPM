@@ -42,8 +42,21 @@ and particle state conventions. A custom constitutive method does **not**
 automatically change the existing independent damage-evolution algorithms,
 time stepping, or boundary conditions.
 
+The elastic template returns **Kirchhoff stress** from elastic trial Hencky
+strain and refreshes `mp-undamaged-stress`; the core converts its return value
+to Cauchy stress. It requires plasticity/damage off and zero initial damage.
+Loading the template selects `custom` and disables both controls. Enabling
+those controls again produces a clear runtime error.
+
 The runner checks for an unqualified primary method specialised on
 `studio-custom-chalk` and refuses a custom run if none exists.
+
+The shared loader in `studio/lisp/custom-model.lisp` removes any previous
+primary method before loading a new file. Failed loads remove partially
+installed primary methods. Scenario construction checks the same contract,
+including exported scripts. A Studio-specific `:around` method rejects
+incorrect matrix dimensions/types and NaN/infinite stress before the core's
+unchecked copies. These checks validate the interface, not the physical law.
 
 ## Run locally (trusted files ONLY)
 
@@ -69,6 +82,12 @@ The server rejects arbitrary Lisp unless all these conditions hold:
 3. The request uses same-origin JSON and explicitly confirms execution.
 4. Non-empty source is at most **32 KiB** and contains no NUL bytes.
 
+When enabled, Host must name `127.0.0.1`, `localhost`, or `[::1]` with the
+actual Studio port. Browser cross-origin/cross-site requests are rejected
+for run, stop and video operations. Native local API clients may omit Origin;
+this is a trusted local service, not an authenticated multi-user application.
+Malformed JSON gets 400; bodies larger than 64 KiB get 413.
+
 The server writes user source to `output/studio/custom-model.lisp` and
 passes its explicit file path as an argument to a new SBCL child process.
 Built-in models never load this file. The runner loads user code before
@@ -85,6 +104,12 @@ Download both files to the same directory when using a custom model:
 - `simulation.lisp` — the configuration as Lisp `gethash` assignments
   plus a runner call that loads the adjacent custom model if selected.
 
+API runs and exports share `public/config.js` and the canonical schema:
+defaults, numeric limits, boolean false, zeros and integer rounding match.
+Exports include every setting in SI units and call the shared
+`cl-mpm-studio:load-custom-model` contract check. Node and Lisp agree on
+decimal strings and half-up integer rounding.
+
 Launch the exported `simulation.lisp` from a correctly configured
 CL-MPM repository root, for example:
 
@@ -97,8 +122,8 @@ Quicklisp, CL-MPM and its runtime libraries.
 
 ## Verification boundaries
 
-Node tests cover lexical checks, templates, export text, default-deny
-behaviour, origin and content-type guards. The complete end-to-end
-SBCL + custom method integration and numerical benchmark are still
-necessary before production or scientific use. This workflow does not
-attempt to reproduce the paper's multi-stage Joss Bay analysis.
+See [testing](../docs/testing.md) for commands and evidence. The suite
+includes real SBCL reader/compiler/CLOS tests of production config and loader
+with explicit dependency stubs. They do not load the MPM solver, Quicklisp,
+MAGICL or OpenBLAS. Real-engine Windows tests and numerical benchmarks remain
+required. This workflow does not reproduce the multi-stage Joss Bay analysis.

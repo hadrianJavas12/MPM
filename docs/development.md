@@ -1,8 +1,22 @@
 # Development
 
 ## Checks before committing
+Run the automated checks first:
+
+```bat
+cd studio
+npm run check
+set STUDIO_REQUIRE_SBCL_TESTS=1
+npm test
+cd ..
+```
+
+SBCL must be on PATH or set with `STUDIO_TEST_SBCL`. Contract tests use explicit
+dependency stubs and need no Quicklisp. See [testing.md](testing.md) for scope.
+
 ```bat
 windows\cl-mpm.cmd scripts\smoke-test.lisp        :: library + numerics
+windows\cl-mpm.cmd scripts\studio-custom-smoke.lisp :: real-engine built-in/delegate comparison
 node --check studio\server.js                     :: server syntax
 windows\cl-mpm.cmd studio\lisp\run.lisp           :: Studio runner with defaults (slow) or pass a small config
 ```
