@@ -114,3 +114,22 @@ test('schema extensions must have exactly one module owner to prevent silent pre
   } };
   assert.throws(() => api.exportFullPreset(defaults, '', extended), /Unassigned schema key/);
 });
+
+test('a full preset can import only selected geometry, leaving every other module untouched', () => {
+  const full = api.exportFullPreset({
+    ...defaults, shelfHeight: 200, cohesion: 3e6, workers: 12,
+    plotMode: 'velocity'
+  }, '(in-package :cl-mpm-studio)');
+  const original = { ...defaults, shelfHeight: 50, cohesion: 9e6, workers: 2 };
+  const plan = api.previewImport(original, '', full, 'merge', undefined, ['geometry']);
+  assert.deepEqual(plan.ids, ['geometry']);
+  assert.equal(plan.fileComplete, true);
+  assert.equal(plan.complete, false);
+  assert.equal(plan.nextConfig.shelfHeight, 200);
+  assert.equal(plan.nextConfig.cohesion, 9e6);
+  assert.equal(plan.nextConfig.workers, 2);
+  assert.equal(plan.nextConfig.plotMode, defaults.plotMode);
+  assert.equal(plan.nextSource, '');
+  assert.throws(() => api.previewImport(original, '', full, 'merge', undefined,
+    ['unavailable-module']), /must exist in the file/i);
+});
