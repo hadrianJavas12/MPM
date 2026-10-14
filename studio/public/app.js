@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const substeps = document.getElementById('substeps');
   const plotMode = document.getElementById('plotMode');
   const workers = document.getElementById('workers');
-  const clearFrames = document.getElementById('clearFrames');
 
   // Progress
   const progressBarFill = document.getElementById('progressBarFill');
@@ -394,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cliffSlope: parseFloat(cliffSlope.value) || 90,
       notchHeight: parseFloat(notchHeight.value) || 0,
       notchDepth: parseFloat(notchDepth.value) || 0,
-      soilBoundary: parseFloat(soilBoundary.value) || 20,
+      soilBoundary: Number(soilBoundary.value),
       meshSize: parseFloat(meshSize.value) || 5.0,
       mpsPerCell: parseInt(mpsPerCell.value) || 2,
       undercut: parseFloat(undercut.value) || 0,
@@ -409,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
       substeps: parseInt(substeps.value) || 10,
       plotMode: plotMode.value || 'stress',
       workers: parseInt(workers.value) || 4,
-      clearFrames: clearFrames.checked
+      delayTime: 10
     };
 
     setRunningUI(true);
