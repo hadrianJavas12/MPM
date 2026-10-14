@@ -107,3 +107,10 @@ test('full preset export refuses missing executable model source', () => {
     ...defaults, constitutiveModel: 'custom'
   }, '').includes(':geometry'));
 });
+
+test('schema extensions must have exactly one module owner to prevent silent preset data loss', () => {
+  const extended = { ...schema, newPhysicalParameter: {
+    type: 'number', default: 5, min: 0, max: 10
+  } };
+  assert.throws(() => api.exportFullPreset(defaults, '', extended), /Unassigned schema key/);
+});
