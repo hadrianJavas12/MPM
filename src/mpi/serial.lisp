@@ -28,8 +28,8 @@
 (define-condition mpi-unavailable (error)
   ((operation :initarg :operation :reader mpi-unavailable-operation))
   (:report (lambda (c stream)
-             (format stream "~A requires MPI, which is not available in this build ~
-                             (feature :CL-MPM-NO-MPI is active)."
+             (format stream
+                     "~A requires MPI, which is not available in this build (feature :CL-MPM-NO-MPI is active)."
                      (mpi-unavailable-operation c)))))
 
 (defun mpi-unavailable (operation)
