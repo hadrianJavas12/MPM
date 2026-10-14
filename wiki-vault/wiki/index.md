@@ -10,6 +10,7 @@
 - [[serial-mpi-standin]] — `cl-mpm/mpi` replacement without MPI
 - [[magicl-patches]] — patched vendored dependencies
 - [[studio-custom-models]] — trusted CLOS law/editor/export contract and execution policy
+- [[studio-modular-lisp-io]] — planned selective module .lisp I/O and complete preset portability (issue #5)
 - [[studio-geometry-material]] — notch/base conventions, material controls and SI units
 
 ## Sources
