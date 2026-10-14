@@ -24,6 +24,12 @@
 
 (defun deg->rad (deg) (* deg (/ pi 180d0)))
 
+;; A distinct particle class allows a user-provided method to affect only
+;; custom Studio runs.  The existing chalk method remains unchanged.
+(defclass studio-custom-chalk (cl-mpm/particle::particle-chalk-delayed) ()
+  (:documentation "Extension point for a user-authored constitutive model."))
+
+
 (defun make-chalk-mps (config block-size h)
   "Material points filling BLOCK-SIZE with particle-chalk-delayed."
   (let* ((mps-per-cell (param config "mpsPerCell"))
@@ -35,7 +41,9 @@
       block-size
       counts
       (param config "density")
-      'cl-mpm/particle::particle-chalk-delayed
+      (if (eq (param config "constitutiveModel") :custom)
+          'studio-custom-chalk
+          'cl-mpm/particle::particle-chalk-delayed)
       :E (param config "E")
       :nu (param config "nu")
       :enable-plasticity (param config "enablePlasticity")
