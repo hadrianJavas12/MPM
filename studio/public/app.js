@@ -585,6 +585,145 @@ document.addEventListener('DOMContentLoaded', () => {
     return element.value.trim() === '' ? undefined : Number(element.value) * scale;
   }
 
+  // --- Inert modular Lisp I/O. Imported configuration is never evaluated. ---
+  const presetModuleApi = window.StudioPresetModules;
+  const presetImportFile = document.getElementById('presetImportFile');
+  const presetImportMode = document.getElementById('presetImportMode');
+  const presetImportPreview = document.getElementById('presetImportPreview');
+  const btnApplyPresetImport = document.getElementById('btnApplyPresetImport');
+  let stagedImportText = '';
+  let stagedImportPlan = null;
+  let stagedSnapshot = '';
+
+  function currentPresetSnapshot(schema) {
+    return JSON.stringify(window.StudioConfig.normalize(collectSimulationParams(), schema)) +
+      '\n' + customModelSource.value;
+  }
+  function resetPresetStage(message) {
+    stagedImportText = '';
+    stagedImportPlan = null;
+    stagedSnapshot = '';
+    btnApplyPresetImport.disabled = true;
+    presetImportPreview.textContent = message || 'Tidak ada import yang menunggu konfirmasi.';
+  }
+  function applyImportedConfiguration(cfg) {
+    // Configuration is already schema-normalized in SI units.
+    const fields = [
+      [shelfHeight, cfg.shelfHeight, shelfHeightRange],
+      [shelfAspect, cfg.shelfAspect, shelfAspectRange],
+      [cliffSlope, cfg.cliffSlope, cliffSlopeRange],
+      [undercut, cfg.undercut, undercutRange],
+      [notchHeight, cfg.notchHeight, notchHeightRange],
+      [notchDepth, cfg.notchDepth, notchDepthRange],
+      [soilBoundary, cfg.soilBoundary],
+      [notchTipFraction, cfg.notchTipFraction],
+      [meshSize, cfg.meshSize],
+      [mpsPerCell, cfg.mpsPerCell],
+      [density, cfg.density],
+      [modulusE, cfg.E / 1e9, modulusERange],
+      [nu, cfg.nu],
+      [frictionAngle, cfg.frictionAngle],
+      [cohesion, cfg.cohesion / 1e3],
+      [dilatancyAngle, cfg.dilatancyAngle],
+      [nonlocalLength, cfg.nonlocalLength],
+      [initStress, cfg.initiationStress / 1e3],
+      [delayTime, cfg.delayTime],
+      [ductility, cfg.ductility],
+      [maxSteps, cfg.maxSteps, maxStepsRange],
+      [substeps, cfg.substeps],
+      [workers, cfg.workers]
+    ];
+    fields.forEach(([control, value, slider]) => {
+      control.value = String(value);
+      if (slider) slider.value = String(value);
+    });
+    notchShape.value = cfg.notchShape;
+    plotMode.value = cfg.plotMode;
+    constitutiveModel.value = cfg.constitutiveModel;
+    enablePlasticity.checked = cfg.enablePlasticity;
+    enableDamage.checked = cfg.enableDamage;
+    presetSelect.value = 'imported';
+    updateGeometryPreview();
+  }
+  async function stageLispImport() {
+    resetPresetStage('Memvalidasi file...');
+    const file = presetImportFile.files && presetImportFile.files[0];
+    if (!file) return resetPresetStage('Pilih file .lisp terlebih dahulu.');
+    if (!file.name.toLowerCase().endsWith('.lisp') ||
+        file.size > presetModuleApi.MAX_FILE_BYTES)
+      return resetPresetStage('File harus .lisp dengan ukuran maksimal 128 KiB.');
+    try {
+      if (isRunning) throw new Error('Hentikan simulasi sebelum melakukan import.');
+      const schema = await schemaReady;
+      if (!schema) throw new Error('Schema tidak tersedia.');
+      const content = await file.text();
+      const plan = presetModuleApi.previewImport(collectSimulationParams(),
+        customModelSource.value, content, presetImportMode.value, schema);
+      stagedImportText = content;
+      stagedImportPlan = plan;
+      stagedSnapshot = currentPresetSnapshot(schema);
+      const changes = plan.changes.map(change =>
+        change.key + ': ' + String(change.before) + ' => ' + String(change.after));
+      presetImportPreview.textContent =
+        'Modules: ' + plan.ids.join(', ') + '\n' +
+        'Mode: ' + plan.mode + (plan.complete ? '\nComplete preset: yes' : '\nComplete preset: no') +
+        '\nChanges (' + changes.length + '):\n' +
+        (changes.join('\n') || '(tidak ada perbedaan)');
+      btnApplyPresetImport.disabled = changes.length === 0;
+    } catch (err) {
+      resetPresetStage('Import ditolak: ' + err.message);
+    }
+  }
+  presetImportFile.addEventListener('change', stageLispImport);
+  presetImportMode.addEventListener('change', stageLispImport);
+  document.getElementById('btnCancelPresetImport').addEventListener('click', () => {
+    presetImportFile.value = '';
+    resetPresetStage('Import dibatalkan. Konfigurasi lama tetap tersimpan.');
+  });
+  btnApplyPresetImport.addEventListener('click', async () => {
+    if (!stagedImportPlan || !stagedImportText) return;
+    try {
+      if (isRunning) throw new Error('Simulasi masih berjalan.');
+      const schema = await schemaReady;
+      if (!schema) throw new Error('Schema tidak tersedia.');
+      if (stagedSnapshot !== currentPresetSnapshot(schema))
+        throw new Error('Parameter berubah setelah preview. Pilih file lagi untuk preview ulang.');
+      applyImportedConfiguration(stagedImportPlan.nextConfig);
+      customModelSource.value = stagedImportPlan.nextSource;
+      appendLog('[Preset] Applied modules: ' + stagedImportPlan.ids.join(', '));
+      resetPresetStage('Import berhasil diterapkan (tanpa menjalankan kode Lisp).');
+      presetImportFile.value = '';
+    } catch (err) {
+      resetPresetStage('Import tidak diterapkan: ' + err.message);
+    }
+  });
+  document.getElementById('btnExportModules').addEventListener('click', async () => {
+    try {
+      const schema = await schemaReady;
+      if (!schema) throw new Error('Schema tidak tersedia.');
+      const ids = Array.from(document.querySelectorAll('.preset-module:checked'))
+        .map(input => input.value);
+      const output = presetModuleApi.exportModules(ids, collectSimulationParams(),
+        customModelSource.value, schema);
+      downloadText(ids.length === 1 ? ids[0] + '.lisp' : 'selected-modules.lisp', output);
+      resetPresetStage('Export modul selesai: ' + ids.join(', '));
+    } catch (err) {
+      resetPresetStage('Export gagal: ' + err.message);
+    }
+  });
+  document.getElementById('btnExportFullPreset').addEventListener('click', async () => {
+    try {
+      const schema = await schemaReady;
+      if (!schema) throw new Error('Schema tidak tersedia.');
+      const output = presetModuleApi.exportFullPreset(
+        collectSimulationParams(), customModelSource.value, schema);
+      downloadText('full-studio-preset.lisp', output);
+      resetPresetStage('Preset lengkap berhasil diekspor. Dapat diimpor kembali melalui panel ini.');
+    } catch (err) {
+      resetPresetStage('Export gagal: ' + err.message);
+    }
+  });
+
   async function handleRunSimulation() {
     console.log('[CL-MPM] handleRunSimulation triggered');
     if (isRunning) return;
