@@ -38,17 +38,17 @@
       'cl-mpm/particle::particle-chalk-delayed
       :E (param config "E")
       :nu (param config "nu")
-      :enable-plasticity t
+      :enable-plasticity (param config "enablePlasticity")
       :friction-angle friction
       :phi (deg->rad friction)
-      :psi 0d0
-      :c 1000d3
+      :psi (deg->rad (param config "dilatancyAngle"))
+      :c (param config "cohesion")
       :initiation-stress (param config "initiationStress")
       :delay-time (param config "delayTime")
       :ductility (param config "ductility")
       :critical-damage 1d0
       :damage-domain-rate 0.5d0
-      :local-length (* 3d0 (sqrt 7d0))
+      :local-length (param config "nonlocalLength")
       :local-length-damaged 1d-9
       :gravity -9.8d0
       :gravity-axis (cl-mpm/utils:vector-from-list '(0d0 1d0 0d0))))))
