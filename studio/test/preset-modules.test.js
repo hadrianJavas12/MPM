@@ -98,3 +98,12 @@ test('malformed, trailing and incomplete file declarations cannot partly apply',
   assert.throws(() => api.inspectImport(moduleFile('output', ['(param :plotMode :stress)']) + '(print :bad)'), /trailing/i);
   assert.throws(() => api.previewImport(defaults, '', moduleFile('solver', ['(param :workers 4)']), 'invalid'), /merge or replace/);
 });
+
+test('full preset export refuses missing executable model source', () => {
+  assert.throws(() => api.exportFullPreset({
+    ...defaults, constitutiveModel: 'custom'
+  }, ''), /requires nonempty constitutive source/i);
+  assert.ok(api.exportModules(['geometry'], {
+    ...defaults, constitutiveModel: 'custom'
+  }, '').includes(':geometry'));
+});
