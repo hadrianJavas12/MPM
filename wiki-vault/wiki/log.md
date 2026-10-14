@@ -16,3 +16,12 @@ project and architecture cross-links and index. Kept historical Windows-port
 claims attributed; superseded unknown CI cause with the confirmed billing lock.
 Recorded 33 passing Node/SBCL contract tests and explicitly open full-engine,
 browser and scientific gates. Normalized wikilink sources as YAML strings.
+
+## [2026-10-14] ingest | Modular Lisp I/O and full preset portability
+
+User requested import/export of individual parts, multiple selected parts and
+complete simulation presets in addition to the GUI workflow. Wrote design
+spec `docs/MODULAR_LISP_IO.md`, opened GitHub issue #5, updated AI handover,
+Studio docs and agent guidance; added [[studio-modular-lisp-io]] and indexed
+it. Status remains proposed, not implemented. Existing custom source import
+and generated simulation runner export stay separate. Raw archive unchanged.
