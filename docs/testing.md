@@ -21,6 +21,28 @@ CI requires them. There are no npm runtime dependencies.
 | Three SBCL contract tests | Real reader/compiler/CLOS; production config/loader; delegate/elastic dispatch; missing/stale/invalid methods and stresses; exports from paths with spaces | JSON parser, matrices, Quicklisp and runner are explicit stubs; no MPM solver |
 | `scripts/studio-custom-smoke.lisp` | Real engine, two steps, built-in/delegate dispatch and finite/matching positions/stresses, VTK | No calibration, long-run benchmark or mesh convergence |
 
+## Modular Lisp I/O — new draft PR #6
+
+Feature branch: `feat/studio-modular-lisp-presets`. Added
+`studio/test/preset-modules.test.js` with **11** regression cases:
+partial-module isolation, selected-module import from a full file, Merge vs Replace, multi-module staging,
+full Unicode/source round-trip, inert rejection of arbitrary reader
+syntax, bounds, duplicate/unknown keys, output completeness and
+malformed/trailing input and exact schema ownership.
+
+On 2026-10-14 these 11 test cases were **executed in an isolated V8 harness**
+with explicit assertion and UTF-8 compatibility stubs: **11 passed**.
+Syntax checks for the changed JS files and the HTML control/script
+binding contract also passed static inspection. This evidence is
+**not the same as running `npm test` under native Node.js**, does not
+constitute browser end-to-end automation, and does not exercise SBCL
+solver physics. Run `cd studio && npm run check && npm test` on the
+checked-out branch when the toolchain is available.
+
+See [PRESETS.md](../studio/PRESETS.md) for the exact declarative file
+format; imported .lisp configuration is parsed as inert data, never
+loaded/evaluated.
+
 ## Full Windows toolchain
 
 From the repository root with the complete installation:

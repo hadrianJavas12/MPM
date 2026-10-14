@@ -45,7 +45,9 @@ simulation.
 - `studio/GEOMETRY.md` — cliff/notch coordinates, preview limitations
 - `studio/MATERIAL.md` — constitutive parameters and units
 - `studio/CUSTOM_MODELS.md` — CLOS extension contract, editor, export, security
-- `docs/MODULAR_LISP_IO.md` — **planned** selective module .lisp I/O and complete preset import/export (issue #5; not shipped)
+- `docs/MODULAR_LISP_IO.md` — modular Lisp I/O design and remaining feature roadmap (issue #5)
+- `studio/PRESETS.md` — v1 declarative module/preset import/export workflow on `feat/studio-modular-lisp-presets`
+- `studio/public/preset-modules.js` — strict non-evaluating module format/parser/preview; no arbitrary Lisp execution
 - `studio/schema.json` — shared param keys/defaults/units
 - `studio/lisp/scenario.lisp` and `runner.lisp` — actual simulation creation/run
 - `studio/public/app.js` and `model-workspace.js` — frontend workflow

@@ -82,6 +82,22 @@ must never auto-execute. See [MODULAR_LISP_IO.md](MODULAR_LISP_IO.md) and
 The existing editable custom-model.lisp and generated simulation.lisp export
 are **not** equivalent to a general preset importer.
 
+## Modular declarative Lisp preset manager (unmerged feature branch)
+
+In the left panel open **Import / Export Modul .lisp & Preset**. Export one or
+more selected configuration modules, or a single full preset with all currently
+supported schema values and the optional inert custom source. Import requires
+an exact versioned format; preview the diff, then choose Merge or Replace and
+confirm. Only imported modules change. The parser never executes imported Lisp
+or accepts general Common Lisp programs.
+
+Available now in branch `feat/studio-modular-lisp-presets`: Geometry,
+Materials, Solver, Output and Constitutive Source. Boundary/loading/phases,
+multimaterial zones and advanced output adapters remain planned. A generated
+`simulation.lisp` is a **runnable script**, while the new preset `.lisp`
+is **importable non-executing data**. See [PRESETS.md](../studio/PRESETS.md),
+[the modular design](MODULAR_LISP_IO.md) and [issue #5](https://github.com/hadrianJavas12/MPM/issues/5).
+
 ## Output (`output/studio/`)
 `config.json`, `vtk/mesh.vtk` + `vtk/sim_NNNNN.vtk`, `frames/frame_NNNNN.png`, `video.mp4`.
 

@@ -41,6 +41,7 @@
           <option value="undercut">Steep Undercut Cliff (10m Notch + 15° Angle)</option>
           <option value="elastic">Elastic Gravity Settle (Tanpa Retak)</option>
           <option value="quick">Preview Cepat (Low Res, 10 Step)</option>
+          <option value="imported">Imported / Custom (Current)</option>
         </select>
       </div>
 
@@ -85,6 +86,45 @@
         <button class="param-tab" data-tab="mat">🪨 Material</button>
         <button class="param-tab" data-tab="solver">⚙️ Solver & Tampilan</button>
       </div>
+
+      <!-- Declarative Lisp module and preset manager (import is never executed). -->
+      <details id="presetWorkspace" style="padding:12px 16px;border-bottom:1px solid #334155">
+        <summary style="cursor:pointer;font-weight:700">📦 Import / Export Modul .lisp &amp; Preset</summary>
+        <div style="display:grid;gap:10px;margin-top:12px;font-size:13px">
+          <small>Export modul tertentu atau preset lengkap. Import menggunakan parser data deklaratif,
+            tidak pernah menjalankan kode Lisp.</small>
+          <fieldset style="border:1px solid #475569;border-radius:7px;padding:8px">
+            <legend>Pilih modul untuk diekspor</legend>
+            <label><input class="preset-module" type="checkbox" value="geometry" checked> Geometry / Notch</label>
+            <label><input class="preset-module" type="checkbox" value="materials"> Material</label>
+            <label><input class="preset-module" type="checkbox" value="solver"> Solver</label>
+            <label><input class="preset-module" type="checkbox" value="output"> Output</label>
+            <label><input class="preset-module" type="checkbox" value="constitutive-source"> Custom Lisp source</label>
+          </fieldset>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <button class="btn btn-secondary" id="btnExportModules" type="button">Export Modul Terpilih</button>
+            <button class="btn btn-secondary" id="btnExportFullPreset" type="button">Export Preset Lengkap</button>
+          </div>
+          <label style="display:flex;gap:6px;align-items:start">
+            <input type="checkbox" id="presetImportSelectedOnly">
+            Import hanya modul yang dicentang di atas (meskipun file memuat preset lengkap)
+          </label>
+          <label for="presetImportFile">Import modul atau preset (.lisp)</label>
+          <input id="presetImportFile" type="file" accept=".lisp,text/plain">
+          <label for="presetImportMode">Strategi import</label>
+          <select id="presetImportMode" class="studio-select">
+            <option value="merge">Merge — hanya field yang ada pada file</option>
+            <option value="replace">Replace — reset hanya modul yang diimpor</option>
+          </select>
+          <pre id="presetImportPreview" role="status" aria-live="polite"
+               style="white-space:pre-wrap;overflow-wrap:anywhere;max-height:230px;overflow:auto;padding:10px;background:#0b1729;color:#d9efff;border-radius:6px">Pilih file .lisp untuk melihat perubahan sebelum diterapkan.</pre>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <button class="btn btn-primary" id="btnApplyPresetImport" type="button" disabled>Terapkan Import</button>
+            <button class="btn btn-secondary" id="btnCancelPresetImport" type="button">Batalkan</button>
+          </div>
+          <small>Modul di luar pilihan tidak diubah. Custom Lisp tetap tidak dieksekusi sampai user menyetujui run lokal.</small>
+        </div>
+      </details>
 
       <form id="configForm" class="parameter-form" novalidate onsubmit="return false;">
         <!-- TAB 1: Geometri & Mesh -->
@@ -630,6 +670,7 @@
 
   <script src="geometry.js"></script>
   <script src="config.js"></script>
+  <script src="preset-modules.js"></script>
   <script src="model-workspace.js"></script>
   <script src="app.js"></script>
 </body>

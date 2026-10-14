@@ -25,3 +25,33 @@ spec `docs/MODULAR_LISP_IO.md`, opened GitHub issue #5, updated AI handover,
 Studio docs and agent guidance; added [[studio-modular-lisp-io]] and indexed
 it. Status remains proposed, not implemented. Existing custom source import
 and generated simulation runner export stay separate. Raw archive unchanged.
+
+## [2026-10-14] ingest | Modular Lisp preset MVP implementation
+
+Reviewed the earlier [[studio-modular-lisp-io]] requirement and updated
+repo docs, AI handover and execution plan. New feature branch
+`feat/studio-modular-lisp-presets` implements strictly declarative
+geometry/material/solver/output/constitutive source modules, selected or
+whole-preset .lisp I/O, inert source restoration, staged preview, merge/replace
+and atomic Apply/Cancel. Updated [[studio-modular-lisp-io]] and wiki index.
+Eight new Node regression cases authored; isolated V8 checks, not full hosted
+CI/Windows SBCL/browser physics tests. Kept vault raw sources immutable.
+
+## [2026-10-14] query | Draft PR #6 and 9 modular preset tests
+
+[PR #6](https://github.com/hadrianJavas12/MPM/pull/6) opened on
+`feat/studio-modular-lisp-presets` stacked on #4. Hardened full-preset
+custom source requirements, browser apply rollback and trailing-form errors.
+Updated [[studio-modular-lisp-io]] and docs/testing.md. All nine modular
+regression cases passed via an isolated V8 harness (not native npm/CI);
+Windows SBCL physics, browser automation and CI are still unverified.
+Raw historical sources remain immutable.
+
+## [2026-10-14] query | Full-preset selective import and 11 regression checks
+
+Extended [[studio-modular-lisp-io]] with a checked-module filter when importing
+complete/multi-module .lisp files, preserving unrelated modules. Strengthened
+schema ownership and no-incomplete-custom-preset guarantees. 11/11 modular
+regression cases passed in the isolated V8 harness; syntax and frontend
+binding checks passed. Full native npm, browser, CI and Windows SBCL physics
+remain open. Updated docs, handover and [PR #6](https://github.com/hadrianJavas12/MPM/pull/6).

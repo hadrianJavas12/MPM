@@ -1,6 +1,23 @@
 # Modular Lisp I/O and full preset portability
 
-**Status: SPECIFICATION ONLY — NOT IMPLEMENTED.** User requirement recorded on 2026-10-14. Existing custom-model .lisp source import/export and runnable simulation.lisp export are separate from the new *selective* module import/export feature.
+**Status: v1 MVP IMPLEMENTED on the unmerged branch `feat/studio-modular-lisp-presets`, broader roadmap still open.** User requirement recorded on 2026-10-14. Existing custom-model .lisp source import/export and runnable simulation.lisp export are separate from the new declarative *selective* module import/export feature.
+
+## Implemented v1 (2026-10-14)
+
+The new **`studio/public/preset-modules.js`** module contains a strict,
+non-executing, line-oriented Lisp-shaped parser, explicit schema-key ownership,
+deterministic per-module/selected-module/full-preset exports, merge/replace
+staging with diffs, default handling and dependency checks. The Studio UI now
+provides Import, Export selected modules, Export full preset, **selective
+import from a multi-module/full preset** and **preview before Apply**. Full presets include the inert custom constitutive source in a
+`source-hex` UTF-8 payload. See [studio/PRESETS.md](../studio/PRESETS.md)
+and `studio/test/preset-modules.test.js`.
+
+**Not implemented yet:** BC/loading/phases as editable modules, additional
+material zones, arbitrary legacy Lisp parsing, multi-file ZIP/manifest
+packaging, browser automation and full Windows/SBCL physics validation.
+The v1 full-preset file is declarative data importable by Studio, **not**
+an SBCL-executable `simulation.lisp` script.
 
 ## Product principle
 
