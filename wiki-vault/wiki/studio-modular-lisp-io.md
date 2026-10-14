@@ -43,8 +43,10 @@ never invokes SBCL or evaluates Common Lisp. Unrecognized legacy scripts
 are refused. See `studio/PRESETS.md` and
 `docs/EXECUTION_PLAN_MODULAR_PRESETS.md`.
 
-Validation: new Node test cases authored, syntax and isolated V8 checks
-performed. Hosted CI still blocked by account billing; no full Windows
+Validation: **9/9 modular regression cases passed in a V8 isolate** with
+explicit UTF-8/assertion stubs; JavaScript syntax and UI element binding
+checks performed. Draft [PR #6](https://github.com/hadrianJavas12/MPM/pull/6)
+is based on PR #4. Native Node tests remain to be run. Hosted CI still blocked by account billing; no full Windows
 SBCL or browser/physics verification. The boundary/loading/phases,
 multi-material and advanced output modules are future milestones.
 
