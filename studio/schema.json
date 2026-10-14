@@ -214,6 +214,15 @@
       "max": 1000,
       "unit": "m",
       "label": "Non-local damage interaction length"
+    },
+    "constitutiveModel": {
+      "type": "enum",
+      "default": "chalk",
+      "values": [
+        "chalk",
+        "custom"
+      ],
+      "label": "Constitutive model selection"
     }
   }
 }
