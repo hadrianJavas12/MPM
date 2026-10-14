@@ -24,14 +24,14 @@ CI requires them. There are no npm runtime dependencies.
 ## Modular Lisp I/O — new draft PR #6
 
 Feature branch: `feat/studio-modular-lisp-presets`. Added
-`studio/test/preset-modules.test.js` with **9** regression cases:
-partial-module isolation, Merge vs Replace, multi-module staging,
+`studio/test/preset-modules.test.js` with **11** regression cases:
+partial-module isolation, selected-module import from a full file, Merge vs Replace, multi-module staging,
 full Unicode/source round-trip, inert rejection of arbitrary reader
 syntax, bounds, duplicate/unknown keys, output completeness and
-malformed/trailing input.
+malformed/trailing input and exact schema ownership.
 
-On 2026-10-14 these test cases were **executed in an isolated V8 harness**
-with explicit assertion and UTF-8 compatibility stubs: **9 passed**.
+On 2026-10-14 these 11 test cases were **executed in an isolated V8 harness**
+with explicit assertion and UTF-8 compatibility stubs: **11 passed**.
 Syntax checks for the changed JS files and the HTML control/script
 binding contract also passed static inspection. This evidence is
 **not the same as running `npm test` under native Node.js**, does not
