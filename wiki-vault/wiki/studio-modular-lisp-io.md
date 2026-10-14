@@ -43,9 +43,11 @@ never invokes SBCL or evaluates Common Lisp. Unrecognized legacy scripts
 are refused. See `studio/PRESETS.md` and
 `docs/EXECUTION_PLAN_MODULAR_PRESETS.md`.
 
-Validation: **9/9 modular regression cases passed in a V8 isolate** with
+Validation: **11/11 modular regression cases passed in a V8 isolate** with
 explicit UTF-8/assertion stubs; JavaScript syntax and UI element binding
-checks performed. Draft [PR #6](https://github.com/hadrianJavas12/MPM/pull/6)
+checks performed. Users can also select only Geometry/Materials/etc
+from within one complete preset file; unchecked modules are preserved.
+Draft [PR #6](https://github.com/hadrianJavas12/MPM/pull/6)
 is based on PR #4. Native Node tests remain to be run. Hosted CI still blocked by account billing; no full Windows
 SBCL or browser/physics verification. The boundary/loading/phases,
 multi-material and advanced output modules are future milestones.
