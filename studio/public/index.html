@@ -165,7 +165,7 @@
               <input type="range" id="notchDepthRange" min="0" max="30" step="0.5" value="0">
               <input type="number" id="notchDepth" value="0" min="0" max="50" step="any">
             </div>
-            <small>Kedalaman torehan horizontal masuk ke dalam tebing (0 = otomatis 2x tinggi).</small>
+            <small>Kedalaman torehan horizontal masuk ke dalam tebing (0 = otomatis 1,5x tinggi).</small>
           </div>
 
           <div class="form-group">
@@ -210,8 +210,8 @@
             </div>
             <select id="mpsPerCell" class="studio-select">
               <option value="1">1 partikel / cell</option>
-              <option value="2" selected>2 partikel / cell (Standar)</option>
-              <option value="4">4 partikel / cell (Akurasi Tinggi)</option>
+              <option value="2" selected>2 per sumbu = 4 partikel / cell (Standar)</option>
+              <option value="4">4 per sumbu = 16 partikel / cell (Detail)</option>
             </select>
           </div>
           <div class="form-group geometry-preview-panel">
@@ -265,6 +265,41 @@
             </div>
             <input type="number" id="initStress" value="200" min="10" max="5000" step="any">
             <small>Kuat tarik / kohesi awal batuan (default: 200 kPa).</small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="cohesion">Kohesi Plastik (c)</label>
+              <span class="unit-badge">kPa</span>
+            </div>
+            <input type="number" id="cohesion" value="1000" min="0" max="20000" step="any">
+            <small>Parameter yield surface Mohr–Coulomb; bukan sama dengan tegangan inisiasi retak.</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="dilatancyAngle">Sudut Dilatansi Plastik (ψ)</label>
+              <span class="unit-badge">derajat (°)</span>
+            </div>
+            <input type="number" id="dilatancyAngle" value="0" min="0" max="45" step="any">
+            <small>Kontrol non-associated plastic flow. Gunakan nilai yang terkalibrasi (umumnya ψ ≤ φ).</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="nonlocalLength">Panjang Interaksi Non-lokal</label>
+              <span class="unit-badge">meter</span>
+            </div>
+            <input type="number" id="nonlocalLength" value="7.937253933193772" min="0.05" max="1000" step="any">
+            <small>Radius regularisasi damage; sensitif terhadap mesh dan ukuran partikel.</small>
+          </div>
+          <div class="form-toggle-row">
+            <label class="toggle-switch">
+              <input type="checkbox" id="enablePlasticity" checked>
+              <span class="toggle-slider"></span>
+            </label>
+            <div class="toggle-text">
+              <span class="toggle-title">Plastisitas Material</span>
+              <small>Nonaktifkan untuk respons tanpa plastic-flow; damage dikontrol terpisah.</small>
+            </div>
           </div>
 
           <div class="form-group">
@@ -346,7 +381,7 @@
               <span class="unit-badge">core</span>
             </div>
             <input type="number" id="workers" value="4" min="1" max="16" step="1">
-            <small>Jumlah thread OpenMP / lparallel worker.</small>
+            <small>Jumlah worker lparallel yang digunakan oleh solver.</small>
           </div>
 
         </div>

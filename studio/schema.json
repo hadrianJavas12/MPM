@@ -185,6 +185,35 @@
       "max": 0.85,
       "unit": "-",
       "label": "Triangular notch tip height / notch height"
+    },
+    "enablePlasticity": {
+      "type": "boolean",
+      "default": true,
+      "label": "Enable plastic deformation"
+    },
+    "cohesion": {
+      "type": "number",
+      "default": 1000000,
+      "min": 0,
+      "max": 20000000,
+      "unit": "Pa",
+      "label": "Mohr-Coulomb cohesion"
+    },
+    "dilatancyAngle": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 45,
+      "unit": "deg",
+      "label": "Plastic dilation angle"
+    },
+    "nonlocalLength": {
+      "type": "number",
+      "default": 7.937253933193772,
+      "min": 0.05,
+      "max": 1000,
+      "unit": "m",
+      "label": "Non-local damage interaction length"
     }
   }
 }

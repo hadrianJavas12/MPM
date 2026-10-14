@@ -40,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const modulusE = document.getElementById('modulusE');
   const nu = document.getElementById('nu');
   const frictionAngle = document.getElementById('frictionAngle');
+  const cohesion = document.getElementById('cohesion');
+  const dilatancyAngle = document.getElementById('dilatancyAngle');
+  const nonlocalLength = document.getElementById('nonlocalLength');
+  const enablePlasticity = document.getElementById('enablePlasticity');
   const initStress = document.getElementById('initStress');
   const ductility = document.getElementById('ductility');
   const delayTime = document.getElementById('delayTime');
@@ -108,6 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
       frictionAngle: 40,
       initStress: 200,
       ductility: 10,
+      cohesion: 1000,
+      dilatancyAngle: 0,
+      nonlocalLength: 3 * Math.sqrt(7),
+      enablePlasticity: true,
       delayTime: 10,
       density: 1700,
       enableDamage: true,
@@ -133,6 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
       frictionAngle: 40,
       initStress: 200,
       ductility: 10,
+      cohesion: 1000,
+      dilatancyAngle: 0,
+      nonlocalLength: 3 * Math.sqrt(7),
+      enablePlasticity: true,
       delayTime: 10,
       density: 1700,
       enableDamage: true,
@@ -158,6 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
       frictionAngle: 40,
       initStress: 200,
       ductility: 10,
+      cohesion: 1000,
+      dilatancyAngle: 0,
+      nonlocalLength: 3 * Math.sqrt(7),
+      enablePlasticity: true,
       delayTime: 10,
       density: 1700,
       enableDamage: true,
@@ -183,6 +199,10 @@ document.addEventListener('DOMContentLoaded', () => {
       frictionAngle: 45,
       initStress: 1000,
       ductility: 20,
+      cohesion: 1000,
+      dilatancyAngle: 0,
+      nonlocalLength: 3 * Math.sqrt(7),
+      enablePlasticity: false,
       delayTime: 10,
       density: 1800,
       enableDamage: false,
@@ -208,6 +228,10 @@ document.addEventListener('DOMContentLoaded', () => {
       frictionAngle: 40,
       initStress: 200,
       ductility: 10,
+      cohesion: 1000,
+      dilatancyAngle: 0,
+      nonlocalLength: 3 * Math.sqrt(7),
+      enablePlasticity: true,
       delayTime: 10,
       density: 1700,
       enableDamage: true,
@@ -314,6 +338,10 @@ document.addEventListener('DOMContentLoaded', () => {
     frictionAngle.value = p.frictionAngle;
     initStress.value = p.initStress;
     ductility.value = p.ductility;
+    cohesion.value = p.cohesion;
+    dilatancyAngle.value = p.dilatancyAngle;
+    nonlocalLength.value = p.nonlocalLength;
+    enablePlasticity.checked = p.enablePlasticity;
     delayTime.value = p.delayTime;
     density.value = p.density;
     enableDamage.checked = p.enableDamage;
@@ -451,6 +479,10 @@ document.addEventListener('DOMContentLoaded', () => {
       E: (parseFloat(modulusE.value) || 1.0) * 1e9,
       nu: parseFloat(nu.value) || 0.35,
       frictionAngle: parseFloat(frictionAngle.value) || 40,
+      cohesion: Number(cohesion.value) * 1e3,
+      dilatancyAngle: Number(dilatancyAngle.value),
+      nonlocalLength: Number(nonlocalLength.value),
+      enablePlasticity: enablePlasticity.checked,
       initiationStress: (parseFloat(initStress.value) || 200) * 1e3,
       ductility: parseFloat(ductility.value) || 10,
       density: parseFloat(density.value) || 1700,
