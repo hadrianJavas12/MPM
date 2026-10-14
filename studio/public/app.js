@@ -688,8 +688,17 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!schema) throw new Error('Schema tidak tersedia.');
       if (stagedSnapshot !== currentPresetSnapshot(schema))
         throw new Error('Parameter berubah setelah preview. Pilih file lagi untuk preview ulang.');
-      applyImportedConfiguration(stagedImportPlan.nextConfig);
-      customModelSource.value = stagedImportPlan.nextSource;
+      const previousConfig = window.StudioConfig.normalize(collectSimulationParams(), schema);
+      const previousSource = customModelSource.value;
+      try {
+        applyImportedConfiguration(stagedImportPlan.nextConfig);
+        customModelSource.value = stagedImportPlan.nextSource;
+      } catch (applyError) {
+        // Restore all supported fields, not just the imported subset.
+        applyImportedConfiguration(previousConfig);
+        customModelSource.value = previousSource;
+        throw applyError;
+      }
       appendLog('[Preset] Applied modules: ' + stagedImportPlan.ids.join(', '));
       resetPresetStage('Import berhasil diterapkan (tanpa menjalankan kode Lisp).');
       presetImportFile.value = '';
