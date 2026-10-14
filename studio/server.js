@@ -24,7 +24,7 @@ const PORT = Number(process.env.STUDIO_PORT || 3000);
 const STUDIO_DIR = __dirname;
 const ROOT = path.resolve(STUDIO_DIR, '..');
 const PUBLIC_DIR = path.join(STUDIO_DIR, 'public');
-const RUN_DIR = path.join(ROOT, 'output', 'studio');
+const RUN_DIR = path.resolve(process.env.STUDIO_OUTPUT_DIR || path.join(ROOT, 'output', 'studio'));
 const FRAMES_DIR = path.join(RUN_DIR, 'frames');
 const VTK_DIR = path.join(RUN_DIR, 'vtk');
 const VIDEO_PATH = path.join(RUN_DIR, 'video.mp4');
@@ -205,12 +205,13 @@ function streamFile(req, res, filePath, contentType) {
 // --- API handlers ------------------------------------------------------------
 async function startRun(req, res) {
   if (state.running) return sendJson(res, 409, { error: 'A simulation is already running.' });
-  const config = validateConfig(await readJsonBody(req));
+  const payload = await readJsonBody(req);
+  // Check again AFTER reading the body: two requests may have awaited it together.
+  if (state.running) return sendJson(res, 409, { error: 'A simulation is already running.' });
+  if (videoBusy) return sendJson(res, 409, { error: 'Wait for video encoding to finish.' });
+  const config = validateConfig(payload);
 
-  await fsp.mkdir(RUN_DIR, { recursive: true });
-  await Promise.all([emptyDir(FRAMES_DIR), emptyDir(VTK_DIR), fsp.rm(VIDEO_PATH, { force: true })]);
-  await fsp.writeFile(CONFIG_PATH, JSON.stringify(config, null, 2), 'utf8');
-
+  // Acquire the run lock before the first filesystem await.
   Object.assign(state, {
     running: true,
     step: 0,
@@ -225,23 +226,38 @@ async function startRun(req, res) {
   stopRequested = false;
   addLog(`[studio] Launching: ${config.maxSteps} frames x ${config.substeps} steps, h=${config.meshSize} m, colour=${config.plotMode}`);
 
-  child = spawnCmd(LAUNCHER, [RUNNER, CONFIG_PATH, RUN_DIR]);
+  try {
+    await fsp.mkdir(RUN_DIR, { recursive: true });
+    await Promise.all([emptyDir(FRAMES_DIR), emptyDir(VTK_DIR), fsp.rm(VIDEO_PATH, { force: true })]);
+    await fsp.writeFile(CONFIG_PATH, JSON.stringify(config, null, 2), 'utf8');
+    child = spawnCmd(LAUNCHER, [RUNNER, CONFIG_PATH, RUN_DIR]);
+  } catch (err) {
+    state.running = false;
+    state.exitCode = -1;
+    state.statusText = `Failed to launch: ${err.message}`;
+    addLog(`[studio] ${state.statusText}`);
+    throw err;
+  }
   child.stdout.on('data', addLog);
   child.stderr.on('data', addLog);
-  child.on('error', (err) => addLog(`[studio] Failed to start: ${err.message}`));
+  let runnerError = null;
+  child.on('error', (err) => {
+    runnerError = err;
+    addLog(`[studio] Failed to start: ${err.message}`);
+  });
   child.on('close', (code) => {
     state.running = false;
-    state.exitCode = code;
+    state.exitCode = runnerError ? -1 : code;
     child = null;
     if (stopRequested) {
       state.statusText = 'Aborted by user';
-    } else if (code === 0) {
+    } else if (code === 0 && !runnerError) {
       state.percent = 100;
       state.statusText = 'Finished';
       addLog('[studio] Simulation finished.');
     } else {
-      state.statusText = `Failed (exit code ${code})`;
-      addLog(`[studio] Runner exited with code ${code}.`);
+      state.statusText = runnerError ? `Failed to start: ${runnerError.message}` : `Failed (exit code ${code})`;
+      addLog(`[studio] ${state.statusText}`);
     }
   });
   sendJson(res, 202, { ok: true, config });
@@ -256,30 +272,49 @@ function stopRun(res) {
 }
 
 async function makeVideo(req, res) {
-  if (videoBusy) return sendJson(res, 409, { error: 'A video is already being rendered.' });
   const body = await readJsonBody(req);
-  const fps = Math.min(60, Math.max(1, Math.round(Number(body.fps) || 15)));
-  const frames = (await listDir(FRAMES_DIR)).filter((f) => FRAME_RE.test(f));
-  if (frames.length === 0) return sendJson(res, 400, { error: 'No frames to encode. Run a simulation first.' });
+  if (state.running) return sendJson(res, 409, { error: 'Wait for the simulation to finish.' });
+  if (videoBusy) return sendJson(res, 409, { error: 'A video is already being rendered.' });
 
+  // Lock before reading the filesystem; a new run must not clear these frames.
   videoBusy = true;
-  addLog(`[studio] Encoding ${frames.length} frames at ${fps} fps...`);
-  const proc = spawnCmd(MAKE_VIDEO, [FRAMES_DIR, String(fps), VIDEO_PATH]);
-  let output = '';
-  proc.stdout.on('data', (d) => (output += d));
-  proc.stderr.on('data', (d) => (output += d));
-  proc.on('close', (code) => {
-    videoBusy = false;
-    const tail = output.trim().split(/\r?\n/).slice(-5).join('\n');
-    if (code === 0) {
-      addLog('[studio] Video ready: output/studio/video.mp4');
-      sendJson(res, 200, { ok: true, videoUrl: '/api/video' });
-    } else {
+  try {
+    const fps = Math.min(60, Math.max(1, Math.round(Number(body.fps) || 15)));
+    const frames = (await listDir(FRAMES_DIR)).filter((f) => FRAME_RE.test(f));
+    if (frames.length === 0) {
+      videoBusy = false;
+      return sendJson(res, 400, { error: 'No frames to encode. Run a simulation first.' });
+    }
+
+    addLog(`[studio] Encoding ${frames.length} frames at ${fps} fps...`);
+    const proc = spawnCmd(MAKE_VIDEO, [FRAMES_DIR, String(fps), VIDEO_PATH]);
+    let output = '';
+    let finished = false;
+    proc.stdout.on('data', (d) => (output += d));
+    proc.stderr.on('data', (d) => (output += d));
+    const finish = (code, err) => {
+      if (finished) return; // spawn errors may be followed by a close event.
+      finished = true;
+      videoBusy = false;
+      const tail = output.trim().split(/\r?\n/).slice(-5).join('\n');
+      if (err) {
+        addLog(`[studio] Video encoder could not start: ${err.message}`);
+        return sendJson(res, 500, { error: `Video encoder could not start: ${err.message}` });
+      }
+      if (code === 0) {
+        addLog('[studio] Video ready: output/studio/video.mp4');
+        return sendJson(res, 200, { ok: true, videoUrl: '/api/video' });
+      }
       addLog(`[studio] Video encoding failed (exit ${code}).`);
       addLog(tail);
-      sendJson(res, 500, { error: `ffmpeg failed (exit ${code})`, output: tail });
-    }
-  });
+      return sendJson(res, 500, { error: `ffmpeg failed (exit ${code})`, output: tail });
+    };
+    proc.on('error', (err) => finish(-1, err));
+    proc.on('close', (code) => finish(code, null));
+  } catch (err) {
+    videoBusy = false;
+    throw err;
+  }
 }
 
 async function listFrames(res) {
@@ -359,9 +394,14 @@ function shutdown() {
 process.on('SIGINT', shutdown);
 process.on('SIGTERM', shutdown);
 
-server.listen(PORT, HOST, () => {
-  console.log('CL-MPM Studio');
-  console.log(`  UI:      http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}`);
-  console.log(`  Output:  ${RUN_DIR}`);
-  console.log('Press Ctrl+C to stop.');
-});
+if (require.main === module) {
+  server.listen(PORT, HOST, () => {
+    console.log('CL-MPM Studio');
+    console.log(`  UI:      http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}`);
+    console.log(`  Output:  ${RUN_DIR}`);
+    console.log('Press Ctrl+C to stop.');
+  });
+}
+
+// Export the server without binding a port, allowing dependency-free API tests.
+module.exports = { server, validateConfig };
