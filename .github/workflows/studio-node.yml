@@ -1,0 +1,26 @@
+name: Studio Node checks
+
+on:
+  push:
+    branches:
+      - main
+      - 'fix/**'
+      - 'feat/**'
+  pull_request:
+
+jobs:
+  studio:
+    name: Validate Studio UI and API
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax checks
+        working-directory: studio
+        run: npm run check
+      - name: Unit and lightweight API tests
+        working-directory: studio
+        run: npm test
