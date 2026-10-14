@@ -69,6 +69,19 @@ Read [the custom-model contract](../studio/CUSTOM_MODELS.md),
 The preview and stress-interface checks do not establish scientific validity
 or reproduce the complete Joss Bay collapse procedure.
 
+## Planned: import/export chosen Lisp modules or entire preset
+
+Requested workflow (not yet implemented): import/export Geometry, Materials,
+Solver, Boundary/Loading, Simulation Phases or Output as separate .lisp modules;
+select multiple modules; or import/export the **complete preset** with manifest
+and custom source dependencies. Import must show a preview and support safe
+Merge vs Replace without modifying unrelated modules. Arbitrary imported Lisp
+must never auto-execute. See [MODULAR_LISP_IO.md](MODULAR_LISP_IO.md) and
+[issue #5](https://github.com/hadrianJavas12/MPM/issues/5).
+
+The existing editable custom-model.lisp and generated simulation.lisp export
+are **not** equivalent to a general preset importer.
+
 ## Output (`output/studio/`)
 `config.json`, `vtk/mesh.vtk` + `vtk/sim_NNNNN.vtk`, `frames/frame_NNNNN.png`, `video.mp4`.
 
