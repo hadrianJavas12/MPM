@@ -29,8 +29,17 @@
   function schemaRequired(schema) {
     const result = schema === undefined ? defaultSchema : schema;
     if (!result || typeof result !== 'object') throw new Error('Preset schema is required.');
-    for (const keys of Object.values(GROUPS))
-      for (const key of keys) if (!result[key]) throw new Error('Schema missing: ' + key);
+    const owners = new Set();
+    for (const keys of Object.values(GROUPS)) {
+      for (const key of keys) {
+        if (!Object.prototype.hasOwnProperty.call(result, key))
+          throw new Error('Schema missing: ' + key);
+        if (owners.has(key)) throw new Error('Duplicate module owner for key: ' + key);
+        owners.add(key);
+      }
+    }
+    for (const key of Object.keys(result))
+      if (!owners.has(key)) throw new Error('Unassigned schema key: ' + key);
     return result;
   }
   function byteSize(s) { return new TextEncoder().encode(s).length; }
