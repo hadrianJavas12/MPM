@@ -83,7 +83,11 @@
       parts.join('\n\n') + '\n(end-preset)\n';
   }
   function exportFullPreset(input, source = '', schema) {
-    return exportModules(IDS, input, source, schema);
+    const specs = schemaRequired(schema);
+    const config = configApi.normalize(input || {}, specs);
+    if (config.constitutiveModel === 'custom' && (!source || !source.trim()))
+      throw new Error('Full preset requires nonempty constitutive source for custom model.');
+    return exportModules(IDS, config, source, specs);
   }
   function parseValue(token, spec, key) {
     if (spec.type === 'boolean') {
