@@ -29,6 +29,12 @@ const FRAMES_DIR = path.join(RUN_DIR, 'frames');
 const VTK_DIR = path.join(RUN_DIR, 'vtk');
 const VIDEO_PATH = path.join(RUN_DIR, 'video.mp4');
 const CONFIG_PATH = path.join(RUN_DIR, 'config.json');
+const CUSTOM_MODEL_PATH = path.join(RUN_DIR, 'custom-model.lisp');
+// Arbitrary Lisp has OS-level privileges. NEVER enable on a remote server.
+const CUSTOM_LISP_ENABLED =
+  process.env.STUDIO_ALLOW_CUSTOM_LISP === '1' &&
+  ['127.0.0.1', 'localhost', '::1'].includes(HOST);
+const MAX_CUSTOM_SOURCE_BYTES = 32 * 1024;
 const LAUNCHER = path.join(ROOT, 'windows', 'cl-mpm.cmd');
 const MAKE_VIDEO = path.join(ROOT, 'windows', 'make-video.cmd');
 const RUNNER = path.join(STUDIO_DIR, 'lisp', 'run.lisp');
@@ -204,12 +210,35 @@ function streamFile(req, res, filePath, contentType) {
 
 // --- API handlers ------------------------------------------------------------
 async function startRun(req, res) {
+  // Reject browser cross-origin requests and non-JSON forms before parsing.
+  const origin = req.headers.origin;
+  const expectedOrigin = `http://${req.headers.host}`;
+  if (origin && origin !== expectedOrigin)
+    return sendJson(res, 403, { error: 'Cross-origin simulation requests are not permitted.' });
+  if (!/^application\/json(?:\s*;|\s*$)/i.test(req.headers['content-type'] || ''))
+    return sendJson(res, 415, { error: 'Content-Type must be application/json.' });
   if (state.running) return sendJson(res, 409, { error: 'A simulation is already running.' });
   const payload = await readJsonBody(req);
   // Check again AFTER reading the body: two requests may have awaited it together.
   if (state.running) return sendJson(res, 409, { error: 'A simulation is already running.' });
   if (videoBusy) return sendJson(res, 409, { error: 'Wait for video encoding to finish.' });
   const config = validateConfig(payload);
+  const isCustom = config.constitutiveModel === 'custom';
+  let customSource = null;
+  if (isCustom) {
+    if (!CUSTOM_LISP_ENABLED) return sendJson(res, 403, {
+      error: 'Custom Lisp execution is disabled. Run Studio on loopback with STUDIO_ALLOW_CUSTOM_LISP=1 to opt in.',
+    });
+    if (payload.confirmCustomExecution !== true) return sendJson(res, 403, {
+      error: 'Explicit confirmation is required to execute user Lisp.',
+    });
+    if (typeof payload.customModelSource !== 'string' || !payload.customModelSource.trim() ||
+        payload.customModelSource.includes('\0') ||
+        Buffer.byteLength(payload.customModelSource, 'utf8') > MAX_CUSTOM_SOURCE_BYTES) {
+      return sendJson(res, 400, { error: 'Supply a nonempty .lisp source of at most 32 KiB without NUL bytes.' });
+    }
+    customSource = payload.customModelSource;
+  }
 
   // Acquire the run lock before the first filesystem await.
   Object.assign(state, {
@@ -228,9 +257,17 @@ async function startRun(req, res) {
 
   try {
     await fsp.mkdir(RUN_DIR, { recursive: true });
-    await Promise.all([emptyDir(FRAMES_DIR), emptyDir(VTK_DIR), fsp.rm(VIDEO_PATH, { force: true })]);
+    await Promise.all([
+      emptyDir(FRAMES_DIR),
+      emptyDir(VTK_DIR),
+      fsp.rm(VIDEO_PATH, { force: true }),
+      fsp.rm(CUSTOM_MODEL_PATH, { force: true }),
+    ]);
     await fsp.writeFile(CONFIG_PATH, JSON.stringify(config, null, 2), 'utf8');
-    child = spawnCmd(LAUNCHER, [RUNNER, CONFIG_PATH, RUN_DIR]);
+    if (isCustom) await fsp.writeFile(CUSTOM_MODEL_PATH, customSource, { mode: 0o600 });
+    child = spawnCmd(LAUNCHER, [
+      RUNNER, CONFIG_PATH, RUN_DIR, ...(isCustom ? [CUSTOM_MODEL_PATH] : []),
+    ]);
   } catch (err) {
     state.running = false;
     state.exitCode = -1;
@@ -357,6 +394,12 @@ async function route(req, res) {
 
   if (method === 'GET' && pathname === '/api/status') return sendJson(res, 200, state);
   if (method === 'GET' && pathname === '/api/schema') return sendJson(res, 200, SCHEMA);
+  if (method === 'GET' && pathname === '/api/custom-model-capabilities')
+    return sendJson(res, 200, {
+      enabled: CUSTOM_LISP_ENABLED,
+      maxSourceBytes: MAX_CUSTOM_SOURCE_BYTES,
+      warning: 'Lisp code is executed with the local user privileges; no sandbox is provided.',
+    });
   if (method === 'GET' && pathname === '/api/logs') {
     const since = Math.max(logBuffer.firstSeq, Number(searchParams.get('since')) || 0);
     const lines = logBuffer.lines.slice(since - logBuffer.firstSeq);
@@ -404,4 +447,4 @@ if (require.main === module) {
 }
 
 // Export the server without binding a port, allowing dependency-free API tests.
-module.exports = { server, validateConfig };
+module.exports = { server, validateConfig, CUSTOM_LISP_ENABLED };
