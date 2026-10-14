@@ -1,8 +1,8 @@
 # AI coding instructions for CL-MPM Studio
 
 **Before editing, read the project's canonical guidance:**
-- [AGENTS.md](../../AGENTS.md) — expected workflow and non-negotiable constraints.
-- [docs/AI_HANDOVER.md](../../docs/AI_HANDOVER.md) — full mission, PR stack,
+- [AGENTS.md](../AGENTS.md) — expected workflow and non-negotiable constraints.
+- [docs/AI_HANDOVER.md](../docs/AI_HANDOVER.md) — full mission, PR stack,
   architecture, scientific limitations, test status and next steps.
 
 Develop the existing Common Lisp Material Point Method engine and Windows
