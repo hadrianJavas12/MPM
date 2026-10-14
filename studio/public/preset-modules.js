@@ -169,11 +169,21 @@
     const ids = modules.map(x => x.id);
     return { version: VERSION, modules, ids, complete: IDS.every(id => ids.includes(id)) };
   }
-  function previewImport(current, currentSource, text, mode = 'merge', schema) {
+  function previewImport(current, currentSource, text, mode = 'merge', schema, selectedIds = null) {
     const specs = schemaRequired(schema);
     if (mode !== 'merge' && mode !== 'replace')
       throw new Error('Import mode must be merge or replace.');
-    const parsed = inspectImport(text, specs);
+    const parsedFile = inspectImport(text, specs);
+    let parsed = parsedFile;
+    if (selectedIds !== null) {
+      if (!Array.isArray(selectedIds) || !selectedIds.length ||
+          new Set(selectedIds).size !== selectedIds.length ||
+          selectedIds.some(id => !parsedFile.ids.includes(id)))
+        throw new Error('Selected import modules must exist in the file.');
+      const modules = parsedFile.modules.filter(module => selectedIds.includes(module.id));
+      parsed = { ...parsedFile, modules, ids: modules.map(module => module.id),
+        complete: IDS.every(id => selectedIds.includes(id)), fileComplete: parsedFile.complete };
+    }
     const before = configApi.normalize(current || {}, specs);
     const nextConfig = { ...before };
     checkSource(currentSource);
