@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const frictionAngle = document.getElementById('frictionAngle');
   const initStress = document.getElementById('initStress');
   const ductility = document.getElementById('ductility');
+  const delayTime = document.getElementById('delayTime');
   const density = document.getElementById('density');
   const enableDamage = document.getElementById('enableDamage');
   const maxStepsRange = document.getElementById('maxStepsRange');
@@ -102,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
       frictionAngle: 40,
       initStress: 200,
       ductility: 10,
+      delayTime: 10,
       density: 1700,
       enableDamage: true,
       maxSteps: 50,
@@ -124,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       frictionAngle: 40,
       initStress: 200,
       ductility: 10,
+      delayTime: 10,
       density: 1700,
       enableDamage: true,
       maxSteps: 50,
@@ -146,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       frictionAngle: 40,
       initStress: 200,
       ductility: 10,
+      delayTime: 10,
       density: 1700,
       enableDamage: true,
       maxSteps: 50,
@@ -168,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       frictionAngle: 45,
       initStress: 1000,
       ductility: 20,
+      delayTime: 10,
       density: 1800,
       enableDamage: false,
       maxSteps: 30,
@@ -190,6 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
       frictionAngle: 40,
       initStress: 200,
       ductility: 10,
+      delayTime: 10,
       density: 1700,
       enableDamage: true,
       maxSteps: 10,
@@ -267,6 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
     frictionAngle.value = p.frictionAngle;
     initStress.value = p.initStress;
     ductility.value = p.ductility;
+    delayTime.value = p.delayTime;
     density.value = p.density;
     enableDamage.checked = p.enableDamage;
     maxSteps.value = p.maxSteps; maxStepsRange.value = p.maxSteps;
@@ -408,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
       substeps: parseInt(substeps.value) || 10,
       plotMode: plotMode.value || 'stress',
       workers: parseInt(workers.value) || 4,
-      delayTime: 10
+      delayTime: Number(delayTime.value)
     };
 
     setRunningUI(true);
