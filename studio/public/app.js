@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const notchHeight = document.getElementById('notchHeight');
   const notchDepthRange = document.getElementById('notchDepthRange');
   const notchDepth = document.getElementById('notchDepth');
+  const notchShape = document.getElementById('notchShape');
+  const notchTipFraction = document.getElementById('notchTipFraction');
+  const geometryPreview = document.getElementById('geometryPreview');
   const undercutRange = document.getElementById('undercutRange');
   const undercut = document.getElementById('undercut');
   const soilBoundary = document.getElementById('soilBoundary');
@@ -94,6 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cliffSlope: 90,
       notchHeight: 0,
       notchDepth: 0,
+      notchShape: 'rectangle',
+      notchTipFraction: 0.5,
       undercut: 0,
       soilBoundary: 20,
       meshSize: "5.0",
@@ -117,6 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cliffSlope: 75,
       notchHeight: 0,
       notchDepth: 0,
+      notchShape: 'rectangle',
+      notchTipFraction: 0.5,
       undercut: 0,
       soilBoundary: 20,
       meshSize: "5.0",
@@ -140,6 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cliffSlope: 90,
       notchHeight: 10,
       notchDepth: 15,
+      notchShape: 'rectangle',
+      notchTipFraction: 0.5,
       undercut: 15,
       soilBoundary: 20,
       meshSize: "5.0",
@@ -163,6 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cliffSlope: 85,
       notchHeight: 0,
       notchDepth: 0,
+      notchShape: 'rectangle',
+      notchTipFraction: 0.5,
       undercut: 0,
       soilBoundary: 20,
       meshSize: "5.0",
@@ -186,6 +197,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cliffSlope: 80,
       notchHeight: 5,
       notchDepth: 8,
+      notchShape: 'rectangle',
+      notchTipFraction: 0.5,
       undercut: 0,
       soilBoundary: 15,
       meshSize: "10.0",
@@ -226,6 +239,32 @@ document.addEventListener('DOMContentLoaded', () => {
   syncInputs(modulusERange, modulusE);
   syncInputs(maxStepsRange, maxSteps);
 
+  // Live geometry previews Lisp's clipping predicates; it is not an MPM result.
+  function updateGeometryPreview() {
+    const raw = {
+      shelfHeight: Number(shelfHeight.value),
+      shelfAspect: Number(shelfAspect.value),
+      cliffSlope: Number(cliffSlope.value),
+      undercut: Number(undercut.value),
+      soilBoundary: Number(soilBoundary.value),
+      notchHeight: Number(notchHeight.value),
+      notchDepth: Number(notchDepth.value),
+      notchShape: notchShape.value,
+      notchTipFraction: Number(notchTipFraction.value)
+    };
+    notchTipFraction.disabled = notchShape.value !== 'triangle';
+    geometryPreview.innerHTML = window.CliffGeometry.previewMarkup(raw);
+  }
+
+  [shelfHeight, shelfHeightRange, shelfAspect, shelfAspectRange,
+   cliffSlope, cliffSlopeRange, undercut, undercutRange,
+   soilBoundary, notchHeight, notchHeightRange, notchDepth,
+   notchDepthRange, notchShape, notchTipFraction].forEach(control => {
+    control.addEventListener('input', updateGeometryPreview);
+    control.addEventListener('change', updateGeometryPreview);
+  });
+  updateGeometryPreview();
+
   // --- Tab Switching: Parameter Panel ---
   const paramTabs = document.querySelectorAll('.param-tab');
   paramTabs.forEach(tab => {
@@ -264,6 +303,9 @@ document.addEventListener('DOMContentLoaded', () => {
     cliffSlope.value = p.cliffSlope; cliffSlopeRange.value = p.cliffSlope;
     notchHeight.value = p.notchHeight; notchHeightRange.value = p.notchHeight;
     notchDepth.value = p.notchDepth; notchDepthRange.value = p.notchDepth;
+    notchShape.value = p.notchShape;
+    notchTipFraction.value = p.notchTipFraction;
+    updateGeometryPreview();
     undercut.value = p.undercut; undercutRange.value = p.undercut;
     soilBoundary.value = p.soilBoundary;
     meshSize.value = p.meshSize;
@@ -400,6 +442,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cliffSlope: parseFloat(cliffSlope.value) || 90,
       notchHeight: parseFloat(notchHeight.value) || 0,
       notchDepth: parseFloat(notchDepth.value) || 0,
+      notchShape: notchShape.value,
+      notchTipFraction: Number(notchTipFraction.value),
       soilBoundary: Number(soilBoundary.value),
       meshSize: parseFloat(meshSize.value) || 5.0,
       mpsPerCell: parseInt(mpsPerCell.value) || 2,
