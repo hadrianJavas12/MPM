@@ -105,6 +105,10 @@
             <button class="btn btn-secondary" id="btnExportModules" type="button">Export Modul Terpilih</button>
             <button class="btn btn-secondary" id="btnExportFullPreset" type="button">Export Preset Lengkap</button>
           </div>
+          <label style="display:flex;gap:6px;align-items:start">
+            <input type="checkbox" id="presetImportSelectedOnly">
+            Import hanya modul yang dicentang di atas (meskipun file memuat preset lengkap)
+          </label>
           <label for="presetImportFile">Import modul atau preset (.lisp)</label>
           <input id="presetImportFile" type="file" accept=".lisp,text/plain">
           <label for="presetImportMode">Strategi import</label>
