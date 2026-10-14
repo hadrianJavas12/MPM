@@ -115,6 +115,7 @@
     const modules = [];
     let finished = false;
     while (i < lines.length) {
+      if (!fullHeader && modules.length) throw new Error('Trailing expressions are not supported.');
       if (fullHeader && lines[i] === '(end-preset)') {
         finished = true;
         i++;
