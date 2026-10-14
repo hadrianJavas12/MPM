@@ -329,7 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
     notchDepth.value = p.notchDepth; notchDepthRange.value = p.notchDepth;
     notchShape.value = p.notchShape;
     notchTipFraction.value = p.notchTipFraction;
-    updateGeometryPreview();
     undercut.value = p.undercut; undercutRange.value = p.undercut;
     soilBoundary.value = p.soilBoundary;
     meshSize.value = p.meshSize;
@@ -350,6 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
     substeps.value = p.substeps;
     plotMode.value = p.plotMode;
     workers.value = p.workers;
+    updateGeometryPreview();
 
     appendLog(`[Preset] Loaded configuration preset: "${name.toUpperCase()}"`);
   }
