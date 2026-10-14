@@ -127,6 +127,25 @@
 
           <div class="form-group">
             <div class="label-row">
+              <label for="notchShape">Bentuk Sobekan Kaki Tebing</label>
+            </div>
+            <select id="notchShape" class="studio-select">
+              <option value="rectangle" selected>Persegi panjang (legacy)</option>
+              <option value="ellipse">Elips / lengkung</option>
+              <option value="triangle">Segitiga / runcing</option>
+            </select>
+            <small>Ketiga bentuk ini memotong partikel pada lokasi yang sama, dengan geometri berbeda.</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="notchTipFraction">Posisi Ujung Notch Segitiga</label>
+              <span class="unit-badge">rasio 0–1</span>
+            </div>
+            <input type="number" id="notchTipFraction" value="0.5" min="0.15" max="0.85" step="0.05">
+            <small>0.5 = ujung tepat di tengah tinggi notch. Hanya untuk bentuk segitiga.</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
               <label for="notchHeight">Tinggi Undercut (Notch Height)</label>
               <span class="unit-badge">meter</span>
             </div>
@@ -151,14 +170,14 @@
 
           <div class="form-group">
             <div class="label-row">
-              <label for="undercut">Sudut Torehan Undercut (&theta;)</label>
+              <label for="undercut">Sudut Overhang Muka Tebing (&theta;)</label>
               <span class="unit-badge">derajat (°)</span>
             </div>
             <div class="slider-input-row">
               <input type="range" id="undercutRange" min="0" max="45" step="0.5" value="0">
               <input type="number" id="undercut" value="0" min="0" max="60" step="any">
             </div>
-            <small>Sudut kemiringan bidang torehan erosi pada bagian dasar tebing.</small>
+            <small>Sudut tambahan kemiringan muka tebing (bukan sudut notch). Bentuk notch diatur terpisah.</small>
           </div>
 
           <div class="form-group">
@@ -194,6 +213,17 @@
               <option value="2" selected>2 partikel / cell (Standar)</option>
               <option value="4">4 partikel / cell (Akurasi Tinggi)</option>
             </select>
+          </div>
+          <div class="form-group geometry-preview-panel">
+            <div class="label-row">
+              <strong>Preview Penampang Geometri</strong>
+              <span class="unit-badge">perkiraan 2D</span>
+            </div>
+            <svg id="geometryPreview" viewBox="0 0 900 360" role="img"
+                 aria-label="Pratinjau domain tebing dan rongga notch"
+                 style="display:block;width:100%;height:auto;border-radius:8px;min-height:150px;background:#0d1d35"></svg>
+            <small>Pratinjau berupa sampling fungsi geometri; bukan hasil material points ataupun perhitungan MPM.
+              Sebaiknya ukuran notch lebih besar dari resolusi mesh.</small>
           </div>
         </div>
 
@@ -523,6 +553,7 @@
     </section>
   </main>
 
+  <script src="geometry.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
