@@ -269,6 +269,41 @@
 
           <div class="form-group">
             <div class="label-row">
+              <label for="cohesion">Kohesi Plastik (c)</label>
+              <span class="unit-badge">kPa</span>
+            </div>
+            <input type="number" id="cohesion" value="1000" min="0" max="20000" step="any">
+            <small>Parameter yield surface Mohr–Coulomb; bukan sama dengan tegangan inisiasi retak.</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="dilatancyAngle">Sudut Dilatansi Plastik (ψ)</label>
+              <span class="unit-badge">derajat (°)</span>
+            </div>
+            <input type="number" id="dilatancyAngle" value="0" min="0" max="45" step="any">
+            <small>Kontrol non-associated plastic flow. Gunakan nilai yang terkalibrasi (umumnya ψ ≤ φ).</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="nonlocalLength">Panjang Interaksi Non-lokal</label>
+              <span class="unit-badge">meter</span>
+            </div>
+            <input type="number" id="nonlocalLength" value="7.937253933193772" min="0.05" max="1000" step="any">
+            <small>Radius regularisasi damage; sensitif terhadap mesh dan ukuran partikel.</small>
+          </div>
+          <div class="form-toggle-row">
+            <label class="toggle-switch">
+              <input type="checkbox" id="enablePlasticity" checked>
+              <span class="toggle-slider"></span>
+            </label>
+            <div class="toggle-text">
+              <span class="toggle-title">Plastisitas Material</span>
+              <small>Nonaktifkan untuk respons tanpa plastic-flow; damage dikontrol terpisah.</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
               <label for="ductility">Daktilitas (softening)</label>
               <span class="unit-badge">-</span>
             </div>
