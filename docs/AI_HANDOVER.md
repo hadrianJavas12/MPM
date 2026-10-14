@@ -14,6 +14,7 @@ The user wants to:
 3. Change the **physical constitutive response**, first through material controls and then through author-authored **Common Lisp methods**.
 4. **Import/edit/export `.lisp`** files, including a custom model and a script reproducing the Studio run.
 5. Eventually obtain trustworthy **damage / crack development / cliff collapse / runout** simulations that can be checked against research reference cases.
+6. **Import/export selected Lisp modules or entire simulation presets**, independently of GUI editing: Geometry, Materials, Constitutive Source, Boundary Conditions, Loading, Solver, Simulation Phases and Output. A partial import must not overwrite unrelated modules; preview, merge/replace, safety and round-trip portability are required. See [MODULAR_LISP_IO.md](MODULAR_LISP_IO.md) and [issue #5](https://github.com/hadrianJavas12/MPM/issues/5). **Planned, not implemented.**
 
 **Critical distinction:** the user explicitly said this project is **not related to their thesis**. Never redirect the project to an unrelated thesis, machine-learning project, or geotechnical sensor optimisation. Keep the user's intended focus on this MPM simulator.
 
@@ -214,6 +215,13 @@ Report new discoveries as **confirmed by code**, **observed by tests**, or **hyp
 - Introduce dynamic relaxation / accelerate / collapse phases by tracing original `examples/chalk/joss.lisp`, not by inventing behaviour.
 - Build reference-case benchmarks: geometry, mass balance, stable timestep, crack path, displacement, runout, parameter sensitivity and mesh refinement. Document the source/reference numbers and tolerance.
 
+### Priority 1b — modular Lisp import/export and full preset portability (new user request)
+- Track [issue #5](https://github.com/hadrianJavas12/MPM/issues/5) and [MODULAR_LISP_IO.md](MODULAR_LISP_IO.md). It is a **backlog requirement**, not a shipped Studio feature.
+- Implement versioned, declarative, non-executing .lisp modules with explicit per-module ownership (Geometry, Materials, BCs, Loading, Solver, Phases, Output and Constitutive Source).
+- Add partial or multi-module import/export, before/after preview, merge vs replace, compatibility checks and atomic application without resetting unselected modules.
+- Add **full preset import and export**, including configuration, metadata and custom-model source dependencies, with deterministic round-trip tests and UI parity. Never execute arbitrary Lisp upon import.
+- Roll out scalar parameter modules first; BC/loading/phases/multi-material support requires matching engine adapters and numerical tests.
+
 ### Priority 3 — usability/research workflow
 - Version and export complete simulation manifests/config, code, VTK/CSV, metadata and run logs.
 - Add robust run IDs, failure recovery, progress reporting and user-facing guidance.
@@ -254,6 +262,8 @@ At **handoff/end**:
 - **2026-10-14:** Existing repository ported toward native-Windows use with CL-MPM Studio; PR #1 lifecycle + API fixes; PR #2 geometrical notch selection/preview; PR #3 chalk material controls; PR #4 custom Lisp editor, opt-in local CLOS model execution and export. All four PRs remain open drafts; GitHub Actions failures remain unresolved; end-to-end SBCL physics tests not performed in these AI sessions. Handover documentation created on the PR #4 branch.
 
 - **2026-10-14 follow-up hardening:** Implementation commit [`52c5ed7`](https://github.com/hadrianJavas12/MPM/commit/52c5ed7c68985703f845b1331d389aab36664124). Reviewed baseline `95ded55` and PR stack. Added shared `public/config.js` normalization; schema-complete exports through `load-custom-model`; dedicated `custom-model.lisp` class/loader/finite-stress guard; stale/partial primary-method cleanup; corrected elastic stress/history handling and per-particle damage flags; Lisp decimal/rounding/boolean coercion parity; character/escaped-symbol lexical handling; robust import errors/reimport; API confirmation/body/Host/origin/run-lock regression tests. Added real-engine Windows smoke script (not executed). **33 tests passed**, including real SBCL compilation/reader/CLOS with explicit dependency stubs. CI billing lock confirmed again for run `38512583746` / check `115684219301` through annotations; Windows physics/browser gates remain open. Updated documentation and Obsidian/LLM Wiki, preserving historical sources and appending the log. Branch remains `feat/studio-custom-constitutive-lisp-export`, PR #4 draft; `main` and the numerical engine are unchanged.
+
+- **2026-10-14 modular portability requirement:** User additionally requested UI + selective .lisp import/export (individual, multiple selected modules) and full preset import/export. Defined proposed contract in [MODULAR_LISP_IO.md](MODULAR_LISP_IO.md) and opened [issue #5](https://github.com/hadrianJavas12/MPM/issues/5). This is documentation/roadmap only; existing code imports custom constitutive source and exports runnable scripts but does not provide a general module/preset import manager. Preserve no-execution-on-import and unselected-module isolation. 
 
 ### Useful navigation
 
