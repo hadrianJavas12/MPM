@@ -3,6 +3,11 @@
 (when (find-system :asdf-system-connections)
   (asdf:oos 'asdf:load-op :asdf-system-connections))
 
+;; Platforms without a native MPI runtime (Windows) use a serial stand-in for
+;; "cl-mpm/mpi" (src/mpi/serial.lisp). Push :cl-mpm-no-mpi yourself before
+;; loading this file to get the same behaviour elsewhere.
+#+win32 (pushnew :cl-mpm-no-mpi *features*)
+
 ;; (defsystem "symbolic-derivation"
 ;;   :description "Symbolic derivation library from #TODO"
 ;;   :author "Aleksander Ksiazek"
@@ -20,7 +25,10 @@
 
 
 (defsystem "cl-mpm/magicl"
-  :depends-on ("magicl")
+  :depends-on ("magicl"
+               ;; Expokit needs a Fortran-compiled shared library; it is only
+               ;; used by dead code (generate-rotation-matrix), so skip it on Windows.
+               (:feature (:not :win32) "magicl/ext-expokit"))
   :description "Dummy package that can be used to prune magicl dependancies, i.e. lisp only implementation")
 
 (defsystem "cl-mpm/utils"
@@ -216,6 +224,7 @@
        (:file "algorithms")))))))
 
 
+#-cl-mpm-no-mpi
 (defsystem "cl-mpm/dynamic-relaxation-mpi"
   :depends-on ("cl-mpm/dynamic-relaxation"
                "cl-mpm/mpi")
@@ -286,6 +295,14 @@
   :components ((:file "src/solvers/usf")
                (:file "src/solvers/usl")
                (:file "src/solvers/musl")))
+#+cl-mpm-no-mpi
+(defsystem "cl-mpm/mpi"
+  :depends-on ("cl-mpm"
+               "cl-mpm/damage")
+  :description "Serial stand-in for the MPI layer (no cl-mpi / MPI runtime required)"
+  :components ((:file "src/mpi/serial")))
+
+#-cl-mpm-no-mpi
 (defsystem "cl-mpm/mpi"
   :depends-on ("cl-mpm"
                "lfarm-client"
@@ -574,6 +591,7 @@
   :depends-on ("cl-mpm"
                "cl-mpm/setup"
                "cl-mpm/particle"
+               "cl-mpm/models/chalk"
                "cl-mpm/output"
                "cl-mpm/buoyancy"
                "cl-mpm/penalty"
@@ -788,7 +806,7 @@
 
 
 
-#+asdf-system-connections
+#+(and asdf-system-connections (not cl-mpm-no-mpi))
 (defsystem-connection "cl-mpm/dynamic-relaxation-mpi"
   :requires ("cl-mpm/dynamic-relaxation" "cl-mpm/mpi")
   :components ((:file "src/dynamic-relaxation/mpi/solvers")))

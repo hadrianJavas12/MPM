@@ -97,11 +97,14 @@
                 ;; :rho 1d6
                 :enable-plasticity t
 
-                :ft 200d3
-                :fc 500d3
+                ;; :ft / :fc / :fracture-energy are not slots of
+                ;; particle-chalk-delayed (invalid initargs -> error);
+                ;; softening is controlled by :ductility instead.
+                ;; :ft 200d3
+                ;; :fc 500d3
                 :friction-angle 40d0
 
-                :fracture-energy 3000d0
+                ;; :fracture-energy 3000d0
                 :initiation-stress 200d3
                 :delay-time 1d1
                 :ductility 10d0

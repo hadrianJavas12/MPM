@@ -12,9 +12,6 @@
 *.dat
 /.vscode
 /output
-/outframes
-/openblas
-/quicklisp
 /libs/eigen_src
 *.mp4
 
@@ -23,5 +20,10 @@ mpi-worker
 ]
 2
 *.swp
-simulation_config.lisp
 *.csv
+
+# Windows port / tooling
+/toolchain/
+/.tmp/
+/windows/env.local.cmd
+/studio/node_modules/

@@ -239,11 +239,11 @@
 
           <div class="form-group">
             <div class="label-row">
-              <label for="fractureEnergy">Energi Fraktur (G_f)</label>
-              <span class="unit-badge">J/m²</span>
+              <label for="ductility">Daktilitas (softening)</label>
+              <span class="unit-badge">-</span>
             </div>
-            <input type="number" id="fractureEnergy" value="3000" min="100" max="20000" step="any">
-            <small>Energi pelepasan retakan (softening law).</small>
+            <input type="number" id="ductility" value="10" min="1" max="100" step="any">
+            <small>Semakin besar, semakin lambat material melunak setelah puncak.</small>
           </div>
 
           <div class="form-group">
@@ -481,10 +481,10 @@
             <div class="vtk-guide-card">
               <div class="guide-badge">ParaView Ready</div>
               <h3>Visualisasi Partikel 3D & Tensor Tegangan</h3>
-              <p>Rangkaian file <code>.vtk</code> disimpan di folder <code>D:\MPM\output\</code>. Anda dapat membukanya secara interaktif di ParaView untuk melihat pemodelan 3D, memotong bidang slice, atau menganalisis medan strain tensor.</p>
+              <p>Rangkaian file <code>.vtk</code> disimpan di folder <code>output\studio\vtk\</code>. Anda dapat membukanya secara interaktif di ParaView untuk melihat pemodelan 3D, memotong bidang slice, atau menganalisis medan strain tensor.</p>
               <ol class="guide-steps">
                 <li>Buka ParaView lalu pilih <strong>File &rarr; Open</strong>.</li>
-                <li>Buka folder <code>D:\MPM\output\</code> dan pilih sequence <strong><code>sim_..vtk</code></strong>.</li>
+                <li>Buka folder <code>output\studio\vtk\</code> dan pilih sequence <strong><code>sim_..vtk</code></strong>.</li>
                 <li>Klik tombol <strong>Apply</strong>, lalu ubah pewarnaan menjadi <code>damage</code> atau <code>velocity</code>.</li>
               </ol>
             </div>

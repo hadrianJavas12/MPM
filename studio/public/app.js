@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const nu = document.getElementById('nu');
   const frictionAngle = document.getElementById('frictionAngle');
   const initStress = document.getElementById('initStress');
-  const fractureEnergy = document.getElementById('fractureEnergy');
+  const ductility = document.getElementById('ductility');
   const density = document.getElementById('density');
   const enableDamage = document.getElementById('enableDamage');
   const maxStepsRange = document.getElementById('maxStepsRange');
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let playInterval = null;
   let frameList = [];
   let currentFrameIndex = -1;
-  let lastLogCount = 0;
+  let lastLogSeq = 0;
 
   // --- Presets Definition ---
   const PRESETS = {
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nu: 0.35,
       frictionAngle: 40,
       initStress: 200,
-      fractureEnergy: 3000,
+      ductility: 10,
       density: 1700,
       enableDamage: true,
       maxSteps: 50,
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nu: 0.35,
       frictionAngle: 40,
       initStress: 200,
-      fractureEnergy: 3000,
+      ductility: 10,
       density: 1700,
       enableDamage: true,
       maxSteps: 50,
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nu: 0.35,
       frictionAngle: 40,
       initStress: 200,
-      fractureEnergy: 3000,
+      ductility: 10,
       density: 1700,
       enableDamage: true,
       maxSteps: 50,
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nu: 0.30,
       frictionAngle: 45,
       initStress: 1000,
-      fractureEnergy: 5000,
+      ductility: 20,
       density: 1800,
       enableDamage: false,
       maxSteps: 30,
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nu: 0.35,
       frictionAngle: 40,
       initStress: 200,
-      fractureEnergy: 3000,
+      ductility: 10,
       density: 1700,
       enableDamage: true,
       maxSteps: 10,
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nu.value = p.nu;
     frictionAngle.value = p.frictionAngle;
     initStress.value = p.initStress;
-    fractureEnergy.value = p.fractureEnergy;
+    ductility.value = p.ductility;
     density.value = p.density;
     enableDamage.checked = p.enableDamage;
     maxSteps.value = p.maxSteps; maxStepsRange.value = p.maxSteps;
@@ -306,15 +306,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       updateEngineState(data);
 
-      // Fetch logs
-      const logRes = await fetch('/api/logs');
+      // Fetch new log lines (cursor based: server returns {lines, next})
+      const logRes = await fetch(`/api/logs?since=${lastLogSeq}`);
       if (logRes.ok) {
         const logData = await logRes.json();
-        if (Array.isArray(logData.logs) && logData.logs.length > lastLogCount) {
-          const newEntries = logData.logs.slice(lastLogCount);
-          lastLogCount = logData.logs.length;
-          newEntries.forEach(line => appendLog(line.trim()));
+        if (Array.isArray(logData.lines)) {
+          logData.lines.forEach(line => appendLog(String(line).trim()));
         }
+        if (Number.isFinite(logData.next)) lastLogSeq = logData.next;
       }
 
       // If frames are being produced, refresh frames list
@@ -403,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nu: parseFloat(nu.value) || 0.35,
       frictionAngle: parseFloat(frictionAngle.value) || 40,
       initiationStress: (parseFloat(initStress.value) || 200) * 1e3,
-      fractureEnergy: parseFloat(fractureEnergy.value) || 3000,
+      ductility: parseFloat(ductility.value) || 10,
       density: parseFloat(density.value) || 1700,
       enableDamage: enableDamage.checked,
       maxSteps: parseInt(maxSteps.value) || 10,
@@ -414,7 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     setRunningUI(true);
-    lastLogCount = 0;
+    lastLogSeq = 0;
     progressBarFill.style.width = '0%';
     progressText.textContent = `0% (0 / ${payload.maxSteps} steps)`;
     etaText.textContent = 'Memulai proses...';
@@ -601,7 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Video creation failed');
 
-      appendLog(`[Video] Success! Video created at D:\\MPM\\simulation_video.mp4`);
+      appendLog(`[Video] Success! Video created (${data.videoUrl || '/api/video'})`);
       
       // Switch to video pane
       document.querySelector('.vtab[data-vtab="video"]').click();
@@ -632,7 +631,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const files = data.files || [];
 
       if (files.length === 0) {
-        vtkFileList.innerHTML = '<div class="empty-hint">Belum ada file .vtk di folder D:\\MPM\\output\\</div>';
+        vtkFileList.innerHTML = `<div class="empty-hint">Belum ada file .vtk di folder ${data.directory || 'output/studio/vtk'}</div>`;
         return;
       }
 

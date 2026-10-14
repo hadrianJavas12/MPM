@@ -1421,15 +1421,14 @@
                                 (if (= *workers-pool-age* current-age)
                                   (progn
                                     (unless *workers-kill*
-                                      (handler-bind
-                                          ((error (lambda (c)
-                                                    (sb-thread:with-mutex (*worker-error-lock*)
-                                                      (format t "Thread threw error: ~a (name ~a)~%" c (ignore-errors (cell-error-name c)))
-                                                      (sb-debug:print-backtrace :count 15)
-                                                      (push c *worker-error-list*)))))
-                                        (let ((iter (sb-ext:atomic-incf (aref *workers-counter* 0))))
-                                          (when (< iter *workers-chunk-count*)
-                                            (ignore-errors (funcall *workers-func* iter)))))
+                                      (handler-case
+                                          (let ((iter (sb-ext:atomic-incf (aref *workers-counter* 0))))
+                                            (when (< iter *workers-chunk-count*)
+                                              (funcall *workers-func* iter)))
+                                        (error (c)
+                                          (sb-thread:with-mutex (*worker-error-lock*)
+                                            (format t "Thread threw error: ~a~%" c)
+                                            (push c *worker-error-list*))))
                                       ;; (print "cleanup unexpected thread termination")
                                       ;; (setf *workers-nesting* nil)
                                       ;; (setf *workers-kill* t)
