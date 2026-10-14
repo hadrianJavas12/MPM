@@ -64,15 +64,35 @@ Prints one \"Step k/N\" line per frame; studio/server.js parses these."
       (sleep 1)
       sim)))
 
+(defun load-custom-model (path)
+  "Load an explicitly approved user Lisp file from disk.
+This is NOT a sandbox. Studio's HTTP server must opt in and run locally."
+  (unless (and path (probe-file path))
+    (error "Missing custom-model.lisp source file."))
+  (format t "~&Loading USER-SUPPLIED Lisp: ~A~%" (namestring path))
+  (finish-output)
+  (load path)
+  (let ((method (find-method
+                 #'cl-mpm/particle:constitutive-model
+                 '()
+                 (list (find-class 'studio-custom-chalk)
+                       (find-class 't)
+                       (find-class 't))
+                 nil)))
+    (unless method
+      (error "Custom file must define constitutive-model (studio-custom-chalk strain dt).")))
+  (format t "~&Custom constitutive model installed.~%")
+  (finish-output))
+
 (defun default-output-dir ()
   (asdf:system-relative-pathname "cl-mpm" "output/cliff/"))
 
 (defun main (args)
-  "Entry point. ARGS = ([config.json] [output-dir]).
+  "Entry point. ARGS = ([config.json] [output-dir] [custom-model.lisp]).
 Without a config every parameter takes its schema default; the output
 directory defaults to the config file's directory, else output/cliff/.
 Returns a process exit code."
-  (destructuring-bind (&optional config-path output-dir) args
+  (destructuring-bind (&optional config-path output-dir custom-path) args
     (handler-case
         (let* ((config-path (and config-path (uiop:parse-native-namestring config-path)))
                (config (load-config config-path))
@@ -80,6 +100,9 @@ Returns a process exit code."
                                               (uiop:parse-native-namestring output-dir)))
                                  (config-path (uiop:pathname-directory-pathname config-path))
                                  (t (default-output-dir)))))
+          (when (eq (param config "constitutiveModel") :custom)
+            (load-custom-model
+             (and custom-path (uiop:parse-native-namestring custom-path))))
           (run config output-dir)
           (format t "~&SUCCESS~%")
           0)
