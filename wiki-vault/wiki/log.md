@@ -46,3 +46,12 @@ Updated [[studio-modular-lisp-io]] and docs/testing.md. All nine modular
 regression cases passed via an isolated V8 harness (not native npm/CI);
 Windows SBCL physics, browser automation and CI are still unverified.
 Raw historical sources remain immutable.
+
+## [2026-10-14] query | Full-preset selective import and 11 regression checks
+
+Extended [[studio-modular-lisp-io]] with a checked-module filter when importing
+complete/multi-module .lisp files, preserving unrelated modules. Strengthened
+schema ownership and no-incomplete-custom-preset guarantees. 11/11 modular
+regression cases passed in the isolated V8 harness; syntax and frontend
+binding checks passed. Full native npm, browser, CI and Windows SBCL physics
+remain open. Updated docs, handover and [PR #6](https://github.com/hadrianJavas12/MPM/pull/6).
