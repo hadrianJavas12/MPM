@@ -36,3 +36,13 @@ whole-preset .lisp I/O, inert source restoration, staged preview, merge/replace
 and atomic Apply/Cancel. Updated [[studio-modular-lisp-io]] and wiki index.
 Eight new Node regression cases authored; isolated V8 checks, not full hosted
 CI/Windows SBCL/browser physics tests. Kept vault raw sources immutable.
+
+## [2026-10-14] query | Draft PR #6 and 9 modular preset tests
+
+[PR #6](https://github.com/hadrianJavas12/MPM/pull/6) opened on
+`feat/studio-modular-lisp-presets` stacked on #4. Hardened full-preset
+custom source requirements, browser apply rollback and trailing-form errors.
+Updated [[studio-modular-lisp-io]] and docs/testing.md. All nine modular
+regression cases passed via an isolated V8 harness (not native npm/CI);
+Windows SBCL physics, browser automation and CI are still unverified.
+Raw historical sources remain immutable.
