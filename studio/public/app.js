@@ -589,6 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const presetModuleApi = window.StudioPresetModules;
   const presetImportFile = document.getElementById('presetImportFile');
   const presetImportMode = document.getElementById('presetImportMode');
+  const presetImportSelectedOnly = document.getElementById('presetImportSelectedOnly');
   const presetImportPreview = document.getElementById('presetImportPreview');
   const btnApplyPresetImport = document.getElementById('btnApplyPresetImport');
   let stagedImportText = '';
@@ -657,8 +658,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const schema = await schemaReady;
       if (!schema) throw new Error('Schema tidak tersedia.');
       const content = await file.text();
+      const chosenIds = presetImportSelectedOnly.checked ?
+        Array.from(document.querySelectorAll('.preset-module:checked')).map(input => input.value) : null;
       const plan = presetModuleApi.previewImport(collectSimulationParams(),
-        customModelSource.value, content, presetImportMode.value, schema);
+        customModelSource.value, content, presetImportMode.value, schema, chosenIds);
       stagedImportText = content;
       stagedImportPlan = plan;
       stagedSnapshot = currentPresetSnapshot(schema);
@@ -676,6 +679,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   presetImportFile.addEventListener('change', stageLispImport);
   presetImportMode.addEventListener('change', stageLispImport);
+  presetImportSelectedOnly.addEventListener('change', () => {
+    if (presetImportFile.files && presetImportFile.files[0]) stageLispImport();
+  });
+  document.querySelectorAll('.preset-module').forEach(input => {
+    input.addEventListener('change', () => {
+      if (presetImportSelectedOnly.checked && presetImportFile.files && presetImportFile.files[0])
+        stageLispImport();
+    });
+  });
   document.getElementById('btnCancelPresetImport').addEventListener('click', () => {
     presetImportFile.value = '';
     resetPresetStage('Import dibatalkan. Konfigurasi lama tetap tersimpan.');
