@@ -254,6 +254,15 @@
             <input type="number" id="density" value="1700" min="500" max="3000" step="any">
           </div>
 
+          <div class="form-group">
+            <div class="label-row">
+              <label for="delayTime">Waktu Tunda Damage</label>
+              <span class="unit-badge">detik</span>
+            </div>
+            <input type="number" id="delayTime" value="10" min="0.01" max="10000" step="any">
+            <small>Waktu karakteristik evolusi damage (delay time).</small>
+          </div>
+
           <div class="form-toggle-row">
             <label class="toggle-switch">
               <input type="checkbox" id="enableDamage" checked>
@@ -310,16 +319,6 @@
             <small>Jumlah thread OpenMP / lparallel worker.</small>
           </div>
 
-          <div class="form-toggle-row">
-            <label class="toggle-switch">
-              <input type="checkbox" id="clearFrames" checked>
-              <span class="toggle-slider"></span>
-            </label>
-            <div class="toggle-text">
-              <span class="toggle-title">Bersihkan Frame Lama</span>
-              <small>Hapus file PNG di outframes sebelum mulai baru</small>
-            </div>
-          </div>
         </div>
 
         <!-- Sticky Action Bar in Panel -->
