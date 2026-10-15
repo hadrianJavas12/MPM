@@ -1,0 +1,73 @@
+{
+  "dateLocal": "2026-10-16",
+  "result": "PASS",
+  "scientificValidation": false,
+  "scope": "Completed paired serial Joss before/after control; no new solver run",
+  "comparison": {
+    "unchangedScript": "scripts/compare-framework-runs.py",
+    "scriptSha256": "772bb84680f2dd041c23dd96dd0413da2ad836b44760912ceefece64a81d4f65",
+    "absoluteTolerance": 1e-08,
+    "relativeTolerance": 1e-07,
+    "interpolation": false,
+    "baselinePhysicalStates": 191,
+    "candidatePhysicalStates": 191,
+    "all191PhysicalVTKsByteIdentical": true,
+    "all193VTKsPerRunByteIdentical": true,
+    "positionMaxAbsDifferenceM": 0.0,
+    "allExportedFieldsMaxAbsDifference": 0.0,
+    "exportedScalarFieldsPerState": 36,
+    "allNumericCSVColumnsMaxAbsDifference": 0.0,
+    "timestepsCSVRowsIncludingSettle": 1849,
+    "transitionsCSVRows": 20,
+    "timestepsTransitionsAndMetadataByteIdentical": true
+  },
+  "invariantsEachRun": {
+    "nativeExitCode": 0,
+    "metadataComplete": true,
+    "termination": "simulation-time",
+    "physicalTimeS": 40.0,
+    "workers": 1,
+    "openblasThreads": 1,
+    "ompThreads": 1,
+    "particles": 4155,
+    "allExportedArraysFinite": true,
+    "massKgPerUnitDepth": 425664.0625,
+    "maximumRelativeMassDrift": 0.0,
+    "protectedBaseParticles": 496,
+    "maximumProtectedBaseDamage": 0.0
+  },
+  "provenance": {
+    "beforeFrozenOriginalCommit": "c749d32",
+    "afterExecutedSnapshotCommit": "41403f4df54f270f8d75288c252e0c9a0fdddca3",
+    "afterWrapperCompletionTimeHEAD": "909fddf31420d61fdea70ea720098ec457a0249e",
+    "clarification": "Before uses frozen original c749d32. After loaded the copied framework/case/input snapshot from launch commit 41403f4. The after wrapper computes git rev-parse HEAD only AFTER the solver exits, so its 909fddf status commit is completion-time repository HEAD, not the executed source snapshot. Full native dependency/FASL/DLL identity is outside the copied-source provenance claim. Earlier four-worker after uses 2f6476f and retains its separate strict FAIL.",
+    "beforeFrozenFilesMatchingExactGitBlobBytes": 21,
+    "beforeOriginalSnapshotManifestHashesVerified": true,
+    "afterSnapshotFilesMatchingExactGitBlobOrCheckoutBytes": 46,
+    "afterExactGitBlobBytes": 10,
+    "afterExactGitCheckoutFilteredBytes": 36,
+    "lineEndings": "The original snapshot uses canonical blob bytes. The after snapshot includes 10 blob-byte and 36 checkout-byte matches; core.autocrlf=true. Each file matches one exact representation of launch commit 41403f4.",
+    "nativeDependencyFaslDllIdentityIncluded": false
+  },
+  "earlierFourWorkerStrictResult": {
+    "result": "FAIL",
+    "baselinePhysicalStates": 176,
+    "candidatePhysicalStates": 191,
+    "beforeCommit": "c749d32",
+    "afterExecutedSnapshotCommit": "2f6476f",
+    "preserved": true,
+    "causeResolved": false
+  },
+  "evidence": {
+    "manifest": "docs/evidence/framework-refactor-2026-10-15/manifest.json",
+    "manifestEntriesVerified": 134,
+    "previousEntriesUnchanged": 114,
+    "previousSerialRunningStatusPreservedAs": "serial-control/launch-status.json",
+    "strictComparison": "docs/evidence/framework-refactor-2026-10-15/serial-control/strict-comparison.json.gz",
+    "independentAudit": "docs/evidence/framework-refactor-2026-10-15/serial-control/independent-audit.json.gz",
+    "independentAuditCompressedSha256": "fd028c85c90b915cc0086b2de4942df9237669f51b6e7c8d46c68127bb03921e",
+    "executedAfterSources": "docs/evidence/framework-refactor-2026-10-15/serial-control/executed-after-source.tar.gz",
+    "allFullLocalRunsAndSnapshotsPreserved": true
+  },
+  "interpretation": "The refactored and original runs are numerically and byte equivalent for this one-worker control. The four-worker strict failure remains; serial success does not isolate its cause or establish deterministic parallel operation. This is numerical regression evidence, not scientific/material/field validation."
+}

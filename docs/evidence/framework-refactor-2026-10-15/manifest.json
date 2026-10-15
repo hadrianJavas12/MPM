@@ -2118,9 +2118,481 @@
     },
     {
       "path": "serial-control/status.json",
+      "bytes": 6034,
+      "sha256": "9715dd76add6b3f5675bd3ee002dcc006d48504b032fafb39f58d3bb97579cef",
+      "source": null
+    },
+    {
+      "path": "serial-control/launch-status.json",
       "bytes": 585,
       "sha256": "a3f6072f43708d74cd626d7eee71a373e24272a0c5a3f706ddc15df152d50afb",
-      "source": "Serial-control execution plan; no runtime results"
+      "source": "docs\\evidence\\framework-refactor-2026-10-15\\serial-control\\status.json"
+    },
+    {
+      "path": "serial-control/before/timesteps.csv",
+      "bytes": 319169,
+      "sha256": "16456aab7be17638ab2df4f53531ca51dd9ccafa58df312c34e9daad0bdee7d9",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\timesteps.csv"
+    },
+    {
+      "path": "serial-control/before/reference-metadata.json",
+      "bytes": 2016,
+      "sha256": "de9669afe9f6edb33461fdaaa27c5e3bf14fd21b1ed7e95818dee0debdacb9dd",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\reference-metadata.json"
+    },
+    {
+      "path": "serial-control/before/transitions.csv",
+      "bytes": 1463,
+      "sha256": "d2fdb000fd1a7ec31a2a3222231aee09b21106fa2a50d48f9c9161da90931ece",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\transitions.csv"
+    },
+    {
+      "path": "serial-control/before/all-saved-state-audit.json",
+      "bytes": 434328,
+      "sha256": "b9d5a765bc6fee1697ed08b293fc13e8dcf1df08fd249950f15f9e2862373a8c",
+      "source": null
+    },
+    {
+      "path": "serial-control/before/particle-vtk.tar.gz",
+      "bytes": 2995017,
+      "sha256": "4bb4ebd3b79dbecb88985ac6cf66154e46f9520c09013c879adccbb45c66355f",
+      "source": null,
+      "members": [
+        {
+          "path": "vtk/equilibrium.vtk",
+          "bytes": 1298217,
+          "sha256": "0ef589b23c1be52ebca491382f8394120000ad498036b2fa3722d6e7c4cdc5e1",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\equilibrium.vtk"
+        },
+        {
+          "path": "vtk/initial.vtk",
+          "bytes": 1298217,
+          "sha256": "d8d0e90a78d865018f1bc5da7edd4b0b32a0136268eae4b25d64781814e0aad9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\initial.vtk"
+        },
+        {
+          "path": "vtk/sim_00001.vtk",
+          "bytes": 1298217,
+          "sha256": "36f2094d968fce3a6ae7cab64478dcbbf67f31e5666d89781e3e9a8439e7c702",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\sim_00001.vtk"
+        },
+        {
+          "path": "vtk/sim_00002.vtk",
+          "bytes": 1298217,
+          "sha256": "75981a525cbff829c594b6d81a322cb1b3ce75158b25c0b8a509b0f8b206557b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\sim_00002.vtk"
+        },
+        {
+          "path": "vtk/sim_00018.vtk",
+          "bytes": 1298217,
+          "sha256": "56c4d08ace61310caa3909ab4ffa1af61191151529c1128f376d2781dbeb5271",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\sim_00018.vtk"
+        },
+        {
+          "path": "vtk/sim_00191.vtk",
+          "bytes": 1298217,
+          "sha256": "9272a7a5c0015b13f1b1ba99328383e73759420fa2bbb5c9f04f333a68ae6931",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\sim_00191.vtk"
+        }
+      ]
+    },
+    {
+      "path": "serial-control/logs/joss-serial-before.log.gz",
+      "bytes": 2754,
+      "sha256": "eff3f3b2de33c2071147070eb52880cf652260b95c894ee1f9dd2ae133e0cfb3",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before.log",
+      "uncompressedSha256": "18116006666d023d91586c36ea6f4b4cc2752314680e310761aa3aa9f8aa9511"
+    },
+    {
+      "path": "serial-control/logs/joss-serial-before-status.json",
+      "bytes": 237,
+      "sha256": "df526f934fbeab8436d8d0e8c1d428b72601862c2a4b0ea844a2300d140d7ebe",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before-status.json"
+    },
+    {
+      "path": "serial-control/after/timesteps.csv",
+      "bytes": 319169,
+      "sha256": "16456aab7be17638ab2df4f53531ca51dd9ccafa58df312c34e9daad0bdee7d9",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\timesteps.csv"
+    },
+    {
+      "path": "serial-control/after/reference-metadata.json",
+      "bytes": 2016,
+      "sha256": "de9669afe9f6edb33461fdaaa27c5e3bf14fd21b1ed7e95818dee0debdacb9dd",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\reference-metadata.json"
+    },
+    {
+      "path": "serial-control/after/transitions.csv",
+      "bytes": 1463,
+      "sha256": "d2fdb000fd1a7ec31a2a3222231aee09b21106fa2a50d48f9c9161da90931ece",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\transitions.csv"
+    },
+    {
+      "path": "serial-control/after/source-provenance.json",
+      "bytes": 164,
+      "sha256": "21803355807eb82afa358a0fd88e9220bbcdc1f6e9bc8925a6ac9797e83e21e3",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source-provenance.json"
+    },
+    {
+      "path": "serial-control/after/all-saved-state-audit.json",
+      "bytes": 434328,
+      "sha256": "b9d5a765bc6fee1697ed08b293fc13e8dcf1df08fd249950f15f9e2862373a8c",
+      "source": null
+    },
+    {
+      "path": "serial-control/after/particle-vtk.tar.gz",
+      "bytes": 2995017,
+      "sha256": "4bb4ebd3b79dbecb88985ac6cf66154e46f9520c09013c879adccbb45c66355f",
+      "source": null,
+      "members": [
+        {
+          "path": "vtk/equilibrium.vtk",
+          "bytes": 1298217,
+          "sha256": "0ef589b23c1be52ebca491382f8394120000ad498036b2fa3722d6e7c4cdc5e1",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\equilibrium.vtk"
+        },
+        {
+          "path": "vtk/initial.vtk",
+          "bytes": 1298217,
+          "sha256": "d8d0e90a78d865018f1bc5da7edd4b0b32a0136268eae4b25d64781814e0aad9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\initial.vtk"
+        },
+        {
+          "path": "vtk/sim_00001.vtk",
+          "bytes": 1298217,
+          "sha256": "36f2094d968fce3a6ae7cab64478dcbbf67f31e5666d89781e3e9a8439e7c702",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\sim_00001.vtk"
+        },
+        {
+          "path": "vtk/sim_00002.vtk",
+          "bytes": 1298217,
+          "sha256": "75981a525cbff829c594b6d81a322cb1b3ce75158b25c0b8a509b0f8b206557b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\sim_00002.vtk"
+        },
+        {
+          "path": "vtk/sim_00018.vtk",
+          "bytes": 1298217,
+          "sha256": "56c4d08ace61310caa3909ab4ffa1af61191151529c1128f376d2781dbeb5271",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\sim_00018.vtk"
+        },
+        {
+          "path": "vtk/sim_00191.vtk",
+          "bytes": 1298217,
+          "sha256": "9272a7a5c0015b13f1b1ba99328383e73759420fa2bbb5c9f04f333a68ae6931",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\sim_00191.vtk"
+        }
+      ]
+    },
+    {
+      "path": "serial-control/logs/joss-serial-after.log.gz",
+      "bytes": 2626,
+      "sha256": "cc55c5df68d46b3fe4fe6d26ec644766c0ba4486c0413343d33a011d0eccb101",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after.log",
+      "uncompressedSha256": "9bb6a50b328b3f65fa794a671f3aea74103a841c12f504ac17d1f00aa1944f6b"
+    },
+    {
+      "path": "serial-control/logs/joss-serial-after-status.json",
+      "bytes": 262,
+      "sha256": "d2d22ba8dce601a320505b33b73515ff7ee23a17575f7db7c43dd5ea2bdbc818",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after-status.json"
+    },
+    {
+      "path": "serial-control/strict-comparison.json.gz",
+      "bytes": 148831,
+      "sha256": "b2cd46e80ab805d753bdc8e43262bab759645dd8359af4ec67e9031fab06ed86",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before-after-comparison.json",
+      "uncompressedSha256": "7391ab5704302f693a9706eba21c278a9693b3ea8ca0e1d6514fe58bfb3cbf32"
+    },
+    {
+      "path": "serial-control/executed-after-source.tar.gz",
+      "bytes": 31407,
+      "sha256": "84dc981a61594cfbbe04ecf1d6014a27adeb2fd61025f347291b8dec301533e7",
+      "source": null,
+      "members": [
+        {
+          "path": "case.lisp",
+          "bytes": 618,
+          "sha256": "8218f92165587533217ae10c1429b1bd4ec0a9830036ce0c1f62c0ec7116c90a",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\case.lisp"
+        },
+        {
+          "path": "framework/cl-mpm-framework.asd",
+          "bytes": 1536,
+          "sha256": "7ddb4085a790130faee8c99c7671492fe234d167d990f88e8919b3809a80dd40",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\cl-mpm-framework.asd"
+        },
+        {
+          "path": "framework/components/geometry.lisp",
+          "bytes": 368,
+          "sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\components\\geometry.lisp"
+        },
+        {
+          "path": "framework/components/materials.lisp",
+          "bytes": 4179,
+          "sha256": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\components\\materials.lisp"
+        },
+        {
+          "path": "framework/components/specifications.lisp",
+          "bytes": 4327,
+          "sha256": "7f0ef4c9210fc9b5d7bb9480e26cf01c78646a28bc77546f87c6b00b22028614",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\components\\specifications.lisp"
+        },
+        {
+          "path": "framework/config/package.lisp",
+          "bytes": 200,
+          "sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\config\\package.lisp"
+        },
+        {
+          "path": "framework/config/parameters.lisp",
+          "bytes": 4101,
+          "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\config\\parameters.lisp"
+        },
+        {
+          "path": "framework/materials/chalk.lisp",
+          "bytes": 4723,
+          "sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\materials\\chalk.lisp"
+        },
+        {
+          "path": "framework/output/plotting.lisp",
+          "bytes": 2391,
+          "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\output\\plotting.lisp"
+        },
+        {
+          "path": "framework/package.lisp",
+          "bytes": 972,
+          "sha256": "3c4e5a5302844c9743c4186240a49d65895a5e4d59b49a9d8d7cd9f77e3effb6",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\package.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/adapter.lisp",
+          "bytes": 4902,
+          "sha256": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\cliff\\adapter.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/build.lisp",
+          "bytes": 2097,
+          "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\cliff\\build.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/geometry.lisp",
+          "bytes": 3294,
+          "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\cliff\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/run.lisp",
+          "bytes": 2470,
+          "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\cliff\\run.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/settings.lisp",
+          "bytes": 1799,
+          "sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\cliff\\settings.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/build.lisp",
+          "bytes": 3187,
+          "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\build.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/classes.lisp",
+          "bytes": 429,
+          "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\classes.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/geometry.lisp",
+          "bytes": 2956,
+          "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/measurements.lisp",
+          "bytes": 3008,
+          "sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\measurements.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/output.lisp",
+          "bytes": 1176,
+          "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\output.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/phases.lisp",
+          "bytes": 1395,
+          "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\phases.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/run.lisp",
+          "bytes": 11888,
+          "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\run.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/statistics.lisp",
+          "bytes": 6450,
+          "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\statistics.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/adapter.lisp",
+          "bytes": 3674,
+          "sha256": "cbab31a041442699d5809dd48caa09398fe49d54acd1dd0ad6e518bc00b8c8a3",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\adapter.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/boundaries.lisp",
+          "bytes": 891,
+          "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\boundaries.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/config.lisp",
+          "bytes": 853,
+          "sha256": "ca254cd019033dccc78a1db6bab141d2b9ea53f304d79a9a63f2c44251904b61",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\config.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/controls.lisp",
+          "bytes": 4294,
+          "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\controls.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/geometry.lisp",
+          "bytes": 3321,
+          "sha256": "6d210567fe2bf1d09fc207283bfe6b4fadd38c2d0fc2da46c5d475bd9a413154",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/homogeneous.lisp",
+          "bytes": 5998,
+          "sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\homogeneous.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/material.lisp",
+          "bytes": 1234,
+          "sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\material.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/measurements.lisp",
+          "bytes": 4492,
+          "sha256": "a8a7a5d4bed1901f1347e67c3c20a9b96238f2ba5946a86a1a6d2474c508a5e2",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\measurements.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/mpm.lisp",
+          "bytes": 3570,
+          "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\mpm.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/package.lisp",
+          "bytes": 426,
+          "sha256": "f4b3a347f1690a1c228f344727ea2511f3469249ddf8973d7efe4166fd710481",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\package.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/runner.lisp",
+          "bytes": 5609,
+          "sha256": "78402e0266bc8d67f21929c4c980259988b27ed8d47d1ab87cbda8a05b9a8053",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\runner.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/tensors.lisp",
+          "bytes": 637,
+          "sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\tensors.lisp"
+        },
+        {
+          "path": "framework/simulation.lisp",
+          "bytes": 2826,
+          "sha256": "f23b2c8f33bbf4cce15a1c56ef98aa2369eb719e66a1e04cb94d3fe55950c311",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\simulation.lisp"
+        },
+        {
+          "path": "inputs/calibration/triaxial-2d.json",
+          "bytes": 525,
+          "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\calibration\\triaxial-2d.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-controls.json",
+          "bytes": 268,
+          "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\calibration\\triaxial-controls.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-demo.json",
+          "bytes": 498,
+          "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\calibration\\triaxial-demo.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-homogeneous.json",
+          "bytes": 370,
+          "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\calibration\\triaxial-homogeneous.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-accepted-collapse.json",
+          "bytes": 1256,
+          "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\studio\\reference\\joss-bay-accepted-collapse.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-prose.json",
+          "bytes": 1726,
+          "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\studio\\reference\\joss-bay-prose.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-table.json",
+          "bytes": 1721,
+          "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\studio\\reference\\joss-bay-table.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-video-candidate.json",
+          "bytes": 2575,
+          "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\studio\\reference\\joss-bay-video-candidate.json"
+        },
+        {
+          "path": "inputs/studio/schema.json",
+          "bytes": 9059,
+          "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\studio\\schema.json"
+        },
+        {
+          "path": "run-case.lisp",
+          "bytes": 4210,
+          "sha256": "e2817f33b9d5035f3d1d295526e541e1b28e4e0caebd3f108a563ad090441eb1",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\run-case.lisp"
+        }
+      ]
+    },
+    {
+      "path": "serial-control/independent-audit.json.gz",
+      "bytes": 26126,
+      "sha256": "fd028c85c90b915cc0086b2de4942df9237669f51b6e7c8d46c68127bb03921e",
+      "source": "output/framework-refactor-2026-10-15/joss-serial-independent-audit.json",
+      "uncompressedSha256": "41f2eeb041a01fffeb79622ce1b7d4b20078688e0be545c3e0cfedbe8ef49b31"
     }
   ]
 }

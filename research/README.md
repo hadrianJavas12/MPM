@@ -10,8 +10,8 @@ the scope. The existing solver and legacy material defaults remain the baseline.
 
 | Milestone | Status | Next evidence required |
 | --- | --- | --- |
-| M0: native framework and contracts | IN PROGRESS | Paired serial Joss result; generic material diagnostics and legacy 3D regression |
-| M1: source-aware reference data | IN PROGRESS | Structured source tables, paired configurations and SI/provenance checks |
+| M0: native framework and contracts | PROVISIONAL | Serial Joss passes exactly; generic material diagnostics and legacy 3D regression still pending |
+| M1: source-aware reference data | COMPLETE (data preparation) | Nine integrity tests pass; runtime execution remains gated by M2 |
 | M2: dedicated MC H/HS materials | NOT RUN | Audited mechanics, explicit accumulated-strain definition and constitutive tests |
 | M3: parameter verification | NOT RUN | Matched pre-peak, peak continuity, post-peak and return-map checks |
 | M4: paired 3D triaxial | NOT RUN | 70 × 140 mm cylinders, 100/200 kPa, matched H/HS |
@@ -21,8 +21,10 @@ the scope. The existing solver and legacy material defaults remain the baseline.
 The refactor checkpoint was pushed as `4d141c3` on
 `codex/reusable-simulation-framework`. Its 2D regression passes exactly (51 VTKs,
 all CSV differences zero); the four-worker Joss comparison fails the unchanged
-strict criterion (176/191 frames). The paired one-worker control is running in
+strict criterion (176/191 frames). The paired one-worker control completed in
 `output/framework-refactor-2026-10-15/joss-serial-before/` and `joss-serial-after/`.
+Its 191 physical states, 193 VTK files per run and all CSV values are identical.
+See [the source-audited serial report](reports/M0_SERIAL_REGRESSION.md).
 Do not start duplicate runs or reinterpret the previous failure as a pass.
 See [the retained evidence](../docs/evidence/framework-refactor-2026-10-15/README.md).
 
@@ -52,6 +54,12 @@ Start with [framework usage](../docs/REUSABLE_FRAMEWORK.md) and
 Small executable cases belong in `cases/`; reusable assembly belongs in
 `framework/`; material equations belong in the native material layer.
 Reference data, parameter provenance and reports belong in `research/`.
+
+M1 outputs are [source-aware values and provenance](references/PROVENANCE.md),
+[four disabled reference proposals](configs/) and
+[the data-only verification evidence](references/verification.json).
+Run `python research/references/test_reference_data.py` to check their integrity.
+They are not executable native configurations or a verified MC implementation.
 
 Delete a file only after checking its callers, ASDF/native loading and documented
 commands. Compatibility entry points, negative evidence, immutable sources,

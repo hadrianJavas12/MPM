@@ -86,6 +86,14 @@ PR remains pending. No physics change was used to force agreement. See the
 [detailed validation status](../docs/REUSABLE_FRAMEWORK.md#hasil-validasi-saat-ini).
 Scientific validity is distinct from regression.
 
+The separate one-worker control completed and passed exactly: 191 physical
+states, 193 VTKs per run including initial/equilibrium, and complete CSVs are
+identical. Its executed after snapshot is `41403f4`, audited against original
+`c749d32`; the completion-time status HEAD is not its source identity.
+See [the serial-control report](../research/reports/M0_SERIAL_REGRESSION.md).
+The four-worker failure remains. Current generic-diagnostic changes require
+their own 2D/3D regression before the M0 framework gate is complete.
+
 The 2D specimen is **plane strain with unit thickness**, not an axisymmetric
 cylinder: it retains 3D constitutive stress while fixing out-of-plane deformation.
 Its projected triaxial q and J2-invariant q differ; it cannot be required to have

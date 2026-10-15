@@ -35,6 +35,8 @@ the complete split triaxial module tree. No UI/server is needed.
 | Full spatial 2D before/after | 51/51 VTKs byte-identical; every CSV column and exported native field has zero difference | Frozen original monolith with minimal 2D adaptation versus refactored public CLI snapshot `2f6476f` |
 | Independent 2D output audit | Passed available-field checks on both runs | Finite fields, mass/volume/kinetic energy/displacement, axial stress and CSV identities; missing tensor components explicitly unavailable |
 | Full spatial Joss before/after | Both completed 40 s, exit 0; **strict regression failed** | 176 versus 191 physical states; common-time pointwise diagnostics also exceed `atol=1e-8`, `rtol=1e-7` |
+| Full serial Joss control, audited 2026-10-16 | **PASS, exact:** 191 physical states / 193 VTKs per run, positions and all 36 scalar arrays differ by zero; complete CSVs byte-identical | Frozen original `c749d32` versus executed after `41403f4`, one worker and one BLAS/OMP thread; four-worker FAIL remains |
+| M1 reference-data integrity | Nine stdlib tests pass | SI conversions, source provenance, paired-law data and execution gates; no constitutive solver or experimental validation |
 
 Both successful 2D runs use 480 MPs, 17,443 updates, 51 saved states and reach
 0.2 s / 10% prescribed strain. Their final qJ2 is 50.01733976 kPa and projected
@@ -72,8 +74,11 @@ See [the detailed status](REUSABLE_FRAMEWORK.md#hasil-validasi-saat-ini) and
 `joss-full-regression-summary.json` in the working evidence directory. Cause
 investigation and overall refactor acceptance remain unresolved. The user
 authorized committing and pushing this interim evidence while the paired
-single-worker controls run; the final PR remains pending. No physics change
-or scientific validation is claimed.
+single-worker controls ran; the final PR remains pending. The serial controls
+are now complete and exactly identical; see [the audited result](../research/reports/M0_SERIAL_REGRESSION.md).
+This separates a passing deterministic control from the retained four-worker
+failure. Generic-material/current-code 2D/3D regressions are a separate M0 gate.
+No physics change or scientific validation is claimed.
 
 ## Repeatable automated checks
 

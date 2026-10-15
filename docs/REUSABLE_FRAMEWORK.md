@@ -127,6 +127,7 @@ tersebut. Kesamaan hasil kode tidak otomatis menetapkan validitas ilmiah model.
 | --- | --- | --- |
 | Triaxial 2D | Keduanya 17.443 update, 51 state, 0,2 s / strain platen 10% | **Lulus:** seluruh 51 VTK identik byte dan semua kolom CSV berbeda nol |
 | Tebing Joss | Keduanya mencapai 40 s, exit 0 | **Belum lulus:** 176 versus 191 state fisik; pembandingan ketat gagal |
+| Kontrol tebing Joss satu worker | Keduanya mencapai 40 s, exit 0 | **Lulus identik:** 191 state fisik, 193 VTK per run termasuk initial/equilibrium, seluruh posisi/field/CSV sama |
 
 Pembanding ketat memakai `atol=1e-8`, `rtol=1e-7` per nilai, dengan state pada
 waktu fisik yang sama. Perbedaan jumlah state sudah menggagalkan pembandingan
@@ -156,3 +157,12 @@ checkpoint akhir **belum dinyatakan berhasil**. Pengguna mengizinkan commit dan
 push checkpoint sambil menunggu kontrol satu worker; PR dan penerimaan akhir
 menunggu evaluasi tersebut. Persamaan fisika tidak diubah untuk memaksa kecocokan.
 Hasil di atas tidak menetapkan kalibrasi material atau validasi ilmiah model.
+
+Kontrol satu worker telah diaudit terpisah: sumber asli `c749d32` dibandingkan
+dengan snapshot yang dieksekusi `41403f4`. Status wrapper `909fddf` mencatat HEAD
+saat selesai, bukan sumber yang dimuat. [Laporan serial](../research/reports/M0_SERIAL_REGRESSION.md)
+menyimpan audit sumber, konservasi massa, field finite dan hash semua state.
+Hasil serial mendukung sensitivitas runtime; kegagalan empat worker tetap ada.
+M0 masih provisional sampai kontrak diagnostik material umum dan regresi kode
+terbaru selesai. [Roadmap penelitian](../research/README.md) membedakan tahap
+tersebut dari model H/HS dan simulasi komparatif yang belum dijalankan.

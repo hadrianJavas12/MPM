@@ -1,9 +1,212 @@
 {
-  "status": "running, no result claimed",
+  "status": "complete; inspect strict comparison result",
+  "serialControlStrictPassed": true,
+  "originalFourWorkerStrictRegressionPassed": false,
   "beforeSourceCommit": "c749d32",
   "afterSourceCommit": "41403f4df54f270f8d75288c252e0c9a0fdddca3",
-  "changesFromFourWorkerPhysics": "Runtime control only:workers1, OPENBLAS_NUM_THREADS=1, OMP_NUM_THREADS=1. Accepted material,geometry,phase rules and40s horizon retained.",
-  "fourWorkerStrictRegressionPassed": false,
-  "partialSerialVTKsRetained": false,
-  "completionRule": "Only append serial VTKs and comparison results after BOTH native metadata complete=true and a fresh explicit comparison; never replace the four-worker FAIL."
+  "runtimeOnlyControl": "workers1; OPENBLAS_NUM_THREADS=1; OMP_NUM_THREADS=1; original accepted material/geometry/phase rules/duration retained",
+  "scientificValidation": false,
+  "runs": {
+    "before": {
+      "complete": true,
+      "frames": 191,
+      "finalTimeS": 40.0,
+      "particleCount": 4155,
+      "finalMass": 425664.0625,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 40.0,
+        "file": "vtk/sim_00191.vtk",
+        "sha256": "9272a7a5c0015b13f1b1ba99328383e73759420fa2bbb5c9f04f333a68ae6931",
+        "particles": 4155,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "damage",
+          "damage-inc",
+          "damage-k",
+          "damage-length",
+          "damage-y",
+          "damage-ybar",
+          "damage-ybar-scaled",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 425664.0625,
+        "bounds_min": [
+          0.12500006834057364,
+          0.12486518776653979,
+          0.0
+        ],
+        "bounds_max": [
+          30.944778307607695,
+          16.37459117818307,
+          0.0
+        ],
+        "max_displacement": 16.411305247873013,
+        "mass_centroid": [
+          11.134215847687,
+          4.988139550227736,
+          0.0
+        ],
+        "max_damage": 0.9999999999999359,
+        "max_damage_position": [
+          30.944778307607695,
+          1.4704437957213512,
+          0.0
+        ],
+        "max_damage_reference_position": [
+          14.781250000000146,
+          4.281250000000064,
+          0.0
+        ],
+        "mass_weighted_damage": 0.4937632781891177,
+        "lower_reference_y_le_4m": 0.9999999999999198,
+        "upper_reference_y_ge_9m": 0.9999999999998759,
+        "damage_gt_0.05": {
+          "count": 2442,
+          "reference_y_min": 1.1249999999999916,
+          "reference_y_max": 16.37500000000051
+        },
+        "damage_gt_0.5": {
+          "count": 2099,
+          "reference_y_min": 1.1249999999999916,
+          "reference_y_max": 16.37500000000051
+        },
+        "damage_gt_0.9": {
+          "count": 1913,
+          "reference_y_min": 1.1249999999999916,
+          "reference_y_max": 16.37500000000051
+        },
+        "right_domain_edge_above_y1_05m": 31.01587823413899,
+        "initial_top_particle_mean_y": 8.175229333232826
+      }
+    },
+    "after": {
+      "complete": true,
+      "frames": 191,
+      "finalTimeS": 40.0,
+      "particleCount": 4155,
+      "finalMass": 425664.0625,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 40.0,
+        "file": "vtk/sim_00191.vtk",
+        "sha256": "9272a7a5c0015b13f1b1ba99328383e73759420fa2bbb5c9f04f333a68ae6931",
+        "particles": 4155,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "damage",
+          "damage-inc",
+          "damage-k",
+          "damage-length",
+          "damage-y",
+          "damage-ybar",
+          "damage-ybar-scaled",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 425664.0625,
+        "bounds_min": [
+          0.12500006834057364,
+          0.12486518776653979,
+          0.0
+        ],
+        "bounds_max": [
+          30.944778307607695,
+          16.37459117818307,
+          0.0
+        ],
+        "max_displacement": 16.411305247873013,
+        "mass_centroid": [
+          11.134215847687,
+          4.988139550227736,
+          0.0
+        ],
+        "max_damage": 0.9999999999999359,
+        "max_damage_position": [
+          30.944778307607695,
+          1.4704437957213512,
+          0.0
+        ],
+        "max_damage_reference_position": [
+          14.781250000000146,
+          4.281250000000064,
+          0.0
+        ],
+        "mass_weighted_damage": 0.4937632781891177,
+        "lower_reference_y_le_4m": 0.9999999999999198,
+        "upper_reference_y_ge_9m": 0.9999999999998759,
+        "damage_gt_0.05": {
+          "count": 2442,
+          "reference_y_min": 1.1249999999999916,
+          "reference_y_max": 16.37500000000051
+        },
+        "damage_gt_0.5": {
+          "count": 2099,
+          "reference_y_min": 1.1249999999999916,
+          "reference_y_max": 16.37500000000051
+        },
+        "damage_gt_0.9": {
+          "count": 1913,
+          "reference_y_min": 1.1249999999999916,
+          "reference_y_max": 16.37500000000051
+        },
+        "right_domain_edge_above_y1_05m": 31.01587823413899,
+        "initial_top_particle_mean_y": 8.175229333232826
+      }
+    }
+  },
+  "interpretation": "The four-worker FAIL remains in the original validation-summary and evidence. A passing serial control would establish equivalence under this controlled runtime, not deterministic behavior for every parallel execution or scientific validation."
 }

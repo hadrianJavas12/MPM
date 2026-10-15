@@ -1,0 +1,62 @@
+{
+  "generated_at_utc": "2026-10-15T21:54:35.051084+00:00",
+  "stage": "M1_reference_data_integrity",
+  "status": "PASS",
+  "command": "python research/references/test_reference_data.py --write-evidence",
+  "python_version": "3.12.14",
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "source_audit": {
+    "filename": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+    "sha256": "acd60b668e3b6ed8c7a7378ae3afd053ca0419f4ed63aecc0031b019495f3979",
+    "page_count": 28,
+    "source_type": "presentation_not_raw_laboratory_timeseries",
+    "audit_date_local": "2026-10-16",
+    "sha256_verified": true,
+    "visually_audited_pages": [
+      3,
+      6,
+      7,
+      11,
+      17
+    ],
+    "text_extraction_audited_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      13,
+      14,
+      16,
+      17,
+      18,
+      25,
+      26,
+      27,
+      28
+    ],
+    "local_file_only": true,
+    "copied_into_repository": false
+  },
+  "audit_scope": "Prior read-only PDF hash/text/render audit plus this run's JSON/stdlib integrity tests.",
+  "file_sha256": {
+    "research/references/source_values.json": "b9b5cfa7caca7f2cf93ae5e3bc0efaa9a568c449b9e0e968af9cbf16dc0b10c8",
+    "research/references/PROVENANCE.md": "6fe66c74ca016acc10f74afa09c116771ab97774fa9ee30c1f10b9f49bdb809c",
+    "research/references/test_reference_data.py": "7d5fba38cf9f0695c4bb9e724ec41f757c497a16b9ddbde15a00f983191a454a",
+    "research/configs/residual_soil_mc_h_reference.json": "e4a0efd12425224d4cb1b900ed374a477c9a3c08401dbd82f06e07c27b1d954c",
+    "research/configs/residual_soil_mc_hs_reference.json": "f764abf425720efd9bc1da7ef73d5a2b55f9963dd9a22343019b80c73237ec8b",
+    "research/configs/zhan_cliff_h_reference.json": "7d465072dec1ed5fa7a30b89dca3c096d9d55e2b6606b8134348c150e945c045",
+    "research/configs/zhan_cliff_hs_reference.json": "e1de03051a1ccf239fd40caca61f4929ff7bd47c8e561a88796f96cf49a5eccc"
+  },
+  "limits": [
+    "No SBCL or solver execution.",
+    "No constitutive verification or experimental validation.",
+    "Source strain mapping and zero-strength apex behavior pending M2.",
+    "Zhan-family initial hardening law unspecified by PDF; common prepeak path unresolved.",
+    "Source author attribution Zhan/Zang unresolved; original publication not audited."
+  ]
+}

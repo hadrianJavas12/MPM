@@ -3,7 +3,7 @@ title: Reusable native simulation framework
 type: synthesis
 tags: [cl-mpm, architecture, refactoring, native-windows, regression]
 sources: [docs/REUSABLE_FRAMEWORK.md, docs/AI_HANDOVER.md, docs/testing.md, framework/cl-mpm-framework.asd, docs/evidence/framework-refactor-2026-10-15/validation-summary.json]
-updated: 2026-10-15
+updated: 2026-10-16
 ---
 
 # Reusable native simulation framework
@@ -116,9 +116,13 @@ Existing independent runs with identical private numerical source already
 show comparable tiny differences at equilibrium and 4 s, while all initial
 VTKs are byte-identical. Unchanged parallel accumulation offers a plausible
 mechanism, but does not prove the entire 40 s difference is runtime variability.
-A paired full serial control now tests that question without changing physics
-or tolerances. The user authorized a checkpoint commit/push while waiting;
-final acceptance and the PR remain pending that assessment.
+A paired full serial control completed without changing physics or tolerances:
+**191 physical states, 193 particle VTKs and complete CSVs are byte-identical**.
+All exported position/scalar differences are zero. The source audit identifies
+original `c749d32` and executed after `41403f4`; completion status `909fddf`
+is HEAD at exit. This establishes serial equivalence and preserves the separate
+parallel failure. M0 still needs current generic-material/configuration and
+2D/3D regression gates; see [[mc-hardening-softening-study]].
 
 These results establish software regression properties, not experimental clay
 calibration, convergence or a closed energy budget. The findings in
@@ -126,9 +130,9 @@ calibration, convergence or a closed energy budget. The findings in
 
 ## Background continuation requested by user
 
-The user requested an explanation before further investigation, so the existing
-heartbeat is **paused**. Existing native processes continue independently;
-do not resume automatic work without user direction. They started at 20:53:38 WIB
+The user subsequently authorized the M0–M6 master plan, commits/pushes per stage
+and reset-aligned automatic continuation. The existing heartbeat is **active**.
+The completed serial controls started at 20:53:38 WIB
 on 2026-10-15: frozen original `c749d32` versus test case `41403f4`, both one
 worker, OpenBLAS/OMP threads set to one. Output folders are
 `joss-serial-before` and `joss-serial-after` under the existing run root.
@@ -138,5 +142,6 @@ heartbeat when the task is complete.
 CurrentHEAD bounded Joss4s and2D27updates passed. A distinct native Mohr-Coulomb
 composition on0fece3b also passed2updates with36finiteVTKarrays andmass504000kg/m
 conserved while native splitting changed70MPs to280; no engine edits/rerun.
-The four-worker evidence bundle is retained with hashes and
-`regressionPassed=false`; the separate serial control is pending.
+The four-worker evidence bundle retains `regressionPassed=false`; separate
+serial-control evidence reports PASS. All 134 manifest hashes verify. Neither
+status should overwrite the other or be presented as experimental validation.

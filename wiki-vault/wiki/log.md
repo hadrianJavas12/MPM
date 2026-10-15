@@ -267,3 +267,15 @@ no additional simulations or scientific-validation claim. Auto-continue is
 paused after the user's request to explain problems before further work.
 Existing native runs continue independently. Raw sources and personal settings
 are unchanged.
+
+## [2026-10-16] ingest | Native master plan, exact serial control and source data
+
+Created [[mc-hardening-softening-study]] and updated the index from the copied
+master plan, M1 provenance/9 data-integrity tests and the audited serial Joss
+result. Both serial runs have 191 physical states, 193 byte-identical VTKs and
+identical complete CSVs. The four-worker strict failure remains unchanged.
+M0 stays provisional pending generic-material/config/current-code regressions;
+M1 completes data preparation only, with all H/HS proposals execution disabled.
+Archived the full earlier handover and shortened the operational entry to save
+future context. Auto-continuation is reauthorized and reset-aligned. No raw
+source, failed evidence or personal Obsidian settings were modified.
