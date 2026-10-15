@@ -1,0 +1,17 @@
+{
+  "mode": "homogeneous",
+  "diameterMm": 70,
+  "heightMm": 140,
+  "youngsModulusPa": 5000000,
+  "poissonRatio": 0.49,
+  "undrainedStrengthPa": 25000,
+  "cellPressurePa": 50000,
+  "densityKgM3": 1800,
+  "enablePlasticity": true,
+  "meshSizeMm": 5,
+  "mpsPerCell": 1,
+  "targetAxialStrainPct": 10,
+  "increments": 1000,
+  "frames": 51,
+  "workers": 1
+}

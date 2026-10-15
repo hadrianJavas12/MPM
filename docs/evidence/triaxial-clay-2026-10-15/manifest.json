@@ -1,0 +1,241 @@
+{
+  "date": "2026-10-15",
+  "sourceBaseline": "f7fb2a3322eabf483b3d6cedd2c090b356ca01ca",
+  "featureBranch": "codex/triaxial-clay-calibration",
+  "kind": "native demonstration; no laboratory data",
+  "scientificValidation": "unverified; no mesh/rate convergence or full energy balance",
+  "sourceSnapshotExactLoadedBytes": {
+    "mpm": false,
+    "homogeneous": false,
+    "controls": true
+  },
+  "files": {
+    "mpm/effective-config.json": {
+      "source": "output/triaxial-3d-demo/effective-config.json",
+      "bytes": 394,
+      "sha256": "b515077a0b8c45e0ee657cddb9eb4a32a472620bc24b1b60a001c8031e6056d2"
+    },
+    "mpm/manifest.json": {
+      "source": "output/triaxial-3d-demo/manifest.json",
+      "bytes": 863,
+      "sha256": "0464959b404597d5c1c54201a0bca0b937149df646542c5debf80962ff193ef7"
+    },
+    "mpm/source-provenance.json": {
+      "source": "output/triaxial-3d-demo/source-provenance.json",
+      "bytes": 541,
+      "sha256": "5d9201e0e39825f2f4a55499c1f025f9b61fbd18993eae619b2849273e325d3b"
+    },
+    "mpm/stress-strain.csv": {
+      "source": "output/triaxial-3d-demo/stress-strain.csv",
+      "bytes": 15329,
+      "sha256": "aaf9ced4c60ea1117fd41e3325e607e47c299551372d182b3c959f374dc74e4c"
+    },
+    "mpm/audit.json": {
+      "source": "output/triaxial-3d-demo/audit.json",
+      "bytes": 7607,
+      "sha256": "406d5e72e832d8604abd1533d7a7aac68528d4bdd52ae4db3f4808f36284b585"
+    },
+    "mpm/visualization-provenance.json": {
+      "source": "output/triaxial-3d-demo/visualization-provenance.json",
+      "bytes": 9515,
+      "sha256": "027797e4e2c8a57363bcfb8841a12771d8b74bd453598c06a2822e6d0960684f"
+    },
+    "mpm/initial-parameter-estimate.json": {
+      "source": "output/triaxial-3d-demo/initial-parameter-estimate.json",
+      "bytes": 2356,
+      "sha256": "c4d0ab18ac6e87a363423d15fb71005557eb2b0a60f88ddc4a58f76698102e2d"
+    },
+    "mpm/result.png": {
+      "source": "output/triaxial-3d-demo/triaxial-result.png",
+      "bytes": 334193,
+      "sha256": "2cdc0ba7860d9aa4c7b2521189f37ce8d3ed8f0e48230d81b9bb139eb7ca0bef"
+    },
+    "mpm/simulation.mp4": {
+      "source": "output/triaxial-3d-demo/triaxial-simulation.mp4",
+      "bytes": 248857,
+      "sha256": "d1290413f1c32a575dad6de6a19c52741cffd6b2ec48efbb676f53dc8f403238"
+    },
+    "mpm/particle-vtk.tar.gz": {
+      "source": "output/triaxial-3d-demo",
+      "bytes": 6280651,
+      "sha256": "096782351febea3e437b05005e60091bacd63e088356e270066bd2d07a03b9bb",
+      "membersSha256": {
+        "particles_0000.vtk": "2177e390c8c7569880c3e02bd9eeb9ce393b68eca32c4b12ebc7f7c59db659b1",
+        "particles_0001.vtk": "995d69068285ad03c4bac12075566352bc75bc65a1d5503bdf7ea7326008af29",
+        "particles_0002.vtk": "fdb41a425f9a3afd484df6e076f7711baecc02f992f78cab006caadbd342df1a",
+        "particles_0003.vtk": "b9f84ab65507ec4c3bafcb0c76349bbf6baed93663d7524f733863336a66d9e1",
+        "particles_0004.vtk": "03abcd3dc98543bbf294c61eabdf961c6d679cc16e3d2dcd12d3ba9c8efb3659",
+        "particles_0005.vtk": "34a39dbd36e9d0eb57fd7370aeacf398a4de7b769ce66d81a7ea090d334dcb39",
+        "particles_0006.vtk": "6bf8027734ad16536c4b90a3184f159ed93e72e37a501a1329243bca1f786071",
+        "particles_0007.vtk": "25d4bdd122baf30b365469d98c02188574ae63b2c785dba4e8f54217f828094f",
+        "particles_0008.vtk": "292eef03198d8726069cc0492c5791617ac8843d9167e61b74536c6b4d72b254",
+        "particles_0009.vtk": "77b6265047318a02c0d0745cd118efc565cdfe8332349894c971d5ea96580808",
+        "particles_0010.vtk": "64743481a9f1643c42591547df53bbd3311e8258cb820ad9ab9b1f3d89fe4ea3",
+        "particles_0011.vtk": "c7cff393a8083af74ea83bb301818c058623aab677a8818280aa01288d9ec33e",
+        "particles_0012.vtk": "a4a7591fc6eb2b030f8aa67f985354ec48950ae22a558c4ae2ac85d3b5d5317b",
+        "particles_0013.vtk": "83741bc8e7fa92b927773a0f4ac5984912e628283c7b329f107c7de0fe34264d",
+        "particles_0014.vtk": "9695a75d27c511ba564958ea7f491a619cded003713a47329255e866a5892814",
+        "particles_0015.vtk": "4d3a9d3b6701337187e0384ef14b1c549731fd720082d7bbe22e1107ba0bd8fb",
+        "particles_0016.vtk": "4271ac0f7b9ad620e75668a952fd59d26f5ea8c68bd9a088d87baa898e2a2414",
+        "particles_0017.vtk": "422fb9784f5f98cbc534ad696372b45acff2d1adc58a616607237fa74048a987",
+        "particles_0018.vtk": "4f4b0bd858b85abd2ae67e20af94a96bfdff9e69a0120749d177ccbaff00e443",
+        "particles_0019.vtk": "dff73194eea9885c93af941ee6f5846859bdf9b6acc2812143ff6bdfbe8c3dbb",
+        "particles_0020.vtk": "40223679700c95bc11a2256be74f17bb85956c7a0ee7aa23a9dcfce322f55956",
+        "particles_0021.vtk": "4044210562bf0d85d1144f8ac2b79d53472f0f46338d8b9eeadee3de7a9a9606",
+        "particles_0022.vtk": "d77323e1304650f2197b264b25ab484e68fc35dfe2136357b2f541c2fb807132",
+        "particles_0023.vtk": "1d887856f0f661f31f0d03a355d9d7c885e97d86d3af8ac24186ea7cb4817f71",
+        "particles_0024.vtk": "94f14193cdd7d182c6d4c060234d37a87b632d4482df0601dd6ca3ec9a6ffc35",
+        "particles_0025.vtk": "487c3873ecdc762824e7aedb234e02f022ff1e3a0d20002a3fcc97c1573cd890",
+        "particles_0026.vtk": "5f808487c327e675cc3405e2f2e52e176b9bb2bd4ac924e2b0a3e247b3e04e03",
+        "particles_0027.vtk": "a061abd421a07ae0c1219e8ee0f384fb2bd372f1a47a94cc715cabf848abe2fd",
+        "particles_0028.vtk": "0727c86b7948be4193bf4bae75877a4ca8fbcf46b9a635799ba65174f7be0b57",
+        "particles_0029.vtk": "4e1ae768abf5945d64bbe71e5ec40296ed8cfe02513e983d208e135cad56d897",
+        "particles_0030.vtk": "b71b0b9c06304e3bbf18a5fc0a8a8c08958a4e6c1ccc4cb2c5762042069c8c08",
+        "particles_0031.vtk": "f2d6ac5c90bde9a007714a5726a75225d9b491abb2759bc366d8d9c1df1e7048",
+        "particles_0032.vtk": "fc91436bea62b2b30f61fb67d153f76e0b990a20efe8111b00dd8f62942774d1",
+        "particles_0033.vtk": "0bbf317e651dce73ba03faac020832bcbe97963cbc3324148f94ab4f91089f08",
+        "particles_0034.vtk": "d856e866cababd4a9417a334b38e5e02a5a696f754f91077e4bdb750e44b3420",
+        "particles_0035.vtk": "ff1cbd87cef3dafcac45124fb7bc08c61052ea8bbf2fa8933a5061a977fea1dc",
+        "particles_0036.vtk": "0df35371a094826b99e45f9c43dcba51a52572ee8e9d7dfccbe70cd75b664560",
+        "particles_0037.vtk": "880cd95486ce811734b38c8b601960158850f2e8bab92de89ad7b12d711ba891",
+        "particles_0038.vtk": "f4f1555b1773247090e0c6d336b949fdffa8254e575b686d06e38a27da57e853",
+        "particles_0039.vtk": "79784cb0c8a19bb7b5fd34e3368c7037f7c05e5ae677ee2038633790fd52ee2d",
+        "particles_0040.vtk": "f39afd21e35ccdf96663d4bb547c64c6b03c7d41d79eb96972aef1b26bd26048",
+        "particles_0041.vtk": "d7b08b95c338f0354ab2833ff9c4d440a4c12a5acb46ccc513b0a71fe786143d",
+        "particles_0042.vtk": "94d0c9feeb53478486314fe1b4c35aca1a36495fda78ed99a45a90ea421943d3",
+        "particles_0043.vtk": "88466041b4e30eb44954f3822ac41b8190bef75346f8820d2fb48b4610f232a7",
+        "particles_0044.vtk": "537cd35ecc77aaec21769eec36eb80214c442553a0454eca0e9d53b1c24a67cf",
+        "particles_0045.vtk": "ea7646dcc107b6298f0005fc334a72d828e716f0314b58f513b1b2f8b61f56a0",
+        "particles_0046.vtk": "fa36c5eedeb021e170fdb81cf9ffe2c6b1c47a7d4da34f32bfe15a8b441f684d",
+        "particles_0047.vtk": "e5ec0a78faf1b2cdf3f3c5ec777d21ef1b4849863b2c4dcad7f0700146c9272d",
+        "particles_0048.vtk": "293c91e75d5c8e94d9c7d2a8cd02a4dfc926d1311225c0e26995b121a8268c41",
+        "particles_0049.vtk": "ba00592baf8eef1653c3b99039cc748307320e792cc2053ced4c8b1bc12495a3",
+        "particles_0050.vtk": "e935eeca4a341a7a03255037f810b748c064f232c84899ccc04fc25f21d6afba"
+      }
+    },
+    "homogeneous/effective-config.json": {
+      "source": "output/triaxial-homogeneous-final/effective-config.json",
+      "bytes": 291,
+      "sha256": "cb315b6e50429919521926ba08dc51394ff61683e0ad5c7a0bcf5c7dd1bf168f"
+    },
+    "homogeneous/manifest.json": {
+      "source": "output/triaxial-homogeneous-final/manifest.json",
+      "bytes": 894,
+      "sha256": "9cddafb8e6d2fa0c957c38e930ca221804d748510c19773b057ad155de086385"
+    },
+    "homogeneous/source-provenance.json": {
+      "source": "output/triaxial-homogeneous-final/source-provenance.json",
+      "bytes": 356,
+      "sha256": "eb674f043c7bc6757a77f5681417f86f62cf65d92af32d1d543085608192384d"
+    },
+    "homogeneous/stress-strain.csv": {
+      "source": "output/triaxial-homogeneous-final/stress-strain.csv",
+      "bytes": 15263,
+      "sha256": "3b3c207a8a1fd2cb1c5e3a80597f85df6744754933b749b5970117c1f996beca"
+    },
+    "homogeneous/audit.json": {
+      "source": "output/triaxial-homogeneous-final/audit.json",
+      "bytes": 7481,
+      "sha256": "390afad25e2e333e96a781ae5a9441e9eb8a28356f2b3934245c5be9285f8833"
+    },
+    "homogeneous/visualization-provenance.json": {
+      "source": "output/triaxial-homogeneous-final/visualization-provenance.json",
+      "bytes": 10064,
+      "sha256": "f4cbbdf2c6464f0c7c0d59cb07a0dc57f4e14e4970d92cfd7eb7b8d0429adc0f"
+    },
+    "homogeneous/initial-parameter-estimate.json": {
+      "source": "output/triaxial-homogeneous-final/initial-parameter-estimate.json",
+      "bytes": 2330,
+      "sha256": "c9aa558d338de1257fe12a61a10d0fcf63c94eb0560972a0d6346668376cfce4"
+    },
+    "homogeneous/result.png": {
+      "source": "output/triaxial-homogeneous-final/triaxial-result.png",
+      "bytes": 462119,
+      "sha256": "64a5904432f24e49a4bd87f5b38d973876811ad24859885825d0a8b6c7bd637d"
+    },
+    "homogeneous/simulation.mp4": {
+      "source": "output/triaxial-homogeneous-final/triaxial-simulation.mp4",
+      "bytes": 269307,
+      "sha256": "bf237f6a614a12662ef426c0c4ff2d0d5435e9576674b5082824241b954d2daf"
+    },
+    "homogeneous/particle-vtk.tar.gz": {
+      "source": "output/triaxial-homogeneous-final",
+      "bytes": 66766,
+      "sha256": "6488b057bc147a54168efcb127e9699cac63de3048a0b91925fd4e22f5ee10d9",
+      "membersSha256": {
+        "particles_0000.vtk": "7a3af309c57111bee67f6fd6100f0875ef52baeda932696457a08445d20b28cd",
+        "particles_0050.vtk": "8386dee348538858c1376d825bd31e25df89efbc13881fd5886f205c0159fc08"
+      }
+    },
+    "mpm/initial-parameter-estimate-specimen.json": {
+      "source": "output/triaxial-3d-demo/initial-parameter-estimate-specimen.json",
+      "bytes": 2383,
+      "sha256": "72a346fb070f104c1ff8da2de72611273d1f05a299a48f10b16fd1b9eac1cf31"
+    },
+    "controls/controls.json": {
+      "source": "output/triaxial-native-controls-final/controls.json",
+      "bytes": 627,
+      "sha256": "629e6637d63a309444e0e5d0c75bba9f77abe3889a804de2cb17b1ea83c679d9"
+    },
+    "controls/effective-config.json": {
+      "source": "output/triaxial-native-controls-final/effective-config.json",
+      "bytes": 209,
+      "sha256": "10fda4c5bfdded9cf18c8777fe30828a035dbb24e4738fe768d6585e7c9f5323"
+    },
+    "controls/source-provenance.json": {
+      "source": "output/triaxial-native-controls-final/source-provenance.json",
+      "bytes": 242,
+      "sha256": "9860cdaf8b79d98f0bea2bb12a4ca17cef6f1d1dc60a4745d2bbf07a92494f62"
+    },
+    "controls/exact-loaded-harness.lisp": {
+      "source": "output/triaxial-native-controls-final/source/triaxial-loaded.lisp",
+      "bytes": 25955,
+      "sha256": "8d21ac49fcca32748b20c4488c8da94a2b30a0d8f7f4c5d800393c83c57f5a12"
+    },
+    "controls/exact-launcher.lisp": {
+      "source": "output/triaxial-native-controls-final/source/run-triaxial.lisp",
+      "bytes": 2215,
+      "sha256": "11e0bb93085335b9cc86ad1dfb29d33e4731473a84565ad042f5181fad3bc3f5"
+    },
+    "logs/triaxial-3d-demo.log": {
+      "source": "output/triaxial-3d-demo.log",
+      "bytes": 5125,
+      "sha256": "3dceb98646bff597437421e5a51196854d7e6c2eb56f1465772de8d66ab21f66"
+    },
+    "logs/triaxial-homogeneous-final.log": {
+      "source": "output/triaxial-homogeneous-final.log",
+      "bytes": 4983,
+      "sha256": "4e9e8a6ae745d62b4acd984ade8beada284ef3705ac1048810cfbf6cf138fbbb"
+    },
+    "logs/estimator-tests.log": {
+      "source": "output/calibration-development-2026-10-15/estimator-tests.log",
+      "bytes": 787,
+      "sha256": "8caf51159523bb61bbb75562e01ddf67ce3ad4635623971d0117d17c959be6c3"
+    },
+    "review-source/triaxial.lisp": {
+      "source": "calibration/triaxial.lisp",
+      "bytes": 26726,
+      "sha256": "662e6b626657047e8c60e3e9d435d0a289f95f4c088ad19aa519e0340ad14b0d"
+    },
+    "review-source/run-triaxial.lisp": {
+      "source": "scripts/run-triaxial.lisp",
+      "bytes": 2317,
+      "sha256": "e4c981f92726f756d50491efaba6b3e5f8becb386f674cb96c18281b1122b1b5"
+    },
+    "review-source/plot-triaxial.py": {
+      "source": "scripts/plot-triaxial.py",
+      "bytes": 8239,
+      "sha256": "c690128f34f2873be17df888beba3956dd02f514c6d49579249b3fa769479b20"
+    },
+    "review-source/audit-triaxial.py": {
+      "source": "scripts/audit-triaxial.py",
+      "bytes": 8865,
+      "sha256": "c9331dc1136bbf5f95f64027d8cc38955461fe1e2f9472a3e68f2dda3f3b0083"
+    },
+    "review-source/estimate-clay-parameters.py": {
+      "source": "calibration/estimate-clay-parameters.py",
+      "bytes": 9609,
+      "sha256": "74a13d9586e4f73d68218130c7c1ff94616651af2839d3a5e5c952376f186b7a"
+    }
+  }
+}

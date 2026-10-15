@@ -1,0 +1,13 @@
+{
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0",
+    "matplotlib": "3.11.2",
+    "reportlab": "4.4.9",
+    "pypdfium2": "5.14.0"
+  },
+  "sbclVersion": "2.6.9",
+  "scope": "Observed after run; not capture of every historical loaded dependency byte"
+}
