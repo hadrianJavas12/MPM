@@ -211,6 +211,17 @@ Retained numerical evidence: [triaxial bundle](evidence/triaxial-clay-2026-10-15
 These checks do not claim laboratory calibration, full undrained pore-water
 modelling, mesh/rate/timestep convergence or a closed energy budget.
 
+## Current framework and isolated MC checkpoint
+
+Current native checkpoint `64f47cc` (2026-10-16): 9 material-diagnostic,
+10 configuration, 10 framework contracts and 36 Node tests pass. The full 2D
+rerun matches all 51 baseline VTK hashes and CSV values exactly, and its
+available-field audit passes. The matched 3D after run is not complete yet.
+Logs/status are under `output/material-contract-2026-10-16/`; the completion-only
+collector `.tmp/finalize-material-contract.py` must wait for all status/manifests.
+The isolated `.tmp/mc-evolution-stage/` passes 32 native point checks, with
+explicit sampled-root/continuation limitations; it is not a full MPM result.
+
 ## GitHub Actions blocker
 
 [Run 38512874136](https://github.com/hadrianJavas12/MPM/actions/runs/38512874136)

@@ -279,3 +279,14 @@ M1 completes data preparation only, with all H/HS proposals execution disabled.
 Archived the full earlier handover and shortened the operational entry to save
 future context. Auto-continuation is reauthorized and reset-aligned. No raw
 source, failed evidence or personal Obsidian settings were modified.
+
+## [2026-10-16] ingest | Current diagnostics regression and isolated MC checkpoint
+
+Updated [[mc-hardening-softening-study]] and index: pushed implementation
+`64f47cc` passes 9 material, 10 configuration, 10 framework and 36 Node checks.
+Its full 2D comparison is exact across 51 VTKs and CSVs; the independent
+available-field audit passes. The original 3D baseline completed; its after run
+remains running. M0 remains provisional with the four-worker failure retained.
+The isolated MC prototype has 32 passing native point tests, with sampled-root
+completeness and continuation limitations. No new full MC MPM or physical
+validation is claimed. Sources remain staged for a separate experimental branch.

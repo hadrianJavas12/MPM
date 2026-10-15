@@ -21,8 +21,11 @@ Completion status `909fddf` is HEAD at exit, not the loaded source snapshot.
 All fields are finite, mass is constant and protected-base damage is zero.
 The four-worker strict failure (176/191 states) remains preserved.
 
-M0 remains **PROVISIONAL**: generic material/state diagnostics, configuration
-integrity and current-code 2D/3D regression are still being completed. Legacy
+M0 remains **PROVISIONAL**: `64f47cc` passes 9 material, 10 configuration,
+10 framework contracts and 36 Node tests. Its current full 2D regression has
+51 byte-identical VTKs and zero CSV differences; the independent available-field
+audit passes. The original 3D baseline finished; its matched after run is still
+running. The four-worker exception remains open. Legacy
 VM-specific yield formulas must not be used for an MC particle. Unsupported
 history/rollback capabilities require explicit rejection.
 
@@ -46,6 +49,13 @@ height/sketch mismatch and unspecified water-modulus unit remain recorded.
 that MC H/HS or true pore-pressure CU has been implemented.
 
 ## Next gates and maintenance
+
+An isolated, uninstalled MC prototype passes 32 native material-point tests.
+Its design is `research/reports/M2_RETURN_MAPPING_DESIGN.md`; staged sources,
+log and hashes are in `.tmp/mc-evolution-stage/`. Root isolation is sampled,
+without a completeness proof or adaptive continuation. This is provisional
+point evidence, not full MPM, M2 acceptance or physical validation. Integrate
+only on the separate experimental branch after the framework checkpoint.
 
 After M0, dedicated H/HS mechanics need strain/state, corner/apex, yield and
 return-map tests before paired 3D cylinders at 100/200 kPa and a separate soil

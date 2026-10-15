@@ -10,15 +10,15 @@ the scope. The existing solver and legacy material defaults remain the baseline.
 
 | Milestone | Status | Next evidence required |
 | --- | --- | --- |
-| M0: native framework and contracts | PROVISIONAL | Serial Joss passes exactly; generic material diagnostics and legacy 3D regression still pending |
+| M0: native framework and contracts | PROVISIONAL | Generic contracts and current 2D pass; current 3D regression running; four-worker exception retained |
 | M1: source-aware reference data | COMPLETE (data preparation) | Nine integrity tests pass; runtime execution remains gated by M2 |
-| M2: dedicated MC H/HS materials | NOT RUN | Audited mechanics, explicit accumulated-strain definition and constitutive tests |
+| M2: dedicated MC H/HS materials | PROVISIONAL (isolated staging) | 32 native point tests pass; review, complete integration and spatial verification still required |
 | M3: parameter verification | NOT RUN | Matched pre-peak, peak continuity, post-peak and return-map checks |
 | M4: paired 3D triaxial | NOT RUN | 70 × 140 mm cylinders, 100/200 kPa, matched H/HS |
 | M5: paired soil cliff | NOT RUN | Frozen geometry/loading, matched H/HS, numerical outputs and audits |
 | M6: sensitivity and report | NOT RUN | Comparisons, limitations, commands and complete evidence status |
 
-The refactor checkpoint was pushed as `4d141c3` on
+The latest implementation checkpoint was pushed as `64f47cc` on
 `codex/reusable-simulation-framework`. Its 2D regression passes exactly (51 VTKs,
 all CSV differences zero); the four-worker Joss comparison fails the unchanged
 strict criterion (176/191 frames). The paired one-worker control completed in
@@ -27,6 +27,18 @@ Its 191 physical states, 193 VTK files per run and all CSV values are identical.
 See [the source-audited serial report](reports/M0_SERIAL_REGRESSION.md).
 Do not start duplicate runs or reinterpret the previous failure as a pass.
 See [the retained evidence](../docs/evidence/framework-refactor-2026-10-15/README.md).
+
+Current `64f47cc` diagnostics/configuration changes pass 9 material, 10 config,
+10 framework contracts and all 36 Node tests. Its full 2D rerun again has 51
+byte-identical VTKs and zero CSV differences; the independent available-field
+audit passes. The fresh original 3D baseline finished successfully; the matched
+after run remains in progress. Do not declare 3D equivalence before comparison.
+
+The [MC design](reports/M2_RETURN_MAPPING_DESIGN.md) has an isolated, uninstalled
+prototype in `.tmp/mc-evolution-stage/`, with 32/32 native material-point tests
+passing. Root sampling has no completeness proof or adaptive continuation;
+full MPM, calibration and M2 acceptance are not established. Preserve this staging
+directory for review on the separate experimental branch.
 
 New constitutive physics will use a separate experimental branch based on the
 refactor checkpoint. An unresolved Joss result remains an explicit framework

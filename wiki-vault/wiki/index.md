@@ -19,7 +19,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[mc-hardening-softening-study]] — M0–M6 native plan; exact serial Joss PASS, generic-material gates in progress, M1 source-aware data complete and H/HS execution disabled
+- [[mc-hardening-softening-study]] — current generic contracts and exact 2D PASS; 3D running; M1 complete, isolated MC point tests 32 PASS with provisional root solver
 - [[reusable-simulation-framework]] — composable native cases; 2D and serial Joss exact passes, four-worker Joss failure retained; current generic-material regression gates in progress
 - [[upstream-development-report-2026-10-15]] — professional Git-based comparison with original CL-MPM and linked evidence
 - [[triaxial-clay-calibration]] — native 70 × 140 mm clay demonstration, computed curves and scientific limits; checkpoint PR #7 merged into main at efd0358

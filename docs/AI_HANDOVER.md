@@ -29,8 +29,10 @@ and soil-cliff comparisons. [Research status](../research/README.md) records gat
 ## Repository and checkpoint topology
 
 Current branch: **codex/reusable-simulation-framework**.
-Published implementation/evidence checkpoint: `4d141c3`; master-plan intake
-`909fddf` and formatting/index follow-up `49e5cdd` are also pushed.
+Latest pushed checkpoint: **`64f47cc`**, including the generic material/config
+contracts and M1 reference preparation. Earlier implementation/evidence
+`4d141c3`, master-plan intake `909fddf` and later documentation checkpoints are
+historical ancestors. Attribute each run to its frozen executed source.
 Main remains `efd0358b7f571e738c0ecc022c4313fb7fca0d15` after the user's PR #7 merge.
 Live GitHub status refreshed on 2026-10-16: draft PRs #2/#3/#4 and separate #6
 remain open; no framework PR or merge is claimed. Do not synchronize upstream
@@ -46,14 +48,17 @@ was committed as `0fece3b`. Attribute evidence to its executed bytes.
 | Check | Result | Exact scope |
 | --- | --- | --- |
 | Legacy triaxial 2D | PASS, exact | Snapshot `2f6476f`; 480 MPs, 17,443 updates, 51 VTK hashes identical, all CSV differences zero |
+| Current `64f47cc` full triaxial 2D | PASS, exact | All 51 corresponding VTKs identical, all CSV differences zero; independent audit PASS |
 | Joss four-worker 40 s | FAIL, retained | Fresh original 176 versus after 191 states; fixed pointwise tolerances fail |
 | Joss serial 40 s | PASS, exact | Original `c749d32` versus executed after `41403f4`; 191 physical states, 193 VTKs incl initial/equilibrium, all fields/CSV differences zero |
-| Existing Node suite | PASS | 36 tests, zero skipped; no UI session or scientific validation |
-| Existing component contracts | PASS | 10 construction contracts, private triaxial contracts, delegate two-step solver/VTK smoke and Joss units |
+| Current Node suite | PASS | 36 tests, zero skipped; no UI session or scientific validation |
+| Current component contracts | PASS | 10 construction contracts; private callback contract also passed |
 | Bounded current-head integration | PASS | Joss 4 s and triaxial 27 updates on `9f26cb1`; native MC cliff two updates on `0fece3b` |
 | M1 reference-data preparation | PASS, data only | Nine stdlib integrity tests; four reference proposals remain non-executable |
-| New generic material diagnostics | IN PROGRESS | Native VM/MC/elastic protocol being tested; requires current-code regression before acceptance |
-| Legacy 3D matched regression | RUNNING | Fresh frozen-original serial baseline described below; current-code after run not yet launched |
+| Generic material diagnostics | PASS, focused | Nine native contracts; VM/MC/elastic identity, diagnostics, mode rejection and bounded native MC smoke |
+| Configuration contracts | PASS | Ten native checks; validation before output, JSON integrity and config isolation |
+| Legacy 3D matched regression | AFTER RUNNING | Original completed exit 0 at 22:26:38 UTC, 17,443 updates and 51 states; frozen `64f47cc` after run last observed at frame 29/50 |
+| Isolated M2 prototype | PASS, provisional points only | 32 native material-point tests; ignored staging directory only, not installed or spatially validated |
 
 Serial Joss has 4,155 MPs, constant mass 425,664.0625 kg per unit depth, finite
 arrays and 496 protected-base MPs with zero damage. The after status records
@@ -74,25 +79,54 @@ Scientific caveats from [the authenticity audit](SCIENTIFIC_AUDIT_2026-10-15.md)
 remain open: no experimental calibration, mesh convergence or closed energy
 budget is established by regression or visually similar collapse.
 
-## Current native job and next bounded action
+## Current native jobs and next bounded action
 
 Run root: `output/material-contract-2026-10-16/`.
-- Original 3D baseline: `triaxial-3d-before/`; wrapper PID **4232**.
-- Status: `triaxial-3d-before-status.json`; log: `triaxial-3d-before.log`.
+- Original 3D baseline: `triaxial-3d-before/`; **completed exit 0 at
+  22:26:38 UTC**, 17,443 updates and 51 states.
+- Before status: `triaxial-3d-before-status.json`; log: `triaxial-3d-before.log`.
 - Frozen original monolith: `output/framework-refactor-2026-10-15/baseline-source/calibration/triaxial.lisp`
   from `c749d32`; helper copies then loads those exact bytes.
 - Config: `triaxial-3d-serial.json`, original 3D recipe with workers=1 and
   OPENBLAS_NUM_THREADS=1 / OMP_NUM_THREADS=1. No physics change.
-- Current after case: `tests/cases/triaxial-3d-regression.lisp`. Commit the generic
-  diagnostics implementation before launching its full post-change regressions.
+- Current 3D after run: `triaxial-3d-after/`, frozen **`64f47cc`**; wrapper PID
+  **42300**, last observed at **frame 29/50**. After status:
+  `triaxial-3d-after-status.json`; log: `triaxial-3d-after.log`.
+- After case: `tests/cases/triaxial-3d-regression.lisp`. The generic/config
+  implementation was committed and pushed before its full regressions.
+- Current `64f47cc` full 2D comparison and audit have already passed: 51 VTKs
+  byte-identical and all CSV differences zero. Do not repeat that run.
 
-Check status and final log line once. Do not launch duplicate baselines. Finish
-focused generic-material tests; then run current 2D and 3D regressions with
-matched runtime/configuration, compare VTK/CSV using unchanged tolerances and
-retain real PASS/FAIL. No new full Joss run is needed when its numerical sources
-remain unchanged; prove that source identity rather than relabeling old output.
+The completion collector **`.tmp/finalize-material-contract.py` is ready**.
+Never run it until both 3D statuses report exit 0 and both native manifests
+report complete. Inspect status and the final log line once; while the after
+run is healthy, let it continue. Once complete, use the collector to compare
+3D VTK/CSV with unchanged tolerances, run the independent audits and package
+actual evidence. Then update docs and checkpoint commit/push. Retain honest
+PASS/FAIL; no reruns or duplicate native jobs are required. Focused generic
+9/9, config 10/10, Node 36/36 and component 10/10 checks already passed.
+No new full Joss run is needed when its numerical sources remain unchanged;
+prove that source identity rather than relabeling old output.
 M0 is **PROVISIONAL**, not complete merely because an exception is documented.
 Only then integrate physics on a separate experimental branch, as the plan allows.
+
+## Isolated M2 preparation checkpoint
+
+**`.tmp/mc-evolution-stage/` is saved but NOT installed or registered.** It holds
+five staged Lisp modules (`package`, `law`, `projection`, `state`, `material`),
+focused native point tests, `README.md`, `status.json` with source hashes and
+`native-points-001.log`. Actual Windows SBCL result: **32/32 tests PASS, exit 0**.
+No tracked engine/framework registration, DLL rebuild or full MPM run was made.
+
+This is a dedicated MC H/HS point prototype with coupled strength/kappa,
+zero-friction handling, explicit stress/strain conventions and deep material
+transactions. It remains **PROVISIONAL**: sampled root isolation lacks a global
+completeness proof and adaptive continuation/subdivision; material rollback does
+not provide whole-MPM global-step rollback. It is not M2 acceptance or scientific
+validation. Preserve the ignored staging directory across sessions. Root must
+create the separate physics branch and review/copy selected modules only after
+the M0 checkpoint/gate; do not install it into the current framework branch.
+See [the M2 design](../research/reports/M2_RETURN_MAPPING_DESIGN.md).
 
 ## Architecture and maintenance contracts
 
@@ -122,8 +156,10 @@ native apex/strain conventions must be verified before enabling those inputs.
 The source's missing Zhan prepeak strength and Zhan/Zang naming discrepancy remain
 explicit. No source PDF, curve fitting or synthetic lab observations are published.
 
-M2–M6 remain NOT RUN: dedicated MC evolution/state/return-map verification;
-matched 3D cylinders at 100/200 kPa; a separate matched soil cliff; sensitivity,
+M1 is complete as reference-data preparation only. M2 has the isolated
+provisional point prototype above; installation, full return-map acceptance
+and spatial validation remain pending. M3–M6 comparative runs remain NOT RUN:
+matched 3D cylinders at 100/200 kPa, a separate matched soil cliff, sensitivity,
 quantitative report and human handoff. No UI task is authorized.
 
 ## Automation and economical continuation
