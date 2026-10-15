@@ -2,7 +2,33 @@
 
 > **Read this at the start of a new AI session.** Open PR topology refreshed through the public GitHub API on **2026-10-15**; older checks below retain their dates. This is a **handover**, not a claim that the software has passed numerical validation. Check live branches, PRs, code and CI status before acting; this document can become stale. Keep it updated when significant decisions or statuses change.
 
-**Active work, 2026-10-15 — reusable native simulation framework:**
+**Latest mission, 2026-10-15 — master plan M0–M6:** the user authorized executing
+`research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md`, copied byte-identically
+from Downloads (SHA-256 `e71ae777cf126bef9b48fc7f2c9435b234b4b7842a384accb10d57de7b8b3e7d`).
+The referenced residual-soil PDF is available in Downloads and matches the plan's
+SHA-256 `acd60b668e3b6ed8c7a7378ae3afd053ca0419f4ed63aecc0031b019495f3979`.
+See `research/README.md` for milestone status. This is numerical verification and
+a fair H/HS comparative demonstration, not laboratory calibration or full CU.
+No UI work, fitting to slide curves, silent strain scaling, or main merge.
+Keep residual-soil and Zhan data separate. New constitutive physics goes on an
+isolated experimental branch. Delete only demonstrably obsolete files; preserve
+compatibility, active outputs, raw sources, negative evidence and personal settings.
+Commit cohesive changes and push each completed stage, as explicitly requested.
+
+The published framework checkpoint is `4d141c3`; main remains `efd0358` (live
+GitHub/remote refresh 2026-10-15). M0 starts with existing serial controls, contract
+audit and maintenance inventory. M1 source preparation can proceed independently;
+do not launch more Joss runs. New expensive investigation requires a clear problem
+report to the user. Existing tests need no repetition until code changes warrant it.
+
+**Automatic continuation reauthorized:** heartbeat `mpm-lanjut-setelah-reset` is
+ACTIVE, first scheduled for **2026-10-16 00:15 WIB**, after the observed five-hour
+usage reset at **00:14:52 WIB**, then every five hours. Check live usage/reset on
+wakeup and reschedule if necessary; scheduling does not change the account quota.
+Use compact progress reads, bounded independent work and checkpoint before limits.
+The laptop and desktop app must remain running for local scheduled work.
+
+**Framework validation checkpoint, 2026-10-15:**
 **Full four-worker result, 20:47 WIB:** the post-refactor Joss run completed
 40 s with exit 0, but **strict regression FAILED: 176 before versus 191 after
 frames**. At common saved clocks the unchanged pointwise tolerances also fail.
@@ -28,8 +54,8 @@ is caused by parallel execution; **do not assert that as a resolved cause**.
 problem before further investigation, then explicitly authorized a checkpoint
 **commit and push while waiting**. Publish the current code/docs/evidence with
 the strict failure retained. The final acceptance and PR remain pending.
-Heartbeat `mpm-lanjut-setelah-reset` is **PAUSED**; leave it paused unless the
-user requests automatic continuation. Existing native runs continue independently.
+The earlier pause was superseded by the user's master-plan request above;
+existing native runs continue independently of the heartbeat.
 At the next authorized check inspect only `joss-serial-before-status.json`,
 `joss-serial-after-status.json`, their `reference-metadata.json`, process IDs in
 `joss-serial-processes.json`, and one final line from each serial log under
@@ -40,8 +66,8 @@ When BOTH complete exit 0 at physicalTime 40, run the unchanged comparator on
 `joss-serial-before/` versus `joss-serial-after/`, and add separate diagnostics
 and evidence using the existing helpers. Preserve the four-worker FAIL even if
 serial passes. If serial also fails, investigate the first divergence rather
-than relaxing criteria. Do not start further investigation without first
-explaining the problem to the user. A checkpoint push is authorized now;
+than relaxing criteria. Explain significant problems before new expensive
+investigation. Master-plan execution and staged checkpoint pushes are authorized;
 overall acceptance and the PR require evaluation of the control. Do not merge
 or modify main.
 
