@@ -65,16 +65,22 @@
     (sample-point sim point
         (matrix-average cl-mpm/mesh:node-velocity '(2 1))))
 
+(defun format-binary-vtk-header (stream control &rest args)
+  "Write an ASCII VTK header to the same octet stream as its binary payload."
+  (write-sequence
+   (map '(vector (unsigned-byte 8)) #'char-code (apply #'format nil control args))
+   stream))
+
 (defun format-scalar (stream stream-bin name id mps accessor)
-  (format stream "SCALARS ~a double ~d~%" name 1)
-  (format stream "LOOKUP_TABLE default~%")
+  (format-binary-vtk-header stream "SCALARS ~a double ~d~%" name 1)
+  (format-binary-vtk-header stream "LOOKUP_TABLE default~%")
   (force-output stream)
   (loop for mp across mps
         do (write-binary-float (coerce (funcall accessor mp) 'double-float) stream-bin)
            ;; (format stream "~E ~%" (coerce (min 1d30 (funcall accessor mp)) 'single-float))
         )
   (force-output stream-bin)
-  (format stream "~%")
+  (format-binary-vtk-header stream "~%")
   )
 
 (defmacro save-parameter (name accessor)
@@ -484,15 +490,17 @@
 (defmethod save-vtk (filename (sim cl-mpm::mpm-sim))
   (with-accessors ((mps cl-mpm:sim-mps)
                    (mesh cl-mpm:sim-mesh)) sim
-    (with-open-file (fs filename :direction :output :if-exists :supersede)
-      (format fs "# vtk DataFile Version 2.0~%")
-      (format fs "Lisp generated vtk file, SJVS~%")
-      ;; (format fs "ASCII~%")
-      (format fs "BINARY~%")
-      (format fs "DATASET UNSTRUCTURED_GRID~%")
-      (format fs "POINTS ~d double~%" (length mps)))
-    (with-open-file (fs filename :direction :output :if-exists :append)
-      (with-open-file (fs-bin filename :direction :output :if-exists :append :element-type '(unsigned-byte 8))
+    ;; Two append handles have independent file positions on Windows, even
+    ;; after force-output; buffered headers can overwrite/interleave payloads.
+    ;; Keep ASCII declarations and big-endian doubles on one binary stream.
+    (with-open-file (fs filename :direction :output :if-exists :supersede
+                                :element-type '(unsigned-byte 8))
+      (format-binary-vtk-header fs "# vtk DataFile Version 2.0~%")
+      (format-binary-vtk-header fs "Lisp generated vtk file, SJVS~%")
+      (format-binary-vtk-header fs "BINARY~%")
+      (format-binary-vtk-header fs "DATASET UNSTRUCTURED_GRID~%")
+      (format-binary-vtk-header fs "POINTS ~d double~%" (length mps))
+      (let ((fs-bin fs))
         (force-output fs)
         (loop for mp across mps
               do
@@ -506,11 +514,11 @@
                    ;;         (coerce (cl-mpm/utils:varef pos 2) 'single-float))
                    ))
         (force-output fs-bin)
-        (format fs "~%")
+        (format-binary-vtk-header fs "~%")
         (let ((id 1)
               (nd (cl-mpm/mesh:mesh-nd mesh)))
           (declare (special id))
-          (format fs "POINT_DATA ~d~%" (length mps))
+          (format-binary-vtk-header fs "POINT_DATA ~d~%" (length mps))
           (dolist (f (cl-mpm::sim-output-list-scalar sim))
             (cl-mpm/output::save-parameter (first f) (funcall (second f) mp)))
           (dolist (f (cl-mpm::sim-output-list-vector sim))

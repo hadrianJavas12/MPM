@@ -2,7 +2,7 @@
 title: Studio custom constitutive models
 type: concept
 tags: [studio, constitutive, common-lisp, clos]
-sources: ["[[studio-hardening-2026-10-14]]", studio/CUSTOM_MODELS.md, studio/lisp/custom-model.lisp]
+sources: ["[[studio-hardening-2026-10-14]]", "[[studio-verification-2026-10-14]]", studio/CUSTOM_MODELS.md, studio/lisp/custom-model.lisp]
 updated: 2026-10-14
 ---
 
@@ -32,5 +32,13 @@ Execution remains disabled by default. It requires local loopback binding,
 confirmation and ≤32 KiB source without NUL. Lisp has unrestricted local user
 permissions; this is not a sandbox.
 
-Evidence and remaining full-engine gates: [[studio-verification-2026-10-14]].
+Native Windows delegate smoke passed with zero position/stress differences
+from built-in and actual CLOS calls. A browser delegate run with damage/plasticity
+on completed three frames. Its unchanged downloaded script from a spaced path
+matched all 28 settings, exact custom source and all seven VTK/PNG outputs byte
+for byte. These short checks establish integration and reproduction for that
+delegate case. Arbitrary laws, the custom elastic template under the full engine,
+calibration and long-run/convergence tests remain open.
+
+Evidence and remaining gates: [[studio-verification-2026-10-14]].
 Geometry/material conventions: [[studio-geometry-material]].

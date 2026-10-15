@@ -1,0 +1,199 @@
+Parameters:
+  E                  1.0d9
+  accelerateInterval 2.0d0
+  cliffSlope         78.0d0
+  cohesion           1965600.0d0
+  collapseInterval   0.1d0
+  constitutiveModel  CHALK
+  damageCohesion     54949.54838909244d0
+  damageDelayExponent 2.0d0
+  damageFrictionAngle 50.0d0
+  delayTime          10.0d0
+  density            1700.0d0
+  dilatancyAngle     0.0d0
+  ductility          12.0d0
+  enableDamage       T
+  enablePlasticity   T
+  fractureEnergy     4.8d0
+  frictionAngle      50.0d0
+  geometryRefinement 4
+  initiationStress   40000.0d0
+  massScaleAccelerate 10000.0d0
+  maxSteps           2000
+  meshSize           0.5d0
+  mpsPerCell         2
+  nonlocalLength     0.5d0
+  notchDepth         0.5d0
+  notchHeight        0.5d0
+  notchShape         TRIANGLE
+  notchTipFraction   0.5d0
+  nu                 0.24d0
+  plotMode           DAMAGE
+  quasiStaticTolerance 0.01d0
+  residualCompressionRatio 0.0d0
+  residualShearRatio 0.51d0
+  residualTensileRatio 1.0d0
+  runoutAspect       1.0d0
+  scenario           JOSS-BAY
+  settleMaxSteps     3000
+  settleTolerance    1.0d-4
+  shelfAspect        1.0d0
+  shelfHeight        15.5d0
+  simulationTime     221.14d0
+  soilBoundary       1.0d0
+  substeps           50
+  timeStepScale      0.5d0
+  undercut           0.0d0
+  upperVerticalHeight 6.8d0
+  workers            4
+Angle: 0.0e+0
+
+(31.0d0 16.5d0 0)
+(0.25d0 0.25d0 0.0d0)
+Reference particles: 4155, initial dt: 3.00241131d-4 s
+""Rebuilt pool"
+Settling 50: energy 7.7123d-1, OOBF 1.6207d-1
+Settling 100: energy 5.1493d-2, OOBF 9.9180d-2
+Settling 150: energy 1.2316d-2, OOBF 6.8715d-2
+Settling 200: energy 4.2758d-3, OOBF 5.0230d-2
+Settling 250: energy 1.7833d-3, OOBF 3.7237d-2
+Settling 300: energy 8.3360d-4, OOBF 2.8134d-2
+Settling 350: energy 4.2253d-4, OOBF 2.1685d-2
+Settling 400: energy 2.2775d-4, OOBF 1.6913d-2
+Settling 450: energy 1.2879d-4, OOBF 1.3245d-2
+Settling 500: energy 7.5637d-5, OOBF 1.0588d-2
+Settling 550: energy 4.5757d-5, OOBF 8.4832d-3
+Settling 600: energy 2.8332d-5, OOBF 6.8167d-3
+Settling 650: energy 1.7865d-5, OOBF 5.5161d-3
+Settling 700: energy 1.1427d-5, OOBF 4.4697d-3
+Settling 750: energy 7.3906d-6, OOBF 3.6268d-3
+Settling 800: energy 4.8223d-6, OOBF 2.9563d-3
+Settling 850: energy 3.1684d-6, OOBF 2.4139d-3
+Settling 900: energy 2.0932d-6, OOBF 1.9745d-3
+Settling 950: energy 1.3891d-6, OOBF 1.6168d-3
+Settling 1000: energy 9.2504d-7, OOBF 1.3249d-3
+Settling 1050: energy 6.1781d-7, OOBF 1.0864d-3
+Settling 1100: energy 4.1358d-7, OOBF 8.9127d-4
+Settling 1150: energy 2.7739d-7, OOBF 7.3152d-4
+Settling 1200: energy 1.8635d-7, OOBF 6.0063d-4
+Settling 1250: energy 1.2534d-7, OOBF 4.9330d-4
+Settling 1300: energy 8.4403d-8, OOBF 4.0526d-4
+Settling 1350: energy 5.6885d-8, OOBF 3.3301d-4
+Settling 1400: energy 3.8367d-8, OOBF 2.7369d-4
+Settling 1450: energy 2.5894d-8, OOBF 2.2497d-4
+Settling 1500: energy 1.7484d-8, OOBF 1.8495d-4
+Settling 1550: energy 1.1811d-8, OOBF 1.5207d-4
+Settling 1600: energy 7.9819d-9, OOBF 1.2505d-4
+Settling 1650: energy 5.3957d-9, OOBF 1.0283d-4
+Step 1/2000; physical time 2.000000 s; accelerate
+Step 2/2000; physical time 4.000000 s; accelerate
+Step 3/2000; physical time 6.000000 s; accelerate
+Step 4/2000; physical time 8.000000 s; accelerate
+Step 5/2000; physical time 10.000000 s; accelerate
+Step 6/2000; physical time 12.000000 s; accelerate
+Step 7/2000; physical time 14.000000 s; accelerate
+Step 8/2000; physical time 16.000000 s; accelerate
+Step 9/2000; physical time 18.000000 s; accelerate
+Step 10/2000; physical time 20.000000 s; accelerate
+Step 11/2000; physical time 22.000000 s; accelerate
+Step 12/2000; physical time 24.000000 s; accelerate
+Step 13/2000; physical time 26.000000 s; accelerate
+Step 14/2000; physical time 28.000000 s; accelerate
+Step 15/2000; physical time 30.000000 s; accelerate
+Step 16/2000; physical time 32.000000 s; accelerate
+Step 17/2000; physical time 34.000000 s; accelerate
+Step 18/2000; physical time 36.000000 s; accelerate
+Step 19/2000; physical time 38.000000 s; accelerate
+Step 20/2000; physical time 40.000000 s; accelerate
+Step 21/2000; physical time 42.000000 s; accelerate
+Step 22/2000; physical time 44.000000 s; accelerate
+Step 23/2000; physical time 46.000000 s; accelerate
+Step 24/2000; physical time 48.000000 s; accelerate
+Step 25/2000; physical time 50.000000 s; accelerate
+Step 26/2000; physical time 52.000000 s; accelerate
+Step 27/2000; physical time 54.000000 s; accelerate
+Step 28/2000; physical time 56.000000 s; accelerate
+Step 29/2000; physical time 58.000000 s; accelerate
+Step 30/2000; physical time 60.000000 s; accelerate
+Step 31/2000; physical time 62.000000 s; accelerate
+Step 32/2000; physical time 64.000000 s; accelerate
+Step 33/2000; physical time 66.000000 s; accelerate
+Step 34/2000; physical time 68.000000 s; accelerate
+Step 35/2000; physical time 70.000000 s; accelerate
+Step 36/2000; physical time 72.000000 s; accelerate
+Step 37/2000; physical time 74.000000 s; accelerate
+Step 38/2000; physical time 76.000000 s; accelerate
+Step 39/2000; physical time 78.000000 s; accelerate
+Step 40/2000; physical time 80.000000 s; accelerate
+Step 41/2000; physical time 82.000000 s; accelerate
+Step 42/2000; physical time 84.000000 s; accelerate
+Step 43/2000; physical time 86.000000 s; accelerate
+Step 44/2000; physical time 88.000000 s; accelerate
+Step 45/2000; physical time 90.000000 s; accelerate
+Step 46/2000; physical time 92.000000 s; accelerate
+Step 47/2000; physical time 94.000000 s; accelerate
+Step 48/2000; physical time 96.000000 s; accelerate
+Step 49/2000; physical time 98.000000 s; accelerate
+Step 50/2000; physical time 100.000000 s; accelerate
+Step 51/2000; physical time 102.000000 s; accelerate
+Step 52/2000; physical time 104.000000 s; accelerate
+Step 53/2000; physical time 106.000000 s; accelerate
+Step 54/2000; physical time 108.000000 s; accelerate
+Step 55/2000; physical time 110.000000 s; accelerate
+Step 56/2000; physical time 112.000000 s; accelerate
+Step 57/2000; physical time 114.000000 s; accelerate
+Step 58/2000; physical time 116.000000 s; accelerate
+Step 59/2000; physical time 118.000000 s; accelerate
+Step 60/2000; physical time 120.000000 s; accelerate
+Step 61/2000; physical time 122.000000 s; accelerate
+Step 62/2000; physical time 124.000000 s; accelerate
+Step 63/2000; physical time 126.000000 s; accelerate
+Step 64/2000; physical time 128.000000 s; accelerate
+Step 65/2000; physical time 130.000000 s; accelerate
+Step 66/2000; physical time 132.000000 s; accelerate
+Step 67/2000; physical time 134.000000 s; accelerate
+Step 68/2000; physical time 136.000000 s; accelerate
+Step 69/2000; physical time 138.000000 s; accelerate
+Step 70/2000; physical time 140.000000 s; accelerate
+Step 71/2000; physical time 142.000000 s; accelerate
+Step 72/2000; physical time 144.000000 s; accelerate
+Step 73/2000; physical time 146.000000 s; accelerate
+Step 74/2000; physical time 148.000000 s; accelerate
+Step 75/2000; physical time 150.000000 s; accelerate
+Step 76/2000; physical time 152.000000 s; accelerate
+Step 77/2000; physical time 154.000000 s; accelerate
+Step 78/2000; physical time 156.000000 s; accelerate
+Step 79/2000; physical time 158.000000 s; accelerate
+Step 80/2000; physical time 160.000000 s; accelerate
+Step 81/2000; physical time 162.000000 s; accelerate
+Step 82/2000; physical time 164.000000 s; accelerate
+Step 83/2000; physical time 166.000000 s; accelerate
+Step 84/2000; physical time 168.000000 s; accelerate
+Step 85/2000; physical time 170.000000 s; accelerate
+Step 86/2000; physical time 172.000000 s; accelerate
+Step 87/2000; physical time 174.000000 s; accelerate
+Step 88/2000; physical time 176.000000 s; accelerate
+Step 89/2000; physical time 178.000000 s; accelerate
+Step 90/2000; physical time 180.000000 s; accelerate
+Step 91/2000; physical time 182.000000 s; accelerate
+Step 92/2000; physical time 184.000000 s; accelerate
+Step 93/2000; physical time 186.000000 s; accelerate
+Step 94/2000; physical time 188.000000 s; accelerate
+Step 95/2000; physical time 190.000000 s; accelerate
+Step 96/2000; physical time 192.000000 s; accelerate
+Step 97/2000; physical time 194.000000 s; accelerate
+Step 98/2000; physical time 196.000000 s; accelerate
+Step 99/2000; physical time 198.000000 s; accelerate
+Step 100/2000; physical time 200.000000 s; accelerate
+Step 101/2000; physical time 202.000000 s; accelerate
+Step 102/2000; physical time 204.000000 s; accelerate
+Step 103/2000; physical time 206.000000 s; accelerate
+Step 104/2000; physical time 208.000000 s; accelerate
+Step 105/2000; physical time 210.000000 s; accelerate
+Step 106/2000; physical time 212.000000 s; accelerate
+Step 107/2000; physical time 214.000000 s; accelerate
+Step 108/2000; physical time 216.000000 s; accelerate
+Step 109/2000; physical time 218.000000 s; accelerate
+Step 110/2000; physical time 220.000000 s; accelerate
+Step 111/2000; physical time 221.140000 s; accelerate
+SUCCESS

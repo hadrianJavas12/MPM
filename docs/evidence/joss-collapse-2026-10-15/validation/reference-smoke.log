@@ -1,0 +1,124 @@
+Angle: 0.0e+0
+
+(31.0d0 16.5d0 0)
+(0.5d0 0.5d0 0.0d0)
+Reference geometry: 1092 MPs, mass 425664.06250000 kg/m; analytic 425897.36669306 kg/m
+
+"Rebuilt pool"
+Parameters:
+  E                  1.0d9
+  accelerateInterval 0.01d0
+  cliffSlope         78.0d0
+  cohesion           1965600.0d0
+  collapseInterval   0.005d0
+  constitutiveModel  CHALK
+  damageCohesion     26000.0d0
+  damageDelayExponent 2.0d0
+  damageFrictionAngle 50.0d0
+  delayTime          10.0d0
+  density            1700.0d0
+  dilatancyAngle     0.0d0
+  ductility          535.9975505618717d0
+  enableDamage       T
+  enablePlasticity   T
+  fractureEnergy     48.0d0
+  frictionAngle      50.0d0
+  geometryRefinement 4
+  initiationStress   18926.452181842527d0
+  massScaleAccelerate 10000.0d0
+  maxSteps           2
+  meshSize           1.0d0
+  mpsPerCell         2
+  nonlocalLength     0.5d0
+  notchDepth         0.5d0
+  notchHeight        0.5d0
+  notchShape         TRIANGLE
+  notchTipFraction   0.5d0
+  nu                 0.24d0
+  plotMode           DAMAGE
+  quasiStaticTolerance 0.01d0
+  residualCompressionRatio 0.0d0
+  residualShearRatio 0.51d0
+  residualTensileRatio 1.0d0
+  runoutAspect       1.0d0
+  scenario           JOSS-BAY
+  settleMaxSteps     1
+  settleTolerance    1.0d-20
+  shelfAspect        1.0d0
+  shelfHeight        15.5d0
+  simulationTime     0.03d0
+  soilBoundary       1.0d0
+  substeps           50
+  timeStepScale      0.5d0
+  undercut           0.0d0
+  upperVerticalHeight 6.8d0
+  workers            1
+Angle: 0.0e+0
+
+(31.0d0 16.5d0 0)
+(0.5d0 0.5d0 0.0d0)
+Reference particles: 1092, initial dt: 6.00482262d-4 s
+Parameters:
+  E                  1.0d9
+  accelerateInterval 0.01d0
+  cliffSlope         78.0d0
+  cohesion           1965600.0d0
+  collapseInterval   0.005d0
+  constitutiveModel  CHALK
+  damageCohesion     26000.0d0
+  damageDelayExponent 2.0d0
+  damageFrictionAngle 50.0d0
+  delayTime          10.0d0
+  density            1700.0d0
+  dilatancyAngle     0.0d0
+  ductility          535.9975505618717d0
+  enableDamage       T
+  enablePlasticity   T
+  fractureEnergy     48.0d0
+  frictionAngle      50.0d0
+  geometryRefinement 4
+  initiationStress   18926.452181842527d0
+  massScaleAccelerate 10000.0d0
+  maxSteps           2
+  meshSize           1.0d0
+  mpsPerCell         2
+  nonlocalLength     0.5d0
+  notchDepth         0.5d0
+  notchHeight        0.5d0
+  notchShape         TRIANGLE
+  notchTipFraction   0.5d0
+  nu                 0.24d0
+  plotMode           DAMAGE
+  quasiStaticTolerance 0.01d0
+  residualCompressionRatio 0.0d0
+  residualShearRatio 0.51d0
+  residualTensileRatio 1.0d0
+  runoutAspect       1.0d0
+  scenario           JOSS-BAY
+  settleMaxSteps     20000
+  settleTolerance    0.01d0
+  shelfAspect        1.0d0
+  shelfHeight        15.5d0
+  simulationTime     0.03d0
+  soilBoundary       1.0d0
+  substeps           50
+  timeStepScale      0.5d0
+  undercut           0.0d0
+  upperVerticalHeight 6.8d0
+  workers            1
+Angle: 0.0e+0
+
+(31.0d0 16.5d0 0)
+(0.5d0 0.5d0 0.0d0)
+Reference particles: 1092, initial dt: 6.00482262d-4 s
+Settling 50: energy 2.0909d-2, OOBF 8.4807d-2
+Settling 100: energy 8.7564d-4, OOBF 3.0650d-2
+Settling 150: energy 1.0241d-4, OOBF 1.3408d-2
+Step 1/2; physical time 0.010000 s; accelerate
+
+Warning: slow font initializationqt_processTermEvent received a GE_fontprops event. This should not have happened
+
+	title is "Joss reference: t=0.010 s, accelerate", offset at (character 0, 0, 0)center justified  textcolor lt -1
+
+Step 2/2; physical time 0.020000 s; accelerate
+JOSS REFERENCE SMOKE PASSED (coarse h=1m, two short frames; not a paper benchmark)

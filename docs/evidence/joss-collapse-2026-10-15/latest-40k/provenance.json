@@ -1,0 +1,15 @@
+{
+  "status": "unverified calibration candidate",
+  "change": "Only damage strength changed from baseline18.926kPa to40kPa; derived ductility updated consistently; longer observation target221.14s.",
+  "reason": "Measured converged native DP nonlocal driving lower50.409kPa, upper33.937kPa; choose threshold between them to localize initial damage below.",
+  "damageCohesion": 54949.54838909244,
+  "initiationStress": 40000.0,
+  "ductility": 12,
+  "fractureEnergy": 4.8,
+  "delayTime": 10.0,
+  "baseline": "dp-physical-pilot: firstdamage lower t4s, then excessivecutback5.2m andrunout7.8m vsreference final; IoU.6998 isonlyimageproxy.",
+  "isLiteralPaperParameters": false,
+  "source": "criterion-probe/summary.json; dp-physical-pilot/final-shape-comparison.json",
+  "target": "actual native progressive basal failure and final shape, no prescribed phase timeline",
+  "launcher": "windows/cl-mpm.cmd output/reference-reproduction-2026-10-14/run-fast.lisp output/reference-reproduction-2026-10-15/strength-40k-config.json output/reference-reproduction-2026-10-15/strength-40k-run"
+}

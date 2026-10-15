@@ -125,5 +125,15 @@ Quicklisp, CL-MPM and its runtime libraries.
 See [testing](../docs/testing.md) for commands and evidence. The suite
 includes real SBCL reader/compiler/CLOS tests of production config and loader
 with explicit dependency stubs. They do not load the MPM solver, Quicklisp,
-MAGICL or OpenBLAS. Real-engine Windows tests and numerical benchmarks remain
-required. This workflow does not reproduce the multi-stage Joss Bay analysis.
+MAGICL or OpenBLAS. Separately, the actual native Windows launcher passed the
+full-engine built-in/delegate comparison and VTK readback. The browser custom
+delegate completed three frames with damage/plasticity enabled; its unchanged
+downloaded script ran from a path containing spaces. All 28 config settings,
+exact custom source and mesh + three VTK + three PNG outputs matched, with
+finite particle fields and identical output bytes/hashes.
+
+See [the Windows evidence report](../docs/windows-verification-2026-10-14.md)
+for the recorded versions and scope. This short delegate case does not validate
+arbitrary custom laws, the experimental elastic template under the full engine,
+long-run stability or mesh convergence. This workflow does not reproduce the
+multi-stage Joss Bay analysis.

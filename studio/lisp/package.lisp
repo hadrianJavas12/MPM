@@ -7,6 +7,8 @@
    #:*schema-path*
    ;; scenario
    #:make-cliff-sim
+   #:make-joss-reference-sim
+   #:run-joss-reference
    #:load-custom-model
    ;; runner
    #:run

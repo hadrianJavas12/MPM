@@ -41,6 +41,7 @@ const MAKE_VIDEO = path.join(ROOT, 'windows', 'make-video.cmd');
 const RUNNER = path.join(STUDIO_DIR, 'lisp', 'run.lisp');
 
 const SCHEMA = JSON.parse(fs.readFileSync(path.join(STUDIO_DIR, 'schema.json'), 'utf8')).parameters;
+const REFERENCE_PRESETS = JSON.parse(fs.readFileSync(path.join(STUDIO_DIR, 'reference-presets.json'), 'utf8'));
 const MAX_LOG_LINES = 2000;
 const MAX_BODY_BYTES = 64 * 1024;
 const FRAME_RE = /^frame_\d{5}\.png$/;
@@ -218,6 +219,9 @@ async function startRun(req, res) {
   if (state.running) return sendJson(res, 409, { error: 'A simulation is already running.' });
   if (videoBusy) return sendJson(res, 409, { error: 'Wait for video encoding to finish.' });
   const config = validateConfig(payload);
+  if (config.scenario === 'joss-bay' && config.constitutiveModel === 'custom') {
+    return sendJson(res, 400, { error: 'Joss Bay uses its dedicated reference material. Select the built-in model for this scenario.' });
+  }
   const isCustom = config.constitutiveModel === 'custom';
   let customSource = null;
   if (isCustom) {
@@ -398,6 +402,7 @@ async function route(req, res) {
 
   if (method === 'GET' && pathname === '/api/status') return sendJson(res, 200, state);
   if (method === 'GET' && pathname === '/api/schema') return sendJson(res, 200, SCHEMA);
+  if (method === 'GET' && pathname === '/api/reference-presets') return sendJson(res, 200, REFERENCE_PRESETS);
   if (method === 'GET' && pathname === '/api/custom-model-capabilities')
     return sendJson(res, 200, {
       enabled: CUSTOM_LISP_ENABLED,

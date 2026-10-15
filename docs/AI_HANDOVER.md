@@ -1,6 +1,103 @@
 # AI Engineering Handover — CL-MPM Studio
 
-> **Read this at the start of a new AI session.** Snapshot verified against GitHub on **2026-10-14**. This is a **handover**, not a claim that the software has passed numerical validation. Check live branches, PRs, code and CI status before acting; this document can become stale. Keep it updated when significant decisions or statuses change.
+> **Read this at the start of a new AI session.** Open PR topology refreshed through the public GitHub API on **2026-10-15**; older checks below retain their dates. This is a **handover**, not a claim that the software has passed numerical validation. Check live branches, PRs, code and CI status before acting; this document can become stale. Keep it updated when significant decisions or statuses change.
+
+**Latest result and user acceptance, 2026-10-15:** after viewing the actual
+native DP collapse/run-out video and the later 40 kPa result, the user said they
+were satisfied and asked for a commit recording successful collapse. The
+**40 s DP physical pilot is accepted as the requested visual
+collapse result**; the user requested a commit and no further calibration.
+This accepts the observed collapse sequence, not numerical identity or scientific
+validation. Its approximate comparison against reference final t=221.14 s remains
+IoU 0.699825, run-out edge +7.8 m and plateau edge −5.2 m: it loses more cliff and
+runs out farther. The pilot completed 174 frames, 4,155 MPs, constant mass
+425664.0625 kg/m and finite audited fields. First saved damage is lower-face at
+t=4 s, max 0.333589; 496 protected base MPs remain undamaged in the pause audit.
+The preserved accepted video/final image, later result, metadata, audits and
+replay provenance are indexed in
+[the commit evidence bundle](evidence/joss-collapse-2026-10-15/README.md).
+Full diagnosis: [JOSS_DAMAGE_DIAGNOSIS_2026-10-15.md](JOSS_DAMAGE_DIAGNOSIS_2026-10-15.md).
+
+The reference-only production path now uses author Joss DP driving with radian
+friction, native aggregate stabilization/statistics and an elastic protected
+index-1 base; ordinary Studio/chalk defaults remain unchanged. The strict frozen
+probe converged in 1658 updates (energy 5.068e-9/OOBF 9.9667e-5). Same-state
+nonlocal lower DP 50.409 kPa versus MC 16.076 kPa explains the former basal
+initiation failure at the correct 18.926 kPa threshold. Exact legacy DR one-trial
+evidence has native time 0/dt 1 and changes trial positions only: do not replay
+its assigned timeline as physical evidence. Clip/source identity is still unproved.
+Actual validation recorded in `output/reference-reproduction-2026-10-15/validation/`:
+Node 36/36 (three real SBCL contracts), native reference smoke with 179 settling
+steps, four finite VTKs/two PNGs and 124 protected base MPs, plus failed-equilibrium
+guard. This is integration evidence, not scientific validation.
+
+**Completed later calibration:** `strength-40k-run` reached **221.14 s / 111
+frames**, ending normally in accelerate with `complete=true`. It uses 40 kPa
+initiation (between measured lower/upper DP drives), derived cohesion
+54949.548389 Pa/ductility 12, unchanged Gf 4.8 J/m² and delay 10 s, h=0.5 m/two
+MPs per axis/four workers. The raw request was 5000 frames; canonical schema
+normalization made the effective cap **2000**, as the actual run log confirms.
+Final max damage is **0.49062952033**, mass-weighted damage **0.008064637675**;
+it did **not** collapse. Do not describe this later case as the accepted collapse
+or keep the stale PID 29416/pending status. It is an unverified calibration,
+not literal paper inputs. The accepted pilot used a saved equilibrium warm start;
+the later candidate exercised the production CLI path. The historical pilot's
+isolated `joss-probe-dp-chalk` subclass and current production reference class
+have separate evidence; identical production replay is unproved. Keep that
+provenance distinction. Heartbeat `mpm-lanjut-setelah-reset` is
+confirmed **PAUSED** following user acceptance. Do not resume simulations,
+calibration or UI work without a new user request. The user authorized a local
+commit on `feat/studio-custom-constitutive-lisp-export`; no push or merge was
+requested.
+
+**Local workspace update, 2026-10-15:** the active checkout is now directly
+`D:\MPM`, branch `feat/studio-custom-constitutive-lisp-export`, HEAD `f70e410`.
+The former `D:\MPM\MPM-test` directory is gone. The old root checkout, including
+its `main` history, local changes and artifacts, is preserved in
+`D:\MPM\.workspace-backup\before-flatten-20261015-0432` (ignored by the active repo).
+All 41 changed/untracked source files matched their pre-move SHA-256 hashes;
+the recovery stash is retained. The relocated Windows launcher actually loaded
+Studio, its schema and local libraries successfully. Existing evidence paths
+under `output/` now resolve relative to `D:\MPM`; old absolute paths in historical
+logs remain historical. Obsidian preferences were preserved.
+
+The earlier physics pilot was stopped for relocation; this historical candidate
+did not match basal crack/collapse/run-out. It was stopped at t=111 s after
+localized upper-face damage; a bounded native-aggregation preparation check
+converged in 1658 updates, but this does not prove correct fracture. User requested
+less repeated testing/token use, results first, and no UI work. Commit `8fba2b7`
+was inspected: its runner uses a 100 m chalk example with default **stress** coloring
+and no toe notch. A 100-update compatibility run did not establish basal damage;
+see `output/reference-reproduction-2026-10-14/commit-8fba2b7-check/damage-audit.json`.
+The supplied-folder `joss.lisp` matches the repository file after newline normalization.
+Do not repeat the earlier broad investigations; use these saved results.
+
+**Antigravity history recovered, 2026-10-15:** the exact conversation
+**Clone and Run CL-MPM** was read from its local database, read-only. Before the
+UI request, the runner used `examples/chalk/chalk.lisp`. After the user's blue
+frame complaint, it switched from damage coloring to **Von Mises stress**;
+the assistant then reported red at the base. The recorded patch supports a
+stress-color explanation for the remembered red base, but does not establish
+basal fracture or a validated Joss Bay collapse. The UI request comes immediately
+after this explanation. See [ANTIGRAVITY_NATIVE_HISTORY.md](ANTIGRAVITY_NATIVE_HISTORY.md)
+and `output/antigravity-history-2026-10-15/`. No additional simulation was run
+for this audit. Keep stress and damage evidence separate and continue to defer UI.
+
+**User-supplied damage video correction, 2026-10-15:** the subsequent WhatsApp
+clip genuinely labels damage0–1 and shows a 31 m Joss-shaped case, not the 100 m
+chalk example. A clear lower-face colored patch is visible at title t=15.87 s,
+red by19.83 s, and spreading upward through39.67 s; the clip does not show a
+completed run-out. The remembered result must not be dismissed as stress based
+on the other runner's color change. `D:\model\render_video.py` closely matches
+the clip and selects the VTK damage field. `run_joss_simulation.lisp` is an
+earlier candidate (DR quasi-static/aggregation, Gf4.8, delay62), with WSL paths;
+its exact identity with the clip is unproved, and later VTK/PNG outputs may have
+been overwritten/cached. The clip's position before the blue-frame complaint
+is also unproved. See the correction in
+[ANTIGRAVITY_NATIVE_HISTORY.md](ANTIGRAVITY_NATIVE_HISTORY.md) and the extracted
+frames/inspection under `output/antigravity-history-2026-10-15/whatsapp-video/`.
+Next diagnosis should recover this Joss run rather than assume the 8fba2b7
+100 m chalk default produced the supplied clip. No new solver runs were made.
 
 ## 1. Mission: what we are building and why
 
@@ -15,14 +112,20 @@ The user wants to:
 4. **Import/edit/export `.lisp`** files, including a custom model and a script reproducing the Studio run.
 5. Eventually obtain trustworthy **damage / crack development / cliff collapse / runout** simulations that can be checked against research reference cases.
 6. **Import/export selected Lisp modules or entire simulation presets**, independently of GUI editing: Geometry, Materials, Constitutive Source, Boundary Conditions, Loading, Solver, Simulation Phases and Output. A partial import must not overwrite unrelated modules; preview, merge/replace, safety and round-trip portability are required. See [MODULAR_LISP_IO.md](MODULAR_LISP_IO.md) and [issue #5](https://github.com/hadrianJavas12/MPM/issues/5). **Planned, not implemented.**
+7. **Reference-shaped Joss Bay experiment:** use the supplied paper/video and
+   `examples/chalk/joss.lisp` for cliff geometry, crack growth, collapse and
+   debris run-out. The user clarified that numerical identity is unnecessary
+   and the research dataset is not required. See [REFERENCE_REPRODUCTION.md](REFERENCE_REPRODUCTION.md).
+   The latest instruction prioritizes actual results and defers reference UI work;
+   its draft is preserved in `output/reference-reproduction-2026-10-14/ui-draft.patch`.
 
 **Critical distinction:** the user explicitly said this project is **not related to their thesis**. Never redirect the project to an unrelated thesis, machine-learning project, or geotechnical sensor optimisation. Keep the user's intended focus on this MPM simulator.
 
 **Engineering values / shared approach:** preserve the established CL-MPM solver wherever possible; extend it through modular interfaces, not one-off hacks; keep the Windows workflow simple; maintain compatibility with existing configurations and upstream examples; make the output scientifically auditable; and mark experimental functionality honestly. The browser is a workbench/controller, **not** an alternative physics engine.
 
-## 2. Current development topology (verified 2026-10-14)
+## 2. Current development topology (PR topology refreshed 2026-10-15)
 
-Four **open DRAFT stacked PRs** exist. NONE is merged into `main`.
+The original four **open DRAFT stacked PRs** remain unmerged, with the same bases.
 
 | Order | PR | Working branch | PR base | Change |
 | --- | --- | --- | --- | --- |
@@ -31,7 +134,38 @@ Four **open DRAFT stacked PRs** exist. NONE is merged into `main`.
 | 3 | [#3](https://github.com/hadrianJavas12/MPM/pull/3) | `feat/studio-material-parameter-controls` | `feat/studio-notch-geometry-preview` | Cohesion, dilatancy, plasticity, nonlocal-length controls, elastic preset |
 | 4 | [#4](https://github.com/hadrianJavas12/MPM/pull/4) | `feat/studio-custom-constitutive-lisp-export` | `feat/studio-material-parameter-controls` | Custom CLOS material model, Lisp editor/import/export, default-deny local execution |
 
-**Recommended starting branch for the next AI:** `feat/studio-custom-constitutive-lisp-export`. It contains **the entire current series** (all earlier feature branches are ancestors). The reviewed baseline before this hardening session was `95ded55b9fee22d9e5871d12d5bd09174a8a401f`. The implementation and synchronized docs/wiki are in commit [`52c5ed7`](https://github.com/hadrianJavas12/MPM/commit/52c5ed7c68985703f845b1331d389aab36664124); a subsequent documentation commit records this provenance. Query the branch for its current HEAD before continuing.
+Live refresh also found open draft [#6](https://github.com/hadrianJavas12/MPM/pull/6),
+`feat/studio-modular-lisp-presets` → `feat/studio-custom-constitutive-lisp-export`.
+It is separate background work; it is not checked out or imported into this
+results task. Do not attach, rebase, merge or imply that its feature is shipped
+locally. CI/billing evidence below remains dated rather than newly verified.
+
+**Recommended starting branch for the next AI:** `feat/studio-custom-constitutive-lisp-export`. It contains the implementation of the current series, including the geometry fix inherited through an equivalent material-branch commit. The reviewed baseline before this hardening session was `95ded55b9fee22d9e5871d12d5bd09174a8a401f`. The implementation and synchronized docs/wiki are in commit [`52c5ed7`](https://github.com/hadrianJavas12/MPM/commit/52c5ed7c68985703f845b1331d389aab36664124); a subsequent documentation commit records this provenance. Query the branch for its current HEAD before continuing.
+
+The earlier native Windows continuation cloned this branch into `D:\MPM\MPM-test`
+at `a2e615712b14154a776dba6839041d34be9465cf`. PRs #1–#4 and their bases were
+checked again and remain as shown above. The setup/output/UI fixes and new
+verification evidence are local working-tree changes; no commit, push, PR edit
+or merge was made in this session. Inspect that checkout's diff before continuing.
+
+Ancestry check for that earlier `a2e6157` baseline: 41 commits ahead of `main`, zero behind;
+the checked `main`, lifecycle and material heads are ancestors. Latest geometry
+head `98eff24` is **not** a literal ancestor. Its fix is already present through
+material commit `648ceca` with the same patch ID
+`ba608523e5f0068a9e05f23465ce0caccbc60721`, and the actual app retains that geometry
+update. No cherry-pick is needed. See captured `branch-ancestry.json`; do not
+equate stacked PR bases with literal ancestry of every subsequently updated head.
+
+**Current reference continuation:** the requested branch was subsequently
+fast-forwarded to `f70e41080d46d33e46448a91e4bbb9e73c0e5318` after preserving
+the prior dirty work. The saved recovery stash is
+`afb61677825e76b8b28fea141eb5b66885c48c42`, recorded in
+`output/reference-reproduction-2026-10-14/pre-sync-stash.txt`, alongside
+`pre-sync-working-tree.patch`. Prior Windows fixes were reapplied. Keep those
+recovery records/stash until the user decides to remove them. The local checkpoint
+`feat(mpm): berhasil runtuh sesuai hasil visual yang disetujui` records the
+accepted reference work and Windows fixes; inspect `git log` for its exact hash
+rather than assuming the pre-checkpoint baseline is still HEAD.
 
 **DO NOT** commit to `main` or merge the PRs without explicit instruction from the user. For new tasks, branch from the most appropriate feature branch; prefer a new small PR rather than silently mixing unrelated work into PR #4. Before changing PR bases, inspect the live PR graph. If the user requests merges, resolve the stack in **#1 → #2 → #3 → #4** order, then rebase/retarget and rerun tests. Never assume a PR is merged just because a branch exists.
 
@@ -76,6 +210,7 @@ Existing CL-MPM numerical engine (`src/`)
 | Actual geometry/particle creation | `studio/lisp/scenario.lisp` |
 | Run loop / VTK / PNG | `studio/lisp/runner.lisp` |
 | Custom authoring / Lisp exports | `studio/public/model-workspace.js` |
+| Joss Bay reference adaptation | `studio/lisp/reference-joss.lisp`; `studio/reference-presets.json`; `docs/REFERENCE_REPRODUCTION.md` |
 | Details of newly added features | `studio/GEOMETRY.md`; `studio/MATERIAL.md`; `studio/CUSTOM_MODELS.md` |
 | Node tests / CI | `studio/test/`; `.github/workflows/studio-node.yml` |
 
@@ -113,31 +248,51 @@ The editor supports local text editing/import and downloads:
 - `custom-model.lisp`: exact user-edited text.
 - `simulation.lisp`: Lisp script setting configuration and running the existing CL-MPM Studio library; when custom is selected it loads the adjacent `custom-model.lisp`.
 
-Exported scripts are **NOT standalone**. They need SBCL, Quicklisp, CL-MPM and other repository dependencies. `public/config.js` now shares API/export normalization, and exports every schema setting with numeric limits/defaults/zero/false preserved. Lisp coercion matches decimal strings and positive half-up integer rounding. Reader/config/adjacent-source parity has passed SBCL tests with dependency stubs; physical output parity under the full toolchain remains unverified. Do not make export invoke arbitrary code silently.
+Exported scripts are **NOT standalone**. They need SBCL, Quicklisp, CL-MPM and other repository dependencies. `public/config.js` shares API/export normalization and exports every schema setting with numeric limits/defaults/zero/false preserved. Lisp coercion matches decimal strings and positive half-up integer rounding. Reader/config/adjacent-source parity passed SBCL tests with dependency stubs. The subsequent full Windows trusted-delegate case also passed: all 28 config settings and exact source bytes matched, and mesh + three particle VTK + three PNG files were byte-identical between the browser and unchanged exported script. This covers that short configuration, not arbitrary laws or calibrated physics. Do not make export invoke arbitrary code silently.
 
 ## 4. Extremely important scientific distinction
 
-The existing Studio scenario in `studio/lisp/scenario.lisp` is a **simplified chalk-cliff setup** derived from `examples/chalk/chalk.lisp`. It is **NOT yet** a full reproduction of `examples/chalk/joss.lisp` or the published Joss Bay cliff-collapse research.
+The ordinary `studio-cliff` scenario in `studio/lisp/scenario.lisp` is a
+**simplified chalk-cliff setup** derived from `examples/chalk/chalk.lisp`. A
+separate experimental `joss-bay` path now adapts `examples/chalk/joss.lisp`
+into geometry/material/equilibrium/accelerate/collapse stages. It remains under
+native verification and is not a proven full reproduction of the published results.
 
 The Studio runner currently loops `substeps` calls to `cl-mpm:update-sim` per output frame; defaults use fixed `*mass-scale* = 1d4` in scenario configuration. The original Joss example/paper involves specialised damage / relaxation / acceleration / dynamic collapse logic. Full reproduction requires separate implementation, tests and comparison to reference results.
+
+That fixed loop describes the ordinary scenario. The dedicated reference path
+uses a physical-time target, CFL-limited stepping and adaptive mass scale after
+bounded initial elastic equilibrium. It writes time/phase/criteria/mass/damage
+CSV and termination metadata; a frame cap or unconverged equilibrium must not
+be reported as a complete collapse. The schema/profile exposes the paper's
+conflicting 1 GPa prose and 100 MPa table moduli explicitly. Geometry details
+not dimensioned in the paper are attributed to the author example/video.
 
 **Never** call Studio results "validated Joss Bay results" or interpret damage contours / debris motion as physically predictive without establishing material calibration, time stepping, boundary conditions, mesh convergence and reference-case comparison. Do not invent or silently infer parameters from the original paper.
 
 ## 5. What has actually been verified — and what has not
 
-Current verified evidence (2026-10-14 follow-up):
+Verified evidence from the earlier native Windows continuation (before the new reference changes):
 
-- All PRs #1–#4 remain open drafts; their bases match the table above. Baseline #4 was `95ded55b9fee22d9e5871d12d5bd09174a8a401f`, ahead of `main` by 39 commits and behind by zero.
-- Baseline JavaScript syntax checks and 22 Node tests actually passed locally. After hardening, syntax checks and **33 tests passed, zero failed/skipped**, on Linux with Node 24.19.0 and SBCL 2.2.9.
+- All PRs #1–#4 remain open drafts; their bases match the table above. The current Windows checkout started at `a2e6157`; older hardening baseline #4 was `95ded55`, ahead of `main` by 39 commits and behind by zero.
+- Final Windows JavaScript syntax checks and **33 tests passed, zero failed/skipped**, with Node 24.13.0 and SBCL 2.6.9. Historical Linux hardening also passed 33 tests on Node 24.19.0/SBCL 2.2.9; its scope remains separately attributed.
 - Three tests invoke a real SBCL reader/compiler/CLOS and compile the production `config.lisp` and `custom-model.lisp`. Their JSON/matrix/Quicklisp/runner dependencies are explicitly stubbed. This is **not** an ASDF/full-engine simulation or physical benchmark.
 - API tests exercise both disabled and opted-in local policy, confirmation/size/NUL/Host/origin checks, exact source writes and concurrent-run locks; child launch is mocked.
-- **CI cause confirmed:** Actions run `38509402658`, check `115674197084`, has no steps/runner. The public check annotation says the job was not started because the account is locked due to a billing issue. Hosted CI remains blocked until the account owner resolves that lock. Do not invent a code-based workaround or call it a passing run.
+- **CI cause confirmed again:** Actions run `38512874136`, check `115685122821`, has no executed steps. The public check annotation says the job was not started because the account is locked due to a billing issue. Hosted CI remains blocked until the account owner resolves that lock. Do not invent a code-based workaround or call it a passing run.
 - The workflow now pins Ubuntu 24.04, uses Node 22, installs SBCL, and requires the contract tests. Its hosted execution is still blocked.
-- `scripts/studio-custom-smoke.lisp` was added for real-engine built-in/delegate comparison, finite stresses/positions and VTK. Only lexical structure was checked here; it has **not** run under the full Windows toolchain.
-- **NOT VERIFIED:** full Windows/SBCL/Quicklisp/MAGICL/OpenBLAS custom simulation, actual exported-vs-UI numerical output parity, full Joss Bay reproduction, mesh-independent predictions. Browser automation could not run because the binary was unavailable and its download failed.
-- Historical wiki [[refactor-2026-10-14]] reports full Windows tests of the earlier port. That is attributed historical evidence; it does not validate these new custom-model changes.
+- Native toolchain ready: SBCL 2.6.9, Quicklisp client 2021-02-13/dist 2026-01-01, OpenBLAS 0.3.34, gnuplot 6.0 pl1, ffmpeg 9.0.1. Existing executables were reused; checkout-local Quicklisp/OpenBLAS were copied from `D:\MPM`. Setup passed and the corrected Quicklisp function independently installed fresh into a path containing spaces on Windows PowerShell 5.1.
+- `scripts/smoke-test.lisp` ran through the Windows launcher: 100 particles, 50 updates, all positions/velocities/stresses finite, positive finite timestep and downward mean y (0.25 → 0.24322331 m).
+- `scripts/studio-custom-smoke.lisp` ran with the complete engine: 64 final particles, two updates, 80 custom calls, maximum position/stress difference zero. Both VTK files passed readback of 36 finite scalar arrays and point/mass equality with the simulation. Plasticity/damage were disabled for this delegate comparison.
+- Actual browser custom delegate run passed through API → Windows launcher → full engine: default plasticity/damage on, three frames/five updates per frame, status Finished/100%, exit 0, all three PNGs displayed. Unchanged downloaded `simulation.lisp` from a path containing spaces exited 0. All 28 config settings and exact source bytes matched; all seven VTK/PNG files were byte/hash identical. Particle output counts were 1120, 1120 and 1309 after splitting, with 36 finite scalar arrays each.
+- Found and fixed fresh-Quicklisp quoting/init failures, malformed binary VTK from two Windows append handles, silent/missing/partial PNG completion and oversized button SVGs. The full-engine plot smoke passed success and failure paths. Independent output-parser review accepted fresh files and rejected seven corruptions, including preserved malformed baseline output. Solver numerical updates were preserved.
+- **NOT VERIFIED:** arbitrary custom laws, the experimental custom elastic template under the full engine, long-run stability, full Joss Bay reproduction, calibration, mesh-independent predictions. The specialized particle-output parser is not a general VTK interoperability test.
+- Historical wiki [[refactor-2026-10-14]] and immutable hardening evidence remain attributed historical reports. They are distinct from the new captured native Windows evidence.
 
-See [testing.md](testing.md) and the Obsidian/LLM Wiki `wiki-vault/wiki/studio-verification-2026-10-14.md` for exact scope. Next: restore hosted Actions through the account owner, then run the supplied full-engine Windows smoke and export/UI comparison before making physical claims.
+See [testing.md](testing.md), [the Windows evidence report](windows-verification-2026-10-14.md) and `wiki-vault/wiki/studio-verification-2026-10-14.md` for exact scope. Evidence is locally preserved in `output/windows-verification-2026-10-14/` (git-ignored). Next: restore hosted Actions through the account owner, test the custom elastic law under the full engine and establish physical reference cases before predictive claims.
+The temporary opted-in Studio server was stopped after testing. A normal new
+launch retains default-deny custom execution; opt in intentionally for trusted
+custom source as shown below. The evidence includes preserved `ui-run/` and
+`export-run/` output copies.
 
 ## 6. How to run / verify
 
@@ -157,6 +312,7 @@ The Studio server uses Node.js >=18 (CI Node 22); no npm runtime dependencies. T
 powershell -ExecutionPolicy Bypass -File windows\setup.ps1
 windows\cl-mpm.cmd scripts\smoke-test.lisp
 windows\cl-mpm.cmd scripts\studio-custom-smoke.lisp
+windows\cl-mpm.cmd scripts\studio-plot-smoke.lisp
 studio\start-studio.cmd
 ```
 
@@ -181,25 +337,35 @@ The server ordinarily **rejects execution**. Custom execution additionally requi
 ## 7. Known gaps / risks to preserve in context
 
 1. **CI account blocker confirmed:** billing lock prevented jobs from starting. Account owner must resolve it; then capture a fresh run. Local tests are green; hosted CI is not.
-2. **Full-engine Lisp integration missing:** real SBCL contract tests now pass with dependency stubs. Execute the supplied `scripts/studio-custom-smoke.lisp` on the complete Windows toolchain; add the elastic/export physics comparisons after that baseline.
-3. **Physical exporter parity unverified:** shared normalization and SBCL reader/config/custom relative-path evaluation passed with stubs. Compare exported vs UI VTK/PNG/config under the actual launcher; those outputs have not been compared.
+2. **Full-engine scope remains limited:** Windows elastic-block and custom delegate integration passed. The custom elastic template still needs full-engine analytical/reference comparison; arbitrary custom laws and long-run stability remain unverified.
+3. **Exporter parity established for one short case:** all config/source and seven output files matched for the recorded delegate run. Add representative configurations/model laws and repeated-run cases before broader reproducibility claims. Preserve the local evidence before removing the checkout.
 4. **UI validation limited:** the editor's "check" is a lexical delimiter/string/comment check, **not** semantic Lisp compilation, API conformance or proof of safety. Syntax highlighting and completion do not yet exist.
 5. **Custom scripting security:** source is arbitrary code; localhost + confirmation are only *operational safeguards*, not sandboxing. Harden CSRF/local service exposures and avoid persistent unintended sensitive output; do not present current code as secure against malicious local/network actors.
 6. **Numerical model:** stress update and independent damage evolution are separate APIs; implement them distinctly if the user requests genuinely custom damage laws.
 7. **Geometry:** no freeform polygon/imported profile yet; sampled SVG preview may differ from discretised geometry. Validate at actual resolution.
 8. **Run bookkeeping:** current Studio uses fixed output directories; source run locks guard concurrency, but per-run output isolation/historical run management remains a future task.
 9. **Validation:** no demonstrated benchmark reproducing paper Joss Bay collapse stages or fracture-energy sensitivity.
-10. **Documentation now synchronized:** Studio/custom/material/development/testing and the wiki describe the hardening. Historical full-Windows claims are attributed and distinguished from current contract-test evidence. Keep all claims current as real-engine evidence arrives.
+10. **Documentation now synchronized:** the handover, setup/development/testing/custom contract, native Windows report and wiki describe the new full-engine/browser/export evidence. Historical reports remain attributed; keep scope and current evidence separate.
 
 Report new discoveries as **confirmed by code**, **observed by tests**, or **hypotheses requiring investigation**. Do not hide unexpected errors.
 
 ## 8. Prioritised next work
 
+**Current user priority overrides the backlog below:** the user accepted the
+actual 40 s DP collapse/run-out visually and requested that it be committed with
+an accurate success description. Preserve the accepted evidence and quantitative
+limits; the later 40 kPa case completed without collapse. No further calibration
+or simulations are requested, and the continuation heartbeat is PAUSED. Reuse
+the completed validation; repeat checks only after a relevant change or failure.
+Defer UI and the separate modular-preset branch.
+The following priorities preserve the wider Studio backlog, not instructions
+to restart completed smoke tests during this results task.
+
 ### Priority 0 — establish a green baseline
 - Inspect the currently checked-out branch and stacked PR bases.
 - Ask the account owner to resolve the confirmed GitHub billing lock; inspect a fresh Actions run. Do not repeatedly retry jobs while locked. Local Node/SBCL contract tests already pass.
-- On a Windows SBCL install, run `scripts/smoke-test.lisp` and a minimal default Studio scenario.
-- Add executable integration tests for custom delegate and elastic model, import/export round trips, parameter validation, API denial paths, and finite output. Fix actual failures.
+- Repeat the captured Windows smoke, custom delegate, PNG and UI/export comparisons after relevant changes. The current local baseline passes; use [testing.md](testing.md).
+- Establish a full-engine analytical/reference test of the custom elastic template and expand export comparison to representative configurations. Keep the existing contract/API denial/finite-output regressions required.
 
 ### Priority 1 — make custom modelling genuinely reliable
 - Test a reference custom CLOS constitutive model end-to-end without modifying the default chalk class.
@@ -265,9 +431,27 @@ At **handoff/end**:
 
 - **2026-10-14 modular portability requirement:** User additionally requested UI + selective .lisp import/export (individual, multiple selected modules) and full preset import/export. Defined proposed contract in [MODULAR_LISP_IO.md](MODULAR_LISP_IO.md) and opened [issue #5](https://github.com/hadrianJavas12/MPM/issues/5). This is documentation/roadmap only; existing code imports custom constitutive source and exports runnable scripts but does not provide a general module/preset import manager. Preserve no-execution-on-import and unselected-module isolation. 
 
+- **2026-10-14 native Windows continuation:** Cloned the requested branch at `a2e6157` into `D:\MPM\MPM-test`; refreshed the unchanged draft PR stack and CI billing lock (`38512874136` / `115685122821`). Completed checkout-local dependencies and verified fresh Quicklisp installation with spaces/PowerShell 5.1. Fixed Quicklisp quoting/init, Windows VTK text/binary stream corruption, silent PNG completion and button SVG sizing. Final Node checks/33 tests passed with zero skips. Actual launcher elastic smoke (100 particles/50 updates), delegate smoke (64 particles/two updates/80 custom calls, zero position/stress differences, 36 finite VTK scalar arrays) and PNG positive/negative smoke passed. Browser delegate finished 3/3 with damage/plasticity on; unchanged downloaded export ran from a spaced path. Independent comparison passed all 28 config settings, exact custom source and seven byte-identical VTK/PNG files; parser rejected seven corruptions. Saved evidence in `output/windows-verification-2026-10-14/`; updated this handover, documentation and linked wiki without changing immutable raw sources or prior log entries. Local changes remain uncommitted; no push, PR edit or merge. Numerical solver updates remain unchanged; physical calibration/Joss/mesh convergence and full-engine custom elastic validation remain open.
+
+- **2026-10-15 visual acceptance and commit request:** after viewing the native
+  DP collapse video and the completed 40 kPa image, the user accepted the actual
+  40 s pilot as the requested visual result and requested a commit recording
+  successful collapse. Preserved the measured mismatch (IoU 0.699825, run-out
+  +7.8 m, plateau −5.2 m against reference t=221.14 s), warm-start provenance and
+  unverified scientific status. The later 40 kPa production candidate completed
+  221.14 s/111 frames without collapse (max damage 0.49062952033, mass-weighted
+  0.008064637675); raw cap 5000 normalized to effective 2000. Continuation
+  heartbeat `mpm-lanjut-setelah-reset` is confirmed PAUSED. No further
+  calibration/simulation is requested. Updated diagnosis/reference docs and
+  linked wiki, preserving immutable raw sources and append-only history.
+  Actual Node 36/36 and native smoke/guard evidence remain distinct from
+  scientific validation. Evidence is indexed under
+  `docs/evidence/joss-collapse-2026-10-15/README.md`; no push/merge was requested.
+
 ### Useful navigation
 
 - [Verification guide](testing.md)
+- [Native Windows evidence](windows-verification-2026-10-14.md)
 - [Obsidian/LLM Wiki index](../wiki-vault/wiki/index.md)
 - [Current verification note](../wiki-vault/wiki/studio-verification-2026-10-14.md)
 

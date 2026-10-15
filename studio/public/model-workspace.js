@@ -112,6 +112,8 @@
         throw new Error('Parameter tidak dapat diekspor: ' + key);
     }
     const config = configApi.normalize(params || {}, schema);
+    if (config.scenario === 'joss-bay' && config.constitutiveModel === 'custom')
+      throw new Error('Joss Bay requires its dedicated reference material.');
     const lines = [];
     for (const [key, value] of Object.entries(config)) {
       if (!/^[A-Za-z][A-Za-z0-9]*$/.test(key)) throw new Error('Invalid schema key: ' + key);

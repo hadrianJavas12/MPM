@@ -14,12 +14,25 @@ The script is idempotent. It:
 
 Options: `-SkipWinget` (only report missing tools), `-BuildKirchoff` (also compile `libs\kirchoff.dll`).
 
+Quicklisp installation uses a temporary Lisp bootstrap file rather than a
+quoted `--eval` expression. SBCL starts with `--no-userinit --no-sysinit` for
+this installation so an existing `.sbclrc` cannot load project dependencies
+before Quicklisp is ready. A fresh installation into a path containing spaces
+was verified on Windows PowerShell 5.1; see [the Windows verification report](windows-verification-2026-10-14.md).
+
 ## 2. Verify
 ```bat
 windows\cl-mpm.cmd scripts\smoke-test.lisp
+windows\cl-mpm.cmd scripts\studio-custom-smoke.lisp
+windows\cl-mpm.cmd scripts\studio-plot-smoke.lisp
 ```
-It builds the README quick-start problem, runs it and asserts the particles settle. The first
-run compiles everything and can take several minutes; later runs start in seconds.
+The first test runs the README quick-start problem and checks finite particle
+positions, velocities and stresses, positive finite timestep and downward
+motion of the mean position. It does not establish equilibrium. The custom
+test compares the built-in chalk law with its custom delegate and checks
+binary VTK output; the plot test exercises successful and failed PNG output.
+The first run compiles everything and can take several minutes; later runs
+start in seconds. Exact results and tool versions: [Windows verification](windows-verification-2026-10-14.md).
 
 ## 3. Launchers (all in `windows\`)
 | File | Purpose |
