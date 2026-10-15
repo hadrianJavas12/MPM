@@ -6,6 +6,7 @@ triaxial dari PowerShell, periksa status selesai, lalu buat dan buka videonya.
 
 | Document | Read it to... |
 |---|---|
+| [REUSABLE_FRAMEWORK.md](REUSABLE_FRAMEWORK.md) | Compose native simulations from interchangeable material/geometry components and short case files, without a UI |
 | **[AI_HANDOVER.md](AI_HANDOVER.md)** | **Start or hand over a coding-agent session: goals, PR stack, architecture, constraints, verified tests, risks and next actions** |
 | [windows-setup.md](windows-setup.md) | Install the toolchain and verify it on native Windows |
 | [usage.md](usage.md) | Run simulations from the REPL, scripts and examples; read the output |

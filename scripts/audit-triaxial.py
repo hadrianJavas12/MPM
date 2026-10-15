@@ -24,6 +24,10 @@ def audit(run):
     with (run / 'stress-strain.csv').open(newline='', encoding='utf-8-sig') as stream:
         rows = list(csv.DictReader(stream))
     config = json.loads((run / 'effective-config.json').read_text(encoding='utf-8-sig'))
+    dimensions = int(config.get('spatialDimensions', 3))
+    if dimensions not in (2, 3):
+        raise ValueError('spatialDimensions must be 2 or 3')
+    plane_strain = dimensions == 2
     manifest = json.loads((run / 'manifest.json').read_text(encoding='utf-8-sig'))
     if not manifest.get('complete') or len(rows) < 2:
         raise ValueError('A completed run with at least two saved states is required')
@@ -41,6 +45,14 @@ def audit(run):
                'kinetic_to_rectified_platen_work_ratio_after_1pct': 0.,
                'prescribed_vs_particle_extent_strain_difference_pct': 0.}
     pressure_kpa = float(config['cellPressurePa']) / 1000
+    if plane_strain:
+        maximum.pop('lateral_pressure_error_kpa')
+        for name in ('csv_q_error_kpa', 'csv_qj2_error_kpa', 'kirchhoff_yield_excess'):
+            maximum.pop(name)
+        maximum['csv_axial_stress_error_kpa'] = 0.
+        maximum['csv_projection_identity_error_kpa'] = 0.
+        maximum['in_plane_lateral_pressure_error_kpa'] = 0.
+        maximum['mean_transverse_stress_minus_cell_pressure_kpa'] = 0.
     qyield_kpa = 2 * float(config['undrainedStrengthPa']) / 1000
     hashes = {}
     last_strain = -1
@@ -64,29 +76,51 @@ def audit(run):
         volume = fields['volume']
         if (volume <= 0).any() or (fields['mass'] <= 0).any():
             raise ValueError('Nonpositive particle mass or volume')
-        sx, sy, sz = (fields[f'sig_{axis}{axis}'] for axis in 'xyz')
-        shear = sum(fields[f'sig_{axes}'] ** 2 for axes in ('xy', 'yz', 'zx'))
-        q = -sy + (sx + sz) / 2
-        qj2 = np.sqrt(((sx - sy) ** 2 + (sy - sz) ** 2 + (sz - sx) ** 2) / 2 + 3 * shear)
-        averaged_q = np.average(q, weights=volume) / 1000
-        averaged_qj2 = np.average(qj2, weights=volume) / 1000
-        lateral = np.average(-(sx + sz) / 2, weights=volume) / 1000
-        kinetic = sum((fields['mass'] * fields[f'vel_{axis}'] ** 2).sum() / 2 for axis in 'xyz')
+        sx, sy = fields['sig_xx'], fields['sig_yy']
+        if not plane_strain:
+            sz = fields['sig_zz']
+            shear = sum(fields[f'sig_{axes}'] ** 2 for axes in ('xy', 'yz', 'zx'))
+            q = -sy + (sx + sz) / 2
+            qj2 = np.sqrt(((sx - sy) ** 2 + (sy - sz) ** 2 + (sz - sx) ** 2) / 2 + 3 * shear)
+            averaged_q = np.average(q, weights=volume) / 1000
+            averaged_qj2 = np.average(qj2, weights=volume) / 1000
+            lateral = np.average(-(sx + sz) / 2, weights=volume) / 1000
+            maximum['csv_q_error_kpa'] = max(maximum['csv_q_error_kpa'], abs(averaged_q - numeric['deviatoric_stress_kpa']))
+            maximum['csv_qj2_error_kpa'] = max(maximum['csv_qj2_error_kpa'], abs(averaged_qj2 - numeric['q_j2_kpa']))
+        else:
+            # Native 2D VTK does not export sigma_zz. Do not reconstruct it from
+            # a plane-strain approximation or present a 3D invariant as audited.
+            axial = np.average(-sy, weights=volume) / 1000
+            maximum['csv_axial_stress_error_kpa'] = max(
+                maximum['csv_axial_stress_error_kpa'], abs(axial - numeric['axial_stress_kpa']))
+            maximum['csv_projection_identity_error_kpa'] = max(
+                maximum['csv_projection_identity_error_kpa'],
+                abs(numeric['deviatoric_stress_kpa'] - numeric['axial_stress_kpa'] + numeric['lateral_stress_kpa']))
+        axes = 'xy' if plane_strain else 'xyz'
+        kinetic = sum((fields['mass'] * fields[f'vel_{axis}'] ** 2).sum() / 2 for axis in axes)
         maximum['mass_relative_error'] = max(maximum['mass_relative_error'], abs(fields['mass'].sum() / mass0 - 1))
-        maximum['csv_q_error_kpa'] = max(maximum['csv_q_error_kpa'], abs(averaged_q - numeric['deviatoric_stress_kpa']))
-        maximum['csv_qj2_error_kpa'] = max(maximum['csv_qj2_error_kpa'], abs(averaged_qj2 - numeric['q_j2_kpa']))
         maximum['csv_volume_error_m3'] = max(maximum['csv_volume_error_m3'], abs(volume.sum() - numeric['volume_m3']))
         maximum['csv_kinetic_energy_error_j'] = max(maximum['csv_kinetic_energy_error_j'], abs(kinetic - numeric['kinetic_energy_j']))
-        displacement = np.column_stack([fields[f'disp_{axis}'] for axis in 'xyz'])
-        maximum['displacement_error_m'] = max(maximum['displacement_error_m'], np.abs(points - initial - displacement).max())
+        displacement = np.column_stack([fields[f'disp_{axis}'] for axis in axes])
+        maximum['displacement_error_m'] = max(maximum['displacement_error_m'],
+                                               np.abs(points[:, :dimensions] - initial[:, :dimensions] - displacement).max())
         maximum['domain_diagonal_error_m'] = max(maximum['domain_diagonal_error_m'],
                                                 abs(fields['size_yy'] - fields['size_y']).max())
         # With Fbar disabled the native V/V0 follows det(F). This independent
         # VTK check uses saved V/V0, not an exported full F tensor.
-        jacobian_from_volume = volume / initial_volume
-        excess = np.max(qj2 * jacobian_from_volume / (qyield_kpa * 1000) - 1)
-        maximum['kirchhoff_yield_excess'] = max(maximum['kirchhoff_yield_excess'], excess)
-        maximum['lateral_pressure_error_kpa'] = max(maximum['lateral_pressure_error_kpa'], abs(lateral - pressure_kpa))
+        if not plane_strain:
+            jacobian_from_volume = volume / initial_volume
+            excess = np.max(qj2 * jacobian_from_volume / (qyield_kpa * 1000) - 1)
+            maximum['kirchhoff_yield_excess'] = max(maximum['kirchhoff_yield_excess'], excess)
+        if plane_strain:
+            in_plane_lateral = np.average(-sx, weights=volume) / 1000
+            maximum['in_plane_lateral_pressure_error_kpa'] = max(
+                maximum['in_plane_lateral_pressure_error_kpa'], abs(in_plane_lateral - pressure_kpa))
+            maximum['mean_transverse_stress_minus_cell_pressure_kpa'] = max(
+                maximum['mean_transverse_stress_minus_cell_pressure_kpa'],
+                abs(numeric['lateral_stress_kpa'] - pressure_kpa))
+        else:
+            maximum['lateral_pressure_error_kpa'] = max(maximum['lateral_pressure_error_kpa'], abs(lateral - pressure_kpa))
         maximum['absolute_volume_drift_pct'] = max(maximum['absolute_volume_drift_pct'], abs((volume.sum() / volume0 - 1) * 100))
         maximum['kinetic_to_elastic_energy_ratio'] = max(maximum['kinetic_to_elastic_energy_ratio'],
                                                         kinetic / max(abs(numeric['elastic_strain_energy_j']), 1e-30))
@@ -102,15 +136,21 @@ def audit(run):
             minimum_top_normal = min(minimum_top_normal, top_normal.min())
             maximum_top_normal = max(maximum_top_normal, top_normal.max())
         hashes[vtk.name] = hashlib.sha256(vtk.read_bytes()).hexdigest()
-    for metric, tolerance in [('mass_relative_error', 1e-12), ('csv_q_error_kpa', 1e-8),
-                              ('csv_qj2_error_kpa', 1e-8), ('csv_volume_error_m3', 6e-15),
-                              ('csv_kinetic_energy_error_j', 1e-10), ('displacement_error_m', 1e-10)]:
+    checks = [('mass_relative_error', 1e-12), ('csv_volume_error_m3', 6e-15),
+              ('csv_kinetic_energy_error_j', 1e-10), ('displacement_error_m', 1e-10)]
+    checks += ([('csv_axial_stress_error_kpa', 1e-8), ('csv_projection_identity_error_kpa', 1e-8)]
+               if plane_strain else [('csv_q_error_kpa', 1e-8), ('csv_qj2_error_kpa', 1e-8)])
+    for metric, tolerance in checks:
         if maximum[metric] > tolerance:
             raise ValueError(f'{metric}={maximum[metric]} exceeds {tolerance}')
-    nominal_volume = np.pi * (float(config['diameterMm']) / 2000) ** 2 * float(config['heightMm']) / 1000
+    width = float(config['diameterMm']) / 1000
+    height = float(config['heightMm']) / 1000
+    nominal_volume = width * height if plane_strain else np.pi * (width / 2) ** 2 * height
     result = {'passed_consistency_checks': True, 'mode': config['mode'], 'saved_frames': len(rows),
+              'spatial_dimensions': dimensions,
+              'nominal_geometry': 'plane-strain rectangle, unit thickness 1m' if plane_strain else '3D cylinder',
               'particle_count': len(initial), 'initial_mass_kg': mass0, 'initial_volume_m3': volume0,
-              'nominal_cylinder_volume_m3': nominal_volume,
+              'nominal_specimen_volume_m3': nominal_volume,
               'discretized_volume_bias_pct': (volume0 / nominal_volume - 1) * 100,
               'final_csv': rows[-1], 'maximum_diagnostics': maximum,
               'sampled_top_spring_normal_force_range_n':
@@ -121,6 +161,14 @@ def audit(run):
                          'Native full F is not exported; the VTK yield audit uses J=V/V0 with Fbar disabled.',
                          'MPM production platen_work_j is rectified force work, not a closed signed energy budget.'],
               'vtk_sha256': hashes}
+    if not plane_strain:
+        result['nominal_cylinder_volume_m3'] = nominal_volume
+    else:
+        result['unit_out_of_plane_thickness_m'] = 1
+        result['limits'].append('Plane strain is not axisymmetric: sigma_zz evolves; in-plane pressure diagnostic uses sigma_xx only.')
+        result['unavailable_independent_vtk_checks'] = [
+            'Full qJ2, triaxial projected q, mean transverse stress and Kirchhoff yield: native 2D VTK omits sigma_zz.',
+            'Out-of-plane velocity/displacement: native 2D VTK omits these components; runtime plane-strain assertions are separate evidence.']
     for filename in ('stress-strain.csv', 'effective-config.json', 'manifest.json'):
         result.setdefault('input_sha256', {})[filename] = hashlib.sha256((run / filename).read_bytes()).hexdigest()
     return result

@@ -1,5 +1,9 @@
 # Panduan singkat: simulasi Windows native tanpa UI
 
+Untuk file kasus modular yang baru, lihat
+[framework reusable](REUSABLE_FRAMEWORK.md). Perintah lama di bawah tetap
+tersedia untuk mengulang contoh triaxial 3D.
+
 Panduan ini mengulang **simulasi triaxial clay diameter 70 mm, tinggi 140 mm**
 beserta video dan kurva strain–deviatoric stress. Semua perintah dijalankan
 melalui **PowerShell**, tanpa membuka Studio atau menjalankan server.
