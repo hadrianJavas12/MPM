@@ -5,6 +5,29 @@
 (defgeneric material-particle-class (material))
 (defgeneric material-particle-initargs (material))
 
+(defun material-value (material key default)
+  "Explicit metadata must agree with matching native constitutive initargs."
+  (let* ((marker (gensym)) (given (option material key marker))
+         (native-key (case key (:youngs-modulus :E) (:poisson-ratio :nu)
+                           (:undrained-strength :rho)))
+         (native (if (and native-key (eq (component-kind material) :native))
+                     (getf (option material :initargs) native-key marker) marker)))
+    (when (and (eq key :undrained-strength) (not (eq native marker)))
+      (setf native (/ native (sqrt (/ 8d0 3d0)))))
+    (when (and (not (eq given marker)) (not (eq native marker))
+               (not (and (numberp given) (numberp native)
+                         (<= (abs (- given native)) (* 1d-12 (max 1d0 (abs given)))))))
+      (error "Material metadata ~S disagrees with native ~S" key native-key))
+    (cond ((not (eq given marker)) given) ((not (eq native marker)) native) (t default))))
+
+(defun resolve-material (material config mappings)
+  "Make a run-local material, inheriting omitted options from this case only."
+  (let ((options (copy-list (component-options material))))
+    (dolist (mapping mappings)
+      (destructuring-bind (key config-key default) mapping
+        (setf (getf options key) (material-value material key (gethash config-key config default)))))
+    (make-instance 'material :kind (component-kind material) :options options)))
+
 (defmethod material-particle-class ((material material))
   (ecase (component-kind material)
     ((:von-mises :elastic) 'cl-mpm/particle::particle-vm)
@@ -23,7 +46,11 @@
          (list :E e :nu nu :rho rho :rho-r rho :softening 0d0
                :enable-plasticity (and (not (eq (component-kind material) :elastic))
                                        (option material :plasticity t)))))
-      (:native (copy-list (option material :initargs)))
+      (:native
+       (let ((args (copy-list (option material :initargs))))
+         (setf (getf args :E) (material-value material :youngs-modulus e)
+               (getf args :nu) (material-value material :poisson-ratio nu))
+         args))
       (otherwise (error "~A uses the dedicated chalk builder; it is not a VM factory."
                          (component-kind material))))))
 

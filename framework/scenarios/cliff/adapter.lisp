@@ -14,7 +14,8 @@
     (check-kind solver (if joss-p '(:staged) '(:explicit)))
     (when (and joss-p (geometry-filter geometry))
       (error "The Joss reference recipe requires its dedicated clipping geometry."))
-    (overlay config material '((:youngs-modulus "E") (:poisson-ratio "nu") (:density "density")))
+    (overlay config material '((:youngs-modulus "E") (:poisson-ratio "nu") (:density "density")
+                               (:plasticity "enablePlasticity")))
     (overlay config geometry '((:height "shelfHeight") (:shelf-aspect "shelfAspect")
                                (:slope "cliffSlope") (:base-height "soilBoundary")
                                (:notch-height "notchHeight") (:notch-depth "notchDepth")))
@@ -25,9 +26,9 @@
       (setf (gethash "enableDamage" config) nil
             (gethash "enablePlasticity" config) (not (eq (component-kind material) :elastic)))
       ;; Keep numerical metadata consistent with the native material factory.
-      (setf (gethash "E" config) (option material :youngs-modulus 5d6)
-            (gethash "nu" config) (option material :poisson-ratio 0.49d0)
-            (gethash "density" config) (option material :density 1800d0)))
+      (setf (gethash "E" config) (material-value material :youngs-modulus (gethash "E" config))
+            (gethash "nu" config) (material-value material :poisson-ratio (gethash "nu" config))
+            (gethash "density" config) (option material :density (gethash "density" config))))
     (setf (gethash "scenario" config) (if joss-p "joss-bay" "cliff")
           (gethash "constitutiveModel" config) "chalk")
     ;; Same canonical coercion/ranges as the old native launcher.
@@ -58,7 +59,10 @@
               (option material :density 1800d0) (material-particle-class material) args)))))
 
 (defmethod execute-scenario ((scenario (eql :cliff)) (case simulation) config directory)
-  (let ((material (simulation-material case)) (filter (geometry-filter (simulation-geometry case))))
+  (let ((material (resolve-material (simulation-material case) config
+                                   '((:youngs-modulus "E" 5d6) (:poisson-ratio "nu" 0.49d0)
+                                     (:density "density" 1800d0))))
+        (filter (geometry-filter (simulation-geometry case))))
     (when filter (error "Generic cliff filter uses the native geometry callback API; this clipping predicate is for triaxial."))
     (cl-mpm/framework/cliff:run
      config directory :cliff-builder

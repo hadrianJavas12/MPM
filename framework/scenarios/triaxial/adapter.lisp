@@ -5,7 +5,12 @@
   (let* ((config (alexandria:copy-hash-table (simulation-parameters case)))
          (material (simulation-material case)) (geometry (simulation-geometry case))
          (load (simulation-loading case)) (solver (simulation-solver case))
-         (boundary (simulation-boundary case)))
+         (boundary (simulation-boundary case))
+         (material (resolve-material material config
+                    '((:youngs-modulus "youngsModulusPa" 5d6)
+                      (:poisson-ratio "poissonRatio" 0.49d0)
+                      (:density "densityKgM3" 1800d0)
+                      (:undrained-strength "undrainedStrengthPa" 25d3)))))
     (check-kind material '(:von-mises :elastic :native))
     (check-kind geometry '(:rectangle :cylinder))
     (check-kind boundary '(:confinement))
@@ -43,5 +48,11 @@
 
 (defmethod execute-scenario ((scenario (eql :triaxial)) (case simulation) config directory)
   (cl-mpm/calibration/triaxial:run-config
-   config directory :particle-factory (make-particle-factory (simulation-material case))
+   config directory :particle-factory
+   (make-particle-factory
+    (resolve-material (simulation-material case) config
+                      '((:youngs-modulus "youngsModulusPa" 5d6)
+                        (:poisson-ratio "poissonRatio" 0.49d0)
+                        (:density "densityKgM3" 1800d0)
+                        (:undrained-strength "undrainedStrengthPa" 25d3))))
    :geometry-filter (geometry-filter (simulation-geometry case))))

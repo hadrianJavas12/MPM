@@ -33,7 +33,7 @@
 (let* ((args (cl-mpm-script-args)) (case-file (first args)) (output (second args)))
   (unless (and (= (length args) 2) case-file output)
     (error "Usage: windows\\cl-mpm.cmd scripts\\run-case.lisp cases\\CASE.lisp OUTPUT"))
-  (let* ((directory (uiop:ensure-directory-pathname output))
+  (let* ((directory (uiop:ensure-directory-pathname (merge-pathnames output)))
          (frozen (merge-pathnames "source/framework/" directory)))
     (when (and (probe-file directory)
                (or (uiop:directory-files directory) (uiop:subdirectories directory)))
