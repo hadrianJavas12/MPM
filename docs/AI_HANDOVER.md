@@ -1,19 +1,89 @@
-# AI Engineering Handover — CL-MPM Studio
+# AI Engineering Handover — CL-MPM
 
 > **Read this at the start of a new AI session.** Open PR topology refreshed through the public GitHub API on **2026-10-15**; older checks below retain their dates. This is a **handover**, not a claim that the software has passed numerical validation. Check live branches, PRs, code and CI status before acting; this document can become stale. Keep it updated when significant decisions or statuses change.
 
-**Checkpoint requested and published, 2026-10-15:**
-[PR #7](https://github.com/hadrianJavas12/MPM/pull/7) targets `main` from
-`codex/triaxial-clay-calibration` and is open, ready for review. It includes the
-ancestry of draft PRs #1–#4 plus native Windows, accepted collapse/audit and
-triaxial/report work; PR #6 remains separate. Main was refreshed at `af7c6479`.
-The PR was created at `5c9ea6f` after feature `3efaea9` and reports `ed5c066`;
-this handover update follows on the same branch. Both committed PDF byte hashes
-match the report manifest, with binary attributes protecting future checkouts.
-No merge or main-branch mutation was performed. Auto-continuation is PAUSED
-after completing this task; do not launch further runs without a new request.
+**Active work, 2026-10-15 — reusable native simulation framework:**
+Current branch is `codex/reusable-simulation-framework`, following the user's
+merged checkpoint and native Windows quickstart. The user requested refactoring
+without UI work, a commit before post-refactor validation, complete native 2D
+triaxial regression and the earlier toe-to-top cliff collapse, then commit/push/PR
+if results agree. Implementation was committed as **`66ea5fb` before these
+post-refactor runs**. Subsequent compatibility/launcher/API fixes include
+`fc0a1d4`, `2f6476f`, `d2dd1e8` and native constructor-option fix `c5fd10d`;
+composition/regression tests were committed as `9f26cb1`. No refactor PR or merge
+is claimed at this intermediate handover. See [framework usage and contracts](REUSABLE_FRAMEWORK.md).
 
-**Latest user work, 2026-10-15:** branch `codex/triaxial-clay-calibration` adds
+The `cl-mpm-framework` ASDF system separates reusable component specifications,
+configuration, dedicated material classes, geometry/builders, boundary conditions,
+measurements/output and scenario phases. Short `cases/*.lisp` files compose them;
+`windows\cl-mpm.cmd scripts\run-case.lisp CASE OUTPUT` runs without a server.
+Original engine equations in `src/` remain the physics implementation. Old native
+entry points remain compatibility adapters. Per-run particle factories/geometry
+filters avoid replacing global engine methods; triaxial measurement state uses
+dynamic run-local bindings. VM/elastic switching, native VM subclasses and custom
+geometry clipping are supported; unsupported state/recipe combinations and ignored
+options fail explicitly. This is not a claim that every material fits every scenario.
+
+**Completed 2D regression:** frozen original monolith plus an auditable minimal
+2D adaptation was run before refactoring. The post-refactor public CLI loaded its
+copied framework/case/JSON source tree from snapshot **`2f6476f`**. Both runs reached
+0.2 s / 10% prescribed strain, **480 MPs, 17,443 updates and 51 VTK states**.
+Every corresponding VTK SHA-256 is identical; **all recorded CSV columns,
+positions and exported field differences are zero**, with zero mass drift.
+Final specimen extent strain is 9.86716593%, native qJ2 50.01733976 kPa and the
+distinct triaxial projection q 43.30520503 kPa. Independent available-field audit
+passed; final actual-data PNG/video and before/after/old-3D-context curve overlay
+were generated and inspected. H.264 video decodes successfully (51 frames,
+15 fps / 3.4 s playback, distinct from 0.2 s numerical time).
+
+This **2D plane-strain rectangle** is 70 × 140 mm with unit out-of-plane thickness,
+not an axisymmetric or 3D cylinder. Native saved-frame assertions check Fzz=1,
+zero out-of-plane shear deformation, position and velocity. The existing 2D VTK
+exporter omits sigma_zz and out-of-plane velocity/displacement. The independent
+audit therefore declares full qJ2/3D projected-stress/yield recomputation unavailable;
+it does not fabricate missing components. The full native CSV qJ2 curve is still
+compared exactly before/after. The old 3D benchmark is contextual only. The first
+2D attempt with one MP per cell direction failed around 6.3% strain when the
+engine's default GIMP domain-size removal deleted two MPs; the mass assertion
+caught it. That failure is retained. Both successful versions use two MPs per
+cell direction; neither the engine removal rule nor the invariant was weakened.
+
+**Other checks completed:** syntax checks and Node **36/36** pass, zero skips;
+**10/10 framework component contracts** pass (construction/composition checks,
+no timesteps), private native triaxial component contracts pass, actual two-step
+custom-delegate compatibility smoke passes with zero stress/position differences,
+and Joss reference unit checks pass. Later constructor/API fixes have their own
+contract tests; the complete 2D result above is attributed to its exact snapshot,
+not silently relabeled as a later commit. Current-HEAD bounded integration checks
+are recorded separately as they finish.
+
+**Still running / next actions:** the complete fresh-start frozen Joss baseline
+finished, but the full **post-refactor Joss 40 s run is still running**. Do not mark
+the cliff regression, accepted toe-to-top sequence, or overall refactoring complete
+before that run finishes and native comparisons are checked. A bounded current-HEAD
+Joss integration run may also be active. Inspect processes, logs and
+`output/framework-refactor-2026-10-15/after-processes.json` before launching anything;
+do not duplicate jobs. Main working evidence is under that output directory:
+`triaxial-before-after-comparison.json`, both triaxial run folders, audits/render
+provenance, test logs, frozen source/adaptation patch and the retained failed run.
+Finish the Joss comparison against the same fresh-start frozen baseline, distinguish
+it from the historical warm-start pilot, save the evidence bundle, update this
+handover/wiki, then commit/push and open the user-requested PR. Numerical regression
+is not laboratory/material/field validation; all earlier scientific caveats below
+remain applicable. Auto-continuation remains paused; this work is authorized by
+the user's new explicit request.
+
+**Merged checkpoint, refreshed live on 2026-10-15:**
+[PR #7](https://github.com/hadrianJavas12/MPM/pull/7) was **merged by the user**
+into `main` at `efd0358b7f571e738c0ecc022c4313fb7fca0d15` (GitHub API:
+merged 2026-10-15 07:57:44 UTC / 14:57:44 WIB). It includes the ancestry of
+PRs #1–#4, native Windows, accepted collapse/audit and triaxial/report work;
+PR #6 was separate from that checkpoint. The earlier PR was created at `5c9ea6f`
+after feature `3efaea9` and reports `ed5c066`. Both PDF byte hashes matched the
+report manifest, with binary attributes protecting checkouts. Earlier dated
+open-PR/main-status notes below are historical snapshots, superseded here for #7.
+
+**Earlier checkpoint work, 2026-10-15:** branch `codex/triaxial-clay-calibration` adds
 [the upstream change report](UPSTREAM_CHANGE_REPORT.md), professional PDF
 exports, and [native clay triaxial calibration](TRIAXIAL_CALIBRATION.md).
 User confirmed no laboratory data and requested an undrained example. Fixed

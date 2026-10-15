@@ -197,3 +197,40 @@ refreshed at af7c6479; no merge performed. Verified both committed PDF bytes
 against their SHA-256 manifest and protected PDF binary attributes. Updated
 handover/index; auto-continuation paused after completion. Preserved raw
 sources, personal Obsidian settings and every prior log entry.
+
+## [2026-10-15] ingest | Reusable native framework and completed 2D regression
+
+Added [[reusable-simulation-framework]] and updated the index plus operational
+handover/testing documentation. Live GitHub API confirms user-merged PR #7,
+main checkpoint efd0358 at 14:57:44 WIB; older open-PR statements are historical.
+Active branch is codex/reusable-simulation-framework. Initial implementation
+66ea5fb was committed before post-refactor native runs; later constructor fixes
+include c5fd10d and contract/regression tests 9f26cb1. Full post-refactor runs
+load exact copied framework/case/JSON snapshot 2f6476f, attributed separately
+from later commit checks. Component recipes organize existing native engine laws;
+per-run factories/filter callbacks, strict option checks and local measurement
+bindings support composition without broad global engine method replacement.
+
+Frozen minimally adapted 2D monolith versus refactored public CLI completed
+480 MPs, 17,443 updates, 51 states and 0.2 s / 10% platen strain. All 51 VTK
+hashes are byte-identical, with zero differences across CSV, positions and
+exported fields and zero mass drift. Final specimen strain 9.86716593%, qJ2
+50.01733976 kPa and distinct projected q 43.30520503 kPa. Plane-strain/unit
+thickness is not axisymmetry or the older physical cylinder benchmark. Native
+Fzz/out-of-plane assertions passed; missing sigma_zz in 2D VTK is explicitly
+unavailable for independent full stress/yield audit, never reconstructed.
+Available-field audits passed. Actual-data image/video and 2D-before/after plus
+3D-context curve overlay were inspected; 51-frame H.264 video decodes completely.
+Playback 3.4 s is distinguished from 0.2 s numerical time.
+
+Retained the failed one-MP-per-direction attempt: native GIMP domain removal
+caused two-MP mass loss around 6.3% strain, caught by the invariant. Both passing
+runs use two MPs per direction; no engine rule or invariant was weakened. Ten
+framework construction contracts, private triaxial contracts, 36 Node tests,
+actual two-step custom smoke and Joss unit checks passed with their scopes
+stated. Full fresh-start Joss baseline finished; post-refactor full 40 s Joss
+run is still running. No final cliff-regression success, scientific validation
+or new framework PR is claimed. Root will finalize comparison/evidence before
+commit/push/PR. No solver runs were launched by this documentation operation.
+Immutable raw sources, personal Obsidian settings and all previous log entries
+were preserved.

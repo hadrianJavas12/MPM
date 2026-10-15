@@ -1,4 +1,64 @@
-# Studio verification
+# Native framework and Studio verification
+
+## Reusable native framework regression, 2026-10-15
+
+The initial refactor was committed as `66ea5fb` before running the requested
+post-refactor native regressions. Compatibility/launcher fixes followed;
+`c5fd10d` corrects native material constructor options and `9f26cb1` retains the
+composition contracts/regression tooling. See [framework usage](REUSABLE_FRAMEWORK.md)
+for supported components, explicit compatibility limits and short case files.
+
+From PowerShell in `D:\MPM`:
+
+```powershell
+& .\windows\cl-mpm.cmd tests\framework-components.lisp
+& .\windows\cl-mpm.cmd tests\triaxial-components.lisp
+$runDir = Join-Path 'D:\MPM\output' ('triaxial-2d-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
+& .\windows\cl-mpm.cmd scripts\run-case.lisp cases\triaxial-clay-2d.lisp $runDir
+if ($LASTEXITCODE -ne 0) { throw 'Native simulation failed' }
+& .\toolchain\analysis-venv\Scripts\python.exe scripts\audit-triaxial.py --run-dir $runDir
+& .\toolchain\analysis-venv\Scripts\python.exe scripts\plot-triaxial.py --run-dir $runDir --video
+```
+
+Use a new output directory for every run. The public launcher copies and loads
+framework, case and JSON inputs before simulation; dependency/FASL/DLL identity
+is recorded separately. The calibration compatibility launcher also snapshots
+the complete split triaxial module tree. No UI/server is needed.
+
+| Executed check | Observed result | Scope |
+| --- | --- | --- |
+| Framework component contracts | 10 passed, 0 failed | Native construction/configuration, VM/elastic choice, geometry/clipping, inheritance, explicit rejection; no time integration |
+| Triaxial component contracts | Passed | Per-run factory/filter composition, initial Fzz, unsupported class rejection and context preservation |
+| Node syntax and suite | 36 passed, 0 failed/skipped | Existing API/schema/reader/compiler contracts; no new browser session |
+| Native custom delegate smoke | 64 MPs, two updates, zero stress/position difference | Actual solver and VTK readback; original delegate compatibility |
+| Joss reference unit checks | Passed | Volume-weighted statistics, damping mapping and state thresholds |
+| Full spatial 2D before/after | 51/51 VTKs byte-identical; every CSV column and exported native field has zero difference | Frozen original monolith with minimal 2D adaptation versus refactored public CLI snapshot `2f6476f` |
+| Independent 2D output audit | Passed available-field checks on both runs | Finite fields, mass/volume/kinetic energy/displacement, axial stress and CSV identities; missing tensor components explicitly unavailable |
+| Full spatial Joss before/after | **Post-refactor run still running** | Do not claim a passing full cliff regression or final visual acceptance yet |
+
+Both successful 2D runs use 480 MPs, 17,443 updates, 51 saved states and reach
+0.2 s / 10% prescribed strain. Their final qJ2 is 50.01733976 kPa and projected
+triaxial q is 43.30520503 kPa. This rectangle is **plane strain with unit thickness**,
+not an axisymmetric approximation of the earlier 3D cylinder. Saved-frame native
+assertions check Fzz=1 and zero out-of-plane shear/position/velocity. Existing 2D
+VTK exports omit sigma_zz and out-of-plane velocity/displacement, so independent
+full qJ2/yield/stress recomputation from those VTKs is marked unavailable; missing
+components are not inferred. The exact regression still compares all native CSV
+columns and all exported fields. Old 3D curves are labeled contextual only.
+
+The first one-MP-per-cell-direction 2D attempt failed mass conservation around
+6.3% strain because lateral domain expansion reached the engine's existing GIMP
+particle-removal limit. Its source/log/failure record are retained. Successful
+before/after runs use two MPs per cell direction on both sides; no removal rule,
+solver equation or mass invariant was relaxed.
+
+Current working evidence is in `output/framework-refactor-2026-10-15/`: the frozen
+sources/adaptation patch, `triaxial-before-after-comparison.json`, both run folders,
+test/audit logs, and actual-data PNG/video/curve overlay with hashes. Native time
+is 0.2 s; video playback is 51 frames at 15 fps, or 3.4 s. These are software
+regression and consistency checks, not laboratory calibration, convergence proof,
+a closed energy budget or validation of the earlier cliff physics. Full Joss
+completion/comparison and final evidence publication remain pending.
 
 ## Repeatable automated checks
 
