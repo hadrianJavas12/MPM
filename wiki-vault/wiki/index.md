@@ -19,7 +19,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[reusable-simulation-framework]] — composable native cases, exact 51-state 2D regression and explicit audit limits; full post-refactor Joss comparison still running
+- [[reusable-simulation-framework]] — composable native cases, exact 51-state 2D regression and explicit audit limits; full post-refactor Joss comparison still running; quiet completion checks every 15 minutes
 - [[upstream-development-report-2026-10-15]] — professional Git-based comparison with original CL-MPM and linked evidence
 - [[triaxial-clay-calibration]] — native 70 × 140 mm clay demonstration, computed curves and scientific limits; checkpoint PR #7 merged into main at efd0358
 - [[scientific-authenticity-audit-2026-10-15]] — real-data/video derivation verified, numerical counterexamples and limits to scientific validity recorded

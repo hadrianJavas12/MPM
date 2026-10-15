@@ -3,6 +3,29 @@
 > **Read this at the start of a new AI session.** Open PR topology refreshed through the public GitHub API on **2026-10-15**; older checks below retain their dates. This is a **handover**, not a claim that the software has passed numerical validation. Check live branches, PRs, code and CI status before acting; this document can become stale. Keep it updated when significant decisions or statuses change.
 
 **Active work, 2026-10-15 — reusable native simulation framework:**
+**Background wait requested by user:** to save tokens, stop active waiting while
+the native process continues. Existing heartbeat `mpm-lanjut-setelah-reset` is
+now ACTIVE, renamed "MPM lanjut setelah simulasi", checking every 15 minutes.
+Each wakeup should inspect only `output/framework-refactor-2026-10-15/joss-after-status.json`,
+`joss-after/reference-metadata.json`, native PID **43576** and the final log line.
+If healthy/running, remain quiet and end the wakeup without repeating tests.
+When complete, use `scripts/compare-framework-runs.py`,
+`.tmp/analyze-framework-regression.py` and completion-guarded
+`.tmp/pack-framework-evidence.py`; preserve strict failures and provenance.
+Finish evidence/docs/wiki, then commit/push/PR only after evaluating the full
+result. Pause this heartbeat after completing the requested work. Do not start
+another full run while the existing one remains active.
+
+Current bounded integration on `9f26cb1` passed both Joss4s and 2D27updates;
+see `current-head-integration-summary.json` and `current-head-source-comparison.json`
+under the same output folder. Additional distinct native Mohr-Coulomb proof on
+`0fece3b` passed two updates through the public cliff composition API: 70 initial
+MPs split natively to280, conserved mass504000kg/m,36 finite VTK arrays. Evidence:
+`current-head-cliff-mc/integration-audit.json`. No engine change or extra full
+simulation was needed. Fresh original full40s differs from historical warm pilot
+(176 versus174 frames, finalshapeIoU .967817); retain that separate diagnostic,
+not a numerical-equivalence claim. The full after-run remains pending.
+
 Current branch is `codex/reusable-simulation-framework`, following the user's
 merged checkpoint and native Windows quickstart. The user requested refactoring
 without UI work, a commit before post-refactor validation, complete native 2D

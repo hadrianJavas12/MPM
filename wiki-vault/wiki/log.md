@@ -234,3 +234,13 @@ or new framework PR is claimed. Root will finalize comparison/evidence before
 commit/push/PR. No solver runs were launched by this documentation operation.
 Immutable raw sources, personal Obsidian settings and all previous log entries
 were preserved.
+
+## [2026-10-15] ingest | Token-saving background continuation
+
+User explicitly authorized ending active waiting and waking after nativecompletion.
+Updated [[reusable-simulation-framework]], index and handover: existingheartbeat
+checks every15minutes, quiet while running; no repeated passedtests/newfullruns.
+NativeJossPID43576 continues. CurrentboundedJoss/2D anddistinctMohr-Coulomb
+integration passed; fullcliffafter comparison stillpending. Preserve strict
+failures and sourceprovenance, finalizeevidence thencommit/push/PR ifappropriate.
+Raw sources and personalsettings untouched.

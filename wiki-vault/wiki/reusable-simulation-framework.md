@@ -110,3 +110,14 @@ commit/push/PR after completion and comparison.
 These results establish software regression properties, not experimental clay
 calibration, convergence or a closed energy budget. The findings in
 [[scientific-authenticity-audit-2026-10-15]] remain open scientific caveats.
+
+## Background continuation requested by user
+
+To save tokens, the existing heartbeat now checks completion every15minutes
+and stays quiet while nativePID43576 is healthy/running. See docs/AI_HANDOVER.md
+for the exact status/log/helper paths. Resume fullcomparison/evidence/commit/push/PR
+after completion, preserving strict comparison failures; pause heartbeat on completion.
+CurrentHEAD bounded Joss4s and2D27updates passed. A distinct native Mohr-Coulomb
+composition on0fece3b also passed2updates with36finiteVTKarrays andmass504000kg/m
+conserved while native splitting changed70MPs to280; no engine edits/rerun.
+Full40safter-regression is still pending.
