@@ -1,0 +1,13 @@
+{
+  "fixture": "output\\reference-reproduction-2026-10-15\\dp-physical-pilot\\vtk\\sim_00002.vtk",
+  "fixtureSha256": "2be5dbf95c8436599dabc3b3c8074d46c80445fc099432f8ebc000f05429ff59",
+  "particles": 4155,
+  "identity": "reference-coordinates-x-minus-displacement",
+  "checks": {
+    "reordered_particles_preserve_all_arrays": true,
+    "detect_1kPa_stress_perturbation": true,
+    "detect_damage_perturbation": true,
+    "reject_changed_reference_identity": true
+  },
+  "passed": true
+}

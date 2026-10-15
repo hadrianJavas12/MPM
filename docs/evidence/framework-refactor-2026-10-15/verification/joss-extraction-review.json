@@ -1,0 +1,249 @@
+{
+  "scope": "Static source extraction review only; not a numerical simulation or scientific validation.",
+  "baselineSHA256": "230e994877a5c0054c9959af0959e8a423560abaab9ea8ffe3fc82a4aed810da",
+  "exactDefinitions": 26,
+  "intentionalDelegations": 1,
+  "checks": [
+    {
+      "definition": "defclass",
+      "name": "joss-reference-chalk",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/materials/chalk.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defmethod",
+      "name": "initialize-instance",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/materials/chalk.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defmethod",
+      "name": "cl-mpm/damage::damage-model-calculate-y",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/materials/chalk.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defmethod",
+      "name": "cl-mpm::update-particle",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/materials/chalk.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defclass",
+      "name": "joss-reference-sim",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/classes.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defclass",
+      "name": "joss-reference-aggregate-sim",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/classes.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-finite-p",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/statistics.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-critical-damping",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/phases.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-viscous-damping",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/phases.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defmethod",
+      "name": "cl-mpm::update-dynamic-stats",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/statistics.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-aggregate-statistics",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/statistics.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defmethod",
+      "name": "cl-mpm::update-dynamic-stats",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/statistics.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-energy-ratio",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/statistics.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-next-state",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/phases.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-zero-velocities",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/phases.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-face-x",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/geometry.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-solid-p",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/geometry.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-surface-height",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/geometry.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-domain-corners",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/geometry.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-clip-geometry",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/geometry.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "make-joss-reference-sim",
+      "exactTokensIgnoringCommentsWhitespace": false,
+      "locations": [],
+      "intentionalChange": "Material construction delegated to make-joss-chalk-mps with unchanged constructor arguments."
+    },
+    {
+      "definition": "defun",
+      "name": "reference-summary",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/measurements.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-effective-material",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/measurements.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-check-finite",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/measurements.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-csv-number",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/output.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "reference-write-row",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/output.lisp"
+      ],
+      "intentionalChange": null
+    },
+    {
+      "definition": "defun",
+      "name": "run-joss-reference",
+      "exactTokensIgnoringCommentsWhitespace": true,
+      "locations": [
+        "framework/scenarios/joss/run.lisp"
+      ],
+      "intentionalChange": null
+    }
+  ]
+}

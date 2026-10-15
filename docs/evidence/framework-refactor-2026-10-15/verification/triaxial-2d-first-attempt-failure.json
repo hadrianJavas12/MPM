@@ -1,0 +1,10 @@
+{
+  "failedAt": "afterframe32, approximately6.3% prescribedstrain",
+  "reason": "Massinvariantdetected2MPs removedby engineGIMPdomain-size criterion",
+  "initialParticles": 120,
+  "massLostKg": 0.588,
+  "lastCompleteFrame": 32,
+  "lastPrescribedStrainPct": 6.308057500212,
+  "willNotUseAsPassingBaseline": true,
+  "remedy": "mpsPerCell2, reducinginitialparticle-domain dimensions without changingenginephysics; sameconfigbeforeandafterrefactoring"
+}

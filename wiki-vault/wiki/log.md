@@ -244,3 +244,26 @@ NativeJossPID43576 continues. CurrentboundedJoss/2D anddistinctMohr-Coulomb
 integration passed; fullcliffafter comparison stillpending. Preserve strict
 failures and sourceprovenance, finalizeevidence thencommit/push/PR ifappropriate.
 Raw sources and personalsettings untouched.
+
+## [2026-10-15] ingest | Full framework cliff result and serial control
+
+Updated [[reusable-simulation-framework]] and index from the complete native
+40 s evidence. Triaxial remains exactly identical. Four-worker Joss finished
+but strict regression failed (176 versus 191 frames; maximum position-component
+difference 0.0811648 m). Lower/upper damage onset and collapse pattern agree;
+shape IoU 0.99667193 is a diagnostic, not numerical or physical validation.
+Recorded same-source bounded replay variability without claiming its cause
+fully established. Paired one-worker 40 s controls started at 20:53:38 WIB;
+no physics or comparison tolerance was changed. Preserved all failures and raw
+sources. Main, existing PRs and personal Obsidian settings were not modified.
+
+## [2026-10-15] ingest | Interim framework checkpoint authorized
+
+The user authorized committing and pushing the current code, documentation and
+actual evidence while waiting for the paired single-worker controls. Updated
+[[reusable-simulation-framework]] and index to distinguish this checkpoint from
+final numerical acceptance. The four-worker strict failure remains explicit;
+no additional simulations or scientific-validation claim. Auto-continue is
+paused after the user's request to explain problems before further work.
+Existing native runs continue independently. Raw sources and personal settings
+are unchanged.

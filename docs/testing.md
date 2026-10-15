@@ -34,7 +34,7 @@ the complete split triaxial module tree. No UI/server is needed.
 | Joss reference unit checks | Passed | Volume-weighted statistics, damping mapping and state thresholds |
 | Full spatial 2D before/after | 51/51 VTKs byte-identical; every CSV column and exported native field has zero difference | Frozen original monolith with minimal 2D adaptation versus refactored public CLI snapshot `2f6476f` |
 | Independent 2D output audit | Passed available-field checks on both runs | Finite fields, mass/volume/kinetic energy/displacement, axial stress and CSV identities; missing tensor components explicitly unavailable |
-| Full spatial Joss before/after | **Post-refactor run still running** | Do not claim a passing full cliff regression or final visual acceptance yet |
+| Full spatial Joss before/after | Both completed 40 s, exit 0; **strict regression failed** | 176 versus 191 physical states; common-time pointwise diagnostics also exceed `atol=1e-8`, `rtol=1e-7` |
 
 Both successful 2D runs use 480 MPs, 17,443 updates, 51 saved states and reach
 0.2 s / 10% prescribed strain. Their final qJ2 is 50.01733976 kPa and projected
@@ -57,8 +57,23 @@ sources/adaptation patch, `triaxial-before-after-comparison.json`, both run fold
 test/audit logs, and actual-data PNG/video/curve overlay with hashes. Native time
 is 0.2 s; video playback is 51 frames at 15 fps, or 3.4 s. These are software
 regression and consistency checks, not laboratory calibration, convergence proof,
-a closed energy budget or validation of the earlier cliff physics. Full Joss
-completion/comparison and final evidence publication remain pending.
+a closed energy budget or validation of the earlier cliff physics.
+
+The full Joss runs are complete; their strict comparison is **not a pass**.
+Saved damage first exceeds 0.05 in the lower reference region at 4 s and upper
+reference region at 7.5 s in both runs. At 40 s, run-out domain edges are
+31.01589046 / 31.01587968 m, and initial-top-particle mean y values are
+8.17637462 / 8.17579450 m (before / after). Final position-component differences
+reach 0.0811648 m, RMS 0.00234568 m. Final-domain IoU 0.99667193 is a shape
+diagnostic, not physical accuracy or a replacement for pointwise tolerances.
+The comparator retains the unequal frame counts and performs no interpolation.
+See [the detailed status](REUSABLE_FRAMEWORK.md#hasil-validasi-saat-ini) and
+`joss-before-after-comparison.json`, `joss-before-after-diagnostics.json`, and
+`joss-full-regression-summary.json` in the working evidence directory. Cause
+investigation and overall refactor acceptance remain unresolved. The user
+authorized committing and pushing this interim evidence while the paired
+single-worker controls run; the final PR remains pending. No physics change
+or scientific validation is claimed.
 
 ## Repeatable automated checks
 

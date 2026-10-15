@@ -1,0 +1,356 @@
+{
+  "dateLocal": "2026-10-15",
+  "beforeCommit": "c749d32",
+  "afterCommit": "2f6476f",
+  "regressionPassed": false,
+  "regression": {
+    "joss": {
+      "passed": false,
+      "failure": "Different saved physical frame counts",
+      "baseline_states": 176,
+      "candidate_states": 191
+    },
+    "triaxial": {
+      "passed": true,
+      "baseline_states": 51,
+      "candidate_states": 51,
+      "max_position_difference_m": 0.0
+    }
+  },
+  "runs": {
+    "joss-before": {
+      "complete": true,
+      "frames": 176,
+      "finalTimeS": 40.0,
+      "particleCount": 4155,
+      "finalMass": 425664.0625,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 40.0,
+        "file": "vtk/sim_00176.vtk",
+        "sha256": "a632a33d1453c93ad0e2d7b5669e11a22ec415062a842ae108b2e8ffb701433a",
+        "particles": 4155,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "damage",
+          "damage-inc",
+          "damage-k",
+          "damage-length",
+          "damage-y",
+          "damage-ybar",
+          "damage-ybar-scaled",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 425664.0625,
+        "bounds_min": [
+          0.12500006938512934,
+          0.12486509679131454,
+          0.0
+        ],
+        "bounds_max": [
+          30.94479176722309,
+          16.374587896083693,
+          0.0
+        ],
+        "max_displacement": 16.41138346620012,
+        "mass_centroid": [
+          11.134165852250177,
+          4.988386678204646,
+          0.0
+        ],
+        "max_damage": 0.9999999999999359,
+        "max_damage_position": [
+          30.94479176722309,
+          1.4702945322013654,
+          0.0
+        ],
+        "max_damage_reference_position": [
+          14.781249999999755,
+          4.281249999999948,
+          0.0
+        ],
+        "mass_weighted_damage": 0.4937527696524591,
+        "lower_reference_y_le_4m": 0.9999999999999198,
+        "upper_reference_y_ge_9m": 0.9999999999998759,
+        "damage_gt_0.05": {
+          "count": 2442,
+          "reference_y_min": 1.1249999999999691,
+          "reference_y_max": 16.375000000000483
+        },
+        "damage_gt_0.5": {
+          "count": 2099,
+          "reference_y_min": 1.1249999999999691,
+          "reference_y_max": 16.375000000000483
+        },
+        "damage_gt_0.9": {
+          "count": 1913,
+          "reference_y_min": 1.1249999999999691,
+          "reference_y_max": 16.375000000000483
+        },
+        "right_domain_edge_above_y1_05m": 31.015890462422394,
+        "initial_top_particle_mean_y": 8.176374619836835
+      }
+    },
+    "joss-after": {
+      "complete": true,
+      "frames": 191,
+      "finalTimeS": 40.0,
+      "particleCount": 4155,
+      "finalMass": 425664.0625,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 40.0,
+        "file": "vtk/sim_00191.vtk",
+        "sha256": "028e785fd5de5d98b0d6ede6496b8c6bdcff72811831cc94bdf70b0372baa26b",
+        "particles": 4155,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "damage",
+          "damage-inc",
+          "damage-k",
+          "damage-length",
+          "damage-y",
+          "damage-ybar",
+          "damage-ybar-scaled",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 425664.0625,
+        "bounds_min": [
+          0.12500006804977346,
+          0.12486532742485744,
+          0.0
+        ],
+        "bounds_max": [
+          30.94477987038663,
+          16.374587903722684,
+          0.0
+        ],
+        "max_displacement": 16.41131479343288,
+        "mass_centroid": [
+          11.134142970638427,
+          4.988234579389689,
+          0.0
+        ],
+        "max_damage": 0.9999999999999359,
+        "max_damage_position": [
+          30.94477987038663,
+          1.4704239232332295,
+          0.0
+        ],
+        "max_damage_reference_position": [
+          14.781250000000117,
+          4.281249999999934,
+          0.0
+        ],
+        "mass_weighted_damage": 0.49377423946341026,
+        "lower_reference_y_le_4m": 0.9999999999999198,
+        "upper_reference_y_ge_9m": 0.9999999999998759,
+        "damage_gt_0.05": {
+          "count": 2442,
+          "reference_y_min": 1.124999999999973,
+          "reference_y_max": 16.375000000000384
+        },
+        "damage_gt_0.5": {
+          "count": 2099,
+          "reference_y_min": 1.124999999999973,
+          "reference_y_max": 16.375000000000384
+        },
+        "damage_gt_0.9": {
+          "count": 1913,
+          "reference_y_min": 1.124999999999973,
+          "reference_y_max": 16.375000000000384
+        },
+        "right_domain_edge_above_y1_05m": 31.015879680175658,
+        "initial_top_particle_mean_y": 8.175794501844093
+      }
+    },
+    "triaxial-before": {
+      "complete": true,
+      "frames": 51,
+      "finalTimeS": 0.2,
+      "particleCount": 480,
+      "finalMass": 17.64,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 0.2,
+        "file": "particles_0050.vtk",
+        "sha256": "0ed90f74db64dad9b7f4bad598752ef8e80e362b34268c4c63f5d379382138ae",
+        "particles": 480,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 17.64,
+        "bounds_min": [
+          0.028055818706061688,
+          0.032045675305295014,
+          0.0
+        ],
+        "bounds_max": [
+          0.10194418129395871,
+          0.15400429876886615,
+          0.0
+        ],
+        "max_displacement": 0.014289572934230416,
+        "mass_centroid": [
+          0.06499999999999999,
+          0.09327754018084089,
+          0.0
+        ]
+      }
+    },
+    "triaxial-after": {
+      "complete": true,
+      "frames": 51,
+      "finalTimeS": 0.2,
+      "particleCount": 480,
+      "finalMass": 17.64,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 0.2,
+        "file": "particles_0050.vtk",
+        "sha256": "0ed90f74db64dad9b7f4bad598752ef8e80e362b34268c4c63f5d379382138ae",
+        "particles": 480,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 17.64,
+        "bounds_min": [
+          0.028055818706061688,
+          0.032045675305295014,
+          0.0
+        ],
+        "bounds_max": [
+          0.10194418129395871,
+          0.15400429876886615,
+          0.0
+        ],
+        "max_displacement": 0.014289572934230416,
+        "mass_centroid": [
+          0.06499999999999999,
+          0.09327754018084089,
+          0.0
+        ]
+      }
+    }
+  },
+  "historicalAcceptedReplay": "All three reach 40 s, initiate lower damage at 4 s and upper damage at 7.5 s, then collapse. Historical/fresh original/refactored have 174/176/191 saved frames. Strict equivalence fails; separate final-domain IoU is a shape diagnostic, not physical accuracy.",
+  "causality": "Early roundoff and later amplification are consistent with nondeterministic runtime, but causality is not proved by these runs. A controlled deterministic comparison remains necessary before claiming numerical equivalence.",
+  "scientificValidation": false,
+  "limitations": [
+    "2D plane-strain rectangle at unit depth, not axisymmetric or a 3D cylinder",
+    "No independent laboratory clay calibration",
+    "Native 2D VTK exports in-plane stress only; full 3D qJ2 cannot be independently reconstructed from those VTK fields",
+    "Historical accepted warm start and fresh original baseline use different preparations",
+    "Original algorithmic audit caveats remain; no convergence or energy-closure proof"
+  ]
+}

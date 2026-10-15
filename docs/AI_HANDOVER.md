@@ -3,18 +3,47 @@
 > **Read this at the start of a new AI session.** Open PR topology refreshed through the public GitHub API on **2026-10-15**; older checks below retain their dates. This is a **handover**, not a claim that the software has passed numerical validation. Check live branches, PRs, code and CI status before acting; this document can become stale. Keep it updated when significant decisions or statuses change.
 
 **Active work, 2026-10-15 — reusable native simulation framework:**
-**Background wait requested by user:** to save tokens, stop active waiting while
-the native process continues. Existing heartbeat `mpm-lanjut-setelah-reset` is
-now ACTIVE, renamed "MPM lanjut setelah simulasi", checking every 15 minutes.
-Each wakeup should inspect only `output/framework-refactor-2026-10-15/joss-after-status.json`,
-`joss-after/reference-metadata.json`, native PID **43576** and the final log line.
-If healthy/running, remain quiet and end the wakeup without repeating tests.
-When complete, use `scripts/compare-framework-runs.py`,
-`.tmp/analyze-framework-regression.py` and completion-guarded
-`.tmp/pack-framework-evidence.py`; preserve strict failures and provenance.
-Finish evidence/docs/wiki, then commit/push/PR only after evaluating the full
-result. Pause this heartbeat after completing the requested work. Do not start
-another full run while the existing one remains active.
+**Full four-worker result, 20:47 WIB:** the post-refactor Joss run completed
+40 s with exit 0, but **strict regression FAILED: 176 before versus 191 after
+frames**. At common saved clocks the unchanged pointwise tolerances also fail.
+Final position max component difference is 0.0811648 m, RMS 0.00234568 m.
+Both runs initiate lower damage at 4 s and upper damage at 7.5 s. Final run-out
+is 31.01589046 versus 31.01587968 m; domain-shape IoU is 0.99667193. These
+diagnostics support the same collapse pattern, not numerical equivalence or
+physical accuracy. All states are finite, mass is conserved and the 496
+protected base MPs retain zero damage. Retained evidence and actual video:
+`docs/evidence/framework-refactor-2026-10-15/` (manifest hashes verified).
+
+**Paired serial control now running, started 20:53:38 WIB:** before uses frozen
+original source `c749d32`; after uses public CLI and test case committed as
+`41403f4`. Only worker count changes to 1, with `OPENBLAS_NUM_THREADS=1` and
+`OMP_NUM_THREADS=1` in both processes. Material, geometry, phases, loading and
+comparison tolerances remain unchanged. Existing same-private-code 4 s replay
+already differs by similar floating-point roundoff at equilibrium; initial VTKs
+are byte-identical in all three runs. See `joss-repeatability-diagnosis.json`.
+This supports runtime variability but does not yet prove the complete difference
+is caused by parallel execution; **do not assert that as a resolved cause**.
+
+**User steering after the result discussion:** the user asked to discuss the
+problem before further investigation, then explicitly authorized a checkpoint
+**commit and push while waiting**. Publish the current code/docs/evidence with
+the strict failure retained. The final acceptance and PR remain pending.
+Heartbeat `mpm-lanjut-setelah-reset` is **PAUSED**; leave it paused unless the
+user requests automatic continuation. Existing native runs continue independently.
+At the next authorized check inspect only `joss-serial-before-status.json`,
+`joss-serial-after-status.json`, their `reference-metadata.json`, process IDs in
+`joss-serial-processes.json`, and one final line from each serial log under
+`output/framework-refactor-2026-10-15/`. Wrapper PIDs are **30740 / 240**;
+discover their native children if necessary. While either is healthy/running,
+remain quiet and end the wakeup. Do not repeat tests, investigate or start jobs.
+When BOTH complete exit 0 at physicalTime 40, run the unchanged comparator on
+`joss-serial-before/` versus `joss-serial-after/`, and add separate diagnostics
+and evidence using the existing helpers. Preserve the four-worker FAIL even if
+serial passes. If serial also fails, investigate the first divergence rather
+than relaxing criteria. Do not start further investigation without first
+explaining the problem to the user. A checkpoint push is authorized now;
+overall acceptance and the PR require evaluation of the control. Do not merge
+or modify main.
 
 Current bounded integration on `9f26cb1` passed both Joss4s and 2D27updates;
 see `current-head-integration-summary.json` and `current-head-source-comparison.json`
@@ -24,7 +53,8 @@ MPs split natively to280, conserved mass504000kg/m,36 finite VTK arrays. Evidenc
 `current-head-cliff-mc/integration-audit.json`. No engine change or extra full
 simulation was needed. Fresh original full40s differs from historical warm pilot
 (176 versus174 frames, finalshapeIoU .967817); retain that separate diagnostic,
-not a numerical-equivalence claim. The full after-run remains pending.
+not a numerical-equivalence claim. The full four-worker after-run and its strict
+failure are now retained; the separate paired serial control is pending.
 
 Current branch is `codex/reusable-simulation-framework`, following the user's
 merged checkpoint and native Windows quickstart. The user requested refactoring
@@ -80,21 +110,16 @@ contract tests; the complete 2D result above is attributed to its exact snapshot
 not silently relabeled as a later commit. Current-HEAD bounded integration checks
 are recorded separately as they finish.
 
-**Still running / next actions:** the complete fresh-start frozen Joss baseline
-finished, but the full **post-refactor Joss 40 s run is still running**. Do not mark
-the cliff regression, accepted toe-to-top sequence, or overall refactoring complete
-before that run finishes and native comparisons are checked. A bounded current-HEAD
-Joss integration run may also be active. Inspect processes, logs and
-`output/framework-refactor-2026-10-15/after-processes.json` before launching anything;
-do not duplicate jobs. Main working evidence is under that output directory:
-`triaxial-before-after-comparison.json`, both triaxial run folders, audits/render
-provenance, test logs, frozen source/adaptation patch and the retained failed run.
-Finish the Joss comparison against the same fresh-start frozen baseline, distinguish
-it from the historical warm-start pilot, save the evidence bundle, update this
-handover/wiki, then commit/push and open the user-requested PR. Numerical regression
-is not laboratory/material/field validation; all earlier scientific caveats below
-remain applicable. Auto-continuation remains paused; this work is authorized by
-the user's new explicit request.
+**Next action:** let the paired serial native control finish, then compare the
+complete saved states with `scripts/compare-framework-runs.py` and diagnose
+actual matching clocks using `.tmp/analyze-framework-regression.py`. Do not mark
+overall numerical regression passed from visual agreement. Full four-worker
+evidence is packaged with `regressionPassed=false`; update it by appending the
+serial evidence, not overwriting raw runs or concealing failures. All completed
+tests listed above remain valid and need no repetition. Numerical regression
+is not laboratory/material/field validation; earlier scientific caveats remain.
+Checkpoint publication is authorized while this acceptance question remains
+open. It must not be described as a passing final regression or a completed PR.
 
 **Merged checkpoint, refreshed live on 2026-10-15:**
 [PR #7](https://github.com/hadrianJavas12/MPM/pull/7) was **merged by the user**

@@ -66,10 +66,25 @@ method for experiments with different assembly or measurement requirements.
 
 ## Regression scope
 
-Refactoring preserves numerical expressions and old defaults. The implementation
-checkpoint is committed before post-refactoring native validation. Full 2D
-before/after compression and full Joss collapse are compared independently from
-their saved VTK and CSV arrays. Scientific validity is distinct from regression.
+The initial implementation was committed before post-refactoring native validation.
+Engine equations are unchanged. Full before/after native runs have these results:
+
+- **Triaxial 2D passes:** all 51 VTKs are byte-identical and every CSV difference
+  is zero.
+- **Joss strict regression fails:** both runs completed 40 s, but saved 176 versus
+  191 physical states; common-time field diagnostics also exceed the pointwise
+  `atol=1e-8`, `rtol=1e-7` tolerances. Final position-component difference reaches
+  0.0811648 m, RMS 0.00234568 m.
+
+Joss damage onset times agree (lower region 4 s, upper 7.5 s), and final run-out
+edges are close (31.01589046 / 31.01587968 m). Initial-top-particle mean y is
+8.17637462 / 8.17579450 m. Final-domain IoU 0.99667193 describes numerical shape
+agreement; it is not physical accuracy and does not override the strict failure.
+Cause investigation and overall acceptance remain pending. The user authorized
+a checkpoint commit/push while the paired single-worker controls run; the final
+PR remains pending. No physics change was used to force agreement. See the
+[detailed validation status](../docs/REUSABLE_FRAMEWORK.md#hasil-validasi-saat-ini).
+Scientific validity is distinct from regression.
 
 The 2D specimen is **plane strain with unit thickness**, not an axisymmetric
 cylinder: it retains 3D constitutive stress while fixing out-of-plane deformation.

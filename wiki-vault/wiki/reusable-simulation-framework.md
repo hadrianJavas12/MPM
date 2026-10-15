@@ -2,7 +2,7 @@
 title: Reusable native simulation framework
 type: synthesis
 tags: [cl-mpm, architecture, refactoring, native-windows, regression]
-sources: [docs/REUSABLE_FRAMEWORK.md, docs/AI_HANDOVER.md, docs/testing.md, framework/cl-mpm-framework.asd, output/framework-refactor-2026-10-15/triaxial-before-after-comparison.json]
+sources: [docs/REUSABLE_FRAMEWORK.md, docs/AI_HANDOVER.md, docs/testing.md, framework/cl-mpm-framework.asd, docs/evidence/framework-refactor-2026-10-15/validation-summary.json]
 updated: 2026-10-15
 ---
 
@@ -90,7 +90,7 @@ and inspected. The H.264 video decodes fully: 51 frames at 15 fps means 3.4 s
 playback, distinct from 0.2 s numerical time. Sources and hashes are recorded
 under `output/framework-refactor-2026-10-15/`.
 
-## Other tests and unfinished cliff comparison
+## Other tests and completed four-worker cliff comparison
 
 Ten framework component contracts passed with no time integration; private
 triaxial component contracts also passed. Node syntax checks and all 36 tests
@@ -98,14 +98,27 @@ passed with zero skips. Actual two-step custom-delegate compatibility smoke
 retained zero stress/position differences, and Joss reference unit checks passed.
 These are narrower scopes than a complete native scenario regression.
 
-The full fresh-start frozen Joss baseline finished. The **full post-refactor
-40 s Joss run is still running**; it is not yet a passing cliff regression.
-The final comparison must use the same fresh-start baseline and separately
-assess the accepted toe-to-top damage/collapse sequence. The historical pilot
-in [[joss-reference-reproduction]] used a warm start, so differences from it
-cannot automatically be assigned to the refactor. Inspect active processes and
-logs before starting another job. Root will finalize evidence and the requested
-commit/push/PR after completion and comparison.
+Both fresh-start Joss versions completed 40 s, but **strict regression failed**:
+176 original versus 191 framework frames. The unchanged comparator uses
+absolute tolerance 1e-8 and relative tolerance 1e-7; common-clock fields also
+fail. At 40 s maximum position-component difference is 0.0811648 m and RMS is
+0.00234568 m. This failure remains in the evidence summary.
+
+Both initiate lower damage above 0.05 at 4 s and upper damage at 7.5 s. Final
+run-out is 31.01589046 versus 31.01587968 m, and shape IoU is 0.99667193.
+All saved arrays are finite, mass is conserved, and the 496 protected base MPs
+retain zero damage. These are diagnostic collapse and integrity checks, not
+proof of numerical equivalence or physical accuracy. The historical pilot in
+[[joss-reference-reproduction]] used a warm start and differs separately; its
+differences must not be assigned automatically to this refactor.
+
+Existing independent runs with identical private numerical source already
+show comparable tiny differences at equilibrium and 4 s, while all initial
+VTKs are byte-identical. Unchanged parallel accumulation offers a plausible
+mechanism, but does not prove the entire 40 s difference is runtime variability.
+A paired full serial control now tests that question without changing physics
+or tolerances. The user authorized a checkpoint commit/push while waiting;
+final acceptance and the PR remain pending that assessment.
 
 These results establish software regression properties, not experimental clay
 calibration, convergence or a closed energy budget. The findings in
@@ -113,11 +126,17 @@ calibration, convergence or a closed energy budget. The findings in
 
 ## Background continuation requested by user
 
-To save tokens, the existing heartbeat now checks completion every15minutes
-and stays quiet while nativePID43576 is healthy/running. See docs/AI_HANDOVER.md
-for the exact status/log/helper paths. Resume fullcomparison/evidence/commit/push/PR
-after completion, preserving strict comparison failures; pause heartbeat on completion.
+The user requested an explanation before further investigation, so the existing
+heartbeat is **paused**. Existing native processes continue independently;
+do not resume automatic work without user direction. They started at 20:53:38 WIB
+on 2026-10-15: frozen original `c749d32` versus test case `41403f4`, both one
+worker, OpenBLAS/OMP threads set to one. Output folders are
+`joss-serial-before` and `joss-serial-after` under the existing run root.
+See docs/AI_HANDOVER.md for exact status/log/helper paths. Preserve the original
+four-worker failure even if the separate serial control passes. Pause the
+heartbeat when the task is complete.
 CurrentHEAD bounded Joss4s and2D27updates passed. A distinct native Mohr-Coulomb
 composition on0fece3b also passed2updates with36finiteVTKarrays andmass504000kg/m
 conserved while native splitting changed70MPs to280; no engine edits/rerun.
-Full40safter-regression is still pending.
+The four-worker evidence bundle is retained with hashes and
+`regressionPassed=false`; the separate serial control is pending.

@@ -1,0 +1,21 @@
+{
+  "claim": "Two native MC updates through the public cliff component adapter; integration only, not calibration or scientific validation.",
+  "implementationCommit": "0fece3ba97f1b1b85270d90cccf5945061074603",
+  "launcherExitCode": 0,
+  "nativeClassSelectedInFrozenCase": "cl-mpm/particle::particle-mc",
+  "nativeLawReplacement": false,
+  "executedUpdates": 2,
+  "savedFrames": 1,
+  "initialParticleCountFromNativeLog": 70,
+  "finalParticleCount": 280,
+  "nativeParticleSplittingEnabled": true,
+  "particleCountCheck": "The retained cliff solver permits native MP splitting; count need not remain constant. Mass is checked against the initialized uniform material points.",
+  "finiteScalarArrays": 36,
+  "allFieldsFinite": true,
+  "expectedInitialMassKgPerM": 504000.0,
+  "massCheckBasis": "Initial native log particle count times 2m x 2m uniform native particle area times specified1800kg/m3; unit out-of-plane thickness.",
+  "finalMassKgPerM": 504000.0,
+  "relativeMassError": 0.0,
+  "sourceSnapshotExactLoadedBytes": true,
+  "passed": true
+}

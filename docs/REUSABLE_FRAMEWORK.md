@@ -120,3 +120,39 @@ Untuk tebing, fresh-start sebelum dan sesudah refactoring dibandingkan
 tersendiri dari video pilot historis yang memakai warm start. Perbedaan
 historis tidak boleh dilabeli sebagai akibat refactoring tanpa pembandingan
 tersebut. Kesamaan hasil kode tidak otomatis menetapkan validitas ilmiah model.
+
+## Hasil validasi saat ini
+
+| Kasus | Penyelesaian native | Regresi sebelum/sesudah |
+| --- | --- | --- |
+| Triaxial 2D | Keduanya 17.443 update, 51 state, 0,2 s / strain platen 10% | **Lulus:** seluruh 51 VTK identik byte dan semua kolom CSV berbeda nol |
+| Tebing Joss | Keduanya mencapai 40 s, exit 0 | **Belum lulus:** 176 versus 191 state fisik; pembandingan ketat gagal |
+
+Pembanding ketat memakai `atol=1e-8`, `rtol=1e-7` per nilai, dengan state pada
+waktu fisik yang sama. Perbedaan jumlah state sudah menggagalkan pembandingan
+keseluruhan tanpa interpolasi. Diagnostik pada waktu yang tersedia di kedua run
+juga menemukan selisih melampaui toleransi. Pada 40 s, maksimum selisih komponen
+posisi adalah **0,0811648 m**, dengan RMS seluruh komponen **0,00234568 m**.
+
+Beberapa ukuran perilaku tebing tetap sangat dekat:
+
+| Diagnostik native | Sebelum | Sesudah |
+| --- | --- | --- |
+| Damage pertama tersimpan >0,05, region awal y≤4 m | 4 s | 4 s |
+| Damage pertama tersimpan >0,05, region awal y≥9 m | 7,5 s | 7,5 s |
+| Tepi domain run-out pada y>1,05 m, t=40 s | 31,01589046 m | 31,01587968 m |
+| Rata-rata y partikel bagian atas awal, t=40 s | 8,17637462 m | 8,17579450 m |
+
+IoU bentuk domain partikel akhir adalah **0,99667193**, memakai raster 0,025 m
+dalam viewport diagnostik dan mengecualikan pondasi. Ini ukuran kemiripan bentuk
+numerik, bukan persentase akurasi fisik, dan tidak menggantikan kegagalan
+pembandingan ketat. Data mentah, jumlah state yang berbeda dan toleransi tetap
+dipertahankan. Lihat `output/framework-refactor-2026-10-15/`:
+`triaxial-before-after-comparison.json`, `joss-before-after-comparison.json`,
+`joss-before-after-diagnostics.json` dan `joss-full-regression-summary.json`.
+
+Penyebab perbedaan Joss masih diselidiki; kesetaraan seluruh refactoring dan
+checkpoint akhir **belum dinyatakan berhasil**. Pengguna mengizinkan commit dan
+push checkpoint sambil menunggu kontrol satu worker; PR dan penerimaan akhir
+menunggu evaluasi tersebut. Persamaan fisika tidak diubah untuk memaksa kecocokan.
+Hasil di atas tidak menetapkan kalibrasi material atau validasi ilmiah model.

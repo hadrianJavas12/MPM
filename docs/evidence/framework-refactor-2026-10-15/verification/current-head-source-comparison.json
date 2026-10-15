@@ -1,0 +1,167 @@
+{
+  "scope": "Byte comparison of frozen private numerical sources and original JSON inputs. Public integration cases intentionally shorten the requested load program/run horizon; this is not a new full-run regression.",
+  "currentImplementationCommit": "9f26cb1ab28fc02b9a8c9752a0ed7f751b82096d",
+  "fullPostRunSnapshotCommit": "2f6476f",
+  "triaxialPrivateSourceComparisons": [
+    {
+      "path": "framework/scenarios/triaxial/boundaries.lisp",
+      "previousSHA256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+      "currentSHA256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/triaxial/config.lisp",
+      "previousSHA256": "ca254cd019033dccc78a1db6bab141d2b9ea53f304d79a9a63f2c44251904b61",
+      "currentSHA256": "ca254cd019033dccc78a1db6bab141d2b9ea53f304d79a9a63f2c44251904b61",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/triaxial/controls.lisp",
+      "previousSHA256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+      "currentSHA256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/triaxial/geometry.lisp",
+      "previousSHA256": "6d210567fe2bf1d09fc207283bfe6b4fadd38c2d0fc2da46c5d475bd9a413154",
+      "currentSHA256": "6d210567fe2bf1d09fc207283bfe6b4fadd38c2d0fc2da46c5d475bd9a413154",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/triaxial/homogeneous.lisp",
+      "previousSHA256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+      "currentSHA256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/triaxial/material.lisp",
+      "previousSHA256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+      "currentSHA256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/triaxial/measurements.lisp",
+      "previousSHA256": "a8a7a5d4bed1901f1347e67c3c20a9b96238f2ba5946a86a1a6d2474c508a5e2",
+      "currentSHA256": "a8a7a5d4bed1901f1347e67c3c20a9b96238f2ba5946a86a1a6d2474c508a5e2",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/triaxial/mpm.lisp",
+      "previousSHA256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+      "currentSHA256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/triaxial/package.lisp",
+      "previousSHA256": "f4b3a347f1690a1c228f344727ea2511f3469249ddf8973d7efe4166fd710481",
+      "currentSHA256": "f4b3a347f1690a1c228f344727ea2511f3469249ddf8973d7efe4166fd710481",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/triaxial/runner.lisp",
+      "previousSHA256": "78402e0266bc8d67f21929c4c980259988b27ed8d47d1ab87cbda8a05b9a8053",
+      "currentSHA256": "78402e0266bc8d67f21929c4c980259988b27ed8d47d1ab87cbda8a05b9a8053",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/triaxial/tensors.lisp",
+      "previousSHA256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+      "currentSHA256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+      "identicalBytes": true
+    }
+  ],
+  "jossPrivateSourceComparisons": [
+    {
+      "path": "framework/scenarios/joss/build.lisp",
+      "previousSHA256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+      "currentSHA256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/classes.lisp",
+      "previousSHA256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+      "currentSHA256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/geometry.lisp",
+      "previousSHA256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+      "currentSHA256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/measurements.lisp",
+      "previousSHA256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+      "currentSHA256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/output.lisp",
+      "previousSHA256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+      "currentSHA256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/phases.lisp",
+      "previousSHA256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+      "currentSHA256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/run.lisp",
+      "previousSHA256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+      "currentSHA256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/statistics.lisp",
+      "previousSHA256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+      "currentSHA256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/materials/chalk.lisp",
+      "previousSHA256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+      "currentSHA256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/cliff/settings.lisp",
+      "previousSHA256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+      "currentSHA256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/output/plotting.lisp",
+      "previousSHA256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+      "currentSHA256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+      "identicalBytes": true
+    }
+  ],
+  "baseInputComparisons": [
+    {
+      "path": "inputs/calibration/triaxial-2d.json",
+      "previousSHA256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35",
+      "currentSHA256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35",
+      "identicalBytes": true
+    },
+    {
+      "path": "inputs/studio/reference/joss-bay-accepted-collapse.json",
+      "previousSHA256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+      "currentSHA256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+      "identicalBytes": true
+    }
+  ],
+  "allListedPrivateSourcesAndBaseInputsIdentical": true,
+  "boundedTriaxialOverrides": {
+    "loadingDurationS": 0.0003,
+    "rampDurationS": 5e-05,
+    "targetAxialStrainPct": 0.01,
+    "frames": 2,
+    "maxUpdates": 1000
+  },
+  "boundedJossOverrides": {
+    "simulationTime": 4,
+    "maxSteps": 10
+  }
+}

@@ -1,0 +1,952 @@
+{
+  "processor": {
+    "Name": "AMD Ryzen 9 6900HS with Radeon Graphics        ",
+    "NumberOfCores": 8,
+    "NumberOfLogicalProcessors": 16
+  },
+  "nativeBinaries": [
+    {
+      "sha256": "e2cbfa6eda45e191d71638b391f7d8d985c8f6b9a38b68b3e963583e99d2ed1b",
+      "path": "C:\\Program Files\\Steel Bank Common Lisp\\sbcl.exe"
+    },
+    {
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "path": "libs\\kirchoff.dll"
+    },
+    {
+      "sha256": "0486735c359a67419d8832e3c40e2837f8762baebcdf4b62d3b18c91f9ece12e",
+      "path": "toolchain\\openblas\\bin\\libopenblas.dll"
+    }
+  ],
+  "engineAndTooling": [
+    {
+      "sha256": "02d5589423adbbbf683d9d1f03b0210ca395a79fde2f3f590bc78cea845287d1",
+      "path": "cl-mpm-tests.asd"
+    },
+    {
+      "sha256": "60fc5e86733a7dc300e58544c55f3cbb5f196034029a0d189c43a1ec88d7227c",
+      "path": "cl-mpm.asd"
+    },
+    {
+      "sha256": "be4795c93970658601501a4640b8b68464e3c1ef193d8094e3accb9ea5ad2a74",
+      "path": "deps/magicl/.gitattributes"
+    },
+    {
+      "sha256": "057cb37a730ba2d1e3a271100815b6476e0ff23fec8472ae44a879a0f83ed8c3",
+      "path": "deps/magicl/.gitignore"
+    },
+    {
+      "sha256": "cc820ff362a7d53a185f4b12e1144a30219418587fda936faf0e19a714688676",
+      "path": "deps/magicl/.gitlab-ci.yml"
+    },
+    {
+      "sha256": "a2f003cf307b8ba2a135d6dfd7c255a9949623ba4f253f4ecf7ecf262c7576e5",
+      "path": "deps/magicl/.travis.yml"
+    },
+    {
+      "sha256": "9ea707eadc4fd672a050e926555031095d3d7ca2764e6f96d7284cceb3f9fd50",
+      "path": "deps/magicl/doc/dev-how-to.md"
+    },
+    {
+      "sha256": "c2771503c910dd48361285f16d3ec3ebfc92df16e52aeaf7c84a461a7f14051c",
+      "path": "deps/magicl/doc/fortran-functions.md"
+    },
+    {
+      "sha256": "dc1feac418123896999de17467510d0b3ca132784190e472734a9742a3b70ab9",
+      "path": "deps/magicl/doc/high-level.md"
+    },
+    {
+      "sha256": "381cccc565f37632b0646d21f731c0aa11c10ef2fd4c93236a4c273f5cef663e",
+      "path": "deps/magicl/doc/requirements.md"
+    },
+    {
+      "sha256": "82e270df28b22a81fafea1c829d37c6b651f0bdab05514c2fe91c62d5390ad9f",
+      "path": "deps/magicl/examples.lisp"
+    },
+    {
+      "sha256": "bbb168528be8c45972b50017102f7a892aaccd206c6c3d0f9a2b7a7d8724242a",
+      "path": "deps/magicl/expokit/expokit.f"
+    },
+    {
+      "sha256": "c1ed4fa75d3cb38d3be304d36d5aeec41a86d5312e377153774c4ee9526e1250",
+      "path": "deps/magicl/expokit/LICENSE-expokit.txt"
+    },
+    {
+      "sha256": "f55a7fc15d61bc6814868d37c86e9eb3284619020dddeceb7845da4341afbf39",
+      "path": "deps/magicl/LICENSE.txt"
+    },
+    {
+      "sha256": "588d7bd5e34f565f06839df9fb5114f905e3ffc4a79543caf482546760d7b8ba",
+      "path": "deps/magicl/magicl-examples.asd"
+    },
+    {
+      "sha256": "5108d1f98c035ef3da1db18b6e8d684572d37c505db31ccffe2da26009e36cf0",
+      "path": "deps/magicl/magicl-gen.asd"
+    },
+    {
+      "sha256": "f9ae74720fa74b2770102ef403796ecea51981d2b9d97c2cff54fe587edcec73",
+      "path": "deps/magicl/magicl-tests.asd"
+    },
+    {
+      "sha256": "13d1b6ac93e31b18de5a8885cd57d63e82a5ea62925429dc444d0b356042b276",
+      "path": "deps/magicl/magicl-transcendental.asd"
+    },
+    {
+      "sha256": "21a754b95f561c6326c48efd6564c0838736c2b9e13c18fb9a94c53145751e34",
+      "path": "deps/magicl/magicl.asd"
+    },
+    {
+      "sha256": "16cb3a79ff5d5090277dda84c72d501430cbba78ee3a1cffd84bde6725c6767b",
+      "path": "deps/magicl/Makefile"
+    },
+    {
+      "sha256": "da61b09d6e71cfd8292ffd9969036bb7aebfb73a103faa76295732ddbc600e52",
+      "path": "deps/magicl/README.md"
+    },
+    {
+      "sha256": "6af5aae88eb8e38abf4f78e44c4cca0d6b48e6ddebfd62e435433e2ad0daa76a",
+      "path": "deps/magicl/src/backend-function.lisp"
+    },
+    {
+      "sha256": "b159f88466dc9239b0234decdd783978f357468b587903f65e68136373ddbf22",
+      "path": "deps/magicl/src/benchmark-utilities.lisp"
+    },
+    {
+      "sha256": "41e1ffe6d17ebc2f4b2dacec1d5c207898a8996ec02100118f9ea9c6b0a8bb5a",
+      "path": "deps/magicl/src/bindings/allegro/blas-cffi.lisp"
+    },
+    {
+      "sha256": "b6aa26f2891b8b19a7e2390eefd5126146b2690797706ba67cbf4c3d0a5b7c17",
+      "path": "deps/magicl/src/bindings/allegro/expokit-cffi.lisp"
+    },
+    {
+      "sha256": "793281e71a4809c3842dbb2ec2d18735d34d0c5c23f6be34b05ef61bbbf7b094",
+      "path": "deps/magicl/src/bindings/allegro/lapack00-cffi.lisp"
+    },
+    {
+      "sha256": "da38b9d53d92f9097549500552290b5e4ff7dda25e927a2522b9a1be00e70f3f",
+      "path": "deps/magicl/src/bindings/allegro/lapack01-cffi.lisp"
+    },
+    {
+      "sha256": "ab1e6861fdccffc7c181ef1c6957e2e3dea0c48e45046ac813ec9e9de1aaa980",
+      "path": "deps/magicl/src/bindings/allegro/lapack02-cffi.lisp"
+    },
+    {
+      "sha256": "a954e91f862f80784e47147777888dcbf0041363f1ad12472390ea9542e9a7e1",
+      "path": "deps/magicl/src/bindings/allegro/lapack03-cffi.lisp"
+    },
+    {
+      "sha256": "ba5fb7fdabd2433a1ecae300693b069dac207c435c51279aabb78260280ce9ca",
+      "path": "deps/magicl/src/bindings/allegro/lapack04-cffi.lisp"
+    },
+    {
+      "sha256": "a9411a2fc7cf937e4f047e7b62ec1df19a584a4e9f1edfd24735c501a6d967b2",
+      "path": "deps/magicl/src/bindings/allegro/lapack05-cffi.lisp"
+    },
+    {
+      "sha256": "66e459e307899eaec4c5bfb40185c15fca5b2f06fb628858b43bb4a3aed37d1f",
+      "path": "deps/magicl/src/bindings/allegro/lapack06-cffi.lisp"
+    },
+    {
+      "sha256": "683d62a6b9519df3e3d9bf5945b0413a685731388cbd53576ed856257604617b",
+      "path": "deps/magicl/src/bindings/allegro/lapack07-cffi.lisp"
+    },
+    {
+      "sha256": "82b49f404202941c9b8b666e6e2a97b080ed22dbf21cc7a3769808565cb9b3e1",
+      "path": "deps/magicl/src/bindings/blas-cffi.lisp"
+    },
+    {
+      "sha256": "5d5bcd0c03488ef0ba0ccc85c88697adfb575fb102051625f9e6b232c158fc39",
+      "path": "deps/magicl/src/bindings/expokit-cffi.lisp"
+    },
+    {
+      "sha256": "a074e0458c6e56f14e0a6e49e93393aa7e3decacd58209ed1ead144c0ac8b0f4",
+      "path": "deps/magicl/src/bindings/lapack-cffi.lisp"
+    },
+    {
+      "sha256": "a2a8d9bd4b3bc7175ded58e809efcc3a118556ea5728f0c8864a18e5e597d18e",
+      "path": "deps/magicl/src/extensions/blas/arithmetic.lisp"
+    },
+    {
+      "sha256": "69ca53643f780386a9d246c036972d12009df2daa821ee65f32a0c4eafaf579c",
+      "path": "deps/magicl/src/extensions/blas/load-libs.lisp"
+    },
+    {
+      "sha256": "e0977754285dbc88a68cd4fdc0ffd1f43c1a7e8fdc104eea4b663864b7158975",
+      "path": "deps/magicl/src/extensions/blas/package.lisp"
+    },
+    {
+      "sha256": "ea06a1b0474f058f6778e062d3f104a0ca4795c033ba7307b50049e8b743a93d",
+      "path": "deps/magicl/src/extensions/common/cffi-types.lisp"
+    },
+    {
+      "sha256": "af536d0c984bcddb9d6adeb7bed6dd61dd046c6c3e7bb7fc57d847ad31526809",
+      "path": "deps/magicl/src/extensions/common/library-tracking.lisp"
+    },
+    {
+      "sha256": "dffd533fe01e3c53ad78f2ff25864198b26466c7291626d309bfb1fb6d1cc4f3",
+      "path": "deps/magicl/src/extensions/common/package.lisp"
+    },
+    {
+      "sha256": "e8317a8bd5e82444cd0e3ac58210f4ed14cd04e88ff1ffb38a1676ca836b7d58",
+      "path": "deps/magicl/src/extensions/common/ptr-ref.lisp"
+    },
+    {
+      "sha256": "f0603fdfb243b9c9fa319bde0422758914ae3f1a6decb907908d089cfee6e41a",
+      "path": "deps/magicl/src/extensions/common/with-array-pointers.lisp"
+    },
+    {
+      "sha256": "0b58729fa7539cea52484ac7abfa39fb660000998206deec19bcdfa79036d7a7",
+      "path": "deps/magicl/src/extensions/expokit/deprecated-package.lisp"
+    },
+    {
+      "sha256": "2f80616a01fa9ee77d2aeb7613fcbc2d546ed07afe7fc874fdcfb0ae1b3492a1",
+      "path": "deps/magicl/src/extensions/expokit/expm.lisp"
+    },
+    {
+      "sha256": "1614a3f085ae7b6e0a6684db8ddedb87ff0ab442989167779a19d0e0a8616750",
+      "path": "deps/magicl/src/extensions/expokit/load-libs.lisp"
+    },
+    {
+      "sha256": "90b52b88459512e67ef949db2ae9a3166c5b2230e469f21d1cac71fc6e2ca3cc",
+      "path": "deps/magicl/src/extensions/expokit/package.lisp"
+    },
+    {
+      "sha256": "41cc915a9db7d858e83ef3dff7a71a98b73020d88f49c3950804ef46af497d09",
+      "path": "deps/magicl/src/extensions/lapack/lapack-bindings.lisp"
+    },
+    {
+      "sha256": "32ab5cae76ae124e9b16d9fd61b96d1a8c33d4e55367e4e7b464369e8fe0f693",
+      "path": "deps/magicl/src/extensions/lapack/lapack-csd.lisp"
+    },
+    {
+      "sha256": "194b5f4a7f0e579c12da2232beda8d37c7677fb4ba133a2b68cbe3a8f6040cf2",
+      "path": "deps/magicl/src/extensions/lapack/lapack-generics.lisp"
+    },
+    {
+      "sha256": "b5bec74166931ae79065f71f411cff5f3625d351a595d019e5bde3857750939d",
+      "path": "deps/magicl/src/extensions/lapack/lapack-qz.lisp"
+    },
+    {
+      "sha256": "4d2eff2b3f8b0f3a74230d97ebbb32b553d4fe5c39e53f979856b6cde01f0f83",
+      "path": "deps/magicl/src/extensions/lapack/lapack-schur.lisp"
+    },
+    {
+      "sha256": "76eab45c4ceb9ad3007e33fe9b39748da27721a770c03a69e016fd759f41cded",
+      "path": "deps/magicl/src/extensions/lapack/lapack-templates.lisp"
+    },
+    {
+      "sha256": "c01801da881cd4798edcc04b2b52f00db60655915b25222beb1bd7ab7c482093",
+      "path": "deps/magicl/src/extensions/lapack/load-libs.lisp"
+    },
+    {
+      "sha256": "c88ab752929b63bf6c7cee5168e65c5cd7c305f7c183ae6e0071753ec155eb4a",
+      "path": "deps/magicl/src/extensions/lapack/package.lisp"
+    },
+    {
+      "sha256": "f83407cc4002e4081acc6880bf1ff63180582576d753edd60285e9a2408976c7",
+      "path": "deps/magicl/src/extensions/simd/arithmetic.lisp"
+    },
+    {
+      "sha256": "7ad210633465b8096f7eba14e07c758273b38fb153dac6a6e84636af34a91841",
+      "path": "deps/magicl/src/extensions/simd/package.lisp"
+    },
+    {
+      "sha256": "6f265d56e30153f025f8486b9734af4c99197af710a64f6add07528479335cbb",
+      "path": "deps/magicl/src/functions.txt"
+    },
+    {
+      "sha256": "b9b2d50158e6d5df5b4efcdebaba0935a78f29263ede739ce308adc30091302e",
+      "path": "deps/magicl/src/generate-interface/generate-interface.lisp"
+    },
+    {
+      "sha256": "3bb56f4a5b212262f65829817032eb00f57ce5151d7d6b50ae0916479859b380",
+      "path": "deps/magicl/src/high-level/abstract-tensor.lisp"
+    },
+    {
+      "sha256": "5b238ed2259d346d54c63ce57826c6438565f3f18b2be8aba1a6847a02d1ce5e",
+      "path": "deps/magicl/src/high-level/allocation-allegro.lisp"
+    },
+    {
+      "sha256": "27f1c77c7b598793c0dbfca54e4b03d044c4ab9e32d02811e32e4d10ff33e2ae",
+      "path": "deps/magicl/src/high-level/allocation.lisp"
+    },
+    {
+      "sha256": "38cfc4f37cf5f887fc73c7fdab158cd8f5be4ade125bf4c95e509fac243dea12",
+      "path": "deps/magicl/src/high-level/constructors.lisp"
+    },
+    {
+      "sha256": "d13483458848798a329082a2f526de56bd74747380cdb80c00388131f22e0462",
+      "path": "deps/magicl/src/high-level/einsum.lisp"
+    },
+    {
+      "sha256": "4254665f9af20a26f6d0bf36810bd75c8515ee2cba339e1df76db77868d20c39",
+      "path": "deps/magicl/src/high-level/matrix-functions/csd.lisp"
+    },
+    {
+      "sha256": "ec3fec704fb7dc1ce4bc7a84b9b80393da41dd6f414a418c4d001330b4f630c3",
+      "path": "deps/magicl/src/high-level/matrix-functions/eig/eig.lisp"
+    },
+    {
+      "sha256": "f266a2759de2c08ade2fb67bf0b038bf670e0c98c9119212254c6999b56e33bd",
+      "path": "deps/magicl/src/high-level/matrix-functions/givens.lisp"
+    },
+    {
+      "sha256": "cdda19779805f9aa8112c3fde1e049bd094e66ebb7bdb88252510cfc37514159",
+      "path": "deps/magicl/src/high-level/matrix-functions/hermitian-eig.lisp"
+    },
+    {
+      "sha256": "02f1ecedab5cdb2258bd83b6d459ba9bb7abac9ddb3252894c6874a3593bbd92",
+      "path": "deps/magicl/src/high-level/matrix-functions/householder.lisp"
+    },
+    {
+      "sha256": "10cfa7fe89d685495558c35b9831330e33b37a31744b666681b2dfdac38d5f52",
+      "path": "deps/magicl/src/high-level/matrix-functions/lu.lisp"
+    },
+    {
+      "sha256": "cbee066dbec11606ef0473214e8a9958205bd8f577e31b8cbe641961df0ceb8b",
+      "path": "deps/magicl/src/high-level/matrix-functions/mult-definition.lisp"
+    },
+    {
+      "sha256": "b7e69781d0cb7189d9a5509a8d0475f8fa9463ef51d4b4fd84746756ec10d02a",
+      "path": "deps/magicl/src/high-level/matrix-functions/mult-methods.lisp"
+    },
+    {
+      "sha256": "64272d11d4b38562f8fcb6bc7b30137e9424d87061d53e89253306d25a4c1e38",
+      "path": "deps/magicl/src/high-level/matrix-functions/qr.lisp"
+    },
+    {
+      "sha256": "64a8f093ef9e99b928841d29cf7af5746b4f7aecb2fb42239cb069feb94834a9",
+      "path": "deps/magicl/src/high-level/matrix-functions/random-hermitian.lisp"
+    },
+    {
+      "sha256": "cd69b951f530f1a4d0578f9a8f69739833826dc06698013a5bb3c5a41dcb65b5",
+      "path": "deps/magicl/src/high-level/matrix-functions/row-column-matrices.lisp"
+    },
+    {
+      "sha256": "f9991e8faf00f365e8dcd903b281beb1b7174413d33e88b72841a1fc9dec8255",
+      "path": "deps/magicl/src/high-level/matrix-functions/svd.lisp"
+    },
+    {
+      "sha256": "6893ef640aa5a03ee1c77dc334149c10bc55c1b3f1991540d2db703425126372",
+      "path": "deps/magicl/src/high-level/matrix-functions/tridiagonal-form.lisp"
+    },
+    {
+      "sha256": "fab0a94560f449f583fde5d36061a214ed7913b814bdb0c0cd1318c4228a5bdc",
+      "path": "deps/magicl/src/high-level/matrix.lisp"
+    },
+    {
+      "sha256": "d1301ce904dd8b19f9cb6ce9fb1ee8cc942a382b8a8dde12020e659bd56ddb57",
+      "path": "deps/magicl/src/high-level/polynomial-solver.lisp"
+    },
+    {
+      "sha256": "82487bd76956b040e408f53e6e3bf1c3caa6157b51d13d3962e0cff5f411f0ca",
+      "path": "deps/magicl/src/high-level/shape.lisp"
+    },
+    {
+      "sha256": "a72ba7c5b66240b4ba6bebe15e91a2e342f0022bab0a08f40e64fbc6b35d1f76",
+      "path": "deps/magicl/src/high-level/specialize-constructor.lisp"
+    },
+    {
+      "sha256": "f4c5bd6d6c0a0f06a166255f88fbf44cda3505e29d88ce9a7ba47b8aa46e0485",
+      "path": "deps/magicl/src/high-level/specialize-tensor.lisp"
+    },
+    {
+      "sha256": "34a3b2c7ac16f8f618692acd2cf7c6e5d2fc66dae2ee733efd1d87ca244eed3a",
+      "path": "deps/magicl/src/high-level/tensor.lisp"
+    },
+    {
+      "sha256": "d6e7330e5bee7fae6c24b82b2309da7cc2187650dd2ecc9790e91d9fa4202d32",
+      "path": "deps/magicl/src/high-level/types/complex-double-float.lisp"
+    },
+    {
+      "sha256": "172ab01f0d4dd742cc9204127992eab9dacf31d9c37c0b7418a37574808afbda",
+      "path": "deps/magicl/src/high-level/types/complex-single-float.lisp"
+    },
+    {
+      "sha256": "7621dc483eaa3f9a654a68c205137a943ccd39b1fbf19dab0c2b9808c4bbf361",
+      "path": "deps/magicl/src/high-level/types/double-float.lisp"
+    },
+    {
+      "sha256": "c7ab6f57a5992b819ceaa2b9231e3f7bcb626b87a17df2ccf48e5cecde80fdb1",
+      "path": "deps/magicl/src/high-level/types/int32.lisp"
+    },
+    {
+      "sha256": "23e91d15e1fb61082caf97ccd0857cdb8fa59b1d43467878fb661446769d08fc",
+      "path": "deps/magicl/src/high-level/types/single-float.lisp"
+    },
+    {
+      "sha256": "17407992423317642bdb90baa2b0ff739d0cd3a1b2dad753c9a12da460f090fd",
+      "path": "deps/magicl/src/high-level/types/specialized-vector.lisp"
+    },
+    {
+      "sha256": "d70f4be1d483046d9f33ad231e6f967e6674cc314433f9645a22efce849c0ba7",
+      "path": "deps/magicl/src/high-level/util.lisp"
+    },
+    {
+      "sha256": "904b2ac37b0d44bb31fd1a7fa89b3883e98df0b6c64e49463deef18fef462708",
+      "path": "deps/magicl/src/high-level/vector.lisp"
+    },
+    {
+      "sha256": "d324357d31f62e2fb2a5b5f8577d669785fff8929fa0242a5f7625591cecc9ce",
+      "path": "deps/magicl/src/magicl.lisp"
+    },
+    {
+      "sha256": "fb8aa2c84bd4df78a9cca5a856940dcde777edb772bac6c93ccfb8d23c8cd62e",
+      "path": "deps/magicl/src/packages.lisp"
+    },
+    {
+      "sha256": "611f15ab852a6467f8954fac52041c12e468fb577ad8f2b654d925a315c6d6a8",
+      "path": "deps/magicl/src/reify.lisp"
+    },
+    {
+      "sha256": "d6529a737740823786f5ee6be53540e6df1444947fe4724942744dd8e68e3cf1",
+      "path": "deps/magicl/tests/abstract-tensor-tests.lisp"
+    },
+    {
+      "sha256": "02cc09ef126b88330babf994f1099f778fe810b66dccbd011092151d681d97b3",
+      "path": "deps/magicl/tests/allocation-tests.lisp"
+    },
+    {
+      "sha256": "530b5fe8127a5f6c91889b20e7972ead61ad0b5045d5121a30bc7312c9c3454e",
+      "path": "deps/magicl/tests/constants.lisp"
+    },
+    {
+      "sha256": "e424291b5882c979707685ffef2fc5173d67c4ee508ea695d9c96c59c672b10e",
+      "path": "deps/magicl/tests/constructor-tests.lisp"
+    },
+    {
+      "sha256": "6e5618eb34d98a674fcc210ac435dffad83111aab4b16db5fc70fd398f84ce56",
+      "path": "deps/magicl/tests/csd-tests.lisp"
+    },
+    {
+      "sha256": "eb2bc1933eceaeb7ddfd3f4d104b14b9f210200e14e7a3ac34e65b39a51f92c1",
+      "path": "deps/magicl/tests/high-level-tests.lisp"
+    },
+    {
+      "sha256": "b3a482ecb4559485849ef5251e090d677aeb381353c3a7b0cf94475057fa945a",
+      "path": "deps/magicl/tests/matrix-tests.lisp"
+    },
+    {
+      "sha256": "4dd63e75994c89631f542a384c27c0d114b81a86b22a4adf76ec5d64fe89d7e9",
+      "path": "deps/magicl/tests/packages.lisp"
+    },
+    {
+      "sha256": "398fd300ab9b786dd0b34e9bffa3d383b5b4378ba2142793cf3337990b90fef3",
+      "path": "deps/magicl/tests/specialization-tests.lisp"
+    },
+    {
+      "sha256": "07f3ec94344d56ff74cb6cf3ab39c6256b8608968160e268acba0dec8763a29a",
+      "path": "deps/magicl/tests/suite.lisp"
+    },
+    {
+      "sha256": "d0b6ad025e141d7c754b3b24a0f776b0a486d269532cac70f3433a9ddc2692f7",
+      "path": "deps/magicl/tests/util-tests.lisp"
+    },
+    {
+      "sha256": "65ccba11122beb463f1c1d38e41a61d4432f3b9547fe2d109c8185a8c721cfd9",
+      "path": "deps/magicl/VERSION.txt"
+    },
+    {
+      "sha256": "7172c7c6e0577009b3e0e4faae95f2956388efd39e37549e9b2c4bce37bda089",
+      "path": "deps/swank.live/swank-live.lisp"
+    },
+    {
+      "sha256": "1cdb51e173968a254bc86d17b9eef2fc17f73995ab0a3e97a1439419c54561cb",
+      "path": "deps/swank.live/swank.live.asd"
+    },
+    {
+      "sha256": "c800c49f7497296596763a82f4ab2cbffbf7b2dd54223cc284bb81c83d84ab75",
+      "path": "deps/vgplot/.gitignore"
+    },
+    {
+      "sha256": "fe07b9d29721d926627dce2e1b1f9ea646fe9594aa7d57e93e78453bab761200",
+      "path": "deps/vgplot/data.txt"
+    },
+    {
+      "sha256": "303401d4fcd79627892c75712f223d8f95d7f07b77c856f4739f5baabd4d32bf",
+      "path": "deps/vgplot/demo.lisp"
+    },
+    {
+      "sha256": "1e92a3b0606077402fa433e465210cfe4cc48644f065879a13c6fbd46cb47ddb",
+      "path": "deps/vgplot/docs/vgplot.html"
+    },
+    {
+      "sha256": "0b383d5a63da644f628d99c33976ea6487ed89aaa59f0b3257992deac1171e6b",
+      "path": "deps/vgplot/LICENSE"
+    },
+    {
+      "sha256": "e07381eb0ea6b1506121cffc00c7df4f092aeac87aac740387c012d097acd0f1",
+      "path": "deps/vgplot/package.lisp"
+    },
+    {
+      "sha256": "c45dd8844af5d0386b874f506660b739a7aa6c3a6a016a0c5928d5c64b84a257",
+      "path": "deps/vgplot/README"
+    },
+    {
+      "sha256": "f9b35d3f1731ab9a07d698b11cd0dbd53bed9bb0625bd2c3443856d086b4052a",
+      "path": "deps/vgplot/test.lisp"
+    },
+    {
+      "sha256": "f762c754a15a41ab101addae941d3e18e61ca18fbabdb0bb04f8d76f28bb7e80",
+      "path": "deps/vgplot/vgplot.asd"
+    },
+    {
+      "sha256": "01d9df504ebb1b55accd7f3fc88670f5828b980ed6d476d8e58aceb135700cfd",
+      "path": "deps/vgplot/vgplot.lisp"
+    },
+    {
+      "sha256": "f3c2a0c0bd90b15164ec42b3367eb9bba67ee626f07fd44f53a27af0ab99a2d6",
+      "path": "libs/.gitignore"
+    },
+    {
+      "sha256": "2c124a0ae9cbb7e818d53917525567a370f34841ec1470735ca19059b13b8159",
+      "path": "libs/build_dp_test.sh"
+    },
+    {
+      "sha256": "91e90a63c0117f877473e1197fc3f76a812403ce9b64b309ebfb5facb332c2b7",
+      "path": "libs/build_mc_test.sh"
+    },
+    {
+      "sha256": "ef6d6db19b7ab4f5e6095a20a068523ce35fa08a5e73546d91b2ff261857f976",
+      "path": "libs/build_visc_test.sh"
+    },
+    {
+      "sha256": "55c32aef8b49283f78c4fe0150660af9d82fe724979eb56afc73e997018dbb57",
+      "path": "libs/build.sh"
+    },
+    {
+      "sha256": "069daecf7e819f006a18dc46a7e9f0fd11e0caaa70d0a6c5628236da6e503f2f",
+      "path": "libs/dr/a.out"
+    },
+    {
+      "sha256": "4350c1f864546ae9e4802f3cd807d57b615c66efa3e0c2c654a2acf079d0f973",
+      "path": "libs/dr/dr.cpp"
+    },
+    {
+      "sha256": "1db9fc770f44c6829014c463480757e5a71743ed5d5c9cbe7f50e30563dc3977",
+      "path": "libs/dr/kernel.cu"
+    },
+    {
+      "sha256": "97a2273f04c6eb1e10374845bd2774f32e93e2348858bff39b6452f1bbb44ccd",
+      "path": "libs/dr/kernel.h"
+    },
+    {
+      "sha256": "cd8b7192267c73042f4e3c17a501ce2fdf97c32ef3dbab095e56add9fcf20f5c",
+      "path": "libs/dr/main.cu"
+    },
+    {
+      "sha256": "d2598b513b895619aed0183c66382271df708fd5708fc32d3a756f011bb6d161",
+      "path": "libs/dr/report.ncu-rep"
+    },
+    {
+      "sha256": "45dfbdf3920f282e659bdef7deae912547e3ff98c156775468bed1e270fb00a2",
+      "path": "libs/dr/types.h"
+    },
+    {
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "path": "libs/kirchoff.dll"
+    },
+    {
+      "sha256": "404a228d9ac89da3a5648beb465dae6acf9896d2479f5a55bf271cb94c1f39bd",
+      "path": "libs/matlab/DPconst.m"
+    },
+    {
+      "sha256": "41c959a58b53c240e070f033719d1a67311f3e2e3c28f277095d9c4f6b105e22",
+      "path": "libs/matlab/dptest.m"
+    },
+    {
+      "sha256": "44ac781b03a881bc2a6e518cd78ca585d928dce59879db41e00d313f4b0ff855",
+      "path": "libs/matlab/MCconst.m"
+    },
+    {
+      "sha256": "4bab7f513393354772a0feab5f6498b22f47c4d7679104e5b38e4e367f19e4c8",
+      "path": "libs/matlab/mctest.m"
+    },
+    {
+      "sha256": "244097459871283b3b0ddd93e76105df810ff3a722f2f74c90d75f5561c61e62",
+      "path": "libs/matlab/test_failed.m"
+    },
+    {
+      "sha256": "327f056358b12b4f3dec8d7449227f89f553a17f166f957337b3c62e9fba9f90",
+      "path": "libs/matlab/VMconst.m"
+    },
+    {
+      "sha256": "1a62497c3f51abce346f9d4d6bd9e94d784ae5192aef9465a16385d623a8c511",
+      "path": "libs/src/constitutive.h"
+    },
+    {
+      "sha256": "57585035b5b5760b3443512c43e44c4418cb6a09566c98513e21d52190b52c43",
+      "path": "libs/src/utils.h"
+    },
+    {
+      "sha256": "5ec22a52bd38b7ce6d8b867631da176db0bdaa0f0820846ee3b6e88623c31672",
+      "path": "libs/test-dp.cpp"
+    },
+    {
+      "sha256": "4fd5eb397d1534166286a73c04e166402ce1cfd50b912967c24ae09d135b51cc",
+      "path": "libs/test-mc.cpp"
+    },
+    {
+      "sha256": "9eb38e232c79ded781a6e830494c9d4cfba8a50b07edb09d25dac08b3881e5e9",
+      "path": "libs/test-visc.cpp"
+    },
+    {
+      "sha256": "560f238e29ccf5f440c950a024c761ca014f4f67ee4253d2f5a635381f2e2bc0",
+      "path": "libs/test.cpp"
+    },
+    {
+      "sha256": "8308aaa8b8e01133828d1215eb8d2a754a8bef8208f8d67d9fb7cb21b1e303bd",
+      "path": "src/aggregate.lisp"
+    },
+    {
+      "sha256": "00a722288bc7e7baad930cdb349a325a90c8b4c864c6a387eec26ecff579c0fa",
+      "path": "src/bc/bc.lisp"
+    },
+    {
+      "sha256": "a9318298ab971141f344c46f634156639a2de859e09123ff672aece032fadba9",
+      "path": "src/bc/buoyancy.lisp"
+    },
+    {
+      "sha256": "db394ab4ba4e747626ae1523d2447ba5f7d69a7a8e8027026ec97b480a5fba85",
+      "path": "src/bc/erosion.lisp"
+    },
+    {
+      "sha256": "d9119416720cf986c91d3ea9488c0e9bab5015663a92e72cbb3f862ac4f3de2a",
+      "path": "src/bc/inflow.lisp"
+    },
+    {
+      "sha256": "f24eb709210e127f357d66f494091f770ef0a5a309b7463f75e3b3e39fbfcbb3",
+      "path": "src/bc/penalty.lisp"
+    },
+    {
+      "sha256": "54c2c4e068fd81bc2b2d79d0ba3835e695e1d0de9f8c0ed6a8ac8513983b92c1",
+      "path": "src/cl-mpm.lisp"
+    },
+    {
+      "sha256": "e11a5a93eb60362cf9fef950dbef932050a5f583684f9f68b68f44621d76b63b",
+      "path": "src/constitutive.lisp"
+    },
+    {
+      "sha256": "90f6ad05fc51456410df291e7782e9acde2f124fa2f16cc5044891238514c1b0",
+      "path": "src/core.lisp"
+    },
+    {
+      "sha256": "7cf4a1d2ad39b5076ccb322ea19896754c32893d1657b98cb5af4c662bfa7026",
+      "path": "src/core/domain-update.lisp"
+    },
+    {
+      "sha256": "938207f2951a1edd7113155bf1c59a3e667629497020507fab78912c750ca80f",
+      "path": "src/core/forces.lisp"
+    },
+    {
+      "sha256": "b969f82a01f8fab4d13cf62b34783fc17fdb49c82efb0c66ceb99c413651530e",
+      "path": "src/core/g2p.lisp"
+    },
+    {
+      "sha256": "ee36f0ec55a97ec6dbb07cbb7f7bab09fa448b2cc33da7bb5229f9ad883e2984",
+      "path": "src/core/iterate-test.lisp"
+    },
+    {
+      "sha256": "39c0e79ee1d3e25db71d22c413b609ff12208598e50bdbe40fbf50a6c4722e2d",
+      "path": "src/core/iterate.lisp"
+    },
+    {
+      "sha256": "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011",
+      "path": "src/core/linear-solver.lisp"
+    },
+    {
+      "sha256": "57bd47f0b8a9932e9d2042173d0b20fb5fd75037c16725cdbf626ccca8570eba",
+      "path": "src/core/mesh.lisp"
+    },
+    {
+      "sha256": "1faedbbfe015f201414773a5d5cdb7314cd0d9de8b21bf4f89b41846daa3bfbc",
+      "path": "src/core/p2g.lisp"
+    },
+    {
+      "sha256": "91fbe2afc519fa5eb0728d54630a8f5f0c47b03ebfda73371076a58a3458452f",
+      "path": "src/core/shape-function.lisp"
+    },
+    {
+      "sha256": "26e57f4399dcc6e87a74b1910c60b3ecc9c6467f551b983a7332171d037436b3",
+      "path": "src/core/splitting.lisp"
+    },
+    {
+      "sha256": "7014b54e59be3b4f8f4b0fc4ddfea750795f71dd3011d5c3fd50b325a628d2e1",
+      "path": "src/core/stress-update.lisp"
+    },
+    {
+      "sha256": "f707ec327b569f93f504ff08dfec333a0684b2df99b5b80028fc7f4f18516928",
+      "path": "src/core/symbolic-derivation.lisp"
+    },
+    {
+      "sha256": "e8aec43b0d53a3f91b100f5602965f028cc3245512667cf61f7af04d3fd35d76",
+      "path": "src/cpp.lisp"
+    },
+    {
+      "sha256": "b0acec0bb522d15a99bd51d9337cf3d4fa30b3904a7aec863917fb7e50e59a3e",
+      "path": "src/damage/criteria.lisp"
+    },
+    {
+      "sha256": "78ae70549935c723ce82e57045e8d270748ee6b795ac48b9a5a9248b29f546ab",
+      "path": "src/damage/damage.lisp"
+    },
+    {
+      "sha256": "3e473fa389a6d0994a0046ff3b4ec741922b90acfc4244f8ab7b968064dfe288",
+      "path": "src/damage/degredation.lisp"
+    },
+    {
+      "sha256": "09263686b609f2ae0677efe748d898d049ea6c646247695a6d991af7326ab873",
+      "path": "src/damage/delay-damage.lisp"
+    },
+    {
+      "sha256": "f3ea1ed92c931f1dfb2437118374806d675a4e37839dd2ac55b858026811e671",
+      "path": "src/damage/ekl.lisp"
+    },
+    {
+      "sha256": "ddea8f5abcf32496f6204b41c3c3232e73e54ae1d8813dcbf565a169c8e6d0a6",
+      "path": "src/damage/mpi.lisp"
+    },
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "src/damage/nonlocal-stress-based.lisp"
+    },
+    {
+      "sha256": "e449445ed45405670a6841972854969b312f55e9ff7d42e21bae673fb35c782b",
+      "path": "src/damage/output.lisp"
+    },
+    {
+      "sha256": "0983111fb3acf696939d7ee54d948ed9345cfbd94ec9c529e84e9e528ddb08ef",
+      "path": "src/damage/package.lisp"
+    },
+    {
+      "sha256": "23ea34b42ab581245af6d3898f4f823d866eb7bcfaac4bfeea9ae6166efb0746",
+      "path": "src/damage/softening.lisp"
+    },
+    {
+      "sha256": "16117cbb17fae425c1e1ea058a29ed7077e087cd7e63862797e5edbd590bdab1",
+      "path": "src/damage/solver.lisp"
+    },
+    {
+      "sha256": "b0552b31151c7bd1a4da664f426715dcef0898e8005397885c7012462ae0b6bf",
+      "path": "src/dynamic-relaxation/algorithms.lisp"
+    },
+    {
+      "sha256": "ae74b9f93db587f39df7de627494baa115d0967c75bfd0257cbd36a650b6342a",
+      "path": "src/dynamic-relaxation/criteria.lisp"
+    },
+    {
+      "sha256": "c5827ab6c324ee2d74dd10d1f27d87f01281100616c68d1840278705f3c2a10a",
+      "path": "src/dynamic-relaxation/dynamic-relaxation.lisp"
+    },
+    {
+      "sha256": "1e6ac4b978a0bab15da7f24b856cff477fbc339a6f3afcbac33490ad0e5cba1f",
+      "path": "src/dynamic-relaxation/misc/erosion.lisp"
+    },
+    {
+      "sha256": "63b112fb0c02f0df46803d39bc4a94c0f9308478fef543c8a0edcd7117d8b23a",
+      "path": "src/dynamic-relaxation/mpi/dr.lisp"
+    },
+    {
+      "sha256": "a6c5feb9e8269cfe48bdd71373d7ec38fef1a7b7a509b2296ace79de1c677bce",
+      "path": "src/dynamic-relaxation/mpi/solvers.lisp"
+    },
+    {
+      "sha256": "e9950da927acf0eace931c02a2814226109428c9943065d8ea499fb84e848b99",
+      "path": "src/dynamic-relaxation/package.lisp"
+    },
+    {
+      "sha256": "581cf8f2f0c2d66cbba0891e27e3c19c79fcc54ce18afee043d15d0b4abc2681",
+      "path": "src/dynamic-relaxation/solvers/dynamic.lisp"
+    },
+    {
+      "sha256": "ef9858a372fab83ae1355bded25db37673591cdf2ffc0651a616472211153251",
+      "path": "src/dynamic-relaxation/solvers/multigrid.lisp"
+    },
+    {
+      "sha256": "96c785c5b1981b09cdba1cdddc0e75dce7cdb25164462d44bd1f2f6bd42aee58",
+      "path": "src/dynamic-relaxation/solvers/quasi-static.lisp"
+    },
+    {
+      "sha256": "3396b21038537944ef0572653fc75c7b14ba070a29257a3c61f12a8169a0c0b7",
+      "path": "src/eigenerosion.lisp"
+    },
+    {
+      "sha256": "e857aa6fae6d4385f571d52903d9755799e39d384547f4fb3622eb7759914bcb",
+      "path": "src/errors.lisp"
+    },
+    {
+      "sha256": "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d",
+      "path": "src/fastmaths.lisp"
+    },
+    {
+      "sha256": "e74fb0200ba0f0f6edbfb77cb0e9821cdc532c718808a89a0d92cef806276e44",
+      "path": "src/ghost.lisp"
+    },
+    {
+      "sha256": "ed262829375b11f92f70148ee4d421dd1ac9f9abe221795399e9436b6b49b357",
+      "path": "src/implicit.lisp"
+    },
+    {
+      "sha256": "257225c99b45c758d066dae11c1792f61b19e7601a3466cd15e9ee2b612a7db5",
+      "path": "src/models/chalk.lisp"
+    },
+    {
+      "sha256": "8224b9bbe474fc2898c1145cf3b82671f885bd633483b3f7dcdda2177546fc59",
+      "path": "src/models/concrete.lisp"
+    },
+    {
+      "sha256": "81ab1297bb8113cfd7333e3912418dc3b15de87b91d8c8c71958e370a8892db8",
+      "path": "src/models/damage-frictional.lisp"
+    },
+    {
+      "sha256": "e2325d69352239257fd72a9efb17472edcd7a9c9c639bdbd54f0c29e79c2b714",
+      "path": "src/models/damage.lisp"
+    },
+    {
+      "sha256": "0accd221eab1441b071fbab926ed97b837655beae52f2ba74fa9ae6cce090b1c",
+      "path": "src/models/elastic.lisp"
+    },
+    {
+      "sha256": "9c698a5e07fd9ced64ffeef2dc4659d61c6548fdb0076fc2be696ce8aac2e5ed",
+      "path": "src/models/ice.lisp"
+    },
+    {
+      "sha256": "c663f6c0c82814da2308adb7fd74e79b761d39feffa6e24fbfdf805ee9cda023",
+      "path": "src/models/limestone.lisp"
+    },
+    {
+      "sha256": "ddacee366d530f79053d229693f55b1990b72d72ed9a6a44c2a9af1c67c67b64",
+      "path": "src/models/plastic.lisp"
+    },
+    {
+      "sha256": "46b815d1884a8ed9443a8f0681dc4cb4bbf0ecc5af72489e9e182332add2fcf5",
+      "path": "src/models/visco.lisp"
+    },
+    {
+      "sha256": "7936696762e57e14f16bff0c2f93ce09c248f4741d36752dbba0450d18b6eb2c",
+      "path": "src/mpi.lisp"
+    },
+    {
+      "sha256": "7d58a28779311ac70514dcebe1431c75e31410eaecde37abc71371c0663ba7ef",
+      "path": "src/mpi/damage.lisp"
+    },
+    {
+      "sha256": "d4c057480d124cb24782eec31a69a77c9a11c3421a68c5f7427a3217450767dd",
+      "path": "src/mpi/domain.lisp"
+    },
+    {
+      "sha256": "ba3ed1eb2ef7b261d3870643c90ce7971e3e22828fac105169e01efd3f8fe657",
+      "path": "src/mpi/mpi.lisp"
+    },
+    {
+      "sha256": "23e9f74d42da9ca4af15df60fdc4893e71d73c0c1a9d25fec5843fe95f8ec923",
+      "path": "src/mpi/package.lisp"
+    },
+    {
+      "sha256": "4941b42947f196dca693901d9fda73d18e6b653d743e73acac6643fd8b1c2c3c",
+      "path": "src/mpi/serial.lisp"
+    },
+    {
+      "sha256": "64f4b75622833d0b4cbcd8e32f99859b710b60e17d00dca2099147e1612babbe",
+      "path": "src/mpi/serialise.lisp"
+    },
+    {
+      "sha256": "4d181e0d032494984dca997bd90a7993d966c2a6523a43954eca8431ed15cd26",
+      "path": "src/mpi/sync.lisp"
+    },
+    {
+      "sha256": "479a747f01a5e1015be69934f0489378751e462b62b5a954ddadd04adf74971a",
+      "path": "src/output.lisp"
+    },
+    {
+      "sha256": "91a7a30a90f9659fb7989afdde056cd41968e13340a0121bae52a99b331270ce",
+      "path": "src/particle.lisp"
+    },
+    {
+      "sha256": "88ba44d5bebd69ddd8a8e80902787997b3c4e036608168f254ccbcb210c68caa",
+      "path": "src/plotter.lisp"
+    },
+    {
+      "sha256": "97307ee66180541a6ea3c3155c2da24f20669420e9e59f8747776253e0e0b710",
+      "path": "src/settings.lisp"
+    },
+    {
+      "sha256": "0bd74167f9125a16b53fc55d6747039525943adffe6746004632781eec62b057",
+      "path": "src/setup.lisp"
+    },
+    {
+      "sha256": "37e58cfc2a43957b259f89e8f27d8fd20adb87fdeed0b6e2b3c4cfe3fc886639",
+      "path": "src/solvers/musl.lisp"
+    },
+    {
+      "sha256": "f0eab46ca3f2e510a516ddbf24991d5a70a739c7005489d47048074f25392e78",
+      "path": "src/solvers/octree/buoyancy.lisp"
+    },
+    {
+      "sha256": "b2c1993fef297d6efcc887da5fea440a7e6be1ffbc7361ce0ce5ca01dd80602e",
+      "path": "src/solvers/octree/penalty.lisp"
+    },
+    {
+      "sha256": "7cefb3fe86a9124715392ad73de19ec34ef6939bf824b0170394c1e312c8120e",
+      "path": "src/solvers/usf.lisp"
+    },
+    {
+      "sha256": "fabc02dda085ce46545d2843456455a5a6fe45c6396463432dd946e5338921b2",
+      "path": "src/solvers/usl.lisp"
+    },
+    {
+      "sha256": "bb3af7f3bd5c55b79b142bd997bfa34906d263355aae190686431eefbfd49063",
+      "path": "src/ssa/mesh.lisp"
+    },
+    {
+      "sha256": "dafd5769cf207aa6f46049b1d8fc939cc6053d9966ffdfda9bbbbdd5715161c0",
+      "path": "src/ssa/p2g.lisp"
+    },
+    {
+      "sha256": "dee67a4760e9f82162ced9533e5316ee3f350f36e5b7e3b360cec02e4908feb8",
+      "path": "src/ssa/package.lisp"
+    },
+    {
+      "sha256": "2f72160e9723bcc5a176d7634d46135a0dcbf629df8250f541b5055a586e2c0f",
+      "path": "src/ssa/particles.lisp"
+    },
+    {
+      "sha256": "0f15f7124f900f8cd406e1ac470e335a8cc823a003c7627394c74d123a231423",
+      "path": "src/ssa/solvers.lisp"
+    },
+    {
+      "sha256": "8ed1bfb0d0662107c8d56694b5388e571c41944cda07448337ebef1665015f57",
+      "path": "src/utils.lisp"
+    },
+    {
+      "sha256": "482dfe4a0bd8312b2d8182a34b318f749482603f0600597331fe972c7ae0e7f3",
+      "path": "windows/build-kirchoff.cmd"
+    },
+    {
+      "sha256": "0b328d24ebc18fc6c7960a5044efc3e93c04752d1be50daece09c575ef86c536",
+      "path": "windows/cl-mpm.cmd"
+    },
+    {
+      "sha256": "20719f3bbef22a95f9b68fd0d794184118fb2c43f266284d21f52d263eb2b7e8",
+      "path": "windows/env.cmd"
+    },
+    {
+      "sha256": "a7fddb3244176d0f734463371461822d0e49a6338b7f331d187dc9ac179dd6fe",
+      "path": "windows/init.lisp"
+    },
+    {
+      "sha256": "2e07d777da0b50cd246b22f6d595b68904c131758a9704c3cef32cad41588848",
+      "path": "windows/make-video.cmd"
+    },
+    {
+      "sha256": "8189c6abec70eed31c767764a4e92d1d6bdb9a142a500f3732990d0a89a8e870",
+      "path": "windows/setup.ps1"
+    }
+  ],
+  "sbclVersion": "SBCL 2.6.9",
+  "platform": "native Windows x64",
+  "baselineCommit": "c749d329f2434d0910b7b13535bed35b955e4de2",
+  "scope": "Tracked source hashes and selected native binaries; shared cached FASLs and all transitive Quicklisp dependency binaries are not comprehensively frozen.",
+  "capturedUtc": "2026-10-15T08:39:45.8290941Z"
+}
