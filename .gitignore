@@ -27,3 +27,17 @@ mpi-worker
 /.tmp/
 /windows/env.local.cmd
 /studio/node_modules/
+/.workspace-backup/
+__pycache__/
+*.pyc
+
+# Small, explicitly retained native-collapse evidence (generated runs stay ignored).
+!/docs/evidence/joss-collapse-2026-10-15/*.png
+!/docs/evidence/joss-collapse-2026-10-15/*.mp4
+!/docs/evidence/joss-collapse-2026-10-15/accepted/*.csv
+!/docs/evidence/joss-collapse-2026-10-15/latest-40k/*.csv
+!/docs/evidence/joss-collapse-2026-10-15/sources/*.csv
+!/docs/evidence/scientific-audit-2026-10-15/*.csv
+!/docs/evidence/triaxial-clay-2026-10-15/**/*.csv
+!/docs/evidence/triaxial-clay-2026-10-15/**/*.png
+!/docs/evidence/triaxial-clay-2026-10-15/**/*.mp4

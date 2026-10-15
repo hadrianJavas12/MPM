@@ -16,6 +16,7 @@ const fs = require('node:fs');
 const fsp = require('node:fs/promises');
 const path = require('node:path');
 const { spawn } = require('node:child_process');
+const { normalize } = require('./public/config.js');
 
 // --- Paths & constants -------------------------------------------------------
 const HOST = process.env.STUDIO_HOST || '127.0.0.1';
@@ -24,16 +25,23 @@ const PORT = Number(process.env.STUDIO_PORT || 3000);
 const STUDIO_DIR = __dirname;
 const ROOT = path.resolve(STUDIO_DIR, '..');
 const PUBLIC_DIR = path.join(STUDIO_DIR, 'public');
-const RUN_DIR = path.join(ROOT, 'output', 'studio');
+const RUN_DIR = path.resolve(process.env.STUDIO_OUTPUT_DIR || path.join(ROOT, 'output', 'studio'));
 const FRAMES_DIR = path.join(RUN_DIR, 'frames');
 const VTK_DIR = path.join(RUN_DIR, 'vtk');
 const VIDEO_PATH = path.join(RUN_DIR, 'video.mp4');
 const CONFIG_PATH = path.join(RUN_DIR, 'config.json');
+const CUSTOM_MODEL_PATH = path.join(RUN_DIR, 'custom-model.lisp');
+// Arbitrary Lisp has OS-level privileges. NEVER enable on a remote server.
+const CUSTOM_LISP_ENABLED =
+  process.env.STUDIO_ALLOW_CUSTOM_LISP === '1' &&
+  ['127.0.0.1', 'localhost', '::1'].includes(HOST);
+const MAX_CUSTOM_SOURCE_BYTES = 32 * 1024;
 const LAUNCHER = path.join(ROOT, 'windows', 'cl-mpm.cmd');
 const MAKE_VIDEO = path.join(ROOT, 'windows', 'make-video.cmd');
 const RUNNER = path.join(STUDIO_DIR, 'lisp', 'run.lisp');
 
 const SCHEMA = JSON.parse(fs.readFileSync(path.join(STUDIO_DIR, 'schema.json'), 'utf8')).parameters;
+const REFERENCE_PRESETS = JSON.parse(fs.readFileSync(path.join(STUDIO_DIR, 'reference-presets.json'), 'utf8'));
 const MAX_LOG_LINES = 2000;
 const MAX_BODY_BYTES = 64 * 1024;
 const FRAME_RE = /^frame_\d{5}\.png$/;
@@ -94,22 +102,29 @@ function sendJson(res, status, body) {
 function readJsonBody(req) {
   return new Promise((resolve, reject) => {
     let size = 0;
+    let tooLarge = false;
     const chunks = [];
     req.on('data', (chunk) => {
       size += chunk.length;
+      if (tooLarge) return;
       if (size > MAX_BODY_BYTES) {
-        reject(new Error('Request body too large'));
-        req.destroy();
+        tooLarge = true;
+        chunks.length = 0;
+        reject(Object.assign(new Error('Request body too large'), { statusCode: 413 }));
         return;
       }
       chunks.push(chunk);
     });
     req.on('end', () => {
+      if (tooLarge) return;
       try {
         const text = Buffer.concat(chunks).toString('utf8');
-        resolve(text ? JSON.parse(text) : {});
+        const value = text ? JSON.parse(text) : {};
+        if (!value || typeof value !== 'object' || Array.isArray(value))
+          throw new TypeError('JSON object required');
+        resolve(value);
       } catch {
-        reject(new Error('Invalid JSON body'));
+        reject(new Error('Request body must be a valid JSON object.'));
       }
     });
     req.on('error', reject);
@@ -118,29 +133,21 @@ function readJsonBody(req) {
 
 /** Coerce and clamp user input to the schema; unknown keys are dropped. */
 function validateConfig(input) {
-  const config = {};
-  for (const [key, spec] of Object.entries(SCHEMA)) {
-    const value = input[key];
-    switch (spec.type) {
-      case 'number':
-      case 'integer': {
-        let n = Number(value);
-        if (value === undefined || value === null || value === '' || !Number.isFinite(n)) n = spec.default;
-        n = Math.min(spec.max, Math.max(spec.min, n));
-        config[key] = spec.type === 'integer' ? Math.round(n) : n;
-        break;
-      }
-      case 'boolean':
-        config[key] = value === undefined ? spec.default : value === true || value === 'true';
-        break;
-      case 'enum':
-        config[key] = spec.values.includes(value) ? value : spec.default;
-        break;
-      default:
-        config[key] = spec.default;
-    }
+  return normalize(input, SCHEMA);
+}
+
+function guardMutation(req, res, jsonRequired = true) {
+  const expectedOrigin = `http://${req.headers.host}`;
+  if ((req.headers.origin && req.headers.origin !== expectedOrigin) ||
+      req.headers['sec-fetch-site'] === 'cross-site') {
+    sendJson(res, 403, { error: 'Cross-origin simulation requests are not permitted.' });
+    return false;
   }
-  return config;
+  if (jsonRequired && !/^application\/json(?:\s*;|\s*$)/i.test(req.headers['content-type'] || '')) {
+    sendJson(res, 415, { error: 'Content-Type must be application/json.' });
+    return false;
+  }
+  return true;
 }
 
 /** Run a .cmd file through cmd.exe with correctly quoted arguments. */
@@ -204,13 +211,35 @@ function streamFile(req, res, filePath, contentType) {
 
 // --- API handlers ------------------------------------------------------------
 async function startRun(req, res) {
+  // Reject browser cross-origin requests and non-JSON forms before parsing.
+  if (!guardMutation(req, res)) return;
   if (state.running) return sendJson(res, 409, { error: 'A simulation is already running.' });
-  const config = validateConfig(await readJsonBody(req));
+  const payload = await readJsonBody(req);
+  // Check again AFTER reading the body: two requests may have awaited it together.
+  if (state.running) return sendJson(res, 409, { error: 'A simulation is already running.' });
+  if (videoBusy) return sendJson(res, 409, { error: 'Wait for video encoding to finish.' });
+  const config = validateConfig(payload);
+  if (config.scenario === 'joss-bay' && config.constitutiveModel === 'custom') {
+    return sendJson(res, 400, { error: 'Joss Bay uses its dedicated reference material. Select the built-in model for this scenario.' });
+  }
+  const isCustom = config.constitutiveModel === 'custom';
+  let customSource = null;
+  if (isCustom) {
+    if (!CUSTOM_LISP_ENABLED) return sendJson(res, 403, {
+      error: 'Custom Lisp execution is disabled. Run Studio on loopback with STUDIO_ALLOW_CUSTOM_LISP=1 to opt in.',
+    });
+    if (payload.confirmCustomExecution !== true) return sendJson(res, 403, {
+      error: 'Explicit confirmation is required to execute user Lisp.',
+    });
+    if (typeof payload.customModelSource !== 'string' || !payload.customModelSource.trim() ||
+        payload.customModelSource.includes('\0') ||
+        Buffer.byteLength(payload.customModelSource, 'utf8') > MAX_CUSTOM_SOURCE_BYTES) {
+      return sendJson(res, 400, { error: 'Supply a nonempty .lisp source of at most 32 KiB without NUL bytes.' });
+    }
+    customSource = payload.customModelSource;
+  }
 
-  await fsp.mkdir(RUN_DIR, { recursive: true });
-  await Promise.all([emptyDir(FRAMES_DIR), emptyDir(VTK_DIR), fsp.rm(VIDEO_PATH, { force: true })]);
-  await fsp.writeFile(CONFIG_PATH, JSON.stringify(config, null, 2), 'utf8');
-
+  // Acquire the run lock before the first filesystem await.
   Object.assign(state, {
     running: true,
     step: 0,
@@ -225,23 +254,46 @@ async function startRun(req, res) {
   stopRequested = false;
   addLog(`[studio] Launching: ${config.maxSteps} frames x ${config.substeps} steps, h=${config.meshSize} m, colour=${config.plotMode}`);
 
-  child = spawnCmd(LAUNCHER, [RUNNER, CONFIG_PATH, RUN_DIR]);
+  try {
+    await fsp.mkdir(RUN_DIR, { recursive: true });
+    await Promise.all([
+      emptyDir(FRAMES_DIR),
+      emptyDir(VTK_DIR),
+      fsp.rm(VIDEO_PATH, { force: true }),
+      fsp.rm(CUSTOM_MODEL_PATH, { force: true }),
+    ]);
+    await fsp.writeFile(CONFIG_PATH, JSON.stringify(config, null, 2), 'utf8');
+    if (isCustom) await fsp.writeFile(CUSTOM_MODEL_PATH, customSource, { mode: 0o600 });
+    child = spawnCmd(LAUNCHER, [
+      RUNNER, CONFIG_PATH, RUN_DIR, ...(isCustom ? [CUSTOM_MODEL_PATH] : []),
+    ]);
+  } catch (err) {
+    state.running = false;
+    state.exitCode = -1;
+    state.statusText = `Failed to launch: ${err.message}`;
+    addLog(`[studio] ${state.statusText}`);
+    throw err;
+  }
   child.stdout.on('data', addLog);
   child.stderr.on('data', addLog);
-  child.on('error', (err) => addLog(`[studio] Failed to start: ${err.message}`));
+  let runnerError = null;
+  child.on('error', (err) => {
+    runnerError = err;
+    addLog(`[studio] Failed to start: ${err.message}`);
+  });
   child.on('close', (code) => {
     state.running = false;
-    state.exitCode = code;
+    state.exitCode = runnerError ? -1 : code;
     child = null;
     if (stopRequested) {
       state.statusText = 'Aborted by user';
-    } else if (code === 0) {
+    } else if (code === 0 && !runnerError) {
       state.percent = 100;
       state.statusText = 'Finished';
       addLog('[studio] Simulation finished.');
     } else {
-      state.statusText = `Failed (exit code ${code})`;
-      addLog(`[studio] Runner exited with code ${code}.`);
+      state.statusText = runnerError ? `Failed to start: ${runnerError.message}` : `Failed (exit code ${code})`;
+      addLog(`[studio] ${state.statusText}`);
     }
   });
   sendJson(res, 202, { ok: true, config });
@@ -256,30 +308,50 @@ function stopRun(res) {
 }
 
 async function makeVideo(req, res) {
-  if (videoBusy) return sendJson(res, 409, { error: 'A video is already being rendered.' });
+  if (!guardMutation(req, res)) return;
   const body = await readJsonBody(req);
-  const fps = Math.min(60, Math.max(1, Math.round(Number(body.fps) || 15)));
-  const frames = (await listDir(FRAMES_DIR)).filter((f) => FRAME_RE.test(f));
-  if (frames.length === 0) return sendJson(res, 400, { error: 'No frames to encode. Run a simulation first.' });
+  if (state.running) return sendJson(res, 409, { error: 'Wait for the simulation to finish.' });
+  if (videoBusy) return sendJson(res, 409, { error: 'A video is already being rendered.' });
 
+  // Lock before reading the filesystem; a new run must not clear these frames.
   videoBusy = true;
-  addLog(`[studio] Encoding ${frames.length} frames at ${fps} fps...`);
-  const proc = spawnCmd(MAKE_VIDEO, [FRAMES_DIR, String(fps), VIDEO_PATH]);
-  let output = '';
-  proc.stdout.on('data', (d) => (output += d));
-  proc.stderr.on('data', (d) => (output += d));
-  proc.on('close', (code) => {
-    videoBusy = false;
-    const tail = output.trim().split(/\r?\n/).slice(-5).join('\n');
-    if (code === 0) {
-      addLog('[studio] Video ready: output/studio/video.mp4');
-      sendJson(res, 200, { ok: true, videoUrl: '/api/video' });
-    } else {
+  try {
+    const fps = Math.min(60, Math.max(1, Math.round(Number(body.fps) || 15)));
+    const frames = (await listDir(FRAMES_DIR)).filter((f) => FRAME_RE.test(f));
+    if (frames.length === 0) {
+      videoBusy = false;
+      return sendJson(res, 400, { error: 'No frames to encode. Run a simulation first.' });
+    }
+
+    addLog(`[studio] Encoding ${frames.length} frames at ${fps} fps...`);
+    const proc = spawnCmd(MAKE_VIDEO, [FRAMES_DIR, String(fps), VIDEO_PATH]);
+    let output = '';
+    let finished = false;
+    proc.stdout.on('data', (d) => (output += d));
+    proc.stderr.on('data', (d) => (output += d));
+    const finish = (code, err) => {
+      if (finished) return; // spawn errors may be followed by a close event.
+      finished = true;
+      videoBusy = false;
+      const tail = output.trim().split(/\r?\n/).slice(-5).join('\n');
+      if (err) {
+        addLog(`[studio] Video encoder could not start: ${err.message}`);
+        return sendJson(res, 500, { error: `Video encoder could not start: ${err.message}` });
+      }
+      if (code === 0) {
+        addLog('[studio] Video ready: output/studio/video.mp4');
+        return sendJson(res, 200, { ok: true, videoUrl: '/api/video' });
+      }
       addLog(`[studio] Video encoding failed (exit ${code}).`);
       addLog(tail);
-      sendJson(res, 500, { error: `ffmpeg failed (exit ${code})`, output: tail });
-    }
-  });
+      return sendJson(res, 500, { error: `ffmpeg failed (exit ${code})`, output: tail });
+    };
+    proc.on('error', (err) => finish(-1, err));
+    proc.on('close', (code) => finish(code, null));
+  } catch (err) {
+    videoBusy = false;
+    throw err;
+  }
 }
 
 async function listFrames(res) {
@@ -317,11 +389,26 @@ function serveStatic(req, res, pathname) {
 
 // --- Router ------------------------------------------------------------------
 async function route(req, res) {
+  if (CUSTOM_LISP_ENABLED) {
+    // Binding localhost alone does not reject a request addressed to a rebinding domain.
+    const authority = new URL(`http://${req.headers.host || ''}`);
+    if (!['127.0.0.1', 'localhost', '[::1]'].includes(authority.hostname) ||
+        authority.username || authority.password || authority.pathname !== '/' ||
+        Number(authority.port || 80) !== server.address().port)
+      return sendJson(res, 403, { error: 'Custom Lisp requires a loopback Host header and the Studio port.' });
+  }
   const { pathname, searchParams } = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   const method = req.method;
 
   if (method === 'GET' && pathname === '/api/status') return sendJson(res, 200, state);
   if (method === 'GET' && pathname === '/api/schema') return sendJson(res, 200, SCHEMA);
+  if (method === 'GET' && pathname === '/api/reference-presets') return sendJson(res, 200, REFERENCE_PRESETS);
+  if (method === 'GET' && pathname === '/api/custom-model-capabilities')
+    return sendJson(res, 200, {
+      enabled: CUSTOM_LISP_ENABLED,
+      maxSourceBytes: MAX_CUSTOM_SOURCE_BYTES,
+      warning: 'Lisp code is executed with the local user privileges; no sandbox is provided.',
+    });
   if (method === 'GET' && pathname === '/api/logs') {
     const since = Math.max(logBuffer.firstSeq, Number(searchParams.get('since')) || 0);
     const lines = logBuffer.lines.slice(since - logBuffer.firstSeq);
@@ -336,7 +423,10 @@ async function route(req, res) {
   if (method === 'GET' && pathname === '/api/output-files') return listVtk(res);
   if (method === 'GET' && pathname === '/api/video') return streamFile(req, res, VIDEO_PATH, 'video/mp4');
   if (method === 'POST' && pathname === '/api/run') return startRun(req, res);
-  if (method === 'POST' && pathname === '/api/stop') return stopRun(res);
+  if (method === 'POST' && pathname === '/api/stop') {
+    if (!guardMutation(req, res, false)) return;
+    return stopRun(res);
+  }
   if (method === 'POST' && pathname === '/api/make-video') return makeVideo(req, res);
   if (pathname.startsWith('/api/')) return sendJson(res, 404, { error: 'Unknown endpoint' });
   if (method === 'GET' || method === 'HEAD') return serveStatic(req, res, pathname);
@@ -346,7 +436,7 @@ async function route(req, res) {
 
 const server = http.createServer((req, res) => {
   route(req, res).catch((err) => {
-    if (!res.headersSent) sendJson(res, 400, { error: err.message });
+    if (!res.headersSent) sendJson(res, err.statusCode || 400, { error: err.message });
     else res.end();
   });
 });
@@ -359,9 +449,14 @@ function shutdown() {
 process.on('SIGINT', shutdown);
 process.on('SIGTERM', shutdown);
 
-server.listen(PORT, HOST, () => {
-  console.log('CL-MPM Studio');
-  console.log(`  UI:      http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}`);
-  console.log(`  Output:  ${RUN_DIR}`);
-  console.log('Press Ctrl+C to stop.');
-});
+if (require.main === module) {
+  server.listen(PORT, HOST, () => {
+    console.log('CL-MPM Studio');
+    console.log(`  UI:      http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}`);
+    console.log(`  Output:  ${RUN_DIR}`);
+    console.log('Press Ctrl+C to stop.');
+  });
+}
+
+// Export the server without binding a port, allowing dependency-free API tests.
+module.exports = { server, validateConfig, CUSTOM_LISP_ENABLED };

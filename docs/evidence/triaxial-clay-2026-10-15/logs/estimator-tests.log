@@ -1,0 +1,9 @@
+test_known_elastic_slope_intercept_and_strength_conversion (test_estimate_clay_parameters.InitializerTests.test_known_elastic_slope_intercept_and_strength_conversion) ... ok
+test_rejects_insufficient_windows_and_negative_elastic_slope (test_estimate_clay_parameters.InitializerTests.test_rejects_insufficient_windows_and_negative_elastic_slope) ... ok
+test_rejects_missing_units_nonfinite_and_unloading (test_estimate_clay_parameters.InitializerTests.test_rejects_missing_units_nonfinite_and_unloading) ... ok
+test_selects_measured_strain_column_and_preserves_source (test_estimate_clay_parameters.InitializerTests.test_selects_measured_strain_column_and_preserves_source) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.115s
+
+OK

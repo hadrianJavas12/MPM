@@ -1,0 +1,62 @@
+{
+  "status": "parameter_initialization_only",
+  "laboratory_calibration": false,
+  "scientific_validation": false,
+  "native_forward_optimization": false,
+  "source": {
+    "path": "D:\\MPM\\output\\triaxial-homogeneous-final\\stress-strain.csv",
+    "sha256": "3b3c207a8a1fd2cb1c5e3a80597f85df6744754933b749b5970117c1f996beca",
+    "kind": "actual_simulation",
+    "provenance": "declared_by_caller_not_independently_verified",
+    "row_count": 51,
+    "strain_column": "axial_strain_pct",
+    "stress_column": "deviatoric_stress_kpa"
+  },
+  "conventions": {
+    "strain": "engineering axial compression positive, percent",
+    "stress": "axial minus radial compression stress, kPa"
+  },
+  "parameters": {
+    "youngsModulusPa": 5010448.158657266,
+    "undrainedStrengthPa": 25004.997501533617,
+    "nativeVmRhoPa": 40832.98993221706
+  },
+  "elastic_regression": {
+    "method": "ordinary least squares with intercept; q [Pa] versus strain [fraction]",
+    "maximum_requested_strain_pct": 0.4,
+    "used_strain_range_pct": [
+      0.0,
+      0.4
+    ],
+    "point_count": 3,
+    "distinct_strain_count": 3,
+    "slope_pa_per_unit_strain": 5010448.158657266,
+    "intercept_kpa": -0.0034807920636540073,
+    "r_squared": 0.9999996380370489,
+    "rmse_kpa": 0.004922583344218845
+  },
+  "late_strength": {
+    "method": "su initializer = median late q / 2; native rho = sqrt(8/3)*su",
+    "minimum_requested_strain_pct": 5.0,
+    "used_strain_range_pct": [
+      5.0,
+      10.0
+    ],
+    "point_count": 26,
+    "distinct_strain_count": 26,
+    "median_q_kpa": 50.00999500306723,
+    "q_range_kpa": [
+      50.00999500306722,
+      50.00999500306723
+    ],
+    "median_absolute_deviation_kpa": 0.0,
+    "plateau_verified": false
+  },
+  "limitations": [
+    "No native constitutive/MPM forward solve or parameter optimization was performed.",
+    "A late stress median does not establish yield or a plateau; inspect the curve and test protocol.",
+    "The small-strain constant-lateral-stress E relation is an initializer, not an exact finite-strain MPM fit.",
+    "VM rho is a Kirchhoff stress scale; Cauchy yield differs by 1/J when J is not one.",
+    "No Poisson ratio, pore pressure, permeability, consolidation history or damage parameters are identified."
+  ]
+}

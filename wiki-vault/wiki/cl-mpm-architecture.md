@@ -2,7 +2,7 @@
 title: CL-MPM architecture
 type: concept
 tags: [architecture, mpm, asdf]
-sources: [[[refactor-2026-10-14]]]
+sources: ["[[refactor-2026-10-14]]"]
 updated: 2026-10-14
 ---
 
@@ -15,3 +15,7 @@ Time step (`cl-mpm:update-sim`): P2G → nodal momentum update with BCs → G2P 
 Platform switches: `:win32` ⇒ `:cl-mpm-no-mpi` ⇒ serial [[serial-mpi-standin]]; expokit skipped. Dependencies are patched, see [[magicl-patches]].
 
 Full text: `docs/architecture.md`. Parent: [[cl-mpm]].
+
+Studio extends the existing particle law through a dedicated CLOS subclass
+and shared loader/stress guard, preserving the core solver. See
+[[studio-custom-models]] and [[studio-verification-2026-10-14]].

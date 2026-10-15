@@ -1,0 +1,32 @@
+name: Studio Node checks
+
+on:
+  push:
+    branches:
+      - main
+      - 'fix/**'
+      - 'feat/**'
+  pull_request:
+
+jobs:
+  studio:
+    name: Validate Studio UI and API
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax checks
+        working-directory: studio
+        run: npm run check
+      - name: Install SBCL for reader and CLOS contract tests
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sbcl
+      - name: Unit and lightweight API tests
+        working-directory: studio
+        env:
+          STUDIO_REQUIRE_SBCL_TESTS: '1'
+        run: npm test

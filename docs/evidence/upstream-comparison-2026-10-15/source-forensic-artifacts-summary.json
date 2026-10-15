@@ -1,0 +1,177 @@
+{
+  "audit_kind": "independent saved-artifact integrity and continuity; no solver runs",
+  "read_only_inputs": true,
+  "physical_frames": 174,
+  "all_36_fields_finite": true,
+  "all_particle_counts_equal_4155": true,
+  "per_particle_mass_index_uniqueid_splitdepth_unchanged": true,
+  "unique_id_limitation": "Most unique-id values are -1: array correspondence is strongly consistent but is not an independent globally unique identity proof.",
+  "total_mass": 425664.0625,
+  "mass_constant": true,
+  "volume_range_m2": [
+    242.97997021163712,
+    250.39419389486454
+  ],
+  "damage_monotone_every_particle": true,
+  "max_damage_reduction": 0.0,
+  "max_displacement_origin_error_m": 8.064660050877137e-13,
+  "base_count_constant_496": true,
+  "base_damage_zero_all_frames": true,
+  "base_plastic_strain_zero_all_frames": true,
+  "max_centres_outside_window": 0,
+  "max_domains_extending_outside_window": 79,
+  "all_frame_domain_bounds": [
+    -2.394413337075685e-06,
+    31.018898602985274,
+    -0.000135160410522972,
+    16.499983130856133
+  ],
+  "first_damage": {
+    "step": 2,
+    "time": 4.0,
+    "phase": "accelerate",
+    "mass_scale": 10000.0,
+    "particles": 4155,
+    "scalar_arrays": 36,
+    "all_fields_finite": true,
+    "sha256": "2be5dbf95c8436599dabc3b3c8074d46c80445fc099432f8ebc000f05429ff59",
+    "mass": 425664.0625,
+    "material_volume": 250.3941849371897,
+    "min_particle_volume": 0.0039057790207960696,
+    "max_particle_volume": 0.06250316092120407,
+    "damage_max": 0.3335893244971707,
+    "mass_weighted_damage": 0.0059894302129485325,
+    "base_particles": 496,
+    "base_damage_max": 0.0,
+    "base_plastic_strain_max": 0.0,
+    "position_min": [
+      0.12500007751344186,
+      0.12499476876931538,
+      0.0
+    ],
+    "position_max": [
+      30.875000000002498,
+      16.374981872737425,
+      0.0
+    ],
+    "axis_aligned_domain_min": [
+      -2.593865976174836e-07,
+      -2.3538061728195503e-06
+    ],
+    "axis_aligned_domain_max": [
+      31.000000000001794,
+      16.499981934845515
+    ],
+    "centre_of_mass": [
+      8.131576921097345,
+      7.571731383574463,
+      0.0
+    ],
+    "particle_centres_outside_31m_window": 0,
+    "axis_aligned_domains_extending_outside_31m_window": 22,
+    "mass_fraction_of_centres_outside_window": 0.0,
+    "max_displacement_origin_error_m": 5.3290705182007514e-14
+  },
+  "first": {
+    "step": 1,
+    "time": 2.0,
+    "phase": "accelerate",
+    "mass_scale": 10000.0,
+    "particles": 4155,
+    "scalar_arrays": 36,
+    "all_fields_finite": true,
+    "sha256": "57effb32e182caa6e76e8fe111f7d81b7f7c24dd23e32eb9ba0a510d9e437598",
+    "mass": 425664.0625,
+    "material_volume": 250.39419389486454,
+    "min_particle_volume": 0.0039057873848164087,
+    "max_particle_volume": 0.06250307861895028,
+    "damage_max": 0.0,
+    "mass_weighted_damage": 0.0,
+    "base_particles": 496,
+    "base_damage_max": 0.0,
+    "base_plastic_strain_max": 0.0,
+    "position_min": [
+      0.12500007771428895,
+      0.12499463945575529,
+      0.0
+    ],
+    "position_max": [
+      30.87500000000237,
+      16.37498308192139,
+      0.0
+    ],
+    "axis_aligned_domain_min": [
+      -2.6064339367359857e-07,
+      -2.3888486125472896e-06
+    ],
+    "axis_aligned_domain_max": [
+      31.00000000000174,
+      16.499983130856133
+    ],
+    "centre_of_mass": [
+      8.131576755765446,
+      7.5717334936825225,
+      0.0
+    ],
+    "particle_centres_outside_31m_window": 0,
+    "axis_aligned_domains_extending_outside_31m_window": 24,
+    "mass_fraction_of_centres_outside_window": 0.0,
+    "max_displacement_origin_error_m": 3.907985046680551e-14
+  },
+  "last": {
+    "step": 174,
+    "time": 40.0,
+    "phase": "accelerate",
+    "mass_scale": 10000.0,
+    "particles": 4155,
+    "scalar_arrays": 36,
+    "all_fields_finite": true,
+    "sha256": "521eeb718de11eaa79af2b80a832ad86d0583b2b90293791381dfb5e11ab80a8",
+    "mass": 425664.0625,
+    "material_volume": 246.1686826962669,
+    "min_particle_volume": 0.00045294256190677763,
+    "max_particle_volume": 0.25145533651775426,
+    "damage_max": 0.9999999999999372,
+    "mass_weighted_damage": 0.4936730233563692,
+    "base_particles": 496,
+    "base_damage_max": 0.0,
+    "base_plastic_strain_max": 0.0,
+    "position_min": [
+      0.1250000974567769,
+      0.12486457478341942,
+      0.0
+    ],
+    "position_max": [
+      30.947585306678686,
+      16.3745559796405,
+      0.0
+    ],
+    "axis_aligned_domain_min": [
+      -2.3049334366698204e-06,
+      -0.0001289237749352995
+    ],
+    "axis_aligned_domain_max": [
+      31.018181754182713,
+      16.499588246851417
+    ],
+    "centre_of_mass": [
+      11.13067170836456,
+      4.992184493400985,
+      0.0
+    ],
+    "particle_centres_outside_31m_window": 0,
+    "axis_aligned_domains_extending_outside_31m_window": 73,
+    "mass_fraction_of_centres_outside_window": 0.0,
+    "max_displacement_origin_error_m": 7.744915819785092e-13
+  },
+  "log_csv_consistent": true,
+  "transitions_consistent": true,
+  "manifest_all_pass": true,
+  "limitations": [
+    "Artifact consistency cannot independently prove which cached FASL bytes were executing.",
+    "VTK has no native clock; time is corroborated by source/log/CSV only.",
+    "Snapshots omit grid, material history and full integrator state; no exact replay asserted.",
+    "Finite fields and positive volume do not establish mesh convergence, energy conservation, fracture validity, or scientific accuracy.",
+    "No derivative or energy-balance test is inferred from sparse saved frames."
+  ]
+}

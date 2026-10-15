@@ -1,26 +1,381 @@
 {
   "$comment": "Single source of truth for Studio run parameters. Read by studio/server.js (validation, clamping) and by the Lisp runner (defaults for CLI runs). Units are SI unless noted.",
   "parameters": {
-    "shelfHeight":      { "type": "number",  "default": 100,    "min": 10,    "max": 500,   "unit": "m",   "label": "Cliff height above the soil layer" },
-    "shelfAspect":      { "type": "number",  "default": 2.0,    "min": 0.5,   "max": 5,     "unit": "-",   "label": "Shelf length / cliff height" },
-    "cliffSlope":       { "type": "number",  "default": 90,     "min": 45,    "max": 90,    "unit": "deg", "label": "Cliff face angle (90 = vertical)" },
-    "undercut":         { "type": "number",  "default": 0,      "min": 0,     "max": 60,    "unit": "deg", "label": "Additional overhang of the face" },
-    "notchHeight":      { "type": "number",  "default": 0,      "min": 0,     "max": 50,    "unit": "m",   "label": "Toe notch height (0 = none)" },
-    "notchDepth":       { "type": "number",  "default": 0,      "min": 0,     "max": 50,    "unit": "m",   "label": "Toe notch depth (0 = 1.5 x height)" },
-    "soilBoundary":     { "type": "number",  "default": 20,     "min": 0,     "max": 100,   "unit": "m",   "label": "Soil/base layer thickness" },
-    "meshSize":         { "type": "number",  "default": 5,      "min": 1,     "max": 20,    "unit": "m",   "label": "Background mesh resolution h" },
-    "mpsPerCell":       { "type": "integer", "default": 2,      "min": 1,     "max": 4,     "unit": "-",   "label": "Material points per cell per axis" },
-    "density":          { "type": "number",  "default": 1700,   "min": 500,   "max": 3000,  "unit": "kg/m3", "label": "Density" },
-    "E":                { "type": "number",  "default": 1e9,    "min": 1e6,   "max": 1e11,  "unit": "Pa",  "label": "Young's modulus" },
-    "nu":               { "type": "number",  "default": 0.35,   "min": 0.05,  "max": 0.49,  "unit": "-",   "label": "Poisson's ratio" },
-    "frictionAngle":    { "type": "number",  "default": 40,     "min": 10,    "max": 60,    "unit": "deg", "label": "Friction angle" },
-    "ductility":        { "type": "number",  "default": 10,     "min": 1,     "max": 100,   "unit": "-",   "label": "Post-peak softening ductility (higher = more ductile)" },
-    "initiationStress": { "type": "number",  "default": 200e3,  "min": 1e4,   "max": 5e6,   "unit": "Pa",  "label": "Damage initiation stress" },
-    "delayTime":        { "type": "number",  "default": 10,     "min": 0.01,  "max": 1e4,   "unit": "s",   "label": "Damage delay time" },
-    "enableDamage":     { "type": "boolean", "default": true,                                              "label": "Enable damage / fracture" },
-    "maxSteps":         { "type": "integer", "default": 10,     "min": 1,     "max": 2000,  "unit": "-",   "label": "Output frames" },
-    "substeps":         { "type": "integer", "default": 10,     "min": 1,     "max": 1000,  "unit": "-",   "label": "Solver steps per frame" },
-    "plotMode":         { "type": "enum",    "default": "stress", "values": ["stress", "damage", "velocity"], "label": "PNG colour field" },
-    "workers":          { "type": "integer", "default": 4,      "min": 1,     "max": 64,    "unit": "-",   "label": "Worker threads" }
+    "shelfHeight": {
+      "type": "number",
+      "default": 100,
+      "min": 10,
+      "max": 500,
+      "unit": "m",
+      "label": "Cliff height above the soil layer"
+    },
+    "shelfAspect": {
+      "type": "number",
+      "default": 2,
+      "min": 0.5,
+      "max": 5,
+      "unit": "-",
+      "label": "Shelf length / cliff height"
+    },
+    "cliffSlope": {
+      "type": "number",
+      "default": 90,
+      "min": 45,
+      "max": 90,
+      "unit": "deg",
+      "label": "Cliff face angle (90 = vertical)"
+    },
+    "undercut": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 60,
+      "unit": "deg",
+      "label": "Cliff face overhang (not notch angle)"
+    },
+    "notchHeight": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 50,
+      "unit": "m",
+      "label": "Toe notch height (0 = none)"
+    },
+    "notchDepth": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 50,
+      "unit": "m",
+      "label": "Toe notch penetration from face (0 = 1.5 x height)"
+    },
+    "soilBoundary": {
+      "type": "number",
+      "default": 20,
+      "min": 0,
+      "max": 100,
+      "unit": "m",
+      "label": "Soil/base layer thickness"
+    },
+    "meshSize": {
+      "type": "number",
+      "default": 5,
+      "min": 0.05,
+      "max": 20,
+      "unit": "m",
+      "label": "Background mesh resolution h"
+    },
+    "mpsPerCell": {
+      "type": "integer",
+      "default": 2,
+      "min": 1,
+      "max": 4,
+      "unit": "-",
+      "label": "Material points per cell per axis"
+    },
+    "density": {
+      "type": "number",
+      "default": 1700,
+      "min": 500,
+      "max": 3000,
+      "unit": "kg/m3",
+      "label": "Density"
+    },
+    "E": {
+      "type": "number",
+      "default": 1000000000,
+      "min": 1000000,
+      "max": 100000000000,
+      "unit": "Pa",
+      "label": "Young's modulus"
+    },
+    "nu": {
+      "type": "number",
+      "default": 0.35,
+      "min": 0.05,
+      "max": 0.49,
+      "unit": "-",
+      "label": "Poisson's ratio"
+    },
+    "frictionAngle": {
+      "type": "number",
+      "default": 40,
+      "min": 10,
+      "max": 60,
+      "unit": "deg",
+      "label": "Friction angle"
+    },
+    "ductility": {
+      "type": "number",
+      "default": 10,
+      "min": 1,
+      "max": 1000000,
+      "unit": "-",
+      "label": "Post-peak softening ductility (higher = more ductile)"
+    },
+    "initiationStress": {
+      "type": "number",
+      "default": 200000,
+      "min": 10000,
+      "max": 5000000,
+      "unit": "Pa",
+      "label": "Damage initiation stress"
+    },
+    "delayTime": {
+      "type": "number",
+      "default": 10,
+      "min": 0.01,
+      "max": 10000,
+      "unit": "s",
+      "label": "Damage delay time"
+    },
+    "enableDamage": {
+      "type": "boolean",
+      "default": true,
+      "label": "Enable damage / fracture"
+    },
+    "maxSteps": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 2000,
+      "unit": "-",
+      "label": "Output frames"
+    },
+    "substeps": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 1000,
+      "unit": "-",
+      "label": "Solver steps per frame"
+    },
+    "plotMode": {
+      "type": "enum",
+      "default": "stress",
+      "values": [
+        "stress",
+        "damage",
+        "velocity"
+      ],
+      "label": "PNG colour field"
+    },
+    "workers": {
+      "type": "integer",
+      "default": 4,
+      "min": 1,
+      "max": 64,
+      "unit": "-",
+      "label": "Worker threads"
+    },
+    "notchShape": {
+      "type": "enum",
+      "default": "rectangle",
+      "values": [
+        "rectangle",
+        "ellipse",
+        "triangle"
+      ],
+      "label": "Toe notch shape"
+    },
+    "notchTipFraction": {
+      "type": "number",
+      "default": 0.5,
+      "min": 0.15,
+      "max": 0.85,
+      "unit": "-",
+      "label": "Triangular notch tip height / notch height"
+    },
+    "enablePlasticity": {
+      "type": "boolean",
+      "default": true,
+      "label": "Enable plastic deformation"
+    },
+    "cohesion": {
+      "type": "number",
+      "default": 1000000,
+      "min": 0,
+      "max": 20000000,
+      "unit": "Pa",
+      "label": "Mohr-Coulomb cohesion"
+    },
+    "dilatancyAngle": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 45,
+      "unit": "deg",
+      "label": "Plastic dilation angle"
+    },
+    "nonlocalLength": {
+      "type": "number",
+      "default": 7.937253933193772,
+      "min": 0.05,
+      "max": 1000,
+      "unit": "m",
+      "label": "Non-local damage interaction length"
+    },
+    "constitutiveModel": {
+      "type": "enum",
+      "default": "chalk",
+      "values": [
+        "chalk",
+        "custom"
+      ],
+      "label": "Constitutive model selection"
+    },
+    "scenario": {
+      "type": "enum",
+      "default": "studio-cliff",
+      "values": [
+        "studio-cliff",
+        "joss-bay"
+      ],
+      "label": "Simplified cliff or Joss Bay reference reconstruction"
+    },
+    "fractureEnergy": {
+      "type": "number",
+      "default": 48,
+      "min": 0.001,
+      "max": 100000,
+      "unit": "J/m2",
+      "label": "Reference fracture energy"
+    },
+    "damageCohesion": {
+      "type": "number",
+      "default": 26000,
+      "min": 1,
+      "max": 20000000,
+      "unit": "Pa",
+      "label": "Reference damage-surface cohesion"
+    },
+    "damageFrictionAngle": {
+      "type": "number",
+      "default": 50,
+      "min": 0,
+      "max": 85,
+      "unit": "deg",
+      "label": "Reference damage-surface friction angle"
+    },
+    "damageDelayExponent": {
+      "type": "number",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "unit": "-",
+      "label": "Reference delayed-damage exponent"
+    },
+    "residualTensileRatio": {
+      "type": "number",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "unit": "-",
+      "label": "Reference tensile degradation ratio"
+    },
+    "residualCompressionRatio": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "unit": "-",
+      "label": "Reference compressive degradation ratio"
+    },
+    "residualShearRatio": {
+      "type": "number",
+      "default": 0.51,
+      "min": 0,
+      "max": 1,
+      "unit": "-",
+      "label": "Reference shear degradation ratio"
+    },
+    "timeStepScale": {
+      "type": "number",
+      "default": 0.5,
+      "min": 0.01,
+      "max": 1,
+      "unit": "-",
+      "label": "Reference CFL timestep multiplier"
+    },
+    "massScaleAccelerate": {
+      "type": "number",
+      "default": 10000,
+      "min": 1,
+      "max": 1000000,
+      "unit": "-",
+      "label": "Reference quasi-static mass scale"
+    },
+    "quasiStaticTolerance": {
+      "type": "number",
+      "default": 0.01,
+      "min": 1e-8,
+      "max": 1,
+      "unit": "-",
+      "label": "Reference kinetic-work and force tolerance"
+    },
+    "settleTolerance": {
+      "type": "number",
+      "default": 0.0001,
+      "min": 1e-8,
+      "max": 0.1,
+      "unit": "-",
+      "label": "Initial elastic relaxation tolerance"
+    },
+    "settleMaxSteps": {
+      "type": "integer",
+      "default": 50000,
+      "min": 1,
+      "max": 1000000,
+      "unit": "updates",
+      "label": "Initial relaxation update limit"
+    },
+    "simulationTime": {
+      "type": "number",
+      "default": 360,
+      "min": 0.001,
+      "max": 10000,
+      "unit": "s",
+      "label": "Reference physical time after initial relaxation"
+    },
+    "accelerateInterval": {
+      "type": "number",
+      "default": 1,
+      "min": 0.001,
+      "max": 10,
+      "unit": "s",
+      "label": "Quasi-static criterion evaluation interval"
+    },
+    "collapseInterval": {
+      "type": "number",
+      "default": 0.1,
+      "min": 0.0001,
+      "max": 1,
+      "unit": "s",
+      "label": "Dynamic criterion evaluation interval"
+    },
+    "geometryRefinement": {
+      "type": "integer",
+      "default": 4,
+      "min": 0,
+      "max": 4,
+      "unit": "bisections",
+      "label": "Reference boundary-particle refinement limit"
+    },
+    "upperVerticalHeight": {
+      "type": "number",
+      "default": 6.8,
+      "min": 0,
+      "max": 100,
+      "unit": "m",
+      "label": "Upper vertical segment height from author example"
+    },
+    "runoutAspect": {
+      "type": "number",
+      "default": 1,
+      "min": 0.1,
+      "max": 5,
+      "unit": "-",
+      "label": "Reference beach length / cliff height"
+    }
   }
 }

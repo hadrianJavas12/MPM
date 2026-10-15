@@ -1,0 +1,2 @@
+# Preserve rendered documents byte-for-byte and display binary diffs.
+*.pdf -text -diff -whitespace

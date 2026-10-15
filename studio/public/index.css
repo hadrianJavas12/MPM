@@ -473,6 +473,11 @@ input[type="range"]::-webkit-slider-thumb:hover {
   transition: all 0.2s ease;
   text-decoration: none;
 }
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-cyan), #0284c7);
   color: #fff;

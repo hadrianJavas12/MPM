@@ -1,0 +1,338 @@
+{
+  "generatedAtUtc": "2026-10-15T03:23:52.811714+00:00",
+  "comparisonKind": "fixed-commit tree comparison; working tree changes excluded",
+  "upstream": {
+    "repository": "https://github.com/samjvsutcliffe/cl-mpm.git",
+    "commit": "d8e65543c55634b54b9d8edf2a6bcf6082415bdc",
+    "refFetchedByParent": "refs/remotes/upstream-audit/main",
+    "metadata": [
+      "d8e65543c55634b54b9d8edf2a6bcf6082415bdc",
+      "2026-06-16T21:59:29+01:00",
+      "2026-06-16T21:59:29+01:00",
+      "Updated examples and lib constitutive pwave for vm"
+    ]
+  },
+  "fork": {
+    "repository": "https://github.com/hadrianJavas12/MPM.git",
+    "commit": "f7fb2a3322eabf483b3d6cedd2c090b356ca01ca",
+    "metadata": [
+      "f7fb2a3322eabf483b3d6cedd2c090b356ca01ca",
+      "2026-10-15T10:05:43+07:00",
+      "2026-10-15T10:05:43+07:00",
+      "docs(audit): verify native outputs and record scientific validity gaps"
+    ]
+  },
+  "mergeBase": "d8e65543c55634b54b9d8edf2a6bcf6082415bdc",
+  "ancestryCountsUpstreamOnlyForkOnly": [
+    0,
+    58
+  ],
+  "originalTreeFiles": 313,
+  "forkTreeFiles": 586,
+  "unchangedOriginalFiles": 308,
+  "changedFiles": 278,
+  "statuses": {
+    "A": 273,
+    "M": 5
+  },
+  "binaryFiles": 11,
+  "addedTextLines": 183384,
+  "deletedTextLines": 21,
+  "categoryRule": "first matching rule in build-comparison.py; each changed path belongs to exactly one category",
+  "categories": {
+    "repository-governance-and-ci": {
+      "files": 9,
+      "statuses": {
+        "A": 8,
+        "M": 1
+      },
+      "binaryFiles": 0,
+      "addedTextLines": 964,
+      "deletedTextLines": 0
+    },
+    "project-documentation": {
+      "files": 16,
+      "statuses": {
+        "M": 1,
+        "A": 15
+      },
+      "binaryFiles": 0,
+      "addedTextLines": 2181,
+      "deletedTextLines": 2
+    },
+    "engine-output-and-platform-adapter": {
+      "files": 3,
+      "statuses": {
+        "M": 2,
+        "A": 1
+      },
+      "binaryFiles": 0,
+      "addedTextLines": 145,
+      "deletedTextLines": 16
+    },
+    "vendored-dependencies": {
+      "files": 117,
+      "statuses": {
+        "A": 117
+      },
+      "binaryFiles": 0,
+      "addedTextLines": 139199,
+      "deletedTextLines": 0
+    },
+    "retained-experimental-evidence": {
+      "files": 60,
+      "statuses": {
+        "A": 60
+      },
+      "binaryFiles": 10,
+      "addedTextLines": 32648,
+      "deletedTextLines": 0
+    },
+    "upstream-example-compatibility": {
+      "files": 1,
+      "statuses": {
+        "M": 1
+      },
+      "binaryFiles": 0,
+      "addedTextLines": 6,
+      "deletedTextLines": 3
+    },
+    "windows-runtime": {
+      "files": 7,
+      "statuses": {
+        "A": 7
+      },
+      "binaryFiles": 1,
+      "addedTextLines": 369,
+      "deletedTextLines": 0
+    },
+    "verification-and-rendering-scripts": {
+      "files": 9,
+      "statuses": {
+        "A": 9
+      },
+      "binaryFiles": 0,
+      "addedTextLines": 1066,
+      "deletedTextLines": 0
+    },
+    "studio-controller": {
+      "files": 36,
+      "statuses": {
+        "A": 36
+      },
+      "binaryFiles": 0,
+      "addedTextLines": 5797,
+      "deletedTextLines": 0
+    },
+    "knowledge-vault": {
+      "files": 20,
+      "statuses": {
+        "A": 20
+      },
+      "binaryFiles": 0,
+      "addedTextLines": 1009,
+      "deletedTextLines": 0
+    }
+  },
+  "preservedPrefixes": [
+    {
+      "prefix": "src/",
+      "upstreamFiles": 80,
+      "identicalBlobsAtSamePath": 79,
+      "modifiedOriginalPaths": [
+        "src/output.lisp"
+      ],
+      "removedOriginalPaths": [],
+      "addedPaths": [
+        "src/mpi/serial.lisp"
+      ]
+    },
+    {
+      "prefix": "src/core/",
+      "upstreamFiles": 12,
+      "identicalBlobsAtSamePath": 12,
+      "modifiedOriginalPaths": [],
+      "removedOriginalPaths": [],
+      "addedPaths": []
+    },
+    {
+      "prefix": "src/models/",
+      "upstreamFiles": 9,
+      "identicalBlobsAtSamePath": 9,
+      "modifiedOriginalPaths": [],
+      "removedOriginalPaths": [],
+      "addedPaths": []
+    },
+    {
+      "prefix": "src/damage/",
+      "upstreamFiles": 11,
+      "identicalBlobsAtSamePath": 11,
+      "modifiedOriginalPaths": [],
+      "removedOriginalPaths": [],
+      "addedPaths": []
+    },
+    {
+      "prefix": "src/dynamic-relaxation/",
+      "upstreamFiles": 10,
+      "identicalBlobsAtSamePath": 10,
+      "modifiedOriginalPaths": [],
+      "removedOriginalPaths": [],
+      "addedPaths": []
+    },
+    {
+      "prefix": "examples/",
+      "upstreamFiles": 72,
+      "identicalBlobsAtSamePath": 71,
+      "modifiedOriginalPaths": [
+        "examples/chalk/chalk.lisp"
+      ],
+      "removedOriginalPaths": [],
+      "addedPaths": []
+    },
+    {
+      "prefix": "libs/",
+      "upstreamFiles": 24,
+      "identicalBlobsAtSamePath": 24,
+      "modifiedOriginalPaths": [],
+      "removedOriginalPaths": [],
+      "addedPaths": [
+        "libs/kirchoff.dll"
+      ]
+    }
+  ],
+  "selectedIdentityProofs": [
+    {
+      "path": "src/core.lisp",
+      "upstream": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "b35e165c0082562c0b0fa73103c3a067bde2ed2f"
+      },
+      "fork": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "b35e165c0082562c0b0fa73103c3a067bde2ed2f"
+      },
+      "byteIdenticalInGit": true
+    },
+    {
+      "path": "src/core/stress-update.lisp",
+      "upstream": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "274082d87089f2e49d23b4ac25fecfa7f1e94b96"
+      },
+      "fork": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "274082d87089f2e49d23b4ac25fecfa7f1e94b96"
+      },
+      "byteIdenticalInGit": true
+    },
+    {
+      "path": "src/core/domain-update.lisp",
+      "upstream": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "2aebebb5fd879bb40b8859ae73725370f069d5af"
+      },
+      "fork": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "2aebebb5fd879bb40b8859ae73725370f069d5af"
+      },
+      "byteIdenticalInGit": true
+    },
+    {
+      "path": "src/aggregate.lisp",
+      "upstream": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "b375715edb685200d04f4478d778cd0aa924622a"
+      },
+      "fork": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "b375715edb685200d04f4478d778cd0aa924622a"
+      },
+      "byteIdenticalInGit": true
+    },
+    {
+      "path": "src/models/chalk.lisp",
+      "upstream": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "40aa117e405f880e06c6e9b3e1ce4f2adeb853d6"
+      },
+      "fork": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "40aa117e405f880e06c6e9b3e1ce4f2adeb853d6"
+      },
+      "byteIdenticalInGit": true
+    },
+    {
+      "path": "src/damage/damage.lisp",
+      "upstream": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "56ce5b77815293ec2c99921a8f32d82e262d0067"
+      },
+      "fork": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "56ce5b77815293ec2c99921a8f32d82e262d0067"
+      },
+      "byteIdenticalInGit": true
+    },
+    {
+      "path": "src/damage/solver.lisp",
+      "upstream": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "1c125297922ca1509ebcbfc57eccd6e63ef7c1ef"
+      },
+      "fork": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "1c125297922ca1509ebcbfc57eccd6e63ef7c1ef"
+      },
+      "byteIdenticalInGit": true
+    },
+    {
+      "path": "examples/chalk/joss.lisp",
+      "upstream": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "5f026a75b7e053fb0401252ec591f67b6eb94bc4"
+      },
+      "fork": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "5f026a75b7e053fb0401252ec591f67b6eb94bc4"
+      },
+      "byteIdenticalInGit": true
+    },
+    {
+      "path": "libs/src/constitutive.h",
+      "upstream": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "81fb1dd91c71fcc6ca474e5efd2af9b1dffc65d5"
+      },
+      "fork": {
+        "mode": "100644",
+        "type": "blob",
+        "gitBlob": "81fb1dd91c71fcc6ca474e5efd2af9b1dffc65d5"
+      },
+      "byteIdenticalInGit": true
+    }
+  ],
+  "exclusions": [
+    "new task changes after f7fb2a3",
+    "untracked files",
+    "git-ignored output and toolchain",
+    "separate modular preset branch / draft PR #6"
+  ],
+  "executionScope": "Git metadata and file hashes only. This script does not run Node tests, SBCL, or simulations."
+}

@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-15",
+  "status": "native collapse/run-out visually accepted by user",
+  "acceptedRun": "dp-physical-pilot, 40 physical seconds, 174 frames",
+  "latestComparison": "strength-40k-run completed 221.14 seconds without collapse",
+  "scientificValidation": "unverified; no numerical identity or mesh convergence claim",
+  "fullRunDirectory": "D:\\MPM\\output\\reference-reproduction-2026-10-15\\dp-physical-pilot",
+  "files": {
+    "accepted-collapse.mp4": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/native-dp-diagnostic.mp4",
+      "bytes": 763508,
+      "sha256": "cd033aafb66c4f2cf6c9ec5ae66f2f547022112d7ecb07ae41f44f84ce84c122"
+    },
+    "accepted-collapse-t40.png": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/damage-t40.png",
+      "bytes": 35829,
+      "sha256": "5fb1dcbd8e69750ba4e5c007db3c57b94cd329a34d2ad81f344f8affd61c5186"
+    },
+    "accepted-damage-t4.png": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/damage-t4.png",
+      "bytes": 38640,
+      "sha256": "59a519c9c56126ddca2a5dcaf582ec5a5456824a20e2284863000a08695d015c"
+    },
+    "accepted/config.json": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/config.json",
+      "bytes": 1016,
+      "sha256": "202cc087030ddb5346e176848ab6fd5fa10ebe5876dbf3f169d9a89e1d68f587"
+    },
+    "accepted/pilot-provenance.json": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/pilot-provenance.json",
+      "bytes": 515,
+      "sha256": "eac36ca25b6291db65b385654d509c0ee1c3c2501b862c0d7c17e794a4dfa0eb"
+    },
+    "accepted/reference-metadata.json": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/reference-metadata.json",
+      "bytes": 1615,
+      "sha256": "7d00420ba56b550565da55d47dbe38665e0eef156d9273019600303816b9b0f6"
+    },
+    "accepted/timesteps.csv": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/timesteps.csv",
+      "bytes": 30604,
+      "sha256": "72d830acb0f4cd64987f7275c4a9cb34a5b0c9d48de01df86e2666a4f92c5ec8"
+    },
+    "accepted/transitions.csv": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/transitions.csv",
+      "bytes": 1607,
+      "sha256": "e5dd4406b524bb4ee4b9f4d5b2cd71b50e1089517e999305b56df0cfc15e50ad"
+    },
+    "accepted/damage-location-audit.json": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/damage-location-audit.json",
+      "bytes": 350226,
+      "sha256": "23923827b0754683208c82affb7ec017ae339dc7540f40dccf51210861c08fca"
+    },
+    "accepted/final-shape-comparison.json": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/final-shape-comparison.json",
+      "bytes": 3661,
+      "sha256": "4e38012cf117083c16fb0b7bc6c1175db899b4c7862dcf62e591dae80d205d31"
+    },
+    "accepted/pause-1-audit.json": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/pause-1-audit.json",
+      "bytes": 343,
+      "sha256": "520be16b1cc95966e8f85985ddad74d080542aaf0828e78b3726a8514ec99884"
+    },
+    "accepted/initial.vtk.gz": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/vtk/initial.vtk",
+      "bytes": 462507,
+      "sha256": "b4e536fa079e42f8afe04580a10929b4b3da6b75df42a01ba878ce0bd1da0b52",
+      "uncompressedSha256": "c831ab20a7efb783a58cb0a7d2b363e4f74823ef7d19004099e3ef7932b15117"
+    },
+    "accepted/equilibrium.vtk.gz": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/vtk/equilibrium.vtk",
+      "bytes": 462737,
+      "sha256": "a0e0f7a6368a037dc53566c096359ee6ac8a523bb1bbdb2388f50382207b595c",
+      "uncompressedSha256": "613b5580991d26cad171cc51ac315a4194e37eb7f3d575d262e459dc9d823af9"
+    },
+    "accepted/sim_00002.vtk.gz": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/vtk/sim_00002.vtk",
+      "bytes": 603694,
+      "sha256": "b43ce06ad771996ea70b08d732764b59ff92dbf8e56a5e7a91271263c58aab5e",
+      "uncompressedSha256": "2be5dbf95c8436599dabc3b3c8074d46c80445fc099432f8ebc000f05429ff59"
+    },
+    "accepted/sim_00174.vtk.gz": {
+      "source": "output/reference-reproduction-2026-10-15/dp-physical-pilot/vtk/sim_00174.vtk",
+      "bytes": 686807,
+      "sha256": "9952d4fdae543db46df2bda3839730943ab0c1e2734630da05c98eebf4254bf3",
+      "uncompressedSha256": "521eeb718de11eaa79af2b80a832ad86d0583b2b90293791381dfb5e11ab80a8"
+    },
+    "latest-40k-t221.png": {
+      "source": "output/reference-reproduction-2026-10-15/strength-40k-run/damage-t221.png",
+      "bytes": 26013,
+      "sha256": "8066d76c92ee5ceb4bdc70e3d205e9fb2634f8ab50563d1b063ba71cd96ab5c6"
+    },
+    "latest-40k/reference-metadata.json": {
+      "source": "output/reference-reproduction-2026-10-15/strength-40k-run/reference-metadata.json",
+      "bytes": 2011,
+      "sha256": "f599fae6059a734ab78b4afdab194d432f3480ae93bb18077781a9bb74ae7abe"
+    },
+    "latest-40k/timesteps.csv": {
+      "source": "output/reference-reproduction-2026-10-15/strength-40k-run/timesteps.csv",
+      "bytes": 305565,
+      "sha256": "3e446dcbd2d2a29b14efa63caab6a3721be03f0da9ba53c8e01447dcb59aa24a"
+    },
+    "latest-40k/transitions.csv": {
+      "source": "output/reference-reproduction-2026-10-15/strength-40k-run/transitions.csv",
+      "bytes": 99,
+      "sha256": "3164635cdab889d9c35687aa7861785ac5d51719632d982a2f3e762e7f91018d"
+    },
+    "latest-40k/sim_00111.vtk.gz": {
+      "source": "output/reference-reproduction-2026-10-15/strength-40k-run/vtk/sim_00111.vtk",
+      "bytes": 603939,
+      "sha256": "bb02557bbed61263ebed11f80d826df9686feb0cd38a5e129f68e3c6a1f179b7",
+      "uncompressedSha256": "04c082e9bef2303c7a6bca949541edc278161f523183f90aa00e50bc2cf3fcba"
+    },
+    "latest-40k/config.json": {
+      "source": "output/reference-reproduction-2026-10-15/strength-40k-config.json",
+      "bytes": 1240,
+      "sha256": "f61754d121dc5d94a7075be75e4c09da797651634d1812eabe79fbf85cc310ac"
+    },
+    "latest-40k/provenance.json": {
+      "source": "output/reference-reproduction-2026-10-15/strength-40k-provenance.json",
+      "bytes": 1095,
+      "sha256": "6d87fba9694c5b86fb1a776ec7b5fb60dd5bd4e86aa515019dba3bb4e108d5b5"
+    },
+    "latest-40k/native-run.log": {
+      "source": "output/reference-reproduction-2026-10-15/strength-40k-run.log",
+      "bytes": 8852,
+      "sha256": "d9ebb2c85b130dde3ed18f55582356a880f5a05529a507ad0fcd69b1d596b320"
+    },
+    "sources/criterion-probe.lisp": {
+      "source": "output/reference-reproduction-2026-10-15/criterion-probe.lisp",
+      "bytes": 14108,
+      "sha256": "e3b0eed656927d3992480d5882ff6d3db914d1ea92e15480862817fd631354a4"
+    },
+    "sources/criterion-probe.log": {
+      "source": "output/reference-reproduction-2026-10-15/criterion-probe.log",
+      "bytes": 25640,
+      "sha256": "eed1295ff709c488b1f09a231bc596cdc84832607729952ceb280515a612aff5"
+    },
+    "sources/config.json": {
+      "source": "output/reference-reproduction-2026-10-15/criterion-probe/config.json",
+      "bytes": 1019,
+      "sha256": "af29a068a7cc0523786b057d75cd1e91d1f330c02569780543d5519fc93f2310"
+    },
+    "sources/summary.json": {
+      "source": "output/reference-reproduction-2026-10-15/criterion-probe/summary.json",
+      "bytes": 11937,
+      "sha256": "b1bf9f6b4a8ccd66a12094c33120c7ecf5279d9fd4af93f7e3d9421bbb02ae7c"
+    },
+    "sources/settle.csv": {
+      "source": "output/reference-reproduction-2026-10-15/criterion-probe/settle.csv",
+      "bytes": 3119,
+      "sha256": "8548fd0846be0e9b1c75797f405fd52c8e09e4f774023754c5bd9eab12d275ca"
+    },
+    "sources/continuation.lisp": {
+      "source": "output/reference-reproduction-2026-10-15/criterion-probe/continuation.lisp",
+      "bytes": 7488,
+      "sha256": "b21444c109fc2366ef28d45edc448fc3601cf32c5f68cd12fbc2ee5e314c278e"
+    },
+    "sources/probe-input-config.json": {
+      "source": "output/reference-reproduction-2026-10-14/video-candidate-config.json",
+      "bytes": 2632,
+      "sha256": "ef81a8b5638c4f7b65e469d33d60b4be96345dc76a0ad0e28408901d8338cac2"
+    },
+    "sources/run-fast.lisp": {
+      "source": "output/reference-reproduction-2026-10-14/run-fast.lisp",
+      "bytes": 790,
+      "sha256": "c0039992f3d6ee88abb1ef511541978034abbeb233b85c90a87e1136936b50ed"
+    },
+    "validation/validation-summary.json": {
+      "source": "output/reference-reproduction-2026-10-15/validation/validation-summary.json",
+      "bytes": 2450,
+      "sha256": "0edb4d0f40a2713cc5026c6fad9386e8355bc7e31481059eae80c258a5f33627"
+    },
+    "validation/node-check.log": {
+      "source": "output/reference-reproduction-2026-10-15/validation/node-check.log",
+      "bytes": 199,
+      "sha256": "ef445b10cde3731a5b5215225895261bdd996b37947569fb0ee27d3c05ba158f"
+    },
+    "validation/node-tests.log": {
+      "source": "output/reference-reproduction-2026-10-15/validation/node-tests.log",
+      "bytes": 3352,
+      "sha256": "04b945590742c9f96ea9325f096ff1d46b9dcc119fe1acacec4ce79b84651afe"
+    },
+    "validation/reference-smoke.log": {
+      "source": "output/reference-reproduction-2026-10-15/validation/reference-smoke.log",
+      "bytes": 3711,
+      "sha256": "fa6e7524f2ec3128ae8f1368e632b4dc0c5e14936bdd362c09ee4e48b5150c09"
+    }
+  }
+}

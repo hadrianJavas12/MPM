@@ -35,20 +35,23 @@
       block-size
       counts
       (param config "density")
-      'cl-mpm/particle::particle-chalk-delayed
+      (if (eq (param config "constitutiveModel") :custom)
+          'studio-custom-chalk
+          'cl-mpm/particle::particle-chalk-delayed)
       :E (param config "E")
       :nu (param config "nu")
-      :enable-plasticity t
+      :enable-plasticity (param config "enablePlasticity")
+      :enable-damage (param config "enableDamage")
       :friction-angle friction
       :phi (deg->rad friction)
-      :psi 0d0
-      :c 1000d3
+      :psi (deg->rad (param config "dilatancyAngle"))
+      :c (param config "cohesion")
       :initiation-stress (param config "initiationStress")
       :delay-time (param config "delayTime")
       :ductility (param config "ductility")
       :critical-damage 1d0
       :damage-domain-rate 0.5d0
-      :local-length (* 3d0 (sqrt 7d0))
+      :local-length (param config "nonlocalLength")
       :local-length-damaged 1d-9
       :gravity -9.8d0
       :gravity-axis (cl-mpm/utils:vector-from-list '(0d0 1d0 0d0))))))
@@ -97,23 +100,53 @@
            1d0)))))
 
 (defun cut-toe-notch (sim config shelf-length soil)
-  "Remove a rectangular notch at the toe of the face (no-op when height is 0)."
+  "Remove a rectangular, elliptic or triangular toe notch.
+The notch dimensions follow the legacy convention: notchDepth measures
+inward from the original face at x=SHELF-LENGTH; 0 means 1.5 x height.
+The tip fraction affects triangular notches only."
   (let ((notch-h (param config "notchHeight")))
     (when (> notch-h 1d-2)
       (let* ((depth (param config "notchDepth"))
              (notch-d (if (> depth 1d-2) depth (* 1.5d0 notch-h)))
              (half-h (* 0.5d0 notch-h))
-             (sdf (cl-mpm/setup::rectangle-sdf (list shelf-length (+ soil half-h))
-                                               (list notch-d half-h))))
+             (centre-y (+ soil half-h))
+             (shape (param config "notchShape"))
+             (tip-y (+ soil (* notch-h (param config "notchTipFraction"))))
+             (sdf (ecase shape
+                    (:rectangle
+                     (cl-mpm/setup::rectangle-sdf
+                      (list shelf-length centre-y) (list notch-d half-h)))
+                    (:ellipse
+                     (cl-mpm/setup::ellipse-sdf
+                      (list shelf-length centre-y 0d0) notch-d half-h))
+                    (:triangle
+                     ;; REMOVE-SDF uses only the sign of the supplied function.
+                     ;; A triangle has a tip at (face-depth, tip-y) and an
+                     ;; open vertical edge along the original cliff face.
+                     (lambda (p)
+                       (let* ((x (magicl:tref p 0 0))
+                              (y (magicl:tref p 1 0))
+                              (inside-y (and (> y soil) (< y (+ soil notch-h))))
+                              (fraction (if inside-y
+                                            (if (< y tip-y)
+                                                (/ (- y soil) (- tip-y soil))
+                                                (/ (- (+ soil notch-h) y)
+                                                   (- (+ soil notch-h) tip-y)))
+                                            0d0))
+                              (left-x (- shelf-length (* notch-d fraction))))
+                         (if (and inside-y
+                                  (> x left-x) (< x shelf-length))
+                             -1d0 1d0)))))))
         (cl-mpm/setup:remove-sdf
          sim
          (lambda (p)
-           (if (> (magicl:tref p 1 0) (- soil 1d-3))
+           ;; Do not cut through the underlying soil/foundation layer.
+           (if (> (magicl:tref p 1 0) soil)
                (funcall sdf p)
                1d0)))))))
-
 (defun make-cliff-sim (config)
   "Build the cliff-collapse simulation described by CONFIG."
+  (when (eq (param config "constitutiveModel") :custom) (ensure-custom-model))
   (let* ((h (param config "meshSize"))
          (height (param config "shelfHeight"))
          (soil (param config "soilBoundary"))

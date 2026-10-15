@@ -50,6 +50,27 @@ function Install-WingetPackage($id, $label) {
     winget install --id $id -e --accept-source-agreements --accept-package-agreements
 }
 
+function Install-Quicklisp([string]$sbcl, [string]$quicklisp) {
+    $installDir = Split-Path -Parent $quicklisp
+    $installer = Join-Path $installDir 'quicklisp-install.lisp'
+    $bootstrap = Join-Path $installDir 'quicklisp-bootstrap.lisp'
+    New-Item -ItemType Directory -Force -Path $installDir | Out-Null
+    try {
+        Invoke-WebRequest 'https://beta.quicklisp.org/quicklisp.lisp' -OutFile $installer
+        # Pass Lisp through a file instead of --eval: PowerShell does not use
+        # backslash to escape quotes, and Windows argument quoting differs
+        # between PowerShell versions. Forward slashes also avoid Lisp escapes.
+        $path = ($quicklisp.Replace('\', '/') + '/').Replace('"', '\"')
+        $source = '(quicklisp-quickstart:install :path "{0}")' -f $path
+        [System.IO.File]::WriteAllText($bootstrap, $source, [System.Text.UTF8Encoding]::new($false))
+        & $sbcl --noinform --no-sysinit --no-userinit --non-interactive --load $installer --load $bootstrap
+        if ($LASTEXITCODE -ne 0) { throw "Quicklisp installer exited with code $LASTEXITCODE." }
+        if (-not (Test-Path (Join-Path $quicklisp 'setup.lisp'))) { throw 'Quicklisp installation failed.' }
+    } finally {
+        Remove-Item -LiteralPath $installer, $bootstrap -ErrorAction SilentlyContinue
+    }
+}
+
 New-Item -ItemType Directory -Force -Path $Toolchain | Out-Null
 
 # --- 1. External tools ------------------------------------------------------
@@ -74,13 +95,7 @@ if ((Test-Path (Join-Path $quicklisp 'setup.lisp')) -or (Test-Path (Join-Path $H
     $sbcl = (Get-Command sbcl -ErrorAction SilentlyContinue).Source
     if (-not $sbcl) { $sbcl = $sbclPaths | Where-Object { Test-Path $_ } | Select-Object -First 1 }
     if (-not $sbcl) { throw 'SBCL is required to install Quicklisp. Install it and re-run this script.' }
-    $installer = Join-Path $Toolchain 'quicklisp-install.lisp'
-    Invoke-WebRequest 'https://beta.quicklisp.org/quicklisp.lisp' -OutFile $installer
-    $path = $quicklisp.Replace('\', '/') + '/'
-    & $sbcl --noinform --non-interactive --load $installer `
-        --eval "(quicklisp-quickstart:install :path \"$path\")"
-    Remove-Item $installer -ErrorAction SilentlyContinue
-    if (-not (Test-Path (Join-Path $quicklisp 'setup.lisp'))) { throw 'Quicklisp installation failed.' }
+    Install-Quicklisp $sbcl $quicklisp
     Ok "installed in $quicklisp"
 }
 

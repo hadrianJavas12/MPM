@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-15",
+  "auditedSourceCommit": "8549c32bb53b69e6cbbb93246b412084eab9a2c1",
+  "scope": "Artifact authenticity, native numerical counterexamples and fresh4s initiation; not scientific validation",
+  "productionSolverChanged": false,
+  "acceptedArtifactsChanged": false,
+  "files": {
+    "forensic-artifacts-summary.json": {
+      "source": "output/scientific-audit-2026-10-15/forensic-artifacts-summary.json",
+      "bytes": 5691,
+      "sha256": "46abf4a4aac56ffce922858ff959508b8d549b51f6a4783609f39a74a9c0775a"
+    },
+    "forensic-artifacts-audit.json": {
+      "source": "output/scientific-audit-2026-10-15/forensic-artifacts-audit.json",
+      "bytes": 317176,
+      "sha256": "930699df99b916028b429cfdbddaeb4b0c581395718c93fa8dc5dfc0d359c5d7"
+    },
+    "forensic-artifacts-audit.py": {
+      "source": "output/scientific-audit-2026-10-15/forensic-artifacts-audit.py",
+      "bytes": 11748,
+      "sha256": "1af5b0dd91179c3dc56565295398b3a21f130aa5132b583db821755bc9a4954c"
+    },
+    "forensic-visual-audit.json": {
+      "source": "output/scientific-audit-2026-10-15/forensic-visual-audit.json",
+      "bytes": 58584,
+      "sha256": "36a186d6611097b032301834572496176234452d9407eb12619c7bb0662c1a64"
+    },
+    "forensic-visual-audit.py": {
+      "source": "output/scientific-audit-2026-10-15/forensic-visual-audit.py",
+      "bytes": 5431,
+      "sha256": "db85f2edac002d801d765464d8b8fae5bc4e1dcdf09c9b8228a614385271bce0"
+    },
+    "native-invariant-controls.json": {
+      "source": "output/scientific-audit-2026-10-15/native-invariant-controls.json",
+      "bytes": 3124,
+      "sha256": "bdd7cc59fb874de63d8fa23005ca72278278bd8e65daa4ab531e847d2f391422"
+    },
+    "native-invariant-controls.log": {
+      "source": "output/scientific-audit-2026-10-15/native-invariant-controls.log",
+      "bytes": 702,
+      "sha256": "0a09460029b07d35d7e9e28d6feb1b3541ba650e3b21b7693a04afce1d47c7a3"
+    },
+    "native-invariant-controls.lisp": {
+      "source": "output/scientific-audit-2026-10-15/native-invariant-controls.lisp",
+      "bytes": 9986,
+      "sha256": "9f49cbd7e4229d10bb5c8a46093aeac2ec28585e0618d76f7f27f50c5b057a27"
+    },
+    "NATIVE_CONTROLS.md": {
+      "source": "output/scientific-audit-2026-10-15/NATIVE_CONTROLS.md",
+      "bytes": 4640,
+      "sha256": "48b8e2336ae3ee27e2d7c2244a2bbfdd46f7b11026aaf8bf55fbd1909ea9dab6"
+    },
+    "nonlocal-control.json": {
+      "source": "output/scientific-audit-2026-10-15/nonlocal-control.json",
+      "bytes": 540,
+      "sha256": "5fd290802bde1ab3d994e8ed4c998fd3feebe60d8aa226b3c4d9772cbef9def8"
+    },
+    "nonlocal-control.log": {
+      "source": "output/scientific-audit-2026-10-15/nonlocal-control.log",
+      "bytes": 2132,
+      "sha256": "1f8584251948f28a051b95de6c3ff59fca1789e2b12bd9e2750e0e0cda55701a"
+    },
+    "nonlocal-control.lisp": {
+      "source": "output/scientific-audit-2026-10-15/nonlocal-control.lisp",
+      "bytes": 3432,
+      "sha256": "af9fa3a8be641ca5ec1ecd84c78718ba94e7a7550eb328957f9b9bfe30a095cc"
+    },
+    "fresh-replay-4s-config.json": {
+      "source": "output/scientific-audit-2026-10-15/fresh-replay-4s-config.json",
+      "bytes": 1248,
+      "sha256": "7ab24575529779ead7edb6e12549925984c3358f8cca16928849bb0a3acf0c3b"
+    },
+    "fresh-replay-4s.log": {
+      "source": "output/scientific-audit-2026-10-15/fresh-replay-4s.log",
+      "bytes": 3121,
+      "sha256": "169b7d130fb2eac21fe8979a41118ac93431f171c82faab298cbf985330f7b61"
+    },
+    "fresh-replay-audit.py": {
+      "source": "output/scientific-audit-2026-10-15/fresh-replay-audit.py",
+      "bytes": 3098,
+      "sha256": "e6adb35f9a8a0931e4aefbed2f5b58790b5a0f4e71e743d43f5f551141683a59"
+    },
+    "fresh-replay-audit.json": {
+      "source": "output/scientific-audit-2026-10-15/fresh-replay-audit.json",
+      "bytes": 2813,
+      "sha256": "423f36b8cf08846e82666c71c89f6edfaba6784c67aacba244e8722c8f040f2f"
+    },
+    "fresh-replay-metadata.json": {
+      "source": "output/scientific-audit-2026-10-15/fresh-replay-4s/reference-metadata.json",
+      "bytes": 2012,
+      "sha256": "a602860a8b37f45ba65d0af1f5bce73b7c58a377ad02849e6ca4626bfc755685"
+    },
+    "fresh-replay-timesteps.csv": {
+      "source": "output/scientific-audit-2026-10-15/fresh-replay-4s/timesteps.csv",
+      "bytes": 286211,
+      "sha256": "ea499e9bdc2afea460dc7dde02f26874eea8dbce5d820f35b39458292434cc81"
+    },
+    "fresh-replay-t4.vtk.gz": {
+      "source": "output/scientific-audit-2026-10-15/fresh-replay-4s/vtk/sim_00002.vtk",
+      "bytes": 603785,
+      "sha256": "0cb45a896f6fe2aa213eccc56604185ae8c3be1c514f69ddee136418d54ecb25",
+      "uncompressedSha256": "3c650715bbf70aaefd155b8a415970938a75e129db9e7c0e6982512a19e69e6b"
+    }
+  }
+}

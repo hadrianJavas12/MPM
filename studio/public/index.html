@@ -127,6 +127,25 @@
 
           <div class="form-group">
             <div class="label-row">
+              <label for="notchShape">Bentuk Sobekan Kaki Tebing</label>
+            </div>
+            <select id="notchShape" class="studio-select">
+              <option value="rectangle" selected>Persegi panjang (legacy)</option>
+              <option value="ellipse">Elips / lengkung</option>
+              <option value="triangle">Segitiga / runcing</option>
+            </select>
+            <small>Ketiga bentuk ini memotong partikel pada lokasi yang sama, dengan geometri berbeda.</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="notchTipFraction">Posisi Ujung Notch Segitiga</label>
+              <span class="unit-badge">rasio 0–1</span>
+            </div>
+            <input type="number" id="notchTipFraction" value="0.5" min="0.15" max="0.85" step="0.05">
+            <small>0.5 = ujung tepat di tengah tinggi notch. Hanya untuk bentuk segitiga.</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
               <label for="notchHeight">Tinggi Undercut (Notch Height)</label>
               <span class="unit-badge">meter</span>
             </div>
@@ -146,19 +165,19 @@
               <input type="range" id="notchDepthRange" min="0" max="30" step="0.5" value="0">
               <input type="number" id="notchDepth" value="0" min="0" max="50" step="any">
             </div>
-            <small>Kedalaman torehan horizontal masuk ke dalam tebing (0 = otomatis 2x tinggi).</small>
+            <small>Kedalaman torehan horizontal masuk ke dalam tebing (0 = otomatis 1,5x tinggi).</small>
           </div>
 
           <div class="form-group">
             <div class="label-row">
-              <label for="undercut">Sudut Torehan Undercut (&theta;)</label>
+              <label for="undercut">Sudut Overhang Muka Tebing (&theta;)</label>
               <span class="unit-badge">derajat (°)</span>
             </div>
             <div class="slider-input-row">
               <input type="range" id="undercutRange" min="0" max="45" step="0.5" value="0">
               <input type="number" id="undercut" value="0" min="0" max="60" step="any">
             </div>
-            <small>Sudut kemiringan bidang torehan erosi pada bagian dasar tebing.</small>
+            <small>Sudut tambahan kemiringan muka tebing (bukan sudut notch). Bentuk notch diatur terpisah.</small>
           </div>
 
           <div class="form-group">
@@ -191,9 +210,20 @@
             </div>
             <select id="mpsPerCell" class="studio-select">
               <option value="1">1 partikel / cell</option>
-              <option value="2" selected>2 partikel / cell (Standar)</option>
-              <option value="4">4 partikel / cell (Akurasi Tinggi)</option>
+              <option value="2" selected>2 per sumbu = 4 partikel / cell (Standar)</option>
+              <option value="4">4 per sumbu = 16 partikel / cell (Detail)</option>
             </select>
+          </div>
+          <div class="form-group geometry-preview-panel">
+            <div class="label-row">
+              <strong>Preview Penampang Geometri</strong>
+              <span class="unit-badge">perkiraan 2D</span>
+            </div>
+            <svg id="geometryPreview" viewBox="0 0 900 360" role="img"
+                 aria-label="Pratinjau domain tebing dan rongga notch"
+                 style="display:block;width:100%;height:auto;border-radius:8px;min-height:150px;background:#0d1d35"></svg>
+            <small>Pratinjau berupa sampling fungsi geometri; bukan hasil material points ataupun perhitungan MPM.
+              Sebaiknya ukuran notch lebih besar dari resolusi mesh.</small>
           </div>
         </div>
 
@@ -239,6 +269,41 @@
 
           <div class="form-group">
             <div class="label-row">
+              <label for="cohesion">Kohesi Plastik (c)</label>
+              <span class="unit-badge">kPa</span>
+            </div>
+            <input type="number" id="cohesion" value="1000" min="0" max="20000" step="any">
+            <small>Parameter yield surface Mohr–Coulomb; bukan sama dengan tegangan inisiasi retak.</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="dilatancyAngle">Sudut Dilatansi Plastik (ψ)</label>
+              <span class="unit-badge">derajat (°)</span>
+            </div>
+            <input type="number" id="dilatancyAngle" value="0" min="0" max="45" step="any">
+            <small>Kontrol non-associated plastic flow. Gunakan nilai yang terkalibrasi (umumnya ψ ≤ φ).</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="nonlocalLength">Panjang Interaksi Non-lokal</label>
+              <span class="unit-badge">meter</span>
+            </div>
+            <input type="number" id="nonlocalLength" value="7.937253933193772" min="0.05" max="1000" step="any">
+            <small>Radius regularisasi damage; sensitif terhadap mesh dan ukuran partikel.</small>
+          </div>
+          <div class="form-toggle-row">
+            <label class="toggle-switch">
+              <input type="checkbox" id="enablePlasticity" checked>
+              <span class="toggle-slider"></span>
+            </label>
+            <div class="toggle-text">
+              <span class="toggle-title">Plastisitas Material</span>
+              <small>Nonaktifkan untuk respons tanpa plastic-flow; damage dikontrol terpisah.</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
               <label for="ductility">Daktilitas (softening)</label>
               <span class="unit-badge">-</span>
             </div>
@@ -254,6 +319,15 @@
             <input type="number" id="density" value="1700" min="500" max="3000" step="any">
           </div>
 
+          <div class="form-group">
+            <div class="label-row">
+              <label for="delayTime">Waktu Tunda Damage</label>
+              <span class="unit-badge">detik</span>
+            </div>
+            <input type="number" id="delayTime" value="10" min="0.01" max="10000" step="any">
+            <small>Waktu karakteristik evolusi damage (delay time).</small>
+          </div>
+
           <div class="form-toggle-row">
             <label class="toggle-switch">
               <input type="checkbox" id="enableDamage" checked>
@@ -263,6 +337,46 @@
               <span class="toggle-title">Model Kerusakan (Damage)</span>
               <small>Aktifkan perambatan retak & degradasi modulus</small>
             </div>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="constitutiveModel">Constitutive Model</label>
+            </div>
+            <select id="constitutiveModel" class="studio-select">
+              <option value="chalk" selected>Built-in Chalk (Plastic-Damage)</option>
+              <option value="custom">Custom Common Lisp (Advanced)</option>
+            </select>
+            <small>Custom memakai subclass chalk khusus sehingga metode bawaan tetap utuh.</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="customModelTemplate">Template Custom Model</label>
+            </div>
+            <select id="customModelTemplate" class="studio-select">
+              <option value="delegate">Delegate (call-next-method)</option>
+              <option value="elastic">Experimental elastic stress update</option>
+            </select>
+            <button type="button" id="btnLoadModelTemplate" class="btn btn-secondary">
+              Muat Template
+            </button>
+            <small>Template hanya titik awal. Model baru wajib diverifikasi secara numerik.</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="customModelFile">Import File .lisp</label>
+            </div>
+            <input type="file" id="customModelFile" accept=".lisp,text/plain">
+            <label for="customModelSource">Source Code Common Lisp</label>
+            <textarea id="customModelSource" rows="14" spellcheck="false"
+              aria-describedby="customModelNotice"
+              style="width:100%;resize:vertical;min-height:220px;background:#0b1729;color:#d9efff;border:1px solid #63758b;border-radius:8px;padding:12px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;line-height:1.45"></textarea>
+            <small id="customModelNotice" role="status">Editor lokal. Tidak ada skrip yang dieksekusi sampai simulasi dimulai dan disetujui.</small>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+              <button type="button" id="btnValidateModel" class="btn btn-secondary">Cek Tanda Kurung</button>
+              <button type="button" id="btnDownloadModel" class="btn btn-secondary">Export custom-model.lisp</button>
+              <button type="button" id="btnExportSimulation" class="btn btn-secondary">Export simulation.lisp</button>
+            </div>
+            <small>PERINGATAN: Custom Lisp dapat mengakses filesystem dan proses sistem. Eksekusi hanya tersedia jika admin mengaktifkan STUDIO_ALLOW_CUSTOM_LISP=1 pada server localhost. Bukan sandbox.</small>
           </div>
         </div>
 
@@ -307,19 +421,9 @@
               <span class="unit-badge">core</span>
             </div>
             <input type="number" id="workers" value="4" min="1" max="16" step="1">
-            <small>Jumlah thread OpenMP / lparallel worker.</small>
+            <small>Jumlah worker lparallel yang digunakan oleh solver.</small>
           </div>
 
-          <div class="form-toggle-row">
-            <label class="toggle-switch">
-              <input type="checkbox" id="clearFrames" checked>
-              <span class="toggle-slider"></span>
-            </label>
-            <div class="toggle-text">
-              <span class="toggle-title">Bersihkan Frame Lama</span>
-              <small>Hapus file PNG di outframes sebelum mulai baru</small>
-            </div>
-          </div>
         </div>
 
         <!-- Sticky Action Bar in Panel -->
@@ -524,6 +628,9 @@
     </section>
   </main>
 
+  <script src="geometry.js"></script>
+  <script src="config.js"></script>
+  <script src="model-workspace.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

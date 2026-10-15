@@ -1,0 +1,222 @@
+{
+  "kind": "scientific visualization of saved native outputs",
+  "simulationMode": "mpm",
+  "primaryStrainColumn": "particle_extents_axial_strain_pct",
+  "platenStrainShownSeparately": true,
+  "forwardModelComputedByRenderer": false,
+  "csv": "D:\\MPM\\output\\triaxial-3d-demo\\stress-strain.csv",
+  "csvSha256": "aaf9ced4c60ea1117fd41e3325e607e47c299551372d182b3c959f374dc74e4c",
+  "png": "D:\\MPM\\output\\triaxial-3d-demo\\triaxial-result.png",
+  "pngSha256": "2cdc0ba7860d9aa4c7b2521189f37ce8d3ed8f0e48230d81b9bb139eb7ca0bef",
+  "frames": 51,
+  "matplotlib": "3.11.2",
+  "vtkInputs": [
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0000.vtk",
+      "sha256": "2177e390c8c7569880c3e02bd9eeb9ce393b68eca32c4b12ebc7f7c59db659b1"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0001.vtk",
+      "sha256": "995d69068285ad03c4bac12075566352bc75bc65a1d5503bdf7ea7326008af29"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0002.vtk",
+      "sha256": "fdb41a425f9a3afd484df6e076f7711baecc02f992f78cab006caadbd342df1a"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0003.vtk",
+      "sha256": "b9f84ab65507ec4c3bafcb0c76349bbf6baed93663d7524f733863336a66d9e1"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0004.vtk",
+      "sha256": "03abcd3dc98543bbf294c61eabdf961c6d679cc16e3d2dcd12d3ba9c8efb3659"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0005.vtk",
+      "sha256": "34a39dbd36e9d0eb57fd7370aeacf398a4de7b769ce66d81a7ea090d334dcb39"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0006.vtk",
+      "sha256": "6bf8027734ad16536c4b90a3184f159ed93e72e37a501a1329243bca1f786071"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0007.vtk",
+      "sha256": "25d4bdd122baf30b365469d98c02188574ae63b2c785dba4e8f54217f828094f"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0008.vtk",
+      "sha256": "292eef03198d8726069cc0492c5791617ac8843d9167e61b74536c6b4d72b254"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0009.vtk",
+      "sha256": "77b6265047318a02c0d0745cd118efc565cdfe8332349894c971d5ea96580808"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0010.vtk",
+      "sha256": "64743481a9f1643c42591547df53bbd3311e8258cb820ad9ab9b1f3d89fe4ea3"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0011.vtk",
+      "sha256": "c7cff393a8083af74ea83bb301818c058623aab677a8818280aa01288d9ec33e"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0012.vtk",
+      "sha256": "a4a7591fc6eb2b030f8aa67f985354ec48950ae22a558c4ae2ac85d3b5d5317b"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0013.vtk",
+      "sha256": "83741bc8e7fa92b927773a0f4ac5984912e628283c7b329f107c7de0fe34264d"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0014.vtk",
+      "sha256": "9695a75d27c511ba564958ea7f491a619cded003713a47329255e866a5892814"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0015.vtk",
+      "sha256": "4d3a9d3b6701337187e0384ef14b1c549731fd720082d7bbe22e1107ba0bd8fb"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0016.vtk",
+      "sha256": "4271ac0f7b9ad620e75668a952fd59d26f5ea8c68bd9a088d87baa898e2a2414"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0017.vtk",
+      "sha256": "422fb9784f5f98cbc534ad696372b45acff2d1adc58a616607237fa74048a987"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0018.vtk",
+      "sha256": "4f4b0bd858b85abd2ae67e20af94a96bfdff9e69a0120749d177ccbaff00e443"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0019.vtk",
+      "sha256": "dff73194eea9885c93af941ee6f5846859bdf9b6acc2812143ff6bdfbe8c3dbb"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0020.vtk",
+      "sha256": "40223679700c95bc11a2256be74f17bb85956c7a0ee7aa23a9dcfce322f55956"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0021.vtk",
+      "sha256": "4044210562bf0d85d1144f8ac2b79d53472f0f46338d8b9eeadee3de7a9a9606"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0022.vtk",
+      "sha256": "d77323e1304650f2197b264b25ab484e68fc35dfe2136357b2f541c2fb807132"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0023.vtk",
+      "sha256": "1d887856f0f661f31f0d03a355d9d7c885e97d86d3af8ac24186ea7cb4817f71"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0024.vtk",
+      "sha256": "94f14193cdd7d182c6d4c060234d37a87b632d4482df0601dd6ca3ec9a6ffc35"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0025.vtk",
+      "sha256": "487c3873ecdc762824e7aedb234e02f022ff1e3a0d20002a3fcc97c1573cd890"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0026.vtk",
+      "sha256": "5f808487c327e675cc3405e2f2e52e176b9bb2bd4ac924e2b0a3e247b3e04e03"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0027.vtk",
+      "sha256": "a061abd421a07ae0c1219e8ee0f384fb2bd372f1a47a94cc715cabf848abe2fd"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0028.vtk",
+      "sha256": "0727c86b7948be4193bf4bae75877a4ca8fbcf46b9a635799ba65174f7be0b57"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0029.vtk",
+      "sha256": "4e1ae768abf5945d64bbe71e5ec40296ed8cfe02513e983d208e135cad56d897"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0030.vtk",
+      "sha256": "b71b0b9c06304e3bbf18a5fc0a8a8c08958a4e6c1ccc4cb2c5762042069c8c08"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0031.vtk",
+      "sha256": "f2d6ac5c90bde9a007714a5726a75225d9b491abb2759bc366d8d9c1df1e7048"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0032.vtk",
+      "sha256": "fc91436bea62b2b30f61fb67d153f76e0b990a20efe8111b00dd8f62942774d1"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0033.vtk",
+      "sha256": "0bbf317e651dce73ba03faac020832bcbe97963cbc3324148f94ab4f91089f08"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0034.vtk",
+      "sha256": "d856e866cababd4a9417a334b38e5e02a5a696f754f91077e4bdb750e44b3420"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0035.vtk",
+      "sha256": "ff1cbd87cef3dafcac45124fb7bc08c61052ea8bbf2fa8933a5061a977fea1dc"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0036.vtk",
+      "sha256": "0df35371a094826b99e45f9c43dcba51a52572ee8e9d7dfccbe70cd75b664560"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0037.vtk",
+      "sha256": "880cd95486ce811734b38c8b601960158850f2e8bab92de89ad7b12d711ba891"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0038.vtk",
+      "sha256": "f4f1555b1773247090e0c6d336b949fdffa8254e575b686d06e38a27da57e853"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0039.vtk",
+      "sha256": "79784cb0c8a19bb7b5fd34e3368c7037f7c05e5ae677ee2038633790fd52ee2d"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0040.vtk",
+      "sha256": "f39afd21e35ccdf96663d4bb547c64c6b03c7d41d79eb96972aef1b26bd26048"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0041.vtk",
+      "sha256": "d7b08b95c338f0354ab2833ff9c4d440a4c12a5acb46ccc513b0a71fe786143d"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0042.vtk",
+      "sha256": "94d0c9feeb53478486314fe1b4c35aca1a36495fda78ed99a45a90ea421943d3"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0043.vtk",
+      "sha256": "88466041b4e30eb44954f3822ac41b8190bef75346f8820d2fb48b4610f232a7"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0044.vtk",
+      "sha256": "537cd35ecc77aaec21769eec36eb80214c442553a0454eca0e9d53b1c24a67cf"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0045.vtk",
+      "sha256": "ea7646dcc107b6298f0005fc334a72d828e716f0314b58f513b1b2f8b61f56a0"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0046.vtk",
+      "sha256": "fa36c5eedeb021e170fdb81cf9ffe2c6b1c47a7d4da34f32bfe15a8b441f684d"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0047.vtk",
+      "sha256": "e5ec0a78faf1b2cdf3f3c5ec777d21ef1b4849863b2c4dcad7f0700146c9272d"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0048.vtk",
+      "sha256": "293c91e75d5c8e94d9c7d2a8cd02a4dfc926d1311225c0e26995b121a8268c41"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0049.vtk",
+      "sha256": "ba00592baf8eef1653c3b99039cc748307320e792cc2053ced4c8b1bc12495a3"
+    },
+    {
+      "file": "D:\\MPM\\output\\triaxial-3d-demo\\particles_0050.vtk",
+      "sha256": "e935eeca4a341a7a03255037f810b748c064f232c84899ccc04fc25f21d6afba"
+    }
+  ],
+  "video": "D:\\MPM\\output\\triaxial-3d-demo\\triaxial-simulation.mp4",
+  "videoSha256": "d1290413f1c32a575dad6de6a19c52741cffd6b2ec48efbb676f53dc8f403238",
+  "playbackFps": 15
+}
