@@ -1,6 +1,5 @@
 (asdf:defsystem "cl-mpm-framework"
   :description "Composable, headless native CL-MPM simulation recipes"
-  :license "MIT"
   :depends-on ("cl-mpm" "cl-mpm/setup" "cl-mpm/damage" "cl-mpm/models/chalk"
                "cl-mpm/output" "cl-mpm/penalty" "cl-mpm/plotter" "vgplot"
                "jonathan" "yason" "alexandria" "uiop")
@@ -8,6 +7,7 @@
   :components
   ((:file "config/package") (:file "config/parameters") (:file "package")
    (:file "components/specifications") (:file "components/materials")
+   (:file "components/diagnostics")
    (:file "components/geometry") (:file "simulation")
    (:file "scenarios/cliff/settings") (:file "materials/chalk")
    (:file "scenarios/cliff/geometry")

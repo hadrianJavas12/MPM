@@ -46,6 +46,7 @@
                       (:plasticity "enablePlasticity" t)))))
     (cl-mpm/calibration/triaxial:setup
      config :particle-factory (make-particle-factory resolved)
+     :diagnostics (material-diagnostics resolved)
      :geometry-filter (geometry-filter (simulation-geometry case)))))
 
 (cl-mpm/utils:set-workers 1)
@@ -162,7 +163,7 @@
    (assert (component-error-p
             (lambda () (validate-simulation
                         (component-triaxial
-                         (make-material :native :particle-class 'cl-mpm/particle::particle-elastic)
+                         (make-material :native :particle-class 'cl-mpm/particle::particle-dp)
                          (make-geometry :rectangle))))))))
 
 (component-check

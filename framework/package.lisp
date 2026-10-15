@@ -9,6 +9,12 @@
            #:simulation-geometry #:simulation-boundary #:simulation-loading
            #:simulation-solver #:simulation-parameters
            #:material-particle-class #:material-particle-initargs
+           #:material-diagnostics #:native-material-diagnostics
+           #:vm-material-diagnostics #:mc-material-diagnostics #:elastic-material-diagnostics
+           #:diagnostics-particle-type #:diagnostics-modes #:diagnostics-conventions
+           #:diagnostics-fields #:diagnostics-legacy-values #:material-state
+           #:validate-material-diagnostics #:configure-material-output
+           #:validate-material-state
            #:make-particle-factory #:geometry-filter #:read-parameters #:case-path
            #:*input-root*))
 

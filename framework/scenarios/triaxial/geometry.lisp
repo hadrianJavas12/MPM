@@ -1,7 +1,7 @@
 ;;;; Native triaxial scenario: geometry.lisp
 (in-package :cl-mpm/calibration/triaxial)
 
-(defun setup (config &key particle-factory geometry-filter)
+(defun setup (config &key particle-factory geometry-filter diagnostics)
   "Build a native cylinder3D or plane-strain rectangle2D, without engine overrides."
   (check-type particle-factory (or null function))
   (check-type geometry-filter (or null function))
@@ -44,11 +44,16 @@
       (check-type particles vector)
       (setf particles (remove-if-not
                        (lambda (mp) (typep mp 'cl-mpm/particle:particle)) particles))
-      (unless (and (plusp (length particles))
-                   (every (lambda (mp) (typep mp 'cl-mpm/particle::particle-vm)) particles))
-        (error "Triaxial VM diagnostics require nonempty native particle-vm/subclass particles; use plasticity disabled for elastic runs"))
+      (if diagnostics
+          (material-diagnostic-call "VALIDATE-MATERIAL-DIAGNOSTICS" diagnostics particles
+                                    (value config "mode" "mpm"))
+          (unless (and (plusp (length particles))
+                       (every (lambda (mp) (typep mp 'cl-mpm/particle::particle-vm)) particles))
+            (error "Non-VM triaxial particles require an explicit compatible diagnostics adapter.")))
       (cl-mpm:add-mps sim particles)
       (initialize-prestress sim config)
+      (when diagnostics
+        (material-diagnostic-call "CONFIGURE-MATERIAL-OUTPUT" diagnostics sim))
       (setf (cl-mpm:sim-gravity sim) 0d0
             (cl-mpm:sim-enable-fbar sim) nil
             (cl-mpm:sim-enable-damage sim) nil

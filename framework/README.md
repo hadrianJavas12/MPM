@@ -26,13 +26,13 @@ is a fraction (`0.10d0` = 10%). Backend JSON retains its existing units.
 
 | Scenario | Material | Geometry | Boundary / loading | Solver |
 | --- | --- | --- | --- | --- |
-| `:triaxial` | `:von-mises`, `:elastic`, compatible `:native` VM subclass | `:rectangle` (2D), `:cylinder` (3D) | `:confinement` / `:compression` | `:explicit` |
+| `:triaxial` spatial MPM | `:von-mises`, `:elastic`, compatible `:native` VM, MC or linear-elastic class | `:rectangle` (2D), `:cylinder` (3D) | `:confinement` / `:compression` | `:explicit` |
 | `:cliff` | `:chalk`, `:von-mises`, `:elastic`, compatible `:native` | `:cliff` | `:rollers` / `:gravity` | `:explicit` |
 | `:joss` | `:joss` dedicated DP/chalk class | `:joss` dedicated shape/base | `:rollers` / `:gravity` | `:staged` |
 
 The elastic triaxial adapter uses the existing VM particle with plasticity off,
-preserving its diagnostic state slots. General incompatible models require a
-measurement adapter, and fail clearly instead of silently using VM diagnostics.
+preserving its diagnostic state slots. Other models require a compatible
+material diagnostics adapter and fail clearly instead of using VM yield formulas.
 The Joss recipe preserves its dedicated material, protected base and phase rules;
 it rejects arbitrary substitutions that would invalidate that recipe.
 
@@ -58,6 +58,11 @@ The material protocol is `material-particle-class` and
 `material-particle-initargs`; specialize these generics for a new material
 component when needed. Existing CLOS constitutive methods belong on the new
 particle class, avoiding replacement of a shared engine method.
+
+Diagnostics/state conventions are a separate protocol; see
+[the material interface](components/README.md). Automatic `:native` adapters
+support spatial MPM. Homogeneous trial/rollback is available only for the known
+legacy VM constructors until an explicit state capability is provided.
 
 Triaxial geometry accepts a per-case `:filter` function `(x y z) -> boolean`
 within its rectangle/cylinder bounding dimensions. Private builders also accept

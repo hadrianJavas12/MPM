@@ -37,6 +37,8 @@ the complete split triaxial module tree. No UI/server is needed.
 | Full spatial Joss before/after | Both completed 40 s, exit 0; **strict regression failed** | 176 versus 191 physical states; common-time pointwise diagnostics also exceed `atol=1e-8`, `rtol=1e-7` |
 | Full serial Joss control, audited 2026-10-16 | **PASS, exact:** 191 physical states / 193 VTKs per run, positions and all 36 scalar arrays differ by zero; complete CSVs byte-identical | Frozen original `c749d32` versus executed after `41403f4`, one worker and one BLAS/OMP thread; four-worker FAIL remains |
 | M1 reference-data integrity | Nine stdlib tests pass | SI conversions, source provenance, paired-law data and execution gates; no constitutive solver or experimental validation |
+| Generic material diagnostics, current M0 working tree | Nine native contracts pass | Native MC/linear elastic/VM, analytic corrected MC yield, output collision and history capability guards; MC 32 MPs / two updates, zero mass drift |
+| Strict triaxial/JSON configuration | Ten native contracts pass, no timesteps | Unknown/range/count/mode/null/duplicate/trailing-data rejection, isolation and actual JSON false disabling particle plasticity |
 
 Both successful 2D runs use 480 MPs, 17,443 updates, 51 saved states and reach
 0.2 s / 10% prescribed strain. Their final qJ2 is 50.01733976 kPa and projected

@@ -4,6 +4,8 @@
 (defun validate-particles (sim initial-mass)
   (let ((mass 0d0))
     (loop for mp across (cl-mpm:sim-mps sim) do
+      (when *material-diagnostics*
+        (material-diagnostic-call "VALIDATE-MATERIAL-STATE" *material-diagnostics* mp))
       (incf mass (cl-mpm/particle:mp-mass mp))
       (assert (and (> (j-of mp) 0d0) (> (cl-mpm/particle:mp-volume mp) 0d0)))
       (assert (< (abs (- (/ (cl-mpm/particle:mp-volume mp)
@@ -21,6 +23,7 @@
       (dolist (matrix (list (cl-mpm/particle:mp-position mp)
                             (cl-mpm/particle:mp-velocity mp)
                             (cl-mpm/particle:mp-stress mp)
+                            (cl-mpm/particle:mp-strain mp)
                             (cl-mpm/particle:mp-deformation-gradient mp)))
         (loop for v across (cl-mpm/utils::fast-storage matrix) do
           (assert (finite-p v) () "Nonfinite native particle field"))))
@@ -41,15 +44,48 @@
         (incf axial (* (- v) (component stress 1)))
         (incf lateral (* -0.5d0 v (+ (component stress 0) (component stress 2))))
         (incf jmean (* v (j-of mp)))
-        (incf plastic (* v (cl-mpm/particle::mp-strain-plastic-vm mp)))
+        (multiple-value-bind (plastic-value yield-value)
+            (if *material-diagnostics*
+                (material-diagnostic-call "DIAGNOSTICS-LEGACY-VALUES" *material-diagnostics* mp)
+                (values (cl-mpm/particle::mp-strain-plastic-vm mp)
+                        (- (/ (* (qj2-of stress) (j-of mp))
+                              (* (sqrt 1.5d0) (cl-mpm/particle::mp-rho mp))) 1d0)))
+          (if plastic-value (when plastic (incf plastic (* v plastic-value))) (setf plastic nil))
+          (if yield-value (when yield-excess (setf yield-excess (max yield-excess yield-value)))
+              (setf yield-excess nil)))
         (dotimes (i 3) (incf ke (* 0.5d0 m (expt (component vel i) 2))))
-        (dotimes (i 6) (incf elastic (* 0.5d0 v (component stress i) (component strain i))))
-        (setf yield-excess (max yield-excess
-                               (- (/ (* (qj2-of stress) (j-of mp))
-                                     (* (sqrt 1.5d0) (cl-mpm/particle::mp-rho mp))) 1d0)))))
+        (dotimes (i 6) (incf elastic (* 0.5d0 v (component stress i) (component strain i))))))
     (list (/ q volume 1000d0) (/ qj2 volume 1000d0) (/ axial volume 1000d0)
-          (/ lateral volume 1000d0) volume mass ke elastic (/ plastic volume)
+          (/ lateral volume 1000d0) volume mass ke elastic (when plastic (/ plastic volume))
           (/ jmean volume) yield-excess)))
+
+(defun write-material-frame (sim directory frame time)
+  "Model-specific CSV, with unavailable legacy columns left blank in the main CSV."
+  (when *material-diagnostics*
+    (let ((fields (material-diagnostic-call "DIAGNOSTICS-FIELDS" *material-diagnostics*)))
+      (when fields
+        (let* ((path (merge-pathnames "material-diagnostics.csv" directory))
+               (new (not (probe-file path)))
+               (volume (reduce #'+ (cl-mpm:sim-mps sim) :key #'cl-mpm/particle:mp-volume)))
+          (with-open-file (csv path :direction :output :if-exists :append :if-does-not-exist :create)
+            (when new
+              (format csv "frame,time_s")
+              (dolist (field fields) (format csv ",~(~A~)_~A" (third field) (first field)))
+              (terpri csv))
+            (format csv "~D,~,12F" frame time)
+            (dolist (field fields)
+              (destructuring-bind (name unit reduction accessor definition) field
+                (declare (ignore unit definition))
+                (let ((result nil))
+                  (loop for mp across (cl-mpm:sim-mps sim)
+                        for sample = (funcall accessor mp) do
+                          (assert (finite-p sample) () "Nonfinite material diagnostic ~A" name)
+                          (setf result
+                                (ecase reduction
+                                  (:mean (+ (or result 0d0) (* sample (cl-mpm/particle:mp-volume mp))))
+                                  (:max (if result (max result sample) sample)))))
+                  (format csv ",~,14F" (if (eq reduction :mean) (/ result volume) result)))))
+            (terpri csv)))))))
 
 (defun write-frame (sim directory frame strain time update work)
   (let* ((data (stats sim))
@@ -64,11 +100,12 @@
     (with-open-file (csv (merge-pathnames "stress-strain.csv" directory)
                          :direction :output :if-exists :append)
       (format csv "~D,~D,~,12F,~,12F" frame update strain time)
-      (dolist (v data) (format csv ",~,14F" v))
+      (dolist (v data) (if v (format csv ",~,14F" v) (write-char #\, csv)))
       (format csv ",~,14F,~,12F,~,12F,~,14F~%" work
               (* 100d0 (- 1d0 (/ height *initial-height*)))
               (* 100d0 (- (/ (fifth data) *initial-volume*) 1d0))
               (* (- *pressure*) (- (fifth data) *initial-volume*))))
+    (write-material-frame sim directory frame time)
     (format t "~&TRIAXIAL frame=~D updates=~D strain=~,5F% q=~,5F kPa lateral=~,5F kPa KE=~,4E J~%"
             frame update strain (first data) (fourth data) (seventh data))
     (force-output)

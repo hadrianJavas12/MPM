@@ -37,24 +37,27 @@
     (overlay config solver '((:mesh-size "meshSizeMm" 1000d0) (:mps-per-cell "mpsPerCell")
                              (:workers "workers") (:time-step-scale "timeStepScale")
                              (:frames "frames") (:max-updates "maxUpdates") (:damping "dampingPerS")))
-    (dolist (key '("youngsModulusPa" "densityKgM3" "undrainedStrengthPa"))
-      (finite-number (gethash key config) key))
-    (let ((nu (gethash "poissonRatio" config)))
-      (finite-number nu "poisson ratio" :minimum -1d0)
-      (unless (< nu 0.5d0) (error "Poisson ratio must be below0.5")))
-    (unless (subtypep (material-particle-class material) 'cl-mpm/particle::particle-vm)
-      (error "Triaxial measurements require a VM particle/subclass; add a measurement adapter for other laws."))
+    (cl-mpm/calibration/triaxial::validate-config config)
+    (let ((diagnostics (material-diagnostics material)))
+      (unless (member (gethash "mode" config) (diagnostics-modes diagnostics) :test #'string=)
+        (error "~S does not support triaxial mode ~A; complete material snapshot/restore hooks are required."
+               (material-particle-class material) (gethash "mode" config)))
+      ;; Controls change material flags internally. A fixed custom factory would
+      ;; silently defeat those controls, so this public composition rejects it.
+      (when (string= (gethash "mode" config) "controls")
+        (error "Controls use the standalone default VM harness; custom material/geometry factories are unsupported.")))
     (geometry-filter geometry)
     config))
 
 (defmethod execute-scenario ((scenario (eql :triaxial)) (case simulation) config directory)
-  (cl-mpm/calibration/triaxial:run-config
-   config directory :particle-factory
-   (make-particle-factory
-    (resolve-material (simulation-material case) config
+  (let ((material
+          (resolve-material (simulation-material case) config
                       '((:youngs-modulus "youngsModulusPa" 5d6)
                         (:poisson-ratio "poissonRatio" 0.49d0)
                         (:density "densityKgM3" 1800d0)
                         (:undrained-strength "undrainedStrengthPa" 25d3)
-                        (:plasticity "enablePlasticity" t))))
-   :geometry-filter (geometry-filter (simulation-geometry case))))
+                        (:plasticity "enablePlasticity" t)))))
+    (cl-mpm/calibration/triaxial:run-config
+     config directory :particle-factory (make-particle-factory material)
+     :diagnostics (material-diagnostics material)
+     :geometry-filter (geometry-filter (simulation-geometry case)))))

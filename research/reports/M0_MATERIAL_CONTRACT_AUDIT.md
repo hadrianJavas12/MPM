@@ -70,3 +70,50 @@ Canonical config currently reads `studio/schema.json`; moving that contract need
 a compatibility migration and is an explicit follow-up, not a reason to change UI
 or Studio files during this bounded adapter change. Local softening, mesh/timestep
 sensitivity, physical calibration and true CU behavior remain outside M0 acceptance.
+
+## Implemented M0 adapter checkpoint
+
+The subsequent framework-only change introduces
+`framework/components/diagnostics.lisp`: `material-diagnostics`, supported-mode
+and field/convention methods, `diagnostics-legacy-values`, read-only
+`material-state`, state validation and per-simulation output configuration.
+`setup`/`run-config` accept optional `:diagnostics`; historical standalone VM
+loading remains independent of the public framework package. Public composition
+selects actual native VM, MC (excluding DP), or linear elastic adapters. It does
+not create MC classes that inherit VM or replace engine methods.
+
+For MC, main CSV `plastic_strain` and `max_yield_excess` are blank and explicitly
+listed unavailable in the manifest. The companion `material-diagnostics.csv`
+and VTK contain named native MC accumulator, signed corrected Kirchhoff residual,
+stored trial yield and current cohesion/friction/dilation. Common q/qJ2, stress,
+strain, finite-state, volume and mass checks remain. Wrong adapters, unsupported
+material/mode combinations, invalid MC state and output descriptor collisions
+fail explicitly. Native MC `phi=0` with enabled plasticity is rejected with its
+apex limitation stated; source reference values are not altered. Every automatic
+`:native` VM adapter supports spatial MPM only, including the exact bare VM class:
+valid `:softening`/`:rho-r` arguments can change `rho` during trials
+(`src/models/plastic.lisp:165–171`). Only the known public `:von-mises`/`:elastic`
+constructors opt into the existing homogeneous state path. Default VM controls remain
+available through the standalone harness; custom callbacks are rejected before
+output rather than silently ignored. `material-state` is explicitly **not** a
+complete constitutive trial/rollback snapshot.
+
+**Executed verification:** `windows\cl-mpm.cmd tests\material-diagnostics.lisp
+output\material-contract-2026-10-16\contracts-generic-006` completed exit 0,
+**9/9 contracts passed**, including an actual 32-particle MC spatial solve for
+exactly two native updates. Analytic hydrostatic, non-unit-J and on-surface stress
+states establish residual stress convention independently of stored trial `f`.
+The suite also checks blank VM columns, native MC identity, linear elastic generic
+measurements, invalid state, output isolation/idempotence, descriptor collisions
+and mode rejection. A real bare native VM with nonzero `:softening` and distinct
+`:rho-r` proves that class identity alone does not grant homogeneous capability;
+the trusted public VM/elastic factories retain that capability. This small smoke
+does not establish MC plastic stress-path,
+mesh/timestep convergence or material validity. Root owns complete 2D/3D VM and
+Joss regressions; these are not claimed here.
+
+Machine-readable evidence: [M0_MATERIAL_CONTRACT_EVIDENCE.json](M0_MATERIAL_CONTRACT_EVIDENCE.json).
+The native test loaded the working tree, without a pre-load source snapshot;
+post-run source hashes and artifact hashes are recorded, and full native
+dependency provenance is explicitly incomplete. The successful working-tree run
+is not relabeled as a committed or scientifically validated result.

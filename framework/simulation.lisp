@@ -3,9 +3,21 @@
 (defvar *input-root* nil)
 (defun case-path (relative)
   (merge-pathnames relative (or *input-root* (asdf:system-source-directory "cl-mpm"))))
+(defun read-parameter-json (path)
+  "Read one object using Yason's per-object duplicate-key checks; keep null distinct from false."
+  (with-open-file (stream path)
+    (let ((input (yason:parse stream :object-as :hash-table :object-key-fn #'identity
+                              :json-booleans-as-symbols nil :json-nulls-as-keyword t
+                              :json-arrays-as-vectors nil)))
+      (unless (hash-table-p input) (error "Parameter file must contain a JSON object: ~A" path))
+      (loop for character = (read-char stream nil) while character
+            unless (find character '(#\Space #\Tab #\Newline #\Return))
+              do (error "Unexpected content after parameter object in ~A" path))
+      input)))
 (defun read-parameters (relative &key schema)
-  (if schema (cl-mpm/framework/config:load-config (case-path relative))
-      (with-open-file (stream (case-path relative)) (yason:parse stream))))
+  (let* ((path (case-path relative)) (input (read-parameter-json path)))
+    ;; Preserve historical schema coercion/defaults while checking raw duplicates first.
+    (if schema (cl-mpm/framework/config:load-config path) input)))
 
 (defgeneric compile-scenario (scenario simulation)
   (:documentation "Validate compatible components and return a fresh backend configuration."))
