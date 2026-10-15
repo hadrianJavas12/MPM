@@ -15,14 +15,14 @@
   "Copy first, then ASDF loads the copied framework, not mutable working files."
   (labels ((copy-one (from to)
              (ensure-directories-exist to) (uiop:copy-file from to))
-           (copy-tree (from to)
+           (copy-source-tree (from to)
              (dolist (path (uiop:directory-files from))
                (when (member (pathname-type path) '("lisp" "asd") :test #'equal)
                  (copy-one path (merge-pathnames (file-namestring path) to))))
              (dolist (path (uiop:subdirectories from))
-               (copy-tree path (merge-pathnames
+               (copy-source-tree path (merge-pathnames
                                 (make-pathname :directory (list :relative (car (last (pathname-directory path))))) to)))))
-    (copy-tree (cl-mpm-path "framework/") (merge-pathnames "source/framework/" directory))
+    (copy-source-tree (cl-mpm-path "framework/") (merge-pathnames "source/framework/" directory))
     (copy-one case-file (merge-pathnames "source/case.lisp" directory))
     (copy-one *load-truename* (merge-pathnames "source/run-case.lisp" directory))
     (copy-one (cl-mpm-path "studio/schema.json") (merge-pathnames "source/inputs/studio/schema.json" directory))
