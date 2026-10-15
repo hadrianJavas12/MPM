@@ -1,0 +1,62 @@
+;;;; Native headless CLI: windows\cl-mpm.cmd scripts\run-case.lisp cases\CASE.lisp OUTPUT
+;;;; A case is trusted executable Lisp, just like any local native script.
+(in-package :cl-user)
+(require :asdf)
+(ql:quickload :cl-mpm/settings :silent t)
+(asdf:initialize-output-translations
+ (list :output-translations
+       (list (cl-mpm-path "src/**/*.*")
+             (cl-mpm-path "output/reference-reproduction-2026-10-14/fast-cache-safe/src/**/*.*"))
+       :inherit-configuration))
+(setf cl-mpm/settings::*optimise-setting*
+      '(optimize (speed 3) (safety 1) (debug 1) (compilation-speed 0)))
+
+(defun snapshot-case-sources (directory case-file)
+  "Copy first, then ASDF loads the copied framework, not mutable working files."
+  (labels ((copy-one (from to)
+             (ensure-directories-exist to) (uiop:copy-file from to))
+           (copy-tree (from to)
+             (dolist (path (uiop:directory-files from))
+               (when (member (pathname-type path) '("lisp" "asd") :test #'equal)
+                 (copy-one path (merge-pathnames (file-namestring path) to))))
+             (dolist (path (uiop:subdirectories from))
+               (copy-tree path (merge-pathnames
+                                (make-pathname :directory (list :relative (car (last (pathname-directory path))))) to)))))
+    (copy-tree (cl-mpm-path "framework/") (merge-pathnames "source/framework/" directory))
+    (copy-one case-file (merge-pathnames "source/case.lisp" directory))
+    (copy-one *load-truename* (merge-pathnames "source/run-case.lisp" directory))
+    (copy-one (cl-mpm-path "studio/schema.json") (merge-pathnames "source/inputs/studio/schema.json" directory))
+    (dolist (relative '("calibration/" "studio/reference/"))
+      (dolist (path (directory (merge-pathnames "*.json" (cl-mpm-path relative))))
+        (copy-one path (merge-pathnames (concatenate 'string "source/inputs/" relative (file-namestring path)) directory))))))
+
+(let* ((args (cl-mpm-script-args)) (case-file (first args)) (output (second args)))
+  (unless (and (= (length args) 2) case-file output)
+    (error "Usage: windows\\cl-mpm.cmd scripts\\run-case.lisp cases\\CASE.lisp OUTPUT"))
+  (let* ((directory (uiop:ensure-directory-pathname output))
+         (frozen (merge-pathnames "source/framework/" directory)))
+    (when (and (probe-file directory)
+               (or (uiop:directory-files directory) (uiop:subdirectories directory)))
+      (error "Choose a new/empty output directory: ~A" directory))
+    (snapshot-case-sources directory case-file)
+    (setf asdf:*central-registry*
+          (cons frozen (remove (cl-mpm-path "framework/") asdf:*central-registry* :test #'equal)))
+    (asdf:clear-system "cl-mpm-framework")
+    (asdf:load-asd (merge-pathnames "cl-mpm-framework.asd" frozen))
+    (ql:quickload :cl-mpm-framework :silent t)
+    (unless (equal (truename frozen) (truename (asdf:system-source-directory "cl-mpm-framework")))
+      (error "ASDF did not load the frozen framework sources."))
+    ;; Resolve package symbols after loading their definitions in this same form.
+    (progv (list (find-symbol "*SIMULATION*" :cl-mpm/framework)
+                 (find-symbol "*INPUT-ROOT*" :cl-mpm/framework)
+                 (find-symbol "*SCHEMA-PATH*" :cl-mpm/framework/config))
+           (list nil (merge-pathnames "source/inputs/" directory)
+                 (merge-pathnames "source/inputs/studio/schema.json" directory))
+      (load (merge-pathnames "source/case.lisp" directory))
+      (let ((case (symbol-value (find-symbol "*SIMULATION*" :cl-mpm/framework))))
+        (unless case (error "The case file must SETF cl-mpm/framework:*simulation*."))
+        (with-open-file (stream (merge-pathnames "source-provenance.json" directory)
+                                :direction :output :if-exists :error)
+          (write-string "{\"sourceSnapshotExactLoadedBytes\":true,\"scope\":\"Copied framework, case and bundled JSON inputs loaded explicitly; native dependency/FASL/DLL identity is separate.\"}" stream))
+        (funcall (find-symbol "RUN-SIMULATION" :cl-mpm/framework) case :output directory))))
+  (uiop:quit 0))

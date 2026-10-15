@@ -17,17 +17,27 @@
 (let* ((args (cl-mpm-script-args))
        (directory (uiop:ensure-directory-pathname
                    (or (second args) (cl-mpm-path "output/triaxial-demo/"))))
-       (snapshot (merge-pathnames "source/triaxial-loaded.lisp" directory))
+       (snapshot (merge-pathnames "source/calibration/triaxial.lisp" directory))
+       (modules (uiop:directory-files
+                 (cl-mpm-path "framework/scenarios/triaxial/") "*.lisp"))
        (provenance (make-hash-table :test 'equal)))
   (when (some (lambda (name) (probe-file (merge-pathnames name directory)))
               '("stress-strain.csv" "controls.json" "manifest.json" "source-provenance.json"))
     (error "Output already contains a run: ~A" directory))
   (ensure-directories-exist snapshot)
   (uiop:copy-file (cl-mpm-path "calibration/triaxial.lisp") snapshot)
+  (dolist (module modules)
+    (let ((target (merge-pathnames
+                   (concatenate 'string "source/framework/scenarios/triaxial/"
+                                (file-namestring module)) directory)))
+      (ensure-directories-exist target)
+      (uiop:copy-file module target)))
   (uiop:copy-file *load-truename* (merge-pathnames "source/run-triaxial.lisp" directory))
   (setf (gethash "sourceSnapshotExactLoadedBytes" provenance) t
         (gethash "loadedHarness" provenance) (namestring snapshot)
-        (gethash "scope" provenance) "Exact harness snapshot loaded below; dependency source/FASL and native DLL identity are separate provenance.")
+        (gethash "scenarioModuleCount" provenance) (length modules)
+        (gethash "scenarioModules" provenance) (coerce (mapcar #'file-namestring modules) 'vector)
+        (gethash "scope" provenance) "Exact compatibility loader and scenario module tree copied before LOAD and executed from that snapshot; dependency source/FASL and native DLL identity are separate provenance.")
   (with-open-file (stream (merge-pathnames "source-provenance.json" directory)
                           :direction :output :if-exists :supersede)
     (yason:encode provenance stream))

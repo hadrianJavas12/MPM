@@ -1,22 +1,10 @@
-;;;; cl-mpm-studio.asd — headless runner behind CL-MPM Studio.
-;;;;
-;;;; Builds a parameterised chalk-cliff collapse scenario (derived from
-;;;; examples/chalk/chalk.lisp) and writes VTK + PNG frames.  Used by the web
-;;;; UI (studio/server.js) and directly from the command line:
-;;;;   windows\cl-mpm.cmd studio\lisp\run.lisp [config.json] [output-dir]
+;;;; Compatibility adapter for existing Studio/exported Lisp entry points.
+;;;; Reusable native simulation ownership lives in cl-mpm-framework.
 
 (defsystem "cl-mpm-studio"
   :description "Parameterised cliff-collapse runner for CL-MPM Studio"
   :license "MIT"
-  :depends-on ("cl-mpm"
-               "cl-mpm/setup"
-               "cl-mpm/damage"
-               "cl-mpm/models/chalk"
-               "cl-mpm/output"
-               "cl-mpm/plotter"
-               "vgplot"
-               "jonathan"
-               "uiop")
+  :depends-on ("cl-mpm-framework")
   :serial t
   :components ((:file "package")
                (:file "config")
