@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-15",
+  "featureCommit": "3efaea90a0a85816d9c7c3321b5e582c4e93833f",
+  "nodeCheck": {
+    "passed": true,
+    "nodeTests": 36,
+    "failed": 0,
+    "skipped": 0,
+    "evidence": "Actual tool session59059 completed exit0; Studio files unchanged; historical full logs retained in earlier evidence bundles"
+  },
+  "estimatorTests": {
+    "passed": 4,
+    "failed": 0,
+    "log": "../evidence/triaxial-clay-2026-10-15/logs/estimator-tests.log"
+  },
+  "nativeControls": "../evidence/triaxial-clay-2026-10-15/controls/controls.json",
+  "native3DMpm": "../evidence/triaxial-clay-2026-10-15/mpm/audit.json",
+  "nativeHomogeneous": "../evidence/triaxial-clay-2026-10-15/homogeneous/audit.json",
+  "finalInvariantSmoke": {
+    "complete": true,
+    "updates": 27,
+    "frames": 2,
+    "purpose": "Current committed harness volume/detF invariant and source snapshot execution, not constitutive calibration",
+    "sourceSnapshotExactLoadedBytes": true
+  },
+  "scientificValidation": "not claimed; parameter assumptions and unresolved convergence/energy limits disclosed"
+}

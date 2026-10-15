@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "frames": 3,
+  "uiDir": "D:\\MPM\\MPM-test\\output\\windows-verification-2026-10-14\\ui-run",
+  "exportDir": "D:\\MPM\\MPM-test\\output\\windows-verification-2026-10-14\\export-run",
+  "files": [
+    {
+      "file": "vtk\\mesh.vtk",
+      "bytes": 29610,
+      "sha256": "c2333f83445824b918235defb2b4a60a8ea5fe59b1ecf0bf89e073edab922329",
+      "byteIdentical": true
+    },
+    {
+      "file": "vtk\\sim_00001.vtk",
+      "bytes": 351297,
+      "sha256": "74aa706d5fb01fc21db5012764851e971faca8befc2eaf95efe6e9744c90c30c",
+      "byteIdentical": true,
+      "particles": 1120,
+      "finiteValues": 43680,
+      "scalarFields": 36
+    },
+    {
+      "file": "vtk\\sim_00002.vtk",
+      "bytes": 351297,
+      "sha256": "6ab55afdceb70a3d554b9015b01f360e5268f718bbbcdbad56c4029d8ab01bcd",
+      "byteIdentical": true,
+      "particles": 1120,
+      "finiteValues": 43680,
+      "scalarFields": 36
+    },
+    {
+      "file": "vtk\\sim_00003.vtk",
+      "bytes": 410265,
+      "sha256": "a7dd67f2358a33d9e859255b76340219894f65a740b485bcfe1539767aacebca",
+      "byteIdentical": true,
+      "particles": 1309,
+      "finiteValues": 51051,
+      "scalarFields": 36
+    },
+    {
+      "file": "frames\\frame_00001.png",
+      "bytes": 48783,
+      "sha256": "6a69df546f27622bb00338f3c2958f7d47b9ad64dad21da233f8c721ae00b072",
+      "byteIdentical": true
+    },
+    {
+      "file": "frames\\frame_00002.png",
+      "bytes": 58043,
+      "sha256": "4d07aead62514a109929ca62da17a3964187e67acd744834bbef8c753a08cf35",
+      "byteIdentical": true
+    },
+    {
+      "file": "frames\\frame_00003.png",
+      "bytes": 53175,
+      "sha256": "47b6aabfd4280582dd90f67a11afd0085f6abe1b1a02e0c0b787d662fd624179",
+      "byteIdentical": true
+    }
+  ]
+}

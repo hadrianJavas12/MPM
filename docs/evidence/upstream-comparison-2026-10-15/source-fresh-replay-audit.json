@@ -1,0 +1,89 @@
+{
+  "kind": "Fresh Windows-native production CLI, bounded 4-second replay",
+  "loadedEntry": "docs/evidence/joss-collapse-2026-10-15/sources/run-fast.lisp",
+  "entryRole": "Only compiler/cache policy then cl-mpm-studio:main; no constructor, particle or environment-function replacements",
+  "config": "fresh-replay-4s-config.json",
+  "changesFromPublished40sConfig": {
+    "simulationTime": 4,
+    "maxSteps": 2
+  },
+  "equilibrationSteps": 1658,
+  "termination": "simulation-time",
+  "complete": true,
+  "integrationTime": 4.0,
+  "frames": 2,
+  "massConstantAllFourSnapshots": true,
+  "snapshots": [
+    {
+      "file": "initial.vtk",
+      "sha256": "d8d0e90a78d865018f1bc5da7edd4b0b32a0136268eae4b25d64781814e0aad9",
+      "particles": 4155,
+      "scalarFields": 36,
+      "mass": 425664.0625,
+      "maxDamage": 0.0,
+      "maxDamagePosition": [
+        0.125,
+        0.125,
+        0.0
+      ],
+      "massWeightedDamage": 0.0,
+      "maxProtectedBaseDamage": 0.0,
+      "allFieldsFinite": true
+    },
+    {
+      "file": "equilibrium.vtk",
+      "sha256": "05898b654592b871f246e5268996d56a403e946a75b4a4d276b627d943a6f2c3",
+      "particles": 4155,
+      "scalarFields": 36,
+      "mass": 425664.0625,
+      "maxDamage": 0.0,
+      "maxDamagePosition": [
+        0.12500007769595411,
+        0.12500052309822318,
+        0.0
+      ],
+      "massWeightedDamage": 0.0,
+      "maxProtectedBaseDamage": 0.0,
+      "allFieldsFinite": true
+    },
+    {
+      "file": "sim_00001.vtk",
+      "sha256": "8f9491063eb5290ad16556d4d0b3502841b7800a120c441997c0cc6af85323da",
+      "particles": 4155,
+      "scalarFields": 36,
+      "mass": 425664.0625,
+      "maxDamage": 0.0,
+      "maxDamagePosition": [
+        0.12500007771428678,
+        0.125000520894233,
+        0.0
+      ],
+      "massWeightedDamage": 0.0,
+      "maxProtectedBaseDamage": 0.0,
+      "allFieldsFinite": true
+    },
+    {
+      "file": "sim_00002.vtk",
+      "sha256": "3c650715bbf70aaefd155b8a415970938a75e129db9e7c0e6982512a19e69e6b",
+      "particles": 4155,
+      "scalarFields": 36,
+      "mass": 425664.0625,
+      "maxDamage": 0.3335893979606803,
+      "maxDamagePosition": [
+        13.12533368593219,
+        3.624981433833068,
+        0.0
+      ],
+      "massWeightedDamage": 0.005989434472488299,
+      "maxProtectedBaseDamage": 0.0,
+      "allFieldsFinite": true
+    }
+  ],
+  "comparisonToHistoricalPilotAt4s": {
+    "maxPositionDifferenceMetres": 9.299618852764979e-10,
+    "maxDamageDifference": 1.1847494085781562e-07,
+    "firstDamageStillLowerRegion": true,
+    "bitIdenticalClaim": false
+  },
+  "scope": "Supports native fresh-start initiation without historical hooks; not a full 40s replay, physical validation or kernel correction"
+}

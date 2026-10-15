@@ -1,0 +1,160 @@
+diff --git a/cl-mpm.asd b/cl-mpm.asd
+index 024f8cd..b5b37aa 100644
+--- a/cl-mpm.asd
++++ b/cl-mpm.asd
+@@ -3,6 +3,11 @@
+ (when (find-system :asdf-system-connections)
+   (asdf:oos 'asdf:load-op :asdf-system-connections))
+ 
++;; Platforms without a native MPI runtime (Windows) use a serial stand-in for
++;; "cl-mpm/mpi" (src/mpi/serial.lisp). Push :cl-mpm-no-mpi yourself before
++;; loading this file to get the same behaviour elsewhere.
++#+win32 (pushnew :cl-mpm-no-mpi *features*)
++
+ ;; (defsystem "symbolic-derivation"
+ ;;   :description "Symbolic derivation library from #TODO"
+ ;;   :author "Aleksander Ksiazek"
+@@ -21,7 +26,9 @@
+ 
+ (defsystem "cl-mpm/magicl"
+   :depends-on ("magicl"
+-               "magicl/ext-expokit")
++               ;; Expokit needs a Fortran-compiled shared library; it is only
++               ;; used by dead code (generate-rotation-matrix), so skip it on Windows.
++               (:feature (:not :win32) "magicl/ext-expokit"))
+   :description "Dummy package that can be used to prune magicl dependancies, i.e. lisp only implementation")
+ 
+ (defsystem "cl-mpm/utils"
+@@ -217,6 +224,7 @@
+        (:file "algorithms")))))))
+ 
+ 
++#-cl-mpm-no-mpi
+ (defsystem "cl-mpm/dynamic-relaxation-mpi"
+   :depends-on ("cl-mpm/dynamic-relaxation"
+                "cl-mpm/mpi")
+@@ -287,6 +295,14 @@
+   :components ((:file "src/solvers/usf")
+                (:file "src/solvers/usl")
+                (:file "src/solvers/musl")))
++#+cl-mpm-no-mpi
++(defsystem "cl-mpm/mpi"
++  :depends-on ("cl-mpm"
++               "cl-mpm/damage")
++  :description "Serial stand-in for the MPI layer (no cl-mpi / MPI runtime required)"
++  :components ((:file "src/mpi/serial")))
++
++#-cl-mpm-no-mpi
+ (defsystem "cl-mpm/mpi"
+   :depends-on ("cl-mpm"
+                "lfarm-client"
+@@ -575,6 +591,7 @@
+   :depends-on ("cl-mpm"
+                "cl-mpm/setup"
+                "cl-mpm/particle"
++               "cl-mpm/models/chalk"
+                "cl-mpm/output"
+                "cl-mpm/buoyancy"
+                "cl-mpm/penalty"
+@@ -789,7 +806,7 @@
+ 
+ 
+ 
+-#+asdf-system-connections
++#+(and asdf-system-connections (not cl-mpm-no-mpi))
+ (defsystem-connection "cl-mpm/dynamic-relaxation-mpi"
+   :requires ("cl-mpm/dynamic-relaxation" "cl-mpm/mpi")
+   :components ((:file "src/dynamic-relaxation/mpi/solvers")))
+diff --git a/examples/chalk/chalk.lisp b/examples/chalk/chalk.lisp
+index 6c60439..96cbdb4 100644
+--- a/examples/chalk/chalk.lisp
++++ b/examples/chalk/chalk.lisp
+@@ -97,11 +97,14 @@
+                 ;; :rho 1d6
+                 :enable-plasticity t
+ 
+-                :ft 200d3
+-                :fc 500d3
++                ;; :ft / :fc / :fracture-energy are not slots of
++                ;; particle-chalk-delayed (invalid initargs -> error);
++                ;; softening is controlled by :ductility instead.
++                ;; :ft 200d3
++                ;; :fc 500d3
+                 :friction-angle 40d0
+ 
+-                :fracture-energy 3000d0
++                ;; :fracture-energy 3000d0
+                 :initiation-stress 200d3
+                 :delay-time 1d1
+                 :ductility 10d0
+diff --git a/src/output.lisp b/src/output.lisp
+index ff51566..0c62d12 100644
+--- a/src/output.lisp
++++ b/src/output.lisp
+@@ -65,16 +65,22 @@
+     (sample-point sim point
+         (matrix-average cl-mpm/mesh:node-velocity '(2 1))))
+ 
++(defun format-binary-vtk-header (stream control &rest args)
++  "Write an ASCII VTK header to the same octet stream as its binary payload."
++  (write-sequence
++   (map '(vector (unsigned-byte 8)) #'char-code (apply #'format nil control args))
++   stream))
++
+ (defun format-scalar (stream stream-bin name id mps accessor)
+-  (format stream "SCALARS ~a double ~d~%" name 1)
+-  (format stream "LOOKUP_TABLE default~%")
++  (format-binary-vtk-header stream "SCALARS ~a double ~d~%" name 1)
++  (format-binary-vtk-header stream "LOOKUP_TABLE default~%")
+   (force-output stream)
+   (loop for mp across mps
+         do (write-binary-float (coerce (funcall accessor mp) 'double-float) stream-bin)
+            ;; (format stream "~E ~%" (coerce (min 1d30 (funcall accessor mp)) 'single-float))
+         )
+   (force-output stream-bin)
+-  (format stream "~%")
++  (format-binary-vtk-header stream "~%")
+   )
+ 
+ (defmacro save-parameter (name accessor)
+@@ -484,15 +490,17 @@
+ (defmethod save-vtk (filename (sim cl-mpm::mpm-sim))
+   (with-accessors ((mps cl-mpm:sim-mps)
+                    (mesh cl-mpm:sim-mesh)) sim
+-    (with-open-file (fs filename :direction :output :if-exists :supersede)
+-      (format fs "# vtk DataFile Version 2.0~%")
+-      (format fs "Lisp generated vtk file, SJVS~%")
+-      ;; (format fs "ASCII~%")
+-      (format fs "BINARY~%")
+-      (format fs "DATASET UNSTRUCTURED_GRID~%")
+-      (format fs "POINTS ~d double~%" (length mps)))
+-    (with-open-file (fs filename :direction :output :if-exists :append)
+-      (with-open-file (fs-bin filename :direction :output :if-exists :append :element-type '(unsigned-byte 8))
++    ;; Two append handles have independent file positions on Windows, even
++    ;; after force-output; buffered headers can overwrite/interleave payloads.
++    ;; Keep ASCII declarations and big-endian doubles on one binary stream.
++    (with-open-file (fs filename :direction :output :if-exists :supersede
++                                :element-type '(unsigned-byte 8))
++      (format-binary-vtk-header fs "# vtk DataFile Version 2.0~%")
++      (format-binary-vtk-header fs "Lisp generated vtk file, SJVS~%")
++      (format-binary-vtk-header fs "BINARY~%")
++      (format-binary-vtk-header fs "DATASET UNSTRUCTURED_GRID~%")
++      (format-binary-vtk-header fs "POINTS ~d double~%" (length mps))
++      (let ((fs-bin fs))
+         (force-output fs)
+         (loop for mp across mps
+               do
+@@ -506,11 +514,11 @@
+                    ;;         (coerce (cl-mpm/utils:varef pos 2) 'single-float))
+                    ))
+         (force-output fs-bin)
+-        (format fs "~%")
++        (format-binary-vtk-header fs "~%")
+         (let ((id 1)
+               (nd (cl-mpm/mesh:mesh-nd mesh)))
+           (declare (special id))
+-          (format fs "POINT_DATA ~d~%" (length mps))
++          (format-binary-vtk-header fs "POINT_DATA ~d~%" (length mps))
+           (dolist (f (cl-mpm::sim-output-list-scalar sim))
+             (cl-mpm/output::save-parameter (first f) (funcall (second f) mp)))
+           (dolist (f (cl-mpm::sim-output-list-vector sim))

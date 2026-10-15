@@ -169,3 +169,20 @@ hooks; maxdamage.333589398 is lower-face, position/damage differences from old4s
 replay, energy budget and convergence remain open. Retained scripts/JSON/logs/VTK
 snapshot under docs/evidence/scientific-audit-2026-10-15 with hashes. No production
 algorithm, accepted artifact, immutable raw source or prior log entry changed.
+## [2026-10-15] ingest | Upstream report and native clay triaxial calibration
+
+Created [[upstream-development-report-2026-10-15]] and [[triaxial-clay-calibration]]
+on branch codex/triaxial-clay-calibration. User requested a professional report
+against samjvsutcliffe/cl-mpm with evidence, and confirmed an undrained example
+without laboratory data. Pinned upstream d8e65543 -> fork f7fb2a3 gives273added/
+5modified,308of313originalfiles identical; vendored/retained capabilities are
+attributed correctly. Added professional PDF/Markdown reports and native3D/
+homogeneous triaxial workflows with actual VTK/CSV visualizations. Actual3D:
+780MP,17443updates,51frames,10%platen/9.89852%specimenstrain,q50.00844kPa;
+homogeneous1000increments,q50.01000kPa. Native material/pressure controls,
+4estimator tests and36Node tests passed. Retained evidence includes all3DVTKs,
+CSV, audits, video, input/source provenance and hashes. Explicit assumptions and
+limits cover no lab/porepressure, bilateral springs, coarsevolume bias, startup
+kinetics, no convergence/energyclosure, and missing exact productionpreload
+snapshots (future launcher fixed/tested). Updated index/handover and preserved
+raw sources and every earlier log entry. No core/Joss/Studio default changes.

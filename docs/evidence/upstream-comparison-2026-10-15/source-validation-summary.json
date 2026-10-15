@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-10-15T02:15:49.307Z",
+  "passed": true,
+  "nodeCheckExitCode": 0,
+  "nodeTests": {
+    "requiredSbclEnvironment": "STUDIO_REQUIRE_SBCL_TESTS=1",
+    "tests": 36,
+    "pass": 36,
+    "fail": 0,
+    "skipped": 0,
+    "executedRealSbclContracts": [
+      "✔ SBCL executes custom delegate/elastic methods and rejects missing, stale or invalid contracts",
+      "✔ SBCL reads and executes a custom export from a path with spaces using its adjacent model",
+      "✔ SBCL exported built-in settings and production coercion match HTTP normalization"
+    ]
+  },
+  "referenceSmoke": {
+    "exitCode": 0,
+    "equilibrationSteps": 179,
+    "physicalTime": 0.02,
+    "requestedTime": 0.03,
+    "termination": "frame-limit",
+    "complete": false,
+    "damageCriterion": "author-Joss-Drucker-Prager",
+    "statisticNorm": "aggregate-projected-L2",
+    "protectedBaseParticles": 124,
+    "baseFlags": "Native smoke asserted all initial flags disabled; after settling only cliff has configured damage/plasticity; every base particle retains zero damage.",
+    "png": [
+      {
+        "file": "frame_00001.png",
+        "bytes": 43814
+      },
+      {
+        "file": "frame_00002.png",
+        "bytes": 43950
+      }
+    ],
+    "vtk": [
+      {
+        "file": "initial.vtk",
+        "particles": 1092,
+        "scalarFields": 36,
+        "finiteValues": 42588,
+        "mass": 425664.0625,
+        "protectedBaseParticles": 124,
+        "maxBaseDamage": 0
+      },
+      {
+        "file": "equilibrium.vtk",
+        "particles": 1092,
+        "scalarFields": 36,
+        "finiteValues": 42588,
+        "mass": 425664.0625,
+        "protectedBaseParticles": 124,
+        "maxBaseDamage": 0
+      },
+      {
+        "file": "sim_00001.vtk",
+        "particles": 1092,
+        "scalarFields": 36,
+        "finiteValues": 42588,
+        "mass": 425664.0625,
+        "protectedBaseParticles": 124,
+        "maxBaseDamage": 0
+      },
+      {
+        "file": "sim_00002.vtk",
+        "particles": 1092,
+        "scalarFields": 36,
+        "finiteValues": 42588,
+        "mass": 425664.0625,
+        "protectedBaseParticles": 124,
+        "maxBaseDamage": 0
+      }
+    ]
+  },
+  "nativeGuard": {
+    "termination": "equilibrium-not-converged",
+    "steps": 1,
+    "physicalTime": 0,
+    "complete": false
+  },
+  "meaning": "Bounded coarse integration validation; no additional physics pilot or full fracture/run-out validation performed."
+}

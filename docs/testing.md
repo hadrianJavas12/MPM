@@ -112,6 +112,23 @@ contracts passed. A fresh native production4s replay passed equilibrium and
 finite-field/base/mass checks with near-identical lower-face initiation, but
 it is not a full40s replay, energy balance or mesh-convergence study.
 
+## Native triaxial calibration demonstration, 2026-10-15
+
+The new standalone module has two separate scopes: actual spatial 3D MPM and
+a native constitutive-point homogeneous comparator. Both completed 51 frames;
+the spatial case completed 17,443 updates and the homogeneous case 1,000 increments.
+Their VTK/CSV audits passed finite-field, constant-mass, stress and displacement
+consistency checks. Native controls passed the analytical elastic tangent, VM
+yield mapping, lateral stress control and a 20-update 3D hydrostatic hold.
+The parameter initializer passed 4/4 unit tests, including explicit strain-column
+selection without changing the input CSV. Current Node checks/36 tests also
+passed with no skips; Studio code is unchanged by this module.
+
+Commands and scientific limits: [calibration/README](../calibration/README.md).
+Retained numerical evidence: [triaxial bundle](evidence/triaxial-clay-2026-10-15/README.md).
+These checks do not claim laboratory calibration, full undrained pore-water
+modelling, mesh/rate/timestep convergence or a closed energy budget.
+
 ## GitHub Actions blocker
 
 [Run 38512874136](https://github.com/hadrianJavas12/MPM/actions/runs/38512874136)

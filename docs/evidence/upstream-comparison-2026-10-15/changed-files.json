@@ -1,0 +1,2782 @@
+[
+  {
+    "path": ".agents/skills/llm-wiki/SKILL.md",
+    "status": "A",
+    "category": "repository-governance-and-ci",
+    "binary": false,
+    "addedLines": 30,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "3938a11441400270e150f62f3e72eceb37cefa80"
+  },
+  {
+    "path": ".agents/skills/llm-wiki/references/LICENSE",
+    "status": "A",
+    "category": "repository-governance-and-ci",
+    "binary": false,
+    "addedLines": 676,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "a621fef585fc675d9188cf54ca1115688fddd843"
+  },
+  {
+    "path": ".agents/skills/llm-wiki/references/llm-wiki.md",
+    "status": "A",
+    "category": "repository-governance-and-ci",
+    "binary": false,
+    "addedLines": 75,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6b0cef32d73931fcab7498a7e82208e3ea41ee6f"
+  },
+  {
+    "path": ".agents/skills/obsidian/SKILL.md",
+    "status": "A",
+    "category": "repository-governance-and-ci",
+    "binary": false,
+    "addedLines": 26,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6e3b78f26895534887e1f1e7a4aeec43ec904587"
+  },
+  {
+    "path": ".github/copilot-instructions.md",
+    "status": "A",
+    "category": "repository-governance-and-ci",
+    "binary": false,
+    "addedLines": 18,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1a906c14864a814f31b2f054c85e750c18fcd363"
+  },
+  {
+    "path": ".github/workflows/studio-node.yml",
+    "status": "A",
+    "category": "repository-governance-and-ci",
+    "binary": false,
+    "addedLines": 32,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "bfee3481c069ea846f549c6ddf44fcf555349fe2"
+  },
+  {
+    "path": ".gitignore",
+    "status": "M",
+    "category": "repository-governance-and-ci",
+    "binary": false,
+    "addedLines": 19,
+    "deletedLines": 0,
+    "upstreamBlob": "e820540e6828d3bcabdbdc782a3de40f129c0bce",
+    "forkBlob": "97e2bff7304ebca1af3aad5e90ffd766495993e9"
+  },
+  {
+    "path": "AGENTS.md",
+    "status": "A",
+    "category": "repository-governance-and-ci",
+    "binary": false,
+    "addedLines": 70,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ba3bebe8eee2f6f55c0a1190811899650021b168"
+  },
+  {
+    "path": "CLAUDE.md",
+    "status": "A",
+    "category": "repository-governance-and-ci",
+    "binary": false,
+    "addedLines": 18,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8e1ced003750c9710cd77d8191b5c85dcbd13392"
+  },
+  {
+    "path": "README.md",
+    "status": "M",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 24,
+    "deletedLines": 2,
+    "upstreamBlob": "775ff54a67fd279c27dddaf53eea14a1c7256885",
+    "forkBlob": "b6d6f5f3f266bc9fb5d5817a645c1ef5390651ab"
+  },
+  {
+    "path": "cl-mpm.asd",
+    "status": "M",
+    "category": "engine-output-and-platform-adapter",
+    "binary": false,
+    "addedLines": 19,
+    "deletedLines": 2,
+    "upstreamBlob": "024f8cd120cc02aa880379b6faae55973520f3d9",
+    "forkBlob": "b5b37aa4a66bb32677716fd037ea5de404f68dd1"
+  },
+  {
+    "path": "deps/magicl/.gitattributes",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 2,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "65588b559a7388836488781502f1b4388885bfc0"
+  },
+  {
+    "path": "deps/magicl/.gitignore",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 4,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "e17179d547530f8dba44ab5c3bff84cd1c0966cd"
+  },
+  {
+    "path": "deps/magicl/.gitlab-ci.yml",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 9,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "06a031947a4ab99d5dcd26452015abe42ef5d424"
+  },
+  {
+    "path": "deps/magicl/.travis.yml",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 8,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "07423a2f2f2ac8269e3ceb415a2740a34f46cffd"
+  },
+  {
+    "path": "deps/magicl/LICENSE.txt",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 31,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8a208312d1259d967f88bf8c823833204e54c392"
+  },
+  {
+    "path": "deps/magicl/Makefile",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 29,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "21725e78778886b1bd6884804f79488c6124127a"
+  },
+  {
+    "path": "deps/magicl/README.md",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 188,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b829deb1827151f05d7408356b58e6154892be1c"
+  },
+  {
+    "path": "deps/magicl/VERSION.txt",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 1,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "81f4475932d08983c738a5eb3bf23259de5db5a3"
+  },
+  {
+    "path": "deps/magicl/doc/dev-how-to.md",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 257,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "15e9686af868f2478021b91e5446535b4551f0e3"
+  },
+  {
+    "path": "deps/magicl/doc/fortran-functions.md",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 87,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "40754ecba8a26d1aa4f6a8e163c9939513878954"
+  },
+  {
+    "path": "deps/magicl/doc/high-level.md",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 105,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8d864acc7923cbe3575a16648b5aca8313ac85cc"
+  },
+  {
+    "path": "deps/magicl/doc/requirements.md",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 103,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "c885f91e72498dac74d66b61723e38bd3431258b"
+  },
+  {
+    "path": "deps/magicl/examples.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 196,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "665e4d4c4f853cfb1491d628603d4db1c936d5c0"
+  },
+  {
+    "path": "deps/magicl/expokit/LICENSE-expokit.txt",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 52,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1b315c3340f94d9dba72ca13ea3b050837028685"
+  },
+  {
+    "path": "deps/magicl/expokit/expokit.f",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 4626,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "65f69b8c58e61b9a28741855fb7d677a723a3ac5"
+  },
+  {
+    "path": "deps/magicl/magicl-examples.asd",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 8,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "2ebc1429bf7c69c41cdf88aa938f563d0b59fb01"
+  },
+  {
+    "path": "deps/magicl/magicl-gen.asd",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 21,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "eb3f92a8bc84fb104059f09b47dbd21191cdf594"
+  },
+  {
+    "path": "deps/magicl/magicl-tests.asd",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 28,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "3e93a50c9d58b41c3888862c2aa4a4c8a2602a65"
+  },
+  {
+    "path": "deps/magicl/magicl-transcendental.asd",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 11,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6a15a798377ee944e0731ebc1919698e3fc1fb1a"
+  },
+  {
+    "path": "deps/magicl/magicl.asd",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 209,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "91c0df57e001b6fe0aef5d3a4479d8729a55a6d2"
+  },
+  {
+    "path": "deps/magicl/src/backend-function.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 325,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "2611206c6f970d3b7f3718b9cc6e575170fc90ed"
+  },
+  {
+    "path": "deps/magicl/src/benchmark-utilities.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 25,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "2910d7aaee060b979445e049d1453ff34aa5d90e"
+  },
+  {
+    "path": "deps/magicl/src/bindings/allegro/blas-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 5840,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "3d23d09982f1d1dc13afe68e244b9815fcac67d2"
+  },
+  {
+    "path": "deps/magicl/src/bindings/allegro/expokit-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 411,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "a1313fb2f7c79f4dadb10379912d35dc3446e117"
+  },
+  {
+    "path": "deps/magicl/src/bindings/allegro/lapack00-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 13815,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "c08fe8d6ba5945be4d24f6f70b4254ca96e41e8e"
+  },
+  {
+    "path": "deps/magicl/src/bindings/allegro/lapack01-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 13718,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "37bb8fc59a127e7bf9f2345054d9684d2e37aa19"
+  },
+  {
+    "path": "deps/magicl/src/bindings/allegro/lapack02-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 13034,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "9f64ef2768477d197ee85d75e1f89a7fc0f0080e"
+  },
+  {
+    "path": "deps/magicl/src/bindings/allegro/lapack03-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 12878,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "acd562037c960cb19f343456bda0c03be810dbd3"
+  },
+  {
+    "path": "deps/magicl/src/bindings/allegro/lapack04-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 13633,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "4c55dda9278ece584ec8dea4d3a682a38c8aa134"
+  },
+  {
+    "path": "deps/magicl/src/bindings/allegro/lapack05-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 13490,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "13ab3c216588671e4202768a7f248b902cab0d58"
+  },
+  {
+    "path": "deps/magicl/src/bindings/allegro/lapack06-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 13267,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "99d92e6c5c2d0129224789a1a0d9d60b0707c850"
+  },
+  {
+    "path": "deps/magicl/src/bindings/allegro/lapack07-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 13660,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b649cb1fbd74f7c919bf2023e590654317d28660"
+  },
+  {
+    "path": "deps/magicl/src/bindings/blas-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 824,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1530af875fedf67b62eaca0f25afdd4ff1258d5f"
+  },
+  {
+    "path": "deps/magicl/src/bindings/expokit-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 450,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6945588aa0b8086281b768ebd8a9bee133c987a5"
+  },
+  {
+    "path": "deps/magicl/src/bindings/lapack-cffi.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 6533,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "7e9d36ad5e93c1d09be837503cc066cfee5cf69f"
+  },
+  {
+    "path": "deps/magicl/src/extensions/blas/arithmetic.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 152,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "dffde95ae8e4d315174ed35d7fc824f57b4fa8b3"
+  },
+  {
+    "path": "deps/magicl/src/extensions/blas/load-libs.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 37,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "e2566f0beffafb534a8b5c7688f6e39430c59552"
+  },
+  {
+    "path": "deps/magicl/src/extensions/blas/package.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 16,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "58a370bfe576bfbcc9bdb4edb53391b8e167f51d"
+  },
+  {
+    "path": "deps/magicl/src/extensions/common/cffi-types.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 61,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "7193888ad8b367d3189b67f506cb2719220683c3"
+  },
+  {
+    "path": "deps/magicl/src/extensions/common/library-tracking.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 64,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8ea89458d60a985dfff505336c0d99fad5be27f3"
+  },
+  {
+    "path": "deps/magicl/src/extensions/common/package.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 21,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8169b8e2711334c1d4b735fa87c1a02ba10b84ea"
+  },
+  {
+    "path": "deps/magicl/src/extensions/common/ptr-ref.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 21,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "c50337315a10dc62097a6f89b1a27a3d5d2e9698"
+  },
+  {
+    "path": "deps/magicl/src/extensions/common/with-array-pointers.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 98,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ccf599229f46eb282b0b5fe7b197a72f6a0aa23b"
+  },
+  {
+    "path": "deps/magicl/src/extensions/expokit/deprecated-package.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 9,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1566e2d6c638e4eab21031daad54f86fe742aadb"
+  },
+  {
+    "path": "deps/magicl/src/extensions/expokit/expm.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 54,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "a08d7a6b3a42d2d756a33f4db677803984d72070"
+  },
+  {
+    "path": "deps/magicl/src/extensions/expokit/load-libs.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 37,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "88d155c34ee3fb7db6ae5cfe905871b17541992a"
+  },
+  {
+    "path": "deps/magicl/src/extensions/expokit/package.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 6,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "cb8023d6d42e96b09012122d978fd1339237d831"
+  },
+  {
+    "path": "deps/magicl/src/extensions/lapack/lapack-bindings.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 61,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "e40afabb2f4cddeb018ca45cf1b90a706a00c2a8"
+  },
+  {
+    "path": "deps/magicl/src/extensions/lapack/lapack-csd.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 175,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "2bc1d62d4d8e23efc9ecb8db426055b0d6a6ba10"
+  },
+  {
+    "path": "deps/magicl/src/extensions/lapack/lapack-generics.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 64,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "cac869d35557f01fe9c8affc2545a588f208dc0c"
+  },
+  {
+    "path": "deps/magicl/src/extensions/lapack/lapack-qz.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 90,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ac5e7112a948446878f516fcdc46ba479020fad7"
+  },
+  {
+    "path": "deps/magicl/src/extensions/lapack/lapack-schur.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 78,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "82c059aa477970538aee6011d6e3f66757f0dd6d"
+  },
+  {
+    "path": "deps/magicl/src/extensions/lapack/lapack-templates.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 704,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "922778d211a1917a6feb1df3c3aef4ca308f224d"
+  },
+  {
+    "path": "deps/magicl/src/extensions/lapack/load-libs.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 41,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "fc419177685749304f62e3602f73267ca46e17ce"
+  },
+  {
+    "path": "deps/magicl/src/extensions/lapack/package.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 30,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b2fb03a334d3dc35d95030f178b2fd343f2007ea"
+  },
+  {
+    "path": "deps/magicl/src/extensions/simd/arithmetic.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 345,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "695a6b7e05a249b0006fcd44956f978380d9388e"
+  },
+  {
+    "path": "deps/magicl/src/extensions/simd/package.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 20,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "613c4bf38431217cf3cdc84ff1e024dd4f7b8334"
+  },
+  {
+    "path": "deps/magicl/src/functions.txt",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 37,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1653b38a8eeab30b8101488bf1e901fe9184d7c1"
+  },
+  {
+    "path": "deps/magicl/src/generate-interface/generate-interface.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 641,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "42ca5855c25a6d0f2f3906ee1ac8ff9c03709fae"
+  },
+  {
+    "path": "deps/magicl/src/high-level/abstract-tensor.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 406,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "90c5b6dc0eda002af8fa132c706aeb5a59482387"
+  },
+  {
+    "path": "deps/magicl/src/high-level/allocation-allegro.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 27,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b3986e6edae50cb0b70ad56c71787d26dc58930b"
+  },
+  {
+    "path": "deps/magicl/src/high-level/allocation.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 71,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "830a29b7291a9b4fdef51ddbae40a09d763e45b8"
+  },
+  {
+    "path": "deps/magicl/src/high-level/constructors.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 331,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "9856aaecc238155291a1d7c853b3a0d6a12b5e69"
+  },
+  {
+    "path": "deps/magicl/src/high-level/einsum.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 213,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "71554f239175d0e18ec48eaf6d072a585af9f0ca"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/csd.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 213,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "540938d795e240ae787fb4c6526a2ab9abdf9742"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/eig/eig.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 281,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "2ad3312be0127d03580cc60c97edae43616a5ed2"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/givens.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 63,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "d2e278beb963f0937f5ac5c43b5e1a675640de85"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/hermitian-eig.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 81,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "2a9dd4ec0b82e57bc08dc972e2010207b3782833"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/householder.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 89,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "06cf427c2749233b6d5f5a5f7e20412bcb6ed3ae"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/lu.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 79,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "78dd9837b4205ab92547d602d9f7bfd1b45ab385"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/mult-definition.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 269,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6acdbc73da9c4baf7f8868b43b29171427569440"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/mult-methods.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 19,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "3735c15da7ae74b644a36c302316a3009eb7b3d8"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/qr.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 53,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1a5987ddf523b9e312a89bc6db6ec15b7e5732ea"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/random-hermitian.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 17,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "80d509a40bf0c52aa0b5da30249630933616cc10"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/row-column-matrices.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 27,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "e09d30e59bc43a2f66b806035b211673c120e23f"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/svd.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 110,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "da1595ea8003af422de69a62b0d74af8c1a2fd88"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix-functions/tridiagonal-form.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 66,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "04fa67d62a94426620595164c042ba7160e92636"
+  },
+  {
+    "path": "deps/magicl/src/high-level/matrix.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 705,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "0cb14402375348522e1cc2209116676f957933c0"
+  },
+  {
+    "path": "deps/magicl/src/high-level/polynomial-solver.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 112,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "e0576588084802888d9669b28272c9cf0b55b240"
+  },
+  {
+    "path": "deps/magicl/src/high-level/shape.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 62,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b2dbe219424a1f19efbaffc196d877e74b4eab92"
+  },
+  {
+    "path": "deps/magicl/src/high-level/specialize-constructor.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 53,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b6bb04443c537b58b376d08f5d215a5c8cb6c332"
+  },
+  {
+    "path": "deps/magicl/src/high-level/specialize-tensor.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 31,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "a785bb1727b60fc31c685f03395c1d5f0eb1a75a"
+  },
+  {
+    "path": "deps/magicl/src/high-level/tensor.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 141,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "051ab11ecf96ae63cfe2ec25888ed18898b52cd1"
+  },
+  {
+    "path": "deps/magicl/src/high-level/types/complex-double-float.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 81,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "87040d3b2475a9a19a043791f6af61a7c8eb0603"
+  },
+  {
+    "path": "deps/magicl/src/high-level/types/complex-single-float.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 78,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "d8fe68187345814b30696463181cbe67c397ee9e"
+  },
+  {
+    "path": "deps/magicl/src/high-level/types/double-float.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 78,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "f1ad052c139a85760f651686c62a55a56482558e"
+  },
+  {
+    "path": "deps/magicl/src/high-level/types/int32.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 23,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "54675f0e6c62139d012afcf8ceb1ed5fcba42246"
+  },
+  {
+    "path": "deps/magicl/src/high-level/types/single-float.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 76,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "5a40ea4285b63030f93f9e865a47ac90fb30f48f"
+  },
+  {
+    "path": "deps/magicl/src/high-level/types/specialized-vector.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 42,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "01cddf9716195f76ed67654267918a5f1fff9764"
+  },
+  {
+    "path": "deps/magicl/src/high-level/util.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 122,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "0d05a50f3d4bcf8826172c9f6bd0ec7dd565966d"
+  },
+  {
+    "path": "deps/magicl/src/high-level/vector.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 220,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "c2830892a0dc0f8f94ede8d3a0f3ff0e260eb2d0"
+  },
+  {
+    "path": "deps/magicl/src/magicl.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 35,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "bee7b4e89f151eb5daf2055f07c8a3340556fc29"
+  },
+  {
+    "path": "deps/magicl/src/packages.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 216,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "7376fb8315ff8a03f6026cac45bb07fffb95c0b7"
+  },
+  {
+    "path": "deps/magicl/src/reify.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 100,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "0992bebe2b7963dcd0a9c4d5c4dc1d9b702d9313"
+  },
+  {
+    "path": "deps/magicl/tests/abstract-tensor-tests.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 99,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8b3b56e3d713203b222a069c96006d5c81740070"
+  },
+  {
+    "path": "deps/magicl/tests/allocation-tests.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 33,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "efedf087bcbdd942e723867c34a0ae6345b97027"
+  },
+  {
+    "path": "deps/magicl/tests/constants.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 30,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "d7ac30414e76ab5f10d52ff39e621a90ae451071"
+  },
+  {
+    "path": "deps/magicl/tests/constructor-tests.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 45,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "17795107e8b3711e629167ca002002d14c77026d"
+  },
+  {
+    "path": "deps/magicl/tests/csd-tests.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 97,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "e1f46a47fc0df9e7c630a98e56b772b43a2a1fc3"
+  },
+  {
+    "path": "deps/magicl/tests/high-level-tests.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 308,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "abb29d9e5ee64848a551c4c794197beaa85488e0"
+  },
+  {
+    "path": "deps/magicl/tests/matrix-tests.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 213,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "5ea3800f2fb4268447099fe2bb2cdacd60adc1e3"
+  },
+  {
+    "path": "deps/magicl/tests/packages.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 8,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "c85341ec32ab11def81eaa61294b462627740968"
+  },
+  {
+    "path": "deps/magicl/tests/specialization-tests.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 31,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "9117c93fbdb344a334cfcf8d4ea86a89e6332932"
+  },
+  {
+    "path": "deps/magicl/tests/suite.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 23,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "2fe2101914826bfcff26608c731b7a5b0b1d242e"
+  },
+  {
+    "path": "deps/magicl/tests/util-tests.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 60,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "812fb6cc32de85e9b900ce63dd0f91e87762170e"
+  },
+  {
+    "path": "deps/swank.live/swank-live.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 9,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "bb84a3af3587dd7fcc4f661d4022fcae63939124"
+  },
+  {
+    "path": "deps/swank.live/swank.live.asd",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 12,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ae519b69503ce5aa53fe47745ad4616db4b39479"
+  },
+  {
+    "path": "deps/vgplot/.gitignore",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 2,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "3d894d70b6e1036034f22654408a382b6e303335"
+  },
+  {
+    "path": "deps/vgplot/LICENSE",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 674,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "94a9ed024d3859793618152ea559a168bbcbb5e2"
+  },
+  {
+    "path": "deps/vgplot/README",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 27,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "225c570c799dcdf5da668834f6e04ab46051e5f2"
+  },
+  {
+    "path": "deps/vgplot/data.txt",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 6,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "d97e30299304ffb0746ea225dcbd4c2f00a4da6e"
+  },
+  {
+    "path": "deps/vgplot/demo.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 287,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ece5bf2a3e9ecd0819ddf54becf0be844a6e1e87"
+  },
+  {
+    "path": "deps/vgplot/docs/vgplot.html",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 570,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "03335400990fc7c124e9feed27d7d7493708585a"
+  },
+  {
+    "path": "deps/vgplot/package.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 70,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "2f0478238fa925d9da325dad28f21d64ad1728fd"
+  },
+  {
+    "path": "deps/vgplot/test.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 110,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "138c53e765cb125aae38404939eb4a8baa689b1b"
+  },
+  {
+    "path": "deps/vgplot/vgplot.asd",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 19,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ccc5e7020491ec0b0e118a297e91ec35ef024c46"
+  },
+  {
+    "path": "deps/vgplot/vgplot.lisp",
+    "status": "A",
+    "category": "vendored-dependencies",
+    "binary": false,
+    "addedLines": 1136,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "cc68bc368e2ad59b202faf186bd7e80500b8023f"
+  },
+  {
+    "path": "docs/AI_HANDOVER.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 493,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "a2770053e9a4ab49447c0dc1bff0125ca0ee5a93"
+  },
+  {
+    "path": "docs/ANTIGRAVITY_NATIVE_HISTORY.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 147,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b199358b746970027e76ff6816db0f641e8bfcf4"
+  },
+  {
+    "path": "docs/JOSS_DAMAGE_DIAGNOSIS_2026-10-15.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 131,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "381b5bc6447ca0c338e41d20f6089f5decc18ce5"
+  },
+  {
+    "path": "docs/MODULAR_LISP_IO.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 89,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "3762cb99af3e8b203617b70937c993c1a0ec1310"
+  },
+  {
+    "path": "docs/README.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 18,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8e98c3167f21d71d507c54aef7074320b0de5ef0"
+  },
+  {
+    "path": "docs/REFERENCE_REPRODUCTION.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 307,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "d7d3850192e2815aab71529e054830958b1b64b1"
+  },
+  {
+    "path": "docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 150,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "13426ab2a6c68132367d2263f3cd3d35106603d0"
+  },
+  {
+    "path": "docs/SCIENTIFIC_AUDIT_2026-10-15.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 206,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "9f4b91252dfb1f845b2395027678e6276da86ba2"
+  },
+  {
+    "path": "docs/architecture.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 41,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "00427cbfc6ff9346e4e0c0f4bfe1f28b8c4a78ef"
+  },
+  {
+    "path": "docs/development.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 79,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "732203b324c51dcaea0186ce8709e1e7495c2837"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/.gitattributes",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 2,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "d42afa290eca1b9ff0a7e8fa3c649d56a10dbcce"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/README.md",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 68,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "875395043bae42c52b897c1f5640ddf7b15c9e40"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted-collapse-t40.png",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": true,
+    "addedLines": null,
+    "deletedLines": null,
+    "upstreamBlob": null,
+    "forkBlob": "63381965e46f9d0b1aba9490b1634be511fa84b6"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted-collapse.mp4",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": true,
+    "addedLines": null,
+    "deletedLines": null,
+    "upstreamBlob": null,
+    "forkBlob": "091f42a445f767f14189bd9f923c7c688c1dda90"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted-damage-t4.png",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": true,
+    "addedLines": null,
+    "deletedLines": null,
+    "upstreamBlob": null,
+    "forkBlob": "d24b7393ee001ef651050569708a08615077fb6d"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/config.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 1,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "4df3b63dfb7fe2ead4568a1472cb38a5b03c3cf5"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/damage-location-audit.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 13914,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "406477ba352bbf40573ec11ca55bb3125f552a30"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/equilibrium.vtk.gz",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": true,
+    "addedLines": null,
+    "deletedLines": null,
+    "upstreamBlob": null,
+    "forkBlob": "8fc03cf1987074c9d122c869f5dd1de38651b0b8"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/final-shape-comparison.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 87,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "7fc751655430b3b7edbdd82aa35d8120aa3803c7"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/initial.vtk.gz",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": true,
+    "addedLines": null,
+    "deletedLines": null,
+    "upstreamBlob": null,
+    "forkBlob": "80e8ed6f47189ba346f1d8befc71020296185f0a"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/pause-1-audit.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 16,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b1bedd0759cb1f49c04865d4752cdb1148b8548f"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/pilot-provenance.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 1,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "bbf4c05f2f0c21925581caaf65a81e22bcf1c04a"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/reference-metadata.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 1,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "56a0131579e668be7516de5935af7caeed9b45a1"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/sim_00002.vtk.gz",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": true,
+    "addedLines": null,
+    "deletedLines": null,
+    "upstreamBlob": null,
+    "forkBlob": "d8689e98ed449153990f7d6a2d41db36302505d4"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/sim_00174.vtk.gz",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": true,
+    "addedLines": null,
+    "deletedLines": null,
+    "upstreamBlob": null,
+    "forkBlob": "3f78e459d0df22b4c33507267ba1a0e75d636b2f"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/timesteps.csv",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 176,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "fad51635cf8f3120f26f0f4148750ab00849cb14"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/accepted/transitions.csv",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 23,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ffdfb56844c2e21cbe18a3efd1d08dad62beb1d9"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/latest-40k-t221.png",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": true,
+    "addedLines": null,
+    "deletedLines": null,
+    "upstreamBlob": null,
+    "forkBlob": "0c4fe97e01f9f757d9eb51faa0271904087f81f6"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/latest-40k/config.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 49,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "468b22d79e31032165c9094ba89c68363b685ca6"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/latest-40k/native-run.log",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 199,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "e65a309150407cccede884a9212eabe4f3e223cf"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/latest-40k/provenance.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 15,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "986db6513fe916fef9468ff977a6916f6c49793d"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/latest-40k/reference-metadata.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 1,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "81cb7db29e5a31eb5ed9402edc6b79ae7a608c03"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/latest-40k/sim_00111.vtk.gz",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": true,
+    "addedLines": null,
+    "deletedLines": null,
+    "upstreamBlob": null,
+    "forkBlob": "61331a4eabdfd3e03d88364f4e7ee432c772f835"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/latest-40k/timesteps.csv",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 1770,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ca43dafc4218bed7669fb068fee19052ea463d51"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/latest-40k/transitions.csv",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 2,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "d033e6c580a79f99b579a16c407f5ad7d22061fd"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/manifest.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 190,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "942324c769b6978ab499a78c70ce1a06600b679c"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/sources/config.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 1,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b5ca835f6ac7f9fbbde5948e5c31296f3ba7328d"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/sources/continuation.lisp",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 125,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "a5f38ff394793c2347d276a4fa6aeb577c0952bb"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/sources/criterion-probe.lisp",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 200,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "e0af94041e839fc77de349866fffcdf529d4f78d"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/sources/criterion-probe.log",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 271,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "c776b3dc5601b256551806ec0ee5c77b192ae6c1"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/sources/probe-input-config.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 65,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "87d6461e37b1a07cc041c0d234ec593b7734ef5d"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/sources/run-fast.lisp",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 15,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "5d236d405ba5588740ed7a38e451a14bc12f62f6"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/sources/settle.csv",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 35,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "18887872b4496dddf99e225d12c11e9a6f21babb"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/sources/summary.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 1,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "06c908a627149bb66818d2719418bf86bd43926f"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/validation/node-check.log",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 4,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1ef31caecf6c5f085a3e21326686c54de2a7ed32"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/validation/node-tests.log",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 48,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8b580cf78d8fa68fa2da8f4b0cfdd17fa3248002"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/validation/reference-smoke.log",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 124,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b06986eb1df78459685e0e0d5f07278d877547b3"
+  },
+  {
+    "path": "docs/evidence/joss-collapse-2026-10-15/validation/validation-summary.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 84,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "62f682e5c7821d4c680989acfc5da9b17ced30bd"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/.gitattributes",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 2,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "f75ab10f1c304d4c22986f3cc66905395c91b1bf"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/NATIVE_CONTROLS.md",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 36,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8f57841dffbe12bd23601446c19e823b01ff41cf"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/README.md",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 40,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "be12751a10785f72b729e2548d6763de8a727a97"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/forensic-artifacts-audit.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 10175,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6caa8c64a09d199d08d8d3676dc8a1eb5167e0ef"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/forensic-artifacts-audit.py",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 178,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "f2ed06f43d5b4e9e2941704f0e73cab06665bd8f"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/forensic-artifacts-summary.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 177,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "cd1d21d33738982a7e99a4f7efcf9f4381665241"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/forensic-visual-audit.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 2144,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "d06070ccd5b334c7ae6a089a458afa698a6a2eee"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/forensic-visual-audit.py",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 86,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "66127b698a98b70573bb7b2f4b5b51b4b6c938c5"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/fresh-replay-4s-config.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 49,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8cc07e44cf8e37039e5029b684e87d43824bd527"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/fresh-replay-4s.log",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 90,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "01cf11b25b6d228429d94fa30c12fa8c6652410a"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/fresh-replay-audit.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 89,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "70e6f6add51181c0ea8511efab8af7c7b8e640c9"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/fresh-replay-audit.py",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 53,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "aec6d69ba3ae53508cee7f355c58b84e842b7c99"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/fresh-replay-metadata.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 1,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1331470257fdc490625e2dd66365f04cf52de580"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/fresh-replay-t4.vtk.gz",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": true,
+    "addedLines": null,
+    "deletedLines": null,
+    "upstreamBlob": null,
+    "forkBlob": "6a4fd116774bf70a062475be346454d104715612"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/fresh-replay-timesteps.csv",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 1661,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "723efc89ee7ca0f84fab43240cf0cc45d0560295"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/manifest.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 105,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b432d48069446d0ae1903750935634edc862920d"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/native-invariant-controls.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 1,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8d711faf6250823cd207b84ee38bf6dca2b18f4e"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/native-invariant-controls.lisp",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 158,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "dd733272208951f82c3e1a23c83dc9df0288a046"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/native-invariant-controls.log",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 14,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6914aa3e29d54ccba83f8d0b2f877d13c33701e4"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/nonlocal-control.json",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 1,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "5e93cb64752d7ee6578e38e787879a3ecc963db7"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/nonlocal-control.lisp",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 57,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1c3b517c364fd14254fd926b7f9f623329c33352"
+  },
+  {
+    "path": "docs/evidence/scientific-audit-2026-10-15/nonlocal-control.log",
+    "status": "A",
+    "category": "retained-experimental-evidence",
+    "binary": false,
+    "addedLines": 43,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6430f2c4621614af77002282a4827580f5a48647"
+  },
+  {
+    "path": "docs/studio.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 104,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "a85013b171c2d7118498e2661634819d4633f862"
+  },
+  {
+    "path": "docs/testing.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 124,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "7bbc90a848772bbc3f2d9033bae6e7db73c09372"
+  },
+  {
+    "path": "docs/usage.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 42,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "16c0273fe371116352197c03e78968739f74e46d"
+  },
+  {
+    "path": "docs/windows-setup.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 65,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8a53027d6d9c2db9dc387ba9a528ce5dc8380418"
+  },
+  {
+    "path": "docs/windows-verification-2026-10-14.md",
+    "status": "A",
+    "category": "project-documentation",
+    "binary": false,
+    "addedLines": 161,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "253101491583a6e81c595f0396c3b77d5c6c8c1b"
+  },
+  {
+    "path": "examples/chalk/chalk.lisp",
+    "status": "M",
+    "category": "upstream-example-compatibility",
+    "binary": false,
+    "addedLines": 6,
+    "deletedLines": 3,
+    "upstreamBlob": "6c60439b261dd6a2fc90161da9bb642a6daf16a1",
+    "forkBlob": "96cbdb4f13e20913d70f7c85912a64c6a1b8af5f"
+  },
+  {
+    "path": "libs/kirchoff.dll",
+    "status": "A",
+    "category": "windows-runtime",
+    "binary": true,
+    "addedLines": null,
+    "deletedLines": null,
+    "upstreamBlob": null,
+    "forkBlob": "956504346bb798edf9b6716c289019fec33a7b5a"
+  },
+  {
+    "path": "scripts/audit-particle-damage.py",
+    "status": "A",
+    "category": "verification-and-rendering-scripts",
+    "binary": false,
+    "addedLines": 84,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "bbf514ba2ccdcfdb71f817467a285f1dfa7ac551"
+  },
+  {
+    "path": "scripts/compare-reference-video.py",
+    "status": "A",
+    "category": "verification-and-rendering-scripts",
+    "binary": false,
+    "addedLines": 282,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8c926f245f05123ce3b1917197c58fa0497dd143"
+  },
+  {
+    "path": "scripts/joss-reference-geometry.lisp",
+    "status": "A",
+    "category": "verification-and-rendering-scripts",
+    "binary": false,
+    "addedLines": 30,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6ba5f2b841e8c79c82fdfa98a26c3178b23cac85"
+  },
+  {
+    "path": "scripts/joss-reference-smoke.lisp",
+    "status": "A",
+    "category": "verification-and-rendering-scripts",
+    "binary": false,
+    "addedLines": 196,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "a2806b91b8b6eea028395daa41d80279aae7173b"
+  },
+  {
+    "path": "scripts/render-particle-vtk.py",
+    "status": "A",
+    "category": "verification-and-rendering-scripts",
+    "binary": false,
+    "addedLines": 113,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "40fa722f95faf03cae1681bb04cd8ced5ae73ab0"
+  },
+  {
+    "path": "scripts/smoke-test.lisp",
+    "status": "A",
+    "category": "verification-and-rendering-scripts",
+    "binary": false,
+    "addedLines": 65,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "e230b44eb80fdf4369de7871047d4ef1e664fcef"
+  },
+  {
+    "path": "scripts/studio-custom-smoke.lisp",
+    "status": "A",
+    "category": "verification-and-rendering-scripts",
+    "binary": false,
+    "addedLines": 126,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "9f0f3f1a3e95f60d25a86be35c860bbb6f19e532"
+  },
+  {
+    "path": "scripts/studio-plot-smoke.lisp",
+    "status": "A",
+    "category": "verification-and-rendering-scripts",
+    "binary": false,
+    "addedLines": 70,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "d39c27bb4c810cb3f4e4ae1f714c1ab9dcdce01c"
+  },
+  {
+    "path": "scripts/verify-studio-output.js",
+    "status": "A",
+    "category": "verification-and-rendering-scripts",
+    "binary": false,
+    "addedLines": 100,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ac7a7c0cbb8d793cf9b6f338094f954b52b6fe0a"
+  },
+  {
+    "path": "src/mpi/serial.lisp",
+    "status": "A",
+    "category": "engine-output-and-platform-adapter",
+    "binary": false,
+    "addedLines": 104,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8e907ea7394ddcbd0357b438dd21eb5168e3a90c"
+  },
+  {
+    "path": "src/output.lisp",
+    "status": "M",
+    "category": "engine-output-and-platform-adapter",
+    "binary": false,
+    "addedLines": 22,
+    "deletedLines": 14,
+    "upstreamBlob": "ff51566d8f94ced095a40dadee3f1f43fc3abe31",
+    "forkBlob": "0c62d12d6b13f8c92325ab37009128dabae999d5"
+  },
+  {
+    "path": "studio/CUSTOM_MODELS.md",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 139,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "7ebe9b63e5b1ab9134a9af2e0c224c34de9d679e"
+  },
+  {
+    "path": "studio/GEOMETRY.md",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 66,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "fcfa3cb7419177901a589722ed11436849aae091"
+  },
+  {
+    "path": "studio/MATERIAL.md",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 51,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b78b8bbcc59f9569636568c692e11a3568ea04c0"
+  },
+  {
+    "path": "studio/lisp/cl-mpm-studio.asd",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 26,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1eaa92693bec258e4ef39f3549edb70a057b80f3"
+  },
+  {
+    "path": "studio/lisp/config.lisp",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 88,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "621573ad4723c34a2da7791cb1f0530b6b93b4cc"
+  },
+  {
+    "path": "studio/lisp/custom-model.lisp",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 47,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ea6b7d2d94be242346ec94abb6e87e30e6f2f16a"
+  },
+  {
+    "path": "studio/lisp/package.lisp",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 15,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "043c90e6392d3f1e8f16182e6216f9a9fd98e0d1"
+  },
+  {
+    "path": "studio/lisp/reference-joss.lisp",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 513,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "abf9a25e0c8f9dc5faf516c1db11e62b2e78e2d0"
+  },
+  {
+    "path": "studio/lisp/run.lisp",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 14,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "15a90f7e786647ca48b21ddcbc2809dfdcbe01fa"
+  },
+  {
+    "path": "studio/lisp/runner.lisp",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 115,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6a64a2d3a553ff9a917bc9d75a0569a663f6f5e3"
+  },
+  {
+    "path": "studio/lisp/scenario.lisp",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 166,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "7dc8f1eb0d1765770539ea0c4bc7679a41e71cad"
+  },
+  {
+    "path": "studio/package.json",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 16,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "9e9e576f98857a188617a24b4300cc5ef189e171"
+  },
+  {
+    "path": "studio/public/app.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 859,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "e68147d3bd1b2626aa334cc0233c63edf7271453"
+  },
+  {
+    "path": "studio/public/config.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 42,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "9c07dc7dfd875a487fdc804b49fa3e5da06b1ee6"
+  },
+  {
+    "path": "studio/public/geometry.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 125,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b29358ff73d9b9d8ef684ec1d3c9a3baec448cd2"
+  },
+  {
+    "path": "studio/public/index.css",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 894,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "abd2c1d9184088c64253d5feb32e3d1e036d2a20"
+  },
+  {
+    "path": "studio/public/index.html",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 636,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "197187eb7ab02a008d56536728ff193eab3bc0c8"
+  },
+  {
+    "path": "studio/public/model-workspace.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 137,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "90a5f9d216b25f1c0d7320731572bc341b5e5425"
+  },
+  {
+    "path": "studio/reference-presets.json",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 124,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "f57593ad5a748d0b5e2b83e2d622105aea1e4659"
+  },
+  {
+    "path": "studio/reference/joss-bay-accepted-collapse.json",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 49,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "7c375554941219d97538a3a74cc8c378d0894c00"
+  },
+  {
+    "path": "studio/reference/joss-bay-prose.json",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 58,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b22772f66afba9fb14bf71b0f7632702b246cd92"
+  },
+  {
+    "path": "studio/reference/joss-bay-table.json",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 58,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "f8ab4fa81b5db631a442f6f8d830e0b3db2a0f21"
+  },
+  {
+    "path": "studio/reference/joss-bay-video-candidate.json",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 64,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "770e20d6b5e5d26038b7ef45eb224487507cdd90"
+  },
+  {
+    "path": "studio/schema.json",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 381,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "5e9c240db96947f72ca1f5b84092961b8d50fcce"
+  },
+  {
+    "path": "studio/server.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 462,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "fbe754e118802346836877a565f0617282a186ff"
+  },
+  {
+    "path": "studio/start-studio.cmd",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 16,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "006e821a04c211c7dfa08346a3ed278ac461e05e"
+  },
+  {
+    "path": "studio/test/config.test.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 22,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "76b72e2fd0e32f5ac85198d73a33b5f3f4af017a"
+  },
+  {
+    "path": "studio/test/custom-run-enabled.test.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 84,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1745fe821f75bef896e24fb4b8b67ab35c2cd614"
+  },
+  {
+    "path": "studio/test/custom-run-guard.test.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 65,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "fb06f56cd65fb2dba1d7b99186b881244348372b"
+  },
+  {
+    "path": "studio/test/geometry.test.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 60,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "2e6e9b23c1411b0bdf9fe0b697a0ee274ebff296"
+  },
+  {
+    "path": "studio/test/lisp-contract-harness.lisp",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 124,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "fc43ebf40d79b567a883876b897fff7031abd47d"
+  },
+  {
+    "path": "studio/test/lisp-contract.test.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 70,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "804ee9cb3486272c421957e0509749da61b7f987"
+  },
+  {
+    "path": "studio/test/material-config.test.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 33,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "9cf9dc95f33f08a6bf56fe103622cc2af7cfbf44"
+  },
+  {
+    "path": "studio/test/model-workspace.test.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 68,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "60fd53abda97cf3cd57147bdfa7347249e1d9909"
+  },
+  {
+    "path": "studio/test/reference.test.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 57,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6716f6140e139a4239d9eb324411f3fe8fc8b75b"
+  },
+  {
+    "path": "studio/test/server.test.js",
+    "status": "A",
+    "category": "studio-controller",
+    "binary": false,
+    "addedLines": 53,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1a985c265bfbc6509ce617f54c223bc989934789"
+  },
+  {
+    "path": "wiki-vault/AGENTS.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 9,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "85a15d869f693c8403e5602d3bb04047ba22b8ab"
+  },
+  {
+    "path": "wiki-vault/raw/joss-reference-inputs-2026-10-14.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 35,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "4c2870dd44359a7a832439ff18c10f432716b041"
+  },
+  {
+    "path": "wiki-vault/raw/studio-hardening-2026-10-14.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 37,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "bd4f719639478d13865d08d836684c2c383cf73e"
+  },
+  {
+    "path": "wiki-vault/wiki/antigravity-native-history-2026-10-15.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 57,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "784ca85aa16211212b5afd0bb7f0c0ceb4b256f7"
+  },
+  {
+    "path": "wiki-vault/wiki/cl-mpm-architecture.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 21,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "26cdf67b580db946a547938085f6ca4455d192b7"
+  },
+  {
+    "path": "wiki-vault/wiki/cl-mpm-studio.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 36,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "96dbadf90f8e4168bc3528a4ee6c9993f7465ef4"
+  },
+  {
+    "path": "wiki-vault/wiki/cl-mpm.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 19,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "0964f1e63699a280a6ed0ea76e50a72760df32e2"
+  },
+  {
+    "path": "wiki-vault/wiki/index.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 27,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "db43750120ce7f5b2eaa7bc99b8a2b215d07593a"
+  },
+  {
+    "path": "wiki-vault/wiki/joss-damage-diagnosis-2026-10-15.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 75,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "c0602a374df963f7e3b1eb6a1d0b5f5d3aeba62f"
+  },
+  {
+    "path": "wiki-vault/wiki/joss-reference-reproduction.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 149,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "1417e1bbb8107297a544c7e7583dbecdd910b347"
+  },
+  {
+    "path": "wiki-vault/wiki/log.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 171,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ae1a73aca7cfca853977212972cfaa38eb43bfcb"
+  },
+  {
+    "path": "wiki-vault/wiki/magicl-patches.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 16,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "a36770e06027ad99b0e3a16c119ee886444a78b5"
+  },
+  {
+    "path": "wiki-vault/wiki/refactor-2026-10-14.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 23,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "8239c61a0028595f9085c0339ef11f3fc84f29d6"
+  },
+  {
+    "path": "wiki-vault/wiki/scientific-authenticity-audit-2026-10-15.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 62,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "c8162716618ffde9d74b5754ab9c93d7301d6755"
+  },
+  {
+    "path": "wiki-vault/wiki/serial-mpi-standin.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 13,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "ee2505a60c586a39a152b1f637b382a9434f9da0"
+  },
+  {
+    "path": "wiki-vault/wiki/studio-custom-models.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 44,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "005b062b36cc42477c1930b7d12a25a622557c70"
+  },
+  {
+    "path": "wiki-vault/wiki/studio-geometry-material.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 29,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "6140cd390abf503fd8233eb0a606f516601c6f9f"
+  },
+  {
+    "path": "wiki-vault/wiki/studio-modular-lisp-io.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 55,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "46dc5f45ffe7990ab00bfb5f4ede9eac44d66305"
+  },
+  {
+    "path": "wiki-vault/wiki/studio-verification-2026-10-14.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 93,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "a125b86eddc002f51bdd7ca50cab5b7afd126cdb"
+  },
+  {
+    "path": "wiki-vault/wiki/windows-port.md",
+    "status": "A",
+    "category": "knowledge-vault",
+    "binary": false,
+    "addedLines": 38,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "66ed57105bda093ed30c7cfadc07d35cc33bc924"
+  },
+  {
+    "path": "windows/build-kirchoff.cmd",
+    "status": "A",
+    "category": "windows-runtime",
+    "binary": false,
+    "addedLines": 40,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "16e408fc6f1f9755516e268d59f793ec08d2511f"
+  },
+  {
+    "path": "windows/cl-mpm.cmd",
+    "status": "A",
+    "category": "windows-runtime",
+    "binary": false,
+    "addedLines": 34,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "b07c13f92dc6e2fdfe88cb8236c97abbbda6e677"
+  },
+  {
+    "path": "windows/env.cmd",
+    "status": "A",
+    "category": "windows-runtime",
+    "binary": false,
+    "addedLines": 63,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "cf784ace75cf0a11b43e0ec937d5d216e5db7598"
+  },
+  {
+    "path": "windows/init.lisp",
+    "status": "A",
+    "category": "windows-runtime",
+    "binary": false,
+    "addedLines": 65,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "faaff9ce98d5766e5b581b9057a4158149b51df5"
+  },
+  {
+    "path": "windows/make-video.cmd",
+    "status": "A",
+    "category": "windows-runtime",
+    "binary": false,
+    "addedLines": 39,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "654ab4f60daa9874b54d8ad1e71c3edb2d299c7b"
+  },
+  {
+    "path": "windows/setup.ps1",
+    "status": "A",
+    "category": "windows-runtime",
+    "binary": false,
+    "addedLines": 128,
+    "deletedLines": 0,
+    "upstreamBlob": null,
+    "forkBlob": "f376aeea7239bd45d1e9c04db16b3ff4ba26a9fe"
+  }
+]

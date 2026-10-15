@@ -1,0 +1,87 @@
+{
+  "comparison_kind": "approximate_image_geometry_proxy",
+  "inputs": {
+    "vtk": "D:\\MPM\\output\\reference-reproduction-2026-10-15\\dp-physical-pilot\\vtk\\sim_00174.vtk",
+    "reference_frame": "D:\\MPM\\output\\reference-reproduction-2026-10-15\\reference-final.png",
+    "vtk_sha256": "521eeb718de11eaa79af2b80a832ad86d0583b2b90293791381dfb5e11ab80a8",
+    "reference_frame_sha256": "1f8d3a88e8a50514d53416f52e0aa4d17de71045c2eaae632267c246c4790fb4",
+    "reference_time_s": 221.14,
+    "simulation_time_s": 40.0,
+    "provided_time_values_match": false,
+    "time_source": "explicit CLI values; titles are not OCR-read; VTK has no inferred clock"
+  },
+  "sampling": {
+    "grid_spacing_m": 0.1,
+    "subsamples_per_axis": 2,
+    "coverage_threshold": 0.5,
+    "particle_footprint": "rectangle",
+    "particle_widths": "full size_x and size_y; axis-aligned, rotation not reconstructed",
+    "world_window_m": [
+      0,
+      31.0,
+      0,
+      17.3
+    ],
+    "foundation_excluded_below_m": 1.2,
+    "reference_colour_detection": "RGB max-min > 40 and min < 245; bilinear world-grid sampling",
+    "world_to_pixel": {
+      "x0": 31.0,
+      "y0": 637.0,
+      "x_pixels_per_metre": 31.9333333333,
+      "y_pixels_per_metre": 31.9375
+    },
+    "practical_edge_uncertainty_m": [
+      0.1,
+      0.2
+    ],
+    "uncertainty_basis": "heuristic video-edge tolerance enlarged for grid quantisation; not a statistical confidence interval"
+  },
+  "particle_count": 4155,
+  "finite_scalar_arrays": 36,
+  "particle_centres_outside_comparison_window": 0,
+  "above_foundation_overlap": {
+    "iou": 0.69982485470902,
+    "intersection_area_proxy_m2": 175.81000000000003,
+    "union_area_proxy_m2": 251.22000000000006,
+    "simulation_area_proxy_m2": 198.41000000000003,
+    "reference_area_proxy_m2": 228.62000000000003
+  },
+  "full_window_overlap": {
+    "iou": 0.7318199173869276,
+    "intersection_area_proxy_m2": 210.83000000000004,
+    "union_area_proxy_m2": 288.09000000000003,
+    "simulation_area_proxy_m2": 233.95000000000005,
+    "reference_area_proxy_m2": 264.97
+  },
+  "above_foundation_fractional_overlap_iou": 0.6803050122187408,
+  "simulation_geometry": {
+    "right_edge_above_foundation_m": 31.000000000000004,
+    "left_connected_top_plateau_edge_m": 2.0000000000000004,
+    "top_plateau_status": "detected",
+    "raw_first_gap_plateau_edge_m": 2.0000000000000004,
+    "large_internal_row_gaps": 0,
+    "occupied_fraction_within_row_span": 1.0,
+    "actual_plateau_sampling_height_m": 16.45
+  },
+  "reference_geometry": {
+    "right_edge_above_foundation_m": 23.200000000000003,
+    "left_connected_top_plateau_edge_m": 7.2,
+    "top_plateau_status": "detected",
+    "raw_first_gap_plateau_edge_m": 7.2,
+    "large_internal_row_gaps": 0,
+    "occupied_fraction_within_row_span": 1.0,
+    "actual_plateau_sampling_height_m": 16.45
+  },
+  "differences_simulation_minus_reference_m": {
+    "right_edge_above_foundation_m": 7.800000000000001,
+    "left_connected_top_plateau_edge_m": -5.199999999999999
+  },
+  "limitations": [
+    "IoU is not a percentage of physical or numerical accuracy.",
+    "No damage/stress/RGB-value matching: the reference colourbar is adaptive.",
+    "Compressed video, antialiasing, particle footprint and subcell sampling affect the proxy.",
+    "Areas describe image occupancy, not conserved particle mass or material volume.",
+    "This parser supports the engine's points/scalars layout, not arbitrary legacy VTK datasets.",
+    "Match phase and verified simulator times before interpreting deformed-state differences."
+  ]
+}

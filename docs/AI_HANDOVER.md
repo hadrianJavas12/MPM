@@ -2,6 +2,35 @@
 
 > **Read this at the start of a new AI session.** Open PR topology refreshed through the public GitHub API on **2026-10-15**; older checks below retain their dates. This is a **handover**, not a claim that the software has passed numerical validation. Check live branches, PRs, code and CI status before acting; this document can become stale. Keep it updated when significant decisions or statuses change.
 
+**Latest user work, 2026-10-15:** branch `codex/triaxial-clay-calibration` adds
+[the upstream change report](UPSTREAM_CHANGE_REPORT.md), professional PDF
+exports, and [native clay triaxial calibration](TRIAXIAL_CALIBRATION.md).
+User confirmed no laboratory data and requested an undrained example. Fixed
+comparison `d8e65543` upstream → `f7fb2a3` fork shows 273 added/5 modified files,
+308/313 original files identical; core/models/damage/aggregate code is retained.
+Report section 9 separately records the new calibration module after that snapshot.
+
+Native 3D MPM completed 780 MPs, 17,443 updates, 51 frames to prescribed platen
+strain 10% (specimen extent 9.89852%), q 50.00844 kPa and lateral 50.02246 kPa.
+Homogeneous native constitutive comparator completed 1,000 increments/51 frames,
+q 50.01000 kPa. E 5 MPa, nu .49, su scale 25 kPa, cell pressure 50 kPa are
+explicit demonstration assumptions. No pore-pressure, damage, Fbar, aggregation
+or mass scaling is used in this experiment. It is not calibrated real clay.
+All VTK/CSV consistency audits passed, native elastic/yield/lateral/hydrostatic
+controls passed, estimator 4/4 tests passed, Node 36/36 passed with no skips.
+Evidence: `docs/evidence/triaxial-clay-2026-10-15/`. Plots/videos read actual VTK
+and CSV; solid curve uses specimen extent strain, dashed curve uses platen strain.
+
+Limits: coarse MPM volume bias +3.4507%; normal end springs are bilateral,
+frictionless displacement constraints; volume drift max .020016%; peak KE/elastic
+3.9556% at startup and .7122% final, no closed energy/convergence study. Raw
+`effective-config.json` plus retained source records defaults; it is not a fully
+resolved configuration by itself. Production runs predate exact pre-load harness
+snapshots (explicit provenance false); future launcher snapshots and executes the
+harness, tested by final native controls. Existing chalk/Joss/Studio defaults and
+the accepted collapse artifacts are untouched. Do not rerun long pilots or claim
+scientific clay validation from this demonstration. Use `calibration/README.md`.
+
 **Latest scientific/authenticity audit, 2026-10-15:** the requested native rerun
 guide/config were committed and pushed first as `8549c32`. Audit now completed:
 [SCIENTIFIC_AUDIT_2026-10-15.md](SCIENTIFIC_AUDIT_2026-10-15.md), with

@@ -19,6 +19,8 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
+- [[upstream-development-report-2026-10-15]] — professional Git-based comparison with original CL-MPM and linked evidence
+- [[triaxial-clay-calibration]] — native 70 × 140 mm clay demonstration, adjacent computed curves, parameter initialization and scientific limits
 - [[scientific-authenticity-audit-2026-10-15]] — real-data/video derivation verified, numerical counterexamples and limits to scientific validity recorded
 - [[refactor-2026-10-14]] — decisions and results of the Windows-port refactor
 - [[studio-verification-2026-10-14]] — native Windows/Studio/export parity, observed fixes, historical evidence and remaining scientific/CI gates
