@@ -27,7 +27,7 @@
     (dolist (mapping mappings)
       (destructuring-bind (key config-key default) mapping
         (setf (getf options key) (material-value material key (gethash config-key config default)))))
-    (make-instance 'material :kind (component-kind material) :options options)))
+    (make-instance (class-of material) :kind (component-kind material) :options options)))
 
 (defmethod material-particle-class ((material material))
   (ecase (component-kind material)
@@ -51,6 +51,14 @@
        (let ((args (copy-list (option material :initargs))))
          (setf (getf args :E) (material-value material :youngs-modulus e)
                (getf args :nu) (material-value material :poisson-ratio nu))
+         (when (subtypep (material-particle-class material) 'cl-mpm/particle::particle-plastic)
+           (setf (getf args :enable-plasticity)
+                 (material-value material :plasticity t)))
+         (when (subtypep (material-particle-class material) 'cl-mpm/particle::particle-vm)
+           (let ((rho (* (sqrt (/ 8d0 3d0))
+                         (material-value material :undrained-strength 25d3))))
+             (unless (getf args :rho) (setf (getf args :rho) rho))
+             (unless (getf args :rho-r) (setf (getf args :rho-r) (getf args :rho)))))
          args))
       (otherwise (error "~A uses the dedicated chalk builder; it is not a VM factory."
                          (component-kind material))))))
