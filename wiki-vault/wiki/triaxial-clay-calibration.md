@@ -8,6 +8,13 @@ updated: 2026-10-15
 
 # Triaxial clay demonstration and calibration method
 
+Checkpoint published as [PR #7](https://github.com/hadrianJavas12/MPM/pull/7)
+from `codex/triaxial-clay-calibration` to `main`, at the user's request. The
+cumulative PR includes ancestry of PRs #1–#4, Windows/collapse/audit work and
+the reports/calibration feature; PR #6 remains separate. It is open for review,
+with no merge performed. Both PDF hashes match their manifest. Auto-continuation
+is paused after completing the requested deliverables.
+
 User confirmed an undrained example without laboratory data. The standalone
 native module uses a nominal 70 mm diameter/140 mm high specimen, E 5 MPa,
 nu .49, strength scale su 25 kPa and confinement 50 kPa. Existing particle-vm

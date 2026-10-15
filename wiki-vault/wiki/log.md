@@ -186,3 +186,14 @@ limits cover no lab/porepressure, bilateral springs, coarsevolume bias, startup
 kinetics, no convergence/energyclosure, and missing exact productionpreload
 snapshots (future launcher fixed/tested). Updated index/handover and preserved
 raw sources and every earlier log entry. No core/Joss/Studio default changes.
+## [2026-10-15] ingest | Published checkpoint PR to main
+
+User requested immediate completion and a checkpoint pull request to main.
+Created https://github.com/hadrianJavas12/MPM/pull/7 from
+codex/triaxial-clay-calibration; it includes the existing PR1-4 ancestry,
+Windows native/collapse/audit work and [[triaxial-clay-calibration]] plus
+[[upstream-development-report-2026-10-15]]. PR6 remains separate. Main was
+refreshed at af7c6479; no merge performed. Verified both committed PDF bytes
+against their SHA-256 manifest and protected PDF binary attributes. Updated
+handover/index; auto-continuation paused after completion. Preserved raw
+sources, personal Obsidian settings and every prior log entry.

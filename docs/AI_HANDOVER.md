@@ -2,6 +2,17 @@
 
 > **Read this at the start of a new AI session.** Open PR topology refreshed through the public GitHub API on **2026-10-15**; older checks below retain their dates. This is a **handover**, not a claim that the software has passed numerical validation. Check live branches, PRs, code and CI status before acting; this document can become stale. Keep it updated when significant decisions or statuses change.
 
+**Checkpoint requested and published, 2026-10-15:**
+[PR #7](https://github.com/hadrianJavas12/MPM/pull/7) targets `main` from
+`codex/triaxial-clay-calibration` and is open, ready for review. It includes the
+ancestry of draft PRs #1–#4 plus native Windows, accepted collapse/audit and
+triaxial/report work; PR #6 remains separate. Main was refreshed at `af7c6479`.
+The PR was created at `5c9ea6f` after feature `3efaea9` and reports `ed5c066`;
+this handover update follows on the same branch. Both committed PDF byte hashes
+match the report manifest, with binary attributes protecting future checkouts.
+No merge or main-branch mutation was performed. Auto-continuation is PAUSED
+after completing this task; do not launch further runs without a new request.
+
 **Latest user work, 2026-10-15:** branch `codex/triaxial-clay-calibration` adds
 [the upstream change report](UPSTREAM_CHANGE_REPORT.md), professional PDF
 exports, and [native clay triaxial calibration](TRIAXIAL_CALIBRATION.md).
