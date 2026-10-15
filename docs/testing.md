@@ -101,6 +101,17 @@ the custom delegate and export. It does not establish physical calibration,
 the full-engine custom elastic template, long-run convergence or Joss Bay reproduction.
 See `wiki-vault/wiki/studio-verification-2026-10-14.md`.
 
+## Scientific/authenticity checks on 2026-10-15
+
+[The audit report](SCIENTIFIC_AUDIT_2026-10-15.md) and its retained evidence
+separate174-frame artifact/visual consistency from physical validation.
+Native two-MP, disconnected-support and prescribed-displacement controls
+reproduce kernel/aggregation/kinematic concerns. Their diagnostic process
+exit0 means the counterexample was observed; it does not mean scientific
+contracts passed. A fresh native production4s replay passed equilibrium and
+finite-field/base/mass checks with near-identical lower-face initiation, but
+it is not a full40s replay, energy balance or mesh-convergence study.
+
 ## GitHub Actions blocker
 
 [Run 38512874136](https://github.com/hadrianJavas12/MPM/actions/runs/38512874136)

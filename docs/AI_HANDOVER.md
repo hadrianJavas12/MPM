@@ -2,13 +2,32 @@
 
 > **Read this at the start of a new AI session.** Open PR topology refreshed through the public GitHub API on **2026-10-15**; older checks below retain their dates. This is a **handover**, not a claim that the software has passed numerical validation. Check live branches, PRs, code and CI status before acting; this document can become stale. Keep it updated when significant decisions or statuses change.
 
-**New user request after acceptance:** deliver and commit/push
-`docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md` plus its fresh-start config first, then
-audit scientific validity/authenticity. New guide config retains the accepted
-pilot parameters but recomputes elastic equilibrium (3000 updates cap/1e-4
-tolerance); schema round trip passed, full identical replay remains unproved.
-Scientific audit is now authorized; previous instructions to wait apply to
-visual calibration/UI work, not this audit. Auto-continuation remains PAUSED.
+**Latest scientific/authenticity audit, 2026-10-15:** the requested native rerun
+guide/config were committed and pushed first as `8549c32`. Audit now completed:
+[SCIENTIFIC_AUDIT_2026-10-15.md](SCIENTIFIC_AUDIT_2026-10-15.md), with
+[retained evidence](evidence/scientific-audit-2026-10-15/README.md). All174 physical
+VTKs have finite36 arrays and constantmass; all174 saved PNGs regenerate exactly,
+and video matches within compression error. No prescribed failure trajectory or
+painted damage found in inspected code/artifacts. Historical constructor/class/
+environment hooks are disclosed. **Authenticity is supported; scientific
+validation is not established.** Native controls reproduced asymmetric damaged
+pair-radius kernel and a separate polynomial difference from Eq33, aggregation
+support across8m emptygap, and an Fbar volume/stored-gradient distinction that
+needs a validated kinematic contract. These controls do not quantify incidence
+or error in the accepted run. Energy budget, mesh/timestep/phase sensitivity and
+material/field validation remain open. Do not hide these findings or mark output
+validated based on acceptance, mass conservation or finite-field checks.
+
+One bounded fresh native production CLI replay to4s completed (exit0,1658 settling
+updates,2frames,4155MPs,496protectedbase), without historical constructor/class/
+environment-function replacement. At4s maxdamage.333589398 is again lower-face;
+maximum difference from historical4s is9.30e-10m position and1.18e-7damage. It used
+the retained compiler/cache `run-fast.lisp` entry and current production main.
+This supports fresh initiation, not a full40s replay or unscaled physical-time
+validation. No production algorithm, accepted config or pilot artifact was
+changed by the audit. No further visual calibration/UI work is requested.
+Auto-continuation remains PAUSED. Current guide:
+[RUN_ACCEPTED_COLLAPSE_WINDOWS.md](RUN_ACCEPTED_COLLAPSE_WINDOWS.md).
 
 **Accepted result, 2026-10-15:** after viewing the actual
 native DP collapse/run-out video and the later 40 kPa result, the user said they
@@ -59,7 +78,8 @@ commit on `feat/studio-custom-constitutive-lisp-export`; no push or merge was
 requested.
 
 **Local workspace update, 2026-10-15:** the active checkout is now directly
-`D:\MPM`, branch `feat/studio-custom-constitutive-lisp-export`, HEAD `f70e410`.
+`D:\MPM`, branch `feat/studio-custom-constitutive-lisp-export`, with migration
+baseline `f70e410` (subsequent accepted checkpoint `cd5e07f`; see git log for HEAD).
 The former `D:\MPM\MPM-test` directory is gone. The old root checkout, including
 its `main` history, local changes and artifacts, is preserved in
 `D:\MPM\.workspace-backup\before-flatten-20261015-0432` (ignored by the active repo).

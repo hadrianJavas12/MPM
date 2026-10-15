@@ -137,7 +137,14 @@ dan lokasi damage. Ini bukan pengganti validasi konstitutif, konvergensi mesh/
 timestep atau pembandingan eksperimen. Bukti pilot dan batas klaimnya tersedia
 di [bundle hasil yang diterima](evidence/joss-collapse-2026-10-15/README.md).
 
-Panduan/config ini telah diperiksa konsistensinya dengan schema; **fresh full
-replay melalui perintah di atas belum selesai diverifikasi saat panduan dibuat**.
+Panduan/config ini telah diperiksa konsistensinya dengan schema. Audit juga
+menjalankan proses fresh sampai 4 s melalui launcher Windows dan entry
+`docs/evidence/joss-collapse-2026-10-15/sources/run-fast.lisp`: equilibrium
+konvergen 1.658 update dan damage bawah hampir identik dengan pilot pada 4 s.
+Entry tersebut hanya mengatur kompilasi speed3/safety1/cache terpisah lalu
+memanggil `main` produksi. Untuk memakai kebijakan kompilasi itu, ganti argumen
+`studio\lisp\run.lisp` pada perintah run dengan path `run-fast.lisp` tersebut;
+config/output tetap sama. **Fresh full replay 40 s belum diverifikasi**.
 Tidak ada konstanta bentuk runtuhan atau timeline referensi yang diberikan ke
-renderer. Audit berikutnya memeriksa jalur solver dan asumsi numeriknya.
+renderer. [Audit ilmiah](SCIENTIFIC_AUDIT_2026-10-15.md) menjelaskan temuan metode
+numerik yang masih membatasi validitas fisik hasil.

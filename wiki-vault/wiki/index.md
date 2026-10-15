@@ -19,6 +19,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
+- [[scientific-authenticity-audit-2026-10-15]] — real-data/video derivation verified, numerical counterexamples and limits to scientific validity recorded
 - [[refactor-2026-10-14]] — decisions and results of the Windows-port refactor
 - [[studio-verification-2026-10-14]] — native Windows/Studio/export parity, observed fixes, historical evidence and remaining scientific/CI gates
 - [[joss-reference-reproduction]] — experimental reference path, visually accepted actual DP collapse, preserved evidence and quantitative limits in D:\MPM

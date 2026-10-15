@@ -13,5 +13,6 @@
 | [windows-verification-2026-10-14.md](windows-verification-2026-10-14.md) | Review the native Windows evidence, observed fixes, tool versions and remaining limits |
 | [REFERENCE_REPRODUCTION.md](REFERENCE_REPRODUCTION.md) | Run the experimental Joss Bay geometry/material/phases adapted from the author example; inspect provenance and result limits |
 | [RUN_ACCEPTED_COLLAPSE_WINDOWS.md](RUN_ACCEPTED_COLLAPSE_WINDOWS.md) | Run the visually accepted Joss collapse parameter set through the Windows native launcher, render VTK and inspect evidence |
+| [SCIENTIFIC_AUDIT_2026-10-15.md](SCIENTIFIC_AUDIT_2026-10-15.md) | Inspect the independent output-authenticity audit, native numerical controls and remaining scientific-validity gaps |
 
 New to coding on this project as an AI agent? Read root [AGENTS.md](../AGENTS.md) and [AI_HANDOVER.md](AI_HANDOVER.md) first. For running the software, follow [windows-setup.md](windows-setup.md), then run the smoke test and open Studio.

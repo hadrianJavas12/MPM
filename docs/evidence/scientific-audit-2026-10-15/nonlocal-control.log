@@ -1,0 +1,43 @@
+
+; file: D:/MPM/output/scientific-audit-2026-10-15/nonlocal-control.lisp
+; in:
+;      LET* ((CONFIG
+;         (LOAD-CONFIG
+;          (COMMON-LISP-USER::CL-MPM-PATH
+;           "studio/reference/joss-bay-accepted-collapse.json")))
+;        (OUTPUT
+;         (COMMON-LISP-USER::CL-MPM-PATH
+;          "output/scientific-audit-2026-10-15/nonlocal-control.json")))
+;     (CL-MPM/DAMAGE::WEIGHT-FUNC-MPS CL-MPM-STUDIO::MESH CL-MPM-STUDIO::A
+;                                     CL-MPM-STUDIO::B (SQRT (* 0.5d0 0.5d0)))
+; 
+; caught STYLE-WARNING:
+;   The variable CL-MPM/DAMAGE::MESH is defined but never used.
+
+;     (CL-MPM/DAMAGE::WEIGHT-FUNC-MPS CL-MPM-STUDIO::MESH CL-MPM-STUDIO::B
+;                                     CL-MPM-STUDIO::A (SQRT (* 0.5d0 0.1d0)))
+; 
+; caught STYLE-WARNING:
+;   The variable CL-MPM/DAMAGE::MESH is defined but never used.
+
+;     (CL-MPM/DAMAGE::WEIGHT-FUNC-MPS CL-MPM-STUDIO::MESH CL-MPM-STUDIO::A
+;                                     CL-MPM-STUDIO::B
+;                                     CL-MPM-STUDIO::EXPECTED-RADIUS)
+; 
+; caught STYLE-WARNING:
+;   The variable CL-MPM/DAMAGE::MESH is defined but never used.
+
+;     (CL-MPM/DAMAGE::WEIGHT-FUNC-MPS CL-MPM-STUDIO::MESH CL-MPM-STUDIO::B
+;                                     CL-MPM-STUDIO::A
+;                                     CL-MPM-STUDIO::EXPECTED-RADIUS)
+; 
+; caught STYLE-WARNING:
+;   The variable CL-MPM/DAMAGE::MESH is defined but never used.
+; 
+; compilation unit finished
+;   caught 4 STYLE-WARNING conditions
+Angle: 0.0e+0
+
+(31.0d0 16.5d0 0)
+(1.0d0 1.03125d0 0.0d0)
+NATIVE NONLOCAL DIAGNOSTIC: {"kind":"Native two-point transient nonlocal kernel counterexample","dataModified":"Synthetic diagnostic inputs only; no accepted artifact changes","nominalRadius":0.5,"trueRadiusA":0.1,"trueRadiusB":0.5,"separation":0.3,"actualUnnormalizedWeightAFromB":0.7575961600000005,"actualUnnormalizedWeightBFromA":0.0,"symmetricDamagedRadiusWeightAFromB":0.0,"symmetricDamagedRadiusWeightBFromA":0.0,"actualAveragedDriveA":43.104108739063264,"actualAveragedDriveB":100.0,"symmetricKernelContractSatisfied":false,"acceptedRunImpactQuantified":false}

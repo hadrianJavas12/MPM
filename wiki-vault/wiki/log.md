@@ -151,3 +151,21 @@ explicitly distinguished. Canonical schema round trip passed. Fresh full replay
 and scientific validity are not claimed. Linked [[joss-reference-reproduction]]
 and index; immutable raw sources and earlier log entries preserved. User has
 explicitly authorized commit and push of this guide to the current feature branch.
+## [2026-10-15] ingest | Scientific authenticity audit and native counterexamples
+
+Ingested docs/SCIENTIFIC_AUDIT_2026-10-15.md and linked
+[[scientific-authenticity-audit-2026-10-15]]. The Windows rerun guide/config were
+committed/pushed first as8549c32. Audited all174 physical VTKs, regenerated174
+PNGsexactly, compared175 decoded video frames, verified35manifest entries and
+log/CSV agreement; no painted damage or prescribed collapse trajectory found.
+Historical hooks/warm start/base protection/mass-scaled clock remain explicit.
+Native tests reproduced a nonlocal pair-radius asymmetry, an independent kernel
+polynomial difference from Eq33, disconnected aggregation support across8m gap,
+and an Fbar volume/gradient distinction requiring a validated contract. No claim
+that these controls quantify accepted-run incidence/error. Freshproduction4s
+replay completed1658equilibrium updates/2frames without historical replacement
+hooks; maxdamage.333589398 is lower-face, position/damage differences from old4s
+<=9.30e-10m/1.18e-7. Authentic output is supported; scientific validation, full40s
+replay, energy budget and convergence remain open. Retained scripts/JSON/logs/VTK
+snapshot under docs/evidence/scientific-audit-2026-10-15 with hashes. No production
+algorithm, accepted artifact, immutable raw source or prior log entry changed.

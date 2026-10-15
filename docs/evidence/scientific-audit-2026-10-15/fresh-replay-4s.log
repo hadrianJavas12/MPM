@@ -1,0 +1,90 @@
+Parameters:
+  E                  1.0d9
+  accelerateInterval 2.0d0
+  cliffSlope         78.0d0
+  cohesion           1965600.0d0
+  collapseInterval   0.1d0
+  constitutiveModel  CHALK
+  damageCohesion     26000.0d0
+  damageDelayExponent 2.0d0
+  damageFrictionAngle 50.0d0
+  delayTime          10.0d0
+  density            1700.0d0
+  dilatancyAngle     0.0d0
+  ductility          53.59975505618717d0
+  enableDamage       T
+  enablePlasticity   T
+  fractureEnergy     4.8d0
+  frictionAngle      50.0d0
+  geometryRefinement 4
+  initiationStress   18926.452181842527d0
+  massScaleAccelerate 10000.0d0
+  maxSteps           2
+  meshSize           0.5d0
+  mpsPerCell         2
+  nonlocalLength     0.5d0
+  notchDepth         0.5d0
+  notchHeight        0.5d0
+  notchShape         TRIANGLE
+  notchTipFraction   0.5d0
+  nu                 0.24d0
+  plotMode           DAMAGE
+  quasiStaticTolerance 0.01d0
+  residualCompressionRatio 0.0d0
+  residualShearRatio 0.51d0
+  residualTensileRatio 1.0d0
+  runoutAspect       1.0d0
+  scenario           JOSS-BAY
+  settleMaxSteps     3000
+  settleTolerance    1.0d-4
+  shelfAspect        1.0d0
+  shelfHeight        15.5d0
+  simulationTime     4.0d0
+  soilBoundary       1.0d0
+  substeps           50
+  timeStepScale      0.5d0
+  undercut           0.0d0
+  upperVerticalHeight 6.8d0
+  workers            4
+Angle: 0.0e+0
+
+(31.0d0 16.5d0 0)
+(0.25d0 0.25d0 0.0d0)
+Reference particles: 4155, initial dt: 3.00241131d-4 s
+""Rebuilt pool"
+Settling 50: energy 7.7123d-1, OOBF 1.6207d-1
+Settling 100: energy 5.1493d-2, OOBF 9.9180d-2
+Settling 150: energy 1.2316d-2, OOBF 6.8715d-2
+Settling 200: energy 4.2758d-3, OOBF 5.0230d-2
+Settling 250: energy 1.7833d-3, OOBF 3.7237d-2
+Settling 300: energy 8.3360d-4, OOBF 2.8134d-2
+Settling 350: energy 4.2253d-4, OOBF 2.1685d-2
+Settling 400: energy 2.2775d-4, OOBF 1.6913d-2
+Settling 450: energy 1.2879d-4, OOBF 1.3245d-2
+Settling 500: energy 7.5637d-5, OOBF 1.0588d-2
+Settling 550: energy 4.5757d-5, OOBF 8.4832d-3
+Settling 600: energy 2.8332d-5, OOBF 6.8167d-3
+Settling 650: energy 1.7865d-5, OOBF 5.5161d-3
+Settling 700: energy 1.1427d-5, OOBF 4.4697d-3
+Settling 750: energy 7.3906d-6, OOBF 3.6268d-3
+Settling 800: energy 4.8223d-6, OOBF 2.9563d-3
+Settling 850: energy 3.1684d-6, OOBF 2.4139d-3
+Settling 900: energy 2.0932d-6, OOBF 1.9745d-3
+Settling 950: energy 1.3891d-6, OOBF 1.6168d-3
+Settling 1000: energy 9.2504d-7, OOBF 1.3249d-3
+Settling 1050: energy 6.1781d-7, OOBF 1.0864d-3
+Settling 1100: energy 4.1358d-7, OOBF 8.9127d-4
+Settling 1150: energy 2.7739d-7, OOBF 7.3152d-4
+Settling 1200: energy 1.8635d-7, OOBF 6.0063d-4
+Settling 1250: energy 1.2534d-7, OOBF 4.9330d-4
+Settling 1300: energy 8.4403d-8, OOBF 4.0526d-4
+Settling 1350: energy 5.6885d-8, OOBF 3.3301d-4
+Settling 1400: energy 3.8367d-8, OOBF 2.7369d-4
+Settling 1450: energy 2.5894d-8, OOBF 2.2497d-4
+Settling 1500: energy 1.7484d-8, OOBF 1.8495d-4
+Settling 1550: energy 1.1811d-8, OOBF 1.5207d-4
+Settling 1600: energy 7.9819d-9, OOBF 1.2505d-4
+Settling 1650: energy 5.3957d-9, OOBF 1.0283d-4
+Step 1/2; physical time 2.000000 s; accelerate
+Step 2/2; physical time 4.000000 s; accelerate
+SUCCESS

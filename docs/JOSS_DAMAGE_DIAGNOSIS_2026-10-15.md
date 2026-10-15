@@ -1,5 +1,10 @@
 # Joss damage diagnosis and physical result — 2026-10-15
 
+**Subsequent scientific audit:** [the independent audit](SCIENTIFIC_AUDIT_2026-10-15.md)
+supports genuine solver-derived data/video but does not establish physical
+validity. Native kernel/aggregation controls revealed scientific-method concerns;
+the accepted visual result and its quantitative mismatch remain unchanged.
+
 The actual native Drucker–Prager (DP) pilot develops lower-face damage, collapse
 and run-out. **The user accepted this as the requested visual collapse result**
 after viewing its video and the later 40 kPa final image. The user said they were
