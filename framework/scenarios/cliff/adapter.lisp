@@ -12,6 +12,10 @@
     (check-kind boundary '(:rollers))
     (check-kind (simulation-loading case) '(:gravity))
     (check-kind solver (if joss-p '(:staged) '(:explicit)))
+    (unless joss-p
+      (dolist (key '(:time-step-scale :max-updates :damping))
+        (when (member key (component-options solver))
+          (error "Ordinary cliff does not consume solver option ~S; use its backend parameters or another recipe." key))))
     (when (and joss-p (geometry-filter geometry))
       (error "The Joss reference recipe requires its dedicated clipping geometry."))
     (overlay config material '((:youngs-modulus "E") (:poisson-ratio "nu") (:density "density")
@@ -24,7 +28,9 @@
                              (:time-step-scale "timeStepScale") (:simulation-time "simulationTime")))
     (unless (member (component-kind material) '(:chalk :joss))
       (setf (gethash "enableDamage" config) nil
-            (gethash "enablePlasticity" config) (not (eq (component-kind material) :elastic)))
+            (gethash "enablePlasticity" config)
+            (and (not (eq (component-kind material) :elastic))
+                 (material-value material :plasticity (gethash "enablePlasticity" config))))
       ;; Keep numerical metadata consistent with the native material factory.
       (setf (gethash "E" config) (material-value material :youngs-modulus (gethash "E" config))
             (gethash "nu" config) (material-value material :poisson-ratio (gethash "nu" config))
@@ -61,7 +67,8 @@
 (defmethod execute-scenario ((scenario (eql :cliff)) (case simulation) config directory)
   (let ((material (resolve-material (simulation-material case) config
                                    '((:youngs-modulus "E" 5d6) (:poisson-ratio "nu" 0.49d0)
-                                     (:density "density" 1800d0))))
+                                     (:density "density" 1800d0)
+                                     (:plasticity "enablePlasticity" t))))
         (filter (geometry-filter (simulation-geometry case))))
     (when filter (error "Generic cliff filter uses the native geometry callback API; this clipping predicate is for triaxial."))
     (cl-mpm/framework/cliff:run

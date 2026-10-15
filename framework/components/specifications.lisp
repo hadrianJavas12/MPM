@@ -18,25 +18,40 @@
     (error "A component needs a keyword kind and keyword/value options."))
   (loop for tail on options by #'cddr for key = (first tail)
         unless (member key allowed) do (error "Unknown ~A option ~S" class key))
+  (let ((keys (loop for tail on options by #'cddr collect (first tail))))
+    (unless (= (length keys) (length (remove-duplicates keys)))
+      (error "Duplicate component option in ~S" options)))
   (make-instance class :kind kind :options (copy-list options)))
 
 (defun make-material (kind &rest options)
   "Existing native material adapter; :NATIVE accepts a dedicated particle class."
   (make-component 'material kind options
-                  '(:youngs-modulus :poisson-ratio :density :undrained-strength
-                    :plasticity :particle-class :initargs)))
+                  (ecase kind
+                    ((:von-mises :elastic) '(:youngs-modulus :poisson-ratio :density
+                                            :undrained-strength :plasticity))
+                    ((:chalk :joss) '(:youngs-modulus :poisson-ratio :density :plasticity))
+                    (:native '(:youngs-modulus :poisson-ratio :density :undrained-strength
+                               :plasticity :particle-class :initargs)))))
 (defun make-geometry (kind &rest options)
   (make-component 'geometry kind options
-                  '(:width :diameter :height :shelf-aspect :slope :base-height
-                    :notch-height :notch-depth :filter)))
+                  (ecase kind
+                    (:rectangle '(:width :height :filter))
+                    (:cylinder '(:diameter :height :filter))
+                    ((:cliff :joss) '(:height :shelf-aspect :slope :base-height
+                                     :notch-height :notch-depth)))))
 (defun make-boundary (kind &rest options)
-  (make-component 'boundary kind options '(:cell-pressure :penalty-scale)))
+  (make-component 'boundary kind options
+                  (ecase kind (:confinement '(:cell-pressure :penalty-scale)) (:rollers nil))))
 (defun make-loading (kind &rest options)
-  (make-component 'loading kind options '(:target-strain :duration :ramp-duration)))
+  (make-component 'loading kind options
+                  (ecase kind (:compression '(:target-strain :duration :ramp-duration)) (:gravity nil))))
 (defun make-solver (kind &rest options)
   (make-component 'solver kind options
-                  '(:mesh-size :mps-per-cell :workers :time-step-scale :frames
-                    :max-updates :damping :simulation-time)))
+                  (ecase kind
+                    (:explicit '(:mesh-size :mps-per-cell :workers :time-step-scale :frames
+                                 :max-updates :damping))
+                    (:staged '(:mesh-size :mps-per-cell :workers :time-step-scale :frames
+                               :simulation-time)))))
 
 (defclass simulation ()
   ((scenario :initarg :scenario :reader simulation-scenario)
