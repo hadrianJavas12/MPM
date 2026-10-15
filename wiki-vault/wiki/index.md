@@ -22,4 +22,5 @@
 - [[refactor-2026-10-14]] — decisions and results of the Windows-port refactor
 - [[studio-verification-2026-10-14]] — native Windows/Studio/export parity, observed fixes, historical evidence and remaining scientific/CI gates
 - [[joss-reference-reproduction]] — experimental reference path, visually accepted actual DP collapse, preserved evidence and quantitative limits in D:\MPM
+- [[joss-reference-reproduction#Workspace and latest state, 2026-10-15|Windows native rerun guide]] — fresh-start config, command-line run, VTK rendering and checks in docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md
 - [[joss-damage-diagnosis-2026-10-15]] — accepted 40 s DP collapse/run-out, measured mismatch, completed no-collapse 40 kPa case and paused continuation

@@ -2,7 +2,15 @@
 
 > **Read this at the start of a new AI session.** Open PR topology refreshed through the public GitHub API on **2026-10-15**; older checks below retain their dates. This is a **handover**, not a claim that the software has passed numerical validation. Check live branches, PRs, code and CI status before acting; this document can become stale. Keep it updated when significant decisions or statuses change.
 
-**Latest result and user acceptance, 2026-10-15:** after viewing the actual
+**New user request after acceptance:** deliver and commit/push
+`docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md` plus its fresh-start config first, then
+audit scientific validity/authenticity. New guide config retains the accepted
+pilot parameters but recomputes elastic equilibrium (3000 updates cap/1e-4
+tolerance); schema round trip passed, full identical replay remains unproved.
+Scientific audit is now authorized; previous instructions to wait apply to
+visual calibration/UI work, not this audit. Auto-continuation remains PAUSED.
+
+**Accepted result, 2026-10-15:** after viewing the actual
 native DP collapse/run-out video and the later 40 kPa result, the user said they
 were satisfied and asked for a commit recording successful collapse. The
 **40 s DP physical pilot is accepted as the requested visual

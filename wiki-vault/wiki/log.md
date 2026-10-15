@@ -138,3 +138,16 @@ equilibrium warm start from a fresh production replay. Public GitHub refresh
 still shows open draft PRs #1–#4 and separate #6 with unchanged bases. This
 documentation update launched no solver or tests, made no commit/push/merge,
 and preserved immutable raw sources and every earlier log entry.
+
+## [2026-10-15] ingest | Windows native accepted-collapse rerun guide
+
+Created docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md and
+studio/reference/joss-bay-accepted-collapse.json at the user's request before
+continuing the scientific audit. The guide covers native launcher setup, a fresh
+output directory, logs and completion metadata, VTK rendering, FFmpeg and field
+integrity checks. The fresh config preserves accepted pilot parameters while
+recomputing equilibrium (cap3000/tolerance1e-4); historical warm-start config is
+explicitly distinguished. Canonical schema round trip passed. Fresh full replay
+and scientific validity are not claimed. Linked [[joss-reference-reproduction]]
+and index; immutable raw sources and earlier log entries preserved. User has
+explicitly authorized commit and push of this guide to the current feature branch.

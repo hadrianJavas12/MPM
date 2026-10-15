@@ -10,6 +10,14 @@ updated: 2026-10-15
 
 ## Workspace and latest state, 2026-10-15
 
+The Windows-native rerun guide is `docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md`, with
+fresh-start configuration `studio/reference/joss-bay-accepted-collapse.json`.
+It retains the accepted pilot's geometry/material/40 s target, but recomputes
+elastic equilibrium (cap 3000, tolerance 1e-4) instead of reusing a live SBCL
+state. Canonical-schema round trip passed; full fresh replay is not yet proved
+identical. The user now requests a scientific/authenticity audit after delivery
+of this guide. This is not a request for additional visual calibration.
+
 The active checkout is `D:\MPM`; `MPM-test` is no longer used. The former root
 checkout and its local changes are preserved under
 `.workspace-backup/before-flatten-20261015-0432`. Forty-one changed/untracked
