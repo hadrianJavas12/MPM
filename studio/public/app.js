@@ -49,6 +49,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const delayTime = document.getElementById('delayTime');
   const density = document.getElementById('density');
   const enableDamage = document.getElementById('enableDamage');
+  const constitutiveModel = document.getElementById('constitutiveModel');
+  const customModelTemplate = document.getElementById('customModelTemplate');
+  const customModelSource = document.getElementById('customModelSource');
+  const customModelFile = document.getElementById('customModelFile');
+  const customModelNotice = document.getElementById('customModelNotice');
+  const btnLoadModelTemplate = document.getElementById('btnLoadModelTemplate');
+  const btnValidateModel = document.getElementById('btnValidateModel');
+  const btnDownloadModel = document.getElementById('btnDownloadModel');
+  const btnExportSimulation = document.getElementById('btnExportSimulation');
+  const modelWorkspace = window.StudioModelWorkspace;
+  const schemaReady = fetch('/api/schema').then(async response => {
+    if (!response.ok) throw new Error('Schema parameter tidak tersedia.');
+    return response.json();
+  }).catch(err => { setModelNotice(err.message); return null; });
   const maxStepsRange = document.getElementById('maxStepsRange');
   const maxSteps = document.getElementById('maxSteps');
   const substeps = document.getElementById('substeps');
@@ -345,6 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
     delayTime.value = p.delayTime;
     density.value = p.density;
     enableDamage.checked = p.enableDamage;
+    constitutiveModel.value = 'chalk';
     maxSteps.value = p.maxSteps; maxStepsRange.value = p.maxSteps;
     substeps.value = p.substeps;
     plotMode.value = p.plotMode;
@@ -456,43 +471,134 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // --- Local Lisp workspace: editing and export never execute model code.
+  function setModelNotice(message) {
+    customModelNotice.textContent = message;
+  }
+  function downloadText(filename, content) {
+    const url = URL.createObjectURL(new Blob([content], { type: 'text/plain;charset=utf-8' }));
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  btnLoadModelTemplate.addEventListener('click', () => {
+    if (customModelSource.value.trim() &&
+        !confirm('Ganti kode editor dengan template? Kode lama di editor akan tertimpa.')) return;
+    customModelSource.value = modelWorkspace.TEMPLATES[customModelTemplate.value];
+    constitutiveModel.value = 'custom';
+    if (customModelTemplate.value === 'elastic') {
+      enablePlasticity.checked = false;
+      enableDamage.checked = false;
+    }
+    setModelNotice('Template dimuat; belum diuji oleh SBCL.' +
+      (customModelTemplate.value === 'elastic' ? ' Plastisitas dan damage dinonaktifkan untuk template elastis.' : ''));
+  });
+  customModelFile.addEventListener('change', async () => {
+    const file = customModelFile.files && customModelFile.files[0];
+    if (!file) return;
+    if (!file.name.toLowerCase().endsWith('.lisp') ||
+        file.size > modelWorkspace.MAX_SOURCE_BYTES) {
+      return setModelNotice('Hanya file .lisp berukuran maksimal 32 KiB yang diterima.');
+    }
+    if (customModelSource.value.trim() &&
+        !confirm('Import akan menimpa kode editor. Lanjutkan?')) return;
+    try {
+      const source = await file.text();
+      if (source.includes('\0')) throw new Error('NUL byte tidak diizinkan.');
+      customModelSource.value = source;
+      constitutiveModel.value = 'custom';
+      setModelNotice('File dimuat ke editor lokal; belum dieksekusi atau diunggah.');
+    } catch (err) {
+      setModelNotice('Gagal import: ' + err.message);
+    } finally {
+      customModelFile.value = ''; // The same file may be selected again after editing it.
+    }
+  });
+  btnValidateModel.addEventListener('click', () => {
+    const result = modelWorkspace.validateSource(customModelSource.value);
+    setModelNotice(result.message);
+  });
+  btnDownloadModel.addEventListener('click', () => {
+    if (!customModelSource.value.trim()) return setModelNotice('Kode .lisp masih kosong.');
+    downloadText('custom-model.lisp', customModelSource.value);
+    setModelNotice('custom-model.lisp berhasil disiapkan untuk download.');
+  });
+  btnExportSimulation.addEventListener('click', async () => {
+    try {
+      const schema = await schemaReady;
+      if (!schema) throw new Error('Schema parameter tidak tersedia. Muat ulang Studio.');
+      if (constitutiveModel.value === 'custom') {
+        const check = modelWorkspace.validateSource(customModelSource.value);
+        if (!check.ok) return setModelNotice(check.message);
+      }
+      downloadText('simulation.lisp', modelWorkspace.exportRunScript(collectSimulationParams(), schema));
+      setModelNotice('simulation.lisp diekspor. Jika memilih custom, ekspor custom-model.lisp juga.');
+    } catch (err) {
+      setModelNotice('Gagal export: ' + err.message);
+    }
+  });
+  fetch('/api/custom-model-capabilities').then(r => r.json()).then(data => {
+    if (!data.enabled) {
+      setModelNotice('Editor dan export aktif; eksekusi custom dinonaktifkan (STUDIO_ALLOW_CUSTOM_LISP=1 untuk localhost).');
+    }
+  }).catch(() => {});
+
   // --- Run Simulation Trigger ---
+  function collectSimulationParams() {
+    return {
+      shelfHeight: numericInput(shelfHeight),
+      shelfAspect: numericInput(shelfAspect),
+      cliffSlope: numericInput(cliffSlope),
+      notchHeight: numericInput(notchHeight),
+      notchDepth: numericInput(notchDepth),
+      notchShape: notchShape.value,
+      notchTipFraction: numericInput(notchTipFraction),
+      soilBoundary: numericInput(soilBoundary),
+      meshSize: numericInput(meshSize),
+      mpsPerCell: numericInput(mpsPerCell),
+      undercut: numericInput(undercut),
+      E: numericInput(modulusE, 1e9),
+      nu: numericInput(nu),
+      frictionAngle: numericInput(frictionAngle),
+      cohesion: numericInput(cohesion, 1e3),
+      dilatancyAngle: numericInput(dilatancyAngle),
+      nonlocalLength: numericInput(nonlocalLength),
+      enablePlasticity: enablePlasticity.checked,
+      initiationStress: numericInput(initStress, 1e3),
+      ductility: numericInput(ductility),
+      density: numericInput(density),
+      enableDamage: enableDamage.checked,
+      maxSteps: numericInput(maxSteps),
+      substeps: numericInput(substeps),
+      plotMode: plotMode.value || 'stress',
+      workers: numericInput(workers),
+      delayTime: numericInput(delayTime),
+      constitutiveModel: constitutiveModel.value
+    };
+  }
+
+  function numericInput(element, scale = 1) {
+    return element.value.trim() === '' ? undefined : Number(element.value) * scale;
+  }
+
   async function handleRunSimulation() {
     console.log('[CL-MPM] handleRunSimulation triggered');
-    if (isRunning) {
-      console.warn('[CL-MPM] Simulation already running');
-      return;
+    if (isRunning) return;
+    const schema = await schemaReady;
+    if (!schema) return setModelNotice('Schema parameter tidak tersedia. Muat ulang Studio.');
+    if (isRunning) return; // Two clicks may have awaited the schema together.
+    const payload = window.StudioConfig.normalize(collectSimulationParams(), schema);
+    if (payload.constitutiveModel === 'custom') {
+      const check = modelWorkspace.validateSource(customModelSource.value);
+      if (!check.ok) return setModelNotice(check.message);
+      if (!confirm('Custom Lisp akan dieksekusi dengan hak akses OS user lokal, TANPA sandbox. Jalankan kode ini?')) return;
+      payload.customModelSource = customModelSource.value;
+      payload.confirmCustomExecution = true;
     }
-
-    const payload = {
-      shelfHeight: parseFloat(shelfHeight.value) || 100,
-      shelfAspect: parseFloat(shelfAspect.value) || 2.0,
-      cliffSlope: parseFloat(cliffSlope.value) || 90,
-      notchHeight: parseFloat(notchHeight.value) || 0,
-      notchDepth: parseFloat(notchDepth.value) || 0,
-      notchShape: notchShape.value,
-      notchTipFraction: Number(notchTipFraction.value),
-      soilBoundary: Number(soilBoundary.value),
-      meshSize: parseFloat(meshSize.value) || 5.0,
-      mpsPerCell: parseInt(mpsPerCell.value) || 2,
-      undercut: parseFloat(undercut.value) || 0,
-      E: (parseFloat(modulusE.value) || 1.0) * 1e9,
-      nu: parseFloat(nu.value) || 0.35,
-      frictionAngle: parseFloat(frictionAngle.value) || 40,
-      cohesion: Number(cohesion.value) * 1e3,
-      dilatancyAngle: Number(dilatancyAngle.value),
-      nonlocalLength: Number(nonlocalLength.value),
-      enablePlasticity: enablePlasticity.checked,
-      initiationStress: (parseFloat(initStress.value) || 200) * 1e3,
-      ductility: parseFloat(ductility.value) || 10,
-      density: parseFloat(density.value) || 1700,
-      enableDamage: enableDamage.checked,
-      maxSteps: parseInt(maxSteps.value) || 10,
-      substeps: parseInt(substeps.value) || 10,
-      plotMode: plotMode.value || 'stress',
-      workers: parseInt(workers.value) || 4,
-      delayTime: Number(delayTime.value)
-    };
 
     setRunningUI(true);
     lastLogSeq = 0;

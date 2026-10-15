@@ -1,0 +1,200 @@
+;;;; Artifact-only frozen-stress discriminator; no legacy Joss/DR hooks loaded.
+;;;; Run with windows/cl-mpm.cmd. Optional CL_MPM_CRITERION_WAIT=1 retains the
+;;;; converged sim for <=600s, loading only a root-generated continuation.lisp
+;;;; in output/reference-reproduction-2026-10-15/criterion-probe/.
+(in-package :cl-user)
+(require :asdf)
+(ql:quickload :cl-mpm/settings :silent t)
+(asdf:initialize-output-translations
+ (list :output-translations
+       (list (cl-mpm-path "src/**/*.*")
+             (cl-mpm-path "output/reference-reproduction-2026-10-14/fast-cache-safe/src/**/*.*"))
+       (list (cl-mpm-path "studio/lisp/**/*.*")
+             (cl-mpm-path "output/reference-reproduction-2026-10-14/fast-cache-safe/studio/lisp/**/*.*"))
+       :inherit-configuration))
+(setf (symbol-value (find-symbol "*OPTIMISE-SETTING*" :cl-mpm/settings))
+      '(optimize (speed 3) (safety 1) (debug 1) (compilation-speed 0)))
+(ql:quickload :cl-mpm-studio :silent t)
+(in-package :cl-mpm-studio)
+
+(defparameter *criterion-probe-sim* nil)
+(defparameter *criterion-probe-config* nil)
+
+(defun criterion-probe-json (path value)
+  (with-open-file (stream path :direction :output :if-exists :supersede)
+    (write-string (jonathan:to-json value) stream)))
+
+(defun criterion-probe-state (mp)
+  ;; Physical fields must be exactly preserved while only driving fields vary.
+  (append (loop for d below 3 collect (cl-mpm/utils:varef (cl-mpm/particle:mp-position mp) d))
+          (loop for d below 6 collect (cl-mpm/utils:varef (cl-mpm/particle::mp-undamaged-stress mp) d))
+          (list (cl-mpm/particle:mp-mass mp) (cl-mpm/particle:mp-volume mp)
+                (cl-mpm/particle::mp-history-stress mp) (cl-mpm/particle::mp-history-stress-n mp)
+                (cl-mpm/particle:mp-damage mp) (cl-mpm/particle::mp-damage-n mp))))
+
+(defun criterion-probe-fields (sim criterion)
+  (let* ((mps (cl-mpm:sim-mps sim))
+         (local (make-array (length mps) :element-type 'double-float))
+         (nonlocal (make-array (length mps) :element-type 'double-float)))
+    (loop for mp across mps for i from 0 do
+      (let ((value (max 0d0 (funcall criterion (cl-mpm/particle::mp-undamaged-stress mp)
+                                    (cl-mpm/particle::mp-friction-angle mp)))))
+        (unless (reference-finite-p value) (error "Nonfinite local criterion at MP ~D" i))
+        (setf (aref local i) value
+              (cl-mpm/particle::mp-damage-y-local mp) value
+              (cl-mpm/particle::mp-local-damage-increment mp) value)))
+    ;; Native neighbourhood and quadrature; no damage/history integration.
+    (cl-mpm/damage::update-delocalisation-list (cl-mpm:sim-mesh sim) mps)
+    (cl-mpm/damage::delocalise-damage sim)
+    (loop for mp across mps for i from 0 do
+      (let ((value (cl-mpm/particle::mp-damage-ybar mp)))
+        (unless (and (reference-finite-p value) (>= value 0d0))
+          (error "Invalid nonlocal criterion at MP ~D" i))
+        (setf (aref nonlocal i) value)))
+    (values local nonlocal)))
+
+(defun criterion-probe-extrema (sim field correct-k0 legacy-k0)
+  (let ((result (make-hash-table :test #'equal))
+        (mps (cl-mpm:sim-mps sim)))
+    (labels ((record (i)
+               (let* ((mp (aref mps i)) (entry (make-hash-table :test #'equal)))
+                 (setf (gethash "arrayIndex" entry) i
+                       (gethash "uniqueId" entry) (cl-mpm/particle::mp-unique-index mp)
+                       (gethash "materialIndex" entry) (cl-mpm/particle::mp-index mp)
+                       (gethash "x" entry) (cl-mpm/utils:varef (cl-mpm/particle:mp-position mp) 0)
+                       (gethash "y" entry) (cl-mpm/utils:varef (cl-mpm/particle:mp-position mp) 1)
+                       (gethash "mass" entry) (cl-mpm/particle:mp-mass mp)
+                       (gethash "drivingStress" entry) (aref field i)
+                       (gethash "ratioToCorrectK0" entry) (/ (aref field i) correct-k0)
+                       (gethash "ratioToLegacyK0" entry) (/ (aref field i) legacy-k0))
+                 entry))
+             (ranked (predicate)
+               (sort (loop for mp across mps for i from 0
+                           when (funcall predicate mp) collect i)
+                     #'> :key (lambda (i) (aref field i)))))
+      (let ((all (ranked (constantly t)))
+            (lower (ranked (lambda (mp) (<= (cl-mpm/utils:varef (cl-mpm/particle:mp-position mp) 1) 4d0))))
+            (upper (ranked (lambda (mp) (>= (cl-mpm/utils:varef (cl-mpm/particle:mp-position mp) 1) 9d0)))))
+        (setf (gethash "top10" result) (coerce (mapcar #'record (subseq all 0 (min 10 (length all)))) 'vector)
+              (gethash "maximumLowerYle4" result) (if lower (record (first lower)) :null)
+              (gethash "maximumUpperYge9" result) (if upper (record (first upper)) :null)
+              (gethash "countOverCorrectK0" result) (count-if (lambda (v) (> v correct-k0)) field)
+              (gethash "countOverLegacyK0" result) (count-if (lambda (v) (> v legacy-k0)) field))))
+    result))
+
+(defun criterion-probe-dump (sim config output summary)
+  (let* ((mps (cl-mpm:sim-mps sim))
+         (states (map 'vector #'criterion-probe-state mps))
+         (driving (map 'vector (lambda (mp) (list (cl-mpm/particle::mp-damage-y-local mp)
+                                                 (cl-mpm/particle::mp-local-damage-increment mp)
+                                                 (cl-mpm/particle::mp-damage-ybar mp))) mps))
+         (angle (param config "damageFrictionAngle"))
+         (correct-k0 (cl-mpm/damage::mohr-coloumb-coheasion-to-tensile (param config "damageCohesion") angle))
+         ;; Deliberately reproduce the legacy units error only as a comparison.
+         (legacy-k0 (cl-mpm/damage::mohr-coloumb-coheasion-to-tensile (param config "damageCohesion") (deg->rad angle))))
+    (unwind-protect
+         (multiple-value-bind (dp-local dp-nonlocal)
+             (criterion-probe-fields sim #'cl-mpm/damage::drucker-prager-criterion)
+           (multiple-value-bind (mc-local mc-nonlocal)
+               (criterion-probe-fields sim #'cl-mpm/damage::criterion-mohr-coloumb-stress-tensile)
+             (with-open-file (csv (merge-pathnames "particles.csv" output) :direction :output :if-exists :supersede)
+               (format csv "arrayIndex,uniqueId,materialIndex,x,y,sizeX,sizeY,mass,volume,sigXX,sigYY,sigZZ,sigYZ,sigXZ,sigXY,dpLocal,dpNonlocal,mcLocal,mcNonlocal,correctK0,legacyK0,currentTau,legacyTau,dpNonlocalOverCorrectK0,dpNonlocalOverLegacyK0,mcNonlocalOverCorrectK0,mcNonlocalOverLegacyK0~%")
+               (loop for mp across mps for i from 0 do
+                 (format csv "~{~A~^,~}~%"
+                         (mapcar #'reference-csv-number
+                          (append (list i (cl-mpm/particle::mp-unique-index mp) (cl-mpm/particle::mp-index mp)
+                                        (cl-mpm/utils:varef (cl-mpm/particle:mp-position mp) 0)
+                                        (cl-mpm/utils:varef (cl-mpm/particle:mp-position mp) 1)
+                                        (cl-mpm/utils:varef (cl-mpm/particle::mp-domain-size mp) 0)
+                                        (cl-mpm/utils:varef (cl-mpm/particle::mp-domain-size mp) 1)
+                                        (cl-mpm/particle:mp-mass mp) (cl-mpm/particle:mp-volume mp))
+                                  (loop for d below 6 collect (cl-mpm/utils:varef (cl-mpm/particle::mp-undamaged-stress mp) d))
+                                  (list (aref dp-local i) (aref dp-nonlocal i) (aref mc-local i) (aref mc-nonlocal i)
+                                        correct-k0 legacy-k0 10d0 62d0
+                                        (/ (aref dp-nonlocal i) correct-k0) (/ (aref dp-nonlocal i) legacy-k0)
+                                        (/ (aref mc-nonlocal i) correct-k0) (/ (aref mc-nonlocal i) legacy-k0)))))))
+             (setf (gethash "correctInitiationPa" summary) correct-k0
+                   (gethash "legacyInitiationPa" summary) legacy-k0
+                   (gethash "currentTauSeconds" summary) 10d0 (gethash "legacyTauSeconds" summary) 62d0
+                   (gethash "damageFrictionRadians" summary) (deg->rad angle)
+                   (gethash "dpLocal" summary) (criterion-probe-extrema sim dp-local correct-k0 legacy-k0)
+                   (gethash "dpNonlocal" summary) (criterion-probe-extrema sim dp-nonlocal correct-k0 legacy-k0)
+                   (gethash "mcLocal" summary) (criterion-probe-extrema sim mc-local correct-k0 legacy-k0)
+                   (gethash "mcNonlocal" summary) (criterion-probe-extrema sim mc-nonlocal correct-k0 legacy-k0))))
+      (loop for mp across mps for old across driving for state across states do
+        (setf (cl-mpm/particle::mp-damage-y-local mp) (first old)
+              (cl-mpm/particle::mp-local-damage-increment mp) (second old)
+              (cl-mpm/particle::mp-damage-ybar mp) (third old))
+        (unless (equalp state (criterion-probe-state mp))
+          (error "Frozen probe changed stress/history/physical state"))))
+    (setf (gethash "frozenPhysicalStatePreserved" summary) t
+          (gethash "damageIntegrated" summary) :false
+          (gethash "provenance" summary)
+          "DP criterion: recovered candidate-joss.lisp line110; legacy degree-helper receives radian angle at line274; candidate-runner.lisp line176 uses tau62. Current MC reference uses degree-correct k0 and tau10. Same actual six-component undamaged stress and native nonlocal quadrature for both; legacy solver/hooks not loaded; source identity with video unproved.")))
+
+(defun criterion-probe-wait (output)
+  (when (equal (uiop:getenv "CL_MPM_CRITERION_WAIT") "1")
+    (let ((control (merge-pathnames "continuation.lisp" output))
+          (started (get-internal-real-time)))
+      (format t "~&CRITERION PROBE WAITING <=600s for trusted root control: ~A~%" control)
+      (finish-output)
+      (loop while (< (/ (- (get-internal-real-time) started) internal-time-units-per-second) 600) do
+        (when (probe-file control)
+          (format t "~&Loading root continuation with settled *criterion-probe-sim* / *criterion-probe-config*.~%")
+          (finish-output) (load control) (return))
+        (sleep 0.5d0)))))
+
+(handler-case
+    (let* ((config (load-config (cl-user::cl-mpm-path "output/reference-reproduction-2026-10-14/video-candidate-config.json")))
+           (output (uiop:ensure-directory-pathname (cl-user::cl-mpm-path "output/reference-reproduction-2026-10-15/criterion-probe/")))
+           (summary (make-hash-table :test #'equal)))
+      (when (probe-file (merge-pathnames "continuation.lisp" output))
+        (error "Existing continuation.lisp must be reviewed/removed before starting this probe"))
+      (setf (gethash "meshSize" config) 0.5d0 (gethash "mpsPerCell" config) 2
+            (gethash "workers" config) 4 (gethash "timeStepScale" config) 0.5d0)
+      (cl-mpm/utils:set-workers 4)
+      (ensure-directories-exist output)
+      (let* ((sim (make-joss-reference-sim config))
+             (initial-mass (reference-summary sim))
+             (started (get-internal-real-time)) (steps 0) (converged nil) (reason "step-limit"))
+        (assert (typep sim 'joss-reference-aggregate-sim))
+        (setf (cl-mpm:sim-damping-factor sim) (reference-viscous-damping config 0.1d0))
+        (format t "~&CRITERION PROBE: aggregate/projected stats, h.5/mps2/workers4/FbarON/mass1, elastic prep cap2000updates/220s, strict1e-4~%")
+        (finish-output)
+        (with-open-file (csv (merge-pathnames "settle.csv" output) :direction :output :if-exists :supersede)
+          (format csv "step,preparationTime,wallSeconds,energyRatio,projectedOobf~%")
+          (loop for step from 1 to 2000 do
+            (setf (cl-mpm:sim-dt sim) (cl-mpm/setup:estimate-elastic-dt sim :dt-scale 0.5d0))
+            (cl-mpm:update-sim sim)
+            (setf steps step)
+            (let ((epsilon (reference-energy-ratio sim)) (oobf (cl-mpm::sim-stats-oobf sim))
+                  (wall (/ (- (get-internal-real-time) started) (float internal-time-units-per-second 1d0))))
+              (when (or (= step 1) (zerop (mod step 50)))
+                (reference-check-finite sim)
+                (format csv "~{~A~^,~}~%" (mapcar #'reference-csv-number (list step (cl-mpm::sim-time sim) wall epsilon oobf)))
+                (format t "~&PROBE settle~D wall~,2Fs epsilon~,6E projectedOobf~,6E~%" step wall epsilon oobf)
+                (finish-output csv) (finish-output))
+              (when (and (< epsilon 1d-4) (< oobf 1d-4))
+                (setf converged t reason "strict-projected-equilibrium") (loop-finish))
+              (when (>= wall 220d0) (setf reason "wall-limit") (loop-finish)))))
+        (reference-check-finite sim)
+        (assert (< (abs (- (reference-summary sim) initial-mass)) 1d-7))
+        (setf (gethash "converged" summary) (if converged t :false)
+              (gethash "termination" summary) reason (gethash "updates" summary) steps
+              (gethash "energyRatio" summary) (reference-energy-ratio sim)
+              (gethash "projectedOobf" summary) (cl-mpm::sim-stats-oobf sim)
+              (gethash "particles" summary) (length (cl-mpm:sim-mps sim))
+              (gethash "mass" summary) (reference-summary sim)
+              (gethash "physicalFractureValidated" summary) :false)
+        (criterion-probe-json (merge-pathnames "summary.json" output) summary)
+        (unless converged (error "Probe preparation failed strict convergence; no frozen criterion comparison emitted"))
+        (cl-mpm/output:save-vtk (merge-pathnames "equilibrium.vtk" output) sim)
+        (criterion-probe-dump sim config output summary)
+        (criterion-probe-json (merge-pathnames "summary.json" output) summary)
+        (criterion-probe-json (merge-pathnames "config.json" output) config)
+        (setf *criterion-probe-sim* sim *criterion-probe-config* config)
+        (format t "~&CRITERION PROBE COMPLETE: ~A~%" (jonathan:to-json summary))
+        (finish-output)
+        (criterion-probe-wait output)))
+  (error (e) (format *error-output* "~&CRITERION PROBE FAILED: ~A~%" e) (uiop:quit 1)))
+(uiop:quit 0)

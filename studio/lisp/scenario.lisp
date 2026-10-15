@@ -35,10 +35,13 @@
       block-size
       counts
       (param config "density")
-      'cl-mpm/particle::particle-chalk-delayed
+      (if (eq (param config "constitutiveModel") :custom)
+          'studio-custom-chalk
+          'cl-mpm/particle::particle-chalk-delayed)
       :E (param config "E")
       :nu (param config "nu")
       :enable-plasticity (param config "enablePlasticity")
+      :enable-damage (param config "enableDamage")
       :friction-angle friction
       :phi (deg->rad friction)
       :psi (deg->rad (param config "dilatancyAngle"))
@@ -143,6 +146,7 @@ The tip fraction affects triangular notches only."
                1d0)))))))
 (defun make-cliff-sim (config)
   "Build the cliff-collapse simulation described by CONFIG."
+  (when (eq (param config "constitutiveModel") :custom) (ensure-custom-model))
   (let* ((h (param config "meshSize"))
          (height (param config "shelfHeight"))
          (soil (param config "soilBoundary"))

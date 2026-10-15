@@ -2,7 +2,7 @@
 title: CL-MPM
 type: entity
 tags: [project, mpm, common-lisp]
-sources: [[[refactor-2026-10-14]]]
+sources: ["[[refactor-2026-10-14]]"]
 updated: 2026-10-14
 ---
 
@@ -14,4 +14,6 @@ Explicit dynamics with mass scaling, GIMP shape functions, non-local continuum d
 - How it is built: [[cl-mpm-architecture]]
 - Native Windows support: [[windows-port]]
 - Web UI: [[cl-mpm-studio]]
+- Custom laws and Lisp export: [[studio-custom-models]]
+- Current verified state and next work: [[studio-verification-2026-10-14]]
 - Repo documentation: `docs/README.md` in the workspace.

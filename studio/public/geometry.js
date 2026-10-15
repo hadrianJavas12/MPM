@@ -19,6 +19,7 @@
       shelfHeight: 100, shelfAspect: 2, soilBoundary: 20,
       cliffSlope: 90, undercut: 0, notchHeight: 0, notchDepth: 0,
       notchShape: 'rectangle', notchTipFraction: 0.5,
+      upperVerticalHeight: 6.8, runoutAspect: 1,
     };
     const result = {};
     for (const [key, fallback] of Object.entries(defaults)) {
@@ -29,6 +30,7 @@
         result[key] = raw[key] === '' || raw[key] == null || !Number.isFinite(n) ? fallback : n;
       }
     }
+    result.scenario = raw.scenario === 'joss-bay' ? 'joss-bay' : 'studio-cliff';
     return result;
   }
 
@@ -37,14 +39,20 @@
     const height = Math.max(0.001, p.shelfHeight);
     const soil = Math.max(0, p.soilBoundary);
     const shelf = height * Math.max(0.001, p.shelfAspect);
-    return { ...p, height, soil, shelf, width: shelf + 2 * height, top: soil + height };
+    return { ...p, height, soil, shelf, width: shelf + (p.scenario === 'joss-bay' ? p.runoutAspect : 2) * height, top: soil + height };
   }
 
   function faceX(g, y) {
+    if (g.scenario === 'joss-bay') {
+      const lowerHeight = Math.max(0, g.height - g.upperVerticalHeight);
+      return g.shelf - Math.min(Math.max(0, y - g.soil), lowerHeight) * Math.tan((90 - g.cliffSlope) * Math.PI / 180);
+    }
     return g.shelf - (y - g.soil) * Math.tan((90 - g.cliffSlope - g.undercut) * Math.PI / 180);
   }
 
   function notchContains(g, x, y) {
+    if (g.scenario === 'joss-bay')
+      return g.notchDepth > 0 && y > g.soil && x - (y - g.soil) > g.shelf - g.notchDepth;
     const h = g.notchHeight;
     if (!(h > 0.01) || y <= g.soil || y >= g.soil + h) return false;
     const d = g.notchDepth > 0.01 ? g.notchDepth : 1.5 * h;

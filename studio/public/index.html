@@ -338,6 +338,46 @@
               <small>Aktifkan perambatan retak & degradasi modulus</small>
             </div>
           </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="constitutiveModel">Constitutive Model</label>
+            </div>
+            <select id="constitutiveModel" class="studio-select">
+              <option value="chalk" selected>Built-in Chalk (Plastic-Damage)</option>
+              <option value="custom">Custom Common Lisp (Advanced)</option>
+            </select>
+            <small>Custom memakai subclass chalk khusus sehingga metode bawaan tetap utuh.</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="customModelTemplate">Template Custom Model</label>
+            </div>
+            <select id="customModelTemplate" class="studio-select">
+              <option value="delegate">Delegate (call-next-method)</option>
+              <option value="elastic">Experimental elastic stress update</option>
+            </select>
+            <button type="button" id="btnLoadModelTemplate" class="btn btn-secondary">
+              Muat Template
+            </button>
+            <small>Template hanya titik awal. Model baru wajib diverifikasi secara numerik.</small>
+          </div>
+          <div class="form-group">
+            <div class="label-row">
+              <label for="customModelFile">Import File .lisp</label>
+            </div>
+            <input type="file" id="customModelFile" accept=".lisp,text/plain">
+            <label for="customModelSource">Source Code Common Lisp</label>
+            <textarea id="customModelSource" rows="14" spellcheck="false"
+              aria-describedby="customModelNotice"
+              style="width:100%;resize:vertical;min-height:220px;background:#0b1729;color:#d9efff;border:1px solid #63758b;border-radius:8px;padding:12px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;line-height:1.45"></textarea>
+            <small id="customModelNotice" role="status">Editor lokal. Tidak ada skrip yang dieksekusi sampai simulasi dimulai dan disetujui.</small>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+              <button type="button" id="btnValidateModel" class="btn btn-secondary">Cek Tanda Kurung</button>
+              <button type="button" id="btnDownloadModel" class="btn btn-secondary">Export custom-model.lisp</button>
+              <button type="button" id="btnExportSimulation" class="btn btn-secondary">Export simulation.lisp</button>
+            </div>
+            <small>PERINGATAN: Custom Lisp dapat mengakses filesystem dan proses sistem. Eksekusi hanya tersedia jika admin mengaktifkan STUDIO_ALLOW_CUSTOM_LISP=1 pada server localhost. Bukan sandbox.</small>
+          </div>
         </div>
 
         <!-- TAB 3: Solver & Tampilan -->
@@ -589,6 +629,8 @@
   </main>
 
   <script src="geometry.js"></script>
+  <script src="config.js"></script>
+  <script src="model-workspace.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

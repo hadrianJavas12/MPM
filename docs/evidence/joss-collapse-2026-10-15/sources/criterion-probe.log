@@ -1,0 +1,271 @@
+Angle: 0.0e+0
+
+(31.0d0 16.5d0 0)
+(0.25d0 0.25d0 0.0d0)
+CRITERION PROBE: aggregate/projected stats, h.5/mps2/workers4/FbarON/mass1, elastic prep cap2000updates/220s, strict1e-4
+
+
+"Rebuilt pool""
+PROBE settle1 wall0.64s epsilon7.894751d+1 projectedOobf7.690774d-1
+PROBE settle50 wall5.25s epsilon7.712349d-1 projectedOobf1.620720d-1
+PROBE settle100 wall9.79s epsilon5.149272d-2 projectedOobf9.917960d-2
+PROBE settle150 wall14.18s epsilon1.231592d-2 projectedOobf6.871538d-2
+PROBE settle200 wall18.95s epsilon4.275788d-3 projectedOobf5.023042d-2
+PROBE settle250 wall23.40s epsilon1.783325d-3 projectedOobf3.723736d-2
+PROBE settle300 wall28.00s epsilon8.336035d-4 projectedOobf2.813416d-2
+PROBE settle350 wall32.37s epsilon4.225311d-4 projectedOobf2.168492d-2
+PROBE settle400 wall36.88s epsilon2.277497d-4 projectedOobf1.691253d-2
+PROBE settle450 wall41.25s epsilon1.287947d-4 projectedOobf1.324538d-2
+PROBE settle500 wall45.86s epsilon7.563687d-5 projectedOobf1.058784d-2
+PROBE settle550 wall50.22s epsilon4.575695d-5 projectedOobf8.483188d-3
+PROBE settle600 wall54.75s epsilon2.833224d-5 projectedOobf6.816656d-3
+PROBE settle650 wall59.13s epsilon1.786526d-5 projectedOobf5.516065d-3
+PROBE settle700 wall63.66s epsilon1.142671d-5 projectedOobf4.469652d-3
+PROBE settle750 wall68.00s epsilon7.390593d-6 projectedOobf3.626849d-3
+PROBE settle800 wall72.48s epsilon4.822260d-6 projectedOobf2.956344d-3
+PROBE settle850 wall77.01s epsilon3.168376d-6 projectedOobf2.413875d-3
+PROBE settle900 wall81.40s epsilon2.093243d-6 projectedOobf1.974549d-3
+PROBE settle950 wall85.88s epsilon1.389054d-6 projectedOobf1.616792d-3
+PROBE settle1000 wall90.23s epsilon9.250417d-7 projectedOobf1.324883d-3
+PROBE settle1050 wall94.83s epsilon6.178060d-7 projectedOobf1.086370d-3
+PROBE settle1100 wall99.25s epsilon4.135797d-7 projectedOobf8.912682d-4
+PROBE settle1150 wall103.85s epsilon2.773942d-7 projectedOobf7.315232d-4
+PROBE settle1200 wall108.16s epsilon1.863455d-7 projectedOobf6.006274d-4
+PROBE settle1250 wall112.69s epsilon1.253441d-7 projectedOobf4.933046d-4
+PROBE settle1300 wall117.01s epsilon8.440265d-8 projectedOobf4.052650d-4
+PROBE settle1350 wall121.47s epsilon5.688479d-8 projectedOobf3.330108d-4
+PROBE settle1400 wall125.82s epsilon3.836713d-8 projectedOobf2.736898d-4
+PROBE settle1450 wall130.42s epsilon2.589361d-8 projectedOobf2.249722d-4
+PROBE settle1500 wall134.77s epsilon1.748444d-8 projectedOobf1.849518d-4
+PROBE settle1550 wall139.24s epsilon1.181137d-8 projectedOobf1.520690d-4
+PROBE settle1600 wall143.57s epsilon7.981933d-9 projectedOobf1.250457d-4
+PROBE settle1650 wall147.80s epsilon5.395722d-9 projectedOobf1.028339d-4
+CRITERION PROBE COMPLETE: {"converged":true,"termination":"strict-projected-equilibrium","updates":1658,"energyRatio":0.00000000506817040669782,"projectedOobf":0.00009966675915730106,"particles":4155,"mass":425664.0625,"physicalFractureValidated":false,"correctInitiationPa":18926.452181842527,"legacyInitiationPa":51213.965508145586,"currentTauSeconds":10.0,"legacyTauSeconds":62.0,"damageFrictionRadians":0.8726646259971648,"dpLocal":{"top10":[{"arrayIndex":4145,"uniqueId":1485,"materialIndex":-1,"x":15.406421641823039,"y":1.4061672622558214,"mass":6.640625,"drivingStress":55675.36924862898,"ratioToCorrectK0":2.941669612123199,"ratioToLegacyK0":1.0871130305223837},{"arrayIndex":3511,"uniqueId":-1,"materialIndex":-1,"x":13.375325502970325,"y":3.3749736551597342,"mass":106.25,"drivingStress":51361.62163856588,"ratioToCorrectK0":2.713747993817916,"ratioToLegacyK0":1.0028831223857642},{"arrayIndex":3447,"uniqueId":-1,"materialIndex":-1,"x":13.125341888275743,"y":3.8749740607455867,"mass":106.25,"drivingStress":51333.70509735899,"ratioToCorrectK0":2.712272992537239,"ratioToLegacyK0":1.002338026122862},{"arrayIndex":3446,"uniqueId":-1,"materialIndex":-1,"x":13.125328223359599,"y":3.6249765209643834,"mass":106.25,"drivingStress":51246.404533929126,"ratioToCorrectK0":2.7076603708693696,"ratioToLegacyK0":1.0006334019531915},{"arrayIndex":3445,"uniqueId":-1,"materialIndex":-1,"x":13.125313171157293,"y":3.3749791597125105,"mass":106.25,"drivingStress":51235.521296629246,"ratioToCorrectK0":2.707085343009139,"ratioToLegacyK0":1.0004208966884283},{"arrayIndex":3513,"uniqueId":-1,"materialIndex":-1,"x":13.375354548737404,"y":3.8749686334656097,"mass":106.25,"drivingStress":51202.75104572861,"ratioToCorrectK0":2.7053538906172285,"ratioToLegacyK0":0.9997810272587623},{"arrayIndex":3512,"uniqueId":-1,"materialIndex":-1,"x":13.375340730334822,"y":3.624971034257328,"mass":106.25,"drivingStress":51115.42870222576,"ratioToCorrectK0":2.7007401181751525,"ratioToLegacyK0":0.998075977813041},{"arrayIndex":3510,"uniqueId":-1,"materialIndex":-1,"x":13.375308866600871,"y":3.1249764961581206,"mass":106.25,"drivingStress":50999.599967588845,"ratioToCorrectK0":2.6946201790801734,"ratioToLegacyK0":0.9958143147395481},{"arrayIndex":3448,"uniqueId":-1,"materialIndex":-1,"x":13.125354219115183,"y":4.124971829465793,"mass":106.25,"drivingStress":50966.313332439175,"ratioToCorrectK0":2.6928614429562625,"ratioToLegacyK0":0.9951643624302628},{"arrayIndex":3449,"uniqueId":-1,"materialIndex":-1,"x":13.125365215922669,"y":4.374969827134294,"mass":106.25,"drivingStress":50899.97907401257,"ratioToCorrectK0":2.6893565991646593,"ratioToLegacyK0":0.9938691247393627}],"maximumLowerYle4":{"arrayIndex":4145,"uniqueId":1485,"materialIndex":-1,"x":15.406421641823039,"y":1.4061672622558214,"mass":6.640625,"drivingStress":55675.36924862898,"ratioToCorrectK0":2.941669612123199,"ratioToLegacyK0":1.0871130305223837},"maximumUpperYge9":{"arrayIndex":2940,"uniqueId":-1,"materialIndex":-1,"x":11.125316670226097,"y":9.124946772468116,"mass":106.25,"drivingStress":33797.637985925714,"ratioToCorrectK0":1.7857355230237053,"ratioToLegacyK0":0.6599301118471327},"countOverCorrectK0":2756,"countOverLegacyK0":5},"dpNonlocal":{"top10":[{"arrayIndex":3446,"uniqueId":-1,"materialIndex":-1,"x":13.125328223359599,"y":3.6249765209643834,"mass":106.25,"drivingStress":50408.9814097604,"ratioToCorrectK0":2.6634141954043176,"ratioToLegacyK0":0.9842819416462264},{"arrayIndex":3447,"uniqueId":-1,"materialIndex":-1,"x":13.125341888275743,"y":3.8749740607455867,"mass":106.25,"drivingStress":50347.83119658184,"ratioToCorrectK0":2.6601832563677226,"ratioToLegacyK0":0.9830879272290293},{"arrayIndex":3445,"uniqueId":-1,"materialIndex":-1,"x":13.125313171157293,"y":3.3749791597125105,"mass":106.25,"drivingStress":50228.43728381433,"ratioToCorrectK0":2.6538749471494714,"ratioToLegacyK0":0.9807566507581901},{"arrayIndex":3448,"uniqueId":-1,"materialIndex":-1,"x":13.125354219115183,"y":4.124971829465793,"mass":106.25,"drivingStress":50192.080538391776,"ratioToCorrectK0":2.6519539983592146,"ratioToLegacyK0":0.9800467517089401},{"arrayIndex":3449,"uniqueId":-1,"materialIndex":-1,"x":13.125365215922669,"y":4.374969827134294,"mass":106.25,"drivingStress":49754.17349786105,"ratioToCorrectK0":2.6288166963269384,"ratioToLegacyK0":0.9714962121015144},{"arrayIndex":3444,"uniqueId":-1,"materialIndex":-1,"x":13.12529673159218,"y":3.12498197698356,"mass":106.25,"drivingStress":49745.90182106249,"ratioToCorrectK0":2.6283796531495334,"ratioToLegacyK0":0.9713346999687107},{"arrayIndex":3381,"uniqueId":-1,"materialIndex":-1,"x":12.875329670484359,"y":3.874978721304955,"mass":106.25,"drivingStress":49373.610095982964,"ratioToCorrectK0":2.608709208762883,"ratioToLegacyK0":0.9640653600262625},{"arrayIndex":3382,"uniqueId":-1,"materialIndex":-1,"x":12.8753419401948,"y":4.124976360904114,"mass":106.25,"drivingStress":49358.885074659964,"ratioToCorrectK0":2.607931196001615,"ratioToLegacyK0":0.9637778403785082},{"arrayIndex":3450,"uniqueId":-1,"materialIndex":-1,"x":13.125374972007867,"y":4.624968099762461,"mass":106.25,"drivingStress":49260.33788291109,"ratioToCorrectK0":2.6027243463077556,"ratioToLegacyK0":0.9618536153986402},{"arrayIndex":3380,"uniqueId":-1,"materialIndex":-1,"x":12.875316155853005,"y":3.624981232842394,"mass":106.25,"drivingStress":49238.728288969876,"ratioToCorrectK0":2.60158257955012,"ratioToLegacyK0":0.9614316681089351}],"maximumLowerYle4":{"arrayIndex":3446,"uniqueId":-1,"materialIndex":-1,"x":13.125328223359599,"y":3.6249765209643834,"mass":106.25,"drivingStress":50408.9814097604,"ratioToCorrectK0":2.6634141954043176,"ratioToLegacyK0":0.9842819416462264},"maximumUpperYge9":{"arrayIndex":3006,"uniqueId":-1,"materialIndex":-1,"x":11.375325184685241,"y":9.124948706357193,"mass":106.25,"drivingStress":33936.54418980125,"ratioToCorrectK0":1.7930747856885167,"ratioToLegacyK0":0.6626423838318796},"countOverCorrectK0":2740,"countOverLegacyK0":0},"mcLocal":{"top10":[{"arrayIndex":4075,"uniqueId":1335,"materialIndex":-1,"x":13.84416178704381,"y":8.781244699606141,"mass":6.640625,"drivingStress":37430.85232692021,"ratioToCorrectK0":1.9777004145991108,"ratioToLegacyK0":0.730871979069202},{"arrayIndex":4073,"uniqueId":1332,"materialIndex":-1,"x":13.781656064966953,"y":8.96874817922715,"mass":6.640625,"drivingStress":36896.90745399565,"ratioToCorrectK0":1.9494888476453838,"ratioToLegacyK0":0.7204462120420492},{"arrayIndex":4071,"uniqueId":1328,"materialIndex":-1,"x":13.8441631371031,"y":8.718742804012141,"mass":6.640625,"drivingStress":36788.12266290103,"ratioToCorrectK0":1.9437410830855268,"ratioToLegacyK0":0.718322088475064},{"arrayIndex":4072,"uniqueId":1329,"materialIndex":-1,"x":13.844164487162884,"y":8.656240908419317,"mass":6.640625,"drivingStress":36502.51858963062,"ratioToCorrectK0":1.928650876504475,"ratioToLegacyK0":0.7127454050365402},{"arrayIndex":4074,"uniqueId":1333,"materialIndex":-1,"x":13.781657535400981,"y":8.906246466138912,"mass":6.640625,"drivingStress":35065.062002865256,"ratioToCorrectK0":1.8527012704740105,"ratioToLegacyK0":0.6846777369209607},{"arrayIndex":4017,"uniqueId":329,"materialIndex":-1,"x":13.812916067523672,"y":8.562487554606811,"mass":26.5625,"drivingStress":33991.252923239976,"ratioToCorrectK0":1.7959653820302448,"ratioToLegacyK0":0.6637106224050091},{"arrayIndex":4030,"uniqueId":801,"materialIndex":-1,"x":13.781659741052595,"y":8.812493896509652,"mass":13.28125,"drivingStress":32445.753832801904,"ratioToCorrectK0":1.7143072310155092,"ratioToLegacyK0":0.6335333245702562},{"arrayIndex":4061,"uniqueId":1201,"materialIndex":-1,"x":13.656632835770495,"y":9.656241977100585,"mass":6.640625,"drivingStress":31560.89208599494,"ratioToCorrectK0":1.6675545835406762,"ratioToLegacyK0":0.6162555813213717},{"arrayIndex":4062,"uniqueId":1204,"materialIndex":-1,"x":13.656634484931681,"y":9.593741990815436,"mass":6.640625,"drivingStress":31288.7131976919,"ratioToCorrectK0":1.6531737114317366,"ratioToLegacyK0":0.6109410370246653},{"arrayIndex":4063,"uniqueId":1205,"materialIndex":-1,"x":13.65663613409272,"y":9.531242004528549,"mass":6.640625,"drivingStress":31016.57418169016,"ratioToCorrectK0":1.6387949460198639,"ratioToLegacyK0":0.605627271271485}],"maximumLowerYle4":{"arrayIndex":4145,"uniqueId":1485,"materialIndex":-1,"x":15.406421641823039,"y":1.4061672622558214,"mass":6.640625,"drivingStress":27912.07049069662,"ratioToCorrectK0":1.4747650654502815,"ratioToLegacyK0":0.5450089680373843},"maximumUpperYge9":{"arrayIndex":4061,"uniqueId":1201,"materialIndex":-1,"x":13.656632835770495,"y":9.656241977100585,"mass":6.640625,"drivingStress":31560.89208599494,"ratioToCorrectK0":1.6675545835406762,"ratioToLegacyK0":0.6162555813213717},"countOverCorrectK0":110,"countOverLegacyK0":0},"mcNonlocal":{"top10":[{"arrayIndex":65,"uniqueId":-1,"materialIndex":-1,"x":0.12500247045002083,"y":16.374885999812143,"mass":106.25,"drivingStress":20232.444234594226,"ratioToCorrectK0":1.0690035322100477,"ratioToLegacyK0":0.39505716915000955},{"arrayIndex":131,"uniqueId":-1,"materialIndex":-1,"x":0.375007411350071,"y":16.374885969865026,"mass":106.25,"drivingStress":20218.380429535027,"ratioToCorrectK0":1.0682604555402062,"ratioToLegacyK0":0.39478256036079246},{"arrayIndex":197,"uniqueId":-1,"materialIndex":-1,"x":0.6250123420810407,"y":16.374885910639094,"mass":106.25,"drivingStress":20184.385494229955,"ratioToCorrectK0":1.0664642955954657,"ratioToLegacyK0":0.39411877783647953},{"arrayIndex":263,"uniqueId":-1,"materialIndex":-1,"x":0.8750172626439471,"y":16.37488582213184,"mass":106.25,"drivingStress":20110.13115314277,"ratioToCorrectK0":1.0625409854909749,"ratioToLegacyK0":0.39266889321320475},{"arrayIndex":329,"uniqueId":-1,"materialIndex":-1,"x":1.1250221628296238,"y":16.374885706349524,"mass":106.25,"drivingStress":20042.02966798569,"ratioToCorrectK0":1.0589427683236594,"ratioToLegacyK0":0.3913391487874143},{"arrayIndex":395,"uniqueId":-1,"materialIndex":-1,"x":1.3750270426421394,"y":16.374885563287382,"mass":106.25,"drivingStress":19918.056735532977,"ratioToCorrectK0":1.052392521544094,"ratioToLegacyK0":0.3889184627260509},{"arrayIndex":461,"uniqueId":-1,"materialIndex":-1,"x":1.6250318918252316,"y":16.374885396316316,"mass":106.25,"drivingStress":19815.758703846055,"ratioToCorrectK0":1.0469874920803541,"ratioToLegacyK0":0.3869209991304883},{"arrayIndex":64,"uniqueId":-1,"materialIndex":-1,"x":0.12500246702042228,"y":16.12488757413861,"mass":106.25,"drivingStress":19782.18114877546,"ratioToCorrectK0":1.045213384881182,"ratioToLegacyK0":0.3862653663409271},{"arrayIndex":130,"uniqueId":-1,"materialIndex":-1,"x":0.3750074010612731,"y":16.124887542759257,"mass":106.25,"drivingStress":19759.57864867272,"ratioToCorrectK0":1.0440191568301147,"ratioToLegacyK0":0.385824031640939},{"arrayIndex":196,"uniqueId":-1,"materialIndex":-1,"x":0.6250123256225404,"y":16.124887480664366,"mass":106.25,"drivingStress":19726.14452103038,"ratioToCorrectK0":1.0422526277774897,"ratioToLegacyK0":0.38517119940444633}],"maximumLowerYle4":{"arrayIndex":3447,"uniqueId":-1,"materialIndex":-1,"x":13.125341888275743,"y":3.8749740607455867,"mass":106.25,"drivingStress":16076.062706422017,"ratioToCorrectK0":0.8493965246082893,"ratioToLegacyK0":0.31389997917394463},"maximumUpperYge9":{"arrayIndex":65,"uniqueId":-1,"materialIndex":-1,"x":0.12500247045002083,"y":16.374885999812143,"mass":106.25,"drivingStress":20232.444234594226,"ratioToCorrectK0":1.0690035322100477,"ratioToLegacyK0":0.39505716915000955},"countOverCorrectK0":23,"countOverLegacyK0":0},"frozenPhysicalStatePreserved":true,"damageIntegrated":false,"provenance":"DP criterion: recovered candidate-joss.lisp line110; legacy degree-helper receives radian angle at line274; candidate-runner.lisp line176 uses tau62. Current MC reference uses degree-correct k0 and tau10. Same actual six-component undamaged stress and native nonlocal quadrature for both; legacy solver/hooks not loaded; source identity with video unproved."}
+CRITERION PROBE WAITING <=600s for trusted root control: D:/MPM/output/reference-reproduction-2026-10-15/criterion-probe/continuation.lisp
+Loading root continuation with settled *criterion-probe-sim* / *criterion-probe-config*.
+DP PHYSICAL PILOT START: same converged native state; 496 protected base MPs; target40s
+Parameters:
+  E                  1.0d9
+  accelerateInterval 2.0d0
+  cliffSlope         78.0d0
+  cohesion           1965600.0d0
+  collapseInterval   0.1d0
+  constitutiveModel  CHALK
+  damageCohesion     26000.0d0
+  damageDelayExponent 2.0d0
+  damageFrictionAngle 50.0d0
+  delayTime          10.0d0
+  density            1700.0d0
+  dilatancyAngle     0.0d0
+  ductility          53.59975505618717d0
+  enableDamage       T
+  enablePlasticity   T
+  fractureEnergy     4.8d0
+  frictionAngle      50.0d0
+  geometryRefinement 4
+  initiationStress   18926.452181842527d0
+  massScaleAccelerate 10000.0d0
+  maxSteps           1000
+  meshSize           0.5d0
+  mpsPerCell         2
+  nonlocalLength     0.5d0
+  notchDepth         0.5d0
+  notchHeight        0.5d0
+  notchShape         TRIANGLE
+  notchTipFraction   0.5d0
+  nu                 0.24d0
+  plotMode           DAMAGE
+  quasiStaticTolerance 0.01d0
+  residualCompressionRatio 0.0d0
+  residualShearRatio 0.51d0
+  residualTensileRatio 1.0d0
+  runoutAspect       1.0d0
+  scenario           JOSS-BAY
+  settleMaxSteps     1
+  settleTolerance    1.01d-4
+  shelfAspect        1.0d0
+  shelfHeight        15.5d0
+  simulationTime     40.0d0
+  soilBoundary       1.0d0
+  substeps           50
+  timeStepScale      0.5d0
+  undercut           0.0d0
+  upperVerticalHeight 6.8d0
+  workers            4
+Reference particles: 4155, initial dt: 3.00203378d-4 s
+Step 1/1000; physical time 2.000000 s; accelerate
+Step 2/1000; physical time 4.000000 s; accelerate
+Step 3/1000; physical time 4.100000 s; collapse
+Step 4/1000; physical time 4.200000 s; collapse
+Step 5/1000; physical time 4.300000 s; collapse
+DP PHYSICAL PILOT PAUSED: {"status":"awaiting-directed-continuation","physicalTime":4.355237601658241,"massScale":1.0,"mass":425664.0625,"maximumDamage":0.3865276334922315,"pause":1,"control":"D:/MPM/output/reference-reproduction-2026-10-15/dp-physical-pilot/resume-1.txt"}
+DP physical state resumed for <=14400 wall seconds.
+Step 6/1000; physical time 4.400000 s; collapse
+Step 7/1000; physical time 4.500000 s; collapse
+Step 8/1000; physical time 4.600000 s; collapse
+Step 9/1000; physical time 4.700000 s; collapse
+Step 10/1000; physical time 4.800000 s; collapse
+Step 11/1000; physical time 4.900000 s; collapse
+Step 12/1000; physical time 5.000000 s; collapse
+Step 13/1000; physical time 7.000000 s; accelerate
+Step 14/1000; physical time 7.100000 s; collapse
+Step 15/1000; physical time 7.200000 s; collapse
+Step 16/1000; physical time 7.300000 s; collapse
+Step 17/1000; physical time 7.400000 s; collapse
+Step 18/1000; physical time 7.500000 s; collapse
+Step 19/1000; physical time 7.600000 s; collapse
+Step 20/1000; physical time 7.700000 s; collapse
+Step 21/1000; physical time 7.800000 s; collapse
+Step 22/1000; physical time 7.900000 s; collapse
+Step 23/1000; physical time 8.000000 s; collapse
+Step 24/1000; physical time 8.100000 s; collapse
+Step 25/1000; physical time 8.200000 s; collapse
+Step 26/1000; physical time 8.300000 s; collapse
+Step 27/1000; physical time 8.400000 s; collapse
+Step 28/1000; physical time 8.500000 s; collapse
+Step 29/1000; physical time 8.600000 s; collapse
+Step 30/1000; physical time 8.700000 s; collapse
+Step 31/1000; physical time 8.800000 s; collapse
+Step 32/1000; physical time 8.900000 s; collapse
+Step 33/1000; physical time 9.000000 s; collapse
+Step 34/1000; physical time 9.100000 s; collapse
+Step 35/1000; physical time 9.200000 s; collapse
+Step 36/1000; physical time 9.300000 s; collapse
+Step 37/1000; physical time 9.400000 s; collapse
+Step 38/1000; physical time 9.500000 s; collapse
+Step 39/1000; physical time 9.600000 s; collapse
+Step 40/1000; physical time 9.700000 s; collapse
+Step 41/1000; physical time 11.700000 s; accelerate
+Step 42/1000; physical time 11.800000 s; collapse
+Step 43/1000; physical time 11.900000 s; collapse
+Step 44/1000; physical time 12.000000 s; collapse
+Step 45/1000; physical time 12.100000 s; collapse
+Step 46/1000; physical time 12.200000 s; collapse
+Step 47/1000; physical time 12.300000 s; collapse
+Step 48/1000; physical time 12.400000 s; collapse
+Step 49/1000; physical time 12.500000 s; collapse
+Step 50/1000; physical time 12.600000 s; collapse
+Step 51/1000; physical time 12.700000 s; collapse
+Step 52/1000; physical time 12.800000 s; collapse
+Step 53/1000; physical time 12.900000 s; collapse
+Step 54/1000; physical time 13.000000 s; collapse
+Step 55/1000; physical time 13.100000 s; collapse
+Step 56/1000; physical time 13.200000 s; collapse
+Step 57/1000; physical time 13.300000 s; collapse
+Step 58/1000; physical time 13.400000 s; collapse
+Step 59/1000; physical time 13.500000 s; collapse
+Step 60/1000; physical time 13.600000 s; collapse
+Step 61/1000; physical time 13.700000 s; collapse
+Step 62/1000; physical time 15.700000 s; accelerate
+Step 63/1000; physical time 15.800000 s; collapse
+Step 64/1000; physical time 15.900000 s; collapse
+Step 65/1000; physical time 16.000000 s; collapse
+Step 66/1000; physical time 16.100000 s; collapse
+Step 67/1000; physical time 16.200000 s; collapse
+Step 68/1000; physical time 16.300000 s; collapse
+Step 69/1000; physical time 16.400000 s; collapse
+Step 70/1000; physical time 16.500000 s; collapse
+Step 71/1000; physical time 16.600000 s; collapse
+Step 72/1000; physical time 16.700000 s; collapse
+Step 73/1000; physical time 16.800000 s; collapse
+Step 74/1000; physical time 16.900000 s; collapse
+Step 75/1000; physical time 17.000000 s; collapse
+Step 76/1000; physical time 17.100000 s; collapse
+Step 77/1000; physical time 17.200000 s; collapse
+Step 78/1000; physical time 17.300000 s; collapse
+Step 79/1000; physical time 17.400000 s; collapse
+Step 80/1000; physical time 17.500000 s; collapse
+Step 81/1000; physical time 17.600000 s; collapse
+Step 82/1000; physical time 17.700000 s; collapse
+Step 83/1000; physical time 17.800000 s; collapse
+Step 84/1000; physical time 17.900000 s; collapse
+Step 85/1000; physical time 18.000000 s; collapse
+Step 86/1000; physical time 18.100000 s; collapse
+Step 87/1000; physical time 18.200000 s; collapse
+Step 88/1000; physical time 18.300000 s; collapse
+Step 89/1000; physical time 18.400000 s; collapse
+Step 90/1000; physical time 18.500000 s; collapse
+Step 91/1000; physical time 18.600000 s; collapse
+Step 92/1000; physical time 18.700000 s; collapse
+Step 93/1000; physical time 18.800000 s; collapse
+Step 94/1000; physical time 18.900000 s; collapse
+Step 95/1000; physical time 19.000000 s; collapse
+Step 96/1000; physical time 19.100000 s; collapse
+Step 97/1000; physical time 19.200000 s; collapse
+Step 98/1000; physical time 19.300000 s; collapse
+Step 99/1000; physical time 19.400000 s; collapse
+Step 100/1000; physical time 19.500000 s; collapse
+Step 101/1000; physical time 19.600000 s; collapse
+Step 102/1000; physical time 19.700000 s; collapse
+Step 103/1000; physical time 19.800000 s; collapse
+Step 104/1000; physical time 19.900000 s; collapse
+Step 105/1000; physical time 20.000000 s; collapse
+Step 106/1000; physical time 20.100000 s; collapse
+Step 107/1000; physical time 20.200000 s; collapse
+Step 108/1000; physical time 20.300000 s; collapse
+Step 109/1000; physical time 20.400000 s; collapse
+Step 110/1000; physical time 20.500000 s; collapse
+Step 111/1000; physical time 20.600000 s; collapse
+Step 112/1000; physical time 20.700000 s; collapse
+Step 113/1000; physical time 20.800000 s; collapse
+Step 114/1000; physical time 20.900000 s; collapse
+Step 115/1000; physical time 21.000000 s; collapse
+Step 116/1000; physical time 21.100000 s; collapse
+Step 117/1000; physical time 21.200000 s; collapse
+Step 118/1000; physical time 21.300000 s; collapse
+Step 119/1000; physical time 21.400000 s; collapse
+Step 120/1000; physical time 21.500000 s; collapse
+Step 121/1000; physical time 21.600000 s; collapse
+Step 122/1000; physical time 21.700000 s; collapse
+Step 123/1000; physical time 21.800000 s; collapse
+Step 124/1000; physical time 21.900000 s; collapse
+Step 125/1000; physical time 22.000000 s; collapse
+Step 126/1000; physical time 22.100000 s; collapse
+Step 127/1000; physical time 22.200000 s; collapse
+Step 128/1000; physical time 22.300000 s; collapse
+Step 129/1000; physical time 22.400000 s; collapse
+Step 130/1000; physical time 22.500000 s; collapse
+Step 131/1000; physical time 22.600000 s; collapse
+Step 132/1000; physical time 22.700000 s; collapse
+Step 133/1000; physical time 22.800000 s; collapse
+Step 134/1000; physical time 22.900000 s; collapse
+Step 135/1000; physical time 23.000000 s; collapse
+Step 136/1000; physical time 23.100000 s; collapse
+Step 137/1000; physical time 23.200000 s; collapse
+Step 138/1000; physical time 23.300000 s; collapse
+Step 139/1000; physical time 23.400000 s; collapse
+Step 140/1000; physical time 23.500000 s; collapse
+Step 141/1000; physical time 23.600000 s; collapse
+Step 142/1000; physical time 23.700000 s; collapse
+Step 143/1000; physical time 23.800000 s; collapse
+Step 144/1000; physical time 23.900000 s; collapse
+Step 145/1000; physical time 24.000000 s; collapse
+Step 146/1000; physical time 24.100000 s; collapse
+Step 147/1000; physical time 24.200000 s; collapse
+Step 148/1000; physical time 24.300000 s; collapse
+Step 149/1000; physical time 24.400000 s; collapse
+Step 150/1000; physical time 24.500000 s; collapse
+Step 151/1000; physical time 24.600000 s; collapse
+Step 152/1000; physical time 24.700000 s; collapse
+Step 153/1000; physical time 24.800000 s; collapse
+Step 154/1000; physical time 24.900000 s; collapse
+Step 155/1000; physical time 26.900000 s; accelerate
+Step 156/1000; physical time 27.000000 s; collapse
+Step 157/1000; physical time 27.100000 s; collapse
+Step 158/1000; physical time 27.200000 s; collapse
+Step 159/1000; physical time 27.300000 s; collapse
+Step 160/1000; physical time 29.300000 s; accelerate
+Step 161/1000; physical time 29.400000 s; collapse
+Step 162/1000; physical time 29.500000 s; collapse
+Step 163/1000; physical time 31.500000 s; accelerate
+Step 164/1000; physical time 31.600000 s; collapse
+Step 165/1000; physical time 31.700000 s; collapse
+Step 166/1000; physical time 33.700000 s; accelerate
+Step 167/1000; physical time 33.800000 s; collapse
+Step 168/1000; physical time 33.900000 s; collapse
+Step 169/1000; physical time 34.000000 s; collapse
+Step 170/1000; physical time 36.000000 s; accelerate
+Step 171/1000; physical time 36.100000 s; collapse
+Step 172/1000; physical time 38.100000 s; accelerate
+Step 173/1000; physical time 38.200000 s; collapse
+Step 174/1000; physical time 40.000000 s; accelerate

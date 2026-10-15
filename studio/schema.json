@@ -60,7 +60,7 @@
     "meshSize": {
       "type": "number",
       "default": 5,
-      "min": 1,
+      "min": 0.05,
       "max": 20,
       "unit": "m",
       "label": "Background mesh resolution h"
@@ -109,7 +109,7 @@
       "type": "number",
       "default": 10,
       "min": 1,
-      "max": 100,
+      "max": 1000000,
       "unit": "-",
       "label": "Post-peak softening ductility (higher = more ductile)"
     },
@@ -214,6 +214,168 @@
       "max": 1000,
       "unit": "m",
       "label": "Non-local damage interaction length"
+    },
+    "constitutiveModel": {
+      "type": "enum",
+      "default": "chalk",
+      "values": [
+        "chalk",
+        "custom"
+      ],
+      "label": "Constitutive model selection"
+    },
+    "scenario": {
+      "type": "enum",
+      "default": "studio-cliff",
+      "values": [
+        "studio-cliff",
+        "joss-bay"
+      ],
+      "label": "Simplified cliff or Joss Bay reference reconstruction"
+    },
+    "fractureEnergy": {
+      "type": "number",
+      "default": 48,
+      "min": 0.001,
+      "max": 100000,
+      "unit": "J/m2",
+      "label": "Reference fracture energy"
+    },
+    "damageCohesion": {
+      "type": "number",
+      "default": 26000,
+      "min": 1,
+      "max": 20000000,
+      "unit": "Pa",
+      "label": "Reference damage-surface cohesion"
+    },
+    "damageFrictionAngle": {
+      "type": "number",
+      "default": 50,
+      "min": 0,
+      "max": 85,
+      "unit": "deg",
+      "label": "Reference damage-surface friction angle"
+    },
+    "damageDelayExponent": {
+      "type": "number",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "unit": "-",
+      "label": "Reference delayed-damage exponent"
+    },
+    "residualTensileRatio": {
+      "type": "number",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "unit": "-",
+      "label": "Reference tensile degradation ratio"
+    },
+    "residualCompressionRatio": {
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 1,
+      "unit": "-",
+      "label": "Reference compressive degradation ratio"
+    },
+    "residualShearRatio": {
+      "type": "number",
+      "default": 0.51,
+      "min": 0,
+      "max": 1,
+      "unit": "-",
+      "label": "Reference shear degradation ratio"
+    },
+    "timeStepScale": {
+      "type": "number",
+      "default": 0.5,
+      "min": 0.01,
+      "max": 1,
+      "unit": "-",
+      "label": "Reference CFL timestep multiplier"
+    },
+    "massScaleAccelerate": {
+      "type": "number",
+      "default": 10000,
+      "min": 1,
+      "max": 1000000,
+      "unit": "-",
+      "label": "Reference quasi-static mass scale"
+    },
+    "quasiStaticTolerance": {
+      "type": "number",
+      "default": 0.01,
+      "min": 1e-8,
+      "max": 1,
+      "unit": "-",
+      "label": "Reference kinetic-work and force tolerance"
+    },
+    "settleTolerance": {
+      "type": "number",
+      "default": 0.0001,
+      "min": 1e-8,
+      "max": 0.1,
+      "unit": "-",
+      "label": "Initial elastic relaxation tolerance"
+    },
+    "settleMaxSteps": {
+      "type": "integer",
+      "default": 50000,
+      "min": 1,
+      "max": 1000000,
+      "unit": "updates",
+      "label": "Initial relaxation update limit"
+    },
+    "simulationTime": {
+      "type": "number",
+      "default": 360,
+      "min": 0.001,
+      "max": 10000,
+      "unit": "s",
+      "label": "Reference physical time after initial relaxation"
+    },
+    "accelerateInterval": {
+      "type": "number",
+      "default": 1,
+      "min": 0.001,
+      "max": 10,
+      "unit": "s",
+      "label": "Quasi-static criterion evaluation interval"
+    },
+    "collapseInterval": {
+      "type": "number",
+      "default": 0.1,
+      "min": 0.0001,
+      "max": 1,
+      "unit": "s",
+      "label": "Dynamic criterion evaluation interval"
+    },
+    "geometryRefinement": {
+      "type": "integer",
+      "default": 4,
+      "min": 0,
+      "max": 4,
+      "unit": "bisections",
+      "label": "Reference boundary-particle refinement limit"
+    },
+    "upperVerticalHeight": {
+      "type": "number",
+      "default": 6.8,
+      "min": 0,
+      "max": 100,
+      "unit": "m",
+      "label": "Upper vertical segment height from author example"
+    },
+    "runoutAspect": {
+      "type": "number",
+      "default": 1,
+      "min": 0.1,
+      "max": 5,
+      "unit": "-",
+      "label": "Reference beach length / cliff height"
     }
   }
 }

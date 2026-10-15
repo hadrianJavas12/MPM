@@ -22,23 +22,40 @@
 when widened). RATIONALIZE recovers the decimal the user actually wrote."
   (if (floatp x) (rationalize x) x))
 
+(defun decimal-input (value)
+  "Accept API-compatible decimal strings without enabling Lisp reader evaluation."
+  (if (stringp value)
+      (let ((text (string-trim '(#\Space #\Tab #\Newline #\Return) value)))
+        (when (and (plusp (length text))
+                   (every (lambda (c) (find c "0123456789+-.eE")) text))
+          (handler-case
+              (let ((*read-eval* nil) (*read-default-float-format* 'double-float))
+                (multiple-value-bind (number end) (read-from-string text nil nil)
+                  (when (and (= end (length text)) (realp number)) number)))
+            (error () nil))))
+      value))
+
 (defun coerce-param (spec value)
   "Coerce VALUE according to the schema entry SPEC, falling back to the default
 and clamping numbers into [min, max]."
   (let ((type (gethash "type" spec))
         (default (exact-real (gethash "default" spec)))
-        (value (exact-real value)))
+        (value (exact-real (if (member (gethash "type" spec) '("number" "integer") :test #'equal)
+                              (decimal-input value) value))))
     (flet ((clamp (x) (max (exact-real (gethash "min" spec))
                            (min (exact-real (gethash "max" spec)) x))))
       (cond
         ((string= type "number")
          (float (clamp (if (realp value) value default)) 1d0))
         ((string= type "integer")
-         (round (clamp (if (realp value) value default))))
+         ;; Schema integer ranges are positive; match JavaScript's half-up rounding.
+         (floor (+ (clamp (if (realp value) value default)) 1/2)))
         ((string= type "boolean")
          ;; jonathan: true -> T, false -> NIL; anything else -> default.
          (cond ((eq value t) t)
                ((null value) nil)
+               ((equal value "true") t)
+               ((equal value "false") nil)
                (t default)))
         ((string= type "enum")
          (let ((choice (if (member value (gethash "values" spec) :test #'equal) value default)))

@@ -1,0 +1,14 @@
+
+; file: D:/MPM/output/scientific-audit-2026-10-15/native-invariant-controls.lisp
+; in: DEFUN AUDIT-FBAR-CASE
+;     (CL-MPM::CALCULATE-STRAIN-RATE-DISP MESH MP 0.01d0 FBAR)
+; 
+; caught STYLE-WARNING:
+;   The variable CL-MPM::DT is defined but never used.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+AUDIT A: local-candidates=0 chosen=(10 1 0) distance=9.0 h gap=8h coupled-rows=4 maxabsE=10.0 row-sum-error=0.0d+0
+AUDIT B: Fbar=T V/V0=1.025000000000 detF=1.023750000000 area/area0=1.023750000000 difference=-0.001250000000
+AUDIT B: Fbar=NIL V/V0=1.025000000000 detF=1.025000000000 area/area0=1.025000000000 difference=0.000000000000
+AUDIT NATIVE CONTROLS COMPLETE
