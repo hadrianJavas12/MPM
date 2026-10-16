@@ -1,6 +1,8 @@
 # AI Engineering Handover — CL-MPM
 
 **Operational checkpoint: 2026-10-16, Asia/Jakarta. Read this first.**
+Read [the current stage table](architecture/STATUS.md) for the latest implemented
+and tested stages; the dated checkpoints below retain historical detail.
 Refresh this fork's live branches/PRs before changes. Detailed earlier history is
 preserved in [the archived handover](archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md).
 Older statuses there are historical and do not override this checkpoint.
@@ -17,10 +19,11 @@ The [scientific master plan](../research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFT
 M0–M6 remains in force, with new MC H/HS physics deferred until migration gates.
 [Research status](../research/README.md) records the separate gates.
 
-P0 inventory is now complete: 884/884 captured paths, 104 ASDF systems, 11 audit
-integrity tests PASS. Only the two hash-bound sources in
-`docs/architecture/MIGRATION_APPROVALS.json` are approved for the
-`P1_CONTRACT_EXTRACTION.md` plan.
+P0 inventory is complete: 884/884 captured paths, 104 ASDF systems, 11 audit
+integrity tests PASS. At that original capture, the two hash-bound sources in
+`docs/architecture/MIGRATION_APPROVALS.json` were approved for the
+`P1_CONTRACT_EXTRACTION.md` plan. Later P2/P3/P4 plans separately
+bind their reviewed sources and do not rewrite that immutable P0 capture.
 The full material form audit preserves existing forward classes/overrides.
 Two absent legacy example paths are recorded as pre-existing compatibility
 exceptions. P0 was committed/pushed as **6f15148 before production moves**.

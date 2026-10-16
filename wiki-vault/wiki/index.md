@@ -5,7 +5,7 @@
 - [[cl-mpm-studio]] — web UI for the cliff-collapse simulation
 
 ## Concepts
-- [[cl-mpm-architecture]] — P1 full VM 2D/3D pass; P3 diagnostics ownership and bounded regressions pass; Joss stopped by user, G3 partial
+- [[cl-mpm-architecture]] — P2-A constitutive ownership and native source freezing pass; remaining state/scenario migration continues; Joss stays stopped
 - [[windows-port]] — native Windows layout, overrides, gotchas
 - [[serial-mpi-standin]] — `cl-mpm/mpi` replacement without MPI
 - [[magicl-patches]] — patched vendored dependencies

@@ -1,0 +1,742 @@
+[
+  {
+    "path": "cl-mpm.asd",
+    "bytes": 29627,
+    "sha256": "ea70c77efe7c7814f1624571b7b44a3f711f662c9ad47564951d89b1d2c2e291"
+  },
+  {
+    "path": "config/git-commit-version.txt",
+    "bytes": 34,
+    "sha256": "7aa5da4c3df0df35d0f7959783dd37a85710b93cd898530e41470e9f51804ea6"
+  },
+  {
+    "path": "framework/cl-mpm-framework.asd",
+    "bytes": 2042,
+    "sha256": "02a2213f9265aaec4f54c02a1af7b06f4e3718493e6c8ed2f859f31281f39101"
+  },
+  {
+    "path": "framework/components/diagnostics.lisp",
+    "bytes": 387,
+    "sha256": "6797f1d798c6597528c4a61a4a2ab2d80a13738be451252277808e829fdcc835"
+  },
+  {
+    "path": "framework/components/geometry.lisp",
+    "bytes": 368,
+    "sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab"
+  },
+  {
+    "path": "framework/components/materials.lisp",
+    "bytes": 299,
+    "sha256": "47df6aa151a2a128c8f50968ce213f331a7ad3e41bfa41ac7a3b7d738440eb1b"
+  },
+  {
+    "path": "framework/components/specifications.lisp",
+    "bytes": 385,
+    "sha256": "1408795413a7235b167181ddfa6b50ee1b3ccf72a5b950ac39a3c7ff169c309b"
+  },
+  {
+    "path": "framework/config/package.lisp",
+    "bytes": 200,
+    "sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c"
+  },
+  {
+    "path": "framework/config/parameters.lisp",
+    "bytes": 4101,
+    "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86"
+  },
+  {
+    "path": "framework/materials/chalk.lisp",
+    "bytes": 4723,
+    "sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d"
+  },
+  {
+    "path": "framework/output/plotting.lisp",
+    "bytes": 2391,
+    "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba"
+  },
+  {
+    "path": "framework/package.lisp",
+    "bytes": 1400,
+    "sha256": "8053c0b199e2bacdb8187045b33bb6762da0eb3ef56e1dbd2f3998daf7bfff15"
+  },
+  {
+    "path": "framework/scenarios/cliff/adapter.lisp",
+    "bytes": 4902,
+    "sha256": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709"
+  },
+  {
+    "path": "framework/scenarios/cliff/build.lisp",
+    "bytes": 2097,
+    "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac"
+  },
+  {
+    "path": "framework/scenarios/cliff/geometry.lisp",
+    "bytes": 3294,
+    "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999"
+  },
+  {
+    "path": "framework/scenarios/cliff/run.lisp",
+    "bytes": 2470,
+    "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c"
+  },
+  {
+    "path": "framework/scenarios/cliff/settings.lisp",
+    "bytes": 1799,
+    "sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a"
+  },
+  {
+    "path": "framework/scenarios/joss/build.lisp",
+    "bytes": 3187,
+    "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e"
+  },
+  {
+    "path": "framework/scenarios/joss/classes.lisp",
+    "bytes": 429,
+    "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd"
+  },
+  {
+    "path": "framework/scenarios/joss/geometry.lisp",
+    "bytes": 2956,
+    "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d"
+  },
+  {
+    "path": "framework/scenarios/joss/measurements.lisp",
+    "bytes": 3008,
+    "sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d"
+  },
+  {
+    "path": "framework/scenarios/joss/output.lisp",
+    "bytes": 1176,
+    "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641"
+  },
+  {
+    "path": "framework/scenarios/joss/phases.lisp",
+    "bytes": 1395,
+    "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91"
+  },
+  {
+    "path": "framework/scenarios/joss/run.lisp",
+    "bytes": 11888,
+    "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684"
+  },
+  {
+    "path": "framework/scenarios/joss/statistics.lisp",
+    "bytes": 6450,
+    "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec"
+  },
+  {
+    "path": "framework/scenarios/triaxial/adapter.lisp",
+    "bytes": 4000,
+    "sha256": "eab6819144c15d8c5ee475040c97ba6f42e6d1288149269c45dc0e74b8e2077c"
+  },
+  {
+    "path": "framework/scenarios/triaxial/boundaries.lisp",
+    "bytes": 891,
+    "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13"
+  },
+  {
+    "path": "framework/scenarios/triaxial/config.lisp",
+    "bytes": 4399,
+    "sha256": "0bf4d2abc858c6330185e092d150755e40d044a497784852e6da6f632494cdce"
+  },
+  {
+    "path": "framework/scenarios/triaxial/controls.lisp",
+    "bytes": 4294,
+    "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948"
+  },
+  {
+    "path": "framework/scenarios/triaxial/geometry.lisp",
+    "bytes": 3589,
+    "sha256": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc"
+  },
+  {
+    "path": "framework/scenarios/triaxial/homogeneous.lisp",
+    "bytes": 5998,
+    "sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082"
+  },
+  {
+    "path": "framework/scenarios/triaxial/material.lisp",
+    "bytes": 1234,
+    "sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9"
+  },
+  {
+    "path": "framework/scenarios/triaxial/measurements.lisp",
+    "bytes": 6819,
+    "sha256": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc"
+  },
+  {
+    "path": "framework/scenarios/triaxial/mpm.lisp",
+    "bytes": 3570,
+    "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518"
+  },
+  {
+    "path": "framework/scenarios/triaxial/package.lisp",
+    "bytes": 463,
+    "sha256": "603756b11e09b4401a0a7e3d471023e894acfc26eb15eff327dc02626a8b42b9"
+  },
+  {
+    "path": "framework/scenarios/triaxial/runner.lisp",
+    "bytes": 7743,
+    "sha256": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96"
+  },
+  {
+    "path": "framework/scenarios/triaxial/tensors.lisp",
+    "bytes": 637,
+    "sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1"
+  },
+  {
+    "path": "framework/simulation.lisp",
+    "bytes": 3635,
+    "sha256": "331b9f228729fd3f6bc07dcbe52b9480c5ae7b6eb3d0d9b47871c23e7bbd70a3"
+  },
+  {
+    "path": "libs/kirchoff.dll",
+    "bytes": 2885169,
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f"
+  },
+  {
+    "path": "materials/adapters/native.lisp",
+    "bytes": 4179,
+    "sha256": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92"
+  },
+  {
+    "path": "materials/backends/cpp/legacy-transaction.lisp",
+    "bytes": 10369,
+    "sha256": "cff14534f13f687e85d4ce262a4a8635c9b8273879d332f846f60abae2bdd924"
+  },
+  {
+    "path": "materials/core/constitutive-package.lisp",
+    "bytes": 364,
+    "sha256": "681fb05352f6c689560e2de4f93b571c865566cb0a12750b90306b5e159e4d30"
+  },
+  {
+    "path": "materials/core/definition.lisp",
+    "bytes": 753,
+    "sha256": "502d80413890b4f6a165b0f634ca0c6b0618e09946f4d3131241911cae17e95e"
+  },
+  {
+    "path": "materials/core/diagnostics-interface.lisp",
+    "bytes": 833,
+    "sha256": "089e1b304abb660255b182040f8e4e23a5829c35cb2718f92bc8fbb34f8f5722"
+  },
+  {
+    "path": "materials/diagnostics/native.lisp",
+    "bytes": 8416,
+    "sha256": "cd23a98cdf42d4c66f494b4df861c3d7f46afdf4efe6a9ec5659c037f0061411"
+  },
+  {
+    "path": "materials/models/damage/constitutive.lisp",
+    "bytes": 8247,
+    "sha256": "5ee75605b1cfafda3d59367fac25ecb466420e41ee1ba2f3080f9673d049a53f"
+  },
+  {
+    "path": "materials/models/elastic/constitutive.lisp",
+    "bytes": 2726,
+    "sha256": "385f803c7b3a8a9482ced32c55ae304006eeb62761c48a7854e73373df1e264e"
+  },
+  {
+    "path": "materials/models/fluid/constitutive.lisp",
+    "bytes": 844,
+    "sha256": "f5bd1e970e8d1779ac455e377eff45ffb342ad135d76f23e7d566fe0778548c1"
+  },
+  {
+    "path": "materials/models/plastic/drucker-prager/constitutive.lisp",
+    "bytes": 11637,
+    "sha256": "db96248bf72353d302ec6613d6b4914714dc97ab14f09a2ab636899e4cf5cf92"
+  },
+  {
+    "path": "materials/models/plastic/mohr-coulomb/constitutive.lisp",
+    "bytes": 24271,
+    "sha256": "784ed026c5fb7b211948e2f83d4578d25be7bad1e62e41ed61505cde2acdd66d"
+  },
+  {
+    "path": "materials/models/plastic/von-mises/constitutive.lisp",
+    "bytes": 9758,
+    "sha256": "41e16eb202d3584b55f1895c0b165fd153783fb8d321475bb433325011dfc702"
+  },
+  {
+    "path": "materials/models/plastic/von-mises/evolution/secant-hardening.lisp",
+    "bytes": 1753,
+    "sha256": "ffc6204dc65439dd8ffa1ce1188bbff6e3444fe2089c848ce3623e97c07e41e3"
+  },
+  {
+    "path": "materials/models/viscoelastic/maxwell/constitutive.lisp",
+    "bytes": 7171,
+    "sha256": "629ed67e46ea7e10e441662475749e158f132ace27f0d35db5a722bcd1c6a81d"
+  },
+  {
+    "path": "materials/models/viscoplastic/glen/constitutive.lisp",
+    "bytes": 8087,
+    "sha256": "55598a7174cd908704123c9646227a49314e94a04193e2ad4ffc2f32fe1c70b2"
+  },
+  {
+    "path": "scripts/lisp/native-source-snapshot.lisp",
+    "bytes": 18974,
+    "sha256": "d3c694634c5e80bbc6689ce961e05efe7ec38a1587b424681171e31694a8cfb1"
+  },
+  {
+    "path": "scripts/run-case.lisp",
+    "bytes": 2851,
+    "sha256": "0c01c977a7cb8a426d8363781ca419694a29bf27595240063f95f710f5f10e84"
+  },
+  {
+    "path": "src/aggregate.lisp",
+    "bytes": 46719,
+    "sha256": "8308aaa8b8e01133828d1215eb8d2a754a8bef8208f8d67d9fb7cb21b1e303bd"
+  },
+  {
+    "path": "src/bc/bc.lisp",
+    "bytes": 21899,
+    "sha256": "00a722288bc7e7baad930cdb349a325a90c8b4c864c6a387eec26ecff579c0fa"
+  },
+  {
+    "path": "src/bc/buoyancy.lisp",
+    "bytes": 78231,
+    "sha256": "a9318298ab971141f344c46f634156639a2de859e09123ff672aece032fadba9"
+  },
+  {
+    "path": "src/bc/erosion.lisp",
+    "bytes": 5558,
+    "sha256": "db394ab4ba4e747626ae1523d2447ba5f7d69a7a8e8027026ec97b480a5fba85"
+  },
+  {
+    "path": "src/bc/inflow.lisp",
+    "bytes": 3342,
+    "sha256": "d9119416720cf986c91d3ea9488c0e9bab5015663a92e72cbb3f862ac4f3de2a"
+  },
+  {
+    "path": "src/bc/penalty.lisp",
+    "bytes": 63098,
+    "sha256": "f24eb709210e127f357d66f494091f770ef0a5a309b7463f75e3b3e39fbfcbb3"
+  },
+  {
+    "path": "src/cl-mpm.lisp",
+    "bytes": 7473,
+    "sha256": "54c2c4e068fd81bc2b2d79d0ba3835e695e1d0de9f8c0ed6a8ac8513983b92c1"
+  },
+  {
+    "path": "src/constitutive.lisp",
+    "bytes": 843,
+    "sha256": "1771a25f23ef0c92dce884475561d592bef3028b3b4d5163c6e240612feb25ae"
+  },
+  {
+    "path": "src/core.lisp",
+    "bytes": 52544,
+    "sha256": "90f6ad05fc51456410df291e7782e9acde2f124fa2f16cc5044891238514c1b0"
+  },
+  {
+    "path": "src/core/domain-update.lisp",
+    "bytes": 31495,
+    "sha256": "7cf4a1d2ad39b5076ccb322ea19896754c32893d1657b98cb5af4c662bfa7026"
+  },
+  {
+    "path": "src/core/forces.lisp",
+    "bytes": 14831,
+    "sha256": "938207f2951a1edd7113155bf1c59a3e667629497020507fab78912c750ca80f"
+  },
+  {
+    "path": "src/core/g2p.lisp",
+    "bytes": 12586,
+    "sha256": "b969f82a01f8fab4d13cf62b34783fc17fdb49c82efb0c66ceb99c413651530e"
+  },
+  {
+    "path": "src/core/iterate-test.lisp",
+    "bytes": 5860,
+    "sha256": "ee36f0ec55a97ec6dbb07cbb7f7bab09fa448b2cc33da7bb5229f9ad883e2984"
+  },
+  {
+    "path": "src/core/iterate.lisp",
+    "bytes": 82697,
+    "sha256": "39c0e79ee1d3e25db71d22c413b609ff12208598e50bdbe40fbf50a6c4722e2d"
+  },
+  {
+    "path": "src/core/linear-solver.lisp",
+    "bytes": 181,
+    "sha256": "ec8e63146a36432ec9ac1854f92ce4b27d3ed81c0b423d6d3933a009b8b8010b"
+  },
+  {
+    "path": "src/core/mesh.lisp",
+    "bytes": 51125,
+    "sha256": "57bd47f0b8a9932e9d2042173d0b20fb5fd75037c16725cdbf626ccca8570eba"
+  },
+  {
+    "path": "src/core/p2g.lisp",
+    "bytes": 14584,
+    "sha256": "1faedbbfe015f201414773a5d5cdb7314cd0d9de8b21bf4f89b41846daa3bfbc"
+  },
+  {
+    "path": "src/core/shape-function.lisp",
+    "bytes": 23457,
+    "sha256": "91fbe2afc519fa5eb0728d54630a8f5f0c47b03ebfda73371076a58a3458452f"
+  },
+  {
+    "path": "src/core/splitting.lisp",
+    "bytes": 15070,
+    "sha256": "26e57f4399dcc6e87a74b1910c60b3ecc9c6467f551b983a7332171d037436b3"
+  },
+  {
+    "path": "src/core/stress-update.lisp",
+    "bytes": 25523,
+    "sha256": "7014b54e59be3b4f8f4b0fc4ddfea750795f71dd3011d5c3fd50b325a628d2e1"
+  },
+  {
+    "path": "src/core/symbolic-derivation.lisp",
+    "bytes": 5093,
+    "sha256": "f707ec327b569f93f504ff08dfec333a0684b2df99b5b80028fc7f4f18516928"
+  },
+  {
+    "path": "src/cpp.lisp",
+    "bytes": 348,
+    "sha256": "5feb00d5d3af65e0e20d5693e394644c97949b7248044fab79b431a01c07fd78"
+  },
+  {
+    "path": "src/damage/criteria.lisp",
+    "bytes": 22296,
+    "sha256": "b0acec0bb522d15a99bd51d9337cf3d4fa30b3904a7aec863917fb7e50e59a3e"
+  },
+  {
+    "path": "src/damage/damage.lisp",
+    "bytes": 64357,
+    "sha256": "78ae70549935c723ce82e57045e8d270748ee6b795ac48b9a5a9248b29f546ab"
+  },
+  {
+    "path": "src/damage/degredation.lisp",
+    "bytes": 17274,
+    "sha256": "3e473fa389a6d0994a0046ff3b4ec741922b90acfc4244f8ab7b968064dfe288"
+  },
+  {
+    "path": "src/damage/delay-damage.lisp",
+    "bytes": 15125,
+    "sha256": "09263686b609f2ae0677efe748d898d049ea6c646247695a6d991af7326ab873"
+  },
+  {
+    "path": "src/damage/ekl.lisp",
+    "bytes": 7162,
+    "sha256": "f3ea1ed92c931f1dfb2437118374806d675a4e37839dd2ac55b858026811e671"
+  },
+  {
+    "path": "src/damage/mpi.lisp",
+    "bytes": 26,
+    "sha256": "ddea8f5abcf32496f6204b41c3c3232e73e54ae1d8813dcbf565a169c8e6d0a6"
+  },
+  {
+    "path": "src/damage/nonlocal-stress-based.lisp",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "src/damage/output.lisp",
+    "bytes": 21614,
+    "sha256": "e449445ed45405670a6841972854969b312f55e9ff7d42e21bae673fb35c782b"
+  },
+  {
+    "path": "src/damage/package.lisp",
+    "bytes": 1972,
+    "sha256": "0983111fb3acf696939d7ee54d948ed9345cfbd94ec9c529e84e9e528ddb08ef"
+  },
+  {
+    "path": "src/damage/softening.lisp",
+    "bytes": 8480,
+    "sha256": "23ea34b42ab581245af6d3898f4f823d866eb7bcfaac4bfeea9ae6166efb0746"
+  },
+  {
+    "path": "src/damage/solver.lisp",
+    "bytes": 7492,
+    "sha256": "16117cbb17fae425c1e1ea058a29ed7077e087cd7e63862797e5edbd590bdab1"
+  },
+  {
+    "path": "src/dynamic-relaxation/algorithms.lisp",
+    "bytes": 95842,
+    "sha256": "b0552b31151c7bd1a4da664f426715dcef0898e8005397885c7012462ae0b6bf"
+  },
+  {
+    "path": "src/dynamic-relaxation/criteria.lisp",
+    "bytes": 45579,
+    "sha256": "ae74b9f93db587f39df7de627494baa115d0967c75bfd0257cbd36a650b6342a"
+  },
+  {
+    "path": "src/dynamic-relaxation/dynamic-relaxation.lisp",
+    "bytes": 18096,
+    "sha256": "c5827ab6c324ee2d74dd10d1f27d87f01281100616c68d1840278705f3c2a10a"
+  },
+  {
+    "path": "src/dynamic-relaxation/misc/erosion.lisp",
+    "bytes": 881,
+    "sha256": "1e6ac4b978a0bab15da7f24b856cff477fbc339a6f3afcbac33490ad0e5cba1f"
+  },
+  {
+    "path": "src/dynamic-relaxation/mpi/dr.lisp",
+    "bytes": 2722,
+    "sha256": "63b112fb0c02f0df46803d39bc4a94c0f9308478fef543c8a0edcd7117d8b23a"
+  },
+  {
+    "path": "src/dynamic-relaxation/mpi/solvers.lisp",
+    "bytes": 13394,
+    "sha256": "a6c5feb9e8269cfe48bdd71373d7ec38fef1a7b7a509b2296ace79de1c677bce"
+  },
+  {
+    "path": "src/dynamic-relaxation/package.lisp",
+    "bytes": 2959,
+    "sha256": "e9950da927acf0eace931c02a2814226109428c9943065d8ea499fb84e848b99"
+  },
+  {
+    "path": "src/dynamic-relaxation/solvers/dynamic.lisp",
+    "bytes": 18899,
+    "sha256": "581cf8f2f0c2d66cbba0891e27e3c19c79fcc54ce18afee043d15d0b4abc2681"
+  },
+  {
+    "path": "src/dynamic-relaxation/solvers/multigrid.lisp",
+    "bytes": 97808,
+    "sha256": "ef9858a372fab83ae1355bded25db37673591cdf2ffc0651a616472211153251"
+  },
+  {
+    "path": "src/dynamic-relaxation/solvers/quasi-static.lisp",
+    "bytes": 32054,
+    "sha256": "96c785c5b1981b09cdba1cdddc0e75dce7cdb25164462d44bd1f2f6bd42aee58"
+  },
+  {
+    "path": "src/eigenerosion.lisp",
+    "bytes": 12320,
+    "sha256": "3396b21038537944ef0572653fc75c7b14ba070a29257a3c61f12a8169a0c0b7"
+  },
+  {
+    "path": "src/errors.lisp",
+    "bytes": 443,
+    "sha256": "e857aa6fae6d4385f571d52903d9755799e39d384547f4fb3622eb7759914bcb"
+  },
+  {
+    "path": "src/fastmaths.lisp",
+    "bytes": 174,
+    "sha256": "e6e9c1629982576dcc5028085347840fc204c8a9812101bb5423f9e6184c78cf"
+  },
+  {
+    "path": "src/ghost.lisp",
+    "bytes": 49776,
+    "sha256": "e74fb0200ba0f0f6edbfb77cb0e9821cdc532c718808a89a0d92cef806276e44"
+  },
+  {
+    "path": "src/implicit.lisp",
+    "bytes": 83220,
+    "sha256": "ed262829375b11f92f70148ee4d421dd1ac9f9abe221795399e9436b6b49b357"
+  },
+  {
+    "path": "src/measurements/material-output.lisp",
+    "bytes": 3115,
+    "sha256": "9601e73a1397746a45945c312681de9d591016d7ccd5b1853488d0473f485b80"
+  },
+  {
+    "path": "src/models/chalk.lisp",
+    "bytes": 61023,
+    "sha256": "257225c99b45c758d066dae11c1792f61b19e7601a3466cd15e9ee2b612a7db5"
+  },
+  {
+    "path": "src/models/concrete.lisp",
+    "bytes": 4100,
+    "sha256": "8224b9bbe474fc2898c1145cf3b82671f885bd633483b3f7dcdda2177546fc59"
+  },
+  {
+    "path": "src/models/damage-frictional.lisp",
+    "bytes": 8129,
+    "sha256": "81ab1297bb8113cfd7333e3912418dc3b15de87b91d8c8c71958e370a8892db8"
+  },
+  {
+    "path": "src/models/damage.lisp",
+    "bytes": 28407,
+    "sha256": "e2325d69352239257fd72a9efb17472edcd7a9c9c639bdbd54f0c29e79c2b714"
+  },
+  {
+    "path": "src/models/elastic.lisp",
+    "bytes": 130,
+    "sha256": "0accd221eab1441b071fbab926ed97b837655beae52f2ba74fa9ae6cce090b1c"
+  },
+  {
+    "path": "src/models/ice.lisp",
+    "bytes": 40657,
+    "sha256": "9c698a5e07fd9ced64ffeef2dc4659d61c6548fdb0076fc2be696ce8aac2e5ed"
+  },
+  {
+    "path": "src/models/limestone.lisp",
+    "bytes": 7179,
+    "sha256": "c663f6c0c82814da2308adb7fd74e79b761d39feffa6e24fbfdf805ee9cda023"
+  },
+  {
+    "path": "src/models/plastic.lisp",
+    "bytes": 20328,
+    "sha256": "ddacee366d530f79053d229693f55b1990b72d72ed9a6a44c2a9af1c67c67b64"
+  },
+  {
+    "path": "src/models/visco.lisp",
+    "bytes": 29627,
+    "sha256": "46b815d1884a8ed9443a8f0681dc4cb4bbf0ecc5af72489e9e182332add2fcf5"
+  },
+  {
+    "path": "src/mpi.lisp",
+    "bytes": 100388,
+    "sha256": "7936696762e57e14f16bff0c2f93ce09c248f4741d36752dbba0450d18b6eb2c"
+  },
+  {
+    "path": "src/mpi/damage.lisp",
+    "bytes": 2578,
+    "sha256": "7d58a28779311ac70514dcebe1431c75e31410eaecde37abc71371c0663ba7ef"
+  },
+  {
+    "path": "src/mpi/domain.lisp",
+    "bytes": 25818,
+    "sha256": "d4c057480d124cb24782eec31a69a77c9a11c3421a68c5f7427a3217450767dd"
+  },
+  {
+    "path": "src/mpi/mpi.lisp",
+    "bytes": 13033,
+    "sha256": "ba3ed1eb2ef7b261d3870643c90ce7971e3e22828fac105169e01efd3f8fe657"
+  },
+  {
+    "path": "src/mpi/package.lisp",
+    "bytes": 7981,
+    "sha256": "23e9f74d42da9ca4af15df60fdc4893e71d73c0c1a9d25fec5843fe95f8ec923"
+  },
+  {
+    "path": "src/mpi/serial.lisp",
+    "bytes": 3677,
+    "sha256": "4941b42947f196dca693901d9fda73d18e6b653d743e73acac6643fd8b1c2c3c"
+  },
+  {
+    "path": "src/mpi/serialise.lisp",
+    "bytes": 7210,
+    "sha256": "64f4b75622833d0b4cbcd8e32f99859b710b60e17d00dca2099147e1612babbe"
+  },
+  {
+    "path": "src/mpi/sync.lisp",
+    "bytes": 37612,
+    "sha256": "4d181e0d032494984dca997bd90a7993d966c2a6523a43954eca8431ed15cd26"
+  },
+  {
+    "path": "src/numerics/fastmaths.lisp",
+    "bytes": 79025,
+    "sha256": "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d"
+  },
+  {
+    "path": "src/numerics/native-bridge/cpp.lisp",
+    "bytes": 5705,
+    "sha256": "3b3c47ef825a28a4d3da7cce9051857460d2d93cb7b985ac253a431b13430e7b"
+  },
+  {
+    "path": "src/numerics/tensors/constitutive-primitives.lisp",
+    "bytes": 5737,
+    "sha256": "e9897f81b3ed9ecd206b46fa12fefa09d3a04cb49555c7aa31cb37a834dfcf95"
+  },
+  {
+    "path": "src/output.lisp",
+    "bytes": 44215,
+    "sha256": "479a747f01a5e1015be69934f0489378751e462b62b5a954ddadd04adf74971a"
+  },
+  {
+    "path": "src/particle.lisp",
+    "bytes": 39724,
+    "sha256": "91a7a30a90f9659fb7989afdde056cd41968e13340a0121bae52a99b331270ce"
+  },
+  {
+    "path": "src/plotter.lisp",
+    "bytes": 5128,
+    "sha256": "88ba44d5bebd69ddd8a8e80902787997b3c4e036608168f254ccbcb210c68caa"
+  },
+  {
+    "path": "src/settings.lisp",
+    "bytes": 492,
+    "sha256": "97307ee66180541a6ea3c3155c2da24f20669420e9e59f8747776253e0e0b710"
+  },
+  {
+    "path": "src/setup.lisp",
+    "bytes": 36567,
+    "sha256": "0bd74167f9125a16b53fc55d6747039525943adffe6746004632781eec62b057"
+  },
+  {
+    "path": "src/simulation/components/base.lisp",
+    "bytes": 923,
+    "sha256": "c49f1519006897200e48fc380f5c07cf998c950a077a5a9b5d1b77ad74a2e50f"
+  },
+  {
+    "path": "src/simulation/components/specifications.lisp",
+    "bytes": 2865,
+    "sha256": "84554dc77e3c7c46bf0fc8670a64b8b630a01f5cf1fb657c75a511c2476db866"
+  },
+  {
+    "path": "src/solvers/linear-systems.lisp",
+    "bytes": 31152,
+    "sha256": "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011"
+  },
+  {
+    "path": "src/solvers/musl.lisp",
+    "bytes": 2302,
+    "sha256": "37e58cfc2a43957b259f89e8f27d8fd20adb87fdeed0b6e2b3c4cfe3fc886639"
+  },
+  {
+    "path": "src/solvers/octree/buoyancy.lisp",
+    "bytes": 18341,
+    "sha256": "f0eab46ca3f2e510a516ddbf24991d5a70a739c7005489d47048074f25392e78"
+  },
+  {
+    "path": "src/solvers/octree/penalty.lisp",
+    "bytes": 6365,
+    "sha256": "b2c1993fef297d6efcc887da5fea440a7e6be1ffbc7361ce0ce5ca01dd80602e"
+  },
+  {
+    "path": "src/solvers/usf.lisp",
+    "bytes": 4540,
+    "sha256": "7cefb3fe86a9124715392ad73de19ec34ef6939bf824b0170394c1e312c8120e"
+  },
+  {
+    "path": "src/solvers/usl.lisp",
+    "bytes": 2651,
+    "sha256": "fabc02dda085ce46545d2843456455a5a6fe45c6396463432dd946e5338921b2"
+  },
+  {
+    "path": "src/ssa/mesh.lisp",
+    "bytes": 58,
+    "sha256": "bb3af7f3bd5c55b79b142bd997bfa34906d263355aae190686431eefbfd49063"
+  },
+  {
+    "path": "src/ssa/p2g.lisp",
+    "bytes": 4814,
+    "sha256": "dafd5769cf207aa6f46049b1d8fc939cc6053d9966ffdfda9bbbbdd5715161c0"
+  },
+  {
+    "path": "src/ssa/package.lisp",
+    "bytes": 228,
+    "sha256": "dee67a4760e9f82162ced9533e5316ee3f350f36e5b7e3b360cec02e4908feb8"
+  },
+  {
+    "path": "src/ssa/particles.lisp",
+    "bytes": 3133,
+    "sha256": "2f72160e9723bcc5a176d7634d46135a0dcbf629df8250f541b5055a586e2c0f"
+  },
+  {
+    "path": "src/ssa/solvers.lisp",
+    "bytes": 1838,
+    "sha256": "0f15f7124f900f8cd406e1ac470e335a8cc823a003c7627394c74d123a231423"
+  },
+  {
+    "path": "src/utils.lisp",
+    "bytes": 57848,
+    "sha256": "8ed1bfb0d0662107c8d56694b5388e571c41944cda07448337ebef1665015f57"
+  },
+  {
+    "path": "tests/case-snapshot-contracts.lisp",
+    "bytes": 3390,
+    "sha256": "420c9dd6488bfedbb4d3e25399700fa97fd673d1571cdbb9f69ee1dc6af257db"
+  },
+  {
+    "path": "tests/cases/triaxial-integration.lisp",
+    "bytes": 908,
+    "sha256": "0259b4474f91ae8b6103e227e0d1a0a59c77ae821275e39151e6a1ab9b38603b"
+  },
+  {
+    "path": "tests/material-diagnostics.lisp",
+    "bytes": 11998,
+    "sha256": "9c49f97c05bcf2e3d1dc87a018ac271e47c2351c411d020e193455f0257ff12e"
+  },
+  {
+    "path": "tests/native-snapshot-contracts.lisp",
+    "bytes": 5865,
+    "sha256": "992bbec8a636bb93b71e92ae4370f51542f890067ec79fd9484d6adcdb2db772"
+  }
+]

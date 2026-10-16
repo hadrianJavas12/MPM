@@ -156,3 +156,11 @@ transition, final compatibility/regressions/docs/PR. P2 helper never edits ASD;
 route-aware updater must preserve existing P5 paths. No full Joss restart, no
 new physics, no main merge. Existing global override/forward-class/atomic C++
 transaction exceptions stay visible; folder relocation does not repair them.
+
+## [2026-10-16] ingest | P2-A constitutive ownership checkpoint
+
+P2-A implementation `4ed46b4` preserves all 81 original forms across 13 owners.
+Five native family catalogs are byte-identical to the saved baseline. Native
+VM/MC bounded controls, active MC ownership and Node 36 checks pass; copied-DLL
+source freezing is verified. See [[cl-mpm-architecture]] and
+`docs/architecture/STATUS.md`. P2-B/C/D and P4 remain pending; Joss stays stopped.

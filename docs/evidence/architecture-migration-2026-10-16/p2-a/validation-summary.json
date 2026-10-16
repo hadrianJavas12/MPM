@@ -1,0 +1,97 @@
+{
+  "stage": "P2-A",
+  "status": "PASS bounded compatibility",
+  "sourceCommitAtLaunch": {
+    "triaxial-short": "4ed46b43fa31d53d4e83622e45f61f7f111f1171",
+    "material-diagnostics": "7e2aac3be4c6c6020d74e1412a0465a4d15c78cb",
+    "ownership-normal": "7e2aac3be4c6c6020d74e1412a0465a4d15c78cb"
+  },
+  "commitAttribution": "VM launched at 4ed46b4; MC/ownership launched at later docs-only 7e2aac3. Captured live source hashes are sealed and verified independently; not inferred from commit names.",
+  "exitCodes": {
+    "triaxial-short": 0,
+    "material-diagnostics": 0,
+    "ownership-normal": 0,
+    "triaxial-short-comparison": 0,
+    "mc-triaxial-comparison": 0
+  },
+  "tests": {
+    "materialDiagnostics": {
+      "passed": 9,
+      "failed": 0
+    },
+    "materialOwnershipNormal": {
+      "passed": 7,
+      "failed": 0
+    },
+    "nativeCatalogs": {
+      "passed": 5,
+      "byteIdenticalToBaseline": true
+    },
+    "nodeCheck": "PASS, retained root-run log",
+    "nodeTests": {
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "runs": {
+    "triaxial-short": {
+      "complete": true,
+      "nativeModel": "cl-mpm/particle::particle-vm",
+      "particleCount": 480,
+      "updates": 27
+    },
+    "mc-triaxial": {
+      "complete": true,
+      "nativeModel": "cl-mpm/particle::particle-mc",
+      "particleCount": 32,
+      "updates": 2
+    }
+  },
+  "strictComparisons": {
+    "triaxial-short": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    },
+    "mc-triaxial": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    }
+  },
+  "rawByteComparison": {
+    "triaxial-short": {
+      "allSavedVtkBytesEqual": true,
+      "vtkFiles": 2,
+      "stressStrainCsvBytesEqual": true
+    },
+    "mc-triaxial": {
+      "allSavedVtkBytesEqual": true,
+      "vtkFiles": 2,
+      "stressStrainCsvBytesEqual": true
+    }
+  },
+  "sourceProof": {
+    "frozenVmCopiedFilesVerified": 157,
+    "performedFirstPartyLoadInputsHashedVerified": 93,
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/architecture-migration-2026-10-16/p2-a/triaxial-short/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "liveUnitArchivedFiles": 147,
+    "liveArchiveSha256": "c9b9c4dda4071415e5623831453fc4840abf3f112562bb4279392a0ff10b3563",
+    "liveUnitScope": "Launch-time live source hashes verified against sealed source bytes for both MC and ownership suites. Cached external dependencies and live-suite FASLs are not independently frozen. VM has the selected-ASDF source/FASL and actual DLL proof."
+  },
+  "architectureGates": {
+    "G1": "PARTIAL",
+    "G3": "PARTIAL",
+    "fullSerialJoss": "STOPPED_BY_USER; acceptance INCOMPLETE; not rerun",
+    "earlierParallelJoss": "Prior failure remains open"
+  },
+  "scientificValidation": false
+}
