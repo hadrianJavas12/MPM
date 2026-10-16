@@ -1,6 +1,9 @@
 ;;;; Structural baseline for each available native family, in fresh processes.
 ;;;; windows\cl-mpm.cmd tests\native-model-catalog.lisp SYSTEM FRESH.sexp
 (in-package :cl-user)
+(defun catalog-resolved-class-p (class)
+  (and (not (typep class 'sb-mop:forward-referenced-class))
+       (every #'catalog-resolved-class-p (sb-mop:class-direct-superclasses class))))
 (let* ((args (cl-mpm-script-args)) (system (first args)) (output (second args)))
   (assert (and (= (length args) 2) output
                (member system '("cl-mpm-framework" "cl-mpm/models/chalk" "cl-mpm/models/ice"
@@ -15,9 +18,9 @@
     (assert (fboundp (find-symbol "CPPMOHRCOULOMB" :cl-mpm/ext)))
     (do-symbols (name package)
       (let ((class (find-class name nil)))
-        (when (and class (eq name (class-name class)))
-          (if (typep class 'sb-mop:forward-referenced-class)
-              (push (list (symbol-name name) :forward-reference) classes)
+        (when (and (eq (symbol-package name) package) class (eq name (class-name class)))
+          (if (not (catalog-resolved-class-p class))
+              (push (list (symbol-name name) :unresolved-ancestry) classes)
               (progn
                 (sb-mop:finalize-inheritance class)
                 (when (member base (sb-mop:class-precedence-list class))
