@@ -130,13 +130,23 @@ Retain both initial test-fixture failures: original-source control proves SBCL's
 `SLOT-OBJECT` tail pre-existed; the escape fixture's registry preference was wrong.
 Only tests/fixtures were corrected; the containment guard and numerical code were not relaxed.
 
-Next: checkpoint the focused evidence, then launch full VM 2D/3D and serial Joss
-on a fixed copied source snapshot under
+Bounded evidence/tests were committed and pushed as **62adb50**. Full VM 2D/3D
+and serial Joss launched at **11:07:41 WIB** on that fixed copied snapshot under
 `output/architecture-migration-2026-10-16/p1-full/{triaxial-2d,triaxial-3d,joss-serial}/`.
-These runs are **NOT_RUN / preparing** at this checkpoint; no PIDs or full G3
-PASS are claimed. Unit tests loaded committed production sources from the working
-tree; CLI controls retained copied sources. Transitive FASL/DLL provenance remains
-incomplete. P2 is plan only, P2–P6 are NOT_RUN and new MC physics stays deferred.
+Wrapper PIDs: **18500** (2D), **18300** (3D), **46728** (Joss). All three reached
+native initialization, with 480/780/4,155 MPs. Full G3 is RUNNING, not PASS.
+Each wrapper records sourceCommitAtLaunch, then automatically runs the unchanged
+strict comparator and VM audit after native exit 0. Read `*-status.json`,
+`*-comparison.json` and manifests; do not repeat postprocessing or native jobs.
+51 copied files per run are hashed in `source-snapshots-sha256.json`.
+
+After all native jobs and automatic postprocessing finish, run completion-only
+`.tmp/finish-migration-p1-full.py`; it does not start solvers or repeat comparisons.
+It retains honest PASS/FAIL and packs evidence, including sources/status/logs.
+Then update docs/wiki and commit/push before approving any P2 extraction. P0
+matrix/approval capture is immutable; changed source hashes after an intentional
+move do not authorize overwriting that pre-migration evidence. P2 is conditional
+planning only. P2–P6 remain NOT_RUN and new MC physics stays deferred.
 
 ## Isolated M2 preparation checkpoint
 
@@ -196,13 +206,14 @@ quantitative report and human handoff. No UI task is authorized.
 
 ## Automation and economical continuation
 
-The former heartbeat **mpm-lanjut-setelah-reset** is unavailable: updating it
-returned “Automation does not exist … may have been deleted manually by user,”
-and its local TOML is missing. No active schedule or next wakeup is confirmed.
-The previously proposed 15:14:38 WIB start after the observed 15:13:38 WIB reset
-is not an active automation. Do not create a replacement without a new user
-request. Save checkpoints when usage is low; avoid active polling and duplicate
-native jobs. Any future automation should notify only for meaningful changes.
+The former heartbeat was missing. In accordance with the user's standing
+auto-continuation request, replacement **mpm-lanjut-migrasi-arsitektur** is now
+ACTIVE. The user confirmed the reset at **15:13 WIB**; its wakeup is anchored to
+**2026-10-16 15:14 WIB**, then every five hours. The tool confirmed the update.
+The new prompt prioritizes this architecture specification and reads current
+run status before any action. Do not create another automation. Save checkpoints
+when usage is low; avoid active polling, repeated tests and duplicate native jobs.
+Notify only for meaningful progress, completion, failure or necessary user input.
 
 Update this concise handover, testing/docs and linked wiki at each checkpoint.
 Read `wiki-vault/AGENTS.md` and the llm-wiki/obsidian skills before wiki edits;

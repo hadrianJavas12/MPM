@@ -150,9 +150,10 @@ calibration, convergence or a closed energy budget. The findings in
 ## Background continuation requested by user
 
 The user subsequently authorized the M0–M6 master plan, commits/pushes per stage
-and reset-aligned automatic continuation. The former heartbeat is now unavailable:
-the tool reports it does not exist and its local TOML is missing. No active schedule
-or next wakeup is confirmed; do not create a replacement without a new request.
+and reset-aligned automatic continuation. The old heartbeat was missing; the
+replacement `mpm-lanjut-migrasi-arsitektur` is ACTIVE with the current architecture
+priority. After the user's reset clarification, its first wakeup is 15:14 WIB
+on 2026-10-16, then every five hours. It checks saved status before any new work.
 The completed serial controls started at 20:53:38 WIB
 on 2026-10-15: frozen original `c749d32` versus test case `41403f4`, both one
 worker, OpenBLAS/OMP threads set to one. Output folders are
@@ -175,7 +176,8 @@ checks pass. Strict bounded VM 27-update and MC two-update controls pass with
 two states and zero CSV/position differences. MC cliff VTKs match; PNG plotting
 is unavailable. Initial SBCL-tail and ASDF-registry fixture failures are retained;
 only tests/fixtures changed. P1 remains PROVISIONAL, G1 PARTIAL. Full migrated VM
-2D/3D and serial Joss G3 runs are NOT_RUN/preparing in `p1-full/`; P2 is plan only,
+2D/3D and serial Joss G3 runs started on `62adb50` at 11:07:41 WIB in `p1-full/`;
+they are RUNNING, not PASS. P2 is plan only,
 P2–P6 NOT_RUN. The isolated
 32-test MC prototype is uninstalled; new physics is deferred until migration gates
 and belongs on a separate experimental branch.

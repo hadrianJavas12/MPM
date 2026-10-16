@@ -51,7 +51,7 @@ retain its output, explain the cause before expensive investigation, and revert
 or repair the stage without deleting history. Rollback uses a forward corrective
 commit or a separate checkout of the recorded parent, never a destructive reset.
 
-The former auto-continuation entry is currently unavailable: update returned
+At P0 the former auto-continuation entry was unavailable: update returned
 "Automation does not exist in the app" and its saved TOML is absent. It has not
 been recreated or claimed active.
 
@@ -105,3 +105,19 @@ The cliff control reports an unavailable gnuplot PNG; plotting is not PASS.
 retains 32 hash-verified artifacts, actual source copies, VTK/CSV, all logs and
 form-byte comparisons. P1 remains PROVISIONAL/G1 PARTIAL pending deeper owner
 migration and full G3 runs. P2 is only a conditional plan, not execution approval.
+
+### P1 full regression launched after checkpoint
+
+Bounded evidence/test correction checkpoint **62adb50** is pushed. At 11:07:41
+WIB, full VM 2D/3D and Joss serial jobs started from that executed source:
+wrapper PIDs 18500/18300/46728, respectively. Outputs, launch records, scripts,
+51 copied-source SHA-256 records per job and eventual statuses are under
+`output/architecture-migration-2026-10-16/p1-full/`. No duplicate baseline runs.
+Wrappers automatically compare fixed criteria and audit VM on native success;
+completion packing is `.tmp/finish-migration-p1-full.py`. Full G3 is RUNNING.
+
+The replacement continuation entry **mpm-lanjut-migrasi-arsitektur** is ACTIVE.
+After the user's reset-time clarification, its first wakeup is 15:14 WIB on
+2026-10-16, followed by five-hour intervals. It prioritizes the new architecture
+specification and stays quiet on unchanged healthy status. The old entry remains
+missing; no duplicate schedule is claimed.

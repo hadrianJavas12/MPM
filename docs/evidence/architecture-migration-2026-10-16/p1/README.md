@@ -12,7 +12,7 @@ equation, numerical parameter/tolerance, class ancestry or native DLL changed.
 | Node suite and syntax checks | 36 PASS, zero skipped; syntax PASS |
 | VM triaxial: 480 MPs, 27 updates | Strict PASS, two states, position/CSV differences zero |
 | Native MC triaxial: 32 MPs, two updates | Strict PASS, two states, position/CSV differences zero |
-| Native MC cliff: 70 MPs, two updates | Both saved VTK files byte-identical to the prior control |
+| Native MC cliff: 70 initial MPs, two updates | Both saved VTK files byte-identical to the prior control; native splitting preserved |
 | Form/source extraction | 16 defining forms byte-identical; native adapter file byte-identical |
 
 `manifest.json` verifies 32 retained artifacts. Run archives include the actual

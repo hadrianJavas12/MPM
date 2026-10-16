@@ -34,7 +34,8 @@ Focused contracts, normal/legacy loaders and snapshot escape checks pass; bounde
 VM 27-update/MC two-update controls have strict two-state PASS with CSV/positions
 zero. MC cliff VTKs match exactly; its unavailable gnuplot PNG is not a plot PASS.
 The initial ownership/SBCL-tail and snapshot-registry fixture failures are retained;
-only tests/fixtures changed. P1 is PROVISIONAL, G1 PARTIAL, full G3 NOT_RUN/preparing.
+only tests/fixtures changed. P1 is PROVISIONAL and G1 PARTIAL. Full VM 2D/3D
+and Joss serial G3 runs started on `62adb50` at 11:07:41 WIB; no full PASS yet.
 
 The user supplied `docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md`
 as the primary migration reference. The complete target remains pending beyond P1.

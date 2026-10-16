@@ -336,3 +336,14 @@ P1 is provisional, G1 partial and full migrated VM 2D/3D/serial Joss G3 is
 NOT_RUN/preparing. P0 evidence remains immutable; P2 is plan only and physics
 deferred. No solver/tests/git commands, raw sources or settings changed in this
 documentation operation; prior log entries are preserved.
+
+## [2026-10-16] ingest | Full P1 controls launched and continuation restored
+
+Checkpoint `62adb50` was pushed before full migrated VM 2D/3D and Joss serial
+runs started at 11:07:41 WIB. [[cl-mpm-architecture]] and
+[[reusable-simulation-framework]] now record RUNNING status, wrapper PIDs and
+saved launch/source records in handover. Each wrapper compares once after native
+success; the completion-only collector must not duplicate it. P2 remains plan
+only and deeper model migration awaits the gate. The replacement heartbeat is
+ACTIVE at 15:14 WIB, immediately after the user-confirmed 15:13 reset, then every
+five hours. No completed full regression or scientific validation is claimed.
