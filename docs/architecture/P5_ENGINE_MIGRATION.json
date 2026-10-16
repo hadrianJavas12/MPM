@@ -1,0 +1,24 @@
+{
+  "phase": "P5",
+  "status": "PREMOVE_PLAN_ONLY",
+  "captureCommit": "7d879e8a6ad2bb42a9967ca48e62c4999c38e79f",
+  "files": [
+    {
+      "source": "src/fastmaths.lisp",
+      "target": "src/numerics/fastmaths.lisp",
+      "sourceSha256": "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d",
+      "strategy": "whole-file byte-identical copy; old source forwarding shim; preserve ASDF component ID with direct pathname",
+      "numericalChangesAllowed": false
+    },
+    {
+      "source": "src/core/linear-solver.lisp",
+      "target": "src/solvers/linear-systems.lisp",
+      "sourceSha256": "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011",
+      "strategy": "whole-file byte-identical copy; old source forwarding shim; preserve ASDF component ID with direct pathname",
+      "numericalChangesAllowed": false
+    }
+  ],
+  "reason": "Group numeric kernels and matrix-free linear solver under existing engine responsibility; no mass rename of generic utilities or MPI modules.",
+  "compatibility": "Existing packages and ASDF names remain; old source paths stay loadable. Validate actual native smoke and tensor/linear solve contracts.",
+  "exceptions": "src/utils.lisp deliberately stays intact: mixed generic worker/tensor helpers need no unnecessary ownership move."
+}
