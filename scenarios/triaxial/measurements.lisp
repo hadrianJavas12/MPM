@@ -47,9 +47,7 @@
         (multiple-value-bind (plastic-value yield-value)
             (if *material-diagnostics*
                 (material-diagnostic-call "DIAGNOSTICS-LEGACY-VALUES" *material-diagnostics* mp)
-                (values (cl-mpm/particle::mp-strain-plastic-vm mp)
-                        (- (/ (* (qj2-of stress) (j-of mp))
-                              (* (sqrt 1.5d0) (cl-mpm/particle::mp-rho mp))) 1d0)))
+                (legacy-vm-stats-values mp stress))
           (if plastic-value (when plastic (incf plastic (* v plastic-value))) (setf plastic nil))
           (if yield-value (when yield-excess (setf yield-excess (max yield-excess yield-value)))
               (setf yield-excess nil)))
