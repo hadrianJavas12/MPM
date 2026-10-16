@@ -2,14 +2,7 @@
 ;;;; windows\cl-mpm.cmd tests\case-snapshot-contracts.lisp FRESH_OUTPUT
 (in-package :cl-user)
 (ql:quickload :cl-mpm/settings :silent t)
-
-;; Read trusted CLI definitions without evaluating its run entry point.
-(let ((*read-eval* nil))
-  (with-open-file (stream (cl-mpm-path "scripts/run-case.lisp"))
-    (loop for form = (read stream nil :eof) until (eq form :eof) do
-      (when (and (consp form) (eq (first form) 'defun)
-                 (member (second form) '(case-source-bytes snapshot-case-sources frozen-case-components)))
-        (eval form)))))
+(load (cl-mpm-path "scripts/lisp/native-source-snapshot.lisp"))
 
 (let* ((output (or (first (cl-mpm-script-args))
                    (error "Supply a fresh snapshot-test output directory.")))
