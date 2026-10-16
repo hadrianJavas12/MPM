@@ -126,13 +126,33 @@
   :components ((:module "src"
                 :serial t
                 :components
-                ((:file "particle")
+                ((:module "particle" :pathname "../" :serial t
+                  :components (
+                    (:file "p2-01-particle-base" :pathname "src/core/particle-base")
+                    (:file "p2-02-particle-protocols" :pathname "src/core/particle-protocols")
+                    (:file "p2-03-particle" :pathname "materials/models/elastic/particle")
+                    (:file "p2-04-particle-objectivity" :pathname "src/numerics/tensors/particle-objectivity")
+                    (:file "p2-05-particle" :pathname "materials/models/fluid/particle")
+                    (:file "p2-06-particle" :pathname "materials/models/viscoelastic/particle")
+                    (:file "p2-07-particle" :pathname "materials/models/viscoplastic/particle")
+                    (:file "p2-08-particle" :pathname "materials/models/damage/particle")
+                  ))
                  (:module "models"
                   :serial t
                   :components
                   (;(:file "damage")
-                   (:file "plastic")
-                   (:file "concrete")
+                   (:module "plastic" :pathname "../../" :serial t
+                     :components (
+                       (:file "p2-01-plastic-state" :pathname "materials/core/plastic-state")
+                       (:file "p2-02-finite-difference-tangent" :pathname "src/numerics/integration/finite-difference-tangent")
+                       (:file "p2-03-particle" :pathname "materials/models/plastic/von-mises/particle")
+                       (:file "p2-04-particle" :pathname "materials/models/plastic/mohr-coulomb/particle")
+                       (:file "p2-05-particle" :pathname "materials/models/plastic/drucker-prager/particle")
+                     ))
+                   (:module "concrete" :pathname "../../" :serial t
+                     :components (
+                       (:file "p2-01-legacy" :pathname "materials/models/concrete/legacy")
+                     ))
                    ;; (:file "limestone")
                    ;; (:file "ice")
                    ;(:file "chalk")
