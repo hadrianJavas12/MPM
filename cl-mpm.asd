@@ -174,16 +174,48 @@
                 ((:module "damage"
                   :serial t
                   :components ((:file "package")
-                               (:file "softening")
-                               (:file "criteria")
+                               (:module "softening" :pathname "../../" :serial t
+                                 :components (
+                                   (:file "p2-01-responses" :pathname "materials/models/damage/evolution/responses")
+                                   (:file "p2-02-softening" :pathname "materials/models/concrete/evolution/softening")
+                                   (:file "p2-03-softening" :pathname "materials/models/chalk/evolution/softening")
+                                 ))
+                               (:module "criteria" :pathname "../../" :serial t
+                                 :components (
+                                   (:file "p2-01-principal-strains" :pathname "src/numerics/tensors/principal-strains")
+                                   (:file "p2-02-criteria" :pathname "materials/models/damage/criteria")
+                                 ))
                                (:file "ekl")
-                               (:file "damage")
-                               (:file "delay-damage")
-                               (:file "degredation")
-                               (:file "output")
+                               (:module "damage" :pathname "../../" :serial t
+                                 :components (
+                                   (:file "p2-01-damage-primitives" :pathname "src/numerics/tensors/damage-primitives")
+                                   (:file "p2-02-legacy-state-evolution" :pathname "materials/models/damage/legacy-state-evolution")
+                                   (:file "p2-03-legacy" :pathname "src/damage/nonlocal/legacy")
+                                   (:file "p2-04-native-hooks" :pathname "materials/models/concrete/evolution/native-hooks")
+                                 ))
+                               (:module "delay-damage" :pathname "../../" :serial t
+                                 :components (
+                                   (:file "p2-01-delayed-rate" :pathname "materials/models/damage/evolution/delayed-rate")
+                                   (:file "p2-02-delayed-steppers" :pathname "src/numerics/integration/delayed-steppers")
+                                 ))
+                               (:module "degredation" :pathname "../../" :serial t
+                                 :components (
+                                   (:file "p2-01-degradation" :pathname "materials/models/damage/evolution/degradation")
+                                 ))
+                               (:module "output" :pathname "../../" :serial t
+                                 :components (
+                                   (:file "p2-01-damage-output" :pathname "materials/adapters/damage-output")
+                                 ))
                                (:file "solver")))
-                 (:file "models/damage")
-                 (:file "models/damage-frictional")))))
+                 (:module "models/damage" :pathname "../" :serial t
+                   :components (
+                     (:file "p2-01-damage-communication-state" :pathname "src/parallel/damage-communication-state")
+                     (:file "p2-02-legacy-particles" :pathname "materials/models/damage/legacy-particles")
+                   ))
+                 (:module "models/damage-frictional" :pathname "../" :serial t
+                   :components (
+                     (:file "p2-01-legacy" :pathname "materials/models/frictional-damage/legacy")
+                   ))))))
 (defsystem "cl-mpm/eigenerosion"
   :depends-on ("cl-mpm/magicl"
                "cl-mpm"
