@@ -2,7 +2,7 @@
 title: Native Mohr-Coulomb hardening and softening study
 type: synthesis
 tags: [cl-mpm, mohr-coulomb, research, native-windows, verification]
-sources: [research/README.md, research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md, research/references/PROVENANCE.md, research/reports/M0_SERIAL_REGRESSION.md]
+sources: [research/README.md, research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md, research/references/PROVENANCE.md, research/reports/M0_SERIAL_REGRESSION.md, docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md, docs/evidence/material-contract-2026-10-16/validation-summary.json]
 updated: 2026-10-16
 ---
 
@@ -11,6 +11,12 @@ updated: 2026-10-16
 The user authorized the M0–M6 master plan, stage commits/pushes and economical
 automatic continuation. This is an independently maintained native software and
 numerical-comparison project, with no UI work or thesis framing.
+
+The immediate priority is [[cl-mpm-architecture]] migration P0/G0, on
+`codex/material-architecture-migration` from `7c399fb`. Root `materials/` is the
+target owner; `framework/` remains temporary compatibility. Complete the actual
+file/ASDF/caller/form ownership audit before moves. The target is not implemented;
+new MC physics is deferred until migration gates and requires a separate branch.
 
 ## Verified checkpoint
 
@@ -23,9 +29,14 @@ The four-worker strict failure (176/191 states) remains preserved.
 
 M0 remains **PROVISIONAL**: `64f47cc` passes 9 material, 10 configuration,
 10 framework contracts and 36 Node tests. Its current full 2D regression has
-51 byte-identical VTKs and zero CSV differences; the independent available-field
-audit passes. The original 3D baseline finished; its matched after run is still
-running. The four-worker exception remains open. Legacy
+51 byte-identical VTKs and zero CSV/position differences. Its matched full 3D
+pair also passes exactly: 780 MPs, 17,443 updates, 51 states, both exit 0.
+All independent audits pass within available-field scope; missing 2D sigma_zz
+and out-of-plane kinematics still prevent full independent tensor checks.
+The material-contract bundle has 60 SHA-256-verified manifest entries and no
+native job remains running. Listed private Joss numerical modules are byte-identical
+to `41403f4`; this is not a new full Joss run on `64f47cc`. Four-worker failure
+and incomplete transitive loaded FASL/DLL provenance keep M0 provisional. Legacy
 VM-specific yield formulas must not be used for an MC particle. Unsupported
 history/rollback capabilities require explicit rejection.
 
@@ -54,8 +65,8 @@ An isolated, uninstalled MC prototype passes 32 native material-point tests.
 Its design is `research/reports/M2_RETURN_MAPPING_DESIGN.md`; staged sources,
 log and hashes are in `.tmp/mc-evolution-stage/`. Root isolation is sampled,
 without a completeness proof or adaptive continuation. This is provisional
-point evidence, not full MPM, M2 acceptance or physical validation. Integrate
-only on the separate experimental branch after the framework checkpoint.
+point evidence, not full MPM, M2 acceptance or physical validation. Integration
+is deferred until migration gates, then requires a separate experimental branch.
 
 After M0, dedicated H/HS mechanics need strain/state, corner/apex, yield and
 return-map tests before paired 3D cylinders at 100/200 kPa and a separate soil
@@ -66,5 +77,6 @@ remain explicit limits. M2–M6 are not completed by the data-preparation tests.
 The cleanup inventory found no proven safe deletion candidate. Compatibility
 loaders, failed evidence, immutable raw sources and personal settings stay intact.
 The active handover was shortened and its complete earlier text archived to
-reduce repeated context loading. The existing heartbeat is active every five
-hours, aligned to the observed reset; read current handover/status before work.
+reduce repeated context loading. The former heartbeat is unavailable/deleted:
+the update tool reported that it does not exist and its TOML is missing. No next
+wakeup is confirmed; do not recreate it without a new user request.

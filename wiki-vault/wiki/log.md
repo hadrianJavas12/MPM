@@ -290,3 +290,33 @@ remains running. M0 remains provisional with the four-worker failure retained.
 The isolated MC prototype has 32 passing native point tests, with sampled-root
 completeness and continuation limitations. No new full MC MPM or physical
 validation is claimed. Sources remain staged for a separate experimental branch.
+
+## [2026-10-16] ingest | Completed VM regressions and architecture migration priority
+
+Updated [[reusable-simulation-framework]], [[mc-hardening-softening-study]],
+[[cl-mpm-architecture]] and index from the completed `64f47cc` evidence and the
+user's architecture migration specification. Full 2D/3D pairs each completed
+17,443 updates and 51 states; every corresponding VTK is byte-identical and all
+CSV/position differences are zero. Independent audits pass within available-field
+scope; absent 2D sigma_zz/out-of-plane kinematics remain unavailable. Recorded
+60 SHA-256-verified material-contract manifest entries, no running native job,
+and byte identity only of listed private Joss numerical modules to `41403f4`;
+no new full Joss run is claimed. Four-worker FAIL and incomplete transitive loaded
+FASL/DLL provenance keep M0 provisional.
+
+The new `codex/material-architecture-migration` branch starts at `7c399fb`.
+Root `materials/` and removal of permanent `framework/` are target ownership,
+not completed migration. P0/G0 requires the complete actual-file/ASDF/caller/form
+audit before moves; P1–P6 remain NOT RUN. MC physics integration is deferred
+until migration gates, then requires a separate experimental branch. The former
+heartbeat is unavailable/deleted, with no confirmed wakeup or authorized
+replacement. This documentation operation ran no solver/tests/git commands and
+preserved all earlier log entries, raw sources and personal settings.
+
+## [2026-10-16] ingest | Complete migration inventory before first extraction
+
+[[cl-mpm-architecture]] now has a frozen 884/884-path migration matrix, native
+metadata for 104 ASDF systems and 11 passing audit-integrity checks. Two
+source-hash-bound P1 extractions are reviewed; the other 882 semantic reviews
+remain pending. The two missing legacy examples and existing native load-order
+overrides remain explicit. This P0 checkpoint changes no production source.

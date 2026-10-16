@@ -79,7 +79,8 @@ authorized committing and pushing this interim evidence while the paired
 single-worker controls ran; the final PR remains pending. The serial controls
 are now complete and exactly identical; see [the audited result](../research/reports/M0_SERIAL_REGRESSION.md).
 This separates a passing deterministic control from the retained four-worker
-failure. Generic-material/current-code 2D/3D regressions are a separate M0 gate.
+failure. Current `64f47cc` VM 2D/3D regressions have now passed separately;
+see the completed checkpoint below. M0 retains the parallel/provenance limits.
 No physics change or scientific validation is claimed.
 
 ## Repeatable automated checks
@@ -211,16 +212,34 @@ Retained numerical evidence: [triaxial bundle](evidence/triaxial-clay-2026-10-15
 These checks do not claim laboratory calibration, full undrained pore-water
 modelling, mesh/rate/timestep convergence or a closed energy budget.
 
-## Current framework and isolated MC checkpoint
+## Completed framework evidence and migration baseline, 2026-10-16
 
-Current native checkpoint `64f47cc` (2026-10-16): 9 material-diagnostic,
-10 configuration, 10 framework contracts and 36 Node tests pass. The full 2D
-rerun matches all 51 baseline VTK hashes and CSV values exactly, and its
-available-field audit passes. The matched 3D after run is not complete yet.
-Logs/status are under `output/material-contract-2026-10-16/`; the completion-only
-collector `.tmp/finalize-material-contract.py` must wait for all status/manifests.
-The isolated `.tmp/mc-evolution-stage/` passes 32 native point checks, with
-explicit sampled-root/continuation limitations; it is not a full MPM result.
+Executed native checkpoint `64f47cc` (2026-10-16): 9 material-diagnostic,
+10 configuration, 10 framework contracts and 36 Node tests pass. Full VM 2D
+(480 MPs) and 3D (780 MPs) pairs each completed exit 0, 17,443 updates, 51 states
+and 0.2 s. Each pair has all 51 corresponding VTKs byte-identical and every CSV,
+position and exported-field difference zero under unchanged criteria. All four
+independent audits pass within their available-field scope; missing 2D
+sigma_zz/out-of-plane kinematics still preclude the full independent tensor checks.
+
+The collector completed; [the retained summary](evidence/material-contract-2026-10-16/validation-summary.json)
+and its 60 SHA-256-verified manifest entries record executed snapshot `64f47cc`,
+frozen original 3D `c749d32`, statuses, CSVs, audits and comparison evidence.
+Working VTK outputs/logs remain under `output/material-contract-2026-10-16/`.
+No native jobs remain running. The Joss byte comparison covers only listed
+dedicated numerical modules versus `41403f4`; no new full Joss run is claimed.
+M0 remains **PROVISIONAL** because four-worker strict FAIL and incomplete
+transitive loaded FASL/DLL provenance remain open.
+
+The [migration specification](architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md)
+now governs the next work. P0/G0 requires a complete actual-file ownership/caller/
+ASDF inventory before moves. These saved results are baseline evidence, not tests
+of the target root `materials/`, `scenarios/` and `src/simulation/` layout.
+P1–P6 and post-migration G1–G5 verification remain NOT RUN. Preserve exact
+regression criteria and historical Windows/ASDF/Studio/calibration entry points.
+The isolated `.tmp/mc-evolution-stage/` has 32 native point checks passing, with
+sampled-root/continuation limits. It is uninstalled; new physics is deferred
+until migration gates and requires a separate experimental branch.
 
 ## GitHub Actions blocker
 

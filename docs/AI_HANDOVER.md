@@ -7,14 +7,26 @@ Older statuses there are historical and do not override this checkpoint.
 
 ## Mission and authorized scope
 
-Execute [the user's master plan](../research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md)
-M0–M6: finish the reusable native framework, verify dedicated Mohr–Coulomb
-hardening-only (H) and hardening–softening (HS), then run fair paired 3D triaxial
-and soil-cliff comparisons. [Research status](../research/README.md) records gates.
+The immediate priority is the [architecture migration specification](architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md):
+audit actual ownership and dependencies in P0/G0 before moving code. Root
+`materials/` is the target owner of material models, state, evolution and model
+diagnostics; `framework/` remains a compatibility layer until its callers and
+numerical behavior are verified. This target design is **not implemented**.
+The [scientific master plan](../research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md)
+M0–M6 remains in force, with new MC H/HS physics deferred until migration gates.
+[Research status](../research/README.md) records the separate gates.
+
+P0 inventory is now complete: 884/884 captured paths, 104 ASDF systems, 11 audit
+integrity tests PASS. Only the two hash-bound sources in
+`docs/architecture/MIGRATION_APPROVALS.json` are approved for the
+`P1_CONTRACT_EXTRACTION.md` plan; numerical migration tests remain NOT_RUN.
+The full material form audit preserves existing forward classes/overrides.
+Two absent legacy example paths are recorded as pre-existing compatibility
+exceptions. No production source has moved at this P0 checkpoint.
 
 - Work headlessly on Windows. No UI/Studio feature work or thesis framing.
-- Preserve legacy numerical defaults. New physics uses a separate experimental
-  branch after the framework checkpoint, dedicated classes and actual solver runs.
+- Preserve equations, algorithms, parameter defaults and numerical results during
+  migration. New physics requires a separate experimental branch and review.
 - No fitting to slide curves, hidden strain multipliers, invented lab data or
   claims of full CU/experimental validation. Residual soil and the separate
   Zhan/Zang reference remain distinct datasets.
@@ -28,9 +40,10 @@ and soil-cliff comparisons. [Research status](../research/README.md) records gat
 
 ## Repository and checkpoint topology
 
-Current branch: **codex/reusable-simulation-framework**.
-Latest pushed checkpoint: **`64f47cc`**, including the generic material/config
-contracts and M1 reference preparation. Earlier implementation/evidence
+Current branch: **codex/material-architecture-migration**, created from
+**`7c399fb`** on `codex/reusable-simulation-framework`. Full material/config
+regressions executed frozen **`64f47cc`**, with M1 reference preparation.
+Earlier implementation/evidence
 `4d141c3`, master-plan intake `909fddf` and later documentation checkpoints are
 historical ancestors. Attribute each run to its frozen executed source.
 Main remains `efd0358b7f571e738c0ecc022c4313fb7fca0d15` after the user's PR #7 merge.
@@ -53,11 +66,11 @@ was committed as `0fece3b`. Attribute evidence to its executed bytes.
 | Joss serial 40 s | PASS, exact | Original `c749d32` versus executed after `41403f4`; 191 physical states, 193 VTKs incl initial/equilibrium, all fields/CSV differences zero |
 | Current Node suite | PASS | 36 tests, zero skipped; no UI session or scientific validation |
 | Current component contracts | PASS | 10 construction contracts; private callback contract also passed |
-| Bounded current-head integration | PASS | Joss 4 s and triaxial 27 updates on `9f26cb1`; native MC cliff two updates on `0fece3b` |
+| Earlier bounded integration | PASS | Joss 4 s and triaxial 27 updates on `9f26cb1`; native MC cliff two updates on `0fece3b` |
 | M1 reference-data preparation | PASS, data only | Nine stdlib integrity tests; four reference proposals remain non-executable |
 | Generic material diagnostics | PASS, focused | Nine native contracts; VM/MC/elastic identity, diagnostics, mode rejection and bounded native MC smoke |
 | Configuration contracts | PASS | Ten native checks; validation before output, JSON integrity and config isolation |
-| Legacy 3D matched regression | AFTER RUNNING | Original completed exit 0 at 22:26:38 UTC, 17,443 updates and 51 states; frozen `64f47cc` after run last observed at frame 29/50 |
+| Current `64f47cc` full triaxial 3D | PASS, exact | Both exit 0; 780 MPs, 17,443 updates, 51 VTKs byte-identical, all CSV/position differences zero; independent audits PASS |
 | Isolated M2 prototype | PASS, provisional points only | 32 native material-point tests; ignored staging directory only, not installed or spatially validated |
 
 Serial Joss has 4,155 MPs, constant mass 425,664.0625 kg per unit depth, finite
@@ -79,36 +92,31 @@ Scientific caveats from [the authenticity audit](SCIENTIFIC_AUDIT_2026-10-15.md)
 remain open: no experimental calibration, mesh convergence or closed energy
 budget is established by regression or visually similar collapse.
 
-## Current native jobs and next bounded action
+## Completed native evidence and next bounded action
 
-Run root: `output/material-contract-2026-10-16/`.
-- Original 3D baseline: `triaxial-3d-before/`; **completed exit 0 at
-  22:26:38 UTC**, 17,443 updates and 51 states.
-- Before status: `triaxial-3d-before-status.json`; log: `triaxial-3d-before.log`.
-- Frozen original monolith: `output/framework-refactor-2026-10-15/baseline-source/calibration/triaxial.lisp`
-  from `c749d32`; helper copies then loads those exact bytes.
-- Config: `triaxial-3d-serial.json`, original 3D recipe with workers=1 and
-  OPENBLAS_NUM_THREADS=1 / OMP_NUM_THREADS=1. No physics change.
-- Current 3D after run: `triaxial-3d-after/`, frozen **`64f47cc`**; wrapper PID
-  **42300**, last observed at **frame 29/50**. After status:
-  `triaxial-3d-after-status.json`; log: `triaxial-3d-after.log`.
-- After case: `tests/cases/triaxial-3d-regression.lisp`. The generic/config
-  implementation was committed and pushed before its full regressions.
-- Current `64f47cc` full 2D comparison and audit have already passed: 51 VTKs
-  byte-identical and all CSV differences zero. Do not repeat that run.
+No native process remains running. The completion collector finished and packaged
+[the material-contract summary](evidence/material-contract-2026-10-16/validation-summary.json)
+and 60 SHA-256-verified manifest entries. Full 2D (480 MPs) and 3D (780 MPs)
+pairs each completed 17,443 updates, 51 states and 0.2 s. Every corresponding
+VTK is byte-identical, all CSV/position differences are zero, and all independent
+audits pass within their available-field scope. The 3D original `c749d32`
+finished at 22:26:38 UTC; frozen `64f47cc` after finished at 22:44:48 UTC on
+2026-10-15, both exit 0. Working outputs remain in
+`output/material-contract-2026-10-16/`; do not repeat these runs.
 
-The completion collector **`.tmp/finalize-material-contract.py` is ready**.
-Never run it until both 3D statuses report exit 0 and both native manifests
-report complete. Inspect status and the final log line once; while the after
-run is healthy, let it continue. Once complete, use the collector to compare
-3D VTK/CSV with unchanged tolerances, run the independent audits and package
-actual evidence. Then update docs and checkpoint commit/push. Retain honest
-PASS/FAIL; no reruns or duplicate native jobs are required. Focused generic
-9/9, config 10/10, Node 36/36 and component 10/10 checks already passed.
-No new full Joss run is needed when its numerical sources remain unchanged;
-prove that source identity rather than relabeling old output.
-M0 is **PROVISIONAL**, not complete merely because an exception is documented.
-Only then integrate physics on a separate experimental branch, as the plan allows.
+The [Joss source comparison](evidence/material-contract-2026-10-16/verification/joss-numerical-source-identity.json)
+proves byte identity only for the listed dedicated numerical modules versus
+serial snapshot `41403f4`; it is **not** a new full Joss run on `64f47cc`.
+M0 remains **PROVISIONAL**: four-worker strict FAIL is retained and complete
+transitive loaded FASL/DLL provenance is not established.
+
+Publish/checkpoint the completed M0 evidence, then finish migration **P0/G0**:
+one matrix record per actual tracked path, separate untracked inventory,
+ASDF/load/Windows/Studio/caller map, and form-level ownership for mixed sources.
+Record baseline/toolchain/provenance gaps and the G0 acceptance status before
+any move. Initial P0 inventory captured 884 tracked paths at `7c399fb`; that
+count alone does not establish complete semantic/caller ownership or G0 PASS.
+P1–P6 and migration regressions remain NOT RUN at this documentation checkpoint.
 
 ## Isolated M2 preparation checkpoint
 
@@ -123,22 +131,26 @@ zero-friction handling, explicit stress/strain conventions and deep material
 transactions. It remains **PROVISIONAL**: sampled root isolation lacks a global
 completeness proof and adaptive continuation/subdivision; material rollback does
 not provide whole-MPM global-step rollback. It is not M2 acceptance or scientific
-validation. Preserve the ignored staging directory across sessions. Root must
-create the separate physics branch and review/copy selected modules only after
-the M0 checkpoint/gate; do not install it into the current framework branch.
+validation. Preserve the ignored staging directory across sessions. Installation
+and new full MC runs are deferred until the migration gates; later physics belongs
+on a separate experimental branch, not in folder-migration commits.
 See [the M2 design](../research/reports/M2_RETURN_MAPPING_DESIGN.md).
 
 ## Architecture and maintenance contracts
 
-Native equations belong in `src/`/native libraries. Framework components own
-material/geometry contracts, simulation assembly and diagnostics; scenario modules
-own loading/boundaries/measurements; `cases/` holds short trusted executable recipes;
-`research/` holds source values, frozen study inputs and reports. No copied
-constitutive equations in scenario setup. Material-specific diagnostics must not
-apply VM yield formulas to MC. Unsupported homogeneous state/rollback must fail
-explicitly until its material adapter is implemented.
+Current implementation still spans `src/`, native libraries and `framework/`.
+The target separates generic engine/numerics/orchestration in `src/`, model-owned
+physics/state/evolution/diagnostics in root `materials/`, reusable procedures in
+`scenarios/`, short recipes in `cases/` and scientific inputs/evidence in `research/`.
+Material definitions are parameter/provenance profiles, distinct from models;
+evolution stays with its model and shared utilities require actual cross-model
+reuse. Audit mixed files per form rather than renaming by filename. No duplicate
+classes, circular ASDF dependencies or scenario-owned constitutive equations.
+MC diagnostics must not use VM formulas; unsupported state/rollback fails explicitly.
 
-The headless system is `framework/cl-mpm-framework.asd`. Historical
+The current headless system is `framework/cl-mpm-framework.asd`. Preserve its
+public symbols and historical quickload paths until compatibility gate G5 passes.
+Remove `framework/` only after active callers transition with evidence. Historical
 `calibration/triaxial.lisp` and Studio Lisp files remain compatibility adapters.
 `studio/schema.json` remains the existing canonical legacy parameter contract;
 new research proposals are separate, execution-gated data. Arbitrary case/custom
@@ -164,14 +176,13 @@ quantitative report and human handoff. No UI task is authorized.
 
 ## Automation and economical continuation
 
-Existing heartbeat **mpm-lanjut-setelah-reset** is ACTIVE in this chat. Its next
-reset-aligned start is **2026-10-16 09:51 WIB**, after the observed account reset
-at **09:50:08 WIB**, then every five hours. Preserve its current prompt/preferences;
-inspect live limits and real resetsAt before adjusting, never create a duplicate.
-Local scheduled work needs the laptop and desktop app running. The schedule does
-not change the shared account quota. When usage is nearly exhausted, save a
-checkpoint and rely on the next wakeup; do not leave active polling loops.
-Notify only for meaningful progress, completion, failure or required input.
+The former heartbeat **mpm-lanjut-setelah-reset** is unavailable: updating it
+returned “Automation does not exist … may have been deleted manually by user,”
+and its local TOML is missing. No active schedule or next wakeup is confirmed.
+The previously proposed 15:14:38 WIB start after the observed 15:13:38 WIB reset
+is not an active automation. Do not create a replacement without a new user
+request. Save checkpoints when usage is low; avoid active polling and duplicate
+native jobs. Any future automation should notify only for meaningful changes.
 
 Update this concise handover, testing/docs and linked wiki at each checkpoint.
 Read `wiki-vault/AGENTS.md` and the llm-wiki/obsidian skills before wiki edits;

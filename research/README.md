@@ -8,19 +8,26 @@ the scope. The existing solver and legacy material defaults remain the baseline.
 
 ## Current stage
 
+The immediate priority is the [architecture migration specification](../docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md),
+on `codex/material-architecture-migration` from `7c399fb`. P0/G0 requires complete
+actual-file ownership, ASDF/caller and compatibility inventories before any move.
+Root `materials/` is the target model owner; `framework/` remains temporary
+compatibility. This target is not implemented. New MC physics is deferred until
+migration gates, then belongs on a separate experimental branch.
+
 | Milestone | Status | Next evidence required |
 | --- | --- | --- |
-| M0: native framework and contracts | PROVISIONAL | Generic contracts and current 2D pass; current 3D regression running; four-worker exception retained |
+| M0: native framework and contracts | PROVISIONAL | Current full VM 2D/3D exact PASS; four-worker FAIL and transitive FASL/DLL provenance limits remain |
 | M1: source-aware reference data | COMPLETE (data preparation) | Nine integrity tests pass; runtime execution remains gated by M2 |
-| M2: dedicated MC H/HS materials | PROVISIONAL (isolated staging) | 32 native point tests pass; review, complete integration and spatial verification still required |
+| M2: dedicated MC H/HS materials | PROVISIONAL (isolated staging), integration DEFERRED | 32 native point tests pass; migration gates, integration and spatial verification still required |
 | M3: parameter verification | NOT RUN | Matched pre-peak, peak continuity, post-peak and return-map checks |
 | M4: paired 3D triaxial | NOT RUN | 70 × 140 mm cylinders, 100/200 kPa, matched H/HS |
 | M5: paired soil cliff | NOT RUN | Frozen geometry/loading, matched H/HS, numerical outputs and audits |
 | M6: sensitivity and report | NOT RUN | Comparisons, limitations, commands and complete evidence status |
 
-The latest implementation checkpoint was pushed as `64f47cc` on
-`codex/reusable-simulation-framework`. Its 2D regression passes exactly (51 VTKs,
-all CSV differences zero); the four-worker Joss comparison fails the unchanged
+The full regression implementation was frozen as `64f47cc` on
+`codex/reusable-simulation-framework`. Its 2D and 3D regressions each pass exactly
+(51 VTKs byte-identical, all CSV/position differences zero); the four-worker Joss comparison fails the unchanged
 strict criterion (176/191 frames). The paired one-worker control completed in
 `output/framework-refactor-2026-10-15/joss-serial-before/` and `joss-serial-after/`.
 Its 191 physical states, 193 VTK files per run and all CSV values are identical.
@@ -29,10 +36,14 @@ Do not start duplicate runs or reinterpret the previous failure as a pass.
 See [the retained evidence](../docs/evidence/framework-refactor-2026-10-15/README.md).
 
 Current `64f47cc` diagnostics/configuration changes pass 9 material, 10 config,
-10 framework contracts and all 36 Node tests. Its full 2D rerun again has 51
-byte-identical VTKs and zero CSV differences; the independent available-field
-audit passes. The fresh original 3D baseline finished successfully; the matched
-after run remains in progress. Do not declare 3D equivalence before comparison.
+10 framework contracts and all 36 Node tests. Full 2D (480 MPs) and 3D (780 MPs)
+pairs completed exit 0, 17,443 updates, 51 states and 0.2 s; all independent
+audits pass within available-field scope. The 2D export still lacks sigma_zz and
+out-of-plane kinematics for full independent tensor checks. The completed
+[evidence summary](../docs/evidence/material-contract-2026-10-16/validation-summary.json)
+has 60 SHA-256-verified manifest entries. No native job remains running.
+Byte identity of the listed private Joss numerical sources versus `41403f4`
+does not constitute a new full Joss run at `64f47cc`.
 
 The [MC design](reports/M2_RETURN_MAPPING_DESIGN.md) has an isolated, uninstalled
 prototype in `.tmp/mc-evolution-stage/`, with 32/32 native material-point tests
@@ -40,9 +51,10 @@ passing. Root sampling has no completeness proof or adaptive continuation;
 full MPM, calibration and M2 acceptance are not established. Preserve this staging
 directory for review on the separate experimental branch.
 
-New constitutive physics will use a separate experimental branch based on the
-refactor checkpoint. An unresolved Joss result remains an explicit framework
-acceptance exception; independent controlled work may proceed as the plan allows.
+Migration must preserve equations, algorithms, parameters, source availability
+and historical entry points. P1–P6 and their migration verification are NOT RUN;
+the saved baseline does not validate the target layout. M0 remains provisional
+with its retained parallel failure and incomplete transitive loaded provenance.
 No automatic merge to `main` is authorized.
 
 ## Source handling and reproducibility
@@ -63,8 +75,9 @@ No automatic merge to `main` is authorized.
 
 Start with [framework usage](../docs/REUSABLE_FRAMEWORK.md) and
 [the Windows native quickstart](../docs/QUICKSTART_WINDOWS_NATIVE.md).
-Small executable cases belong in `cases/`; reusable assembly belongs in
-`framework/`; material equations belong in the native material layer.
+Current executable cases belong in `cases/`; reusable assembly still lives in
+`framework/` pending the audited migration to `src/simulation/` and `scenarios/`.
+Model implementation will move to root `materials/` with compatibility evidence.
 Reference data, parameter provenance and reports belong in `research/`.
 
 M1 outputs are [source-aware values and provenance](references/PROVENANCE.md),
@@ -78,6 +91,6 @@ commands. Compatibility entry points, negative evidence, immutable sources,
 active outputs and personal Obsidian settings must be preserved. A file without
 a text-search match is not by itself proven unused.
 
-Automatic continuation is scheduled after the next observed usage reset and
-every five hours thereafter. Use [the operational handover](../docs/AI_HANDOVER.md)
-for the next bounded task; avoid active polling while native jobs run.
+The former continuation automation is unavailable/deleted; no next wakeup is
+confirmed and no replacement is authorized without a new request. Use
+[the operational handover](../docs/AI_HANDOVER.md) for the next bounded P0/G0 task.

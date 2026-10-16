@@ -2,8 +2,8 @@
 title: CL-MPM architecture
 type: concept
 tags: [architecture, mpm, asdf]
-sources: ["[[refactor-2026-10-14]]"]
-updated: 2026-10-14
+sources: ["[[refactor-2026-10-14]]", docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md, docs/AI_HANDOVER.md]
+updated: 2026-10-16
 ---
 
 # CL-MPM architecture
@@ -15,6 +15,38 @@ Time step (`cl-mpm:update-sim`): P2G → nodal momentum update with BCs → G2P 
 Platform switches: `:win32` ⇒ `:cl-mpm-no-mpi` ⇒ serial [[serial-mpi-standin]]; expokit skipped. Dependencies are patched, see [[magicl-patches]].
 
 Full text: `docs/architecture.md`. Parent: [[cl-mpm]].
+
+## Migration target, 2026-10-16
+
+P0 inventory is complete: 884 captured tracked paths exactly once, 104 native
+ASDF registrations and 11 passing audit-integrity checks. Only two hash-bound
+P1 source extractions are approved; 882 semantic reviews remain pending.
+No production code has moved. See `docs/architecture/FILE_MIGRATION_MATRIX.json`
+and the execution log for the frozen scope and separate newly tracked files.
+
+The user supplied `docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md`
+as the primary migration reference. It is a **target design, not implemented**.
+`codex/material-architecture-migration` starts from the `7c399fb` checkpoint of
+[[reusable-simulation-framework]]. P0/G0 requires a complete actual-file matrix,
+ASDF/load/Windows/Studio/caller map and form-level ownership for mixed source
+before any code moves. The specification's 884-file remote inventory does not
+cover untracked local work or prove that semantic audit complete.
+
+Root `materials/` is the final owner of material models, model state, evolution
+and diagnostics. A material definition is a parameter/provenance profile, not
+a constitutive solver; evolution belongs within its model. Shared utilities need
+real cross-model reuse. Generic engine/numerics/orchestration remain in `src/`,
+reusable procedures belong in `scenarios/`, and `cases/` composes components.
+Material code must not depend on scenarios or Studio; generic solvers call
+constitutive protocols without embedding model laws or creating ASDF cycles.
+
+Preserve package/class identity, native backend, equations, algorithms, defaults
+and numerical results. `framework/` remains temporary compatibility until G5
+proves all active callers/entry points have transitioned. P1–P6 and their
+post-migration tests are NOT RUN at this checkpoint. Saved exact VM 2D/3D and
+serial Joss controls are baseline evidence; four-worker FAIL and loaded-provenance
+limits remain explicit. [[mc-hardening-softening-study]] physics integration is
+deferred until migration gates, then requires a separate experimental branch.
 
 Studio extends the existing particle law through a dedicated CLOS subclass
 and shared loader/stress guard, preserving the core solver. See

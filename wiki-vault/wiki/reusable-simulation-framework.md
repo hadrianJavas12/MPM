@@ -2,7 +2,7 @@
 title: Reusable native simulation framework
 type: synthesis
 tags: [cl-mpm, architecture, refactoring, native-windows, regression]
-sources: [docs/REUSABLE_FRAMEWORK.md, docs/AI_HANDOVER.md, docs/testing.md, framework/cl-mpm-framework.asd, docs/evidence/framework-refactor-2026-10-15/validation-summary.json]
+sources: [docs/REUSABLE_FRAMEWORK.md, docs/AI_HANDOVER.md, docs/testing.md, framework/cl-mpm-framework.asd, docs/evidence/framework-refactor-2026-10-15/validation-summary.json, docs/evidence/material-contract-2026-10-16/validation-summary.json, docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md]
 updated: 2026-10-16
 ---
 
@@ -20,7 +20,16 @@ The user merged [PR #7](https://github.com/hadrianJavas12/MPM/pull/7) into `main
 merge commit `efd0358b7f571e738c0ecc022c4313fb7fca0d15`. Public GitHub API status
 was refreshed on 2026-10-15: merged at 14:57:44 WIB. Older wiki statements that
 PR #7 remains open describe the publication checkpoint and are superseded here.
-The active branch is `codex/reusable-simulation-framework`.
+The architecture checkpoint is `7c399fb` on `codex/reusable-simulation-framework`.
+Current branch is `codex/material-architecture-migration`, created from it.
+
+The new [[cl-mpm-architecture]] specification governs the next work: root
+`materials/` owns model-specific implementation/state/evolution/diagnostics,
+`src/` owns generic engine/numerics/orchestration, and `scenarios/` owns reusable
+procedures. These are target owners, not completed moves. P0/G0 must inventory
+every actual tracked path and ASDF/load/caller/form ownership before code moves.
+`framework/` remains temporary compatibility until G5 proves caller transition;
+equations, algorithms, defaults and numerical results must remain unchanged.
 
 Initial refactoring was committed as `66ea5fb` **before post-refactor simulation
 validation**, as requested. Compatibility/launcher/API fixes followed, including
@@ -121,8 +130,18 @@ A paired full serial control completed without changing physics or tolerances:
 All exported position/scalar differences are zero. The source audit identifies
 original `c749d32` and executed after `41403f4`; completion status `909fddf`
 is HEAD at exit. This establishes serial equivalence and preserves the separate
-parallel failure. M0 still needs current generic-material/configuration and
-2D/3D regression gates; see [[mc-hardening-softening-study]].
+parallel failure. The listed dedicated Joss numerical sources remain byte-identical
+to `41403f4`; no new full Joss run on `64f47cc` is claimed.
+
+Generic diagnostics passed 9 native contracts and configuration passed 10,
+with 10 framework contracts and 36 Node tests passing. Full VM regressions on frozen
+`64f47cc` now pass for both 2D (480 MPs) and 3D (780 MPs): each completed exit 0,
+17,443 updates and 51 states, with all 51 VTKs byte-identical and all CSV/position
+differences zero. All independent audits pass within their available-field scope;
+the 2D missing-field caveat above remains. The new material-contract bundle has
+60 SHA-256-verified manifest entries; native jobs have finished. M0 remains
+**PROVISIONAL** with four-worker FAIL and incomplete transitive loaded FASL/DLL
+provenance. See [[mc-hardening-softening-study]].
 
 These results establish software regression properties, not experimental clay
 calibration, convergence or a closed energy budget. The findings in
@@ -131,17 +150,21 @@ calibration, convergence or a closed energy budget. The findings in
 ## Background continuation requested by user
 
 The user subsequently authorized the M0–M6 master plan, commits/pushes per stage
-and reset-aligned automatic continuation. The existing heartbeat is **active**.
+and reset-aligned automatic continuation. The former heartbeat is now unavailable:
+the tool reports it does not exist and its local TOML is missing. No active schedule
+or next wakeup is confirmed; do not create a replacement without a new request.
 The completed serial controls started at 20:53:38 WIB
 on 2026-10-15: frozen original `c749d32` versus test case `41403f4`, both one
 worker, OpenBLAS/OMP threads set to one. Output folders are
 `joss-serial-before` and `joss-serial-after` under the existing run root.
-See docs/AI_HANDOVER.md for exact status/log/helper paths. Preserve the original
-four-worker failure even if the separate serial control passes. Pause the
-heartbeat when the task is complete.
-CurrentHEAD bounded Joss4s and2D27updates passed. A distinct native Mohr-Coulomb
+See docs/AI_HANDOVER.md for saved status/log/evidence paths. Preserve the original
+four-worker failure alongside the passing serial control.
+Bounded Joss 4 s and 2D 27 updates on `9f26cb1` passed. A distinct native Mohr-Coulomb
 composition on0fece3b also passed2updates with36finiteVTKarrays andmass504000kg/m
 conserved while native splitting changed70MPs to280; no engine edits/rerun.
 The four-worker evidence bundle retains `regressionPassed=false`; separate
 serial-control evidence reports PASS. All 134 manifest hashes verify. Neither
 status should overwrite the other or be presented as experimental validation.
+P1–P6 migration and post-migration verification are NOT RUN here. The isolated
+32-test MC prototype is uninstalled; new physics is deferred until migration gates
+and belongs on a separate experimental branch.

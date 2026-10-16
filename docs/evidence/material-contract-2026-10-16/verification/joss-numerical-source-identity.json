@@ -1,0 +1,66 @@
+{
+  "scope": "Byte comparison of dedicated Joss numerical modules; no new full Joss run on 64f47cc",
+  "allIdentical": true,
+  "files": [
+    {
+      "path": "framework/scenarios/joss/build.lisp",
+      "currentSha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+      "serialSnapshotSha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/classes.lisp",
+      "currentSha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+      "serialSnapshotSha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/geometry.lisp",
+      "currentSha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+      "serialSnapshotSha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/measurements.lisp",
+      "currentSha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+      "serialSnapshotSha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/output.lisp",
+      "currentSha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+      "serialSnapshotSha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/phases.lisp",
+      "currentSha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+      "serialSnapshotSha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/run.lisp",
+      "currentSha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+      "serialSnapshotSha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/joss/statistics.lisp",
+      "currentSha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+      "serialSnapshotSha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/materials/chalk.lisp",
+      "currentSha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+      "serialSnapshotSha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+      "identicalBytes": true
+    },
+    {
+      "path": "framework/scenarios/cliff/settings.lisp",
+      "currentSha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+      "serialSnapshotSha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+      "identicalBytes": true
+    }
+  ]
+}

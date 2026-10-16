@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-16",
+  "scope": "Windows SBCL focused native contracts and bounded spatial integration; not full regression or scientific validation",
+  "baselineCommit": "909fddf31420d61fdea70ea720098ec457a0249e",
+  "testedWorkingTree": true,
+  "sourceSnapshotBeforeLoad": false,
+  "nativeDependencyProvenanceComplete": false,
+  "contractsPassed": 9,
+  "exitCode": 0,
+  "runDirectory": "output/material-contract-2026-10-16/contracts-generic-006",
+  "updates": 2,
+  "particles": 32,
+  "nativeModel": "cl-mpm/particle::particle-mc",
+  "allSavedMainCsvVmPlasticFieldsBlank": true,
+  "massKg": 1.44,
+  "massDriftKg": 0.0,
+  "finalMcDiagnostics": {
+    "frame": "1",
+    "time_s": "0.000045000000",
+    "mean_mc-plastic-strain-native": "0.00000000000000",
+    "max_mc-yield-residual-kirchhoff-pa": "-120784.60908318704000",
+    "max_mc-trial-yield-kirchhoff-pa": "-120784.60937500000000",
+    "mean_mc-cohesion-pa": "6000.00000000000000",
+    "mean_mc-friction-rad": "0.52359877559830",
+    "mean_mc-dilation-rad": "0.00000000000000"
+  },
+  "sourcesHashedAfterRun": {
+    "framework/components/diagnostics.lisp": "32d3ad0e7f17a09d5f2f90e3dc6dd51f21dd679922b629560a2f6c6b2ead3112",
+    "framework/scenarios/triaxial/package.lisp": "603756b11e09b4401a0a7e3d471023e894acfc26eb15eff327dc02626a8b42b9",
+    "framework/scenarios/triaxial/config.lisp": "0bf4d2abc858c6330185e092d150755e40d044a497784852e6da6f632494cdce",
+    "framework/scenarios/triaxial/geometry.lisp": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc",
+    "framework/scenarios/triaxial/adapter.lisp": "eab6819144c15d8c5ee475040c97ba6f42e6d1288149269c45dc0e74b8e2077c",
+    "framework/scenarios/triaxial/measurements.lisp": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc",
+    "framework/scenarios/triaxial/runner.lisp": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96",
+    "tests/material-diagnostics.lisp": "9c49f97c05bcf2e3d1dc87a018ac271e47c2351c411d020e193455f0257ff12e"
+  },
+  "artifactHashes": {
+    "output/material-contract-2026-10-16/contracts-generic-006/effective-config.json": "03e6734f74f11b3a47f56444ef89f3ffd5587e8e9fe16ee230b86467fbacaaeb",
+    "output/material-contract-2026-10-16/contracts-generic-006/manifest.json": "c025bb31ba862da62860f6e9fdc163cf7193f2699712bd877718b83bc0710377",
+    "output/material-contract-2026-10-16/contracts-generic-006/material-diagnostics.csv": "ef38c3a4d83c05a8407e01e7049b5a36689cbe95b1293b8eae05b6204cbb5fd5",
+    "output/material-contract-2026-10-16/contracts-generic-006/particles_0000.vtk": "fcb644151ced9442407ce1d345c469844115d7e59273ea81f3b9ee2af1b6f043",
+    "output/material-contract-2026-10-16/contracts-generic-006/particles_0001.vtk": "3c4b7cc2f952336969260bbd26e161f9b4e73cf69868cba04b03ca544b221d8d",
+    "output/material-contract-2026-10-16/contracts-generic-006/stress-strain.csv": "c3d9bd72ecf9b9392d99c0301353b5a7b231e5d57514b3fff45367ee9b8d1799",
+    ".tmp/material-diagnostics-contracts-006.log": "225651cbcbcf70e62316148a9fdd5060648e2c31e03d37525e23eac7b190b998"
+  }
+}
