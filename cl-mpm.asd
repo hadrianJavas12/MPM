@@ -798,7 +798,10 @@
                )
   :description "MPM chalk particle definitions"
   :serial t
-  :components ((:file "src/models/chalk")))
+  :components ((:module "src/models/chalk" :pathname "./" :serial t
+    :components (
+      (:file "p2-01-legacy" :pathname "materials/models/chalk/legacy")
+    ))))
 
 
 (defsystem "cl-mpm/models/ice"
@@ -808,14 +811,20 @@
                "cl-mpm/damage")
   :description "MPM ice particle definitions"
   :serial t
-  :components ((:file "src/models/ice")))
+  :components ((:module "src/models/ice" :pathname "./" :serial t
+    :components (
+      (:file "p2-01-legacy" :pathname "materials/models/ice/legacy")
+    ))))
 
 (defsystem "cl-mpm/models/limestone"
   :depends-on ("cl-mpm/particle"
                "cl-mpm/damage")
   :description "MPM limestone definitions"
   :serial t
-  :components ((:file "src/models/limestone")))
+  :components ((:module "src/models/limestone" :pathname "./" :serial t
+    :components (
+      (:file "p2-01-legacy" :pathname "materials/models/limestone/legacy")
+    ))))
 
 
 (defsystem "cl-mpm/models/visco"
@@ -824,7 +833,12 @@
                "cl-mpm/ext")
   :description "MPM limestone definitions"
   :serial t
-  :components ((:file "src/models/visco")))
+  :components ((:module "src/models/visco" :pathname "./" :serial t
+    :components (
+      (:file "p2-01-visco-package" :pathname "materials/core/visco-package")
+      (:file "p2-02-voigt-2d" :pathname "src/numerics/tensors/voigt-2d")
+      (:file "p2-03-legacy" :pathname "materials/models/viscoelastic/finite-strain/legacy")
+    ))))
 
 (defsystem "cl-mpm/examples/ice-visco"
   :depends-on ("cl-mpm/example"
