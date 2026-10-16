@@ -100,7 +100,20 @@
                "cl-mpm/fastmaths")
   :description "Various constitutive models"
   :serial t
-  :components ((:file "src/constitutive")))
+  :components ((:module "src/constitutive" :pathname "./" :serial t
+    :components (
+      (:file "p2-01-constitutive-package" :pathname "materials/core/constitutive-package")
+      (:file "p2-02-constitutive-primitives" :pathname "src/numerics/tensors/constitutive-primitives")
+      (:file "p2-03-constitutive" :pathname "materials/models/elastic/constitutive")
+      (:file "p2-04-constitutive" :pathname "materials/models/fluid/constitutive")
+      (:file "p2-05-constitutive" :pathname "materials/models/viscoelastic/maxwell/constitutive")
+      (:file "p2-06-constitutive" :pathname "materials/models/damage/constitutive")
+      (:file "p2-07-constitutive" :pathname "materials/models/viscoplastic/glen/constitutive")
+      (:file "p2-08-constitutive" :pathname "materials/models/plastic/von-mises/constitutive")
+      (:file "p2-09-constitutive" :pathname "materials/models/plastic/mohr-coulomb/constitutive")
+      (:file "p2-10-constitutive" :pathname "materials/models/plastic/drucker-prager/constitutive")
+      (:file "p2-11-secant-hardening" :pathname "materials/models/plastic/von-mises/evolution/secant-hardening")
+    ))))
 
 (defsystem "cl-mpm/particle"
   :depends-on ("cl-mpm/magicl"
@@ -250,7 +263,11 @@
                "array-operations")
   :description "External libraries"
   :serial t
-  :components ((:file "src/cpp"))
+  :components ((:module "src/cpp" :pathname "./" :serial t
+    :components (
+      (:file "p2-01-cpp" :pathname "src/numerics/native-bridge/cpp")
+      (:file "p2-02-legacy-transaction" :pathname "materials/backends/cpp/legacy-transaction")
+    )))
   )
 (defsystem "cl-mpm/core"
   :depends-on ("cl-mpm/magicl"

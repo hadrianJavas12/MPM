@@ -1,0 +1,137 @@
+(defpackage :cl-mpm/ext
+  (:use :cl
+        :cffi
+   )
+  (:import-from
+   :magicl tref .+ .-)
+  (:export
+   #:kirchoff-update
+   #:kirchoff-expt-step
+   #:kirchoff-expt-step-lisp
+   ))
+(in-package :cl-mpm/ext)
+(declaim (optimize (debug 0) (safety 0) (speed 3)))
+;; (declaim (optimize (debug 3) (safety 3) (speed 0)))
+
+
+(pushnew (asdf:system-relative-pathname 'cl-mpm "./libs/")  *foreign-library-directories* :test #'equal)
+(declaim (ftype (function (magicl:matrix/double-float magicl:matrix/double-float)
+                          (values))
+                kirchoff-expt-step)
+         (notinline kirchoff-expt-step)
+         )
+;; (sb-ext:restrict-compiler-policy 'speed  0 0)
+;; (sb-ext:restrict-compiler-policy 'debug  3 3)
+;; (sb-ext:restrict-compiler-policy 'safety 3 3)
+(defun kirchoff-expt-step-lisp (strain df)
+  ;;Broken?
+  ;; (loop for s across (cl-mpm/utils::fast-storage strain)
+  ;;       do (when (or
+  ;;                 (sb-ext:float-nan-p s)
+  ;;                 (< (the double-float s) -1d2)
+  ;;                 (> (the double-float s) 1d2))
+  ;;            (error "Bad strain! ~A" strain)))
+  ;; (loop for s across (cl-mpm/utils::fast-storage df)
+  ;;       do (when (or
+  ;;                 (sb-ext:float-nan-p s)
+  ;;                 (< (the double-float s) -1d2)
+  ;;                 (> (the double-float s) 1d2))
+  ;;            (error "Bad df! ~A" df)))
+  (multiple-value-bind (l v) (cl-mpm/utils::eig
+                              (cl-mpm/utils:voigt-to-matrix strain))
+    ;; (loop for eigenvalue in l
+    ;;       do (when (or
+    ;;                 (sb-ext:float-nan-p eigenvalue)
+    ;;                 ;; (< (the double-float eigenvalue) -1d2)
+    ;;                 (> (the double-float eigenvalue) 1d2))
+    ;;            (error "Bad eigenvalue! ~A - ~A" l v)))
+    (let ((trial-lgs (magicl:@ df
+                               v
+                               (cl-mpm/utils::matrix-from-list
+                                (list
+                                 (the double-float (exp (* 2d0 (the double-float (nth 0 l))))) 0d0 0d0
+                                 0d0 (the double-float (exp (* 2d0 (the double-float (nth 1 l))))) 0d0
+                                 0d0 0d0 (the double-float (exp (* 2d0 (the double-float (nth 2 l)))))
+                                 ))
+                               (magicl:transpose v)
+                               (magicl:transpose df))))
+
+      ;;Enforce symmetry
+      (multiple-value-bind (lf vf)
+          (cl-mpm/utils::eig trial-lgs)
+        (loop for eigenvalue in lf
+              do (when (<= (the double-float eigenvalue) 0d0)
+                   (error "Negative eigenvalue! ~A - ~A" lf vf)))
+        ;; (loop for i from 0 to 2
+        ;;       do (setf (nth i lf) (max 1d-20 (nth i lf))))
+        (destructuring-bind (lf0 lf1 lf2) lf
+          (declare (double-float lf0 lf1 lf2)
+                   )
+          (setf lf0 (max 1d-20 lf0)
+                lf1 (max 1d-20 lf1)
+                lf2 (max 1d-20 lf2))
+          (cl-mpm/utils:voigt-copy-into
+                          (magicl:scale!
+                           ;;Note that this is taking care of the shear scaling factor
+                           (cl-mpm/utils:matrix-to-voigt
+                            (magicl:@
+                             vf
+                             (cl-mpm/utils::matrix-from-list
+                              (list
+                               (the double-float (log (the double-float lf0))) 0d0 0d0
+                               0d0 (the double-float (log (the double-float lf1))) 0d0
+                               0d0 0d0 (the double-float (log (the double-float lf2))))
+                              )
+                             (magicl:transpose vf)))
+                           0.5d0)
+                          strain
+                          ))))))
+
+(declaim (ftype (function (magicl:matrix/double-float magicl:matrix/double-float) (values)) kirchoff-update))
+(defun kirchoff-update (strain df)
+  (kirchoff-expt-step strain df)
+  ;; (kirchoff-expt-step-lisp strain df)
+  ;; (kirchoff-svd-lisp strain df)
+  )
+
+
+;; (defun test-drucker-prager ()
+;;   (let* ((E 1d0)
+;;          (nu 0.1d0)
+;;          (phi 0.1d0)
+;;          (psi 0.0d0)
+;;          (c 1d0)
+;;          (de (cl-mpm/constitutive::linear-elastic-matrix E nu))
+;;          (strain (cl-mpm/constitutive::swizzle-coombs->voigt (cl-mpm/utils:voigt-from-list (list -1d0 -1d0 -1d0 4d0 0d0 0d0 ))))
+;;          )
+;;     ;; (time
+;;     ;;  (lparallel:pdotimes (i 1000000)
+;;     ;;    (progn)))
+;;     (constitutive-drucker-prager strain de E nu phi psi c)
+;;     (multiple-value-bind (sig eps f) (constitutive-drucker-prager strain de E nu phi psi c)
+;;       ;; (pprint sig)
+;;       (pprint (cl-mpm/constitutive::swizzle-voigt->coombs eps)))))
+ 
+;; (defun test-mc ()
+;;   (let* ((E 1d0)
+;;          (nu 0.2d0)
+;;          (phi 0.1d0)
+;;          (psi 0.0d0)
+;;          (c 1d0)
+;;          (de (cl-mpm/constitutive::linear-elastic-matrix E nu))
+;;          (strain (cl-mpm/utils:voigt-from-list (list 1d0 2d0 3d0 4d0 5d0 6d0)))
+;;          (stress (magicl:@ de strain))
+;;          )
+;;     ;; (pprint stress)
+;;     ;; (pprint de)
+;;     (time
+;;      (lparallel:pdotimes (i 1000000)
+;;        (progn
+;;          ;; (cl-mpm/utils:voigt-copy-into strain-0 strain)
+;;          (cl-mpm/constitutive::mc-plastic stress de strain de E nu phi psi c))))
+;;     (multiple-value-bind (sig eps f) (cl-mpm/constitutive::mc-plastic stress de strain E nu phi psi c)
+;;       (pprint f)
+;;       (pprint sig)
+;;       (pprint eps))))
+
+
