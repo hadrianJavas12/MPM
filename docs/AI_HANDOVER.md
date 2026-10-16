@@ -8,7 +8,7 @@ Older statuses there are historical and do not override this checkpoint.
 ## Mission and authorized scope
 
 The immediate priority is the [architecture migration specification](architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md):
-continue the approved P1 ownership extraction after the completed P0 inventory. Root
+continue actual ownership migration after the bounded P1 extraction. Root
 `materials/` is the target owner of material models, state, evolution and model
 diagnostics; `framework/` remains a compatibility layer until its callers and
 numerical behavior are verified. Only the bounded P1 extraction is implemented;
@@ -133,20 +133,33 @@ Only tests/fixtures were corrected; the containment guard and numerical code wer
 Bounded evidence/tests were committed and pushed as **62adb50**. Full VM 2D/3D
 and serial Joss launched at **11:07:41 WIB** on that fixed copied snapshot under
 `output/architecture-migration-2026-10-16/p1-full/{triaxial-2d,triaxial-3d,joss-serial}/`.
-Wrapper PIDs: **18500** (2D), **18300** (3D), **46728** (Joss). All three reached
-native initialization, with 480/780/4,155 MPs. Full G3 is RUNNING, not PASS.
-Each wrapper records sourceCommitAtLaunch, then automatically runs the unchanged
-strict comparator and VM audit after native exit 0. Read `*-status.json`,
-`*-comparison.json` and manifests; do not repeat postprocessing or native jobs.
+Full VM 2D completed: manifest `complete=true`, 480 MPs, 17,443 updates and 51
+states; native/comparison/audit exit codes are all 0, strict comparison and
+available-field audit PASS with zero position/exported-field/CSV differences.
+VM 3D remains running under wrapper **18300**, untouched by the stop request;
+no 3D result is claimed yet. Read saved status/logs before any action.
+
+The user explicitly stopped the migrated Joss serial run and prioritized
+architecture. Only its process tree (wrapper **46728**, cmd **35268**, SBCL
+**42456** and descendants) was terminated. `joss-serial-status.json` records
+**STOPPED_BY_USER**, `complete=false`, `nativeExitCode=null` and
+`comparisonStatus=NOT_RUN_CANCELLED`; retained output reaches 4.2 s.
+This is partial evidence, not PASS or a fabricated native failure code.
+The exact `41403f4` serial control remains historical evidence. **Do not restart
+or repeat full Joss without a new user request**, including from automation.
 51 copied files per run are hashed in `source-snapshots-sha256.json`.
 
-After all native jobs and automatic postprocessing finish, run completion-only
-`.tmp/finish-migration-p1-full.py`; it does not start solvers or repeat comparisons.
-It retains honest PASS/FAIL and packs evidence, including sources/status/logs.
-Then update docs/wiki and commit/push before approving any P2 extraction. P0
-matrix/approval capture is immutable; changed source hashes after an intentional
-move do not authorize overwriting that pre-migration evidence. P2 is conditional
-planning only. P2–P6 remain NOT_RUN and new MC physics stays deferred.
+Collect completed VM evidence separately from cancelled Joss. Do not run
+`.tmp/finish-migration-p1-full.py` unchanged: its all-three-complete assumption
+must first handle user cancellation honestly. Full G3 is PARTIAL, P1 PROVISIONAL
+and G1 PARTIAL. The cancelled full Joss run is not a prerequisite for independent
+ownership work under the user's latest direction.
+
+Next is independent **P3 diagnostics ownership preparation**: review the source
+split and obtain fresh hash-bound approval before implementation. P2 native
+formula migration still needs a native-source/provenance plan and remains plan
+only; P3 can proceed first. P0 matrix/approval capture is immutable. P2–P6
+implementation remains NOT_RUN at this checkpoint; new MC physics stays deferred.
 
 ## Isolated M2 preparation checkpoint
 
@@ -210,8 +223,9 @@ The former heartbeat was missing. In accordance with the user's standing
 auto-continuation request, replacement **mpm-lanjut-migrasi-arsitektur** is now
 ACTIVE. The user corrected the reset to **13:13 WIB**; its wakeup is anchored to
 **2026-10-16 13:14 WIB**, then every five hours. The tool confirmed the correction.
-The new prompt prioritizes this architecture specification and reads current
-run status before any action. Do not create another automation. Save checkpoints
+The updated prompt prioritizes architecture and explicitly forbids restarting
+the user-stopped full Joss run without a new request. It reads current VM status
+before any action. Do not create another automation. Save checkpoints
 when usage is low; avoid active polling, repeated tests and duplicate native jobs.
 Notify only for meaningful progress, completion, failure or necessary user input.
 

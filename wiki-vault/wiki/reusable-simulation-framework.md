@@ -154,6 +154,8 @@ and reset-aligned automatic continuation. The old heartbeat was missing; the
 replacement `mpm-lanjut-migrasi-arsitektur` is ACTIVE with the current architecture
 priority. After the user's final reset correction, its first wakeup is 13:14 WIB
 on 2026-10-16, then every five hours. It checks saved status before any new work.
+Its updated prompt forbids restarting the user-stopped full Joss run without a
+new request and prioritizes independent architecture ownership work.
 The completed serial controls started at 20:53:38 WIB
 on 2026-10-15: frozen original `c749d32` versus test case `41403f4`, both one
 worker, OpenBLAS/OMP threads set to one. Output folders are
@@ -176,8 +178,15 @@ checks pass. Strict bounded VM 27-update and MC two-update controls pass with
 two states and zero CSV/position differences. MC cliff VTKs match; PNG plotting
 is unavailable. Initial SBCL-tail and ASDF-registry fixture failures are retained;
 only tests/fixtures changed. P1 remains PROVISIONAL, G1 PARTIAL. Full migrated VM
-2D/3D and serial Joss G3 runs started on `62adb50` at 11:07:41 WIB in `p1-full/`;
-they are RUNNING, not PASS. P2 is plan only,
-P2–P6 NOT_RUN. The isolated
+2D on `62adb50` passed 51 states/17,443 updates, native/comparison/audit exit 0,
+with zero CSV/position/exported-field differences; available-field limitations
+remain. VM 3D is running. The user stopped Joss serial at 4.2 s, with saved
+STOPPED_BY_USER/incomplete status, null native exit and cancelled comparison.
+Retain partial evidence; do not restart full Joss without a new request.
+Full G3 is PARTIAL. Collect VM evidence separately and correct the collector's
+all-three-complete assumption before use. The cancelled run does not block the
+user's independent architecture priority: P3 diagnostics split/approval is next,
+while P2 native formula ownership still needs native-source/provenance planning.
+P2–P6 implementation is NOT_RUN. The isolated
 32-test MC prototype is uninstalled; new physics is deferred until migration gates
 and belongs on a separate experimental branch.

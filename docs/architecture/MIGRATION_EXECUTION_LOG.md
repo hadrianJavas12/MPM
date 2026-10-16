@@ -126,3 +126,27 @@ Schedule correction: the user subsequently clarified **13:13 WIB**, superseding
 15:13. The active heartbeat was updated to **2026-10-16 13:14 WIB**, then every
 five hours; the tool confirmed ACTIVE. Native jobs and numerical settings are
 unchanged by this correction.
+
+### User-directed Joss stop and architecture continuation
+
+The user explicitly requested stopping Joss serial and continuing architecture.
+Only the Joss process tree was terminated: wrapper 46728, cmd 35268, SBCL 42456
+and descendants. Saved `p1-full/joss-serial-status.json` records source `62adb50`,
+STOPPED_BY_USER, `complete=false`, `nativeExitCode=null` and
+`comparisonStatus=NOT_RUN_CANCELLED`; partial outputs reach 4.2 s. No native
+exit code or regression PASS is invented. Historical exact serial `41403f4`
+evidence remains separate. No full Joss restart is authorized without a new request.
+
+Full migrated VM 2D on `62adb50` has completed: manifest complete, 480 MPs,
+17,443 updates, 51 states, native/comparison/audit exit 0, strict/available-field
+audit PASS and zero CSV/position/exported-field differences. VM 3D remains running
+under wrapper 18300 and was untouched. Full G3 is PARTIAL; P1 stays PROVISIONAL
+and G1 PARTIAL. Collect completed VM evidence separately. The completion collector's
+all-three-complete assumption must be corrected before it is run after cancellation.
+
+The user's architecture priority permits independent P3 diagnostics ownership
+preparation before P2. A new source split and hash-bound P3 approval are pending;
+no P3 move is claimed. P2 native formula migration still needs its native-source/
+provenance plan. The cancelled Joss run does not block independent ownership work.
+P0 capture/approvals remain immutable, new physics remains deferred, and the active
+13:14 WIB/five-hour automation now carries the no-Joss-restart directive.

@@ -354,3 +354,22 @@ The user corrected the reset from 15:13 to **13:13 WIB**. The active replacement
 heartbeat was updated and confirmed for **13:14 WIB**, then every five hours.
 Updated [[reusable-simulation-framework]], index and handover. This supersedes
 the earlier schedule entry without changing native jobs or regression status.
+
+## [2026-10-16] ingest | User stops migrated Joss and prioritizes architecture
+
+Updated [[cl-mpm-architecture]], [[reusable-simulation-framework]] and index.
+The user requested stopping Joss serial and continuing actual architecture work.
+Only its verified process tree was terminated. Source `62adb50` retains partial
+4.2 s output and STOPPED_BY_USER/incomplete status, native exit null and
+comparison NOT_RUN_CANCELLED; no PASS or exit code is invented. Historical exact
+`41403f4` evidence remains separate. No full Joss restart is authorized without
+a new request; the active 13:14 WIB/five-hour automation carries that directive.
+
+Migrated VM 2D completed 51 states/17,443 updates with native/comparison/audit
+exit 0, strict and available-field audit PASS and zero CSV/position/exported-field
+differences. VM 3D continues untouched. G3 is partial, P1 provisional/G1 partial.
+Collect completed VM evidence separately and correct the all-three completion
+collector before use. Cancelled Joss does not block independent P3 diagnostics
+ownership preparation; new split/hash-bound approval is pending. P2 native-source/
+provenance planning remains open. This documentation operation changed no code,
+tests, solvers, git state, prior log entries, immutable raw sources or settings.

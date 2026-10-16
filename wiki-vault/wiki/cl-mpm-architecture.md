@@ -34,8 +34,14 @@ Focused contracts, normal/legacy loaders and snapshot escape checks pass; bounde
 VM 27-update/MC two-update controls have strict two-state PASS with CSV/positions
 zero. MC cliff VTKs match exactly; its unavailable gnuplot PNG is not a plot PASS.
 The initial ownership/SBCL-tail and snapshot-registry fixture failures are retained;
-only tests/fixtures changed. P1 is PROVISIONAL and G1 PARTIAL. Full VM 2D/3D
-and Joss serial G3 runs started on `62adb50` at 11:07:41 WIB; no full PASS yet.
+only tests/fixtures changed. P1 is PROVISIONAL and G1 PARTIAL. Full migrated VM
+2D on `62adb50` completed 51 states/17,443 updates with native/comparison/audit
+exit 0 and strict/available-field audit PASS; positions/CSV/exported fields differ
+by zero. VM 3D remains running. The user stopped Joss serial at 4.2 s:
+STOPPED_BY_USER, incomplete, native exit null and comparison NOT_RUN_CANCELLED.
+Its partial output is retained; the old exact `41403f4` control remains historical.
+No full Joss restart is authorized without a new user request. Collect completed
+VM evidence separately; fix the all-three collector before using it after cancellation.
 
 The user supplied `docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md`
 as the primary migration reference. The complete target remains pending beyond P1.
@@ -55,8 +61,12 @@ constitutive protocols without embedding model laws or creating ASDF cycles.
 
 Preserve package/class identity, native backend, equations, algorithms, defaults
 and numerical results. `framework/` remains temporary compatibility until G5
-proves all active callers/entry points have transitioned. P2 is plan only; P2–P6
-are NOT_RUN. Saved exact VM 2D/3D and
+proves all active callers/entry points have transitioned. Full G3 is PARTIAL.
+The user prioritizes independent P3 diagnostics ownership preparation; a new
+hash-bound split approval is pending before moves. P2 native formula migration
+remains plan only until native-source/provenance planning. Cancelled Joss does
+not block independent ownership work. P2–P6 implementation remains NOT_RUN.
+Saved exact VM 2D/3D and
 serial Joss controls are baseline evidence; four-worker FAIL and loaded-provenance
 limits remain explicit. [[mc-hardening-softening-study]] physics integration is
 deferred until migration gates, then requires a separate experimental branch.
