@@ -1,63 +1,6 @@
-;;;; Public SI components -> native calibration configuration.
-(in-package :cl-mpm/framework)
-
-(defmethod compile-scenario ((scenario (eql :triaxial)) (case simulation))
-  (let* ((config (alexandria:copy-hash-table (simulation-parameters case)))
-         (material (simulation-material case)) (geometry (simulation-geometry case))
-         (load (simulation-loading case)) (solver (simulation-solver case))
-         (boundary (simulation-boundary case))
-         (material (resolve-material material config
-                    '((:youngs-modulus "youngsModulusPa" 5d6)
-                      (:poisson-ratio "poissonRatio" 0.49d0)
-                      (:density "densityKgM3" 1800d0)
-                      (:undrained-strength "undrainedStrengthPa" 25d3)
-                      (:plasticity "enablePlasticity" t)))))
-    (check-kind material '(:von-mises :elastic :native))
-    (check-kind geometry '(:rectangle :cylinder))
-    (check-kind boundary '(:confinement))
-    (check-kind load '(:compression))
-    (check-kind solver '(:explicit))
-    (setf (gethash "spatialDimensions" config)
-          (if (eq (component-kind geometry) :rectangle) 2 3)
-          (gethash "mode" config) (gethash "mode" config "mpm"))
-    (dolist (mapping '((:youngs-modulus "youngsModulusPa" 5d6)
-                       (:poisson-ratio "poissonRatio" 0.49d0)
-                       (:density "densityKgM3" 1800d0)
-                       (:undrained-strength "undrainedStrengthPa" 25d3)))
-      (destructuring-bind (key name default) mapping
-        (setf (gethash name config) (option material key default))))
-    (setf (gethash "enablePlasticity" config)
-          (and (not (eq (component-kind material) :elastic))
-               (material-value material :plasticity (gethash "enablePlasticity" config t))))
-    (overlay config geometry '((:width "diameterMm" 1000d0)
-                               (:diameter "diameterMm" 1000d0) (:height "heightMm" 1000d0)))
-    (overlay config boundary '((:cell-pressure "cellPressurePa") (:penalty-scale "penaltyModulusScale")))
-    (overlay config load '((:target-strain "targetAxialStrainPct" 100d0)
-                           (:duration "loadingDurationS") (:ramp-duration "rampDurationS")))
-    (overlay config solver '((:mesh-size "meshSizeMm" 1000d0) (:mps-per-cell "mpsPerCell")
-                             (:workers "workers") (:time-step-scale "timeStepScale")
-                             (:frames "frames") (:max-updates "maxUpdates") (:damping "dampingPerS")))
-    (cl-mpm/calibration/triaxial::validate-config config)
-    (let ((diagnostics (material-diagnostics material)))
-      (unless (member (gethash "mode" config) (diagnostics-modes diagnostics) :test #'string=)
-        (error "~S does not support triaxial mode ~A; complete material snapshot/restore hooks are required."
-               (material-particle-class material) (gethash "mode" config)))
-      ;; Controls change material flags internally. A fixed custom factory would
-      ;; silently defeat those controls, so this public composition rejects it.
-      (when (string= (gethash "mode" config) "controls")
-        (error "Controls use the standalone default VM harness; custom material/geometry factories are unsupported.")))
-    (geometry-filter geometry)
-    config))
-
-(defmethod execute-scenario ((scenario (eql :triaxial)) (case simulation) config directory)
-  (let ((material
-          (resolve-material (simulation-material case) config
-                      '((:youngs-modulus "youngsModulusPa" 5d6)
-                        (:poisson-ratio "poissonRatio" 0.49d0)
-                        (:density "densityKgM3" 1800d0)
-                        (:undrained-strength "undrainedStrengthPa" 25d3)
-                        (:plasticity "enablePlasticity" t)))))
-    (cl-mpm/calibration/triaxial:run-config
-     config directory :particle-factory (make-particle-factory material)
-     :diagnostics (material-diagnostics material)
-     :geometry-filter (geometry-filter (simulation-geometry case)))))
+;;;; Temporary historical source-path compatibility; actual owners are outside framework.
+(in-package :cl-user)
+(let ((root (merge-pathnames "../../../"
+              (uiop:pathname-directory-pathname *load-truename*))))
+  (dolist (relative '("scenarios/triaxial/adapter.lisp"))
+    (load (merge-pathnames relative root))))

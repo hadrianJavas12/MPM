@@ -1,11 +1,6 @@
-;;;; Native triaxial compression harness. Units: m, Pa, kg, s.
-;;;; No material law, damage field or curve is replaced here.
-(defpackage :cl-mpm/calibration/triaxial
-  (:use :cl)
-  (:export :main :run-config :setup :run-controls))
-(in-package :cl-mpm/calibration/triaxial)
-(declaim (optimize (speed 2) (safety 1) (debug 1)))
-(defvar *initial-height* 0.14d0)
-(defvar *initial-volume* 1d0)
-(defvar *pressure* 50000d0)
-(defvar *material-diagnostics* nil)
+;;;; Temporary historical source-path compatibility; actual owners are outside framework.
+(in-package :cl-user)
+(let ((root (merge-pathnames "../../../"
+              (uiop:pathname-directory-pathname *load-truename*))))
+  (dolist (relative '("src/simulation/compatibility/triaxial-package.lisp" "scenarios/triaxial/state.lisp"))
+    (load (merge-pathnames relative root))))

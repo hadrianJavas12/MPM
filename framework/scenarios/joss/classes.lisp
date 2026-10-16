@@ -1,9 +1,6 @@
-;;;; Dedicated reference simulation classes.
-;;;; Extracted without changing the existing numerical expressions.
-(in-package :cl-mpm/framework/cliff)
-
-(defclass joss-reference-sim (cl-mpm/damage::mpm-sim-damage) ())
-
-(defclass joss-reference-aggregate-sim
-    (joss-reference-sim cl-mpm/aggregate::mpm-sim-aggregated) ()
-  (:documentation "Reference-only cut-cell stabilization through the author's aggregate solver."))
+;;;; Temporary historical source-path compatibility; actual owners are outside framework.
+(in-package :cl-user)
+(let ((root (merge-pathnames "../../../"
+              (uiop:pathname-directory-pathname *load-truename*))))
+  (dolist (relative '("scenarios/joss/classes.lisp"))
+    (load (merge-pathnames relative root))))
