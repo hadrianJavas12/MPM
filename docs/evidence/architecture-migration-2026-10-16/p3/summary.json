@@ -1,0 +1,176 @@
+{
+  "executedSourceCommit": "333306bbcaa7e900fe66a14d8bcc3d28eaca664c",
+  "focusedStagePass": true,
+  "counts": {
+    "framework-components": 10,
+    "config-contracts": 10,
+    "material-diagnostics": 9,
+    "diagnostics-normal": 3,
+    "diagnostics-legacy": 3,
+    "ownership-normal": 7,
+    "ownership-legacy": 7,
+    "snapshot-contract": 3,
+    "node-tests": 36
+  },
+  "nativeBoundedComparisons": {
+    "triaxial-short": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    },
+    "mc-triaxial": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    }
+  },
+  "runs": {
+    "triaxial-short": {
+      "complete": true,
+      "frames": 2,
+      "finalTimeS": 0.0003,
+      "particleCount": 480,
+      "finalMass": 17.64,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 0.0003,
+        "file": "particles_0001.vtk",
+        "sha256": "0b9c90d69e4ed5f3622a4996d6089c48ba965f07ff7bd501dc81e4a07c0d9598",
+        "particles": 480,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 17.64,
+        "bounds_min": [
+          0.032183574541798876,
+          0.03233333332922795,
+          0.0
+        ],
+        "bounds_max": [
+          0.09781642545820116,
+          0.1676630289287541,
+          0.0
+        ],
+        "max_displacement": 6.456940198490704e-06,
+        "mass_centroid": [
+          0.06500000000000002,
+          0.09999941893883664,
+          0.0
+        ]
+      }
+    },
+    "mc-triaxial": {
+      "complete": true,
+      "frames": 2,
+      "finalTimeS": 4.5e-05,
+      "particleCount": 32,
+      "finalMass": 1.4400000000000002,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 4.5e-05,
+        "file": "particles_0001.vtk",
+        "sha256": "3c4b7cc2f952336969260bbd26e161f9b4e73cf69868cba04b03ca544b221d8d",
+        "particles": 32,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mc-cohesion-pa",
+          "mc-dilation-rad",
+          "mc-friction-rad",
+          "mc-plastic-strain-native",
+          "mc-trial-yield-kirchhoff-pa",
+          "mc-yield-residual-kirchhoff-pa",
+          "mpi-index",
+          "p-wave-modulus",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume"
+        ],
+        "mass": 1.4400000000000002,
+        "bounds_min": [
+          0.032499999999975986,
+          0.0325,
+          0.0
+        ],
+        "bounds_max": [
+          0.047500000000024016,
+          0.06749999999321406,
+          0.0
+        ],
+        "max_displacement": 6.785989299873883e-12,
+        "mass_centroid": [
+          0.04,
+          0.04999999999875608,
+          0.0
+        ]
+      }
+    }
+  },
+  "vtkByteIdentity": {
+    "triaxial-short": {
+      "count": 2,
+      "byteIdentical": true
+    },
+    "mc-triaxial": {
+      "count": 2,
+      "byteIdentical": true
+    }
+  },
+  "sourceUnchangedDuringChecks": true,
+  "all31OriginalFormsRetained": true,
+  "numericalBodyChanges": false,
+  "unitProvenance": "Live committed files hashed before and after checks; CLI separately copies and loads frozen source",
+  "fullG3": "PARTIAL; latest full Joss cancelled by user",
+  "G1": "PARTIAL; native model/state/evolution migration pending",
+  "scientificValidation": false
+}

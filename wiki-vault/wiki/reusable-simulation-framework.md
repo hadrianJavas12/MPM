@@ -190,3 +190,29 @@ while P2 native formula ownership still needs native-source/provenance planning.
 P2–P6 implementation is NOT_RUN. The isolated
 32-test MC prototype is uninstalled; new physics is deferred until migration gates
 and belongs on a separate experimental branch.
+
+### P3 validated checkpoint — 2026-10-16
+
+Implementation `315a46d` preceded tests; supported-factory fixture correction
+`333306b` is the executed snapshot. All 13 finite validation commands exit 0:
+10 component, 10 config, 9 material, 3+3 diagnostic ownership, 7+7 original
+ownership, 3 snapshot and 36 Node tests (zero skipped), plus Node syntax checks
+and strict bounded comparisons. VM 480 MPs/27 updates and native MC 32 MPs/two
+updates each retain two byte-identical VTK files versus P1; CSV/position/field
+numerical differences are zero. All 31 original source forms retain exact bodies.
+Live unit source hashes remained unchanged throughout checks; the CLI additionally
+loaded copied source. This does not complete native engine/FASL/DLL provenance.
+
+Evidence: `docs/evidence/architecture-migration-2026-10-16/p3/` (37 verified
+manifest entries), and `p1-full/` (44 entries: completed full VM 2D/3D, cancelled
+Joss retained separately). Joss stays stopped; full G3 and G1 remain PARTIAL.
+The initial P3 packaging attempt failed only because its Node reporter regex
+expected `# pass` instead of the actual Unicode reporter. Partial packaging is
+retained in `output/architecture-migration-2026-10-16/p3-packaging-attempt001/`;
+parser corrected and packaging completed without rerunning tests or simulations.
+
+No active simulation remains from these validation jobs. Next: implement/review
+native-source freezing per `docs/architecture/NATIVE_SOURCE_SNAPSHOT_PLAN.md`,
+then P2 elastic ownership extraction with exact per-form approval and focused
+regression. Preserve the cancelled Joss directive, native formulas and all prior
+positive/negative evidence; no UI, main merge, or premature framework deletion.

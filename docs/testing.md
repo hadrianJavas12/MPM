@@ -263,9 +263,30 @@ Both failed fixtures/logs are retained.
 Focused units loaded committed production sources from the working tree;
 CLI controls retained copied source/input trees. Full transitive loaded FASL/DLL
 provenance is incomplete. P1 is PROVISIONAL, G1 PARTIAL. Full migrated VM 2D/3D
-and serial Joss G3 runs are **NOT_RUN / preparing** under
-`output/architecture-migration-2026-10-16/p1-full/`; older full results do not
-validate this extraction. P2 is plan only; new physics remains deferred.
+on frozen `62adb50` completed with native/comparison/audit exit 0. The new serial
+Joss run was STOPPED_BY_USER at 4.2 s; it has no full comparison or observed exit
+code. [P1 full evidence](evidence/architecture-migration-2026-10-16/p1-full/README.md)
+retains completed VM controls separately from cancelled partial Joss output.
+P2 is plan only; new physics remains deferred.
+
+### P3 diagnostics ownership, Windows native
+
+Implementation was committed before validation; executed source is `333306b`.
+Fresh-process contracts, Node checks and two bounded VM/MC controls passed.
+Both corresponding VTK pairs are byte-identical to P1, with zero numerical
+CSV/position/field differences under the unchanged strict comparator.
+[Evidence and actual commands](evidence/architecture-migration-2026-10-16/p3/README.md)
+include source hashes, logs and retained VTK/CSV. These are focused compatibility
+results, not full scientific or architectural acceptance.
+
+```powershell
+.\windows\cl-mpm.cmd tests\diagnostics-ownership-compat.lisp
+.\windows\cl-mpm.cmd tests\diagnostics-ownership-compat.lisp legacy
+.\windows\cl-mpm.cmd tests\case-snapshot-contracts.lisp output\snapshot-FRESH
+```
+
+Use a new empty output path for each snapshot check. The old diagnostics source
+path remains a loader; normal ASDF loads the three new owner files directly.
 
 ## GitHub Actions blocker
 

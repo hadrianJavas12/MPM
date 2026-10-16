@@ -1,0 +1,1899 @@
+{
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "bytes": 32,
+      "sha256": "f2e214c6e24cdffd8157778a19ef8c10a6ce15d28b90988d21fc6a4a7319298a",
+      "source": null
+    },
+    {
+      "path": "triaxial-2d/stress-strain.csv",
+      "bytes": 15420,
+      "sha256": "09596885c6e9a725d64fce0f682ac38ffd00503525d2fe70e5df710db01760f9",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\stress-strain.csv"
+    },
+    {
+      "path": "triaxial-2d/manifest.json",
+      "bytes": 1434,
+      "sha256": "4f10f73f2c07ea12799e04e15f7963402a55778e4d916fcddc5c653784d16b05",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\manifest.json"
+    },
+    {
+      "path": "triaxial-2d/source-provenance.json",
+      "bytes": 4446,
+      "sha256": "b8c30fd795860ce97cf188b672cd63674de59007a7474a01321f8178e4218a7c",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source-provenance.json"
+    },
+    {
+      "path": "triaxial-2d/effective-config.json",
+      "bytes": 430,
+      "sha256": "c9d55a70be465cd92ab8b7ea1b10f062d53bc7f5a51aa17a0445a946a6db8b0d",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\effective-config.json"
+    },
+    {
+      "path": "triaxial-2d/audit.json",
+      "bytes": 8174,
+      "sha256": "ebf4ed309f7c893b99bc49084a635f3d05fb7449ed17e10a697923519c24d2ed",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\audit.json"
+    },
+    {
+      "path": "triaxial-2d/all-saved-state-audit.json",
+      "bytes": 58728,
+      "sha256": "4b68b9d35ad283b6eec694b438c3eb655f79ea71b20a716380eb97d0ccc5589d",
+      "source": null
+    },
+    {
+      "path": "triaxial-2d/particle-vtk.tar.gz",
+      "bytes": 3008141,
+      "sha256": "10956d16142d45bacde58e7cf98bc4d50c292ee9594b4a2f4f1e7d3cca2be099",
+      "source": null,
+      "members": [
+        {
+          "path": "particles_0000.vtk",
+          "bytes": 124381,
+          "sha256": "f4dcf0c403af7c5f3ed478d0d1ec6a4affd4a99eee2d4b1a6a7fc3a191f83587",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0000.vtk"
+        },
+        {
+          "path": "particles_0001.vtk",
+          "bytes": 124381,
+          "sha256": "c734eaa10601adfc806c1840d679938815712b549d239ee3a5c3769ed2ed4a7f",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0001.vtk"
+        },
+        {
+          "path": "particles_0002.vtk",
+          "bytes": 124381,
+          "sha256": "6f738d300371a31d51e6e48cc5a3ba8eea08ec5a9f280d8fa72ddbc3d6700b6d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0002.vtk"
+        },
+        {
+          "path": "particles_0003.vtk",
+          "bytes": 124381,
+          "sha256": "fb85faf57995d6d33d7852818d330e2e208c55b82974e1d8df3ad23ae2dca594",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0003.vtk"
+        },
+        {
+          "path": "particles_0004.vtk",
+          "bytes": 124381,
+          "sha256": "6ebb60a76e7068f964532ecc9a1f08c7d4874b0f0da9df30494b55637f3e9f70",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0004.vtk"
+        },
+        {
+          "path": "particles_0005.vtk",
+          "bytes": 124381,
+          "sha256": "cd78944a58b43bccfc2ccf39fc61d7de5e94f917af0df289a4ee3c2f442cc866",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0005.vtk"
+        },
+        {
+          "path": "particles_0006.vtk",
+          "bytes": 124381,
+          "sha256": "1feb5a6262690e86f1ce9334da57da171d207e12cb633492bae7c9045f97209b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0006.vtk"
+        },
+        {
+          "path": "particles_0007.vtk",
+          "bytes": 124381,
+          "sha256": "26497ade80fb694524357f3df540e501755ae7dc889b5bef3b7b620a47e4a815",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0007.vtk"
+        },
+        {
+          "path": "particles_0008.vtk",
+          "bytes": 124381,
+          "sha256": "628a063a0c4a9e1471d7c3c65de8b6b892d6e31284d1356630f20be1fd234f41",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0008.vtk"
+        },
+        {
+          "path": "particles_0009.vtk",
+          "bytes": 124381,
+          "sha256": "608980090ff3e4b7c8f20f213d8bd5a7b6a37b4ead16036cf78068f55d2855a9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0009.vtk"
+        },
+        {
+          "path": "particles_0010.vtk",
+          "bytes": 124381,
+          "sha256": "2bae64dab3ffb2b595a7ae90506cb29488cbb483c52a67c94e2aa0cfc1f599d2",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0010.vtk"
+        },
+        {
+          "path": "particles_0011.vtk",
+          "bytes": 124381,
+          "sha256": "fe35fb408a8c47989a9b547681322fa558d01ad363115b86e0351a86ae63d287",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0011.vtk"
+        },
+        {
+          "path": "particles_0012.vtk",
+          "bytes": 124381,
+          "sha256": "b91687dfd119a34229dafa54209df081e880f6d72f4ebfb358b32449b04f47a1",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0012.vtk"
+        },
+        {
+          "path": "particles_0013.vtk",
+          "bytes": 124381,
+          "sha256": "4221e61db254814b9ee71895d25c1b01c06c0477d2603b146b298fa5369ac31f",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0013.vtk"
+        },
+        {
+          "path": "particles_0014.vtk",
+          "bytes": 124381,
+          "sha256": "71dc5c163a8f33dbfb875f7bf5b7914f3e821c7ae34626274684e317f125b1a1",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0014.vtk"
+        },
+        {
+          "path": "particles_0015.vtk",
+          "bytes": 124381,
+          "sha256": "cae367cb758242136b439800ffe553c0da04b66fad045fcf365e94c49c61b735",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0015.vtk"
+        },
+        {
+          "path": "particles_0016.vtk",
+          "bytes": 124381,
+          "sha256": "3c19c5a85693517de75887caa2a5a378e7d50c82dc3f4536db70fb5f890a189c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0016.vtk"
+        },
+        {
+          "path": "particles_0017.vtk",
+          "bytes": 124381,
+          "sha256": "e9769c0ac2000ec96ef1f17a3d04aff679fd2d75b3525ffe3de1fe53639d89d3",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0017.vtk"
+        },
+        {
+          "path": "particles_0018.vtk",
+          "bytes": 124381,
+          "sha256": "957ccd3d68b83c714e8370158c22ecd9f1e3022f49e9a17846e71bb284803ae7",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0018.vtk"
+        },
+        {
+          "path": "particles_0019.vtk",
+          "bytes": 124381,
+          "sha256": "2a229e71ee87ba59e238fcc77963bfa69845edef92e796ff5247bbdd0e80c31f",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0019.vtk"
+        },
+        {
+          "path": "particles_0020.vtk",
+          "bytes": 124381,
+          "sha256": "d76d9f925dd28acd11eb04541927caac17dbb0cf51f7b1ad2180c0490945561e",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0020.vtk"
+        },
+        {
+          "path": "particles_0021.vtk",
+          "bytes": 124381,
+          "sha256": "9d837ac16a8f2bb46ea432abbfe1a3eb690c36c76b717bb015276a5bf5385dcb",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0021.vtk"
+        },
+        {
+          "path": "particles_0022.vtk",
+          "bytes": 124381,
+          "sha256": "9ecd4b32553a75c82344d042e4fcb0fc60b0181c8696c2be7ac8cb12c618d142",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0022.vtk"
+        },
+        {
+          "path": "particles_0023.vtk",
+          "bytes": 124381,
+          "sha256": "3aa9c41e03089c8e2636ff9931d0ff5edc969d5a1ac114a590cb8fbde9affb82",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0023.vtk"
+        },
+        {
+          "path": "particles_0024.vtk",
+          "bytes": 124381,
+          "sha256": "f0564f7c0c4c8264a0eb507a348661b40717381e218e3446e2ae3df95cc28e03",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0024.vtk"
+        },
+        {
+          "path": "particles_0025.vtk",
+          "bytes": 124381,
+          "sha256": "57c9f17d9d5aeafc6612e18e0c21ac3ba47d7dba188a1f96f97308f1379d9cda",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0025.vtk"
+        },
+        {
+          "path": "particles_0026.vtk",
+          "bytes": 124381,
+          "sha256": "fad126c23152b746318c3c3b0fe5203beecaaad5514489e88e6d51a15a654bf9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0026.vtk"
+        },
+        {
+          "path": "particles_0027.vtk",
+          "bytes": 124381,
+          "sha256": "a87b61b9921af91e40d931e0cb9750c009595c6d23650697ee29735a1e938486",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0027.vtk"
+        },
+        {
+          "path": "particles_0028.vtk",
+          "bytes": 124381,
+          "sha256": "111ac519fe2231e78d2919219c292775f77cc90c6a2d29fcd95aa7d124fbb73d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0028.vtk"
+        },
+        {
+          "path": "particles_0029.vtk",
+          "bytes": 124381,
+          "sha256": "28d632332d9de073b326c5af9859368b977b9ac7d46a715fe6c9bda3129ba4b5",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0029.vtk"
+        },
+        {
+          "path": "particles_0030.vtk",
+          "bytes": 124381,
+          "sha256": "c96d164a9a6137cd6ba070e13a5fa7c611711f8d095995f51b7f7b57dd5ac4db",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0030.vtk"
+        },
+        {
+          "path": "particles_0031.vtk",
+          "bytes": 124381,
+          "sha256": "2294bd460d47b2a3d5dde4f86665683ba28ad516003bcd05dfda020dc10060dc",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0031.vtk"
+        },
+        {
+          "path": "particles_0032.vtk",
+          "bytes": 124381,
+          "sha256": "e1d469cd31b2af237df847d165ec4f311f0d7b6021c2c9b1e3541fc656a52fe0",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0032.vtk"
+        },
+        {
+          "path": "particles_0033.vtk",
+          "bytes": 124381,
+          "sha256": "4956cfffc3215060883b1acd06d307be36af1d0afe852c795e95e98cc1dccc76",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0033.vtk"
+        },
+        {
+          "path": "particles_0034.vtk",
+          "bytes": 124381,
+          "sha256": "ac0fb3542e36ff1617d62eb89ed7ecbab220c116eb15d365a299b7a01a95052c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0034.vtk"
+        },
+        {
+          "path": "particles_0035.vtk",
+          "bytes": 124381,
+          "sha256": "89e097c8e2bc1075bc2018926ef5668430cd13a1ad994cae78227fb80badce79",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0035.vtk"
+        },
+        {
+          "path": "particles_0036.vtk",
+          "bytes": 124381,
+          "sha256": "d45ac22d669d895b8cd2534dce37f56207fe1fc38d8015b8592d41e29875cbe3",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0036.vtk"
+        },
+        {
+          "path": "particles_0037.vtk",
+          "bytes": 124381,
+          "sha256": "0cd471d3e95819094e30d6ec77ab56db3a5a09c204fa2d4cbd8228a5024056ec",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0037.vtk"
+        },
+        {
+          "path": "particles_0038.vtk",
+          "bytes": 124381,
+          "sha256": "5afca9dc476871203c6457c92b2f1f0f94bcf6f0e47587e6e6c9c4169d9ce5f1",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0038.vtk"
+        },
+        {
+          "path": "particles_0039.vtk",
+          "bytes": 124381,
+          "sha256": "e47a4be7fd04ead3cfa9d658a7e124c9f3a9198c9ba0fcdeed9d97ab3549495a",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0039.vtk"
+        },
+        {
+          "path": "particles_0040.vtk",
+          "bytes": 124381,
+          "sha256": "5bb60ac8c4fcdbc5e79ce0bb714a5750040c6049c11a6ff8a2538420e926c741",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0040.vtk"
+        },
+        {
+          "path": "particles_0041.vtk",
+          "bytes": 124381,
+          "sha256": "247b02d1b16096e6d0ffe238dc9faf7ae4a7d054358b7d4e6cf090dc736c4f53",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0041.vtk"
+        },
+        {
+          "path": "particles_0042.vtk",
+          "bytes": 124381,
+          "sha256": "11d26ec32ea0b1a5b09a27ebab89f31aa3f6deddacedddca8b412b7d17c70487",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0042.vtk"
+        },
+        {
+          "path": "particles_0043.vtk",
+          "bytes": 124381,
+          "sha256": "56a4fd4bf64d295816395c567109361246d0f56f5de13cdd0eb127de8edbfd7a",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0043.vtk"
+        },
+        {
+          "path": "particles_0044.vtk",
+          "bytes": 124381,
+          "sha256": "cfe48680ebc1ae0f442e4e05e7bcee44d3066d689ee1fe780c3b1f9e4189bc88",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0044.vtk"
+        },
+        {
+          "path": "particles_0045.vtk",
+          "bytes": 124381,
+          "sha256": "33f48c7c5ac982f9ebefd12592dba02234b0ba3d057e4d897766f4a3c2bdbd53",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0045.vtk"
+        },
+        {
+          "path": "particles_0046.vtk",
+          "bytes": 124381,
+          "sha256": "a4c766fb3ca06ae375a7b154685dfff8757621d1ea87029094bcca1619875229",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0046.vtk"
+        },
+        {
+          "path": "particles_0047.vtk",
+          "bytes": 124381,
+          "sha256": "d58a178925a41d22dbdd4a69555720780848672c5936b991cc1b3e6038d0de45",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0047.vtk"
+        },
+        {
+          "path": "particles_0048.vtk",
+          "bytes": 124381,
+          "sha256": "3a4ca49503f9bb1fea6c337fb30150934f8b562184eb778f03e8c23734f81c94",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0048.vtk"
+        },
+        {
+          "path": "particles_0049.vtk",
+          "bytes": 124381,
+          "sha256": "12184813aef976ae60caf2a677839db87f3f01b4dcacf5ebe78c030e512849e9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0049.vtk"
+        },
+        {
+          "path": "particles_0050.vtk",
+          "bytes": 124381,
+          "sha256": "0ed90f74db64dad9b7f4bad598752ef8e80e362b34268c4c63f5d379382138ae",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\particles_0050.vtk"
+        }
+      ]
+    },
+    {
+      "path": "triaxial-3d/stress-strain.csv",
+      "bytes": 15329,
+      "sha256": "85a76fd6e6f3d52ab757aa8b16a3278e755ec47a6820ea608be94bbba35cbbc1",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\stress-strain.csv"
+    },
+    {
+      "path": "triaxial-3d/manifest.json",
+      "bytes": 1372,
+      "sha256": "70c35ecff88fafd0a2f30e23fd9db7b73717e490892f772b293c123d92d95287",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\manifest.json"
+    },
+    {
+      "path": "triaxial-3d/source-provenance.json",
+      "bytes": 4446,
+      "sha256": "b8c30fd795860ce97cf188b672cd63674de59007a7474a01321f8178e4218a7c",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source-provenance.json"
+    },
+    {
+      "path": "triaxial-3d/effective-config.json",
+      "bytes": 432,
+      "sha256": "aeac77e3e1384e0da178f2d19c83e02efd177517f69c23a965b782a9760a54f4",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\effective-config.json"
+    },
+    {
+      "path": "triaxial-3d/audit.json",
+      "bytes": 7730,
+      "sha256": "2ee2022dadffea549c2c787da29ccb33219fda0936f51763098d80046106cfbb",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\audit.json"
+    },
+    {
+      "path": "triaxial-3d/all-saved-state-audit.json",
+      "bytes": 70968,
+      "sha256": "dd541d1059c2fdfff74743f48580d07a1c92e6ea35aa0d06683b10c9abac72a0",
+      "source": null
+    },
+    {
+      "path": "triaxial-3d/particle-vtk.tar.gz",
+      "bytes": 6304291,
+      "sha256": "26d6a4574c238a973ab83f0a3ef091b205b8b1ee34351facdba43d71bf8d1f2c",
+      "source": null,
+      "members": [
+        {
+          "path": "particles_0000.vtk",
+          "bytes": 264039,
+          "sha256": "2177e390c8c7569880c3e02bd9eeb9ce393b68eca32c4b12ebc7f7c59db659b1",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0000.vtk"
+        },
+        {
+          "path": "particles_0001.vtk",
+          "bytes": 264039,
+          "sha256": "9b55d81beb559ec32bf60109e62a84943375d94f52f5392e31fcb52e86952ca1",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0001.vtk"
+        },
+        {
+          "path": "particles_0002.vtk",
+          "bytes": 264039,
+          "sha256": "476b6775d5d379893a724fd4089478fa888a27419329b6d8e8f9c1b0758db2b6",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0002.vtk"
+        },
+        {
+          "path": "particles_0003.vtk",
+          "bytes": 264039,
+          "sha256": "44bd6feb3e66adcedbe9159fbfa5dbe3e68bc8ecb5eace3c55f21589d79ff28e",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0003.vtk"
+        },
+        {
+          "path": "particles_0004.vtk",
+          "bytes": 264039,
+          "sha256": "48b2f86224dad81459ff3d8f00c176b541d43398fc8efb8a57f2a6fa85f2ee7b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0004.vtk"
+        },
+        {
+          "path": "particles_0005.vtk",
+          "bytes": 264039,
+          "sha256": "0bd8ac08cfebc638882f1265a16873cf8edf940adbb3b20236b91c4bdb1c3148",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0005.vtk"
+        },
+        {
+          "path": "particles_0006.vtk",
+          "bytes": 264039,
+          "sha256": "f53b6b8ba4148012d36847c840b43eb309d94e2dcd55a9b070d29c2fa52d18de",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0006.vtk"
+        },
+        {
+          "path": "particles_0007.vtk",
+          "bytes": 264039,
+          "sha256": "0b5d27d3c443308293a3878b861288fb2ee173941d02ad9cbb5b7d5361208b60",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0007.vtk"
+        },
+        {
+          "path": "particles_0008.vtk",
+          "bytes": 264039,
+          "sha256": "d13b917641e78182f22f32c89b743050ba8135ce0d759c3a25cdae14bb0f2d24",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0008.vtk"
+        },
+        {
+          "path": "particles_0009.vtk",
+          "bytes": 264039,
+          "sha256": "e29a35ef0c1143e568f03e17f8ef00503d2880a6e348c45c27d29315e1318770",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0009.vtk"
+        },
+        {
+          "path": "particles_0010.vtk",
+          "bytes": 264039,
+          "sha256": "063e49b1bf127dbfc87f2eb8e7126fc474f194e7ab91ae2fe1057721faabd6bb",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0010.vtk"
+        },
+        {
+          "path": "particles_0011.vtk",
+          "bytes": 264039,
+          "sha256": "02f118affc04cc8c5ad00ef2ba4509ef9229a3bcb1312ca36eadf4cf293bb4f2",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0011.vtk"
+        },
+        {
+          "path": "particles_0012.vtk",
+          "bytes": 264039,
+          "sha256": "8f63ebc4c3777c31648347052faea0e1becd3cc1df8e914804914e7f7dc71055",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0012.vtk"
+        },
+        {
+          "path": "particles_0013.vtk",
+          "bytes": 264039,
+          "sha256": "8bc5a9cc3177e729c2e91ddaa5ecff329b1b782536324326cb24114a81428efd",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0013.vtk"
+        },
+        {
+          "path": "particles_0014.vtk",
+          "bytes": 264039,
+          "sha256": "251ecc45b235b359d4e6edbfdf74e753c7e3134ff5a45a39398561ec3f5d57ad",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0014.vtk"
+        },
+        {
+          "path": "particles_0015.vtk",
+          "bytes": 264039,
+          "sha256": "b301b32df17b4a7535786fb57fb3256fc79f840e9227e35f7ae506b601f0d1ba",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0015.vtk"
+        },
+        {
+          "path": "particles_0016.vtk",
+          "bytes": 264039,
+          "sha256": "c0fbce8fe16c4e3e555a548272fdfe609e09bb6704169156a0d2897b14c88106",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0016.vtk"
+        },
+        {
+          "path": "particles_0017.vtk",
+          "bytes": 264039,
+          "sha256": "e1371b8e6919d27c68c7854ca2abb700d1a9665f6eb157740f422612363fc669",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0017.vtk"
+        },
+        {
+          "path": "particles_0018.vtk",
+          "bytes": 264039,
+          "sha256": "4096636df6aeef20310c10dcaca4d4175f3b99388dfa6a92402dd95d8a58652f",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0018.vtk"
+        },
+        {
+          "path": "particles_0019.vtk",
+          "bytes": 264039,
+          "sha256": "ef7501a54d92b01055bad0b3c863cbc76095d40ac2b6be47c9a6eaf77db6cd65",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0019.vtk"
+        },
+        {
+          "path": "particles_0020.vtk",
+          "bytes": 264039,
+          "sha256": "d59068ad2c4d57bdb47798f8fe2ff6da3c1edf32af70deb864354ba373c18f42",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0020.vtk"
+        },
+        {
+          "path": "particles_0021.vtk",
+          "bytes": 264039,
+          "sha256": "fe068dde3dfd5eaa0f4992ed6bfd1e0d60f4e833ee74722284e6de04b53188c9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0021.vtk"
+        },
+        {
+          "path": "particles_0022.vtk",
+          "bytes": 264039,
+          "sha256": "f95f4011b0b7f2606c87951d4b42fc9d8b5da02222ec382f899901d6b73006f4",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0022.vtk"
+        },
+        {
+          "path": "particles_0023.vtk",
+          "bytes": 264039,
+          "sha256": "3fa3a1e26d9a5d30fba03e44af387d975fee8109ff78f88a683b5b6baeeddb32",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0023.vtk"
+        },
+        {
+          "path": "particles_0024.vtk",
+          "bytes": 264039,
+          "sha256": "6d3de203e0b221eab10272bda8383cca4e992bf0affd5892a031bebb362d800e",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0024.vtk"
+        },
+        {
+          "path": "particles_0025.vtk",
+          "bytes": 264039,
+          "sha256": "28090f4772af27d18ada6dd1c3c32757d5fb85938a73769ed183f75b7ec79f04",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0025.vtk"
+        },
+        {
+          "path": "particles_0026.vtk",
+          "bytes": 264039,
+          "sha256": "7747021c948dc4dbd4a7d1bbdf733c36ae287c9eb64481fe09df1ee3fa6cf8a4",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0026.vtk"
+        },
+        {
+          "path": "particles_0027.vtk",
+          "bytes": 264039,
+          "sha256": "ad2eb0f02555123720a2cb8e2970b5a070b0917c259dbf681255fe0561a4b4dd",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0027.vtk"
+        },
+        {
+          "path": "particles_0028.vtk",
+          "bytes": 264039,
+          "sha256": "77a4afd2e8f4d693a14e3ab7c40e8ece51dd07cea12b17830b632c05a09749f1",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0028.vtk"
+        },
+        {
+          "path": "particles_0029.vtk",
+          "bytes": 264039,
+          "sha256": "2f07f9204b84ddf1acbb34995bb7f227dfcd9fe49f859f0e7fe1fa98bf2e3039",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0029.vtk"
+        },
+        {
+          "path": "particles_0030.vtk",
+          "bytes": 264039,
+          "sha256": "f661c025abb3f40afc9cc9c615860fc0b983163f181ae614eb2416eb7f361b99",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0030.vtk"
+        },
+        {
+          "path": "particles_0031.vtk",
+          "bytes": 264039,
+          "sha256": "e58391e13295f7545b4787c0e801ed71fd5991f2eeb91ddfd6ae487a6afd5ec7",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0031.vtk"
+        },
+        {
+          "path": "particles_0032.vtk",
+          "bytes": 264039,
+          "sha256": "a51137825a9845c60b8e55e6bdec1994fe30ea2f74eee5a8e5a94a490fd4cbf9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0032.vtk"
+        },
+        {
+          "path": "particles_0033.vtk",
+          "bytes": 264039,
+          "sha256": "efb24a8c4efc362c744adfca95578ec64b98bade373b5578af2c30462186fd06",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0033.vtk"
+        },
+        {
+          "path": "particles_0034.vtk",
+          "bytes": 264039,
+          "sha256": "b7f69f5f3580fd70246a0b033f79734060aaeec01d56b8bb3568b4ed044a4566",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0034.vtk"
+        },
+        {
+          "path": "particles_0035.vtk",
+          "bytes": 264039,
+          "sha256": "44599cea3b39ff673d1f4bf37c44323b30b2a7ab61268b57ada383d8b4098d69",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0035.vtk"
+        },
+        {
+          "path": "particles_0036.vtk",
+          "bytes": 264039,
+          "sha256": "214de1faae0da24d8b963afa33396a36febd8de4b1a4dc50b731c1ba9bc8da0a",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0036.vtk"
+        },
+        {
+          "path": "particles_0037.vtk",
+          "bytes": 264039,
+          "sha256": "e0351d5a5dcaffc739d5f45dd37eda3882e01aeae4b98eb1499ff302f868a2cb",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0037.vtk"
+        },
+        {
+          "path": "particles_0038.vtk",
+          "bytes": 264039,
+          "sha256": "22af6c71141022344ce49c604eb2be9c7ae109f958b4f551ba92eb43f574a4d8",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0038.vtk"
+        },
+        {
+          "path": "particles_0039.vtk",
+          "bytes": 264039,
+          "sha256": "b3d9840e308167b384cd79be654de3d64267d30d3c940b7393fdb66abfde316a",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0039.vtk"
+        },
+        {
+          "path": "particles_0040.vtk",
+          "bytes": 264039,
+          "sha256": "346cb10252b60041c901c7875447983d3b04b3cb87fa1707b9053f4ba81635d4",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0040.vtk"
+        },
+        {
+          "path": "particles_0041.vtk",
+          "bytes": 264039,
+          "sha256": "200ebd812f4c58f47583c96cae00cf4806b7324e4100f023131506616e47eaef",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0041.vtk"
+        },
+        {
+          "path": "particles_0042.vtk",
+          "bytes": 264039,
+          "sha256": "ae66ff7aa950e3773666db4fcc9d4916922e0ea334bb4a0278a340a6c93e1077",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0042.vtk"
+        },
+        {
+          "path": "particles_0043.vtk",
+          "bytes": 264039,
+          "sha256": "a1a574db90b60f45a9093f4945789afb0fe16a3263b193401a6fff7301ecc22d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0043.vtk"
+        },
+        {
+          "path": "particles_0044.vtk",
+          "bytes": 264039,
+          "sha256": "45d99568f876eadd9d9345ccdd88639a49802eb5fb930fedbdec020d602c585a",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0044.vtk"
+        },
+        {
+          "path": "particles_0045.vtk",
+          "bytes": 264039,
+          "sha256": "d83e44bb9b0670963598a3078c2886293de5cc15f97869c48cee7f4bbaf7d621",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0045.vtk"
+        },
+        {
+          "path": "particles_0046.vtk",
+          "bytes": 264039,
+          "sha256": "2f85acd99e9b5c4775ac2a839477dffc27ab0c8eb622c89832c10ebe85b50d79",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0046.vtk"
+        },
+        {
+          "path": "particles_0047.vtk",
+          "bytes": 264039,
+          "sha256": "5036957e256458cabf16110875f82e5b37a62de6841987a138c73ebb5feed0a5",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0047.vtk"
+        },
+        {
+          "path": "particles_0048.vtk",
+          "bytes": 264039,
+          "sha256": "99298248f6a61ed35fc285c35c6cfaf7324541b78ebf4417b609fbb72f36aa0b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0048.vtk"
+        },
+        {
+          "path": "particles_0049.vtk",
+          "bytes": 264039,
+          "sha256": "a37b6e46505d4ae691ecac56df4301e171053664421e8037e4cd7425c4ae3631",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0049.vtk"
+        },
+        {
+          "path": "particles_0050.vtk",
+          "bytes": 264039,
+          "sha256": "614bdd8251b7a314bbe71cf78a4975c592b08f337a99ca24abcc5dc366bd49f5",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\particles_0050.vtk"
+        }
+      ]
+    },
+    {
+      "path": "comparisons/triaxial-2d.json.gz",
+      "bytes": 33946,
+      "sha256": "2750e4ab77e9050333a50b436be5e65e2f1351af32f728b07af84fa4e4e5cc7b",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d-comparison.json",
+      "uncompressedSha256": "e04b9747c16705a80530c62d85ee106f587726208e0c7844a11d4b5e491a3b06"
+    },
+    {
+      "path": "comparisons/triaxial-3d.json.gz",
+      "bytes": 42958,
+      "sha256": "850d066593897cb5a40fdbed2a6556aa53464787dee7e1872f991a93de2b447c",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d-comparison.json",
+      "uncompressedSha256": "5803019add973887956ebaaf08b7f9658e5d6f1bc9089619daa75eae2667d454"
+    },
+    {
+      "path": "control/joss-serial-launch.json",
+      "bytes": 271,
+      "sha256": "95c7a9977780777bd04d0d6066e995e10d66a449a51f57d2e9095499ae1d5799",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial-launch.json"
+    },
+    {
+      "path": "control/joss-serial-status.json",
+      "bytes": 2215,
+      "sha256": "6199a52d6fda8184c536d24c21a14c259190361d8c9652a8765701a4d179d6f3",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial-status.json"
+    },
+    {
+      "path": "logs/joss-serial.log.gz",
+      "bytes": 1709,
+      "sha256": "143861a9d5fe9d966c60994f4f0e119e7e5fca20369bd9250c2be38e88c80710",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial.log",
+      "uncompressedSha256": "4f2d9492fe4b9f043267a4d3625bc88a1e640833816fa58fcea2564c13ae3b7b"
+    },
+    {
+      "path": "control/launch-joss-serial.ps1",
+      "bytes": 2173,
+      "sha256": "0383674e0b5f6ed6cf0115a640785707a62f3f5a32758ff0d369f055e4cd7f97",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\launch-joss-serial.ps1"
+    },
+    {
+      "path": "control/launch-triaxial-2d.ps1",
+      "bytes": 2148,
+      "sha256": "44c4f7c1ecd5b8bedbf7d1cc84904525b3b872e64da0c35a3326a0359d27b45b",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\launch-triaxial-2d.ps1"
+    },
+    {
+      "path": "control/launch-triaxial-3d.ps1",
+      "bytes": 2172,
+      "sha256": "a064718251cf3b8fb3a011171bd1a99c452375551029fa55707cba1f7e9ba973",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\launch-triaxial-3d.ps1"
+    },
+    {
+      "path": "control/processes.json",
+      "bytes": 353,
+      "sha256": "3ee2e3acf6702c2812bc8782b82ff4ee20bd0c29fa7fdbe3ca8cb4e8e013dfa1",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\processes.json"
+    },
+    {
+      "path": "control/README.txt",
+      "bytes": 278,
+      "sha256": "7881ec1c55ff3a10c09946650d01d7b1e0df6027c27fe0086cdef7c759552d1d",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\README.txt"
+    },
+    {
+      "path": "control/source-snapshots-sha256.json",
+      "bytes": 17938,
+      "sha256": "0bdcd9faebe3ab9ece36f0eb94ec635662a40f24fd94641216c7745a7d686d1e",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\source-snapshots-sha256.json"
+    },
+    {
+      "path": "logs/triaxial-2d-audit.log.gz",
+      "bytes": 1740,
+      "sha256": "0fbe530741191ca2c13a066c79591cf21d3e15c29d5e345cf2309750c4cbe252",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d-audit.log",
+      "uncompressedSha256": "472d03878eb6c46d913b7c1f2e778664601066b29c945ce7e506584924da2893"
+    },
+    {
+      "path": "control/triaxial-2d-comparison.json",
+      "bytes": 1023915,
+      "sha256": "e04b9747c16705a80530c62d85ee106f587726208e0c7844a11d4b5e491a3b06",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d-comparison.json"
+    },
+    {
+      "path": "logs/triaxial-2d-comparison.log.gz",
+      "bytes": 142,
+      "sha256": "6e7a6014c136856fb112ca8c42315c047c9bd856bc176eb2ced63d0936828ce8",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d-comparison.log",
+      "uncompressedSha256": "ee82dd542082480210d102f1d04e791de725f74cdcf5b2b882d1a118aaf04a97"
+    },
+    {
+      "path": "control/triaxial-2d-launch.json",
+      "bytes": 258,
+      "sha256": "5ec29c242d765d1e76cfab1fb6fda852203255eb2e3774588be22e5024a80046",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d-launch.json"
+    },
+    {
+      "path": "control/triaxial-2d-status.json",
+      "bytes": 483,
+      "sha256": "bb8023ea84ae27a8bd90c4a634a4d84edc70e4e63ae69ffa3fc2d26e0a9fc4ca",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d-status.json"
+    },
+    {
+      "path": "logs/triaxial-2d.log.gz",
+      "bytes": 1684,
+      "sha256": "7cff725bf428242f3ab0bb3d19b1ab9d8310e9bca88081a52614c299a2000a23",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d.log",
+      "uncompressedSha256": "8f1f4366350c0137b8bca7b88079561a54a9755b94f6e96844aa25593bd8eda4"
+    },
+    {
+      "path": "logs/triaxial-3d-audit.log.gz",
+      "bytes": 1479,
+      "sha256": "b40d4935174efac81090882d7c058c80a36ee8ebab192b0d8e4100af4941dd1c",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d-audit.log",
+      "uncompressedSha256": "a3facb78e6d07e6d790f480abba8bcdf34aa72a6949a01753cc8b9ee811268c9"
+    },
+    {
+      "path": "control/triaxial-3d-comparison.json",
+      "bytes": 1341580,
+      "sha256": "5803019add973887956ebaaf08b7f9658e5d6f1bc9089619daa75eae2667d454",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d-comparison.json"
+    },
+    {
+      "path": "logs/triaxial-3d-comparison.log.gz",
+      "bytes": 142,
+      "sha256": "6e7a6014c136856fb112ca8c42315c047c9bd856bc176eb2ced63d0936828ce8",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d-comparison.log",
+      "uncompressedSha256": "ee82dd542082480210d102f1d04e791de725f74cdcf5b2b882d1a118aaf04a97"
+    },
+    {
+      "path": "control/triaxial-3d-launch.json",
+      "bytes": 271,
+      "sha256": "4e8acb20cdbd1b34cc49e4712f9761c7d0a729cdf0b3959cef8af516c5f11e24",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d-launch.json"
+    },
+    {
+      "path": "control/triaxial-3d-status.json",
+      "bytes": 496,
+      "sha256": "2c8024d61cedb092d71c54f8c90375a4fe886f9c0de02d11db36477e5f761311",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d-status.json"
+    },
+    {
+      "path": "logs/triaxial-3d.log.gz",
+      "bytes": 1601,
+      "sha256": "315db83be6f7fafbf75487ee9077f9c309cdd981acafbaa900291a99a4fcbf9b",
+      "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d.log",
+      "uncompressedSha256": "ab01b0da38c5c892fcc2520909ac1f6cad63b76589f64e61e7a2c58a51fc1710"
+    },
+    {
+      "path": "sources/executed-full-source.tar.gz",
+      "bytes": 112536,
+      "sha256": "6ab682cb97b6be2bf52cf4ea75554a5d64a0eca533970a9ccfa618ae1c9434de",
+      "source": null,
+      "members": [
+        {
+          "path": "joss-serial/case.lisp",
+          "bytes": 618,
+          "sha256": "8218f92165587533217ae10c1429b1bd4ec0a9830036ce0c1f62c0ec7116c90a",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\case.lisp"
+        },
+        {
+          "path": "joss-serial/framework/cl-mpm-framework.asd",
+          "bytes": 1815,
+          "sha256": "3247c40a6b81a18b044f0bdc72270bda16f56fd5d2ceec7a9a9a3b1fabbad5f2",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\cl-mpm-framework.asd"
+        },
+        {
+          "path": "joss-serial/framework/components/diagnostics.lisp",
+          "bytes": 12087,
+          "sha256": "32d3ad0e7f17a09d5f2f90e3dc6dd51f21dd679922b629560a2f6c6b2ead3112",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\components\\diagnostics.lisp"
+        },
+        {
+          "path": "joss-serial/framework/components/geometry.lisp",
+          "bytes": 368,
+          "sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\components\\geometry.lisp"
+        },
+        {
+          "path": "joss-serial/framework/components/materials.lisp",
+          "bytes": 299,
+          "sha256": "47df6aa151a2a128c8f50968ce213f331a7ad3e41bfa41ac7a3b7d738440eb1b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\components\\materials.lisp"
+        },
+        {
+          "path": "joss-serial/framework/components/specifications.lisp",
+          "bytes": 385,
+          "sha256": "1408795413a7235b167181ddfa6b50ee1b3ccf72a5b950ac39a3c7ff169c309b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\components\\specifications.lisp"
+        },
+        {
+          "path": "joss-serial/framework/config/package.lisp",
+          "bytes": 200,
+          "sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\config\\package.lisp"
+        },
+        {
+          "path": "joss-serial/framework/config/parameters.lisp",
+          "bytes": 4101,
+          "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\config\\parameters.lisp"
+        },
+        {
+          "path": "joss-serial/framework/materials/chalk.lisp",
+          "bytes": 4723,
+          "sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\materials\\chalk.lisp"
+        },
+        {
+          "path": "joss-serial/framework/output/plotting.lisp",
+          "bytes": 2391,
+          "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\output\\plotting.lisp"
+        },
+        {
+          "path": "joss-serial/framework/package.lisp",
+          "bytes": 1400,
+          "sha256": "8053c0b199e2bacdb8187045b33bb6762da0eb3ef56e1dbd2f3998daf7bfff15",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\package.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/cliff/adapter.lisp",
+          "bytes": 4902,
+          "sha256": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\cliff\\adapter.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/cliff/build.lisp",
+          "bytes": 2097,
+          "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\cliff\\build.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/cliff/geometry.lisp",
+          "bytes": 3294,
+          "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\cliff\\geometry.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/cliff/run.lisp",
+          "bytes": 2470,
+          "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\cliff\\run.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/cliff/settings.lisp",
+          "bytes": 1799,
+          "sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\cliff\\settings.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/joss/build.lisp",
+          "bytes": 3187,
+          "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\joss\\build.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/joss/classes.lisp",
+          "bytes": 429,
+          "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\joss\\classes.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/joss/geometry.lisp",
+          "bytes": 2956,
+          "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\joss\\geometry.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/joss/measurements.lisp",
+          "bytes": 3008,
+          "sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\joss\\measurements.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/joss/output.lisp",
+          "bytes": 1176,
+          "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\joss\\output.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/joss/phases.lisp",
+          "bytes": 1395,
+          "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\joss\\phases.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/joss/run.lisp",
+          "bytes": 11888,
+          "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\joss\\run.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/joss/statistics.lisp",
+          "bytes": 6450,
+          "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\joss\\statistics.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/adapter.lisp",
+          "bytes": 4000,
+          "sha256": "eab6819144c15d8c5ee475040c97ba6f42e6d1288149269c45dc0e74b8e2077c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\adapter.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/boundaries.lisp",
+          "bytes": 891,
+          "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\boundaries.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/config.lisp",
+          "bytes": 4399,
+          "sha256": "0bf4d2abc858c6330185e092d150755e40d044a497784852e6da6f632494cdce",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\config.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/controls.lisp",
+          "bytes": 4294,
+          "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\controls.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/geometry.lisp",
+          "bytes": 3589,
+          "sha256": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\geometry.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/homogeneous.lisp",
+          "bytes": 5998,
+          "sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\homogeneous.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/material.lisp",
+          "bytes": 1234,
+          "sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\material.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/measurements.lisp",
+          "bytes": 6819,
+          "sha256": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\measurements.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/mpm.lisp",
+          "bytes": 3570,
+          "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\mpm.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/package.lisp",
+          "bytes": 463,
+          "sha256": "603756b11e09b4401a0a7e3d471023e894acfc26eb15eff327dc02626a8b42b9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\package.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/runner.lisp",
+          "bytes": 7743,
+          "sha256": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\runner.lisp"
+        },
+        {
+          "path": "joss-serial/framework/scenarios/triaxial/tensors.lisp",
+          "bytes": 637,
+          "sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\scenarios\\triaxial\\tensors.lisp"
+        },
+        {
+          "path": "joss-serial/framework/simulation.lisp",
+          "bytes": 3635,
+          "sha256": "331b9f228729fd3f6bc07dcbe52b9480c5ae7b6eb3d0d9b47871c23e7bbd70a3",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\framework\\simulation.lisp"
+        },
+        {
+          "path": "joss-serial/inputs/calibration/triaxial-2d.json",
+          "bytes": 525,
+          "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\inputs\\calibration\\triaxial-2d.json"
+        },
+        {
+          "path": "joss-serial/inputs/calibration/triaxial-controls.json",
+          "bytes": 268,
+          "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\inputs\\calibration\\triaxial-controls.json"
+        },
+        {
+          "path": "joss-serial/inputs/calibration/triaxial-demo.json",
+          "bytes": 498,
+          "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\inputs\\calibration\\triaxial-demo.json"
+        },
+        {
+          "path": "joss-serial/inputs/calibration/triaxial-homogeneous.json",
+          "bytes": 370,
+          "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\inputs\\calibration\\triaxial-homogeneous.json"
+        },
+        {
+          "path": "joss-serial/inputs/studio/reference/joss-bay-accepted-collapse.json",
+          "bytes": 1256,
+          "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\inputs\\studio\\reference\\joss-bay-accepted-collapse.json"
+        },
+        {
+          "path": "joss-serial/inputs/studio/reference/joss-bay-prose.json",
+          "bytes": 1726,
+          "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\inputs\\studio\\reference\\joss-bay-prose.json"
+        },
+        {
+          "path": "joss-serial/inputs/studio/reference/joss-bay-table.json",
+          "bytes": 1721,
+          "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\inputs\\studio\\reference\\joss-bay-table.json"
+        },
+        {
+          "path": "joss-serial/inputs/studio/reference/joss-bay-video-candidate.json",
+          "bytes": 2575,
+          "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\inputs\\studio\\reference\\joss-bay-video-candidate.json"
+        },
+        {
+          "path": "joss-serial/inputs/studio/schema.json",
+          "bytes": 9059,
+          "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\inputs\\studio\\schema.json"
+        },
+        {
+          "path": "joss-serial/materials/adapters/native.lisp",
+          "bytes": 4179,
+          "sha256": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\materials\\adapters\\native.lisp"
+        },
+        {
+          "path": "joss-serial/materials/core/definition.lisp",
+          "bytes": 753,
+          "sha256": "502d80413890b4f6a165b0f634ca0c6b0618e09946f4d3131241911cae17e95e",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\materials\\core\\definition.lisp"
+        },
+        {
+          "path": "joss-serial/run-case.lisp",
+          "bytes": 6528,
+          "sha256": "5e694acc1f2c81fa9bdcea6ae4b75571064dcb9e565c66b197ab90a590477ff6",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\run-case.lisp"
+        },
+        {
+          "path": "joss-serial/src/simulation/components/base.lisp",
+          "bytes": 923,
+          "sha256": "c49f1519006897200e48fc380f5c07cf998c950a077a5a9b5d1b77ad74a2e50f",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\src\\simulation\\components\\base.lisp"
+        },
+        {
+          "path": "joss-serial/src/simulation/components/specifications.lisp",
+          "bytes": 2865,
+          "sha256": "84554dc77e3c7c46bf0fc8670a64b8b630a01f5cf1fb657c75a511c2476db866",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source\\src\\simulation\\components\\specifications.lisp"
+        },
+        {
+          "path": "triaxial-2d/case.lisp",
+          "bytes": 654,
+          "sha256": "d9b15044e2496083adba42810a18066609d9e229b261c64e2b3df04296f92630",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\case.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/cl-mpm-framework.asd",
+          "bytes": 1815,
+          "sha256": "3247c40a6b81a18b044f0bdc72270bda16f56fd5d2ceec7a9a9a3b1fabbad5f2",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\cl-mpm-framework.asd"
+        },
+        {
+          "path": "triaxial-2d/framework/components/diagnostics.lisp",
+          "bytes": 12087,
+          "sha256": "32d3ad0e7f17a09d5f2f90e3dc6dd51f21dd679922b629560a2f6c6b2ead3112",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\components\\diagnostics.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/components/geometry.lisp",
+          "bytes": 368,
+          "sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\components\\geometry.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/components/materials.lisp",
+          "bytes": 299,
+          "sha256": "47df6aa151a2a128c8f50968ce213f331a7ad3e41bfa41ac7a3b7d738440eb1b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\components\\materials.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/components/specifications.lisp",
+          "bytes": 385,
+          "sha256": "1408795413a7235b167181ddfa6b50ee1b3ccf72a5b950ac39a3c7ff169c309b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\components\\specifications.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/config/package.lisp",
+          "bytes": 200,
+          "sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\config\\package.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/config/parameters.lisp",
+          "bytes": 4101,
+          "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\config\\parameters.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/materials/chalk.lisp",
+          "bytes": 4723,
+          "sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\materials\\chalk.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/output/plotting.lisp",
+          "bytes": 2391,
+          "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\output\\plotting.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/package.lisp",
+          "bytes": 1400,
+          "sha256": "8053c0b199e2bacdb8187045b33bb6762da0eb3ef56e1dbd2f3998daf7bfff15",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\package.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/cliff/adapter.lisp",
+          "bytes": 4902,
+          "sha256": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\cliff\\adapter.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/cliff/build.lisp",
+          "bytes": 2097,
+          "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\cliff\\build.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/cliff/geometry.lisp",
+          "bytes": 3294,
+          "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\cliff\\geometry.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/cliff/run.lisp",
+          "bytes": 2470,
+          "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\cliff\\run.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/cliff/settings.lisp",
+          "bytes": 1799,
+          "sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\cliff\\settings.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/joss/build.lisp",
+          "bytes": 3187,
+          "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\joss\\build.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/joss/classes.lisp",
+          "bytes": 429,
+          "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\joss\\classes.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/joss/geometry.lisp",
+          "bytes": 2956,
+          "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\joss\\geometry.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/joss/measurements.lisp",
+          "bytes": 3008,
+          "sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\joss\\measurements.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/joss/output.lisp",
+          "bytes": 1176,
+          "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\joss\\output.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/joss/phases.lisp",
+          "bytes": 1395,
+          "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\joss\\phases.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/joss/run.lisp",
+          "bytes": 11888,
+          "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\joss\\run.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/joss/statistics.lisp",
+          "bytes": 6450,
+          "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\joss\\statistics.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/adapter.lisp",
+          "bytes": 4000,
+          "sha256": "eab6819144c15d8c5ee475040c97ba6f42e6d1288149269c45dc0e74b8e2077c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\adapter.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/boundaries.lisp",
+          "bytes": 891,
+          "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\boundaries.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/config.lisp",
+          "bytes": 4399,
+          "sha256": "0bf4d2abc858c6330185e092d150755e40d044a497784852e6da6f632494cdce",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\config.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/controls.lisp",
+          "bytes": 4294,
+          "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\controls.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/geometry.lisp",
+          "bytes": 3589,
+          "sha256": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\geometry.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/homogeneous.lisp",
+          "bytes": 5998,
+          "sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\homogeneous.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/material.lisp",
+          "bytes": 1234,
+          "sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\material.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/measurements.lisp",
+          "bytes": 6819,
+          "sha256": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\measurements.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/mpm.lisp",
+          "bytes": 3570,
+          "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\mpm.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/package.lisp",
+          "bytes": 463,
+          "sha256": "603756b11e09b4401a0a7e3d471023e894acfc26eb15eff327dc02626a8b42b9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\package.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/runner.lisp",
+          "bytes": 7743,
+          "sha256": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\runner.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/scenarios/triaxial/tensors.lisp",
+          "bytes": 637,
+          "sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\scenarios\\triaxial\\tensors.lisp"
+        },
+        {
+          "path": "triaxial-2d/framework/simulation.lisp",
+          "bytes": 3635,
+          "sha256": "331b9f228729fd3f6bc07dcbe52b9480c5ae7b6eb3d0d9b47871c23e7bbd70a3",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\framework\\simulation.lisp"
+        },
+        {
+          "path": "triaxial-2d/inputs/calibration/triaxial-2d.json",
+          "bytes": 525,
+          "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\inputs\\calibration\\triaxial-2d.json"
+        },
+        {
+          "path": "triaxial-2d/inputs/calibration/triaxial-controls.json",
+          "bytes": 268,
+          "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\inputs\\calibration\\triaxial-controls.json"
+        },
+        {
+          "path": "triaxial-2d/inputs/calibration/triaxial-demo.json",
+          "bytes": 498,
+          "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\inputs\\calibration\\triaxial-demo.json"
+        },
+        {
+          "path": "triaxial-2d/inputs/calibration/triaxial-homogeneous.json",
+          "bytes": 370,
+          "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\inputs\\calibration\\triaxial-homogeneous.json"
+        },
+        {
+          "path": "triaxial-2d/inputs/studio/reference/joss-bay-accepted-collapse.json",
+          "bytes": 1256,
+          "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\inputs\\studio\\reference\\joss-bay-accepted-collapse.json"
+        },
+        {
+          "path": "triaxial-2d/inputs/studio/reference/joss-bay-prose.json",
+          "bytes": 1726,
+          "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\inputs\\studio\\reference\\joss-bay-prose.json"
+        },
+        {
+          "path": "triaxial-2d/inputs/studio/reference/joss-bay-table.json",
+          "bytes": 1721,
+          "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\inputs\\studio\\reference\\joss-bay-table.json"
+        },
+        {
+          "path": "triaxial-2d/inputs/studio/reference/joss-bay-video-candidate.json",
+          "bytes": 2575,
+          "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\inputs\\studio\\reference\\joss-bay-video-candidate.json"
+        },
+        {
+          "path": "triaxial-2d/inputs/studio/schema.json",
+          "bytes": 9059,
+          "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\inputs\\studio\\schema.json"
+        },
+        {
+          "path": "triaxial-2d/materials/adapters/native.lisp",
+          "bytes": 4179,
+          "sha256": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\materials\\adapters\\native.lisp"
+        },
+        {
+          "path": "triaxial-2d/materials/core/definition.lisp",
+          "bytes": 753,
+          "sha256": "502d80413890b4f6a165b0f634ca0c6b0618e09946f4d3131241911cae17e95e",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\materials\\core\\definition.lisp"
+        },
+        {
+          "path": "triaxial-2d/run-case.lisp",
+          "bytes": 6528,
+          "sha256": "5e694acc1f2c81fa9bdcea6ae4b75571064dcb9e565c66b197ab90a590477ff6",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\run-case.lisp"
+        },
+        {
+          "path": "triaxial-2d/src/simulation/components/base.lisp",
+          "bytes": 923,
+          "sha256": "c49f1519006897200e48fc380f5c07cf998c950a077a5a9b5d1b77ad74a2e50f",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\src\\simulation\\components\\base.lisp"
+        },
+        {
+          "path": "triaxial-2d/src/simulation/components/specifications.lisp",
+          "bytes": 2865,
+          "sha256": "84554dc77e3c7c46bf0fc8670a64b8b630a01f5cf1fb657c75a511c2476db866",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-2d\\source\\src\\simulation\\components\\specifications.lisp"
+        },
+        {
+          "path": "triaxial-3d/case.lisp",
+          "bytes": 668,
+          "sha256": "88680df1a1063fc06f096c58fecaee69aca6d7a1be12f1266f1544230d3827df",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\case.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/cl-mpm-framework.asd",
+          "bytes": 1815,
+          "sha256": "3247c40a6b81a18b044f0bdc72270bda16f56fd5d2ceec7a9a9a3b1fabbad5f2",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\cl-mpm-framework.asd"
+        },
+        {
+          "path": "triaxial-3d/framework/components/diagnostics.lisp",
+          "bytes": 12087,
+          "sha256": "32d3ad0e7f17a09d5f2f90e3dc6dd51f21dd679922b629560a2f6c6b2ead3112",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\components\\diagnostics.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/components/geometry.lisp",
+          "bytes": 368,
+          "sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\components\\geometry.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/components/materials.lisp",
+          "bytes": 299,
+          "sha256": "47df6aa151a2a128c8f50968ce213f331a7ad3e41bfa41ac7a3b7d738440eb1b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\components\\materials.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/components/specifications.lisp",
+          "bytes": 385,
+          "sha256": "1408795413a7235b167181ddfa6b50ee1b3ccf72a5b950ac39a3c7ff169c309b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\components\\specifications.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/config/package.lisp",
+          "bytes": 200,
+          "sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\config\\package.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/config/parameters.lisp",
+          "bytes": 4101,
+          "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\config\\parameters.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/materials/chalk.lisp",
+          "bytes": 4723,
+          "sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\materials\\chalk.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/output/plotting.lisp",
+          "bytes": 2391,
+          "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\output\\plotting.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/package.lisp",
+          "bytes": 1400,
+          "sha256": "8053c0b199e2bacdb8187045b33bb6762da0eb3ef56e1dbd2f3998daf7bfff15",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\package.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/cliff/adapter.lisp",
+          "bytes": 4902,
+          "sha256": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\cliff\\adapter.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/cliff/build.lisp",
+          "bytes": 2097,
+          "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\cliff\\build.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/cliff/geometry.lisp",
+          "bytes": 3294,
+          "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\cliff\\geometry.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/cliff/run.lisp",
+          "bytes": 2470,
+          "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\cliff\\run.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/cliff/settings.lisp",
+          "bytes": 1799,
+          "sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\cliff\\settings.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/joss/build.lisp",
+          "bytes": 3187,
+          "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\joss\\build.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/joss/classes.lisp",
+          "bytes": 429,
+          "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\joss\\classes.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/joss/geometry.lisp",
+          "bytes": 2956,
+          "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\joss\\geometry.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/joss/measurements.lisp",
+          "bytes": 3008,
+          "sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\joss\\measurements.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/joss/output.lisp",
+          "bytes": 1176,
+          "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\joss\\output.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/joss/phases.lisp",
+          "bytes": 1395,
+          "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\joss\\phases.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/joss/run.lisp",
+          "bytes": 11888,
+          "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\joss\\run.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/joss/statistics.lisp",
+          "bytes": 6450,
+          "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\joss\\statistics.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/adapter.lisp",
+          "bytes": 4000,
+          "sha256": "eab6819144c15d8c5ee475040c97ba6f42e6d1288149269c45dc0e74b8e2077c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\adapter.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/boundaries.lisp",
+          "bytes": 891,
+          "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\boundaries.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/config.lisp",
+          "bytes": 4399,
+          "sha256": "0bf4d2abc858c6330185e092d150755e40d044a497784852e6da6f632494cdce",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\config.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/controls.lisp",
+          "bytes": 4294,
+          "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\controls.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/geometry.lisp",
+          "bytes": 3589,
+          "sha256": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\geometry.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/homogeneous.lisp",
+          "bytes": 5998,
+          "sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\homogeneous.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/material.lisp",
+          "bytes": 1234,
+          "sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\material.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/measurements.lisp",
+          "bytes": 6819,
+          "sha256": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\measurements.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/mpm.lisp",
+          "bytes": 3570,
+          "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\mpm.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/package.lisp",
+          "bytes": 463,
+          "sha256": "603756b11e09b4401a0a7e3d471023e894acfc26eb15eff327dc02626a8b42b9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\package.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/runner.lisp",
+          "bytes": 7743,
+          "sha256": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\runner.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/scenarios/triaxial/tensors.lisp",
+          "bytes": 637,
+          "sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\scenarios\\triaxial\\tensors.lisp"
+        },
+        {
+          "path": "triaxial-3d/framework/simulation.lisp",
+          "bytes": 3635,
+          "sha256": "331b9f228729fd3f6bc07dcbe52b9480c5ae7b6eb3d0d9b47871c23e7bbd70a3",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\framework\\simulation.lisp"
+        },
+        {
+          "path": "triaxial-3d/inputs/calibration/triaxial-2d.json",
+          "bytes": 525,
+          "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\inputs\\calibration\\triaxial-2d.json"
+        },
+        {
+          "path": "triaxial-3d/inputs/calibration/triaxial-controls.json",
+          "bytes": 268,
+          "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\inputs\\calibration\\triaxial-controls.json"
+        },
+        {
+          "path": "triaxial-3d/inputs/calibration/triaxial-demo.json",
+          "bytes": 498,
+          "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\inputs\\calibration\\triaxial-demo.json"
+        },
+        {
+          "path": "triaxial-3d/inputs/calibration/triaxial-homogeneous.json",
+          "bytes": 370,
+          "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\inputs\\calibration\\triaxial-homogeneous.json"
+        },
+        {
+          "path": "triaxial-3d/inputs/studio/reference/joss-bay-accepted-collapse.json",
+          "bytes": 1256,
+          "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\inputs\\studio\\reference\\joss-bay-accepted-collapse.json"
+        },
+        {
+          "path": "triaxial-3d/inputs/studio/reference/joss-bay-prose.json",
+          "bytes": 1726,
+          "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\inputs\\studio\\reference\\joss-bay-prose.json"
+        },
+        {
+          "path": "triaxial-3d/inputs/studio/reference/joss-bay-table.json",
+          "bytes": 1721,
+          "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\inputs\\studio\\reference\\joss-bay-table.json"
+        },
+        {
+          "path": "triaxial-3d/inputs/studio/reference/joss-bay-video-candidate.json",
+          "bytes": 2575,
+          "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\inputs\\studio\\reference\\joss-bay-video-candidate.json"
+        },
+        {
+          "path": "triaxial-3d/inputs/studio/schema.json",
+          "bytes": 9059,
+          "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\inputs\\studio\\schema.json"
+        },
+        {
+          "path": "triaxial-3d/materials/adapters/native.lisp",
+          "bytes": 4179,
+          "sha256": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\materials\\adapters\\native.lisp"
+        },
+        {
+          "path": "triaxial-3d/materials/core/definition.lisp",
+          "bytes": 753,
+          "sha256": "502d80413890b4f6a165b0f634ca0c6b0618e09946f4d3131241911cae17e95e",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\materials\\core\\definition.lisp"
+        },
+        {
+          "path": "triaxial-3d/run-case.lisp",
+          "bytes": 6528,
+          "sha256": "5e694acc1f2c81fa9bdcea6ae4b75571064dcb9e565c66b197ab90a590477ff6",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\run-case.lisp"
+        },
+        {
+          "path": "triaxial-3d/src/simulation/components/base.lisp",
+          "bytes": 923,
+          "sha256": "c49f1519006897200e48fc380f5c07cf998c950a077a5a9b5d1b77ad74a2e50f",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\src\\simulation\\components\\base.lisp"
+        },
+        {
+          "path": "triaxial-3d/src/simulation/components/specifications.lisp",
+          "bytes": 2865,
+          "sha256": "84554dc77e3c7c46bf0fc8670a64b8b630a01f5cf1fb657c75a511c2476db866",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\triaxial-3d\\source\\src\\simulation\\components\\specifications.lisp"
+        }
+      ]
+    },
+    {
+      "path": "joss-cancelled/partial-output.tar.gz",
+      "bytes": 3235524,
+      "sha256": "002d165dfa4fc301fc028900865ee31c49f7578da57a4d1ab705fa865be5a237",
+      "source": null,
+      "members": [
+        {
+          "path": "frames/frame_00001.png",
+          "bytes": 63625,
+          "sha256": "bcbac0782932e31d087215aa741e3ebfe691cfcf373370b579644ed969591370",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\frames\\frame_00001.png"
+        },
+        {
+          "path": "frames/frame_00002.png",
+          "bytes": 74151,
+          "sha256": "854b9512b7052ba0484e1dd3231d9f2b904f6273badce9463e7900a95340211e",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\frames\\frame_00002.png"
+        },
+        {
+          "path": "frames/frame_00003.png",
+          "bytes": 75167,
+          "sha256": "41a36775fff6e07194c2d00a4d09e7af39f47e22a19b208ce29ae155262eb888",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\frames\\frame_00003.png"
+        },
+        {
+          "path": "frames/frame_00004.png",
+          "bytes": 76947,
+          "sha256": "272be742a23f58185a0bead20032b7c052b0451a44ee4e5de7fbe36c77ca205e",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\frames\\frame_00004.png"
+        },
+        {
+          "path": "source-provenance.json",
+          "bytes": 4446,
+          "sha256": "b8c30fd795860ce97cf188b672cd63674de59007a7474a01321f8178e4218a7c",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\source-provenance.json"
+        },
+        {
+          "path": "timesteps.csv",
+          "bytes": 286555,
+          "sha256": "39a21469b9453d6ee9eabbcacebc6c4fe104b3792a53a15e26eb18817c71fcb9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\timesteps.csv"
+        },
+        {
+          "path": "transitions.csv",
+          "bytes": 170,
+          "sha256": "c3e58e1043b994f465eff1cd5ae020fe604ecbe9af73fc36b45ea334b55889b7",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\transitions.csv"
+        },
+        {
+          "path": "vtk/equilibrium.vtk",
+          "bytes": 1298217,
+          "sha256": "0ef589b23c1be52ebca491382f8394120000ad498036b2fa3722d6e7c4cdc5e1",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\vtk\\equilibrium.vtk"
+        },
+        {
+          "path": "vtk/initial.vtk",
+          "bytes": 1298217,
+          "sha256": "d8d0e90a78d865018f1bc5da7edd4b0b32a0136268eae4b25d64781814e0aad9",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\vtk\\initial.vtk"
+        },
+        {
+          "path": "vtk/mesh.vtk",
+          "bytes": 107970,
+          "sha256": "aae9c355862ba8e809d36eee577bde0617298d98e9aa5e607a6f17b9552bb69a",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\vtk\\mesh.vtk"
+        },
+        {
+          "path": "vtk/sim_00001.vtk",
+          "bytes": 1298217,
+          "sha256": "36f2094d968fce3a6ae7cab64478dcbbf67f31e5666d89781e3e9a8439e7c702",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\vtk\\sim_00001.vtk"
+        },
+        {
+          "path": "vtk/sim_00002.vtk",
+          "bytes": 1298217,
+          "sha256": "75981a525cbff829c594b6d81a322cb1b3ce75158b25c0b8a509b0f8b206557b",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\vtk\\sim_00002.vtk"
+        },
+        {
+          "path": "vtk/sim_00003.vtk",
+          "bytes": 1298217,
+          "sha256": "f17128acb237712f927519f25b8da1300814665adfca22621888e495f6bcbce8",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\vtk\\sim_00003.vtk"
+        },
+        {
+          "path": "vtk/sim_00004.vtk",
+          "bytes": 1298217,
+          "sha256": "97b162aef2ed5bb99d575c6e37e1ad86ebb1ec0f98cb8aefb7218a5ed5f5fb25",
+          "source": "output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\\vtk\\sim_00004.vtk"
+        }
+      ]
+    },
+    {
+      "path": "sources/finish-p1-vm.py",
+      "bytes": 3226,
+      "sha256": "1ebb76c36ca4715c7cc792703a0fc45006f833ce204f6aa5c2f7bf37973d6ccc",
+      "source": ".tmp\\finish-p1-vm.py"
+    },
+    {
+      "path": "sources/evidence-library.py",
+      "bytes": 10688,
+      "sha256": "31577cd02fb942f36bb95030e79bfd59b2004cbc04f4fea3d3feafd632f64cab",
+      "source": "docs\\evidence\\architecture-migration-2026-10-16\\p1\\sources\\pack-framework-evidence.py"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 3570,
+      "sha256": "8bcaad65198b3c511fb478fd97d6876042ed126f7ef3d4284163b3c2b3617318",
+      "source": null
+    },
+    {
+      "path": "README.md",
+      "bytes": 285,
+      "sha256": "ef3df50349a2465230daa46535ff5b293d21a985c598da13cff31d43f5b088b2",
+      "source": null
+    }
+  ]
+}
