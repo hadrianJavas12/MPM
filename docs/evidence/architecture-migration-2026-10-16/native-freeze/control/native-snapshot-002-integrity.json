@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "scope": "Independent saved provenance/hash integrity only; no solver/comparison replay",
+  "copiedFilesVerified": 144,
+  "actualFirstPartyLoads": 82,
+  "nativeBackend": {
+    "modulePath": "D:/MPM/output/architecture-migration-2026-10-16/native-freeze/native-snapshot-002/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  },
+  "compilerPolicy": "(OPTIMIZE (SPEED 3) (SAFETY 1) (DEBUG 1) (COMPILATION-SPEED 0))",
+  "externalMathModuleProbes": [
+    {
+      "module": "libopenblas.dll",
+      "path": "D:/MPM/toolchain/openblas/bin/libopenblas.dll",
+      "sha256": "0486735c359a67419d8832e3c40e2837f8762baebcdf4b62d3b18c91f9ece12e"
+    }
+  ]
+}

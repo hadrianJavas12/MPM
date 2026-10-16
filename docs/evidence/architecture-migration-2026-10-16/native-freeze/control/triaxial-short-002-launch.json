@@ -1,0 +1,13 @@
+{
+  "startedUtc": "2026-10-16T08:52:43.2619033Z",
+  "sourceCommitAtLaunch": "a99a4e1d1a8deb17483230ee59d53c07f4a26822",
+  "arguments": [
+    "scripts/run-case.lisp",
+    "tests/cases/triaxial-integration.lisp",
+    "D:/MPM/output/architecture-migration-2026-10-16/native-freeze/triaxial-short-002"
+  ],
+  "wrapperPid": 44556,
+  "openblasThreads": 1,
+  "ompThreads": 1,
+  "scope": "Fresh native Windows attempt; direct unit suites use captured live source hashes; CLI snapshots additionally record copied sources and loaded DLL"
+}

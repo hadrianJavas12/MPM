@@ -1,0 +1,199 @@
+{
+  "scope": "Bounded Windows native source-freeze validation; no complete architecture or scientific acceptance claim",
+  "checks": {
+    "caseSnapshot": {
+      "count": 3,
+      "passed": true
+    },
+    "nativeSnapshot": {
+      "count": 7,
+      "passed": true,
+      "attempt": "native-snapshot-002"
+    },
+    "materialDiagnostics": {
+      "count": 9,
+      "passed": true
+    }
+  },
+  "attempts": {
+    "case-snapshot-001": {
+      "startedUtc": "2026-10-16T08:48:04.3579621Z",
+      "sourceCommitAtLaunch": "f3a57ae5ce8785ff3325856b28ef6c925d56617c",
+      "arguments": [
+        "tests/case-snapshot-contracts.lisp",
+        "D:\\MPM\\output\\architecture-migration-2026-10-16\\native-freeze\\case-snapshot-001"
+      ],
+      "wrapperPid": 36964,
+      "openblasThreads": 1,
+      "ompThreads": 1,
+      "scope": "Fresh native Windows attempt; direct unit suites use captured live source hashes; CLI snapshots additionally record copied sources and loaded DLL",
+      "exitCode": 0,
+      "endedUtc": "2026-10-16T08:48:10.6360481Z"
+    },
+    "native-snapshot-001": {
+      "startedUtc": "2026-10-16T08:48:26.7991539Z",
+      "sourceCommitAtLaunch": "f3a57ae5ce8785ff3325856b28ef6c925d56617c",
+      "arguments": [
+        "tests/native-snapshot-contracts.lisp",
+        "D:/MPM/output/architecture-migration-2026-10-16/native-freeze/native-snapshot-001"
+      ],
+      "wrapperPid": 30600,
+      "openblasThreads": 1,
+      "ompThreads": 1,
+      "scope": "Fresh native Windows attempt; direct unit suites use captured live source hashes; CLI snapshots additionally record copied sources and loaded DLL",
+      "exitCode": 0,
+      "endedUtc": "2026-10-16T08:49:05.9382899Z"
+    },
+    "triaxial-short-001": {
+      "startedUtc": "2026-10-16T08:49:21.7676012Z",
+      "sourceCommitAtLaunch": "f3a57ae5ce8785ff3325856b28ef6c925d56617c",
+      "arguments": [
+        "scripts/run-case.lisp",
+        "tests/cases/triaxial-integration.lisp",
+        "D:/MPM/output/architecture-migration-2026-10-16/native-freeze/triaxial-short-001"
+      ],
+      "wrapperPid": 31200,
+      "openblasThreads": 1,
+      "ompThreads": 1,
+      "scope": "Fresh native Windows attempt; direct unit suites use captured live source hashes; CLI snapshots additionally record copied sources and loaded DLL",
+      "exitCode": 1,
+      "endedUtc": "2026-10-16T08:49:57.9383884Z"
+    },
+    "native-snapshot-002": {
+      "startedUtc": "2026-10-16T08:51:50.1371026Z",
+      "sourceCommitAtLaunch": "0a17ece5d19fca265214e4394c5b19a8fdb2c103",
+      "arguments": [
+        "tests/native-snapshot-contracts.lisp",
+        "D:/MPM/output/architecture-migration-2026-10-16/native-freeze/native-snapshot-002"
+      ],
+      "wrapperPid": 3988,
+      "openblasThreads": 1,
+      "ompThreads": 1,
+      "scope": "Fresh native Windows attempt; direct unit suites use captured live source hashes; CLI snapshots additionally record copied sources and loaded DLL",
+      "exitCode": 0,
+      "endedUtc": "2026-10-16T08:52:20.6547115Z"
+    },
+    "triaxial-short-002": {
+      "startedUtc": "2026-10-16T08:52:43.2619033Z",
+      "sourceCommitAtLaunch": "a99a4e1d1a8deb17483230ee59d53c07f4a26822",
+      "arguments": [
+        "scripts/run-case.lisp",
+        "tests/cases/triaxial-integration.lisp",
+        "D:/MPM/output/architecture-migration-2026-10-16/native-freeze/triaxial-short-002"
+      ],
+      "wrapperPid": 44556,
+      "openblasThreads": 1,
+      "ompThreads": 1,
+      "scope": "Fresh native Windows attempt; direct unit suites use captured live source hashes; CLI snapshots additionally record copied sources and loaded DLL",
+      "exitCode": 0,
+      "endedUtc": "2026-10-16T08:53:19.4461454Z"
+    },
+    "material-diagnostics-001": {
+      "startedUtc": "2026-10-16T08:54:00.0474898Z",
+      "sourceCommitAtLaunch": "a99a4e1d1a8deb17483230ee59d53c07f4a26822",
+      "arguments": [
+        "tests/material-diagnostics.lisp",
+        "D:/MPM/output/architecture-migration-2026-10-16/native-freeze/mc-triaxial-001"
+      ],
+      "wrapperPid": 28972,
+      "openblasThreads": 1,
+      "ompThreads": 1,
+      "scope": "Fresh native Windows attempt; direct unit suites use captured live source hashes; CLI snapshots additionally record copied sources and loaded DLL",
+      "exitCode": 0,
+      "endedUtc": "2026-10-16T08:54:19.1715638Z"
+    }
+  },
+  "provenanceIntegrity": {
+    "native-snapshot-002": {
+      "passed": true,
+      "scope": "Independent saved provenance/hash integrity only; no solver/comparison replay",
+      "copiedFilesVerified": 144,
+      "actualFirstPartyLoads": 82,
+      "nativeBackend": {
+        "modulePath": "D:/MPM/output/architecture-migration-2026-10-16/native-freeze/native-snapshot-002/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "compilerPolicy": "(OPTIMIZE (SPEED 3) (SAFETY 1) (DEBUG 1) (COMPILATION-SPEED 0))",
+      "externalMathModuleProbes": [
+        {
+          "module": "libopenblas.dll",
+          "path": "D:/MPM/toolchain/openblas/bin/libopenblas.dll",
+          "sha256": "0486735c359a67419d8832e3c40e2837f8762baebcdf4b62d3b18c91f9ece12e"
+        }
+      ]
+    },
+    "triaxial-short-002": {
+      "passed": true,
+      "scope": "Independent saved provenance/hash integrity only; no solver/comparison replay",
+      "copiedFilesVerified": 144,
+      "actualFirstPartyLoads": 82,
+      "nativeBackend": {
+        "modulePath": "D:/MPM/output/architecture-migration-2026-10-16/native-freeze/triaxial-short-002/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "compilerPolicy": "(OPTIMIZE (SPEED 3) (SAFETY 1) (DEBUG 1) (COMPILATION-SPEED 0))",
+      "externalMathModuleProbes": [
+        {
+          "module": "libopenblas.dll",
+          "path": "D:/MPM/toolchain/openblas/bin/libopenblas.dll",
+          "sha256": "0486735c359a67419d8832e3c40e2837f8762baebcdf4b62d3b18c91f9ece12e"
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "triaxial-short-002": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0,
+      "failure": null,
+      "error": null
+    },
+    "mc-triaxial-001": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0,
+      "failure": null,
+      "error": null
+    }
+  },
+  "byteIdentity": {
+    "triaxial-short-002": {
+      "states": 2,
+      "allVtkBytesIdentical": true,
+      "csvBytesIdentical": true
+    },
+    "mc-triaxial-001": {
+      "states": 2,
+      "allVtkBytesIdentical": true,
+      "csvBytesIdentical": true
+    }
+  },
+  "retainedFailure": {
+    "attempt": "triaxial-short-001",
+    "exitCode": 1,
+    "solverTimesteps": 0,
+    "cause": "Bootstrap manifest/cache at output root rejected by existing freshness guard",
+    "fixCommit": "0a17ece",
+    "fix": "Manifest/private cache moved under source; framework guard unchanged"
+  },
+  "nativeVmScope": "Copied first-party native source, private FASL and actual Windows copied-DLL path/hash verified",
+  "nativeMcScope": "Existing live unit suite with launch source hashes; cached dependency/FASL identity not reconstructed",
+  "G1": "PARTIAL",
+  "G3": "PARTIAL",
+  "fullJoss": "STOPPED_BY_USER; full acceptance INCOMPLETE; not restarted",
+  "parallelJossStrictExceptionStillOpen": true,
+  "scientificValidation": false,
+  "limits": [
+    "Windows-only native snapshot helper; non-Windows provenance fails explicitly",
+    "Third-party source/FASLs remain external; math module probes are partial",
+    "Trusted non-ASDF LOADs are outside selected-ASDF source claim",
+    "Initial failure remains retained; passing retry does not erase it"
+  ]
+}
