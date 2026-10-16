@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "starting_head": "7c399fb23de8e04871855c3911d73e583fdbcdc3",
+  "scope": "Only the two reviewed ownership extractions; approval is not execution or regression PASS",
+  "approvals": [
+    {
+      "source_path": "framework/components/specifications.lisp",
+      "source_sha256_before": "7f0ef4c9210fc9b5d7bb9480e26cf01c78646a28bc77546f87c6b00b22028614",
+      "phase": "P1",
+      "decision": "APPROVED_EXTRACTION_NOT_EXECUTED",
+      "review_evidence": [
+        "docs/architecture/MATERIAL_OWNERSHIP_AUDIT.md",
+        "docs/architecture/P1_CONTRACT_EXTRACTION.md"
+      ],
+      "numerical_behavior_change_allowed": false,
+      "targets": [
+        {
+          "path": "src/simulation/components/base.lisp",
+          "forms": [
+            "component",
+            "option",
+            "make-component"
+          ],
+          "reason": "Generic component storage and validation prerequisites; same package/symbols"
+        },
+        {
+          "path": "materials/core/definition.lisp",
+          "forms": [
+            "material",
+            "make-material"
+          ],
+          "reason": "Existing material profile contract; no new material equations/registry"
+        },
+        {
+          "path": "src/simulation/components/specifications.lisp",
+          "forms": [
+            "geometry",
+            "boundary",
+            "loading",
+            "solver",
+            "make-geometry",
+            "make-boundary",
+            "make-loading",
+            "make-solver",
+            "simulation",
+            "make-simulation",
+            "*simulation*"
+          ],
+          "reason": "Remaining non-material composition declarations"
+        }
+      ]
+    },
+    {
+      "source_path": "framework/components/materials.lisp",
+      "source_sha256_before": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92",
+      "phase": "P1",
+      "decision": "APPROVED_EXTRACTION_NOT_EXECUTED",
+      "review_evidence": [
+        "docs/architecture/MATERIAL_OWNERSHIP_AUDIT.md",
+        "docs/architecture/P1_CONTRACT_EXTRACTION.md"
+      ],
+      "numerical_behavior_change_allowed": false,
+      "targets": [
+        {
+          "path": "materials/adapters/native.lisp",
+          "forms": [
+            "ALL_TOP_LEVEL_FORMS_EXCEPT_PACKAGE_PREAMBLE"
+          ],
+          "reason": "Existing native integration factory and class dispatch; preserve exact forms"
+        }
+      ]
+    }
+  ],
+  "required_compatibility_edits": [
+    "framework/cl-mpm-framework.asd",
+    "scripts/run-case.lisp"
+  ],
+  "remaining_source_reviews": "PENDING; no bulk migration approved"
+}

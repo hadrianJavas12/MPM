@@ -139,10 +139,10 @@
                             (find-class t) (find-class t))))
        (backend (fdefinition 'cl-mpm/ext::constitutive-mohr-coulomb))
        (point-before nil) (elastic-before nil))
-  (ownership-check "Material CPL and native factories preserve distinct MC, VM and elastic identities"
+  (ownership-check "Material direct ancestry and native factories preserve distinct MC, VM and elastic identities"
    (lambda ()
-     (assert (equal (mapcar #'class-name (sb-mop:class-precedence-list old-material-class))
-                    '(cl-mpm/framework:material cl-mpm/framework:component standard-object t)))
+     (assert (equal (mapcar #'class-name (sb-mop:class-direct-superclasses old-material-class))
+                    '(cl-mpm/framework:component)))
      (assert (not (subtypep 'cl-mpm/particle::particle-mc 'cl-mpm/particle::particle-vm)))
      (dolist (kind '(:von-mises :elastic))
        (let ((mp (ownership-one-particle (cl-mpm/framework:make-material kind))))
@@ -170,8 +170,7 @@
    (lambda ()
      (let ((cl-mpm/framework:*simulation* material)
            (*default-pathname-defaults* (uiop:temporary-directory)))
-       (dotimes (iteration 2)
-         (declare (ignore iteration))
+       (loop repeat 2 do
          (load (cl-user::cl-mpm-path "framework/components/specifications.lisp"))
          (load (cl-user::cl-mpm-path "framework/components/materials.lisp")))
        (assert (eq cl-mpm/framework:*simulation* material)))

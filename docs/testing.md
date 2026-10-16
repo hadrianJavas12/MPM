@@ -226,20 +226,46 @@ The collector completed; [the retained summary](evidence/material-contract-2026-
 and its 60 SHA-256-verified manifest entries record executed snapshot `64f47cc`,
 frozen original 3D `c749d32`, statuses, CSVs, audits and comparison evidence.
 Working VTK outputs/logs remain under `output/material-contract-2026-10-16/`.
-No native jobs remain running. The Joss byte comparison covers only listed
+Those baseline jobs are complete. The Joss byte comparison covers only listed
 dedicated numerical modules versus `41403f4`; no new full Joss run is claimed.
 M0 remains **PROVISIONAL** because four-worker strict FAIL and incomplete
 transitive loaded FASL/DLL provenance remain open.
 
 The [migration specification](architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md)
-now governs the next work. P0/G0 requires a complete actual-file ownership/caller/
-ASDF inventory before moves. These saved results are baseline evidence, not tests
+governs the migration. P0 inventory was pushed as `6f15148` before moves; its
+matrix/approvals remain immutable. These saved results are baseline evidence, not tests
 of the target root `materials/`, `scenarios/` and `src/simulation/` layout.
-P1–P6 and post-migration G1–G5 verification remain NOT RUN. Preserve exact
+Preserve exact
 regression criteria and historical Windows/ASDF/Studio/calibration entry points.
 The isolated `.tmp/mc-evolution-stage/` has 32 native point checks passing, with
 sampled-root/continuation limits. It is uninstalled; new physics is deferred
 until migration gates and requires a separate experimental branch.
+
+## P1 bounded migration verification, 2026-10-16
+
+Production extraction `3cd172e` was committed/pushed before tests. Its 16 defining
+forms and whole native factory file retain exact bytes; class/package symbols,
+historical source shims and ASDF IDs are preserved. The
+[retained P1 evidence](evidence/architecture-migration-2026-10-16/p1/README.md)
+has 32 hash-verified artifacts. Actual Windows checks pass: 10 framework,
+10 configuration, 9 material (including 32 MPs/two updates), 36 Node with zero
+skipped, 7 normal and 7 legacy ownership checks, and 3 snapshot/escape checks.
+
+Strict bounded VM (27 updates) and MC (two updates) comparisons pass across two
+states each with zero CSV/position differences. Both two-update MC cliff VTKs
+are byte-identical to the prior control; gnuplot PNG is unavailable and plotting
+is not marked PASS. The initial 6/7 ownership failure assumed an incorrect SBCL
+precedence tail; original-source control confirms `SLOT-OBJECT` already existed.
+Only the assertion changed. The first escape fixture preferred the wrong ASDF
+registry; correcting the fixture made the unchanged guard reject escape.
+Both failed fixtures/logs are retained.
+
+Focused units loaded committed production sources from the working tree;
+CLI controls retained copied source/input trees. Full transitive loaded FASL/DLL
+provenance is incomplete. P1 is PROVISIONAL, G1 PARTIAL. Full migrated VM 2D/3D
+and serial Joss G3 runs are **NOT_RUN / preparing** under
+`output/architecture-migration-2026-10-16/p1-full/`; older full results do not
+validate this extraction. P2 is plan only; new physics remains deferred.
 
 ## GitHub Actions blocker
 

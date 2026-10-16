@@ -85,3 +85,23 @@ Native engine/FASL/DLL identity remains a separate, limited provenance scope.
 No constitutive algorithm, particle ancestry, numerical parameter or tolerance
 was changed. P1 compatibility/native/Node and full numerical tests are **NOT_RUN**
 at this implementation checkpoint; neither P1 nor G1 is declared complete.
+
+### P1 bounded verification after 3cd172e
+
+Actual checks pass: 10 framework, 10 configuration, 9 material diagnostics,
+7 normal and 7 legacy ownership, 3 snapshot-boundary checks, Node syntax and
+36 tests with zero skips. VM 27-update and MC two-update triaxial controls pass
+the unchanged strict comparator with zero position/CSV differences. Both saved
+native MC cliff VTKs are byte-identical to the prior control.
+
+The initial ownership test failed due to its incorrect hardcoded SBCL class
+tail; an original-source control proves `SLOT-OBJECT` was already present. The
+first snapshot negative fixture still preferred the frozen registry; its setup
+was corrected so the unchanged guard now rejects actual checkout paths.
+Both failed logs remain retained. No numerical assertion/tolerance was changed.
+The cliff control reports an unavailable gnuplot PNG; plotting is not PASS.
+
+[Bounded evidence](../evidence/architecture-migration-2026-10-16/p1/README.md)
+retains 32 hash-verified artifacts, actual source copies, VTK/CSV, all logs and
+form-byte comparisons. P1 remains PROVISIONAL/G1 PARTIAL pending deeper owner
+migration and full G3 runs. P2 is only a conditional plan, not execution approval.

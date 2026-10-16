@@ -8,10 +8,11 @@ Older statuses there are historical and do not override this checkpoint.
 ## Mission and authorized scope
 
 The immediate priority is the [architecture migration specification](architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md):
-audit actual ownership and dependencies in P0/G0 before moving code. Root
+continue the approved P1 ownership extraction after the completed P0 inventory. Root
 `materials/` is the target owner of material models, state, evolution and model
 diagnostics; `framework/` remains a compatibility layer until its callers and
-numerical behavior are verified. This target design is **not implemented**.
+numerical behavior are verified. Only the bounded P1 extraction is implemented;
+the complete target design remains pending.
 The [scientific master plan](../research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md)
 M0–M6 remains in force, with new MC H/HS physics deferred until migration gates.
 [Research status](../research/README.md) records the separate gates.
@@ -19,14 +20,19 @@ M0–M6 remains in force, with new MC H/HS physics deferred until migration gate
 P0 inventory is now complete: 884/884 captured paths, 104 ASDF systems, 11 audit
 integrity tests PASS. Only the two hash-bound sources in
 `docs/architecture/MIGRATION_APPROVALS.json` are approved for the
-`P1_CONTRACT_EXTRACTION.md` plan; numerical migration tests remain NOT_RUN.
+`P1_CONTRACT_EXTRACTION.md` plan.
 The full material form audit preserves existing forward classes/overrides.
 Two absent legacy example paths are recorded as pre-existing compatibility
 exceptions. P0 was committed/pushed as **6f15148 before production moves**.
-P1 now extracts the approved contracts into `src/simulation/components/` and
-root `materials/{core,adapters}/`, with old source-path shims, ASDF ordering and
-extended copied-source guards. Validation is pending; do not declare P1/G1 PASS.
+P1 was committed/pushed as **3cd172e before testing**. It extracts the approved
+contracts into `src/simulation/components/{base,specifications}.lisp`,
+`materials/core/definition.lisp` and `materials/adapters/native.lisp`.
+All 16 defining-form bodies and the whole native factory file retain exact bytes;
+class/package symbols, old path shims and ASDF IDs remain compatible. Focused
+contracts and bounded controls pass; P1 remains PROVISIONAL, G1 PARTIAL, full G3 pending.
 Before-source/hash evidence is under `output/architecture-migration-2026-10-16/`.
+The P0 matrix and hash-bound pre-extraction approvals are immutable; do not
+regenerate them from the deliberately changed post-extraction working tree.
 
 - Work headlessly on Windows. No UI/Studio feature work or thesis framing.
 - Preserve equations, algorithms, parameter defaults and numerical results during
@@ -98,7 +104,7 @@ budget is established by regression or visually similar collapse.
 
 ## Completed native evidence and next bounded action
 
-No native process remains running. The completion collector finished and packaged
+The earlier `64f47cc` jobs completed. The collector finished and packaged
 [the material-contract summary](evidence/material-contract-2026-10-16/validation-summary.json)
 and 60 SHA-256-verified manifest entries. Full 2D (480 MPs) and 3D (780 MPs)
 pairs each completed 17,443 updates, 51 states and 0.2 s. Every corresponding
@@ -114,13 +120,23 @@ serial snapshot `41403f4`; it is **not** a new full Joss run on `64f47cc`.
 M0 remains **PROVISIONAL**: four-worker strict FAIL is retained and complete
 transitive loaded FASL/DLL provenance is not established.
 
-Publish/checkpoint the completed M0 evidence, then finish migration **P0/G0**:
-one matrix record per actual tracked path, separate untracked inventory,
-ASDF/load/Windows/Studio/caller map, and form-level ownership for mixed sources.
-Record baseline/toolchain/provenance gaps and the G0 acceptance status before
-any move. Initial P0 inventory captured 884 tracked paths at `7c399fb`; that
-count alone does not establish complete semantic/caller ownership or G0 PASS.
-P1–P6 and migration regressions remain NOT RUN at this documentation checkpoint.
+The [P1 bounded evidence](evidence/architecture-migration-2026-10-16/p1/README.md)
+contains 32 hash-verified artifacts: 10 framework, 10 configuration, 9 material,
+36 Node (zero skipped), 7 normal/7 legacy ownership and 3 snapshot checks pass.
+VM 27-update and native MC two-update triaxial controls each have two states,
+strict PASS and zero CSV/position differences. Both native MC cliff VTKs match
+the prior control exactly; its gnuplot PNG is unavailable, so plotting is not PASS.
+Retain both initial test-fixture failures: original-source control proves SBCL's
+`SLOT-OBJECT` tail pre-existed; the escape fixture's registry preference was wrong.
+Only tests/fixtures were corrected; the containment guard and numerical code were not relaxed.
+
+Next: checkpoint the focused evidence, then launch full VM 2D/3D and serial Joss
+on a fixed copied source snapshot under
+`output/architecture-migration-2026-10-16/p1-full/{triaxial-2d,triaxial-3d,joss-serial}/`.
+These runs are **NOT_RUN / preparing** at this checkpoint; no PIDs or full G3
+PASS are claimed. Unit tests loaded committed production sources from the working
+tree; CLI controls retained copied sources. Transitive FASL/DLL provenance remains
+incomplete. P2 is plan only, P2–P6 are NOT_RUN and new MC physics stays deferred.
 
 ## Isolated M2 preparation checkpoint
 

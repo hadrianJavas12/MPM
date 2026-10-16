@@ -320,3 +320,19 @@ metadata for 104 ASDF systems and 11 passing audit-integrity checks. Two
 source-hash-bound P1 extractions are reviewed; the other 882 semantic reviews
 remain pending. The two missing legacy examples and existing native load-order
 overrides remain explicit. This P0 checkpoint changes no production source.
+
+## [2026-10-16] ingest | Bounded P1 contract extraction verification
+
+Updated [[cl-mpm-architecture]], [[reusable-simulation-framework]] and index.
+P0 `6f15148` preceded moves; P1 `3cd172e` preceded tests. Sixteen form bodies and
+the native factory file retain exact bytes at their new material/component owners;
+symbols, shims and ASDF IDs remain compatible. The 32-artifact hashed P1 bundle
+records 10 framework, 10 config, 9 material, 36 Node/zero skipped, 7 normal/7 legacy
+and 3 snapshot checks passing. Bounded VM 27-update and MC two-update comparisons
+pass strictly across two states with CSV/positions zero; MC cliff VTKs match,
+while its gnuplot PNG is unavailable. Initial SBCL-precedence and ASDF-registry
+test-fixture failures are retained; no numerical code or guard was relaxed.
+P1 is provisional, G1 partial and full migrated VM 2D/3D/serial Joss G3 is
+NOT_RUN/preparing. P0 evidence remains immutable; P2 is plan only and physics
+deferred. No solver/tests/git commands, raw sources or settings changed in this
+documentation operation; prior log entries are preserved.

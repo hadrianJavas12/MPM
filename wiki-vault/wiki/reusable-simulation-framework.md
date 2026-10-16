@@ -26,8 +26,8 @@ Current branch is `codex/material-architecture-migration`, created from it.
 The new [[cl-mpm-architecture]] specification governs the next work: root
 `materials/` owns model-specific implementation/state/evolution/diagnostics,
 `src/` owns generic engine/numerics/orchestration, and `scenarios/` owns reusable
-procedures. These are target owners, not completed moves. P0/G0 must inventory
-every actual tracked path and ASDF/load/caller/form ownership before code moves.
+procedures. P0's 884-path inventory was pushed as `6f15148` before moves; its
+matrix/approvals stay immutable. The full target remains pending beyond P1.
 `framework/` remains temporary compatibility until G5 proves caller transition;
 equations, algorithms, defaults and numerical results must remain unchanged.
 
@@ -165,6 +165,17 @@ conserved while native splitting changed70MPs to280; no engine edits/rerun.
 The four-worker evidence bundle retains `regressionPassed=false`; separate
 serial-control evidence reports PASS. All 134 manifest hashes verify. Neither
 status should overwrite the other or be presented as experimental validation.
-P1–P6 migration and post-migration verification are NOT RUN here. The isolated
+P1 extraction `3cd172e` was pushed before tests. New owners are
+`src/simulation/components/{base,specifications}.lisp`,
+`materials/core/definition.lisp` and `materials/adapters/native.lisp`; 16 defining
+forms and the whole factory file retain exact bytes, symbols, ASDF IDs and shims.
+The P1 bundle retains 32 hash-verified artifacts: 10 framework, 10 config,
+9 material, 36 Node/zero skipped, 7 normal/7 legacy compatibility and 3 snapshot
+checks pass. Strict bounded VM 27-update and MC two-update controls pass with
+two states and zero CSV/position differences. MC cliff VTKs match; PNG plotting
+is unavailable. Initial SBCL-tail and ASDF-registry fixture failures are retained;
+only tests/fixtures changed. P1 remains PROVISIONAL, G1 PARTIAL. Full migrated VM
+2D/3D and serial Joss G3 runs are NOT_RUN/preparing in `p1-full/`; P2 is plan only,
+P2–P6 NOT_RUN. The isolated
 32-test MC prototype is uninstalled; new physics is deferred until migration gates
 and belongs on a separate experimental branch.
