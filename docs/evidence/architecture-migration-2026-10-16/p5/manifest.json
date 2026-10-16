@@ -1,0 +1,74 @@
+{
+  "entries": [
+    {
+      "path": "logs/engine-numerics.log.gz",
+      "sha256": "cfee417c58665eee7214273046c632cb2b7cb242d0a644603038a3c329f44277",
+      "bytes": 1093,
+      "source": "output/architecture-migration-2026-10-16/p5/engine-numerics.log"
+    },
+    {
+      "path": "logs/smoke.log.gz",
+      "sha256": "c130f9cbdc202f77444c25408bbd1b5d80ae277e02bdd7e453463096a139e531",
+      "bytes": 132,
+      "source": "output/architecture-migration-2026-10-16/p5/smoke.log"
+    },
+    {
+      "path": "control/status.json",
+      "sha256": "3404c510158bd1b8364ad60446292f7112e3bf52ef99cceb3ba16116030923ae",
+      "bytes": 123,
+      "source": "output/architecture-migration-2026-10-16/p5/status.json"
+    },
+    {
+      "path": "source-identity.json",
+      "sha256": "06058133de5c02c79c8d0479e2cd9db144600aa4a1e21bbd6d8f927c0fd51fdb",
+      "bytes": 632,
+      "source": "output/architecture-migration-2026-10-16/p5-source-identity.json"
+    },
+    {
+      "path": "sources/migrate-p5.py",
+      "sha256": "31f2f998867f724b0ac7325c8b0e10cbe764394598116f72f6fbb3d668a3e91f",
+      "bytes": 1435,
+      "source": ".tmp/migrate-p5.py"
+    },
+    {
+      "path": "sources/engine-numerics-compat.lisp",
+      "sha256": "bd7beab14fbddde2cd8b9d6550b98a31fcbfa2b84a6a842e84f950bf87c6761f",
+      "bytes": 1599,
+      "source": "tests/engine-numerics-compat.lisp"
+    },
+    {
+      "path": "before/src/fastmaths.lisp.gz",
+      "sha256": "62e46e549c61737a893ba2605a4805b6d3dc6c237858f9bd8aaf13e5e1e23603",
+      "bytes": 9937,
+      "source": "output/architecture-migration-2026-10-16/p5-source-before/src/fastmaths.lisp"
+    },
+    {
+      "path": "after/src/numerics/fastmaths.lisp.gz",
+      "sha256": "62e46e549c61737a893ba2605a4805b6d3dc6c237858f9bd8aaf13e5e1e23603",
+      "bytes": 9937,
+      "source": "src/numerics/fastmaths.lisp"
+    },
+    {
+      "path": "before/src/core/linear-solver.lisp.gz",
+      "sha256": "e9a859e70fb78336274d402e9d1a33e56c21ed7b5a28fdf3a6eaf9d2aa3abbe9",
+      "bytes": 4336,
+      "source": "output/architecture-migration-2026-10-16/p5-source-before/src/core/linear-solver.lisp"
+    },
+    {
+      "path": "after/src/solvers/linear-systems.lisp.gz",
+      "sha256": "e9a859e70fb78336274d402e9d1a33e56c21ed7b5a28fdf3a6eaf9d2aa3abbe9",
+      "bytes": 4336,
+      "source": "src/solvers/linear-systems.lisp"
+    },
+    {
+      "path": "summary.json",
+      "sha256": "e5be7a86204ed5ee9477eb919199f70c78b77cad5b50d5216bd3c6d872123669",
+      "bytes": 515
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "f2e214c6e24cdffd8157778a19ef8c10a6ce15d28b90988d21fc6a4a7319298a",
+      "bytes": 32
+    }
+  ]
+}

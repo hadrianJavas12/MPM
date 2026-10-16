@@ -116,3 +116,43 @@ native-source freezing per `docs/architecture/NATIVE_SOURCE_SNAPSHOT_PLAN.md`,
 then P2 elastic ownership extraction with exact per-form approval and focused
 regression. Preserve the cancelled Joss directive, native formulas and all prior
 positive/negative evidence; no UI, main merge, or premature framework deletion.
+
+### Full-migration continuation, 2026-10-16
+
+The user explicitly authorized continuing until the entire architecture refactor
+is finished. P2 now has a committed compact plan: 23 source files / 495 forms,
+49 cohesive targets. The 109-fragment exact-order plan is an audit alternative,
+not the chosen execution layout. Independent definitions may be regrouped only
+under the reviewed dependency/override order; arithmetic bodies stay exact.
+P2/P4 plans were checkpointed before source moves. No P2/P4 move is claimed yet.
+
+P5 engine grouping (`59928ba`) is implemented: numeric kernels and matrix-free
+linear solver moved byte-identically to `src/numerics/fastmaths.lisp` and
+`src/solvers/linear-systems.lisp`, preserving ASDF IDs and old source shims.
+Three analytical/legacy/path contracts and actual gravity smoke (100 MPs,
+50 updates) passed. Evidence: `docs/evidence/architecture-migration-2026-10-16/p5/`
+(12 hashes). The live unit status records HEAD at completion; it is not a frozen
+pre-load source claim. Engine bodies match the implementation commit.
+
+Five fresh native family load/catalog baselines passed before model migration
+(engine/framework, chalk, ice, limestone, visco); sources stayed unchanged.
+Evidence `p2-baseline/` (21 hashes) preserves the first reflection-fixture failure
+and corrected complete catalogs. Console size reporting was corrected separately;
+the serialized sorted catalogs were already complete. These are structural
+compatibility baselines, not numerical/scientific validation of optional models.
+
+Native source freezing was implemented at `7a320f5`; existing snapshot 3 and new
+native snapshot 7 contracts passed, including actual Windows copied-DLL path and
+private FASLs. Its first bounded VM attempt failed before stepping because the
+new metadata/cache occupied the otherwise-empty output root. Fix `0a17ece`
+places them under reserved `source/` without weakening the runner guard and adds
+future canonical-root ASDF support. Native snapshot/VM retry and bounded MC checks
+are now running once under `output/architecture-migration-2026-10-16/native-freeze/`.
+Do not edit selected native/P4 sources until that agent reports completion.
+The frozen CLI currently requires Windows; core ASDF remains separate/portable.
+
+Next: P2 compact stages A–D, then P4 helpers/owners/canonical ASDF and caller
+transition, final compatibility/regressions/docs/PR. P2 helper never edits ASD;
+route-aware updater must preserve existing P5 paths. No full Joss restart, no
+new physics, no main merge. Existing global override/forward-class/atomic C++
+transaction exceptions stay visible; folder relocation does not repair them.

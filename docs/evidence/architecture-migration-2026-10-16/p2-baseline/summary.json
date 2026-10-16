@@ -1,0 +1,15 @@
+{
+  "structuralBaselinePass": true,
+  "executedNativeSourcesCommit": "59e1c3fc3ef550b0e43f9d210221a3046e78380f",
+  "systems": [
+    "base",
+    "chalk",
+    "ice",
+    "limestone",
+    "visco"
+  ],
+  "numericalValidation": false,
+  "liveSourcesUnchanged": true,
+  "fixtureFailuresRetained": "Initial reflection included inherited CL builtins; corrected owned-package filter and explicit unresolved ancestry. All five corrected processes exit 0.",
+  "reportingCorrection": "The .sexp structures contain the complete sorted catalogs. Initial console counts used an old list head after destructive SORT; reporting-only fix 5312a3b does not change serialized catalogs."
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "source": "src/fastmaths.lisp",
+    "target": "src/numerics/fastmaths.lisp",
+    "beforeSha256": "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d",
+    "afterSha256": "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d",
+    "wholeFileByteIdentical": true
+  },
+  {
+    "source": "src/core/linear-solver.lisp",
+    "target": "src/solvers/linear-systems.lisp",
+    "beforeSha256": "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011",
+    "afterSha256": "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011",
+    "wholeFileByteIdentical": true
+  }
+]
