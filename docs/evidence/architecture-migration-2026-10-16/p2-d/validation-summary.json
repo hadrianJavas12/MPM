@@ -1,0 +1,128 @@
+{
+  "stage": "P2-D / P4-D",
+  "status": "PASS bounded compatibility",
+  "sourceCommitAtLaunch": {
+    "triaxial-short": "f9ba947db677abfe35776fc823b7a2ad12afcd45",
+    "material-diagnostics": "f9ba947db677abfe35776fc823b7a2ad12afcd45",
+    "ownership-normal": "f9ba947db677abfe35776fc823b7a2ad12afcd45",
+    "p4-orchestration": "f9ba947db677abfe35776fc823b7a2ad12afcd45",
+    "framework-components": "f9ba947db677abfe35776fc823b7a2ad12afcd45",
+    "config-contracts": "f9ba947db677abfe35776fc823b7a2ad12afcd45",
+    "joss-unit": "f9ba947db677abfe35776fc823b7a2ad12afcd45"
+  },
+  "commitAttribution": "Exact launch commits retained per check; live unit source bytes sealed and verified against every captured unit manifest before subsequent-stage edits.",
+  "exitCodes": {
+    "triaxial-short": 0,
+    "material-diagnostics": 0,
+    "ownership-normal": 0,
+    "triaxial-short-comparison": 0,
+    "mc-triaxial-comparison": 0,
+    "p4-orchestration": 0,
+    "framework-components": 0,
+    "config-contracts": 0,
+    "joss-unit": 0
+  },
+  "tests": {
+    "materialDiagnostics": {
+      "passed": 9,
+      "failed": 0
+    },
+    "materialOwnershipNormal": {
+      "passed": 7,
+      "failed": 0
+    },
+    "p4Orchestration": {
+      "passed": 3,
+      "failed": 0
+    },
+    "frameworkComponents": {
+      "passed": 10,
+      "failed": 0
+    },
+    "configContracts": {
+      "passed": 10,
+      "failed": 0
+    },
+    "jossUnitOnly": {
+      "status": "PASS",
+      "scope": "volume-weighted statistics, damping mapping and state thresholds; no full Joss run"
+    },
+    "nativeCatalogs": {
+      "passed": 5,
+      "byteIdenticalToBaseline": true
+    },
+    "nodeCheck": "PASS, retained root-run log",
+    "nodeTests": {
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "runs": {
+    "triaxial-short": {
+      "complete": true,
+      "nativeModel": "cl-mpm/particle::particle-vm",
+      "particleCount": 480,
+      "updates": 27
+    },
+    "mc-triaxial": {
+      "complete": true,
+      "nativeModel": "cl-mpm/particle::particle-mc",
+      "particleCount": 32,
+      "updates": 2
+    }
+  },
+  "strictComparisons": {
+    "triaxial-short": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    },
+    "mc-triaxial": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    }
+  },
+  "rawByteComparison": {
+    "triaxial-short": {
+      "allSavedVtkBytesEqual": true,
+      "vtkFiles": 2,
+      "stressStrainCsvBytesEqual": true
+    },
+    "mc-triaxial": {
+      "allSavedVtkBytesEqual": true,
+      "vtkFiles": 2,
+      "stressStrainCsvBytesEqual": true
+    }
+  },
+  "sourceProof": {
+    "frozenVmCopiedFilesVerified": 240,
+    "performedFirstPartyLoadInputsHashedVerified": 127,
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/architecture-migration-2026-10-16/p2-d/triaxial-short/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "liveUnitArchivedFiles": 245,
+    "liveArchiveSha256": "8779b1d3e0ace9fb835f549395721a4c1c5f468f4056be8d2d9e07ff46aa1c6e",
+    "liveUnitScope": "Launch-time live source hashes verified against sealed source bytes for both MC and ownership suites. Cached external dependencies and live-suite FASLs are not independently frozen. VM has the selected-ASDF source/FASL and actual DLL proof."
+  },
+  "architectureGates": {
+    "G1": "PARTIAL",
+    "G3": "PARTIAL",
+    "fullSerialJoss": "STOPPED_BY_USER; acceptance INCOMPLETE; not rerun",
+    "earlierParallelJoss": "Prior failure remains open"
+  },
+  "scientificValidation": false,
+  "scope": "P2-D completes A-D native model ownership across 49 targets plus P4-D scenario ownership; retained extraction proof archives. Bounded compatibility only.",
+  "retainedPriorCliffProof": {
+    "stage": "P2-C / P4-C",
+    "scope": "C cliff MC two native updates and P1 VTK identity retained; not rerun at D because D changes whole-file ownership paths only. Final canonical G5 remains separate.",
+    "path": "../p2-c/validation-summary.json",
+    "sha256": "18ab26edaa0d3c7abea9e333fbc5d6fe74497c437e5e664acd1628675c3e0a7f"
+  }
+}

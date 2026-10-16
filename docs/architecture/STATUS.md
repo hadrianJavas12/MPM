@@ -9,9 +9,13 @@ P0 inventory remain the authority for scope.
 | P0 | Complete inventory and dependency audit | `6f15148`; 884 original paths, 104 ASDF systems |
 | P1 | Contract owners extracted, compatible old source loaders | `62adb50`; focused contracts and bounded controls |
 | P2-A | Constitutive laws/native bridge extracted; arithmetic bodies unchanged | `4ed46b4`; five catalogs byte-identical, strict VM/MC controls pass, native MC 9 and ownership 7, Node 36 |
-| P2-B/C/D | Remaining material state, damage/evolution and optional families pending | Committed compact plan: 23 sources, 495 forms, 49 cohesive targets |
+| P2-B | Particle/material state owners extracted | `5a1501b`; five catalogs exact, VM/MC controls exact; 57 evidence hashes |
+| P2-C | Damage/evolution owners extracted | `791dd64`; five catalogs exact, VM/MC and cliff controls exact; custom delegate passes; 74 evidence hashes |
+| P2-D | Optional chalk, ice, limestone and visco owners extracted | `a016cdb`; five catalogs exact, VM/MC controls exact; 58 evidence hashes |
 | P3 | Diagnostics/material output owners extracted and tested | `7d879e8`; 37 verified artifacts |
-| P4 | Orchestration/scenario migration approved; implementation pending | Plan `f3a57ae`; guarded B/C/D/E/F helper ready |
+| P4-B/C/D | Configuration, geometry, lifecycle and scenario owners relocated | `76cac13`, `f76618d`, `f9ba947`; bounded comparisons and compatibility contracts pass |
+| P4-E | Nested legacy material diagnostics/state transfer extracted | `d6d3f61`; exact expression reconstruction; validation in progress |
+| P4-F | Canonical root ASDF and active caller transition pending | Guarded approved helper; implementation must precede final validation |
 | P5 | Useful numeric/linear-solver grouping complete | `59928ba`; byte-identical files, analytical solve and 50-step smoke pass |
 | P6 | Final compatibility, results matrix, docs and PR pending | No main merge authorized |
 
@@ -30,3 +34,14 @@ transaction remain explicit compatibility exceptions, not repaired physics.
 Continue the existing stages and test only changed code. Preserve all negative
 evidence, immutable raw sources, and personal Obsidian settings. The next native
 test must follow an implementation commit, with a fresh output directory.
+
+P2 A–D now installs all 49 approved material owners. Twenty post-move native
+family catalogs match the five original baseline catalogs byte for byte. This
+preserves class/slot/method identity, not scientific validation of every model.
+P2-B/C/D bundles include launch hashes, extraction proofs, actual Windows DLL
+paths, VTK/CSV comparisons and sealed live-unit sources. Node has 36 passing
+tests at each wave; those finished checks must not be repeated without changes.
+
+A separate fresh **four-second** serial Joss integration control is being
+prepared from immutable pre-P2 sources. It is not the cancelled 40-second run,
+does not validate full collapse/run-out, and cannot close the full G3 exception.

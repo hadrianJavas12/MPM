@@ -463,3 +463,8 @@ Five native family catalogs are byte-identical to the saved baseline. Native
 VM/MC bounded controls, active MC ownership and Node 36 checks pass; copied-DLL
 source freezing is verified. See [[cl-mpm-architecture]] and
 `docs/architecture/STATUS.md`. P2-B/C/D and P4 remain pending; Joss stays stopped.
+
+## [2026-10-16] ingest | P2 native ownership completed
+
+All four native material waves passed bounded controls and twenty exact family catalogs. P4 B/C/D scenario ownership passed; E is committed and under validation. See [[cl-mpm-architecture]] and docs/architecture/STATUS.md. Full Joss cancellation and historical parallel failure remain explicit.
+

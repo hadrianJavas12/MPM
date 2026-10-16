@@ -1,0 +1,6 @@
+{
+  "status": "HARNESS_ERROR_BEFORE_NATIVE_LAUNCH",
+  "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command run-check ownership-normal",
+  "error": "Get-FileHash unavailable in legacy powershell.exe; no launch file/source manifest/native process created. Retried with actual Codex runtime pwsh.exe.",
+  "nativeTestExecuted": false
+}

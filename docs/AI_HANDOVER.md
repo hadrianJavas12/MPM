@@ -319,3 +319,28 @@ transition, final compatibility/regressions/docs/PR. P2 helper never edits ASD;
 route-aware updater must preserve existing P5 paths. No full Joss restart, no
 new physics, no main merge. Existing global override/forward-class/atomic C++
 transaction exceptions stay visible; folder relocation does not repair them.
+
+### P2 complete, P4 scenario ownership checkpoint — 2026-10-16
+
+P2 A–D is implemented: 23 original mixed files, 495 audited forms, 49 approved
+material targets. The chosen compact plan preserves arithmetic and override
+order; old source loaders remain compatibility shims. All twenty post-move
+native family catalogs match the five baseline catalogs byte for byte.
+
+P2-B + P4-B: 57 evidence hashes; P2-C + P4-C: 74; P2-D + P4-D: 58.
+Each wave passed actual Windows VM/MC short controls with exact saved VTK/CSV
+bytes against the preceding wave, material ownership/diagnostics contracts,
+scenario/config contracts and Node 36. C additionally passed two native cliff
+MC updates with exact P1 VTKs and the custom delegate control. D deliberately
+reuses that unchanged cliff proof. Sources were sealed before later edits.
+Evidence is under docs/evidence/architecture-migration-2026-10-16/p2-{b,c,d}/.
+
+P4-E is committed at d6d3f61: the approved nested VM diagnostics and homogeneous
+material-state transfer now belong to materials/adapters/legacy-triaxial.lisp.
+Both exact expression reconstruction proofs are saved; validation is running.
+Next is P4-F canonical root ASDF, actual caller/snapshot integration, final full
+VM 2D/3D regressions, bounded serial Joss comparison, compatibility, docs and PR.
+The fresh four-second old-source Joss control uses isolated verified pre-P2
+source copies; it does not restart or replace the cancelled full 40-second run.
+G1/G3 remain PARTIAL owing to preserved legacy overrides and Joss exceptions.
+No main merge, numeric changes, new H/HS physics or UI work is authorized here.

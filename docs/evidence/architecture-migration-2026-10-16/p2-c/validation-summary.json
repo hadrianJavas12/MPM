@@ -1,0 +1,165 @@
+{
+  "stage": "P2-C / P4-C",
+  "status": "PASS bounded compatibility",
+  "sourceCommitAtLaunch": {
+    "triaxial-short": "9568b8e4637e837093d18e91684ebe38a71e24d1",
+    "material-diagnostics": "a17eb4b8213c464e64bea78d3719e67192cd6342",
+    "ownership-normal": "a17eb4b8213c464e64bea78d3719e67192cd6342",
+    "p4-orchestration": "a17eb4b8213c464e64bea78d3719e67192cd6342",
+    "framework-components": "a17eb4b8213c464e64bea78d3719e67192cd6342",
+    "config-contracts": "a17eb4b8213c464e64bea78d3719e67192cd6342",
+    "joss-unit": "a17eb4b8213c464e64bea78d3719e67192cd6342",
+    "cliff-mc": "9568b8e4637e837093d18e91684ebe38a71e24d1"
+  },
+  "commitAttribution": "Exact launch commits retained per check; live unit source bytes sealed and verified against every captured unit manifest before subsequent-stage edits.",
+  "exitCodes": {
+    "triaxial-short": 0,
+    "material-diagnostics": 0,
+    "ownership-normal": 0,
+    "triaxial-short-comparison": 0,
+    "mc-triaxial-comparison": 0,
+    "p4-orchestration": 0,
+    "framework-components": 0,
+    "config-contracts": 0,
+    "joss-unit": 0,
+    "cliff-mc": 0
+  },
+  "tests": {
+    "materialDiagnostics": {
+      "passed": 9,
+      "failed": 0
+    },
+    "materialOwnershipNormal": {
+      "passed": 7,
+      "failed": 0
+    },
+    "p4Orchestration": {
+      "passed": 3,
+      "failed": 0
+    },
+    "frameworkComponents": {
+      "passed": 10,
+      "failed": 0
+    },
+    "configContracts": {
+      "passed": 10,
+      "failed": 0
+    },
+    "jossUnitOnly": {
+      "status": "PASS",
+      "scope": "volume-weighted statistics, damping mapping and state thresholds; no full Joss run"
+    },
+    "nativeCatalogs": {
+      "passed": 5,
+      "byteIdenticalToBaseline": true
+    },
+    "nodeCheck": "PASS, retained root-run log",
+    "nodeTests": {
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0
+    },
+    "customDelegate": {
+      "status": "PASS",
+      "exitCode": 0,
+      "sourceHead": "a17eb4b8213c464e64bea78d3719e67192cd6342",
+      "nativeUpdates": 2,
+      "particles": 64,
+      "positionsAndStressesDifference": 0,
+      "finiteFields": 36,
+      "scope": "Root-run live committed source; exact source head in retained status, saved VTK/log retained. Optional output-path support change only; no separate live-source freeze claim."
+    }
+  },
+  "runs": {
+    "triaxial-short": {
+      "complete": true,
+      "nativeModel": "cl-mpm/particle::particle-vm",
+      "particleCount": 480,
+      "updates": 27
+    },
+    "mc-triaxial": {
+      "complete": true,
+      "nativeModel": "cl-mpm/particle::particle-mc",
+      "particleCount": 32,
+      "updates": 2
+    }
+  },
+  "strictComparisons": {
+    "triaxial-short": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    },
+    "mc-triaxial": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    }
+  },
+  "rawByteComparison": {
+    "triaxial-short": {
+      "allSavedVtkBytesEqual": true,
+      "vtkFiles": 2,
+      "stressStrainCsvBytesEqual": true
+    },
+    "mc-triaxial": {
+      "allSavedVtkBytesEqual": true,
+      "vtkFiles": 2,
+      "stressStrainCsvBytesEqual": true
+    }
+  },
+  "sourceProof": {
+    "frozenVmCopiedFilesVerified": 198,
+    "performedFirstPartyLoadInputsHashedVerified": 115,
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/architecture-migration-2026-10-16/p2-c/triaxial-short/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "liveUnitArchivedFiles": 203,
+    "liveArchiveSha256": "b1ceb4ea0419f8671d0437e0041035fa0b3021627f8c519e49a6ac5e87b6aa08",
+    "liveUnitScope": "Launch-time live source hashes verified against sealed source bytes for both MC and ownership suites. Cached external dependencies and live-suite FASLs are not independently frozen. VM has the selected-ASDF source/FASL and actual DLL proof.",
+    "cliffNativeBackend": {
+      "modulePath": "D:/MPM/output/architecture-migration-2026-10-16/p2-c/cliff-mc/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "frozenCliffCopiedFilesVerified": 198,
+    "cliffPerformedFirstPartyLoadInputsHashedVerified": 115
+  },
+  "architectureGates": {
+    "G1": "PARTIAL",
+    "G3": "PARTIAL",
+    "fullSerialJoss": "STOPPED_BY_USER; acceptance INCOMPLETE; not rerun",
+    "earlierParallelJoss": "Prior failure remains open"
+  },
+  "scientificValidation": false,
+  "scope": "P2-C damage/evolution ownership plus P4-C material/profile/output ownership; retained extraction proof archives. Bounded compatibility only.",
+  "cliffMcComparison": {
+    "scope": "Native cliff case 70 MPs, substeps=2, one saved frame; raw VTK/CSV bytes only. PNG is not compared. No scientific validation.",
+    "baseline": "D:\\MPM\\output\\architecture-migration-2026-10-16\\p1\\cliff-mc",
+    "candidate": "D:\\MPM\\output\\architecture-migration-2026-10-16\\p2-c\\cliff-mc",
+    "sameFileSet": true,
+    "files": [
+      {
+        "path": "vtk/mesh.vtk",
+        "candidateSha256": "60543eaab934cff5683c96bfeeed3f7e37e35a999c5847649344f7fea475755f",
+        "baselineSha256": "60543eaab934cff5683c96bfeeed3f7e37e35a999c5847649344f7fea475755f",
+        "byteEqual": true
+      },
+      {
+        "path": "vtk/sim_00001.vtk",
+        "candidateSha256": "770d6a6e674dfdcbf40febbdb71cf7123f4f49d182e0ecf590b44155f7cba376",
+        "baselineSha256": "770d6a6e674dfdcbf40febbdb71cf7123f4f49d182e0ecf590b44155f7cba376",
+        "byteEqual": true
+      }
+    ],
+    "vtkCount": 2,
+    "csvCount": 0,
+    "passed": true
+  }
+}
