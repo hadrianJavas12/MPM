@@ -1,9 +1,6 @@
-(in-package :cl-mpm/framework)
-
-(defgeneric geometry-filter (geometry)
-  (:documentation "Optional run-local (x,y,z)->boolean clipping predicate."))
-(defmethod geometry-filter ((geometry geometry))
-  (let ((filter (option geometry :filter)))
-    (when (and filter (not (functionp filter)))
-      (error "Geometry :FILTER must be a function of x, y, z."))
-    filter))
+;;;; Temporary historical source-path compatibility; actual owners are outside framework.
+(in-package :cl-user)
+(let ((root (merge-pathnames "../../"
+              (uiop:pathname-directory-pathname *load-truename*))))
+  (dolist (relative '("src/simulation/components/geometry.lisp"))
+    (load (merge-pathnames relative root))))
