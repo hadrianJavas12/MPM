@@ -1,0 +1,47 @@
+;;;; Structural baseline for each available native family, in fresh processes.
+;;;; windows\cl-mpm.cmd tests\native-model-catalog.lisp SYSTEM FRESH.sexp
+(in-package :cl-user)
+(let* ((args (cl-mpm-script-args)) (system (first args)) (output (second args)))
+  (assert (and (= (length args) 2) output
+               (member system '("cl-mpm-framework" "cl-mpm/models/chalk" "cl-mpm/models/ice"
+                                "cl-mpm/models/limestone" "cl-mpm/models/visco") :test #'string=)))
+  (assert (not (probe-file output)))
+  (ql:quickload system :silent t)
+  (let* ((package (find-package :cl-mpm/particle))
+         (base (find-class (find-symbol "PARTICLE" package)))
+         (mc (find-symbol "PARTICLE-MC" package)) (vm (find-symbol "PARTICLE-VM" package))
+         (classes nil) (methods nil))
+    (assert (not (subtypep mc vm)))
+    (assert (fboundp (find-symbol "CPPMOHRCOULOMB" :cl-mpm/ext)))
+    (do-symbols (name package)
+      (let ((class (find-class name nil)))
+        (when (and class (eq name (class-name class)))
+          (if (typep class 'sb-mop:forward-referenced-class)
+              (push (list (symbol-name name) :forward-reference) classes)
+              (progn
+                (sb-mop:finalize-inheritance class)
+                (when (member base (sb-mop:class-precedence-list class))
+                  (push (list (symbol-name name)
+                              (mapcar #'class-name (sb-mop:class-direct-superclasses class))
+                              (mapcar #'class-name (sb-mop:class-precedence-list class))
+                              (mapcar (lambda (slot)
+                                        (list (sb-mop:slot-definition-name slot)
+                                              (sb-mop:slot-definition-type slot)
+                                              (sb-mop:slot-definition-initargs slot)))
+                                      (sb-mop:class-slots class))) classes)))))))
+    (dolist (method (sb-mop:generic-function-methods
+                     (fdefinition (find-symbol "CONSTITUTIVE-MODEL" package))))
+      (push (list (sb-mop:method-qualifiers method)
+                  (mapcar (lambda (specializer)
+                            (if (typep specializer 'class) (class-name specializer)
+                                (list :eql (sb-mop:eql-specializer-object specializer))))
+                          (sb-mop:method-specializers method))) methods))
+    (ensure-directories-exist output)
+    (with-standard-io-syntax
+      (let ((*print-pretty* t) (*print-case* :upcase))
+        (with-open-file (stream output :direction :output :if-exists :error)
+          (write (list :system system :classes (sort classes #'string< :key #'first)
+                       :constitutive-methods (sort methods #'string< :key #'prin1-to-string)) :stream stream))))
+    (format t "~&NATIVE MODEL CATALOG ~A: ~D classes, ~D constitutive methods; native backend present.~%"
+            system (length classes) (length methods))))
+(uiop:quit 0)
