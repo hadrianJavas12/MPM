@@ -49,7 +49,7 @@
                :sb-simd)
   :description "MPM fast maths operations definitions"
   :serial t
-  :components ((:file "src/fastmaths")))
+  :components ((:file "src/fastmaths" :pathname "src/numerics/fastmaths")))
 
 (defsystem "cl-mpm/linear-solver"
   :depends-on ("cl-mpm/magicl"
@@ -57,7 +57,7 @@
                "cl-mpm/fastmaths")
   :description "Iterative matrix-free linear solvers"
   :serial t
-  :components ((:file "src/core/linear-solver")))
+  :components ((:file "src/core/linear-solver" :pathname "src/solvers/linear-systems")))
 
 (defsystem "cl-mpm/mesh"
   :depends-on ("cl-mpm/magicl"
