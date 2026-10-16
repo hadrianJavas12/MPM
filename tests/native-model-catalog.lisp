@@ -40,11 +40,13 @@
                                 (list :eql (sb-mop:eql-specializer-object specializer))))
                           (sb-mop:method-specializers method))) methods))
     (ensure-directories-exist output)
+    (setf classes (sort classes #'string< :key #'first)
+          methods (sort methods #'string< :key #'prin1-to-string))
     (with-standard-io-syntax
       (let ((*print-pretty* t) (*print-case* :upcase))
         (with-open-file (stream output :direction :output :if-exists :error)
-          (write (list :system system :classes (sort classes #'string< :key #'first)
-                       :constitutive-methods (sort methods #'string< :key #'prin1-to-string)) :stream stream))))
+          (write (list :system system :classes classes
+                       :constitutive-methods methods) :stream stream))))
     (format t "~&NATIVE MODEL CATALOG ~A: ~D classes, ~D constitutive methods; native backend present.~%"
             system (length classes) (length methods))))
 (uiop:quit 0)
