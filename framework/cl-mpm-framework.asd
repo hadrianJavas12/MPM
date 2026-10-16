@@ -6,7 +6,10 @@
   :serial t
   :components
   ((:file "config/package") (:file "config/parameters") (:file "package")
-   (:file "components/specifications") (:file "components/materials")
+   (:file "components/base" :pathname "../src/simulation/components/base")
+   (:file "components/material-definition" :pathname "../materials/core/definition")
+   (:file "components/specifications" :pathname "../src/simulation/components/specifications")
+   (:file "components/materials" :pathname "../materials/adapters/native")
    (:file "components/diagnostics")
    (:file "components/geometry") (:file "simulation")
    (:file "scenarios/cliff/settings") (:file "materials/chalk")

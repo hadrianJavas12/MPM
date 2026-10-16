@@ -22,7 +22,11 @@ integrity tests PASS. Only the two hash-bound sources in
 `P1_CONTRACT_EXTRACTION.md` plan; numerical migration tests remain NOT_RUN.
 The full material form audit preserves existing forward classes/overrides.
 Two absent legacy example paths are recorded as pre-existing compatibility
-exceptions. No production source has moved at this P0 checkpoint.
+exceptions. P0 was committed/pushed as **6f15148 before production moves**.
+P1 now extracts the approved contracts into `src/simulation/components/` and
+root `materials/{core,adapters}/`, with old source-path shims, ASDF ordering and
+extended copied-source guards. Validation is pending; do not declare P1/G1 PASS.
+Before-source/hash evidence is under `output/architecture-migration-2026-10-16/`.
 
 - Work headlessly on Windows. No UI/Studio feature work or thesis framing.
 - Preserve equations, algorithms, parameter defaults and numerical results during

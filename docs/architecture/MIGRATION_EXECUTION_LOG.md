@@ -65,3 +65,23 @@ sources to exact pre-extraction hashes and concrete target/form lists. The other
 checkpoint files are registered separately as NEW rather than silently added to
 the immutable 884-path capture. [P1 extraction plan](P1_CONTRACT_EXTRACTION.md)
 defines the next small change and its still-unexecuted regression requirements.
+
+## P1 implementation checkpoint — validation pending
+
+P0 was committed and pushed as **6f15148 before any production extraction**.
+The two approved sources now forward to their new owners. Sixteen existing
+defining forms were extracted with identical body bytes; the native factory
+file was copied byte-identically. Evidence before sources and form hashes:
+`output/architecture-migration-2026-10-16/p1-source-before/` and
+`p1-extraction-form-hashes.json`.
+
+ASDF preserves the old specification/factory component IDs with relative owner
+paths and explicit base/material-definition prerequisites. The CLI copies the
+new ownership trees, compares each copy byte-for-byte, and verifies all framework
+source component paths lie within the frozen source root **before** loading.
+It records those paths; the external collector supplies SHA-256 manifests.
+Native engine/FASL/DLL identity remains a separate, limited provenance scope.
+
+No constitutive algorithm, particle ancestry, numerical parameter or tolerance
+was changed. P1 compatibility/native/Node and full numerical tests are **NOT_RUN**
+at this implementation checkpoint; neither P1 nor G1 is declared complete.
