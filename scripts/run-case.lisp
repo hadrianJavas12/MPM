@@ -16,7 +16,7 @@
                (or (uiop:directory-files directory) (uiop:subdirectories directory)))
       (error "Choose a new/empty output directory: ~A" directory))
     (multiple-value-bind (copied records) (snapshot-case-sources directory case-file)
-      (snapshot-write-json (merge-pathnames "source-manifest.json" directory)
+      (snapshot-write-json (merge-pathnames "source/source-manifest.json" directory)
                            (snapshot-object "scope" "Copied bytes before any project load/compilation"
                                             "files" (coerce records 'vector)))
       (let ((*native-snapshot-context* (snapshot-register-native directory records)))

@@ -22,7 +22,7 @@
   (incf checks) (format t "~&PASS: Windows SHA-256 matches empty and abc reference digests.~%")
   (multiple-value-bind (copied records)
       (snapshot-case-sources directory (cl-mpm-path "tests/cases/triaxial-integration.lisp"))
-    (snapshot-write-json (merge-pathnames "source-manifest.json" directory)
+    (snapshot-write-json (merge-pathnames "source/source-manifest.json" directory)
                          (snapshot-object "files" (coerce records 'vector)))
     (let ((*native-snapshot-context* (snapshot-register-native directory records)))
       (dolist (relative '("cl-mpm.asd" "src/settings.lisp" "src/particle.lisp"

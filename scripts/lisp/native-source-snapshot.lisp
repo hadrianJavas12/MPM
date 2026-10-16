@@ -137,7 +137,7 @@
         (copy-tree-sources (cl-mpm-path relative) (merge-pathnames (concatenate 'string "source/" relative) directory)))
       (dolist (relative '("cl-mpm.asd" "config/git-commit-version.txt" "libs/kirchoff.dll"))
         (copy-one (cl-mpm-path relative) (merge-pathnames (concatenate 'string "source/" relative) directory)))
-      (dolist (relative '("cl-mpm-simulation.asd" "cl-mpm-materials.asd"))
+      (dolist (relative '("cl-mpm-framework.asd" "cl-mpm-simulation.asd" "cl-mpm-materials.asd"))
         (when (probe-file (cl-mpm-path relative))
           (copy-one (cl-mpm-path relative) (merge-pathnames (concatenate 'string "source/" relative) directory))))
       (copy-one case-file (merge-pathnames "source/case.lisp" directory))
@@ -225,7 +225,7 @@
 
 (defun snapshot-register-native (directory records)
   (let* ((source (truename (merge-pathnames "source/" directory)))
-         (cache (merge-pathnames "native-cache/" directory))
+         (cache (merge-pathnames ".native-cache/" source))
          (index (make-hash-table :test #'equal)))
     (dolist (row records)
       (setf (gethash (snapshot-path-key (merge-pathnames (gethash "path" row) directory)) index) row))
@@ -245,7 +245,7 @@
            (list (merge-pathnames "**/*.*" source) (merge-pathnames "**/*.*" cache))
            :inherit-configuration))
     (let ((*native-snapshot-context* (list :output directory :source source :cache cache :index index :records records :actions nil)))
-      (dolist (relative '("cl-mpm.asd" "cl-mpm-simulation.asd" "cl-mpm-materials.asd" "framework/cl-mpm-framework.asd"))
+      (dolist (relative '("cl-mpm.asd" "cl-mpm-framework.asd" "cl-mpm-simulation.asd" "cl-mpm-materials.asd" "framework/cl-mpm-framework.asd"))
         (let ((path (merge-pathnames relative source)))
           (when (probe-file path) (snapshot-verify-file path) (asdf:load-asd path))))
       *native-snapshot-context*)))
@@ -291,7 +291,7 @@
     "compilerPolicy" (prin1-to-string (symbol-value (find-symbol "*OPTIMISE-SETTING*" "CL-MPM/SETTINGS")))
     "storedGitVersionFile" (uiop:read-file-string
                              (merge-pathnames "config/git-commit-version.txt" (getf *native-snapshot-context* :source)))
-    "executedSourceIdentity" "Pre-load source-manifest.json SHA-256 records; launch collector records commit attribution separately."
+    "executedSourceIdentity" "Pre-load source/source-manifest.json SHA-256 records; launch collector records commit attribution separately."
     "features" (coerce (sort (mapcar #'symbol-name *features*) #'string<) 'vector)
     "openblasThreads" (uiop:getenv "OPENBLAS_NUM_THREADS") "ompThreads" (uiop:getenv "OMP_NUM_THREADS")
     "privateFaslCache" (namestring (getf *native-snapshot-context* :cache))
