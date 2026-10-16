@@ -16,8 +16,10 @@
   (mapcar (lambda (method)
             (list (sb-mop:method-qualifiers method) (sb-mop:method-specializers method)))
           (sb-mop:generic-function-methods generic)))
-(let* ((adapters (mapcar (lambda (kind) (material-diagnostics (make-material kind)))
-                        '(:von-mises :mohr-coulomb :elastic)))
+(let* ((adapters (mapcar #'material-diagnostics
+                        (list (make-material :von-mises)
+                              (make-material :native :particle-class 'cl-mpm/particle::particle-mc)
+                              (make-material :native :particle-class 'cl-mpm/particle::particle-elastic))))
        (classes (mapcar #'class-of adapters))
        (table (diagnostics-output-ownership (second adapters)))
        (key (gensym "OWNERSHIP"))
