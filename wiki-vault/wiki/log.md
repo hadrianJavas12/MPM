@@ -347,3 +347,10 @@ success; the completion-only collector must not duplicate it. P2 remains plan
 only and deeper model migration awaits the gate. The replacement heartbeat is
 ACTIVE at 15:14 WIB, immediately after the user-confirmed 15:13 reset, then every
 five hours. No completed full regression or scientific validation is claimed.
+
+## [2026-10-16] ingest | User correction to reset time
+
+The user corrected the reset from 15:13 to **13:13 WIB**. The active replacement
+heartbeat was updated and confirmed for **13:14 WIB**, then every five hours.
+Updated [[reusable-simulation-framework]], index and handover. This supersedes
+the earlier schedule entry without changing native jobs or regression status.

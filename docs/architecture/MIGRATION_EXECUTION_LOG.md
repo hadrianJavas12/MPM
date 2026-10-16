@@ -121,3 +121,8 @@ After the user's reset-time clarification, its first wakeup is 15:14 WIB on
 2026-10-16, followed by five-hour intervals. It prioritizes the new architecture
 specification and stays quiet on unchanged healthy status. The old entry remains
 missing; no duplicate schedule is claimed.
+
+Schedule correction: the user subsequently clarified **13:13 WIB**, superseding
+15:13. The active heartbeat was updated to **2026-10-16 13:14 WIB**, then every
+five hours; the tool confirmed ACTIVE. Native jobs and numerical settings are
+unchanged by this correction.

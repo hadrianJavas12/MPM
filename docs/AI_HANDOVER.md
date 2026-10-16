@@ -208,8 +208,8 @@ quantitative report and human handoff. No UI task is authorized.
 
 The former heartbeat was missing. In accordance with the user's standing
 auto-continuation request, replacement **mpm-lanjut-migrasi-arsitektur** is now
-ACTIVE. The user confirmed the reset at **15:13 WIB**; its wakeup is anchored to
-**2026-10-16 15:14 WIB**, then every five hours. The tool confirmed the update.
+ACTIVE. The user corrected the reset to **13:13 WIB**; its wakeup is anchored to
+**2026-10-16 13:14 WIB**, then every five hours. The tool confirmed the correction.
 The new prompt prioritizes this architecture specification and reads current
 run status before any action. Do not create another automation. Save checkpoints
 when usage is low; avoid active polling, repeated tests and duplicate native jobs.

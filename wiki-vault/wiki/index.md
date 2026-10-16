@@ -20,7 +20,7 @@
 
 ## Synthesis
 - [[mc-hardening-softening-study]] — exact current VM 2D/3D PASS; M0 provisional, M1 data complete; isolated 32-point MC prototype integration deferred until migration gates
-- [[reusable-simulation-framework]] — baseline and bounded P1 controls pass; migrated full G3 running; four-worker FAIL/provenance limits retained
+- [[reusable-simulation-framework]] — baseline and bounded P1 controls pass; full G3 running; continuation at 13:14 WIB; four-worker FAIL/provenance limits retained
 - [[upstream-development-report-2026-10-15]] — professional Git-based comparison with original CL-MPM and linked evidence
 - [[triaxial-clay-calibration]] — native 70 × 140 mm clay demonstration, computed curves and scientific limits; checkpoint PR #7 merged into main at efd0358
 - [[scientific-authenticity-audit-2026-10-15]] — real-data/video derivation verified, numerical counterexamples and limits to scientific validity recorded

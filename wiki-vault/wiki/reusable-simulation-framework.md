@@ -152,7 +152,7 @@ calibration, convergence or a closed energy budget. The findings in
 The user subsequently authorized the M0–M6 master plan, commits/pushes per stage
 and reset-aligned automatic continuation. The old heartbeat was missing; the
 replacement `mpm-lanjut-migrasi-arsitektur` is ACTIVE with the current architecture
-priority. After the user's reset clarification, its first wakeup is 15:14 WIB
+priority. After the user's final reset correction, its first wakeup is 13:14 WIB
 on 2026-10-16, then every five hours. It checks saved status before any new work.
 The completed serial controls started at 20:53:38 WIB
 on 2026-10-15: frozen original `c749d32` versus test case `41403f4`, both one
