@@ -150,3 +150,19 @@ no P3 move is claimed. P2 native formula migration still needs its native-source
 provenance plan. The cancelled Joss run does not block independent ownership work.
 P0 capture/approvals remain immutable, new physics remains deferred, and the active
 13:14 WIB/five-hour automation now carries the no-Joss-restart directive.
+
+### P3 implementation checkpoint, before validation
+
+Pre-move diagnostics approval was committed/pushed as `585af1d`.
+Thirty-one original forms from `framework/components/diagnostics.lisp` were
+extracted with exact form-body bytes: core protocol in
+`materials/core/diagnostics-interface.lisp`, native classes/queries/validators in
+`materials/diagnostics/native.lisp`, output helpers in
+`src/measurements/material-output.lisp`. Existing package/CLOS symbols and old
+source shim remain; ASDF loads owners directly. CLI snapshots now include
+`src/measurements`. P3 tests are PENDING at this implementation checkpoint.
+No native constitutive formula/state/evolution was moved or changed in P3.
+
+Full P1 VM 3D on `62adb50` subsequently finished: native/comparison/audit exit 0
+at 04:35 UTC, manifest complete. Its saved strict result remains separate from
+P3 validation and from the cancelled Joss run. No full Joss restart.

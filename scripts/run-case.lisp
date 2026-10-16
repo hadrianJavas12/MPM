@@ -34,6 +34,7 @@
                                 (make-pathname :directory (list :relative (car (last (pathname-directory path))))) to)))))
     (copy-source-tree (cl-mpm-path "framework/") (merge-pathnames "source/framework/" directory))
     (copy-source-tree (cl-mpm-path "src/simulation/") (merge-pathnames "source/src/simulation/" directory))
+    (copy-source-tree (cl-mpm-path "src/measurements/") (merge-pathnames "source/src/measurements/" directory))
     (copy-source-tree (cl-mpm-path "materials/") (merge-pathnames "source/materials/" directory))
     (copy-one case-file (merge-pathnames "source/case.lisp" directory))
     (copy-one *load-truename* (merge-pathnames "source/run-case.lisp" directory))
@@ -62,7 +63,7 @@
     (setf (gethash "sourceSnapshotExactLoadedBytes" record) t
           (gethash "copiedByteEqualityBeforeLoad" record) t
           (gethash "scope" record)
-          "Copied framework, material adapters, simulation contracts, case and JSON inputs; native engine/dependency/FASL/DLL identity is separate. SHA-256 manifests are recorded by the external evidence collector."
+          "Copied framework, material adapters/diagnostics, simulation contracts, material output, case and JSON inputs; native engine/dependency/FASL/DLL identity is separate. SHA-256 manifests are recorded by the external evidence collector."
           (gethash "copiedFiles" record)
           (coerce (mapcar (lambda (path) (enough-namestring path directory)) copied) 'vector)
           (gethash "verifiedFrameworkComponents" record)

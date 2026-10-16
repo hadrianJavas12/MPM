@@ -23,11 +23,13 @@
   (let ((*load-truename* (cl-mpm-path "scripts/run-case.lisp")))
     (snapshot-case-sources directory (cl-mpm-path "tests/cases/triaxial-integration.lisp")))
   (dolist (relative '("materials/core/definition.lisp" "materials/adapters/native.lisp"
+                      "materials/core/diagnostics-interface.lisp" "materials/diagnostics/native.lisp"
+                      "src/measurements/material-output.lisp"
                       "src/simulation/components/base.lisp" "src/simulation/components/specifications.lisp"))
     (assert (equalp (case-source-bytes (cl-mpm-path relative))
                     (case-source-bytes (merge-pathnames relative source-root)))))
   (incf checks)
-  (format t "~&PASS: All four relocated owners are copied byte-identically.~%")
+  (format t "~&PASS: All seven relocated owners are copied byte-identically.~%")
   (pushnew frozen asdf:*central-registry* :test #'equal)
   (asdf:clear-system "cl-mpm-framework")
   (asdf:load-asd (merge-pathnames "cl-mpm-framework.asd" frozen))
@@ -35,6 +37,8 @@
     (assert (plusp (length components)))
     (dolist (path components) (assert (uiop:subpathp path (truename source-root))))
     (dolist (relative '("materials/core/definition.lisp" "materials/adapters/native.lisp"
+                        "materials/core/diagnostics-interface.lisp" "materials/diagnostics/native.lisp"
+                        "src/measurements/material-output.lisp"
                         "src/simulation/components/base.lisp" "src/simulation/components/specifications.lisp"))
       (assert (member (truename (merge-pathnames relative source-root)) components :test #'equal))))
   (incf checks)
