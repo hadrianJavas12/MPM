@@ -1,7 +1,8 @@
 # Dependency and compatibility contracts
 
-These rules implement the [migration specification](CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md).
-They describe target ownership, not a claim that every target system exists.
+These rules implement the [migration specification](CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md)
+across the installed Section 2 repository layout (`cl-mpm.asd`, `cl-mpm-framework.asd`,
+and `materials/cl-mpm-materials.asd`).
 
 ```mermaid
 flowchart TD
@@ -26,22 +27,25 @@ flowchart TD
   Case files select these components without global solver/material method patches.
 - Generic output accepts declared model fields. Field ownership and units are
   explicit, without rewriting global writers to assume one plastic model.
-- Legacy ASDF and CLOS names may forward to new physical owners. Compatibility
-  forwarding loads one implementation; it must not define a second class/method.
+- Legacy ASDF and CLOS names forward to canonical physical owners. Compatibility
+  entrypoints load one implementation; they must not define a second class/method.
 
 ## Existing load graph and hazards
 
 `cl-mpm/particle` depends on constitutive, native extension and mesh systems, then
-loads `src/particle`, plastic and concrete in that order. `cl-mpm/damage` depends
-on particle and loads its own generic damage/model modules later. Concrete's
-damage superclass is forward-referenced at the earlier load stage. Preserve
-that observable order during relocation; a particle/damage cycle is forbidden.
+loads `src/core/particle-base.lisp`, plastic (`materials/core/plastic-state.lisp` +
+`materials/models/...`) and concrete (`materials/models/concrete/legacy.lisp`) in
+that order. `cl-mpm/damage` depends on particle and loads its generic nonlocal
+transport (`src/damage/`) and damage material modules (`materials/models/damage/`
+and `materials/models/frictional-damage/`) later. Concrete's damage superclass is
+forward-referenced at the earlier load stage. Preserve that observable order; a
+particle/damage cycle is forbidden.
 
-`cl-mpm-framework` currently loads configuration/package/component definitions
-before material factories and diagnostics, then cliff/Joss/triaxial modules.
-Some material adapters use the existing framework component classes. Extracting
-them into a new system must first separate the minimal common contract; a
-`materials -> full framework -> materials` cycle is forbidden.
+`cl-mpm-framework` loads configuration/package/component definitions (`src/simulation/`)
+before material factories and diagnostics (`materials/core/`, `materials/adapters/`,
+`materials/diagnostics/`), then scenario modules (`scenarios/cliff/`, `scenarios/joss/`,
+`scenarios/triaxial/`). Some material adapters use the framework component classes;
+a `materials -> full framework -> materials` cycle is forbidden.
 
 `cl-mpm-studio` depends on the headless framework. The reverse dependency on the
 Studio ASDF system is forbidden. The current legacy schema file is an input

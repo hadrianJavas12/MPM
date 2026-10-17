@@ -51,8 +51,11 @@ including final checkpoint `f9ba947`. This verifies native loading and
 class/slot/method metadata, not numerical or scientific validation.
 The atomic mixed C++ block, inherited damage/ice overrides and concrete forward
 class remain [explicit exceptions](../docs/architecture/MODEL_CATALOG.md).
-Native kernels/DLLs stay in `libs/`; old source paths remain forwarding loaders.
-The canonical headless ASDF declaration is root `cl-mpm-framework.asd`
-(P4-F implementation `436b561`; final validation is incomplete).
+Native kernels/DLLs stay in `libs/`; legacy `framework/` and `src/models/`
+compatibility shims were retired in `5d6a5cf` after canonical root ASDF wiring.
+The canonical headless ASDF declarations are root `cl-mpm.asd` and
+`cl-mpm-framework.asd`, alongside the optional extension `materials/cl-mpm-materials.asd`
+(P4-F/P6 and Section 2 layout validated through `9dfb58b` and `5eda644`; see
+[architecture status](../docs/architecture/STATUS.md)).
 See the maintained [diagnostic contract](DIAGNOSTICS.md). Full G3 completion is not claimed.
 The cancelled full Joss serial run must stay cancelled.

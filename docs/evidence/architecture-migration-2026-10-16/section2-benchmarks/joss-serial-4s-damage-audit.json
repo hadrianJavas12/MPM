@@ -1,0 +1,166 @@
+{
+  "basis": "Strict finite big-endian VTK parse; clock only from CSV; lower y<=4m, upper y>=9m",
+  "validation": "field integrity and damage location only; no physical accuracy claim",
+  "records": [
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-serial-4s\\vtk\\initial.vtk",
+      "clock": null,
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.0,
+      "max_damage_position": null,
+      "mass_weighted_damage": 0.0,
+      "lower_max_damage": 0.0,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.05": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-serial-4s\\vtk\\equilibrium.vtk",
+      "clock": null,
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.0,
+      "max_damage_position": null,
+      "mass_weighted_damage": 0.0,
+      "lower_max_damage": 0.0,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.05": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-serial-4s\\vtk\\sim_00001.vtk",
+      "clock": {
+        "time": 2.0,
+        "phase": "accelerate"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.0,
+      "max_damage_position": null,
+      "mass_weighted_damage": 0.0,
+      "lower_max_damage": 0.0,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.05": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-serial-4s\\vtk\\sim_00002.vtk",
+      "clock": {
+        "time": 4.0,
+        "phase": "accelerate"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.33358939786364217,
+      "max_damage_position": [
+        13.125333685932198,
+        3.624981433833066,
+        0.0
+      ],
+      "mass_weighted_damage": 0.005989434472308899,
+      "lower_max_damage": 0.33358939786364217,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 183,
+          "bounds": {
+            "min": [
+              10.625288855368417,
+              1.8750197707991192,
+              0.0
+            ],
+            "max": [
+              13.625390127667481,
+              7.1249343704093455,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 139,
+          "bounds": {
+            "min": [
+              11.125287912324678,
+              2.1250210767478857,
+              0.0
+            ],
+            "max": [
+              13.625361909570382,
+              6.624934414273254,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    }
+  ]
+}

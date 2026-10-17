@@ -1,0 +1,1424 @@
+{
+  "basis": "Strict finite big-endian VTK parse; clock only from CSV; lower y<=4m, upper y>=9m",
+  "validation": "field integrity and damage location only; no physical accuracy claim",
+  "records": [
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\initial.vtk",
+      "clock": null,
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.0,
+      "max_damage_position": null,
+      "mass_weighted_damage": 0.0,
+      "lower_max_damage": 0.0,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.05": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\equilibrium.vtk",
+      "clock": null,
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.0,
+      "max_damage_position": null,
+      "mass_weighted_damage": 0.0,
+      "lower_max_damage": 0.0,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.05": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00001.vtk",
+      "clock": {
+        "time": 2.0,
+        "phase": "accelerate"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.0,
+      "max_damage_position": null,
+      "mass_weighted_damage": 0.0,
+      "lower_max_damage": 0.0,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.05": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00002.vtk",
+      "clock": {
+        "time": 4.0,
+        "phase": "accelerate"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.33358939797454745,
+      "max_damage_position": [
+        13.12533368593218,
+        3.6249814338330664,
+        0.0
+      ],
+      "mass_weighted_damage": 0.005989434472513549,
+      "lower_max_damage": 0.33358939797454745,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 183,
+          "bounds": {
+            "min": [
+              10.625288855368431,
+              1.8750197707991194,
+              0.0
+            ],
+            "max": [
+              13.62539012766748,
+              7.124934370409348,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 139,
+          "bounds": {
+            "min": [
+              11.125287912324692,
+              2.125021076747893,
+              0.0
+            ],
+            "max": [
+              13.625361909570392,
+              6.624934414273248,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00003.vtk",
+      "clock": {
+        "time": 4.1,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.3488107972702329,
+      "max_damage_position": [
+        13.125336285769649,
+        3.624968850070812,
+        0.0
+      ],
+      "mass_weighted_damage": 0.006725516295611556,
+      "lower_max_damage": 0.3488107972702329,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 199,
+          "bounds": {
+            "min": [
+              10.625273605987301,
+              1.8750166362622034,
+              0.0
+            ],
+            "max": [
+              13.625405786777362,
+              7.124909917299514,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 155,
+          "bounds": {
+            "min": [
+              10.875284648341905,
+              2.125017188072217,
+              0.0
+            ],
+            "max": [
+              13.625381316990044,
+              6.624914237736528,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00004.vtk",
+      "clock": {
+        "time": 4.2,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.36388485396990466,
+      "max_damage_position": [
+        13.125338383046609,
+        3.6249668794120407,
+        0.0
+      ],
+      "mass_weighted_damage": 0.007500989909217695,
+      "lower_max_damage": 0.36388485396990466,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 213,
+          "bounds": {
+            "min": [
+              10.375270615380874,
+              1.8750179455856055,
+              0.0
+            ],
+            "max": [
+              13.625408074774366,
+              7.124906609011676,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 165,
+          "bounds": {
+            "min": [
+              10.875276446325469,
+              2.1250185027705126,
+              0.0
+            ],
+            "max": [
+              13.625397141106944,
+              6.624908622078093,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00005.vtk",
+      "clock": {
+        "time": 4.3,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.37860448102750677,
+      "max_damage_position": [
+        13.125341919494353,
+        3.6249682886600954,
+        0.0
+      ],
+      "mass_weighted_damage": 0.008303511407017544,
+      "lower_max_damage": 0.37860448102750677,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 227,
+          "bounds": {
+            "min": [
+              10.375267210902518,
+              1.8750209245445753,
+              0.0
+            ],
+            "max": [
+              13.625422251479343,
+              7.374899294063804,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 177,
+          "bounds": {
+            "min": [
+              10.625293246006825,
+              2.125021693986712,
+              0.0
+            ],
+            "max": [
+              13.625402085521696,
+              6.874902176955117,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00006.vtk",
+      "clock": {
+        "time": 4.4,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.39304867412945144,
+      "max_damage_position": [
+        13.125336972518424,
+        3.624972712870568,
+        0.0
+      ],
+      "mass_weighted_damage": 0.009128474923380056,
+      "lower_max_damage": 0.39304867412945144,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 238,
+          "bounds": {
+            "min": [
+              10.1252713303859,
+              1.8750251739369066,
+              0.0
+            ],
+            "max": [
+              13.625416765758974,
+              7.374912917216811,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 188,
+          "bounds": {
+            "min": [
+              10.62527133600736,
+              2.1250167150206263,
+              0.0
+            ],
+            "max": [
+              13.625407988872194,
+              6.874917579969083,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00007.vtk",
+      "clock": {
+        "time": 4.5,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.407057944480962,
+      "max_damage_position": [
+        13.125336471749014,
+        3.6249696389004,
+        0.0
+      ],
+      "mass_weighted_damage": 0.009961189748607635,
+      "lower_max_damage": 0.407057944480962,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 248,
+          "bounds": {
+            "min": [
+              10.125253829511056,
+              1.8750263211281812,
+              0.0
+            ],
+            "max": [
+              13.625415828590883,
+              7.624891246698235,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 202,
+          "bounds": {
+            "min": [
+              10.375271089046805,
+              2.125017677826292,
+              0.0
+            ],
+            "max": [
+              13.625407454959085,
+              7.124897416753329,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00008.vtk",
+      "clock": {
+        "time": 4.6,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.420933472547664,
+      "max_damage_position": [
+        13.125344327704822,
+        3.6249625031463277,
+        0.0
+      ],
+      "mass_weighted_damage": 0.010831667777763242,
+      "lower_max_damage": 0.420933472547664,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 263,
+          "bounds": {
+            "min": [
+              9.875263829722606,
+              1.8750253447089498,
+              0.0
+            ],
+            "max": [
+              13.625433439927685,
+              7.624878952006633,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 214,
+          "bounds": {
+            "min": [
+              10.375271388956675,
+              1.8750253447089498,
+              0.0
+            ],
+            "max": [
+              13.625427011562982,
+              7.124884039935956,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00009.vtk",
+      "clock": {
+        "time": 4.7,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.43452860915822966,
+      "max_damage_position": [
+        13.125347899656077,
+        3.6249644527647353,
+        0.0
+      ],
+      "mass_weighted_damage": 0.011726242694421298,
+      "lower_max_damage": 0.43452860915822966,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 273,
+          "bounds": {
+            "min": [
+              9.875261490410837,
+              1.8750285656018413,
+              0.0
+            ],
+            "max": [
+              13.62543839386308,
+              7.624885037440134,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 226,
+          "bounds": {
+            "min": [
+              10.125278726068494,
+              1.8750285656018413,
+              0.0
+            ],
+            "max": [
+              13.625431917441803,
+              7.374873479609178,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00010.vtk",
+      "clock": {
+        "time": 4.8,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.4478260948787627,
+      "max_damage_position": [
+        13.125340168379305,
+        3.6249657866942204,
+        0.0
+      ],
+      "mass_weighted_damage": 0.012626654407244552,
+      "lower_max_damage": 0.4478260948787627,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 282,
+          "bounds": {
+            "min": [
+              9.62525714430994,
+              1.8750316296231357,
+              0.0
+            ],
+            "max": [
+              13.625428753284302,
+              7.624889850207533,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 234,
+          "bounds": {
+            "min": [
+              10.12526012431936,
+              1.8750316296231357,
+              0.0
+            ],
+            "max": [
+              13.625422769975597,
+              7.374880728303758,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00011.vtk",
+      "clock": {
+        "time": 4.9,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.4607536154657662,
+      "max_damage_position": [
+        13.12534025318276,
+        3.624967317859354,
+        0.0
+      ],
+      "mass_weighted_damage": 0.013537214816952971,
+      "lower_max_damage": 0.4607536154657662,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 297,
+          "bounds": {
+            "min": [
+              9.625243869080482,
+              1.8750343037385955,
+              0.0
+            ],
+            "max": [
+              13.625432417385168,
+              7.874876239684539,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 247,
+          "bounds": {
+            "min": [
+              9.875259733174829,
+              1.8750343037385955,
+              0.0
+            ],
+            "max": [
+              13.625428525703018,
+              7.374884964196543,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00012.vtk",
+      "clock": {
+        "time": 5.0,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.47345812467167114,
+      "max_damage_position": [
+        13.125349943858948,
+        3.6249591988198135,
+        0.0
+      ],
+      "mass_weighted_damage": 0.014467521939173679,
+      "lower_max_damage": 0.47345812467167114,
+      "upper_max_damage": 0.0,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 309,
+          "bounds": {
+            "min": [
+              9.375261029602738,
+              1.8750227455971342,
+              0.0
+            ],
+            "max": [
+              13.625447339756475,
+              7.874867376528443,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 258,
+          "bounds": {
+            "min": [
+              9.875264463000553,
+              1.875033167735147,
+              0.0
+            ],
+            "max": [
+              13.62544294867352,
+              7.62484823269866,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 0,
+          "bounds": null
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00013.vtk",
+      "clock": {
+        "time": 7.0,
+        "phase": "accelerate"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.6572145766954333,
+      "max_damage_position": [
+        12.875363900215774,
+        3.874925275767388,
+        0.0
+      ],
+      "mass_weighted_damage": 0.033334982059485076,
+      "lower_max_damage": 0.6572145766954333,
+      "upper_max_damage": 0.0004989673670349193,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 511,
+          "bounds": {
+            "min": [
+              7.875193687703959,
+              1.6250618303758013,
+              0.0
+            ],
+            "max": [
+              13.875459590882976,
+              9.124830812835071,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 445,
+          "bounds": {
+            "min": [
+              8.375202769087341,
+              1.8750572333891207,
+              0.0
+            ],
+            "max": [
+              13.875459590882976,
+              8.62483678037336,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 69,
+          "bounds": {
+            "min": [
+              11.37530000696762,
+              2.6250594238253724,
+              0.0
+            ],
+            "max": [
+              13.375449077643365,
+              5.37485358173792,
+              0.0
+            ]
+          }
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00014.vtk",
+      "clock": {
+        "time": 7.1,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.6659659027721189,
+      "max_damage_position": [
+        12.875367612445933,
+        3.874902555142684,
+        0.0
+      ],
+      "mass_weighted_damage": 0.034450729558924836,
+      "lower_max_damage": 0.6659659027721189,
+      "upper_max_damage": 0.011244035320583157,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 522,
+          "bounds": {
+            "min": [
+              7.875180873906784,
+              1.6250582068459243,
+              0.0
+            ],
+            "max": [
+              13.875480395649538,
+              9.124797372411793,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 452,
+          "bounds": {
+            "min": [
+              8.125200119941193,
+              1.8750521969430858,
+              0.0
+            ],
+            "max": [
+              13.875468658173002,
+              8.62480708339264,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 73,
+          "bounds": {
+            "min": [
+              11.375296534509523,
+              2.6250508851307037,
+              0.0
+            ],
+            "max": [
+              13.37545785071147,
+              5.374819859995099,
+              0.0
+            ]
+          }
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00015.vtk",
+      "clock": {
+        "time": 7.2,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.6747140091978661,
+      "max_damage_position": [
+        12.875382841068095,
+        3.87488919462658,
+        0.0
+      ],
+      "mass_weighted_damage": 0.03561135195266209,
+      "lower_max_damage": 0.6747140091978661,
+      "upper_max_damage": 0.022497835554174617,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 527,
+          "bounds": {
+            "min": [
+              7.8751918765072055,
+              1.6250559841022596,
+              0.0
+            ],
+            "max": [
+              13.875498694102781,
+              9.12475498669965,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 465,
+          "bounds": {
+            "min": [
+              8.125206186629708,
+              1.8750496886250771,
+              0.0
+            ],
+            "max": [
+              13.875486637825395,
+              8.874737948447104,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 80,
+          "bounds": {
+            "min": [
+              11.125317834622232,
+              2.62504642089544,
+              0.0
+            ],
+            "max": [
+              13.375480467613203,
+              5.624764476311345,
+              0.0
+            ]
+          }
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00016.vtk",
+      "clock": {
+        "time": 7.3,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.6832478854759683,
+      "max_damage_position": [
+        12.875393312785436,
+        3.874880735218678,
+        0.0
+      ],
+      "mass_weighted_damage": 0.03676593881186053,
+      "lower_max_damage": 0.6832478854759683,
+      "upper_max_damage": 0.033583940224751085,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 538,
+          "bounds": {
+            "min": [
+              7.625213029971354,
+              1.6250554093121137,
+              0.0
+            ],
+            "max": [
+              13.87551254858232,
+              9.124768189269808,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 471,
+          "bounds": {
+            "min": [
+              8.125215857597011,
+              1.8750487769842017,
+              0.0
+            ],
+            "max": [
+              13.875499582650193,
+              8.874750145017293,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 87,
+          "bounds": {
+            "min": [
+              11.125316788477283,
+              2.6250250658645773,
+              0.0
+            ],
+            "max": [
+              13.625442548240137,
+              5.624779376703104,
+              0.0
+            ]
+          }
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00017.vtk",
+      "clock": {
+        "time": 7.4,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.6916356526262348,
+      "max_damage_position": [
+        12.875370806317735,
+        3.8748961572815372,
+        0.0
+      ],
+      "mass_weighted_damage": 0.037925721347188315,
+      "lower_max_damage": 0.6916356526262348,
+      "upper_max_damage": 0.04461998303629533,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 547,
+          "bounds": {
+            "min": [
+              7.625182994150494,
+              1.6250628815989605,
+              0.0
+            ],
+            "max": [
+              13.875486599760196,
+              9.374762881106488,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 482,
+          "bounds": {
+            "min": [
+              7.875196806875018,
+              1.8750571994772411,
+              0.0
+            ],
+            "max": [
+              13.875486599760196,
+              8.874795087412766,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 95,
+          "bounds": {
+            "min": [
+              11.12527696424187,
+              2.6250363533773298,
+              0.0
+            ],
+            "max": [
+              13.62544321306661,
+              5.8747737717762085,
+              0.0
+            ]
+          }
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00018.vtk",
+      "clock": {
+        "time": 7.5,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.6995193358119125,
+      "max_damage_position": [
+        12.875365844293853,
+        3.8749086167981575,
+        0.0
+      ],
+      "mass_weighted_damage": 0.03905859189790694,
+      "lower_max_damage": 0.6995193358119125,
+      "upper_max_damage": 0.055367882268256285,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 558,
+          "bounds": {
+            "min": [
+              7.625169917618889,
+              1.6250683157169246,
+              0.0
+            ],
+            "max": [
+              13.875486040912222,
+              9.374801335284703,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 493,
+          "bounds": {
+            "min": [
+              7.875182789836507,
+              1.8750635340348756,
+              0.0
+            ],
+            "max": [
+              13.87547936622533,
+              9.1247817001,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 101,
+          "bounds": {
+            "min": [
+              10.875278793317603,
+              2.6250450445745095,
+              0.0
+            ],
+            "max": [
+              13.6254368501402,
+              5.874812222865241,
+              0.0
+            ]
+          }
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00019.vtk",
+      "clock": {
+        "time": 7.6,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.7073347193382233,
+      "max_damage_position": [
+        12.875379993170554,
+        3.874887635764093,
+        0.0
+      ],
+      "mass_weighted_damage": 0.04020339138751493,
+      "lower_max_damage": 0.7073347193382233,
+      "upper_max_damage": 0.06620572979419925,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 568,
+          "bounds": {
+            "min": [
+              7.375193632902099,
+              1.6250650818144283,
+              0.0
+            ],
+            "max": [
+              13.875507628916102,
+              9.37479130448246,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 500,
+          "bounds": {
+            "min": [
+              7.875195553617195,
+              1.8750591808863262,
+              0.0
+            ],
+            "max": [
+              13.875500317261135,
+              9.12478320080463,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 103,
+          "bounds": {
+            "min": [
+              10.875293205954325,
+              2.625036751277701,
+              0.0
+            ],
+            "max": [
+              13.625472858911838,
+              5.87478649950915,
+              0.0
+            ]
+          }
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00020.vtk",
+      "clock": {
+        "time": 7.7,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.7150405312684982,
+      "max_damage_position": [
+        12.875393464195156,
+        3.874875261200309,
+        0.0
+      ],
+      "mass_weighted_damage": 0.04136551852624274,
+      "lower_max_damage": 0.7150405312684982,
+      "upper_max_damage": 0.07718515592869135,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 580,
+          "bounds": {
+            "min": [
+              7.3751878049704285,
+              1.6250644957455325,
+              0.0
+            ],
+            "max": [
+              13.875524027164582,
+              9.37474852245083,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 510,
+          "bounds": {
+            "min": [
+              7.875196530678575,
+              1.8750584177561436,
+              0.0
+            ],
+            "max": [
+              13.875524027164582,
+              9.12472981233786,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 112,
+          "bounds": {
+            "min": [
+              10.62530803481022,
+              2.6250340213114485,
+              0.0
+            ],
+            "max": [
+              13.625488603682065,
+              6.124726542254981,
+              0.0
+            ]
+          }
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    },
+    {
+      "file": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-collapse\\vtk\\sim_00021.vtk",
+      "clock": {
+        "time": 7.8,
+        "phase": "collapse"
+      },
+      "particles": 4155,
+      "scalar_count": 36,
+      "mass": 425664.0625,
+      "max_damage": 0.7226440117767687,
+      "max_damage_position": [
+        12.875390740118357,
+        3.8748647329407984,
+        0.0
+      ],
+      "mass_weighted_damage": 0.0425577319703242,
+      "lower_max_damage": 0.7226440117767687,
+      "upper_max_damage": 0.08852916100768515,
+      "damage_thresholds": {
+        "1e-06": {
+          "particles": 590,
+          "bounds": {
+            "min": [
+              7.375177344367843,
+              1.625064276943403,
+              0.0
+            ],
+            "max": [
+              13.875525642546483,
+              9.624723220918082,
+              0.0
+            ]
+          }
+        },
+        "0.05": {
+          "particles": 517,
+          "bounds": {
+            "min": [
+              7.625197296104922,
+              1.8750575911758975,
+              0.0
+            ],
+            "max": [
+              13.875525642546483,
+              9.124735049785142,
+              0.0
+            ]
+          }
+        },
+        "0.5": {
+          "particles": 115,
+          "bounds": {
+            "min": [
+              10.625289209292383,
+              2.6250312041544417,
+              0.0
+            ],
+            "max": [
+              13.625489043030798,
+              6.124737896086163,
+              0.0
+            ]
+          }
+        },
+        "0.9": {
+          "particles": 0,
+          "bounds": null
+        }
+      },
+      "all_fields_finite": true,
+      "mass_change_fraction": 0.0
+    }
+  ]
+}

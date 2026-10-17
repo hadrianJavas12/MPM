@@ -1,0 +1,168 @@
+{
+  "phase": "P6-Section2-Benchmarks",
+  "executedCommit": "5eda644",
+  "generatedAt": "2026-10-17T13:17:00+07:00",
+  "benchmarks": {
+    "triaxial2d": {
+      "caseFile": "cases/triaxial/triaxial-clay-2d.lisp",
+      "exitCode": 0,
+      "particles": 480,
+      "updates": 17443,
+      "vtkStates": 51,
+      "byteIdenticalVtksVsP1Full": "51/51",
+      "byteIdenticalCsvVsP1Full": true,
+      "maxPositionDifferenceM": 0.0,
+      "auditPassed": true,
+      "video": "output/architecture-migration-2026-10-16/section2-benchmarks/triaxial-2d/triaxial-simulation.mp4"
+    },
+    "jossSerial4sControl": {
+      "scriptFile": "tests/cases/joss-serial-integration.lisp",
+      "exitCode": 0,
+      "equilibrationSteps": 1658,
+      "physicalTimeS": 4.0,
+      "byteIdenticalVtksVsBefore003": "5/5 (initial.vtk, mesh.vtk, equilibrium.vtk, sim_00001.vtk, sim_00002.vtk)",
+      "maxPositionDifferenceM": 0.0,
+      "lowerToeMaxDamageAt4s": 0.3335714340209961,
+      "upperCliffMaxDamageAt4s": 0.0
+    },
+    "jossBottomToTopPropagation": {
+      "caseFile": "cases/benchmarks/joss-collapse.lisp",
+      "savedVtkFiles": 23,
+      "physicalSteps": 21,
+      "physicalTimeRangeS": [
+        0.0,
+        7.8
+      ],
+      "bottomInitiationTimeS": 4.0,
+      "bottomMaxDamageAt4s": 0.3335714340209961,
+      "upperPropagationTimeS": 7.0,
+      "lowerMaxDamageAt7p8s": 0.7225551605224609,
+      "upperMaxDamageAt7p8s": 0.08850467205047607,
+      "allFieldsFinite": true,
+      "massChangeFraction": 0.0,
+      "video": "output/architecture-migration-2026-10-16/section2-benchmarks/joss-collapse/joss-bottom-to-top-propagation.mp4"
+    }
+  },
+  "artifacts": [
+    {
+      "relativePath": "triaxial-2d/stress-strain.csv",
+      "sizeBytes": 15420,
+      "sha256": "09596885c6e9a725d64fce0f682ac38ffd00503525d2fe70e5df710db01760f9"
+    },
+    {
+      "relativePath": "triaxial-2d/source-provenance.json",
+      "sizeBytes": 602273,
+      "sha256": "33c1ec0d5ac9e9a32b26bd379af63426730cae1534608cf1a9fd50c765b1021d"
+    },
+    {
+      "relativePath": "triaxial-2d/audit.json",
+      "sizeBytes": 8174,
+      "sha256": "5471cc5993092e741403e8a14c9075300f7078a4aa91f7aae8d21a7c598a933c"
+    },
+    {
+      "relativePath": "triaxial-2d/triaxial-simulation.mp4",
+      "sizeBytes": 228362,
+      "sha256": "daabc1f41ee8b2dd461db99d161b27875fbf27a8ddf042c5e1c84071745c8544"
+    },
+    {
+      "relativePath": "triaxial-2d/triaxial-result.png",
+      "sizeBytes": 160959,
+      "sha256": "11344937000736786debffd2fc168c2bc591492b78c8ef74de822ee9c75ac993"
+    },
+    {
+      "relativePath": "triaxial-2d/triaxial-refactor-comparison.png",
+      "sizeBytes": 110397,
+      "sha256": "7e66cdcc8b7d3213100a54a4b69d2abf840339dbbfc8b7d1b64f025b44cf1130"
+    },
+    {
+      "relativePath": "triaxial-2d/particles_0000.vtk",
+      "sizeBytes": 124381,
+      "sha256": "f4dcf0c403af7c5f3ed478d0d1ec6a4affd4a99eee2d4b1a6a7fc3a191f83587"
+    },
+    {
+      "relativePath": "triaxial-2d/particles_0050.vtk",
+      "sizeBytes": 124381,
+      "sha256": "0ed90f74db64dad9b7f4bad598752ef8e80e362b34268c4c63f5d379382138ae"
+    },
+    {
+      "relativePath": "joss-serial-4s/source-provenance.json",
+      "sizeBytes": 605706,
+      "sha256": "42e3c47030549ad4278c906a915464b3b7a804728a5b8bf283780c6cf13bced9"
+    },
+    {
+      "relativePath": "joss-serial-4s/timesteps.csv",
+      "sizeBytes": 286211,
+      "sha256": "76da1f52723edce9f937d350921674404c16d116ee6a9bf7f8f3caf2ffa2c1d9"
+    },
+    {
+      "relativePath": "joss-serial-4s/vtk/initial.vtk",
+      "sizeBytes": 1298217,
+      "sha256": "d8d0e90a78d865018f1bc5da7edd4b0b32a0136268eae4b25d64781814e0aad9"
+    },
+    {
+      "relativePath": "joss-serial-4s/vtk/mesh.vtk",
+      "sizeBytes": 107970,
+      "sha256": "aae9c355862ba8e809d36eee577bde0617298d98e9aa5e607a6f17b9552bb69a"
+    },
+    {
+      "relativePath": "joss-serial-4s/vtk/equilibrium.vtk",
+      "sizeBytes": 1298217,
+      "sha256": "0ef589b23c1be52ebca491382f8394120000ad498036b2fa3722d6e7c4cdc5e1"
+    },
+    {
+      "relativePath": "joss-serial-4s/vtk/sim_00001.vtk",
+      "sizeBytes": 1298217,
+      "sha256": "36f2094d968fce3a6ae7cab64478dcbbf67f31e5666d89781e3e9a8439e7c702"
+    },
+    {
+      "relativePath": "joss-serial-4s/vtk/sim_00002.vtk",
+      "sizeBytes": 1298217,
+      "sha256": "75981a525cbff829c594b6d81a322cb1b3ce75158b25c0b8a509b0f8b206557b"
+    },
+    {
+      "relativePath": "joss-collapse/source-provenance.json",
+      "sizeBytes": 604563,
+      "sha256": "cbefbf0bec0bd0f3ef27ebe12211301efc4060307703c288e9bc600da50ac121"
+    },
+    {
+      "relativePath": "joss-collapse/timesteps.csv",
+      "sizeBytes": 289493,
+      "sha256": "92841638493c95271b7da9d81e7751e153eaad78f113d0defab2b909cd972ea0"
+    },
+    {
+      "relativePath": "joss-collapse/joss-bottom-to-top-propagation.mp4",
+      "sizeBytes": 32231,
+      "sha256": "8147184eaa0dd7cda1238fc533b3929d15b3fc3c4d0baa20427c713f6b4fdf59"
+    },
+    {
+      "relativePath": "joss-collapse/vtk/initial.vtk",
+      "sizeBytes": 1298217,
+      "sha256": "d8d0e90a78d865018f1bc5da7edd4b0b32a0136268eae4b25d64781814e0aad9"
+    },
+    {
+      "relativePath": "joss-collapse/vtk/equilibrium.vtk",
+      "sizeBytes": 1298217,
+      "sha256": "69cd3b4522a342232a68391174678f11c6f9f09e3ad06aee591ca9ef08a72bb3"
+    },
+    {
+      "relativePath": "joss-collapse/vtk/sim_00001.vtk",
+      "sizeBytes": 1298217,
+      "sha256": "f9acd5d56e640b973f52c04b724acb8fde5f066b039ef94efdfa3d6dcae61ff1"
+    },
+    {
+      "relativePath": "joss-collapse/vtk/sim_00002.vtk",
+      "sizeBytes": 1298217,
+      "sha256": "f51c5bf88e02dd01cc2c8bb05c8bf34cf0f02fc1bc10568593eb919c622c2b20"
+    },
+    {
+      "relativePath": "joss-collapse/vtk/sim_00015.vtk",
+      "sizeBytes": 1298217,
+      "sha256": "12d0f78b28022f4fe58b45433c66eea9d8fd6a5f684d06e995b8c17f073a5b2e"
+    },
+    {
+      "relativePath": "joss-collapse/vtk/sim_00021.vtk",
+      "sizeBytes": 1298217,
+      "sha256": "2ac789615b7682a4eda0effedf7fd111d5328fc033554dc559307421d7df4f50"
+    }
+  ]
+}

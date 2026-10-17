@@ -14,7 +14,7 @@ From PowerShell in `D:\MPM`:
 & .\windows\cl-mpm.cmd tests\framework-components.lisp
 & .\windows\cl-mpm.cmd tests\triaxial-components.lisp
 $runDir = Join-Path 'D:\MPM\output' ('triaxial-2d-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
-& .\windows\cl-mpm.cmd scripts\run-case.lisp cases\triaxial-clay-2d.lisp $runDir
+& .\windows\cl-mpm.cmd scripts\run-case.lisp cases\triaxial\triaxial-clay-2d.lisp $runDir
 if ($LASTEXITCODE -ne 0) { throw 'Native simulation failed' }
 & .\toolchain\analysis-venv\Scripts\python.exe scripts\audit-triaxial.py --run-dir $runDir
 & .\toolchain\analysis-venv\Scripts\python.exe scripts\plot-triaxial.py --run-dir $runDir --video
@@ -331,7 +331,24 @@ On the final canonical root-ASDF layout (`436b561` / `9dfb58b`):
   `51/51` in 3D) and `stress-strain.csv` is byte-identical (`SHA-256` match) to
   `p1-full` (`62adb50`), with zero position/CSV/field differences and independent
   consistency audits passing.
+- **`section2-benchmarks/` (Section 2 canonical directory layout `5eda644`, committed evidence in [section2-benchmarks](evidence/architecture-migration-2026-10-16/section2-benchmarks/README.md))**:
+  After retiring legacy `framework/` and `src/models/` shims (`5d6a5cf`), installing the
+  15 `src/` engine domain directories, `cases/{triaxial,cliff,benchmarks,direct-shear}/`,
+  and `materials/cl-mpm-materials.asd` (`af3a3ee`–`5eda644`), all focused native suites
+  (`case-snapshot-contracts` 3/3, `native-snapshot-contracts` 7/7, `material-ownership-compat`
+  normal & legacy 7/7, `p4-orchestration-compat F` 4/4, `p4-standalone-triaxial-compat` 3/3)
+  and two end-to-end benchmarks passed:
+  1. **Triaxial 2D (`cases/triaxial/triaxial-clay-2d.lisp`)**: `exit 0` (480 MPs, 17,443 updates,
+     51 VTKs), `51/51` VTKs and `stress-strain.csv` byte-identical (`SHA-256`) to `p1-full/triaxial-2d`,
+     `audit-triaxial.py` PASS, and `triaxial-simulation.mp4` rendered.
+  2. **Chalk Cliff Progressive Bottom-to-Top Damage (`tests/cases/joss-serial-integration.lisp` & `cases/benchmarks/joss-collapse.lisp`)**:
+     4.0 s serial initiation control (`joss-serial-4s`) exited 0 with `initial.vtk`, `mesh.vtk`,
+     `equilibrium.vtk`, `sim_00001.vtk`, and `sim_00002.vtk` 100% byte-identical (`SHA-256`) to
+     pre-P2 `before-003`; extended propagation run (`joss-collapse`, 23 VTKs, `t = 0..7.8 s`)
+     confirmed bottom initiation at `t = 4.0 s` (`lower_max_damage = 0.3336`, `upper_max_damage = 0.0`)
+     propagating upward into the upper cliff (`y >= 9 m`) by `t = 7.0..7.8 s` (`lower_max_damage = 0.7226`,
+     `upper_max_damage = 0.0885 > 0.05`, all fields finite, zero mass change), with
+     `joss-bottom-to-top-propagation.mp4` rendered.
 
 No new 40-second full Joss run was started (the earlier run on `62adb50` remains
-`STOPPED_BY_USER` at 4.2 s); PNG plotting, complete G3, and scientific validation
-are not claimed.
+`STOPPED_BY_USER` at 4.2 s); complete G3 and scientific validation are not claimed.

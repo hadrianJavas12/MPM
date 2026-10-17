@@ -1,13 +1,18 @@
 # Komposisi simulasi native
 
 Branch arsitektur: `codex/material-architecture-migration`, berasal dari
-`7c399fb`. Seluruh tahapan migrasi kepemilikan (P0–P6) sudah selesai diinstal
-dan divalidasi: model material berada di `materials/`, prosedur skenario di
-`scenarios/`, dan orkestrasi di `src/simulation/`, dengan ASDF kanonis di root
-(`cl-mpm-framework.asd`). Regresi penuh VM 2D/3D (`p6-full/`), rangkaian pendek
-11 pemeriksaan (`p6-short/`), dan kontrol serial terbatas Joss 4 detik (`joss-bounded/`)
-seluruhnya lulus (`exit 0`, VTK/CSV identik byte); gate G1 dan G3 tetap `PARTIAL`
-karena pengecualian kompatibilitas legacy dan penghentian run penuh Joss 40 s oleh pengguna.
+`7c399fb`. Seluruh tahapan migrasi kepemilikan (P0–P6) dan penyelarasan tata
+letak direktori Section 2 (`5d6a5cf`–`5eda644`) sudah selesai diinstal dan
+divalidasi: model material berada di `materials/`, prosedur skenario di
+`scenarios/`, kasus simulasi di `cases/{triaxial,cliff,benchmarks,direct-shear}/`,
+dan orkestrasi serta engine MPM di `src/{core,geometry,discretization,transfer,boundaries,loading,solvers,formulations,stabilization,damage,numerics,parallel,simulation,measurements,output}/`,
+dengan ASDF kanonis di root (`cl-mpm.asd`, `cl-mpm-framework.asd`, dan
+`materials/cl-mpm-materials.asd`). Regresi penuh VM 2D/3D (`p6-full/` dan
+`section2-benchmarks/triaxial-2d`), rangkaian pendek 11 pemeriksaan (`p6-short/`),
+kontrol serial terbatas Joss 4 detik (`joss-bounded/` dan `section2-benchmarks/joss-serial-4s`),
+serta run propagasi kerusakan tebing bawah-ke-atas (`section2-benchmarks/joss-collapse`)
+seluruhnya lulus (`exit 0`, VTK/CSV kontrol identik byte); gate G1 dan G3 tetap `PARTIAL`
+karena pengecualian kompatibilitas C++/override dan penghentian run penuh Joss 40 s oleh pengguna.
 Lihat [status aktual](architecture/STATUS.md).
 
 ## Menjalankan kasus di Windows
@@ -15,25 +20,24 @@ Lihat [status aktual](architecture/STATUS.md).
 Buka PowerShell pada mesin dengan toolchain yang sudah tersedia:
 
 ```powershell
-Set-Location D:MPM
-$runDir = Join-Path 'D:MPMoutput' ('triaxial-2d-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
-& .windowscl-mpm.cmd scripts
-un-case.lisp cases	riaxial-clay-2d.lisp $runDir
+Set-Location D:\MPM
+$runDir = Join-Path 'D:\MPM\output' ('triaxial-2d-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
+& .\windows\cl-mpm.cmd scripts\run-case.lisp cases\triaxial\triaxial-clay-2d.lisp $runDir
 if ($LASTEXITCODE -ne 0) { throw 'Run gagal; periksa pesan terminal.' }
-& .	oolchainanalysis-venvScriptspython.exe scriptsplot-triaxial.py --run-dir $runDir --video
+& .\toolchain\analysis-venv\Scripts\python.exe scripts\plot-triaxial.py --run-dir $runDir --video
 ```
 
 | Kasus di `cases/` | Arti |
 | --- | --- |
-| `triaxial-clay-2d.lisp` | Persegi panjang 70 × 140 mm, plane strain, ketebalan satuan |
-| `triaxial-clay-3d.lisp` | Silinder diameter 70 mm, tinggi 140 mm, MPM 3D |
-| `cliff.lisp` | Contoh tebing dengan konfigurasi kecil |
-| `joss-collapse.lisp` | Resep Joss legacy; run penuh 40 s yang dihentikan pengguna tetap dihentikan |
+| `cases/triaxial/triaxial-clay-2d.lisp` | Persegi panjang 70 × 140 mm, plane strain, ketebalan satuan (kompatibel juga dengan argumen lama `cases/triaxial-clay-2d.lisp`) |
+| `cases/triaxial/triaxial-clay-3d.lisp` | Silinder diameter 70 mm, tinggi 140 mm, MPM 3D (kompatibel juga dengan `cases/triaxial-clay-3d.lisp`) |
+| `cases/cliff/cliff.lisp` | Contoh tebing dengan konfigurasi kecil (kompatibel juga dengan `cases/cliff.lisp`) |
+| `cases/benchmarks/joss-collapse.lisp` | Resep Joss Bay progressive collapse; run penuh 40 s yang dihentikan pengguna tetap tidak diklaim PASS |
 
 Gunakan direktori output baru untuk setiap run. File kasus adalah Lisp lokal
 tepercaya yang berjalan dengan hak akses pengguna Windows. Tebing memakai
 VTK dan renderer pada [panduan Windows](RUN_ACCEPTED_COLLAPSE_WINDOWS.md),
-bukan plotter triaxial. Jangan memulai ulang full Joss yang dibatalkan.
+bukan plotter triaxial. Jangan memulai ulang full Joss 40 s yang dibatalkan.
 
 ## Material dan geometri yang dapat dipilih
 
@@ -80,16 +84,16 @@ Rincian kelas, satuan dan batasannya ada di [katalog model](architecture/MODEL_C
 
 | Owner | Isi |
 | --- | --- |
-| `src/core/` | Base particle, common slots dan generic protocol |
-| `materials/` | Profile/adapter, kelas material, constitutive, evolution, diagnostics dan binding backend |
+| `src/core/`, `src/geometry/`, `src/discretization/`, `src/transfer/`, `src/boundaries/`, `src/loading/`, `src/formulations/`, `src/stabilization/` | Base particle, mesh/shape-function, P2G/G2P, boundary conditions, dynamic relaxation, SSA/multiphase, dan aggregate/eigenerosion |
+| `materials/` | Profile/adapter, kelas material, constitutive, evolution, diagnostics dan binding backend (`materials/cl-mpm-materials.asd`) |
 | `src/numerics/`, `src/solvers/` | Tensor, integrasi numerik, fastmaths dan solver generik |
 | `src/damage/`, `src/parallel/` | Nonlocal transport, scheduling dan komunikasi engine |
 | `src/simulation/` | Konfigurasi, komponen dan lifecycle run |
-| `scenarios/{triaxial,cliff,joss}/` | Geometri, boundary, loading, fase dan pengukuran skenario |
+| `scenarios/{triaxial,cliff,joss,direct-shear}/` | Geometri, boundary, loading, fase dan pengukuran skenario |
 | `src/measurements/`, `src/output/` | Mekanisme pengukuran/output generik |
-| `cases/`, `scripts/`, `windows/` | Resep dan launcher |
+| `cases/{triaxial,cliff,benchmarks,direct-shear}/`, `scripts/`, `windows/` | Resep kasus simulasi dan launcher |
 | `libs/` | Kernel/DLL native yang ABI-nya dipertahankan |
-| `framework/` dan jalur source lama | Compatibility loaders; deklarasi ASDF kanonis sekarang di root |
+| `cl-mpm.asd`, `cl-mpm-framework.asd`, `calibration/triaxial.lisp` | Deklarasi ASDF kanonis di root dan entrypoint kompatibilitas kalibrasi; direktori shim `framework/` dan `src/models/` telah dipensiunkan (`5d6a5cf`) |
 
 Simbol CLOS lama tetap dipakai. Modul skenario tidak menyalin persamaan material.
 Lihat [aturan ownership](architecture/FOLDER_OWNERSHIP.md) dan
@@ -100,8 +104,8 @@ dan forward class concrete tetap merupakan pengecualian yang dicatat.
 
 CLI memerlukan proses Windows yang fresh sebelum paket proyek atau
 `kirchoff.dll` dimuat. Ia menyalin source first-party `src/`, `materials/`,
-`framework/`, `scenarios/`, ASDF, kasus, input, launcher/helper dan DLL native
-ke direktori run; manifest menyimpan SHA-256 byte sebelum pemuatan.
+`scenarios/`, ASDF, kasus (`cases/`), input, launcher/helper dan DLL native
+ke direktori run (serta menyalin `framework/` hanya bila menjalankan fixture legacy yang menyertakannya); manifest menyimpan SHA-256 byte sebelum pemuatan.
 
 ASDF memeriksa containment/hash file first-party yang dipilih sebelum compile
 dan load. FASL first-party memakai cache privat pada snapshot. Windows memeriksa
@@ -121,14 +125,17 @@ solver; Python hanya membaca hasil untuk audit/visualisasi.
 | --- | --- |
 | P2 A–D: 20 katalog native | Lima keluarga per checkpoint, exit 0; seluruh serialized catalog identik byte dengan baseline |
 | Kontrol pendek P4-F / P6 (`p6-short/`) | Seluruh 11 pemeriksaan native lulus (`exit 0`, 64 artefak terverifikasi SHA-256) dan Node 36/36 lulus |
-| Full VM 2D/3D pada layout kanonis final (`p6-full/`, `9dfb58b`) | **PASS exact** terhadap `p1-full` (`62adb50`): 51/51 VTK pada 2D (480 MP, 17.443 update) dan 51/51 VTK pada 3D (780 MP, 17.443 update) serta `stress-strain.csv` identik byte (`SHA-256` sama), selisih posisi/CSV/field nol, dan audit independen lulus |
-| Kontrol serial terbatas Joss 4 detik (`joss-bounded/`) | **PASS exact** antara sumber pra-P2 (`before-003`) dan layout kanonis final (`after-001`): 1.658 langkah ekuilibrasi dan waktu fisik 4,0 s (`exit 0`), `equilibrium.vtk`, `sim_00001.vtk`, dan `sim_00002.vtk` identik byte dengan selisih posisi/field/CSV nol |
+| Full VM 2D/3D pada layout kanonis final (`p6-full/`, `9dfb58b`, dan `section2-benchmarks/triaxial-2d`, `5eda644`) | **PASS exact** terhadap `p1-full` (`62adb50`): 51/51 VTK pada 2D (480 MP, 17.443 update) dan 51/51 VTK pada 3D (780 MP, 17.443 update) serta `stress-strain.csv` identik byte (`SHA-256` sama), selisih posisi/CSV/field nol, audit independen lulus, dan video `triaxial-simulation.mp4` dirender |
+| Kontrol serial terbatas Joss 4 detik (`joss-bounded/` dan `section2-benchmarks/joss-serial-4s`, `5eda644`) | **PASS exact** antara sumber pra-P2 (`before-003`) dan layout Section 2 final (`5eda644`): 1.658 langkah ekuilibrasi dan waktu fisik 4,0 s (`exit 0`), `initial.vtk`, `mesh.vtk`, `equilibrium.vtk`, `sim_00001.vtk`, dan `sim_00002.vtk` identik byte dengan selisih posisi/field/CSV nol |
+| Propagasi kerusakan tebing bawah-ke-atas (`section2-benchmarks/joss-collapse`, `5eda644`) | Run `cases/benchmarks/joss-collapse.lisp` menghasilkan 23 VTK (`t = 0..7,8 s`, 21 frame fisik) dengan inisiasi kerusakan di kaki/takik bawah pada `t = 4,0 s` (`lower_max_damage = 0,3336`, `upper_max_damage = 0,0`) yang merambat ke tebing atas pada `t = 7,0..7,8 s` (`lower_max_damage = 0,7226`, `upper_max_damage = 0,0885 > 0,05`), seluruh field berhingga, massa kekal (`0,0`), dan video `joss-bottom-to-top-propagation.mp4` dirender |
 | Joss serial 40 s historis | PASS exact, sumber asli `c749d32` versus executed `41403f4`; lihat [laporan serial](../research/reports/M0_SERIAL_REGRESSION.md) |
 | Joss empat worker historis | FAIL tetap dipertahankan; serial PASS tidak menghapusnya |
 | Full Joss 40 s pada cabang migrasi (`62adb50`) | `STOPPED_BY_USER` pada 4,2 s; tidak dimulai ulang atau diganti label PASS |
 
-Kontrol Joss berdurasi pendek (4 detik) adalah bukti inisiasi serial terpisah dan
-tidak membuktikan collapse/run-out 40 s atau menutup gate G3 penuh. Bandingkan VTK/CSV,
+Kontrol Joss berdurasi pendek (4 detik) dan run propagasi bawah-ke-atas (7,8 detik)
+membuktikan inisiasi serial identik byte serta rambatan kerusakan kaki-ke-puncak pada
+layout Section 2, namun tidak mengklaim penyelesaian run-out 40 s penuh atau menutup
+gate G3 penuh. Bandingkan VTK/CSV,
 massa, jumlah partikel, waktu fisik dan completion status dengan toleransi yang tetap.
 Plane strain 2D bukan axisymmetry dan tidak setara dengan silinder 3D. Regresi kode
 tidak menetapkan kalibrasi, mesh convergence, keseimbangan energi tertutup atau
