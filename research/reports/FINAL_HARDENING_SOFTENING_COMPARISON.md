@@ -178,14 +178,43 @@ Executed via `windows\cl-mpm.cmd tests\materials\mc-evolution-points.lisp` (**34
 ### 5.3 Cliff Visual Artifacts & Video
 - **4-Panel Cliff Evolution Dashboard:** [`research/cliff/plots/m5_cliff_h_vs_hs_dashboard.png`](../cliff/plots/m5_cliff_h_vs_hs_dashboard.png)
 - **2D Spatial Shear-Band & Friction Degradation Map ($t = 1.93\text{ s}$):** [`research/cliff/plots/m5_cliff_spatial_localization.png`](../cliff/plots/m5_cliff_spatial_localization.png)
-- **Side-by-Side 2D Cliff Collapse Animation Video (`.mp4`):** [`research/cliff/videos/cliff_h_vs_hs.mp4`](../cliff/videos/cliff_h_vs_hs.mp4)
+- **Individual & Side-by-Side 2D Cliff Collapse Animation Videos (`.mp4`):**
+  - [`research/cliff/videos/3_cliff_2d_hardening_lh.mp4`](../cliff/videos/3_cliff_2d_hardening_lh.mp4) (`L-H`)
+  - [`research/cliff/videos/4_cliff_2d_softening_lhs.mp4`](../cliff/videos/4_cliff_2d_softening_lhs.mp4) (`L-HS`)
+  - [`research/cliff/videos/cliff_h_vs_hs.mp4`](../cliff/videos/cliff_h_vs_hs.mp4) (Side-by-Side)
+
+### 5.4 Elongated Urmi-Geometry Long-Duration 2D MPM Cliff Collapse (`L-URMI-LONG-H` vs `L-URMI-LONG-HS`)
+
+To investigate long-term retrogressive failure kinematics and runout on an elongated slope geometry inspired by Urmi et al. (2024), an extended 2D MPM cliff pair (`L-URMI-LONG-H` vs `L-URMI-LONG-HS`) was executed over a **$102\text{ m} \times 16\text{ m}$ domain** ($48\text{ m}$ upper shelf/terrace $+ 54\text{ m}$ toe runout floor, cliff height $H = 12\text{ m}$, base foundation $4\text{ m}$, $15,267$ GIMP particles at $h = 0.5\text{ m}$) for **$220$ Stage-1 gravity settling steps + $80\text{ frames} \times 40\text{ substeps} = 3,200\text{ Stage-2 dynamic updates}$ ($t = 9.79\text{ s}$)** using Urmi et al. (2024) Eq. (2) exponential–linear post-peak softening (`make-urmi-evolution-law`).
+
+| Metric ($102\text{ m} \times 16\text{ m}$ Domain, $t = 9.79\text{ s}$) | Model H (`L-URMI-LONG-H`) | Model HS (`L-URMI-LONG-HS`, Urmi Eq. 2) | Comparison / Physical Interpretation |
+| :--- | :---: | :---: | :--- |
+| **Material Point Count** | $15,267$ | $15,267$ | Elongated $48\text{ m}$ terrace + $54\text{ m}$ runout floor |
+| **Dynamic Duration & Updates** | $3,200$ steps ($80$ frames, $9.79\text{ s}$) | $3,200$ steps ($80$ frames, $9.79\text{ s}$) | $5.1\times$ longer physical time than standard `L-H`/`L-HS` |
+| **Pre-Peak Dynamic Identity ($\kappa_{\max} \le 0.05$)** | Frames $0..1$ | Frames $0..1$ | $\max |\Delta u| = 0.0\text{ m}$, $\max |\Delta \kappa| = 3.65 \times 10^{-15}$ |
+| **Collapse Regime Over Extended Time** | Single-stage slump, arrests by $t \approx 3.5\text{ s}$ | **3-stage retrogressive surges** ($t = 0.25\text{ s}$, $0.8\text{–}2.0\text{ s}$, $5.2\text{–}6.1\text{ s}$) | Post-peak softening triggers successive block mobilization |
+| **Final Max Shear-Band Strain $\kappa_{\max}$** | $4.9304$ | **$7.5377$** | **$1.53\times$ higher peak plastic shear strain** |
+| **Final Mean Plastic Strain $\kappa_{\text{mean}}$** | $0.0883$ | **$0.1756$** | **$1.99\times$ ($+98.9\%$) higher mean plastic deformation** |
+| **Shear-Band Minimum $(c, \phi)$** | $5.0\text{ kPa}, 15.0^\circ$ (hardens to $7\text{ kPa}, 20^\circ$) | **$2.0\text{ kPa}, 13.0^\circ$** | Full residual degradation along retrogressive basal & rear shear zones |
+| **Softened Terrace Fraction ($\kappa > 0.05$)** | $0.00\%$ | **$14.78\%$** | Extensive softened failure wedge across the $48\text{ m}$ shelf |
+| **Continuum Max Displacement $|u|_{\max}$ ($t = 9.79\text{ s}$)** | $7.9424\text{ m}$ | **$13.5387\text{ m}$** | **$+70.46\%$ amplification** ($1.705\times$) under Urmi Eq. 2 softening |
+| **Horizontal Toe Runout Distance** | $7.7678\text{ m}$ | **$13.0667\text{ m}$** | **$+68.22\%$ longer toe runout** ($1.682\times$) across the runout floor |
+| **Crest Scarp Vertical Settlement** | $5.5405\text{ m}$ | **$7.7317\text{ m}$** | **$+39.55\%$ deeper crest slump** ($1.395\times$) |
+| **Stage-2 Max 6-Plane Yield Residual** | $3.30 \times 10^{-9}\text{ Pa}$ | $5.40 \times 10^{-8}\text{ Pa}$ | Exact return-mapping admissibility across all $3,200$ steps |
+
+- **Elongated Cliff Summary JSON:** [`research/cliff/m5_urmi_long_summary.json`](../cliff/m5_urmi_long_summary.json)
+- **Elongated Cliff Plots:** [`research/cliff/plots/m5_urmi_long_dashboard.png`](../cliff/plots/m5_urmi_long_dashboard.png) and [`research/cliff/plots/m5_urmi_long_spatial_localization.png`](../cliff/plots/m5_urmi_long_spatial_localization.png)
+- **Elongated Cliff Videos (`.mp4`):**
+  - [`research/cliff/videos/5_cliff_urmi_long_hardening_lh.mp4`](../cliff/videos/5_cliff_urmi_long_hardening_lh.mp4) (`L-URMI-LONG-H`)
+  - [`research/cliff/videos/6_cliff_urmi_long_softening_lhs.mp4`](../cliff/videos/6_cliff_urmi_long_softening_lhs.mp4) (`L-URMI-LONG-HS`)
+  - [`research/cliff/videos/cliff_urmi_long_h_vs_hs.mp4`](../cliff/videos/cliff_urmi_long_h_vs_hs.mp4) (Side-by-Side)
 
 ---
 
 ## 6. Scientific Caveats & Interpretation Notes
 
 1. **Local Continuum Softening & Mesh-Scale Dependence:**
-   As documented in Urmi et al. (2024, Section 2) and standard continuum plasticity theory, local strain-softening (`Model HS`) localizes plastic shear strain into a band of thickness governed by the MPM background cell size ($h$). In our paired comparisons (`T-100-H` vs `T-100-HS` and `L-H` vs `L-HS`), the background mesh size ($h$), particle count, initial stress state, time step ($\text{CFL} = 0.25$), and pre-peak hardening law are held **100% identical** between Model H and Model HS so that all observed post-peak differences isolate the constitutive effect of post-peak softening versus peak-plateau hardening.
+   As documented in Urmi et al. (2024, Section 2) and standard continuum plasticity theory, local strain-softening (`Model HS`) localizes plastic shear strain into a band of thickness governed by the MPM background cell size ($h$). In our paired comparisons (`T-100-H` vs `T-100-HS`, `L-H` vs `L-HS`, and `L-URMI-LONG-H` vs `L-URMI-LONG-HS`), the background mesh size ($h$), particle count, initial stress state, time step ($\text{CFL}$), and pre-peak hardening law are held **100% identical** between Model H and Model HS so that all observed post-peak differences isolate the constitutive effect of post-peak softening versus peak-plateau hardening.
 2. **Zero-Dilation Cohesionless Apex Behavior (`c = 0, psi = 0`):**
    For cohesionless sand ($c = 0, \psi = 0^\circ$) in 3D MPM triaxial compression (`T-100-HS`), zero plastic volumetric dilation ($\operatorname{tr}\Delta\boldsymbol{\varepsilon}^p = 0$) implies $\operatorname{tr}\boldsymbol{\tau} = \operatorname{tr}\boldsymbol{\tau}^{\text{tr}}$, so a strictly tensile mean trial stress ($\operatorname{tr}\boldsymbol{\tau}^{\text{tr}} > 0$) cannot return to the zero-mean-stress apex $\boldsymbol{\tau} = \mathbf{0}$ without volumetric plastic dilation. In `T-100-HS`, this platen-corner tensile state occurs only after $\varepsilon_a > 14.3\%$ (frame 30), well after the specimen has completed peak failure ($\varepsilon_a = 6.52\%$) and reached its full residual softening plateau ($\varepsilon_a = 14.26\%, q_{HS} = 91.31\text{ kPa}$). In the cohesive–dilatant cliff soil ($c \in [2, 7]\text{ kPa}, \psi = 1.0^\circ$), the apex lies in tension ($+8.66\text{ kPa}$ to $+19.23\text{ kPa}$) and all 3-plane apex return bases are nonsingular throughout the entire collapse.
 3. **Total-Stress Single-Phase Formulation:**
@@ -213,4 +242,8 @@ python scripts\plot_m4_triaxial_comparison.py
 # 5. Reproduce M5 2D MPM Cliff simulations, plots & video
 windows\cl-mpm.cmd scripts\run-m5-cliff-simulations.lisp
 python scripts\plot_m5_cliff_comparison.py
+
+# 6. Reproduce Elongated Urmi-Geometry Long-Duration 2D MPM Cliff pair, plots & videos
+windows\cl-mpm.cmd scripts\run-m5-urmi-long-cliff.lisp
+python scripts\plot_m5_urmi_long_cliff.py
 ```

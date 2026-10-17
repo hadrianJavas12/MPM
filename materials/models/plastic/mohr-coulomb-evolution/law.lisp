@@ -49,6 +49,7 @@
 
 (defun make-urmi-evolution-law (&key (variant :hs)
                                      prepeak-points
+                                     prepeak-cohesion-points
                                      (peak-kappa 0.037d0)
                                      (residual-kappa 0.20d0)
                                      (phi-peak-deg 33.99d0)
@@ -83,6 +84,9 @@ For VARIANT :H, the law remains identical up to PEAK-KAPPA and clamps at peak."
          (base-prepeak (or prepeak-points
                            (list (list 0d0 phi-pk)
                                  (list (float peak-kappa 1d0) phi-pk))))
+         (base-c-prepeak (or prepeak-cohesion-points
+                             (list (list 0d0 c-pk)
+                                   (list (float peak-kappa 1d0) c-pk))))
          (phi-post
            (loop for i from 1 to postpeak-segments
                  for ratio = (/ (float i 1d0) (float postpeak-segments 1d0))
@@ -102,8 +106,7 @@ For VARIANT :H, the law remains identical up to PEAK-KAPPA and clamps at peak."
     (make-evolution-law
      :variant variant
      :points (append base-prepeak phi-post)
-     :cohesion-points (append (list (list 0d0 c-pk) (list (float peak-kappa 1d0) c-pk))
-                              c-post)
+     :cohesion-points (append base-c-prepeak c-post)
      :psi psi
      :stress-measure stress-measure
      :peak-kappa peak-kappa
