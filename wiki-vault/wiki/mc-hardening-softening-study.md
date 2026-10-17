@@ -3,7 +3,7 @@ title: Native Mohr-Coulomb hardening and softening study
 type: synthesis
 tags: [cl-mpm, mohr-coulomb, research, native-windows, verification]
 sources: [research/README.md, research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md, research/references/PROVENANCE.md, research/reports/M0_SERIAL_REGRESSION.md, docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md, docs/evidence/material-contract-2026-10-16/validation-summary.json]
-updated: 2026-10-16
+updated: 2026-10-17
 ---
 
 # Native Mohr-Coulomb hardening and softening study
@@ -12,11 +12,15 @@ The user authorized the M0–M6 master plan, stage commits/pushes and economical
 automatic continuation. This is an independently maintained native software and
 numerical-comparison project, with no UI work or thesis framing.
 
-The immediate priority is [[cl-mpm-architecture]] migration P0/G0, on
-`codex/material-architecture-migration` from `7c399fb`. Root `materials/` is the
-target owner; `framework/` remains temporary compatibility. Complete the actual
-file/ASDF/caller/form ownership audit before moves. The target is not implemented;
-new MC physics is deferred until migration gates and requires a separate branch.
+The [[cl-mpm-architecture]] P0–P6 ownership migration on `codex/material-architecture-migration`
+(from `7c399fb`) is now implemented and validated: root `materials/` owns
+constitutive laws, state, evolution, and model diagnostics; `scenarios/` owns
+reusable procedures; `src/simulation/` owns configuration and composition; and
+root `cl-mpm-framework.asd` is the canonical ASDF system (`p6-short/` 11/11 checks,
+`joss-bounded/` 4s serial control, and `p6-full/` full VM 2D/3D regressions all
+`exit 0` with byte-identical VTKs/CSVs; `FILE_MIGRATION_RESULT.json` records
+`58/58` mapped owners present). `framework/` remains temporary compatibility.
+New MC H/HS physics (`G4`) remains deferred to a separate experimental branch.
 
 ## Verified checkpoint
 

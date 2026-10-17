@@ -1,0 +1,3 @@
+# Bounded 4-second serial Joss integration control
+
+Compares immutable pre-P2 source (`7e2aac3`, `before-003`) against the final canonical root-ASDF layout (`9dfb58b`, `after-001`) for a 4-second serial Joss Bay cliff simulation (`workers=1`, `OPENBLAS_NUM_THREADS=1`, `OMP_NUM_THREADS=1`). Both runs complete 1,658 elastic equilibration steps and reach 4.0 s physical time with exit code 0. All saved VTK files (`equilibrium.vtk`, `sim_00001.vtk`, `sim_00002.vtk`) are byte-identical (`SHA-256` match) and `compare-framework-runs.py` passes with zero position, scalar-field, or CSV differences. Earlier harness failures (`before-001`, `before-002`) are retained in full. This bounded 4-second control does not replace the user-cancelled 40-second run or close the full G3 gate.

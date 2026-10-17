@@ -34,83 +34,41 @@ until checking existing processes and saved statuses.**
 | P2 wave evidence | `p2-a/` 42, `p2-b/` 57, `p2-c/` 74, `p2-d/` 58 hashes | Each VM/MC saved VTK pair and CSV exact versus previous wave; real Windows runs, no tolerance changes |
 | P4-E | `d6d3f61`, executed `06eba1e`; `p4-e/` 34 hashes | Standalone 3, orchestration 3, VM 27 updates, MC diagnostics 9; strict comparisons and saved VTK/CSV exact versus D |
 | P4-F implementation | `436b561` | Root canonical `cl-mpm-framework.asd`, active Windows/Studio config/calibration callers and snapshot tests updated |
-| P4-F partial validation | launch HEAD `326268a`; `p6-short/` | Snapshot 3, native snapshot 7, standalone calibration 3 all exit 0; no production/test fixes needed |
-| Node at F | `p4-f/node-{check,tests}.log`, `node-status.json` | Syntax check and 36 tests pass, zero failed/skipped |
+| P4-F & P6 short suite | `326268a` / `9dfb58b`; `p6-short/` 64 hashes | All 11 short native checks pass (`exit 0`), 252 sealed source files verified; initial PS 5.1 `p4-orchestration` stderr wrapper exception retained alongside passing `p4-orchestration-002` |
+| Node at F | `p4-f-node/` 4 hashes | Syntax check and 36 tests pass, zero failed/skipped |
+| Bounded 4s serial Joss control | `joss-bounded/` 54 hashes | `before-003` (`a99a4e1` / `7e2aac3`) vs `after-001` (`9dfb58b`): both 1,658 equilibration steps, 4.0 s, `exit 0`; `equilibrium.vtk`, `sim_00001.vtk`, `sim_00002.vtk` byte-identical, zero diff; failed attempts `before-001`/`before-002` retained |
+| Full final-layout VM 2D & 3D | `9dfb58b`; `p6-full/` 38 hashes | `triaxial-2d` (480 MPs, 17,443 updates, 51 states) and `triaxial-3d` (780 MPs, 17,443 updates, 51 states) both `exit 0`; all 51 VTKs per run and `stress-strain.csv` byte-identical to `p1-full` (`62adb50`); strict comparisons and independent audits PASS |
+| Ownership result ledger | `FILE_MIGRATION_RESULT.json`, `COMPONENTS.md` | All 884 P0 paths accounted for without mutating `FILE_MIGRATION_MATRIX.json`: `812` `RETAINED_UNCHANGED`, `14` `RETAINED_MODIFIED`, `58/58` `MAPPED_OWNERS_PRESENT` (`0` pending) |
 
 Evidence directories above are under
 `docs/evidence/architecture-migration-2026-10-16/`; working runs are under
 `output/architecture-migration-2026-10-16/`. Source/CLOS compatibility and
 numerical regression are distinct from scientific validation.
-F partial evidence is saved in `p6-short/` (20 hashes, 252 sealed source files);
-Node logs/status are additionally committed in `p4-f-node/` (4 hashes).
 
 P2's chosen plan is `P2_COMPACT_MIGRATION.json`: 23 original sources/495 audited
 forms/49 cohesive targets. The 109-fragment plan is an unused audit alternative.
 P4 plan was committed at `f3a57ae` before moves. `p4/migration-state.json` now
 contains B/C/D/E/F. **Do not apply the migration helpers again.**
 
-## Active job and preserved failures
+## Completed post-handover execution (no active native jobs remain)
 
-One independent **old-source four-second serial Joss baseline** was already
-launched: `output/architecture-migration-2026-10-16/joss-bounded/before-003/`.
-Last inspected wrapper PID **39560**, cmd **8832**, native SBCL **45988**.
-Treat PIDs as observations, not proof they remain alive. Read:
-
-1. `before-003-status.json` if present, else launch metadata/process existence.
-2. `before-003/reference-metadata.json`: `complete`, physical time, termination.
-3. One last line of `before-003.stdout.log`; stderr if failure is observed.
-
-Last observed was settling iteration 350; completion was not established.
-Never duplicate this job or actively poll it. It uses verified immutable pre-P2
-source bytes copied from `native-freeze/triaxial-short-002/source/`, old CLI,
-private FASLs and copied native DLL. Physics/settings match the committed
-`tests/cases/joss-serial-integration.lisp`: one worker, 4 s, frame cap 10.
-This is not the cancelled 40 s simulation or full-collapse acceptance.
-
-`before-001` failed before native stepping because a quoted Windows argument
-ended with a backslash and merged arguments. `before-002` failed before stepping
-because old path guards resolved a missing empty `studio/lisp/` registry root.
-Both failures/logs are retained. `2fee283` fixes argument/log capture;
-`326268a` supplies the empty directory, without replacing numerical source.
-`scripts/prepare-joss-bounded-baseline.py --verify-retry --attempt before-003`
-checks prepared inputs without launching a solver. Preserve these failed attempts.
-
-The F short-suite Python controller **34140** was deliberately terminated for
-the human handover. Its command exit 1 means **USER_STOPPED_QUEUE**, not a failed
-native assertion. Already-launched standalone wrapper 32920 finished exit 0;
-no F short-suite process remains. Do not restart the whole eleven-check queue.
-
-## Remaining implementation/validation work
-
-1. Read saved final short statuses first. Already completed snapshot3/native7/
-   standalone3/Node36 must not rerun. Remaining F checks were **NOT_RUN**:
-   orchestration F (4 assertions), engine smoke 50 updates, ownership normal/
-   legacy, diagnostic legacy, custom delegate, bounded cliff MC, and the changed
-   `scripts/run-triaxial.lisp` copied legacy-source loader.
-   Use fresh named outputs and existing `p6-short/run-check.ps1`; inspect its
-   arguments/legacy-config before use. Preserve source launch hashes.
-2. Full final-layout VM 2D and 3D are **NOT_RUN**. Prepared but never launched:
-   `p6-full/launch-triaxial-2d.ps1`, `launch-triaxial-3d.ps1`.
-   They run native once, strict compare against completed P1-full `62adb50`,
-   and independent audit after exit 0. Both historical baselines have 51 VTKs,
-   17,443 updates, 0.2 s, all native/compare/audit exits 0. Do not rerun baselines.
-   Helper `.tmp/launch-migration-p6-full.py` exists; inspect wrappers, do not
-   regenerate/overwrite prepared evidence. Snapshot code before permitting edits.
-3. Once old bounded Joss baseline actually completes, run the same 4 s case once
-   on final canonical code with a fresh frozen output. Strictly compare whole
-   outputs at matching states, unchanged tolerances, no interpolation/cropping.
-   No current-source after run has been launched yet. Preserve failures honestly.
-4. Run `scripts/report-architecture-migration.py` for the final path/hash ledger
-   without changing P0. Every original path must appear once; target existence
-   is not a test PASS. Preserve old LOAD wrappers while compatibility is needed.
-5. Final evidence collector, updated `STATUS.md`, `docs/testing.md`, human guide,
-   handover and wiki/index/append-only log; commit/push coherent checkpoints.
-   Make PR to main and attach it in Codex. **Do not merge.**
-
-Useful ignored helpers remain under `.tmp/`; stage extraction originals/proofs
-are under `output/.../p2-*-before/` and `p4/original/`, `p4/stage-*/`.
-Committed evidence bundles include their reproducibility support. Do not waste
-tokens rebuilding inventories, catalog baselines, plans, or completed tests.
+1. All 8 remaining `p6-short/` checks (`p4-orchestration-002`, `engine-smoke`,
+   `ownership-normal`, `ownership-legacy`, `diagnostics-legacy`, `custom-delegate`,
+   `cliff-mc`, `legacy-triaxial`) completed with `exit 0` under `pwsh.exe` and
+   are packaged in `docs/evidence/architecture-migration-2026-10-16/p6-short/` (64 hashes).
+   Note: use PowerShell 7 (`pwsh.exe`), not Windows PowerShell 5.1 (`powershell.exe`),
+   when running wrappers that redirect SBCL `stderr` with `$ErrorActionPreference = 'Stop'`.
+2. Pre-P2 4-second serial Joss baseline `before-003` completed (`exit 0`, 1,658
+   equilibration steps, 4.0 s), and the matched canonical final-layout run `after-001`
+   completed (`exit 0`) with byte-identical VTKs and zero position/field/CSV differences;
+   packaged in `docs/evidence/architecture-migration-2026-10-16/joss-bounded/` (54 hashes).
+3. Full final-layout VM Triaxial 2D and 3D regressions completed (`exit 0`) with all
+   51 VTKs per run and `stress-strain.csv` byte-identical to `p1-full` (`62adb50`);
+   packaged in `docs/evidence/architecture-migration-2026-10-16/p6-full/` (38 hashes).
+4. `docs/architecture/COMPONENTS.md` and `docs/architecture/FILE_MIGRATION_RESULT.json`
+   are generated (`58/58` `MAPPED_OWNERS_PRESENT`), documentation and `wiki-vault/` are
+   updated, and the branch is ready for PR review against `main` (**do not merge without
+   express user direction**).
 
 ## Scientific and compatibility exceptions
 

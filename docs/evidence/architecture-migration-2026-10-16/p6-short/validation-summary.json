@@ -1,8 +1,21 @@
 {
-  "status": "PARTIAL_USER_HANDOVER",
-  "actualSuiteHead": "326268a2b6e1441c5c8a9947e83427e0fc16e34f",
-  "attribution": "Native production and snapshot fixture bytes remain unchanged since 436b561; intervening commit modifies the separate old-source Joss baseline helper. Exact captured source hashes are retained.",
-  "completed": {
+  "stage": "P4-F / P6 short native compatibility suite",
+  "status": "PASS",
+  "sourceCommitsAtLaunch": {
+    "case-snapshot": "326268a2b6e1441c5c8a9947e83427e0fc16e34f",
+    "native-snapshot": "326268a2b6e1441c5c8a9947e83427e0fc16e34f",
+    "standalone-triaxial": "326268a2b6e1441c5c8a9947e83427e0fc16e34f",
+    "p4-orchestration-002": "9dfb58b06fc3f8bc7883491e818fe33dab091ee7",
+    "engine-smoke": "9dfb58b06fc3f8bc7883491e818fe33dab091ee7",
+    "ownership-normal": "9dfb58b06fc3f8bc7883491e818fe33dab091ee7",
+    "ownership-legacy": "9dfb58b06fc3f8bc7883491e818fe33dab091ee7",
+    "diagnostics-legacy": "9dfb58b06fc3f8bc7883491e818fe33dab091ee7",
+    "custom-delegate": "9dfb58b06fc3f8bc7883491e818fe33dab091ee7",
+    "cliff-mc": "9dfb58b06fc3f8bc7883491e818fe33dab091ee7",
+    "legacy-triaxial": "9dfb58b06fc3f8bc7883491e818fe33dab091ee7"
+  },
+  "commitAttribution": "First three checks launched at 326268a before human handover; remaining eight checks launched at 9dfb58b after handover. All 252 tracked Lisp/JSON/script source files are byte-identical across both commits and verified against sealed live-unit-sources.tar.gz.",
+  "completedChecks": {
     "caseSnapshot": {
       "passed": 3,
       "exitCode": 0
@@ -14,26 +27,52 @@
     "standaloneTriaxial": {
       "passed": 3,
       "exitCode": 0
+    },
+    "p4Orchestration002": {
+      "passed": 4,
+      "exitCode": 0
+    },
+    "engineSmoke50": {
+      "particles": 100,
+      "steps": 50,
+      "exitCode": 0
+    },
+    "ownershipNormal": {
+      "passed": 7,
+      "exitCode": 0
+    },
+    "ownershipLegacy": {
+      "passed": 7,
+      "exitCode": 0
+    },
+    "diagnosticsLegacy": {
+      "passed": 3,
+      "exitCode": 0
+    },
+    "customDelegate": {
+      "particles": 64,
+      "steps": 2,
+      "customCalls": 80,
+      "maxDiff": 0.0,
+      "exitCode": 0
+    },
+    "cliffMc": {
+      "particles": 70,
+      "substeps": 2,
+      "vtkByteIdenticalToP1": true,
+      "exitCode": 0
+    },
+    "legacyTriaxial": {
+      "particles": 480,
+      "updates": 27,
+      "strictComparisonPassed": true,
+      "exitCode": 0
     }
   },
+  "retainedHarnessException": {
+    "p4-orchestration": "Initial invocation under Windows PowerShell 5.1 failed at wrapper level (exitCode -1) because PS 5.1 treats SBCL stderr redefinition warnings under *> redirection as NativeCommandError. Retained unchanged; rerun under pwsh.exe as p4-orchestration-002 passed 4/4."
+  },
   "sourceFilesSealed": 252,
-  "queue": "USER_STOPPED_QUEUE: controller PID34140 terminated to prevent new launches; tool exit1 is intentional cancellation, not native/test failure. Already-launched standalone wrapper PID32920 subsequently finished exit0. No owned native process remains.",
-  "notRun": [
-    "orchestration-F",
-    "engine-smoke50",
-    "ownership-normal",
-    "ownership-legacy",
-    "diagnostics-legacy",
-    "custom-delegate",
-    "cliff-mc",
-    "legacy-triaxial",
-    "full-VM2D",
-    "full-VM3D"
-  ],
-  "preparedFullWrappers": [
-    "output/architecture-migration-2026-10-16/p6-full/launch-triaxial-2d.ps1",
-    "output/architecture-migration-2026-10-16/p6-full/launch-triaxial-3d.ps1"
-  ],
   "scientificValidation": false,
-  "fullJoss": "STOPPED_BY_USER earlier; no restart; acceptance incomplete"
+  "fullJoss": "STOPPED_BY_USER earlier at 4.2 s; not restarted; 4-second serial bounded control packaged separately in joss-bounded/"
 }

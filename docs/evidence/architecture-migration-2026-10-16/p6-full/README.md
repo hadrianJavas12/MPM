@@ -1,0 +1,3 @@
+# P4-F / P6 final-layout full VM Triaxial 2D and 3D regressions
+
+Executes the complete 51-state (17,443 updates, 0.2 s / 10% prescribed axial strain) spatial MPM 2D plane-strain rectangle (480 MPs) and 3D cylinder (780 MPs) regressions on the final canonical root-ASDF layout (`9dfb58b`). Both runs exit 0 with frozen first-party source and copied-DLL provenance verified. Every saved VTK (`51/51` in 2D and `51/51` in 3D) and `stress-strain.csv` is byte-identical (`SHA-256` match) to the `p1-full` (`62adb50`) baseline, with zero position, CSV, or exported-field differences under `compare-framework-runs.py` and `audit-triaxial.py` passing.

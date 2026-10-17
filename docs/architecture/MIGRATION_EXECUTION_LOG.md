@@ -284,3 +284,46 @@ are retained. All details/PIDs/paths and next steps are in the checkpoint.
 
 Automatic continuation is PAUSED to avoid concurrent work during human handoff.
 No final migration PR, main merge, scientific acceptance or complete G3 is claimed.
+
+### P4-F and P6 final validation, bounded Joss control, and full VM 2D/3D completion — 2026-10-17
+
+Resumed from handover commit `9dfb58b` without repeating already-passed checks:
+
+- **Remaining `p6-short/` native compatibility checks (8/8 exit 0; 11/11 total)**:
+  `p4-orchestration-002` (4/4), `engine-smoke` (100 MPs, 50 steps), `ownership-normal` (7/7),
+  `ownership-legacy` (7/7), `diagnostics-legacy` (3/3), `custom-delegate` (64 MPs, 2 steps,
+  80 custom calls, zero position/stress diff, VTK readback), `cliff-mc` (70 MPs, 2 substeps,
+  `vtk/mesh.vtk` and `vtk/sim_00001.vtk` byte-identical to `p1`), and `legacy-triaxial`
+  (480 MPs, 27 updates, strict comparison exit 0 vs `p4-e`). The initial Windows PowerShell 5.1
+  `p4-orchestration` invocation failed at wrapper level (`exitCode: -1`) because PS 5.1 treats
+  SBCL `stderr` redefinition warnings under `*>` redirection as `NativeCommandError`; that record
+  is retained unchanged alongside the passing `pwsh.exe` run (`p4-orchestration-002`).
+  Evidence: `docs/evidence/architecture-migration-2026-10-16/p6-short/` (64 verified hashes).
+- **Bounded 4-second serial Joss integration control (`joss-bounded/`, exit 0)**:
+  Pre-P2 baseline `before-003` (`a99a4e1` / `7e2aac3`) and canonical final-layout candidate
+  `after-001` (`9dfb58b`) both completed 1,658 elastic equilibration steps and 4.0 s physical
+  time (`workers=1`, `OPENBLAS_NUM_THREADS=1`, `OMP_NUM_THREADS=1`). All saved VTKs
+  (`equilibrium.vtk`, `sim_00001.vtk`, `sim_00002.vtk`) are byte-identical (`SHA-256` match)
+  and `compare-framework-runs.py` exited 0 with zero position, scalar-field, or CSV differences.
+  Earlier harness failures `before-001` and `before-002` are retained. This bounded 4-second
+  control does not replace the user-stopped 40-second run or close full G3.
+  Evidence: `docs/evidence/architecture-migration-2026-10-16/joss-bounded/` (54 verified hashes).
+- **Full final-layout VM Triaxial 2D and 3D regressions (`p6-full/`, exit 0)**:
+  Both `triaxial-2d` (480 MPs, 17,443 updates, 51 states) and `triaxial-3d` (780 MPs, 17,443
+  updates, 51 states) completed on `9dfb58b` with `nativeExitCode=0`, `comparisonExitCode=0`,
+  and `auditExitCode=0`. Every saved VTK (`51/51` in 2D and `51/51` in 3D) and `stress-strain.csv`
+  is byte-identical (`SHA-256` match) to `p1-full` (`62adb50`), with zero position/CSV/field
+  differences and independent consistency audits passing.
+  Evidence: `docs/evidence/architecture-migration-2026-10-16/p6-full/`.
+- **Ownership result ledger (`docs/architecture/FILE_MIGRATION_RESULT.json`)**:
+  Created `docs/architecture/COMPONENTS.md` (mapped target of `framework/components/README.md`)
+  and ran `scripts/report-architecture-migration.py` without modifying immutable
+  `FILE_MIGRATION_MATRIX.json`: `884` original paths accounted for (`812` `RETAINED_UNCHANGED`,
+  `14` `RETAINED_MODIFIED`, `58/58` `MAPPED_OWNERS_PRESENT`, `0` pending).
+- **Gate summary**: `G0` DONE, `G1` PARTIAL (preserved legacy global overrides in damage/ice,
+  concrete forward class, mixed C++ transaction), `G2` DONE, `G3` PARTIAL (full VM 2D/3D and
+  bounded 4s serial Joss exact PASS; 40s serial Joss on migrated code remains `STOPPED_BY_USER`;
+  historical 4-worker parallel Joss failure remains open), `G4` DEFERRED (new MC H/HS physics
+  deferred to separate experimental branch), `G5` DONE for active callers and compatibility shims
+  (`framework/` shims retained; two pre-existing missing legacy example files remain `BLOCKED`).
+

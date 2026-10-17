@@ -473,3 +473,8 @@ All four native material waves passed bounded controls and twenty exact family c
 
 P2/P4-E validation complete; P4-F installed with snapshot3/native7/standalone3 and Node36 passing. Remaining validation stopped for human handoff, full VM final runs NOT_RUN. Existing bounded old-source Joss continues independently; fullJoss remains cancelled. See [[cl-mpm-architecture]] and docs/architecture/NEXT_AI_CHECKPOINT.md. Automation paused; raw sources/settings preserved.
 
+## [2026-10-17] ingest | P4-F and P6 final architecture migration validation complete
+
+Completed all remaining P4-F/P6 short native checks (`p6-short/`, 11/11 PASS, 64 verified artifacts; initial PS 5.1 stderr redirection failure `p4-orchestration` retained alongside passing `pwsh.exe` run `p4-orchestration-002`), the 4-second serial Joss bounded control (`joss-bounded/`, 54 verified artifacts, `before-003` vs `after-001` exact VTK/CSV match), full final-layout VM Triaxial 2D and 3D regressions (`p6-full/`, 38 verified artifacts, 51/51 VTKs and `stress-strain.csv` byte-identical to `p1-full` in both 2D and 3D), and `docs/architecture/FILE_MIGRATION_RESULT.json` (`884` original paths, `58/58` `MAPPED_OWNERS_PRESENT`). Updated [[cl-mpm-architecture]], [[reusable-simulation-framework]], [[mc-hardening-softening-study]], and `index.md`. Full 40s Joss remains `STOPPED_BY_USER` (not restarted); G1 and G3 remain `PARTIAL`, G4 `DEFERRED`.
+
+

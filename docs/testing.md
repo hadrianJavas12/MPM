@@ -299,20 +299,39 @@ older unknown-cause note. The workflow installs SBCL and requires the contract
 tests on Node 22/Ubuntu 24.04. Hosted CI cannot be marked green until the account
 owner resolves the billing lock and a fresh run completes.
 
-## Architecture handover checkpoint, 2026-10-17
+## Architecture migration final verification, 2026-10-17
 
 Current source/status and commands are in
-[the next-AI checkpoint](architecture/NEXT_AI_CHECKPOINT.md), which overrides
-older next-action paragraphs. P2 A–D and P4 B–E passed their saved native
-controls; all twenty family catalogs match baseline bytes. E standalone3 and
-orchestration3 pass, and VM/MC saved VTK/CSV remain exact against D.
+[the next-AI checkpoint](architecture/NEXT_AI_CHECKPOINT.md) and
+[architecture status](architecture/STATUS.md). P2 A–D and P4 B–F passed all
+saved native controls; all twenty post-move family catalogs match the five
+baseline catalogs byte for byte.
 
-P4-F is implemented at 436b561. Snapshot3, native-snapshot7 and standalone3
-passed on launch HEAD326268a; [partial evidence](evidence/architecture-migration-2026-10-16/p6-short/validation-summary.json)
-retains 20 hash-verified artifacts and 252 sealed source files. Check/Node36
-passed with zero skips. Remaining final short checks and full VM2D/3D were
-not run; the queue was stopped deliberately for human handoff. Do not rerun
-completed checks. The prepared full wrappers compare/audit once automatically.
+On the final canonical root-ASDF layout (`436b561` / `9dfb58b`):
+- **`p6-short/` (11/11 native checks PASS, 64 verified artifacts)**:
+  `case-snapshot` (3/3), `native-snapshot` (7/7), `standalone-triaxial` (3/3),
+  `p4-orchestration-002` (4/4; initial Windows PowerShell 5.1 stderr redirection
+  attempt `p4-orchestration` is retained unchanged), `engine-smoke` (100 MPs, 50 steps),
+  `ownership-normal` (7/7), `ownership-legacy` (7/7), `diagnostics-legacy` (3/3),
+  `custom-delegate` (64 MPs, 2 steps, 80 custom calls, zero position/stress diff, VTK readback),
+  `cliff-mc` (70 MPs, 2 substeps, byte-identical `vtk/mesh.vtk` and `vtk/sim_00001.vtk` vs P1),
+  and `legacy-triaxial` (480 MPs, 27 updates, strict comparison PASS vs P4-E), plus
+  Node syntax check and 36/36 tests passing (`p4-f-node/`).
+- **`joss-bounded/` (4-second serial initiation control PASS, 54 verified artifacts)**:
+  Pre-P2 baseline `before-003` (`a99a4e1` / `7e2aac3`) and final-layout candidate
+  `after-001` (`9dfb58b`) both completed 1,658 elastic equilibration steps and 4.0 s
+  physical time (`exit 0`). All saved VTKs (`equilibrium.vtk`, `sim_00001.vtk`,
+  `sim_00002.vtk`) are byte-identical (`SHA-256` match) and `compare-framework-runs.py`
+  exited 0 with zero position, scalar-field, or CSV differences. Earlier harness
+  failures `before-001` and `before-002` are retained.
+- **`p6-full/` (full final-layout VM Triaxial 2D and 3D regressions PASS, 38 verified artifacts)**:
+  Both `triaxial-2d` (480 MPs, 17,443 updates, 51 states) and `triaxial-3d` (780 MPs,
+  17,443 updates, 51 states) completed on `9dfb58b` with `nativeExitCode=0`,
+  `comparisonExitCode=0`, and `auditExitCode=0`. Every saved VTK (`51/51` in 2D and
+  `51/51` in 3D) and `stress-strain.csv` is byte-identical (`SHA-256` match) to
+  `p1-full` (`62adb50`), with zero position/CSV/field differences and independent
+  consistency audits passing.
 
-The separate old-source 4s Joss baseline remains in progress at handoff; no new
-fullJoss completion, PNG success, complete G3 or scientific validation is claimed.
+No new 40-second full Joss run was started (the earlier run on `62adb50` remains
+`STOPPED_BY_USER` at 4.2 s); PNG plotting, complete G3, and scientific validation
+are not claimed.

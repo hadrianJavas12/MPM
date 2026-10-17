@@ -3,7 +3,7 @@ title: Reusable native simulation framework
 type: synthesis
 tags: [cl-mpm, architecture, refactoring, native-windows, regression]
 sources: [docs/REUSABLE_FRAMEWORK.md, docs/AI_HANDOVER.md, docs/testing.md, framework/cl-mpm-framework.asd, docs/evidence/framework-refactor-2026-10-15/validation-summary.json, docs/evidence/material-contract-2026-10-16/validation-summary.json, docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md]
-updated: 2026-10-16
+updated: 2026-10-17
 ---
 
 # Reusable native simulation framework
@@ -275,3 +275,25 @@ are retained. All details/PIDs/paths and next steps are in the checkpoint.
 
 Automatic continuation is PAUSED to avoid concurrent work during human handoff.
 No final migration PR, main merge, scientific acceptance or complete G3 is claimed.
+
+### P4-F and P6 final completion — 2026-10-17
+
+Canonical root `cl-mpm-framework.asd` (`436b561` / `9dfb58b`) is now fully validated:
+- **`p6-short/` (11/11 checks PASS, 64 verified artifacts)**: `case-snapshot` (3/3),
+  `native-snapshot` (7/7), `standalone-triaxial` (3/3), `p4-orchestration-002` (4/4;
+  initial PS 5.1 stderr redirection failure `p4-orchestration` retained), `engine-smoke`
+  (50 steps), `ownership-normal` (7/7), `ownership-legacy` (7/7), `diagnostics-legacy`
+  (3/3), `custom-delegate` (80 custom calls, zero diff), `cliff-mc` (byte-identical VTKs
+  vs P1), and `legacy-triaxial` (strict comparison PASS vs P4-E), plus Node 36/36 (`p4-f-node/`).
+- **`joss-bounded/` (4-second serial control PASS, 54 verified artifacts)**: `before-003`
+  (`a99a4e1` / `7e2aac3`) and `after-001` (`9dfb58b`) both finished 1,658 equilibration
+  steps and 4.0 s (`exit 0`) with byte-identical `equilibrium.vtk`, `sim_00001.vtk`, and
+  `sim_00002.vtk` and zero position/field/CSV differences.
+- **`p6-full/` (full final-layout VM 2D and 3D regressions PASS, 38 verified artifacts)**:
+  Both `triaxial-2d` (480 MPs, 17,443 updates, 51 states) and `triaxial-3d` (780 MPs,
+  17,443 updates, 51 states) completed on `9dfb58b` (`exit 0`) with all 51 VTKs per run
+  and `stress-strain.csv` byte-identical to `p1-full` (`62adb50`), zero position/CSV/field
+  differences, and independent audits passing.
+- `docs/architecture/FILE_MIGRATION_RESULT.json` records all 884 original P0 paths with
+  `58/58` `MAPPED_OWNERS_PRESENT`. See [[cl-mpm-architecture]].
+

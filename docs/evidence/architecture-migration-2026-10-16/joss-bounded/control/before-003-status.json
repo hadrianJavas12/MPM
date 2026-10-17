@@ -1,0 +1,22 @@
+{
+  "startedUtc": "2026-10-17T03:09:57.8719130Z",
+  "bootstrapRepositoryCheckpoint": "326268a2b6e1441c5c8a9947e83427e0fc16e34f",
+  "numericalSourceBaselineCommit": "a99a4e1d1a8deb17483230ee59d53c07f4a26822",
+  "sourceIdentity": "Original manifest-bound payload copied into original-root, then old CLI re-copies/guards/compiles it in this fresh run",
+  "caseCommitReported": "9568b8e",
+  "workers": 1,
+  "requestedPhysicalTimeS": 4,
+  "frameCap": 10,
+  "openblasThreads": 1,
+  "ompThreads": 1,
+  "pngEnabled": false,
+  "wrapperPid": 39560,
+  "scope": "Fresh bounded serial initiation control; not full collapse/run-out, not restarted cancelled run",
+  "nativeExitCode": 0,
+  "stdoutPath": "D:\\MPM\\output\\architecture-migration-2026-10-16\\joss-bounded\\before-003.stdout.log",
+  "stderrPath": "D:\\MPM\\output\\architecture-migration-2026-10-16\\joss-bounded\\before-003.stderr.log",
+  "simulationComplete": true,
+  "physicalTime": 4.0,
+  "termination": "simulation-time",
+  "endedUtc": "2026-10-17T03:16:08.9713668Z"
+}

@@ -1,0 +1,1146 @@
+{
+  "createdUtc": "2026-10-16T16:32:49.684033+00:00",
+  "status": "PREPARED_NATIVE_NOT_RUN",
+  "sourceRun": "output\\architecture-migration-2026-10-16\\native-freeze\\triaxial-short-002",
+  "numericalSourceBaselineCommit": "a99a4e1d1a8deb17483230ee59d53c07f4a26822",
+  "trustedCaseCommitReported": "9568b8e",
+  "original_manifest_sha256": "f205518b1ae783fc0d5b4f282e86fe9a7fc704f09e06f0c977905de624557008",
+  "payload_file_count": 144,
+  "path_mirror_count": 13,
+  "prepared_files": [
+    {
+      "destination": "original-root/src/aggregate.lisp",
+      "origin": "source/src/aggregate.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 46719,
+      "sha256": "8308aaa8b8e01133828d1215eb8d2a754a8bef8208f8d67d9fb7cb21b1e303bd"
+    },
+    {
+      "destination": "original-root/src/cl-mpm.lisp",
+      "origin": "source/src/cl-mpm.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 7473,
+      "sha256": "54c2c4e068fd81bc2b2d79d0ba3835e695e1d0de9f8c0ed6a8ac8513983b92c1"
+    },
+    {
+      "destination": "original-root/src/constitutive.lisp",
+      "origin": "source/src/constitutive.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 79705,
+      "sha256": "e11a5a93eb60362cf9fef950dbef932050a5f583684f9f68b68f44621d76b63b"
+    },
+    {
+      "destination": "original-root/src/core.lisp",
+      "origin": "source/src/core.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 52544,
+      "sha256": "90f6ad05fc51456410df291e7782e9acde2f124fa2f16cc5044891238514c1b0"
+    },
+    {
+      "destination": "original-root/src/cpp.lisp",
+      "origin": "source/src/cpp.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 15989,
+      "sha256": "e8aec43b0d53a3f91b100f5602965f028cc3245512667cf61f7af04d3fd35d76"
+    },
+    {
+      "destination": "original-root/src/eigenerosion.lisp",
+      "origin": "source/src/eigenerosion.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 12320,
+      "sha256": "3396b21038537944ef0572653fc75c7b14ba070a29257a3c61f12a8169a0c0b7"
+    },
+    {
+      "destination": "original-root/src/errors.lisp",
+      "origin": "source/src/errors.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 443,
+      "sha256": "e857aa6fae6d4385f571d52903d9755799e39d384547f4fb3622eb7759914bcb"
+    },
+    {
+      "destination": "original-root/src/fastmaths.lisp",
+      "origin": "source/src/fastmaths.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 174,
+      "sha256": "e6e9c1629982576dcc5028085347840fc204c8a9812101bb5423f9e6184c78cf"
+    },
+    {
+      "destination": "original-root/src/ghost.lisp",
+      "origin": "source/src/ghost.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 49776,
+      "sha256": "e74fb0200ba0f0f6edbfb77cb0e9821cdc532c718808a89a0d92cef806276e44"
+    },
+    {
+      "destination": "original-root/src/implicit.lisp",
+      "origin": "source/src/implicit.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 83220,
+      "sha256": "ed262829375b11f92f70148ee4d421dd1ac9f9abe221795399e9436b6b49b357"
+    },
+    {
+      "destination": "original-root/src/mpi.lisp",
+      "origin": "source/src/mpi.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 100388,
+      "sha256": "7936696762e57e14f16bff0c2f93ce09c248f4741d36752dbba0450d18b6eb2c"
+    },
+    {
+      "destination": "original-root/src/output.lisp",
+      "origin": "source/src/output.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 44215,
+      "sha256": "479a747f01a5e1015be69934f0489378751e462b62b5a954ddadd04adf74971a"
+    },
+    {
+      "destination": "original-root/src/particle.lisp",
+      "origin": "source/src/particle.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 39724,
+      "sha256": "91a7a30a90f9659fb7989afdde056cd41968e13340a0121bae52a99b331270ce"
+    },
+    {
+      "destination": "original-root/src/plotter.lisp",
+      "origin": "source/src/plotter.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 5128,
+      "sha256": "88ba44d5bebd69ddd8a8e80902787997b3c4e036608168f254ccbcb210c68caa"
+    },
+    {
+      "destination": "original-root/src/settings.lisp",
+      "origin": "source/src/settings.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 492,
+      "sha256": "97307ee66180541a6ea3c3155c2da24f20669420e9e59f8747776253e0e0b710"
+    },
+    {
+      "destination": "original-root/src/setup.lisp",
+      "origin": "source/src/setup.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 36567,
+      "sha256": "0bd74167f9125a16b53fc55d6747039525943adffe6746004632781eec62b057"
+    },
+    {
+      "destination": "original-root/src/utils.lisp",
+      "origin": "source/src/utils.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 57848,
+      "sha256": "8ed1bfb0d0662107c8d56694b5388e571c41944cda07448337ebef1665015f57"
+    },
+    {
+      "destination": "original-root/src/bc/bc.lisp",
+      "origin": "source/src/bc/bc.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 21899,
+      "sha256": "00a722288bc7e7baad930cdb349a325a90c8b4c864c6a387eec26ecff579c0fa"
+    },
+    {
+      "destination": "original-root/src/bc/buoyancy.lisp",
+      "origin": "source/src/bc/buoyancy.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 78231,
+      "sha256": "a9318298ab971141f344c46f634156639a2de859e09123ff672aece032fadba9"
+    },
+    {
+      "destination": "original-root/src/bc/erosion.lisp",
+      "origin": "source/src/bc/erosion.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 5558,
+      "sha256": "db394ab4ba4e747626ae1523d2447ba5f7d69a7a8e8027026ec97b480a5fba85"
+    },
+    {
+      "destination": "original-root/src/bc/inflow.lisp",
+      "origin": "source/src/bc/inflow.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 3342,
+      "sha256": "d9119416720cf986c91d3ea9488c0e9bab5015663a92e72cbb3f862ac4f3de2a"
+    },
+    {
+      "destination": "original-root/src/bc/penalty.lisp",
+      "origin": "source/src/bc/penalty.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 63098,
+      "sha256": "f24eb709210e127f357d66f494091f770ef0a5a309b7463f75e3b3e39fbfcbb3"
+    },
+    {
+      "destination": "original-root/src/core/domain-update.lisp",
+      "origin": "source/src/core/domain-update.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 31495,
+      "sha256": "7cf4a1d2ad39b5076ccb322ea19896754c32893d1657b98cb5af4c662bfa7026"
+    },
+    {
+      "destination": "original-root/src/core/forces.lisp",
+      "origin": "source/src/core/forces.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 14831,
+      "sha256": "938207f2951a1edd7113155bf1c59a3e667629497020507fab78912c750ca80f"
+    },
+    {
+      "destination": "original-root/src/core/g2p.lisp",
+      "origin": "source/src/core/g2p.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 12586,
+      "sha256": "b969f82a01f8fab4d13cf62b34783fc17fdb49c82efb0c66ceb99c413651530e"
+    },
+    {
+      "destination": "original-root/src/core/iterate-test.lisp",
+      "origin": "source/src/core/iterate-test.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 5860,
+      "sha256": "ee36f0ec55a97ec6dbb07cbb7f7bab09fa448b2cc33da7bb5229f9ad883e2984"
+    },
+    {
+      "destination": "original-root/src/core/iterate.lisp",
+      "origin": "source/src/core/iterate.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 82697,
+      "sha256": "39c0e79ee1d3e25db71d22c413b609ff12208598e50bdbe40fbf50a6c4722e2d"
+    },
+    {
+      "destination": "original-root/src/core/linear-solver.lisp",
+      "origin": "source/src/core/linear-solver.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 181,
+      "sha256": "ec8e63146a36432ec9ac1854f92ce4b27d3ed81c0b423d6d3933a009b8b8010b"
+    },
+    {
+      "destination": "original-root/src/core/mesh.lisp",
+      "origin": "source/src/core/mesh.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 51125,
+      "sha256": "57bd47f0b8a9932e9d2042173d0b20fb5fd75037c16725cdbf626ccca8570eba"
+    },
+    {
+      "destination": "original-root/src/core/p2g.lisp",
+      "origin": "source/src/core/p2g.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 14584,
+      "sha256": "1faedbbfe015f201414773a5d5cdb7314cd0d9de8b21bf4f89b41846daa3bfbc"
+    },
+    {
+      "destination": "original-root/src/core/shape-function.lisp",
+      "origin": "source/src/core/shape-function.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 23457,
+      "sha256": "91fbe2afc519fa5eb0728d54630a8f5f0c47b03ebfda73371076a58a3458452f"
+    },
+    {
+      "destination": "original-root/src/core/splitting.lisp",
+      "origin": "source/src/core/splitting.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 15070,
+      "sha256": "26e57f4399dcc6e87a74b1910c60b3ecc9c6467f551b983a7332171d037436b3"
+    },
+    {
+      "destination": "original-root/src/core/stress-update.lisp",
+      "origin": "source/src/core/stress-update.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 25523,
+      "sha256": "7014b54e59be3b4f8f4b0fc4ddfea750795f71dd3011d5c3fd50b325a628d2e1"
+    },
+    {
+      "destination": "original-root/src/core/symbolic-derivation.lisp",
+      "origin": "source/src/core/symbolic-derivation.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 5093,
+      "sha256": "f707ec327b569f93f504ff08dfec333a0684b2df99b5b80028fc7f4f18516928"
+    },
+    {
+      "destination": "original-root/src/damage/criteria.lisp",
+      "origin": "source/src/damage/criteria.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 22296,
+      "sha256": "b0acec0bb522d15a99bd51d9337cf3d4fa30b3904a7aec863917fb7e50e59a3e"
+    },
+    {
+      "destination": "original-root/src/damage/damage.lisp",
+      "origin": "source/src/damage/damage.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 64357,
+      "sha256": "78ae70549935c723ce82e57045e8d270748ee6b795ac48b9a5a9248b29f546ab"
+    },
+    {
+      "destination": "original-root/src/damage/degredation.lisp",
+      "origin": "source/src/damage/degredation.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 17274,
+      "sha256": "3e473fa389a6d0994a0046ff3b4ec741922b90acfc4244f8ab7b968064dfe288"
+    },
+    {
+      "destination": "original-root/src/damage/delay-damage.lisp",
+      "origin": "source/src/damage/delay-damage.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 15125,
+      "sha256": "09263686b609f2ae0677efe748d898d049ea6c646247695a6d991af7326ab873"
+    },
+    {
+      "destination": "original-root/src/damage/ekl.lisp",
+      "origin": "source/src/damage/ekl.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 7162,
+      "sha256": "f3ea1ed92c931f1dfb2437118374806d675a4e37839dd2ac55b858026811e671"
+    },
+    {
+      "destination": "original-root/src/damage/mpi.lisp",
+      "origin": "source/src/damage/mpi.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 26,
+      "sha256": "ddea8f5abcf32496f6204b41c3c3232e73e54ae1d8813dcbf565a169c8e6d0a6"
+    },
+    {
+      "destination": "original-root/src/damage/nonlocal-stress-based.lisp",
+      "origin": "source/src/damage/nonlocal-stress-based.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "destination": "original-root/src/damage/output.lisp",
+      "origin": "source/src/damage/output.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 21614,
+      "sha256": "e449445ed45405670a6841972854969b312f55e9ff7d42e21bae673fb35c782b"
+    },
+    {
+      "destination": "original-root/src/damage/package.lisp",
+      "origin": "source/src/damage/package.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 1972,
+      "sha256": "0983111fb3acf696939d7ee54d948ed9345cfbd94ec9c529e84e9e528ddb08ef"
+    },
+    {
+      "destination": "original-root/src/damage/softening.lisp",
+      "origin": "source/src/damage/softening.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 8480,
+      "sha256": "23ea34b42ab581245af6d3898f4f823d866eb7bcfaac4bfeea9ae6166efb0746"
+    },
+    {
+      "destination": "original-root/src/damage/solver.lisp",
+      "origin": "source/src/damage/solver.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 7492,
+      "sha256": "16117cbb17fae425c1e1ea058a29ed7077e087cd7e63862797e5edbd590bdab1"
+    },
+    {
+      "destination": "original-root/src/dynamic-relaxation/algorithms.lisp",
+      "origin": "source/src/dynamic-relaxation/algorithms.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 95842,
+      "sha256": "b0552b31151c7bd1a4da664f426715dcef0898e8005397885c7012462ae0b6bf"
+    },
+    {
+      "destination": "original-root/src/dynamic-relaxation/criteria.lisp",
+      "origin": "source/src/dynamic-relaxation/criteria.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 45579,
+      "sha256": "ae74b9f93db587f39df7de627494baa115d0967c75bfd0257cbd36a650b6342a"
+    },
+    {
+      "destination": "original-root/src/dynamic-relaxation/dynamic-relaxation.lisp",
+      "origin": "source/src/dynamic-relaxation/dynamic-relaxation.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 18096,
+      "sha256": "c5827ab6c324ee2d74dd10d1f27d87f01281100616c68d1840278705f3c2a10a"
+    },
+    {
+      "destination": "original-root/src/dynamic-relaxation/package.lisp",
+      "origin": "source/src/dynamic-relaxation/package.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2959,
+      "sha256": "e9950da927acf0eace931c02a2814226109428c9943065d8ea499fb84e848b99"
+    },
+    {
+      "destination": "original-root/src/dynamic-relaxation/misc/erosion.lisp",
+      "origin": "source/src/dynamic-relaxation/misc/erosion.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 881,
+      "sha256": "1e6ac4b978a0bab15da7f24b856cff477fbc339a6f3afcbac33490ad0e5cba1f"
+    },
+    {
+      "destination": "original-root/src/dynamic-relaxation/mpi/dr.lisp",
+      "origin": "source/src/dynamic-relaxation/mpi/dr.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2722,
+      "sha256": "63b112fb0c02f0df46803d39bc4a94c0f9308478fef543c8a0edcd7117d8b23a"
+    },
+    {
+      "destination": "original-root/src/dynamic-relaxation/mpi/solvers.lisp",
+      "origin": "source/src/dynamic-relaxation/mpi/solvers.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 13394,
+      "sha256": "a6c5feb9e8269cfe48bdd71373d7ec38fef1a7b7a509b2296ace79de1c677bce"
+    },
+    {
+      "destination": "original-root/src/dynamic-relaxation/solvers/dynamic.lisp",
+      "origin": "source/src/dynamic-relaxation/solvers/dynamic.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 18899,
+      "sha256": "581cf8f2f0c2d66cbba0891e27e3c19c79fcc54ce18afee043d15d0b4abc2681"
+    },
+    {
+      "destination": "original-root/src/dynamic-relaxation/solvers/multigrid.lisp",
+      "origin": "source/src/dynamic-relaxation/solvers/multigrid.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 97808,
+      "sha256": "ef9858a372fab83ae1355bded25db37673591cdf2ffc0651a616472211153251"
+    },
+    {
+      "destination": "original-root/src/dynamic-relaxation/solvers/quasi-static.lisp",
+      "origin": "source/src/dynamic-relaxation/solvers/quasi-static.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 32054,
+      "sha256": "96c785c5b1981b09cdba1cdddc0e75dce7cdb25164462d44bd1f2f6bd42aee58"
+    },
+    {
+      "destination": "original-root/src/measurements/material-output.lisp",
+      "origin": "source/src/measurements/material-output.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 3115,
+      "sha256": "9601e73a1397746a45945c312681de9d591016d7ccd5b1853488d0473f485b80"
+    },
+    {
+      "destination": "original-root/src/models/chalk.lisp",
+      "origin": "source/src/models/chalk.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 61023,
+      "sha256": "257225c99b45c758d066dae11c1792f61b19e7601a3466cd15e9ee2b612a7db5"
+    },
+    {
+      "destination": "original-root/src/models/concrete.lisp",
+      "origin": "source/src/models/concrete.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 4100,
+      "sha256": "8224b9bbe474fc2898c1145cf3b82671f885bd633483b3f7dcdda2177546fc59"
+    },
+    {
+      "destination": "original-root/src/models/damage-frictional.lisp",
+      "origin": "source/src/models/damage-frictional.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 8129,
+      "sha256": "81ab1297bb8113cfd7333e3912418dc3b15de87b91d8c8c71958e370a8892db8"
+    },
+    {
+      "destination": "original-root/src/models/damage.lisp",
+      "origin": "source/src/models/damage.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 28407,
+      "sha256": "e2325d69352239257fd72a9efb17472edcd7a9c9c639bdbd54f0c29e79c2b714"
+    },
+    {
+      "destination": "original-root/src/models/elastic.lisp",
+      "origin": "source/src/models/elastic.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 130,
+      "sha256": "0accd221eab1441b071fbab926ed97b837655beae52f2ba74fa9ae6cce090b1c"
+    },
+    {
+      "destination": "original-root/src/models/ice.lisp",
+      "origin": "source/src/models/ice.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 40657,
+      "sha256": "9c698a5e07fd9ced64ffeef2dc4659d61c6548fdb0076fc2be696ce8aac2e5ed"
+    },
+    {
+      "destination": "original-root/src/models/limestone.lisp",
+      "origin": "source/src/models/limestone.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 7179,
+      "sha256": "c663f6c0c82814da2308adb7fd74e79b761d39feffa6e24fbfdf805ee9cda023"
+    },
+    {
+      "destination": "original-root/src/models/plastic.lisp",
+      "origin": "source/src/models/plastic.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 20328,
+      "sha256": "ddacee366d530f79053d229693f55b1990b72d72ed9a6a44c2a9af1c67c67b64"
+    },
+    {
+      "destination": "original-root/src/models/visco.lisp",
+      "origin": "source/src/models/visco.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 29627,
+      "sha256": "46b815d1884a8ed9443a8f0681dc4cb4bbf0ecc5af72489e9e182332add2fcf5"
+    },
+    {
+      "destination": "original-root/src/mpi/damage.lisp",
+      "origin": "source/src/mpi/damage.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2578,
+      "sha256": "7d58a28779311ac70514dcebe1431c75e31410eaecde37abc71371c0663ba7ef"
+    },
+    {
+      "destination": "original-root/src/mpi/domain.lisp",
+      "origin": "source/src/mpi/domain.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 25818,
+      "sha256": "d4c057480d124cb24782eec31a69a77c9a11c3421a68c5f7427a3217450767dd"
+    },
+    {
+      "destination": "original-root/src/mpi/mpi.lisp",
+      "origin": "source/src/mpi/mpi.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 13033,
+      "sha256": "ba3ed1eb2ef7b261d3870643c90ce7971e3e22828fac105169e01efd3f8fe657"
+    },
+    {
+      "destination": "original-root/src/mpi/package.lisp",
+      "origin": "source/src/mpi/package.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 7981,
+      "sha256": "23e9f74d42da9ca4af15df60fdc4893e71d73c0c1a9d25fec5843fe95f8ec923"
+    },
+    {
+      "destination": "original-root/src/mpi/serial.lisp",
+      "origin": "source/src/mpi/serial.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 3677,
+      "sha256": "4941b42947f196dca693901d9fda73d18e6b653d743e73acac6643fd8b1c2c3c"
+    },
+    {
+      "destination": "original-root/src/mpi/serialise.lisp",
+      "origin": "source/src/mpi/serialise.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 7210,
+      "sha256": "64f4b75622833d0b4cbcd8e32f99859b710b60e17d00dca2099147e1612babbe"
+    },
+    {
+      "destination": "original-root/src/mpi/sync.lisp",
+      "origin": "source/src/mpi/sync.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 37612,
+      "sha256": "4d181e0d032494984dca997bd90a7993d966c2a6523a43954eca8431ed15cd26"
+    },
+    {
+      "destination": "original-root/src/numerics/fastmaths.lisp",
+      "origin": "source/src/numerics/fastmaths.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 79025,
+      "sha256": "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d"
+    },
+    {
+      "destination": "original-root/src/simulation/components/base.lisp",
+      "origin": "source/src/simulation/components/base.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 923,
+      "sha256": "c49f1519006897200e48fc380f5c07cf998c950a077a5a9b5d1b77ad74a2e50f"
+    },
+    {
+      "destination": "original-root/src/simulation/components/specifications.lisp",
+      "origin": "source/src/simulation/components/specifications.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2865,
+      "sha256": "84554dc77e3c7c46bf0fc8670a64b8b630a01f5cf1fb657c75a511c2476db866"
+    },
+    {
+      "destination": "original-root/src/solvers/linear-systems.lisp",
+      "origin": "source/src/solvers/linear-systems.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 31152,
+      "sha256": "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011"
+    },
+    {
+      "destination": "original-root/src/solvers/musl.lisp",
+      "origin": "source/src/solvers/musl.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2302,
+      "sha256": "37e58cfc2a43957b259f89e8f27d8fd20adb87fdeed0b6e2b3c4cfe3fc886639"
+    },
+    {
+      "destination": "original-root/src/solvers/usf.lisp",
+      "origin": "source/src/solvers/usf.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 4540,
+      "sha256": "7cefb3fe86a9124715392ad73de19ec34ef6939bf824b0170394c1e312c8120e"
+    },
+    {
+      "destination": "original-root/src/solvers/usl.lisp",
+      "origin": "source/src/solvers/usl.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2651,
+      "sha256": "fabc02dda085ce46545d2843456455a5a6fe45c6396463432dd946e5338921b2"
+    },
+    {
+      "destination": "original-root/src/solvers/octree/buoyancy.lisp",
+      "origin": "source/src/solvers/octree/buoyancy.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 18341,
+      "sha256": "f0eab46ca3f2e510a516ddbf24991d5a70a739c7005489d47048074f25392e78"
+    },
+    {
+      "destination": "original-root/src/solvers/octree/penalty.lisp",
+      "origin": "source/src/solvers/octree/penalty.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 6365,
+      "sha256": "b2c1993fef297d6efcc887da5fea440a7e6be1ffbc7361ce0ce5ca01dd80602e"
+    },
+    {
+      "destination": "original-root/src/ssa/mesh.lisp",
+      "origin": "source/src/ssa/mesh.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 58,
+      "sha256": "bb3af7f3bd5c55b79b142bd997bfa34906d263355aae190686431eefbfd49063"
+    },
+    {
+      "destination": "original-root/src/ssa/p2g.lisp",
+      "origin": "source/src/ssa/p2g.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 4814,
+      "sha256": "dafd5769cf207aa6f46049b1d8fc939cc6053d9966ffdfda9bbbbdd5715161c0"
+    },
+    {
+      "destination": "original-root/src/ssa/package.lisp",
+      "origin": "source/src/ssa/package.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 228,
+      "sha256": "dee67a4760e9f82162ced9533e5316ee3f350f36e5b7e3b360cec02e4908feb8"
+    },
+    {
+      "destination": "original-root/src/ssa/particles.lisp",
+      "origin": "source/src/ssa/particles.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 3133,
+      "sha256": "2f72160e9723bcc5a176d7634d46135a0dcbf629df8250f541b5055a586e2c0f"
+    },
+    {
+      "destination": "original-root/src/ssa/solvers.lisp",
+      "origin": "source/src/ssa/solvers.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 1838,
+      "sha256": "0f15f7124f900f8cd406e1ac470e335a8cc823a003c7627394c74d123a231423"
+    },
+    {
+      "destination": "original-root/materials/adapters/native.lisp",
+      "origin": "source/materials/adapters/native.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 4179,
+      "sha256": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92"
+    },
+    {
+      "destination": "original-root/materials/core/definition.lisp",
+      "origin": "source/materials/core/definition.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 753,
+      "sha256": "502d80413890b4f6a165b0f634ca0c6b0618e09946f4d3131241911cae17e95e"
+    },
+    {
+      "destination": "original-root/materials/core/diagnostics-interface.lisp",
+      "origin": "source/materials/core/diagnostics-interface.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 833,
+      "sha256": "089e1b304abb660255b182040f8e4e23a5829c35cb2718f92bc8fbb34f8f5722"
+    },
+    {
+      "destination": "original-root/materials/diagnostics/native.lisp",
+      "origin": "source/materials/diagnostics/native.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 8416,
+      "sha256": "cd23a98cdf42d4c66f494b4df861c3d7f46afdf4efe6a9ec5659c037f0061411"
+    },
+    {
+      "destination": "original-root/framework/cl-mpm-framework.asd",
+      "origin": "source/framework/cl-mpm-framework.asd",
+      "kind": "original-manifest-payload",
+      "bytes": 2042,
+      "sha256": "02a2213f9265aaec4f54c02a1af7b06f4e3718493e6c8ed2f859f31281f39101"
+    },
+    {
+      "destination": "original-root/framework/package.lisp",
+      "origin": "source/framework/package.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 1400,
+      "sha256": "8053c0b199e2bacdb8187045b33bb6762da0eb3ef56e1dbd2f3998daf7bfff15"
+    },
+    {
+      "destination": "original-root/framework/simulation.lisp",
+      "origin": "source/framework/simulation.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 3635,
+      "sha256": "331b9f228729fd3f6bc07dcbe52b9480c5ae7b6eb3d0d9b47871c23e7bbd70a3"
+    },
+    {
+      "destination": "original-root/framework/components/diagnostics.lisp",
+      "origin": "source/framework/components/diagnostics.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 387,
+      "sha256": "6797f1d798c6597528c4a61a4a2ab2d80a13738be451252277808e829fdcc835"
+    },
+    {
+      "destination": "original-root/framework/components/geometry.lisp",
+      "origin": "source/framework/components/geometry.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 368,
+      "sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab"
+    },
+    {
+      "destination": "original-root/framework/components/materials.lisp",
+      "origin": "source/framework/components/materials.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 299,
+      "sha256": "47df6aa151a2a128c8f50968ce213f331a7ad3e41bfa41ac7a3b7d738440eb1b"
+    },
+    {
+      "destination": "original-root/framework/components/specifications.lisp",
+      "origin": "source/framework/components/specifications.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 385,
+      "sha256": "1408795413a7235b167181ddfa6b50ee1b3ccf72a5b950ac39a3c7ff169c309b"
+    },
+    {
+      "destination": "original-root/framework/config/package.lisp",
+      "origin": "source/framework/config/package.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 200,
+      "sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c"
+    },
+    {
+      "destination": "original-root/framework/config/parameters.lisp",
+      "origin": "source/framework/config/parameters.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 4101,
+      "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86"
+    },
+    {
+      "destination": "original-root/framework/materials/chalk.lisp",
+      "origin": "source/framework/materials/chalk.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 4723,
+      "sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d"
+    },
+    {
+      "destination": "original-root/framework/output/plotting.lisp",
+      "origin": "source/framework/output/plotting.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2391,
+      "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba"
+    },
+    {
+      "destination": "original-root/framework/scenarios/cliff/adapter.lisp",
+      "origin": "source/framework/scenarios/cliff/adapter.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 4902,
+      "sha256": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709"
+    },
+    {
+      "destination": "original-root/framework/scenarios/cliff/build.lisp",
+      "origin": "source/framework/scenarios/cliff/build.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2097,
+      "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac"
+    },
+    {
+      "destination": "original-root/framework/scenarios/cliff/geometry.lisp",
+      "origin": "source/framework/scenarios/cliff/geometry.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 3294,
+      "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999"
+    },
+    {
+      "destination": "original-root/framework/scenarios/cliff/run.lisp",
+      "origin": "source/framework/scenarios/cliff/run.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2470,
+      "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c"
+    },
+    {
+      "destination": "original-root/framework/scenarios/cliff/settings.lisp",
+      "origin": "source/framework/scenarios/cliff/settings.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 1799,
+      "sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a"
+    },
+    {
+      "destination": "original-root/framework/scenarios/joss/build.lisp",
+      "origin": "source/framework/scenarios/joss/build.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 3187,
+      "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e"
+    },
+    {
+      "destination": "original-root/framework/scenarios/joss/classes.lisp",
+      "origin": "source/framework/scenarios/joss/classes.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 429,
+      "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd"
+    },
+    {
+      "destination": "original-root/framework/scenarios/joss/geometry.lisp",
+      "origin": "source/framework/scenarios/joss/geometry.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2956,
+      "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d"
+    },
+    {
+      "destination": "original-root/framework/scenarios/joss/measurements.lisp",
+      "origin": "source/framework/scenarios/joss/measurements.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 3008,
+      "sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d"
+    },
+    {
+      "destination": "original-root/framework/scenarios/joss/output.lisp",
+      "origin": "source/framework/scenarios/joss/output.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 1176,
+      "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641"
+    },
+    {
+      "destination": "original-root/framework/scenarios/joss/phases.lisp",
+      "origin": "source/framework/scenarios/joss/phases.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 1395,
+      "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91"
+    },
+    {
+      "destination": "original-root/framework/scenarios/joss/run.lisp",
+      "origin": "source/framework/scenarios/joss/run.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 11888,
+      "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684"
+    },
+    {
+      "destination": "original-root/framework/scenarios/joss/statistics.lisp",
+      "origin": "source/framework/scenarios/joss/statistics.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 6450,
+      "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/adapter.lisp",
+      "origin": "source/framework/scenarios/triaxial/adapter.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 4000,
+      "sha256": "eab6819144c15d8c5ee475040c97ba6f42e6d1288149269c45dc0e74b8e2077c"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/boundaries.lisp",
+      "origin": "source/framework/scenarios/triaxial/boundaries.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 891,
+      "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/config.lisp",
+      "origin": "source/framework/scenarios/triaxial/config.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 4399,
+      "sha256": "0bf4d2abc858c6330185e092d150755e40d044a497784852e6da6f632494cdce"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/controls.lisp",
+      "origin": "source/framework/scenarios/triaxial/controls.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 4294,
+      "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/geometry.lisp",
+      "origin": "source/framework/scenarios/triaxial/geometry.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 3589,
+      "sha256": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/homogeneous.lisp",
+      "origin": "source/framework/scenarios/triaxial/homogeneous.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 5998,
+      "sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/material.lisp",
+      "origin": "source/framework/scenarios/triaxial/material.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 1234,
+      "sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/measurements.lisp",
+      "origin": "source/framework/scenarios/triaxial/measurements.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 6819,
+      "sha256": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/mpm.lisp",
+      "origin": "source/framework/scenarios/triaxial/mpm.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 3570,
+      "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/package.lisp",
+      "origin": "source/framework/scenarios/triaxial/package.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 463,
+      "sha256": "603756b11e09b4401a0a7e3d471023e894acfc26eb15eff327dc02626a8b42b9"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/runner.lisp",
+      "origin": "source/framework/scenarios/triaxial/runner.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 7743,
+      "sha256": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96"
+    },
+    {
+      "destination": "original-root/framework/scenarios/triaxial/tensors.lisp",
+      "origin": "source/framework/scenarios/triaxial/tensors.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 637,
+      "sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1"
+    },
+    {
+      "destination": "original-root/cl-mpm.asd",
+      "origin": "source/cl-mpm.asd",
+      "kind": "original-manifest-payload",
+      "bytes": 28299,
+      "sha256": "edc05275c0be83af00118764c26e62cb85c70e5140b2cfc5e9273d927f49328e"
+    },
+    {
+      "destination": "original-root/config/git-commit-version.txt",
+      "origin": "source/config/git-commit-version.txt",
+      "kind": "original-manifest-payload",
+      "bytes": 34,
+      "sha256": "7aa5da4c3df0df35d0f7959783dd37a85710b93cd898530e41470e9f51804ea6"
+    },
+    {
+      "destination": "original-root/libs/kirchoff.dll",
+      "origin": "source/libs/kirchoff.dll",
+      "kind": "original-manifest-payload",
+      "bytes": 2885169,
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f"
+    },
+    {
+      "destination": "original-root/case.lisp",
+      "origin": "source/case.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 908,
+      "sha256": "0259b4474f91ae8b6103e227e0d1a0a59c77ae821275e39151e6a1ab9b38603b"
+    },
+    {
+      "destination": "original-root/run-case.lisp",
+      "origin": "source/run-case.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2851,
+      "sha256": "0c01c977a7cb8a426d8363781ca419694a29bf27595240063f95f710f5f10e84"
+    },
+    {
+      "destination": "original-root/scripts/lisp/native-source-snapshot.lisp",
+      "origin": "source/scripts/lisp/native-source-snapshot.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 18974,
+      "sha256": "d3c694634c5e80bbc6689ce961e05efe7ec38a1587b424681171e31694a8cfb1"
+    },
+    {
+      "destination": "original-root/bootstrap/windows/init.lisp",
+      "origin": "source/bootstrap/windows/init.lisp",
+      "kind": "original-manifest-payload",
+      "bytes": 2925,
+      "sha256": "a7fddb3244176d0f734463371461822d0e49a6338b7f331d187dc9ac179dd6fe"
+    },
+    {
+      "destination": "original-root/bootstrap/windows/env.cmd",
+      "origin": "source/bootstrap/windows/env.cmd",
+      "kind": "original-manifest-payload",
+      "bytes": 2833,
+      "sha256": "20719f3bbef22a95f9b68fd0d794184118fb2c43f266284d21f52d263eb2b7e8"
+    },
+    {
+      "destination": "original-root/bootstrap/windows/cl-mpm.cmd",
+      "origin": "source/bootstrap/windows/cl-mpm.cmd",
+      "kind": "original-manifest-payload",
+      "bytes": 1121,
+      "sha256": "0b328d24ebc18fc6c7960a5044efc3e93c04752d1be50daece09c575ef86c536"
+    },
+    {
+      "destination": "original-root/inputs/studio/schema.json",
+      "origin": "source/inputs/studio/schema.json",
+      "kind": "original-manifest-payload",
+      "bytes": 9059,
+      "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9"
+    },
+    {
+      "destination": "original-root/inputs/calibration/triaxial-2d.json",
+      "origin": "source/inputs/calibration/triaxial-2d.json",
+      "kind": "original-manifest-payload",
+      "bytes": 525,
+      "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35"
+    },
+    {
+      "destination": "original-root/inputs/calibration/triaxial-controls.json",
+      "origin": "source/inputs/calibration/triaxial-controls.json",
+      "kind": "original-manifest-payload",
+      "bytes": 268,
+      "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861"
+    },
+    {
+      "destination": "original-root/inputs/calibration/triaxial-demo.json",
+      "origin": "source/inputs/calibration/triaxial-demo.json",
+      "kind": "original-manifest-payload",
+      "bytes": 498,
+      "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0"
+    },
+    {
+      "destination": "original-root/inputs/calibration/triaxial-homogeneous.json",
+      "origin": "source/inputs/calibration/triaxial-homogeneous.json",
+      "kind": "original-manifest-payload",
+      "bytes": 370,
+      "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17"
+    },
+    {
+      "destination": "original-root/inputs/studio/reference/joss-bay-accepted-collapse.json",
+      "origin": "source/inputs/studio/reference/joss-bay-accepted-collapse.json",
+      "kind": "original-manifest-payload",
+      "bytes": 1256,
+      "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0"
+    },
+    {
+      "destination": "original-root/inputs/studio/reference/joss-bay-prose.json",
+      "origin": "source/inputs/studio/reference/joss-bay-prose.json",
+      "kind": "original-manifest-payload",
+      "bytes": 1726,
+      "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b"
+    },
+    {
+      "destination": "original-root/inputs/studio/reference/joss-bay-table.json",
+      "origin": "source/inputs/studio/reference/joss-bay-table.json",
+      "kind": "original-manifest-payload",
+      "bytes": 1721,
+      "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88"
+    },
+    {
+      "destination": "original-root/inputs/studio/reference/joss-bay-video-candidate.json",
+      "origin": "source/inputs/studio/reference/joss-bay-video-candidate.json",
+      "kind": "original-manifest-payload",
+      "bytes": 2575,
+      "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b"
+    },
+    {
+      "destination": "original-root/scripts/run-case.lisp",
+      "origin": "source/run-case.lisp",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 2851,
+      "sha256": "0c01c977a7cb8a426d8363781ca419694a29bf27595240063f95f710f5f10e84"
+    },
+    {
+      "destination": "original-root/windows/init.lisp",
+      "origin": "source/bootstrap/windows/init.lisp",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 2925,
+      "sha256": "a7fddb3244176d0f734463371461822d0e49a6338b7f331d187dc9ac179dd6fe"
+    },
+    {
+      "destination": "original-root/windows/env.cmd",
+      "origin": "source/bootstrap/windows/env.cmd",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 2833,
+      "sha256": "20719f3bbef22a95f9b68fd0d794184118fb2c43f266284d21f52d263eb2b7e8"
+    },
+    {
+      "destination": "original-root/windows/cl-mpm.cmd",
+      "origin": "source/bootstrap/windows/cl-mpm.cmd",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 1121,
+      "sha256": "0b328d24ebc18fc6c7960a5044efc3e93c04752d1be50daece09c575ef86c536"
+    },
+    {
+      "destination": "original-root/studio/schema.json",
+      "origin": "source/inputs/studio/schema.json",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 9059,
+      "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9"
+    },
+    {
+      "destination": "original-root/calibration/triaxial-2d.json",
+      "origin": "source/inputs/calibration/triaxial-2d.json",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 525,
+      "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35"
+    },
+    {
+      "destination": "original-root/calibration/triaxial-controls.json",
+      "origin": "source/inputs/calibration/triaxial-controls.json",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 268,
+      "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861"
+    },
+    {
+      "destination": "original-root/calibration/triaxial-demo.json",
+      "origin": "source/inputs/calibration/triaxial-demo.json",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 498,
+      "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0"
+    },
+    {
+      "destination": "original-root/calibration/triaxial-homogeneous.json",
+      "origin": "source/inputs/calibration/triaxial-homogeneous.json",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 370,
+      "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17"
+    },
+    {
+      "destination": "original-root/studio/reference/joss-bay-accepted-collapse.json",
+      "origin": "source/inputs/studio/reference/joss-bay-accepted-collapse.json",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 1256,
+      "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0"
+    },
+    {
+      "destination": "original-root/studio/reference/joss-bay-prose.json",
+      "origin": "source/inputs/studio/reference/joss-bay-prose.json",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 1726,
+      "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b"
+    },
+    {
+      "destination": "original-root/studio/reference/joss-bay-table.json",
+      "origin": "source/inputs/studio/reference/joss-bay-table.json",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 1721,
+      "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88"
+    },
+    {
+      "destination": "original-root/studio/reference/joss-bay-video-candidate.json",
+      "origin": "source/inputs/studio/reference/joss-bay-video-candidate.json",
+      "kind": "byte-identical-path-mirror",
+      "bytes": 2575,
+      "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b"
+    },
+    {
+      "destination": "joss-serial-integration.lisp",
+      "origin": "tests/cases/joss-serial-integration.lisp",
+      "kind": "new-trusted-4s-case-reported-commit-9568b8e",
+      "bytes": 592,
+      "sha256": "cc23b1309abce5d6980a65f36f817204a81e08c9f502ebca4f5fdee867f60f9f"
+    },
+    {
+      "destination": "run-original-bootstrap.lisp",
+      "origin": "scripts/lisp/run-frozen-joss-baseline.lisp",
+      "kind": "new-launch-adapter-no-numerical-body",
+      "bytes": 1638,
+      "sha256": "02a4ef823b44fb2df49ea036a5e724d22f74381d833516ac35c726aba922dfa1"
+    },
+    {
+      "destination": "original-source-manifest.json",
+      "origin": "output\\architecture-migration-2026-10-16\\native-freeze\\triaxial-short-002\\source\\source-manifest.json",
+      "kind": "original-manifest-copy-not-executed-source",
+      "bytes": 27363,
+      "sha256": "f205518b1ae783fc0d5b4f282e86fe9a7fc704f09e06f0c977905de624557008"
+    }
+  ],
+  "bootstrap": "Actual main windows/init.lisp first, then bind *cl-mpm-root* to copied original-root and load its old run-case.lisp. Third-party dependencies remain external.",
+  "mainWindowsInitSha256AtPreparation": "a7fddb3244176d0f734463371461822d0e49a6338b7f331d187dc9ac179dd6fe",
+  "helperSha256AtPreparation": "1d838208385093e439d6023892ccdd7a1d03918ec6993f82fc99961a66dd996c",
+  "rendering": "PNG disabled consistently for bounded comparison; no plot PASS claim.",
+  "excluded": [
+    ".native-cache/**",
+    "old generated provenance/manifests except this separate source-manifest copy"
+  ],
+  "limits": [
+    "Original manifest has 144 payload records; do not invent a 147-record payload.",
+    "No native command was launched during preparation; fresh-run DLL/private-FASL/source proof remains pending.",
+    "Bounded four-second initiation evidence does not complete full G3 or scientific validation.",
+    "The user-cancelled full Joss run remains stopped; this is a distinct fresh bounded control."
+  ]
+}

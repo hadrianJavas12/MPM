@@ -1,12 +1,14 @@
 # AI Engineering Handover — CL-MPM
 
 **Operational checkpoint: 2026-10-17, Asia/Jakarta. Read this first.**
-**Human handover requested. Read [NEXT_AI_CHECKPOINT.md](architecture/NEXT_AI_CHECKPOINT.md)
-before launching tests or changing source.** P2 is complete; P4-F is implemented,
-final compatibility is partial, and one old-source bounded Joss baseline remains
-running. The continuation automation is paused for handoff; no new full Joss run.
-Read [the current stage table](architecture/STATUS.md) for the latest implemented
-and tested stages; the dated checkpoints below retain historical detail.
+**P0–P6 architecture ownership migration and regression suite complete on
+`codex/material-architecture-migration`. Read [NEXT_AI_CHECKPOINT.md](architecture/NEXT_AI_CHECKPOINT.md)
+and [STATUS.md](architecture/STATUS.md) first.** P1–P5 and P4-F canonical root ASDF
+are implemented and validated (`p6-short/` 11/11 checks, `joss-bounded/` 4s serial
+control, and `p6-full/` full VM 2D/3D regressions all `exit 0` with byte-identical
+VTKs/CSVs; `FILE_MIGRATION_RESULT.json` accounts for all 884 original paths with
+`58/58` mapped owners present). Full 40s Joss remains `STOPPED_BY_USER` and must
+not be restarted; G1 and G3 remain `PARTIAL`.
 Refresh this fork's live branches/PRs before changes. Detailed earlier history is
 preserved in [the archived handover](archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md).
 Older statuses there are historical and do not override this checkpoint.
@@ -367,3 +369,36 @@ are retained. All details/PIDs/paths and next steps are in the checkpoint.
 
 Automatic continuation is PAUSED to avoid concurrent work during human handoff.
 No final migration PR, main merge, scientific acceptance or complete G3 is claimed.
+
+### P4-F and P6 final completion checkpoint — 2026-10-17 (Asia/Jakarta)
+
+Resumed from `9dfb58b` without repeating already-passed checks:
+- **All 11 `p6-short/` native checks PASS (`exit 0`, 64 verified artifacts)**:
+  `case-snapshot` (3/3), `native-snapshot` (7/7), `standalone-triaxial` (3/3),
+  `p4-orchestration-002` (4/4; initial PS 5.1 stderr redirection failure `p4-orchestration`
+  retained unchanged), `engine-smoke` (100 MPs, 50 steps), `ownership-normal` (7/7),
+  `ownership-legacy` (7/7), `diagnostics-legacy` (3/3), `custom-delegate` (64 MPs, 2 steps,
+  80 custom calls, zero diff, VTK readback), `cliff-mc` (70 MPs, 2 substeps, byte-identical
+  `vtk/mesh.vtk` and `vtk/sim_00001.vtk` vs P1), and `legacy-triaxial` (480 MPs, 27 updates,
+  strict comparison PASS vs P4-E), plus Node syntax check and 36/36 tests passing (`p4-f-node/`).
+- **Bounded 4-second serial Joss control PASS (`joss-bounded/`, 54 verified artifacts)**:
+  Pre-P2 baseline `before-003` (`a99a4e1` / `7e2aac3`) and final canonical candidate
+  `after-001` (`9dfb58b`) both completed 1,658 elastic equilibration steps and 4.0 s
+  physical time (`exit 0`), with byte-identical `equilibrium.vtk`, `sim_00001.vtk`, and
+  `sim_00002.vtk` and zero position/field/CSV differences. Earlier harness failures
+  `before-001` and `before-002` are retained.
+- **Full final-layout VM Triaxial 2D and 3D regressions PASS (`p6-full/`, 38 verified artifacts)**:
+  Both `triaxial-2d` (480 MPs, 17,443 updates, 51 states) and `triaxial-3d` (780 MPs,
+  17,443 updates, 51 states) completed on `9dfb58b` with `nativeExitCode=0`,
+  `comparisonExitCode=0`, and `auditExitCode=0`; all 51 VTKs per run and `stress-strain.csv`
+  are byte-identical to `p1-full` (`62adb50`), with zero position/CSV/field differences
+  and independent audits passing.
+- **Final path/hash ledger (`docs/architecture/FILE_MIGRATION_RESULT.json`)**:
+  Accounts for all 884 original P0 paths without modifying `FILE_MIGRATION_MATRIX.json`:
+  `812` `RETAINED_UNCHANGED`, `14` `RETAINED_MODIFIED`, `58/58` `MAPPED_OWNERS_PRESENT` (`0` pending).
+- **Gate status**: `G0` DONE, `G1` PARTIAL, `G2` DONE, `G3` PARTIAL (full 40s Joss on
+  migrated code remains `STOPPED_BY_USER` at 4.2 s and was not restarted; historical
+  4-worker parallel Joss failure remains open), `G4` DEFERRED (new MC H/HS physics
+  deferred to a separate experimental branch), `G5` DONE for active callers and retained
+  `framework/` compatibility shims (two pre-existing missing legacy examples remain `BLOCKED`).
+

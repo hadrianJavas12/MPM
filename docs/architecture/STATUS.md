@@ -15,9 +15,9 @@ P0 inventory remain the authority for scope.
 | P3 | Diagnostics/material output owners extracted and tested | `7d879e8`; 37 verified artifacts |
 | P4-B/C/D | Configuration, geometry, lifecycle and scenario owners relocated | `76cac13`, `f76618d`, `f9ba947`; bounded comparisons and compatibility contracts pass |
 | P4-E | Nested legacy material diagnostics/state transfer extracted and tested | `d6d3f61`; exact reconstruction; standalone 3, orchestration 3, VM/MC strict comparisons pass; 34 evidence hashes |
-| P4-F | Canonical root ASDF and active callers implemented; validation incomplete | `436b561`; Node 36 pass; final short native suite running under `p6-short/` |
+| P4-F | Canonical root ASDF and active callers implemented and validated | `436b561` / `9dfb58b`; Node 36 pass; all 11 `p6-short/` native checks pass (64 evidence hashes); full VM 2D/3D `p6-full/` exact PASS vs `p1-full` |
 | P5 | Useful numeric/linear-solver grouping complete | `59928ba`; byte-identical files, analytical solve and 50-step smoke pass |
-| P6 | Final compatibility, results matrix, docs and PR pending | No main merge authorized |
+| P6 | Final compatibility, results ledger (`FILE_MIGRATION_RESULT.json`), bounded 4s Joss control, full VM 2D/3D regressions, docs/wiki and PR complete | `58/58` mapped owners present; no `main` merge authorized |
 
 Native source freezing is implemented and tested: selected source hashes,
 private FASLs and the actual Windows copied DLL path are verified. Its 47-artifact
@@ -25,28 +25,36 @@ bundle is committed as `7e2aac3`. The first pre-step metadata-placement failure
 is retained; the guard was preserved and the corrected run passes. Core ASDF
 remains separate; the frozen CLI currently requires Windows.
 
-Full P1 VM 2D/3D passed on `62adb50`. The newer full Joss run remains
-STOPPED_BY_USER at 4.2 s and must not restart; historical exact serial results
-remain separate. The parallel Joss failure is retained. Full G3 is PARTIAL.
-Legacy global overrides, the concrete forward class and the atomic mixed C++
-transaction remain explicit compatibility exceptions, not repaired physics.
+Full P1 VM 2D/3D passed on `62adb50`, and full final-layout P6 VM 2D (480 MPs,
+17,443 updates, 51 states) and VM 3D (780 MPs, 17,443 updates, 51 states) passed
+on `9dfb58b` with all 51 VTKs per run and `stress-strain.csv` byte-identical to
+`p1-full` (`0` position/CSV/field difference; independent audits PASS).
+The 40-second full Joss run on `62adb50` remains `STOPPED_BY_USER` at 4.2 s and
+was not restarted; historical exact 40-second serial results (`c749d32` vs `41403f4`)
+remain separate. The historical 4-worker parallel Joss failure is retained.
+Full G3 and G1 remain `PARTIAL`: legacy global overrides in damage/ice, the
+concrete forward class, and the atomic mixed C++ transaction remain explicit
+compatibility exceptions, not repaired physics.
 
-Continue the existing stages and test only changed code. Preserve all negative
-evidence, immutable raw sources, and personal Obsidian settings. The next native
-test must follow an implementation commit, with a fresh output directory.
-
-P2 A–D now installs all 49 approved material owners. Twenty post-move native
+P2 A–D installs all 49 approved material owners. Twenty post-move native
 family catalogs match the five original baseline catalogs byte for byte. This
 preserves class/slot/method identity, not scientific validation of every model.
 P2-B/C/D bundles include launch hashes, extraction proofs, actual Windows DLL
 paths, VTK/CSV comparisons and sealed live-unit sources. Node has 36 passing
-tests at each wave; those finished checks must not be repeated without changes.
+tests at each wave.
 
-A separate fresh **four-second** serial Joss integration baseline is running
-from immutable pre-P2 sources (`joss-bounded/before-003/`). It is not the cancelled 40-second run,
-does not validate full collapse/run-out, and cannot close the full G3 exception.
+The separate fresh **four-second** serial Joss integration control (`joss-bounded/`)
+completed on both immutable pre-P2 sources (`before-003`, `a99a4e1` / `7e2aac3`)
+and canonical final-layout sources (`after-001`, `9dfb58b`): both finished 1,658
+elastic equilibration steps and reached 4.0 s physical time (`exit 0`), with
+byte-identical `equilibrium.vtk`, `sim_00001.vtk`, and `sim_00002.vtk` and zero
+position/field/CSV differences (`54` verified evidence artifacts). It is a
+bounded initiation control, not the cancelled 40-second run, and does not close
+the full G3 exception.
 
-The user requested a handover checkpoint before further work. Read
-[NEXT_AI_CHECKPOINT.md](NEXT_AI_CHECKPOINT.md) first for active jobs, partial
-checks, exact source commits and remaining actions. Final full VM 2D/3D on the
-canonical layout and the final PR are NOT_RUN; old full results are historical.
+`docs/architecture/FILE_MIGRATION_RESULT.json` records all 884 original P0 paths
+without mutating `FILE_MIGRATION_MATRIX.json`: `812` `RETAINED_UNCHANGED`,
+`14` `RETAINED_MODIFIED`, and `58/58` `MAPPED_OWNERS_PRESENT` (`0` pending).
+`framework/` compatibility shims remain in place for historical `LOAD` callers;
+two pre-existing absent legacy example paths (`examples/dr/quasi-time.lisp`,
+`examples/octree/slope-stability.lisp`) remain documented `BLOCKED` exceptions.

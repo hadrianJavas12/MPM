@@ -1,29 +1,11 @@
 {
-  "stage": "F/G5 partial handover",
+  "stage": "P4-F/P6-short",
   "entries": [
     {
       "path": ".gitattributes",
       "bytes": 32,
       "sha256": "f2e214c6e24cdffd8157778a19ef8c10a6ce15d28b90988d21fc6a4a7319298a",
       "source": null
-    },
-    {
-      "path": "sources/run-check.ps1",
-      "bytes": 3252,
-      "sha256": "a2d8ac15cd07f97b588b8154423bf6918aaad4dbc6669f46d05be34ea6373147",
-      "source": "output\\architecture-migration-2026-10-16\\p6-short\\run-check.ps1"
-    },
-    {
-      "path": "sources/live-unit-sources.tar.gz",
-      "bytes": 373358,
-      "sha256": "24bfdfb63c649704d767cdc952308ac1f3a6ce02a17a10430c938911c479f808",
-      "source": "output\\architecture-migration-2026-10-16\\p6-short\\live-unit-sources.tar.gz"
-    },
-    {
-      "path": "control/case-snapshot-status.json",
-      "bytes": 570,
-      "sha256": "195427ff8a39251719eec1fa570d01b91fde65cace56ed23d4ee43018e4a8694",
-      "source": "output\\architecture-migration-2026-10-16\\p6-short\\case-snapshot-status.json"
     },
     {
       "path": "control/case-snapshot-launch.json",
@@ -38,17 +20,175 @@
       "source": "output\\architecture-migration-2026-10-16\\p6-short\\case-snapshot-source-sha256.json"
     },
     {
+      "path": "control/case-snapshot-status.json",
+      "bytes": 570,
+      "sha256": "195427ff8a39251719eec1fa570d01b91fde65cace56ed23d4ee43018e4a8694",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\case-snapshot-status.json"
+    },
+    {
       "path": "logs/case-snapshot.log.gz",
       "bytes": 215,
-      "sha256": "9f5f58f36b942fee0f0ebc0bb14fd7e70a3d876b273904abffeea15dac963d4c",
+      "sha256": "06269cf309efd3890c839374851c630a965e77e912d5dbef9ed20f612a1cb8c2",
       "source": "output\\architecture-migration-2026-10-16\\p6-short\\case-snapshot.log",
       "uncompressedSha256": "cd0051af1d32b0a297640109f0c23677adacf837a6840d17d3140fdfe33c96d0"
     },
     {
-      "path": "control/native-snapshot-status.json",
-      "bytes": 573,
-      "sha256": "19472d1e4bf3f5a19a0bb0d54dfe636baab964f0159180e7658751b7ed74d621",
-      "source": "output\\architecture-migration-2026-10-16\\p6-short\\native-snapshot-status.json"
+      "path": "control/cliff-mc-launch.json",
+      "bytes": 528,
+      "sha256": "ad8d049e68e003edce385aec5da87a3e1080c3b70cc0914629f7c912a32d452c",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\cliff-mc-launch.json"
+    },
+    {
+      "path": "control/cliff-mc-source-sha256.json",
+      "bytes": 40953,
+      "sha256": "f029e4017940d4d1e025302cc5b36efbdd5e9fe7230baf8413494eaa3544caf0",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\cliff-mc-source-sha256.json"
+    },
+    {
+      "path": "control/cliff-mc-status.json",
+      "bytes": 593,
+      "sha256": "f542ff85679df92344d2d0e80950ca4756f9d3d85cdbb499a5470b24074ca8cc",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\cliff-mc-status.json"
+    },
+    {
+      "path": "comparisons/cliff-mc-vtk-comparison.json.gz",
+      "bytes": 442,
+      "sha256": "c0012f5b71d8d651e1c935426d36d78c9a4df45db99beea0ed4b1c400f575a11",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\cliff-mc-vtk-comparison.json",
+      "uncompressedSha256": "2b669669a6c795ee8d58d75477ae8cc46c43ccc8d2cfd99537e5b901458b75c6"
+    },
+    {
+      "path": "logs/cliff-mc.log.gz",
+      "bytes": 711,
+      "sha256": "a7538aaba38c8b114fdca266c75d09db9e8daa2a82ad129b186f97c502c43f7e",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\cliff-mc.log",
+      "uncompressedSha256": "f6ffe56848b6e40771373f2a2a2ad7feeed91827c5446b1c13a15bfa1b7f920e"
+    },
+    {
+      "path": "control/custom-delegate-launch.json",
+      "bytes": 500,
+      "sha256": "2379f8d99bd7479d2e57c866363d9817cb0ea338433859268ee0562c697ed3e3",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\custom-delegate-launch.json"
+    },
+    {
+      "path": "control/custom-delegate-source-sha256.json",
+      "bytes": 40953,
+      "sha256": "f029e4017940d4d1e025302cc5b36efbdd5e9fe7230baf8413494eaa3544caf0",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\custom-delegate-source-sha256.json"
+    },
+    {
+      "path": "control/custom-delegate-status.json",
+      "bytes": 565,
+      "sha256": "d00dc59b3b718bb8ccc92192e8a891b12549289a331f8d7d72b2c11082f23b30",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\custom-delegate-status.json"
+    },
+    {
+      "path": "logs/custom-delegate.log.gz",
+      "bytes": 334,
+      "sha256": "3d461983123184cf539943678ceef9834f4266bba36fdd62979ff5c43a68221f",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\custom-delegate.log",
+      "uncompressedSha256": "4208727182e8721563f206a2425b625892296d2c62839fe1ec38622ddfe6fca3"
+    },
+    {
+      "path": "control/diagnostics-legacy-launch.json",
+      "bytes": 441,
+      "sha256": "84ac61604feffff3ca661b7b04a2721943115a3c9d38be67f646987703702212",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\diagnostics-legacy-launch.json"
+    },
+    {
+      "path": "control/diagnostics-legacy-source-sha256.json",
+      "bytes": 40953,
+      "sha256": "f029e4017940d4d1e025302cc5b36efbdd5e9fe7230baf8413494eaa3544caf0",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\diagnostics-legacy-source-sha256.json"
+    },
+    {
+      "path": "control/diagnostics-legacy-status.json",
+      "bytes": 506,
+      "sha256": "cb09af3c5a394e0a2fc0c8314fcffbfc6fc39d8cb8ca30dc6dc7788a592aae76",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\diagnostics-legacy-status.json"
+    },
+    {
+      "path": "logs/diagnostics-legacy.log.gz",
+      "bytes": 431,
+      "sha256": "7919569dffda278994c4c9c6fc61b4d12c6d4a9566ee3fd012881011eb796e8b",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\diagnostics-legacy.log",
+      "uncompressedSha256": "7d101508e9b6f82355619c0b9f1198f64411064a23767a749e8fc1baafa4ec56"
+    },
+    {
+      "path": "control/engine-smoke-launch.json",
+      "bytes": 421,
+      "sha256": "9b5c8c7e720d931cb9481a2b4f8394cc4352914b93de12f3e2cf6e5aad0d4d9f",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\engine-smoke-launch.json"
+    },
+    {
+      "path": "control/engine-smoke-source-sha256.json",
+      "bytes": 40953,
+      "sha256": "f029e4017940d4d1e025302cc5b36efbdd5e9fe7230baf8413494eaa3544caf0",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\engine-smoke-source-sha256.json"
+    },
+    {
+      "path": "control/engine-smoke-status.json",
+      "bytes": 486,
+      "sha256": "79d5ce8580f587d52ac300927b0b7bd04d484271e25b832cf7723b86b5624ac7",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\engine-smoke-status.json"
+    },
+    {
+      "path": "logs/engine-smoke.log.gz",
+      "bytes": 132,
+      "sha256": "c130f9cbdc202f77444c25408bbd1b5d80ae277e02bdd7e453463096a139e531",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\engine-smoke.log",
+      "uncompressedSha256": "081d9428cd056f6c894149b7464811ebdec11fbfe83e3ed88e339f154bdbb89c"
+    },
+    {
+      "path": "control/legacy-config.json",
+      "bytes": 528,
+      "sha256": "5e2138d4e47b939027b105c9bce22ef1305346c5cf39498aa3622bd0d85eaedb",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-config.json"
+    },
+    {
+      "path": "comparisons/legacy-triaxial-comparison.json.gz",
+      "bytes": 3531,
+      "sha256": "066d21ebeef097cf32fd992958cf9aa6d446603de6c7bca06120d4b30dc400b2",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial-comparison.json",
+      "uncompressedSha256": "640479eb00e9b3f9e6207f6c670bc1f0b88f75e9f7ab3f9fd3d59a325b6043d9"
+    },
+    {
+      "path": "logs/legacy-triaxial-comparison.log.gz",
+      "bytes": 139,
+      "sha256": "b68a3e1c7c70fac6eaa3d5c1ba83dad7204c846995fe7b77a8ac614e89712284",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial-comparison.log",
+      "uncompressedSha256": "f134dfc930ef67b124e67c3c81b7ac51c78e5a3dda0b47984b5570a8bef3567f"
+    },
+    {
+      "path": "control/legacy-triaxial-launch.json",
+      "bytes": 577,
+      "sha256": "2d74a246b8428b55b0075874b570468de40b2a4c9c5f88225f198e44c8348492",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial-launch.json"
+    },
+    {
+      "path": "control/legacy-triaxial-source-sha256.json",
+      "bytes": 40953,
+      "sha256": "f029e4017940d4d1e025302cc5b36efbdd5e9fe7230baf8413494eaa3544caf0",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial-source-sha256.json"
+    },
+    {
+      "path": "control/legacy-triaxial-status.json",
+      "bytes": 642,
+      "sha256": "b5f450268e70247a350af2a33f60cd8f7f3feecc223227e7f2be89552d46145f",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial-status.json"
+    },
+    {
+      "path": "logs/legacy-triaxial.log.gz",
+      "bytes": 184,
+      "sha256": "57235b071cef29b1606d8e327d1650699a40cc7cfc59bbaed450e3ac1be62bd6",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial.log",
+      "uncompressedSha256": "14f29faa62a33354747b5266a86d8d72ffc6ee74ad7abac6e80f2fb560e1c6e2"
+    },
+    {
+      "path": "sources/live-unit-sources.tar.gz",
+      "bytes": 373358,
+      "sha256": "24bfdfb63c649704d767cdc952308ac1f3a6ce02a17a10430c938911c479f808",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\live-unit-sources.tar.gz"
     },
     {
       "path": "control/native-snapshot-launch.json",
@@ -63,17 +203,123 @@
       "source": "output\\architecture-migration-2026-10-16\\p6-short\\native-snapshot-source-sha256.json"
     },
     {
+      "path": "control/native-snapshot-status.json",
+      "bytes": 573,
+      "sha256": "19472d1e4bf3f5a19a0bb0d54dfe636baab964f0159180e7658751b7ed74d621",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\native-snapshot-status.json"
+    },
+    {
       "path": "logs/native-snapshot.log.gz",
       "bytes": 376,
-      "sha256": "f5f7bc5b5a0058d9314224779bbe78890ffd62af850bcc962084dc975dd1e679",
+      "sha256": "a38f523a39fae11814f226cd66d58a0bf0d248fb33b488ba24d64874859651e4",
       "source": "output\\architecture-migration-2026-10-16\\p6-short\\native-snapshot.log",
       "uncompressedSha256": "d7dab68c72d4c8fa83157a63bce942e4d86a10f5955d60080391d0d2c3e9b6dd"
     },
     {
-      "path": "control/standalone-triaxial-status.json",
-      "bytes": 492,
-      "sha256": "ca5058716433135f3875455d9210f3a148b4e38a84dd287557cb183bf1377bad",
-      "source": "output\\architecture-migration-2026-10-16\\p6-short\\standalone-triaxial-status.json"
+      "path": "control/ownership-legacy-launch.json",
+      "bytes": 438,
+      "sha256": "e1007bfc4ea5bbf9c41a72c94860a8a5795c182613c7d7f64d1fc16d31e8f92d",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\ownership-legacy-launch.json"
+    },
+    {
+      "path": "control/ownership-legacy-source-sha256.json",
+      "bytes": 40953,
+      "sha256": "f029e4017940d4d1e025302cc5b36efbdd5e9fe7230baf8413494eaa3544caf0",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\ownership-legacy-source-sha256.json"
+    },
+    {
+      "path": "control/ownership-legacy-status.json",
+      "bytes": 503,
+      "sha256": "f898685f74cd4e68c19fa9901d54184d6272b92562362e3401d6433b90bf23fb",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\ownership-legacy-status.json"
+    },
+    {
+      "path": "logs/ownership-legacy.log.gz",
+      "bytes": 416,
+      "sha256": "5d08de14c254193036470f06b6263085c472543819637b102c77b72c0bf68e28",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\ownership-legacy.log",
+      "uncompressedSha256": "26cd357f0c08e88196388057eaf6be6f5ff2e7f9947ac279a90007c18bf47a0a"
+    },
+    {
+      "path": "control/ownership-normal-launch.json",
+      "bytes": 422,
+      "sha256": "c4ffe1fa9d582f63e084abf18dd5a2c3ecc1cd7b7e8a7307223dfdb972687bae",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\ownership-normal-launch.json"
+    },
+    {
+      "path": "control/ownership-normal-source-sha256.json",
+      "bytes": 40953,
+      "sha256": "f029e4017940d4d1e025302cc5b36efbdd5e9fe7230baf8413494eaa3544caf0",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\ownership-normal-source-sha256.json"
+    },
+    {
+      "path": "control/ownership-normal-status.json",
+      "bytes": 487,
+      "sha256": "2c203667cf811988b41af3f1f21f0c5b416e623a5aeefb384f43e44f544f0313",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\ownership-normal-status.json"
+    },
+    {
+      "path": "logs/ownership-normal.log.gz",
+      "bytes": 629,
+      "sha256": "d1d3d9e8ab54fa4ba149c92579b83230fceb1e64a06dcc69f47eab3b7735947b",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\ownership-normal.log",
+      "uncompressedSha256": "18077ac991eb37b5683650f81cb7779fefa7accde8abd937bb5e9b047158cbe9"
+    },
+    {
+      "path": "control/p4-orchestration-002-launch.json",
+      "bytes": 431,
+      "sha256": "0af823555c90942408bbad03c0540a9d4e4105e7a93e58d3cb717ed672e7f0f7",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\p4-orchestration-002-launch.json"
+    },
+    {
+      "path": "control/p4-orchestration-002-source-sha256.json",
+      "bytes": 40953,
+      "sha256": "f029e4017940d4d1e025302cc5b36efbdd5e9fe7230baf8413494eaa3544caf0",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\p4-orchestration-002-source-sha256.json"
+    },
+    {
+      "path": "control/p4-orchestration-002-status.json",
+      "bytes": 496,
+      "sha256": "b2f6ba5043f2413375b9f9cdbc20ba24995de94e9c3ea44869cd20aefa7f6d7d",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\p4-orchestration-002-status.json"
+    },
+    {
+      "path": "logs/p4-orchestration-002.log.gz",
+      "bytes": 1436,
+      "sha256": "8dabdb22f95630b8721efed8b799f20d6b67975adb458fe26de0bdfe92bc5735",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\p4-orchestration-002.log",
+      "uncompressedSha256": "fb44367e0b0c2446d005e97b3c2b46d347510a6faac9f3427bb1ae8c5a615019"
+    },
+    {
+      "path": "control/p4-orchestration-launch.json",
+      "bytes": 507,
+      "sha256": "0dd2120a6ece18baa31fe51c5c51edda913e274660ca99ff96da2144207820e0",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\p4-orchestration-launch.json"
+    },
+    {
+      "path": "control/p4-orchestration-source-sha256.json",
+      "bytes": 45763,
+      "sha256": "7b1e9b2a5066c3ed765f1e0ffd0cdf90f29e2c19063e618abd270af35f841c39",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\p4-orchestration-source-sha256.json"
+    },
+    {
+      "path": "control/p4-orchestration-status.json",
+      "bytes": 664,
+      "sha256": "3cee81684e6510bf6ed052bdde204f4863a51ecf0a78e0843acdf9f66867d732",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\p4-orchestration-status.json"
+    },
+    {
+      "path": "logs/p4-orchestration.log.gz",
+      "bytes": 212,
+      "sha256": "a25e8e3ec96e0da9c78778e8f4eae2ac8bbef20885b2c009e374711170ef7531",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\p4-orchestration.log",
+      "uncompressedSha256": "85215a7fed3ebaad85cf92e813a2e03c09caea64bebb4422777e047ac1778ed5"
+    },
+    {
+      "path": "sources/run-check.ps1",
+      "bytes": 3252,
+      "sha256": "a2d8ac15cd07f97b588b8154423bf6918aaad4dbc6669f46d05be34ea6373147",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\run-check.ps1"
     },
     {
       "path": "control/standalone-triaxial-launch.json",
@@ -88,16 +334,22 @@
       "source": "output\\architecture-migration-2026-10-16\\p6-short\\standalone-triaxial-source-sha256.json"
     },
     {
+      "path": "control/standalone-triaxial-status.json",
+      "bytes": 492,
+      "sha256": "ca5058716433135f3875455d9210f3a148b4e38a84dd287557cb183bf1377bad",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\standalone-triaxial-status.json"
+    },
+    {
       "path": "logs/standalone-triaxial.log.gz",
       "bytes": 279,
-      "sha256": "9a9fe3d162ea9e28ea7d573632b3be5a013a913b2450bcdb01777f54a96b066e",
+      "sha256": "c3a75c62b8cb6f47a78ad7a3b030f963564d64bb8c07fcad587157beb1cb4c94",
       "source": "output\\architecture-migration-2026-10-16\\p6-short\\standalone-triaxial.log",
       "uncompressedSha256": "0f6d2fc2cf5a3d5f0a58ee46a4522769916348067f1cab3db89aa1b49587f4d1"
     },
     {
       "path": "sources/native-source-provenance.json.gz",
       "bytes": 43039,
-      "sha256": "ed6f124aec142f7c4040b4353437772b8e9c36cf32013f80f163ccbf80d50f7d",
+      "sha256": "aa33fe7c4895aaeba4341fef35ffb8bb58eedb3716e8d9540d6d3f05a7346dc9",
       "source": "output\\architecture-migration-2026-10-16\\p6-short\\native-snapshot\\source-provenance.json",
       "uncompressedSha256": "dc2241050f6527665c9145a886d65a9a213fbde5ca0285aee4b11e92514b2625"
     },
@@ -110,7 +362,7 @@
     {
       "path": "sources/native-frozen-source.tar.gz",
       "bytes": 342889,
-      "sha256": "d6f14e31757250f1118ed69a729678de0893a21ece52ba87f39e1ffa88af54c6",
+      "sha256": "0376020e2e6e4d6f24f004f06da9c4d1f86b988109edb2687f9e532c0b7d30ca",
       "source": null,
       "members": [
         {
@@ -1562,15 +1814,117 @@
       ]
     },
     {
+      "path": "sources/legacy-triaxial-source-provenance.json",
+      "bytes": 1157,
+      "sha256": "113b8840e6fe2cda87af84c92fb3e388e5229e716f252b1592167acb312a7c06",
+      "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial\\source-provenance.json"
+    },
+    {
+      "path": "runs/custom-delegate.tar.gz",
+      "bytes": 4929,
+      "sha256": "fa9c5634d1f0438bb0a2041941d09cae4453466ecb4e971b282ee470b303d27f",
+      "source": null,
+      "members": [
+        {
+          "path": "built-in.vtk",
+          "bytes": 21821,
+          "sha256": "293b2e31e19ec5473f5c1a0fd37e752d4c04ab5360e89f4a9cb7d5d5d88f248b",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\custom-delegate\\built-in.vtk"
+        },
+        {
+          "path": "custom-delegate.vtk",
+          "bytes": 21821,
+          "sha256": "293b2e31e19ec5473f5c1a0fd37e752d4c04ab5360e89f4a9cb7d5d5d88f248b",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\custom-delegate\\custom-delegate.vtk"
+        }
+      ]
+    },
+    {
+      "path": "runs/cliff-mc.tar.gz",
+      "bytes": 80235,
+      "sha256": "87ba839c3b34a4886bc67910b8169687e691c804909c266bf8adf9cd6b343171",
+      "source": null,
+      "members": [
+        {
+          "path": "frames/frame_00001.png",
+          "bytes": 34793,
+          "sha256": "d1a99f222e9d361a9713371ce787373415373f097b59e55d1a96f0219afa343c",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\cliff-mc\\frames\\frame_00001.png"
+        },
+        {
+          "path": "source-provenance.json",
+          "bytes": 584754,
+          "sha256": "d979a4ceca38ce935617a9c29d753dfb1e956ee81975ab7382969a10347ba9b3",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\cliff-mc\\source-provenance.json"
+        },
+        {
+          "path": "vtk/mesh.vtk",
+          "bytes": 9718,
+          "sha256": "60543eaab934cff5683c96bfeeed3f7e37e35a999c5847649344f7fea475755f",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\cliff-mc\\vtk\\mesh.vtk"
+        },
+        {
+          "path": "vtk/sim_00001.vtk",
+          "bytes": 89215,
+          "sha256": "770d6a6e674dfdcbf40febbdb71cf7123f4f49d182e0ecf590b44155f7cba376",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\cliff-mc\\vtk\\sim_00001.vtk"
+        }
+      ]
+    },
+    {
+      "path": "runs/legacy-triaxial.tar.gz",
+      "bytes": 62237,
+      "sha256": "b9d9ca9e0da2e882f0ec81d5c95386293850c4084d19984335fae4bac7483a92",
+      "source": null,
+      "members": [
+        {
+          "path": "effective-config.json",
+          "bytes": 421,
+          "sha256": "7f369cdf4289dc3fae9c00975a79907ce1e9243c1be01967b2f887a69bc68072",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial\\effective-config.json"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 1404,
+          "sha256": "42c622816d523d2e5285ef98cae485ce1a11b3afc163e07a4b69757ea17c2016",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial\\manifest.json"
+        },
+        {
+          "path": "particles_0000.vtk",
+          "bytes": 124381,
+          "sha256": "f4dcf0c403af7c5f3ed478d0d1ec6a4affd4a99eee2d4b1a6a7fc3a191f83587",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial\\particles_0000.vtk"
+        },
+        {
+          "path": "particles_0001.vtk",
+          "bytes": 124381,
+          "sha256": "0b9c90d69e4ed5f3622a4996d6089c48ba965f07ff7bd501dc81e4a07c0d9598",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial\\particles_0001.vtk"
+        },
+        {
+          "path": "source-provenance.json",
+          "bytes": 1157,
+          "sha256": "113b8840e6fe2cda87af84c92fb3e388e5229e716f252b1592167acb312a7c06",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial\\source-provenance.json"
+        },
+        {
+          "path": "stress-strain.csv",
+          "bytes": 868,
+          "sha256": "6ecec165708e340b3a7e00d233918821e2ae96a474af0505c6f830073314740f",
+          "source": "output\\architecture-migration-2026-10-16\\p6-short\\legacy-triaxial\\stress-strain.csv"
+        }
+      ]
+    },
+    {
       "path": "validation-summary.json",
-      "bytes": 1374,
-      "sha256": "89ae6c233a7842eaee9f7de5d1279f3bde9f8095fc44c79df224d0031942e21a",
+      "bytes": 2678,
+      "sha256": "8f734020a122dc373d4a06f28fdb751741903cd15edeeea0ce9326dcc1b16533",
       "source": null
     },
     {
       "path": "README.md",
-      "bytes": 292,
-      "sha256": "2d170a00765f961f77cd7798e572805cb901402c3bb365efa864367211d5f32f",
+      "bytes": 715,
+      "sha256": "18552c81eeb8a4aff1a24378419ecbd6776ac699bef67e0ad043707001ac084c",
       "source": null
     }
   ]

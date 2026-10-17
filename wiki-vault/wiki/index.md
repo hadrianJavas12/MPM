@@ -5,7 +5,7 @@
 - [[cl-mpm-studio]] — web UI for the cliff-collapse simulation
 
 ## Concepts
-- [[cl-mpm-architecture]] — P2 and P4-E pass; canonical ASDF installed, final checks partial; human handover checkpoint prepared
+- [[cl-mpm-architecture]] — P0–P6 ownership migration complete (`58/58` mapped owners); `p6-short/` 11/11, `joss-bounded/` 4s serial, and `p6-full/` full VM 2D/3D exact PASS; G1/G3 partial
 - [[windows-port]] — native Windows layout, overrides, gotchas
 - [[serial-mpi-standin]] — `cl-mpm/mpi` replacement without MPI
 - [[magicl-patches]] — patched vendored dependencies
@@ -19,8 +19,8 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[mc-hardening-softening-study]] — exact current VM 2D/3D PASS; M0 provisional, M1 data complete; isolated 32-point MC prototype integration deferred until migration gates
-- [[reusable-simulation-framework]] — P1 full VM 2D/3D and P3 focused checks pass; cancelled Joss retained; native material migration and provenance work next
+- [[mc-hardening-softening-study]] — P0–P6 architecture migration complete; M0 provisional, M1 data complete; isolated 32-point MC H/HS prototype integration deferred to separate branch (G4)
+- [[reusable-simulation-framework]] — canonical root ASDF (`cl-mpm-framework.asd`) and P6 full VM 2D/3D, 11 short checks, and 4s serial Joss control exact PASS; cancelled 40s Joss retained
 - [[upstream-development-report-2026-10-15]] — professional Git-based comparison with original CL-MPM and linked evidence
 - [[triaxial-clay-calibration]] — native 70 × 140 mm clay demonstration, computed curves and scientific limits; checkpoint PR #7 merged into main at efd0358
 - [[scientific-authenticity-audit-2026-10-15]] — real-data/video derivation verified, numerical counterexamples and limits to scientific validity recorded

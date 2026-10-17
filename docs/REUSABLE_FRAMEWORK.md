@@ -1,10 +1,13 @@
 # Komposisi simulasi native
 
 Branch arsitektur: `codex/material-architecture-migration`, berasal dari
-`7c399fb`. Checkpoint sumber P2 A–D/P4D sudah memusatkan model material di
-`materials/`, prosedur skenario di `scenarios/`, dan orkestrasi di
-`src/simulation/`. ASDF kanonis sudah berada di root pada `436b561`.
-Validasi akhir masih berlanjut; halaman ini tidak menyatakan refactoring atau G3 selesai.
+`7c399fb`. Seluruh tahapan migrasi kepemilikan (P0–P6) sudah selesai diinstal
+dan divalidasi: model material berada di `materials/`, prosedur skenario di
+`scenarios/`, dan orkestrasi di `src/simulation/`, dengan ASDF kanonis di root
+(`cl-mpm-framework.asd`). Regresi penuh VM 2D/3D (`p6-full/`), rangkaian pendek
+11 pemeriksaan (`p6-short/`), dan kontrol serial terbatas Joss 4 detik (`joss-bounded/`)
+seluruhnya lulus (`exit 0`, VTK/CSV identik byte); gate G1 dan G3 tetap `PARTIAL`
+karena pengecualian kompatibilitas legacy dan penghentian run penuh Joss 40 s oleh pengguna.
 Lihat [status aktual](architecture/STATUS.md).
 
 ## Menjalankan kasus di Windows
@@ -117,15 +120,16 @@ solver; Python hanya membaca hasil untuk audit/visualisasi.
 | Bukti | Lingkup yang dapat dinyatakan |
 | --- | --- |
 | P2 A–D: 20 katalog native | Lima keluarga per checkpoint, exit 0; seluruh serialized catalog identik byte dengan baseline |
-| Kontrol bounded VM/MC, kontrak native dan Node | Hasil yang sudah dicatat pada [status](architecture/STATUS.md); bukan pengganti run penuh final |
-| Full VM 2D/3D pada P1 `62adb50` | PASS historis pada snapshot itu; full VM untuk snapshot migrasi final masih pending |
+| Kontrol pendek P4-F / P6 (`p6-short/`) | Seluruh 11 pemeriksaan native lulus (`exit 0`, 64 artefak terverifikasi SHA-256) dan Node 36/36 lulus |
+| Full VM 2D/3D pada layout kanonis final (`p6-full/`, `9dfb58b`) | **PASS exact** terhadap `p1-full` (`62adb50`): 51/51 VTK pada 2D (480 MP, 17.443 update) dan 51/51 VTK pada 3D (780 MP, 17.443 update) serta `stress-strain.csv` identik byte (`SHA-256` sama), selisih posisi/CSV/field nol, dan audit independen lulus |
+| Kontrol serial terbatas Joss 4 detik (`joss-bounded/`) | **PASS exact** antara sumber pra-P2 (`before-003`) dan layout kanonis final (`after-001`): 1.658 langkah ekuilibrasi dan waktu fisik 4,0 s (`exit 0`), `equilibrium.vtk`, `sim_00001.vtk`, dan `sim_00002.vtk` identik byte dengan selisih posisi/field/CSV nol |
 | Joss serial 40 s historis | PASS exact, sumber asli `c749d32` versus executed `41403f4`; lihat [laporan serial](../research/reports/M0_SERIAL_REGRESSION.md) |
 | Joss empat worker historis | FAIL tetap dipertahankan; serial PASS tidak menghapusnya |
-| Full Joss yang lebih baru | STOPPED_BY_USER pada 4,2 s; tidak dilanjutkan atau diganti label PASS |
+| Full Joss 40 s pada cabang migrasi (`62adb50`) | `STOPPED_BY_USER` pada 4,2 s; tidak dimulai ulang atau diganti label PASS |
 
-Kontrol Joss berdurasi pendek adalah bukti terpisah dan tidak membuktikan
-collapse/run-out 40 s. Bandingkan VTK/CSV, massa, jumlah partikel, waktu fisik
-dan completion status dengan toleransi yang tetap. Plane strain 2D bukan
-axisymmetry dan tidak setara dengan silinder 3D. Regresi kode tidak menetapkan
-kalibrasi, mesh convergence, keseimbangan energi tertutup atau validasi ilmiah.
-[Roadmap penelitian](../research/README.md) menjaga gate fisika H/HS terpisah.
+Kontrol Joss berdurasi pendek (4 detik) adalah bukti inisiasi serial terpisah dan
+tidak membuktikan collapse/run-out 40 s atau menutup gate G3 penuh. Bandingkan VTK/CSV,
+massa, jumlah partikel, waktu fisik dan completion status dengan toleransi yang tetap.
+Plane strain 2D bukan axisymmetry dan tidak setara dengan silinder 3D. Regresi kode
+tidak menetapkan kalibrasi, mesh convergence, keseimbangan energi tertutup atau
+validasi ilmiah. [Roadmap penelitian](../research/README.md) menjaga gate fisika H/HS terpisah.

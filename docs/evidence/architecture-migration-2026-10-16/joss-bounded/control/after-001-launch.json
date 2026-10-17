@@ -1,0 +1,13 @@
+{
+  "startedUtc": "2026-10-17T03:42:18.8589321Z",
+  "sourceCommitAtLaunch": "9dfb58b06fc3f8bc7883491e818fe33dab091ee7",
+  "case": "tests/cases/joss-serial-integration.lisp",
+  "workers": 1,
+  "requestedPhysicalTimeS": 4,
+  "frameCap": 10,
+  "openblasThreads": 1,
+  "ompThreads": 1,
+  "pngEnabled": false,
+  "wrapperPid": 31232,
+  "scope": "Fresh bounded serial initiation control on final canonical root ASDF layout; compared strictly against completed before-003 pre-P2 baseline. Not full 40 s collapse/run-out."
+}

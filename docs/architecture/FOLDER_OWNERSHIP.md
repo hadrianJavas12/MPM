@@ -1,7 +1,7 @@
 # CL-MPM folder ownership
 
 Authority: [migration specification](CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md).
-Current source checkpoint: P2 A–D and P4D, 2026-10-16. Physical owners changed;
+Current source checkpoint: P0–P6 complete on `codex/material-architecture-migration`, 2026-10-17. Physical owners changed;
 historical package/class symbols and ASDF system names remain. Remaining
 integration gates are stated separately from installed source ownership.
 
@@ -23,9 +23,9 @@ integration gates are stated separately from installed source ownership.
 
 `framework/` and moved historical `src/` paths provide forwarding loaders.
 Normal ASDF loads owner files directly, once. The canonical headless declaration
-is root `cl-mpm-framework.asd` at P4-F implementation `436b561`; final validation
-is incomplete. Compatibility paths must remain until their callers and
-gates pass; this page does not claim `framework/` has been removed.
+is root `cl-mpm-framework.asd` (implemented at `436b561`, validated through `p6-short/`,
+`joss-bounded/`, and `p6-full/` on `9dfb58b`). Compatibility paths remain in place
+for historical `LOAD` callers; this page does not claim `framework/` has been removed.
 
 ## Maintainer contracts
 
