@@ -1,7 +1,13 @@
 # CL-MPM documentation
 
+**Ingin langsung menjalankan simulasi tanpa UI?** Ikuti
+[panduan singkat Windows native](QUICKSTART_WINDOWS_NATIVE.md): jalankan
+triaxial dari PowerShell, periksa status selesai, lalu buat dan buka videonya.
+
 | Document | Read it to... |
 |---|---|
+| [Native H/HS research roadmap](../research/README.md) | Follow M0–M6, source-aware inputs, paired Mohr–Coulomb experiments and explicit acceptance gates |
+| [REUSABLE_FRAMEWORK.md](REUSABLE_FRAMEWORK.md) | Compose native simulations from interchangeable material/geometry components and short case files, without a UI |
 | **[AI_HANDOVER.md](AI_HANDOVER.md)** | **Start or hand over a coding-agent session: goals, PR stack, architecture, constraints, verified tests, risks and next actions** |
 | [windows-setup.md](windows-setup.md) | Install the toolchain and verify it on native Windows |
 | [usage.md](usage.md) | Run simulations from the REPL, scripts and examples; read the output |
@@ -18,4 +24,4 @@
 | [TRIAXIAL_CALIBRATION.md](TRIAXIAL_CALIBRATION.md) | Follow the clay triaxial calibration method, assumptions, native results, strain conventions and limitations |
 | [Calibration launcher guide](../calibration/README.md) | Run the 70 mm × 140 mm native specimen, generate adjacent stress-strain plots/video, and initialize parameters from CSV |
 
-New to coding on this project as an AI agent? Read root [AGENTS.md](../AGENTS.md) and [AI_HANDOVER.md](AI_HANDOVER.md) first. For running the software, follow [windows-setup.md](windows-setup.md), then run the smoke test and open Studio.
+New to coding on this project as an AI agent? Read root [AGENTS.md](../AGENTS.md) and [AI_HANDOVER.md](AI_HANDOVER.md) first. For running the software without UI, follow [QUICKSTART_WINDOWS_NATIVE.md](QUICKSTART_WINDOWS_NATIVE.md); for a new computer, start with [windows-setup.md](windows-setup.md).

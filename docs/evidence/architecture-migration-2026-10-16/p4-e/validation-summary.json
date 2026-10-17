@@ -1,0 +1,94 @@
+{
+  "stage": "P4-E",
+  "status": "PASS bounded compatibility",
+  "sourceCommitAtLaunch": {
+    "triaxial-short": "06eba1ea5b508a5f11e5d47ada3b215718854e9d",
+    "material-diagnostics": "06eba1ea5b508a5f11e5d47ada3b215718854e9d",
+    "standalone-triaxial": "06eba1ea5b508a5f11e5d47ada3b215718854e9d",
+    "p4-orchestration": "06eba1ea5b508a5f11e5d47ada3b215718854e9d"
+  },
+  "commitAttribution": "Exact launch commits retained per check; live unit source bytes sealed and verified against every captured unit manifest before subsequent-stage edits.",
+  "exitCodes": {
+    "triaxial-short": 0,
+    "material-diagnostics": 0,
+    "standalone-triaxial": 0,
+    "triaxial-short-comparison": 0,
+    "mc-triaxial-comparison": 0,
+    "p4-orchestration": 0
+  },
+  "tests": {
+    "materialDiagnostics": {
+      "passed": 9,
+      "failed": 0
+    },
+    "standaloneTriaxial": {
+      "passed": 3,
+      "failed": 0
+    },
+    "p4Orchestration": {
+      "passed": 3,
+      "failed": 0
+    }
+  },
+  "runs": {
+    "triaxial-short": {
+      "complete": true,
+      "nativeModel": "cl-mpm/particle::particle-vm",
+      "particleCount": 480,
+      "updates": 27
+    },
+    "mc-triaxial": {
+      "complete": true,
+      "nativeModel": "cl-mpm/particle::particle-mc",
+      "particleCount": 32,
+      "updates": 2
+    }
+  },
+  "strictComparisons": {
+    "triaxial-short": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    },
+    "mc-triaxial": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    }
+  },
+  "rawByteComparison": {
+    "triaxial-short": {
+      "allSavedVtkBytesEqual": true,
+      "vtkFiles": 2,
+      "stressStrainCsvBytesEqual": true
+    },
+    "mc-triaxial": {
+      "allSavedVtkBytesEqual": true,
+      "vtkFiles": 2,
+      "stressStrainCsvBytesEqual": true
+    }
+  },
+  "sourceProof": {
+    "frozenVmCopiedFilesVerified": 240,
+    "performedFirstPartyLoadInputsHashedVerified": 127,
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/architecture-migration-2026-10-16/p4-e/triaxial-short/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "liveUnitArchivedFiles": 247,
+    "liveArchiveSha256": "3cf950afc2cb0e1717d34b6a03d3a30ff29e2ee2978d674ed39bcfe8086c63e8",
+    "liveUnitScope": "Launch-time source hashes verified against sealed source bytes for all three unit suites. External dependencies and live-suite FASLs are not independently frozen. VM has selected-ASDF source/FASL and actual DLL proof."
+  },
+  "architectureGates": {
+    "G1": "PARTIAL",
+    "G3": "PARTIAL",
+    "fullSerialJoss": "STOPPED_BY_USER; acceptance INCOMPLETE; not rerun",
+    "earlierParallelJoss": "Prior failure remains open"
+  },
+  "scientificValidation": false,
+  "scope": "P4-E private homogeneous material-state transfer and VM diagnostics adapter; exact reconstruction proof and independent standalone loader checks. Bounded compatibility only."
+}

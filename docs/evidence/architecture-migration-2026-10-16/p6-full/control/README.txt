@@ -1,0 +1,1 @@
+Prepared only full VM2D and VM3D; launch after F short tests pass. No Joss wrapper. Check launch/status/log before any new run. Each wrapper compares once and audits VM outputs after successful native completion. Source commit is captured at launch, not completion. No parallel-Joss PASS claimed.

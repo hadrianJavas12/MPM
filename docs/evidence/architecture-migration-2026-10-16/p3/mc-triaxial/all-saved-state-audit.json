@@ -1,0 +1,122 @@
+{
+  "basis": "Strict native binaryVTK parser checks allavailablearraysfinite; x-u identity; no interpolation or invented deformation",
+  "frameCount": 2,
+  "states": [
+    {
+      "time": 0.0,
+      "file": "particles_0000.vtk",
+      "sha256": "fcb644151ced9442407ce1d345c469844115d7e59273ea81f3b9ee2af1b6f043",
+      "particles": 32,
+      "fields": [
+        "acc_x",
+        "acc_y",
+        "disp_x",
+        "disp_y",
+        "eps_xx",
+        "eps_xy",
+        "eps_yy",
+        "fric-contact",
+        "fric-normal",
+        "index",
+        "mass",
+        "mc-cohesion-pa",
+        "mc-dilation-rad",
+        "mc-friction-rad",
+        "mc-plastic-strain-native",
+        "mc-trial-yield-kirchhoff-pa",
+        "mc-yield-residual-kirchhoff-pa",
+        "mpi-index",
+        "p-wave-modulus",
+        "sig_xx",
+        "sig_xy",
+        "sig_yy",
+        "size_x",
+        "size_xx",
+        "size_xy",
+        "size_y",
+        "size_yx",
+        "size_yy",
+        "split-depth",
+        "unique-id",
+        "vel_x",
+        "vel_y",
+        "volume"
+      ],
+      "mass": 1.4400000000000002,
+      "bounds_min": [
+        0.0325,
+        0.0325,
+        0.0
+      ],
+      "bounds_max": [
+        0.0475,
+        0.0675,
+        0.0
+      ],
+      "max_displacement": 0.0,
+      "mass_centroid": [
+        0.04,
+        0.05,
+        0.0
+      ]
+    },
+    {
+      "time": 4.5e-05,
+      "file": "particles_0001.vtk",
+      "sha256": "3c4b7cc2f952336969260bbd26e161f9b4e73cf69868cba04b03ca544b221d8d",
+      "particles": 32,
+      "fields": [
+        "acc_x",
+        "acc_y",
+        "disp_x",
+        "disp_y",
+        "eps_xx",
+        "eps_xy",
+        "eps_yy",
+        "fric-contact",
+        "fric-normal",
+        "index",
+        "mass",
+        "mc-cohesion-pa",
+        "mc-dilation-rad",
+        "mc-friction-rad",
+        "mc-plastic-strain-native",
+        "mc-trial-yield-kirchhoff-pa",
+        "mc-yield-residual-kirchhoff-pa",
+        "mpi-index",
+        "p-wave-modulus",
+        "sig_xx",
+        "sig_xy",
+        "sig_yy",
+        "size_x",
+        "size_xx",
+        "size_xy",
+        "size_y",
+        "size_yx",
+        "size_yy",
+        "split-depth",
+        "unique-id",
+        "vel_x",
+        "vel_y",
+        "volume"
+      ],
+      "mass": 1.4400000000000002,
+      "bounds_min": [
+        0.032499999999975986,
+        0.0325,
+        0.0
+      ],
+      "bounds_max": [
+        0.047500000000024016,
+        0.06749999999321406,
+        0.0
+      ],
+      "max_displacement": 6.785989299873883e-12,
+      "mass_centroid": [
+        0.04,
+        0.04999999999875608,
+        0.0
+      ]
+    }
+  ]
+}

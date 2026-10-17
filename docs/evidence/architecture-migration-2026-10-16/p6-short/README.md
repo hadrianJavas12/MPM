@@ -1,0 +1,3 @@
+# P4-F / P6 short native compatibility evidence
+
+All 11 short native checks pass (`exit 0`): `case-snapshot` (3/3), `native-snapshot` (7/7), `standalone-triaxial` (3/3), `p4-orchestration-002` (4/4), `engine-smoke` (50 steps), `ownership-normal` (7/7), `ownership-legacy` (7/7), `diagnostics-legacy` (3/3), `custom-delegate` (80 custom calls, zero diff, VTK readback), `cliff-mc` (byte-identical VTKs vs P1), and `legacy-triaxial` (strict comparison PASS vs P4-E). The initial Windows PowerShell 5.1 stderr redirection wrapper failure (`p4-orchestration`) is retained unchanged alongside the passing `pwsh.exe` run (`p4-orchestration-002`). All 252 first-party source files are verified against the sealed archive.

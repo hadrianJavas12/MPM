@@ -1,0 +1,15 @@
+{
+  "startedUtc": "2026-10-17T03:37:58.7316109Z",
+  "sourceCommitAtLaunch": "9dfb58b06fc3f8bc7883491e818fe33dab091ee7",
+  "arguments": [
+    "scripts/run-case.lisp",
+    "tests/cases/cliff-mc-integration.lisp",
+    "D:/MPM/output/architecture-migration-2026-10-16/p6-short/cliff-mc"
+  ],
+  "wrapperPid": 30300,
+  "openblasThreads": 1,
+  "ompThreads": 1,
+  "scope": "Fresh native Windows attempt; direct unit suites use captured live source hashes; CLI snapshots additionally record copied sources and loaded DLL",
+  "exitCode": 0,
+  "endedUtc": "2026-10-17T03:38:50.1589841Z"
+}

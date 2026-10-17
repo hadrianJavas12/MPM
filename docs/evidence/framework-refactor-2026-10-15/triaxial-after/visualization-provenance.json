@@ -1,0 +1,228 @@
+{
+  "kind": "scientific visualization of saved native outputs",
+  "simulationMode": "mpm",
+  "rendererSourceSha256": "c5de47aea84b5f642fe446d0c6ab9e4a965c2be19d85b6fb357a3647e59c29da",
+  "spatialDimensions": 2,
+  "geometryInterpretation": "plane strain rectangle, unit out-of-plane thickness, not axisymmetric",
+  "primaryStressColumn": "q_j2_kpa",
+  "primaryStrainColumn": "particle_extents_axial_strain_pct",
+  "platenStrainShownSeparately": true,
+  "forwardModelComputedByRenderer": false,
+  "csv": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\stress-strain.csv",
+  "csvSha256": "09596885c6e9a725d64fce0f682ac38ffd00503525d2fe70e5df710db01760f9",
+  "png": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\triaxial-result.png",
+  "pngSha256": "58a11ef74aa212bc720170c44769f32968e0a0c17a5107ee5ca2be0d986b88c8",
+  "frames": 51,
+  "nativeSimulationDurationS": 0.2,
+  "matplotlib": "3.11.2",
+  "vtkInputs": [
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0000.vtk",
+      "sha256": "f4dcf0c403af7c5f3ed478d0d1ec6a4affd4a99eee2d4b1a6a7fc3a191f83587"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0001.vtk",
+      "sha256": "c734eaa10601adfc806c1840d679938815712b549d239ee3a5c3769ed2ed4a7f"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0002.vtk",
+      "sha256": "6f738d300371a31d51e6e48cc5a3ba8eea08ec5a9f280d8fa72ddbc3d6700b6d"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0003.vtk",
+      "sha256": "fb85faf57995d6d33d7852818d330e2e208c55b82974e1d8df3ad23ae2dca594"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0004.vtk",
+      "sha256": "6ebb60a76e7068f964532ecc9a1f08c7d4874b0f0da9df30494b55637f3e9f70"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0005.vtk",
+      "sha256": "cd78944a58b43bccfc2ccf39fc61d7de5e94f917af0df289a4ee3c2f442cc866"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0006.vtk",
+      "sha256": "1feb5a6262690e86f1ce9334da57da171d207e12cb633492bae7c9045f97209b"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0007.vtk",
+      "sha256": "26497ade80fb694524357f3df540e501755ae7dc889b5bef3b7b620a47e4a815"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0008.vtk",
+      "sha256": "628a063a0c4a9e1471d7c3c65de8b6b892d6e31284d1356630f20be1fd234f41"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0009.vtk",
+      "sha256": "608980090ff3e4b7c8f20f213d8bd5a7b6a37b4ead16036cf78068f55d2855a9"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0010.vtk",
+      "sha256": "2bae64dab3ffb2b595a7ae90506cb29488cbb483c52a67c94e2aa0cfc1f599d2"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0011.vtk",
+      "sha256": "fe35fb408a8c47989a9b547681322fa558d01ad363115b86e0351a86ae63d287"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0012.vtk",
+      "sha256": "b91687dfd119a34229dafa54209df081e880f6d72f4ebfb358b32449b04f47a1"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0013.vtk",
+      "sha256": "4221e61db254814b9ee71895d25c1b01c06c0477d2603b146b298fa5369ac31f"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0014.vtk",
+      "sha256": "71dc5c163a8f33dbfb875f7bf5b7914f3e821c7ae34626274684e317f125b1a1"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0015.vtk",
+      "sha256": "cae367cb758242136b439800ffe553c0da04b66fad045fcf365e94c49c61b735"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0016.vtk",
+      "sha256": "3c19c5a85693517de75887caa2a5a378e7d50c82dc3f4536db70fb5f890a189c"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0017.vtk",
+      "sha256": "e9769c0ac2000ec96ef1f17a3d04aff679fd2d75b3525ffe3de1fe53639d89d3"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0018.vtk",
+      "sha256": "957ccd3d68b83c714e8370158c22ecd9f1e3022f49e9a17846e71bb284803ae7"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0019.vtk",
+      "sha256": "2a229e71ee87ba59e238fcc77963bfa69845edef92e796ff5247bbdd0e80c31f"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0020.vtk",
+      "sha256": "d76d9f925dd28acd11eb04541927caac17dbb0cf51f7b1ad2180c0490945561e"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0021.vtk",
+      "sha256": "9d837ac16a8f2bb46ea432abbfe1a3eb690c36c76b717bb015276a5bf5385dcb"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0022.vtk",
+      "sha256": "9ecd4b32553a75c82344d042e4fcb0fc60b0181c8696c2be7ac8cb12c618d142"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0023.vtk",
+      "sha256": "3aa9c41e03089c8e2636ff9931d0ff5edc969d5a1ac114a590cb8fbde9affb82"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0024.vtk",
+      "sha256": "f0564f7c0c4c8264a0eb507a348661b40717381e218e3446e2ae3df95cc28e03"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0025.vtk",
+      "sha256": "57c9f17d9d5aeafc6612e18e0c21ac3ba47d7dba188a1f96f97308f1379d9cda"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0026.vtk",
+      "sha256": "fad126c23152b746318c3c3b0fe5203beecaaad5514489e88e6d51a15a654bf9"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0027.vtk",
+      "sha256": "a87b61b9921af91e40d931e0cb9750c009595c6d23650697ee29735a1e938486"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0028.vtk",
+      "sha256": "111ac519fe2231e78d2919219c292775f77cc90c6a2d29fcd95aa7d124fbb73d"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0029.vtk",
+      "sha256": "28d632332d9de073b326c5af9859368b977b9ac7d46a715fe6c9bda3129ba4b5"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0030.vtk",
+      "sha256": "c96d164a9a6137cd6ba070e13a5fa7c611711f8d095995f51b7f7b57dd5ac4db"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0031.vtk",
+      "sha256": "2294bd460d47b2a3d5dde4f86665683ba28ad516003bcd05dfda020dc10060dc"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0032.vtk",
+      "sha256": "e1d469cd31b2af237df847d165ec4f311f0d7b6021c2c9b1e3541fc656a52fe0"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0033.vtk",
+      "sha256": "4956cfffc3215060883b1acd06d307be36af1d0afe852c795e95e98cc1dccc76"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0034.vtk",
+      "sha256": "ac0fb3542e36ff1617d62eb89ed7ecbab220c116eb15d365a299b7a01a95052c"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0035.vtk",
+      "sha256": "89e097c8e2bc1075bc2018926ef5668430cd13a1ad994cae78227fb80badce79"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0036.vtk",
+      "sha256": "d45ac22d669d895b8cd2534dce37f56207fe1fc38d8015b8592d41e29875cbe3"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0037.vtk",
+      "sha256": "0cd471d3e95819094e30d6ec77ab56db3a5a09c204fa2d4cbd8228a5024056ec"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0038.vtk",
+      "sha256": "5afca9dc476871203c6457c92b2f1f0f94bcf6f0e47587e6e6c9c4169d9ce5f1"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0039.vtk",
+      "sha256": "e47a4be7fd04ead3cfa9d658a7e124c9f3a9198c9ba0fcdeed9d97ab3549495a"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0040.vtk",
+      "sha256": "5bb60ac8c4fcdbc5e79ce0bb714a5750040c6049c11a6ff8a2538420e926c741"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0041.vtk",
+      "sha256": "247b02d1b16096e6d0ffe238dc9faf7ae4a7d054358b7d4e6cf090dc736c4f53"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0042.vtk",
+      "sha256": "11d26ec32ea0b1a5b09a27ebab89f31aa3f6deddacedddca8b412b7d17c70487"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0043.vtk",
+      "sha256": "56a4fd4bf64d295816395c567109361246d0f56f5de13cdd0eb127de8edbfd7a"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0044.vtk",
+      "sha256": "cfe48680ebc1ae0f442e4e05e7bcee44d3066d689ee1fe780c3b1f9e4189bc88"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0045.vtk",
+      "sha256": "33f48c7c5ac982f9ebefd12592dba02234b0ba3d057e4d897766f4a3c2bdbd53"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0046.vtk",
+      "sha256": "a4c766fb3ca06ae375a7b154685dfff8757621d1ea87029094bcca1619875229"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0047.vtk",
+      "sha256": "d58a178925a41d22dbdd4a69555720780848672c5936b991cc1b3e6038d0de45"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0048.vtk",
+      "sha256": "3a4ca49503f9bb1fea6c337fb30150934f8b562184eb778f03e8c23734f81c94"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0049.vtk",
+      "sha256": "12184813aef976ae60caf2a677839db87f3f01b4dcacf5ebe78c030e512849e9"
+    },
+    {
+      "file": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0050.vtk",
+      "sha256": "0ed90f74db64dad9b7f4bad598752ef8e80e362b34268c4c63f5d379382138ae"
+    }
+  ],
+  "video": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\triaxial-simulation.mp4",
+  "videoSha256": "5d3aadf2ec6d069859887a268715a3501ba7e0897cb564cdadebbb6433782576",
+  "playbackFps": 15,
+  "playbackSeconds": 3.4
+}

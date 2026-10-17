@@ -1,0 +1,236 @@
+{
+  "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\source",
+  "scope": "Exact copied source loaded bypublicCLI, runtime dependenciesseparate",
+  "files": [
+    {
+      "path": "case.lisp",
+      "sha256": "d9b15044e2496083adba42810a18066609d9e229b261c64e2b3df04296f92630",
+      "bytes": 654
+    },
+    {
+      "path": "framework/cl-mpm-framework.asd",
+      "sha256": "7ddb4085a790130faee8c99c7671492fe234d167d990f88e8919b3809a80dd40",
+      "bytes": 1536
+    },
+    {
+      "path": "framework/components/geometry.lisp",
+      "sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
+      "bytes": 368
+    },
+    {
+      "path": "framework/components/materials.lisp",
+      "sha256": "3f5f3fe01d48af2bd2f6f710055ff2b703d8db36ca74145c6e3be41d3139b89b",
+      "bytes": 3514
+    },
+    {
+      "path": "framework/components/specifications.lisp",
+      "sha256": "0c98b0544adcdc2b495ebad228be926ae812374f910ad8ee931217520e1bdf48",
+      "bytes": 3356
+    },
+    {
+      "path": "framework/config/package.lisp",
+      "sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
+      "bytes": 200
+    },
+    {
+      "path": "framework/config/parameters.lisp",
+      "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+      "bytes": 4101
+    },
+    {
+      "path": "framework/materials/chalk.lisp",
+      "sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+      "bytes": 4723
+    },
+    {
+      "path": "framework/output/plotting.lisp",
+      "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+      "bytes": 2391
+    },
+    {
+      "path": "framework/package.lisp",
+      "sha256": "3c4e5a5302844c9743c4186240a49d65895a5e4d59b49a9d8d7cd9f77e3effb6",
+      "bytes": 972
+    },
+    {
+      "path": "framework/scenarios/cliff/adapter.lisp",
+      "sha256": "433b7a547c68bf7cdaee8b55bfcf39bbad3af4e53470b09a3c17a9e32c497008",
+      "bytes": 4463
+    },
+    {
+      "path": "framework/scenarios/cliff/build.lisp",
+      "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+      "bytes": 2097
+    },
+    {
+      "path": "framework/scenarios/cliff/geometry.lisp",
+      "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+      "bytes": 3294
+    },
+    {
+      "path": "framework/scenarios/cliff/run.lisp",
+      "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+      "bytes": 2470
+    },
+    {
+      "path": "framework/scenarios/cliff/settings.lisp",
+      "sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+      "bytes": 1799
+    },
+    {
+      "path": "framework/scenarios/joss/build.lisp",
+      "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+      "bytes": 3187
+    },
+    {
+      "path": "framework/scenarios/joss/classes.lisp",
+      "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+      "bytes": 429
+    },
+    {
+      "path": "framework/scenarios/joss/geometry.lisp",
+      "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+      "bytes": 2956
+    },
+    {
+      "path": "framework/scenarios/joss/measurements.lisp",
+      "sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+      "bytes": 3008
+    },
+    {
+      "path": "framework/scenarios/joss/output.lisp",
+      "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+      "bytes": 1176
+    },
+    {
+      "path": "framework/scenarios/joss/phases.lisp",
+      "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+      "bytes": 1395
+    },
+    {
+      "path": "framework/scenarios/joss/run.lisp",
+      "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+      "bytes": 11888
+    },
+    {
+      "path": "framework/scenarios/joss/statistics.lisp",
+      "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+      "bytes": 6450
+    },
+    {
+      "path": "framework/scenarios/triaxial/adapter.lisp",
+      "sha256": "1c0d76996ec55938db6291163c5da8a0abe3d39d47de71cfc364a421dbb5c21f",
+      "bytes": 3514
+    },
+    {
+      "path": "framework/scenarios/triaxial/boundaries.lisp",
+      "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+      "bytes": 891
+    },
+    {
+      "path": "framework/scenarios/triaxial/config.lisp",
+      "sha256": "ca254cd019033dccc78a1db6bab141d2b9ea53f304d79a9a63f2c44251904b61",
+      "bytes": 853
+    },
+    {
+      "path": "framework/scenarios/triaxial/controls.lisp",
+      "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+      "bytes": 4294
+    },
+    {
+      "path": "framework/scenarios/triaxial/geometry.lisp",
+      "sha256": "6d210567fe2bf1d09fc207283bfe6b4fadd38c2d0fc2da46c5d475bd9a413154",
+      "bytes": 3321
+    },
+    {
+      "path": "framework/scenarios/triaxial/homogeneous.lisp",
+      "sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+      "bytes": 5998
+    },
+    {
+      "path": "framework/scenarios/triaxial/material.lisp",
+      "sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+      "bytes": 1234
+    },
+    {
+      "path": "framework/scenarios/triaxial/measurements.lisp",
+      "sha256": "a8a7a5d4bed1901f1347e67c3c20a9b96238f2ba5946a86a1a6d2474c508a5e2",
+      "bytes": 4492
+    },
+    {
+      "path": "framework/scenarios/triaxial/mpm.lisp",
+      "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+      "bytes": 3570
+    },
+    {
+      "path": "framework/scenarios/triaxial/package.lisp",
+      "sha256": "f4b3a347f1690a1c228f344727ea2511f3469249ddf8973d7efe4166fd710481",
+      "bytes": 426
+    },
+    {
+      "path": "framework/scenarios/triaxial/runner.lisp",
+      "sha256": "78402e0266bc8d67f21929c4c980259988b27ed8d47d1ab87cbda8a05b9a8053",
+      "bytes": 5609
+    },
+    {
+      "path": "framework/scenarios/triaxial/tensors.lisp",
+      "sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+      "bytes": 637
+    },
+    {
+      "path": "framework/simulation.lisp",
+      "sha256": "f23b2c8f33bbf4cce15a1c56ef98aa2369eb719e66a1e04cb94d3fe55950c311",
+      "bytes": 2826
+    },
+    {
+      "path": "inputs/calibration/triaxial-2d.json",
+      "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35",
+      "bytes": 525
+    },
+    {
+      "path": "inputs/calibration/triaxial-controls.json",
+      "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861",
+      "bytes": 268
+    },
+    {
+      "path": "inputs/calibration/triaxial-demo.json",
+      "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0",
+      "bytes": 498
+    },
+    {
+      "path": "inputs/calibration/triaxial-homogeneous.json",
+      "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17",
+      "bytes": 370
+    },
+    {
+      "path": "inputs/studio/reference/joss-bay-accepted-collapse.json",
+      "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+      "bytes": 1256
+    },
+    {
+      "path": "inputs/studio/reference/joss-bay-prose.json",
+      "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b",
+      "bytes": 1726
+    },
+    {
+      "path": "inputs/studio/reference/joss-bay-table.json",
+      "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88",
+      "bytes": 1721
+    },
+    {
+      "path": "inputs/studio/reference/joss-bay-video-candidate.json",
+      "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b",
+      "bytes": 2575
+    },
+    {
+      "path": "inputs/studio/schema.json",
+      "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9",
+      "bytes": 9059
+    },
+    {
+      "path": "run-case.lisp",
+      "sha256": "e2817f33b9d5035f3d1d295526e541e1b28e4e0caebd3f108a563ad090441eb1",
+      "bytes": 4210
+    }
+  ]
+}

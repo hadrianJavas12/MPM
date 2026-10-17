@@ -1,0 +1,82 @@
+--- frozen/calibration/triaxial.lisp
++++ triaxial-2d-baseline-source.lisp
+@@ -43,6 +43,7 @@
+ 
+ (defun setup (config)
+   (let* ((h (* 1d-3 (num config "meshSizeMm" 10)))
++         (dimensions (round (num config "spatialDimensions" 3)))
+          (diameter (* 1d-3 (num config "diameterMm" 70)))
+          (height (* 1d-3 (num config "heightMm" 140)))
+          (density (num config "densityKgM3" 1800))
+@@ -54,28 +55,33 @@
+          (offset (* 3d0 h))
+          (center (+ offset (* 0.5d0 diameter)))
+          (sim (cl-mpm/setup:make-simple-sim
+-               h (list (ceiling (+ diameter (* 6 h)) h)
+-                       (ceiling (+ height (* 6 h)) h)
+-                       (ceiling (+ diameter (* 6 h)) h))
++               h (if (= dimensions 2)
++                     (list (ceiling (+ diameter (* 6 h)) h)
++                           (ceiling (+ height (* 6 h)) h))
++                     (list (ceiling (+ diameter (* 6 h)) h)
++                           (ceiling (+ height (* 6 h)) h)
++                           (ceiling (+ diameter (* 6 h)) h)))
+                :args-list (list :enable-fbar nil :enable-damage nil
+                                 :ghost-factor nil :enable-split nil))))
+     (assert (and (> h 0d0) (> diameter 0d0) (> height 0d0) (> density 0d0)
+                  (> e 0d0) (> su 0d0) (>= p 0d0) (< -1d0 nu 0.5d0)
+-                 (<= 1 mps 3)))
++                 (<= 1 mps 3) (member dimensions '(2 3))))
+     (cl-mpm:add-mps
+      sim (remove-if-not (lambda (mp) (typep mp 'cl-mpm/particle:particle))
+           (cl-mpm/setup:make-block-mps
+-          (list offset offset offset) (list diameter height diameter)
++          (if (= dimensions 2) (list offset offset) (list offset offset offset))
++          (if (= dimensions 2) (list diameter height) (list diameter height diameter))
+           (mapcar (lambda (length) (* (ceiling length h) mps))
+-                  (list diameter height diameter))
++                  (if (= dimensions 2) (list diameter height) (list diameter height diameter)))
+           density 'cl-mpm/particle::particle-vm
+           :E e :nu nu :rho (* (sqrt (/ 8d0 3d0)) su)
+           :rho-r (* (sqrt (/ 8d0 3d0)) su) :softening 0d0
+           :enable-plasticity (value config "enablePlasticity" t)
+           :clip-func (lambda (x y z)
+                        (declare (ignore y))
+-                       (<= (+ (expt (- x center) 2) (expt (- z center) 2))
+-                           (expt (* diameter 0.5d0) 2))))))
++                       (or (= dimensions 2)
++                           (<= (+ (expt (- x center) 2) (expt (- z center) 2))
++                               (expt (* diameter 0.5d0) 2)))))))
+     ;; Initial total isotropic stress is supported by an elastic prestress;
+     ;; F=I defines the measured specimen after cell-pressure application.
+     (loop for mp across (cl-mpm:sim-mps sim) do
+@@ -204,7 +210,7 @@
+                              (vector (make-instance 'isotropic-pressure :index nil :pressure p)
+                                      top bottom))
+     (write-frame sim directory 0 0d0 0d0 0 0d0)
+-    (format t "~&Native3D particles=~D dt=~E planned-updates=~D~%"
++    (format t "~&Native MPM particles=~D dt=~E planned-updates=~D~%"
+             (length (cl-mpm:sim-mps sim)) dt (ceiling duration dt))
+     (loop while (< (cl-mpm::sim-time sim) duration) do
+       (when (>= update max-updates) (error "Bounded update cap reached at t=~E" (cl-mpm::sim-time sim)))
+@@ -422,7 +428,10 @@
+                 (t (error "Unknown triaxial mode ~A" mode)))
+         (json-file (merge-pathnames "manifest.json" directory)
+                    (object "complete" t "mode" mode "nativeModel" "cl-mpm/particle::particle-vm"
+-                           "geometry" "70mm diameter x 140mm height defaults; see config"
++                           "geometry" "2D plane strain rectangle; 70mm width x 140mm height; unit out-of-plane thickness"
++                           "spatialDimensions" 2
++                           "planeStrain" t
++                           "planeStrainConvention" "F_zz=1; sigma_zz evolves constitutively; not axisymmetric or a 3D cylinder"
+                            "stressConvention" "compression positive CSV; native tension positive Cauchy stress"
+                            "axialStrainConvention" "MPM: prescribed platen engineering strain; separate measured particle-domain extent diagnostic; homogeneous: computed F_yy"
+                            "plasticStrainConvention" "native sqrt(3 J2 of deviatoric plastic strain increment); 1.5 times conventional von Mises equivalent plastic strain"
+@@ -432,7 +441,7 @@
+                            "yieldConvention" "rho=sqrt(8/3)*su; q_kirchhoff_yield=2su; q_cauchy_yield=2su/J"
+                            "drainage" "assumed total-stress undrained surrogate; no pore fluid or pore pressure"
+                            "spatialMPM" (if (string= mode "mpm") t 'yason:false)
+-                           "deformationSource" (if (string= mode "mpm") "native 3D grid/particle momentum solve"
++                           "deformationSource" (if (string= mode "mpm") "native 2D plane-strain grid/particle momentum solve with full 3D constitutive state"
+                                                    "homogeneous native constitutive solve; affine F visualization")
+                            "damageEnabled" 'yason:false "fbarEnabled" 'yason:false
+                            "aggregationEnabled" 'yason:false "gravity" 0

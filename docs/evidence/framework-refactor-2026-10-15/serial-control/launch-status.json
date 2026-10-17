@@ -1,0 +1,9 @@
+{
+  "status": "running, no result claimed",
+  "beforeSourceCommit": "c749d32",
+  "afterSourceCommit": "41403f4df54f270f8d75288c252e0c9a0fdddca3",
+  "changesFromFourWorkerPhysics": "Runtime control only:workers1, OPENBLAS_NUM_THREADS=1, OMP_NUM_THREADS=1. Accepted material,geometry,phase rules and40s horizon retained.",
+  "fourWorkerStrictRegressionPassed": false,
+  "partialSerialVTKsRetained": false,
+  "completionRule": "Only append serial VTKs and comparison results after BOTH native metadata complete=true and a fresh explicit comparison; never replace the four-worker FAIL."
+}

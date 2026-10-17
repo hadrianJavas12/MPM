@@ -1,0 +1,23 @@
+{
+  "purpose": "Computed finalshape agreement between historicalaccepted and fresh original-code baseline; not a pass of strict numerical equivalence",
+  "nativePhysicalTimeS": 40,
+  "rasterSpacingM": 0.025,
+  "viewportM": {
+    "x": [
+      0,
+      31
+    ],
+    "y": [
+      0,
+      17.333333333
+    ]
+  },
+  "excludeFoundationYAtOrBelowM": 1.05,
+  "footprint": "actual VTK particle rectangle domains",
+  "intersectionOverUnion": 0.9678170817521954,
+  "intersectionAreaM2": 188.25312500000004,
+  "unionAreaM2": 194.51312500000003,
+  "acceptedVtkSha256": "521eeb718de11eaa79af2b80a832ad86d0583b2b90293791381dfb5e11ab80a8",
+  "freshOriginalVtkSha256": "a632a33d1453c93ad0e2d7b5669e11a22ec415062a842ae108b2e8ffb701433a",
+  "scientificValidation": false
+}

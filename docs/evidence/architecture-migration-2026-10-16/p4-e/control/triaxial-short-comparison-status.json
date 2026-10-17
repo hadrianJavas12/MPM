@@ -1,0 +1,15 @@
+{
+  "exitCode": 0,
+  "comparatorSha256": "772bb84680f2dd041c23dd96dd0413da2ad836b44760912ceefece64a81d4f65",
+  "tolerances": "unchanged defaults",
+  "command": [
+    "D:\\MPM\\toolchain\\analysis-venv\\Scripts\\python.exe",
+    "D:\\MPM\\scripts\\compare-framework-runs.py",
+    "--baseline",
+    "D:\\MPM\\output\\architecture-migration-2026-10-16\\p2-d\\triaxial-short",
+    "--candidate",
+    "D:\\MPM\\output\\architecture-migration-2026-10-16\\p4-e\\triaxial-short",
+    "--output",
+    "D:\\MPM\\output\\architecture-migration-2026-10-16\\p4-e\\triaxial-short-comparison.json"
+  ]
+}

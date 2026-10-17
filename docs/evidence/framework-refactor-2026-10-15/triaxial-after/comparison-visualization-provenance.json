@@ -1,0 +1,33 @@
+{
+  "method": "Original CSV samples overlaid directly, without interpolation or fitting",
+  "rendererSourceSha256": "c5de47aea84b5f642fe446d0c6ab9e4a965c2be19d85b6fb357a3647e59c29da",
+  "threeDimensionalCurveIsContextOnly": true,
+  "inputs": [
+    {
+      "label": "2D sebelum refactoring",
+      "csv": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\stress-strain.csv",
+      "csvSha256": "09596885c6e9a725d64fce0f682ac38ffd00503525d2fe70e5df710db01760f9",
+      "configSha256": "ed8e5c1fde769ed2a7afb785f2d3f62024050b0a7109fd5d6c6f1d2f738e57af",
+      "samples": 51,
+      "spatialDimensions": 2
+    },
+    {
+      "label": "2D sesudah refactoring",
+      "csv": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\stress-strain.csv",
+      "csvSha256": "09596885c6e9a725d64fce0f682ac38ffd00503525d2fe70e5df710db01760f9",
+      "configSha256": "c9d55a70be465cd92ab8b7ea1b10f062d53bc7f5a51aa17a0445a946a6db8b0d",
+      "samples": 51,
+      "spatialDimensions": 2
+    },
+    {
+      "label": "3D benchmark lama (konteks)",
+      "csv": "D:\\MPM\\output\\triaxial-3d-demo\\stress-strain.csv",
+      "csvSha256": "aaf9ced4c60ea1117fd41e3325e607e47c299551372d182b3c959f374dc74e4c",
+      "configSha256": "b515077a0b8c45e0ee657cddb9eb4a32a472620bc24b1b60a001c8031e6056d2",
+      "samples": 51,
+      "spatialDimensions": 3
+    }
+  ],
+  "png": "D:\\MPM\\output\\framework-refactor-2026-10-15\\triaxial-2d-after\\triaxial-refactor-comparison.png",
+  "pngSha256": "eadb89a2af660513c0c19f0db69c176c3e93d04ce9bbfbccd689b5d36bd72aea"
+}

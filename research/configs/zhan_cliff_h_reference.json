@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "id": "zhan_cliff_h_reference",
+  "dataset": "zhan_cliff_pair",
+  "variant": "H",
+  "status": "reference_not_calibration",
+  "kind": "reference_case_proposal",
+  "execution": {
+    "enabled": false,
+    "blockers": [
+      "M2 internal strain mapping, constitutive state and corners/apex verification pending.",
+      "Native adapter, solver settings and boundary/loading design are not specified by this data file.",
+      "Table 4.8 does not supply an initial hardening strength; no prepeak path has been invented."
+    ]
+  },
+  "scientific_scope": "numerical_comparative_reference; not calibrated or validated residual-soil prediction; not a full CU simulation",
+  "shared": {
+    "material_family": "zhan_clay_table_4_8_slide",
+    "gravity": {
+      "value": 9.80665,
+      "source_file": "research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md",
+      "page": null,
+      "model_family": "shared_conversion_convention",
+      "units": "m/s^2",
+      "status": "reference_not_calibration",
+      "origin": "declared_assumption",
+      "notes": "Same gamma/g conversion convention as residual-soil pair."
+    },
+    "unit_weight": {
+      "value": 18800,
+      "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+      "page": 17,
+      "model_family": "zhan_clay_table_4_8_slide",
+      "units": "N/m^3",
+      "status": "reference_not_calibration",
+      "origin": "derived_SI",
+      "notes": "18.8 kN/m^3 * 1000 N/kN."
+    },
+    "density": {
+      "value": 1917.0664803985053,
+      "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+      "page": 17,
+      "model_family": "zhan_clay_table_4_8_slide",
+      "units": "kg/m^3",
+      "status": "reference_not_calibration",
+      "origin": "derived_SI",
+      "notes": "rho=18800 N/m^3 / 9.80665 m/s^2; Table 4.1 density 2000 kg/m^3 is not substituted."
+    },
+    "poisson_ratio": {
+      "value": 0.2,
+      "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+      "page": 17,
+      "model_family": "zhan_clay_table_4_8_slide",
+      "units": "dimensionless",
+      "status": "reference_not_calibration",
+      "origin": "transcribed",
+      "notes": "Table 4.8 value; Table 4.1 uses a different nu."
+    },
+    "young_modulus_law": {
+      "value": "max(4000000, 25 * (p_effective_Pa + 100000))",
+      "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+      "page": 17,
+      "model_family": "zhan_clay_table_4_8_slide",
+      "units": "Pa",
+      "status": "reference_not_calibration",
+      "origin": "derived_SI",
+      "notes": "SI rewrite of E[kPa]=max(4000,25*(p'[kPa]+100)); pressure dependence retained. No stiffness update strategy is claimed."
+    },
+    "dilation": {
+      "value": 0,
+      "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+      "page": 17,
+      "model_family": "zhan_clay_table_4_8_slide",
+      "units": "degree",
+      "status": "reference_not_calibration",
+      "origin": "transcribed",
+      "notes": "Table 4.8 baseline."
+    },
+    "k0": {
+      "value": 1,
+      "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+      "page": 17,
+      "model_family": "zhan_clay_table_4_8_slide",
+      "units": "dimensionless",
+      "status": "reference_not_calibration",
+      "origin": "transcribed",
+      "notes": "Table 4.8; page-26 S3 K0=1.5 is a separate case."
+    },
+    "porosity": {
+      "value": 0.3,
+      "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+      "page": 17,
+      "model_family": "zhan_clay_table_4_8_slide",
+      "units": "dimensionless",
+      "status": "reference_not_calibration",
+      "origin": "transcribed",
+      "notes": "Reference only; no coupled-fluid formulation implied."
+    },
+    "geometry_status": "cliff_geometry_and_boundaries_pending_explicit_M5_case_design",
+    "prepeak_initialization_status": "not_given_in_source; common_initial_strength_and_hardening_path_must_be_declared_in_M2",
+    "strain_coordinate": {
+      "source_label": "epsilon_D^P; percent values converted to dimensionless",
+      "mapping_status": "unverified_pending_M2",
+      "source_multiplier": {
+        "value": 1,
+        "source_file": "research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md",
+        "page": null,
+        "model_family": "zhan_mc_pair",
+        "units": "dimensionless",
+        "status": "reference_not_calibration",
+        "origin": "declared_assumption",
+        "notes": "No automatic transformation into CL-MPM internal plastic strain."
+      },
+      "excluded_flac_shear_to_deviatoric_ratio": {
+        "value": 0.5,
+        "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+        "page": 17,
+        "model_family": "zhan_clay_table_4_8_slide",
+        "units": "dimensionless",
+        "status": "reference_not_calibration",
+        "origin": "transcribed",
+        "notes": "FLAC table shear strain is half epsilon_D^P per source footnote; inactive until definitions are audited."
+      }
+    },
+    "stress_interpretation": "effective_stress_parameters; pore-pressure treatment not established"
+  },
+  "evolution": {
+    "interpolation": "piecewise_linear_between_given_endpoints_only",
+    "prepeak": "unresolved_common_hardening_path; source gives no initial strength",
+    "peak_kappa": {
+      "value": 0.05,
+      "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+      "page": 17,
+      "model_family": "zhan_clay_table_4_8_slide",
+      "units": "dimensionless",
+      "status": "reference_not_calibration",
+      "origin": "transcribed",
+      "notes": "Source 5%; not residual-soil peak strain 0.037."
+    },
+    "extrapolation": "clamp_after_final_endpoint; prepeak_undefined_until_M2",
+    "points": [
+      {
+        "kappa": {
+          "value": 0.05,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "epsilon_D^P source coordinate; not an established CL-MPM internal variable."
+        },
+        "cohesion": {
+          "value": 7000,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "Pa",
+          "status": "reference_not_calibration",
+          "origin": "derived_SI",
+          "notes": "Source cohesion in kPa multiplied by 1000 Pa/kPa."
+        },
+        "phi": {
+          "value": 20,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "degree",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Source effective friction angle."
+        }
+      }
+    ],
+    "postpeak": "plateau_at_peak_cohesion_and_phi"
+  }
+}

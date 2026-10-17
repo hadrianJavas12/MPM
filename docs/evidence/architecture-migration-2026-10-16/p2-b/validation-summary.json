@@ -1,0 +1,116 @@
+{
+  "stage": "P2-B / P4-B",
+  "status": "PASS bounded compatibility",
+  "sourceCommitAtLaunch": {
+    "triaxial-short": "5a1501b5a4afb503679be35ca462132d84a7a178",
+    "material-diagnostics": "5a1501b5a4afb503679be35ca462132d84a7a178",
+    "ownership-normal": "5a1501b5a4afb503679be35ca462132d84a7a178",
+    "p4-orchestration": "5a1501b5a4afb503679be35ca462132d84a7a178",
+    "framework-components": "5a1501b5a4afb503679be35ca462132d84a7a178",
+    "config-contracts": "5a1501b5a4afb503679be35ca462132d84a7a178"
+  },
+  "commitAttribution": "Exact launch commits retained per check; live unit source bytes sealed and verified against every captured unit manifest before subsequent-stage edits.",
+  "exitCodes": {
+    "triaxial-short": 0,
+    "material-diagnostics": 0,
+    "ownership-normal": 0,
+    "triaxial-short-comparison": 0,
+    "mc-triaxial-comparison": 0,
+    "p4-orchestration": 0,
+    "framework-components": 0,
+    "config-contracts": 0
+  },
+  "tests": {
+    "materialDiagnostics": {
+      "passed": 9,
+      "failed": 0
+    },
+    "materialOwnershipNormal": {
+      "passed": 7,
+      "failed": 0
+    },
+    "p4Orchestration": {
+      "passed": 3,
+      "failed": 0
+    },
+    "frameworkComponents": {
+      "passed": 10,
+      "failed": 0
+    },
+    "configContracts": {
+      "passed": 10,
+      "failed": 0
+    },
+    "nativeCatalogs": {
+      "passed": 5,
+      "byteIdenticalToBaseline": true
+    },
+    "nodeCheck": "PASS, retained root-run log",
+    "nodeTests": {
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "runs": {
+    "triaxial-short": {
+      "complete": true,
+      "nativeModel": "cl-mpm/particle::particle-vm",
+      "particleCount": 480,
+      "updates": 27
+    },
+    "mc-triaxial": {
+      "complete": true,
+      "nativeModel": "cl-mpm/particle::particle-mc",
+      "particleCount": 32,
+      "updates": 2
+    }
+  },
+  "strictComparisons": {
+    "triaxial-short": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    },
+    "mc-triaxial": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    }
+  },
+  "rawByteComparison": {
+    "triaxial-short": {
+      "allSavedVtkBytesEqual": true,
+      "vtkFiles": 2,
+      "stressStrainCsvBytesEqual": true
+    },
+    "mc-triaxial": {
+      "allSavedVtkBytesEqual": true,
+      "vtkFiles": 2,
+      "stressStrainCsvBytesEqual": true
+    }
+  },
+  "sourceProof": {
+    "frozenVmCopiedFilesVerified": 176,
+    "performedFirstPartyLoadInputsHashedVerified": 104,
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/architecture-migration-2026-10-16/p2-b/triaxial-short/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "liveUnitArchivedFiles": 171,
+    "liveArchiveSha256": "06166a8e9adaaada1862403832a237b5af16a3c359f5a06a4ff1c03c644dfc81",
+    "liveUnitScope": "Launch-time live source hashes verified against sealed source bytes for both MC and ownership suites. Cached external dependencies and live-suite FASLs are not independently frozen. VM has the selected-ASDF source/FASL and actual DLL proof."
+  },
+  "architectureGates": {
+    "G1": "PARTIAL",
+    "G3": "PARTIAL",
+    "fullSerialJoss": "STOPPED_BY_USER; acceptance INCOMPLETE; not rerun",
+    "earlierParallelJoss": "Prior failure remains open"
+  },
+  "scientificValidation": false,
+  "scope": "P2-B 87 original forms across 14 targets plus P4-B 26 forms across 5 owners; retained extraction proof archives. Bounded compatibility only."
+}

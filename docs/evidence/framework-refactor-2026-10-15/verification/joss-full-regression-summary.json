@@ -1,0 +1,235 @@
+{
+  "baseline": {
+    "firstLowerDamageAbove005": {
+      "time": 4.0,
+      "max_damage": 0.3335893978972718,
+      "max_damage_position": [
+        13.1253336859322,
+        3.624981433833064,
+        0.0
+      ],
+      "max_damage_reference_position": [
+        13.125000000000014,
+        3.6250000000000044,
+        0.0
+      ],
+      "right_domain_edge_above_y1_05m": 15.437665930589267,
+      "initial_top_particle_mean_y": 15.249904082735448,
+      "mass_weighted_damage": 0.005989434472813533,
+      "mass": 425664.0625
+    },
+    "firstUpperDamageAbove005": {
+      "time": 7.5,
+      "max_damage": 0.6995193357479654,
+      "max_damage_position": [
+        12.875365844293876,
+        3.8749086167981748,
+        0.0
+      ],
+      "max_damage_reference_position": [
+        12.874999999999966,
+        3.874999999999994,
+        0.0
+      ],
+      "right_domain_edge_above_y1_05m": 15.437659644556865,
+      "initial_top_particle_mean_y": 15.249800277705628,
+      "mass_weighted_damage": 0.03905859189962481,
+      "mass": 425664.0625
+    },
+    "final": {
+      "time": 40.0,
+      "max_damage": 0.9999999999999359,
+      "max_damage_position": [
+        30.94479176722309,
+        1.4702945322013654,
+        0.0
+      ],
+      "max_damage_reference_position": [
+        14.781249999999755,
+        4.281249999999948,
+        0.0
+      ],
+      "right_domain_edge_above_y1_05m": 31.015890462422394,
+      "initial_top_particle_mean_y": 8.176374619836835,
+      "mass_weighted_damage": 0.4937527696524591,
+      "mass": 425664.0625
+    },
+    "maxRelativeMassDrift": 0.0,
+    "allPhysicalPlusInitialEquilibriumVTKs": 178,
+    "allAuditedFieldsFinite": true,
+    "protectedBaseParticleCounts": [
+      496
+    ],
+    "protectedBaseMaximumDamage": 0.0
+  },
+  "candidate": {
+    "firstLowerDamageAbove005": {
+      "time": 4.0,
+      "max_damage": 0.3335893978546651,
+      "max_damage_position": [
+        13.125333685932196,
+        3.6249814338330704,
+        0.0
+      ],
+      "max_damage_reference_position": [
+        13.125000000000005,
+        3.6250000000000036,
+        0.0
+      ],
+      "right_domain_edge_above_y1_05m": 15.437665930589283,
+      "initial_top_particle_mean_y": 15.249904082735448,
+      "mass_weighted_damage": 0.0059894344725328905,
+      "mass": 425664.0625
+    },
+    "firstUpperDamageAbove005": {
+      "time": 7.5,
+      "max_damage": 0.6995193357910521,
+      "max_damage_position": [
+        12.875365844293926,
+        3.8749086167981903,
+        0.0
+      ],
+      "max_damage_reference_position": [
+        12.875000000000009,
+        3.875000000000001,
+        0.0
+      ],
+      "right_domain_edge_above_y1_05m": 15.437659644556868,
+      "initial_top_particle_mean_y": 15.24980027770562,
+      "mass_weighted_damage": 0.039058591898611605,
+      "mass": 425664.0625
+    },
+    "final": {
+      "time": 40.0,
+      "max_damage": 0.9999999999999359,
+      "max_damage_position": [
+        30.94477987038663,
+        1.4704239232332295,
+        0.0
+      ],
+      "max_damage_reference_position": [
+        14.781250000000117,
+        4.281249999999934,
+        0.0
+      ],
+      "right_domain_edge_above_y1_05m": 31.015879680175658,
+      "initial_top_particle_mean_y": 8.175794501844093,
+      "mass_weighted_damage": 0.49377423946341026,
+      "mass": 425664.0625
+    },
+    "maxRelativeMassDrift": 0.0,
+    "allPhysicalPlusInitialEquilibriumVTKs": 193,
+    "allAuditedFieldsFinite": true,
+    "protectedBaseParticleCounts": [
+      496
+    ],
+    "protectedBaseMaximumDamage": 0.0
+  },
+  "firstPointwiseFailure_position": {
+    "time": 18.0,
+    "metric": {
+      "max_abs_difference": 6.133945937847329e-07,
+      "rms_difference": 1.6377197952938656e-08,
+      "max_scaled_difference": 1.0818524959515485,
+      "mismatched_values": 1,
+      "pass": false,
+      "global_linf_diagnostic": {
+        "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+        "baseline_linf": 30.8750011494773,
+        "relative_linf_difference": 1.9867030637992946e-08,
+        "tolerance": 3.0975001149477297e-06,
+        "pass": true
+      }
+    }
+  },
+  "firstGlobalFailure_position": {
+    "time": 18.2,
+    "metric": {
+      "max_abs_difference": 3.822668185549105e-06,
+      "rms_difference": 1.3641498312178937e-07,
+      "max_scaled_difference": 6.6695559152611885,
+      "mismatched_values": 58,
+      "pass": false,
+      "global_linf_diagnostic": {
+        "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+        "baseline_linf": 30.875001002070775,
+        "relative_linf_difference": 1.2381111130304806e-07,
+        "tolerance": 3.097500100207077e-06,
+        "pass": false
+      }
+    }
+  },
+  "firstPointwiseFailure_damage": {
+    "time": 16.8,
+    "metric": {
+      "max_abs_difference": 1.41701609335243e-08,
+      "rms_difference": 7.886840850424733e-10,
+      "max_scaled_difference": 1.2364007405495991,
+      "mismatched_values": 1,
+      "pass": false,
+      "global_linf_diagnostic": {
+        "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+        "baseline_linf": 0.9999999999997127,
+        "relative_linf_difference": 1.4170160933528372e-08,
+        "tolerance": 1.0999999999997126e-07,
+        "pass": true
+      }
+    }
+  },
+  "firstGlobalFailure_damage": {
+    "time": 18.1,
+    "metric": {
+      "max_abs_difference": 3.0224142890666883e-06,
+      "rms_difference": 5.1463061519965943e-08,
+      "max_scaled_difference": 29.78269684783746,
+      "mismatched_values": 17,
+      "pass": false,
+      "global_linf_diagnostic": {
+        "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+        "baseline_linf": 0.9999999999999224,
+        "relative_linf_difference": 3.022414289066923e-06,
+        "tolerance": 1.0999999999999224e-07,
+        "pass": false
+      }
+    }
+  },
+  "firstPointwiseFailure_sig_xx": {
+    "time": 2.0,
+    "metric": {
+      "max_abs_difference": 6.440387369366363e-05,
+      "rms_difference": 1.3968402882286886e-05,
+      "max_scaled_difference": 453.48357458848517,
+      "mismatched_values": 54,
+      "pass": false,
+      "global_linf_diagnostic": {
+        "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+        "baseline_linf": 86993.84561760945,
+        "relative_linf_difference": 7.403267810088267e-10,
+        "tolerance": 0.008699394561760944,
+        "pass": true
+      }
+    }
+  },
+  "firstGlobalFailure_sig_xx": {
+    "time": 17.6,
+    "metric": {
+      "max_abs_difference": 0.06450450249394635,
+      "rms_difference": 0.003896227797107744,
+      "max_scaled_difference": 2123.1449343429226,
+      "mismatched_values": 793,
+      "pass": false,
+      "global_linf_diagnostic": {
+        "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+        "baseline_linf": 434601.9611215249,
+        "relative_linf_difference": 1.4842202351661586e-07,
+        "tolerance": 0.04346020611215249,
+        "pass": false
+      }
+    }
+  },
+  "firstClockSequenceDifference": {
+    "index0": 159,
+    "baselineTime": 27.4,
+    "candidateTime": 25.5
+  }
+}

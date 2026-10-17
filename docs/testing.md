@@ -1,4 +1,87 @@
-# Studio verification
+# Native framework and Studio verification
+
+## Reusable native framework regression, 2026-10-15
+
+The initial refactor was committed as `66ea5fb` before running the requested
+post-refactor native regressions. Compatibility/launcher fixes followed;
+`c5fd10d` corrects native material constructor options and `9f26cb1` retains the
+composition contracts/regression tooling. See [framework usage](REUSABLE_FRAMEWORK.md)
+for supported components, explicit compatibility limits and short case files.
+
+From PowerShell in `D:\MPM`:
+
+```powershell
+& .\windows\cl-mpm.cmd tests\framework-components.lisp
+& .\windows\cl-mpm.cmd tests\triaxial-components.lisp
+$runDir = Join-Path 'D:\MPM\output' ('triaxial-2d-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
+& .\windows\cl-mpm.cmd scripts\run-case.lisp cases\triaxial\triaxial-clay-2d.lisp $runDir
+if ($LASTEXITCODE -ne 0) { throw 'Native simulation failed' }
+& .\toolchain\analysis-venv\Scripts\python.exe scripts\audit-triaxial.py --run-dir $runDir
+& .\toolchain\analysis-venv\Scripts\python.exe scripts\plot-triaxial.py --run-dir $runDir --video
+```
+
+Use a new output directory for every run. The public launcher copies and loads
+framework, case and JSON inputs before simulation; dependency/FASL/DLL identity
+is recorded separately. The calibration compatibility launcher also snapshots
+the complete split triaxial module tree. No UI/server is needed.
+
+| Executed check | Observed result | Scope |
+| --- | --- | --- |
+| Framework component contracts | 10 passed, 0 failed | Native construction/configuration, VM/elastic choice, geometry/clipping, inheritance, explicit rejection; no time integration |
+| Triaxial component contracts | Passed | Per-run factory/filter composition, initial Fzz, unsupported class rejection and context preservation |
+| Node syntax and suite | 36 passed, 0 failed/skipped | Existing API/schema/reader/compiler contracts; no new browser session |
+| Native custom delegate smoke | 64 MPs, two updates, zero stress/position difference | Actual solver and VTK readback; original delegate compatibility |
+| Joss reference unit checks | Passed | Volume-weighted statistics, damping mapping and state thresholds |
+| Full spatial 2D before/after | 51/51 VTKs byte-identical; every CSV column and exported native field has zero difference | Frozen original monolith with minimal 2D adaptation versus refactored public CLI snapshot `2f6476f` |
+| Independent 2D output audit | Passed available-field checks on both runs | Finite fields, mass/volume/kinetic energy/displacement, axial stress and CSV identities; missing tensor components explicitly unavailable |
+| Full spatial Joss before/after | Both completed 40 s, exit 0; **strict regression failed** | 176 versus 191 physical states; common-time pointwise diagnostics also exceed `atol=1e-8`, `rtol=1e-7` |
+| Full serial Joss control, audited 2026-10-16 | **PASS, exact:** 191 physical states / 193 VTKs per run, positions and all 36 scalar arrays differ by zero; complete CSVs byte-identical | Frozen original `c749d32` versus executed after `41403f4`, one worker and one BLAS/OMP thread; four-worker FAIL remains |
+| M1 reference-data integrity | Nine stdlib tests pass | SI conversions, source provenance, paired-law data and execution gates; no constitutive solver or experimental validation |
+| Generic material diagnostics, current M0 working tree | Nine native contracts pass | Native MC/linear elastic/VM, analytic corrected MC yield, output collision and history capability guards; MC 32 MPs / two updates, zero mass drift |
+| Strict triaxial/JSON configuration | Ten native contracts pass, no timesteps | Unknown/range/count/mode/null/duplicate/trailing-data rejection, isolation and actual JSON false disabling particle plasticity |
+
+Both successful 2D runs use 480 MPs, 17,443 updates, 51 saved states and reach
+0.2 s / 10% prescribed strain. Their final qJ2 is 50.01733976 kPa and projected
+triaxial q is 43.30520503 kPa. This rectangle is **plane strain with unit thickness**,
+not an axisymmetric approximation of the earlier 3D cylinder. Saved-frame native
+assertions check Fzz=1 and zero out-of-plane shear/position/velocity. Existing 2D
+VTK exports omit sigma_zz and out-of-plane velocity/displacement, so independent
+full qJ2/yield/stress recomputation from those VTKs is marked unavailable; missing
+components are not inferred. The exact regression still compares all native CSV
+columns and all exported fields. Old 3D curves are labeled contextual only.
+
+The first one-MP-per-cell-direction 2D attempt failed mass conservation around
+6.3% strain because lateral domain expansion reached the engine's existing GIMP
+particle-removal limit. Its source/log/failure record are retained. Successful
+before/after runs use two MPs per cell direction on both sides; no removal rule,
+solver equation or mass invariant was relaxed.
+
+Current working evidence is in `output/framework-refactor-2026-10-15/`: the frozen
+sources/adaptation patch, `triaxial-before-after-comparison.json`, both run folders,
+test/audit logs, and actual-data PNG/video/curve overlay with hashes. Native time
+is 0.2 s; video playback is 51 frames at 15 fps, or 3.4 s. These are software
+regression and consistency checks, not laboratory calibration, convergence proof,
+a closed energy budget or validation of the earlier cliff physics.
+
+The full Joss runs are complete; their strict comparison is **not a pass**.
+Saved damage first exceeds 0.05 in the lower reference region at 4 s and upper
+reference region at 7.5 s in both runs. At 40 s, run-out domain edges are
+31.01589046 / 31.01587968 m, and initial-top-particle mean y values are
+8.17637462 / 8.17579450 m (before / after). Final position-component differences
+reach 0.0811648 m, RMS 0.00234568 m. Final-domain IoU 0.99667193 is a shape
+diagnostic, not physical accuracy or a replacement for pointwise tolerances.
+The comparator retains the unequal frame counts and performs no interpolation.
+See [the detailed status](REUSABLE_FRAMEWORK.md#hasil-validasi-saat-ini) and
+`joss-before-after-comparison.json`, `joss-before-after-diagnostics.json`, and
+`joss-full-regression-summary.json` in the working evidence directory. Cause
+investigation and overall refactor acceptance remain unresolved. The user
+authorized committing and pushing this interim evidence while the paired
+single-worker controls ran; the final PR remains pending. The serial controls
+are now complete and exactly identical; see [the audited result](../research/reports/M0_SERIAL_REGRESSION.md).
+This separates a passing deterministic control from the retained four-worker
+failure. Current `64f47cc` VM 2D/3D regressions have now passed separately;
+see the completed checkpoint below. M0 retains the parallel/provenance limits.
+No physics change or scientific validation is claimed.
 
 ## Repeatable automated checks
 
@@ -129,6 +212,82 @@ Retained numerical evidence: [triaxial bundle](evidence/triaxial-clay-2026-10-15
 These checks do not claim laboratory calibration, full undrained pore-water
 modelling, mesh/rate/timestep convergence or a closed energy budget.
 
+## Completed framework evidence and migration baseline, 2026-10-16
+
+Executed native checkpoint `64f47cc` (2026-10-16): 9 material-diagnostic,
+10 configuration, 10 framework contracts and 36 Node tests pass. Full VM 2D
+(480 MPs) and 3D (780 MPs) pairs each completed exit 0, 17,443 updates, 51 states
+and 0.2 s. Each pair has all 51 corresponding VTKs byte-identical and every CSV,
+position and exported-field difference zero under unchanged criteria. All four
+independent audits pass within their available-field scope; missing 2D
+sigma_zz/out-of-plane kinematics still preclude the full independent tensor checks.
+
+The collector completed; [the retained summary](evidence/material-contract-2026-10-16/validation-summary.json)
+and its 60 SHA-256-verified manifest entries record executed snapshot `64f47cc`,
+frozen original 3D `c749d32`, statuses, CSVs, audits and comparison evidence.
+Working VTK outputs/logs remain under `output/material-contract-2026-10-16/`.
+Those baseline jobs are complete. The Joss byte comparison covers only listed
+dedicated numerical modules versus `41403f4`; no new full Joss run is claimed.
+M0 remains **PROVISIONAL** because four-worker strict FAIL and incomplete
+transitive loaded FASL/DLL provenance remain open.
+
+The [migration specification](architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md)
+governs the migration. P0 inventory was pushed as `6f15148` before moves; its
+matrix/approvals remain immutable. These saved results are baseline evidence, not tests
+of the target root `materials/`, `scenarios/` and `src/simulation/` layout.
+Preserve exact
+regression criteria and historical Windows/ASDF/Studio/calibration entry points.
+The isolated `.tmp/mc-evolution-stage/` has 32 native point checks passing, with
+sampled-root/continuation limits. It is uninstalled; new physics is deferred
+until migration gates and requires a separate experimental branch.
+
+## P1 bounded migration verification, 2026-10-16
+
+Production extraction `3cd172e` was committed/pushed before tests. Its 16 defining
+forms and whole native factory file retain exact bytes; class/package symbols,
+historical source shims and ASDF IDs are preserved. The
+[retained P1 evidence](evidence/architecture-migration-2026-10-16/p1/README.md)
+has 32 hash-verified artifacts. Actual Windows checks pass: 10 framework,
+10 configuration, 9 material (including 32 MPs/two updates), 36 Node with zero
+skipped, 7 normal and 7 legacy ownership checks, and 3 snapshot/escape checks.
+
+Strict bounded VM (27 updates) and MC (two updates) comparisons pass across two
+states each with zero CSV/position differences. Both two-update MC cliff VTKs
+are byte-identical to the prior control; gnuplot PNG is unavailable and plotting
+is not marked PASS. The initial 6/7 ownership failure assumed an incorrect SBCL
+precedence tail; original-source control confirms `SLOT-OBJECT` already existed.
+Only the assertion changed. The first escape fixture preferred the wrong ASDF
+registry; correcting the fixture made the unchanged guard reject escape.
+Both failed fixtures/logs are retained.
+
+Focused units loaded committed production sources from the working tree;
+CLI controls retained copied source/input trees. Full transitive loaded FASL/DLL
+provenance is incomplete. P1 is PROVISIONAL, G1 PARTIAL. Full migrated VM 2D/3D
+on frozen `62adb50` completed with native/comparison/audit exit 0. The new serial
+Joss run was STOPPED_BY_USER at 4.2 s; it has no full comparison or observed exit
+code. [P1 full evidence](evidence/architecture-migration-2026-10-16/p1-full/README.md)
+retains completed VM controls separately from cancelled partial Joss output.
+P2 is plan only; new physics remains deferred.
+
+### P3 diagnostics ownership, Windows native
+
+Implementation was committed before validation; executed source is `333306b`.
+Fresh-process contracts, Node checks and two bounded VM/MC controls passed.
+Both corresponding VTK pairs are byte-identical to P1, with zero numerical
+CSV/position/field differences under the unchanged strict comparator.
+[Evidence and actual commands](evidence/architecture-migration-2026-10-16/p3/README.md)
+include source hashes, logs and retained VTK/CSV. These are focused compatibility
+results, not full scientific or architectural acceptance.
+
+```powershell
+.\windows\cl-mpm.cmd tests\diagnostics-ownership-compat.lisp
+.\windows\cl-mpm.cmd tests\diagnostics-ownership-compat.lisp legacy
+.\windows\cl-mpm.cmd tests\case-snapshot-contracts.lisp output\snapshot-FRESH
+```
+
+Use a new empty output path for each snapshot check. The old diagnostics source
+path remains a loader; normal ASDF loads the three new owner files directly.
+
 ## GitHub Actions blocker
 
 [Run 38512874136](https://github.com/hadrianJavas12/MPM/actions/runs/38512874136)
@@ -139,3 +298,57 @@ billing issue**. This confirms the account-level cause and supersedes the
 older unknown-cause note. The workflow installs SBCL and requires the contract
 tests on Node 22/Ubuntu 24.04. Hosted CI cannot be marked green until the account
 owner resolves the billing lock and a fresh run completes.
+
+## Architecture migration final verification, 2026-10-17
+
+Current source/status and commands are in
+[the next-AI checkpoint](architecture/NEXT_AI_CHECKPOINT.md) and
+[architecture status](architecture/STATUS.md). P2 A–D and P4 B–F passed all
+saved native controls; all twenty post-move family catalogs match the five
+baseline catalogs byte for byte.
+
+On the final canonical root-ASDF layout (`436b561` / `9dfb58b`):
+- **`p6-short/` (11/11 native checks PASS, 64 verified artifacts)**:
+  `case-snapshot` (3/3), `native-snapshot` (7/7), `standalone-triaxial` (3/3),
+  `p4-orchestration-002` (4/4; initial Windows PowerShell 5.1 stderr redirection
+  attempt `p4-orchestration` is retained unchanged), `engine-smoke` (100 MPs, 50 steps),
+  `ownership-normal` (7/7), `ownership-legacy` (7/7), `diagnostics-legacy` (3/3),
+  `custom-delegate` (64 MPs, 2 steps, 80 custom calls, zero position/stress diff, VTK readback),
+  `cliff-mc` (70 MPs, 2 substeps, byte-identical `vtk/mesh.vtk` and `vtk/sim_00001.vtk` vs P1),
+  and `legacy-triaxial` (480 MPs, 27 updates, strict comparison PASS vs P4-E), plus
+  Node syntax check and 36/36 tests passing (`p4-f-node/`).
+- **`joss-bounded/` (4-second serial initiation control PASS, 54 verified artifacts)**:
+  Pre-P2 baseline `before-003` (`a99a4e1` / `7e2aac3`) and final-layout candidate
+  `after-001` (`9dfb58b`) both completed 1,658 elastic equilibration steps and 4.0 s
+  physical time (`exit 0`). All saved VTKs (`equilibrium.vtk`, `sim_00001.vtk`,
+  `sim_00002.vtk`) are byte-identical (`SHA-256` match) and `compare-framework-runs.py`
+  exited 0 with zero position, scalar-field, or CSV differences. Earlier harness
+  failures `before-001` and `before-002` are retained.
+- **`p6-full/` (full final-layout VM Triaxial 2D and 3D regressions PASS, 38 verified artifacts)**:
+  Both `triaxial-2d` (480 MPs, 17,443 updates, 51 states) and `triaxial-3d` (780 MPs,
+  17,443 updates, 51 states) completed on `9dfb58b` with `nativeExitCode=0`,
+  `comparisonExitCode=0`, and `auditExitCode=0`. Every saved VTK (`51/51` in 2D and
+  `51/51` in 3D) and `stress-strain.csv` is byte-identical (`SHA-256` match) to
+  `p1-full` (`62adb50`), with zero position/CSV/field differences and independent
+  consistency audits passing.
+- **`section2-benchmarks/` (Section 2 canonical directory layout `5eda644`, committed evidence in [section2-benchmarks](evidence/architecture-migration-2026-10-16/section2-benchmarks/README.md))**:
+  After retiring legacy `framework/` and `src/models/` shims (`5d6a5cf`), installing the
+  15 `src/` engine domain directories, `cases/{triaxial,cliff,benchmarks,direct-shear}/`,
+  and `materials/cl-mpm-materials.asd` (`af3a3ee`–`5eda644`), all focused native suites
+  (`case-snapshot-contracts` 3/3, `native-snapshot-contracts` 7/7, `material-ownership-compat`
+  normal & legacy 7/7, `p4-orchestration-compat F` 4/4, `p4-standalone-triaxial-compat` 3/3)
+  and two end-to-end benchmarks passed:
+  1. **Triaxial 2D (`cases/triaxial/triaxial-clay-2d.lisp`)**: `exit 0` (480 MPs, 17,443 updates,
+     51 VTKs), `51/51` VTKs and `stress-strain.csv` byte-identical (`SHA-256`) to `p1-full/triaxial-2d`,
+     `audit-triaxial.py` PASS, and `triaxial-simulation.mp4` rendered.
+  2. **Chalk Cliff Progressive Bottom-to-Top Damage (`tests/cases/joss-serial-integration.lisp` & `cases/benchmarks/joss-collapse.lisp`)**:
+     4.0 s serial initiation control (`joss-serial-4s`) exited 0 with `initial.vtk`, `mesh.vtk`,
+     `equilibrium.vtk`, `sim_00001.vtk`, and `sim_00002.vtk` 100% byte-identical (`SHA-256`) to
+     pre-P2 `before-003`; extended propagation run (`joss-collapse`, 23 VTKs, `t = 0..7.8 s`)
+     confirmed bottom initiation at `t = 4.0 s` (`lower_max_damage = 0.3336`, `upper_max_damage = 0.0`)
+     propagating upward into the upper cliff (`y >= 9 m`) by `t = 7.0..7.8 s` (`lower_max_damage = 0.7226`,
+     `upper_max_damage = 0.0885 > 0.05`, all fields finite, zero mass change), with
+     `joss-bottom-to-top-propagation.mp4` rendered.
+
+No new 40-second full Joss run was started (the earlier run on `62adb50` remains
+`STOPPED_BY_USER` at 4.2 s); complete G3 and scientific validation are not claimed.

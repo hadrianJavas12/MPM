@@ -1,5 +1,9 @@
 # Triaxial clay native Windows — diameter 70 mm, tinggi 140 mm
 
+Mulai dari [panduan singkat Windows tanpa UI](../docs/QUICKSTART_WINDOWS_NATIVE.md)
+untuk menyalin perintah run, memeriksa penyelesaian dan membuka video.
+Bagian berikut menjelaskan metode dan pilihan lanjutan.
+
 Contoh ini menggunakan model VM elastoplastik native CL-MPM sebagai pendekatan
 **undrained total stress** dengan parameter asumsi: E=5 MPa, nu=0,49,
 skala su=25 kPa, tekanan sel=50 kPa dan density=1800 kg/m³. Data laboratorium

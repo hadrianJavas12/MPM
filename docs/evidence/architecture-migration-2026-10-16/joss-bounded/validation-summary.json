@@ -1,0 +1,238 @@
+{
+  "stage": "Bounded 4-second serial Joss control (pre-P2 7e2aac3 vs canonical P4-F/P6 9dfb58b)",
+  "status": "PASS (bounded 4s serial scope only; does not close full 40s G3)",
+  "baseline": {
+    "label": "before-003",
+    "numericalSourceBaselineCommit": "a99a4e1d1a8deb17483230ee59d53c07f4a26822",
+    "bootstrapRepositoryCheckpoint": "326268a2b6e1441c5c8a9947e83427e0fc16e34f",
+    "equilibrationSteps": 1658,
+    "physicalTimeS": 4.0,
+    "nativeExitCode": 0
+  },
+  "candidate": {
+    "label": "after-001",
+    "launchCommit": "9dfb58b06fc3f8bc7883491e818fe33dab091ee7",
+    "equilibrationSteps": 1658,
+    "physicalTimeS": 4.0,
+    "exitCode": 0
+  },
+  "strictComparison": {
+    "passed": true,
+    "baselineStates": 2,
+    "candidateStates": 2,
+    "maxPositionDifferenceM": 0.0,
+    "vtkByteIdentical": {
+      "equilibrium.vtk": "0ef589b23c1be52ebca491382f8394120000ad498036b2fa3722d6e7c4cdc5e1",
+      "sim_00001.vtk": "36f2094d968fce3a6ae7cab64478dcbbf67f31e5666d89781e3e9a8439e7c702",
+      "sim_00002.vtk": "75981a525cbff829c594b6d81a322cb1b3ce75158b25c0b8a509b0f8b206557b"
+    }
+  },
+  "retainedFailedAttempts": {
+    "before-001": "Initial PowerShell runner path quoting error before SBCL launch",
+    "before-002": "Windows PowerShell 5.1 stderr NativeCommandError on SBCL compilation note during equilibration"
+  },
+  "runs": {
+    "before-003": {
+      "complete": true,
+      "frames": 2,
+      "finalTimeS": 4.0,
+      "particleCount": 4155,
+      "finalMass": 425664.0625,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 4.0,
+        "file": "vtk/sim_00002.vtk",
+        "sha256": "75981a525cbff829c594b6d81a322cb1b3ce75158b25c0b8a509b0f8b206557b",
+        "particles": 4155,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "damage",
+          "damage-inc",
+          "damage-k",
+          "damage-length",
+          "damage-y",
+          "damage-ybar",
+          "damage-ybar-scaled",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 425664.0625,
+        "bounds_min": [
+          0.12500007751351716,
+          0.12499476876093486,
+          0.0
+        ],
+        "bounds_max": [
+          30.875000000002487,
+          16.37498187189552,
+          0.0
+        ],
+        "max_displacement": 0.00044685414268193316,
+        "mass_centroid": [
+          8.131576921242692,
+          7.5717313830759,
+          0.0
+        ],
+        "max_damage": 0.33358939786364217,
+        "max_damage_position": [
+          13.125333685932198,
+          3.624981433833066,
+          0.0
+        ],
+        "max_damage_reference_position": [
+          13.125000000000009,
+          3.6250000000000058,
+          0.0
+        ],
+        "mass_weighted_damage": 0.005989434472308899,
+        "lower_reference_y_le_4m": 0.33358939786364217,
+        "upper_reference_y_ge_9m": 0.0,
+        "damage_gt_0.05": {
+          "count": 139,
+          "reference_y_min": 2.1249999999999947,
+          "reference_y_max": 6.625000000000016
+        },
+        "damage_gt_0.5": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "damage_gt_0.9": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "right_domain_edge_above_y1_05m": 15.437665930589288,
+        "initial_top_particle_mean_y": 15.249904082735444
+      }
+    },
+    "after-001": {
+      "complete": true,
+      "frames": 2,
+      "finalTimeS": 4.0,
+      "particleCount": 4155,
+      "finalMass": 425664.0625,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 4.0,
+        "file": "vtk/sim_00002.vtk",
+        "sha256": "75981a525cbff829c594b6d81a322cb1b3ce75158b25c0b8a509b0f8b206557b",
+        "particles": 4155,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "damage",
+          "damage-inc",
+          "damage-k",
+          "damage-length",
+          "damage-y",
+          "damage-ybar",
+          "damage-ybar-scaled",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 425664.0625,
+        "bounds_min": [
+          0.12500007751351716,
+          0.12499476876093486,
+          0.0
+        ],
+        "bounds_max": [
+          30.875000000002487,
+          16.37498187189552,
+          0.0
+        ],
+        "max_displacement": 0.00044685414268193316,
+        "mass_centroid": [
+          8.131576921242692,
+          7.5717313830759,
+          0.0
+        ],
+        "max_damage": 0.33358939786364217,
+        "max_damage_position": [
+          13.125333685932198,
+          3.624981433833066,
+          0.0
+        ],
+        "max_damage_reference_position": [
+          13.125000000000009,
+          3.6250000000000058,
+          0.0
+        ],
+        "mass_weighted_damage": 0.005989434472308899,
+        "lower_reference_y_le_4m": 0.33358939786364217,
+        "upper_reference_y_ge_9m": 0.0,
+        "damage_gt_0.05": {
+          "count": 139,
+          "reference_y_min": 2.1249999999999947,
+          "reference_y_max": 6.625000000000016
+        },
+        "damage_gt_0.5": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "damage_gt_0.9": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "right_domain_edge_above_y1_05m": 15.437665930589288,
+        "initial_top_particle_mean_y": 15.249904082735444
+      }
+    }
+  },
+  "fullJoss40sStatus": "STOPPED_BY_USER at 4.2 s earlier; not restarted; full G3 remains PARTIAL",
+  "scientificValidation": false
+}

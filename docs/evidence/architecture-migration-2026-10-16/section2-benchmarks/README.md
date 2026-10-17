@@ -1,0 +1,6 @@
+# Section 2 canonical layout end-to-end benchmarks (5eda644)
+
+Records the post-Section-2 directory and ownership alignment benchmarks on 5eda644:
+
+1. **Triaxial 2D (cases/triaxial/triaxial-clay-2d.lisp)**: exit 0 (480 MPs, 17,443 updates, 51 saved VTK frames, 0.2 s / 10% axial strain). 51/51 VTK files and stress-strain.csv are byte-identical (SHA-256 match, max_position_difference_m = 0.0) to p1-full/triaxial-2d, udit-triaxial.py passes, and 	riaxial-simulation.mp4 is rendered.
+2. **Chalk Cliff Progressive Bottom-to-Top Damage (	ests/cases/joss-serial-integration.lisp & cases/benchmarks/joss-collapse.lisp)**: 4.0 s serial initiation control (joss-serial-4s) exits 0 (1,658 equilibration steps + 4.0 s) with initial.vtk, mesh.vtk, equilibrium.vtk, sim_00001.vtk, and sim_00002.vtk byte-identical (SHA-256 match, max_position_difference_m = 0.0) to pre-P2 efore-003. Extended bottom-to-top propagation run (joss-collapse, 23 VTKs across 	 = 0..7.8 s) shows damage initiating in the lower toe/notch (y <= 4 m, lower_max_damage = 0.3336, upper_max_damage = 0.0 at 	 = 4.0 s) and propagating upward into the upper cliff (y >= 9 m, lower_max_damage = 0.7226, upper_max_damage = 0.0885 > 0.05 at 	 = 7.0..7.8 s, all fields finite, zero mass change), with joss-bottom-to-top-propagation.mp4 rendered.

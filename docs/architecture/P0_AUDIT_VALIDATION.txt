@@ -1,0 +1,109 @@
+P0 audit tooling validation (actual process output)
+Recorded UTC: 2026-10-16T03:50:15.472268+00:00
+Scope: audit-tool integrity, lexical declarations and source-bound approval validation only; no physics, solver or production test suites.
+
+COMMAND: python scripts/audit-migration.py --self-test
+EXIT_CODE: 0
+STDOUT:
+
+STDERR:
+test_duplicate_approval_source_rejected (__main__.IntegrityTests.test_duplicate_approval_source_rejected) ... ok
+test_duplicate_cannot_mask_missing (__main__.IntegrityTests.test_duplicate_cannot_mask_missing) ... ok
+test_exact_capture (__main__.IntegrityTests.test_exact_capture) ... ok
+test_invalid_target_paths_rejected (__main__.IntegrityTests.test_invalid_target_paths_rejected) ... ok
+test_lexical_exports_exclude_comments_and_never_claim_runtime (__main__.IntegrityTests.test_lexical_exports_exclude_comments_and_never_claim_runtime) ... ok
+test_missing_schema_rejected (__main__.IntegrityTests.test_missing_schema_rejected) ... ok
+test_missing_source_hash_rejected (__main__.IntegrityTests.test_missing_source_hash_rejected) ... ok
+test_numerical_change_rejected (__main__.IntegrityTests.test_numerical_change_rejected) ... ok
+test_stale_approval_hash_rejected (__main__.IntegrityTests.test_stale_approval_hash_rejected) ... ok
+test_unknown_source_is_blocked (__main__.IntegrityTests.test_unknown_source_is_blocked) ... ok
+test_untracked_cannot_replace_tracked (__main__.IntegrityTests.test_untracked_cannot_replace_tracked) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.166s
+
+OK
+
+COMMAND: python scripts/audit-migration.py
+EXIT_CODE: 0
+STDOUT:
+{
+  "output": "D:\\MPM\\docs\\architecture\\FILE_MIGRATION_MATRIX.json",
+  "head": "7c399fb23de8e04871855c3911d73e583fdbcdc3",
+  "coverage": {
+    "expected_count": 884,
+    "record_count": 884,
+    "unique_count": 884,
+    "missing_paths": [],
+    "extra_paths": [],
+    "duplicate_paths": [],
+    "invalid_records": [],
+    "UNCLASSIFIED": [],
+    "complete_exactly_once": true,
+    "active_path_definition": "All captured paths under src/materials/framework/cases/studio/windows/calibration/scripts/tests/libs, plus root ASD files; conservative path-based migration gate, not runtime reachability",
+    "active_path_count": 233,
+    "UNCLASSIFIED_active": []
+  },
+  "decision_counts": {
+    "COMPATIBILITY": 53,
+    "KEEP": 392,
+    "MOVE_CANDIDATE": 76,
+    "OPTIONAL/NOT_LOADED": 2,
+    "PRESERVE_EVIDENCE": 319,
+    "SPLIT_REVIEW": 42
+  },
+  "native_asdf_systems": 104,
+  "changed_since_baseline": [
+    "docs/AI_HANDOVER.md",
+    "docs/testing.md",
+    "research/README.md",
+    "research/reports/M0_OWNERSHIP_AND_ACCEPTANCE.md",
+    "wiki-vault/wiki/cl-mpm-architecture.md",
+    "wiki-vault/wiki/index.md",
+    "wiki-vault/wiki/log.md",
+    "wiki-vault/wiki/mc-hardening-softening-study.md",
+    "wiki-vault/wiki/reusable-simulation-framework.md"
+  ],
+  "reviewed_P1_sources": 2,
+  "approval_errors": [],
+  "NEW_delta_count": 0,
+  "UNCLASSIFIED_delta_active": [],
+  "migration_ready": false
+}
+STDERR:
+
+
+COMMAND: python scripts/audit-migration.py --check
+EXIT_CODE: 0
+STDOUT:
+{
+  "frozen_capture_valid": true,
+  "coverage": {
+    "expected_count": 884,
+    "record_count": 884,
+    "unique_count": 884,
+    "missing_paths": [],
+    "extra_paths": [],
+    "duplicate_paths": [],
+    "invalid_records": [],
+    "UNCLASSIFIED": [],
+    "complete_exactly_once": true
+  },
+  "stale_source_hashes": [],
+  "stale_asdf_metadata": false,
+  "stale_asdf_definitions": [],
+  "metadata_missing_or_failed": false,
+  "capture_head_mismatch": false,
+  "live_index_delta_requires_classification_before_moves": [],
+  "NEW_delta_registration_complete": true,
+  "UNCLASSIFIED_delta": [],
+  "stale_delta_hashes": [],
+  "stale_approval_input": false,
+  "stale_review_reports": [],
+  "approval_errors": [],
+  "semantic_review_pending": 882,
+  "migration_ready": false
+}
+STDERR:
+
+

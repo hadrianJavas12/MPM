@@ -1,0 +1,28 @@
+{
+  "scope": "Native freeze validation so far; retained initial CLI failure; no numerical algorithm change",
+  "checks": {
+    "case-snapshot-001": {
+      "exitCode": 0,
+      "sourceCommitAtLaunch": "f3a57ae5ce8785ff3325856b28ef6c925d56617c",
+      "log": "case-snapshot-001.log"
+    },
+    "native-snapshot-001": {
+      "exitCode": 0,
+      "sourceCommitAtLaunch": "f3a57ae5ce8785ff3325856b28ef6c925d56617c",
+      "log": "native-snapshot-001.log"
+    },
+    "triaxial-short-001": {
+      "exitCode": 1,
+      "sourceCommitAtLaunch": "f3a57ae5ce8785ff3325856b28ef6c925d56617c",
+      "log": "triaxial-short-001.log",
+      "failure": "CLI metadata/cache at output root rejected by existing freshness guard before any solver timestep"
+    }
+  },
+  "fix": "Move metadata and private cache under source/, preserving freshness guard; root commit required before retries",
+  "pending": [
+    "native-snapshot-002 after fix commit",
+    "triaxial-short-002 after fix commit",
+    "material-diagnostics9 on stable committed live sources",
+    "P3 strict VM/MC comparisons"
+  ]
+}

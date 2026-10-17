@@ -1,0 +1,54 @@
+;;;; Snapshot boundary contracts only; no simulation timestep.
+;;;; windows\cl-mpm.cmd tests\case-snapshot-contracts.lisp FRESH_OUTPUT
+(in-package :cl-user)
+(ql:quickload :cl-mpm/settings :silent t)
+(load (cl-mpm-path "scripts/lisp/native-source-snapshot.lisp"))
+
+(let* ((output (or (first (cl-mpm-script-args))
+                   (error "Supply a fresh snapshot-test output directory.")))
+       (directory (uiop:ensure-directory-pathname (merge-pathnames output)))
+       (frozen (merge-pathnames "source/" directory))
+       (source-root (merge-pathnames "source/" directory))
+       (checks 0))
+  (when (and (probe-file directory)
+             (or (uiop:directory-files directory) (uiop:subdirectories directory)))
+    (error "Snapshot test refuses an existing output directory."))
+  (let ((*load-truename* (cl-mpm-path "scripts/run-case.lisp")))
+    (snapshot-case-sources directory (cl-mpm-path "tests/cases/triaxial-integration.lisp")))
+  (dolist (relative '("materials/core/definition.lisp" "materials/adapters/native.lisp"
+                      "materials/core/diagnostics-interface.lisp" "materials/diagnostics/native.lisp"
+                      "src/measurements/material-output.lisp"
+                      "src/simulation/components/base.lisp" "src/simulation/components/specifications.lisp"))
+    (assert (equalp (case-source-bytes (cl-mpm-path relative))
+                    (case-source-bytes (merge-pathnames relative source-root)))))
+  (assert (equalp (case-source-bytes (cl-mpm-path "cl-mpm-framework.asd"))
+                  (case-source-bytes (merge-pathnames "cl-mpm-framework.asd" source-root))))
+  (incf checks)
+  (format t "~&PASS: Relocated owners and canonical ASDF are copied byte-identically.~%")
+  (pushnew frozen asdf:*central-registry* :test #'equal)
+  (asdf:clear-system "cl-mpm-framework")
+  (asdf:load-asd (merge-pathnames "cl-mpm-framework.asd" frozen))
+  (let ((components (frozen-case-components directory)))
+    (assert (plusp (length components)))
+    (dolist (path components) (assert (uiop:subpathp path (truename source-root))))
+    (dolist (relative '("materials/core/definition.lisp" "materials/adapters/native.lisp"
+                        "materials/core/diagnostics-interface.lisp" "materials/diagnostics/native.lisp"
+                        "src/measurements/material-output.lisp"
+                        "src/simulation/components/base.lisp" "src/simulation/components/specifications.lisp"))
+      (assert (member (truename (merge-pathnames relative source-root)) components :test #'equal))))
+  (incf checks)
+  (format t "~&PASS: ASDF file components resolve inside the copied tree, including sibling owners.~%")
+  ;; Reload only metadata pointing at the mutable checkout. The same frozen-root
+  ;; guard must reject it before any model source LOAD-OP can run.
+  (setf asdf:*central-registry* (remove frozen asdf:*central-registry* :test #'equal))
+  (asdf:clear-system "cl-mpm-framework")
+  (asdf:load-asd (cl-mpm-path "cl-mpm-framework.asd"))
+  (assert (equal (truename (asdf:system-source-directory "cl-mpm-framework"))
+                 (truename (cl-mpm-path ""))))
+  (let ((message (handler-case (progn (frozen-case-components directory) nil)
+                   (error (condition) (princ-to-string condition)))))
+    (assert (and message (search "escapes frozen source" message))))
+  (incf checks)
+  (format t "~&PASS: Checkout component escape rejects before source loading.~%")
+  (format t "~&CASE SNAPSHOT CONTRACTS: ~D passed; no solver or model loaded.~%" checks))
+(uiop:quit 0)

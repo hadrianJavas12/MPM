@@ -1,0 +1,50 @@
+{
+  "status": "STOPPED_BY_USER",
+  "complete": false,
+  "cancelled": true,
+  "termination": "user-request",
+  "stoppedUtc": "2026-10-16T04:20:36.7521174Z",
+  "sourceCommitAtLaunch": "62adb5013e6379ae1d970e4ad334fc92cc5ef912",
+  "nativeExitCode": null,
+  "exitCode": null,
+  "comparisonStatus": "NOT_RUN_CANCELLED",
+  "reason": "User requested stopping this Joss serial run and continuing architecture refactoring",
+  "stoppedProcesses": [
+    {
+      "ProcessId": 46728,
+      "ParentProcessId": 43508,
+      "Name": "powershell.exe",
+      "CommandLine": "\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -NonInteractive -ExecutionPolicy Bypass -File D:\\MPM\\output\\architecture-migration-2026-10-16\\p1-full\\launch-joss-serial.ps1"
+    },
+    {
+      "ProcessId": 18448,
+      "ParentProcessId": 46728,
+      "Name": "conhost.exe",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+    },
+    {
+      "ProcessId": 35268,
+      "ParentProcessId": 46728,
+      "Name": "cmd.exe",
+      "CommandLine": "C:\\WINDOWS\\system32\\cmd.exe /c \"\"D:\\MPM\\windows\\cl-mpm.cmd\" scripts\\run-case.lisp tests\\cases\\joss-serial-regression.lisp D:\\MPM\\output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\""
+    },
+    {
+      "ProcessId": 42456,
+      "ParentProcessId": 35268,
+      "Name": "sbcl.exe",
+      "CommandLine": "\"C:\\Program Files\\Steel Bank Common Lisp\\sbcl.exe\"  --dynamic-space-size 4000 --noinform --no-userinit --disable-debugger     --load \"D:\\MPM\\windows\\init.lisp\" --load \"D:\\MPM\\scripts\\run-case.lisp\" --quit --end-toplevel-options  \"tests\\cases\\joss-serial-regression.lisp\" \"D:\\MPM\\output\\architecture-migration-2026-10-16\\p1-full\\joss-serial\""
+    },
+    {
+      "ProcessId": 23016,
+      "ParentProcessId": 42456,
+      "Name": "gnuplot.exe",
+      "CommandLine": "gnuplot"
+    },
+    {
+      "ProcessId": 23864,
+      "ParentProcessId": 23016,
+      "Name": "gnuplot_qt.exe",
+      "CommandLine": "C:\\Users\\ASUS\\AppData\\Local\\Microsoft\\WinGet\\Packages\\gnuplot.gnuplot_Microsoft.Winget.Source_8wekyb3d8bbwe\\gnuplot\\bin\\gnuplot_qt.exe "
+    }
+  ]
+}

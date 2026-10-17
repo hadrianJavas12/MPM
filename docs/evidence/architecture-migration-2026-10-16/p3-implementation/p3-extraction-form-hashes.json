@@ -1,0 +1,169 @@
+{
+  "phase": "P3",
+  "sourceSha256": "32d3ad0e7f17a09d5f2f90e3dc6dd51f21dd679922b629560a2f6c6b2ead3112",
+  "beforeSource": "output\\architecture-migration-2026-10-16\\p3-source-before\\framework\\components\\diagnostics.lisp",
+  "all31SourceFormsCoveredExactlyOnce": true,
+  "definingBodyChanges": false,
+  "targets": {
+    "materials\\core\\diagnostics-interface.lisp": "089e1b304abb660255b182040f8e4e23a5829c35cb2718f92bc8fbb34f8f5722",
+    "materials\\diagnostics\\native.lisp": "cd23a98cdf42d4c66f494b4df861c3d7f46afdf4efe6a9ec5659c037f0061411",
+    "src\\measurements\\material-output.lisp": "9601e73a1397746a45945c312681de9d591016d7ccd5b1853488d0473f485b80"
+  },
+  "forms": [
+    {
+      "source_form_id": "F01",
+      "source_form_sha256": "97143a7d95aaf2ad166cc0cfa279bc26ac37ebbacde5c9ec736645783dbbabcc",
+      "target_path": "materials/core/diagnostics-interface.lisp"
+    },
+    {
+      "source_form_id": "F02",
+      "source_form_sha256": "f2b41a43d7ac1c99e2192124333df8a0e1e32a6f1f0b7a6f0ea41594673a49f4",
+      "target_path": "materials/core/diagnostics-interface.lisp"
+    },
+    {
+      "source_form_id": "F03",
+      "source_form_sha256": "3edf1781b9797e7e03c22595dd95cd800c6d18a56899ddf11d05b291fbb2f7f1",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F04",
+      "source_form_sha256": "1b0a165995411bca2a174d8367994dbe05eaabe2eb7d70e44b8770ef605db0ff",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F05",
+      "source_form_sha256": "3e5d99212e4332ac9fcf37fb18617e4c1c53677d9f3ef5148ecafaf4f435cc86",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F06",
+      "source_form_sha256": "10d0a79aadc4801a22d6ddb3c6036b0e027a1503febd6daf5909186b6799f3c8",
+      "target_path": "materials/core/diagnostics-interface.lisp"
+    },
+    {
+      "source_form_id": "F07",
+      "source_form_sha256": "d7db6fdf00aba11e927abadf28d68395635c0814102e2d72c8f48956c37ab761",
+      "target_path": "materials/core/diagnostics-interface.lisp"
+    },
+    {
+      "source_form_id": "F08",
+      "source_form_sha256": "e9f7275d0290fd083121eb7875414fddbe4bb907183638cbe5f3534fc839a435",
+      "target_path": "materials/core/diagnostics-interface.lisp"
+    },
+    {
+      "source_form_id": "F09",
+      "source_form_sha256": "cb1762f8719cb588cfa97d8a08656484e6ab142dcd9090fe9a33d326bf0124e7",
+      "target_path": "materials/core/diagnostics-interface.lisp"
+    },
+    {
+      "source_form_id": "F10",
+      "source_form_sha256": "1ad199174479a683f04c607d709d0cd236ce6c31a1709fb02ec4c7129a306a1f",
+      "target_path": "materials/core/diagnostics-interface.lisp"
+    },
+    {
+      "source_form_id": "F11",
+      "source_form_sha256": "2c7bbe40cac9e67ecc847950893a8366e90a4ed915774af4ce03a0355996ba52",
+      "target_path": "materials/core/diagnostics-interface.lisp"
+    },
+    {
+      "source_form_id": "F12",
+      "source_form_sha256": "85174eb8ad32a0a39604db288b8440fe03631f5471176e763dfdb6c19b22a3a1",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F13",
+      "source_form_sha256": "d24867f4b23de19098f0fbef8ed0c73ebafff248e1a687829970d1d76bf45f59",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F14",
+      "source_form_sha256": "bf5182c8ffbbe0aacc43b0b043251aa43134e7b01ecd5bfa1641242a61b553d9",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F15",
+      "source_form_sha256": "44ef2a9ada22968eb6db0937d9f18bea2db97ffb54e0e584c89580069b98de89",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F16",
+      "source_form_sha256": "c41ce49cdaad72e97554b4a885a0f5a2f538a360552abe4b94f13ca97d74c248",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F17",
+      "source_form_sha256": "f8efe4dcc091ff4e57f051c1c030fea02afd81c4e3bb5b12cd96d1fda5b74c45",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F18",
+      "source_form_sha256": "0b2363d839f1872b48d9f0ae3f1715b7790ac0b1d7f1c45d2a57aa9c22135678",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F19",
+      "source_form_sha256": "b6b53b99302720c86ba71f6ba787e518f52a7d91dfe68001730720d65fd9d8dc",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F20",
+      "source_form_sha256": "27114bdd00062c4885cf497e9d353c510e27279e4be91ae768852f8130e610e1",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F21",
+      "source_form_sha256": "f0a6c5874fdac356c1021942ea3370cad9b507aa02948cae1589d378f4454311",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F22",
+      "source_form_sha256": "eda9fc571b39262929c1903d75f7e158d38098e7962aba7329fe1695285c8a01",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F23",
+      "source_form_sha256": "9a77da4cf6ea7be1106cbc66f19cfd9edec7288b4d8a84060fb32fd8aa7a669c",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F24",
+      "source_form_sha256": "0c70f16a874c89442c94728d2d90d504437ef7fc010aadd87cd47e6e7b074ac9",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F25",
+      "source_form_sha256": "73ba27981f4f05c1badf23ab9785d6044c73359bbeab5d1aa743cac9d103e7cd",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F26",
+      "source_form_sha256": "e40b8b55fe939ba96af715779a569f8a1426901084a29fd60abf9f9e0a403450",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F27",
+      "source_form_sha256": "47cf31241113d2db0d78c493424086836ec3049ab311fcd7c923fd03d841cdfd",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F28",
+      "source_form_sha256": "3c7fc2378b6a0ebafc5a2e57196e37249a702eb58e3d3bfb0f87d7fbdeaac77c",
+      "target_path": "materials/diagnostics/native.lisp"
+    },
+    {
+      "source_form_id": "F29",
+      "source_form_sha256": "81ec4fdddfdd43c2a26bd45195985a37026939fabb90deba4d9db3301fa8bb51",
+      "target_path": "src/measurements/material-output.lisp"
+    },
+    {
+      "source_form_id": "F30",
+      "source_form_sha256": "da68599ebe93dde2dc5c14f6abd3a390aeede933329af05189757282f3b07446",
+      "target_path": "src/measurements/material-output.lisp"
+    },
+    {
+      "source_form_id": "F31",
+      "source_form_sha256": "b708681a617068a3709c1a0cdd3df3493f15f1ae4e7c1efe8b787ef882566d6f",
+      "target_path": "src/measurements/material-output.lisp"
+    }
+  ]
+}

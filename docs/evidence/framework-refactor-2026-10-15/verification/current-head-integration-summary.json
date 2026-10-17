@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-15",
+  "claim": "Bounded native Windows public-CLI integration at current committed implementation; full before/after numerical regression is separate. No scientific validation claim.",
+  "scientificValidation": false,
+  "joss": {
+    "implementationCommit": "9f26cb1ab28fc02b9a8c9752a0ed7f751b82096d",
+    "launcherExitCode": 0,
+    "complete": true,
+    "termination": "simulation-time",
+    "physicalTimeS": 4.0,
+    "particleCount": 4155,
+    "equilibrationSteps": 1658,
+    "savedPhysicalFrames": 2,
+    "protectedBaseParticles": 496,
+    "plottedFrames": 2,
+    "massKgPerM": 425664.0625,
+    "maxDamage": 0.3335893978942833,
+    "maxDamagePositionM": [
+      13.125333685932189,
+      3.6249814338330646,
+      0.0
+    ],
+    "lowerMaxDamage": 0.3335893978942833,
+    "upperMaxDamage": 0.0,
+    "allAuditedFieldsFinite": true,
+    "maxRelativeMassDrift": 0.0,
+    "sourceSnapshotExactLoadedBytes": true
+  },
+  "triaxial": {
+    "implementationCommit": "9f26cb1ab28fc02b9a8c9752a0ed7f751b82096d",
+    "launcherExitCode": 0,
+    "complete": true,
+    "spatialDimensions": 2,
+    "particleCount": 480,
+    "updates": 27,
+    "savedFrames": 2,
+    "finalTimeS": 0.0003,
+    "targetAxialStrainPct": 0.01,
+    "finalDeviatoricStressKpa": 0.12999852260098016,
+    "passedConsistencyChecks": true,
+    "sourceSnapshotExactLoadedBytes": true,
+    "initialVTKByteIdenticalToFullPostSnapshot": true
+  },
+  "privateSourceComparisonReport": "current-head-source-comparison.json",
+  "sourceComparisonPassed": true
+}

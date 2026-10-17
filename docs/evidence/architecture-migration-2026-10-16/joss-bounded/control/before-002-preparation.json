@@ -1,0 +1,23 @@
+{
+  "status": "PREPARED_NATIVE_NOT_RUN",
+  "attempt": "before-002",
+  "createdUtc": "2026-10-17T03:08:38.582871+00:00",
+  "originalPreparationSha256": "bc9de71ff27585bf73cbe9b9952ab5dd9a37e9a26809fa0df0106c2c6a8212ac",
+  "numericalSourceBaselineCommit": "a99a4e1d1a8deb17483230ee59d53c07f4a26822",
+  "payload_file_count": 144,
+  "path_mirror_count": 13,
+  "prepared_files": [
+    {
+      "destination": "before-002-bootstrap.lisp",
+      "bytes": 1705,
+      "sha256": "fb7f07c333129a72887ba35db5291e228e8b2472d5276afecfd19ec2267a20d8"
+    },
+    {
+      "destination": "run-original-retry.ps1",
+      "bytes": 2945,
+      "sha256": "f3646a1806ec923f24000260a6e394eb6d5fe039c0320624451aca560309b0d4"
+    }
+  ],
+  "harnessRepair": "Pass old-root without a trailing command-line backslash; use cmd/Start-Process redirected logs and actual process exit code.",
+  "before001": "Failure/status/empty log and exact bootstrap argument diagnostic are retained unchanged. No old numerical source or physics parameter changed."
+}

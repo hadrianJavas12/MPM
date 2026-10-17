@@ -1,0 +1,3698 @@
+{
+  "schema_version": 1,
+  "phase": "P4 with focused P5 and G5 retirement",
+  "status": "PREMOVE_SOURCE_AND_SUBFORM_PLAN_ROOT_REVIEW_REQUIRED_NOT_EXECUTED",
+  "capture_branch": "codex/material-architecture-migration",
+  "parent_reported_checkpoint": "7d879e8",
+  "capture_scope": "No Git/source execution occurred in this audit. Parent-reported checkpoint is context; actual per-file current SHA-256 values below bind all proposed changes. Reject mismatches rather than silently updating approvals.",
+  "immutable_P0": {
+    "path": "docs/architecture/FILE_MIGRATION_MATRIX.json",
+    "sha256": "fa47aafa98379535e9013255a468b3012499928f28dc6742ca305b52f6012c03",
+    "capture": "7c399fb23de8e04871855c3911d73e583fdbcdc3",
+    "count": 884,
+    "rule": "Preserve original P0 bytes and approval captures. This separate current-source plan does not regenerate or reinterpret its 884-path inventory."
+  },
+  "authority": [
+    "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+    "docs/architecture/FOLDER_OWNERSHIP.md",
+    "docs/architecture/DEPENDENCY_RULES.md"
+  ],
+  "numerical_behavior_change_allowed": false,
+  "new_physics_allowed": false,
+  "scope": "Move actual implementation/config/geometry/scenario/material/output owners out of framework. Preserve established symbols, class/method identity, source entrypoints during transition, ASDF IDs, native algorithms/defaults/backend and Studio Lisp compatibility. No production or ASDF edit is performed by this plan.",
+  "coverage": {
+    "actual_framework_paths": 39,
+    "records": 39,
+    "unclassified": [],
+    "duplicate": [],
+    "lexical_top_level_forms": 148,
+    "mixed_nested_expressions": 2
+  },
+  "framework_records": [
+    {
+      "source_path": "framework/README.md",
+      "sha256": "dec67772242346170327bbf09d109966436a784a0c835d4103b34cd559d00a17",
+      "bytes": 6009,
+      "forms": [],
+      "P0_sha256": "dec67772242346170327bbf09d109966436a784a0c835d4103b34cd559d00a17",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md"
+      ],
+      "decision": "DOC_MERGE_REVIEW",
+      "owner": "docs",
+      "target_paths": [
+        "docs/REUSABLE_FRAMEWORK.md"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Read/merge existing target, preserve information, update active links. Do not overwrite historical evidence or raw sources.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/cl-mpm-framework.asd",
+      "sha256": "02a2213f9265aaec4f54c02a1af7b06f4e3718493e6c8ed2f859f31281f39101",
+      "bytes": 2042,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "asdf:defsystem",
+          "name": "\"cl-mpm-framework\"",
+          "start": 0,
+          "end": 2041,
+          "start_line": 1,
+          "end_line": 31,
+          "sha256": "6f591f742949f7f343ac5fa1048fcdf7b17187f42e80880cb7cb6825e5b8cf96",
+          "target_path": "cl-mpm-framework.asd",
+          "rule": "ASDF metadata adaptation only: preserve system/dependency/component IDs and serial prerequisites, rebind exact new owner paths; do not copy stale relative paths or load shim plus owner."
+        }
+      ],
+      "P0_sha256": "2085bd22d5ff111f5f6fadf2becd6e06b88511202de672953a6637d73b62babd",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/AI_HANDOVER.md",
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "docs/architecture/MATERIAL_OWNERSHIP_AUDIT.md",
+        "docs/architecture/MIGRATION_APPROVALS.json",
+        "research/reports/M0_CLEANUP_INVENTORY.md",
+        "scripts/audit-asdf-metadata.lisp"
+      ],
+      "decision": "ADAPT_ASDF_METADATA_PRESERVE_IDS",
+      "owner": "root/ASDF",
+      "target_paths": [
+        "cl-mpm-framework.asd"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Canonical root ASDF retains old umbrella/system/dependency/component IDs and direct new target paths. Old metadata path temporarily forwards; never register two competing definitions or load shim plus owner.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/components/README.md",
+      "sha256": "6019c9b7d5f19ee84c44a41b1b442a0a119cadd582ac1263a5bce010dc4056a6",
+      "bytes": 3793,
+      "forms": [],
+      "P0_sha256": "6019c9b7d5f19ee84c44a41b1b442a0a119cadd582ac1263a5bce010dc4056a6",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md"
+      ],
+      "decision": "DOC_MERGE_REVIEW",
+      "owner": "docs",
+      "target_paths": [
+        "docs/architecture/COMPONENTS.md"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Preserve component contract information and compatibility notices.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/components/diagnostics.lisp",
+      "sha256": "6797f1d798c6597528c4a61a4a2ab2d80a13738be451252277808e829fdcc835",
+      "bytes": 387,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-user",
+          "start": 80,
+          "end": 101,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "98a1ba7cf5bb6fe0a4a00cdc841baf4b69b36311b84a07c5914aeba5d17b7f74",
+          "target_path": "materials/core/diagnostics-interface.lisp",
+          "rule": "Existing forwarding shim is compatibility evidence only; defining owners already live at listed targets. No production body extraction from this shim."
+        },
+        {
+          "id": "F02",
+          "kind": "let",
+          "name": "((root (merge-pathnames \"../../\" (uiop:pathname-directory-pathname *load-truename*)",
+          "start": 103,
+          "end": 385,
+          "start_line": 3,
+          "end_line": 5,
+          "sha256": "53909f27b7da0ff5db517ce48afc29c00adf5be02eb701e892af047d7b0b3b7a",
+          "target_path": "materials/core/diagnostics-interface.lisp",
+          "rule": "Existing forwarding shim is compatibility evidence only; defining owners already live at listed targets. No production body extraction from this shim."
+        }
+      ],
+      "P0_sha256": "32d3ad0e7f17a09d5f2f90e3dc6dd51f21dd679922b629560a2f6c6b2ead3112",
+      "P0_decision": "SPLIT_REVIEW",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd",
+        "research/reports/M0_MATERIAL_CONTRACT_AUDIT.md",
+        "research/reports/M0_MATERIAL_CONTRACT_EVIDENCE.json",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "EXISTING_SHIM_NO_OWNER_MIGRATION",
+      "owner": "compatibility-only",
+      "target_paths": [
+        "materials/core/diagnostics-interface.lisp",
+        "materials/diagnostics/native.lisp",
+        "src/measurements/material-output.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Already extracted in P1/P3. No defining implementation may return under framework; keep reloadable old-path forwarding until G5 proves caller transition.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/components/geometry.lisp",
+      "sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
+      "bytes": 368,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework",
+          "start": 0,
+          "end": 30,
+          "start_line": 1,
+          "end_line": 1,
+          "sha256": "97143a7d95aaf2ad166cc0cfa279bc26ac37ebbacde5c9ec736645783dbbabcc",
+          "target_path": "src/simulation/components/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defgeneric",
+          "name": "geometry-filter",
+          "start": 32,
+          "end": 148,
+          "start_line": 3,
+          "end_line": 4,
+          "sha256": "e51a3745ed6b42f3d330e6fb26c186037488904809d89d7655df76fb853efca0",
+          "target_path": "src/simulation/components/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defmethod",
+          "name": "geometry-filter",
+          "start": 149,
+          "end": 367,
+          "start_line": 5,
+          "end_line": 9,
+          "sha256": "b9f7cdfaed7049dfb13dc22deae3625bacd05721a8723b4c1a01565199623de5",
+          "target_path": "src/simulation/components/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
+      "P0_decision": "SPLIT_REVIEW",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "engine/simulation",
+      "target_paths": [
+        "src/simulation/components/geometry.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Actual forms are a component clipping callback contract/validation, not SDF implementation; whole-file move resolves earlier filename-level split classification.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/components/materials.lisp",
+      "sha256": "47df6aa151a2a128c8f50968ce213f331a7ad3e41bfa41ac7a3b7d738440eb1b",
+      "bytes": 299,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-user",
+          "start": 79,
+          "end": 100,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "98a1ba7cf5bb6fe0a4a00cdc841baf4b69b36311b84a07c5914aeba5d17b7f74",
+          "target_path": "materials/adapters/native.lisp",
+          "rule": "Existing forwarding shim is compatibility evidence only; defining owners already live at listed targets. No production body extraction from this shim."
+        },
+        {
+          "id": "F02",
+          "kind": "let",
+          "name": "((root (merge-pathnames \"../../\" (uiop:pathname-directory-pathname *load-truename*)",
+          "start": 102,
+          "end": 297,
+          "start_line": 3,
+          "end_line": 5,
+          "sha256": "2b1140576a233fa5c63f97de02a39af78cdfed693084612abeec9cc76e75933d",
+          "target_path": "materials/adapters/native.lisp",
+          "rule": "Existing forwarding shim is compatibility evidence only; defining owners already live at listed targets. No production body extraction from this shim."
+        }
+      ],
+      "P0_sha256": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92",
+      "P0_decision": "SPLIT_REVIEW",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "docs/architecture/FOLDER_OWNERSHIP.md",
+        "docs/architecture/MIGRATION_APPROVALS.json",
+        "docs/architecture/P1_CONTRACT_EXTRACTION.md",
+        "framework/cl-mpm-framework.asd",
+        "research/reports/M0_MATERIAL_CONTRACT_AUDIT.md",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "EXISTING_SHIM_NO_OWNER_MIGRATION",
+      "owner": "compatibility-only",
+      "target_paths": [
+        "materials/adapters/native.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Already extracted in P1/P3. No defining implementation may return under framework; keep reloadable old-path forwarding until G5 proves caller transition.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/components/specifications.lisp",
+      "sha256": "1408795413a7235b167181ddfa6b50ee1b3ccf72a5b950ac39a3c7ff169c309b",
+      "bytes": 385,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-user",
+          "start": 79,
+          "end": 100,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "98a1ba7cf5bb6fe0a4a00cdc841baf4b69b36311b84a07c5914aeba5d17b7f74",
+          "target_path": "src/simulation/components/base.lisp",
+          "rule": "Existing forwarding shim is compatibility evidence only; defining owners already live at listed targets. No production body extraction from this shim."
+        },
+        {
+          "id": "F02",
+          "kind": "let",
+          "name": "((root (merge-pathnames \"../../\" (uiop:pathname-directory-pathname *load-truename*)",
+          "start": 102,
+          "end": 383,
+          "start_line": 3,
+          "end_line": 5,
+          "sha256": "06c6911e88152909a33f27d49ece6d5f9fde6c95df9b11f975a34264870c2fb2",
+          "target_path": "src/simulation/components/base.lisp",
+          "rule": "Existing forwarding shim is compatibility evidence only; defining owners already live at listed targets. No production body extraction from this shim."
+        }
+      ],
+      "P0_sha256": "7f0ef4c9210fc9b5d7bb9480e26cf01c78646a28bc77546f87c6b00b22028614",
+      "P0_decision": "SPLIT_REVIEW",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/MATERIAL_OWNERSHIP_AUDIT.md",
+        "docs/architecture/MIGRATION_APPROVALS.json",
+        "docs/architecture/P1_CONTRACT_EXTRACTION.md",
+        "framework/cl-mpm-framework.asd",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "EXISTING_SHIM_NO_OWNER_MIGRATION",
+      "owner": "compatibility-only",
+      "target_paths": [
+        "src/simulation/components/base.lisp",
+        "materials/core/definition.lisp",
+        "src/simulation/components/specifications.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Already extracted in P1/P3. No defining implementation may return under framework; keep reloadable old-path forwarding until G5 proves caller transition.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/config/package.lisp",
+      "sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
+      "bytes": 200,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "defpackage",
+          "name": ":cl-mpm/framework/config",
+          "start": 0,
+          "end": 199,
+          "start_line": 1,
+          "end_line": 4,
+          "sha256": "48dc24f2c624dc8ea918548c5e814a88c2bbd7868829418ab64713059e6a6a9a",
+          "target_path": "src/simulation/config/package.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "engine/config",
+      "target_paths": [
+        "src/simulation/config/package.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Keep exported config package; isolated compile/load must remain engine-free.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/config/parameters.lisp",
+      "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+      "bytes": 4101,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/config",
+          "start": 220,
+          "end": 257,
+          "start_line": 6,
+          "end_line": 6,
+          "sha256": "30c99aa9b01708ad599386fab6664325cef785978d06bbd66e262eec03650be9",
+          "target_path": "src/simulation/config/parameters.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defvar",
+          "name": "*schema-path*",
+          "start": 261,
+          "end": 377,
+          "start_line": 8,
+          "end_line": 9,
+          "sha256": "705b90cc15da49124ae74ca19b9dc88a231e40c6ee68092ca399ec6280911036",
+          "target_path": "src/simulation/config/parameters.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "read-json-file",
+          "start": 381,
+          "end": 610,
+          "start_line": 11,
+          "end_line": 14,
+          "sha256": "ff021c677f3edeb95aaa7a588312d577572373d3d9d42eb15c77f882e6523ef2",
+          "target_path": "src/simulation/config/parameters.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defun",
+          "name": "schema",
+          "start": 614,
+          "end": 755,
+          "start_line": 16,
+          "end_line": 17,
+          "sha256": "04396c651188b02e574687734e0c89088d3c7ae0cc91960abac630336752e892",
+          "target_path": "src/simulation/config/parameters.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defun",
+          "name": "exact-real",
+          "start": 759,
+          "end": 971,
+          "start_line": 19,
+          "end_line": 22,
+          "sha256": "df6af223f093bca9dd1a510b27437d8083b904bc60e61b59045a384d1c2aab1b",
+          "target_path": "src/simulation/config/parameters.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F06",
+          "kind": "defun",
+          "name": "decimal-input",
+          "start": 975,
+          "end": 1619,
+          "start_line": 24,
+          "end_line": 35,
+          "sha256": "5431b129e76e07a37e70fa232880580564e8e86f8c6d5e429db2a5aac25987ea",
+          "target_path": "src/simulation/config/parameters.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F07",
+          "kind": "defun",
+          "name": "coerce-param",
+          "start": 1623,
+          "end": 2970,
+          "start_line": 37,
+          "end_line": 62,
+          "sha256": "a582e5236ed3309a9647480b7e7a7ca22a4d366f096e995ecfa6c4d885be4a25",
+          "target_path": "src/simulation/config/parameters.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F08",
+          "kind": "defun",
+          "name": "load-config",
+          "start": 2974,
+          "end": 3586,
+          "start_line": 64,
+          "end_line": 75,
+          "sha256": "c728bb6fc9b95efd4be92530e3404c9db9118f5952f966e8d8080041a0d244b7",
+          "target_path": "src/simulation/config/parameters.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F09",
+          "kind": "defun",
+          "name": "param",
+          "start": 3590,
+          "end": 3818,
+          "start_line": 77,
+          "end_line": 81,
+          "sha256": "72525f3b628282fe5e1f24e1569c66ad23d7c303a39217807ec5ae605dc6d30c",
+          "target_path": "src/simulation/config/parameters.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F10",
+          "kind": "defun",
+          "name": "describe-config",
+          "start": 3822,
+          "end": 4099,
+          "start_line": 83,
+          "end_line": 87,
+          "sha256": "db8bb38639832dfe09d0823622d4a2e8a37997c65cb4fcfcb2a564aa69e09523",
+          "target_path": "src/simulation/config/parameters.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "engine/config",
+      "target_paths": [
+        "src/simulation/config/parameters.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Preserve coercion/default/range/rounding and dynamic schema override. studio/schema.json remains canonical data; no UI runtime dependency.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/materials/chalk.lisp",
+      "sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+      "bytes": 4723,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 132,
+          "end": 168,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "materials/models/chalk/joss-reference.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defclass",
+          "name": "joss-reference-chalk",
+          "start": 172,
+          "end": 711,
+          "start_line": 5,
+          "end_line": 11,
+          "sha256": "77bc25f6b915e56fe20d1fa0544c2466d558760ce90f31a8dc9847ba7665a4ad",
+          "target_path": "materials/models/chalk/joss-reference.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defmethod",
+          "name": "initialize-instance",
+          "start": 715,
+          "end": 1377,
+          "start_line": 13,
+          "end_line": 21,
+          "sha256": "ee84251fe6ce3c37bc2df3d1392fadc40ce6514acff58e441c8c9af859a0794c",
+          "target_path": "materials/models/chalk/joss-reference.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defmethod",
+          "name": "cl-mpm/damage::damage-model-calculate-y",
+          "start": 1381,
+          "end": 2058,
+          "start_line": 23,
+          "end_line": 32,
+          "sha256": "290f5b9b09f4001d80755f11c17f05e7b33fc04942105f318217f094dec681dc",
+          "target_path": "materials/models/chalk/joss-reference.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defmethod",
+          "name": "cl-mpm::update-particle",
+          "start": 2062,
+          "end": 2221,
+          "start_line": 34,
+          "end_line": 36,
+          "sha256": "6368acba84ebff86d5817b9e50cbf8c3511373a857e88d58336f32d4d3826ea4",
+          "target_path": "materials/models/chalk/joss-reference.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F06",
+          "kind": "defun",
+          "name": "make-joss-chalk-mps",
+          "start": 2225,
+          "end": 3416,
+          "start_line": 38,
+          "end_line": 57,
+          "sha256": "f7028f6319d8678f7a8fda2071c4d962711dfb4c0a596b67f4b8e30f1fcd4c4d",
+          "target_path": "materials/adapters/chalk.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F07",
+          "kind": "defun",
+          "name": "make-chalk-mps",
+          "start": 3420,
+          "end": 4721,
+          "start_line": 59,
+          "end_line": 88,
+          "sha256": "0e9af5052461788d03f36698f6f0ccde6dad788fd36b02dec6ed28241a6badde",
+          "target_path": "materials/adapters/chalk.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/README.md",
+        "framework/cl-mpm-framework.asd",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "EXACT_FORM_SPLIT",
+      "owner": "materials",
+      "target_paths": [
+        "materials/models/chalk/joss-reference.lisp",
+        "materials/adapters/chalk.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Dedicated chalk class/constructor-restoration/damage/update methods are model-owned; MP construction is a material adapter using neutral config/angles, with no scenario implementation dependency.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/output/plotting.lisp",
+      "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+      "bytes": 2391,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 131,
+          "end": 167,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "src/output/plotting/legacy-particle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "colour-function",
+          "start": 171,
+          "end": 514,
+          "start_line": 5,
+          "end_line": 10,
+          "sha256": "5dd2411fa0b4b3b18ec6571845182ab997660b90ff985204162f80f0a4dd5a18",
+          "target_path": "src/output/plotting/legacy-particle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "png-file-complete-p",
+          "start": 518,
+          "end": 1347,
+          "start_line": 12,
+          "end_line": 25,
+          "sha256": "03248e5d5ba63b1eb0f47444492426e0fecc5e5ea4c5a973231e35fa1979eb41",
+          "target_path": "src/output/plotting/legacy-particle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defun",
+          "name": "save-frame",
+          "start": 1351,
+          "end": 2282,
+          "start_line": 27,
+          "end_line": 41,
+          "sha256": "c992e4c7ebf73de362f864577266a9f335ab6463a7a4af9352f89e1dad006579",
+          "target_path": "src/output/plotting/legacy-particle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defun",
+          "name": "numbered",
+          "start": 2286,
+          "end": 2389,
+          "start_line": 43,
+          "end_line": 44,
+          "sha256": "79c8e5060fa7238995ca5e4a23eb58ef50e5bbf5680625061f7e1eda0cdd133d",
+          "target_path": "src/output/plotting/legacy-particle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+      "P0_decision": "SPLIT_REVIEW",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "engine/output",
+      "target_paths": [
+        "src/output/plotting/legacy-particle.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Keep old cliff package symbols, optional plotting warnings, PNG timeout/signature/IEND checks, naming and scalar conventions.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/package.lisp",
+      "sha256": "8053c0b199e2bacdb8187045b33bb6762da0eb3ef56e1dbd2f3998daf7bfff15",
+      "bytes": 1400,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "defpackage",
+          "name": ":cl-mpm/framework",
+          "start": 0,
+          "end": 1198,
+          "start_line": 1,
+          "end_line": 19,
+          "sha256": "c12a14c02029277323ec29ff88efbc39dea58b56639e0ffad0c420bfdebc1a49",
+          "target_path": "src/simulation/package.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defpackage",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 1200,
+          "end": 1399,
+          "start_line": 21,
+          "end_line": 24,
+          "sha256": "773e922e553ec504219b4e18bb7d395787fdae5616e00faf29939367f295da75",
+          "target_path": "src/simulation/package.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "8053c0b199e2bacdb8187045b33bb6762da0eb3ef56e1dbd2f3998daf7bfff15",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "engine/simulation",
+      "target_paths": [
+        "src/simulation/package.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Both existing packages/exports remain. Compatibility namespace names do not imply physical framework ownership.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/cliff/adapter.lisp",
+      "sha256": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709",
+      "bytes": 4902,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework",
+          "start": 78,
+          "end": 108,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "97143a7d95aaf2ad166cc0cfa279bc26ac37ebbacde5c9ec736645783dbbabcc",
+          "target_path": "scenarios/cliff/adapter.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "cliff-configuration",
+          "start": 110,
+          "end": 3038,
+          "start_line": 4,
+          "end_line": 46,
+          "sha256": "ac8d2ca0edd8e79e82a6be9647fa4ec6dc1430f2326118042d999ff0bf91e28d",
+          "target_path": "scenarios/cliff/adapter.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defmethod",
+          "name": "compile-scenario",
+          "start": 3040,
+          "end": 3145,
+          "start_line": 48,
+          "end_line": 49,
+          "sha256": "e54a57dfdc50988f081f2ce6965b76232ec83459c2f3f4d566806adfea073523",
+          "target_path": "scenarios/cliff/adapter.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defmethod",
+          "name": "compile-scenario",
+          "start": 3146,
+          "end": 3248,
+          "start_line": 50,
+          "end_line": 51,
+          "sha256": "c406ea251f1cea9cbd9cb05027d1ef29a09b801d39b64936c6dc080da765eb96",
+          "target_path": "scenarios/cliff/adapter.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defmethod",
+          "name": "execute-scenario",
+          "start": 3250,
+          "end": 3427,
+          "start_line": 53,
+          "end_line": 55,
+          "sha256": "4efec2dfdad0683a07990773a39b4d223370b9ed4ad49219fc1df04af5807d8a",
+          "target_path": "scenarios/cliff/adapter.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F06",
+          "kind": "defun",
+          "name": "cliff-particle-factory",
+          "start": 3429,
+          "end": 4026,
+          "start_line": 57,
+          "end_line": 65,
+          "sha256": "e2170f8572e8237aabd8c58897ef8a0ce40949d679ad32fcbd395e0f1562cce1",
+          "target_path": "materials/adapters/cliff.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F07",
+          "kind": "defmethod",
+          "name": "execute-scenario",
+          "start": 4028,
+          "end": 4901,
+          "start_line": 67,
+          "end_line": 79,
+          "sha256": "04a6b1ffffec224e37ae682a8b29365dcbaeda6c3fbfa2f7d9c3d67b6ae65a59",
+          "target_path": "scenarios/cliff/execute.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "EXACT_FORM_SPLIT",
+      "owner": "scenario+materials",
+      "target_paths": [
+        "scenarios/cliff/adapter.lisp",
+        "materials/adapters/cliff.lisp",
+        "scenarios/cliff/execute.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Composition remains scenario-owned; F06 native factory belongs in root materials, F07 execution loads after it. Retain all kind/mode guards and parameter overlays.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/cliff/build.lisp",
+      "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+      "bytes": 2097,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 129,
+          "end": 165,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/cliff/build.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "make-cliff-sim",
+          "start": 169,
+          "end": 2095,
+          "start_line": 5,
+          "end_line": 39,
+          "sha256": "34254d8de14c730d63c590abc06f7424e301abac2792d8363554e140f0d12c5a",
+          "target_path": "scenarios/cliff/build.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/cliff",
+      "target_paths": [
+        "scenarios/cliff/build.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Preserve face/notch geometry, material/geometry callbacks, custom-validator safeguard, loading/native stepping and dedicated Joss dispatch.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/cliff/geometry.lisp",
+      "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+      "bytes": 3294,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 118,
+          "end": 154,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/cliff/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "cut-cliff-face",
+          "start": 158,
+          "end": 858,
+          "start_line": 5,
+          "end_line": 18,
+          "sha256": "497a0a286caa186c3517cace67bd94ae4eef2976c07795936e68ed9cd5c7da26",
+          "target_path": "scenarios/cliff/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "cut-toe-notch",
+          "start": 862,
+          "end": 3292,
+          "start_line": 20,
+          "end_line": 64,
+          "sha256": "49187e80cc831e1e3508816b682a7ae7653870320b777d344c4824ef60922142",
+          "target_path": "scenarios/cliff/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/cliff",
+      "target_paths": [
+        "scenarios/cliff/geometry.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Preserve face/notch geometry, material/geometry callbacks, custom-validator safeguard, loading/native stepping and dedicated Joss dispatch.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/cliff/run.lisp",
+      "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+      "bytes": 2470,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 131,
+          "end": 167,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/cliff/run.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "run",
+          "start": 171,
+          "end": 2468,
+          "start_line": 5,
+          "end_line": 49,
+          "sha256": "46f0aad6e00868bdb12fc684527a7aeddf259c375019b9132e47326fb25c0402",
+          "target_path": "scenarios/cliff/run.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/cliff",
+      "target_paths": [
+        "scenarios/cliff/run.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Preserve face/notch geometry, material/geometry callbacks, custom-validator safeguard, loading/native stepping and dedicated Joss dispatch.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/cliff/settings.lisp",
+      "sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+      "bytes": 1799,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 125,
+          "end": 161,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/cliff/settings.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defparameter",
+          "name": "*runout-aspect*",
+          "start": 165,
+          "end": 274,
+          "start_line": 5,
+          "end_line": 6,
+          "sha256": "9a40cbef0709664faa111f9bef24e00d12922f4931066005161936b1aa605ec7",
+          "target_path": "scenarios/cliff/settings.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defparameter",
+          "name": "*mass-scale*",
+          "start": 278,
+          "end": 391,
+          "start_line": 8,
+          "end_line": 9,
+          "sha256": "5788f88cbe7135278ba1f52d6621aca171077e4a5b98241f2e524dde5c6a3bf6",
+          "target_path": "scenarios/cliff/settings.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defun",
+          "name": "deg->rad",
+          "start": 395,
+          "end": 438,
+          "start_line": 11,
+          "end_line": 11,
+          "sha256": "826a8348b5e49e7cd9c8a9229ab931d1de5cf1ca4e622dcc5c8373bc0d86e025",
+          "target_path": "src/numerics/angles.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defun",
+          "name": "configure-solver",
+          "start": 442,
+          "end": 1797,
+          "start_line": 13,
+          "end_line": 39,
+          "sha256": "892da4101bc904b88d3b63aab30b5c5269a277df6f0b9d708a092d71e4fd2ec5",
+          "target_path": "scenarios/cliff/solver.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "EXACT_FORM_SPLIT",
+      "owner": "scenario+numerics",
+      "target_paths": [
+        "scenarios/cliff/settings.lisp",
+        "src/numerics/angles.lisp",
+        "scenarios/cliff/solver.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Load runout/mass state, then generic angle, then configure-solver in original order. Solver function contains recipe-specific boundaries/settings and stays intact; no hidden rewrite.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/joss/build.lisp",
+      "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+      "bytes": 3187,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 118,
+          "end": 154,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/joss/build.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "make-joss-reference-sim",
+          "start": 158,
+          "end": 3185,
+          "start_line": 5,
+          "end_line": 52,
+          "sha256": "59f6e92217a8b6beeeca7485596b35a7b51dd3654b9aaccb0abc6cd8bbbcde49",
+          "target_path": "scenarios/joss/build.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/joss",
+      "target_paths": [
+        "scenarios/joss/build.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Dedicated simulation classes/statistics, protected base, aggregation, adaptive phase and output contracts remain exact. No full Joss restart.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/joss/classes.lisp",
+      "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+      "bytes": 429,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 115,
+          "end": 151,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/joss/classes.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defclass",
+          "name": "joss-reference-sim",
+          "start": 155,
+          "end": 219,
+          "start_line": 5,
+          "end_line": 5,
+          "sha256": "8971dabb04d9024646b9f75c51292d66821ad1595a3d47eba5c9395dd5a9903e",
+          "target_path": "scenarios/joss/classes.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defclass",
+          "name": "joss-reference-aggregate-sim",
+          "start": 223,
+          "end": 427,
+          "start_line": 7,
+          "end_line": 9,
+          "sha256": "2963cdbd2cad747f0aea4c0b6f31dcb5f4ca6634ba560cbec9fbc3a016da0398",
+          "target_path": "scenarios/joss/classes.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+      "P0_decision": "SPLIT_REVIEW",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/joss",
+      "target_paths": [
+        "scenarios/joss/classes.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Dedicated simulation classes/statistics, protected base, aggregation, adaptive phase and output contracts remain exact. No full Joss restart.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/joss/geometry.lisp",
+      "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+      "bytes": 2956,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 113,
+          "end": 149,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/joss/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "reference-face-x",
+          "start": 153,
+          "end": 572,
+          "start_line": 5,
+          "end_line": 11,
+          "sha256": "9efb80497dd00b2993693dea9fc4a3f805c3e780bf2f2debc2f272434beeb00b",
+          "target_path": "scenarios/joss/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "reference-solid-p",
+          "start": 576,
+          "end": 978,
+          "start_line": 13,
+          "end_line": 20,
+          "sha256": "a8b0a0bdfa0da5af4ab33de3f9962740686ffb825c81642a8f0a4cc18425586d",
+          "target_path": "scenarios/joss/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defun",
+          "name": "reference-surface-height",
+          "start": 982,
+          "end": 1394,
+          "start_line": 22,
+          "end_line": 29,
+          "sha256": "61624f0fe471d028d53ccbec4e67b40fb0eb39a04df0b37965e2468ef9553fc1",
+          "target_path": "scenarios/joss/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defun",
+          "name": "reference-domain-corners",
+          "start": 1398,
+          "end": 1907,
+          "start_line": 31,
+          "end_line": 40,
+          "sha256": "095860e311c5d0ba64faa647e161228dabaf289aa4717fb40fa2325f3a36c59e",
+          "target_path": "scenarios/joss/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F06",
+          "kind": "defun",
+          "name": "reference-clip-geometry",
+          "start": 1911,
+          "end": 2954,
+          "start_line": 42,
+          "end_line": 63,
+          "sha256": "d429bde5d2d4f1226cb3514c9e6b65b044a87896a309de58312105699541be3a",
+          "target_path": "scenarios/joss/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/joss",
+      "target_paths": [
+        "scenarios/joss/geometry.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Dedicated simulation classes/statistics, protected base, aggregation, adaptive phase and output contracts remain exact. No full Joss restart.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/joss/measurements.lisp",
+      "sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+      "bytes": 3008,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 132,
+          "end": 168,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/joss/measurements.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "reference-summary",
+          "start": 172,
+          "end": 462,
+          "start_line": 5,
+          "end_line": 10,
+          "sha256": "88ea1dee5dfad990363ae99fc6130d37339349eacd2046c0ff96c49b6f029644",
+          "target_path": "scenarios/joss/measurements.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "reference-effective-material",
+          "start": 466,
+          "end": 1795,
+          "start_line": 12,
+          "end_line": 29,
+          "sha256": "dad76820c199ae4aa637c08b080419d5e12a9e46f10adbc4f1141cc9ae8c7fcd",
+          "target_path": "materials/diagnostics/chalk-reference.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defun",
+          "name": "reference-check-finite",
+          "start": 1799,
+          "end": 3006,
+          "start_line": 31,
+          "end_line": 47,
+          "sha256": "382a4ea1a3c2bf0efb255bb446f2441ddaf9c35e000c06fb8c2438890b821882",
+          "target_path": "scenarios/joss/validation.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "EXACT_FORM_SPLIT",
+      "owner": "scenario+materials/diagnostics",
+      "target_paths": [
+        "scenarios/joss/measurements.lisp",
+        "materials/diagnostics/chalk-reference.lisp",
+        "scenarios/joss/validation.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Model-specific field readout moves into root materials; mass summary and whole-run finite/kinematics validation stay in scenarios. Three targets preserve original definition sequence.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/joss/output.lisp",
+      "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+      "bytes": 1176,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 97,
+          "end": 133,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/joss/output.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "reference-csv-number",
+          "start": 137,
+          "end": 314,
+          "start_line": 5,
+          "end_line": 7,
+          "sha256": "8cf6083f65ed1a716c9f160050736fb9c9a5aabb7351c09abe78e0dcb456825f",
+          "target_path": "scenarios/joss/output.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "reference-write-row",
+          "start": 318,
+          "end": 1174,
+          "start_line": 9,
+          "end_line": 21,
+          "sha256": "571c253524d7f4cc0f9f667a78581c112c1d788102428d773f298348bcbf6c96",
+          "target_path": "scenarios/joss/output.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/joss",
+      "target_paths": [
+        "scenarios/joss/output.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Dedicated simulation classes/statistics, protected base, aggregation, adaptive phase and output contracts remain exact. No full Joss restart.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/joss/phases.lisp",
+      "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+      "bytes": 1395,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 119,
+          "end": 155,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/joss/phases.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "reference-critical-damping",
+          "start": 159,
+          "end": 411,
+          "start_line": 5,
+          "end_line": 9,
+          "sha256": "88ae19698a894712cdcda92aa7229076c05fbffb21f6fe00a6f65a6cc3f35d0c",
+          "target_path": "scenarios/joss/phases.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "reference-viscous-damping",
+          "start": 415,
+          "end": 597,
+          "start_line": 11,
+          "end_line": 13,
+          "sha256": "522d64f485182731d73bb7c3ff7ebd72d2dac23110b9f53318111efdbd85283b",
+          "target_path": "scenarios/joss/phases.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defun",
+          "name": "reference-next-state",
+          "start": 601,
+          "end": 1073,
+          "start_line": 15,
+          "end_line": 21,
+          "sha256": "ad313cc62b7a0d0b2b2daf2945ff3d79095b9db031bedc8894d9247d622474db",
+          "target_path": "scenarios/joss/phases.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defun",
+          "name": "reference-zero-velocities",
+          "start": 1077,
+          "end": 1393,
+          "start_line": 23,
+          "end_line": 29,
+          "sha256": "0ebab9b4548a6cb04ff25e3c9fbbda3a2d0e8acd6c1dd925ccf11a271eda766e",
+          "target_path": "scenarios/joss/phases.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/joss",
+      "target_paths": [
+        "scenarios/joss/phases.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Dedicated simulation classes/statistics, protected base, aggregation, adaptive phase and output contracts remain exact. No full Joss restart.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/joss/run.lisp",
+      "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+      "bytes": 11888,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 128,
+          "end": 164,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/joss/run.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "run-joss-reference",
+          "start": 168,
+          "end": 11886,
+          "start_line": 5,
+          "end_line": 164,
+          "sha256": "1221572c6ef35d75fbb7414bc608c917897f247f72be2984aa6dfad493ef88d6",
+          "target_path": "scenarios/joss/run.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/joss",
+      "target_paths": [
+        "scenarios/joss/run.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Dedicated simulation classes/statistics, protected base, aggregation, adaptive phase and output contracts remain exact. No full Joss restart.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/joss/statistics.lisp",
+      "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+      "bytes": 6450,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework/cliff",
+          "start": 128,
+          "end": 164,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "d8c873981e5918f473fb5446364545fc956f375ce9fa34a53d4bb2dfcd75bf45",
+          "target_path": "scenarios/joss/statistics.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "reference-finite-p",
+          "start": 168,
+          "end": 326,
+          "start_line": 5,
+          "end_line": 8,
+          "sha256": "520f0f6e37f492c499a640643e167290fed57e6223d63aaeec577da4d70ba7f2",
+          "target_path": "scenarios/joss/statistics.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defmethod",
+          "name": "cl-mpm::update-dynamic-stats",
+          "start": 330,
+          "end": 3013,
+          "start_line": 10,
+          "end_line": 47,
+          "sha256": "a2462695874ab19f39ba78eecac5a04fb06a14b7ff3c90a51e5c0d072e109640",
+          "target_path": "scenarios/joss/statistics.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defun",
+          "name": "reference-aggregate-statistics",
+          "start": 3017,
+          "end": 5627,
+          "start_line": 49,
+          "end_line": 83,
+          "sha256": "def0b5499a03519b0a938623d79c94651d46347454e61876bfe3aa2b017cb4e3",
+          "target_path": "scenarios/joss/statistics.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defmethod",
+          "name": "cl-mpm::update-dynamic-stats",
+          "start": 5631,
+          "end": 6119,
+          "start_line": 85,
+          "end_line": 92,
+          "sha256": "6c128fd0835bd077b88d9d77b9a655205a15d86e084bd84cb3ccd83bf09606dc",
+          "target_path": "scenarios/joss/statistics.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F06",
+          "kind": "defun",
+          "name": "reference-energy-ratio",
+          "start": 6123,
+          "end": 6448,
+          "start_line": 94,
+          "end_line": 99,
+          "sha256": "968708eec7ad1087141bfc98e1b229598eee14384b64b80f8e6d052c9214f9f1",
+          "target_path": "scenarios/joss/statistics.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/joss",
+      "target_paths": [
+        "scenarios/joss/statistics.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Dedicated simulation classes/statistics, protected base, aggregation, adaptive phase and output contracts remain exact. No full Joss restart.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/README.md",
+      "sha256": "a9b468fa37741c96d85280d55ca793fd6ad79717b902beab175e3dc55643a8f7",
+      "bytes": 2557,
+      "forms": [],
+      "P0_sha256": "a9b468fa37741c96d85280d55ca793fd6ad79717b902beab175e3dc55643a8f7",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md"
+      ],
+      "decision": "DOC_MERGE_REVIEW",
+      "owner": "docs",
+      "target_paths": [
+        "scenarios/triaxial/README.md"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Preserve supported/unsupported mode and scientific caveats.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/adapter.lisp",
+      "sha256": "eab6819144c15d8c5ee475040c97ba6f42e6d1288149269c45dc0e74b8e2077c",
+      "bytes": 4000,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework",
+          "start": 63,
+          "end": 93,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "97143a7d95aaf2ad166cc0cfa279bc26ac37ebbacde5c9ec736645783dbbabcc",
+          "target_path": "scenarios/triaxial/adapter.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defmethod",
+          "name": "compile-scenario",
+          "start": 95,
+          "end": 3270,
+          "start_line": 4,
+          "end_line": 50,
+          "sha256": "d7e8bfe2db681b6d4fde5f10b826d39234fc5c0b54d6a640213ad9548c6841b0",
+          "target_path": "scenarios/triaxial/adapter.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defmethod",
+          "name": "execute-scenario",
+          "start": 3272,
+          "end": 3999,
+          "start_line": 52,
+          "end_line": 63,
+          "sha256": "e62c5c2a83e73bd1fbdc03fb74040322065783c926e0e809f0c4077e95bb83d6",
+          "target_path": "scenarios/triaxial/adapter.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "eab6819144c15d8c5ee475040c97ba6f42e6d1288149269c45dc0e74b8e2077c",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd",
+        "research/reports/M0_MATERIAL_CONTRACT_AUDIT.md",
+        "research/reports/M0_MATERIAL_CONTRACT_EVIDENCE.json"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/triaxial",
+      "target_paths": [
+        "scenarios/triaxial/adapter.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Exact assembly/loading/control/lifecycle; preserve default VM mode gates and rejection of unsupported custom controls/state rollback. Controls expected-value formulas are test oracles, not production model definitions.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/boundaries.lisp",
+      "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+      "bytes": 891,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 48,
+          "end": 89,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "b66c198bf72350df0a1a53ad26aa06ffc22c32770cc2ec148d52368877d83fd8",
+          "target_path": "src/boundaries/pressure/isotropic.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defclass",
+          "name": "isotropic-pressure",
+          "start": 93,
+          "end": 190,
+          "start_line": 4,
+          "end_line": 5,
+          "sha256": "27454be4ef692edca12c50b2ae893a63dc1cba0c34856d890aff08b52c22cbc3",
+          "target_path": "src/boundaries/pressure/isotropic.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defmethod",
+          "name": "cl-mpm/bc::apply-sim-bc",
+          "start": 192,
+          "end": 889,
+          "start_line": 6,
+          "end_line": 17,
+          "sha256": "897d22616270dc7c6c40ea93d4f7bc6de23b18dab2da7790f48aac2a02a34d86",
+          "target_path": "src/boundaries/pressure/isotropic.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd",
+        "framework/scenarios/triaxial/README.md"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE_P5_FOCUSED",
+      "owner": "engine/boundaries",
+      "target_paths": [
+        "src/boundaries/pressure/isotropic.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Whole generic pressure BC is used by spatial compression and hydrostatic controls. Preserve class identity, specializers, shape-gradient force order and existing ASDF component ID.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/config.lisp",
+      "sha256": "0bf4d2abc858c6330185e092d150755e40d044a497784852e6da6f632494cdce",
+      "bytes": 4399,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 44,
+          "end": 85,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "b66c198bf72350df0a1a53ad26aa06ffc22c32770cc2ec148d52368877d83fd8",
+          "target_path": "src/simulation/config/legacy-triaxial-values.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "value",
+          "start": 89,
+          "end": 155,
+          "start_line": 4,
+          "end_line": 5,
+          "sha256": "d10bc5732d6a690619dc6c590fb0a3a5e8383a88faa4db3f728d51868215706c",
+          "target_path": "src/simulation/config/legacy-triaxial-values.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "num",
+          "start": 157,
+          "end": 424,
+          "start_line": 6,
+          "end_line": 11,
+          "sha256": "503943c6a5c3dc31013fe0316befcba180d726bef68d5db6491a57c60292ba38",
+          "target_path": "src/simulation/config/legacy-triaxial-values.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defun",
+          "name": "finite-p",
+          "start": 426,
+          "end": 560,
+          "start_line": 12,
+          "end_line": 14,
+          "sha256": "391be23668b5e34e150638ae3db86aeccd12988aa5b51a0105134628c43ded65",
+          "target_path": "src/simulation/config/legacy-triaxial-values.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defparameter",
+          "name": "*config-rules*",
+          "start": 564,
+          "end": 1493,
+          "start_line": 16,
+          "end_line": 29,
+          "sha256": "86df7f7289394464982bec029b044cd960abbca4e77b6154157278723700f45a",
+          "target_path": "scenarios/triaxial/config.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F06",
+          "kind": "defun",
+          "name": "config-value-valid-p",
+          "start": 1497,
+          "end": 2268,
+          "start_line": 31,
+          "end_line": 44,
+          "sha256": "40b54e0c779875d8370bddfaeffe8d3e27f35001a9c99857d2ce0bac9b3ac1f7",
+          "target_path": "scenarios/triaxial/config.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F07",
+          "kind": "defun",
+          "name": "validate-config",
+          "start": 2272,
+          "end": 3674,
+          "start_line": 46,
+          "end_line": 68,
+          "sha256": "6107cb092ba7ddf8172a176275843509acac70990008bb45e6aec50648802bc7",
+          "target_path": "scenarios/triaxial/config.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F08",
+          "kind": "defun",
+          "name": "json-file",
+          "start": 3678,
+          "end": 3818,
+          "start_line": 70,
+          "end_line": 72,
+          "sha256": "64a2a223e0428dedbca8224e0cd450ac2cecb9a905a7997667185b44fc15c18a",
+          "target_path": "src/output/legacy-triaxial-json.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F09",
+          "kind": "defun",
+          "name": "object",
+          "start": 3820,
+          "end": 3967,
+          "start_line": 73,
+          "end_line": 75,
+          "sha256": "012aaf36b3cb66853f0e260a81dcbaba2b6233893aaa56a3495d448eaa22322f",
+          "target_path": "src/output/legacy-triaxial-json.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F10",
+          "kind": "defun",
+          "name": "material-diagnostic-call",
+          "start": 3971,
+          "end": 4397,
+          "start_line": 77,
+          "end_line": 83,
+          "sha256": "9dbadfe138fc44d115e157b72e0198cafc2b01f09d1f63ee0c4f1d77494e2d9e",
+          "target_path": "materials/adapters/diagnostics-call.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "0bf4d2abc858c6330185e092d150755e40d044a497784852e6da6f632494cdce",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd",
+        "framework/scenarios/triaxial/README.md",
+        "research/reports/M0_MATERIAL_CONTRACT_EVIDENCE.json"
+      ],
+      "decision": "EXACT_FORM_SPLIT",
+      "owner": "engine+scenario+materials",
+      "target_paths": [
+        "src/simulation/config/legacy-triaxial-values.lisp",
+        "scenarios/triaxial/config.lisp",
+        "src/output/legacy-triaxial-json.lisp",
+        "materials/adapters/diagnostics-call.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Neutral values/finite checks, scenario rules, JSON output, optional material protocol calls are distinct. Preserve all unknown/range/null/duplicate/mode rejection; standalone VM loader stays independent.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/controls.lisp",
+      "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+      "bytes": 4294,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 46,
+          "end": 87,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "b66c198bf72350df0a1a53ad26aa06ffc22c32770cc2ec148d52368877d83fd8",
+          "target_path": "scenarios/triaxial/controls.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "run-controls",
+          "start": 91,
+          "end": 4292,
+          "start_line": 4,
+          "end_line": 68,
+          "sha256": "0d3f822ed863e27c55330d756e6b002f75cdb6a02b54820b83e2672e90aba6cb",
+          "target_path": "scenarios/triaxial/controls.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd",
+        "framework/scenarios/triaxial/README.md"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/triaxial",
+      "target_paths": [
+        "scenarios/triaxial/controls.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Exact assembly/loading/control/lifecycle; preserve default VM mode gates and rejection of unsupported custom controls/state rollback. Controls expected-value formulas are test oracles, not production model definitions.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/geometry.lisp",
+      "sha256": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc",
+      "bytes": 3589,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 46,
+          "end": 87,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "b66c198bf72350df0a1a53ad26aa06ffc22c32770cc2ec148d52368877d83fd8",
+          "target_path": "scenarios/triaxial/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "setup",
+          "start": 91,
+          "end": 3587,
+          "start_line": 4,
+          "end_line": 63,
+          "sha256": "e95053d8daf3834ea4781b0d9b45679c4efdc5eba73ffe50e9bd3e5eb69d011a",
+          "target_path": "scenarios/triaxial/geometry.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd",
+        "framework/scenarios/triaxial/README.md",
+        "research/reports/M0_MATERIAL_CONTRACT_EVIDENCE.json"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/triaxial",
+      "target_paths": [
+        "scenarios/triaxial/geometry.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Exact assembly/loading/control/lifecycle; preserve default VM mode gates and rejection of unsupported custom controls/state rollback. Controls expected-value formulas are test oracles, not production model definitions.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/homogeneous.lisp",
+      "sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+      "bytes": 5998,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 49,
+          "end": 90,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "b66c198bf72350df0a1a53ad26aa06ffc22c32770cc2ec148d52368877d83fd8",
+          "target_path": "materials/adapters/legacy-triaxial.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "homogeneous-step",
+          "start": 94,
+          "end": 1950,
+          "start_line": 4,
+          "end_line": 31,
+          "sha256": "718b7b12b61eeb06b058f119c7d33264de900f68bba25f38839e67b0cbcbebf7",
+          "target_path": "materials/adapters/legacy-triaxial.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "run-homogeneous",
+          "start": 1954,
+          "end": 5996,
+          "start_line": 33,
+          "end_line": 94,
+          "sha256": "85b4cda3e791a3cbbb03a2b2d3bf46abe1fb4c857e4805b75e596acc13887ecd",
+          "target_path": "scenarios/triaxial/homogeneous.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd",
+        "framework/scenarios/triaxial/README.md",
+        "research/reports/M0_MATERIAL_CONTRACT_AUDIT.md"
+      ],
+      "decision": "FORM_SPLIT_AND_SEPARATE_SUBFORM_CHECKPOINT",
+      "owner": "materials+scenario",
+      "target_paths": [
+        "materials/adapters/legacy-triaxial.lisp",
+        "scenarios/triaxial/homogeneous.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "VM-only native point trial/state adapter moves to materials; orchestration remains scenario-owned. Native state-copy branch is subject to explicit nested-form approval below.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/material.lisp",
+      "sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+      "bytes": 1234,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 46,
+          "end": 87,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "b66c198bf72350df0a1a53ad26aa06ffc22c32770cc2ec148d52368877d83fd8",
+          "target_path": "materials/adapters/triaxial.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "material-initargs",
+          "start": 91,
+          "end": 529,
+          "start_line": 4,
+          "end_line": 11,
+          "sha256": "10262fc323207e92a595ca9900861e03035eee5a93579441eec34a9443b3bba0",
+          "target_path": "materials/adapters/triaxial.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "initialize-prestress",
+          "start": 533,
+          "end": 1232,
+          "start_line": 13,
+          "end_line": 25,
+          "sha256": "7aa359bb17a50149414c402b53d70bbf68ac6a26083ac569a145cf0c2e80234f",
+          "target_path": "materials/adapters/legacy-triaxial.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+      "P0_decision": "SPLIT_REVIEW",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd",
+        "framework/scenarios/triaxial/README.md",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "EXACT_FORM_SPLIT",
+      "owner": "materials/adapters",
+      "target_paths": [
+        "materials/adapters/triaxial.lisp",
+        "materials/adapters/legacy-triaxial.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "VM strength mapping and E/nu-dependent strain/stress initialization are material adapters. Scenario still selects pressure/config. Helpers num/value/component move to neutral owners first; no adapter dependency on a scenario implementation.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/measurements.lisp",
+      "sha256": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc",
+      "bytes": 6819,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 50,
+          "end": 91,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "b66c198bf72350df0a1a53ad26aa06ffc22c32770cc2ec148d52368877d83fd8",
+          "target_path": "scenarios/triaxial/measurements.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "validate-particles",
+          "start": 95,
+          "end": 1802,
+          "start_line": 4,
+          "end_line": 30,
+          "sha256": "7b58aa56d935a1945e1388b3f9903ba074e6e74c9f3e8ceed80af29e73bd64d4",
+          "target_path": "scenarios/triaxial/measurements.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "stats",
+          "start": 1806,
+          "end": 3612,
+          "start_line": 32,
+          "end_line": 60,
+          "sha256": "81e216d0f829bbd9252ec4c04031a041a678db181ffb016d54e9b2c51f6c284c",
+          "target_path": "scenarios/triaxial/measurements.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defun",
+          "name": "write-material-frame",
+          "start": 3616,
+          "end": 5289,
+          "start_line": 62,
+          "end_line": 88,
+          "sha256": "2ce97024fcbc7b0c76bf2238cd4df5c51edd4ad50527151a790876f5b5cfe819",
+          "target_path": "scenarios/triaxial/measurements.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defun",
+          "name": "write-frame",
+          "start": 5293,
+          "end": 6817,
+          "start_line": 90,
+          "end_line": 112,
+          "sha256": "643e4559a85ccb8974e63e24bf2d0aa39401864735a38f2e4e6e1b9185c06980",
+          "target_path": "scenarios/triaxial/measurements.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc",
+      "P0_decision": "SPLIT_REVIEW",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd",
+        "framework/scenarios/triaxial/README.md",
+        "research/reports/M0_MATERIAL_CONTRACT_AUDIT.md",
+        "research/reports/M0_MATERIAL_CONTRACT_EVIDENCE.json",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "WHOLE_FILE_THEN_SEPARATE_SUBFORM_CHECKPOINT",
+      "owner": "scenario/triaxial",
+      "target_paths": [
+        "scenarios/triaxial/measurements.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Exact measurement/invariant/CSV file first. Its embedded VM fallback must then be centralized through the explicit nested helper approval; it is not accepted as final scenario-owned model math.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/mpm.lisp",
+      "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+      "bytes": 3570,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 41,
+          "end": 82,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "b66c198bf72350df0a1a53ad26aa06ffc22c32770cc2ec148d52368877d83fd8",
+          "target_path": "scenarios/triaxial/mpm.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "run-mpm",
+          "start": 86,
+          "end": 3326,
+          "start_line": 4,
+          "end_line": 57,
+          "sha256": "bfab3459a66b4fd4ce7bf8e7768b44cc0e829c02acfe3c9ecb6af4c59f370450",
+          "target_path": "scenarios/triaxial/mpm.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd",
+        "framework/scenarios/triaxial/README.md"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/triaxial",
+      "target_paths": [
+        "scenarios/triaxial/mpm.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Exact assembly/loading/control/lifecycle; preserve default VM mode gates and rejection of unsupported custom controls/state rollback. Controls expected-value formulas are test oracles, not production model definitions.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/package.lisp",
+      "sha256": "603756b11e09b4401a0a7e3d471023e894acfc26eb15eff327dc02626a8b42b9",
+      "bytes": 463,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "defpackage",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 127,
+          "end": 234,
+          "start_line": 3,
+          "end_line": 5,
+          "sha256": "d0d3dce6582cef08cf2f6514debbff0d01122d2b53c525135da8b70a6b5d3d16",
+          "target_path": "src/simulation/compatibility/triaxial-package.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "in-package",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 236,
+          "end": 277,
+          "start_line": 6,
+          "end_line": 6,
+          "sha256": "b66c198bf72350df0a1a53ad26aa06ffc22c32770cc2ec148d52368877d83fd8",
+          "target_path": "scenarios/triaxial/state.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "declaim",
+          "name": "(optimize (speed 2)",
+          "start": 279,
+          "end": 330,
+          "start_line": 7,
+          "end_line": 7,
+          "sha256": "1ffc51667ba4bb13e402185f5908fef8dc7baefeee156dadeeafc4126e52baf5",
+          "target_path": "scenarios/triaxial/state.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defvar",
+          "name": "*initial-height*",
+          "start": 332,
+          "end": 364,
+          "start_line": 8,
+          "end_line": 8,
+          "sha256": "203d9f27c9715735188a9157fee6adc94802bf83d31aca32520d066bf887e034",
+          "target_path": "scenarios/triaxial/state.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defvar",
+          "name": "*initial-volume*",
+          "start": 366,
+          "end": 395,
+          "start_line": 9,
+          "end_line": 9,
+          "sha256": "92b91b0d07cb1903832cf020050c383cd3a82fee3e0051e6844a9f89c9fb3db1",
+          "target_path": "scenarios/triaxial/state.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F06",
+          "kind": "defvar",
+          "name": "*pressure*",
+          "start": 397,
+          "end": 424,
+          "start_line": 10,
+          "end_line": 10,
+          "sha256": "f1d7cec3697a9cab7f53cc7d03973516c580cbf18994d7bfb7b844123c351bed",
+          "target_path": "scenarios/triaxial/state.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F07",
+          "kind": "defvar",
+          "name": "*material-diagnostics*",
+          "start": 426,
+          "end": 461,
+          "start_line": 11,
+          "end_line": 11,
+          "sha256": "5dbeabf1e76f75622d90e311b276eacee5d5c828404968c419feb896f5649b20",
+          "target_path": "scenarios/triaxial/state.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "603756b11e09b4401a0a7e3d471023e894acfc26eb15eff327dc02626a8b42b9",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/cl-mpm-framework.asd",
+        "research/reports/M0_MATERIAL_CONTRACT_EVIDENCE.json"
+      ],
+      "decision": "EXACT_FORM_SPLIT",
+      "owner": "compatibility+scenario",
+      "target_paths": [
+        "src/simulation/compatibility/triaxial-package.lisp",
+        "scenarios/triaxial/state.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Declare only legacy package identity before neutral/material helpers; retain optimize proclamation and dynamic scenario bindings in state.lisp. Preserve compiler policy scope.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/runner.lisp",
+      "sha256": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96",
+      "bytes": 7743,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 44,
+          "end": 85,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "b66c198bf72350df0a1a53ad26aa06ffc22c32770cc2ec148d52368877d83fd8",
+          "target_path": "scenarios/triaxial/runner.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "run-config",
+          "start": 89,
+          "end": 7310,
+          "start_line": 4,
+          "end_line": 86,
+          "sha256": "73ca98f3eb227552e040b05ea0d48d1a556fa9e1f7bceeb2b4c78366ed1dde43",
+          "target_path": "scenarios/triaxial/runner.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "main",
+          "start": 7314,
+          "end": 7741,
+          "start_line": 88,
+          "end_line": 93,
+          "sha256": "dcfbfa03a6cd5250ed47f74cbb51576840e7589ea1a902f313054f67c49a570f",
+          "target_path": "scenarios/triaxial/runner.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd",
+        "framework/scenarios/triaxial/README.md",
+        "research/reports/M0_MATERIAL_CONTRACT_AUDIT.md",
+        "research/reports/M0_MATERIAL_CONTRACT_EVIDENCE.json"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "scenario/triaxial",
+      "target_paths": [
+        "scenarios/triaxial/runner.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Exact assembly/loading/control/lifecycle; preserve default VM mode gates and rejection of unsupported custom controls/state rollback. Controls expected-value formulas are test oracles, not production model definitions.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/tensors.lisp",
+      "sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+      "bytes": 637,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/calibration/triaxial",
+          "start": 45,
+          "end": 86,
+          "start_line": 2,
+          "end_line": 2,
+          "sha256": "b66c198bf72350df0a1a53ad26aa06ffc22c32770cc2ec148d52368877d83fd8",
+          "target_path": "src/numerics/legacy-tensors.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defun",
+          "name": "vec",
+          "start": 90,
+          "end": 130,
+          "start_line": 4,
+          "end_line": 5,
+          "sha256": "0d64e7de2b8e0a0dccde69d60a730e54d5f8f185f08dfe4c7ce7f02972336935",
+          "target_path": "src/numerics/legacy-tensors.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "component",
+          "start": 132,
+          "end": 193,
+          "start_line": 6,
+          "end_line": 7,
+          "sha256": "4e0a9d4c205667cde7e3847e9e8bbb9cf12bb3c2c9bca34de4f886591a238282",
+          "target_path": "src/numerics/legacy-tensors.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defun",
+          "name": "(setf component)",
+          "start": 195,
+          "end": 290,
+          "start_line": 8,
+          "end_line": 9,
+          "sha256": "0ca4850d21aa0fa1b4da09239bbfdffa219379ef37aa177492e22bb2aa2485e9",
+          "target_path": "src/numerics/legacy-tensors.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defun",
+          "name": "j-of",
+          "start": 292,
+          "end": 384,
+          "start_line": 10,
+          "end_line": 11,
+          "sha256": "99e86662fa68125cf76734913f3bdd1e9bc1a7a139103d08dbc69d01d8223fb5",
+          "target_path": "src/measurements/legacy-particle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F06",
+          "kind": "defun",
+          "name": "q-of",
+          "start": 386,
+          "end": 507,
+          "start_line": 12,
+          "end_line": 14,
+          "sha256": "5c3656e00555f0e4ae11b5128b5e0dcc7141f88e988e05f537d15c3658a5ed8c",
+          "target_path": "scenarios/triaxial/stress-measures.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F07",
+          "kind": "defun",
+          "name": "qj2-of",
+          "start": 509,
+          "end": 635,
+          "start_line": 15,
+          "end_line": 17,
+          "sha256": "33648e8aa69384d028a140d196b3b12c925e50e1f0541d037b2d8ca9f8fa391f",
+          "target_path": "src/measurements/legacy-stress.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+      "P0_decision": "SPLIT_REVIEW",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "framework/cl-mpm-framework.asd",
+        "framework/scenarios/triaxial/README.md",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "EXACT_FORM_SPLIT_P5_FOCUSED",
+      "owner": "numerics+measurements+scenario",
+      "target_paths": [
+        "src/numerics/legacy-tensors.lisp",
+        "src/measurements/legacy-particle.lisp",
+        "scenarios/triaxial/stress-measures.lisp",
+        "src/measurements/legacy-stress.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Generic tensor access/J/qJ2 separates from triaxial compression-positive projected q. Preserve symbols and original mathematical expressions.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    },
+    {
+      "source_path": "framework/simulation.lisp",
+      "sha256": "331b9f228729fd3f6bc07dcbe52b9480c5ae7b6eb3d0d9b47871c23e7bbd70a3",
+      "bytes": 3635,
+      "forms": [
+        {
+          "id": "F01",
+          "kind": "in-package",
+          "name": ":cl-mpm/framework",
+          "start": 0,
+          "end": 30,
+          "start_line": 1,
+          "end_line": 1,
+          "sha256": "97143a7d95aaf2ad166cc0cfa279bc26ac37ebbacde5c9ec736645783dbbabcc",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F02",
+          "kind": "defvar",
+          "name": "*input-root*",
+          "start": 32,
+          "end": 57,
+          "start_line": 3,
+          "end_line": 3,
+          "sha256": "51827f4e8c8dd58b58b74d66396a906128626e9d2c62bd0896a0aa23144dd6ba",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F03",
+          "kind": "defun",
+          "name": "case-path",
+          "start": 58,
+          "end": 173,
+          "start_line": 4,
+          "end_line": 5,
+          "sha256": "ec43df50f756429a5a9ee80f74f992fec8e9024ad0afbba2c41491932e526a1d",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F04",
+          "kind": "defun",
+          "name": "read-parameter-json",
+          "start": 174,
+          "end": 901,
+          "start_line": 6,
+          "end_line": 16,
+          "sha256": "449468f741d8491ae52f84d8b73a84f6fbe3fed16562ea78718fc053961a9904",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F05",
+          "kind": "defun",
+          "name": "read-parameters",
+          "start": 902,
+          "end": 1176,
+          "start_line": 17,
+          "end_line": 20,
+          "sha256": "8296f774c1f5216611d04076bf8bcdfeea4b232cfc7edbb3595529840223adc7",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F06",
+          "kind": "defgeneric",
+          "name": "compile-scenario",
+          "start": 1178,
+          "end": 1323,
+          "start_line": 22,
+          "end_line": 23,
+          "sha256": "83cc306b18f47f3ad4ccc5bad783e299063a9d4d5960049dee738c01e2eeba7e",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F07",
+          "kind": "defgeneric",
+          "name": "execute-scenario",
+          "start": 1324,
+          "end": 1478,
+          "start_line": 24,
+          "end_line": 25,
+          "sha256": "7d62c52a0a8c359363121926d4740fd849fcd36f5ba59e05929ef0b1fb39c171",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F08",
+          "kind": "defmethod",
+          "name": "compile-scenario",
+          "start": 1479,
+          "end": 1600,
+          "start_line": 26,
+          "end_line": 27,
+          "sha256": "d7da61f784a94b7882439b68000ee18c64292f3c00da696f75be1ee3a9d34e8f",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F09",
+          "kind": "defun",
+          "name": "finite-number",
+          "start": 1602,
+          "end": 1975,
+          "start_line": 29,
+          "end_line": 35,
+          "sha256": "b4471079928474725f778ed6c7d623ce2c802fa7ec052e37bb8417fe119ed06b",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F10",
+          "kind": "defun",
+          "name": "check-kind",
+          "start": 1977,
+          "end": 2194,
+          "start_line": 37,
+          "end_line": 40,
+          "sha256": "db67a6cad6649d391b11a80b9ff36fb379dc4ac63e99eb789f3c2d14d0e1eced",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F11",
+          "kind": "defun",
+          "name": "overlay",
+          "start": 2196,
+          "end": 2628,
+          "start_line": 42,
+          "end_line": 49,
+          "sha256": "ef4e882e59c2bf16b008a6dccb27e6e8f30b5088821ac1331b02044d1c51d1bc",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F12",
+          "kind": "defun",
+          "name": "validate-simulation",
+          "start": 2630,
+          "end": 2748,
+          "start_line": 51,
+          "end_line": 53,
+          "sha256": "38ffd86c583c9d376bd85cddc35d6c62e4678e8ee8b452ac6e4faa299f1e8472",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        },
+        {
+          "id": "F13",
+          "kind": "defun",
+          "name": "run-simulation",
+          "start": 2750,
+          "end": 3634,
+          "start_line": 55,
+          "end_line": 67,
+          "sha256": "992b85bbc1983228796b998b0ce9cff6e92705a3eff9d19389207cb5c4489e30",
+          "target_path": "src/simulation/lifecycle.lisp",
+          "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+        }
+      ],
+      "P0_sha256": "331b9f228729fd3f6bc07dcbe52b9480c5ae7b6eb3d0d9b47871c23e7bbd70a3",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [
+        "cl-mpm-framework"
+      ],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "docs/architecture/FOLDER_OWNERSHIP.md",
+        "framework/README.md",
+        "framework/cl-mpm-framework.asd",
+        "scripts/audit-migration.py"
+      ],
+      "decision": "WHOLE_FILE_EXACT_MOVE",
+      "owner": "engine/simulation",
+      "target_paths": [
+        "src/simulation/lifecycle.lisp"
+      ],
+      "status": "PREMOVE_PLAN_ROOT_REVIEW_REQUIRED",
+      "numerical_behavior_change_allowed": false,
+      "rationale": "Preserve input JSON safeguards, compile/execute dispatch, run-local state and fresh-output guard.",
+      "added_preambles": "For each split target needing a package preamble copy the original IN-PACKAGE exactly; do not duplicate a class/generic/method. Account for preamble separately.",
+      "old_path_transition": "Old source path becomes/retains only a relative-to-LOAD-TRUENAME forwarding loader. Normal ASDF directly loads actual owners once. Final path retirement only after G5 active callers transition."
+    }
+  ],
+  "current_asdf": {
+    "source_sha256": "02a2213f9265aaec4f54c02a1af7b06f4e3718493e6c8ed2f859f31281f39101",
+    "system_id": "cl-mpm-framework",
+    "serial": true,
+    "ordered_component_ids": [
+      "config/package",
+      "config/parameters",
+      "package",
+      "components/base",
+      "components/material-definition",
+      "components/specifications",
+      "components/materials",
+      "components/diagnostics",
+      "components/native-diagnostics",
+      "components/material-output",
+      "components/geometry",
+      "simulation",
+      "scenarios/cliff/settings",
+      "materials/chalk",
+      "scenarios/cliff/geometry",
+      "scenarios/cliff/build",
+      "output/plotting",
+      "scenarios/joss/classes",
+      "scenarios/joss/statistics",
+      "scenarios/joss/phases",
+      "scenarios/joss/geometry",
+      "scenarios/joss/build",
+      "scenarios/joss/measurements",
+      "scenarios/joss/output",
+      "scenarios/joss/run",
+      "scenarios/cliff/run",
+      "scenarios/triaxial/package",
+      "scenarios/triaxial/config",
+      "scenarios/triaxial/tensors",
+      "scenarios/triaxial/material",
+      "scenarios/triaxial/geometry",
+      "scenarios/triaxial/boundaries",
+      "scenarios/triaxial/measurements",
+      "scenarios/triaxial/mpm",
+      "scenarios/triaxial/homogeneous",
+      "scenarios/triaxial/controls",
+      "scenarios/triaxial/runner",
+      "scenarios/triaxial/adapter",
+      "scenarios/cliff/adapter"
+    ],
+    "canonical_target": "cl-mpm-framework.asd",
+    "rule": "Preserve original ordered component IDs; bind split original ID to first target and add explicit subsequent/prerequisite components. Normal loading never executes an old shim and actual owner twice.",
+    "root_facade": "Root facade keeps established cl-mpm-framework ID and native dependencies; names can remain compatible without a framework directory or extra package/registry abstraction. Temporary old ASDF path forwards only."
+  },
+  "integration_contracts": [
+    {
+      "source_path": "calibration/run-triaxial.cmd",
+      "sha256": "d4355c4799c071e4902cc383d3b3723a12c7f92fd3d96c4bab1ecc2dec4613a7",
+      "bytes": 525,
+      "forms": [],
+      "P0_sha256": "d4355c4799c071e4902cc383d3b3723a12c7f92fd3d96c4bab1ecc2dec4613a7",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [],
+      "P0_callers": [],
+      "action": "Preserve launcher/client entrypoint behavior; compatibility changes only, no frontend feature or numerical change.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "calibration/triaxial.lisp",
+      "sha256": "0c34d4990f2507a6ca67072aaf782fe62f1af72fc776c3a0465342b8ea95a09b",
+      "bytes": 568,
+      "forms": [],
+      "P0_sha256": "0c34d4990f2507a6ca67072aaf782fe62f1af72fc776c3a0465342b8ea95a09b",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/AI_HANDOVER.md",
+        "docs/UPSTREAM_CHANGE_REPORT.md",
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "framework/README.md",
+        "framework/scenarios/triaxial/README.md",
+        "research/reports/M0_CLEANUP_INVENTORY.md",
+        "scripts/run-triaxial.lisp",
+        "tests/triaxial-components.lisp"
+      ],
+      "action": "Keep standalone MAIN/RUN-CONFIG/SETUP/RUN-CONTROLS and same symbol identity. Load explicit new-owner ordered closure including material helper/state adapters; do not require full framework or Studio system.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "cases/cliff.lisp",
+      "sha256": "f27d7d13b4a5db77a1bdda07fcf44deb5c588571c12f883f3aab90a93e9d7b3f",
+      "bytes": 382,
+      "forms": [],
+      "P0_sha256": "f27d7d13b4a5db77a1bdda07fcf44deb5c588571c12f883f3aab90a93e9d7b3f",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md"
+      ],
+      "action": "Keep old trusted recipe paths and bytes. Optional future case grouping needs separate copied-case/alias provenance plan; current flattened CLI source/case.lisp must not execute an unrecorded live alias target.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "cases/joss-collapse.lisp",
+      "sha256": "ecc8db3231a96136d2b595078d22a5c3c0d5a457cccdbcfe6821b2efdcd57e74",
+      "bytes": 479,
+      "forms": [],
+      "P0_sha256": "ecc8db3231a96136d2b595078d22a5c3c0d5a457cccdbcfe6821b2efdcd57e74",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md"
+      ],
+      "action": "Keep old trusted recipe paths and bytes. Optional future case grouping needs separate copied-case/alias provenance plan; current flattened CLI source/case.lisp must not execute an unrecorded live alias target.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "cases/triaxial-clay-2d.lisp",
+      "sha256": "d9b15044e2496083adba42810a18066609d9e229b261c64e2b3df04296f92630",
+      "bytes": 654,
+      "forms": [],
+      "P0_sha256": "d9b15044e2496083adba42810a18066609d9e229b261c64e2b3df04296f92630",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/REUSABLE_FRAMEWORK.md",
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "docs/testing.md",
+        "framework/README.md",
+        "tests/cases/triaxial-integration.lisp"
+      ],
+      "action": "Keep old trusted recipe paths and bytes. Optional future case grouping needs separate copied-case/alias provenance plan; current flattened CLI source/case.lisp must not execute an unrecorded live alias target.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "cases/triaxial-clay-3d.lisp",
+      "sha256": "48e2caa1993872ab37f95ae0e3c64bbdb52273b1230a03aa4fb9c176eac05518",
+      "bytes": 570,
+      "forms": [],
+      "P0_sha256": "48e2caa1993872ab37f95ae0e3c64bbdb52273b1230a03aa4fb9c176eac05518",
+      "P0_decision": "MOVE_CANDIDATE",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md"
+      ],
+      "action": "Keep old trusted recipe paths and bytes. Optional future case grouping needs separate copied-case/alias provenance plan; current flattened CLI source/case.lisp must not execute an unrecorded live alias target.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "cl-mpm-tests.asd",
+      "sha256": "02d5589423adbbbf683d9d1f03b0210ca395a79fde2f3f590bc78cea845287d1",
+      "bytes": 401,
+      "forms": [],
+      "P0_sha256": "02d5589423adbbbf683d9d1f03b0210ca395a79fde2f3f590bc78cea845287d1",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/architecture.md",
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "docs/architecture/baseline-source-comparison.json"
+      ],
+      "action": "Preserve test/optional registrations and two pre-existing missing legacy example exceptions; do not invent files.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "cl-mpm.asd",
+      "sha256": "60fc5e86733a7dc300e58544c55f3cbb5f196034029a0d189c43a1ec88d7227c",
+      "bytes": 28225,
+      "forms": [],
+      "P0_sha256": "60fc5e86733a7dc300e58544c55f3cbb5f196034029a0d189c43a1ec88d7227c",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/UPSTREAM_CHANGE_REPORT.md",
+        "docs/architecture.md",
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "docs/architecture/baseline-source-comparison.json",
+        "docs/archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md",
+        "docs/development.md",
+        "docs/usage.md"
+      ],
+      "action": "Native systems/order/optional status/backend are separate P2/P5 scope. No eager model activation or broad ASDF redesign.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "examples/chalk/joss.lisp",
+      "sha256": "0da4b2e8714edca68fd5befe4bf062c22468034c118cea7c01b88e0e46efcd88",
+      "bytes": 90915,
+      "forms": [],
+      "P0_sha256": "0da4b2e8714edca68fd5befe4bf062c22468034c118cea7c01b88e0e46efcd88",
+      "P0_decision": "KEEP",
+      "P0_asdf": [
+        "cl-mpm/examples/joss"
+      ],
+      "P0_callers": [
+        "cl-mpm.asd",
+        "docs/REFERENCE_REPRODUCTION.md",
+        "docs/UPSTREAM_CHANGE_REPORT.md",
+        "docs/archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md",
+        "studio/reference/joss-bay-video-candidate.json"
+      ],
+      "action": "Preserve original legacy source/method overrides. No full Joss restart; source not rewritten in orchestration migration.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "scripts/audit-asdf-metadata.lisp",
+      "sha256": "97d90d34ee8263ab1104934a664915c44d6af5fadf73e6de3fb9e2eb62d0caa5",
+      "bytes": 5913,
+      "forms": [],
+      "P0_sha256": null,
+      "P0_decision": null,
+      "P0_asdf": [],
+      "P0_callers": [],
+      "action": "Capture root facade and new components in separate P4 phase data; never overwrite immutable P0 capture/approvals.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "scripts/audit-migration.py",
+      "sha256": "c82e964c65ff4f9fc0a24e5cd50411bd558d040b8c81d2e173ee5b038e601d5d",
+      "bytes": 46029,
+      "forms": [],
+      "P0_sha256": null,
+      "P0_decision": null,
+      "P0_asdf": [],
+      "P0_callers": [],
+      "action": "P0 is immutable even when intentionally moved current source no longer matches; record separate P4 new owners/approvals.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "scripts/run-case.lisp",
+      "sha256": "c188922b1a69f33e6234be2d145f4455b482c5761b709069c77dc44e95630e80",
+      "bytes": 2642,
+      "forms": [],
+      "P0_sha256": "e2817f33b9d5035f3d1d295526e541e1b28e4e0caebd3f108a563ad090441eb1",
+      "P0_decision": "KEEP",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/REUSABLE_FRAMEWORK.md",
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "docs/architecture/MIGRATION_APPROVALS.json",
+        "docs/archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md",
+        "docs/testing.md",
+        "framework/README.md",
+        "research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md",
+        "research/reports/M0_CLEANUP_INVENTORY.md"
+      ],
+      "action": "Snapshot canonical root ASDF, scenarios, materials and all required src owner trees including numerics/output/boundaries and separate native-source plan. Resolve every component inside copied root before loading; retain input/schema binding and fresh-output guards. Adapt old source/framework root assumption, do not skip containment checks.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "scripts/run-triaxial.lisp",
+      "sha256": "255e8ba0a375576ecceb0357ecc99914523e458ab0fc2bbcf2cfa566594fba7d",
+      "bytes": 3010,
+      "forms": [],
+      "P0_sha256": "255e8ba0a375576ecceb0357ecc99914523e458ab0fc2bbcf2cfa566594fba7d",
+      "P0_decision": "KEEP",
+      "P0_asdf": [],
+      "P0_callers": [
+        "calibration/README.md",
+        "calibration/run-triaxial.cmd",
+        "docs/QUICKSTART_WINDOWS_NATIVE.md",
+        "docs/REUSABLE_FRAMEWORK.md",
+        "docs/TRIAXIAL_CALIBRATION.md",
+        "docs/UPSTREAM_CHANGE_REPORT.md",
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "research/reports/M0_CLEANUP_INVENTORY.md"
+      ],
+      "action": "Current loader copies only calibration shim and framework/scenarios/triaxial tree. Replace with explicit ordered complete neutral/material/scenario closure and execute those copies; never load copied shims against live root targets.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "studio/lisp/cl-mpm-studio.asd",
+      "sha256": "e1bd1f56985adac193b03011eedace3eb07571e4fcdfe790a53b3997079109ee",
+      "bytes": 532,
+      "forms": [],
+      "P0_sha256": "e1bd1f56985adac193b03011eedace3eb07571e4fcdfe790a53b3997079109ee",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "docs/architecture/MATERIAL_OWNERSHIP_AUDIT.md",
+        "docs/archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md",
+        "scripts/audit-asdf-metadata.lisp"
+      ],
+      "action": "Keep cl-mpm-studio depends on preserved cl-mpm-framework ID, never reverse dependency. No UI features; don't invent repository-wide licensing.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "studio/lisp/config.lisp",
+      "sha256": "6f198e2a506f851d929d4275f2146a4ec6e98069844841142900c7ab8f998fc4",
+      "bytes": 1385,
+      "forms": [],
+      "P0_sha256": "6f198e2a506f851d929d4275f2146a4ec6e98069844841142900c7ab8f998fc4",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [
+        "cl-mpm-studio"
+      ],
+      "P0_callers": [
+        "studio/lisp/cl-mpm-studio.asd",
+        "studio/test/lisp-contract-harness.lisp"
+      ],
+      "action": "Isolated compile/load fallback currently computes ../../framework/config/. Adapt to src/simulation/config/ using own compile/load pathname; keep config-only loading, aliases, dynamic schema override and tests with spaces.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "studio/lisp/custom-model.lisp",
+      "sha256": "fce9109793f4e268754e01bc9e02a3b985f3da4c956ad4656be0fb21e52f22da",
+      "bytes": 2425,
+      "forms": [],
+      "P0_sha256": "fce9109793f4e268754e01bc9e02a3b985f3da4c956ad4656be0fb21e52f22da",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [
+        "cl-mpm-studio"
+      ],
+      "P0_callers": [
+        "AGENTS.md",
+        "studio/CUSTOM_MODELS.md",
+        "studio/lisp/cl-mpm-studio.asd",
+        "studio/test/lisp-contract-harness.lisp"
+      ],
+      "action": "Preserve dedicated class, stress guard, trusted local opt-in and explicit execution safeguards; no sandbox claim or silent enablement.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "studio/lisp/package.lisp",
+      "sha256": "97235c77b5e8cd3d67f04e0bbb87e2f82055a176b47e0cac27409f11380e39bf",
+      "bytes": 271,
+      "forms": [],
+      "P0_sha256": "97235c77b5e8cd3d67f04e0bbb87e2f82055a176b47e0cac27409f11380e39bf",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [
+        "cl-mpm-studio"
+      ],
+      "P0_callers": [
+        "studio/lisp/cl-mpm-studio.asd",
+        "studio/lisp/config.lisp",
+        "studio/test/lisp-contract-harness.lisp"
+      ],
+      "action": "Preserve launcher/client entrypoint behavior; compatibility changes only, no frontend feature or numerical change.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "studio/lisp/reference-joss.lisp",
+      "sha256": "272dd71dea6a51c51c36be62c3532c7714cf054ca759d4a09cba01dc971c557f",
+      "bytes": 1339,
+      "forms": [],
+      "P0_sha256": "272dd71dea6a51c51c36be62c3532c7714cf054ca759d4a09cba01dc971c557f",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [
+        "cl-mpm-studio"
+      ],
+      "P0_callers": [
+        "docs/REFERENCE_REPRODUCTION.md",
+        "docs/SCIENTIFIC_AUDIT_2026-10-15.md",
+        "docs/UPSTREAM_CHANGE_REPORT.md",
+        "docs/archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md",
+        "studio/lisp/cl-mpm-studio.asd"
+      ],
+      "action": "Retain alias identity for joss-reference-chalk/sim/aggregate classes and listed reference functions; same objects at new physical owners.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "studio/lisp/run.lisp",
+      "sha256": "a675fd25ee53becf6c40308a66b8878c9aa5d225553f562432becaa3a5da6cb9",
+      "bytes": 666,
+      "forms": [],
+      "P0_sha256": "a675fd25ee53becf6c40308a66b8878c9aa5d225553f562432becaa3a5da6cb9",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/REFERENCE_REPRODUCTION.md",
+        "docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md",
+        "docs/archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md",
+        "docs/development.md",
+        "docs/studio.md",
+        "studio/server.js"
+      ],
+      "action": "Preserve launcher/client entrypoint behavior; compatibility changes only, no frontend feature or numerical change.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "studio/lisp/runner.lisp",
+      "sha256": "3c14362951f68eb07c2f83f98cabbd40b2ea21327d80c6d6d7a2bed62a6066af",
+      "bytes": 1722,
+      "forms": [],
+      "P0_sha256": "3c14362951f68eb07c2f83f98cabbd40b2ea21327d80c6d6d7a2bed62a6066af",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [
+        "cl-mpm-studio"
+      ],
+      "P0_callers": [
+        "docs/archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md",
+        "docs/development.md",
+        "studio/lisp/cl-mpm-studio.asd"
+      ],
+      "action": "Preserve aliases to plot symbols, run entry/default-output/exit/error handling and custom model selection.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "studio/lisp/scenario.lisp",
+      "sha256": "7c15c75ea13859d293bdaae5cd16d4b965d7be63f7dd1aa4a334281ea0473a98",
+      "bytes": 1510,
+      "forms": [],
+      "P0_sha256": "7c15c75ea13859d293bdaae5cd16d4b965d7be63f7dd1aa4a334281ea0473a98",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [
+        "cl-mpm-studio"
+      ],
+      "P0_callers": [
+        "AGENTS.md",
+        "docs/archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md",
+        "studio/GEOMETRY.md",
+        "studio/MATERIAL.md",
+        "studio/lisp/cl-mpm-studio.asd"
+      ],
+      "action": "Preserve cliff symbols/functions, custom-validator and dynamic mass/runout binding. Do not copy native/class methods into Studio.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "studio/public/config.js",
+      "sha256": "f528383251da581ebd77fb65e9eacf00e5ac93e0307de818aedab39b08a7e3be",
+      "bytes": 1822,
+      "forms": [],
+      "P0_sha256": "f528383251da581ebd77fb65e9eacf00e5ac93e0307de818aedab39b08a7e3be",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [],
+      "P0_callers": [
+        "AGENTS.md",
+        "docs/studio.md",
+        "studio/CUSTOM_MODELS.md",
+        "studio/public/index.html",
+        "studio/public/model-workspace.js",
+        "studio/server.js",
+        "studio/test/config.test.js",
+        "studio/test/lisp-contract.test.js",
+        "studio/test/model-workspace.test.js",
+        "studio/test/reference.test.js"
+      ],
+      "action": "Preserve launcher/client entrypoint behavior; compatibility changes only, no frontend feature or numerical change.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "studio/schema.json",
+      "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9",
+      "bytes": 9059,
+      "forms": [],
+      "P0_sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9",
+      "P0_decision": "COMPATIBILITY",
+      "P0_asdf": [],
+      "P0_callers": [
+        "AGENTS.md",
+        "docs/AI_HANDOVER.md",
+        "docs/MODULAR_LISP_IO.md",
+        "docs/UPSTREAM_CHANGE_REPORT.md",
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "docs/archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md",
+        "docs/studio.md",
+        "framework/config/parameters.lisp",
+        "research/reports/M0_MATERIAL_CONTRACT_AUDIT.md",
+        "scripts/run-case.lisp",
+        "studio/lisp/config.lisp",
+        "studio/public/model-workspace.js",
+        "studio/server.js",
+        "studio/test/config.test.js",
+        "studio/test/lisp-contract.test.js",
+        "studio/test/model-workspace.test.js",
+        "studio/test/reference.test.js"
+      ],
+      "action": "Preserve canonical bytes/path and UI/API/export agreement; no duplicate schema or UI runtime dependency.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "tests/case-snapshot-contracts.lisp",
+      "sha256": "e396ff9e92e3f708f335c6a070e61f6782b2da2617c9a0e4e31b91683951afa4",
+      "bytes": 3807,
+      "forms": [],
+      "P0_sha256": null,
+      "P0_decision": null,
+      "P0_asdf": [],
+      "P0_callers": [],
+      "action": "Keep old-path loader assertions until G5 and add exact new-owner/singleton/order checks. Adapt hardcoded framework snapshot root only alongside correct root facade; no weakened negative or numerical assertions.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "tests/config-contracts.lisp",
+      "sha256": "a75f3574e054ea1fdb194613bb72746523aef8ff62b7ca6a7ee1b658b51823bc",
+      "bytes": 10004,
+      "forms": [],
+      "P0_sha256": "a75f3574e054ea1fdb194613bb72746523aef8ff62b7ca6a7ee1b658b51823bc",
+      "P0_decision": "KEEP",
+      "P0_asdf": [],
+      "P0_callers": [
+        "framework/components/README.md"
+      ],
+      "action": "Keep old-path loader assertions until G5 and add exact new-owner/singleton/order checks. Adapt hardcoded framework snapshot root only alongside correct root facade; no weakened negative or numerical assertions.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "tests/diagnostics-ownership-compat.lisp",
+      "sha256": "741db4e6a9c8093345b8821d8412348d8242ca88bc6c98f0367e114fe933675f",
+      "bytes": 4346,
+      "forms": [],
+      "P0_sha256": null,
+      "P0_decision": null,
+      "P0_asdf": [],
+      "P0_callers": [],
+      "action": "Keep old-path loader assertions until G5 and add exact new-owner/singleton/order checks. Adapt hardcoded framework snapshot root only alongside correct root facade; no weakened negative or numerical assertions.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "tests/framework-components.lisp",
+      "sha256": "53e23c3982818b042a571940c607a26170c8055e3a5713876450f8e57402f9e5",
+      "bytes": 12744,
+      "forms": [],
+      "P0_sha256": "53e23c3982818b042a571940c607a26170c8055e3a5713876450f8e57402f9e5",
+      "P0_decision": "KEEP",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/testing.md"
+      ],
+      "action": "Keep old-path loader assertions until G5 and add exact new-owner/singleton/order checks. Adapt hardcoded framework snapshot root only alongside correct root facade; no weakened negative or numerical assertions.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "tests/material-diagnostics.lisp",
+      "sha256": "9c49f97c05bcf2e3d1dc87a018ac271e47c2351c411d020e193455f0257ff12e",
+      "bytes": 11998,
+      "forms": [],
+      "P0_sha256": "9c49f97c05bcf2e3d1dc87a018ac271e47c2351c411d020e193455f0257ff12e",
+      "P0_decision": "KEEP",
+      "P0_asdf": [],
+      "P0_callers": [
+        "framework/components/README.md",
+        "research/reports/M0_MATERIAL_CONTRACT_AUDIT.md",
+        "research/reports/M0_MATERIAL_CONTRACT_EVIDENCE.json"
+      ],
+      "action": "Keep old-path loader assertions until G5 and add exact new-owner/singleton/order checks. Adapt hardcoded framework snapshot root only alongside correct root facade; no weakened negative or numerical assertions.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "tests/material-ownership-compat.lisp",
+      "sha256": "fe13945a91506c9fbdc1229c7c4f220eff7dac846f94f9edddb494b3a27b67f1",
+      "bytes": 11596,
+      "forms": [],
+      "P0_sha256": null,
+      "P0_decision": null,
+      "P0_asdf": [],
+      "P0_callers": [],
+      "action": "Keep old-path loader assertions until G5 and add exact new-owner/singleton/order checks. Adapt hardcoded framework snapshot root only alongside correct root facade; no weakened negative or numerical assertions.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "tests/native-model-catalog.lisp",
+      "sha256": "c0a4dee3aa555acb1d9268c8d4f018ca38e04dd3354417a35afbcb694ba40c95",
+      "bytes": 3252,
+      "forms": [],
+      "P0_sha256": null,
+      "P0_decision": null,
+      "P0_asdf": [],
+      "P0_callers": [],
+      "action": "Keep old-path loader assertions until G5 and add exact new-owner/singleton/order checks. Adapt hardcoded framework snapshot root only alongside correct root facade; no weakened negative or numerical assertions.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "tests/triaxial-components.lisp",
+      "sha256": "8b15d735547f50d4f9dbc63aafffa4287ad850b4189e6bccde8df42b9b7a3e1e",
+      "bytes": 2233,
+      "forms": [],
+      "P0_sha256": "8b15d735547f50d4f9dbc63aafffa4287ad850b4189e6bccde8df42b9b7a3e1e",
+      "P0_decision": "KEEP",
+      "P0_asdf": [],
+      "P0_callers": [
+        "docs/testing.md"
+      ],
+      "action": "Keep old-path loader assertions until G5 and add exact new-owner/singleton/order checks. Adapt hardcoded framework snapshot root only alongside correct root facade; no weakened negative or numerical assertions.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "windows/cl-mpm.cmd",
+      "sha256": "0b328d24ebc18fc6c7960a5044efc3e93c04752d1be50daece09c575ef86c536",
+      "bytes": 1121,
+      "forms": [],
+      "P0_sha256": "0b328d24ebc18fc6c7960a5044efc3e93c04752d1be50daece09c575ef86c536",
+      "P0_decision": "KEEP",
+      "P0_asdf": [],
+      "P0_callers": [
+        "README.md",
+        "calibration/README.md",
+        "calibration/run-triaxial.cmd",
+        "docs/ANTIGRAVITY_NATIVE_HISTORY.md",
+        "docs/QUICKSTART_WINDOWS_NATIVE.md",
+        "docs/REFERENCE_REPRODUCTION.md",
+        "docs/REUSABLE_FRAMEWORK.md",
+        "docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md",
+        "docs/TRIAXIAL_CALIBRATION.md",
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "docs/archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md",
+        "docs/development.md",
+        "docs/studio.md",
+        "docs/testing.md",
+        "docs/usage.md",
+        "docs/windows-setup.md",
+        "docs/windows-verification-2026-10-14.md",
+        "framework/README.md",
+        "research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md",
+        "research/reports/M0_MATERIAL_CONTRACT_AUDIT.md",
+        "scripts/joss-reference-geometry.lisp",
+        "scripts/run-case.lisp",
+        "scripts/run-triaxial.lisp",
+        "scripts/smoke-test.lisp",
+        "scripts/studio-custom-smoke.lisp",
+        "scripts/studio-plot-smoke.lisp",
+        "studio/CUSTOM_MODELS.md",
+        "studio/lisp/run.lisp",
+        "studio/server.js",
+        "tests/config-contracts.lisp",
+        "tests/framework-components.lisp",
+        "tests/material-diagnostics.lisp",
+        "windows/setup.ps1"
+      ],
+      "action": "Preserve launcher/client entrypoint behavior; compatibility changes only, no frontend feature or numerical change.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    },
+    {
+      "source_path": "windows/init.lisp",
+      "sha256": "a7fddb3244176d0f734463371461822d0e49a6338b7f331d187dc9ac179dd6fe",
+      "bytes": 2925,
+      "forms": [],
+      "P0_sha256": "a7fddb3244176d0f734463371461822d0e49a6338b7f331d187dc9ac179dd6fe",
+      "P0_decision": "KEEP",
+      "P0_asdf": [],
+      "P0_callers": [
+        "deps/swank.live/swank.live.asd",
+        "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
+        "docs/architecture/MATERIAL_OWNERSHIP_AUDIT.md",
+        "windows/cl-mpm.cmd"
+      ],
+      "action": "Root is already registered. Canonical cl-mpm-framework.asd moves there; remove old framework registry only at G5 after singleton/collision checks.",
+      "status": "INSPECTED_COMPATIBILITY_PLAN_NO_EDIT",
+      "numerical_behavior_change_allowed": false
+    }
+  ],
+  "explicit_nested_form_approvals": [
+    {
+      "source_path": "framework/scenarios/triaxial/measurements.lisp",
+      "source_sha256": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc",
+      "start": 2793,
+      "end": 2988,
+      "start_line": 50,
+      "end_line": 52,
+      "original_expression": "(values (cl-mpm/particle::mp-strain-plastic-vm mp)\r\n                        (- (/ (* (qj2-of stress) (j-of mp))\r\n                              (* (sqrt 1.5d0) (cl-mpm/particle::mp-rho mp))) 1d0))",
+      "expression_sha256": "005303666de9a0e8f75a7647acd3bab2ccc36ac13714cffea06a7113c3b79ab9",
+      "target_path": "materials/adapters/legacy-triaxial.lisp",
+      "helper_name": "legacy-vm-stats-values",
+      "lambda_list": "mp stress",
+      "helper_definition": "(defun legacy-vm-stats-values (mp stress)\n  (values (cl-mpm/particle::mp-strain-plastic-vm mp)\r\n                        (- (/ (* (qj2-of stress) (j-of mp))\r\n                              (* (sqrt 1.5d0) (cl-mpm/particle::mp-rho mp))) 1d0)))\n",
+      "helper_sha256": "4545ddcd3fd11535285149d4030e541275bae2b242d658dee11204ff3ad602a9",
+      "replacement": "(legacy-vm-stats-values mp stress)",
+      "predicted_source_sha256": "5702f1c392ae52f1216b98a2562ccd589ef4a2654abb5428c922e068a2710454",
+      "reconstruction_sha256": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc",
+      "reconstruction_exact": true,
+      "status": "EXPLICIT_SUBFORM_APPROVAL_PROPOSED_SEPARATE_CHECKPOINT_NOT_EXECUTED",
+      "helper_package": "cl-mpm/calibration/triaxial",
+      "public_API_change": false,
+      "arithmetic_change_allowed": false,
+      "conditions": [
+        "Original whole-source and enclosing form/expression hashes must match before edit; after a whole-file move use a fresh hash-bound coordinate plan if bytes differ.",
+        "Copy original expression byte-for-byte into private helper. Original arguments are bound symbols with no evaluation side effects; pass identical objects in the stated order.",
+        "Retain VALUES order and optional diagnostics branch; retain the UNLESS guard and the original state copy/assignment order. Do not add MC rollback/homogeneous capability.",
+        "Statically expand helper call back to original exact expression and compare source/form bytes; both recorded roundtrips are exact. This lexical proof is not runtime validation.",
+        "Commit the separate helper substitution before meaningful native point/state/CSV checks. Preserve every failure and original formulas/tolerances."
+      ],
+      "enclosing_form": {
+        "id": "F03",
+        "kind": "defun",
+        "name": "stats",
+        "start": 1806,
+        "end": 3612,
+        "start_line": 32,
+        "end_line": 60,
+        "sha256": "81e216d0f829bbd9252ec4c04031a041a678db181ffb016d54e9b2c51f6c284c",
+        "target_path": "scenarios/triaxial/measurements.lisp",
+        "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+      },
+      "enclosing_form_sha256": "81e216d0f829bbd9252ec4c04031a041a678db181ffb016d54e9b2c51f6c284c",
+      "helper_reconstruction_scope": "Substitution occurs in the enclosing form above. Expanding the sole private helper call reproduces the entire original file bytes before any independent approved whole-file move."
+    },
+    {
+      "source_path": "framework/scenarios/triaxial/homogeneous.lisp",
+      "source_sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+      "start": 3593,
+      "end": 4513,
+      "start_line": 59,
+      "end_line": 70,
+      "original_expression": "(unless (eq mp representative)\r\n            (cl-mpm/utils::copy-into f (cl-mpm/particle:mp-deformation-gradient mp))\r\n            (cl-mpm/utils::voigt-copy-into (cl-mpm/particle:mp-stress representative) (cl-mpm/particle:mp-stress mp))\r\n            (cl-mpm/utils::voigt-copy-into (cl-mpm/particle::mp-stress-kirchoff representative)\r\n                                          (cl-mpm/particle::mp-stress-kirchoff mp))\r\n            (cl-mpm/utils::voigt-copy-into (cl-mpm/particle:mp-strain representative) (cl-mpm/particle:mp-strain mp))\r\n            (setf (cl-mpm/particle::mp-strain-plastic-vm mp)\r\n                  (cl-mpm/particle::mp-strain-plastic-vm representative)\r\n                  (cl-mpm/particle::mp-yield-func mp)\r\n                  (cl-mpm/particle::mp-yield-func representative)\r\n                  (cl-mpm/particle::mp-p-modulus-0 mp)\r\n                  (cl-mpm/particle::mp-p-modulus-0 representative)))",
+      "expression_sha256": "f43f2a3086f94fa4159efc1be1f065c0d621c24f64a676433f05189fc4d7f99d",
+      "target_path": "materials/adapters/legacy-triaxial.lisp",
+      "helper_name": "legacy-copy-homogeneous-state",
+      "lambda_list": "mp representative f",
+      "helper_definition": "(defun legacy-copy-homogeneous-state (mp representative f)\n  (unless (eq mp representative)\r\n            (cl-mpm/utils::copy-into f (cl-mpm/particle:mp-deformation-gradient mp))\r\n            (cl-mpm/utils::voigt-copy-into (cl-mpm/particle:mp-stress representative) (cl-mpm/particle:mp-stress mp))\r\n            (cl-mpm/utils::voigt-copy-into (cl-mpm/particle::mp-stress-kirchoff representative)\r\n                                          (cl-mpm/particle::mp-stress-kirchoff mp))\r\n            (cl-mpm/utils::voigt-copy-into (cl-mpm/particle:mp-strain representative) (cl-mpm/particle:mp-strain mp))\r\n            (setf (cl-mpm/particle::mp-strain-plastic-vm mp)\r\n                  (cl-mpm/particle::mp-strain-plastic-vm representative)\r\n                  (cl-mpm/particle::mp-yield-func mp)\r\n                  (cl-mpm/particle::mp-yield-func representative)\r\n                  (cl-mpm/particle::mp-p-modulus-0 mp)\r\n                  (cl-mpm/particle::mp-p-modulus-0 representative))))\n",
+      "helper_sha256": "0e2fbd6581131b2061120d220ef6eae5f09954509ab703679dfca4856ac197d2",
+      "replacement": "(legacy-copy-homogeneous-state mp representative f)",
+      "predicted_source_sha256": "42a5fc78bf565f082eb637328548d9db218c9b2831dfbc8f73a9313c6e71fbfb",
+      "reconstruction_sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+      "reconstruction_exact": true,
+      "status": "EXPLICIT_SUBFORM_APPROVAL_PROPOSED_SEPARATE_CHECKPOINT_NOT_EXECUTED",
+      "helper_package": "cl-mpm/calibration/triaxial",
+      "public_API_change": false,
+      "arithmetic_change_allowed": false,
+      "conditions": [
+        "Original whole-source and enclosing form/expression hashes must match before edit; after a whole-file move use a fresh hash-bound coordinate plan if bytes differ.",
+        "Copy original expression byte-for-byte into private helper. Original arguments are bound symbols with no evaluation side effects; pass identical objects in the stated order.",
+        "Retain VALUES order and optional diagnostics branch; retain the UNLESS guard and the original state copy/assignment order. Do not add MC rollback/homogeneous capability.",
+        "Statically expand helper call back to original exact expression and compare source/form bytes; both recorded roundtrips are exact. This lexical proof is not runtime validation.",
+        "Commit the separate helper substitution before meaningful native point/state/CSV checks. Preserve every failure and original formulas/tolerances."
+      ],
+      "enclosing_form": {
+        "id": "F03",
+        "kind": "defun",
+        "name": "run-homogeneous",
+        "start": 1954,
+        "end": 5996,
+        "start_line": 33,
+        "end_line": 94,
+        "sha256": "85b4cda3e791a3cbbb03a2b2d3bf46abe1fb4c857e4805b75e596acc13887ecd",
+        "target_path": "scenarios/triaxial/homogeneous.lisp",
+        "rule": "Copy exact form body; preserve namespace/qualifiers/specializers/declaration policy and relative order in target"
+      },
+      "enclosing_form_sha256": "85b4cda3e791a3cbbb03a2b2d3bf46abe1fb4c857e4805b75e596acc13887ecd",
+      "helper_reconstruction_scope": "Substitution occurs in the enclosing form above. Expanding the sole private helper call reproduces the entire original file bytes before any independent approved whole-file move."
+    }
+  ],
+  "load_order_constraints": [
+    "Neutral config package/parameters -> existing public composition/cliff packages -> P1 base/material/specifications/native adapter -> P3 diagnostics interface/native/output -> geometry contract -> lifecycle.",
+    "Cliff state bindings -> exact neutral angle helper -> configure-solver -> dedicated chalk class/methods -> root MP factories -> geometry/build/plot. Material adapters call neutral config/numerics, not scenario implementation.",
+    "Joss simulation classes -> statistics -> phases -> geometry -> build -> summary -> root effective material readout -> finite validation -> CSV -> run; preserve dedicated methods/protected base/statistic norms and phase arithmetic.",
+    "Triaxial minimal compatibility package -> original optimize/state bindings -> neutral config values -> scenario rules -> JSON helpers -> diagnostics-call adapter -> tensor/J/projected-q/qJ2 -> material initargs/prestress/helpers -> geometry -> pressure BC -> measurements -> MPM/homogeneous orchestration -> controls -> runner -> public adapter.",
+    "Exact function bodies may be grouped into a root material adapter earlier than their original call site only with explicit preserved prerequisites and no top-level invocation; specializer/class/constructor-restoration method order must not change.",
+    "homogeneous-step and native state-copy helper remain legacy VM-only material adapters. Generic affine kinematics/loading remains scenario-owned; no new constitutive integration or unsupported rollback is introduced.",
+    "Keep original compiler-policy/declaim scope and dynamic state bindings. Verify package/class/generic identity and singleton methods under normal ASDF and repeated legacy LOAD."
+  ],
+  "ordered_checkpoints": [
+    {
+      "id": "P4-A",
+      "action": "Root review/hash approval and commit this pre-move ledger before production moves; preserve P0 unchanged.",
+      "exit": "No unassigned framework path/form; source hashes current; helper substitutions explicitly distinguished from exact moves."
+    },
+    {
+      "id": "P4-B",
+      "action": "Exact general config/package/geometry contract/lifecycle moves plus compatibility shims; normal ASDF points directly at new owners.",
+      "exit": "Fresh normal/isolated old loaders, config/component identity and validation guards; canonical schema unchanged."
+    },
+    {
+      "id": "P4-C",
+      "action": "Exact chalk material/factory, cliff state/numerics/solver and reusable output splits.",
+      "exit": "Every original class/method/function body accounted once; focused native construction and bounded cliff/MC VTK/CSV equality. PNG warning remains separate."
+    },
+    {
+      "id": "P4-D",
+      "action": "Move scenario owners and approved triaxial neutral utilities/pressure/material state adapters in stated order.",
+      "exit": "Standalone calibration and public ASDF work independently; run-local state/modes and custom validation preserved. No full Joss restart."
+    },
+    {
+      "id": "P4-E",
+      "action": "Separate explicit nested helper checkpoint for VM stats fallback and VM homogeneous native-state copying.",
+      "exit": "Bound expression/body hashes and call-expansion reconstruction; multiple-value/state identity checks and actual bounded native controls."
+    },
+    {
+      "id": "P4-F",
+      "action": "Canonical root cl-mpm-framework.asd, both CLI source closures, Studio config-only fallback, Windows registry and caller/test transition.",
+      "exit": "Actual components resolve inside copied root; deliberate checkout escape rejected before load, root ASDF singleton; Studio aliases/config/custom contracts and Windows paths preserved."
+    },
+    {
+      "id": "P5-focused",
+      "action": "The exact angle/tensor/J/qJ2/pressure relocations here are justified; all remaining native internals require their separate P2/P5 semantic plans.",
+      "exit": "No changed solver order/defaults/ABI/backend/optional activation; meaningful boundary, tensor and saved-field controls."
+    },
+    {
+      "id": "P6-G5",
+      "action": "Retire proven obsolete framework shims/ASDF/docs only after caller and provenance gates; keep compatible root ASDF ID and historical evidence.",
+      "exit": "Zero implementation owners and active runtime callers under framework; current launchers/Studio/calibration/tests/registry/snapshots point at new owners. No inferred deletion."
+    }
+  ],
+  "framework_retirement": {
+    "final_implementation_owner_count": 0,
+    "temporary_surface": "Only explicit relative forwarding loaders/notices; no duplicate defining class/method/config/geometry/run body under framework.",
+    "final_packages": [
+      "cl-mpm/framework",
+      "cl-mpm/framework/config",
+      "cl-mpm/framework/cliff",
+      "cl-mpm/calibration/triaxial"
+    ],
+    "final_ASDF_id": "cl-mpm-framework",
+    "old_source_paths": "Preserve temporarily and verify, migrate all active direct LOAD callers, then retire only with G5 evidence/review. Do not promise old physical paths forever while claiming directory deletion.",
+    "preserve": [
+      "Original examples/tutorials/optional-not-loaded models and two missing legacy example exceptions.",
+      "All positive/negative outputs, cancelled run, immutable raw/wiki settings and source provenance.",
+      "Current source/compiler/backend/default behavior; no UI feature, new registry, class rename, force push or main merge."
+    ]
+  },
+  "required_verification_NOT_RUN": [
+    "Commit/push implementation before native validation; record actual executed snapshot, byte/form hashes, commands, statuses and artifacts.",
+    "Exact whole-file/form accounting including declarations/package preambles and only explicitly approved private-helper substitutions; reconstruct original nested source.",
+    "Fresh normal/legacy ASDF and direct LOAD tests for object/class/generic/method identity/order and old shim reloads; all meaningful component/config/material/diagnostics contracts.",
+    "CLI native/material/scenario/numerics/output/boundary snapshot closure and checkout-escape negatives; align separately approved native-source freezing without claiming full transitive FASL/DLL provenance.",
+    "Bounded native VM/MC/triaxial/cliff VTK/CSV comparisons using unchanged fixed clocks/point identities/tolerances; distinguish optional rendering.",
+    "Standalone calibration/old case CLI/Windows spaces and alternate CWD; Studio Lisp aliases/custom stress/config harness; npm run check and npm test.",
+    "Any justified affected full VM 2D/3D comparison follows focused checks; do not duplicate tests without new changes. Full Joss STOPPED_BY_USER cannot restart without new human request and does not block independent architecture work.",
+    "Final actual ASDF/loader/current caller proof of zero framework implementation owners, updated docs/wiki/index/append-only log; no premature G1/G3/G5 completion."
+  ],
+  "implementation_status": "NOT_EXECUTED_BY_THIS_PLAN",
+  "tests_status": "NOT_RUN_BY_THIS_PLAN",
+  "scientific_validation_status": "NOT_CLAIMED"
+}

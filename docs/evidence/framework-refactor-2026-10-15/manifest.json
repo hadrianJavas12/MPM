@@ -1,0 +1,2598 @@
+{
+  "sourceRoot": "D:/MPM",
+  "scope": "Retainedactualnativeoutputs; fullJossVTKslocalignored, allframeshashesretained; selectedJoss/all2DVTKsarchived",
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "bytes": 58,
+      "sha256": "a5a3df1d01c4d1a688e5082ef7b7346500d3e2b67f5c27b6c494a39e1207f102",
+      "source": null
+    },
+    {
+      "path": "joss-before/timesteps.csv",
+      "bytes": 316545,
+      "sha256": "f5a2160f1fe3428bfa2204445940d0e7d5c6cbb2da3c70883b4ec2b0173c14cb",
+      "source": "output\\framework-refactor-2026-10-15\\joss-baseline\\timesteps.csv"
+    },
+    {
+      "path": "joss-before/reference-metadata.json",
+      "bytes": 2016,
+      "sha256": "dff85cd44f328a3c1a196e42afc87e8b3fa09c7de7bf69c7b5f267a402ae1554",
+      "source": "output\\framework-refactor-2026-10-15\\joss-baseline\\reference-metadata.json"
+    },
+    {
+      "path": "joss-before/transitions.csv",
+      "bytes": 1607,
+      "sha256": "4cb1c4581dfd8daf697d7fb05a79e8817daeb33a660275645c4753b5e8238259",
+      "source": "output\\framework-refactor-2026-10-15\\joss-baseline\\transitions.csv"
+    },
+    {
+      "path": "joss-before/final-t40.png",
+      "bytes": 35485,
+      "sha256": "99282f3c448bdd55dad41af1df4baa99e4a743bb25b1c0dbeb8b0e8849b7c49a",
+      "source": "output\\framework-refactor-2026-10-15\\joss-baseline\\final-t40.png"
+    },
+    {
+      "path": "joss-before/all-saved-state-audit.json",
+      "bytes": 399993,
+      "sha256": "5cfc41e7e537799755ad4ea57449f061764d15b2bb37a0d8d2bccbaa79e9dfdb",
+      "source": null
+    },
+    {
+      "path": "joss-before/particle-vtk.tar.gz",
+      "bytes": 2994577,
+      "sha256": "8ec127ede5fa4e961b4d0bab3c778f1461035b1690db305f286f09181c88c58d",
+      "source": null,
+      "members": [
+        {
+          "path": "vtk/equilibrium.vtk",
+          "bytes": 1298217,
+          "sha256": "dddf2225fb688ceb10e4485fb761f173a2228f46d0343b19f7ca7a2eaab76d55",
+          "source": "output\\framework-refactor-2026-10-15\\joss-baseline\\vtk\\equilibrium.vtk"
+        },
+        {
+          "path": "vtk/initial.vtk",
+          "bytes": 1298217,
+          "sha256": "d8d0e90a78d865018f1bc5da7edd4b0b32a0136268eae4b25d64781814e0aad9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-baseline\\vtk\\initial.vtk"
+        },
+        {
+          "path": "vtk/sim_00001.vtk",
+          "bytes": 1298217,
+          "sha256": "6aa86ff62228e02580db79fd965cdf50c8035b6926f0f49fcd87b4c0c2c1446e",
+          "source": "output\\framework-refactor-2026-10-15\\joss-baseline\\vtk\\sim_00001.vtk"
+        },
+        {
+          "path": "vtk/sim_00002.vtk",
+          "bytes": 1298217,
+          "sha256": "3c4e312833e6144b4ea1393cbbbab52564784e055c8259da697c4c6e7f694bf4",
+          "source": "output\\framework-refactor-2026-10-15\\joss-baseline\\vtk\\sim_00002.vtk"
+        },
+        {
+          "path": "vtk/sim_00018.vtk",
+          "bytes": 1298217,
+          "sha256": "3ba7e6982c68b457af38ba35d6fc660f8b9c49235b9bf9341be24b239d86e72b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-baseline\\vtk\\sim_00018.vtk"
+        },
+        {
+          "path": "vtk/sim_00176.vtk",
+          "bytes": 1298217,
+          "sha256": "a632a33d1453c93ad0e2d7b5669e11a22ec415062a842ae108b2e8ffb701433a",
+          "source": "output\\framework-refactor-2026-10-15\\joss-baseline\\vtk\\sim_00176.vtk"
+        }
+      ]
+    },
+    {
+      "path": "joss-after/timesteps.csv",
+      "bytes": 319166,
+      "sha256": "5267eb9ca776e6e2178d640b6fba1bd82c835cbd872a587f4eb65221de9bc334",
+      "source": "output\\framework-refactor-2026-10-15\\joss-after\\timesteps.csv"
+    },
+    {
+      "path": "joss-after/reference-metadata.json",
+      "bytes": 2018,
+      "sha256": "6556c1c1fe24239bebbf812ed685b80962e79cda70a2de08a822cf5bbc287bf7",
+      "source": "output\\framework-refactor-2026-10-15\\joss-after\\reference-metadata.json"
+    },
+    {
+      "path": "joss-after/transitions.csv",
+      "bytes": 1535,
+      "sha256": "671768a85b96e3b5683a19e880b53bfa543da20c535c7ddedab9378eaf0f410a",
+      "source": "output\\framework-refactor-2026-10-15\\joss-after\\transitions.csv"
+    },
+    {
+      "path": "joss-after/source-provenance.json",
+      "bytes": 164,
+      "sha256": "21803355807eb82afa358a0fd88e9220bbcdc1f6e9bc8925a6ac9797e83e21e3",
+      "source": "output\\framework-refactor-2026-10-15\\joss-after\\source-provenance.json"
+    },
+    {
+      "path": "joss-after/final-t40.png",
+      "bytes": 35690,
+      "sha256": "17668c2fa3fe14dc9661fd003ea81b30b9781fe036113698897efedcc913e5f9",
+      "source": "output\\framework-refactor-2026-10-15\\joss-after\\final-t40.png"
+    },
+    {
+      "path": "joss-after/simulation.mp4",
+      "bytes": 790148,
+      "sha256": "db116d1a8a75f13dfc0b953f430808f1dbe51adfeceb3a7860dcf537bff6dd72",
+      "source": "output\\framework-refactor-2026-10-15\\joss-after\\simulation.mp4"
+    },
+    {
+      "path": "joss-after/media-validation.json",
+      "bytes": 662,
+      "sha256": "8683569697b65308864cd062bb0586944c374a816e8d5ceeee5bae0b9957bef3",
+      "source": "output\\framework-refactor-2026-10-15\\joss-after\\media-validation.json"
+    },
+    {
+      "path": "joss-after/all-saved-state-audit.json",
+      "bytes": 434284,
+      "sha256": "14b6118c8bb186be9c45a9a723a0a2df770e42301fe1b6cb3946f80417b25ac5",
+      "source": null
+    },
+    {
+      "path": "joss-after/particle-vtk.tar.gz",
+      "bytes": 2994814,
+      "sha256": "c35492c80cea4004ca4f7a744ccfe150f1a2defed8edc2228bd3901b990306a6",
+      "source": null,
+      "members": [
+        {
+          "path": "vtk/equilibrium.vtk",
+          "bytes": 1298217,
+          "sha256": "20656c5eca6a17639d446e1ee10938927104a8715778e3d859dc03695336e01a",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\vtk\\equilibrium.vtk"
+        },
+        {
+          "path": "vtk/initial.vtk",
+          "bytes": 1298217,
+          "sha256": "d8d0e90a78d865018f1bc5da7edd4b0b32a0136268eae4b25d64781814e0aad9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\vtk\\initial.vtk"
+        },
+        {
+          "path": "vtk/sim_00001.vtk",
+          "bytes": 1298217,
+          "sha256": "58aa1ce8b436e9e96007599b58bdf4c00953d992600a831607407fff8fde90cf",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\vtk\\sim_00001.vtk"
+        },
+        {
+          "path": "vtk/sim_00002.vtk",
+          "bytes": 1298217,
+          "sha256": "b237bfb553b667aa2e75f5637bda6036c12db7d0c0e1da42ecd60219444e0210",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\vtk\\sim_00002.vtk"
+        },
+        {
+          "path": "vtk/sim_00018.vtk",
+          "bytes": 1298217,
+          "sha256": "edfbe51165ce2a22d3fdc8d9bf2446ed829e5cd6f97a22e2c06e61d9e9f18326",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\vtk\\sim_00018.vtk"
+        },
+        {
+          "path": "vtk/sim_00191.vtk",
+          "bytes": 1298217,
+          "sha256": "028e785fd5de5d98b0d6ede6496b8c6bdcff72811831cc94bdf70b0372baa26b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\vtk\\sim_00191.vtk"
+        }
+      ]
+    },
+    {
+      "path": "triaxial-before/stress-strain.csv",
+      "bytes": 15420,
+      "sha256": "09596885c6e9a725d64fce0f682ac38ffd00503525d2fe70e5df710db01760f9",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\stress-strain.csv"
+    },
+    {
+      "path": "triaxial-before/manifest.json",
+      "bytes": 1348,
+      "sha256": "b7f2fc25888d7aa3375f87426ab55bb98c4432558fecc581fab80b748156bb3b",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\manifest.json"
+    },
+    {
+      "path": "triaxial-before/source-provenance.json",
+      "bytes": 265,
+      "sha256": "75c33e371b2015530151cb916c3a436d069dc8836ebc13a0e36d68628e8806e8",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\source-provenance.json"
+    },
+    {
+      "path": "triaxial-before/effective-config.json",
+      "bytes": 416,
+      "sha256": "ed8e5c1fde769ed2a7afb785f2d3f62024050b0a7109fd5d6c6f1d2f738e57af",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\effective-config.json"
+    },
+    {
+      "path": "triaxial-before/audit.json",
+      "bytes": 8174,
+      "sha256": "c061c7482dcb9fb06580783dd67debe5ec4913d4dcce64c8f9e2c376be9ed29e",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\audit.json"
+    },
+    {
+      "path": "triaxial-before/triaxial-result.png",
+      "bytes": 147582,
+      "sha256": "f4d608fc82e88b1460a074aaa397b347ec30cac7ac6e193f5e8049e6f12327d1",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\triaxial-result.png"
+    },
+    {
+      "path": "triaxial-before/visualization-provenance.json",
+      "bytes": 11514,
+      "sha256": "a4eeb4ab186925ad8e72ee08d29698dcf91014e54e4c0810c2e2b0dd6db400c5",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\visualization-provenance.json"
+    },
+    {
+      "path": "triaxial-before/all-saved-state-audit.json",
+      "bytes": 58728,
+      "sha256": "4b68b9d35ad283b6eec694b438c3eb655f79ea71b20a716380eb97d0ccc5589d",
+      "source": null
+    },
+    {
+      "path": "triaxial-before/particle-vtk.tar.gz",
+      "bytes": 3008141,
+      "sha256": "10956d16142d45bacde58e7cf98bc4d50c292ee9594b4a2f4f1e7d3cca2be099",
+      "source": null,
+      "members": [
+        {
+          "path": "particles_0000.vtk",
+          "bytes": 124381,
+          "sha256": "f4dcf0c403af7c5f3ed478d0d1ec6a4affd4a99eee2d4b1a6a7fc3a191f83587",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0000.vtk"
+        },
+        {
+          "path": "particles_0001.vtk",
+          "bytes": 124381,
+          "sha256": "c734eaa10601adfc806c1840d679938815712b549d239ee3a5c3769ed2ed4a7f",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0001.vtk"
+        },
+        {
+          "path": "particles_0002.vtk",
+          "bytes": 124381,
+          "sha256": "6f738d300371a31d51e6e48cc5a3ba8eea08ec5a9f280d8fa72ddbc3d6700b6d",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0002.vtk"
+        },
+        {
+          "path": "particles_0003.vtk",
+          "bytes": 124381,
+          "sha256": "fb85faf57995d6d33d7852818d330e2e208c55b82974e1d8df3ad23ae2dca594",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0003.vtk"
+        },
+        {
+          "path": "particles_0004.vtk",
+          "bytes": 124381,
+          "sha256": "6ebb60a76e7068f964532ecc9a1f08c7d4874b0f0da9df30494b55637f3e9f70",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0004.vtk"
+        },
+        {
+          "path": "particles_0005.vtk",
+          "bytes": 124381,
+          "sha256": "cd78944a58b43bccfc2ccf39fc61d7de5e94f917af0df289a4ee3c2f442cc866",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0005.vtk"
+        },
+        {
+          "path": "particles_0006.vtk",
+          "bytes": 124381,
+          "sha256": "1feb5a6262690e86f1ce9334da57da171d207e12cb633492bae7c9045f97209b",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0006.vtk"
+        },
+        {
+          "path": "particles_0007.vtk",
+          "bytes": 124381,
+          "sha256": "26497ade80fb694524357f3df540e501755ae7dc889b5bef3b7b620a47e4a815",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0007.vtk"
+        },
+        {
+          "path": "particles_0008.vtk",
+          "bytes": 124381,
+          "sha256": "628a063a0c4a9e1471d7c3c65de8b6b892d6e31284d1356630f20be1fd234f41",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0008.vtk"
+        },
+        {
+          "path": "particles_0009.vtk",
+          "bytes": 124381,
+          "sha256": "608980090ff3e4b7c8f20f213d8bd5a7b6a37b4ead16036cf78068f55d2855a9",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0009.vtk"
+        },
+        {
+          "path": "particles_0010.vtk",
+          "bytes": 124381,
+          "sha256": "2bae64dab3ffb2b595a7ae90506cb29488cbb483c52a67c94e2aa0cfc1f599d2",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0010.vtk"
+        },
+        {
+          "path": "particles_0011.vtk",
+          "bytes": 124381,
+          "sha256": "fe35fb408a8c47989a9b547681322fa558d01ad363115b86e0351a86ae63d287",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0011.vtk"
+        },
+        {
+          "path": "particles_0012.vtk",
+          "bytes": 124381,
+          "sha256": "b91687dfd119a34229dafa54209df081e880f6d72f4ebfb358b32449b04f47a1",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0012.vtk"
+        },
+        {
+          "path": "particles_0013.vtk",
+          "bytes": 124381,
+          "sha256": "4221e61db254814b9ee71895d25c1b01c06c0477d2603b146b298fa5369ac31f",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0013.vtk"
+        },
+        {
+          "path": "particles_0014.vtk",
+          "bytes": 124381,
+          "sha256": "71dc5c163a8f33dbfb875f7bf5b7914f3e821c7ae34626274684e317f125b1a1",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0014.vtk"
+        },
+        {
+          "path": "particles_0015.vtk",
+          "bytes": 124381,
+          "sha256": "cae367cb758242136b439800ffe553c0da04b66fad045fcf365e94c49c61b735",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0015.vtk"
+        },
+        {
+          "path": "particles_0016.vtk",
+          "bytes": 124381,
+          "sha256": "3c19c5a85693517de75887caa2a5a378e7d50c82dc3f4536db70fb5f890a189c",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0016.vtk"
+        },
+        {
+          "path": "particles_0017.vtk",
+          "bytes": 124381,
+          "sha256": "e9769c0ac2000ec96ef1f17a3d04aff679fd2d75b3525ffe3de1fe53639d89d3",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0017.vtk"
+        },
+        {
+          "path": "particles_0018.vtk",
+          "bytes": 124381,
+          "sha256": "957ccd3d68b83c714e8370158c22ecd9f1e3022f49e9a17846e71bb284803ae7",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0018.vtk"
+        },
+        {
+          "path": "particles_0019.vtk",
+          "bytes": 124381,
+          "sha256": "2a229e71ee87ba59e238fcc77963bfa69845edef92e796ff5247bbdd0e80c31f",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0019.vtk"
+        },
+        {
+          "path": "particles_0020.vtk",
+          "bytes": 124381,
+          "sha256": "d76d9f925dd28acd11eb04541927caac17dbb0cf51f7b1ad2180c0490945561e",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0020.vtk"
+        },
+        {
+          "path": "particles_0021.vtk",
+          "bytes": 124381,
+          "sha256": "9d837ac16a8f2bb46ea432abbfe1a3eb690c36c76b717bb015276a5bf5385dcb",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0021.vtk"
+        },
+        {
+          "path": "particles_0022.vtk",
+          "bytes": 124381,
+          "sha256": "9ecd4b32553a75c82344d042e4fcb0fc60b0181c8696c2be7ac8cb12c618d142",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0022.vtk"
+        },
+        {
+          "path": "particles_0023.vtk",
+          "bytes": 124381,
+          "sha256": "3aa9c41e03089c8e2636ff9931d0ff5edc969d5a1ac114a590cb8fbde9affb82",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0023.vtk"
+        },
+        {
+          "path": "particles_0024.vtk",
+          "bytes": 124381,
+          "sha256": "f0564f7c0c4c8264a0eb507a348661b40717381e218e3446e2ae3df95cc28e03",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0024.vtk"
+        },
+        {
+          "path": "particles_0025.vtk",
+          "bytes": 124381,
+          "sha256": "57c9f17d9d5aeafc6612e18e0c21ac3ba47d7dba188a1f96f97308f1379d9cda",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0025.vtk"
+        },
+        {
+          "path": "particles_0026.vtk",
+          "bytes": 124381,
+          "sha256": "fad126c23152b746318c3c3b0fe5203beecaaad5514489e88e6d51a15a654bf9",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0026.vtk"
+        },
+        {
+          "path": "particles_0027.vtk",
+          "bytes": 124381,
+          "sha256": "a87b61b9921af91e40d931e0cb9750c009595c6d23650697ee29735a1e938486",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0027.vtk"
+        },
+        {
+          "path": "particles_0028.vtk",
+          "bytes": 124381,
+          "sha256": "111ac519fe2231e78d2919219c292775f77cc90c6a2d29fcd95aa7d124fbb73d",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0028.vtk"
+        },
+        {
+          "path": "particles_0029.vtk",
+          "bytes": 124381,
+          "sha256": "28d632332d9de073b326c5af9859368b977b9ac7d46a715fe6c9bda3129ba4b5",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0029.vtk"
+        },
+        {
+          "path": "particles_0030.vtk",
+          "bytes": 124381,
+          "sha256": "c96d164a9a6137cd6ba070e13a5fa7c611711f8d095995f51b7f7b57dd5ac4db",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0030.vtk"
+        },
+        {
+          "path": "particles_0031.vtk",
+          "bytes": 124381,
+          "sha256": "2294bd460d47b2a3d5dde4f86665683ba28ad516003bcd05dfda020dc10060dc",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0031.vtk"
+        },
+        {
+          "path": "particles_0032.vtk",
+          "bytes": 124381,
+          "sha256": "e1d469cd31b2af237df847d165ec4f311f0d7b6021c2c9b1e3541fc656a52fe0",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0032.vtk"
+        },
+        {
+          "path": "particles_0033.vtk",
+          "bytes": 124381,
+          "sha256": "4956cfffc3215060883b1acd06d307be36af1d0afe852c795e95e98cc1dccc76",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0033.vtk"
+        },
+        {
+          "path": "particles_0034.vtk",
+          "bytes": 124381,
+          "sha256": "ac0fb3542e36ff1617d62eb89ed7ecbab220c116eb15d365a299b7a01a95052c",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0034.vtk"
+        },
+        {
+          "path": "particles_0035.vtk",
+          "bytes": 124381,
+          "sha256": "89e097c8e2bc1075bc2018926ef5668430cd13a1ad994cae78227fb80badce79",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0035.vtk"
+        },
+        {
+          "path": "particles_0036.vtk",
+          "bytes": 124381,
+          "sha256": "d45ac22d669d895b8cd2534dce37f56207fe1fc38d8015b8592d41e29875cbe3",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0036.vtk"
+        },
+        {
+          "path": "particles_0037.vtk",
+          "bytes": 124381,
+          "sha256": "0cd471d3e95819094e30d6ec77ab56db3a5a09c204fa2d4cbd8228a5024056ec",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0037.vtk"
+        },
+        {
+          "path": "particles_0038.vtk",
+          "bytes": 124381,
+          "sha256": "5afca9dc476871203c6457c92b2f1f0f94bcf6f0e47587e6e6c9c4169d9ce5f1",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0038.vtk"
+        },
+        {
+          "path": "particles_0039.vtk",
+          "bytes": 124381,
+          "sha256": "e47a4be7fd04ead3cfa9d658a7e124c9f3a9198c9ba0fcdeed9d97ab3549495a",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0039.vtk"
+        },
+        {
+          "path": "particles_0040.vtk",
+          "bytes": 124381,
+          "sha256": "5bb60ac8c4fcdbc5e79ce0bb714a5750040c6049c11a6ff8a2538420e926c741",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0040.vtk"
+        },
+        {
+          "path": "particles_0041.vtk",
+          "bytes": 124381,
+          "sha256": "247b02d1b16096e6d0ffe238dc9faf7ae4a7d054358b7d4e6cf090dc736c4f53",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0041.vtk"
+        },
+        {
+          "path": "particles_0042.vtk",
+          "bytes": 124381,
+          "sha256": "11d26ec32ea0b1a5b09a27ebab89f31aa3f6deddacedddca8b412b7d17c70487",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0042.vtk"
+        },
+        {
+          "path": "particles_0043.vtk",
+          "bytes": 124381,
+          "sha256": "56a4fd4bf64d295816395c567109361246d0f56f5de13cdd0eb127de8edbfd7a",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0043.vtk"
+        },
+        {
+          "path": "particles_0044.vtk",
+          "bytes": 124381,
+          "sha256": "cfe48680ebc1ae0f442e4e05e7bcee44d3066d689ee1fe780c3b1f9e4189bc88",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0044.vtk"
+        },
+        {
+          "path": "particles_0045.vtk",
+          "bytes": 124381,
+          "sha256": "33f48c7c5ac982f9ebefd12592dba02234b0ba3d057e4d897766f4a3c2bdbd53",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0045.vtk"
+        },
+        {
+          "path": "particles_0046.vtk",
+          "bytes": 124381,
+          "sha256": "a4c766fb3ca06ae375a7b154685dfff8757621d1ea87029094bcca1619875229",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0046.vtk"
+        },
+        {
+          "path": "particles_0047.vtk",
+          "bytes": 124381,
+          "sha256": "d58a178925a41d22dbdd4a69555720780848672c5936b991cc1b3e6038d0de45",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0047.vtk"
+        },
+        {
+          "path": "particles_0048.vtk",
+          "bytes": 124381,
+          "sha256": "3a4ca49503f9bb1fea6c337fb30150934f8b562184eb778f03e8c23734f81c94",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0048.vtk"
+        },
+        {
+          "path": "particles_0049.vtk",
+          "bytes": 124381,
+          "sha256": "12184813aef976ae60caf2a677839db87f3f01b4dcacf5ebe78c030e512849e9",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0049.vtk"
+        },
+        {
+          "path": "particles_0050.vtk",
+          "bytes": 124381,
+          "sha256": "0ed90f74db64dad9b7f4bad598752ef8e80e362b34268c4c63f5d379382138ae",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2\\particles_0050.vtk"
+        }
+      ]
+    },
+    {
+      "path": "triaxial-after/stress-strain.csv",
+      "bytes": 15420,
+      "sha256": "09596885c6e9a725d64fce0f682ac38ffd00503525d2fe70e5df710db01760f9",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\stress-strain.csv"
+    },
+    {
+      "path": "triaxial-after/manifest.json",
+      "bytes": 1408,
+      "sha256": "581390e864d691bce4c02677ce56f91ba50ef4d6026fe5ab9475e6370dce6b7d",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\manifest.json"
+    },
+    {
+      "path": "triaxial-after/source-provenance.json",
+      "bytes": 164,
+      "sha256": "21803355807eb82afa358a0fd88e9220bbcdc1f6e9bc8925a6ac9797e83e21e3",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\source-provenance.json"
+    },
+    {
+      "path": "triaxial-after/effective-config.json",
+      "bytes": 430,
+      "sha256": "c9d55a70be465cd92ab8b7ea1b10f062d53bc7f5a51aa17a0445a946a6db8b0d",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\effective-config.json"
+    },
+    {
+      "path": "triaxial-after/audit.json",
+      "bytes": 8174,
+      "sha256": "82fe2f53c40a2e27feb5e766b0b649b56122ac058ecedeb3cdd4e1d631004a9c",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\audit.json"
+    },
+    {
+      "path": "triaxial-after/triaxial-result.png",
+      "bytes": 148586,
+      "sha256": "58a11ef74aa212bc720170c44769f32968e0a0c17a5107ee5ca2be0d986b88c8",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\triaxial-result.png"
+    },
+    {
+      "path": "triaxial-after/triaxial-simulation.mp4",
+      "bytes": 217296,
+      "sha256": "5d3aadf2ec6d069859887a268715a3501ba7e0897cb564cdadebbb6433782576",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\triaxial-simulation.mp4"
+    },
+    {
+      "path": "triaxial-after/visualization-provenance.json",
+      "bytes": 11569,
+      "sha256": "14146feaab2e13aa9183dfcd56b0370be81ec0293d25ddf696dd5b51fc87c41a",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\visualization-provenance.json"
+    },
+    {
+      "path": "triaxial-after/triaxial-refactor-comparison.png",
+      "bytes": 121253,
+      "sha256": "eadb89a2af660513c0c19f0db69c176c3e93d04ce9bbfbccd689b5d36bd72aea",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\triaxial-refactor-comparison.png"
+    },
+    {
+      "path": "triaxial-after/comparison-visualization-provenance.json",
+      "bytes": 1602,
+      "sha256": "e3c9ccc1a8fcbb7440c824d8520a4b6a3876a95025cc9fe732f4cdd4fe4207e2",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\comparison-visualization-provenance.json"
+    },
+    {
+      "path": "triaxial-after/media-validation.json",
+      "bytes": 396,
+      "sha256": "09cbf28ce829aa8d3e57e828b0c4ac34b5c492fdf252753a0f4a7c2ba23cede3",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\media-validation.json"
+    },
+    {
+      "path": "triaxial-after/all-saved-state-audit.json",
+      "bytes": 58728,
+      "sha256": "4b68b9d35ad283b6eec694b438c3eb655f79ea71b20a716380eb97d0ccc5589d",
+      "source": null
+    },
+    {
+      "path": "triaxial-after/particle-vtk.tar.gz",
+      "bytes": 3008141,
+      "sha256": "10956d16142d45bacde58e7cf98bc4d50c292ee9594b4a2f4f1e7d3cca2be099",
+      "source": null,
+      "members": [
+        {
+          "path": "particles_0000.vtk",
+          "bytes": 124381,
+          "sha256": "f4dcf0c403af7c5f3ed478d0d1ec6a4affd4a99eee2d4b1a6a7fc3a191f83587",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0000.vtk"
+        },
+        {
+          "path": "particles_0001.vtk",
+          "bytes": 124381,
+          "sha256": "c734eaa10601adfc806c1840d679938815712b549d239ee3a5c3769ed2ed4a7f",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0001.vtk"
+        },
+        {
+          "path": "particles_0002.vtk",
+          "bytes": 124381,
+          "sha256": "6f738d300371a31d51e6e48cc5a3ba8eea08ec5a9f280d8fa72ddbc3d6700b6d",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0002.vtk"
+        },
+        {
+          "path": "particles_0003.vtk",
+          "bytes": 124381,
+          "sha256": "fb85faf57995d6d33d7852818d330e2e208c55b82974e1d8df3ad23ae2dca594",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0003.vtk"
+        },
+        {
+          "path": "particles_0004.vtk",
+          "bytes": 124381,
+          "sha256": "6ebb60a76e7068f964532ecc9a1f08c7d4874b0f0da9df30494b55637f3e9f70",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0004.vtk"
+        },
+        {
+          "path": "particles_0005.vtk",
+          "bytes": 124381,
+          "sha256": "cd78944a58b43bccfc2ccf39fc61d7de5e94f917af0df289a4ee3c2f442cc866",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0005.vtk"
+        },
+        {
+          "path": "particles_0006.vtk",
+          "bytes": 124381,
+          "sha256": "1feb5a6262690e86f1ce9334da57da171d207e12cb633492bae7c9045f97209b",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0006.vtk"
+        },
+        {
+          "path": "particles_0007.vtk",
+          "bytes": 124381,
+          "sha256": "26497ade80fb694524357f3df540e501755ae7dc889b5bef3b7b620a47e4a815",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0007.vtk"
+        },
+        {
+          "path": "particles_0008.vtk",
+          "bytes": 124381,
+          "sha256": "628a063a0c4a9e1471d7c3c65de8b6b892d6e31284d1356630f20be1fd234f41",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0008.vtk"
+        },
+        {
+          "path": "particles_0009.vtk",
+          "bytes": 124381,
+          "sha256": "608980090ff3e4b7c8f20f213d8bd5a7b6a37b4ead16036cf78068f55d2855a9",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0009.vtk"
+        },
+        {
+          "path": "particles_0010.vtk",
+          "bytes": 124381,
+          "sha256": "2bae64dab3ffb2b595a7ae90506cb29488cbb483c52a67c94e2aa0cfc1f599d2",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0010.vtk"
+        },
+        {
+          "path": "particles_0011.vtk",
+          "bytes": 124381,
+          "sha256": "fe35fb408a8c47989a9b547681322fa558d01ad363115b86e0351a86ae63d287",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0011.vtk"
+        },
+        {
+          "path": "particles_0012.vtk",
+          "bytes": 124381,
+          "sha256": "b91687dfd119a34229dafa54209df081e880f6d72f4ebfb358b32449b04f47a1",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0012.vtk"
+        },
+        {
+          "path": "particles_0013.vtk",
+          "bytes": 124381,
+          "sha256": "4221e61db254814b9ee71895d25c1b01c06c0477d2603b146b298fa5369ac31f",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0013.vtk"
+        },
+        {
+          "path": "particles_0014.vtk",
+          "bytes": 124381,
+          "sha256": "71dc5c163a8f33dbfb875f7bf5b7914f3e821c7ae34626274684e317f125b1a1",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0014.vtk"
+        },
+        {
+          "path": "particles_0015.vtk",
+          "bytes": 124381,
+          "sha256": "cae367cb758242136b439800ffe553c0da04b66fad045fcf365e94c49c61b735",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0015.vtk"
+        },
+        {
+          "path": "particles_0016.vtk",
+          "bytes": 124381,
+          "sha256": "3c19c5a85693517de75887caa2a5a378e7d50c82dc3f4536db70fb5f890a189c",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0016.vtk"
+        },
+        {
+          "path": "particles_0017.vtk",
+          "bytes": 124381,
+          "sha256": "e9769c0ac2000ec96ef1f17a3d04aff679fd2d75b3525ffe3de1fe53639d89d3",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0017.vtk"
+        },
+        {
+          "path": "particles_0018.vtk",
+          "bytes": 124381,
+          "sha256": "957ccd3d68b83c714e8370158c22ecd9f1e3022f49e9a17846e71bb284803ae7",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0018.vtk"
+        },
+        {
+          "path": "particles_0019.vtk",
+          "bytes": 124381,
+          "sha256": "2a229e71ee87ba59e238fcc77963bfa69845edef92e796ff5247bbdd0e80c31f",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0019.vtk"
+        },
+        {
+          "path": "particles_0020.vtk",
+          "bytes": 124381,
+          "sha256": "d76d9f925dd28acd11eb04541927caac17dbb0cf51f7b1ad2180c0490945561e",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0020.vtk"
+        },
+        {
+          "path": "particles_0021.vtk",
+          "bytes": 124381,
+          "sha256": "9d837ac16a8f2bb46ea432abbfe1a3eb690c36c76b717bb015276a5bf5385dcb",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0021.vtk"
+        },
+        {
+          "path": "particles_0022.vtk",
+          "bytes": 124381,
+          "sha256": "9ecd4b32553a75c82344d042e4fcb0fc60b0181c8696c2be7ac8cb12c618d142",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0022.vtk"
+        },
+        {
+          "path": "particles_0023.vtk",
+          "bytes": 124381,
+          "sha256": "3aa9c41e03089c8e2636ff9931d0ff5edc969d5a1ac114a590cb8fbde9affb82",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0023.vtk"
+        },
+        {
+          "path": "particles_0024.vtk",
+          "bytes": 124381,
+          "sha256": "f0564f7c0c4c8264a0eb507a348661b40717381e218e3446e2ae3df95cc28e03",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0024.vtk"
+        },
+        {
+          "path": "particles_0025.vtk",
+          "bytes": 124381,
+          "sha256": "57c9f17d9d5aeafc6612e18e0c21ac3ba47d7dba188a1f96f97308f1379d9cda",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0025.vtk"
+        },
+        {
+          "path": "particles_0026.vtk",
+          "bytes": 124381,
+          "sha256": "fad126c23152b746318c3c3b0fe5203beecaaad5514489e88e6d51a15a654bf9",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0026.vtk"
+        },
+        {
+          "path": "particles_0027.vtk",
+          "bytes": 124381,
+          "sha256": "a87b61b9921af91e40d931e0cb9750c009595c6d23650697ee29735a1e938486",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0027.vtk"
+        },
+        {
+          "path": "particles_0028.vtk",
+          "bytes": 124381,
+          "sha256": "111ac519fe2231e78d2919219c292775f77cc90c6a2d29fcd95aa7d124fbb73d",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0028.vtk"
+        },
+        {
+          "path": "particles_0029.vtk",
+          "bytes": 124381,
+          "sha256": "28d632332d9de073b326c5af9859368b977b9ac7d46a715fe6c9bda3129ba4b5",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0029.vtk"
+        },
+        {
+          "path": "particles_0030.vtk",
+          "bytes": 124381,
+          "sha256": "c96d164a9a6137cd6ba070e13a5fa7c611711f8d095995f51b7f7b57dd5ac4db",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0030.vtk"
+        },
+        {
+          "path": "particles_0031.vtk",
+          "bytes": 124381,
+          "sha256": "2294bd460d47b2a3d5dde4f86665683ba28ad516003bcd05dfda020dc10060dc",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0031.vtk"
+        },
+        {
+          "path": "particles_0032.vtk",
+          "bytes": 124381,
+          "sha256": "e1d469cd31b2af237df847d165ec4f311f0d7b6021c2c9b1e3541fc656a52fe0",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0032.vtk"
+        },
+        {
+          "path": "particles_0033.vtk",
+          "bytes": 124381,
+          "sha256": "4956cfffc3215060883b1acd06d307be36af1d0afe852c795e95e98cc1dccc76",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0033.vtk"
+        },
+        {
+          "path": "particles_0034.vtk",
+          "bytes": 124381,
+          "sha256": "ac0fb3542e36ff1617d62eb89ed7ecbab220c116eb15d365a299b7a01a95052c",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0034.vtk"
+        },
+        {
+          "path": "particles_0035.vtk",
+          "bytes": 124381,
+          "sha256": "89e097c8e2bc1075bc2018926ef5668430cd13a1ad994cae78227fb80badce79",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0035.vtk"
+        },
+        {
+          "path": "particles_0036.vtk",
+          "bytes": 124381,
+          "sha256": "d45ac22d669d895b8cd2534dce37f56207fe1fc38d8015b8592d41e29875cbe3",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0036.vtk"
+        },
+        {
+          "path": "particles_0037.vtk",
+          "bytes": 124381,
+          "sha256": "0cd471d3e95819094e30d6ec77ab56db3a5a09c204fa2d4cbd8228a5024056ec",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0037.vtk"
+        },
+        {
+          "path": "particles_0038.vtk",
+          "bytes": 124381,
+          "sha256": "5afca9dc476871203c6457c92b2f1f0f94bcf6f0e47587e6e6c9c4169d9ce5f1",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0038.vtk"
+        },
+        {
+          "path": "particles_0039.vtk",
+          "bytes": 124381,
+          "sha256": "e47a4be7fd04ead3cfa9d658a7e124c9f3a9198c9ba0fcdeed9d97ab3549495a",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0039.vtk"
+        },
+        {
+          "path": "particles_0040.vtk",
+          "bytes": 124381,
+          "sha256": "5bb60ac8c4fcdbc5e79ce0bb714a5750040c6049c11a6ff8a2538420e926c741",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0040.vtk"
+        },
+        {
+          "path": "particles_0041.vtk",
+          "bytes": 124381,
+          "sha256": "247b02d1b16096e6d0ffe238dc9faf7ae4a7d054358b7d4e6cf090dc736c4f53",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0041.vtk"
+        },
+        {
+          "path": "particles_0042.vtk",
+          "bytes": 124381,
+          "sha256": "11d26ec32ea0b1a5b09a27ebab89f31aa3f6deddacedddca8b412b7d17c70487",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0042.vtk"
+        },
+        {
+          "path": "particles_0043.vtk",
+          "bytes": 124381,
+          "sha256": "56a4fd4bf64d295816395c567109361246d0f56f5de13cdd0eb127de8edbfd7a",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0043.vtk"
+        },
+        {
+          "path": "particles_0044.vtk",
+          "bytes": 124381,
+          "sha256": "cfe48680ebc1ae0f442e4e05e7bcee44d3066d689ee1fe780c3b1f9e4189bc88",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0044.vtk"
+        },
+        {
+          "path": "particles_0045.vtk",
+          "bytes": 124381,
+          "sha256": "33f48c7c5ac982f9ebefd12592dba02234b0ba3d057e4d897766f4a3c2bdbd53",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0045.vtk"
+        },
+        {
+          "path": "particles_0046.vtk",
+          "bytes": 124381,
+          "sha256": "a4c766fb3ca06ae375a7b154685dfff8757621d1ea87029094bcca1619875229",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0046.vtk"
+        },
+        {
+          "path": "particles_0047.vtk",
+          "bytes": 124381,
+          "sha256": "d58a178925a41d22dbdd4a69555720780848672c5936b991cc1b3e6038d0de45",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0047.vtk"
+        },
+        {
+          "path": "particles_0048.vtk",
+          "bytes": 124381,
+          "sha256": "3a4ca49503f9bb1fea6c337fb30150934f8b562184eb778f03e8c23734f81c94",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0048.vtk"
+        },
+        {
+          "path": "particles_0049.vtk",
+          "bytes": 124381,
+          "sha256": "12184813aef976ae60caf2a677839db87f3f01b4dcacf5ebe78c030e512849e9",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0049.vtk"
+        },
+        {
+          "path": "particles_0050.vtk",
+          "bytes": 124381,
+          "sha256": "0ed90f74db64dad9b7f4bad598752ef8e80e362b34268c4c63f5d379382138ae",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\particles_0050.vtk"
+        }
+      ]
+    },
+    {
+      "path": "verification/accepted-vs-frozen-strict.json",
+      "bytes": 5079,
+      "sha256": "fb56a81dfd881a23b3a9ddbce190068068b0b1d4d5bda5cd031c2ddc8616edf0",
+      "source": "output\\framework-refactor-2026-10-15\\accepted-vs-frozen-strict.json"
+    },
+    {
+      "path": "verification/accepted-vs-frozen-final-shape.json",
+      "bytes": 777,
+      "sha256": "b4754b7779c84f8e42fcbe2cb50c7a5d7b6bceb175f1d5910085e95e03011776",
+      "source": "output\\framework-refactor-2026-10-15\\accepted-vs-frozen-final-shape.json"
+    },
+    {
+      "path": "verification/comparator-guard-checks.json",
+      "bytes": 500,
+      "sha256": "31eea8fb42c94f176f00d7343aac6c5dca8adb5bd60b0e33588e3bae7e4259f0",
+      "source": "output\\framework-refactor-2026-10-15\\comparator-guard-checks.json"
+    },
+    {
+      "path": "verification/joss-extraction-review.json",
+      "bytes": 7223,
+      "sha256": "926831b92a1ba8ad1a4375ef5d0ccf308a581e5d984475f022a1acaad9861338",
+      "source": "output\\framework-refactor-2026-10-15\\joss-extraction-review.json"
+    },
+    {
+      "path": "verification/triaxial-2d-baseline-adaptation.json",
+      "bytes": 402,
+      "sha256": "6cbf8479adba1ae540651106191035b3f74ca72f39e20a2b7abc6ecbc58e9d4e",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-baseline-adaptation.json"
+    },
+    {
+      "path": "verification/triaxial-2d-first-attempt-failure.json",
+      "bytes": 460,
+      "sha256": "ffa7bb85fda2fc3561de1a4f1ef35faf6a395e74a0bd354f8e0515f69a7f5132",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-first-attempt-failure.json"
+    },
+    {
+      "path": "verification/environment-provenance.json",
+      "bytes": 35573,
+      "sha256": "dd4e1a90ad0ede1cc5753f86a8c35aacf4aa236e279286e6c90940bc0567512e",
+      "source": "output\\framework-refactor-2026-10-15\\environment-provenance.json"
+    },
+    {
+      "path": "verification/after-processes.json",
+      "bytes": 124,
+      "sha256": "81c4574d8569383bdf4e85bf61045368a6e45c69892474277a4e4aad393a094d",
+      "source": "output\\framework-refactor-2026-10-15\\after-processes.json"
+    },
+    {
+      "path": "verification/joss-baseline-provenance.json",
+      "bytes": 5075,
+      "sha256": "2cf7a7e1232e05f345b4796ca1ba745e03f785220aea1b7017b1a27c1c43752e",
+      "source": "output\\framework-refactor-2026-10-15\\joss-baseline-provenance.json"
+    },
+    {
+      "path": "verification/joss-baseline-status.json",
+      "bytes": 134,
+      "sha256": "063167d2618da970fe400199c46ecec8fd60c82c824922beb719a23ab39bf32c",
+      "source": "output\\framework-refactor-2026-10-15\\joss-baseline-status.json"
+    },
+    {
+      "path": "verification/joss-after-status.json",
+      "bytes": 106,
+      "sha256": "eaf30941547a161ae06026b0a1ddc25c06f3a9c7d30a84bf2fd71e5f90f88409",
+      "source": "output\\framework-refactor-2026-10-15\\joss-after-status.json"
+    },
+    {
+      "path": "verification/triaxial-2d-after-status.json",
+      "bytes": 106,
+      "sha256": "09ca89e5196480b2344a365ca4f8b50b5794e18fe00b0156950093365c438e06",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after-status.json"
+    },
+    {
+      "path": "verification/joss-full-regression-summary.json",
+      "bytes": 7652,
+      "sha256": "f6707e0d49436cf3c11c9fb8e4b1ceb404a845393f281a2a274ebbd4c55e13a8",
+      "source": "output\\framework-refactor-2026-10-15\\joss-full-regression-summary.json"
+    },
+    {
+      "path": "verification/current-head-integration-summary.json",
+      "bytes": 1576,
+      "sha256": "0898b545892b7435bc1a994d0be587186864eaf4a1cb437d8601d0828a39dbf2",
+      "source": "output\\framework-refactor-2026-10-15\\current-head-integration-summary.json"
+    },
+    {
+      "path": "verification/current-head-source-comparison.json",
+      "bytes": 7706,
+      "sha256": "c7c47cfbf5696ca9c8e6faee26eea566885fa230a9d1128ecb18607283279030",
+      "source": "output\\framework-refactor-2026-10-15\\current-head-source-comparison.json"
+    },
+    {
+      "path": "verification/joss-before-after-comparison.json.gz",
+      "bytes": 1477,
+      "sha256": "561d363cdf1f46cf2f8f8951b73e9fe8e431db39682906b2e3577b207c5418e4",
+      "source": "output\\framework-refactor-2026-10-15\\joss-before-after-comparison.json",
+      "uncompressedSha256": "38754e984cce91eb092daddf5d216de57390dcc73539699e97fc565bc443e86b"
+    },
+    {
+      "path": "verification/triaxial-before-after-comparison.json.gz",
+      "bytes": 33958,
+      "sha256": "2edfab2fc9a0334b6294b67e471f5f978e56aa303d094b5067721981d1d3e4be",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-before-after-comparison.json",
+      "uncompressedSha256": "55228e29531b4a5c121d56fbdb94b5c6141d98a08cf4aad11be4285a7f9a9f5a"
+    },
+    {
+      "path": "verification/accepted-vs-frozen-diagnostics.json.gz",
+      "bytes": 217281,
+      "sha256": "9608a1d5b78a7c67d51378d945e254309f6d4517f144dba846dd81af18b3f970",
+      "source": "output\\framework-refactor-2026-10-15\\accepted-vs-frozen-diagnostics.json",
+      "uncompressedSha256": "469a6c94d7d32fc9ccd923a63f1ade94a5bcca3f0b6cd27cd4ba31c127312bec"
+    },
+    {
+      "path": "verification/joss-before-after-diagnostics.json.gz",
+      "bytes": 350674,
+      "sha256": "6bfc0bd540cd8fd53768dd39b212a24022cb46d75a5520d27fe5544fcc7ec501",
+      "source": "output\\framework-refactor-2026-10-15\\joss-before-after-diagnostics.json",
+      "uncompressedSha256": "3783b24cad0b5e3841c7e93b3683c5712fcd554bdffbe945b3ec74c78d81cbda"
+    },
+    {
+      "path": "verification/accepted-vs-after-diagnostics.json.gz",
+      "bytes": 337169,
+      "sha256": "9cdadfa5d7c78f98533eac15b3121a69ae4da88649e0a2e1611f20c895414199",
+      "source": "output\\framework-refactor-2026-10-15\\accepted-vs-after-diagnostics.json",
+      "uncompressedSha256": "0fda0165be37122d9601c90a6fab9f71a60e36da28a1bb29b37ac1ea594b73a3"
+    },
+    {
+      "path": "verification/comparator-self-check.json.gz",
+      "bytes": 57653,
+      "sha256": "80da2c42b0f511280e2eb258dc383330f7e7d38792b2de166bcda526d176991e",
+      "source": "output\\framework-refactor-2026-10-15\\comparator-self-check.json",
+      "uncompressedSha256": "4bddaf21d1b50a9961ccaf13cba6d8cf13bfb2fd9cbc63a9de56d90c78867718"
+    },
+    {
+      "path": "logs/joss-baseline.log.gz",
+      "bytes": 2672,
+      "sha256": "23573c2fc5b09221e700ea12a2bb7fa8506875b04695932f1a335f88a2ecead0",
+      "source": "output\\framework-refactor-2026-10-15\\joss-baseline.log",
+      "uncompressedSha256": "dd333022f029b81cb6a87d391f9342115df041e102c4bedfe4f20294faceb512"
+    },
+    {
+      "path": "logs/joss-after.log.gz",
+      "bytes": 2630,
+      "sha256": "34a4b2c7141b2346973b4503e2528a9be275b359e8419e19ed94898631fef6b8",
+      "source": "output\\framework-refactor-2026-10-15\\joss-after.log",
+      "uncompressedSha256": "5ce02e56e8697064b9944fedc6fdff1bff8d4647c822d97aaf12073f68cd9248"
+    },
+    {
+      "path": "logs/triaxial-2d-before-mps2.log.gz",
+      "bytes": 1337,
+      "sha256": "1d669d4d39a9c359da3ea62c2ee080039a496e356a118983e55766686c19dc81",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-before-mps2.log",
+      "uncompressedSha256": "7283206ad6bbebe8a3c63406d13edc8e7404ce8c9a89d5843c78b42bc738fdfb"
+    },
+    {
+      "path": "logs/triaxial-2d-after.log.gz",
+      "bytes": 1684,
+      "sha256": "7cff725bf428242f3ab0bb3d19b1ab9d8310e9bca88081a52614c299a2000a23",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after.log",
+      "uncompressedSha256": "8f1f4366350c0137b8bca7b88079561a54a9755b94f6e96844aa25593bd8eda4"
+    },
+    {
+      "path": "logs/node-check.log.gz",
+      "bytes": 124,
+      "sha256": "27edcb03d6fba9965e0052b5144db7392f7e29e78ae3f2086ffcf1a166ab0804",
+      "source": "output\\framework-refactor-2026-10-15\\node-check.log",
+      "uncompressedSha256": "ef445b10cde3731a5b5215225895261bdd996b37947569fb0ee27d3c05ba158f"
+    },
+    {
+      "path": "logs/node-tests.log.gz",
+      "bytes": 1631,
+      "sha256": "85e4f0095ce7f1b6f0b88a009b9774ed3efb9e6c7240f3f96cad2814d1dd8789",
+      "source": "output\\framework-refactor-2026-10-15\\node-tests.log",
+      "uncompressedSha256": "eb93bf5b6375457eb0fbcc06aba9974b3a37f6b5eb6c5b497c5baf160b2dca61"
+    },
+    {
+      "path": "logs/framework-load.log.gz",
+      "bytes": 50,
+      "sha256": "c42bc5695b42117f072b3cb3edc2ef9944658ac97688ae741e37d85fd509775e",
+      "source": "output\\framework-refactor-2026-10-15\\framework-load.log",
+      "uncompressedSha256": "68691ad7c928c2a4316c53683362ac30bca2b0116514237585640a02295fee7b"
+    },
+    {
+      "path": "logs/studio-custom-compat.log.gz",
+      "bytes": 310,
+      "sha256": "63ef5506ff01e2d9fbe511f9392964e6e0d604e7c413a2d40c7cd1920fcdfa4c",
+      "source": "output\\framework-refactor-2026-10-15\\studio-custom-compat.log",
+      "uncompressedSha256": "7c8085a88b1188315bd6e1d753dc203122fde789baf1b9928823de49795cce98"
+    },
+    {
+      "path": "logs/triaxial-definitions-load.log.gz",
+      "bytes": 82,
+      "sha256": "77ab2f7f46fece54ef98616c8b598e695aeea23b62fc97b614ee5fa3142aeffb",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-definitions-load.log",
+      "uncompressedSha256": "c44c7418ece7e1d39299bce9a3c5d6d772262e82c8558ba01430fa1a91d7b889"
+    },
+    {
+      "path": "logs/triaxial-component-contracts.log.gz",
+      "bytes": 129,
+      "sha256": "879f0f769fe8a567b0c8799b6db572db31735d3f2750e8be24570f1b4d3d1c55",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-component-contracts.log",
+      "uncompressedSha256": "6c02e9196fc19ef564acde61da79cc21e3072d6bf099a61251b7cfc348c5959a"
+    },
+    {
+      "path": "logs/joss-unit-compat.log.gz",
+      "bytes": 114,
+      "sha256": "e00d8804d02224275fdcc45ac2152d859d4d5fc5faa2728ff178be1dd9334dc5",
+      "source": "output\\framework-refactor-2026-10-15\\joss-unit-compat.log",
+      "uncompressedSha256": "a403a5242092aed362877d2f99bfcc074f83387a7144090bc022925f4eae2f6c"
+    },
+    {
+      "path": "logs/current-head-joss.log.gz",
+      "bytes": 1275,
+      "sha256": "78e63886745de41b6df9396d37e82911aef711df78a85a5135f17cac3c69e12e",
+      "source": "output\\framework-refactor-2026-10-15\\current-head-joss.log",
+      "uncompressedSha256": "a271ea011dee56d1570879dda75033d15f89bbe86a5bd3c6270172a2e413e3e6"
+    },
+    {
+      "path": "logs/current-head-joss-audit.log.gz",
+      "bytes": 324,
+      "sha256": "7b0d68e086866a4763617752831dbbe05454aff7a249da915a22cde15736f3aa",
+      "source": "output\\framework-refactor-2026-10-15\\current-head-joss-audit.log",
+      "uncompressedSha256": "c6ec34b796a3b1a76c09e41eeed1a65cfe0f71d1997cb7fb1cc33a3db10f54cf"
+    },
+    {
+      "path": "logs/current-head-triaxial.log.gz",
+      "bytes": 184,
+      "sha256": "74d009e396bfcaf8578a876eee304b56816922e71d9eb72986f8769f32ed6e8c",
+      "source": "output\\framework-refactor-2026-10-15\\current-head-triaxial.log",
+      "uncompressedSha256": "14f29faa62a33354747b5266a86d8d72ffc6ee74ad7abac6e80f2fb560e1c6e2"
+    },
+    {
+      "path": "logs/current-head-triaxial-audit.log.gz",
+      "bytes": 1368,
+      "sha256": "74a4ac37d5bf2871340ba8a4ad5887bf9e726a597f50d2845ed02acf480b3678",
+      "source": "output\\framework-refactor-2026-10-15\\current-head-triaxial-audit.log",
+      "uncompressedSha256": "cd9ea00cc43d054148eea747bbc059f27ad4e3d1ea88018314b5e552011dcc83"
+    },
+    {
+      "path": "logs/current-head-cliff-mc.log.gz",
+      "bytes": 712,
+      "sha256": "4b77efedf6f6cf854e3cfe895de15df495859e6f00cc1fe81af73624b15a6295",
+      "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc.log",
+      "uncompressedSha256": "bdff4e8236425f929ff6e57f0b39aac335c8ae1752a1beb6c9e8e4bcc8d52ed6"
+    },
+    {
+      "path": "logs/failed-cli-package-lock/joss-after-status.json.gz",
+      "bytes": 108,
+      "sha256": "105a2eb1a3711efd2b7986ab8e179fa6932a5b572ba20bf8e668135faf9dbe34",
+      "source": "output\\framework-refactor-2026-10-15\\failed-cli-package-lock\\joss-after-status.json",
+      "uncompressedSha256": "f18fb2eb157bc67709325812513548e3187821a811c049e31ccfee9232ff5c66"
+    },
+    {
+      "path": "logs/failed-cli-package-lock/joss-after.log.gz",
+      "bytes": 3503,
+      "sha256": "13dcad6e9d446209e1bcc789ad010db8cd600cd1ac95e0983e3b51c98b522b71",
+      "source": "output\\framework-refactor-2026-10-15\\failed-cli-package-lock\\joss-after.log",
+      "uncompressedSha256": "8372db1b444dab912eb9161468342f6f81b6da0d35396a6865f218a10bfa451d"
+    },
+    {
+      "path": "logs/failed-cli-package-lock/launch-joss-after.ps1.gz",
+      "bytes": 319,
+      "sha256": "23c46c63744f17d5f99a4d0790e51984c98ff4dd3da49c6e2c945a943dee647c",
+      "source": "output\\framework-refactor-2026-10-15\\failed-cli-package-lock\\launch-joss-after.ps1",
+      "uncompressedSha256": "3dd50228187efc2d507b6b28d572e5ce97874e9e0f43976a0f2307c1a882a511"
+    },
+    {
+      "path": "logs/failed-cli-package-lock/launch-triaxial-after.ps1.gz",
+      "bytes": 327,
+      "sha256": "97d59efe7e8c0823f8a97ab3477df69b197f5777b59d06a74226559b53a84521",
+      "source": "output\\framework-refactor-2026-10-15\\failed-cli-package-lock\\launch-triaxial-after.ps1",
+      "uncompressedSha256": "6410bd45f1a56632851ef6fa4527dea926ff340c92bc694f07f681bed093ae2b"
+    },
+    {
+      "path": "logs/failed-cli-package-lock/triaxial-2d-after-status.json.gz",
+      "bytes": 108,
+      "sha256": "dbb15f3cc1d7e2e176d35ea2dc216c73ebf78eba4be513479f20a6a6105a3175",
+      "source": "output\\framework-refactor-2026-10-15\\failed-cli-package-lock\\triaxial-2d-after-status.json",
+      "uncompressedSha256": "f2bdbb8e1fb22f8ff2510ac4713b180f4691d5b73d883387fc5e1d71fbf2159f"
+    },
+    {
+      "path": "logs/failed-cli-package-lock/triaxial-2d-after.log.gz",
+      "bytes": 3509,
+      "sha256": "e1b4f89b92ec67401e3f7fc8ecdf10d13f83748895f96fe76f931fe4791ce9a6",
+      "source": "output\\framework-refactor-2026-10-15\\failed-cli-package-lock\\triaxial-2d-after.log",
+      "uncompressedSha256": "105a114c71130577edb9a462427d19c93a76a7a2d8341b58f1e0d6c17e95c5fc"
+    },
+    {
+      "path": "sources/compare-framework-runs.py",
+      "bytes": 14089,
+      "sha256": "772bb84680f2dd041c23dd96dd0413da2ad836b44760912ceefece64a81d4f65",
+      "source": "scripts\\compare-framework-runs.py"
+    },
+    {
+      "path": "sources/compare-reference-video.py",
+      "bytes": 16160,
+      "sha256": "c3e255f2a718b6104cf163089029ce4ef7758af550f8afe6fb262bcf339df4ee",
+      "source": "scripts\\compare-reference-video.py"
+    },
+    {
+      "path": "sources/render-particle-vtk.py",
+      "bytes": 5865,
+      "sha256": "f6503e38d5c4ce9f8d5919a06a88684f87a92081b7a5d5585b05378757622303",
+      "source": "scripts\\render-particle-vtk.py"
+    },
+    {
+      "path": "sources/plot-triaxial.py",
+      "bytes": 15299,
+      "sha256": "c5de47aea84b5f642fe446d0c6ab9e4a965c2be19d85b6fb357a3647e59c29da",
+      "source": "scripts\\plot-triaxial.py"
+    },
+    {
+      "path": "sources/audit-triaxial.py",
+      "bytes": 11997,
+      "sha256": "427973759d87b2ec37d06ddffb5954fc41ec22c4be63ca57da15cfb8432c5c84",
+      "source": "scripts\\audit-triaxial.py"
+    },
+    {
+      "path": "sources/run-frozen-joss.lisp",
+      "bytes": 1386,
+      "sha256": "6637f042c8e4b891ae5070aaccf9d38f43b275c3ff4d3d794383413f1e136edc",
+      "source": "output\\framework-refactor-2026-10-15\\run-frozen-joss.lisp"
+    },
+    {
+      "path": "sources/run-triaxial-2d-baseline.lisp",
+      "bytes": 2402,
+      "sha256": "1bc44815e7898dd426caa2137481cc812d0bc0c60b965d5446cd6eb7b3181bc5",
+      "source": "output\\framework-refactor-2026-10-15\\run-triaxial-2d-baseline.lisp"
+    },
+    {
+      "path": "sources/launch-joss-baseline.ps1",
+      "bytes": 873,
+      "sha256": "28aa4e13d77c64c5cdf91db46398abc275af5a1f3ea6ad41bd3fc17bf9760c9c",
+      "source": "output\\framework-refactor-2026-10-15\\launch-joss-baseline.ps1"
+    },
+    {
+      "path": "sources/launch-joss-after.ps1",
+      "bytes": 490,
+      "sha256": "01896b2ed4c79d22bccc8d0fed320412853b0b080dbbc5d5f9d6223947052d24",
+      "source": "output\\framework-refactor-2026-10-15\\launch-joss-after.ps1"
+    },
+    {
+      "path": "sources/launch-triaxial-after.ps1",
+      "bytes": 514,
+      "sha256": "d0a29eaf3030b8928a92a6b3b02a2f27c43b4eecbcb84b143961f53606029f45",
+      "source": "output\\framework-refactor-2026-10-15\\launch-triaxial-after.ps1"
+    },
+    {
+      "path": "sources/joss-baseline-config.json",
+      "bytes": 1256,
+      "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+      "source": "output\\framework-refactor-2026-10-15\\joss-baseline-config.json"
+    },
+    {
+      "path": "sources/triaxial-2d-baseline-adaptation.patch",
+      "bytes": 5555,
+      "sha256": "c4f7e5bfaae1056dd65e9d3ea174afe0992641749adc68defc4810d2839710bd",
+      "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-baseline-adaptation.patch"
+    },
+    {
+      "path": "sources/frozen-original-scenario-source.tar.gz",
+      "bytes": 41236,
+      "sha256": "17dad7636dd1dfc0b0f85ad9e5e67c8a34f89b571009ceef81701d94e594d791",
+      "source": null,
+      "members": [
+        {
+          "path": "adapted-2d/triaxial.lisp",
+          "bytes": 27936,
+          "sha256": "f7bc3669831945cd39cd67d336e039793e4e297f8cc97408c9c1aa70f4433ad8",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-baseline-source.lisp"
+        },
+        {
+          "path": "calibration/README.md",
+          "bytes": 6039,
+          "sha256": "4fac4065beb58db90299c012cc4f675f5ab58e8c31e6ea6ab6b7c3fe19d0a5c6",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\README.md"
+        },
+        {
+          "path": "calibration/estimate-clay-parameters.py",
+          "bytes": 9609,
+          "sha256": "74a13d9586e4f73d68218130c7c1ff94616651af2839d3a5e5c952376f186b7a",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\estimate-clay-parameters.py"
+        },
+        {
+          "path": "calibration/requirements-reports.txt",
+          "bytes": 111,
+          "sha256": "889f7c37c8fa2b6c19b31f4fabb70b83c49099b8fc2b7c395dd0c2d71204777a",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\requirements-reports.txt"
+        },
+        {
+          "path": "calibration/requirements.txt",
+          "bytes": 120,
+          "sha256": "cc6a4ba72b40ab19fd45167b01fadb0aaea09ce18228de3dc3b491a73894bb89",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\requirements.txt"
+        },
+        {
+          "path": "calibration/run-triaxial.cmd",
+          "bytes": 515,
+          "sha256": "7156e68a6a80de66615787dd9bbb66afde6a36efebdc2c2c5db8222c6772f270",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\run-triaxial.cmd"
+        },
+        {
+          "path": "calibration/test_estimate_clay_parameters.py",
+          "bytes": 4053,
+          "sha256": "2366ec424a07f8ae062b0daa719b55a7a0fb569ba1fa72f84ebecd9de4c7e821",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\test_estimate_clay_parameters.py"
+        },
+        {
+          "path": "calibration/triaxial-controls.json",
+          "bytes": 255,
+          "sha256": "b4e37185ddcd921d6d7fce016ba78b6766e69a60bb329b66e3105fad356ed767",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\triaxial-controls.json"
+        },
+        {
+          "path": "calibration/triaxial-demo.json",
+          "bytes": 476,
+          "sha256": "da6bc4749aa6e2470f8a5a0f858d89d338053d4aa02d339b9fc96eba6ba57ef0",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\triaxial-demo.json"
+        },
+        {
+          "path": "calibration/triaxial-homogeneous.json",
+          "bytes": 353,
+          "sha256": "5783515f9dcb5c7d0488e15a4e18520615e0f0f1b0a90d2d7564c72f2d4a752a",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\triaxial-homogeneous.json"
+        },
+        {
+          "path": "calibration/triaxial.lisp",
+          "bytes": 26726,
+          "sha256": "662e6b626657047e8c60e3e9d435d0a289f95f4c088ad19aa519e0340ad14b0d",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\triaxial.lisp"
+        },
+        {
+          "path": "scripts/joss-reference-smoke.lisp",
+          "bytes": 12122,
+          "sha256": "06836fe6b0e4a1626b07039fdf60ca49a0ec1d575f410571e728144aec836136",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\scripts\\joss-reference-smoke.lisp"
+        },
+        {
+          "path": "scripts/run-triaxial.lisp",
+          "bytes": 2317,
+          "sha256": "e4c981f92726f756d50491efaba6b3e5f8becb386f674cb96c18281b1122b1b5",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\scripts\\run-triaxial.lisp"
+        },
+        {
+          "path": "snapshot-manifest.json",
+          "bytes": 3128,
+          "sha256": "8f383cce8db8899cfdb74eb05a4089964fba30e9a21cad3e329af99c9125f33c",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\snapshot-manifest.json"
+        },
+        {
+          "path": "studio/lisp/cl-mpm-studio.asd",
+          "bytes": 954,
+          "sha256": "9fb725f4663a97184d7af38b1f983554f7220eeaa8ed69bc622c9103ca658224",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\cl-mpm-studio.asd"
+        },
+        {
+          "path": "studio/lisp/config.lisp",
+          "bytes": 3974,
+          "sha256": "4d586eb0b5ced41b64b76275d1c5d17decdad0eb1bedbfb01c73eb4160049b19",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\config.lisp"
+        },
+        {
+          "path": "studio/lisp/custom-model.lisp",
+          "bytes": 2378,
+          "sha256": "3dda747afed998afa022edbdd2c3618ae98784283d04f7d36ddfa6c16282e378",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\custom-model.lisp"
+        },
+        {
+          "path": "studio/lisp/package.lisp",
+          "bytes": 256,
+          "sha256": "5ef89ce0c4d4360a3cbe851edac1355c8645efcf5959f98d3a0a5e20f81b2b46",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\package.lisp"
+        },
+        {
+          "path": "studio/lisp/reference-joss.lisp",
+          "bytes": 32051,
+          "sha256": "230e994877a5c0054c9959af0959e8a423560abaab9ea8ffe3fc82a4aed810da",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\reference-joss.lisp"
+        },
+        {
+          "path": "studio/lisp/run.lisp",
+          "bytes": 652,
+          "sha256": "d0d62ffa9f61e04f83e2c7bbc1788d977f7bebd2d1ff2e490a6658557a2851cf",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\run.lisp"
+        },
+        {
+          "path": "studio/lisp/runner.lisp",
+          "bytes": 5681,
+          "sha256": "2e2231b83ef36aca7dd0e7cad8959fb0de040f36ad27450537163014e4409d9f",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\runner.lisp"
+        },
+        {
+          "path": "studio/lisp/scenario.lisp",
+          "bytes": 7886,
+          "sha256": "5b0ef263f0d92923f43ff6bd098970e405f3034f569433820ba51cfa071a770f",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\scenario.lisp"
+        },
+        {
+          "path": "studio/schema.json",
+          "bytes": 8678,
+          "sha256": "329c63aac8ab3d4aba790fec4cdca1dccef742efffe87edd26dfd572b3507d5e",
+          "source": "output\\framework-refactor-2026-10-15\\baseline-source\\studio\\schema.json"
+        }
+      ]
+    },
+    {
+      "path": "sources/executed-after-source.tar.gz",
+      "bytes": 31169,
+      "sha256": "a28ba4e3f759023d198bae33be2d3d1283aa42a1a1e11b5887b9e2e0b1431285",
+      "source": null,
+      "members": [
+        {
+          "path": "case.lisp",
+          "bytes": 479,
+          "sha256": "ecc8db3231a96136d2b595078d22a5c3c0d5a457cccdbcfe6821b2efdcd57e74",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\case.lisp"
+        },
+        {
+          "path": "framework/cl-mpm-framework.asd",
+          "bytes": 1536,
+          "sha256": "7ddb4085a790130faee8c99c7671492fe234d167d990f88e8919b3809a80dd40",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\cl-mpm-framework.asd"
+        },
+        {
+          "path": "framework/components/geometry.lisp",
+          "bytes": 368,
+          "sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\components\\geometry.lisp"
+        },
+        {
+          "path": "framework/components/materials.lisp",
+          "bytes": 3514,
+          "sha256": "3f5f3fe01d48af2bd2f6f710055ff2b703d8db36ca74145c6e3be41d3139b89b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\components\\materials.lisp"
+        },
+        {
+          "path": "framework/components/specifications.lisp",
+          "bytes": 3356,
+          "sha256": "0c98b0544adcdc2b495ebad228be926ae812374f910ad8ee931217520e1bdf48",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\components\\specifications.lisp"
+        },
+        {
+          "path": "framework/config/package.lisp",
+          "bytes": 200,
+          "sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\config\\package.lisp"
+        },
+        {
+          "path": "framework/config/parameters.lisp",
+          "bytes": 4101,
+          "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\config\\parameters.lisp"
+        },
+        {
+          "path": "framework/materials/chalk.lisp",
+          "bytes": 4723,
+          "sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\materials\\chalk.lisp"
+        },
+        {
+          "path": "framework/output/plotting.lisp",
+          "bytes": 2391,
+          "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\output\\plotting.lisp"
+        },
+        {
+          "path": "framework/package.lisp",
+          "bytes": 972,
+          "sha256": "3c4e5a5302844c9743c4186240a49d65895a5e4d59b49a9d8d7cd9f77e3effb6",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\package.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/adapter.lisp",
+          "bytes": 4463,
+          "sha256": "433b7a547c68bf7cdaee8b55bfcf39bbad3af4e53470b09a3c17a9e32c497008",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\cliff\\adapter.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/build.lisp",
+          "bytes": 2097,
+          "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\cliff\\build.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/geometry.lisp",
+          "bytes": 3294,
+          "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\cliff\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/run.lisp",
+          "bytes": 2470,
+          "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\cliff\\run.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/settings.lisp",
+          "bytes": 1799,
+          "sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\cliff\\settings.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/build.lisp",
+          "bytes": 3187,
+          "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\joss\\build.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/classes.lisp",
+          "bytes": 429,
+          "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\joss\\classes.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/geometry.lisp",
+          "bytes": 2956,
+          "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\joss\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/measurements.lisp",
+          "bytes": 3008,
+          "sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\joss\\measurements.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/output.lisp",
+          "bytes": 1176,
+          "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\joss\\output.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/phases.lisp",
+          "bytes": 1395,
+          "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\joss\\phases.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/run.lisp",
+          "bytes": 11888,
+          "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\joss\\run.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/statistics.lisp",
+          "bytes": 6450,
+          "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\joss\\statistics.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/adapter.lisp",
+          "bytes": 3514,
+          "sha256": "1c0d76996ec55938db6291163c5da8a0abe3d39d47de71cfc364a421dbb5c21f",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\adapter.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/boundaries.lisp",
+          "bytes": 891,
+          "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\boundaries.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/config.lisp",
+          "bytes": 853,
+          "sha256": "ca254cd019033dccc78a1db6bab141d2b9ea53f304d79a9a63f2c44251904b61",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\config.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/controls.lisp",
+          "bytes": 4294,
+          "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\controls.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/geometry.lisp",
+          "bytes": 3321,
+          "sha256": "6d210567fe2bf1d09fc207283bfe6b4fadd38c2d0fc2da46c5d475bd9a413154",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/homogeneous.lisp",
+          "bytes": 5998,
+          "sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\homogeneous.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/material.lisp",
+          "bytes": 1234,
+          "sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\material.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/measurements.lisp",
+          "bytes": 4492,
+          "sha256": "a8a7a5d4bed1901f1347e67c3c20a9b96238f2ba5946a86a1a6d2474c508a5e2",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\measurements.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/mpm.lisp",
+          "bytes": 3570,
+          "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\mpm.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/package.lisp",
+          "bytes": 426,
+          "sha256": "f4b3a347f1690a1c228f344727ea2511f3469249ddf8973d7efe4166fd710481",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\package.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/runner.lisp",
+          "bytes": 5609,
+          "sha256": "78402e0266bc8d67f21929c4c980259988b27ed8d47d1ab87cbda8a05b9a8053",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\runner.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/tensors.lisp",
+          "bytes": 637,
+          "sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\scenarios\\triaxial\\tensors.lisp"
+        },
+        {
+          "path": "framework/simulation.lisp",
+          "bytes": 2826,
+          "sha256": "f23b2c8f33bbf4cce15a1c56ef98aa2369eb719e66a1e04cb94d3fe55950c311",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\framework\\simulation.lisp"
+        },
+        {
+          "path": "inputs/calibration/triaxial-2d.json",
+          "bytes": 525,
+          "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\inputs\\calibration\\triaxial-2d.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-controls.json",
+          "bytes": 268,
+          "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\inputs\\calibration\\triaxial-controls.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-demo.json",
+          "bytes": 498,
+          "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\inputs\\calibration\\triaxial-demo.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-homogeneous.json",
+          "bytes": 370,
+          "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\inputs\\calibration\\triaxial-homogeneous.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-accepted-collapse.json",
+          "bytes": 1256,
+          "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\inputs\\studio\\reference\\joss-bay-accepted-collapse.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-prose.json",
+          "bytes": 1726,
+          "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\inputs\\studio\\reference\\joss-bay-prose.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-table.json",
+          "bytes": 1721,
+          "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\inputs\\studio\\reference\\joss-bay-table.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-video-candidate.json",
+          "bytes": 2575,
+          "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\inputs\\studio\\reference\\joss-bay-video-candidate.json"
+        },
+        {
+          "path": "inputs/studio/schema.json",
+          "bytes": 9059,
+          "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\inputs\\studio\\schema.json"
+        },
+        {
+          "path": "run-case.lisp",
+          "bytes": 4210,
+          "sha256": "e2817f33b9d5035f3d1d295526e541e1b28e4e0caebd3f108a563ad090441eb1",
+          "source": "output\\framework-refactor-2026-10-15\\joss-after\\source\\run-case.lisp"
+        },
+        {
+          "path": "triaxial-case.lisp",
+          "bytes": 654,
+          "sha256": "d9b15044e2496083adba42810a18066609d9e229b261c64e2b3df04296f92630",
+          "source": "output\\framework-refactor-2026-10-15\\triaxial-2d-after\\source\\case.lisp"
+        }
+      ]
+    },
+    {
+      "path": "sources/joss-after-executed-source-manifest.json",
+      "bytes": 8070,
+      "sha256": "7f2ab654be708335049a2372b595493ec5debdb1d992de1a9b1e8f108d1879d1",
+      "source": null
+    },
+    {
+      "path": "sources/triaxial-2d-after-executed-source-manifest.json",
+      "bytes": 8077,
+      "sha256": "0667d05274ce9f7ffa710d8eba99ffc80e672693acafda6120b74d572bb2b00a",
+      "source": null
+    },
+    {
+      "path": "context/previous-3d-stress-strain.csv",
+      "bytes": 15329,
+      "sha256": "aaf9ced4c60ea1117fd41e3325e607e47c299551372d182b3c959f374dc74e4c",
+      "source": "output\\triaxial-3d-demo\\stress-strain.csv"
+    },
+    {
+      "path": "context/previous-3d-effective-config.json",
+      "bytes": 394,
+      "sha256": "b515077a0b8c45e0ee657cddb9eb4a32a472620bc24b1b60a001c8031e6056d2",
+      "source": "output\\triaxial-3d-demo\\effective-config.json"
+    },
+    {
+      "path": "sources/analyze-framework-regression.py",
+      "bytes": 3669,
+      "sha256": "3668d013a2cb7e8b73485c2f3c54974445619330f97d8e835c47f56e02572fc6",
+      "source": ".tmp\\analyze-framework-regression.py"
+    },
+    {
+      "path": "sources/summarize-joss-full-result.py",
+      "bytes": 2279,
+      "sha256": "2d43792fba7b02324d626d2900b353110207a925991a7b299787719a1fbc238a",
+      "source": ".tmp\\summarize-joss-full-result.py"
+    },
+    {
+      "path": "sources/validate-framework-comparator.py",
+      "bytes": 1597,
+      "sha256": "ededf73f0fc0b9356eb5813cd9b306b42f3747ce1e0db3e9d3b84e220d53c650",
+      "source": ".tmp\\validate-framework-comparator.py"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6713,
+      "sha256": "b1382d9086d3ef258da18d6e812c9a14724514d4c2e5b6b64ebd64ebabfe19d5",
+      "source": ".tmp\\framework-evidence-README.md"
+    },
+    {
+      "path": "bounded-cliff-mc/integration-audit.json",
+      "bytes": 1068,
+      "sha256": "5245bfa6be365c1e5507cd3693a1e1607187e7d0e0ae3c73de53f7811f1dd587",
+      "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\integration-audit.json"
+    },
+    {
+      "path": "bounded-cliff-mc/source-provenance.json",
+      "bytes": 164,
+      "sha256": "21803355807eb82afa358a0fd88e9220bbcdc1f6e9bc8925a6ac9797e83e21e3",
+      "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source-provenance.json"
+    },
+    {
+      "path": "bounded-cliff-mc/particle-vtk.tar.gz",
+      "bytes": 7212,
+      "sha256": "07384d2eb1d83014e75ddec5a2a07ca43a81352209c9db7e26198a72cb7ef935",
+      "source": null,
+      "members": [
+        {
+          "path": "sim_00001.vtk",
+          "bytes": 89215,
+          "sha256": "770d6a6e674dfdcbf40febbdb71cf7123f4f49d182e0ecf590b44155f7cba376",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\vtk\\sim_00001.vtk"
+        }
+      ]
+    },
+    {
+      "path": "bounded-cliff-mc/executed-source.tar.gz",
+      "bytes": 31456,
+      "sha256": "951e86f23212c1de0d84d76471bdf3bd3032f80e3e7e539a898468272726e397",
+      "source": null,
+      "members": [
+        {
+          "path": "case.lisp",
+          "bytes": 954,
+          "sha256": "345e528478b34bf9da4300e6216e5aee00a856e61c5fac8130edfb32808e1416",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\case.lisp"
+        },
+        {
+          "path": "framework/cl-mpm-framework.asd",
+          "bytes": 1536,
+          "sha256": "7ddb4085a790130faee8c99c7671492fe234d167d990f88e8919b3809a80dd40",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\cl-mpm-framework.asd"
+        },
+        {
+          "path": "framework/components/geometry.lisp",
+          "bytes": 368,
+          "sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\components\\geometry.lisp"
+        },
+        {
+          "path": "framework/components/materials.lisp",
+          "bytes": 4179,
+          "sha256": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\components\\materials.lisp"
+        },
+        {
+          "path": "framework/components/specifications.lisp",
+          "bytes": 4327,
+          "sha256": "7f0ef4c9210fc9b5d7bb9480e26cf01c78646a28bc77546f87c6b00b22028614",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\components\\specifications.lisp"
+        },
+        {
+          "path": "framework/config/package.lisp",
+          "bytes": 200,
+          "sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\config\\package.lisp"
+        },
+        {
+          "path": "framework/config/parameters.lisp",
+          "bytes": 4101,
+          "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\config\\parameters.lisp"
+        },
+        {
+          "path": "framework/materials/chalk.lisp",
+          "bytes": 4723,
+          "sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\materials\\chalk.lisp"
+        },
+        {
+          "path": "framework/output/plotting.lisp",
+          "bytes": 2391,
+          "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\output\\plotting.lisp"
+        },
+        {
+          "path": "framework/package.lisp",
+          "bytes": 972,
+          "sha256": "3c4e5a5302844c9743c4186240a49d65895a5e4d59b49a9d8d7cd9f77e3effb6",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\package.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/adapter.lisp",
+          "bytes": 4902,
+          "sha256": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\cliff\\adapter.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/build.lisp",
+          "bytes": 2097,
+          "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\cliff\\build.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/geometry.lisp",
+          "bytes": 3294,
+          "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\cliff\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/run.lisp",
+          "bytes": 2470,
+          "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\cliff\\run.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/settings.lisp",
+          "bytes": 1799,
+          "sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\cliff\\settings.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/build.lisp",
+          "bytes": 3187,
+          "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\joss\\build.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/classes.lisp",
+          "bytes": 429,
+          "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\joss\\classes.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/geometry.lisp",
+          "bytes": 2956,
+          "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\joss\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/measurements.lisp",
+          "bytes": 3008,
+          "sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\joss\\measurements.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/output.lisp",
+          "bytes": 1176,
+          "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\joss\\output.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/phases.lisp",
+          "bytes": 1395,
+          "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\joss\\phases.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/run.lisp",
+          "bytes": 11888,
+          "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\joss\\run.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/statistics.lisp",
+          "bytes": 6450,
+          "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\joss\\statistics.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/adapter.lisp",
+          "bytes": 3674,
+          "sha256": "cbab31a041442699d5809dd48caa09398fe49d54acd1dd0ad6e518bc00b8c8a3",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\adapter.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/boundaries.lisp",
+          "bytes": 891,
+          "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\boundaries.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/config.lisp",
+          "bytes": 853,
+          "sha256": "ca254cd019033dccc78a1db6bab141d2b9ea53f304d79a9a63f2c44251904b61",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\config.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/controls.lisp",
+          "bytes": 4294,
+          "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\controls.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/geometry.lisp",
+          "bytes": 3321,
+          "sha256": "6d210567fe2bf1d09fc207283bfe6b4fadd38c2d0fc2da46c5d475bd9a413154",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/homogeneous.lisp",
+          "bytes": 5998,
+          "sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\homogeneous.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/material.lisp",
+          "bytes": 1234,
+          "sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\material.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/measurements.lisp",
+          "bytes": 4492,
+          "sha256": "a8a7a5d4bed1901f1347e67c3c20a9b96238f2ba5946a86a1a6d2474c508a5e2",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\measurements.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/mpm.lisp",
+          "bytes": 3570,
+          "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\mpm.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/package.lisp",
+          "bytes": 426,
+          "sha256": "f4b3a347f1690a1c228f344727ea2511f3469249ddf8973d7efe4166fd710481",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\package.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/runner.lisp",
+          "bytes": 5609,
+          "sha256": "78402e0266bc8d67f21929c4c980259988b27ed8d47d1ab87cbda8a05b9a8053",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\runner.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/tensors.lisp",
+          "bytes": 637,
+          "sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\scenarios\\triaxial\\tensors.lisp"
+        },
+        {
+          "path": "framework/simulation.lisp",
+          "bytes": 2826,
+          "sha256": "f23b2c8f33bbf4cce15a1c56ef98aa2369eb719e66a1e04cb94d3fe55950c311",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\framework\\simulation.lisp"
+        },
+        {
+          "path": "inputs/calibration/triaxial-2d.json",
+          "bytes": 525,
+          "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\inputs\\calibration\\triaxial-2d.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-controls.json",
+          "bytes": 268,
+          "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\inputs\\calibration\\triaxial-controls.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-demo.json",
+          "bytes": 498,
+          "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\inputs\\calibration\\triaxial-demo.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-homogeneous.json",
+          "bytes": 370,
+          "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\inputs\\calibration\\triaxial-homogeneous.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-accepted-collapse.json",
+          "bytes": 1256,
+          "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\inputs\\studio\\reference\\joss-bay-accepted-collapse.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-prose.json",
+          "bytes": 1726,
+          "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\inputs\\studio\\reference\\joss-bay-prose.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-table.json",
+          "bytes": 1721,
+          "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\inputs\\studio\\reference\\joss-bay-table.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-video-candidate.json",
+          "bytes": 2575,
+          "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\inputs\\studio\\reference\\joss-bay-video-candidate.json"
+        },
+        {
+          "path": "inputs/studio/schema.json",
+          "bytes": 9059,
+          "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\inputs\\studio\\schema.json"
+        },
+        {
+          "path": "run-case.lisp",
+          "bytes": 4210,
+          "sha256": "e2817f33b9d5035f3d1d295526e541e1b28e4e0caebd3f108a563ad090441eb1",
+          "source": "output\\framework-refactor-2026-10-15\\current-head-cliff-mc\\source\\run-case.lisp"
+        }
+      ]
+    },
+    {
+      "path": "validation-summary.json",
+      "bytes": 9721,
+      "sha256": "799bed3fe109f50217142f89542424b0e22f31e70a03cacd9ec0f050e49568ec",
+      "source": null
+    },
+    {
+      "path": "verification/joss-repeatability-diagnosis.json",
+      "bytes": 36746,
+      "sha256": "6ecd510a61b2165946586abdcb601ca388103f3ae51c0c73a0752a02c96f3e53",
+      "source": "output/framework-refactor-2026-10-15/joss-repeatability-diagnosis.json"
+    },
+    {
+      "path": "serial-control/inputs/joss-serial-before-config.json",
+      "bytes": 1256,
+      "sha256": "2c78cbe852224ff31f3a1db635e77c889ef2467ed3f7ddab35723ba939ac7dee",
+      "source": "output/framework-refactor-2026-10-15/joss-serial-before-config.json"
+    },
+    {
+      "path": "serial-control/inputs/launch-joss-serial-before.ps1",
+      "bytes": 1021,
+      "sha256": "5f4edf58a06b59056aac0035400364fa7757c48bb1dc2b7d3ba8f8bd5f72fa74",
+      "source": "output/framework-refactor-2026-10-15/launch-joss-serial-before.ps1"
+    },
+    {
+      "path": "serial-control/inputs/launch-joss-serial-after.ps1",
+      "bytes": 1000,
+      "sha256": "f6e5f219f4fc9e57a00009cfb0e291c6458709218b0ee12714d5e95f87cf8026",
+      "source": "output/framework-refactor-2026-10-15/launch-joss-serial-after.ps1"
+    },
+    {
+      "path": "serial-control/inputs/joss-serial-processes.json",
+      "bytes": 415,
+      "sha256": "7ddc1d825e4ab74ffe008616d8b4f3f323639075c2d134965739409a7d8dafe3",
+      "source": "output/framework-refactor-2026-10-15/joss-serial-processes.json"
+    },
+    {
+      "path": "serial-control/inputs/joss-serial-regression.lisp",
+      "bytes": 618,
+      "sha256": "8218f92165587533217ae10c1429b1bd4ec0a9830036ce0c1f62c0ec7116c90a",
+      "source": "tests/cases/joss-serial-regression.lisp"
+    },
+    {
+      "path": "serial-control/status.json",
+      "bytes": 6034,
+      "sha256": "9715dd76add6b3f5675bd3ee002dcc006d48504b032fafb39f58d3bb97579cef",
+      "source": null
+    },
+    {
+      "path": "serial-control/launch-status.json",
+      "bytes": 585,
+      "sha256": "a3f6072f43708d74cd626d7eee71a373e24272a0c5a3f706ddc15df152d50afb",
+      "source": "docs\\evidence\\framework-refactor-2026-10-15\\serial-control\\status.json"
+    },
+    {
+      "path": "serial-control/before/timesteps.csv",
+      "bytes": 319169,
+      "sha256": "16456aab7be17638ab2df4f53531ca51dd9ccafa58df312c34e9daad0bdee7d9",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\timesteps.csv"
+    },
+    {
+      "path": "serial-control/before/reference-metadata.json",
+      "bytes": 2016,
+      "sha256": "de9669afe9f6edb33461fdaaa27c5e3bf14fd21b1ed7e95818dee0debdacb9dd",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\reference-metadata.json"
+    },
+    {
+      "path": "serial-control/before/transitions.csv",
+      "bytes": 1463,
+      "sha256": "d2fdb000fd1a7ec31a2a3222231aee09b21106fa2a50d48f9c9161da90931ece",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\transitions.csv"
+    },
+    {
+      "path": "serial-control/before/all-saved-state-audit.json",
+      "bytes": 434328,
+      "sha256": "b9d5a765bc6fee1697ed08b293fc13e8dcf1df08fd249950f15f9e2862373a8c",
+      "source": null
+    },
+    {
+      "path": "serial-control/before/particle-vtk.tar.gz",
+      "bytes": 2995017,
+      "sha256": "4bb4ebd3b79dbecb88985ac6cf66154e46f9520c09013c879adccbb45c66355f",
+      "source": null,
+      "members": [
+        {
+          "path": "vtk/equilibrium.vtk",
+          "bytes": 1298217,
+          "sha256": "0ef589b23c1be52ebca491382f8394120000ad498036b2fa3722d6e7c4cdc5e1",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\equilibrium.vtk"
+        },
+        {
+          "path": "vtk/initial.vtk",
+          "bytes": 1298217,
+          "sha256": "d8d0e90a78d865018f1bc5da7edd4b0b32a0136268eae4b25d64781814e0aad9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\initial.vtk"
+        },
+        {
+          "path": "vtk/sim_00001.vtk",
+          "bytes": 1298217,
+          "sha256": "36f2094d968fce3a6ae7cab64478dcbbf67f31e5666d89781e3e9a8439e7c702",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\sim_00001.vtk"
+        },
+        {
+          "path": "vtk/sim_00002.vtk",
+          "bytes": 1298217,
+          "sha256": "75981a525cbff829c594b6d81a322cb1b3ce75158b25c0b8a509b0f8b206557b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\sim_00002.vtk"
+        },
+        {
+          "path": "vtk/sim_00018.vtk",
+          "bytes": 1298217,
+          "sha256": "56c4d08ace61310caa3909ab4ffa1af61191151529c1128f376d2781dbeb5271",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\sim_00018.vtk"
+        },
+        {
+          "path": "vtk/sim_00191.vtk",
+          "bytes": 1298217,
+          "sha256": "9272a7a5c0015b13f1b1ba99328383e73759420fa2bbb5c9f04f333a68ae6931",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-before\\vtk\\sim_00191.vtk"
+        }
+      ]
+    },
+    {
+      "path": "serial-control/logs/joss-serial-before.log.gz",
+      "bytes": 2754,
+      "sha256": "eff3f3b2de33c2071147070eb52880cf652260b95c894ee1f9dd2ae133e0cfb3",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before.log",
+      "uncompressedSha256": "18116006666d023d91586c36ea6f4b4cc2752314680e310761aa3aa9f8aa9511"
+    },
+    {
+      "path": "serial-control/logs/joss-serial-before-status.json",
+      "bytes": 237,
+      "sha256": "df526f934fbeab8436d8d0e8c1d428b72601862c2a4b0ea844a2300d140d7ebe",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before-status.json"
+    },
+    {
+      "path": "serial-control/after/timesteps.csv",
+      "bytes": 319169,
+      "sha256": "16456aab7be17638ab2df4f53531ca51dd9ccafa58df312c34e9daad0bdee7d9",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\timesteps.csv"
+    },
+    {
+      "path": "serial-control/after/reference-metadata.json",
+      "bytes": 2016,
+      "sha256": "de9669afe9f6edb33461fdaaa27c5e3bf14fd21b1ed7e95818dee0debdacb9dd",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\reference-metadata.json"
+    },
+    {
+      "path": "serial-control/after/transitions.csv",
+      "bytes": 1463,
+      "sha256": "d2fdb000fd1a7ec31a2a3222231aee09b21106fa2a50d48f9c9161da90931ece",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\transitions.csv"
+    },
+    {
+      "path": "serial-control/after/source-provenance.json",
+      "bytes": 164,
+      "sha256": "21803355807eb82afa358a0fd88e9220bbcdc1f6e9bc8925a6ac9797e83e21e3",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source-provenance.json"
+    },
+    {
+      "path": "serial-control/after/all-saved-state-audit.json",
+      "bytes": 434328,
+      "sha256": "b9d5a765bc6fee1697ed08b293fc13e8dcf1df08fd249950f15f9e2862373a8c",
+      "source": null
+    },
+    {
+      "path": "serial-control/after/particle-vtk.tar.gz",
+      "bytes": 2995017,
+      "sha256": "4bb4ebd3b79dbecb88985ac6cf66154e46f9520c09013c879adccbb45c66355f",
+      "source": null,
+      "members": [
+        {
+          "path": "vtk/equilibrium.vtk",
+          "bytes": 1298217,
+          "sha256": "0ef589b23c1be52ebca491382f8394120000ad498036b2fa3722d6e7c4cdc5e1",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\equilibrium.vtk"
+        },
+        {
+          "path": "vtk/initial.vtk",
+          "bytes": 1298217,
+          "sha256": "d8d0e90a78d865018f1bc5da7edd4b0b32a0136268eae4b25d64781814e0aad9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\initial.vtk"
+        },
+        {
+          "path": "vtk/sim_00001.vtk",
+          "bytes": 1298217,
+          "sha256": "36f2094d968fce3a6ae7cab64478dcbbf67f31e5666d89781e3e9a8439e7c702",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\sim_00001.vtk"
+        },
+        {
+          "path": "vtk/sim_00002.vtk",
+          "bytes": 1298217,
+          "sha256": "75981a525cbff829c594b6d81a322cb1b3ce75158b25c0b8a509b0f8b206557b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\sim_00002.vtk"
+        },
+        {
+          "path": "vtk/sim_00018.vtk",
+          "bytes": 1298217,
+          "sha256": "56c4d08ace61310caa3909ab4ffa1af61191151529c1128f376d2781dbeb5271",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\sim_00018.vtk"
+        },
+        {
+          "path": "vtk/sim_00191.vtk",
+          "bytes": 1298217,
+          "sha256": "9272a7a5c0015b13f1b1ba99328383e73759420fa2bbb5c9f04f333a68ae6931",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\vtk\\sim_00191.vtk"
+        }
+      ]
+    },
+    {
+      "path": "serial-control/logs/joss-serial-after.log.gz",
+      "bytes": 2626,
+      "sha256": "cc55c5df68d46b3fe4fe6d26ec644766c0ba4486c0413343d33a011d0eccb101",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after.log",
+      "uncompressedSha256": "9bb6a50b328b3f65fa794a671f3aea74103a841c12f504ac17d1f00aa1944f6b"
+    },
+    {
+      "path": "serial-control/logs/joss-serial-after-status.json",
+      "bytes": 262,
+      "sha256": "d2d22ba8dce601a320505b33b73515ff7ee23a17575f7db7c43dd5ea2bdbc818",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-after-status.json"
+    },
+    {
+      "path": "serial-control/strict-comparison.json.gz",
+      "bytes": 148831,
+      "sha256": "b2cd46e80ab805d753bdc8e43262bab759645dd8359af4ec67e9031fab06ed86",
+      "source": "output\\framework-refactor-2026-10-15\\joss-serial-before-after-comparison.json",
+      "uncompressedSha256": "7391ab5704302f693a9706eba21c278a9693b3ea8ca0e1d6514fe58bfb3cbf32"
+    },
+    {
+      "path": "serial-control/executed-after-source.tar.gz",
+      "bytes": 31407,
+      "sha256": "84dc981a61594cfbbe04ecf1d6014a27adeb2fd61025f347291b8dec301533e7",
+      "source": null,
+      "members": [
+        {
+          "path": "case.lisp",
+          "bytes": 618,
+          "sha256": "8218f92165587533217ae10c1429b1bd4ec0a9830036ce0c1f62c0ec7116c90a",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\case.lisp"
+        },
+        {
+          "path": "framework/cl-mpm-framework.asd",
+          "bytes": 1536,
+          "sha256": "7ddb4085a790130faee8c99c7671492fe234d167d990f88e8919b3809a80dd40",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\cl-mpm-framework.asd"
+        },
+        {
+          "path": "framework/components/geometry.lisp",
+          "bytes": 368,
+          "sha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\components\\geometry.lisp"
+        },
+        {
+          "path": "framework/components/materials.lisp",
+          "bytes": 4179,
+          "sha256": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\components\\materials.lisp"
+        },
+        {
+          "path": "framework/components/specifications.lisp",
+          "bytes": 4327,
+          "sha256": "7f0ef4c9210fc9b5d7bb9480e26cf01c78646a28bc77546f87c6b00b22028614",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\components\\specifications.lisp"
+        },
+        {
+          "path": "framework/config/package.lisp",
+          "bytes": 200,
+          "sha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\config\\package.lisp"
+        },
+        {
+          "path": "framework/config/parameters.lisp",
+          "bytes": 4101,
+          "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\config\\parameters.lisp"
+        },
+        {
+          "path": "framework/materials/chalk.lisp",
+          "bytes": 4723,
+          "sha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\materials\\chalk.lisp"
+        },
+        {
+          "path": "framework/output/plotting.lisp",
+          "bytes": 2391,
+          "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\output\\plotting.lisp"
+        },
+        {
+          "path": "framework/package.lisp",
+          "bytes": 972,
+          "sha256": "3c4e5a5302844c9743c4186240a49d65895a5e4d59b49a9d8d7cd9f77e3effb6",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\package.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/adapter.lisp",
+          "bytes": 4902,
+          "sha256": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\cliff\\adapter.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/build.lisp",
+          "bytes": 2097,
+          "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\cliff\\build.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/geometry.lisp",
+          "bytes": 3294,
+          "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\cliff\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/run.lisp",
+          "bytes": 2470,
+          "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\cliff\\run.lisp"
+        },
+        {
+          "path": "framework/scenarios/cliff/settings.lisp",
+          "bytes": 1799,
+          "sha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\cliff\\settings.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/build.lisp",
+          "bytes": 3187,
+          "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\build.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/classes.lisp",
+          "bytes": 429,
+          "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\classes.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/geometry.lisp",
+          "bytes": 2956,
+          "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/measurements.lisp",
+          "bytes": 3008,
+          "sha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\measurements.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/output.lisp",
+          "bytes": 1176,
+          "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\output.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/phases.lisp",
+          "bytes": 1395,
+          "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\phases.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/run.lisp",
+          "bytes": 11888,
+          "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\run.lisp"
+        },
+        {
+          "path": "framework/scenarios/joss/statistics.lisp",
+          "bytes": 6450,
+          "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\joss\\statistics.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/adapter.lisp",
+          "bytes": 3674,
+          "sha256": "cbab31a041442699d5809dd48caa09398fe49d54acd1dd0ad6e518bc00b8c8a3",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\adapter.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/boundaries.lisp",
+          "bytes": 891,
+          "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\boundaries.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/config.lisp",
+          "bytes": 853,
+          "sha256": "ca254cd019033dccc78a1db6bab141d2b9ea53f304d79a9a63f2c44251904b61",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\config.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/controls.lisp",
+          "bytes": 4294,
+          "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\controls.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/geometry.lisp",
+          "bytes": 3321,
+          "sha256": "6d210567fe2bf1d09fc207283bfe6b4fadd38c2d0fc2da46c5d475bd9a413154",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\geometry.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/homogeneous.lisp",
+          "bytes": 5998,
+          "sha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\homogeneous.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/material.lisp",
+          "bytes": 1234,
+          "sha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\material.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/measurements.lisp",
+          "bytes": 4492,
+          "sha256": "a8a7a5d4bed1901f1347e67c3c20a9b96238f2ba5946a86a1a6d2474c508a5e2",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\measurements.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/mpm.lisp",
+          "bytes": 3570,
+          "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\mpm.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/package.lisp",
+          "bytes": 426,
+          "sha256": "f4b3a347f1690a1c228f344727ea2511f3469249ddf8973d7efe4166fd710481",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\package.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/runner.lisp",
+          "bytes": 5609,
+          "sha256": "78402e0266bc8d67f21929c4c980259988b27ed8d47d1ab87cbda8a05b9a8053",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\runner.lisp"
+        },
+        {
+          "path": "framework/scenarios/triaxial/tensors.lisp",
+          "bytes": 637,
+          "sha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\scenarios\\triaxial\\tensors.lisp"
+        },
+        {
+          "path": "framework/simulation.lisp",
+          "bytes": 2826,
+          "sha256": "f23b2c8f33bbf4cce15a1c56ef98aa2369eb719e66a1e04cb94d3fe55950c311",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\framework\\simulation.lisp"
+        },
+        {
+          "path": "inputs/calibration/triaxial-2d.json",
+          "bytes": 525,
+          "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\calibration\\triaxial-2d.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-controls.json",
+          "bytes": 268,
+          "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\calibration\\triaxial-controls.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-demo.json",
+          "bytes": 498,
+          "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\calibration\\triaxial-demo.json"
+        },
+        {
+          "path": "inputs/calibration/triaxial-homogeneous.json",
+          "bytes": 370,
+          "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\calibration\\triaxial-homogeneous.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-accepted-collapse.json",
+          "bytes": 1256,
+          "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\studio\\reference\\joss-bay-accepted-collapse.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-prose.json",
+          "bytes": 1726,
+          "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\studio\\reference\\joss-bay-prose.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-table.json",
+          "bytes": 1721,
+          "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\studio\\reference\\joss-bay-table.json"
+        },
+        {
+          "path": "inputs/studio/reference/joss-bay-video-candidate.json",
+          "bytes": 2575,
+          "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\studio\\reference\\joss-bay-video-candidate.json"
+        },
+        {
+          "path": "inputs/studio/schema.json",
+          "bytes": 9059,
+          "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\inputs\\studio\\schema.json"
+        },
+        {
+          "path": "run-case.lisp",
+          "bytes": 4210,
+          "sha256": "e2817f33b9d5035f3d1d295526e541e1b28e4e0caebd3f108a563ad090441eb1",
+          "source": "output\\framework-refactor-2026-10-15\\joss-serial-after\\source\\run-case.lisp"
+        }
+      ]
+    },
+    {
+      "path": "serial-control/independent-audit.json.gz",
+      "bytes": 26126,
+      "sha256": "fd028c85c90b915cc0086b2de4942df9237669f51b6e7c8d46c68127bb03921e",
+      "source": "output/framework-refactor-2026-10-15/joss-serial-independent-audit.json",
+      "uncompressedSha256": "41f2eeb041a01fffeb79622ce1b7d4b20078688e0be545c3e0cfedbe8ef49b31"
+    }
+  ]
+}

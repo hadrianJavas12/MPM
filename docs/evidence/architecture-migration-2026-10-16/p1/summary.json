@@ -1,0 +1,42 @@
+{
+  "productionImplementationCommit": "3cd172e",
+  "scope": "Bounded current-code Windows native contracts and CLI controls; full G3 pending",
+  "checks": {
+    "framework": 10,
+    "configuration": 10,
+    "material": 9,
+    "node": 36,
+    "ownershipNormal": 7,
+    "ownershipLegacy": 7,
+    "snapshot": 3
+  },
+  "strictBoundedRegressions": {
+    "triaxial-short": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    },
+    "mc-triaxial": {
+      "passed": true,
+      "baseline_states": 2,
+      "candidate_states": 2,
+      "max_position_difference_m": 0.0
+    }
+  },
+  "cliffMcVtkExact": true,
+  "sourceFormsExact": true,
+  "initialFailuresRetained": [
+    "ownership-normal.log: test incorrectly omitted SBCL SLOT-OBJECT; old-source control confirms it; only test assertion corrected",
+    "snapshot-contract-001.log: negative fixture still preferred frozen registry; fixture registry corrected, guard unchanged"
+  ],
+  "plotWarningRetained": "cliff MC gnuplot PNG unavailable; numerical VTK hashes match exactly",
+  "nativeEngineNumericalChanges": false,
+  "newMcEvolutionInstalled": false,
+  "scientificValidation": false,
+  "fullG3": "NOT_RUN at bounded checkpoint",
+  "P1Acceptance": "PROVISIONAL",
+  "G1": "PARTIAL",
+  "unitProvenance": "Units loaded committed production code from working tree, not pre-load frozen unit sources; full executed CLI source copies retained in run archives",
+  "transitiveNativeDependencyProvenanceComplete": false
+}

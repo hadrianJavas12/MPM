@@ -13,7 +13,8 @@ dan [gambar akhirnya](evidence/joss-collapse-2026-10-15/accepted-collapse-t40.pn
 tersimpan di proses SBCL, lalu memeriksa ulang satu update. Panduan ini memulai
 proses baru dan menghitung equilibrium dari awal. Parameter material/geometri
 dan durasi 40 s mengikuti pilot; identitas frame demi frame belum dibuktikan.
-Audit ilmiah sedang berlangsung. Menjalankan perintah ini tidak otomatis
+Audit ilmiah telah didokumentasikan pada [laporan audit](SCIENTIFIC_AUDIT_2026-10-15.md).
+Menjalankan perintah ini tidak otomatis
 menjadikan hasilnya tervalidasi ilmiah.
 
 ## 1. Persiapan
@@ -23,7 +24,8 @@ Set-Location D:\MPM
 git branch --show-current
 ```
 
-Branch yang digunakan: `feat/studio-custom-constitutive-lisp-export`.
+Gunakan branch `main` setelah merge checkpoint PR #7 (commit `efd0358`).
+Branch historis pilot adalah `feat/studio-custom-constitutive-lisp-export`.
 SBCL, Quicklisp dan pustaka native telah disiapkan pada komputer ini. Untuk
 komputer baru, ikuti [windows-setup.md](windows-setup.md) terlebih dahulu.
 Launcher `windows\cl-mpm.cmd` menyiapkan lingkungan dan memuat engine asli.

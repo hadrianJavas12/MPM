@@ -1,0 +1,114 @@
+{
+  "basis": "Strict native binaryVTK parser checks allavailablearraysfinite; x-u identity; no interpolation or invented deformation",
+  "frameCount": 2,
+  "states": [
+    {
+      "time": 0.0,
+      "file": "particles_0000.vtk",
+      "sha256": "f4dcf0c403af7c5f3ed478d0d1ec6a4affd4a99eee2d4b1a6a7fc3a191f83587",
+      "particles": 480,
+      "fields": [
+        "acc_x",
+        "acc_y",
+        "disp_x",
+        "disp_y",
+        "eps_xx",
+        "eps_xy",
+        "eps_yy",
+        "fric-contact",
+        "fric-normal",
+        "index",
+        "mass",
+        "mpi-index",
+        "p-wave-modulus",
+        "plastic-strain",
+        "sig_xx",
+        "sig_xy",
+        "sig_yy",
+        "size_x",
+        "size_xx",
+        "size_xy",
+        "size_y",
+        "size_yx",
+        "size_yy",
+        "split-depth",
+        "unique-id",
+        "vel_x",
+        "vel_y",
+        "volume",
+        "yield-function"
+      ],
+      "mass": 17.64,
+      "bounds_min": [
+        0.0321875,
+        0.03233333333333333,
+        0.0
+      ],
+      "bounds_max": [
+        0.0978125,
+        0.16766666666666666,
+        0.0
+      ],
+      "max_displacement": 0.0,
+      "mass_centroid": [
+        0.06499999999999967,
+        0.09999999999999999,
+        0.0
+      ]
+    },
+    {
+      "time": 0.0003,
+      "file": "particles_0001.vtk",
+      "sha256": "0b9c90d69e4ed5f3622a4996d6089c48ba965f07ff7bd501dc81e4a07c0d9598",
+      "particles": 480,
+      "fields": [
+        "acc_x",
+        "acc_y",
+        "disp_x",
+        "disp_y",
+        "eps_xx",
+        "eps_xy",
+        "eps_yy",
+        "fric-contact",
+        "fric-normal",
+        "index",
+        "mass",
+        "mpi-index",
+        "p-wave-modulus",
+        "plastic-strain",
+        "sig_xx",
+        "sig_xy",
+        "sig_yy",
+        "size_x",
+        "size_xx",
+        "size_xy",
+        "size_y",
+        "size_yx",
+        "size_yy",
+        "split-depth",
+        "unique-id",
+        "vel_x",
+        "vel_y",
+        "volume",
+        "yield-function"
+      ],
+      "mass": 17.64,
+      "bounds_min": [
+        0.032183574541798876,
+        0.03233333332922795,
+        0.0
+      ],
+      "bounds_max": [
+        0.09781642545820116,
+        0.1676630289287541,
+        0.0
+      ],
+      "max_displacement": 6.456940198490704e-06,
+      "mass_centroid": [
+        0.06500000000000002,
+        0.09999941893883664,
+        0.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "sourceCommitAtLaunch": "333306bbcaa7e900fe66a14d8bcc3d28eaca664c",
+  "startedUtc": "2026-10-16T08:23:06.203676+00:00",
+  "sourceSha256": {
+    "framework/README.md": "dec67772242346170327bbf09d109966436a784a0c835d4103b34cd559d00a17",
+    "framework/cl-mpm-framework.asd": "02a2213f9265aaec4f54c02a1af7b06f4e3718493e6c8ed2f859f31281f39101",
+    "framework/components/README.md": "6019c9b7d5f19ee84c44a41b1b442a0a119cadd582ac1263a5bce010dc4056a6",
+    "framework/components/diagnostics.lisp": "6797f1d798c6597528c4a61a4a2ab2d80a13738be451252277808e829fdcc835",
+    "framework/components/geometry.lisp": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
+    "framework/components/materials.lisp": "47df6aa151a2a128c8f50968ce213f331a7ad3e41bfa41ac7a3b7d738440eb1b",
+    "framework/components/specifications.lisp": "1408795413a7235b167181ddfa6b50ee1b3ccf72a5b950ac39a3c7ff169c309b",
+    "framework/config/package.lisp": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
+    "framework/config/parameters.lisp": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+    "framework/materials/chalk.lisp": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
+    "framework/output/plotting.lisp": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+    "framework/package.lisp": "8053c0b199e2bacdb8187045b33bb6762da0eb3ef56e1dbd2f3998daf7bfff15",
+    "framework/scenarios/cliff/adapter.lisp": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709",
+    "framework/scenarios/cliff/build.lisp": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+    "framework/scenarios/cliff/geometry.lisp": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+    "framework/scenarios/cliff/run.lisp": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+    "framework/scenarios/cliff/settings.lisp": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
+    "framework/scenarios/joss/build.lisp": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+    "framework/scenarios/joss/classes.lisp": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+    "framework/scenarios/joss/geometry.lisp": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+    "framework/scenarios/joss/measurements.lisp": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
+    "framework/scenarios/joss/output.lisp": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+    "framework/scenarios/joss/phases.lisp": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+    "framework/scenarios/joss/run.lisp": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+    "framework/scenarios/joss/statistics.lisp": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+    "framework/scenarios/triaxial/README.md": "a9b468fa37741c96d85280d55ca793fd6ad79717b902beab175e3dc55643a8f7",
+    "framework/scenarios/triaxial/adapter.lisp": "eab6819144c15d8c5ee475040c97ba6f42e6d1288149269c45dc0e74b8e2077c",
+    "framework/scenarios/triaxial/boundaries.lisp": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+    "framework/scenarios/triaxial/config.lisp": "0bf4d2abc858c6330185e092d150755e40d044a497784852e6da6f632494cdce",
+    "framework/scenarios/triaxial/controls.lisp": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+    "framework/scenarios/triaxial/geometry.lisp": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc",
+    "framework/scenarios/triaxial/homogeneous.lisp": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
+    "framework/scenarios/triaxial/material.lisp": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
+    "framework/scenarios/triaxial/measurements.lisp": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc",
+    "framework/scenarios/triaxial/mpm.lisp": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+    "framework/scenarios/triaxial/package.lisp": "603756b11e09b4401a0a7e3d471023e894acfc26eb15eff327dc02626a8b42b9",
+    "framework/scenarios/triaxial/runner.lisp": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96",
+    "framework/scenarios/triaxial/tensors.lisp": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
+    "framework/simulation.lisp": "331b9f228729fd3f6bc07dcbe52b9480c5ae7b6eb3d0d9b47871c23e7bbd70a3",
+    "materials/README.md": "2386e6aa3eefa8ba0228dc0f2b2899dfee5d3e430d990d43e6cbfb3ed9cd214f",
+    "materials/adapters/native.lisp": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92",
+    "materials/core/definition.lisp": "502d80413890b4f6a165b0f634ca0c6b0618e09946f4d3131241911cae17e95e",
+    "materials/core/diagnostics-interface.lisp": "089e1b304abb660255b182040f8e4e23a5829c35cb2718f92bc8fbb34f8f5722",
+    "materials/diagnostics/native.lisp": "cd23a98cdf42d4c66f494b4df861c3d7f46afdf4efe6a9ec5659c037f0061411",
+    "scripts/run-case.lisp": "1718226101a9e7f75dba4534c0d0c8315758b1641b4eef2788715fb4d09fb40a",
+    "src/measurements/material-output.lisp": "9601e73a1397746a45945c312681de9d591016d7ccd5b1853488d0473f485b80",
+    "tests/case-snapshot-contracts.lisp": "90b366cff0172d9cc11b71e532d93cc351f7b3cc9fa21184ea93798205ce84ab",
+    "tests/cases/cliff-mc-integration.lisp": "345e528478b34bf9da4300e6216e5aee00a856e61c5fac8130edfb32808e1416",
+    "tests/cases/joss-integration.lisp": "f1b79ca6e3bf7210f1cf5a0a4bd0840decf2de335540906eac27039a346f05bf",
+    "tests/cases/joss-serial-regression.lisp": "8218f92165587533217ae10c1429b1bd4ec0a9830036ce0c1f62c0ec7116c90a",
+    "tests/cases/triaxial-3d-regression.lisp": "88680df1a1063fc06f096c58fecaee69aca6d7a1be12f1266f1544230d3827df",
+    "tests/cases/triaxial-integration.lisp": "0259b4474f91ae8b6103e227e0d1a0a59c77ae821275e39151e6a1ab9b38603b",
+    "tests/config-contracts.lisp": "a75f3574e054ea1fdb194613bb72746523aef8ff62b7ca6a7ee1b658b51823bc",
+    "tests/constitutive.lisp": "81f78f654282cc4e705536793d3ac04d3bea08b3ba87eeddb24cc4f144cf5b17",
+    "tests/cpp.lisp": "36054d7ea7a18f2dcadc21c3683a37531cab2c2e26e21342e21080f4740e885b",
+    "tests/diagnostics-ownership-compat.lisp": "d4e10b95ab03385cef74247bbe9262dcbe83c9f2c6c522b78b62123e242892f1",
+    "tests/dsvp.lisp": "e10c707ce9eb61934aeb38195efa6f2cf0cb83227f17b01666bd0b4c0c088aba",
+    "tests/framework-components.lisp": "53e23c3982818b042a571940c607a26170c8055e3a5713876450f8e57402f9e5",
+    "tests/full-sim/simple-shear.lisp": "7914901ea95689f7bf26a391c8f73029a4b5f5eed457c2867398a68db41ec492",
+    "tests/material-diagnostics.lisp": "9c49f97c05bcf2e3d1dc87a018ac271e47c2351c411d020e193455f0257ff12e",
+    "tests/material-ownership-compat.lisp": "fe13945a91506c9fbdc1229c7c4f220eff7dac846f94f9edddb494b3a27b67f1",
+    "tests/packages.lisp": "3cb532a441d1886bdad43952d2a3132df7a95d9106d3633bba4d527d9a38d1e1",
+    "tests/triaxial-components.lisp": "8b15d735547f50d4f9dbc63aafffa4287ad850b4189e6bccde8df42b9b7a3e1e"
+  },
+  "status": "PASS",
+  "checks": {
+    "framework-components": {
+      "exitCode": 0
+    },
+    "config-contracts": {
+      "exitCode": 0
+    },
+    "material-diagnostics": {
+      "exitCode": 0
+    },
+    "diagnostics-normal": {
+      "exitCode": 0
+    },
+    "diagnostics-legacy": {
+      "exitCode": 0
+    },
+    "ownership-normal": {
+      "exitCode": 0
+    },
+    "ownership-legacy": {
+      "exitCode": 0
+    },
+    "snapshot-contract": {
+      "exitCode": 0
+    },
+    "node-check": {
+      "exitCode": 0
+    },
+    "node-tests": {
+      "exitCode": 0
+    },
+    "triaxial-short": {
+      "exitCode": 0
+    },
+    "mc-triaxial-comparison": {
+      "exitCode": 0
+    },
+    "triaxial-short-comparison": {
+      "exitCode": 0
+    }
+  },
+  "fullJoss": "NOT_RUN_USER_CANCELLED",
+  "sourceUnchangedDuringChecks": true,
+  "endedUtc": "2026-10-16T08:25:41.083774+00:00"
+}

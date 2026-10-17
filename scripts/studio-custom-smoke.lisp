@@ -1,5 +1,5 @@
 ;;;; Real-engine smoke test, requiring the complete CL-MPM/Quicklisp toolchain.
-;;;; windows\cl-mpm.cmd scripts\studio-custom-smoke.lisp
+;;;; windows\cl-mpm.cmd scripts\studio-custom-smoke.lisp [FRESH_OUTPUT_DIRECTORY]
 ;;;; Unlike studio/test/lisp-contract-harness.lisp, this uses the real MPM engine.
 (in-package :cl-user)
 (ql:quickload :cl-mpm-studio :silent t)
@@ -111,7 +111,13 @@
                     (length (cl-mpm:sim-mps custom)) (cl-mpm:sim-dt custom) *smoke-custom-calls*)
             (format t "~&Max absolute position difference: ~,8E m; stress difference: ~,8E Pa~%"
                     position-difference stress-difference))
-          (let ((output (asdf:system-relative-pathname "cl-mpm" "output/studio-custom-smoke/")))
+          (let* ((requested (first (cl-user::cl-mpm-script-args)))
+                 (output (uiop:ensure-directory-pathname
+                          (if requested (merge-pathnames requested)
+                              (asdf:system-relative-pathname "cl-mpm" "output/studio-custom-smoke/")))))
+            (when (and requested (probe-file output)
+                       (or (uiop:directory-files output) (uiop:subdirectories output)))
+              (error "Use a fresh custom-smoke output directory: ~A" output))
             (ensure-directories-exist output)
             (let ((built-in-path (merge-pathnames "built-in.vtk" output))
                   (custom-path (merge-pathnames "custom-delegate.vtk" output)))

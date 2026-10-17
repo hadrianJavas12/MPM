@@ -47,7 +47,7 @@ options (and that marker), so they are simply the rest of argv."
 
 ;;; 2. ASDF registry ---------------------------------------------------------
 
-(dolist (dir '("" "deps/magicl/" "deps/vgplot/" "deps/swank.live/" "studio/lisp/"))
+(dolist (dir '("" "materials/" "deps/magicl/" "deps/vgplot/" "deps/swank.live/" "studio/lisp/"))
   (pushnew (cl-mpm-path dir) asdf:*central-registry* :test #'equal))
 
 ;;; 3. Native libraries ------------------------------------------------------

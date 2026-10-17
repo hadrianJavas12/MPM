@@ -1,0 +1,21 @@
+(in-package :cl-user)
+(require :asdf)
+(ql:quickload :cl-mpm/settings :silent t)
+(asdf:initialize-output-translations
+ (list :output-translations
+       (list (cl-mpm-path "src/**/*.*")
+             (cl-mpm-path "output/reference-reproduction-2026-10-14/fast-cache-safe/src/**/*.*"))
+       (list (cl-mpm-path "output/framework-refactor-2026-10-15/baseline-source/studio/lisp/**/*.*")
+             (cl-mpm-path "output/framework-refactor-2026-10-15/frozen-fast-cache/studio/lisp/**/*.*"))
+       :inherit-configuration))
+(setf (symbol-value (find-symbol "*OPTIMISE-SETTING*" :cl-mpm/settings))
+      '(optimize (speed 3) (safety 1) (debug 1) (compilation-speed 0)))
+(setf asdf:*central-registry* (cons (cl-mpm-path "output/framework-refactor-2026-10-15/baseline-source/studio/lisp/") (remove (cl-mpm-path "studio/lisp/") asdf:*central-registry* :test #'equal)))
+(asdf:clear-system "cl-mpm-studio")
+(asdf:load-asd (cl-mpm-path "output/framework-refactor-2026-10-15/baseline-source/studio/lisp/cl-mpm-studio.asd"))
+(ql:quickload :cl-mpm-studio :silent t)
+(assert (equal (truename (asdf:system-source-directory "cl-mpm-studio")) (truename (cl-mpm-path "output/framework-refactor-2026-10-15/baseline-source/studio/lisp/"))))
+(format t "~&FROZEN-BASELINE-SYSTEM=~A~%" (asdf:system-source-directory "cl-mpm-studio"))
+(finish-output)
+(uiop:quit (cl-mpm-studio:main (cl-mpm-script-args)))
+

@@ -1,0 +1,147 @@
+{
+  "executedSourceCommit": "62adb5013e6379ae1d970e4ad334fc92cc5ef912",
+  "completedVmStrictComparisonsAndAuditsPass": true,
+  "runs": {
+    "triaxial-2d": {
+      "complete": true,
+      "frames": 51,
+      "finalTimeS": 0.2,
+      "particleCount": 480,
+      "finalMass": 17.64,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 0.2,
+        "file": "particles_0050.vtk",
+        "sha256": "0ed90f74db64dad9b7f4bad598752ef8e80e362b34268c4c63f5d379382138ae",
+        "particles": 480,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 17.64,
+        "bounds_min": [
+          0.028055818706061688,
+          0.032045675305295014,
+          0.0
+        ],
+        "bounds_max": [
+          0.10194418129395871,
+          0.15400429876886615,
+          0.0
+        ],
+        "max_displacement": 0.014289572934230416,
+        "mass_centroid": [
+          0.06499999999999999,
+          0.09327754018084089,
+          0.0
+        ]
+      }
+    },
+    "triaxial-3d": {
+      "complete": true,
+      "frames": 51,
+      "finalTimeS": 0.2,
+      "particleCount": 780,
+      "finalMass": 1.0032750000000004,
+      "maxRelativeMassDrift": 0.0,
+      "last": {
+        "time": 0.2,
+        "file": "particles_0050.vtk",
+        "sha256": "614bdd8251b7a314bbe71cf78a4975c592b08f337a99ca24abcc5dc366bd49f5",
+        "particles": 780,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "acc_z",
+          "disp_x",
+          "disp_y",
+          "disp_z",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "eps_yz",
+          "eps_zx",
+          "eps_zz",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "sig_yz",
+          "sig_zx",
+          "sig_zz",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "size_z",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "vel_z",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 1.0032750000000004,
+        "bounds_min": [
+          0.032559694286697,
+          0.03416236572417463,
+          0.0325596942871278
+        ],
+        "bounds_max": [
+          0.09744030570884189,
+          0.15189403369129628,
+          0.09744030570931085
+        ],
+        "max_displacement": 0.013586979876597703,
+        "mass_centroid": [
+          0.06499999999999996,
+          0.09319156112641541,
+          0.06499999999999996
+        ]
+      }
+    }
+  },
+  "jossStatus": "STOPPED_BY_USER",
+  "jossComplete": false,
+  "jossLastObservedTimeS": 4.2,
+  "jossNativeExitCode": null,
+  "fullG3": "PARTIAL",
+  "scientificValidation": false,
+  "scope": "Completed P1 VM regression only; cancelled Joss retained without PASS/FAIL claim"
+}

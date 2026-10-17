@@ -1,0 +1,2097 @@
+{
+  "baseline": "D:\\MPM\\output\\architecture-migration-2026-10-16\\joss-bounded\\before-003",
+  "candidate": "D:\\MPM\\output\\architecture-migration-2026-10-16\\section2-benchmarks\\joss-serial-4s",
+  "comparison": "native saved states and recorded CSV only; no interpolation or renderer comparison",
+  "scientific_validation": false,
+  "run_metadata": {
+    "baseline": {
+      "effectiveMaterial": {
+        "E": 1000000000.0,
+        "nu": 0.24,
+        "plasticCohesion": 1965600.0,
+        "plasticFrictionRadians": 0.8726646259971648,
+        "damageFrictionRadians": 0.8726646259971648,
+        "damageInitiationStress": 18926.452181842527,
+        "ductility": 53.59975505618717,
+        "nonlocalLength": 0.5,
+        "delayTime": 10.0,
+        "damageDelayExponent": 2.0,
+        "residualTensileRatio": 1.0,
+        "residualCompressionRatio": 0.0,
+        "residualShearRatio": 0.51
+      },
+      "scenario": "joss-bay",
+      "implementation": "experimental-paper-reference",
+      "complete": true,
+      "termination": "simulation-time",
+      "phase": "collapse",
+      "physicalTime": 4.0,
+      "equilibrationSteps": 1658,
+      "equilibrationDuration": 0.49773793996241683,
+      "frames": 2,
+      "plottingCompleted": false,
+      "plottedFrames": 0,
+      "plottingTimeoutSeconds": 30,
+      "requestedSimulationTime": 4.0,
+      "scientificValidation": "unverified",
+      "damageCriterion": "author-Joss-Drucker-Prager",
+      "damageCriterionConvention": "max(0, Drucker-Prager(undamaged Kirchhoff stress, stored radian friction angle)); reference-only author-code adaptation, full fracture/run-out unvalidated.",
+      "protectedBaseParticles": 496,
+      "protectedBaseConvention": "Initial y <= soilBoundary is material index1; damage and plasticity remain disabled for this elastic beach.",
+      "statisticNorm": "aggregate-projected-L2",
+      "statisticConvention": "Author-code stabilization adaptation: bulk physical nodal KE/work plus aggregate constrained E^T M E kinetic energy and global displacement dot external work; OOBF uses independent E^T(internal+external) / E^T external L2 norms, excludes damping and dependent exterior DOFs. No volume weighting or literal Eq67 claim.",
+      "stabilization": "author-code-cut-cell-aggregation",
+      "viscousDampingConvention": "core damping=2*beta; beta_crit=(pi/2)*sqrt(E/(rho*h^2)); settle beta=0.1*beta_crit, dynamic beta=1e-4*beta_crit.",
+      "criticalDamping": 2409.4915745234766,
+      "settleDampingFactor": 481.8983149046953,
+      "dynamicDampingFactor": 0.48189831490469537,
+      "parameterAmbiguities": "Paper Table 5 E=100 MPa conflicts with prose E=1 GPa; Eq19 blend notation conflicts with prose. Effective inputs must be reported."
+    },
+    "candidate": {
+      "effectiveMaterial": {
+        "E": 1000000000.0,
+        "nu": 0.24,
+        "plasticCohesion": 1965600.0,
+        "plasticFrictionRadians": 0.8726646259971648,
+        "damageFrictionRadians": 0.8726646259971648,
+        "damageInitiationStress": 18926.452181842527,
+        "ductility": 53.59975505618717,
+        "nonlocalLength": 0.5,
+        "delayTime": 10.0,
+        "damageDelayExponent": 2.0,
+        "residualTensileRatio": 1.0,
+        "residualCompressionRatio": 0.0,
+        "residualShearRatio": 0.51
+      },
+      "scenario": "joss-bay",
+      "implementation": "experimental-paper-reference",
+      "complete": true,
+      "termination": "simulation-time",
+      "phase": "collapse",
+      "physicalTime": 4.0,
+      "equilibrationSteps": 1658,
+      "equilibrationDuration": 0.49773793996241683,
+      "frames": 2,
+      "plottingCompleted": false,
+      "plottedFrames": 0,
+      "plottingTimeoutSeconds": 30,
+      "requestedSimulationTime": 4.0,
+      "scientificValidation": "unverified",
+      "damageCriterion": "author-Joss-Drucker-Prager",
+      "damageCriterionConvention": "max(0, Drucker-Prager(undamaged Kirchhoff stress, stored radian friction angle)); reference-only author-code adaptation, full fracture/run-out unvalidated.",
+      "protectedBaseParticles": 496,
+      "protectedBaseConvention": "Initial y <= soilBoundary is material index1; damage and plasticity remain disabled for this elastic beach.",
+      "statisticNorm": "aggregate-projected-L2",
+      "statisticConvention": "Author-code stabilization adaptation: bulk physical nodal KE/work plus aggregate constrained E^T M E kinetic energy and global displacement dot external work; OOBF uses independent E^T(internal+external) / E^T external L2 norms, excludes damping and dependent exterior DOFs. No volume weighting or literal Eq67 claim.",
+      "stabilization": "author-code-cut-cell-aggregation",
+      "viscousDampingConvention": "core damping=2*beta; beta_crit=(pi/2)*sqrt(E/(rho*h^2)); settle beta=0.1*beta_crit, dynamic beta=1e-4*beta_crit.",
+      "criticalDamping": 2409.4915745234766,
+      "settleDampingFactor": 481.8983149046953,
+      "dynamicDampingFactor": 0.48189831490469537,
+      "parameterAmbiguities": "Paper Table 5 E=100 MPa conflicts with prose E=1 GPa; Eq19 blend notation conflicts with prose. Effective inputs must be reported."
+    }
+  },
+  "tolerances": {
+    "absolute": 1e-08,
+    "relative_to_baseline": 1e-07,
+    "reference_coordinate_quantum_m": 1e-07,
+    "time_tolerance_s": 1e-10
+  },
+  "baseline_states": 2,
+  "candidate_states": 2,
+  "frames": [
+    {
+      "time": 2.0,
+      "baseline_file": "sim_00001.vtk",
+      "candidate_file": "sim_00001.vtk",
+      "baseline_sha256": "36f2094d968fce3a6ae7cab64478dcbbf67f31e5666d89781e3e9a8439e7c702",
+      "candidate_sha256": "36f2094d968fce3a6ae7cab64478dcbbf67f31e5666d89781e3e9a8439e7c702",
+      "identity_basis": "reference-coordinates-x-minus-displacement",
+      "same_fields": true,
+      "position": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 30.875000000002363,
+          "relative_linf_difference": 0.0,
+          "tolerance": 3.097500000000236e-06,
+          "pass": true
+        }
+      },
+      "fields": {
+        "acc_x": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "acc_y": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "damage": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "damage-inc": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "damage-k": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 17406.09875847727,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.001740619875847727,
+            "pass": true
+          }
+        },
+        "damage-length": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.5,
+            "relative_linf_difference": 0.0,
+            "tolerance": 6e-08,
+            "pass": true
+          }
+        },
+        "damage-y": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 55686.88034748241,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.00556869803474824,
+            "pass": true
+          }
+        },
+        "damage-ybar": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 50414.70108037612,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.005041480108037612,
+            "pass": true
+          }
+        },
+        "damage-ybar-scaled": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 50414.70108037612,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.005041480108037612,
+            "pass": true
+          }
+        },
+        "disp_x": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.000442088687552009,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.00442088687552e-08,
+            "pass": true
+          }
+        },
+        "disp_y": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.00011806525834918691,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0011806525834919e-08,
+            "pass": true
+          }
+        },
+        "eps_xx": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 5.3309414691277025e-05,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0005330941469127e-08,
+            "pass": true
+          }
+        },
+        "eps_xy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.00019605762778197356,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0019605762778197e-08,
+            "pass": true
+          }
+        },
+        "eps_yy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.00023521373245144123,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0023521373245145e-08,
+            "pass": true
+          }
+        },
+        "fric-contact": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "fric-normal": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "index": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 1.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0999999999999999e-07,
+            "pass": true
+          }
+        },
+        "mass": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 106.25,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0634999999999999e-05,
+            "pass": true
+          }
+        },
+        "mpi-index": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 1.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0999999999999999e-07,
+            "pass": true
+          }
+        },
+        "p-wave-modulus": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 1178984013.7202058,
+            "relative_linf_difference": 0.0,
+            "tolerance": 117.89840138202057,
+            "pass": true
+          }
+        },
+        "plastic-strain": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "sig_xx": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 86993.84561735767,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.008699394561735766,
+            "pass": true
+          }
+        },
+        "sig_xy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 79064.10184992959,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.00790642018499296,
+            "pass": true
+          }
+        },
+        "sig_yy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 277062.68475747906,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.027706278475747907,
+            "pass": true
+          }
+        },
+        "size_x": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.2500058123036617,
+            "relative_linf_difference": 0.0,
+            "tolerance": 3.500058123036617e-08,
+            "pass": true
+          }
+        },
+        "size_xx": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.25,
+            "relative_linf_difference": 0.0,
+            "tolerance": 3.4999999999999996e-08,
+            "pass": true
+          }
+        },
+        "size_xy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 1.3877787807814457e-17,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0000000000000002e-08,
+            "pass": true
+          }
+        },
+        "size_y": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.2500058123036617,
+            "relative_linf_difference": 0.0,
+            "tolerance": 3.500058123036617e-08,
+            "pass": true
+          }
+        },
+        "size_yx": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 6.938893903907228e-18,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "size_yy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.25,
+            "relative_linf_difference": 0.0,
+            "tolerance": 3.4999999999999996e-08,
+            "pass": true
+          }
+        },
+        "split-depth": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 4.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 4.1e-07,
+            "pass": true
+          }
+        },
+        "unique-id": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 1501.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.00015010999999999998,
+            "pass": true
+          }
+        },
+        "vel_x": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 7.34600878950196e-08,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0000007346008789e-08,
+            "pass": true
+          }
+        },
+        "vel_y": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 1.8693095344292982e-07,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0000018693095344e-08,
+            "pass": true
+          }
+        },
+        "volume": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.06250307861894187,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.625030786189419e-08,
+            "pass": true
+          }
+        },
+        "yield-function": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 11104040.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.1104040099999999,
+            "pass": true
+          }
+        }
+      },
+      "baseline_summary": {
+        "particles": 4155,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "damage",
+          "damage-inc",
+          "damage-k",
+          "damage-length",
+          "damage-y",
+          "damage-ybar",
+          "damage-ybar-scaled",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 425664.0625,
+        "bounds_min": [
+          0.12500007771428637,
+          0.12499463945560818,
+          0.0
+        ],
+        "bounds_max": [
+          30.875000000002363,
+          16.374983081896506,
+          0.0
+        ],
+        "max_displacement": 0.0004442906103925714,
+        "mass_centroid": [
+          8.131576755772606,
+          7.571733493680718,
+          0.0
+        ],
+        "max_damage": 0.0,
+        "max_damage_position": [
+          0.12500007771428637,
+          0.12500052089423122,
+          0.0
+        ],
+        "max_damage_reference_position": [
+          0.12499999999999985,
+          0.12499999999999968,
+          0.0
+        ],
+        "mass_weighted_damage": 0.0,
+        "lower_reference_y_le_4m": 0.0,
+        "upper_reference_y_ge_9m": 0.0,
+        "damage_gt_0.05": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "damage_gt_0.5": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "damage_gt_0.9": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "right_domain_edge_above_y1_05m": 15.43766996886462,
+        "initial_top_particle_mean_y": 15.249904778548668
+      },
+      "candidate_summary": {
+        "particles": 4155,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "damage",
+          "damage-inc",
+          "damage-k",
+          "damage-length",
+          "damage-y",
+          "damage-ybar",
+          "damage-ybar-scaled",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 425664.0625,
+        "bounds_min": [
+          0.12500007771428637,
+          0.12499463945560818,
+          0.0
+        ],
+        "bounds_max": [
+          30.875000000002363,
+          16.374983081896506,
+          0.0
+        ],
+        "max_displacement": 0.0004442906103925714,
+        "mass_centroid": [
+          8.131576755772606,
+          7.571733493680718,
+          0.0
+        ],
+        "max_damage": 0.0,
+        "max_damage_position": [
+          0.12500007771428637,
+          0.12500052089423122,
+          0.0
+        ],
+        "max_damage_reference_position": [
+          0.12499999999999985,
+          0.12499999999999968,
+          0.0
+        ],
+        "mass_weighted_damage": 0.0,
+        "lower_reference_y_le_4m": 0.0,
+        "upper_reference_y_ge_9m": 0.0,
+        "damage_gt_0.05": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "damage_gt_0.5": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "damage_gt_0.9": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "right_domain_edge_above_y1_05m": 15.43766996886462,
+        "initial_top_particle_mean_y": 15.249904778548668
+      },
+      "passed": true
+    },
+    {
+      "time": 4.0,
+      "baseline_file": "sim_00002.vtk",
+      "candidate_file": "sim_00002.vtk",
+      "baseline_sha256": "75981a525cbff829c594b6d81a322cb1b3ce75158b25c0b8a509b0f8b206557b",
+      "candidate_sha256": "75981a525cbff829c594b6d81a322cb1b3ce75158b25c0b8a509b0f8b206557b",
+      "identity_basis": "reference-coordinates-x-minus-displacement",
+      "same_fields": true,
+      "position": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 30.875000000002487,
+          "relative_linf_difference": 0.0,
+          "tolerance": 3.0975000000002486e-06,
+          "pass": true
+        }
+      },
+      "fields": {
+        "acc_x": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "acc_y": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "damage": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.33358939786364217,
+            "relative_linf_difference": 0.0,
+            "tolerance": 4.3358939786364214e-08,
+            "pass": true
+          }
+        },
+        "damage-inc": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.00367320707677643,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0367320707677643e-08,
+            "pass": true
+          }
+        },
+        "damage-k": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 27893.538088260495,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.002789363808826049,
+            "pass": true
+          }
+        },
+        "damage-length": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.5,
+            "relative_linf_difference": 0.0,
+            "tolerance": 6e-08,
+            "pass": true
+          }
+        },
+        "damage-y": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 63271.87869196748,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.006327197869196748,
+            "pass": true
+          }
+        },
+        "damage-ybar": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 60987.67900761326,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.0060987779007613254,
+            "pass": true
+          }
+        },
+        "damage-ybar-scaled": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 44904.820475823515,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.004490492047582351,
+            "pass": true
+          }
+        },
+        "disp_x": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0004411975718245402,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0044119757182454e-08,
+            "pass": true
+          }
+        },
+        "disp_y": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.00011835684133960563,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.001183568413396e-08,
+            "pass": true
+          }
+        },
+        "eps_xx": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 6.245161718912464e-05,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0006245161718913e-08,
+            "pass": true
+          }
+        },
+        "eps_xy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.00019275877283113333,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0019275877283113e-08,
+            "pass": true
+          }
+        },
+        "eps_yy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.00022884415439954463,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0022884415439954e-08,
+            "pass": true
+          }
+        },
+        "fric-contact": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "fric-normal": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "index": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 1.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0999999999999999e-07,
+            "pass": true
+          }
+        },
+        "mass": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 106.25,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0634999999999999e-05,
+            "pass": true
+          }
+        },
+        "mpi-index": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 1.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0999999999999999e-07,
+            "pass": true
+          }
+        },
+        "p-wave-modulus": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 1178983011.0755198,
+            "relative_linf_difference": 0.0,
+            "tolerance": 117.89830111755197,
+            "pass": true
+          }
+        },
+        "plastic-strain": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "sig_xx": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 85791.2796508016,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.00857913796508016,
+            "pass": true
+          }
+        },
+        "sig_xy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 77733.79622183184,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.007773389622183184,
+            "pass": true
+          }
+        },
+        "sig_yy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 269879.42796879495,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.026987952796879495,
+            "pass": true
+          }
+        },
+        "size_x": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.2500061962905365,
+            "relative_linf_difference": 0.0,
+            "tolerance": 3.500061962905365e-08,
+            "pass": true
+          }
+        },
+        "size_xx": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.25,
+            "relative_linf_difference": 0.0,
+            "tolerance": 3.4999999999999996e-08,
+            "pass": true
+          }
+        },
+        "size_xy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 1.3877787807814457e-17,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0000000000000002e-08,
+            "pass": true
+          }
+        },
+        "size_y": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.2500061962905365,
+            "relative_linf_difference": 0.0,
+            "tolerance": 3.500061962905365e-08,
+            "pass": true
+          }
+        },
+        "size_yx": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 6.938893903907228e-18,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1e-08,
+            "pass": true
+          }
+        },
+        "size_yy": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.25,
+            "relative_linf_difference": 0.0,
+            "tolerance": 3.4999999999999996e-08,
+            "pass": true
+          }
+        },
+        "split-depth": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 4.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 4.1e-07,
+            "pass": true
+          }
+        },
+        "unique-id": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 1501.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 0.00015010999999999998,
+            "pass": true
+          }
+        },
+        "vel_x": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 2.8316091257579162e-05,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0002831609125759e-08,
+            "pass": true
+          }
+        },
+        "vel_y": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 4.727317144950295e-05,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.0004727317144951e-08,
+            "pass": true
+          }
+        },
+        "volume": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 0.06250316091830767,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.6250316091830767e-08,
+            "pass": true
+          }
+        },
+        "yield-function": {
+          "max_abs_difference": 0.0,
+          "rms_difference": 0.0,
+          "max_scaled_difference": 0.0,
+          "mismatched_values": 0,
+          "pass": true,
+          "global_linf_diagnostic": {
+            "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+            "baseline_linf": 11104140.0,
+            "relative_linf_difference": 0.0,
+            "tolerance": 1.11041401,
+            "pass": true
+          }
+        }
+      },
+      "baseline_summary": {
+        "particles": 4155,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "damage",
+          "damage-inc",
+          "damage-k",
+          "damage-length",
+          "damage-y",
+          "damage-ybar",
+          "damage-ybar-scaled",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 425664.0625,
+        "bounds_min": [
+          0.12500007751351716,
+          0.12499476876093486,
+          0.0
+        ],
+        "bounds_max": [
+          30.875000000002487,
+          16.37498187189552,
+          0.0
+        ],
+        "max_displacement": 0.00044685414268193316,
+        "mass_centroid": [
+          8.131576921242692,
+          7.5717313830759,
+          0.0
+        ],
+        "max_damage": 0.33358939786364217,
+        "max_damage_position": [
+          13.125333685932198,
+          3.624981433833066,
+          0.0
+        ],
+        "max_damage_reference_position": [
+          13.125000000000009,
+          3.6250000000000058,
+          0.0
+        ],
+        "mass_weighted_damage": 0.005989434472308899,
+        "lower_reference_y_le_4m": 0.33358939786364217,
+        "upper_reference_y_ge_9m": 0.0,
+        "damage_gt_0.05": {
+          "count": 139,
+          "reference_y_min": 2.1249999999999947,
+          "reference_y_max": 6.625000000000016
+        },
+        "damage_gt_0.5": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "damage_gt_0.9": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "right_domain_edge_above_y1_05m": 15.437665930589288,
+        "initial_top_particle_mean_y": 15.249904082735444
+      },
+      "candidate_summary": {
+        "particles": 4155,
+        "fields": [
+          "acc_x",
+          "acc_y",
+          "damage",
+          "damage-inc",
+          "damage-k",
+          "damage-length",
+          "damage-y",
+          "damage-ybar",
+          "damage-ybar-scaled",
+          "disp_x",
+          "disp_y",
+          "eps_xx",
+          "eps_xy",
+          "eps_yy",
+          "fric-contact",
+          "fric-normal",
+          "index",
+          "mass",
+          "mpi-index",
+          "p-wave-modulus",
+          "plastic-strain",
+          "sig_xx",
+          "sig_xy",
+          "sig_yy",
+          "size_x",
+          "size_xx",
+          "size_xy",
+          "size_y",
+          "size_yx",
+          "size_yy",
+          "split-depth",
+          "unique-id",
+          "vel_x",
+          "vel_y",
+          "volume",
+          "yield-function"
+        ],
+        "mass": 425664.0625,
+        "bounds_min": [
+          0.12500007751351716,
+          0.12499476876093486,
+          0.0
+        ],
+        "bounds_max": [
+          30.875000000002487,
+          16.37498187189552,
+          0.0
+        ],
+        "max_displacement": 0.00044685414268193316,
+        "mass_centroid": [
+          8.131576921242692,
+          7.5717313830759,
+          0.0
+        ],
+        "max_damage": 0.33358939786364217,
+        "max_damage_position": [
+          13.125333685932198,
+          3.624981433833066,
+          0.0
+        ],
+        "max_damage_reference_position": [
+          13.125000000000009,
+          3.6250000000000058,
+          0.0
+        ],
+        "mass_weighted_damage": 0.005989434472308899,
+        "lower_reference_y_le_4m": 0.33358939786364217,
+        "upper_reference_y_ge_9m": 0.0,
+        "damage_gt_0.05": {
+          "count": 139,
+          "reference_y_min": 2.1249999999999947,
+          "reference_y_max": 6.625000000000016
+        },
+        "damage_gt_0.5": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "damage_gt_0.9": {
+          "count": 0,
+          "reference_y_min": null,
+          "reference_y_max": null
+        },
+        "right_domain_edge_above_y1_05m": 15.437665930589288,
+        "initial_top_particle_mean_y": 15.249904082735444
+      },
+      "passed": true
+    }
+  ],
+  "curve": {
+    "same_columns": true,
+    "columns": {
+      "energyRatio": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 2.825919220542e-06,
+          "relative_linf_difference": 0.0,
+          "tolerance": 1.0000282591922055e-08,
+          "pass": true
+        }
+      },
+      "kineticEnergy": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 2.639523032994e-05,
+          "relative_linf_difference": 0.0,
+          "tolerance": 1.0002639523032994e-08,
+          "pass": true
+        }
+      },
+      "mass": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 425664.0625,
+          "relative_linf_difference": 0.0,
+          "tolerance": 0.04256641625,
+          "pass": true
+        }
+      },
+      "massDamage": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 2549.487009561,
+          "relative_linf_difference": 0.0,
+          "tolerance": 0.0002549587009561,
+          "pass": true
+        }
+      },
+      "massScale": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 10000.0,
+          "relative_linf_difference": 0.0,
+          "tolerance": 0.00100001,
+          "pass": true
+        }
+      },
+      "oobf": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 0.02803890056941,
+          "relative_linf_difference": 0.0,
+          "tolerance": 1.2803890056941e-08,
+          "pass": true
+        }
+      },
+      "particles": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 4155.0,
+          "relative_linf_difference": 0.0,
+          "tolerance": 0.00041550999999999996,
+          "pass": true
+        }
+      },
+      "phase": {
+        "pass": true,
+        "kind": "categorical"
+      },
+      "preparationTime": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 0.0,
+          "relative_linf_difference": 0.0,
+          "tolerance": 1e-08,
+          "pass": true
+        }
+      },
+      "step": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 2.0,
+          "relative_linf_difference": 0.0,
+          "tolerance": 2.1e-07,
+          "pass": true
+        }
+      },
+      "time": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 4.0,
+          "relative_linf_difference": 0.0,
+          "tolerance": 4.1e-07,
+          "pass": true
+        }
+      },
+      "work": {
+        "max_abs_difference": 0.0,
+        "rms_difference": 0.0,
+        "max_scaled_difference": 0.0,
+        "mismatched_values": 0,
+        "pass": true,
+        "global_linf_diagnostic": {
+          "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+          "baseline_linf": 9.340405110687,
+          "relative_linf_difference": 0.0,
+          "tolerance": 9.440405110687e-07,
+          "pass": true
+        }
+      }
+    },
+    "pass": true,
+    "global_linf_diagnostic_pass": true
+  },
+  "passed": true,
+  "global_linf_diagnostic_passed": true,
+  "global_linf_is_diagnostic_only": true,
+  "max_position_difference_m": 0.0,
+  "field_maxima": {
+    "acc_x": 0.0,
+    "acc_y": 0.0,
+    "damage": 0.0,
+    "damage-inc": 0.0,
+    "damage-k": 0.0,
+    "damage-length": 0.0,
+    "damage-y": 0.0,
+    "damage-ybar": 0.0,
+    "damage-ybar-scaled": 0.0,
+    "disp_x": 0.0,
+    "disp_y": 0.0,
+    "eps_xx": 0.0,
+    "eps_xy": 0.0,
+    "eps_yy": 0.0,
+    "fric-contact": 0.0,
+    "fric-normal": 0.0,
+    "index": 0.0,
+    "mass": 0.0,
+    "mpi-index": 0.0,
+    "p-wave-modulus": 0.0,
+    "plastic-strain": 0.0,
+    "sig_xx": 0.0,
+    "sig_xy": 0.0,
+    "sig_yy": 0.0,
+    "size_x": 0.0,
+    "size_xx": 0.0,
+    "size_xy": 0.0,
+    "size_y": 0.0,
+    "size_yx": 0.0,
+    "size_yy": 0.0,
+    "split-depth": 0.0,
+    "unique-id": 0.0,
+    "vel_x": 0.0,
+    "vel_y": 0.0,
+    "volume": 0.0,
+    "yield-function": 0.0
+  },
+  "baseline_max_relative_mass_drift": 0.0,
+  "candidate_max_relative_mass_drift": 0.0,
+  "baseline_damage_progression": {
+    "definition": "threshold damage>0.05; lower/upper refer to original material y, not falling current y",
+    "first_lower": {
+      "time": 4.0,
+      "particles": 4155,
+      "fields": [
+        "acc_x",
+        "acc_y",
+        "damage",
+        "damage-inc",
+        "damage-k",
+        "damage-length",
+        "damage-y",
+        "damage-ybar",
+        "damage-ybar-scaled",
+        "disp_x",
+        "disp_y",
+        "eps_xx",
+        "eps_xy",
+        "eps_yy",
+        "fric-contact",
+        "fric-normal",
+        "index",
+        "mass",
+        "mpi-index",
+        "p-wave-modulus",
+        "plastic-strain",
+        "sig_xx",
+        "sig_xy",
+        "sig_yy",
+        "size_x",
+        "size_xx",
+        "size_xy",
+        "size_y",
+        "size_yx",
+        "size_yy",
+        "split-depth",
+        "unique-id",
+        "vel_x",
+        "vel_y",
+        "volume",
+        "yield-function"
+      ],
+      "mass": 425664.0625,
+      "bounds_min": [
+        0.12500007751351716,
+        0.12499476876093486,
+        0.0
+      ],
+      "bounds_max": [
+        30.875000000002487,
+        16.37498187189552,
+        0.0
+      ],
+      "max_displacement": 0.00044685414268193316,
+      "mass_centroid": [
+        8.131576921242692,
+        7.5717313830759,
+        0.0
+      ],
+      "max_damage": 0.33358939786364217,
+      "max_damage_position": [
+        13.125333685932198,
+        3.624981433833066,
+        0.0
+      ],
+      "max_damage_reference_position": [
+        13.125000000000009,
+        3.6250000000000058,
+        0.0
+      ],
+      "mass_weighted_damage": 0.005989434472308899,
+      "lower_reference_y_le_4m": 0.33358939786364217,
+      "upper_reference_y_ge_9m": 0.0,
+      "damage_gt_0.05": {
+        "count": 139,
+        "reference_y_min": 2.1249999999999947,
+        "reference_y_max": 6.625000000000016
+      },
+      "damage_gt_0.5": {
+        "count": 0,
+        "reference_y_min": null,
+        "reference_y_max": null
+      },
+      "damage_gt_0.9": {
+        "count": 0,
+        "reference_y_min": null,
+        "reference_y_max": null
+      },
+      "right_domain_edge_above_y1_05m": 15.437665930589288,
+      "initial_top_particle_mean_y": 15.249904082735444
+    },
+    "first_upper": null,
+    "final": {
+      "time": 4.0,
+      "particles": 4155,
+      "fields": [
+        "acc_x",
+        "acc_y",
+        "damage",
+        "damage-inc",
+        "damage-k",
+        "damage-length",
+        "damage-y",
+        "damage-ybar",
+        "damage-ybar-scaled",
+        "disp_x",
+        "disp_y",
+        "eps_xx",
+        "eps_xy",
+        "eps_yy",
+        "fric-contact",
+        "fric-normal",
+        "index",
+        "mass",
+        "mpi-index",
+        "p-wave-modulus",
+        "plastic-strain",
+        "sig_xx",
+        "sig_xy",
+        "sig_yy",
+        "size_x",
+        "size_xx",
+        "size_xy",
+        "size_y",
+        "size_yx",
+        "size_yy",
+        "split-depth",
+        "unique-id",
+        "vel_x",
+        "vel_y",
+        "volume",
+        "yield-function"
+      ],
+      "mass": 425664.0625,
+      "bounds_min": [
+        0.12500007751351716,
+        0.12499476876093486,
+        0.0
+      ],
+      "bounds_max": [
+        30.875000000002487,
+        16.37498187189552,
+        0.0
+      ],
+      "max_displacement": 0.00044685414268193316,
+      "mass_centroid": [
+        8.131576921242692,
+        7.5717313830759,
+        0.0
+      ],
+      "max_damage": 0.33358939786364217,
+      "max_damage_position": [
+        13.125333685932198,
+        3.624981433833066,
+        0.0
+      ],
+      "max_damage_reference_position": [
+        13.125000000000009,
+        3.6250000000000058,
+        0.0
+      ],
+      "mass_weighted_damage": 0.005989434472308899,
+      "lower_reference_y_le_4m": 0.33358939786364217,
+      "upper_reference_y_ge_9m": 0.0,
+      "damage_gt_0.05": {
+        "count": 139,
+        "reference_y_min": 2.1249999999999947,
+        "reference_y_max": 6.625000000000016
+      },
+      "damage_gt_0.5": {
+        "count": 0,
+        "reference_y_min": null,
+        "reference_y_max": null
+      },
+      "damage_gt_0.9": {
+        "count": 0,
+        "reference_y_min": null,
+        "reference_y_max": null
+      },
+      "right_domain_edge_above_y1_05m": 15.437665930589288,
+      "initial_top_particle_mean_y": 15.249904082735444
+    }
+  },
+  "candidate_damage_progression": {
+    "definition": "threshold damage>0.05; lower/upper refer to original material y, not falling current y",
+    "first_lower": {
+      "time": 4.0,
+      "particles": 4155,
+      "fields": [
+        "acc_x",
+        "acc_y",
+        "damage",
+        "damage-inc",
+        "damage-k",
+        "damage-length",
+        "damage-y",
+        "damage-ybar",
+        "damage-ybar-scaled",
+        "disp_x",
+        "disp_y",
+        "eps_xx",
+        "eps_xy",
+        "eps_yy",
+        "fric-contact",
+        "fric-normal",
+        "index",
+        "mass",
+        "mpi-index",
+        "p-wave-modulus",
+        "plastic-strain",
+        "sig_xx",
+        "sig_xy",
+        "sig_yy",
+        "size_x",
+        "size_xx",
+        "size_xy",
+        "size_y",
+        "size_yx",
+        "size_yy",
+        "split-depth",
+        "unique-id",
+        "vel_x",
+        "vel_y",
+        "volume",
+        "yield-function"
+      ],
+      "mass": 425664.0625,
+      "bounds_min": [
+        0.12500007751351716,
+        0.12499476876093486,
+        0.0
+      ],
+      "bounds_max": [
+        30.875000000002487,
+        16.37498187189552,
+        0.0
+      ],
+      "max_displacement": 0.00044685414268193316,
+      "mass_centroid": [
+        8.131576921242692,
+        7.5717313830759,
+        0.0
+      ],
+      "max_damage": 0.33358939786364217,
+      "max_damage_position": [
+        13.125333685932198,
+        3.624981433833066,
+        0.0
+      ],
+      "max_damage_reference_position": [
+        13.125000000000009,
+        3.6250000000000058,
+        0.0
+      ],
+      "mass_weighted_damage": 0.005989434472308899,
+      "lower_reference_y_le_4m": 0.33358939786364217,
+      "upper_reference_y_ge_9m": 0.0,
+      "damage_gt_0.05": {
+        "count": 139,
+        "reference_y_min": 2.1249999999999947,
+        "reference_y_max": 6.625000000000016
+      },
+      "damage_gt_0.5": {
+        "count": 0,
+        "reference_y_min": null,
+        "reference_y_max": null
+      },
+      "damage_gt_0.9": {
+        "count": 0,
+        "reference_y_min": null,
+        "reference_y_max": null
+      },
+      "right_domain_edge_above_y1_05m": 15.437665930589288,
+      "initial_top_particle_mean_y": 15.249904082735444
+    },
+    "first_upper": null,
+    "final": {
+      "time": 4.0,
+      "particles": 4155,
+      "fields": [
+        "acc_x",
+        "acc_y",
+        "damage",
+        "damage-inc",
+        "damage-k",
+        "damage-length",
+        "damage-y",
+        "damage-ybar",
+        "damage-ybar-scaled",
+        "disp_x",
+        "disp_y",
+        "eps_xx",
+        "eps_xy",
+        "eps_yy",
+        "fric-contact",
+        "fric-normal",
+        "index",
+        "mass",
+        "mpi-index",
+        "p-wave-modulus",
+        "plastic-strain",
+        "sig_xx",
+        "sig_xy",
+        "sig_yy",
+        "size_x",
+        "size_xx",
+        "size_xy",
+        "size_y",
+        "size_yx",
+        "size_yy",
+        "split-depth",
+        "unique-id",
+        "vel_x",
+        "vel_y",
+        "volume",
+        "yield-function"
+      ],
+      "mass": 425664.0625,
+      "bounds_min": [
+        0.12500007751351716,
+        0.12499476876093486,
+        0.0
+      ],
+      "bounds_max": [
+        30.875000000002487,
+        16.37498187189552,
+        0.0
+      ],
+      "max_displacement": 0.00044685414268193316,
+      "mass_centroid": [
+        8.131576921242692,
+        7.5717313830759,
+        0.0
+      ],
+      "max_damage": 0.33358939786364217,
+      "max_damage_position": [
+        13.125333685932198,
+        3.624981433833066,
+        0.0
+      ],
+      "max_damage_reference_position": [
+        13.125000000000009,
+        3.6250000000000058,
+        0.0
+      ],
+      "mass_weighted_damage": 0.005989434472308899,
+      "lower_reference_y_le_4m": 0.33358939786364217,
+      "upper_reference_y_ge_9m": 0.0,
+      "damage_gt_0.05": {
+        "count": 139,
+        "reference_y_min": 2.1249999999999947,
+        "reference_y_max": 6.625000000000016
+      },
+      "damage_gt_0.5": {
+        "count": 0,
+        "reference_y_min": null,
+        "reference_y_max": null
+      },
+      "damage_gt_0.9": {
+        "count": 0,
+        "reference_y_min": null,
+        "reference_y_max": null
+      },
+      "right_domain_edge_above_y1_05m": 15.437665930589288,
+      "initial_top_particle_mean_y": 15.249904082735444
+    }
+  }
+}

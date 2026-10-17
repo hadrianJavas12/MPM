@@ -1,0 +1,1 @@
+Full controls launched only after bounded P1 checkpoint62adb50. Check launch/status/log before any new run. Each wrapper compares once and audits VM outputs after successful native completion. Source commit is captured at launch, not completion. No parallel-Joss PASS claimed.

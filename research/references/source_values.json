@@ -1,0 +1,1449 @@
+{
+  "schema_version": 1,
+  "status": "reference_not_calibration",
+  "source_document": {
+    "filename": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+    "sha256": "acd60b668e3b6ed8c7a7378ae3afd053ca0419f4ed63aecc0031b019495f3979",
+    "page_count": 28,
+    "source_type": "presentation_not_raw_laboratory_timeseries",
+    "audit_date_local": "2026-10-16",
+    "sha256_verified": true,
+    "visually_audited_pages": [
+      3,
+      6,
+      7,
+      11,
+      17
+    ],
+    "text_extraction_audited_pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      13,
+      14,
+      16,
+      17,
+      18,
+      25,
+      26,
+      27,
+      28
+    ],
+    "local_file_only": true,
+    "copied_into_repository": false
+  },
+  "limitations": [
+    "Numerical comparative references only; no fitting, curve digitization or experimental validation.",
+    "All raw source families remain separate. SANICLAY parameters are not imported into MC.",
+    "Source labels of strain are preserved; internal CL-MPM mapping awaits M2.",
+    "Page 17 Table 4.1 is distinct from Table 4.8 and unused.",
+    "Reference configurations are data proposals, not executable validated physics."
+  ],
+  "datasets": {
+    "residual_soil_laboratory_slide": {
+      "purpose": "Raw page-6 column; keep independent from other columns.",
+      "values": {
+        "confining_pressure": {
+          "value": [
+            100,
+            200
+          ],
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "initial_void_ratio": {
+          "value": 1.25,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "unit_weight": {
+          "value": 16.83,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "kN/m^3",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "ocr": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "k0_nc": {
+          "value": 0.72,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "compression_index": {
+          "value": 0.26,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "consolidation_coefficient": {
+          "value": 0.0032,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "cm^2/s",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "recompression_index": {
+          "value": 0.01,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "normal_consolidation_slope_lambda": {
+          "value": 0.113,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "swelling_slope_kappa": {
+          "value": 0.004,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry. Swelling-line symbol; not an accumulated plastic strain coordinate."
+        },
+        "poisson_ratio_effective": {
+          "value": 0.2,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "young_modulus_effective": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "kN/m^2",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "critical_stress_ratio_compression": {
+          "value": 0.561,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "critical_stress_ratio_extension": {
+          "value": 0.28,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "anisotropy_limit": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "yield_surface_shape": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "anisotropy_evolution_rate": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "cohesion_effective": {
+          "value": 5.11,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "friction_angle_effective": {
+          "value": 16.34,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "degree",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "permeability": {
+          "value": 0.0000135,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "cm/s",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "volumetric_water_content": {
+          "value": 0.51,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_laboratory_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        }
+      }
+    },
+    "residual_soil_saniclay_slide": {
+      "purpose": "Raw page-6 column; keep independent from other columns.",
+      "values": {
+        "confining_pressure": {
+          "value": [
+            100,
+            200
+          ],
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "initial_void_ratio": {
+          "value": 1.25,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "unit_weight": {
+          "value": 16.83,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "kN/m^3",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "ocr": {
+          "value": 1,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "k0_nc": {
+          "value": 0.51,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "compression_index": {
+          "value": 1.5,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "consolidation_coefficient": {
+          "value": 0.0032,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "cm^2/s",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "recompression_index": {
+          "value": 0.05,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "normal_consolidation_slope_lambda": {
+          "value": 0.651,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "swelling_slope_kappa": {
+          "value": 0.022,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry. Swelling-line symbol; not an accumulated plastic strain coordinate."
+        },
+        "poisson_ratio_effective": {
+          "value": 0.2,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "young_modulus_effective": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "kN/m^2",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "critical_stress_ratio_compression": {
+          "value": 0.621,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "critical_stress_ratio_extension": {
+          "value": 0.514,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "anisotropy_limit": {
+          "value": 0.93,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "yield_surface_shape": {
+          "value": 0.71,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "anisotropy_evolution_rate": {
+          "value": 5,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "cohesion_effective": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "friction_angle_effective": {
+          "value": 29.56,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "degree",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "permeability": {
+          "value": 0.0000135,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "cm/s",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "volumetric_water_content": {
+          "value": 0.51,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_saniclay_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        }
+      }
+    },
+    "residual_soil_mc_hs_slide": {
+      "purpose": "Raw page-6 column; keep independent from other columns.",
+      "values": {
+        "confining_pressure": {
+          "value": [
+            100,
+            200
+          ],
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "initial_void_ratio": {
+          "value": 1.25,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "unit_weight": {
+          "value": 16.83,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "kN/m^3",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "ocr": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "k0_nc": {
+          "value": 1,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry. Source labels this value as default."
+        },
+        "compression_index": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "consolidation_coefficient": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "cm^2/s",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "recompression_index": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "normal_consolidation_slope_lambda": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "swelling_slope_kappa": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed. Swelling-line symbol; not an accumulated plastic strain coordinate."
+        },
+        "poisson_ratio_effective": {
+          "value": 0.2,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "young_modulus_effective": {
+          "value": 20000,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "kN/m^2",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "critical_stress_ratio_compression": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "critical_stress_ratio_extension": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "anisotropy_limit": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "yield_surface_shape": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "anisotropy_evolution_rate": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "cohesion_effective": {
+          "value": 0,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "friction_angle_effective": {
+          "value": "function_of_deviatoric_plastic_strain",
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "degree",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "permeability": {
+          "value": 0.0000135,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "cm/s",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "volumetric_water_content": {
+          "value": 0.51,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_hs_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        }
+      }
+    },
+    "residual_soil_mc_peak_slide": {
+      "purpose": "Raw page-6 column; keep independent from other columns.",
+      "values": {
+        "confining_pressure": {
+          "value": [
+            100,
+            200
+          ],
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "initial_void_ratio": {
+          "value": 1.25,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "unit_weight": {
+          "value": 16.83,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "kN/m^3",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "ocr": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "k0_nc": {
+          "value": 0.441,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry. Source labels this value as default."
+        },
+        "compression_index": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "consolidation_coefficient": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "cm^2/s",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "recompression_index": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "normal_consolidation_slope_lambda": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "swelling_slope_kappa": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed. Swelling-line symbol; not an accumulated plastic strain coordinate."
+        },
+        "poisson_ratio_effective": {
+          "value": 0.2,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "young_modulus_effective": {
+          "value": 20000,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "kN/m^2",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "critical_stress_ratio_compression": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "critical_stress_ratio_extension": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "anisotropy_limit": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "yield_surface_shape": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "anisotropy_evolution_rate": {
+          "value": null,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Blank source cell; not supplied and must not be imputed."
+        },
+        "cohesion_effective": {
+          "value": 6.04,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry. Source labels this as peak; not the MC-HS cohesion."
+        },
+        "friction_angle_effective": {
+          "value": 33.99,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "degree",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry. Source labels this as peak; not the MC-HS cohesion."
+        },
+        "permeability": {
+          "value": 0.0000135,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "cm/s",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        },
+        "volumetric_water_content": {
+          "value": 0.51,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 6,
+          "model_family": "residual_soil_mc_peak_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Explicit page-6 table entry."
+        }
+      }
+    },
+    "residual_soil_mc_hs_friction": {
+      "purpose": "Unscaled literal table, repeated on pages 7 and 11; no curve digitization.",
+      "strain_label": "Deviatoric Plastic Strain",
+      "strain_mapping_status": "unverified_pending_M2",
+      "points": [
+        {
+          "kappa": {
+            "value": 0,
+            "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+            "page": 7,
+            "model_family": "residual_soil_mc_hs_slide",
+            "units": "dimensionless",
+            "status": "reference_not_calibration",
+            "origin": "transcribed",
+            "notes": "Raw table abscissa; repeated unchanged on page 11. Mapping to CL-MPM internal strain is unverified."
+          },
+          "phi": {
+            "value": 0,
+            "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+            "page": 7,
+            "model_family": "residual_soil_mc_hs_slide",
+            "units": "degree",
+            "status": "reference_not_calibration",
+            "origin": "transcribed",
+            "notes": "Raw effective friction angle; repeated unchanged on page 11. Initial zero is preserved."
+          }
+        },
+        {
+          "kappa": {
+            "value": 0.0068,
+            "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+            "page": 7,
+            "model_family": "residual_soil_mc_hs_slide",
+            "units": "dimensionless",
+            "status": "reference_not_calibration",
+            "origin": "transcribed",
+            "notes": "Raw table abscissa; repeated unchanged on page 11. Mapping to CL-MPM internal strain is unverified."
+          },
+          "phi": {
+            "value": 27.1,
+            "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+            "page": 7,
+            "model_family": "residual_soil_mc_hs_slide",
+            "units": "degree",
+            "status": "reference_not_calibration",
+            "origin": "transcribed",
+            "notes": "Raw effective friction angle; repeated unchanged on page 11. Initial zero is preserved."
+          }
+        },
+        {
+          "kappa": {
+            "value": 0.037,
+            "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+            "page": 7,
+            "model_family": "residual_soil_mc_hs_slide",
+            "units": "dimensionless",
+            "status": "reference_not_calibration",
+            "origin": "transcribed",
+            "notes": "Raw table abscissa; repeated unchanged on page 11. Mapping to CL-MPM internal strain is unverified."
+          },
+          "phi": {
+            "value": 33.99,
+            "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+            "page": 7,
+            "model_family": "residual_soil_mc_hs_slide",
+            "units": "degree",
+            "status": "reference_not_calibration",
+            "origin": "transcribed",
+            "notes": "Raw effective friction angle; repeated unchanged on page 11. Initial zero is preserved."
+          }
+        },
+        {
+          "kappa": {
+            "value": 0.1,
+            "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+            "page": 7,
+            "model_family": "residual_soil_mc_hs_slide",
+            "units": "dimensionless",
+            "status": "reference_not_calibration",
+            "origin": "transcribed",
+            "notes": "Raw table abscissa; repeated unchanged on page 11. Mapping to CL-MPM internal strain is unverified."
+          },
+          "phi": {
+            "value": 27.62,
+            "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+            "page": 7,
+            "model_family": "residual_soil_mc_hs_slide",
+            "units": "degree",
+            "status": "reference_not_calibration",
+            "origin": "transcribed",
+            "notes": "Raw effective friction angle; repeated unchanged on page 11. Initial zero is preserved."
+          }
+        },
+        {
+          "kappa": {
+            "value": 0.2,
+            "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+            "page": 7,
+            "model_family": "residual_soil_mc_hs_slide",
+            "units": "dimensionless",
+            "status": "reference_not_calibration",
+            "origin": "transcribed",
+            "notes": "Raw table abscissa; repeated unchanged on page 11. Mapping to CL-MPM internal strain is unverified."
+          },
+          "phi": {
+            "value": 16.34,
+            "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+            "page": 7,
+            "model_family": "residual_soil_mc_hs_slide",
+            "units": "degree",
+            "status": "reference_not_calibration",
+            "origin": "transcribed",
+            "notes": "Raw effective friction angle; repeated unchanged on page 11. Initial zero is preserved."
+          }
+        }
+      ],
+      "flac_strain_multiplier": {
+        "value": 20,
+        "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+        "page": 11,
+        "model_family": "residual_soil_flac_ssoft_slide",
+        "units": "dimensionless",
+        "status": "reference_not_calibration",
+        "origin": "transcribed",
+        "notes": "Slide reports enlarging strain input 20 times to match a trend. Historical simulation adjustment, not a universal material law; never applied automatically."
+      }
+    },
+    "zhan_clay_table_4_8_slide": {
+      "purpose": "Independent assumed clay benchmark from page-17 Table 4.8; not residual soil.",
+      "attribution_status": "Plan calls this Zhan et al. (2012); page 25 spells Zang et al. (2012). Original publication not audited.",
+      "values": {
+        "unit_weight": {
+          "value": 18.8,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "kN/m^3",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.8: bulk unit weight."
+        },
+        "cohesion_peak": {
+          "value": 7,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.8: bulk peak strength."
+        },
+        "friction_peak": {
+          "value": 20,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "degree",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.8: bulk peak strength."
+        },
+        "cohesion_residual": {
+          "value": 2,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.8: residual strength; no initial cohesion is supplied."
+        },
+        "friction_residual": {
+          "value": 13,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "degree",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.8: residual strength; no initial friction angle is supplied."
+        },
+        "plastic_strain_peak": {
+          "value": 0.05,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Printed as 5% epsilon_D^P. Strain definition requires M2 audit."
+        },
+        "plastic_strain_residual": {
+          "value": 0.2,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Printed as 20% epsilon_D^P. Strain definition requires M2 audit."
+        },
+        "poisson_ratio": {
+          "value": 0.2,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.8 assumed value."
+        },
+        "young_modulus_law": {
+          "value": "max(4000, 25 * (p_effective_kPa + 100))",
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.8 expression; footnote explicitly defines p' in kPa. Pressure-dependent stiffness is not silently replaced by a constant."
+        },
+        "dilation": {
+          "value": 0,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "degree",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.8 assumed angle of dilation."
+        },
+        "permeability": {
+          "value": [
+            1e-9,
+            0.000001
+          ],
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "m/s",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.8 range, stored in ascending order; not activated by reference configs."
+        },
+        "k0": {
+          "value": 1,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.8 at-rest coefficient; do not replace with page-26 S3 value."
+        },
+        "porosity": {
+          "value": 0.3,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.8 assumed porosity."
+        },
+        "water_bulk_modulus": {
+          "value": 2000000000,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "unspecified_in_source",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "No unit is printed in Table 4.8. Preserve literal value; do not activate until units and coupled-fluid model are established."
+        },
+        "flac_shear_to_deviatoric_strain_ratio": {
+          "value": 0.5,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "zhan_clay_table_4_8_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Footnote: plastic shear strain in FLAC softening tables is half epsilon_D^P. Applies to this reference definition; no CL-MPM conversion has been established."
+        }
+      }
+    },
+    "independent_basic_model_table_4_1_slide": {
+      "purpose": "Distinct page-17 Table 4.1; preserved for audit only and UNUSED by the four configs.",
+      "values": {
+        "density": {
+          "value": 2000,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "independent_basic_model_table_4_1_slide",
+          "units": "kg/m^3",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.1; not Table 4.8 and not residual soil."
+        },
+        "young_modulus": {
+          "value": 50000000,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "independent_basic_model_table_4_1_slide",
+          "units": "Pa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.1; not Table 4.8 and not residual soil."
+        },
+        "poisson_ratio": {
+          "value": 0.3,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "independent_basic_model_table_4_1_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.1; not Table 4.8 and not residual soil."
+        },
+        "bulk_modulus": {
+          "value": 41700000,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "independent_basic_model_table_4_1_slide",
+          "units": "Pa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.1; not Table 4.8 and not residual soil."
+        },
+        "shear_modulus": {
+          "value": 18200000,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "independent_basic_model_table_4_1_slide",
+          "units": "Pa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.1; not Table 4.8 and not residual soil."
+        },
+        "tensile_strength": {
+          "value": 196261,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 17,
+          "model_family": "independent_basic_model_table_4_1_slide",
+          "units": "Pa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Table 4.1; not Table 4.8 and not residual soil."
+        }
+      }
+    },
+    "triaxial_source": {
+      "purpose": "Geometry and procedures from source; axisymmetric slides do not prove CU pore-pressure physics.",
+      "values": {
+        "specimen_diameter": {
+          "value": 7,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 3,
+          "model_family": "triaxial_geometry_slide",
+          "units": "cm",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Written diameter; 0.07 m after explicit conversion."
+        },
+        "specimen_height": {
+          "value": 14,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 3,
+          "model_family": "triaxial_geometry_slide",
+          "units": "cm",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Written specimen height. The axisymmetric sketch on the same slide also labels 7 cm vertically; the declared 14 cm specimen height is retained and the sketch ambiguity is not resolved."
+        },
+        "axisymmetric_radius": {
+          "value": 3.5,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 3,
+          "model_family": "triaxial_geometry_slide",
+          "units": "cm",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Sketch radius; not a plane-strain specimen width."
+        },
+        "source_geometry": {
+          "value": "2D_axisymmetric",
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 3,
+          "model_family": "triaxial_geometry_slide",
+          "units": "not_applicable",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Source explicitly labels axisymmetric 2D."
+        },
+        "initial_stage": {
+          "value": "isotropic_elastic_confinement",
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 4,
+          "model_family": "triaxial_procedure_slide",
+          "units": "not_applicable",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Confining sigma3 establishes initial stresses."
+        },
+        "compression_stage": {
+          "value": "prescribed_vertical_displacement_over_time",
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 5,
+          "model_family": "triaxial_procedure_slide",
+          "units": "not_applicable",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "No numerical loading rate is supplied here."
+        },
+        "flac_confining_pressure": {
+          "value": 200,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 10,
+          "model_family": "residual_soil_flac_ssoft_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Separate SSoft reference uses 200 kPa; page 6 gives 100 and 200 kPa."
+        },
+        "flac_element_grid": {
+          "value": [
+            1,
+            1
+          ],
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 13,
+          "model_family": "flac_axisymmetric_element_slide",
+          "units": "grid_cells",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Text extraction audited; illustrative element test, not a recommended MPM mesh."
+        },
+        "sandroni_lab_confinement": {
+          "value": [
+            112,
+            137
+          ],
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 14,
+          "model_family": "sandroni_1977_independent_slide",
+          "units": "kPa",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Plan transcription only; page 14 image numbers not visually audited in this pass. Independent historical example, unused by four configs."
+        },
+        "sandroni_simulation_to_lab_confinement_ratio": {
+          "value": 0.5,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 14,
+          "model_family": "sandroni_1977_independent_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Text extraction states simulated confinement was twice smaller than lab. Not used to scale primary cases."
+        }
+      }
+    },
+    "zhan_auxiliary": {
+      "purpose": "Separate comparison and long-term-progress context, not CL-MPM targets.",
+      "values": {
+        "fos_lem": {
+          "value": [
+            1.254,
+            0.946,
+            0.655
+          ],
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 25,
+          "model_family": "zhan_slide_simulation_lem",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Text audited, slide Simulation column: peak, post-rupture, residual. Not a required numerical MPM target."
+        },
+        "fos_flac_psi_zero": {
+          "value": [
+            1.25,
+            0.92,
+            0.65
+          ],
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 25,
+          "model_family": "zhan_slide_simulation_flac_psi_zero",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Text audited, slide Simulation column; distinct cited-study column has residual 0.64."
+        },
+        "fos_flac_psi_phi": {
+          "value": [
+            1.28,
+            0.96,
+            0.67
+          ],
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 25,
+          "model_family": "zhan_slide_simulation_flac_psi_phi",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Text audited, slide Simulation column; distinct cited-study column has peak 1.29."
+        },
+        "s3_k0": {
+          "value": 1.5,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 26,
+          "model_family": "zhan_s3_slide",
+          "units": "dimensionless",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Separate example; not Table 4.8 common baseline."
+        },
+        "long_term_target": {
+          "value": 9,
+          "source_file": "Numerical Simulation Residual Soil TRX CU SIGMA ^0 FLAC_290825.pdf",
+          "page": 27,
+          "model_family": "zhan_long_term_progress_slide",
+          "units": "year",
+          "status": "reference_not_calibration",
+          "origin": "transcribed",
+          "notes": "Slide explicitly says target duration NOT reached: maximum iteration steps. Page 28 says pore pressure results on progress."
+        }
+      }
+    }
+  }
+}

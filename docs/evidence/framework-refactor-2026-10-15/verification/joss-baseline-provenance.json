@@ -1,0 +1,98 @@
+{
+  "command": "windows\\cl-mpm.cmd run-frozen-joss.lisp joss-baseline-config.json joss-baseline",
+  "configSha256": "8E5014F277BE0CA5C8AE3E785A5F644B035E2AF937B5907FA66EB57BC7BC04A0",
+  "root": "D:\\MPM",
+  "launcherSha256": "6637F042C8E4B891AE5070AACCF9D38F43B275C3FF4D3D794383413F1E136EDC",
+  "png": false,
+  "compiler": "speed3 safety1 debug1 compilation-speed0",
+  "files": [
+    {
+      "sha256": "8F383CCE8DB8899CFDB74EB05A4089964FBA30E9A21CAD3E329AF99C9125F33C",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\snapshot-manifest.json"
+    },
+    {
+      "sha256": "74A13D9586E4F73D68218130C7C1FF94616651AF2839D3A5E5C952376F186B7A",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\estimate-clay-parameters.py"
+    },
+    {
+      "sha256": "4FAC4065BEB58DB90299C012CC4F675F5AB58E8C31E6EA6AB6B7C3FE19D0A5C6",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\README.md"
+    },
+    {
+      "sha256": "889F7C37C8FA2B6C19B31F4FABB70B83C49099B8FC2B7C395DD0C2D71204777A",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\requirements-reports.txt"
+    },
+    {
+      "sha256": "CC6A4BA72B40AB19FD45167B01FADB0AAEA09CE18228DE3DC3B491A73894BB89",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\requirements.txt"
+    },
+    {
+      "sha256": "7156E68A6A80DE66615787DD9BBB66AFDE6A36EFEBDC2C2C5DB8222C6772F270",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\run-triaxial.cmd"
+    },
+    {
+      "sha256": "2366EC424A07F8AE062B0DAA719B55A7A0FB569BA1FA72F84EBECD9DE4C7E821",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\test_estimate_clay_parameters.py"
+    },
+    {
+      "sha256": "B4E37185DDCD921D6D7FCE016BA78B6766E69A60BB329B66E3105FAD356ED767",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\triaxial-controls.json"
+    },
+    {
+      "sha256": "DA6BC4749AA6E2470F8A5A0F858D89D338053D4AA02D339B9FC96EBA6BA57EF0",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\triaxial-demo.json"
+    },
+    {
+      "sha256": "5783515F9DCB5C7D0488E15A4E18520615E0F0F1B0A90D2D7564C72F2D4A752A",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\triaxial-homogeneous.json"
+    },
+    {
+      "sha256": "662E6B626657047E8C60E3E9D435D0A289F95F4C088AD19AA519E0340AD14B0D",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\calibration\\triaxial.lisp"
+    },
+    {
+      "sha256": "06836FE6B0E4A1626B07039FDF60CA49A0EC1D575F410571E728144AEC836136",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\scripts\\joss-reference-smoke.lisp"
+    },
+    {
+      "sha256": "E4C981F92726F756D50491EFABA6B3E5F8BECB386F674CB96C18281B1122B1B5",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\scripts\\run-triaxial.lisp"
+    },
+    {
+      "sha256": "329C63AAC8AB3D4ABA790FEC4CDCA1DCCEF742EFFFE87EDD26DFD572B3507D5E",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\studio\\schema.json"
+    },
+    {
+      "sha256": "9FB725F4663A97184D7AF38B1F983554F7220EEAA8ED69BC622C9103CA658224",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\cl-mpm-studio.asd"
+    },
+    {
+      "sha256": "4D586EB0B5CED41B64B76275D1C5D17DECDAD0EB1BEDBFB01C73EB4160049B19",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\config.lisp"
+    },
+    {
+      "sha256": "3DDA747AFED998AFA022EDBDD2C3618AE98784283D04F7D36DDFA6C16282E378",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\custom-model.lisp"
+    },
+    {
+      "sha256": "5EF89CE0C4D4360A3CBE851EDAC1355C8645EFCF5959F98D3A0A5E20F81B2B46",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\package.lisp"
+    },
+    {
+      "sha256": "230E994877A5C0054C9959AF0959E8A423560ABAAB9EA8FFE3FC82A4AED810DA",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\reference-joss.lisp"
+    },
+    {
+      "sha256": "D0D62FFA9F61E04F83E2C7BBC1788D977F7BEBD2D1FF2E490A6658557A2851CF",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\run.lisp"
+    },
+    {
+      "sha256": "2E2231B83EF36ACA7DD0E7CAD8959FB0DE040F36AD27450537163014E4409D9F",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\runner.lisp"
+    },
+    {
+      "sha256": "5B0EF263F0D92923F43FF6BD098970E405F3034F569433820BA51CFA071A770F",
+      "path": "D:\\MPM\\output\\framework-refactor-2026-10-15\\baseline-source\\studio\\lisp\\scenario.lisp"
+    }
+  ]
+}
