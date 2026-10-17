@@ -1,0 +1,25 @@
+;;;; Milestone M5 — Batch runner for paired 2D MPM Cliff / Slope simulations (L-H vs L-HS)
+(in-package :cl-user)
+
+(ql:quickload :cl-mpm-framework :silent t)
+
+(defun run-m5-batch ()
+  (let ((runs '(("L-H"  "cases/cliff/cliff-mc-h.lisp"  "research/cliff/l-h")
+                ("L-HS" "cases/cliff/cliff-mc-hs.lisp" "research/cliff/l-hs"))))
+    (dolist (entry runs)
+      (destructuring-bind (label case-rel out-rel) entry
+        (let ((case-path (cl-mpm/framework:case-path case-rel))
+              (out-dir (uiop:ensure-directory-pathname (cl-mpm/framework:case-path out-rel))))
+          (format t "~&============================================================~%")
+          (format t "~&[M5] Starting ~A: ~A -> ~A~%" label case-rel out-rel)
+          (finish-output)
+          (uiop:delete-directory-tree out-dir :validate t :if-does-not-exist :ignore)
+          (setf cl-mpm/framework:*simulation* nil)
+          (load case-path)
+          (cl-mpm/framework:run-simulation cl-mpm/framework:*simulation* :output out-dir)
+          (format t "~&[M5] Completed ~A~%" label)
+          (finish-output)))))
+  (format t "~&[M5] All cliff simulations completed successfully.~%")
+  (finish-output))
+
+(run-m5-batch)

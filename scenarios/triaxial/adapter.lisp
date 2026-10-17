@@ -12,7 +12,7 @@
                       (:density "densityKgM3" 1800d0)
                       (:undrained-strength "undrainedStrengthPa" 25d3)
                       (:plasticity "enablePlasticity" t)))))
-    (check-kind material '(:von-mises :elastic :native))
+    (check-kind material '(:von-mises :elastic :mc-h :mc-hs :native))
     (check-kind geometry '(:rectangle :cylinder))
     (check-kind boundary '(:confinement))
     (check-kind load '(:compression))

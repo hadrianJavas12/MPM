@@ -6,7 +6,7 @@
          (solver (simulation-solver case)) (boundary (simulation-boundary case)))
     (maphash (lambda (key value) (setf (gethash key config) value))
              (simulation-parameters case))
-    (check-kind material (if joss-p '(:joss) '(:chalk :von-mises :elastic :native)))
+    (check-kind material (if joss-p '(:joss) '(:chalk :von-mises :elastic :mc-h :mc-hs :native)))
     (check-kind geometry (if joss-p '(:joss) '(:cliff)))
     (check-kind boundary '(:rollers))
     (check-kind (simulation-loading case) '(:gravity))

@@ -1,6 +1,7 @@
 (asdf:defsystem "cl-mpm-framework"
   :description "Composable, headless native CL-MPM simulation recipes"
   :depends-on ("cl-mpm" "cl-mpm/setup" "cl-mpm/damage" "cl-mpm/models/chalk"
+               "cl-mpm/models/mc-evolution"
                "cl-mpm/output" "cl-mpm/penalty" "cl-mpm/plotter" "vgplot"
                "jonathan" "yason" "alexandria" "uiop")
   :serial t

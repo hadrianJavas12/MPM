@@ -1,0 +1,28 @@
+;;;; Milestone M4 — Batch runner for paired 3D MPM Triaxial simulations (H vs HS)
+(in-package :cl-user)
+
+(ql:quickload :cl-mpm-framework :silent t)
+
+(defun run-m4-batch ()
+  (let ((runs '(("T-100-H"       "cases/triaxial/triaxial-mc-h-100.lisp"       "research/triaxial/t-100-h")
+                ("T-100-HS"      "cases/triaxial/triaxial-mc-hs-100.lisp"      "research/triaxial/t-100-hs")
+                ("T-200-H"       "cases/triaxial/triaxial-mc-h-200.lisp"       "research/triaxial/t-200-h")
+                ("T-200-HS"      "cases/triaxial/triaxial-mc-hs-200.lisp"      "research/triaxial/t-200-hs")
+                ("T-100-HS-URMI" "cases/triaxial/triaxial-mc-hs-100-urmi.lisp" "research/triaxial/t-100-hs-urmi"))))
+    (dolist (entry runs)
+      (destructuring-bind (label case-rel out-rel) entry
+        (let ((case-path (cl-mpm/framework:case-path case-rel))
+              (out-dir (uiop:ensure-directory-pathname (cl-mpm/framework:case-path out-rel))))
+          (format t "~&============================================================~%")
+          (format t "~&[M4] Starting ~A: ~A -> ~A~%" label case-rel out-rel)
+          (finish-output)
+          (uiop:delete-directory-tree out-dir :validate t :if-does-not-exist :ignore)
+          (setf cl-mpm/framework:*simulation* nil)
+          (load case-path)
+          (cl-mpm/framework:run-simulation cl-mpm/framework:*simulation* :output out-dir)
+          (format t "~&[M4] Completed ~A~%" label)
+          (finish-output)))))
+  (format t "~&[M4] All triaxial simulations completed successfully.~%")
+  (finish-output))
+
+(run-m4-batch)

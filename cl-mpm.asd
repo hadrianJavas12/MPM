@@ -88,7 +88,8 @@
 (defsystem "cl-mpm/setup"
   :depends-on ("cl-mpm"
                "cl-mpm/mesh"
-               "cl-mpm/bc")
+               "cl-mpm/bc"
+               "cl-mpm/models/mc-evolution")
   :description "MPM setup system"
   :serial t
   :components ((:file "src/setup" :pathname "src/geometry/setup")))
@@ -839,6 +840,19 @@
       (:file "p2-02-voigt-2d" :pathname "src/numerics/tensors/voigt-2d")
       (:file "p2-03-legacy" :pathname "materials/models/viscoelastic/finite-strain/legacy")
     ))))
+
+(defsystem "cl-mpm/models/mc-evolution"
+  :depends-on ("cl-mpm/particle")
+  :description "Dedicated evolving Mohr-Coulomb (Hardening / Hardening-Softening) model"
+  :serial t
+  :components ((:module "materials/models/plastic/mohr-coulomb-evolution"
+                :pathname "materials/models/plastic/mohr-coulomb-evolution"
+                :serial t
+                :components ((:file "package")
+                             (:file "law")
+                             (:file "projection")
+                             (:file "state")
+                             (:file "material")))))
 
 (defsystem "cl-mpm/examples/ice-visco"
   :depends-on ("cl-mpm/example"

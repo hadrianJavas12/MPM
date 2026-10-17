@@ -1,0 +1,47 @@
+{
+  "milestone": "M4",
+  "status": "PASS",
+  "pairs": [
+    {
+      "pairId": "T-100",
+      "particleCount": 780,
+      "matchedFrames": 30,
+      "matchedMaxAxialStrainPct": 14.263605292585,
+      "matchedUpdates": 2224,
+      "hFullRunMaxAxialStrainPct": 22.0,
+      "hFullRunFinalQKpa": 226.58858547557094,
+      "prepeakFrames": 13,
+      "prepeakMaxQDiffKpa": 5.286437954055145e-12,
+      "prepeakMaxKappaDiff": 9.999813477268304e-15,
+      "hPeakQKpa": 252.86832774426455,
+      "hPeakStrainPct": 6.521125473012,
+      "hsPeakQKpa": 250.29586581178768,
+      "hsPeakStrainPct": 6.521125473012,
+      "hFinalQKpa": 242.3853451468827,
+      "hsFinalQKpa": 91.30940855996515,
+      "postpeakDropVsHPct": 62.3288245811096,
+      "hsPeakToFinalDropPct": 63.519410013497335,
+      "hFinalMeanKappa": 0.12951234515986,
+      "hFinalMaxKappa": 0.33936802896897,
+      "hsFinalMeanKappa": 0.1567662281615,
+      "hsFinalMaxKappa": 0.65862835705036,
+      "hLocalizationRatio": 2.6203527435942915,
+      "hsLocalizationRatio": 4.201340842186006,
+      "hFinalMeanPhiDeg": 33.99000000000001,
+      "hsFinalMeanPhiDeg": 26.40682968386931,
+      "hsFinalSoftenedFraction": 0.97435700564467,
+      "hFinalPlasticWorkKJm3": 27.853515646864672,
+      "hsFinalPlasticWorkKJm3": 21.011633040661206,
+      "hMaxYieldResidualPa": 4.9477e-10,
+      "hsMaxYieldResidualPa": 5.2387e-10,
+      "massConservationMaxRelError": 0.0
+    }
+  ],
+  "plots": [
+    "research\\triaxial\\plots\\m4_triaxial_100kpa_h_vs_hs.png",
+    "research\\triaxial\\plots\\m4_triaxial_3d_localization_snapshot.png"
+  ],
+  "videos": [
+    "research\\triaxial\\videos\\triaxial_100kpa_h_vs_hs.mp4"
+  ]
+}

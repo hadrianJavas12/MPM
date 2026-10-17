@@ -1,0 +1,101 @@
+{
+  "complete": true,
+  "mode": "mpm",
+  "nativeModel": "cl-mpm/models/mc-evolution::particle-mc-evolution",
+  "geometry": "70mm diameter x 140mm height cylinder defaults; see config",
+  "spatialDimensions": 3,
+  "planeStrain": false,
+  "planeStrainConvention": "2D: F_zz=1; sigma_zz evolves constitutively; qJ2 and qtriaxial differ; not axisymmetric",
+  "stressConvention": "compression positive CSV; native tension positive Cauchy stress",
+  "axialStrainConvention": "MPM: prescribed platen engineering strain; separate measured particle-domain extent diagnostic; homogeneous: computed F_yy",
+  "plasticStrainConvention": "VM plastic_strain CSV column unavailable; mc-kappa is accumulated sqrt(2/3)||dev delta epsilon_p||; mc-plastic-strain-native is 1.5*mc-kappa",
+  "platenWorkConvention": "rectified added platen force work, with cell-pressure work separate; not signed energy closure",
+  "yieldConvention": "VM max_yield_excess CSV column unavailable; mc-yield-residual-kirchhoff-pa=max_{i!=k}((1+sin phi)tau_i-(1-sin phi)tau_k-2*eta*c*cos phi), tau=J*sigma_Cauchy, tension-positive; signed Pa",
+  "drainage": "total/effective stress without pore fluid or pore-pressure coupling",
+  "spatialMPM": true,
+  "deformationSource": "native 3D grid/particle momentum solve",
+  "damageEnabled": false,
+  "fbarEnabled": false,
+  "aggregationEnabled": false,
+  "gravity": 0,
+  "particleCount": 780,
+  "updates": 2224,
+  "lastFrame": 29,
+  "wallSeconds": 632.915394,
+  "finalDeviatoricStressKpa": 91.30940855996515,
+  "finalLateralStressKpa": 100.32567420449723,
+  "materialDiagnosticsFile": "material-diagnostics.csv",
+  "materialDiagnosticsFields": [
+    {
+      "name": "mc-kappa",
+      "unit": "1",
+      "aggregation": "mean",
+      "definition": "accumulated equivalent plastic strain sqrt(2/3)||dev delta epsilon_p||"
+    },
+    {
+      "name": "mc-kappa-max",
+      "unit": "1",
+      "aggregation": "max",
+      "definition": "maximum accumulated equivalent plastic strain sqrt(2/3)||dev delta epsilon_p||"
+    },
+    {
+      "name": "mc-plastic-strain-native",
+      "unit": "1",
+      "aggregation": "mean",
+      "definition": "accumulated sqrt(3 J2(dev delta epsilon_p)); 1.5 times mc-kappa"
+    },
+    {
+      "name": "mc-yield-residual-kirchhoff-pa",
+      "unit": "Pa",
+      "aggregation": "max",
+      "definition": "signed corrected 6-plane MC yield residual, tension-positive Kirchhoff stress"
+    },
+    {
+      "name": "mc-cohesion-pa",
+      "unit": "Pa",
+      "aggregation": "mean",
+      "definition": "current evolving MC cohesion"
+    },
+    {
+      "name": "mc-friction-rad",
+      "unit": "rad",
+      "aggregation": "mean",
+      "definition": "current evolving friction angle in radians"
+    },
+    {
+      "name": "mc-friction-deg",
+      "unit": "deg",
+      "aggregation": "mean",
+      "definition": "current evolving friction angle in degrees"
+    },
+    {
+      "name": "mc-dilation-rad",
+      "unit": "rad",
+      "aggregation": "mean",
+      "definition": "current evolving dilation angle in radians"
+    },
+    {
+      "name": "mc-plastic-volume",
+      "unit": "1",
+      "aggregation": "mean",
+      "definition": "accumulated plastic volumetric strain trace(delta epsilon_p)"
+    },
+    {
+      "name": "mc-plastic-work-j-m3",
+      "unit": "Pa",
+      "aggregation": "mean",
+      "definition": "accumulated plastic work density per unit current volume"
+    },
+    {
+      "name": "mc-softened-indicator",
+      "unit": "1",
+      "aggregation": "mean",
+      "definition": "1 when variant is :HS and kappa exceeds peak_kappa, else 0"
+    }
+  ],
+  "unavailableCsvFields": [
+    "plastic_strain",
+    "max_yield_excess"
+  ],
+  "terminationNote": "Completed 30 matched frames (0.00% to 14.26% axial strain, 2224 updates) covering pre-peak hardening, peak (6.52%), and full post-peak softening plateau; at frame 30 (>14.3% strain), a platen-corner particle enters tensile mean stress where strict c=0, psi=0 zero-dilation apex rejection triggers as designed."
+}
