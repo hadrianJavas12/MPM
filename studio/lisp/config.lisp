@@ -4,7 +4,7 @@
   ;; Contract tests compile this file without loading the native engine/system.
   (unless (and (find-package :cl-mpm/framework/config)
                (fboundp (find-symbol "LOAD-CONFIG" :cl-mpm/framework/config)))
-    (let ((base (merge-pathnames "../../framework/config/"
+    (let ((base (merge-pathnames "../../src/simulation/config/"
                  (uiop:pathname-directory-pathname
                    (or *compile-file-truename* *load-truename*)))))
       (load (merge-pathnames "package.lisp" base))

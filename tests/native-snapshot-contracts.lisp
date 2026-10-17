@@ -25,7 +25,7 @@
     (snapshot-write-json (merge-pathnames "source/source-manifest.json" directory)
                          (snapshot-object "files" (coerce records 'vector)))
     (let ((*native-snapshot-context* (snapshot-register-native directory records)))
-      (dolist (relative '("cl-mpm.asd" "src/settings.lisp" "src/particle.lisp"
+      (dolist (relative '("cl-mpm.asd" "cl-mpm-framework.asd" "src/settings.lisp" "src/particle.lisp"
                           "config/git-commit-version.txt" "libs/kirchoff.dll"
                           "scripts/lisp/native-source-snapshot.lisp"))
         (snapshot-verify-file (merge-pathnames relative (getf *native-snapshot-context* :source))))
@@ -61,6 +61,9 @@
       (setf (symbol-value (find-symbol "*OPTIMISE-SETTING*" "CL-MPM/SETTINGS"))
             '(optimize (speed 3) (safety 1) (debug 1) (compilation-speed 0)))
       (snapshot-check-plan "cl-mpm-framework")
+      (assert (snapshot-same-path-p
+               (asdf:system-source-file (asdf:find-system "cl-mpm-framework"))
+               (merge-pathnames "cl-mpm-framework.asd" (getf *native-snapshot-context* :source))))
       (ql:quickload :cl-mpm-framework :silent t)
       (let ((proof (snapshot-native-proof))
             (loads (remove-if-not (lambda (action)
