@@ -179,33 +179,41 @@ def prepare():
     return proof
 
 
-def prepare_retry():
+def prepare_retry(attempt='before-002'):
+    if not attempt.startswith('before-') or not attempt[7:].isdigit():
+        raise RuntimeError('Retry attempt must have the form before-NNN.')
     original = verify()
-    for relative in ('before-002-preparation.json', 'before-002-bootstrap.lisp',
-                     'run-original-retry.ps1', 'before-002', 'before-002-launch.json'):
+    retry_launcher = 'run-original-retry.ps1' if attempt == 'before-002' else attempt + '-run.ps1'
+    for relative in (attempt + '-preparation.json', attempt + '-bootstrap.lisp',
+                     retry_launcher, attempt, attempt + '-launch.json'):
         if (DEST / relative).exists():
             raise RuntimeError('Refusing retry overwrite: ' + relative)
     bootstrap = BOOTSTRAP.read_bytes()
-    launcher = launcher_text('before-002', 'before-002-bootstrap.lisp', retry=True).encode()
-    (DEST / 'before-002-bootstrap.lisp').write_bytes(bootstrap)
-    (DEST / 'run-original-retry.ps1').write_bytes(launcher)
-    proof = {'status': 'PREPARED_NATIVE_NOT_RUN', 'attempt': 'before-002',
+    launcher = launcher_text(attempt, attempt + '-bootstrap.lisp', retry=True)
+    launcher = launcher.replace(' --verify-retry\n', ' --verify-retry --attempt ' + attempt + '\n').encode()
+    (DEST / (attempt + '-bootstrap.lisp')).write_bytes(bootstrap)
+    (DEST / retry_launcher).write_bytes(launcher)
+    # The old path guard resolves registry roots even when no Studio system is
+    # selected. Supply its empty directory; never substitute source or methods.
+    (DEST / 'original-root/studio/lisp').mkdir(parents=True, exist_ok=True)
+    proof = {'status': 'PREPARED_NATIVE_NOT_RUN', 'attempt': attempt,
              'createdUtc': dt.datetime.now(dt.timezone.utc).isoformat(),
              'originalPreparationSha256': sha((DEST / 'preparation.json').read_bytes()),
              'numericalSourceBaselineCommit': OLD_COMMIT,
              'payload_file_count': original['payload_file_count'],
              'path_mirror_count': original['path_mirror_count'],
              'prepared_files': [
-                 {'destination': 'before-002-bootstrap.lisp', 'bytes': len(bootstrap), 'sha256': sha(bootstrap)},
-                 {'destination': 'run-original-retry.ps1', 'bytes': len(launcher), 'sha256': sha(launcher)}],
+                 {'destination': attempt + '-bootstrap.lisp', 'bytes': len(bootstrap), 'sha256': sha(bootstrap)},
+                 {'destination': retry_launcher, 'bytes': len(launcher), 'sha256': sha(launcher)}],
+             'emptyRegistrySupportDirectories': ['original-root/studio/lisp/'],
              'harnessRepair': 'Pass old-root without a trailing command-line backslash; use cmd/Start-Process redirected logs and actual process exit code.',
              'before001': 'Failure/status/empty log and exact bootstrap argument diagnostic are retained unchanged. No old numerical source or physics parameter changed.'}
-    write_json(DEST / 'before-002-preparation.json', proof)
-    return verify_retry()
+    write_json(DEST / (attempt + '-preparation.json'), proof)
+    return verify_retry(attempt)
 
-def verify_retry():
+def verify_retry(attempt='before-002'):
     original = verify()
-    proof = json.loads((DEST / 'before-002-preparation.json').read_text(encoding='utf-8'))
+    proof = json.loads((DEST / (attempt + '-preparation.json')).read_text(encoding='utf-8'))
     if sha((DEST / 'preparation.json').read_bytes()) != proof['originalPreparationSha256']:
         raise RuntimeError('Original preparation changed after retry capture.')
     for row in proof['prepared_files']:
@@ -220,16 +228,17 @@ def main():
     group.add_argument('--verify-only', action='store_true')
     group.add_argument('--prepare-retry', action='store_true')
     group.add_argument('--verify-retry', action='store_true')
+    parser.add_argument('--attempt', default='before-002')
     arguments = parser.parse_args()
     if arguments.prepare_retry:
-        proof = prepare_retry()
+        proof = prepare_retry(arguments.attempt)
     elif arguments.verify_retry:
-        proof = verify_retry()
+        proof = verify_retry(arguments.attempt)
     else:
         proof = verify() if arguments.verify_only else prepare()
     print(json.dumps({'status': proof['status'], 'payloadFiles': proof['payload_file_count'],
                       'byteIdenticalMirrors': proof['path_mirror_count'],
-                      'proof': str(DEST / ('before-002-preparation.json' if arguments.prepare_retry or arguments.verify_retry else 'preparation.json')), 'nativeLaunched': False}))
+                      'proof': str(DEST / (arguments.attempt + '-preparation.json' if arguments.prepare_retry or arguments.verify_retry else 'preparation.json')), 'nativeLaunched': False}))
 
 if __name__ == '__main__':
     main()
