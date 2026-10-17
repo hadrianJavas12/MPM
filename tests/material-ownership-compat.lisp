@@ -13,10 +13,13 @@
   ((string= *material-ownership-mode* "legacy")
    (ql:quickload :cl-mpm/setup :silent t)
    (assert (null (find-package :cl-mpm/framework)))
-   (load (cl-mpm-path "framework/config/package.lisp"))
-   (load (cl-mpm-path "framework/package.lisp"))
-   (load (cl-mpm-path "framework/components/specifications.lisp"))
-   (load (cl-mpm-path "framework/components/materials.lisp")))
+   (dolist (path '("src/simulation/config/package.lisp"
+                   "src/simulation/package.lisp"
+                   "src/simulation/components/base.lisp"
+                   "materials/core/definition.lisp"
+                   "src/simulation/components/specifications.lisp"
+                   "materials/adapters/native.lisp"))
+     (load (cl-mpm-path path))))
   (t (error "Expected ownership test mode normal or legacy, got ~S."
             *material-ownership-mode*)))
 
@@ -114,8 +117,9 @@
                              :key (lambda (file) (truename (asdf:component-pathname file)))))))))
     (dolist (old '("framework/components/specifications.lisp"
                    "framework/components/materials.lisp"))
-      (assert (not (find (truename (cl-user::cl-mpm-path old)) components :test #'equal
-                         :key (lambda (file) (truename (asdf:component-pathname file)))))))))
+      (when (probe-file (cl-user::cl-mpm-path old))
+        (assert (not (find (truename (cl-user::cl-mpm-path old)) components :test #'equal
+                           :key (lambda (file) (truename (asdf:component-pathname file))))))))))
 
 (setf *checks* 0 *failures* nil)
 (let* ((material (ownership-mc-material t))
@@ -166,13 +170,16 @@
                        #'ownership-check-asdf-paths)
       (ownership-check "Legacy source loaders construct native factories without loading framework execution"
        (lambda () (assert (not (fboundp 'cl-mpm/framework:run-simulation))))))
-  (ownership-check "Old source shims reload twice from another default directory without losing existing objects"
+  (ownership-check "Canonical owners reload twice from another default directory without losing existing objects"
    (lambda ()
      (let ((cl-mpm/framework:*simulation* material)
            (*default-pathname-defaults* (uiop:temporary-directory)))
        (loop repeat 2 do
-         (load (cl-user::cl-mpm-path "framework/components/specifications.lisp"))
-         (load (cl-user::cl-mpm-path "framework/components/materials.lisp")))
+         (dolist (path '("src/simulation/components/base.lisp"
+                         "materials/core/definition.lisp"
+                         "src/simulation/components/specifications.lisp"
+                         "materials/adapters/native.lisp"))
+           (load (cl-user::cl-mpm-path path))))
        (assert (eq cl-mpm/framework:*simulation* material)))
      (assert (eq (class-of material) old-material-class))
      (let ((particles (funcall old-factory nil '(0d0 0d0) '(0.01d0 0.01d0) '(1 1)

@@ -1,12 +1,12 @@
 {
   "scope": "Complete path/hash ownership ledger; existence is not validation",
-  "captureHead": "0dc994afe68cbce2d58ffba9893c1c5ca20ad5d1",
+  "captureHead": "5f83ec702d0a9463368465f56b2dcf0a0c511cbf",
   "originalInventorySha256": "fa47aafa98379535e9013255a468b3012499928f28dc6742ca305b52f6012c03",
   "originalPaths": 884,
   "counts": {
-    "RETAINED_UNCHANGED": 811,
+    "RETAINED_UNCHANGED": 749,
     "RETAINED_MODIFIED": 15,
-    "MAPPED_OWNERS_PRESENT": 58
+    "MAPPED_OWNERS_PRESENT": 120
   },
   "records": [
     {
@@ -684,30 +684,50 @@
     {
       "source": "cases/cliff.lisp",
       "originalSha256": "f27d7d13b4a5db77a1bdda07fcf44deb5c588571c12f883f3aab90a93e9d7b3f",
-      "currentSha256": "f27d7d13b4a5db77a1bdda07fcf44deb5c588571c12f883f3aab90a93e9d7b3f",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "cases/cliff/cliff.lisp",
+          "sha256": "f27d7d13b4a5db77a1bdda07fcf44deb5c588571c12f883f3aab90a93e9d7b3f"
+        }
+      ]
     },
     {
       "source": "cases/joss-collapse.lisp",
       "originalSha256": "ecc8db3231a96136d2b595078d22a5c3c0d5a457cccdbcfe6821b2efdcd57e74",
-      "currentSha256": "ecc8db3231a96136d2b595078d22a5c3c0d5a457cccdbcfe6821b2efdcd57e74",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "cases/benchmarks/joss-collapse.lisp",
+          "sha256": "ecc8db3231a96136d2b595078d22a5c3c0d5a457cccdbcfe6821b2efdcd57e74"
+        }
+      ]
     },
     {
       "source": "cases/triaxial-clay-2d.lisp",
       "originalSha256": "d9b15044e2496083adba42810a18066609d9e229b261c64e2b3df04296f92630",
-      "currentSha256": "d9b15044e2496083adba42810a18066609d9e229b261c64e2b3df04296f92630",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "cases/triaxial/triaxial-clay-2d.lisp",
+          "sha256": "d9b15044e2496083adba42810a18066609d9e229b261c64e2b3df04296f92630"
+        }
+      ]
     },
     {
       "source": "cases/triaxial-clay-3d.lisp",
       "originalSha256": "48e2caa1993872ab37f95ae0e3c64bbdb52273b1230a03aa4fb9c176eac05518",
-      "currentSha256": "48e2caa1993872ab37f95ae0e3c64bbdb52273b1230a03aa4fb9c176eac05518",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "cases/triaxial/triaxial-clay-3d.lisp",
+          "sha256": "48e2caa1993872ab37f95ae0e3c64bbdb52273b1230a03aa4fb9c176eac05518"
+        }
+      ]
     },
     {
       "source": "cl-mpm-tests.asd",
@@ -719,7 +739,7 @@
     {
       "source": "cl-mpm.asd",
       "originalSha256": "60fc5e86733a7dc300e58544c55f3cbb5f196034029a0d189c43a1ec88d7227c",
-      "currentSha256": "70e6f7e5e36971bddbad9948990c13e52c6a79d2e336486cc264b775e8cfd83a",
+      "currentSha256": "d9800d9573d90bea6bce4fa52cef73cc11745456f08dc8c7da366467d2535437",
       "status": "RETAINED_MODIFIED",
       "mappedOwners": []
     },
@@ -4289,7 +4309,7 @@
     {
       "source": "framework/README.md",
       "originalSha256": "dec67772242346170327bbf09d109966436a784a0c835d4103b34cd559d00a17",
-      "currentSha256": "9a99d526a4ce8925a2405c81e64036f9115ee3bf8d1b485be1311311da02b993",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4301,7 +4321,7 @@
     {
       "source": "framework/cl-mpm-framework.asd",
       "originalSha256": "2085bd22d5ff111f5f6fadf2becd6e06b88511202de672953a6637d73b62babd",
-      "currentSha256": "7cf79fdbdf58796d190422c60b22fdf1a66577e948bbf442930a5542d621da4e",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4313,7 +4333,7 @@
     {
       "source": "framework/components/README.md",
       "originalSha256": "6019c9b7d5f19ee84c44a41b1b442a0a119cadd582ac1263a5bce010dc4056a6",
-      "currentSha256": "3c9cdf861643d1088e1a7690eab9d90d02935d14de0b58f358a7c23a043b6d72",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4325,7 +4345,7 @@
     {
       "source": "framework/components/diagnostics.lisp",
       "originalSha256": "32d3ad0e7f17a09d5f2f90e3dc6dd51f21dd679922b629560a2f6c6b2ead3112",
-      "currentSha256": "6797f1d798c6597528c4a61a4a2ab2d80a13738be451252277808e829fdcc835",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4345,7 +4365,7 @@
     {
       "source": "framework/components/geometry.lisp",
       "originalSha256": "98ec9faa925ad831c28bacdc9e5b429f41a3f861bb781102e168683acd7d69ab",
-      "currentSha256": "29b511fe1f150d58874334bb825ad63c7bd0dc46113bc9781d409b77b9d1e386",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4357,7 +4377,7 @@
     {
       "source": "framework/components/materials.lisp",
       "originalSha256": "4be2f3e8b80e8867b4ee80135f409ae7dc887ca4194d22ea784630d4a445fd92",
-      "currentSha256": "47df6aa151a2a128c8f50968ce213f331a7ad3e41bfa41ac7a3b7d738440eb1b",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4369,7 +4389,7 @@
     {
       "source": "framework/components/specifications.lisp",
       "originalSha256": "7f0ef4c9210fc9b5d7bb9480e26cf01c78646a28bc77546f87c6b00b22028614",
-      "currentSha256": "1408795413a7235b167181ddfa6b50ee1b3ccf72a5b950ac39a3c7ff169c309b",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4389,7 +4409,7 @@
     {
       "source": "framework/config/package.lisp",
       "originalSha256": "b876d63ba59c6289f5551c9d1e849168505a58c606ca0145f4b542120fe2bf2c",
-      "currentSha256": "90fa908a0f6a4cc3434951d7a12a621653fed5aea64bb200ffac39bd50b99cdc",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4401,7 +4421,7 @@
     {
       "source": "framework/config/parameters.lisp",
       "originalSha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
-      "currentSha256": "7257d2b62aa198b79035a33b2c6529680e6aa2c5607e93cd09ed7f0845eff5c3",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4413,7 +4433,7 @@
     {
       "source": "framework/materials/chalk.lisp",
       "originalSha256": "e53556914a08efeb0aed3afd11b102b24a41ebac9dd2bdc3c765cf2cfbf1e80d",
-      "currentSha256": "2fcead890f3af62ef39d01eadf157ab0be38f6b7dd8fbef163653f6a057e491d",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4429,7 +4449,7 @@
     {
       "source": "framework/output/plotting.lisp",
       "originalSha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
-      "currentSha256": "c2775510e09c969f72fe832e87a6a81fcf4fd25aacfab81b801e24e59748aef2",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4441,7 +4461,7 @@
     {
       "source": "framework/package.lisp",
       "originalSha256": "8053c0b199e2bacdb8187045b33bb6762da0eb3ef56e1dbd2f3998daf7bfff15",
-      "currentSha256": "4426a2344af8e61ecbee36e700701e1dae2d2b4320fd252a60aad8794546e822",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4453,7 +4473,7 @@
     {
       "source": "framework/scenarios/cliff/adapter.lisp",
       "originalSha256": "917cad8678c37569f8dc0a5375574b30259aa409a03cc4cb1efe4f796d863709",
-      "currentSha256": "b06e34863a407070fffd91dd7b815e1746ae16ba26ed13ef8909fc2514035dc2",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4473,7 +4493,7 @@
     {
       "source": "framework/scenarios/cliff/build.lisp",
       "originalSha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
-      "currentSha256": "e9a0c8a739d48b1c75a3131b760fb98bda939c517f0966e6c1ffd56348ffa367",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4485,7 +4505,7 @@
     {
       "source": "framework/scenarios/cliff/geometry.lisp",
       "originalSha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
-      "currentSha256": "b84f42587b5cf17d81d8846b02b826e3b4b1de3076c74e90a7350420d3e10e7a",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4497,7 +4517,7 @@
     {
       "source": "framework/scenarios/cliff/run.lisp",
       "originalSha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
-      "currentSha256": "39897a404045a319c52cd49a98258d7962beefe3c3ce261a098d80d03ce9afeb",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4509,7 +4529,7 @@
     {
       "source": "framework/scenarios/cliff/settings.lisp",
       "originalSha256": "ce962d65506b9ffcf1c6e7388f6b4df5ad2119a505037e31fb7eebf5e861ae2a",
-      "currentSha256": "97002312234a3bfc89aca2667b3414923acb82aab80ef846563fe69bb477a440",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4529,7 +4549,7 @@
     {
       "source": "framework/scenarios/joss/build.lisp",
       "originalSha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
-      "currentSha256": "e43570cabbfa12f0730808e9afadbe90ca907da48d9c302bc75db6a5bddd0d61",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4541,7 +4561,7 @@
     {
       "source": "framework/scenarios/joss/classes.lisp",
       "originalSha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
-      "currentSha256": "a3c23704ab87328043d65e2daff3b5c938f7d6219e56b1c97bf9ee5744cac57b",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4553,7 +4573,7 @@
     {
       "source": "framework/scenarios/joss/geometry.lisp",
       "originalSha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
-      "currentSha256": "7f04c6e4436f08971be8dd3f5451266db0b86b7a2541a9a239aedc59252404db",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4565,7 +4585,7 @@
     {
       "source": "framework/scenarios/joss/measurements.lisp",
       "originalSha256": "27c2cc196ed8bfe85f92058d49622054d0a5021fc128a1ea759cfd79c6df772d",
-      "currentSha256": "383894d3bfa20350fdfcce3ad2438918932c9c189c0f1079ccb312c2d62c406f",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4585,7 +4605,7 @@
     {
       "source": "framework/scenarios/joss/output.lisp",
       "originalSha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
-      "currentSha256": "7c52ab65f13682f7303c10fefeb5da570bbc0744f82d6c0a47d60196db98772b",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4597,7 +4617,7 @@
     {
       "source": "framework/scenarios/joss/phases.lisp",
       "originalSha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
-      "currentSha256": "aaa16b07f2dfd3dba5c21325fbf9d56ba20846d7e8f8dd89e51922e03fef298f",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4609,7 +4629,7 @@
     {
       "source": "framework/scenarios/joss/run.lisp",
       "originalSha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
-      "currentSha256": "a4eb115108d78e52a2f2a486b3511c835c6017cadafb2f21b642af6efc2f8ac3",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4621,7 +4641,7 @@
     {
       "source": "framework/scenarios/joss/statistics.lisp",
       "originalSha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
-      "currentSha256": "2e041976b266d0ddf42e4ec79e10703f3b3db207887dae927328200c52daa438",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4633,7 +4653,7 @@
     {
       "source": "framework/scenarios/triaxial/README.md",
       "originalSha256": "a9b468fa37741c96d85280d55ca793fd6ad79717b902beab175e3dc55643a8f7",
-      "currentSha256": "43abc4c377ecdeb2f338b2a7b76e14c7dd47455d5bc27a00fdf694f9dbaad8e9",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4645,7 +4665,7 @@
     {
       "source": "framework/scenarios/triaxial/adapter.lisp",
       "originalSha256": "eab6819144c15d8c5ee475040c97ba6f42e6d1288149269c45dc0e74b8e2077c",
-      "currentSha256": "bfa093c7d45cc4ed511d8073a20343c85781b065ed2f8fad26e71c9c72d4a529",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4657,7 +4677,7 @@
     {
       "source": "framework/scenarios/triaxial/boundaries.lisp",
       "originalSha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
-      "currentSha256": "9619568ec0f2306857eb69b7ad0880e7258ca60527112c9e6de924d574b81227",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4669,7 +4689,7 @@
     {
       "source": "framework/scenarios/triaxial/config.lisp",
       "originalSha256": "0bf4d2abc858c6330185e092d150755e40d044a497784852e6da6f632494cdce",
-      "currentSha256": "eb0632ba4a017af317154ac1a7b6ea4856d69cca1038475f02c9a54e35beaea4",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4693,7 +4713,7 @@
     {
       "source": "framework/scenarios/triaxial/controls.lisp",
       "originalSha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
-      "currentSha256": "eae362a5c6b95ad6d2651ff75c5cc386b793fd9cc1b6cfc18489d6a99f617784",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4705,7 +4725,7 @@
     {
       "source": "framework/scenarios/triaxial/geometry.lisp",
       "originalSha256": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc",
-      "currentSha256": "5c037a9311d48633d5d7f6cc1e6ce3e92dea75d9c0dc44e23af359ff73bc87e9",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4717,7 +4737,7 @@
     {
       "source": "framework/scenarios/triaxial/homogeneous.lisp",
       "originalSha256": "732164497df091981db51bbf692bf9313f5a02fc098fe714bfb45470703f4082",
-      "currentSha256": "dddfb065d7428d4fd408ef9f710bad7fba93e31a1d7c40cb5cafa0eae0c98e92",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4733,7 +4753,7 @@
     {
       "source": "framework/scenarios/triaxial/material.lisp",
       "originalSha256": "b6a5e1874997e31410f3c7071e7fe25bb2e308f3359db04da5bd3e3cfb063cb9",
-      "currentSha256": "7ad1a2aaa5c4aaca394ddeab2d7861fb2e6ab5707f9bb49942f776476281a88d",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4749,7 +4769,7 @@
     {
       "source": "framework/scenarios/triaxial/measurements.lisp",
       "originalSha256": "8e72c64187a946336bfdce506fafe03f87b0115bd93ca9ff7babf3fda6edd6cc",
-      "currentSha256": "cbc5b52d7655c9aa0a75c7062ed10f5ed58da785227112892efa4584d5a510b7",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4761,7 +4781,7 @@
     {
       "source": "framework/scenarios/triaxial/mpm.lisp",
       "originalSha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
-      "currentSha256": "808ceb01398e0cce786aea303a906fa6e9ebf9dadea4c32aad2692f53cb2e78e",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4773,7 +4793,7 @@
     {
       "source": "framework/scenarios/triaxial/package.lisp",
       "originalSha256": "603756b11e09b4401a0a7e3d471023e894acfc26eb15eff327dc02626a8b42b9",
-      "currentSha256": "cfe7a427818cf884dbe8af66d2e053733ca541a09bd4c46b1edbefccfbf64cf7",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4789,7 +4809,7 @@
     {
       "source": "framework/scenarios/triaxial/runner.lisp",
       "originalSha256": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96",
-      "currentSha256": "7c786801d2cf9b8bbf311f1e63610ff849d936dbd30f209e7f2e9a087168e0d1",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4801,7 +4821,7 @@
     {
       "source": "framework/scenarios/triaxial/tensors.lisp",
       "originalSha256": "9d2e08f44508622ec34bf0e869e63ccfbe9bcc7018923652335ea0770cff67d1",
-      "currentSha256": "2b3920ba7cece32bbbafca83969c30d09e07dc978af08c5159d66204c94eb976",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -4825,7 +4845,7 @@
     {
       "source": "framework/simulation.lisp",
       "originalSha256": "331b9f228729fd3f6bc07dcbe52b9480c5ae7b6eb3d0d9b47871c23e7bbd70a3",
-      "currentSha256": "1cea21bf8f655f48103e92978269a2363e695c56e0b620834c470e018df1d2ac",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5320,56 +5340,91 @@
     {
       "source": "src/aggregate.lisp",
       "originalSha256": "8308aaa8b8e01133828d1215eb8d2a754a8bef8208f8d67d9fb7cb21b1e303bd",
-      "currentSha256": "8308aaa8b8e01133828d1215eb8d2a754a8bef8208f8d67d9fb7cb21b1e303bd",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/stabilization/aggregate/aggregate.lisp",
+          "sha256": "8308aaa8b8e01133828d1215eb8d2a754a8bef8208f8d67d9fb7cb21b1e303bd"
+        }
+      ]
     },
     {
       "source": "src/bc/bc.lisp",
       "originalSha256": "00a722288bc7e7baad930cdb349a325a90c8b4c864c6a387eec26ecff579c0fa",
-      "currentSha256": "00a722288bc7e7baad930cdb349a325a90c8b4c864c6a387eec26ecff579c0fa",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/boundaries/constraints/bc.lisp",
+          "sha256": "00a722288bc7e7baad930cdb349a325a90c8b4c864c6a387eec26ecff579c0fa"
+        }
+      ]
     },
     {
       "source": "src/bc/buoyancy.lisp",
       "originalSha256": "a9318298ab971141f344c46f634156639a2de859e09123ff672aece032fadba9",
-      "currentSha256": "a9318298ab971141f344c46f634156639a2de859e09123ff672aece032fadba9",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/boundaries/buoyancy/buoyancy.lisp",
+          "sha256": "a9318298ab971141f344c46f634156639a2de859e09123ff672aece032fadba9"
+        }
+      ]
     },
     {
       "source": "src/bc/erosion.lisp",
       "originalSha256": "db394ab4ba4e747626ae1523d2447ba5f7d69a7a8e8027026ec97b480a5fba85",
-      "currentSha256": "db394ab4ba4e747626ae1523d2447ba5f7d69a7a8e8027026ec97b480a5fba85",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/boundaries/erosion/erosion.lisp",
+          "sha256": "db394ab4ba4e747626ae1523d2447ba5f7d69a7a8e8027026ec97b480a5fba85"
+        }
+      ]
     },
     {
       "source": "src/bc/inflow.lisp",
       "originalSha256": "d9119416720cf986c91d3ea9488c0e9bab5015663a92e72cbb3f862ac4f3de2a",
-      "currentSha256": "d9119416720cf986c91d3ea9488c0e9bab5015663a92e72cbb3f862ac4f3de2a",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/boundaries/inflow/inflow.lisp",
+          "sha256": "d9119416720cf986c91d3ea9488c0e9bab5015663a92e72cbb3f862ac4f3de2a"
+        }
+      ]
     },
     {
       "source": "src/bc/penalty.lisp",
       "originalSha256": "f24eb709210e127f357d66f494091f770ef0a5a309b7463f75e3b3e39fbfcbb3",
-      "currentSha256": "f24eb709210e127f357d66f494091f770ef0a5a309b7463f75e3b3e39fbfcbb3",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/boundaries/penalty/penalty.lisp",
+          "sha256": "f24eb709210e127f357d66f494091f770ef0a5a309b7463f75e3b3e39fbfcbb3"
+        }
+      ]
     },
     {
       "source": "src/cl-mpm.lisp",
       "originalSha256": "54c2c4e068fd81bc2b2d79d0ba3835e695e1d0de9f8c0ed6a8ac8513983b92c1",
-      "currentSha256": "54c2c4e068fd81bc2b2d79d0ba3835e695e1d0de9f8c0ed6a8ac8513983b92c1",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/core/package.lisp",
+          "sha256": "54c2c4e068fd81bc2b2d79d0ba3835e695e1d0de9f8c0ed6a8ac8513983b92c1"
+        }
+      ]
     },
     {
       "source": "src/constitutive.lisp",
       "originalSha256": "e11a5a93eb60362cf9fef950dbef932050a5f583684f9f68b68f44621d76b63b",
-      "currentSha256": "1771a25f23ef0c92dce884475561d592bef3028b3b4d5163c6e240612feb25ae",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5421,30 +5476,50 @@
     {
       "source": "src/core.lisp",
       "originalSha256": "90f6ad05fc51456410df291e7782e9acde2f124fa2f16cc5044891238514c1b0",
-      "currentSha256": "90f6ad05fc51456410df291e7782e9acde2f124fa2f16cc5044891238514c1b0",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/core/simulation-base.lisp",
+          "sha256": "90f6ad05fc51456410df291e7782e9acde2f124fa2f16cc5044891238514c1b0"
+        }
+      ]
     },
     {
       "source": "src/core/domain-update.lisp",
       "originalSha256": "7cf4a1d2ad39b5076ccb322ea19896754c32893d1657b98cb5af4c662bfa7026",
-      "currentSha256": "7cf4a1d2ad39b5076ccb322ea19896754c32893d1657b98cb5af4c662bfa7026",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/discretization/domain-update/domain-update.lisp",
+          "sha256": "7cf4a1d2ad39b5076ccb322ea19896754c32893d1657b98cb5af4c662bfa7026"
+        }
+      ]
     },
     {
       "source": "src/core/forces.lisp",
       "originalSha256": "938207f2951a1edd7113155bf1c59a3e667629497020507fab78912c750ca80f",
-      "currentSha256": "938207f2951a1edd7113155bf1c59a3e667629497020507fab78912c750ca80f",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/transfer/forces.lisp",
+          "sha256": "938207f2951a1edd7113155bf1c59a3e667629497020507fab78912c750ca80f"
+        }
+      ]
     },
     {
       "source": "src/core/g2p.lisp",
       "originalSha256": "b969f82a01f8fab4d13cf62b34783fc17fdb49c82efb0c66ceb99c413651530e",
-      "currentSha256": "b969f82a01f8fab4d13cf62b34783fc17fdb49c82efb0c66ceb99c413651530e",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/transfer/g2p.lisp",
+          "sha256": "b969f82a01f8fab4d13cf62b34783fc17fdb49c82efb0c66ceb99c413651530e"
+        }
+      ]
     },
     {
       "source": "src/core/iterate-test.lisp",
@@ -5463,11 +5538,11 @@
     {
       "source": "src/core/linear-solver.lisp",
       "originalSha256": "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011",
-      "currentSha256": "ec8e63146a36432ec9ac1854f92ce4b27d3ed81c0b423d6d3933a009b8b8010b",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
-          "path": "src/solvers/linear-systems.lisp",
+          "path": "src/solvers/linear-systems/linear-solver.lisp",
           "sha256": "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011"
         }
       ]
@@ -5475,30 +5550,50 @@
     {
       "source": "src/core/mesh.lisp",
       "originalSha256": "57bd47f0b8a9932e9d2042173d0b20fb5fd75037c16725cdbf626ccca8570eba",
-      "currentSha256": "57bd47f0b8a9932e9d2042173d0b20fb5fd75037c16725cdbf626ccca8570eba",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/core/mesh-base.lisp",
+          "sha256": "57bd47f0b8a9932e9d2042173d0b20fb5fd75037c16725cdbf626ccca8570eba"
+        }
+      ]
     },
     {
       "source": "src/core/p2g.lisp",
       "originalSha256": "1faedbbfe015f201414773a5d5cdb7314cd0d9de8b21bf4f89b41846daa3bfbc",
-      "currentSha256": "1faedbbfe015f201414773a5d5cdb7314cd0d9de8b21bf4f89b41846daa3bfbc",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/transfer/p2g.lisp",
+          "sha256": "1faedbbfe015f201414773a5d5cdb7314cd0d9de8b21bf4f89b41846daa3bfbc"
+        }
+      ]
     },
     {
       "source": "src/core/shape-function.lisp",
       "originalSha256": "91fbe2afc519fa5eb0728d54630a8f5f0c47b03ebfda73371076a58a3458452f",
-      "currentSha256": "91fbe2afc519fa5eb0728d54630a8f5f0c47b03ebfda73371076a58a3458452f",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/discretization/shape-functions/shape-function.lisp",
+          "sha256": "91fbe2afc519fa5eb0728d54630a8f5f0c47b03ebfda73371076a58a3458452f"
+        }
+      ]
     },
     {
       "source": "src/core/splitting.lisp",
       "originalSha256": "26e57f4399dcc6e87a74b1910c60b3ecc9c6467f551b983a7332171d037436b3",
-      "currentSha256": "26e57f4399dcc6e87a74b1910c60b3ecc9c6467f551b983a7332171d037436b3",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/discretization/splitting/splitting.lisp",
+          "sha256": "26e57f4399dcc6e87a74b1910c60b3ecc9c6467f551b983a7332171d037436b3"
+        }
+      ]
     },
     {
       "source": "src/core/stress-update.lisp",
@@ -5510,14 +5605,19 @@
     {
       "source": "src/core/symbolic-derivation.lisp",
       "originalSha256": "f707ec327b569f93f504ff08dfec333a0684b2df99b5b80028fc7f4f18516928",
-      "currentSha256": "f707ec327b569f93f504ff08dfec333a0684b2df99b5b80028fc7f4f18516928",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/numerics/linear-algebra/symbolic-derivation.lisp",
+          "sha256": "f707ec327b569f93f504ff08dfec333a0684b2df99b5b80028fc7f4f18516928"
+        }
+      ]
     },
     {
       "source": "src/cpp.lisp",
       "originalSha256": "e8aec43b0d53a3f91b100f5602965f028cc3245512667cf61f7af04d3fd35d76",
-      "currentSha256": "5feb00d5d3af65e0e20d5693e394644c97949b7248044fab79b431a01c07fd78",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5533,7 +5633,7 @@
     {
       "source": "src/damage/criteria.lisp",
       "originalSha256": "b0acec0bb522d15a99bd51d9337cf3d4fa30b3904a7aec863917fb7e50e59a3e",
-      "currentSha256": "47380b93d9b34cb807737df804e403283314ce70e2ee985680580bfabf2fc343",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5549,7 +5649,7 @@
     {
       "source": "src/damage/damage.lisp",
       "originalSha256": "78ae70549935c723ce82e57045e8d270748ee6b795ac48b9a5a9248b29f546ab",
-      "currentSha256": "e5f56eff40c1c31f52c012aeb8e248ffb3d7b9afd90b2c267dbbb14f5d9b2869",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5573,7 +5673,7 @@
     {
       "source": "src/damage/degredation.lisp",
       "originalSha256": "3e473fa389a6d0994a0046ff3b4ec741922b90acfc4244f8ab7b968064dfe288",
-      "currentSha256": "195c91eff8bba05b3081649983e006fb1bea580fa6106d93462ed57fca2ebfd3",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5585,7 +5685,7 @@
     {
       "source": "src/damage/delay-damage.lisp",
       "originalSha256": "09263686b609f2ae0677efe748d898d049ea6c646247695a6d991af7326ab873",
-      "currentSha256": "f72d68fe9b323b98f36398d59ecbf2cea54dcaae7e10d442108f7d9260ecac73",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5601,28 +5701,43 @@
     {
       "source": "src/damage/ekl.lisp",
       "originalSha256": "f3ea1ed92c931f1dfb2437118374806d675a4e37839dd2ac55b858026811e671",
-      "currentSha256": "f3ea1ed92c931f1dfb2437118374806d675a4e37839dd2ac55b858026811e671",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/damage/nonlocal/ekl.lisp",
+          "sha256": "f3ea1ed92c931f1dfb2437118374806d675a4e37839dd2ac55b858026811e671"
+        }
+      ]
     },
     {
       "source": "src/damage/mpi.lisp",
       "originalSha256": "ddea8f5abcf32496f6204b41c3c3232e73e54ae1d8813dcbf565a169c8e6d0a6",
-      "currentSha256": "ddea8f5abcf32496f6204b41c3c3232e73e54ae1d8813dcbf565a169c8e6d0a6",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/parallel/mpi/damage-stub.lisp",
+          "sha256": "ddea8f5abcf32496f6204b41c3c3232e73e54ae1d8813dcbf565a169c8e6d0a6"
+        }
+      ]
     },
     {
       "source": "src/damage/nonlocal-stress-based.lisp",
       "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "currentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/damage/nonlocal/nonlocal-stress-based.lisp",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
     },
     {
       "source": "src/damage/output.lisp",
       "originalSha256": "e449445ed45405670a6841972854969b312f55e9ff7d42e21bae673fb35c782b",
-      "currentSha256": "f741652cc1d9e661fc85549c590f7d861d7032361750f5f90f27eff860ee544e",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5641,7 +5756,7 @@
     {
       "source": "src/damage/softening.lisp",
       "originalSha256": "23ea34b42ab581245af6d3898f4f823d866eb7bcfaac4bfeea9ae6166efb0746",
-      "currentSha256": "45c7c0135fd469098152eb516ea493b10a7862c11b6099fd2d27ebc8e0e932c4",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5661,102 +5776,167 @@
     {
       "source": "src/damage/solver.lisp",
       "originalSha256": "16117cbb17fae425c1e1ea058a29ed7077e087cd7e63862797e5edbd590bdab1",
-      "currentSha256": "16117cbb17fae425c1e1ea058a29ed7077e087cd7e63862797e5edbd590bdab1",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/damage/solver/solver.lisp",
+          "sha256": "16117cbb17fae425c1e1ea058a29ed7077e087cd7e63862797e5edbd590bdab1"
+        }
+      ]
     },
     {
       "source": "src/dynamic-relaxation/algorithms.lisp",
       "originalSha256": "b0552b31151c7bd1a4da664f426715dcef0898e8005397885c7012462ae0b6bf",
-      "currentSha256": "b0552b31151c7bd1a4da664f426715dcef0898e8005397885c7012462ae0b6bf",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/solvers/dynamic-relaxation/algorithms.lisp",
+          "sha256": "b0552b31151c7bd1a4da664f426715dcef0898e8005397885c7012462ae0b6bf"
+        }
+      ]
     },
     {
       "source": "src/dynamic-relaxation/criteria.lisp",
       "originalSha256": "ae74b9f93db587f39df7de627494baa115d0967c75bfd0257cbd36a650b6342a",
-      "currentSha256": "ae74b9f93db587f39df7de627494baa115d0967c75bfd0257cbd36a650b6342a",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/solvers/dynamic-relaxation/convergence/criteria.lisp",
+          "sha256": "ae74b9f93db587f39df7de627494baa115d0967c75bfd0257cbd36a650b6342a"
+        }
+      ]
     },
     {
       "source": "src/dynamic-relaxation/dynamic-relaxation.lisp",
       "originalSha256": "c5827ab6c324ee2d74dd10d1f27d87f01281100616c68d1840278705f3c2a10a",
-      "currentSha256": "c5827ab6c324ee2d74dd10d1f27d87f01281100616c68d1840278705f3c2a10a",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/solvers/dynamic-relaxation/dynamic-relaxation.lisp",
+          "sha256": "c5827ab6c324ee2d74dd10d1f27d87f01281100616c68d1840278705f3c2a10a"
+        }
+      ]
     },
     {
       "source": "src/dynamic-relaxation/misc/erosion.lisp",
       "originalSha256": "1e6ac4b978a0bab15da7f24b856cff477fbc339a6f3afcbac33490ad0e5cba1f",
-      "currentSha256": "1e6ac4b978a0bab15da7f24b856cff477fbc339a6f3afcbac33490ad0e5cba1f",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/boundaries/erosion/dr-erosion.lisp",
+          "sha256": "1e6ac4b978a0bab15da7f24b856cff477fbc339a6f3afcbac33490ad0e5cba1f"
+        }
+      ]
     },
     {
       "source": "src/dynamic-relaxation/mpi/dr.lisp",
       "originalSha256": "63b112fb0c02f0df46803d39bc4a94c0f9308478fef543c8a0edcd7117d8b23a",
-      "currentSha256": "63b112fb0c02f0df46803d39bc4a94c0f9308478fef543c8a0edcd7117d8b23a",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/parallel/mpi/dr.lisp",
+          "sha256": "63b112fb0c02f0df46803d39bc4a94c0f9308478fef543c8a0edcd7117d8b23a"
+        }
+      ]
     },
     {
       "source": "src/dynamic-relaxation/mpi/solvers.lisp",
       "originalSha256": "a6c5feb9e8269cfe48bdd71373d7ec38fef1a7b7a509b2296ace79de1c677bce",
-      "currentSha256": "a6c5feb9e8269cfe48bdd71373d7ec38fef1a7b7a509b2296ace79de1c677bce",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/parallel/mpi/dr-solvers.lisp",
+          "sha256": "a6c5feb9e8269cfe48bdd71373d7ec38fef1a7b7a509b2296ace79de1c677bce"
+        }
+      ]
     },
     {
       "source": "src/dynamic-relaxation/package.lisp",
       "originalSha256": "e9950da927acf0eace931c02a2814226109428c9943065d8ea499fb84e848b99",
-      "currentSha256": "e9950da927acf0eace931c02a2814226109428c9943065d8ea499fb84e848b99",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/solvers/dynamic-relaxation/package.lisp",
+          "sha256": "e9950da927acf0eace931c02a2814226109428c9943065d8ea499fb84e848b99"
+        }
+      ]
     },
     {
       "source": "src/dynamic-relaxation/solvers/dynamic.lisp",
       "originalSha256": "581cf8f2f0c2d66cbba0891e27e3c19c79fcc54ce18afee043d15d0b4abc2681",
-      "currentSha256": "581cf8f2f0c2d66cbba0891e27e3c19c79fcc54ce18afee043d15d0b4abc2681",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/solvers/dynamic-relaxation/dynamic/dynamic.lisp",
+          "sha256": "581cf8f2f0c2d66cbba0891e27e3c19c79fcc54ce18afee043d15d0b4abc2681"
+        }
+      ]
     },
     {
       "source": "src/dynamic-relaxation/solvers/multigrid.lisp",
       "originalSha256": "ef9858a372fab83ae1355bded25db37673591cdf2ffc0651a616472211153251",
-      "currentSha256": "ef9858a372fab83ae1355bded25db37673591cdf2ffc0651a616472211153251",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/solvers/dynamic-relaxation/multigrid/multigrid.lisp",
+          "sha256": "ef9858a372fab83ae1355bded25db37673591cdf2ffc0651a616472211153251"
+        }
+      ]
     },
     {
       "source": "src/dynamic-relaxation/solvers/quasi-static.lisp",
       "originalSha256": "96c785c5b1981b09cdba1cdddc0e75dce7cdb25164462d44bd1f2f6bd42aee58",
-      "currentSha256": "96c785c5b1981b09cdba1cdddc0e75dce7cdb25164462d44bd1f2f6bd42aee58",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/solvers/dynamic-relaxation/quasi-static/quasi-static.lisp",
+          "sha256": "96c785c5b1981b09cdba1cdddc0e75dce7cdb25164462d44bd1f2f6bd42aee58"
+        }
+      ]
     },
     {
       "source": "src/eigenerosion.lisp",
       "originalSha256": "3396b21038537944ef0572653fc75c7b14ba070a29257a3c61f12a8169a0c0b7",
-      "currentSha256": "3396b21038537944ef0572653fc75c7b14ba070a29257a3c61f12a8169a0c0b7",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/damage/eigenerosion/eigenerosion.lisp",
+          "sha256": "3396b21038537944ef0572653fc75c7b14ba070a29257a3c61f12a8169a0c0b7"
+        }
+      ]
     },
     {
       "source": "src/errors.lisp",
       "originalSha256": "e857aa6fae6d4385f571d52903d9755799e39d384547f4fb3622eb7759914bcb",
-      "currentSha256": "e857aa6fae6d4385f571d52903d9755799e39d384547f4fb3622eb7759914bcb",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/numerics/error-handling/errors.lisp",
+          "sha256": "e857aa6fae6d4385f571d52903d9755799e39d384547f4fb3622eb7759914bcb"
+        }
+      ]
     },
     {
       "source": "src/fastmaths.lisp",
       "originalSha256": "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d",
-      "currentSha256": "e6e9c1629982576dcc5028085347840fc204c8a9812101bb5423f9e6184c78cf",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
-          "path": "src/numerics/fastmaths.lisp",
+          "path": "src/numerics/fastmaths/fastmaths.lisp",
           "sha256": "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d"
         }
       ]
@@ -5764,21 +5944,31 @@
     {
       "source": "src/ghost.lisp",
       "originalSha256": "e74fb0200ba0f0f6edbfb77cb0e9821cdc532c718808a89a0d92cef806276e44",
-      "currentSha256": "e74fb0200ba0f0f6edbfb77cb0e9821cdc532c718808a89a0d92cef806276e44",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/discretization/ghost-nodes/ghost.lisp",
+          "sha256": "e74fb0200ba0f0f6edbfb77cb0e9821cdc532c718808a89a0d92cef806276e44"
+        }
+      ]
     },
     {
       "source": "src/implicit.lisp",
       "originalSha256": "ed262829375b11f92f70148ee4d421dd1ac9f9abe221795399e9436b6b49b357",
-      "currentSha256": "ed262829375b11f92f70148ee4d421dd1ac9f9abe221795399e9436b6b49b357",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/solvers/implicit/implicit.lisp",
+          "sha256": "ed262829375b11f92f70148ee4d421dd1ac9f9abe221795399e9436b6b49b357"
+        }
+      ]
     },
     {
       "source": "src/models/chalk.lisp",
       "originalSha256": "257225c99b45c758d066dae11c1792f61b19e7601a3466cd15e9ee2b612a7db5",
-      "currentSha256": "6c4f8c1c9a1b79985f0210d3834cc32b30911fb27fc005f1ddfae8ed4421a49a",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5790,7 +5980,7 @@
     {
       "source": "src/models/concrete.lisp",
       "originalSha256": "8224b9bbe474fc2898c1145cf3b82671f885bd633483b3f7dcdda2177546fc59",
-      "currentSha256": "59082e97aa8271be284bf41220837fe060a08d967302c9bbfd114929f6de5ad7",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5802,7 +5992,7 @@
     {
       "source": "src/models/damage-frictional.lisp",
       "originalSha256": "81ab1297bb8113cfd7333e3912418dc3b15de87b91d8c8c71958e370a8892db8",
-      "currentSha256": "81ddf7feeb593eaf5303fff1cafd2492ea0d3fc124a3b24aa94e0bb4102bd922",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5814,7 +6004,7 @@
     {
       "source": "src/models/damage.lisp",
       "originalSha256": "e2325d69352239257fd72a9efb17472edcd7a9c9c639bdbd54f0c29e79c2b714",
-      "currentSha256": "019dc5bc81551d4cf90455d7700ce8a22db04aa0db19cbbf2d278adf1aab9612",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5830,14 +6020,19 @@
     {
       "source": "src/models/elastic.lisp",
       "originalSha256": "0accd221eab1441b071fbab926ed97b837655beae52f2ba74fa9ae6cce090b1c",
-      "currentSha256": "0accd221eab1441b071fbab926ed97b837655beae52f2ba74fa9ae6cce090b1c",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "materials/models/elastic/linear-elastic/package.lisp",
+          "sha256": "0accd221eab1441b071fbab926ed97b837655beae52f2ba74fa9ae6cce090b1c"
+        }
+      ]
     },
     {
       "source": "src/models/ice.lisp",
       "originalSha256": "9c698a5e07fd9ced64ffeef2dc4659d61c6548fdb0076fc2be696ce8aac2e5ed",
-      "currentSha256": "72ca588d2e5717326ef3880c7ae16016ffc088578fe549322b1abd54ee13b701",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5849,7 +6044,7 @@
     {
       "source": "src/models/limestone.lisp",
       "originalSha256": "c663f6c0c82814da2308adb7fd74e79b761d39feffa6e24fbfdf805ee9cda023",
-      "currentSha256": "a2a3bb8300c51d5c30d3d0416af7981d23e637f538fb1ff475cb41625e4814cf",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5861,7 +6056,7 @@
     {
       "source": "src/models/plastic.lisp",
       "originalSha256": "ddacee366d530f79053d229693f55b1990b72d72ed9a6a44c2a9af1c67c67b64",
-      "currentSha256": "8dd070c599f0e2f51a4d2742502d73b21d33954d0c92505e7e37d65f8b0289dc",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5889,7 +6084,7 @@
     {
       "source": "src/models/visco.lisp",
       "originalSha256": "46b815d1884a8ed9443a8f0681dc4cb4bbf0ecc5af72489e9e182332add2fcf5",
-      "currentSha256": "8733418ff90513ae0cc0cea09649a9621da9bd6fbc4786d748d49fd87f84a52f",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -5909,70 +6104,115 @@
     {
       "source": "src/mpi.lisp",
       "originalSha256": "7936696762e57e14f16bff0c2f93ce09c248f4741d36752dbba0450d18b6eb2c",
-      "currentSha256": "7936696762e57e14f16bff0c2f93ce09c248f4741d36752dbba0450d18b6eb2c",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/parallel/mpi/legacy-mpi.lisp",
+          "sha256": "7936696762e57e14f16bff0c2f93ce09c248f4741d36752dbba0450d18b6eb2c"
+        }
+      ]
     },
     {
       "source": "src/mpi/damage.lisp",
       "originalSha256": "7d58a28779311ac70514dcebe1431c75e31410eaecde37abc71371c0663ba7ef",
-      "currentSha256": "7d58a28779311ac70514dcebe1431c75e31410eaecde37abc71371c0663ba7ef",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/parallel/mpi/damage.lisp",
+          "sha256": "7d58a28779311ac70514dcebe1431c75e31410eaecde37abc71371c0663ba7ef"
+        }
+      ]
     },
     {
       "source": "src/mpi/domain.lisp",
       "originalSha256": "d4c057480d124cb24782eec31a69a77c9a11c3421a68c5f7427a3217450767dd",
-      "currentSha256": "d4c057480d124cb24782eec31a69a77c9a11c3421a68c5f7427a3217450767dd",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/parallel/mpi/domain.lisp",
+          "sha256": "d4c057480d124cb24782eec31a69a77c9a11c3421a68c5f7427a3217450767dd"
+        }
+      ]
     },
     {
       "source": "src/mpi/mpi.lisp",
       "originalSha256": "ba3ed1eb2ef7b261d3870643c90ce7971e3e22828fac105169e01efd3f8fe657",
-      "currentSha256": "ba3ed1eb2ef7b261d3870643c90ce7971e3e22828fac105169e01efd3f8fe657",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/parallel/mpi/mpi.lisp",
+          "sha256": "ba3ed1eb2ef7b261d3870643c90ce7971e3e22828fac105169e01efd3f8fe657"
+        }
+      ]
     },
     {
       "source": "src/mpi/package.lisp",
       "originalSha256": "23e9f74d42da9ca4af15df60fdc4893e71d73c0c1a9d25fec5843fe95f8ec923",
-      "currentSha256": "23e9f74d42da9ca4af15df60fdc4893e71d73c0c1a9d25fec5843fe95f8ec923",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/parallel/mpi/package.lisp",
+          "sha256": "23e9f74d42da9ca4af15df60fdc4893e71d73c0c1a9d25fec5843fe95f8ec923"
+        }
+      ]
     },
     {
       "source": "src/mpi/serial.lisp",
       "originalSha256": "4941b42947f196dca693901d9fda73d18e6b653d743e73acac6643fd8b1c2c3c",
-      "currentSha256": "4941b42947f196dca693901d9fda73d18e6b653d743e73acac6643fd8b1c2c3c",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/parallel/serial/serial.lisp",
+          "sha256": "4941b42947f196dca693901d9fda73d18e6b653d743e73acac6643fd8b1c2c3c"
+        }
+      ]
     },
     {
       "source": "src/mpi/serialise.lisp",
       "originalSha256": "64f4b75622833d0b4cbcd8e32f99859b710b60e17d00dca2099147e1612babbe",
-      "currentSha256": "64f4b75622833d0b4cbcd8e32f99859b710b60e17d00dca2099147e1612babbe",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/parallel/serial/serialise.lisp",
+          "sha256": "64f4b75622833d0b4cbcd8e32f99859b710b60e17d00dca2099147e1612babbe"
+        }
+      ]
     },
     {
       "source": "src/mpi/sync.lisp",
       "originalSha256": "4d181e0d032494984dca997bd90a7993d966c2a6523a43954eca8431ed15cd26",
-      "currentSha256": "4d181e0d032494984dca997bd90a7993d966c2a6523a43954eca8431ed15cd26",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/parallel/mpi/sync.lisp",
+          "sha256": "4d181e0d032494984dca997bd90a7993d966c2a6523a43954eca8431ed15cd26"
+        }
+      ]
     },
     {
       "source": "src/output.lisp",
       "originalSha256": "479a747f01a5e1015be69934f0489378751e462b62b5a954ddadd04adf74971a",
-      "currentSha256": "479a747f01a5e1015be69934f0489378751e462b62b5a954ddadd04adf74971a",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/output/vtk.lisp",
+          "sha256": "479a747f01a5e1015be69934f0489378751e462b62b5a954ddadd04adf74971a"
+        }
+      ]
     },
     {
       "source": "src/particle.lisp",
       "originalSha256": "91a7a30a90f9659fb7989afdde056cd41968e13340a0121bae52a99b331270ce",
-      "currentSha256": "25ecb4d8603d71f862aee5de51545371f986ead66c368990e9ae5d61c1c41c1f",
+      "currentSha256": null,
       "status": "MAPPED_OWNERS_PRESENT",
       "mappedOwners": [
         {
@@ -6012,100 +6252,170 @@
     {
       "source": "src/plotter.lisp",
       "originalSha256": "88ba44d5bebd69ddd8a8e80902787997b3c4e036608168f254ccbcb210c68caa",
-      "currentSha256": "88ba44d5bebd69ddd8a8e80902787997b3c4e036608168f254ccbcb210c68caa",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/output/plotting/plotter.lisp",
+          "sha256": "88ba44d5bebd69ddd8a8e80902787997b3c4e036608168f254ccbcb210c68caa"
+        }
+      ]
     },
     {
       "source": "src/settings.lisp",
       "originalSha256": "97307ee66180541a6ea3c3155c2da24f20669420e9e59f8747776253e0e0b710",
-      "currentSha256": "97307ee66180541a6ea3c3155c2da24f20669420e9e59f8747776253e0e0b710",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/core/settings.lisp",
+          "sha256": "97307ee66180541a6ea3c3155c2da24f20669420e9e59f8747776253e0e0b710"
+        }
+      ]
     },
     {
       "source": "src/setup.lisp",
       "originalSha256": "0bd74167f9125a16b53fc55d6747039525943adffe6746004632781eec62b057",
-      "currentSha256": "0bd74167f9125a16b53fc55d6747039525943adffe6746004632781eec62b057",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/geometry/setup.lisp",
+          "sha256": "0bd74167f9125a16b53fc55d6747039525943adffe6746004632781eec62b057"
+        }
+      ]
     },
     {
       "source": "src/solvers/musl.lisp",
       "originalSha256": "37e58cfc2a43957b259f89e8f27d8fd20adb87fdeed0b6e2b3c4cfe3fc886639",
-      "currentSha256": "37e58cfc2a43957b259f89e8f27d8fd20adb87fdeed0b6e2b3c4cfe3fc886639",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/solvers/explicit/musl.lisp",
+          "sha256": "37e58cfc2a43957b259f89e8f27d8fd20adb87fdeed0b6e2b3c4cfe3fc886639"
+        }
+      ]
     },
     {
       "source": "src/solvers/octree/buoyancy.lisp",
       "originalSha256": "f0eab46ca3f2e510a516ddbf24991d5a70a739c7005489d47048074f25392e78",
-      "currentSha256": "f0eab46ca3f2e510a516ddbf24991d5a70a739c7005489d47048074f25392e78",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/formulations/octree/buoyancy.lisp",
+          "sha256": "f0eab46ca3f2e510a516ddbf24991d5a70a739c7005489d47048074f25392e78"
+        }
+      ]
     },
     {
       "source": "src/solvers/octree/penalty.lisp",
       "originalSha256": "b2c1993fef297d6efcc887da5fea440a7e6be1ffbc7361ce0ce5ca01dd80602e",
-      "currentSha256": "b2c1993fef297d6efcc887da5fea440a7e6be1ffbc7361ce0ce5ca01dd80602e",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/formulations/octree/penalty.lisp",
+          "sha256": "b2c1993fef297d6efcc887da5fea440a7e6be1ffbc7361ce0ce5ca01dd80602e"
+        }
+      ]
     },
     {
       "source": "src/solvers/usf.lisp",
       "originalSha256": "7cefb3fe86a9124715392ad73de19ec34ef6939bf824b0170394c1e312c8120e",
-      "currentSha256": "7cefb3fe86a9124715392ad73de19ec34ef6939bf824b0170394c1e312c8120e",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/solvers/explicit/usf.lisp",
+          "sha256": "7cefb3fe86a9124715392ad73de19ec34ef6939bf824b0170394c1e312c8120e"
+        }
+      ]
     },
     {
       "source": "src/solvers/usl.lisp",
       "originalSha256": "fabc02dda085ce46545d2843456455a5a6fe45c6396463432dd946e5338921b2",
-      "currentSha256": "fabc02dda085ce46545d2843456455a5a6fe45c6396463432dd946e5338921b2",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/solvers/explicit/usl.lisp",
+          "sha256": "fabc02dda085ce46545d2843456455a5a6fe45c6396463432dd946e5338921b2"
+        }
+      ]
     },
     {
       "source": "src/ssa/mesh.lisp",
       "originalSha256": "bb3af7f3bd5c55b79b142bd997bfa34906d263355aae190686431eefbfd49063",
-      "currentSha256": "bb3af7f3bd5c55b79b142bd997bfa34906d263355aae190686431eefbfd49063",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/formulations/ssa/mesh.lisp",
+          "sha256": "bb3af7f3bd5c55b79b142bd997bfa34906d263355aae190686431eefbfd49063"
+        }
+      ]
     },
     {
       "source": "src/ssa/p2g.lisp",
       "originalSha256": "dafd5769cf207aa6f46049b1d8fc939cc6053d9966ffdfda9bbbbdd5715161c0",
-      "currentSha256": "dafd5769cf207aa6f46049b1d8fc939cc6053d9966ffdfda9bbbbdd5715161c0",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/formulations/ssa/p2g.lisp",
+          "sha256": "dafd5769cf207aa6f46049b1d8fc939cc6053d9966ffdfda9bbbbdd5715161c0"
+        }
+      ]
     },
     {
       "source": "src/ssa/package.lisp",
       "originalSha256": "dee67a4760e9f82162ced9533e5316ee3f350f36e5b7e3b360cec02e4908feb8",
-      "currentSha256": "dee67a4760e9f82162ced9533e5316ee3f350f36e5b7e3b360cec02e4908feb8",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/formulations/ssa/package.lisp",
+          "sha256": "dee67a4760e9f82162ced9533e5316ee3f350f36e5b7e3b360cec02e4908feb8"
+        }
+      ]
     },
     {
       "source": "src/ssa/particles.lisp",
       "originalSha256": "2f72160e9723bcc5a176d7634d46135a0dcbf629df8250f541b5055a586e2c0f",
-      "currentSha256": "2f72160e9723bcc5a176d7634d46135a0dcbf629df8250f541b5055a586e2c0f",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/formulations/ssa/particles.lisp",
+          "sha256": "2f72160e9723bcc5a176d7634d46135a0dcbf629df8250f541b5055a586e2c0f"
+        }
+      ]
     },
     {
       "source": "src/ssa/solvers.lisp",
       "originalSha256": "0f15f7124f900f8cd406e1ac470e335a8cc823a003c7627394c74d123a231423",
-      "currentSha256": "0f15f7124f900f8cd406e1ac470e335a8cc823a003c7627394c74d123a231423",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/formulations/ssa/solvers.lisp",
+          "sha256": "0f15f7124f900f8cd406e1ac470e335a8cc823a003c7627394c74d123a231423"
+        }
+      ]
     },
     {
       "source": "src/utils.lisp",
       "originalSha256": "8ed1bfb0d0662107c8d56694b5388e571c41944cda07448337ebef1665015f57",
-      "currentSha256": "8ed1bfb0d0662107c8d56694b5388e571c41944cda07448337ebef1665015f57",
-      "status": "RETAINED_UNCHANGED",
-      "mappedOwners": []
+      "currentSha256": null,
+      "status": "MAPPED_OWNERS_PRESENT",
+      "mappedOwners": [
+        {
+          "path": "src/numerics/tensors/utils.lisp",
+          "sha256": "8ed1bfb0d0662107c8d56694b5388e571c41944cda07448337ebef1665015f57"
+        }
+      ]
     },
     {
       "source": "studio/CUSTOM_MODELS.md",
@@ -6677,7 +6987,7 @@
     {
       "source": "windows/init.lisp",
       "originalSha256": "a7fddb3244176d0f734463371461822d0e49a6338b7f331d187dc9ac179dd6fe",
-      "currentSha256": "c0849c047839568cb5fc2852a01ff9e95f3a44b0dbbf5cc08d94596318fe3565",
+      "currentSha256": "dd68bc9bcecb6abd66b8c03ee9eb2d24141488a257e84b22a47ca6266ed39218",
       "status": "RETAINED_MODIFIED",
       "mappedOwners": []
     },
@@ -6697,12 +7007,18 @@
     }
   ],
   "newTrackedPaths": [
+    "cases/benchmarks/joss-collapse.lisp",
+    "cases/cliff/cliff.lisp",
+    "cases/direct-shear/README.md",
+    "cases/triaxial/triaxial-clay-2d.lisp",
+    "cases/triaxial/triaxial-clay-3d.lisp",
     "cl-mpm-framework.asd",
     "docs/architecture/.gitattributes",
     "docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md",
     "docs/architecture/COMPONENTS.md",
     "docs/architecture/DEPENDENCY_RULES.md",
     "docs/architecture/FILE_MIGRATION_MATRIX.json",
+    "docs/architecture/FILE_MIGRATION_MATRIX.md",
     "docs/architecture/FILE_MIGRATION_RESULT.json",
     "docs/architecture/FOLDER_OWNERSHIP.md",
     "docs/architecture/MATERIAL_OWNERSHIP_AUDIT.md",
@@ -6724,6 +7040,7 @@
     "docs/architecture/baseline-source-comparison.json",
     "docs/architecture/environment-baseline.json",
     "docs/architecture/inventory-baseline.json",
+    "docs/archive/README.md",
     "docs/evidence/architecture-migration-2026-10-16/joss-bounded/.gitattributes",
     "docs/evidence/architecture-migration-2026-10-16/joss-bounded/README.md",
     "docs/evidence/architecture-migration-2026-10-16/joss-bounded/after-001/all-saved-state-audit.json",
@@ -7416,11 +7733,16 @@
     "materials/adapters/native.lisp",
     "materials/adapters/triaxial.lisp",
     "materials/backends/cpp/legacy-transaction.lisp",
+    "materials/backends/lisp/README.md",
+    "materials/cl-mpm-materials.asd",
     "materials/core/constitutive-package.lisp",
     "materials/core/definition.lisp",
     "materials/core/diagnostics-interface.lisp",
     "materials/core/plastic-state.lisp",
     "materials/core/visco-package.lisp",
+    "materials/definitions/concrete/README.md",
+    "materials/definitions/rocks/README.md",
+    "materials/definitions/soils/README.md",
     "materials/diagnostics/chalk-reference.lisp",
     "materials/diagnostics/native.lisp",
     "materials/models/chalk/evolution/softening.lisp",
@@ -7438,6 +7760,8 @@
     "materials/models/damage/legacy-state-evolution.lisp",
     "materials/models/damage/particle.lisp",
     "materials/models/elastic/constitutive.lisp",
+    "materials/models/elastic/hyperelastic/README.md",
+    "materials/models/elastic/linear-elastic/package.lisp",
     "materials/models/elastic/particle.lisp",
     "materials/models/fluid/constitutive.lisp",
     "materials/models/fluid/particle.lisp",
@@ -7447,6 +7771,8 @@
     "materials/models/plastic/drucker-prager/constitutive.lisp",
     "materials/models/plastic/drucker-prager/particle.lisp",
     "materials/models/plastic/mohr-coulomb/constitutive.lisp",
+    "materials/models/plastic/mohr-coulomb/evolution/README.md",
+    "materials/models/plastic/mohr-coulomb/legacy/README.md",
     "materials/models/plastic/mohr-coulomb/particle.lisp",
     "materials/models/plastic/von-mises/constitutive.lisp",
     "materials/models/plastic/von-mises/evolution/secant-hardening.lisp",
@@ -7456,6 +7782,13 @@
     "materials/models/viscoelastic/particle.lisp",
     "materials/models/viscoplastic/glen/constitutive.lisp",
     "materials/models/viscoplastic/particle.lisp",
+    "materials/shared/interpolation/README.md",
+    "research/calibration/README.md",
+    "research/comparisons/README.md",
+    "research/datasets/README.md",
+    "research/experiments/cliff/README.md",
+    "research/experiments/constitutive/README.md",
+    "research/experiments/triaxial/README.md",
     "scenarios/README.md",
     "scenarios/cliff/adapter.lisp",
     "scenarios/cliff/build.lisp",
@@ -7464,6 +7797,7 @@
     "scenarios/cliff/run.lisp",
     "scenarios/cliff/settings.lisp",
     "scenarios/cliff/solver.lisp",
+    "scenarios/direct-shear/README.md",
     "scenarios/joss/build.lisp",
     "scenarios/joss/classes.lisp",
     "scenarios/joss/geometry.lisp",
@@ -7486,31 +7820,82 @@
     "scenarios/triaxial/stress-measures.lisp",
     "scripts/audit-asdf-metadata.lisp",
     "scripts/audit-migration.py",
+    "scripts/audit/README.md",
+    "scripts/build/README.md",
+    "scripts/comparison/README.md",
     "scripts/lisp/native-source-snapshot.lisp",
     "scripts/lisp/run-frozen-joss-baseline.lisp",
+    "scripts/plotting/README.md",
     "scripts/prepare-joss-bounded-baseline.py",
     "scripts/report-architecture-migration.py",
+    "src/boundaries/buoyancy/buoyancy.lisp",
+    "src/boundaries/constraints/bc.lisp",
+    "src/boundaries/erosion/dr-erosion.lisp",
+    "src/boundaries/erosion/erosion.lisp",
+    "src/boundaries/inflow/inflow.lisp",
+    "src/boundaries/penalty/penalty.lisp",
     "src/boundaries/pressure/isotropic.lisp",
+    "src/core/mesh-base.lisp",
+    "src/core/package.lisp",
     "src/core/particle-base.lisp",
     "src/core/particle-protocols.lisp",
+    "src/core/settings.lisp",
+    "src/core/simulation-base.lisp",
+    "src/damage/eigenerosion/eigenerosion.lisp",
+    "src/damage/fracture/README.md",
+    "src/damage/nonlocal/ekl.lisp",
     "src/damage/nonlocal/legacy.lisp",
+    "src/damage/nonlocal/nonlocal-stress-based.lisp",
+    "src/damage/solver/solver.lisp",
+    "src/discretization/domain-update/domain-update.lisp",
+    "src/discretization/ghost-nodes/ghost.lisp",
+    "src/discretization/shape-functions/shape-function.lisp",
+    "src/discretization/splitting/splitting.lisp",
+    "src/formulations/octree/buoyancy.lisp",
+    "src/formulations/octree/penalty.lisp",
+    "src/formulations/ssa/mesh.lisp",
+    "src/formulations/ssa/p2g.lisp",
+    "src/formulations/ssa/package.lisp",
+    "src/formulations/ssa/particles.lisp",
+    "src/formulations/ssa/solvers.lisp",
+    "src/formulations/standard-mpm/README.md",
+    "src/geometry/setup.lisp",
+    "src/loading/README.md",
     "src/measurements/legacy-particle.lisp",
     "src/measurements/legacy-stress.lisp",
     "src/measurements/material-output.lisp",
     "src/numerics/angles.lisp",
-    "src/numerics/fastmaths.lisp",
+    "src/numerics/eigen/README.md",
+    "src/numerics/error-handling/errors.lisp",
+    "src/numerics/fastmaths/fastmaths.lisp",
     "src/numerics/integration/delayed-steppers.lisp",
     "src/numerics/integration/finite-difference-tangent.lisp",
     "src/numerics/legacy-tensors.lisp",
+    "src/numerics/linear-algebra/symbolic-derivation.lisp",
     "src/numerics/native-bridge/cpp.lisp",
     "src/numerics/tensors/constitutive-primitives.lisp",
     "src/numerics/tensors/damage-primitives.lisp",
     "src/numerics/tensors/particle-objectivity.lisp",
     "src/numerics/tensors/principal-strains.lisp",
+    "src/numerics/tensors/utils.lisp",
     "src/numerics/tensors/voigt-2d.lisp",
     "src/output/legacy-triaxial-json.lisp",
     "src/output/plotting/legacy-particle.lisp",
+    "src/output/plotting/plotter.lisp",
+    "src/output/vtk.lisp",
     "src/parallel/damage-communication-state.lisp",
+    "src/parallel/mpi/damage-stub.lisp",
+    "src/parallel/mpi/damage.lisp",
+    "src/parallel/mpi/domain.lisp",
+    "src/parallel/mpi/dr-solvers.lisp",
+    "src/parallel/mpi/dr.lisp",
+    "src/parallel/mpi/legacy-mpi.lisp",
+    "src/parallel/mpi/mpi.lisp",
+    "src/parallel/mpi/package.lisp",
+    "src/parallel/mpi/sync.lisp",
+    "src/parallel/serial/serial.lisp",
+    "src/parallel/serial/serialise.lisp",
+    "src/parallel/workers/README.md",
     "src/simulation/README.md",
     "src/simulation/compatibility/triaxial-package.lisp",
     "src/simulation/components/base.lisp",
@@ -7521,16 +7906,43 @@
     "src/simulation/config/parameters.lisp",
     "src/simulation/lifecycle.lisp",
     "src/simulation/package.lisp",
-    "src/solvers/linear-systems.lisp",
+    "src/solvers/dynamic-relaxation/algorithms.lisp",
+    "src/solvers/dynamic-relaxation/convergence/criteria.lisp",
+    "src/solvers/dynamic-relaxation/dynamic-relaxation.lisp",
+    "src/solvers/dynamic-relaxation/dynamic/dynamic.lisp",
+    "src/solvers/dynamic-relaxation/multigrid/multigrid.lisp",
+    "src/solvers/dynamic-relaxation/package.lisp",
+    "src/solvers/dynamic-relaxation/quasi-static/quasi-static.lisp",
+    "src/solvers/explicit/musl.lisp",
+    "src/solvers/explicit/usf.lisp",
+    "src/solvers/explicit/usl.lisp",
+    "src/solvers/implicit/implicit.lisp",
+    "src/solvers/linear-systems/linear-solver.lisp",
+    "src/stabilization/aggregate/aggregate.lisp",
+    "src/stabilization/damping/README.md",
+    "src/stabilization/fbar/README.md",
+    "src/stabilization/mass-filtering/README.md",
+    "src/transfer/forces.lisp",
+    "src/transfer/g2p.lisp",
+    "src/transfer/p2g.lisp",
     "tests/case-snapshot-contracts.lisp",
     "tests/cases/joss-serial-integration.lisp",
     "tests/diagnostics-ownership-compat.lisp",
     "tests/engine-numerics-compat.lisp",
+    "tests/engine/README.md",
+    "tests/fixtures/README.md",
+    "tests/integration/README.md",
     "tests/material-ownership-compat.lisp",
+    "tests/materials/README.md",
     "tests/native-model-catalog.lisp",
     "tests/native-snapshot-contracts.lisp",
+    "tests/numerical/README.md",
     "tests/p4-orchestration-compat.lisp",
-    "tests/p4-standalone-triaxial-compat.lisp"
+    "tests/p4-standalone-triaxial-compat.lisp",
+    "tests/performance/README.md",
+    "tests/regression/README.md",
+    "tests/scenarios/README.md",
+    "tests/unit/README.md"
   ],
   "runtimeValidation": "See stage evidence and STATUS.md; not inferred by this report"
 }

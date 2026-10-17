@@ -34,21 +34,23 @@
     (assert (asdf:find-component system id)))
   (incf checks)
   (format t "~&PASS: Public ASDF IDs remain, implementation paths load once, and Studio is not required.~%")
-  (let ((shims nil))
+  (let ((shims nil) (targets-to-reload nil))
     (dolist (record (coerce (gethash "framework_records" plan) 'list))
       (let* ((relative (gethash "source_path" record)) (introduced (p4-stage-for-source relative)))
         (when (and introduced (char<= introduced stage))
           (push relative shims)
           (dolist (target (coerce (gethash "target_paths" record) 'list))
-            (assert (member (truename (cl-mpm-path target)) components :test #'equal)))
-          ;; A compatibility path must no longer define actual implementation.
-          (with-open-file (stream (cl-mpm-path relative))
-            (let ((*read-eval* nil))
-              (loop for form = (read stream nil :eof) until (eq form :eof) do
-                (assert (not (member (first form)
-                                     '(defun defclass defgeneric defmethod defvar defparameter))))))))))
+            (assert (member (truename (cl-mpm-path target)) components :test #'equal))
+            (pushnew target targets-to-reload :test #'equal))
+          ;; If a compatibility path still exists on disk, it must contain forwarding code only.
+          (when (probe-file (cl-mpm-path relative))
+            (with-open-file (stream (cl-mpm-path relative))
+              (let ((*read-eval* nil))
+                (loop for form = (read stream nil :eof) until (eq form :eof) do
+                  (assert (not (member (first form)
+                                       '(defun defclass defgeneric defmethod defvar defparameter)))))))))))
     (incf checks)
-    (format t "~&PASS: Applied stage owners resolve directly; old source paths contain forwarding code only.~%")
+    (format t "~&PASS: Applied stage owners resolve directly; old source paths retired or forwarding only.~%")
     (let* ((class-symbols '(cl-mpm/framework:component cl-mpm/framework:material
                             cl-mpm/framework:simulation
                             cl-mpm/framework/cliff::joss-reference-chalk
@@ -61,7 +63,9 @@
                                   generics))
            (live (cl-mpm/framework:make-material :von-mises)))
       (let ((*default-pathname-defaults* (cl-mpm-path "output/")))
-        (loop repeat 2 do (dolist (relative (reverse shims)) (load (cl-mpm-path relative)))))
+        (loop repeat 2 do
+          (dolist (relative (reverse targets-to-reload))
+            (load (cl-mpm-path relative)))))
       (assert (every #'eq classes (mapcar #'find-class class-symbols)))
       (assert (typep live 'cl-mpm/framework:material))
       (assert (eq (first generics) #'cl-mpm/framework:compile-scenario))
@@ -70,7 +74,7 @@
                      (mapcar (lambda (function) (length (sb-mop:generic-function-methods function)))
                              generics)))
       (incf checks)
-      (format t "~&PASS: Historical shims reload from another directory without replacing classes/live objects or duplicating dispatch.~%")))
+      (format t "~&PASS: Canonical owners reload from another directory without replacing classes/live objects or duplicating dispatch.~%")))
   (when (char= stage #\F)
     (assert (equal (truename (asdf:system-source-directory "cl-mpm-framework"))
                    (truename (cl-mpm-path ""))))

@@ -15,11 +15,11 @@
 ;;   :components ((:file "src/core/symbolic-derivation")))
 
 (defsystem "cl-mpm/settings"
-  :components ((:file "src/settings"))
+  :components ((:file "src/settings" :pathname "src/core/settings"))
   :description "Dummy package that can be used to define settings")
 
 (defsystem "cl-mpm/errors"
-  :components ((:file "src/errors"))
+  :components ((:file "src/errors" :pathname "src/numerics/error-handling/errors"))
   :description "Package that contains the different kinds of error that are signaled")
 
 
@@ -41,7 +41,7 @@
                "array-operations")
   :description "MPM utility functions definitions"
   :serial t
-  :components ((:file "src/utils")))
+  :components ((:file "src/utils" :pathname "src/numerics/tensors/utils")))
 
 (defsystem "cl-mpm/fastmaths"
   :depends-on ("cl-mpm/magicl"
@@ -49,7 +49,7 @@
                :sb-simd)
   :description "MPM fast maths operations definitions"
   :serial t
-  :components ((:file "src/fastmaths" :pathname "src/numerics/fastmaths")))
+  :components ((:file "src/fastmaths" :pathname "src/numerics/fastmaths/fastmaths")))
 
 (defsystem "cl-mpm/linear-solver"
   :depends-on ("cl-mpm/magicl"
@@ -57,7 +57,7 @@
                "cl-mpm/fastmaths")
   :description "Iterative matrix-free linear solvers"
   :serial t
-  :components ((:file "src/core/linear-solver" :pathname "src/solvers/linear-systems")))
+  :components ((:file "src/core/linear-solver" :pathname "src/solvers/linear-systems/linear-solver")))
 
 (defsystem "cl-mpm/mesh"
   :depends-on ("cl-mpm/magicl"
@@ -66,7 +66,7 @@
                "cl-mpm/shape-function")
   :description "MPM boundary conditions"
   :serial t
-  :components ((:file "src/core/mesh")))
+  :components ((:file "src/core/mesh" :pathname "src/core/mesh-base")))
 
 (defsystem "cl-mpm/forces"
   :depends-on ("cl-mpm/magicl"
@@ -75,7 +75,7 @@
                "cl-mpm/mesh")
   :description "MPM forces calculations"
   :serial t
-  :components ((:file "src/core/forces")))
+  :components ((:file "src/core/forces" :pathname "src/transfer/forces")))
 
 (defsystem "cl-mpm/bc"
   :depends-on ("cl-mpm/magicl"
@@ -83,7 +83,7 @@
                )
   :description "MPM boundary conditions"
   :serial t
-  :components ((:file "src/bc/bc")))
+  :components ((:file "src/bc/bc" :pathname "src/boundaries/constraints/bc")))
 
 (defsystem "cl-mpm/setup"
   :depends-on ("cl-mpm"
@@ -91,7 +91,7 @@
                "cl-mpm/bc")
   :description "MPM setup system"
   :serial t
-  :components ((:file "src/setup")))
+  :components ((:file "src/setup" :pathname "src/geometry/setup")))
 
 
 (defsystem "cl-mpm/constitutive"
@@ -185,7 +185,7 @@
                                    (:file "p2-01-principal-strains" :pathname "src/numerics/tensors/principal-strains")
                                    (:file "p2-02-criteria" :pathname "materials/models/damage/criteria")
                                  ))
-                               (:file "ekl")
+                               (:file "ekl" :pathname "nonlocal/ekl")
                                (:module "damage" :pathname "../../" :serial t
                                  :components (
                                    (:file "p2-01-damage-primitives" :pathname "src/numerics/tensors/damage-primitives")
@@ -206,7 +206,7 @@
                                  :components (
                                    (:file "p2-01-damage-output" :pathname "materials/adapters/damage-output")
                                  ))
-                               (:file "solver")))
+                               (:file "solver" :pathname "solver/solver")))
                  (:module "models/damage" :pathname "../" :serial t
                    :components (
                      (:file "p2-01-damage-communication-state" :pathname "src/parallel/damage-communication-state")
@@ -223,7 +223,7 @@
                "cl-mpm/particle")
   :description "MPM eigenerosion damage mechanics"
   :serial t
-  :components ((:file "src/eigenerosion")))
+  :components ((:file "src/eigenerosion" :pathname "src/damage/eigenerosion/eigenerosion")))
 
 (defsystem "cl-mpm/output"
   :depends-on ("cl-mpm/magicl"
@@ -234,7 +234,7 @@
                "str")
   :description "MPM output helper functions"
   :serial t
-  :components ((:file "src/output")))
+  :components ((:file "src/output" :pathname "src/output/vtk")))
 
 (defsystem "cl-mpm/shape-function"
   :depends-on ("cl-mpm/magicl"
@@ -242,7 +242,7 @@
                )
   :description "MPM shape function definitions"
   :serial t
-  :components ((:file "src/core/shape-function")))
+  :components ((:file "src/core/shape-function" :pathname "src/discretization/shape-functions/shape-function")))
 
 (defsystem "cl-mpm/dynamic-relaxation/core"
   :depends-on ("cl-mpm"
@@ -260,11 +260,11 @@
   ((:module "src"
     :serial t
     :components
-    ((:module "dynamic-relaxation"
+    ((:module "dynamic-relaxation" :pathname "solvers/dynamic-relaxation"
       :serial t
       :components
       ((:file "package")
-       (:file "criteria")
+       (:file "criteria" :pathname "convergence/criteria")
        (:file "dynamic-relaxation")))))))
 
 
@@ -280,12 +280,12 @@
   ((:module "src"
     :serial t
     :components
-    ((:module "dynamic-relaxation"
+    ((:module "dynamic-relaxation" :pathname "solvers/dynamic-relaxation"
       :serial t
       :components
-      ((:file "solvers/quasi-static")
-       (:file "solvers/dynamic")
-       (:file "solvers/multigrid")
+      ((:file "solvers/quasi-static" :pathname "quasi-static/quasi-static")
+       (:file "solvers/dynamic" :pathname "dynamic/dynamic")
+       (:file "solvers/multigrid" :pathname "multigrid/multigrid")
        (:file "algorithms")))))))
 
 
@@ -299,11 +299,11 @@
   ((:module "src"
     :serial t
     :components
-    ((:module "dynamic-relaxation"
+    ((:module "dynamic-relaxation" :pathname "solvers/dynamic-relaxation"
       :serial t
       :components
-      ((:file "mpi/solvers")
-       (:file "mpi/dr")))))))
+      ((:file "mpi/solvers" :pathname "../../parallel/mpi/dr-solvers")
+       (:file "mpi/dr" :pathname "../../parallel/mpi/dr")))))))
 
 
 
@@ -344,14 +344,14 @@
   :in-order-to ((test-op (load-op "test/all")))
   :perform (test-op (o c) (symbol-call :test/all :test-suite))
   :serial t
-  :components ((:file "src/cl-mpm")
+  :components ((:file "src/cl-mpm" :pathname "src/core/package")
                (:file "src/core/iterate")
-               (:file "src/core/domain-update")
+               (:file "src/core/domain-update" :pathname "src/discretization/domain-update/domain-update")
                (:file "src/core/stress-update")
-               (:file "src/core/splitting")
-               (:file "src/core/p2g")
-               (:file "src/core/g2p")
-               (:file "src/core")
+               (:file "src/core/splitting" :pathname "src/discretization/splitting/splitting")
+               (:file "src/core/p2g" :pathname "src/transfer/p2g")
+               (:file "src/core/g2p" :pathname "src/transfer/g2p")
+               (:file "src/core" :pathname "src/core/simulation-base")
                ))
 (defsystem "cl-mpm"
   ;; :class :package-inferred-system
@@ -361,15 +361,15 @@
   :in-order-to ((test-op (load-op "test/all")))
   :perform (test-op (o c) (symbol-call :test/all :test-suite))
   :serial t
-  :components ((:file "src/solvers/usf")
-               (:file "src/solvers/usl")
-               (:file "src/solvers/musl")))
+  :components ((:file "src/solvers/usf" :pathname "src/solvers/explicit/usf")
+               (:file "src/solvers/usl" :pathname "src/solvers/explicit/usl")
+               (:file "src/solvers/musl" :pathname "src/solvers/explicit/musl")))
 #+cl-mpm-no-mpi
 (defsystem "cl-mpm/mpi"
   :depends-on ("cl-mpm"
                "cl-mpm/damage")
   :description "Serial stand-in for the MPI layer (no cl-mpi / MPI runtime required)"
-  :components ((:file "src/mpi/serial")))
+  :components ((:file "src/mpi/serial" :pathname "src/parallel/serial/serial")))
 
 #-cl-mpm-no-mpi
 (defsystem "cl-mpm/mpi"
@@ -398,11 +398,11 @@
   :description ""
   :components ((:module "src"
                 :components
-                ((:module "mpi"
+                ((:module "mpi" :pathname "parallel/mpi"
                   :serial t
                   :components
                   ((:file "package")
-                   (:file "serialise")
+                   (:file "serialise" :pathname "../serial/serialise")
                    (:file "domain")
                    (:file "sync")
                    (:file "mpi")
@@ -416,7 +416,7 @@
                "cl-mpm/mpi"
                )
   :description ""
-  :components ((:file "src/bc/buoyancy")))
+  :components ((:file "src/bc/buoyancy" :pathname "src/boundaries/buoyancy/buoyancy")))
 
 (defsystem "cl-mpm/erosion"
   :depends-on ("cl-mpm"
@@ -424,25 +424,25 @@
                "cl-mpm/buoyancy"
                "cl-mpm/damage")
   :description "Erosion specific BCs"
-  :components ((:file "src/bc/erosion")))
+  :components ((:file "src/bc/erosion" :pathname "src/boundaries/erosion/erosion")))
 
 (defsystem "cl-mpm/penalty"
   :depends-on ("cl-mpm"
                "cl-mpm/bc")
   :description ""
-  :components ((:file "src/bc/penalty")))
+  :components ((:file "src/bc/penalty" :pathname "src/boundaries/penalty/penalty")))
 
 (defsystem "cl-mpm/ghost"
   :depends-on ("cl-mpm/core"
                "cl-mpm/bc")
   :description ""
-  :components ((:file "src/ghost")))
+  :components ((:file "src/ghost" :pathname "src/discretization/ghost-nodes/ghost")))
 
 (defsystem "cl-mpm/aggregate"
   :depends-on ("cl-mpm"
                "cl-mpm/bc")
   :description ""
-  :components ((:file "src/aggregate")))
+  :components ((:file "src/aggregate" :pathname "src/stabilization/aggregate/aggregate")))
 
 
 (defsystem "cl-mpm/test"
@@ -501,7 +501,7 @@
                "cl-mpm/particle"
                "vgplot")
   :serial t
-  :components ((:file "src/plotter")))
+  :components ((:file "src/plotter" :pathname "src/output/plotting/plotter")))
 
 (defsystem "cl-mpm/examples/fracture"
   :depends-on ("cl-mpm"
@@ -864,11 +864,11 @@
 (defsystem "cl-mpm/ssa"
   :depends-on ("cl-mpm")
   :serial t
-  :components ((:file "src/ssa/package")
-               (:file "src/ssa/mesh")
-               (:file "src/ssa/particles")
-               (:file "src/ssa/p2g")
-               (:file "src/ssa/solvers")))
+  :components ((:file "src/ssa/package" :pathname "src/formulations/ssa/package")
+               (:file "src/ssa/mesh" :pathname "src/formulations/ssa/mesh")
+               (:file "src/ssa/particles" :pathname "src/formulations/ssa/particles")
+               (:file "src/ssa/p2g" :pathname "src/formulations/ssa/p2g")
+               (:file "src/ssa/solvers" :pathname "src/formulations/ssa/solvers")))
 
 (defsystem "cl-mpm/examples/ssa/box"
   :depends-on ("cl-mpm/example"
@@ -892,7 +892,7 @@
 #+(and asdf-system-connections (not cl-mpm-no-mpi))
 (defsystem-connection "cl-mpm/dynamic-relaxation-mpi"
   :requires ("cl-mpm/dynamic-relaxation" "cl-mpm/mpi")
-  :components ((:file "src/dynamic-relaxation/mpi/solvers")))
+  :components ((:file "src/dynamic-relaxation/mpi/solvers" :pathname "src/parallel/mpi/dr-solvers")))
 
 
 #+asdf-system-connections
@@ -901,7 +901,7 @@
                "cl-mpm/erosion")
   :description "MPM DR erosions specific criteria"
   :serial t
-  :components ((:file "src/dynamic-relaxation/misc/erosion")))
+  :components ((:file "src/dynamic-relaxation/misc/erosion" :pathname "src/boundaries/erosion/dr-erosion")))
 
 
 
@@ -924,7 +924,7 @@
   ((:module "src"
     :serial t
     :components
-    ((:file "implicit")))))
+    ((:file "implicit" :pathname "solvers/implicit/implicit")))))
 
 
 ;;Ice stuff
@@ -1011,7 +1011,7 @@
 #+asdf-system-connections
 (defsystem-connection "cl-mpm/octree-penalty"
   :requires ("cl-mpm/dynamic-relaxation" "cl-mpm/penalty")
-  :components ((:file "src/solvers/octree/penalty")))
+  :components ((:file "src/solvers/octree/penalty" :pathname "src/formulations/octree/penalty")))
 
 #+asdf-system-connections
 (defsystem-connection "cl-mpm/octree-buoyancy"
@@ -1023,7 +1023,7 @@
   ;;                   )
 
   ;; :serial t
-  :components ((:file "src/solvers/octree/buoyancy"))
+  :components ((:file "src/solvers/octree/buoyancy" :pathname "src/formulations/octree/buoyancy"))
   )
 
 

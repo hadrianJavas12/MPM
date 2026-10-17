@@ -42,7 +42,7 @@
   ;; guard must reject it before any model source LOAD-OP can run.
   (setf asdf:*central-registry* (remove frozen asdf:*central-registry* :test #'equal))
   (asdf:clear-system "cl-mpm-framework")
-  (asdf:load-asd (cl-mpm-path "framework/cl-mpm-framework.asd"))
+  (asdf:load-asd (cl-mpm-path "cl-mpm-framework.asd"))
   (assert (equal (truename (asdf:system-source-directory "cl-mpm-framework"))
                  (truename (cl-mpm-path ""))))
   (let ((message (handler-case (progn (frozen-case-components directory) nil)

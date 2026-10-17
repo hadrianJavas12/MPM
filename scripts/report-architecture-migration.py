@@ -41,8 +41,8 @@ def main():
     for row in read(ARCH / "P3_DIAGNOSTICS_MIGRATION.json")["ordered_groups"]:
         mappings.setdefault("framework/components/diagnostics.lisp", []).append(row["target_path"])
     for row in read(ARCH / "P4_ORCHESTRATION_MIGRATION.json")["framework_records"]:
-        if row["target_paths"] and row["decision"] != "EXISTING_SHIM_NO_OWNER_MIGRATION":
-            mappings[row["source_path"]] = row["target_paths"]
+        if row["target_paths"]:
+            mappings.setdefault(row["source_path"], row["target_paths"])
     for row in read(ARCH / "P5_ENGINE_MIGRATION.json")["files"]:
         mappings[row["source"]] = [row["target"]]
     records = []

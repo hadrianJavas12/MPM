@@ -25,7 +25,7 @@
     (snapshot-write-json (merge-pathnames "source/source-manifest.json" directory)
                          (snapshot-object "files" (coerce records 'vector)))
     (let ((*native-snapshot-context* (snapshot-register-native directory records)))
-      (dolist (relative '("cl-mpm.asd" "cl-mpm-framework.asd" "src/settings.lisp" "src/particle.lisp"
+      (dolist (relative '("cl-mpm.asd" "cl-mpm-framework.asd" "src/core/settings.lisp" "src/core/particle-base.lisp"
                           "config/git-commit-version.txt" "libs/kirchoff.dll"
                           "scripts/lisp/native-source-snapshot.lisp"))
         (snapshot-verify-file (merge-pathnames relative (getf *native-snapshot-context* :source))))
@@ -33,11 +33,11 @@
       (let* ((system (asdf:find-system "cl-mpm/settings"))
              (operation (asdf:make-operation 'asdf:load-op))
              (escape (make-instance 'asdf:cl-source-file :name "escape" :parent system
-                                    :pathname (cl-mpm-path "src/settings.lisp"))))
+                                    :pathname (cl-mpm-path "src/core/settings.lisp"))))
         (assert (native-snapshot-error (lambda () (snapshot-check-component escape operation))
                                        "escapes frozen source")))
       (incf checks) (format t "~&PASS: A selected native component escaping to the checkout rejects before load.~%")
-      (let* ((path (merge-pathnames "src/settings.lisp" (getf *native-snapshot-context* :source)))
+      (let* ((path (merge-pathnames "src/core/settings.lisp" (getf *native-snapshot-context* :source)))
              (before (case-source-bytes path)))
         (unwind-protect
              (progn
