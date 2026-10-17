@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "milestone": "M3",
+  "status": "frozen_verification_parameter_matrix",
+  "scientific_status": "numerical_verification_and_comparative_study_not_empirical_calibration",
+  "gravity_m_s2": 9.80665,
+  "datasets": {
+    "residual_soil_pair": {
+      "description": "Primary triaxial and slope sensitivity pair from Master Plan Section 2.3-2.4 (pages 6-14 of slide deck)",
+      "density_kg_m3": 1716.1824256292906,
+      "unit_weight_kn_m3": 16.83,
+      "youngs_modulus_pa": 20000000.0,
+      "poisson_ratio": 0.2,
+      "dilation_deg": 0.0,
+      "cohesion_pa": 0.0,
+      "peak_kappa": 0.037,
+      "residual_kappa": 0.2,
+      "confining_pressures_pa": [100000.0, 200000.0],
+      "variants": {
+        "H_piecewise": {
+          "variant": "h",
+          "points_kappa_phi_deg": [
+            [0.0, 0.0],
+            [0.0068, 27.1],
+            [0.037, 33.99],
+            [0.1, 27.62],
+            [0.2, 16.34]
+          ],
+          "cohesion_points_kappa_pa": [
+            [0.0, 0.0],
+            [0.2, 0.0]
+          ]
+        },
+        "HS_piecewise": {
+          "variant": "hs",
+          "points_kappa_phi_deg": [
+            [0.0, 0.0],
+            [0.0068, 27.1],
+            [0.037, 33.99],
+            [0.1, 27.62],
+            [0.2, 16.34]
+          ],
+          "cohesion_points_kappa_pa": [
+            [0.0, 0.0],
+            [0.2, 0.0]
+          ]
+        },
+        "HS_urmi_exp_linear": {
+          "variant": "hs",
+          "reference": "Urmi et al. (2024), Engineering Geology 340, 107669, Eq. (2)",
+          "beta": -25.0,
+          "postpeak_segments": 8,
+          "phi_peak_deg": 33.99,
+          "phi_post_rupture_deg": 27.62,
+          "phi_residual_deg": 16.34
+        }
+      }
+    },
+    "zhan_cliff_pair": {
+      "description": "Independent soil cliff/slope failure pair from Master Plan Section 2.5 (Zhan et al. 2012, pages 17-25 of slide deck) with Urmi et al. (2024) two-stage MPM protocol",
+      "density_kg_m3": 1917.066479888647,
+      "unit_weight_kn_m3": 18.8,
+      "youngs_modulus_pa": 5250000.0,
+      "youngs_modulus_min_pa": 4000000.0,
+      "poisson_ratio": 0.2,
+      "dilation_deg": 0.0,
+      "peak_kappa": 0.05,
+      "residual_kappa": 0.2,
+      "k0_baseline": 1.0,
+      "k0_sensitivity": 1.5,
+      "urmi_stage1_damping": 0.75,
+      "urmi_stage2_damping": 0.02,
+      "variants": {
+        "H_piecewise": {
+          "variant": "h",
+          "points_kappa_phi_deg": [
+            [0.0, 15.0],
+            [0.05, 20.0],
+            [0.2, 13.0]
+          ],
+          "cohesion_points_kappa_pa": [
+            [0.0, 5000.0],
+            [0.05, 7000.0],
+            [0.2, 2000.0]
+          ]
+        },
+        "HS_piecewise": {
+          "variant": "hs",
+          "points_kappa_phi_deg": [
+            [0.0, 15.0],
+            [0.05, 20.0],
+            [0.2, 13.0]
+          ],
+          "cohesion_points_kappa_pa": [
+            [0.0, 5000.0],
+            [0.05, 7000.0],
+            [0.2, 2000.0]
+          ]
+        },
+        "H_plateau_from_zero": {
+          "variant": "h",
+          "points_kappa_phi_deg": [
+            [0.0, 20.0],
+            [0.05, 20.0],
+            [0.2, 13.0]
+          ],
+          "cohesion_points_kappa_pa": [
+            [0.0, 7000.0],
+            [0.05, 7000.0],
+            [0.2, 2000.0]
+          ]
+        },
+        "HS_plateau_from_zero": {
+          "variant": "hs",
+          "points_kappa_phi_deg": [
+            [0.0, 20.0],
+            [0.05, 20.0],
+            [0.2, 13.0]
+          ],
+          "cohesion_points_kappa_pa": [
+            [0.0, 7000.0],
+            [0.05, 7000.0],
+            [0.2, 2000.0]
+          ]
+        },
+        "HS_urmi_exp_linear": {
+          "variant": "hs",
+          "reference": "Urmi et al. (2024), Engineering Geology 340, 107669, Eq. (2)",
+          "beta": -25.0,
+          "postpeak_segments": 8,
+          "phi_peak_deg": 20.0,
+          "phi_post_rupture_deg": 16.5,
+          "phi_residual_deg": 13.0,
+          "c_peak_pa": 7000.0,
+          "c_post_rupture_pa": 4500.0,
+          "c_residual_pa": 2000.0
+        }
+      }
+    }
+  }
+}

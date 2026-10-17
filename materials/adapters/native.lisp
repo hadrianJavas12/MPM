@@ -34,6 +34,7 @@
     ((:von-mises :elastic) 'cl-mpm/particle::particle-vm)
     (:chalk 'cl-mpm/particle::particle-chalk-delayed)
     (:joss 'cl-mpm/framework/cliff::joss-reference-chalk)
+    ((:mc-h :mc-hs) 'cl-mpm/models/mc-evolution:particle-mc-evolution)
     (:native (or (option material :particle-class)
                  (error ":NATIVE material requires :PARTICLE-CLASS")))))
 
@@ -47,6 +48,23 @@
          (list :E e :nu nu :rho rho :rho-r rho :softening 0d0
                :enable-plasticity (and (not (eq (component-kind material) :elastic))
                                        (option material :plasticity t)))))
+      ((:mc-h :mc-hs)
+       (let* ((args (copy-list (option material :initargs)))
+              (law (or (option material :evolution-law)
+                       (getf args :evolution-law)
+                       (error "~A material requires :EVOLUTION-LAW" (component-kind material))))
+              (expected (if (eq (component-kind material) :mc-h) :h :hs)))
+         (unless (and (typep law 'cl-mpm/models/mc-evolution:evolution-law)
+                      (eq (cl-mpm/models/mc-evolution:evolution-law-variant law) expected))
+           (error "~A material requires an evolution-law with variant ~S."
+                  (component-kind material) expected))
+         (setf (getf args :E) (material-value material :youngs-modulus e)
+               (getf args :nu) (material-value material :poisson-ratio nu)
+               (getf args :evolution-law) law
+               (getf args :enable-plasticity) (material-value material :plasticity t))
+         (when (option material :kappa)
+           (setf (getf args :kappa) (option material :kappa)))
+         args))
       (:native
        (let ((args (copy-list (option material :initargs))))
          (setf (getf args :E) (material-value material :youngs-modulus e)

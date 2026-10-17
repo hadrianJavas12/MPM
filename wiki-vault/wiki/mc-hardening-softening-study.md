@@ -1,86 +1,54 @@
 ---
 title: Native Mohr-Coulomb hardening and softening study
 type: synthesis
-tags: [cl-mpm, mohr-coulomb, research, native-windows, verification]
-sources: [research/README.md, research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md, research/references/PROVENANCE.md, research/reports/M0_SERIAL_REGRESSION.md, docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md, docs/evidence/material-contract-2026-10-16/validation-summary.json]
+tags: [cl-mpm, mohr-coulomb, research, native-windows, verification, hardening, softening]
+sources: [research/README.md, research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md, research/reports/FINAL_HARDENING_SOFTENING_COMPARISON.md, research/comparisons/h_vs_hs_metrics.json, research/triaxial/m4_verification_summary.json, research/cliff/m5_verification_summary.json]
 updated: 2026-10-17
 ---
 
 # Native Mohr-Coulomb hardening and softening study
 
-The user authorized the M0–M6 master plan, stage commits/pushes and economical
-automatic continuation. This is an independently maintained native software and
-numerical-comparison project, with no UI work or thesis framing.
+Milestones **M0 through M6** of the Mohr–Coulomb strain-hardening (**Model H**, `:mc-h`) and
+strain-hardening–softening (**Model HS**, `:mc-hs`) comparative study are **100% COMPLETE**
+on branch `codex/mc-hardening-softening-study` (branched from `origin/main` at `e6f9abe`
+after PR #8 merged the [[cl-mpm-architecture]] Section 2/5 ownership migration).
 
-The [[cl-mpm-architecture]] P0–P6 ownership migration on `codex/material-architecture-migration`
-(from `7c399fb`) is now implemented and validated: root `materials/` owns
-constitutive laws, state, evolution, and model diagnostics; `scenarios/` owns
-reusable procedures; `src/simulation/` owns configuration and composition; and
-root `cl-mpm-framework.asd` is the canonical ASDF system (`p6-short/` 11/11 checks,
-`joss-bounded/` 4s serial control, and `p6-full/` full VM 2D/3D regressions all
-`exit 0` with byte-identical VTKs/CSVs; `FILE_MIGRATION_RESULT.json` records
-`58/58` mapped owners present). `framework/` remains temporary compatibility.
-New MC H/HS physics (`G4`) remains deferred to a separate experimental branch.
+See [`research/reports/FINAL_HARDENING_SOFTENING_COMPARISON.md`](../../research/reports/FINAL_HARDENING_SOFTENING_COMPARISON.md)
+and [`research/comparisons/h_vs_hs_metrics.json`](../../research/comparisons/h_vs_hs_metrics.json)
+for complete equations, numerical tables, plots, and side-by-side `.mp4` animations.
 
-## Verified checkpoint
+## Milestone M2 & M3 — Constitutive Implementation & Point Verification
 
-[[reusable-simulation-framework]] has an exact serial Joss control: 191 physical
-states through 40 s, all 193 particle VTKs per run and complete CSVs identical.
-The source audit identifies original `c749d32` and executed after `41403f4`.
-Completion status `909fddf` is HEAD at exit, not the loaded source snapshot.
-All fields are finite, mass is constant and protected-base damage is zero.
-The four-worker strict failure (176/191 states) remains preserved.
+- Installed dedicated package `cl-mpm/models/mc-evolution` (`particle-mc-evolution`) in
+  `materials/models/plastic/mohr-coulomb-evolution/{package,law,projection,particle}.lisp`
+  and integrated framework constructors `:mc-h` and `:mc-hs` in [[reusable-simulation-framework]].
+- Supports both piecewise-linear tables (`make-evolution-law`) and the combined exponential + linear
+  post-peak strain-softening law of Urmi et al. (2024, Eq. 2) (`make-urmi-evolution-law`).
+- Multi-surface Koiter return mapping (`project-principal`) handles 1-plane (smooth face),
+  2-plane (edge), and 3-plane (apex: `(0 1 4)`, `(1 3 4)`, `(0 3 4)`) active sets with exact
+  piecewise-linear breakpoint crossing.
+- `tests/materials/mc-evolution-points.lisp`: **34/34 unit assertions PASS**.
+- Across all 7 constitutive point pairs (`C-RES-100/200`, `C-RES-URMI-100/200`, `C-ZHAN-50/100`,
+  `C-ZHAN-URMI-50`), pre-peak identity holds to $\max |q_H - q_{HS}| \le 1.17 \times 10^{-11}\text{ kPa}$,
+  post-peak softening drops deviatoric capacity by **$-69.12\%$** (Resende sand, $\phi: 33.99^\circ \to 16.34^\circ$)
+  and **$-52.69\%$** (Zhan cliff soil at $\sigma_3 = 50\text{ kPa}$, $(c,\phi): (7\text{ kPa}, 20^\circ) \to (2\text{ kPa}, 13^\circ)$),
+  and 6-plane yield residuals remain $\le 1.16 \times 10^{-10}\text{ Pa}$.
 
-M0 remains **PROVISIONAL**: `64f47cc` passes 9 material, 10 configuration,
-10 framework contracts and 36 Node tests. Its current full 2D regression has
-51 byte-identical VTKs and zero CSV/position differences. Its matched full 3D
-pair also passes exactly: 780 MPs, 17,443 updates, 51 states, both exit 0.
-All independent audits pass within available-field scope; missing 2D sigma_zz
-and out-of-plane kinematics still prevent full independent tensor checks.
-The material-contract bundle has 60 SHA-256-verified manifest entries and no
-native job remains running. Listed private Joss numerical modules are byte-identical
-to `41403f4`; this is not a new full Joss run on `64f47cc`. Four-worker failure
-and incomplete transitive loaded FASL/DLL provenance keep M0 provisional. Legacy
-VM-specific yield formulas must not be used for an MC particle. Unsupported
-history/rollback capabilities require explicit rejection.
+## Milestone M4 — Paired 3D MPM Triaxial Compression (`T-100-H` vs `T-100-HS`)
 
-## M1 reference preparation
+- Executed with $780$ 3D GIMP particles ($D = 70\text{ mm}, H = 140\text{ mm}, \sigma_3 = 100\text{ kPa}, E = 20\text{ MPa}, \nu = 0.2, c = 0, \psi = 0^\circ$).
+- **Pre-peak identity ($\varepsilon_a = 0\% \to 6.00\%$, frames 0..13):** $\max |q_H - q_{HS}| = 5.29 \times 10^{-12}\text{ kPa}$, $\max |\Delta \kappa| = 1.00 \times 10^{-14}$.
+- **Peak strength ($\varepsilon_a = 6.52\%$):** $q_{\text{peak},H} = 252.87\text{ kPa}$ vs $q_{\text{peak},HS} = 250.30\text{ kPa}$.
+- **Post-peak divergence ($\varepsilon_a = 14.26\%$, frame 29, 2,224 updates):**
+  - `T-100-H` (Model H): sustains plateau $q_H = 242.39\text{ kPa}$ (and $226.59\text{ kPa}$ at $\varepsilon_a = 22.0\%$), uniform $\phi = 33.99^\circ$, $\kappa_{\max} = 0.3394$ ($\kappa_{\max}/\kappa_{\text{mean}} = 2.62\times$).
+  - `T-100-HS` (Model HS): localizes into a 3D shear band ($\kappa_{\max} = 0.6586$, $\kappa_{\max}/\kappa_{\text{mean}} = 4.20\times$), softens to residual $\phi_{\min} = 16.34^\circ$ ($97.44\%$ softened particles), and drops macroscopic deviatoric stress to **$q_{HS} = 91.31\text{ kPa}$** (**$-62.33\%$ vs Model H**, **$-63.52\%$ vs peak**).
+- Artifacts: `research/triaxial/m4_verification_summary.json`, `research/triaxial/plots/m4_triaxial_100kpa_h_vs_hs.png`, `research/triaxial/plots/m4_triaxial_3d_localization_snapshot.png`, and `research/triaxial/videos/triaxial_100kpa_h_vs_hs.mp4`.
 
-The supplied plan was copied byte-identically; the local 28-page residual-soil
-PDF matches its declared SHA-256. Pages 3, 6, 7, 11 and 17 were visually audited.
-Structured values preserve source pages, model family, units, missing entries,
-assumptions and SI conversions. Nine data-only integrity tests passed.
+## Milestone M5 — Paired 2D MPM Cliff / Slope Collapse (`L-H` vs `L-HS`)
 
-Four H/HS proposals remain **execution disabled**. Residual-soil H and HS share
-the raw prepeak knots and zero cohesion. H plateaus at 33.99 degrees; HS reaches
-16.34 degrees at source strain 0.2. This source coordinate has not been equated
-to CL-MPM's internal accumulator. The source's 20× FLAC input adjustment is
-inactive, and its half-strain footnote is explicit.
-
-The separate Zhan/Zang reference has no supplied prepeak initial strength;
-that initialization remains unresolved. The source naming discrepancy, page-3
-height/sketch mismatch and unspecified water-modulus unit remain recorded.
-[[triaxial-clay-calibration]] is prior VM demonstration context, not evidence
-that MC H/HS or true pore-pressure CU has been implemented.
-
-## Next gates and maintenance
-
-An isolated, uninstalled MC prototype passes 32 native material-point tests.
-Its design is `research/reports/M2_RETURN_MAPPING_DESIGN.md`; staged sources,
-log and hashes are in `.tmp/mc-evolution-stage/`. Root isolation is sampled,
-without a completeness proof or adaptive continuation. This is provisional
-point evidence, not full MPM, M2 acceptance or physical validation. Integration
-is deferred until migration gates, then requires a separate experimental branch.
-
-After M0, dedicated H/HS mechanics need strain/state, corner/apex, yield and
-return-map tests before paired 3D cylinders at 100/200 kPa and a separate soil
-cliff experiment. No fitting to slide images or invented lab data is allowed.
-Mesh dependence, missing calibration and [[scientific-authenticity-audit-2026-10-15]]
-remain explicit limits. M2–M6 are not completed by the data-preparation tests.
-
-The cleanup inventory found no proven safe deletion candidate. Compatibility
-loaders, failed evidence, immutable raw sources and personal settings stay intact.
-The active handover was shortened and its complete earlier text archived to
-reduce repeated context loading. The former heartbeat is unavailable/deleted:
-the update tool reported that it does not exist and its TOML is missing. No next
-wakeup is confirmed; do not recreate it without a new user request.
+- Executed with $5,667$ 2D GIMP particles using Master Plan Section 2.5 Zhan cliff parameters ($H = 12\text{ m}$, base $4\text{ m}$, slope $72^\circ$, notch $2.5 \times 2.5\text{ m}$, $E = 5.25\text{ MPa}, \nu = 0.2, \rho = 1917.07\text{ kg/m}^3, \psi = 1.0^\circ$) and the Urmi et al. (2024) two-stage MPM landslide protocol ($200$ elastic gravity settling steps with $\alpha = 0.75 c_p / h$ followed by $875$ low-damping dynamic elasto-plastic steps with $\alpha = 0.02 c_p / h$ to $t = 1.93\text{ s}$).
+- **Stage-1 & pre-peak identity (frames 0..3, $\kappa_{\max} \le 0.05$):** $\max |\Delta u| = 0.0\text{ m}$, $\max |\Delta \kappa| = 0.0$.
+- **Post-peak progressive failure ($t = 1.93\text{ s}$, frame 35):**
+  - `L-H` (Model H): shear zone hardens to peak plateau ($c = 7\text{ kPa}, \phi = 20^\circ$), $\kappa_{\max} = 1.7993$, max displacement $|u|_{\max} = 3.7089\text{ m}$, toe runout $3.2254\text{ m}$, crest settlement $3.0225\text{ m}$, final kinetic energy $80.97\text{ kJ}$.
+  - `L-HS` (Model HS): shear band degrades to residual ($c_{\min} = 2\text{ kPa}, \phi_{\min} = 13^\circ$, $33.39\%$ softened particles), triggering a secondary retrogressive surge with $\kappa_{\max} = 4.7737$ (**$2.65\times$ Model H**), max displacement **$5.6345\text{ m}$** (**$+51.92\%$**), toe runout **$4.4764\text{ m}$** (**$+38.79\%$**), crest settlement **$3.6408\text{ m}$** (**$+20.46\%$**), peak velocity $5.5939\text{ m/s}$ (**$+52.39\%$**), and final kinetic energy $182.75\text{ kJ}$ (**$2.26\times$**).
+- Artifacts: `research/cliff/m5_verification_summary.json`, `research/cliff/plots/m5_cliff_h_vs_hs_dashboard.png`, `research/cliff/plots/m5_cliff_spatial_localization.png`, and `research/cliff/videos/cliff_h_vs_hs.mp4`.

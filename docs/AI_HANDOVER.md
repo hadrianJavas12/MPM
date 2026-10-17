@@ -1,10 +1,21 @@
 # AI Engineering Handover — CL-MPM
 
 **Operational checkpoint: 2026-10-17, Asia/Jakarta. Read this first.**
-**P0–P6 architecture ownership migration, Section 2/5 physical folder alignment (`5d6a5cf`),
-and two-benchmark verification complete on `codex/material-architecture-migration`.
+**Milestones M0–M6 of the Mohr–Coulomb Hardening (Model H) vs Hardening–Softening (Model HS)
+comparative study are 100% COMPLETE on branch `codex/mc-hardening-softening-study` (branched
+from `origin/main` at `e6f9abe` after PR #8 merged the Section 2/5 architecture migration).**
+Read [`research/reports/FINAL_HARDENING_SOFTENING_COMPARISON.md`](../research/reports/FINAL_HARDENING_SOFTENING_COMPARISON.md)
+and [`research/comparisons/h_vs_hs_metrics.json`](../research/comparisons/h_vs_hs_metrics.json) first:
+- **M2 (`materials/models/plastic/mohr-coulomb-evolution/`):** Dedicated `cl-mpm/models/mc-evolution:particle-mc-evolution` supporting `:mc-h` (peak plateau) and `:mc-hs` (piecewise-linear & Urmi et al. 2024 Eq. 2 combined exponential–linear softening), active-set 6-plane Koiter return mapping (`project-principal`), and full native diagnostics (`tests/materials/mc-evolution-points.lisp`: 34/34 PASS).
+- **M3 (`research/constitutive-tests/`):** 7 paired constitutive point trajectories (`C-RES-100/200`, `C-RES-URMI-100/200`, `C-ZHAN-50/100`, `C-ZHAN-URMI-50`); pre-peak $\max |q_H - q_{HS}| \le 1.17 \times 10^{-11}\text{ kPa}$, post-peak drop $-69.12\%$ (Resende sand) and $-52.69\%$ (Zhan cliff soil).
+- **M4 (`research/triaxial/`):** Paired 3D MPM Triaxial simulations (`T-100-H` vs `T-100-HS`, $780$ 3D GIMP particles, $\sigma_3 = 100\text{ kPa}$); pre-peak $\max |\Delta q| = 5.29 \times 10^{-12}\text{ kPa}$, post-peak at $\varepsilon_a = 14.26\%$: $q_H = 242.39\text{ kPa}$ vs $q_{HS} = 91.31\text{ kPa}$ ($-62.33\%$), 3D shear-band $\kappa_{\max} = 0.6586$ ($4.20\times$ localization), zero mass error, plus side-by-side video `research/triaxial/videos/triaxial_100kpa_h_vs_hs.mp4`.
+- **M5 (`research/cliff/`):** Paired 2D MPM Cliff simulations (`L-H` vs `L-HS`, $5,667$ 2D GIMP particles, Master Plan Section 2.5 Zhan cliff parameters + Urmi et al. 2024 two-stage MPM protocol: 200 elastic gravity initialization steps + 875 dynamic steps to $t = 1.93\text{ s}$); Stage-1 & pre-peak identity ($\max |\Delta u| = 0.0\text{ m}$), post-peak progressive shear-band localization ($\kappa_{\max}: 1.7993 \to 4.7737$, $2.65\times$), maximum displacement $3.7089\text{ m} \to 5.6345\text{ m}$ ($+51.92\%$), toe runout $3.2254\text{ m} \to 4.4764\text{ m}$ ($+38.79\%$), crest settlement $3.0225\text{ m} \to 3.6408\text{ m}$ ($+20.46\%$), plus side-by-side video `research/cliff/videos/cliff_h_vs_hs.mp4`.
+- **M6 (`research/reports/`, `research/comparisons/`):** Final comparison report, metrics JSON, documentation, and Obsidian/LLM Wiki updated.
+
+**Historical P0–P6 architecture migration note:** P0–P6 architecture ownership migration, Section 2/5 physical folder alignment (`5d6a5cf`),
+and two-benchmark verification completed on `codex/material-architecture-migration` and merged into `main` (`e6f9abe`).
 Read [NEXT_AI_CHECKPOINT.md](architecture/NEXT_AI_CHECKPOINT.md) and
-[STATUS.md](architecture/STATUS.md) first.** P1–P5, P4-F canonical root ASDF, and physical
+[STATUS.md](architecture/STATUS.md) for the architecture migration archive.** P1–P5, P4-F canonical root ASDF, and physical
 Section 2/5 workspace alignment (`src/` 15 engine subdirectories, `materials/`, `scenarios/`,
 `cases/{triaxial,cliff,benchmarks,direct-shear}/`, `framework/` retired, `FILE_MIGRATION_RESULT.json`
 with `120/120` mapped owners present) are implemented and validated across all contract suites,
@@ -18,15 +29,10 @@ Older statuses there are historical and do not override this checkpoint.
 
 ## Mission and authorized scope
 
-The immediate priority is the [architecture migration specification](architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md):
-continue actual ownership migration after the bounded P1 extraction. Root
-`materials/` is the target owner of material models, state, evolution and model
-diagnostics; `framework/` remains a compatibility layer until its callers and
-numerical behavior are verified. P1 contracts and P3 diagnostics ownership are
-implemented; native constitutive/state/evolution ownership remains pending.
-The [scientific master plan](../research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md)
-M0–M6 remains in force, with new MC H/HS physics deferred until migration gates.
-[Research status](../research/README.md) records the separate gates.
+The [architecture migration specification](architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md) (M0) and the
+[scientific master plan](../research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md) (M1–M6) are now implemented and verified on
+`codex/mc-hardening-softening-study`. See [Research status](../research/README.md) and
+[Final Comparison Report](../research/reports/FINAL_HARDENING_SOFTENING_COMPARISON.md) for full details.
 
 P0 inventory is complete: 884/884 captured paths, 104 ASDF systems, 11 audit
 integrity tests PASS. At that original capture, the two hash-bound sources in

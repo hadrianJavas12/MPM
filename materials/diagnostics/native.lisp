@@ -8,6 +8,8 @@
 
 (defclass mc-material-diagnostics (native-material-diagnostics) ())
 
+(defclass mc-evolution-material-diagnostics (native-material-diagnostics) ())
+
 (defclass elastic-material-diagnostics (native-material-diagnostics) ())
 
 (defmethod material-diagnostics ((material material))
@@ -15,6 +17,8 @@
     (cond ((subtypep type 'cl-mpm/particle::particle-vm)
            (make-instance 'vm-material-diagnostics :particle-class type
                           :legacy-affine-p (not (null (member (component-kind material) '(:von-mises :elastic))))))
+          ((subtypep type 'cl-mpm/models/mc-evolution:particle-mc-evolution)
+           (make-instance 'mc-evolution-material-diagnostics))
           ((and (subtypep type 'cl-mpm/particle::particle-mc)
                 (not (subtypep type 'cl-mpm/particle::particle-dp)))
            (make-instance 'mc-material-diagnostics))
@@ -27,6 +31,9 @@
 
 (defmethod diagnostics-particle-type ((adapter mc-material-diagnostics))
   'cl-mpm/particle::particle-mc)
+
+(defmethod diagnostics-particle-type ((adapter mc-evolution-material-diagnostics))
+  'cl-mpm/models/mc-evolution:particle-mc-evolution)
 
 (defmethod diagnostics-particle-type ((adapter elastic-material-diagnostics))
   'cl-mpm/particle::particle-elastic)
@@ -52,6 +59,13 @@
         "yieldConvention"
         "VM max_yield_excess CSV column unavailable; mc-yield-residual-kirchhoff-pa=k*tau_max-tau_min-2*c*sqrt(k), k=(1+sin(phi))/(1-sin(phi)), tau=J*sigma_Cauchy, native tension-positive; signed Pa; stored native yield-function is trial f"
         "drainage" "no pore fluid or pore pressure; no true CU effective-stress path"))
+
+(defmethod diagnostics-conventions ((adapter mc-evolution-material-diagnostics))
+  (list "plasticStrainConvention"
+        "VM plastic_strain CSV column unavailable; mc-kappa is accumulated sqrt(2/3)||dev delta epsilon_p||; mc-plastic-strain-native is 1.5*mc-kappa"
+        "yieldConvention"
+        "VM max_yield_excess CSV column unavailable; mc-yield-residual-kirchhoff-pa=max_{i!=k}((1+sin phi)tau_i-(1-sin phi)tau_k-2*eta*c*cos phi), tau=J*sigma_Cauchy, tension-positive; signed Pa"
+        "drainage" "total/effective stress without pore fluid or pore-pressure coupling"))
 
 (defmethod diagnostics-conventions ((adapter elastic-material-diagnostics))
   (list "plasticStrainConvention" "not available: elastic material has no plastic internal state"
@@ -95,6 +109,31 @@
    (list "mc-friction-rad" "rad" :mean #'cl-mpm/particle::mp-phi "current friction angle")
    (list "mc-dilation-rad" "rad" :mean #'cl-mpm/particle::mp-psi "current dilation angle")))
 
+(defmethod diagnostics-fields ((adapter mc-evolution-material-diagnostics))
+  (list
+   (list "mc-kappa" "1" :mean #'cl-mpm/models/mc-evolution:particle-kappa
+         "accumulated equivalent plastic strain sqrt(2/3)||dev delta epsilon_p||")
+   (list "mc-kappa-max" "1" :max #'cl-mpm/models/mc-evolution:particle-kappa
+         "maximum accumulated equivalent plastic strain sqrt(2/3)||dev delta epsilon_p||")
+   (list "mc-plastic-strain-native" "1" :mean #'cl-mpm/particle::mp-strain-plastic-vm
+         "accumulated sqrt(3 J2(dev delta epsilon_p)); 1.5 times mc-kappa")
+   (list "mc-yield-residual-kirchhoff-pa" "Pa" :max #'cl-mpm/models/mc-evolution:particle-yield-residual-kirchhoff
+         "signed corrected 6-plane MC yield residual, tension-positive Kirchhoff stress")
+   (list "mc-cohesion-pa" "Pa" :mean #'cl-mpm/models/mc-evolution:particle-cohesion
+         "current evolving MC cohesion")
+   (list "mc-friction-rad" "rad" :mean #'cl-mpm/models/mc-evolution:particle-phi
+         "current evolving friction angle in radians")
+   (list "mc-friction-deg" "deg" :mean #'cl-mpm/models/mc-evolution:particle-phi-deg
+         "current evolving friction angle in degrees")
+   (list "mc-dilation-rad" "rad" :mean #'cl-mpm/models/mc-evolution:particle-psi
+         "current evolving dilation angle in radians")
+   (list "mc-plastic-volume" "1" :mean #'cl-mpm/models/mc-evolution:particle-plastic-volume
+         "accumulated plastic volumetric strain trace(delta epsilon_p)")
+   (list "mc-plastic-work-j-m3" "Pa" :mean #'cl-mpm/models/mc-evolution:particle-plastic-work
+         "accumulated plastic work density per unit current volume")
+   (list "mc-softened-indicator" "1" :mean #'cl-mpm/models/mc-evolution:particle-softened-indicator
+         "1 when variant is :HS and kappa exceeds peak_kappa, else 0")))
+
 (defun material-state (adapter particle)
   "Read-only named material diagnostics. This is not a trial/rollback snapshot."
   (loop for (name unit reduction accessor definition) in (diagnostics-fields adapter)
@@ -117,6 +156,14 @@
         (error "Invalid MC material state: require nonnegative cohesion/plastic strain and finite admissible angles."))
       (when (and (cl-mpm/particle::mp-enable-plasticity particle) (= phi 0d0))
         (error "Native MC phi=0 return mapping has an unhandled apex singularity; use a declared positive-friction case or a separately verified implementation."))))
+  (when (typep adapter 'mc-evolution-material-diagnostics)
+    (let ((phi (cl-mpm/models/mc-evolution:particle-phi particle))
+          (psi (cl-mpm/models/mc-evolution:particle-psi particle))
+          (c (cl-mpm/models/mc-evolution:particle-cohesion particle))
+          (kappa (cl-mpm/models/mc-evolution:particle-kappa particle)))
+      (unless (and (<= 0d0 phi) (< phi (* 0.5d0 pi))
+                   (<= 0d0 psi (* 0.5d0 pi)) (>= c 0d0) (>= kappa 0d0))
+        (error "Invalid MC evolution material state: require nonnegative cohesion/kappa and finite admissible angles."))))
   t)
 
 (defun validate-material-diagnostics (adapter particles mode)

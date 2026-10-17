@@ -10,5 +10,7 @@
                     ((:von-mises :elastic) '(:youngs-modulus :poisson-ratio :density
                                             :undrained-strength :plasticity))
                     ((:chalk :joss) '(:youngs-modulus :poisson-ratio :density :plasticity))
+                    ((:mc-h :mc-hs) '(:youngs-modulus :poisson-ratio :density :plasticity
+                                      :evolution-law :kappa :initargs))
                     (:native '(:youngs-modulus :poisson-ratio :density :undrained-strength
                                :plasticity :particle-class :initargs)))))

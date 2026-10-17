@@ -31,7 +31,11 @@ if ($LASTEXITCODE -ne 0) { throw 'Run gagal; periksa pesan terminal.' }
 | --- | --- |
 | `cases/triaxial/triaxial-clay-2d.lisp` | Persegi panjang 70 × 140 mm, plane strain, ketebalan satuan (kompatibel juga dengan argumen lama `cases/triaxial-clay-2d.lisp`) |
 | `cases/triaxial/triaxial-clay-3d.lisp` | Silinder diameter 70 mm, tinggi 140 mm, MPM 3D (kompatibel juga dengan `cases/triaxial-clay-3d.lisp`) |
+| `cases/triaxial/triaxial-mc-h-100.lisp` | Silinder 3D MPM Triaxial ($\sigma_3 = 100\text{ kPa}$) dengan model Mohr–Coulomb Hardening (`:mc-h`, `T-100-H`) |
+| `cases/triaxial/triaxial-mc-hs-100.lisp` | Silinder 3D MPM Triaxial ($\sigma_3 = 100\text{ kPa}$) dengan model Mohr–Coulomb Hardening–Softening (`:mc-hs`, `T-100-HS`) |
 | `cases/cliff/cliff.lisp` | Contoh tebing dengan konfigurasi kecil (kompatibel juga dengan `cases/cliff.lisp`) |
+| `cases/cliff/cliff-mc-h.lisp` | Tebing tanah 2D MPM (`L-H`) dengan model Mohr–Coulomb Hardening (`:mc-h`, parameter Zhan + protokol dua-tahap Urmi et al. 2024) |
+| `cases/cliff/cliff-mc-hs.lisp` | Tebing tanah 2D MPM (`L-HS`) dengan model Mohr–Coulomb Hardening–Softening (`:mc-hs`, parameter Zhan + protokol dua-tahap Urmi et al. 2024) |
 | `cases/benchmarks/joss-collapse.lisp` | Resep Joss Bay progressive collapse; run penuh 40 s yang dihentikan pengguna tetap tidak diklaim PASS |
 
 Gunakan direktori output baru untuk setiap run. File kasus adalah Lisp lokal
@@ -58,6 +62,11 @@ Contoh komponen pada kasus triaxial, dengan geometri tetap:
 sebenarnya dapat dipilih melalui `:native` dengan
 `:particle-class 'cl-mpm/particle::particle-elastic`.
 Native MC memakai `cl-mpm/particle::particle-mc`, tetap independen dari VM.
+Model Mohr–Coulomb berevolusi (`:mc-h` untuk Hardening ke plateau puncak dan
+`:mc-hs` untuk Hardening–Softening pasca-puncak) memakai kelas dedicated
+`cl-mpm/models/mc-evolution:particle-mc-evolution` di
+`materials/models/plastic/mohr-coulomb-evolution/` dengan `:evolution-law`
+(`make-evolution-law` atau `make-urmi-evolution-law`).
 E, nu dan metadata kekuatan harus konsisten dengan initargs; konflik ditolak.
 Parameter MC `:phi` dan `:psi` memakai radian, `:c` memakai Pa.
 
@@ -73,12 +82,12 @@ Triaxial menerima kombinasi material/diagnostik yang didukung dengan confinement
 dan compression. Cliff/Joss mempertahankan kontrak geometri dan fase tersendiri.
 Opsi atau kombinasi yang tidak didukung harus ditolak, bukan diabaikan.
 
-Diagnostik sudah membedakan VM, MC dan native elastic. Kolom VM yang tidak
+Diagnostik sudah membedakan VM, MC, MC berevolusi (`:mc-h` / `:mc-hs`), dan native elastic. Kolom VM yang tidak
 bermakna untuk MC tetap unavailable; MC mempunyai field bernama dan residual
 Kirchhoff tersendiri. Mode homogeneous/controls tetap dibatasi capability.
 `material-state` adalah pembacaan diagnostik, bukan snapshot trial/rollback.
-Migrasi ini tidak menambahkan integrator dedicated MC H/HS atau kalibrasi.
-Rincian kelas, satuan dan batasannya ada di [katalog model](architecture/MODEL_CATALOG.md).
+Lihat [laporan perbandingan akhir H vs HS](../research/reports/FINAL_HARDENING_SOFTENING_COMPARISON.md)
+dan [katalog model](architecture/MODEL_CATALOG.md).
 
 ## Lokasi implementasi
 

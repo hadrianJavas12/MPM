@@ -5,6 +5,7 @@
                "cl-mpm/models/chalk"
                "cl-mpm/models/ice"
                "cl-mpm/models/limestone"
-               "cl-mpm/models/visco")
+               "cl-mpm/models/visco"
+               "cl-mpm/models/mc-evolution")
   :serial t
   :components ())
