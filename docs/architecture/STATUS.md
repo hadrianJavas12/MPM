@@ -1,6 +1,6 @@
 # Architecture migration status
 
-Updated 2026-10-16. This table overrides earlier checkpoint descriptions, which
+Updated 2026-10-17. This table overrides earlier checkpoint descriptions, which
 remain historical evidence. The supplied migration specification and immutable
 P0 inventory remain the authority for scope.
 
@@ -14,8 +14,8 @@ P0 inventory remain the authority for scope.
 | P2-D | Optional chalk, ice, limestone and visco owners extracted | `a016cdb`; five catalogs exact, VM/MC controls exact; 58 evidence hashes |
 | P3 | Diagnostics/material output owners extracted and tested | `7d879e8`; 37 verified artifacts |
 | P4-B/C/D | Configuration, geometry, lifecycle and scenario owners relocated | `76cac13`, `f76618d`, `f9ba947`; bounded comparisons and compatibility contracts pass |
-| P4-E | Nested legacy material diagnostics/state transfer extracted | `d6d3f61`; exact expression reconstruction; validation in progress |
-| P4-F | Canonical root ASDF and active caller transition pending | Guarded approved helper; implementation must precede final validation |
+| P4-E | Nested legacy material diagnostics/state transfer extracted and tested | `d6d3f61`; exact reconstruction; standalone 3, orchestration 3, VM/MC strict comparisons pass; 34 evidence hashes |
+| P4-F | Canonical root ASDF and active callers implemented; validation incomplete | `436b561`; Node 36 pass; final short native suite running under `p6-short/` |
 | P5 | Useful numeric/linear-solver grouping complete | `59928ba`; byte-identical files, analytical solve and 50-step smoke pass |
 | P6 | Final compatibility, results matrix, docs and PR pending | No main merge authorized |
 
@@ -42,6 +42,11 @@ P2-B/C/D bundles include launch hashes, extraction proofs, actual Windows DLL
 paths, VTK/CSV comparisons and sealed live-unit sources. Node has 36 passing
 tests at each wave; those finished checks must not be repeated without changes.
 
-A separate fresh **four-second** serial Joss integration control is being
-prepared from immutable pre-P2 sources. It is not the cancelled 40-second run,
+A separate fresh **four-second** serial Joss integration baseline is running
+from immutable pre-P2 sources (`joss-bounded/before-003/`). It is not the cancelled 40-second run,
 does not validate full collapse/run-out, and cannot close the full G3 exception.
+
+The user requested a handover checkpoint before further work. Read
+[NEXT_AI_CHECKPOINT.md](NEXT_AI_CHECKPOINT.md) first for active jobs, partial
+checks, exact source commits and remaining actions. Final full VM 2D/3D on the
+canonical layout and the final PR are NOT_RUN; old full results are historical.

@@ -5,7 +5,7 @@
 - [[cl-mpm-studio]] — web UI for the cliff-collapse simulation
 
 ## Concepts
-- [[cl-mpm-architecture]] — P2 A–D native material ownership passes; P4 scenario migration continues; full Joss stays stopped
+- [[cl-mpm-architecture]] — P2 and P4-E pass; canonical ASDF installed, final checks partial; human handover checkpoint prepared
 - [[windows-port]] — native Windows layout, overrides, gotchas
 - [[serial-mpi-standin]] — `cl-mpm/mpi` replacement without MPI
 - [[magicl-patches]] — patched vendored dependencies
@@ -29,4 +29,3 @@
 - [[joss-reference-reproduction]] — experimental reference path, visually accepted actual DP collapse, preserved evidence and quantitative limits in D:\MPM
 - [[joss-reference-reproduction#Workspace and latest state, 2026-10-15|Windows native rerun guide]] — fresh-start config, command-line run, VTK rendering and checks in docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md
 - [[joss-damage-diagnosis-2026-10-15]] — accepted 40 s DP collapse/run-out, measured mismatch, completed no-collapse 40 kPa case and paused continuation
-

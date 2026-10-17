@@ -1,0 +1,1 @@
+F/G5 partial checkpoint requested by user. Only snapshot3, native7, standalone3 executed and passed. Remaining queue stopped before launch; full VM2D/VM3D prepared but not launched. Exact suite HEAD and sealed source hashes are retained. No final regression or scientific acceptance claimed.

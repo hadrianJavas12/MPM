@@ -1,43 +1,44 @@
-# Framework simulasi native yang dapat disusun ulang
+# Komposisi simulasi native
 
-Branch pengembangan: `codex/reusable-simulation-framework`, dari checkpoint
-`main` / PR #7 (`efd0358`). Implementasi awal disimpan pada `66ea5fb` sebelum
-validasi setelah refactoring. Perubahan lanjutan memperbaiki launcher dan
-kontrak parameter; hasil pengujian dicatat terpisah.
+Branch arsitektur: `codex/material-architecture-migration`, berasal dari
+`7c399fb`. Checkpoint sumber P2 A–D/P4D sudah memusatkan model material di
+`materials/`, prosedur skenario di `scenarios/`, dan orkestrasi di
+`src/simulation/`. ASDF kanonis sudah berada di root pada `436b561`.
+Validasi akhir masih berlanjut; halaman ini tidak menyatakan refactoring atau G3 selesai.
+Lihat [status aktual](architecture/STATUS.md).
 
-## Jalankan dari file kasus pendek
+## Menjalankan kasus di Windows
 
-Buka PowerShell pada komputer Windows yang toolchain-nya sudah tersedia:
+Buka PowerShell pada mesin dengan toolchain yang sudah tersedia:
 
 ```powershell
-Set-Location D:\MPM
-$runDir = Join-Path 'D:\MPM\output' ('triaxial-2d-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
-& .\windows\cl-mpm.cmd scripts\run-case.lisp cases\triaxial-clay-2d.lisp $runDir
+Set-Location D:MPM
+$runDir = Join-Path 'D:MPMoutput' ('triaxial-2d-' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
+& .windowscl-mpm.cmd scripts
+un-case.lisp cases	riaxial-clay-2d.lisp $runDir
 if ($LASTEXITCODE -ne 0) { throw 'Run gagal; periksa pesan terminal.' }
-& .\toolchain\analysis-venv\Scripts\python.exe scripts\plot-triaxial.py --run-dir $runDir --video
+& .	oolchainanalysis-venvScriptspython.exe scriptsplot-triaxial.py --run-dir $runDir --video
 ```
 
-Untuk kasus lain, ganti file pada `cases\`:
-
-| File | Perhitungan |
+| Kasus di `cases/` | Arti |
 | --- | --- |
-| `triaxial-clay-2d.lisp` | Spesimen 70 × 140 mm, plane strain, ketebalan satuan |
-| `triaxial-clay-3d.lisp` | Silinder diameter 70 mm × tinggi 140 mm, MPM 3D |
-| `joss-collapse.lisp` | Tebing dengan parameter runtuhan yang diterima sebelumnya |
-| `cliff.lisp` | Contoh tebing umum dengan konfigurasi kecil |
+| `triaxial-clay-2d.lisp` | Persegi panjang 70 × 140 mm, plane strain, ketebalan satuan |
+| `triaxial-clay-3d.lisp` | Silinder diameter 70 mm, tinggi 140 mm, MPM 3D |
+| `cliff.lisp` | Contoh tebing dengan konfigurasi kecil |
+| `joss-collapse.lisp` | Resep Joss legacy; run penuh 40 s yang dihentikan pengguna tetap dihentikan |
 
-Run tebing memakai keluaran VTK dan renderer tebing yang dijelaskan dalam
-[panduan Windows](RUN_ACCEPTED_COLLAPSE_WINDOWS.md), bukan plotter triaxial.
-Setiap run harus memakai folder baru. File kasus adalah kode Lisp lokal
-tepercaya yang dieksekusi dengan hak akses pengguna Windows.
+Gunakan direktori output baru untuk setiap run. File kasus adalah Lisp lokal
+tepercaya yang berjalan dengan hak akses pengguna Windows. Tebing memakai
+VTK dan renderer pada [panduan Windows](RUN_ACCEPTED_COLLAPSE_WINDOWS.md),
+bukan plotter triaxial. Jangan memulai ulang full Joss yang dibatalkan.
 
-## Apa yang dapat dibongkar pasang?
+## Material dan geometri yang dapat dipilih
 
-File kasus menyusun enam hal: skenario, material, geometri, boundary,
-pembebanan dan solver. Ukuran pada API memakai m, tegangan Pa, waktu s,
-massa jenis kg/m³, dan regangan sebagai fraksi (`0.10d0` berarti 10%).
+`make-simulation` menyusun skenario, material, geometri, boundary, loading dan
+solver. API komponen memakai m, Pa, s, kg/m³ dan fraksi regangan; `0.10d0`
+berarti 10%. Adapter tetap mengonversi parameter legacy mm/% secara eksplisit.
 
-Contoh mengganti material sambil mempertahankan geometri:
+Contoh komponen pada kasus triaxial, dengan geometri tetap:
 
 ```lisp
 :material (make-material :elastic :youngs-modulus 5d6
@@ -45,124 +46,86 @@ Contoh mengganti material sambil mempertahankan geometri:
 :geometry (make-geometry :rectangle :width 0.07d0 :height 0.14d0)
 ```
 
-Gunakan `:von-mises` dengan `:undrained-strength 25d3` untuk kembali ke
-contoh plastis. Adapter `:elastic` memakai particle VM yang plasticity-nya
-dimatikan agar kontrak pencatatan tetap konsisten. Persamaan konstitutif
-tetap berasal dari engine asli.
+`:von-mises` dengan `:undrained-strength 25d3` memilih VM. Adapter legacy
+`:elastic` mempertahankan kelas VM dengan plasticity dimatikan. Elastic native
+sebenarnya dapat dipilih melalui `:native` dengan
+`:particle-class 'cl-mpm/particle::particle-elastic`.
+Native MC memakai `cl-mpm/particle::particle-mc`, tetap independen dari VM.
+E, nu dan metadata kekuatan harus konsisten dengan initargs; konflik ditolak.
+Parameter MC `:phi` dan `:psi` memakai radian, `:c` memakai Pa.
 
-Contoh mengganti geometri menjadi silinder 3D:
+Geometri silinder 3D memakai komponen berikut:
 
 ```lisp
 :geometry (make-geometry :cylinder :diameter 0.07d0 :height 0.14d0)
 ```
 
-Tambahkan bentuk potongan pada spesimen memakai `:filter`, fungsi lokal
-`(x y z) -> boolean`. Filter digunakan pada pembentukan partikel; tidak
-mengubah perpindahan atau hasil damage sesudah solver berjalan.
+`:filter` menerima fungsi lokal `(x y z) -> boolean` pada pembentukan partikel;
+filter tersebut tidak mengubah hasil damage setelah solver berjalan.
+Triaxial menerima kombinasi material/diagnostik yang didukung dengan confinement
+dan compression. Cliff/Joss mempertahankan kontrak geometri dan fase tersendiri.
+Opsi atau kombinasi yang tidak didukung harus ditolak, bukan diabaikan.
 
-Model native tambahan dapat memakai `:native :particle-class 'kelas-anda
-:initargs (...)`. Method konstitutif ditulis pada class tersebut. Metadata E,
-nu dan kekuatan harus konsisten dengan initargs; konflik ditolak.
-Diagnostik triaxial saat ini membutuhkan particle VM atau subclass-nya.
-Model dengan state lain memerlukan adapter pengukuran sendiri.
+Diagnostik sudah membedakan VM, MC dan native elastic. Kolom VM yang tidak
+bermakna untuk MC tetap unavailable; MC mempunyai field bernama dan residual
+Kirchhoff tersendiri. Mode homogeneous/controls tetap dibatasi capability.
+`material-state` adalah pembacaan diagnostik, bukan snapshot trial/rollback.
+Migrasi ini tidak menambahkan integrator dedicated MC H/HS atau kalibrasi.
+Rincian kelas, satuan dan batasannya ada di [katalog model](architecture/MODEL_CATALOG.md).
 
-Tidak semua kombinasi bermakna secara fisik. Resep Joss mempertahankan material
-khusus, geometri dasar dan aturan fasenya; substitusi yang tidak didukung
-ditolak. API menolak opsi yang tidak dikenal atau tidak digunakan oleh resep,
-agar input tidak diam-diam diabaikan.
+## Lokasi implementasi
 
-## Struktur dan tanggung jawab
+| Owner | Isi |
+| --- | --- |
+| `src/core/` | Base particle, common slots dan generic protocol |
+| `materials/` | Profile/adapter, kelas material, constitutive, evolution, diagnostics dan binding backend |
+| `src/numerics/`, `src/solvers/` | Tensor, integrasi numerik, fastmaths dan solver generik |
+| `src/damage/`, `src/parallel/` | Nonlocal transport, scheduling dan komunikasi engine |
+| `src/simulation/` | Konfigurasi, komponen dan lifecycle run |
+| `scenarios/{triaxial,cliff,joss}/` | Geometri, boundary, loading, fase dan pengukuran skenario |
+| `src/measurements/`, `src/output/` | Mekanisme pengukuran/output generik |
+| `cases/`, `scripts/`, `windows/` | Resep dan launcher |
+| `libs/` | Kernel/DLL native yang ABI-nya dipertahankan |
+| `framework/` dan jalur source lama | Compatibility loaders; deklarasi ASDF kanonis sekarang di root |
 
-```text
-src/                             engine numerik dan model asli
-framework/
-  config/                        normalisasi parameter bersama
-  components/                    kontrak dan spesifikasi komponen
-  simulation.lisp                dispatch dan lifecycle run
-  materials/                     constructor dan method chalk khusus
-  scenarios/
-    cliff/                       geometri, assembly, solver, run
-    joss/                        material/base, statistik, fase, output
-    triaxial/                    material, geometri, boundary, ukur, run
-  output/                        penulisan plot yang sudah ada
-cases/                           komposisi eksperimen pendek
-scripts/run-case.lisp             launcher Windows tanpa server
-tests/                           kontrak komponen dan kompatibilitas
-```
+Simbol CLOS lama tetap dipakai. Modul skenario tidak menyalin persamaan material.
+Lihat [aturan ownership](architecture/FOLDER_OWNERSHIP.md) dan
+[API material](../materials/README.md). Kernel C++ campuran, override damage/ice
+dan forward class concrete tetap merupakan pengecualian yang dicatat.
 
-Modul skenario tidak menyalin persamaan material dari `src/`. Variasi material
-dan geometri dikirim melalui komponen/factory pada tiap run. Pengukuran
-triaxial memakai konteks yang diikat lokal untuk satu run; input konfigurasi
-tidak dimutasi. Jalur lama `scripts/run-triaxial.lisp` dan entry Lisp tebing
-tetap tersedia sebagai adapter kompatibilitas. Tidak ada perubahan UI.
+## Source yang benar-benar dijalankan
 
-## Reproduksi dan pemeriksaan
+CLI memerlukan proses Windows yang fresh sebelum paket proyek atau
+`kirchoff.dll` dimuat. Ia menyalin source first-party `src/`, `materials/`,
+`framework/`, `scenarios/`, ASDF, kasus, input, launcher/helper dan DLL native
+ke direktori run; manifest menyimpan SHA-256 byte sebelum pemuatan.
 
-Launcher menyalin source framework, kasus, schema dan JSON input sebelum
-memuatnya. ASDF harus benar-benar memuat salinan tersebut; kegagalan pemilihan
-source menghentikan run. Identitas dependency/FASL/DLL engine merupakan
-provenance terpisah. CSV/VTK berisi hasil solver, sedangkan Python hanya
-membaca hasil untuk audit dan visualisasi.
+ASDF memeriksa containment/hash file first-party yang dipilih sebelum compile
+dan load. FASL first-party memakai cache privat pada snapshot. Windows memeriksa
+path modul DLL yang benar-benar terpetakan melalui GetModuleHandleW/
+GetModuleFileNameW dan mencocokkannya dengan salinan DLL. Kegagalan guard
+menghentikan run. Baca `source/source-manifest.json` dan
+`source-provenance.json`, bukan hanya HEAD saat proses selesai.
 
-Untuk menilai refactoring, bandingkan seluruh field VTK yang tersedia,
-kurva CSV, massa, jumlah partikel, waktu akhir, dan status penyelesaian.
-Triaxial 2D dibandingkan dengan adaptasi 2D minimal dari kode sebelum
-refactoring. Benchmark lama 3D menjadi konteks tambahan: plane strain tidak
-memiliki kondisi tegangan lateral yang sama dengan silinder 3D, sehingga
-kurva proyeksi q keduanya tidak boleh dianggap identik.
+Dependency pihak ketiga tetap berasal dari instalasi eksternal. Probe modul
+matematika bukan inventaris semua DLL proses. Arbitrary non-ASDF LOAD dari
+kasus tepercaya berada di luar klaim source-ASDF tersebut. CSV/VTK berasal dari
+solver; Python hanya membaca hasil untuk audit/visualisasi.
 
-Baseline 2D dengan satu partikel per arah sel gagal karena pembesaran domain
-melewati batas penghapusan partikel bawaan engine. Percobaan tersebut dan
-pemeriksaan massa yang menangkapnya dipertahankan. Pembandingan lengkap
-memakai dua partikel per arah sel pada kedua versi; engine tidak diubah.
+## Bukti dan gate yang masih terbuka
 
-Untuk tebing, fresh-start sebelum dan sesudah refactoring dibandingkan
-tersendiri dari video pilot historis yang memakai warm start. Perbedaan
-historis tidak boleh dilabeli sebagai akibat refactoring tanpa pembandingan
-tersebut. Kesamaan hasil kode tidak otomatis menetapkan validitas ilmiah model.
+| Bukti | Lingkup yang dapat dinyatakan |
+| --- | --- |
+| P2 A–D: 20 katalog native | Lima keluarga per checkpoint, exit 0; seluruh serialized catalog identik byte dengan baseline |
+| Kontrol bounded VM/MC, kontrak native dan Node | Hasil yang sudah dicatat pada [status](architecture/STATUS.md); bukan pengganti run penuh final |
+| Full VM 2D/3D pada P1 `62adb50` | PASS historis pada snapshot itu; full VM untuk snapshot migrasi final masih pending |
+| Joss serial 40 s historis | PASS exact, sumber asli `c749d32` versus executed `41403f4`; lihat [laporan serial](../research/reports/M0_SERIAL_REGRESSION.md) |
+| Joss empat worker historis | FAIL tetap dipertahankan; serial PASS tidak menghapusnya |
+| Full Joss yang lebih baru | STOPPED_BY_USER pada 4,2 s; tidak dilanjutkan atau diganti label PASS |
 
-## Hasil validasi saat ini
-
-| Kasus | Penyelesaian native | Regresi sebelum/sesudah |
-| --- | --- | --- |
-| Triaxial 2D | Keduanya 17.443 update, 51 state, 0,2 s / strain platen 10% | **Lulus:** seluruh 51 VTK identik byte dan semua kolom CSV berbeda nol |
-| Tebing Joss | Keduanya mencapai 40 s, exit 0 | **Belum lulus:** 176 versus 191 state fisik; pembandingan ketat gagal |
-| Kontrol tebing Joss satu worker | Keduanya mencapai 40 s, exit 0 | **Lulus identik:** 191 state fisik, 193 VTK per run termasuk initial/equilibrium, seluruh posisi/field/CSV sama |
-
-Pembanding ketat memakai `atol=1e-8`, `rtol=1e-7` per nilai, dengan state pada
-waktu fisik yang sama. Perbedaan jumlah state sudah menggagalkan pembandingan
-keseluruhan tanpa interpolasi. Diagnostik pada waktu yang tersedia di kedua run
-juga menemukan selisih melampaui toleransi. Pada 40 s, maksimum selisih komponen
-posisi adalah **0,0811648 m**, dengan RMS seluruh komponen **0,00234568 m**.
-
-Beberapa ukuran perilaku tebing tetap sangat dekat:
-
-| Diagnostik native | Sebelum | Sesudah |
-| --- | --- | --- |
-| Damage pertama tersimpan >0,05, region awal y≤4 m | 4 s | 4 s |
-| Damage pertama tersimpan >0,05, region awal y≥9 m | 7,5 s | 7,5 s |
-| Tepi domain run-out pada y>1,05 m, t=40 s | 31,01589046 m | 31,01587968 m |
-| Rata-rata y partikel bagian atas awal, t=40 s | 8,17637462 m | 8,17579450 m |
-
-IoU bentuk domain partikel akhir adalah **0,99667193**, memakai raster 0,025 m
-dalam viewport diagnostik dan mengecualikan pondasi. Ini ukuran kemiripan bentuk
-numerik, bukan persentase akurasi fisik, dan tidak menggantikan kegagalan
-pembandingan ketat. Data mentah, jumlah state yang berbeda dan toleransi tetap
-dipertahankan. Lihat `output/framework-refactor-2026-10-15/`:
-`triaxial-before-after-comparison.json`, `joss-before-after-comparison.json`,
-`joss-before-after-diagnostics.json` dan `joss-full-regression-summary.json`.
-
-Penyebab perbedaan Joss masih diselidiki; kesetaraan seluruh refactoring dan
-checkpoint akhir **belum dinyatakan berhasil**. Pengguna mengizinkan commit dan
-push checkpoint sambil menunggu kontrol satu worker; PR dan penerimaan akhir
-menunggu evaluasi tersebut. Persamaan fisika tidak diubah untuk memaksa kecocokan.
-Hasil di atas tidak menetapkan kalibrasi material atau validasi ilmiah model.
-
-Kontrol satu worker telah diaudit terpisah: sumber asli `c749d32` dibandingkan
-dengan snapshot yang dieksekusi `41403f4`. Status wrapper `909fddf` mencatat HEAD
-saat selesai, bukan sumber yang dimuat. [Laporan serial](../research/reports/M0_SERIAL_REGRESSION.md)
-menyimpan audit sumber, konservasi massa, field finite dan hash semua state.
-Hasil serial mendukung sensitivitas runtime; kegagalan empat worker tetap ada.
-M0 masih provisional sampai kontrak diagnostik material umum dan regresi kode
-terbaru selesai. [Roadmap penelitian](../research/README.md) membedakan tahap
-tersebut dari model H/HS dan simulasi komparatif yang belum dijalankan.
+Kontrol Joss berdurasi pendek adalah bukti terpisah dan tidak membuktikan
+collapse/run-out 40 s. Bandingkan VTK/CSV, massa, jumlah partikel, waktu fisik
+dan completion status dengan toleransi yang tetap. Plane strain 2D bukan
+axisymmetry dan tidak setara dengan silinder 3D. Regresi kode tidak menetapkan
+kalibrasi, mesh convergence, keseimbangan energi tertutup atau validasi ilmiah.
+[Roadmap penelitian](../research/README.md) menjaga gate fisika H/HS terpisah.

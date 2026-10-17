@@ -1,6 +1,10 @@
 # AI Engineering Handover — CL-MPM
 
-**Operational checkpoint: 2026-10-16, Asia/Jakarta. Read this first.**
+**Operational checkpoint: 2026-10-17, Asia/Jakarta. Read this first.**
+**Human handover requested. Read [NEXT_AI_CHECKPOINT.md](architecture/NEXT_AI_CHECKPOINT.md)
+before launching tests or changing source.** P2 is complete; P4-F is implemented,
+final compatibility is partial, and one old-source bounded Joss baseline remains
+running. The continuation automation is paused for handoff; no new full Joss run.
 Read [the current stage table](architecture/STATUS.md) for the latest implemented
 and tested stages; the dated checkpoints below retain historical detail.
 Refresh this fork's live branches/PRs before changes. Detailed earlier history is
@@ -344,3 +348,22 @@ The fresh four-second old-source Joss control uses isolated verified pre-P2
 source copies; it does not restart or replace the cancelled full 40-second run.
 G1/G3 remain PARTIAL owing to preserved legacy overrides and Joss exceptions.
 No main merge, numeric changes, new H/HS physics or UI work is authorized here.
+
+### Human handover checkpoint — 2026-10-17 (Asia/Jakarta)
+
+The user requested a committed handover before another AI continues. Read
+`docs/architecture/NEXT_AI_CHECKPOINT.md` first; it supersedes older next steps.
+P2 A–D and P4 B–E are implemented/tested. P4-F canonical root ASDF/callers are
+implemented at 436b561. E evidence has 34 verified hashes; F partial evidence
+has 20 verified hashes and 252 sealed source files (snapshot3/native7/standalone3
+all exit 0 at actual launch HEAD326268a). Node36/check also pass.
+
+The remaining F short queue was deliberately stopped before further launches;
+its controller interruption is USER_STOPPED_QUEUE, not a failed assertion.
+Final full VM2D/3D wrappers are prepared but NOT_RUN. One independent immutable
+old-source four-second Joss baseline before-003 remains running; do not duplicate
+it or confuse it with the cancelled full40s run. The initial two harness failures
+are retained. All details/PIDs/paths and next steps are in the checkpoint.
+
+Automatic continuation is PAUSED to avoid concurrent work during human handoff.
+No final migration PR, main merge, scientific acceptance or complete G3 is claimed.

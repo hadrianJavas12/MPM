@@ -468,3 +468,8 @@ source freezing is verified. See [[cl-mpm-architecture]] and
 
 All four native material waves passed bounded controls and twenty exact family catalogs. P4 B/C/D scenario ownership passed; E is committed and under validation. See [[cl-mpm-architecture]] and docs/architecture/STATUS.md. Full Joss cancellation and historical parallel failure remain explicit.
 
+
+## [2026-10-17] handover | Canonical ASDF migration checkpoint
+
+P2/P4-E validation complete; P4-F installed with snapshot3/native7/standalone3 and Node36 passing. Remaining validation stopped for human handoff, full VM final runs NOT_RUN. Existing bounded old-source Joss continues independently; fullJoss remains cancelled. See [[cl-mpm-architecture]] and docs/architecture/NEXT_AI_CHECKPOINT.md. Automation paused; raw sources/settings preserved.
+

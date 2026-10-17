@@ -298,3 +298,21 @@ billing issue**. This confirms the account-level cause and supersedes the
 older unknown-cause note. The workflow installs SBCL and requires the contract
 tests on Node 22/Ubuntu 24.04. Hosted CI cannot be marked green until the account
 owner resolves the billing lock and a fresh run completes.
+
+## Architecture handover checkpoint, 2026-10-17
+
+Current source/status and commands are in
+[the next-AI checkpoint](architecture/NEXT_AI_CHECKPOINT.md), which overrides
+older next-action paragraphs. P2 A–D and P4 B–E passed their saved native
+controls; all twenty family catalogs match baseline bytes. E standalone3 and
+orchestration3 pass, and VM/MC saved VTK/CSV remain exact against D.
+
+P4-F is implemented at 436b561. Snapshot3, native-snapshot7 and standalone3
+passed on launch HEAD326268a; [partial evidence](evidence/architecture-migration-2026-10-16/p6-short/validation-summary.json)
+retains 20 hash-verified artifacts and 252 sealed source files. Check/Node36
+passed with zero skips. Remaining final short checks and full VM2D/3D were
+not run; the queue was stopped deliberately for human handoff. Do not rerun
+completed checks. The prepared full wrappers compare/audit once automatically.
+
+The separate old-source 4s Joss baseline remains in progress at handoff; no new
+fullJoss completion, PNG success, complete G3 or scientific validation is claimed.

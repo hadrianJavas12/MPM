@@ -256,3 +256,22 @@ transition, final compatibility/regressions/docs/PR. P2 helper never edits ASD;
 route-aware updater must preserve existing P5 paths. No full Joss restart, no
 new physics, no main merge. Existing global override/forward-class/atomic C++
 transaction exceptions stay visible; folder relocation does not repair them.
+
+### Human handover checkpoint — 2026-10-17 (Asia/Jakarta)
+
+The user requested a committed handover before another AI continues. Read
+`docs/architecture/NEXT_AI_CHECKPOINT.md` first; it supersedes older next steps.
+P2 A–D and P4 B–E are implemented/tested. P4-F canonical root ASDF/callers are
+implemented at 436b561. E evidence has 34 verified hashes; F partial evidence
+has 20 verified hashes and 252 sealed source files (snapshot3/native7/standalone3
+all exit 0 at actual launch HEAD326268a). Node36/check also pass.
+
+The remaining F short queue was deliberately stopped before further launches;
+its controller interruption is USER_STOPPED_QUEUE, not a failed assertion.
+Final full VM2D/3D wrappers are prepared but NOT_RUN. One independent immutable
+old-source four-second Joss baseline before-003 remains running; do not duplicate
+it or confuse it with the cancelled full40s run. The initial two harness failures
+are retained. All details/PIDs/paths and next steps are in the checkpoint.
+
+Automatic continuation is PAUSED to avoid concurrent work during human handoff.
+No final migration PR, main merge, scientific acceptance or complete G3 is claimed.
