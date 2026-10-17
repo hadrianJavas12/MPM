@@ -1,31 +1,28 @@
 # CL-MPM folder ownership
 
 Authority: [migration specification](CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md).
-Current source checkpoint: P0–P6 complete on `codex/material-architecture-migration`, 2026-10-17. Physical owners changed;
+Current source checkpoint: P0–P6 and Section 2/5 physical folder alignment complete on `codex/material-architecture-migration`, 2026-10-17 (`5d6a5cf`). Physical owners match the Section 2 target tree;
 historical package/class symbols and ASDF system names remain. Remaining
 integration gates are stated separately from installed source ownership.
 
 | Responsibility | Installed owner | Boundary |
 | --- | --- | --- |
 | Base particle/cache/common slots | `src/core/particle-base.lisp`, `particle-protocols.lisp` | Common stress/strain/F/mass/position and generic lifecycle stay engine-owned |
-| Constitutive state/laws/evolution | Root `materials/core/`, `materials/models/` | Families own equations/history; 49 P2 owner files installed |
-| Profiles/factories | `materials/core/definition.lisp`, `materials/adapters/` | Existing selection/construction, separate from integration |
+| Constitutive state/laws/evolution | Root `materials/core/`, `materials/models/`, `materials/cl-mpm-materials.asd` | Families own equations/history; 49 P2 owner files + linear-elastic package owner installed |
+| Profiles/factories | `materials/core/definition.lisp`, `materials/definitions/`, `materials/adapters/` | Existing selection/construction, separate from integration |
 | Model diagnostics | `materials/core/diagnostics-interface.lisp`, `materials/diagnostics/` | Model conventions/fields; no universal rollback API |
-| Generic measurements/output | `src/measurements/`, `src/output/` | Mechanisms consume model descriptors |
-| Config/composition/lifecycle | `src/simulation/config/`, `components/`, `lifecycle.lisp` | Run-local assembly; no return mapping |
-| Scenario procedures | Root `scenarios/{triaxial,cliff,joss}/` | Geometry, loading, boundaries, stages and measurements |
-| Tensor/integration/bridge helpers | `src/numerics/` | Includes relocated fastmaths; material formulas stay with their families |
-| Linear solver | `src/solvers/linear-systems.lisp` | Existing matrix-free implementation; explicit solvers remain `src/solvers/` |
-| Nonlocal damage/communication | `src/damage/`, `src/damage/nonlocal/`, `src/parallel/` | Engine transport and scheduling with typed material hooks |
-| Recipes/platform | `cases/`, `scripts/`, `windows/` | Compose supported SI components; freeze selected source/DLL bytes |
+| Generic measurements/output | `src/measurements/`, `src/output/`, `src/output/plotting/` | Mechanisms consume model descriptors |
+| Config/composition/lifecycle | `src/simulation/config/`, `components/`, `compatibility/`, `lifecycle.lisp` | Run-local assembly; no return mapping |
+| Scenario procedures | Root `scenarios/{triaxial,cliff,joss,direct-shear}/` | Geometry, loading, boundaries, stages and measurements |
+| Tensor/integration/bridge helpers | `src/numerics/{tensors,fastmaths,linear-algebra,integration,native-bridge,error-handling,eigen}/` | Includes relocated fastmaths and native bridge; material formulas stay with their families |
+| Solvers | `src/solvers/{explicit,implicit,dynamic-relaxation,linear-systems}/` | Explicit (`usf`, `usl`, `musl`), implicit, dynamic-relaxation, and matrix-free linear solver |
+| Discretization/transfer/boundaries/formulations/stabilization | `src/discretization/`, `src/transfer/`, `src/boundaries/`, `src/formulations/{ssa,octree,standard-mpm}/`, `src/stabilization/` | Engine mesh/shape/splitting/ghost, P2G/G2P/forces, BCs, SSA/octree, and aggregate stabilization |
+| Nonlocal damage/communication | `src/damage/{nonlocal,eigenerosion,solver,fracture}/`, `src/parallel/{mpi,serial,workers}/` | Engine transport and scheduling with typed material hooks |
+| Recipes/platform | `cases/{triaxial,cliff,benchmarks,direct-shear}/`, `scripts/`, `windows/` | Compose supported SI components; freeze selected source/DLL bytes |
 | Native kernels/binaries | `libs/` | Retained ABI/build boundary; bindings in `materials/backends/cpp/` |
 | Research/evidence/dependencies | `research/`, `docs/evidence/`, `deps/`, historical roots | Preserve provenance, licenses, failed runs, examples and raw sources |
 
-`framework/` and moved historical `src/` paths provide forwarding loaders.
-Normal ASDF loads owner files directly, once. The canonical headless declaration
-is root `cl-mpm-framework.asd` (implemented at `436b561`, validated through `p6-short/`,
-`joss-bounded/`, and `p6-full/` on `9dfb58b`). Compatibility paths remain in place
-for historical `LOAD` callers; this page does not claim `framework/` has been removed.
+Following explicit user direction on 2026-10-17, the physical workspace layout was aligned with Section 2 and Section 5 of `CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md` (`5d6a5cf`): legacy `framework/`, `src/models/`, and root `src/` forwarding shims were retired (`120/120` mapped owners present in `FILE_MIGRATION_RESULT.json`), `src/` is organized into the 15 Section 2 engine subdirectories, and `cases/` is organized into `cases/{triaxial,cliff,benchmarks,direct-shear}/` (with automatic flat-path resolution in `scripts/lisp/native-source-snapshot.lisp`). Normal ASDF loads owner files directly from root `cl-mpm.asd`, `cl-mpm-framework.asd`, and `materials/cl-mpm-materials.asd`.
 
 ## Maintainer contracts
 

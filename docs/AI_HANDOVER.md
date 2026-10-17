@@ -1,14 +1,17 @@
 # AI Engineering Handover — CL-MPM
 
 **Operational checkpoint: 2026-10-17, Asia/Jakarta. Read this first.**
-**P0–P6 architecture ownership migration and regression suite complete on
-`codex/material-architecture-migration`. Read [NEXT_AI_CHECKPOINT.md](architecture/NEXT_AI_CHECKPOINT.md)
-and [STATUS.md](architecture/STATUS.md) first.** P1–P5 and P4-F canonical root ASDF
-are implemented and validated (`p6-short/` 11/11 checks, `joss-bounded/` 4s serial
-control, and `p6-full/` full VM 2D/3D regressions all `exit 0` with byte-identical
-VTKs/CSVs; `FILE_MIGRATION_RESULT.json` accounts for all 884 original paths with
-`58/58` mapped owners present). Full 40s Joss remains `STOPPED_BY_USER` and must
-not be restarted; G1 and G3 remain `PARTIAL`.
+**P0–P6 architecture ownership migration, Section 2/5 physical folder alignment (`5d6a5cf`),
+and two-benchmark verification complete on `codex/material-architecture-migration`.
+Read [NEXT_AI_CHECKPOINT.md](architecture/NEXT_AI_CHECKPOINT.md) and
+[STATUS.md](architecture/STATUS.md) first.** P1–P5, P4-F canonical root ASDF, and physical
+Section 2/5 workspace alignment (`src/` 15 engine subdirectories, `materials/`, `scenarios/`,
+`cases/{triaxial,cliff,benchmarks,direct-shear}/`, `framework/` retired, `FILE_MIGRATION_RESULT.json`
+with `120/120` mapped owners present) are implemented and validated across all contract suites,
+`section2-benchmarks/triaxial-2d` (51/51 VTKs & CSV byte-identical to `p1-full`),
+`section2-benchmarks/joss-serial-4s` (byte-identical to `before-003`), and
+`section2-benchmarks/joss-collapse` (progressive bottom-to-top cliff damage verified via
+`audit-particle-damage.py`). G1 and G3 remain `PARTIAL`.
 Refresh this fork's live branches/PRs before changes. Detailed earlier history is
 preserved in [the archived handover](archive/AI_HANDOVER_BEFORE_M0_2026-10-16.md).
 Older statuses there are historical and do not override this checkpoint.
@@ -399,6 +402,19 @@ Resumed from `9dfb58b` without repeating already-passed checks:
 - **Gate status**: `G0` DONE, `G1` PARTIAL, `G2` DONE, `G3` PARTIAL (full 40s Joss on
   migrated code remains `STOPPED_BY_USER` at 4.2 s and was not restarted; historical
   4-worker parallel Joss failure remains open), `G4` DEFERRED (new MC H/HS physics
-  deferred to a separate experimental branch), `G5` DONE for active callers and retained
-  `framework/` compatibility shims (two pre-existing missing legacy examples remain `BLOCKED`).
+  deferred to a separate experimental branch), `G5` DONE for active callers and physical
+  Section 2 layout (two pre-existing missing legacy examples remain `BLOCKED`).
+
+### Section 2/5 physical folder alignment and two-benchmark validation — 2026-10-17
+
+Following explicit user direction (`"pokoknya ikuti struktur folder di dokemen final nya, setelah itu kamu uji coba dengan 2 benchmark kita triaxial 2d dan tebing yang rusak dari bawah keatas"`), the workspace directory tree in `D:\MPM` was physically aligned with Section 2 and Section 5 of `CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md` (`5d6a5cf`):
+- Retired `framework/` (`39` legacy shims), `src/models/`, and root `src/` shims; organized `src/` into the 15 Section 2 engine subdirectories (`core`, `geometry`, `discretization`, `transfer`, `boundaries`, `loading`, `solvers`, `formulations`, `stabilization`, `damage`, `numerics`, `parallel`, `simulation`, `measurements`, `output`); organized `cases/` into `cases/{triaxial,cliff,benchmarks,direct-shear}/` with automatic flat-path fallback in `snapshot-resolve-case-file`; added `materials/cl-mpm-materials.asd` and all Section 2 subdirectories.
+- Updated `docs/architecture/FILE_MIGRATION_RESULT.json` and `FILE_MIGRATION_MATRIX.md`: `884` original paths accounted for (`749` `RETAINED_UNCHANGED`, `15` `RETAINED_MODIFIED`, `120/120` `MAPPED_OWNERS_PRESENT`, `0` pending).
+- Verified all native contract suites (`smoke-test`, `engine-numerics-compat`, `material-ownership-compat` normal/legacy, `p4-orchestration-compat`, `framework-components`, `config-contracts`, `material-diagnostics`, `p4-standalone-triaxial-compat`, `case-snapshot-contracts`, `native-snapshot-contracts`) and Studio Node `npm run check` + `npm test` (`36/36 PASS`).
+- **Benchmark 1 — Triaxial 2D (`cases/triaxial/triaxial-clay-2d.lisp`, exit 0)**:
+  Ran to `output/architecture-migration-2026-10-16/section2-benchmarks/triaxial-2d` (480 MPs, 17,443 updates, 51 saved VTK frames); `compare-framework-runs.py` against `p1-full/triaxial-2d` passed (`max_position_difference_m = 0.0`), all 51 VTKs and `stress-strain.csv` are byte-identical (`SHA-256` match), and `audit-triaxial.py` passed (`passed_consistency_checks = true`).
+- **Benchmark 2 — Progressive bottom-to-top chalk cliff failure (`tests/cases/joss-serial-integration.lisp` and `cases/benchmarks/joss-collapse.lisp`)**:
+  - `section2-benchmarks/joss-serial-4s` (`exit 0`): 1,658 equilibration steps + 4.0 s physical time; `initial.vtk`, `mesh.vtk`, `equilibrium.vtk`, `sim_00001.vtk`, and `sim_00002.vtk` are byte-identical (`SHA-256` match) to `joss-bounded/before-003` (`max_position_difference_m = 0.0`), initiating lower notch/toe damage ($y = 3.625\text{ m} \le 4\text{ m}$, `lower_max_damage = 0.3336`) while upper cliff damage ($y \ge 9\text{ m}$) is `0.0`.
+  - `section2-benchmarks/joss-collapse`: `audit-particle-damage.py` confirms undamaged equilibrium (`t = 0..2.0 s`), bottom toe/notch initiation at `t = 4.0 s` (`sim_00002.vtk`, `lower_max_damage = 0.3336`, `upper_max_damage = 0.0`), upward propagation across `t = 4.1..5.0 s` (`sim_00003.vtk`..`sim_00012.vtk`), and arrival at the upper cliff face ($y \ge 9\text{ m}$) across `t = 7.0..7.7 s` (`sim_00013.vtk`..`sim_00020.vtk`, `lower_max_damage = 0.6572 -> 0.7150`, `upper_max_damage = 0.0005 -> 0.0772 > 0.05`) with `all_fields_finite = true` and `mass_change_fraction = 0.0`.
+
 

@@ -240,6 +240,13 @@ Resumed from handover commit `9dfb58b` without repeating already-passed checks:
   forward class, mixed C++ transaction), `G2` DONE, `G3` PARTIAL (full 40s Joss on migrated
   code remains `STOPPED_BY_USER` at 4.2 s and was not restarted; historical 4-worker parallel
   Joss failure remains open), `G4` DEFERRED ([[mc-hardening-softening-study]] physics deferred
-  to separate experimental branch), `G5` DONE for active callers and retained `framework/`
-  compatibility shims (two pre-existing missing legacy examples remain `BLOCKED`).
+  to separate experimental branch), `G5` DONE for active callers and physical Section 2 layout
+  (two pre-existing missing legacy examples remain `BLOCKED`).
+
+### Section 2/5 physical directory alignment and two-benchmark validation — 2026-10-17
+
+Following explicit user direction (`5d6a5cf`), the physical workspace layout in `D:\MPM` was aligned with Section 2 and Section 5 of `docs/architecture/CL_MPM_ARCHITECTURE_MIGRATION_SPEC_AGENT.md`:
+- Retired root `framework/` (`39` shims), `src/models/`, and root `src/` shims; organized `src/` into the 15 Section 2 engine subdirectories (`core`, `geometry`, `discretization`, `transfer`, `boundaries`, `loading`, `solvers`, `formulations`, `stabilization`, `damage`, `numerics`, `parallel`, `simulation`, `measurements`, `output`); organized `cases/` into `cases/{triaxial,cliff,benchmarks,direct-shear}/` with automatic flat-path fallback in `snapshot-resolve-case-file`; added `materials/cl-mpm-materials.asd` and all Section 2 subdirectories.
+- `docs/architecture/FILE_MIGRATION_RESULT.json` records `749` `RETAINED_UNCHANGED`, `15` `RETAINED_MODIFIED`, and `120/120` `MAPPED_OWNERS_PRESENT` (`0` pending).
+- Verified all native contract suites, Studio Node `36/36` tests, **Benchmark 1 — Triaxial 2D** (`cases/triaxial/triaxial-clay-2d.lisp` -> `section2-benchmarks/triaxial-2d`, 51/51 VTKs and `stress-strain.csv` SHA-256 byte-identical to `p1-full/triaxial-2d`, `audit-triaxial.py` PASS), and **Benchmark 2 — Progressive bottom-to-top chalk cliff failure** (`section2-benchmarks/joss-serial-4s` SHA-256 byte-identical to `before-003`, and `section2-benchmarks/joss-collapse` verified via `audit-particle-damage.py` showing lower toe/notch initiation at `t = 4.0 s` `lower_max_damage = 0.3336`, `upper_max_damage = 0.0` propagating upward to the upper cliff face $y \ge 9\text{ m}$ at `t = 7.0..7.7 s` `upper_max_damage = 0.0554 -> 0.0772 > 0.05`).
 

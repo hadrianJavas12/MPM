@@ -295,5 +295,18 @@ Canonical root `cl-mpm-framework.asd` (`436b561` / `9dfb58b`) is now fully valid
   and `stress-strain.csv` byte-identical to `p1-full` (`62adb50`), zero position/CSV/field
   differences, and independent audits passing.
 - `docs/architecture/FILE_MIGRATION_RESULT.json` records all 884 original P0 paths with
-  `58/58` `MAPPED_OWNERS_PRESENT`. See [[cl-mpm-architecture]].
+  `120/120` `MAPPED_OWNERS_PRESENT` (`749` `RETAINED_UNCHANGED`, `15` `RETAINED_MODIFIED`) after
+  the user-directed Section 2/5 physical directory alignment (`5d6a5cf`), which retired legacy
+  `framework/`, `src/models/`, and root `src/` shims, organized `src/` into the 15 Section 2
+  engine subdirectories, and organized `cases/` into `cases/{triaxial,cliff,benchmarks,direct-shear}/`
+  (with flat-path fallback in `snapshot-resolve-case-file`).
+- On the aligned Section 2 layout, **Benchmark 1 — Triaxial 2D** (`cases/triaxial/triaxial-clay-2d.lisp`
+  -> `section2-benchmarks/triaxial-2d`) passed with all 51 VTKs and `stress-strain.csv` SHA-256
+  byte-identical to `p1-full/triaxial-2d` (`audit-triaxial.py` PASS), and **Benchmark 2 —
+  Progressive bottom-to-top chalk cliff failure** passed both the bounded 4.0 s serial control
+  (`section2-benchmarks/joss-serial-4s`, SHA-256 byte-identical to `before-003`) and the
+  progressive bottom-to-top damage propagation audit (`section2-benchmarks/joss-collapse`,
+  bottom toe/notch initiation at `t = 4.0 s` `lower_max_damage = 0.3336`, `upper_max_damage = 0.0`
+  propagating upward to the upper cliff face $y \ge 9\text{ m}$ at `t = 7.0..7.7 s`
+  `upper_max_damage = 0.0554 -> 0.0772 > 0.05`). See [[cl-mpm-architecture]].
 

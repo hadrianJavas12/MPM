@@ -53,8 +53,30 @@ bounded initiation control, not the cancelled 40-second run, and does not close
 the full G3 exception.
 
 `docs/architecture/FILE_MIGRATION_RESULT.json` records all 884 original P0 paths
-without mutating `FILE_MIGRATION_MATRIX.json`: `812` `RETAINED_UNCHANGED`,
-`14` `RETAINED_MODIFIED`, and `58/58` `MAPPED_OWNERS_PRESENT` (`0` pending).
-`framework/` compatibility shims remain in place for historical `LOAD` callers;
-two pre-existing absent legacy example paths (`examples/dr/quasi-time.lisp`,
-`examples/octree/slope-stability.lisp`) remain documented `BLOCKED` exceptions.
+without mutating `FILE_MIGRATION_MATRIX.json`: following the explicit user-directed
+Section 2/5 physical directory alignment (`5d6a5cf`), `749` paths are
+`RETAINED_UNCHANGED`, `15` are `RETAINED_MODIFIED`, and `120/120` are
+`MAPPED_OWNERS_PRESENT` (`0` pending). Legacy `framework/`, `src/models/`, and
+root `src/` forwarding shims are retired, `src/` is organized into the 15 Section 2
+engine subdirectories, and `cases/` is organized into `cases/{triaxial,cliff,benchmarks,direct-shear}/`
+(two pre-existing absent legacy example paths `examples/dr/quasi-time.lisp` and
+`examples/octree/slope-stability.lisp` remain documented `BLOCKED` exceptions).
+
+On the aligned Section 2 directory tree (`5d6a5cf`), all contract suites (`smoke-test`,
+`engine-numerics-compat`, `material-ownership-compat` normal/legacy,
+`p4-orchestration-compat`, `framework-components`, `config-contracts`,
+`material-diagnostics`, `p4-standalone-triaxial-compat`, `case-snapshot-contracts`,
+`native-snapshot-contracts`, and Studio Node `npm run check` + `36/36` `npm test`)
+pass (`exit 0`), and the two primary user-requested benchmarks pass:
+1. **Triaxial 2D (`cases/triaxial/triaxial-clay-2d.lisp`)**: 480 MPs, 17,443 updates,
+   51 saved VTK states (`section2-benchmarks/triaxial-2d`); all 51 VTKs and
+   `stress-strain.csv` are byte-identical (`SHA-256` match) to `p1-full/triaxial-2d`
+   (`max_position_difference_m = 0.0`, `audit-triaxial.py` `passed_consistency_checks = true`).
+2. **Joss Bay bottom-to-top progressive cliff damage (`tests/cases/joss-serial-integration.lisp`
+   and `cases/benchmarks/joss-collapse.lisp`)**: bounded 4.0 s serial control
+   (`section2-benchmarks/joss-serial-4s`) completes 1,658 equilibration steps and 4.0 s
+   with `initial.vtk`, `mesh.vtk`, `equilibrium.vtk`, `sim_00001.vtk`, and `sim_00002.vtk`
+   byte-identical (`SHA-256` match) to `joss-bounded/before-003`, initiating lower
+   notch/toe damage ($y \le 4\text{ m}$, `lower_max_damage = 0.3336` at `[13.125, 3.625]`)
+   while upper cliff damage ($y \ge 9\text{ m}$) is `0.0`, followed by progressive
+   bottom-to-top upward propagation (`section2-benchmarks/joss-collapse`).
