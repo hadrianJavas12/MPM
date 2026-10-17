@@ -1,6 +1,6 @@
 {
   "scope": "Complete path/hash ownership ledger; existence is not validation",
-  "captureHead": "af3a3ee30a1d948c6a123edc54ea907112d9516d",
+  "captureHead": "cbd24b8b5b9d898239220421fc497ae5927098a0",
   "originalInventorySha256": "fa47aafa98379535e9013255a468b3012499928f28dc6742ca305b52f6012c03",
   "originalPaths": 884,
   "counts": {
@@ -1649,7 +1649,7 @@
     {
       "source": "docs/REUSABLE_FRAMEWORK.md",
       "originalSha256": "7bb3f4e7f1f286e6c21ca807c7886cf21f91679d2566e91a18bcbf29c9f980c5",
-      "currentSha256": "cf88a99cc29dde3a833eab4aec82a6c0bc91d8578bad6e98fcd0e5a2316d29c2",
+      "currentSha256": "2a8c1867927e35698f053f420ebf988cc227975f0395230871f3c9ddc9c639c8",
       "status": "RETAINED_MODIFIED",
       "mappedOwners": []
     },
@@ -3539,7 +3539,7 @@
     {
       "source": "docs/testing.md",
       "originalSha256": "12bf1a775285539b3dc49e4a31a94a7ddf6849c53177f52b5776a840a0bc8dd0",
-      "currentSha256": "3bc402d459a6b1f330ae9380358aa4170ebf87e8f6a9ea85d90a3032e0c05686",
+      "currentSha256": "73caa8dd5b2c9c916a1c6edadb74e236f1ca1bd447918a695df86de4b0d21537",
       "status": "RETAINED_MODIFIED",
       "mappedOwners": []
     },
@@ -4314,7 +4314,7 @@
       "mappedOwners": [
         {
           "path": "docs/REUSABLE_FRAMEWORK.md",
-          "sha256": "cf88a99cc29dde3a833eab4aec82a6c0bc91d8578bad6e98fcd0e5a2316d29c2"
+          "sha256": "2a8c1867927e35698f053f420ebf988cc227975f0395230871f3c9ddc9c639c8"
         }
       ]
     },
@@ -7666,6 +7666,13 @@
     "docs/evidence/architecture-migration-2026-10-16/p6-short/sources/native-source-provenance.json.gz",
     "docs/evidence/architecture-migration-2026-10-16/p6-short/sources/run-check.ps1",
     "docs/evidence/architecture-migration-2026-10-16/p6-short/validation-summary.json",
+    "docs/evidence/architecture-migration-2026-10-16/section2-benchmarks/README.md",
+    "docs/evidence/architecture-migration-2026-10-16/section2-benchmarks/joss-collapse-damage-audit.json",
+    "docs/evidence/architecture-migration-2026-10-16/section2-benchmarks/joss-serial-4s-comparison.json",
+    "docs/evidence/architecture-migration-2026-10-16/section2-benchmarks/joss-serial-4s-damage-audit.json",
+    "docs/evidence/architecture-migration-2026-10-16/section2-benchmarks/triaxial-2d-audit.json",
+    "docs/evidence/architecture-migration-2026-10-16/section2-benchmarks/triaxial-2d-comparison.json",
+    "docs/evidence/architecture-migration-2026-10-16/section2-benchmarks/validation-summary.json",
     "docs/evidence/material-contract-2026-10-16/.gitattributes",
     "docs/evidence/material-contract-2026-10-16/2d-after/all-saved-state-audit.json",
     "docs/evidence/material-contract-2026-10-16/2d-after/audit.json",
