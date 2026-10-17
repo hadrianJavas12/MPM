@@ -30,6 +30,57 @@ def relative_path(value):
         raise RuntimeError('Unsafe/non-payload path: ' + value)
     return rel
 
+def launcher_text(attempt='before-001', bootstrap='run-original-bootstrap.lisp', retry=False):
+    launcher = r'''param([Parameter(Mandatory=$true)][string]$ExecutionCheckpoint)
+$ErrorActionPreference = 'Stop'
+Set-Location -LiteralPath 'D:/MPM'
+$taskRoot = 'D:/MPM/output/architecture-migration-2026-10-16/joss-bounded'
+$taskPrefix = Join-Path $taskRoot 'before-001'
+if (Test-Path -LiteralPath ($taskPrefix + '-launch.json')) { throw 'Refusing duplicate baseline launch' }
+if (Test-Path -LiteralPath $taskPrefix) { throw 'Baseline output must be fresh/nonexistent' }
+& 'D:/MPM/toolchain/analysis-venv/Scripts/python.exe' 'D:/MPM/scripts/prepare-joss-bounded-baseline.py' --verify-only
+if ($LASTEXITCODE -ne 0) { throw 'Prepared baseline input verification failed' }
+$env:OPENBLAS_NUM_THREADS = '1'
+$env:OMP_NUM_THREADS = '1'
+$env:CL_MPM_REFERENCE_PNG = '0'
+$taskRecord = [ordered]@{
+  startedUtc=[DateTime]::UtcNow.ToString('o'); bootstrapRepositoryCheckpoint=$ExecutionCheckpoint
+  numericalSourceBaselineCommit='a99a4e1d1a8deb17483230ee59d53c07f4a26822'
+  sourceIdentity='Original manifest-bound payload copied into original-root, then old CLI re-copies/guards/compiles it in this fresh run'
+  caseCommitReported='9568b8e'; workers=1; requestedPhysicalTimeS=4; frameCap=10
+  openblasThreads=1; ompThreads=1; pngEnabled=$false; wrapperPid=$PID
+  scope='Fresh bounded serial initiation control; not full collapse/run-out, not restarted cancelled run'
+}
+$taskRecord | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath ($taskPrefix + '-launch.json') -Encoding utf8
+try {
+  $taskCommand = 'call "D:/MPM/windows/cl-mpm.cmd" "' + (Join-Path $taskRoot 'run-original-bootstrap.lisp') + '" "' + (Join-Path $taskRoot 'original-root') + '" "' + (Join-Path $taskRoot 'joss-serial-integration.lisp') + '" "' + $taskPrefix + '"'
+  $taskNative = Start-Process -FilePath 'cmd.exe' -ArgumentList @('/d','/c',$taskCommand) -WindowStyle Hidden -Wait -PassThru -RedirectStandardOutput ($taskPrefix + '.stdout.log') -RedirectStandardError ($taskPrefix + '.stderr.log')
+  $taskRecord.nativeExitCode=$taskNative.ExitCode
+  $taskRecord.stdoutPath=$taskPrefix + '.stdout.log'
+  $taskRecord.stderrPath=$taskPrefix + '.stderr.log'
+  $taskMetadataPath = Join-Path $taskPrefix 'reference-metadata.json'
+  if (Test-Path -LiteralPath $taskMetadataPath) {
+    $taskMetadata = Get-Content -Raw -LiteralPath $taskMetadataPath | ConvertFrom-Json
+    $taskRecord.simulationComplete=$taskMetadata.complete
+    $taskRecord.physicalTime=$taskMetadata.physicalTime
+    $taskRecord.termination=$taskMetadata.termination
+  }
+  $taskRecord.endedUtc=[DateTime]::UtcNow.ToString('o')
+  $taskRecord | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath ($taskPrefix + '-status.json') -Encoding utf8
+  exit $taskRecord.nativeExitCode
+} catch {
+  $taskRecord.wrapperError=$_.Exception.Message
+  $taskRecord.nativeExitCode=$null
+  $taskRecord.endedUtc=[DateTime]::UtcNow.ToString('o')
+  $taskRecord | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath ($taskPrefix + '-status.json') -Encoding utf8
+  throw
+}
+'''
+    launcher = launcher.replace("'before-001'", repr(attempt)).replace('run-original-bootstrap.lisp', bootstrap)
+    if retry:
+        launcher = launcher.replace(' --verify-only\n', ' --verify-retry\n')
+    return launcher
+
 def verify():
     proof = json.loads((DEST / 'preparation.json').read_text(encoding='utf-8'))
     for record in proof['prepared_files']:
@@ -104,41 +155,8 @@ def prepare():
                'new-trusted-4s-case-reported-commit-9568b8e')
     copy_exact('run-original-bootstrap.lisp', bootstrap_bytes, BOOTSTRAP.relative_to(ROOT).as_posix(),
                'new-launch-adapter-no-numerical-body')
-    launcher = r'''param([Parameter(Mandatory=$true)][string]$ExecutionCheckpoint)
-$ErrorActionPreference = 'Stop'
-Set-Location -LiteralPath 'D:/MPM'
-$taskRoot = 'D:/MPM/output/architecture-migration-2026-10-16/joss-bounded'
-$taskPrefix = Join-Path $taskRoot 'before-001'
-if (Test-Path -LiteralPath ($taskPrefix + '-launch.json')) { throw 'Refusing duplicate baseline launch' }
-if (Test-Path -LiteralPath $taskPrefix) { throw 'Baseline output must be fresh/nonexistent' }
-& 'D:/MPM/toolchain/analysis-venv/Scripts/python.exe' 'D:/MPM/scripts/prepare-joss-bounded-baseline.py' --verify-only
-if ($LASTEXITCODE -ne 0) { throw 'Prepared baseline input verification failed' }
-$env:OPENBLAS_NUM_THREADS = '1'
-$env:OMP_NUM_THREADS = '1'
-$env:CL_MPM_REFERENCE_PNG = '0'
-$taskRecord = [ordered]@{
-  startedUtc=[DateTime]::UtcNow.ToString('o'); bootstrapRepositoryCheckpoint=$ExecutionCheckpoint
-  numericalSourceBaselineCommit='a99a4e1d1a8deb17483230ee59d53c07f4a26822'
-  sourceIdentity='Original manifest-bound payload copied into original-root, then old CLI re-copies/guards/compiles it in this fresh run'
-  caseCommitReported='9568b8e'; workers=1; requestedPhysicalTimeS=4; frameCap=10
-  openblasThreads=1; ompThreads=1; pngEnabled=$false; wrapperPid=$PID
-  scope='Fresh bounded serial initiation control; not full collapse/run-out, not restarted cancelled run'
-}
-$taskRecord | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath ($taskPrefix + '-launch.json') -Encoding utf8
-try {
-  & 'D:/MPM/windows/cl-mpm.cmd' (Join-Path $taskRoot 'run-original-bootstrap.lisp') (Join-Path $taskRoot 'original-root/') (Join-Path $taskRoot 'joss-serial-integration.lisp') $taskPrefix *> ($taskPrefix + '.log')
-  $taskRecord.nativeExitCode=$LASTEXITCODE
-  $taskRecord.endedUtc=[DateTime]::UtcNow.ToString('o')
-  $taskRecord | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath ($taskPrefix + '-status.json') -Encoding utf8
-  exit $taskRecord.nativeExitCode
-} catch {
-  $taskRecord.wrapperError=$_.Exception.Message
-  $taskRecord.nativeExitCode=$null
-  $taskRecord.endedUtc=[DateTime]::UtcNow.ToString('o')
-  $taskRecord | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath ($taskPrefix + '-status.json') -Encoding utf8
-  throw
-}
-'''
+    launcher = launcher_text()
+
     (DEST / 'run-original.ps1').write_text(launcher, encoding='utf-8')
     copy_exact('original-source-manifest.json', manifest_bytes,
                str(original_manifest.relative_to(ROOT)), 'original-manifest-copy-not-executed-source')
@@ -160,14 +178,58 @@ try {
     verify()
     return proof
 
+
+def prepare_retry():
+    original = verify()
+    for relative in ('before-002-preparation.json', 'before-002-bootstrap.lisp',
+                     'run-original-retry.ps1', 'before-002', 'before-002-launch.json'):
+        if (DEST / relative).exists():
+            raise RuntimeError('Refusing retry overwrite: ' + relative)
+    bootstrap = BOOTSTRAP.read_bytes()
+    launcher = launcher_text('before-002', 'before-002-bootstrap.lisp', retry=True).encode()
+    (DEST / 'before-002-bootstrap.lisp').write_bytes(bootstrap)
+    (DEST / 'run-original-retry.ps1').write_bytes(launcher)
+    proof = {'status': 'PREPARED_NATIVE_NOT_RUN', 'attempt': 'before-002',
+             'createdUtc': dt.datetime.now(dt.timezone.utc).isoformat(),
+             'originalPreparationSha256': sha((DEST / 'preparation.json').read_bytes()),
+             'numericalSourceBaselineCommit': OLD_COMMIT,
+             'payload_file_count': original['payload_file_count'],
+             'path_mirror_count': original['path_mirror_count'],
+             'prepared_files': [
+                 {'destination': 'before-002-bootstrap.lisp', 'bytes': len(bootstrap), 'sha256': sha(bootstrap)},
+                 {'destination': 'run-original-retry.ps1', 'bytes': len(launcher), 'sha256': sha(launcher)}],
+             'harnessRepair': 'Pass old-root without a trailing command-line backslash; use cmd/Start-Process redirected logs and actual process exit code.',
+             'before001': 'Failure/status/empty log and exact bootstrap argument diagnostic are retained unchanged. No old numerical source or physics parameter changed.'}
+    write_json(DEST / 'before-002-preparation.json', proof)
+    return verify_retry()
+
+def verify_retry():
+    original = verify()
+    proof = json.loads((DEST / 'before-002-preparation.json').read_text(encoding='utf-8'))
+    if sha((DEST / 'preparation.json').read_bytes()) != proof['originalPreparationSha256']:
+        raise RuntimeError('Original preparation changed after retry capture.')
+    for row in proof['prepared_files']:
+        value = (DEST / row['destination']).read_bytes()
+        if len(value) != row['bytes'] or sha(value) != row['sha256']:
+            raise RuntimeError('Retry harness bytes changed: ' + row['destination'])
+    return proof
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--verify-only', action='store_true')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--verify-only', action='store_true')
+    group.add_argument('--prepare-retry', action='store_true')
+    group.add_argument('--verify-retry', action='store_true')
     arguments = parser.parse_args()
-    proof = verify() if arguments.verify_only else prepare()
+    if arguments.prepare_retry:
+        proof = prepare_retry()
+    elif arguments.verify_retry:
+        proof = verify_retry()
+    else:
+        proof = verify() if arguments.verify_only else prepare()
     print(json.dumps({'status': proof['status'], 'payloadFiles': proof['payload_file_count'],
                       'byteIdenticalMirrors': proof['path_mirror_count'],
-                      'proof': str(DEST / 'preparation.json'), 'nativeLaunched': False}))
+                      'proof': str(DEST / ('before-002-preparation.json' if arguments.prepare_retry or arguments.verify_retry else 'preparation.json')), 'nativeLaunched': False}))
 
 if __name__ == '__main__':
     main()

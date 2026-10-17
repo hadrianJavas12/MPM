@@ -14,7 +14,8 @@
                      (uiop:parse-native-namestring (third arguments))))))
   (unless (and (= (length arguments) 3) old-root case-file output
                (probe-file old-root) (probe-file case-file))
-    (error "Supply copied-old-root, trusted case and fresh output directory."))
+    (error "Supply copied-old-root, trusted case and fresh output directory; received ~D arguments: ~S."
+           (length arguments) arguments))
   (when (or (uiop:subpathp output old-root) (uiop:subpathp old-root output))
     (error "Old-source root and output must be separate trees."))
   ;; The old CLI independently checks a fresh project runtime, all selected
