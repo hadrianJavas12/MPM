@@ -1,5 +1,38 @@
 # AI Engineering Handover — CL-MPM
 
+## New branch checkpoint — 2026-10-18: Unnotched Urmi Long angle sweep
+
+**Branch:** `feat/unnotched-slope-angle-sweep`; `main` remains unchanged.
+**Scope:** 5 slope angles (45, 55, 65, 75, 85 degrees) × 2 materials (H/HS),
+zero toe notch, headless Windows native CL-MPM, all panels in ONE MP4, NO plots.
+
+**Scientific baseline has been corrected to the latest M5 Urmi Long pair**:
+`cases/cliff/cliff-urmi-long-mc-h.lisp` and
+`cases/cliff/cliff-urmi-long-mc-hs.lisp`.
+Do NOT confuse this with the former Zhan-style standard cliff setup.
+Exact Urmi exponential-linear law: `make-urmi-evolution-law`, beta=-5, 8
+postpeak segments, original E/nu/density/strength coefficients. Baseline
+geometry 12 m slope / 4 m base / 48 m shelf / 54 m runout; mesh 0.5 m,
+2 MPs per cell per axis, 220 settling updates, 80 frames × 40 substeps,
+CFL 0.35. Differences by design: swept inclination, notch disabled,
+2 CPU workers per native process by default instead of 12 to suit 16 GB RAM.
+
+**Files:** `scripts/sweep_unnotched_slope.py`,
+`scripts/render_slope_montage.py`, `tests/test_slope_angle_sweep.py`,
+`docs/UNNOTCHED_SLOPE_SWEEP.md`,
+`wiki-vault/wiki/unnotched-slope-angle-sweep.md`.
+On Windows: `py -3 scripts\sweep_unnotched_slope.py --parallel 2 --workers 2`.
+Output: `output/slope-angle-sweep-urmi-long/all_angles_H_vs_HS.mp4`.
+The runner verifies manifests, CSV frames and VTK before encoding.
+Previous output schema is excluded with an upgraded plan scope and output folder.
+
+**Verification:** live GitHub sources read back; generated H/HS Lisp template
+parentheses balanced and material coefficients compared to exact M5 reference
+cases, no mismatches. **Native SBCL simulation, Python test suite and MP4
+encoding remain UNEXECUTED here**: complete validation must be done on the
+Windows laptop. Historic GitHub Actions failures should not be labeled green.
+
+
 **Operational checkpoint: 2026-10-17, Asia/Jakarta. Read this first.**
 **Milestones M0–M6 of the Mohr–Coulomb Hardening (Model H) vs Hardening–Softening (Model HS)
 comparative study are 100% COMPLETE on branch `codex/mc-hardening-softening-study` (branched
