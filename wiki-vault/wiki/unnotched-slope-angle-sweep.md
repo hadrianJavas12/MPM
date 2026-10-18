@@ -8,12 +8,13 @@
 
 Study angle dependence of progressive failure without artificial toe excavation:
 five angle pairs (45, 55, 65, 75, 85 deg), H vs HS, using identical
-Zhan-type prepeak strength, density, mesh and external gravity. All original M5
+**M5 Urmi Long-Duration** material law, geometry scale, density, mesh and gravity. All original M5
 cases, Studio code and physical constitutive laws are unchanged.
 
-The experiment reuses `cases/cliff/cliff-mc-hs.lisp` interfaces and
-`scenarios/cliff/execute.lisp` two-stage native run, but saves generated
-case sources under ignored `output/slope-angle-sweep/cases/`.
+The experiment reuses `cases/cliff/cliff-urmi-long-mc-h.lisp` and
+`cases/cliff/cliff-urmi-long-mc-hs.lisp` as scientific baseline,
+plus `scenarios/cliff/execute.lisp` two-stage native run, but saves generated
+case sources under ignored `output/slope-angle-sweep-urmi-long/cases/`.
 
 Batch runner: `scripts/sweep_unnotched_slope.py`.
 Composite-only video renderer: `scripts/render_slope_montage.py`.
@@ -42,7 +43,11 @@ equal physical time across cases.
 
 Visual failure is not a safety-factor measurement. Stiffness, residual
 strength, gravitational stress initialization, duration and mesh controls
-can change the inferred transition angle. The existing local MC softening
-law is mesh-sensitive; this branch is a reproducible exploratory batch,
+can change the inferred transition angle. The Urmi exponential-linear law (`beta=-5`, 8 postpeak segments) uses the
+original long-run parameters: 12 m height, 4 m base, 48 m shelf, 54 m
+runout, 0.5 m mesh, 220 settle steps, and 80×40 dynamic updates.
+Only slope angle, removed notch, and the user-controlled native worker count
+change by default; the original long benchmark remains untouched.
+The existing local MC softening law is mesh-sensitive; this branch is a reproducible exploratory batch,
 not a calibrated prediction. Extend to sub-45-degree slopes only after the
 canonical config schema and geometry width are deliberately supported.
