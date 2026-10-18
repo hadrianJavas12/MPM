@@ -9,7 +9,6 @@ from __future__ import annotations
 import argparse
 import concurrent.futures
 import csv
-import hashlib
 import json
 import math
 import os
@@ -19,7 +18,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_ANGLES = (45, 55, 65, 75, 85)
-BRANCH_SCOPE = "unnotched-slope-angle-h-vs-hs-v1"
+BRANCH_SCOPE = "unnotched-slope-angle-urmi-long-h-vs-hs-v2"
 MODELS = ("H", "HS")
 
 
@@ -43,6 +42,7 @@ def case_content(angle: int, model: str, plan: dict) -> str:
   (setf (gethash "substeps" params) {plan['substeps']}
         (gethash "settleSteps" params) {plan['settle_steps']}
         (gethash "cflScale" params) {lisp_double(plan['cfl_scale'])}
+        (gethash "elongatedShelfAspect" params) {lisp_double(plan['shelf_aspect'])}
         (gethash "runoutAspect" params) {lisp_double(plan['runout_aspect'])})
   (setf *simulation*
         (make-simulation
@@ -53,14 +53,22 @@ def case_content(angle: int, model: str, plan: dict) -> str:
                     :poisson-ratio 0.2d0
                     :density 1917.07d0
                     :evolution-law
-                    (cl-mpm/models/mc-evolution:make-evolution-law
+                    (cl-mpm/models/mc-evolution:make-urmi-evolution-law
                      :variant :{variant}
-                     :points '((0d0 15d0) (0.05d0 20d0) (0.20d0 13d0))
-                     :cohesion-points '((0d0 5000d0) (0.05d0 7000d0)
-                                        (0.20d0 2000d0))
-                     :psi 1.0d0
+                     :prepeak-points '((0d0 15.0d0) (0.05d0 20.0d0))
+                     :prepeak-cohesion-points '((0d0 5000d0) (0.05d0 7000d0))
                      :peak-kappa 0.05d0
-                     :strain-assumption "Exploratory gravity-only, unnotched slope sweep; no calibration claim"))
+                     :residual-kappa 0.20d0
+                     :phi-peak-deg 20.0d0
+                     :phi-post-rupture-deg 16.0d0
+                     :phi-residual-deg 13.0d0
+                     :c-peak-pa 7000d0
+                     :c-post-rupture-pa 4000d0
+                     :c-residual-pa 2000d0
+                     :beta -5.0d0
+                     :postpeak-segments 8
+                     :psi 1.0d0
+                     :strain-assumption "Urmi Long M5 baseline; gravity-only, unnotched angle sweep; exploratory"))
          :geometry (make-geometry :cliff
                     :height {lisp_double(plan['height'])}
                     :shelf-aspect {lisp_double(plan['shelf_aspect'])}
@@ -112,7 +120,7 @@ def make_plan(args: argparse.Namespace) -> dict:
         "mesh_size": args.mesh_size, "mps_per_cell": args.mps_per_cell,
         "frames": args.frames, "substeps": args.substeps, "settle_steps": args.settle_steps,
         "cfl_scale": args.cfl_scale, "workers": args.workers,
-        "reference": "Zhan-style H/HS paired constitutive parameters from repository's M5 cliff cases",
+        "reference": "M5 Urmi Long-Duration: cases/cliff/cliff-urmi-long-mc-{h,hs}.lisp (only slope, notch, optional solver/geometry overrides)",
         "synchronization": "equal saved frame/update number; actual physical time shown per panel",
     }
 
@@ -205,19 +213,19 @@ def main(argv=None) -> int:
     parser.add_argument("--angles", type=int, nargs="+", default=list(DEFAULT_ANGLES))
     parser.add_argument("--height", type=float, default=12)
     parser.add_argument("--base-height", type=float, default=4)
-    parser.add_argument("--shelf-aspect", type=float, default=1.5)
-    parser.add_argument("--runout-aspect", type=float, default=2.0)
-    parser.add_argument("--mesh-size", type=float, default=0.75)
+    parser.add_argument("--shelf-aspect", type=float, default=4.0)
+    parser.add_argument("--runout-aspect", type=float, default=4.5)
+    parser.add_argument("--mesh-size", type=float, default=0.5)
     parser.add_argument("--mps-per-cell", type=int, default=2)
-    parser.add_argument("--frames", type=int, default=40)
-    parser.add_argument("--substeps", type=int, default=30)
-    parser.add_argument("--settle-steps", type=int, default=300)
-    parser.add_argument("--cfl-scale", type=float, default=0.25)
+    parser.add_argument("--frames", type=int, default=80)
+    parser.add_argument("--substeps", type=int, default=40)
+    parser.add_argument("--settle-steps", type=int, default=220)
+    parser.add_argument("--cfl-scale", type=float, default=0.35)
     parser.add_argument("--workers", type=int, default=2)
     parser.add_argument("--parallel", type=int, choices=(1, 2), default=1,
                         help="Number of simultaneous native simulations; 1 uses less RAM")
     parser.add_argument("--fps", type=int, default=8)
-    parser.add_argument("--output", type=Path, default=ROOT / "output" / "slope-angle-sweep")
+    parser.add_argument("--output", type=Path, default=ROOT / "output" / "slope-angle-sweep-urmi-long")
     parser.add_argument("--dry-run", action="store_true", help="Generate files without running solver or video")
     parser.add_argument("--render-only", action="store_true", help="Only render existing, completed VTK runs")
     args = parser.parse_args(argv)
