@@ -20,9 +20,9 @@ import numpy as np
 class TestSlopeAngleSweep(unittest.TestCase):
     def options(self, **overrides):
         args = dict(angles=[45, 55, 65], height=12., base_height=4.,
-                    shelf_aspect=1.5, runout_aspect=2.0, mesh_size=0.75,
-                    mps_per_cell=2, frames=2, substeps=3, settle_steps=10,
-                    cfl_scale=0.25, workers=2, parallel=1)
+                    shelf_aspect=4.0, runout_aspect=4.5, mesh_size=0.5,
+                    mps_per_cell=2, frames=80, substeps=40, settle_steps=220,
+                    cfl_scale=0.35, workers=2, parallel=1)
         args.update(overrides)
         return argparse.Namespace(**args)
 
@@ -34,13 +34,40 @@ class TestSlopeAngleSweep(unittest.TestCase):
             self.assertIn(":slope 55.00000000d0", source)
             self.assertIn(":notch-height 0d0", source)
             self.assertIn(":notch-depth 0d0", source)
-            self.assertIn(":mesh-size 0.75000000d0", source)
+            self.assertIn(":mesh-size 0.50000000d0", source)
+            self.assertIn('(gethash "elongatedShelfAspect" params) 4.00000000d0', source)
+            self.assertIn('(gethash "runoutAspect" params) 4.50000000d0', source)
+            self.assertIn('(gethash "settleSteps" params) 220', source)
+            self.assertIn('(gethash "cflScale" params) 0.35000000d0', source)
+            self.assertIn(":frames 80", source)
+            self.assertIn('(cl-mpm/models/mc-evolution:make-urmi-evolution-law', source)
+            self.assertNotIn('(cl-mpm/models/mc-evolution:make-evolution-law', source)
+            self.assertIn(":beta -5.0d0", source)
+            self.assertIn(":postpeak-segments 8", source)
+            self.assertIn(":residual-kappa 0.20d0", source)
             self.assertIn(":loading (make-loading :gravity)", source)
         self.assertIn(":material (make-material :mc-h\n", h)
         self.assertIn(":variant :h\n", h)
         self.assertIn(":material (make-material :mc-hs\n", hs)
         self.assertIn(":variant :hs\n", hs)
         self.assertEqual(h.replace(":mc-h", ":mc-hs").replace(":variant :h\n", ":variant :hs\n"), hs)
+        for model, generated in (("h", h), ("hs", hs)):
+            baseline = (ROOT / "cases" / "cliff" / f"cliff-urmi-long-mc-{model}.lisp").read_text(encoding="utf-8")
+            # Verify every scientific Urmi-law parameter stays identical to
+            # the actual reference cases, not merely to a duplicated fixture.
+            import re
+            for key in ("prepeak-points", "prepeak-cohesion-points", "peak-kappa",
+                        "residual-kappa", "phi-peak-deg", "phi-post-rupture-deg",
+                        "phi-residual-deg", "c-peak-pa", "c-post-rupture-pa",
+                        "c-residual-pa", "beta", "postpeak-segments", "psi",
+                        "youngs-modulus", "poisson-ratio", "density"):
+                pattern = rf":{re.escape(key)}\\s+([^\\n]+)"
+                reference_value = re.search(pattern, baseline)
+                generated_value = re.search(pattern, generated)
+                self.assertIsNotNone(reference_value, key)
+                self.assertIsNotNone(generated_value, key)
+                self.assertEqual(reference_value.group(1).strip(),
+                                 generated_value.group(1).strip(), key)
 
     def test_crest_and_schema_bounds(self):
         with self.assertRaises(ValueError):
