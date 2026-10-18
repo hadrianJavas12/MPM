@@ -61,7 +61,7 @@ class TestSlopeAngleSweep(unittest.TestCase):
                         "phi-residual-deg", "c-peak-pa", "c-post-rupture-pa",
                         "c-residual-pa", "beta", "postpeak-segments", "psi",
                         "youngs-modulus", "poisson-ratio", "density"):
-                pattern = rf":{re.escape(key)}\\s+([^\\n]+)"
+                pattern = rf":{re.escape(key)}\s+([^\n]+)"
                 reference_value = re.search(pattern, baseline)
                 generated_value = re.search(pattern, generated)
                 self.assertIsNotNone(reference_value, key)
