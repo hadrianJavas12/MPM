@@ -11,6 +11,37 @@ gravity, constitutive pre-peak parameters, discretization, and time-stepping,
 except that H stays on the peak friction/cohesion plateau while HS softens to
 residual strength. **No toe notch** (`:notch-height 0d0`).
 
+## Exact reference baseline
+
+This sweep now inherits its parameters from the latest **M5 Urmi Long-Duration**
+pair: `cases/cliff/cliff-urmi-long-mc-h.lisp` and
+`cases/cliff/cliff-urmi-long-mc-hs.lisp`. The references are preserved intact.
+
+| Component | Urmi Long baseline / sweep default |
+| --- | --- |
+| Slope height + foundation | 12 m + 4 m |
+| Plateau / shelf aspect | 4.0 (48 m) |
+| Runout aspect | 4.5 (54 m) |
+| Total horizontal domain | 102 m |
+| Inclination | Sweep 45°, 55°, 65°, 75°, 85°; replaces 72° |
+| Toe notch | Removed (height=depth=0); original used 2.5 m × 2.5 m |
+| Grid size | 0.5 m |
+| Material points per cell axis | 2 |
+| Elastic gravity settling | 220 updates |
+| Dynamic simulation | 80 frames × 40 substeps = 3,200 updates |
+| CFL scale | 0.35 |
+| Constitutive law | `make-urmi-evolution-law`, H plateau vs HS exponential–linear |
+| Urmi softening shape | beta = -5, 8 post-peak segments |
+| Material | E = 5.25 MPa, nu = 0.2, rho = 1917.07 kg/m³ |
+| Cohesion initial/peak/post-rupture/residual | 5/7/4/2 kPa |
+| Friction angle initial/peak/post-rupture/residual | 15/20/16/13 degrees |
+| Native worker threads per case | Default 2 for a 16 GB laptop; original M5 used 12 |
+
+The script retains parameter overrides for controlled follow-up studies.
+For the default experiment, only **angle, removed notch, and available CPU
+worker threads** differ from the M5 Urmi Long pair. Equal step counts do
+not guarantee equal physical end time because the CFL estimate is dynamic.
+
 Default angles: **45, 55, 65, 75, 85 degrees** (10 solver runs).
 
 For every angle the runner uses the existing two-stage MPM cliff implementation:
@@ -19,7 +50,7 @@ updates. Cases are executed with the repository's source-snapshot-protected
 Windows `scripts/run-case.lisp` interface.
 
 **One video only** is created automatically on success:
-`output/slope-angle-sweep/all_angles_H_vs_HS.mp4`.
+`output/slope-angle-sweep-urmi-long/all_angles_H_vs_HS.mp4`.
 
 The video shows **all angles concurrently**, one row per angle, H on the left,
 HS on the right. Particles are drawn using the actual saved VTK geometry with
@@ -58,7 +89,7 @@ py -3 scripts\sweep_unnotched_slope.py
 Open the final video:
 
 ```powershell
-Invoke-Item .\output\slope-angle-sweep\all_angles_H_vs_HS.mp4
+Invoke-Item .\output\slope-angle-sweep-urmi-long\all_angles_H_vs_HS.mp4
 ```
 
 Other useful commands:
@@ -77,14 +108,15 @@ py -3 scripts\sweep_unnotched_slope.py --parallel 2 --output output\sweep-parall
 py -3 scripts\sweep_unnotched_slope.py --render-only
 ```
 
-Recommended on low-memory laptops: retain `--parallel 1` (default). The
+For a ROG Flow X13 Ryzen 9 / 16 GB RAM, begin with `--parallel 2` or use
+`--parallel 1` if memory runs short. The
 `--workers` parameter controls threads *per solver*, independently from
 `--parallel`. Default is 2 native threads per solver process.
 
 ## Output
 
 ```text
-output/slope-angle-sweep/
+output/slope-angle-sweep-urmi-long/
   plan.json                 immutable sweep parameters
   cases/                   generated case files for each slope/model
   runs/slope_45_h/         native VTKs, CSV, manifests, frozen source snapshot
@@ -112,8 +144,10 @@ prevent mixing different experiments.
 - `:slope` is the inclined free-face angle to the horizontal; no toe notch.
 - Existing schema restricts `:slope` to 45–90 degrees. This sweep deliberately
   respects that contract instead of silently modifying the Studio shared schema.
-- Parameters match the existing Zhan-style M5 reference, but are **not**
-  calibrated to an arbitrary field slope. The runs are exploratory.
+- All default material evolution parameters and long-duration geometry match the
+  final **M5 Urmi Long** reference except the swept angle, removed notch, and
+  reduced compute workers. They are **not** calibrated to an arbitrary field
+  slope; the runs are exploratory.
 - A visibly motionless frame or small final displacement is **not** proof of
   stability; a moving frame is not in itself a factor-of-safety calculation.
 - A fixed output horizon can miss delayed failure; refine duration, angle
