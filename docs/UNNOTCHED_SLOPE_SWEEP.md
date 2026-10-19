@@ -68,22 +68,32 @@ cd D:\MPM
 git fetch origin
 git switch feat/unnotched-slope-angle-sweep
 git pull --ff-only
+# Verify the intended remote branch and case defaults:
+git rev-parse --short HEAD
+Select-String -Path scripts\sweep_unnotched_slope.py -Pattern 'DEFAULT_ANGLES|slope-angle-sweep-urmi-long-6'
 ```
+
+Expected: 3 default angles `(45, 65, 85)` and an output directory ending
+in `-6`. The checkpoint head after the six-case switch is `9df3b8f`.
+If the local branch is older despite `git pull`, inspect `git branch -vv`
+and `git remote -v` rather than forcing a reset.
 
 Check native dependencies: the existing `windows\cl-mpm.cmd` must work, and
 Python needs `numpy` and `Pillow`, while `ffmpeg` must be on `PATH`.
+The Windows `py` launcher is optional; this guide uses `python` to also work
+on installations without `py.exe`.
 If your analysis virtual environment is available, use its Python. Otherwise:
 
 ```powershell
-py -3 -m pip install numpy pillow
+python -m pip install numpy pillow
 ffmpeg -version
-py -3 -m unittest discover -s tests -p "test_slope_angle_sweep.py"
+python -m unittest discover -s tests -p "test_slope_angle_sweep.py"
 ```
 
 Run the batch and render the single video **automatically**:
 
 ```powershell
-py -3 scripts\sweep_unnotched_slope.py
+python scripts\sweep_unnotched_slope.py
 ```
 
 Open the final video:
@@ -96,16 +106,16 @@ Other useful commands:
 
 ```powershell
 # Quick plan preview: generate case files WITHOUT running MPM.
-py -3 scripts\sweep_unnotched_slope.py --dry-run --output output\preview-sweep
+python scripts\sweep_unnotched_slope.py --dry-run --output output\preview-sweep
 
 # Only 3 slopes: 6 native simulations. Always use a new output folder for new settings.
-py -3 scripts\sweep_unnotched_slope.py --angles 45 60 75 --frames 50 --output output\sweep-3-angle
+python scripts\sweep_unnotched_slope.py --angles 45 60 75 --frames 50 --output output\sweep-3-angle
 
 # Optional two concurrent native simulations, if enough CPU and memory.
-py -3 scripts\sweep_unnotched_slope.py --parallel 2 --output output\sweep-parallel
+python scripts\sweep_unnotched_slope.py --parallel 2 --output output\sweep-parallel
 
 # Re-encode the video from complete saved VTKs WITHOUT rerunning the solver.
-py -3 scripts\sweep_unnotched_slope.py --render-only
+python scripts\sweep_unnotched_slope.py --render-only
 ```
 
 For a ROG Flow X13 Ryzen 9 / 16 GB RAM, begin with `--parallel 2` or use
