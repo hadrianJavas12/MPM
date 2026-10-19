@@ -7,14 +7,14 @@
 ## Intent and scope
 
 Study angle dependence of progressive failure without artificial toe excavation:
-five angle pairs (45, 55, 65, 75, 85 deg), H vs HS, using identical
+three angle pairs (45, 65, 85 deg), H vs HS, using identical
 **M5 Urmi Long-Duration** material law, geometry scale, density, mesh and gravity. All original M5
 cases, Studio code and physical constitutive laws are unchanged.
 
 The experiment reuses `cases/cliff/cliff-urmi-long-mc-h.lisp` and
 `cases/cliff/cliff-urmi-long-mc-hs.lisp` as scientific baseline,
 plus `scenarios/cliff/execute.lisp` two-stage native run, but saves generated
-case sources under ignored `output/slope-angle-sweep-urmi-long/cases/`.
+case sources under ignored `output/slope-angle-sweep-urmi-long-6/cases/`.
 
 Batch runner: `scripts/sweep_unnotched_slope.py`.
 Composite-only video renderer: `scripts/render_slope_montage.py`.
