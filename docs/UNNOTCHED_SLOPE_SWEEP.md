@@ -23,7 +23,7 @@ pair: `cases/cliff/cliff-urmi-long-mc-h.lisp` and
 | Plateau / shelf aspect | 4.0 (48 m) |
 | Runout aspect | 4.5 (54 m) |
 | Total horizontal domain | 102 m |
-| Inclination | Sweep 45°, 55°, 65°, 75°, 85°; replaces 72° |
+| Inclination | Sweep 45°, 65°, 85°; replaces 72° |
 | Toe notch | Removed (height=depth=0); original used 2.5 m × 2.5 m |
 | Grid size | 0.5 m |
 | Material points per cell axis | 2 |
@@ -42,7 +42,7 @@ For the default experiment, only **angle, removed notch, and available CPU
 worker threads** differ from the M5 Urmi Long pair. Equal step counts do
 not guarantee equal physical end time because the CFL estimate is dynamic.
 
-Default angles: **45, 55, 65, 75, 85 degrees** (10 solver runs).
+Default angles: **45, 65, 85 degrees** (6 solver runs).
 
 For every angle the runner uses the existing two-stage MPM cliff implementation:
 high-damping elastic gravity initialization, then low-damping elastoplastic
@@ -50,7 +50,7 @@ updates. Cases are executed with the repository's source-snapshot-protected
 Windows `scripts/run-case.lisp` interface.
 
 **One video only** is created automatically on success:
-`output/slope-angle-sweep-urmi-long/all_angles_H_vs_HS.mp4`.
+`output/slope-angle-sweep-urmi-long-6/all_angles_H_vs_HS.mp4`.
 
 The video shows **all angles concurrently**, one row per angle, H on the left,
 HS on the right. Particles are drawn using the actual saved VTK geometry with
@@ -89,7 +89,7 @@ py -3 scripts\sweep_unnotched_slope.py
 Open the final video:
 
 ```powershell
-Invoke-Item .\output\slope-angle-sweep-urmi-long\all_angles_H_vs_HS.mp4
+Invoke-Item .\output\slope-angle-sweep-urmi-long-6\all_angles_H_vs_HS.mp4
 ```
 
 Other useful commands:
@@ -116,7 +116,7 @@ For a ROG Flow X13 Ryzen 9 / 16 GB RAM, begin with `--parallel 2` or use
 ## Output
 
 ```text
-output/slope-angle-sweep-urmi-long/
+output/slope-angle-sweep-urmi-long-6/
   plan.json                 immutable sweep parameters
   cases/                   generated case files for each slope/model
   runs/slope_45_h/         native VTKs, CSV, manifests, frozen source snapshot
