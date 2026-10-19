@@ -12,19 +12,25 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from sweep_unnotched_slope import make_plan, case_content, prepare, verified_run, entries
+from sweep_unnotched_slope import DEFAULT_ANGLES, make_plan, case_content, prepare, verified_run, entries
 from render_slope_montage import kappa_color, draw_panel
 import numpy as np
 
 
 class TestSlopeAngleSweep(unittest.TestCase):
     def options(self, **overrides):
-        args = dict(angles=[45, 55, 65], height=12., base_height=4.,
+        args = dict(angles=list(DEFAULT_ANGLES), height=12., base_height=4.,
                     shelf_aspect=4.0, runout_aspect=4.5, mesh_size=0.5,
                     mps_per_cell=2, frames=80, substeps=40, settle_steps=220,
                     cfl_scale=0.35, workers=2, parallel=1)
         args.update(overrides)
         return argparse.Namespace(**args)
+
+    def test_default_six_scenarios(self):
+        self.assertEqual(DEFAULT_ANGLES, (45, 65, 85))
+        plan = make_plan(self.options())
+        self.assertEqual(len(list(entries(plan, Path("ignored")))), 6)
+        self.assertEqual(plan["angles"], [45, 65, 85])
 
     def test_pair_is_identical_except_constitutive_variant(self):
         plan = make_plan(self.options())
