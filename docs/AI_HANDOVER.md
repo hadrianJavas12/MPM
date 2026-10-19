@@ -3,7 +3,7 @@
 ## New branch checkpoint — 2026-10-18: Unnotched Urmi Long angle sweep
 
 **Branch:** `feat/unnotched-slope-angle-sweep`; `main` remains unchanged.
-**Scope:** 5 slope angles (45, 55, 65, 75, 85 degrees) × 2 materials (H/HS),
+**Scope:** 3 slope angles (45, 65, 85 degrees) × 2 materials (H/HS) = 6 native simulations,
 zero toe notch, headless Windows native CL-MPM, all panels in ONE MP4, NO plots.
 
 **Scientific baseline has been corrected to the latest M5 Urmi Long pair**:
@@ -22,7 +22,7 @@ CFL 0.35. Differences by design: swept inclination, notch disabled,
 `docs/UNNOTCHED_SLOPE_SWEEP.md`,
 `wiki-vault/wiki/unnotched-slope-angle-sweep.md`.
 On Windows: `py -3 scripts\sweep_unnotched_slope.py --parallel 2 --workers 2`.
-Output: `output/slope-angle-sweep-urmi-long/all_angles_H_vs_HS.mp4`.
+Output: `output/slope-angle-sweep-urmi-long-6/all_angles_H_vs_HS.mp4`.
 The runner verifies manifests, CSV frames and VTK before encoding.
 Previous output schema is excluded with an upgraded plan scope and output folder.
 
