@@ -17,8 +17,8 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_ANGLES = (45, 55, 65, 75, 85)
-BRANCH_SCOPE = "unnotched-slope-angle-urmi-long-h-vs-hs-v2"
+DEFAULT_ANGLES = (45, 65, 85)
+BRANCH_SCOPE = "unnotched-slope-angle-urmi-long-h-vs-hs-v3-6cases"
 MODELS = ("H", "HS")
 
 
@@ -225,7 +225,7 @@ def main(argv=None) -> int:
     parser.add_argument("--parallel", type=int, choices=(1, 2), default=1,
                         help="Number of simultaneous native simulations; 1 uses less RAM")
     parser.add_argument("--fps", type=int, default=8)
-    parser.add_argument("--output", type=Path, default=ROOT / "output" / "slope-angle-sweep-urmi-long")
+    parser.add_argument("--output", type=Path, default=ROOT / "output" / "slope-angle-sweep-urmi-long-6")
     parser.add_argument("--dry-run", action="store_true", help="Generate files without running solver or video")
     parser.add_argument("--render-only", action="store_true", help="Only render existing, completed VTK runs")
     args = parser.parse_args(argv)
