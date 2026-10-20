@@ -1,5 +1,14 @@
 # AI Engineering Handover — CL-MPM
 
+## 2026-10-21 — CFL 0.10 probe: 65° HS reached frame 80
+
+User ran `python scripts/sweep_unnotched_slope.py --angles 65 --cfl-scale 0.10 --frames 80 --dry-run --output output/probe-65-cfl010`, then directly executed the `slope_65_hs.lisp` native case in a distinct directory `output/probe-65hs-cfl010-native`.
+Reported CLIFF frame=80/80, updates=3200, physical time=2.8406 s, max_kappa=7.0056, min_phi=13°, max_disp=7.8735 m, toe_runout=7.5675 m, KE=1.0384e5 J. No `NUMERICAL_FAILURE` appeared in the posted final 15 matching log lines. Prior CFL 0.35 65° HS failed at t=1.6087 s, frame 13 substep 38, j_increment=-7.4155.
+
+**Interpretation**: strong timestep sensitivity; run at smaller CFL has gone beyond the earlier failure time, but **80 frames cover only 2.84 s**, not the full time horizon of the 0.35 sweep, and native success/manifest not yet independently verified in the assistant environment. Do not equate a finished-frame log with solution convergence. Max_kappa and max_disp are instantaneous maxima across particles; their flat values from frames 73–80 do not establish global arrest.
+
+Next: check `output/probe-65hs-cfl010-native/manifest.json` and frame completeness; run isolated `--angles 65 --cfl-scale 0.10 --frames 300 --dry-run --output output/probe-65-cfl010-300` and native 65 HS into a fresh output to target about 10.6 s physical time. If successful, compare at matched physical times and repeat a tighter CFL (e.g. 0.05) for convergence before selecting batch-wide stabilization. No source changes to physical solver based on the present log.
+
 ## 2026-10-20 — Actual 6-case run failed on negative MPM Jacobian
 
 At `7dcc2ce`, native Windows results: 45° H and 85° H complete;
