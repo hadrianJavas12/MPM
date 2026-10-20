@@ -39,6 +39,25 @@ equal physical time across cases.
   on this branch. GitHub Actions on original main were failing; do not claim CI
   success for this work.
 
+## 2026-10-20 native run checkpoint: Jacobian inversion (IN_PROGRESS)
+
+Laptop completed `45 H` and `85 H`; `45 HS` (frame 35), `65 H`
+(frame 47), `65 HS` (frame 12) and `85 HS` (frame 12) all stopped with
+`ERROR-DF-NEGATIVE`. This is an invalid negative local deformation-gradient
+determinant, not a validated physical failure endpoint.
+
+Instrumented `src/core/stress-update.lisp` to print particle position,
+velocity, raw deformation gradient increment, negative determinant; and
+`scenarios/cliff/execute.lisp` to print failed frame/substep, actual dt and
+physical time. **No solver equations, law coefficients, timestep, or inversion
+guards were changed.** Added a source regression test and single-case native
+reproduction guide at `docs/UNNOTCHED_SLOPE_SWEEP.md`.
+
+Pending: rerun only failing `slope_65_hs.lisp` into new output directory
+and inspect `MPM NUMERICAL_FAILURE` / `CLIFF NUMERICAL_FAILURE` entries.
+Native diagnostic execution remains **NOT_RUN** at handover. No new
+all-six result or MP4 is claimed.
+
 ## Scientific caution
 
 Visual failure is not a safety-factor measurement. Stiffness, residual
