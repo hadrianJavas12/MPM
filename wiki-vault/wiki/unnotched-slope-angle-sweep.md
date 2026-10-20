@@ -39,6 +39,20 @@ equal physical time across cases.
   on this branch. GitHub Actions on original main were failing; do not claim CI
   success for this work.
 
+## 2026-10-21 CFL probe — 65° HS
+
+A native run at CFL=0.10 and 80×40 updates printed frame 80/80 with
+time=2.8406 s, max displacement 7.8735 m, max kappa 7.0056, no inversion
+error in the provided log tail. This exceeded the prior CFL=0.35 inversion
+at t=1.6087 s, supporting strong time-step sensitivity.
+**Not yet a validated remedy**: the physical horizon is much shorter
+than the original sweep and no timestep convergence check exists.
+
+Next: verify completed manifest and 81 VTK states; run one 65° HS
+case at CFL=0.10 for 300 frames (fresh output) and then evaluate
+timestep sensitivity at matched physical time. Keep H/HS material
+parameters and safety checks unchanged.
+
 ## 2026-10-20 native run checkpoint: Jacobian inversion (IN_PROGRESS)
 
 Laptop completed `45 H` and `85 H`; `45 HS` (frame 35), `65 H`
