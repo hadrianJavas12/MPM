@@ -1,5 +1,27 @@
 # AI Engineering Handover — CL-MPM
 
+## 2026-10-20 — Actual 6-case run failed on negative MPM Jacobian
+
+At `7dcc2ce`, native Windows results: 45° H and 85° H complete;
+45° HS, 65° H, 65° HS, 85° HS fail on
+`CL-MPM/ERRORS:ERROR-DF-NEGATIVE`, ending at frames 35, 47, 12, 12.
+Prior stage 1 and partial stage 2 succeeded but final outputs are
+scientifically incomplete. No new montage exists.
+
+Diagnostic-only branch commits:
+- `src/core/stress-update.lisp`: negative `det(dF)` material particle
+  position, velocity, matrix, determinant (retains the original error).
+- `scenarios/cliff/execute.lisp`: failing frame, substep, dt, physical time,
+  then rethrows the original condition.
+- `tests/test_slope_angle_sweep.py`: regression of instrumentation and guard.
+- `docs/UNNOTCHED_SLOPE_SWEEP.md`: command to run JUST 65° HS in a separate
+  native output folder and retrieve diagnostic log.
+
+Physics, baseline Urmi laws, computed CFL and H/HS 6-case plan unchanged.
+The instrumented native rerun has **NOT** been performed in this environment.
+Do not disable the Jacobian guard or claim that decreasing CFL is a
+scientifically validated fix. Preserve old output folders and VTK.
+
 ## New branch checkpoint — 2026-10-18: Unnotched Urmi Long angle sweep
 
 **Branch:** `feat/unnotched-slope-angle-sweep`; `main` remains unchanged.
