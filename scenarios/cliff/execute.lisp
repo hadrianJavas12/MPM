@@ -209,7 +209,17 @@ low-damping elasto-plastic progressive failure propagation) with full CSV/VTK/ma
               (dotimes (s substeps)
                 (setf (cl-mpm:sim-dt sim)
                       (* cfl-scale (cl-mpm/setup:estimate-elastic-dt sim)))
-                (cl-mpm:update-sim sim)
+                ;; Diagnose the precise failed update while preserving the
+                ;; original fail-closed error and leaving MPM physics unchanged.
+                (handler-case
+                    (cl-mpm:update-sim sim)
+                  (cl-mpm/errors:error-dF-negative (failure)
+                    (format *error-output*
+                            "~&CLIFF NUMERICAL_FAILURE ERROR-DF-NEGATIVE frame=~D substep=~D/~D completed_updates=~D time_s=~,10E dt_s=~,10E cfl_scale=~,5F~%"
+                            step (1+ s) substeps total-updates
+                            (cl-mpm::sim-time sim) (cl-mpm:sim-dt sim) cfl-scale)
+                    (finish-output *error-output*)
+                    (error failure)))
                 (incf total-updates))
               (write-state step "stage2_dynamic")))
           (let ((manifest (make-hash-table :test #'equal))
