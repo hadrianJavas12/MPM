@@ -130,8 +130,22 @@
                             (cl-mpm/utils:matrix-eye 1d0))))
         (cl-mpm/fastmaths::fast-.+-matrix df stretch-tensor df)
         ;; (setf dJ (cl-mpm/fastmaths:det-3x3 df))
-        (when (< (cl-mpm/fastmaths:det-3x3 df) 0d0)
-          (error 'cl-mpm/errors:error-dF-negative))
+        ;; Diagnostic-only: preserve the original strict negative-Jacobian
+        ;; guard, but include the offending material point in the native log.
+        (let ((j-increment (cl-mpm/fastmaths:det-3x3 df)))
+          (when (< j-increment 0d0)
+            (format *error-output*
+                    "~&MPM NUMERICAL_FAILURE ERROR-DF-NEGATIVE source=calculate-df j_increment=~,12E pos=(~,8E,~,8E) vel=(~,8E,~,8E)~%"
+                    j-increment (magicl:tref pos 0 0) (magicl:tref pos 1 0)
+                    (magicl:tref (cl-mpm/particle:mp-velocity mp) 0 0)
+                    (magicl:tref (cl-mpm/particle:mp-velocity mp) 1 0))
+            (format *error-output*
+                    "MPM NUMERICAL_FAILURE dF=[(~,8E ~,8E ~,8E) (~,8E ~,8E ~,8E) (~,8E ~,8E ~,8E)]~%"
+                    (magicl:tref df 0 0) (magicl:tref df 0 1) (magicl:tref df 0 2)
+                    (magicl:tref df 1 0) (magicl:tref df 1 1) (magicl:tref df 1 2)
+                    (magicl:tref df 2 0) (magicl:tref df 2 1) (magicl:tref df 2 2))
+            (finish-output *error-output*)
+            (error 'cl-mpm/errors:error-dF-negative)))
         (cl-mpm/utils:matrix-copy-into df df-strain)
         ;;Explicit fbar
         (when fbar
@@ -186,8 +200,13 @@
                   (declare (fixnum nd))
                   (cl-mpm/fastmaths::matrix-reset-identity df-fbar)
                   (cl-mpm/fastmaths::fast-.+-matrix df-fbar stretch-tensor-fbar df-fbar)
-                  (when (< (cl-mpm/fastmaths:det-3x3 df-fbar) 0d0)
-                    (error 'cl-mpm/errors:error-dF-negative))
+                  (let ((j-fbar (cl-mpm/fastmaths:det-3x3 df-fbar)))
+                    (when (< j-fbar 0d0)
+                      (format *error-output*
+                              "~&MPM NUMERICAL_FAILURE ERROR-DF-NEGATIVE source=calculate-df-fbar j_increment=~,12E pos=(~,8E,~,8E)~%"
+                              j-fbar (magicl:tref pos 0 0) (magicl:tref pos 1 0))
+                      (finish-output *error-output*)
+                      (error 'cl-mpm/errors:error-dF-negative)))
                   (cl-mpm/fastmaths::fast-scale!
                    df-strain
                    (expt
