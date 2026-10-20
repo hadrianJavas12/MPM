@@ -26,6 +26,18 @@ class TestSlopeAngleSweep(unittest.TestCase):
         args.update(overrides)
         return argparse.Namespace(**args)
 
+    def test_inversion_diagnostics_preserve_fail_closed_solver(self):
+        """Static regression: instrumentation must never hide inverted dF."""
+        core = (ROOT / "src" / "core" / "stress-update.lisp").read_text(encoding="utf-8")
+        cliff = (ROOT / "scenarios" / "cliff" / "execute.lisp").read_text(encoding="utf-8")
+        self.assertIn("j_increment=", core)
+        self.assertIn("MPM NUMERICAL_FAILURE dF=", core)
+        self.assertIn("source=calculate-df-fbar", core)
+        self.assertGreaterEqual(core.count("(error 'cl-mpm/errors:error-dF-negative)"), 2)
+        self.assertIn("CLIFF NUMERICAL_FAILURE ERROR-DF-NEGATIVE frame=", cliff)
+        self.assertIn("completed_updates=", cliff)
+        self.assertIn("(error failure)", cliff)
+
     def test_default_six_scenarios(self):
         self.assertEqual(DEFAULT_ANGLES, (45, 65, 85))
         plan = make_plan(self.options())
