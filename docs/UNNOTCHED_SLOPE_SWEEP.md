@@ -149,6 +149,44 @@ No video frames are fabricated if a native simulation fails.
 Changing the sweep parameters in the same output folder is rejected to
 prevent mixing different experiments.
 
+## Native ERROR-DF-NEGATIVE investigation (2026-10-20)
+
+The first actual native six-case batch (default Urmi parameters, CFL 0.35)
+completed **45° H and 85° H**, but 45° HS, 65° H, 65° HS, and 85° HS
+stopped on `CL-MPM/ERRORS:ERROR-DF-NEGATIVE`. The observed last completed
+frames were 35, 47, 12, and 12 respectively. These are **incomplete
+simulations**, NOT scientific proof of instability or a validated runout.
+
+The branch now emits a precise failure trace without modifying the
+constitutive law, determinant guard, CFL calculation, or timestep. The original
+core condition is still raised. Its enhanced log records:
+
+- `MPM NUMERICAL_FAILURE`: first inverted material point's `j_increment`,
+  planar position, velocity, and full 3×3 deformation increment `dF`
+- `CLIFF NUMERICAL_FAILURE`: requested output frame, failed substep,
+  completed integration updates, physical time, instantaneous `dt_s`, CFL
+
+After fetching the latest branch, **reproduce just one failing case** in a new
+output folder without rerunning any completed cases:
+
+```powershell
+cd D:\MPM
+.\windows\cl-mpm.cmd .\scripts\run-case.lisp .\output\slope-angle-sweep-urmi-long-6\cases\slope_65_hs.lisp .\output\diagnostic-65-hs-1 2>&1 | Tee-Object .\output\diagnostic-65-hs-1.log
+
+Select-String -Path .\output\diagnostic-65-hs-1.log -Pattern 'NUMERICAL_FAILURE'
+```
+
+Run again only with a **new** diagnostic output path. A failed run will leave
+valuable partial results and does not produce a complete manifest. Never delete
+or overwrite these to conceal a failure.
+
+**Next scientific check:** determine the failing particle's spatial region and
+distinguish integration-step dependence from severe localization. An optional
+smaller CFL can be tested with the existing sweep CLI and a separate `--output`,
+but the same frame/substep count then covers **less physical time**; increase
+steps or compare at matched physical times. A smaller timestep alone is not
+validated stabilization and never justifies disabling the guard.
+
 ## Scope and cautions
 
 - `:slope` is the inclined free-face angle to the horizontal; no toe notch.
