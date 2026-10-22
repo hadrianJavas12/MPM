@@ -75,6 +75,21 @@
             (cl-mpm/bc::apply-sim-bc sim strip 0d0)
             (let ((expected (* (strip-epsilon strip) 3d0 descent)))
               (check-close (strip-reaction strip) expected)
-              (check-close (strip-mapped-reaction strip) expected))))))))
+              (check-close (strip-mapped-reaction strip) expected)))))))
+  (check "Gravity budget failure persists an incomplete manifest instead of success"
+    (let* ((output (or (first (cl-user::cl-mpm-script-args))
+                       (error "Supply a fresh negative-control output directory.")))
+           (directory (uiop:ensure-directory-pathname output))
+           (short (alexandria:copy-hash-table config)))
+      (when (probe-file directory) (error "Negative-control directory must not exist."))
+      (setf (gethash "settleMaxUpdates" short) 1
+            (gethash "settleMinUpdates" short) 1
+            (gethash "settleHoldChecks" short) 2)
+      (assert (rejected-p (lambda () (run material short directory))))
+      (let ((record (cl-mpm/framework::read-parameter-json
+                     (merge-pathnames "manifest.json" directory))))
+        (assert (null (gethash "complete" record)))
+        (assert (equal (gethash "status" record) "failed"))
+        (assert (= (gethash "loadingUpdates" record) 0))))))
 (format t "~&WANG2017 DESCENT CONTROLS: ~D passed; no physical loading run executed.~%" *checks*)
 (uiop:quit 0)
