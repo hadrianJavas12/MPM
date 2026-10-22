@@ -1,0 +1,65 @@
+{
+  "passedConsistencyChecks": true,
+  "nativeComplete": true,
+  "scope": "Saved native output consistency, not calibrated landslide validation",
+  "constantSelfWeight": "self-weight plus unilateral tracked crest pusher; soil can outrun and separate",
+  "frames": 11,
+  "physicalTimeS": 1.0,
+  "maxDisplacementM": 0.013243411614915108,
+  "maxSpeedMPerS": 0.05208882283717539,
+  "maxCreepKappa": 0.002463002421503756,
+  "creepObserved": true,
+  "strengthLossObserved": true,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "vtk": [
+    {
+      "path": "vtk\\particles_0000.vtk",
+      "sha256": "1042c3b4ca8b0d640ba05f638352b0b70f390962d0eec6aa2cf5f54d44127e44"
+    },
+    {
+      "path": "vtk\\particles_0001.vtk",
+      "sha256": "4f1a3967a8be0cd0012dc43eee898fe2c0af0b9b36f376beefb4c7a307483f54"
+    },
+    {
+      "path": "vtk\\particles_0002.vtk",
+      "sha256": "09df71a54bf24e040ec2e3165e7b95a8dfb2abac59c5a62ea9625c7d075d70b1"
+    },
+    {
+      "path": "vtk\\particles_0003.vtk",
+      "sha256": "89b611870bfa7f79daf52bd2331eb38b7eb313aab14c276da53926e7232fb14b"
+    },
+    {
+      "path": "vtk\\particles_0004.vtk",
+      "sha256": "b50f7fa1ba48864b835a92c89f83373115003d60800f0a6aa1f83ee6d8f53e1b"
+    },
+    {
+      "path": "vtk\\particles_0005.vtk",
+      "sha256": "b20f266ee1259c2018e957848fa6705ed83295ddffcf10bab9c663db22989e86"
+    },
+    {
+      "path": "vtk\\particles_0006.vtk",
+      "sha256": "8469255acb43fd6f09964fbd36ab0122220ff1ef21698bebcdda6b346721f4a6"
+    },
+    {
+      "path": "vtk\\particles_0007.vtk",
+      "sha256": "17a6d5bce8a6946f1c37dd7fbc45563bf39b56e1d2cac4b0362470f4dde9c004"
+    },
+    {
+      "path": "vtk\\particles_0008.vtk",
+      "sha256": "7dcadd7d8eaa181755167d4bb420076eb0b6523f8141e8efe940b30936700873"
+    },
+    {
+      "path": "vtk\\particles_0009.vtk",
+      "sha256": "b6cdc437aeef68f3d17b15c41bfc9688fce7755ccbef332901b203c6b9171f82"
+    },
+    {
+      "path": "vtk\\particles_0010.vtk",
+      "sha256": "50f39c6f80d23313bb5c4dd0cd340c9aebd572a5582c6ad23ab1c82b40f36b2f"
+    }
+  ],
+  "unilateralContactHistoryConsistent": true,
+  "pusherVelocityMPerS": 0.005,
+  "soilOutranPusherObserved": true,
+  "zeroLoadFrameObserved": true
+}

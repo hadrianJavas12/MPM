@@ -622,3 +622,18 @@ to pilot-002 PASS:14 VTK files and all11 CSV states byte-identical, with identic
 physical config/cadence.15 hashes retain source/data/media/comparison. No repeat
 run is needed. The pusher pilot remains a separate active job; dynamic release
 and landslide outcomes are not inferred from this compatibility regression.
+
+## [2026-10-22] checkpoint | Bounded dynamic release passed; landslide unverified
+
+[[clay-creep-slope]] pusher-pilot-001 completed23:27 WIB on ec285c0,
+native/audit/render exit0,1s/11states/915MPs, zero mass drift. Actual patch
+settlement10.07815mm exceeds the5mm driver command; max displacement13.24341mm,
+max speed0.0520888m/s. The0.1s sample has6 active contacts,3616.041N/m upward
+reaction and22.419micrometres maximum compression gap. Saved0.2–1.0s samples
+all have0 active/6 unloaded contacts and zero reaction; intermediate timesteps
+are not inferred. Evidence is retained in pusher-pilot-001. Dynamic release
+18 artifact hashes retain sources/data/proof/media/review/contact diagnostics.
+PASS is bounded implementation evidence, not calibration/general contact or
+landslide validation. Full120s pusher NOT_RUN; no active jobs remain. The slow
+driver loses contact, so no automatic long run or material tuning is justified.
+Updated guide/testing/wiki/index; preserved raw sources and prior log entries.

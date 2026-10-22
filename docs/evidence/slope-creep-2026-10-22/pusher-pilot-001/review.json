@@ -1,0 +1,49 @@
+{
+  "scope": "Actual native 1s moving-driver pilot; sampled unilateral loading/release, not calibrated landslide validation",
+  "sourceCommit": "ec285c05956c1b6fd592428869fba826b7430dd9",
+  "nativeComplete": true,
+  "frames": 11,
+  "particleCount": 915,
+  "durationS": 1.0,
+  "driverVelocityMPerS": 0.005,
+  "finalCommandedSettlementM": 0.005,
+  "finalMeasuredPatchSettlementM": 0.010078149910873377,
+  "finalMeanCrestSettlementM": 0.011818382658853162,
+  "finalMaxDisplacementM": 0.013243411614915108,
+  "finalMaxSpeedMPerS": 0.05208882283717539,
+  "maxAbsMassErrorFraction": 0.0,
+  "minimumSavedJacobian": 0.9869907355861542,
+  "finalMaxCreepKappa": 0.002463002421503756,
+  "positiveReactionSampleTimesS": [
+    0.1
+  ],
+  "maxSavedReactionNPerM": 3616.0411363894696,
+  "maxSavedCompressionGapM": 2.2419353289393484e-05,
+  "allContactsReleasedSampleTimesS": [
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "finalActiveContacts": 0.0,
+  "finalSeparatedContacts": 6.0,
+  "finalReactionNPerM": 0.0,
+  "allSavedParticlesInsideOverviewViewport": true,
+  "sampledDynamicLoadingAndReleaseVerified": true,
+  "landslideVerified": false,
+  "scientificValidation": false,
+  "morphologyReview": "Unamplified overview inspected: small distributed creep, no detached mass or run-out",
+  "limits": [
+    "Contact force/gaps are the last predicted BC evaluation; settlement is current MP geometry",
+    "0.1s samples do not establish zero force at every intervening step or an integrated actuator-work budget",
+    "Original tracked surface/profile, finite penalty, no new surface search/tangential traction",
+    "The inherited penalty timestep and actual early contact force differ from the gravity-only pilot; do not call them an exact physics match",
+    "Slow driver releases once soil moves ahead; this pilot does not justify a long run as a sustained loading experiment"
+  ],
+  "reviewScriptSha256": "6baa39865e2463a95f12102a35dadac64e04465cbea3880c14eae57c21ba332f"
+}

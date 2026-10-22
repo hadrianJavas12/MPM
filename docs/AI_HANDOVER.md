@@ -71,7 +71,7 @@ The user authorizes the duration extension despite the earlier hold on repeats.
  stress histories or full-MPM/laboratory results; geometry/stress redistribution
  can still affect the coupled slope. More duration alone does not guarantee failure.
 
-### Current checkpoint: unilateral crest pusher — controls/compatibility PASS, pusher pilot active
+### Current checkpoint: unilateral crest pusher — sampled dynamic loading/release PASS
 
 Latest user clarification is retained in
 `wiki-vault/raw/creep-pusher-clarification-2026-10-22.md`. The communicated
@@ -89,7 +89,7 @@ CSV in `docs/evidence/slope-creep-2026-10-22/pusher-controls-001/`.
 The 0.02m/s control checks static separated geometry and velocity non-mutation,
 not time-integrated outrunning. No material law or old bilateral boundary changed.
 
-Two bounded **1s / 11-state** jobs launched on ec285c0, each1h wall budget:
+Two bounded **1s / 11-state** jobs completed on ec285c0, each1h wall budget:
 
 - `output/slope-creep-2026-10-22/gravity-compat-001/`: start23:22:26 WIB,
   wrapper19844 / native cmd23896. **Completed native/audit/render exit0**.
@@ -99,25 +99,41 @@ Two bounded **1s / 11-state** jobs launched on ec285c0, each1h wall budget:
   Comparison is saved in run and evidence; do not repeat it or either solver.
 - `output/slope-creep-2026-10-22/pusher-pilot-001/`: start23:22:51 WIB,
   wrapper30008 / native cmd40432. New crest patch7–10m, driver0.005m/s,
-  penaltyScale5, unchanged assumed material/geometry. Read adjacent `-status.json`
-  and run manifest before any further work. Never infer completion from this note.
+  penaltyScale5, unchanged assumed material/geometry. **Completed23:27 WIB**,
+  native exit0/complete=true and audit/render exit0. No solver remains active.
 
-Wrappers audit and render automatically after native exit0/complete=true. Keep
-`plot-slope-creep.py` and `plot_m5_cliff_comparison.py` unchanged while active.
-No full120s pusher job is launched or justified yet. Review actual command vs
-measured patch settlement, active/separated contacts, non-tensile reaction and
-grid force mapping, mass/J/state and viewport. The mean-settlement audit flag
-alone does not prove every contact released. If the soil outruns the slow driver,
-zero force is the expected physical contact response; do not make it pull the
-soil or force re-contact to produce failure.
+Actual pusher result:915 MPs, zero mass drift, minimum savedJ0.986991. At1s,
+driver command **5mm**, measured tracked-patch settlement **10.07815mm**,
+mean whole-crest settlement11.81838mm, max displacement13.24341mm and max
+particle speed0.0520888m/s. The0.1s sample has6 active contacts/reaction
+**3.61604kN/m** and max compression22.419micrometres. Every saved0.2–1.0s
+sample has0active/6unloaded contacts and zero reaction. This proves sampled
+dynamic compression followed by free release, not a minimum/capped soil velocity.
+No continuous zero-load assertion is made between0.1s samples. All saved points
+fit the unamplified viewport. Overview shows small distributed creep, without
+detached mass/run-out: **landslide NOT_VERIFIED**.
+
+**18 artifact hashes** retain actual VTK/CSV/source/runtime proof, logs, review,
+PNG/MP4 and contact diagnostics in
+`docs/evidence/slope-creep-2026-10-22/pusher-pilot-001/`. The executed review
+script is in native-output.tar.gz under analysis-support. Do not repeat the pilot,
+passed controls, gravity compatibility or finished120s observation.
+
+Full120s pusher is **NOT_RUN**. A driver already behind the soil cannot provide
+sustained compression without catching up. Review found no justification for
+automatically spending hours repeating this loading as a failure experiment.
+Report this result before proposing a different loading or material study;
+do not make the driver pull, force re-contact, tune strength/viscosity or schedule
+collapse to produce failure. The inherited penalty timestep and early real force
+also differ from gravity-only, so the two physical pilots are not an exact match.
 
 Contact uses original tracked crest points and individual rebased heights, fixed
 original tributary widths and finite penalty. No new-surface/entering-particle
 search or tangential traction; not general rigid-platen contact. CSV force/gaps
 come from the last predicted contact evaluation, measured settlement from current
 MP geometry. Sparse frame diagnostics do not give integrated actuator work or
-a closed energy audit. **Dynamic release and landslide outcome remain unverified
-until actual pilot review.** Do not rerun the completed gravity-only120s case.
+a closed energy audit. Dynamic loading/release is verified only in this bounded
+sampled pilot; general contact validity/calibration/landslide are not established.
 
 **Verified on33eed96:**13 actual Windows material controls,4 exception-history
 controls,2 scenario controls, Node syntax check/36 tests all pass. The expected
@@ -191,11 +207,11 @@ are in `crest-sequence-regression/`. No repeat13/4/Node suite is needed.
   changes. Do not lower viscosity/strength or extend runs just to force collapse.
   Report a concrete evidence-based mechanism/plan before another expensive run.
 
-Heartbeat **mpm-lanjut-migrasi-arsitektur** follows the remaining pusher job above;
-the old120s job is complete. Check latest status once and remain quiet while
-healthy. No active polling, duplicate solver or repeated passed controls.
-Gravity compatibility is already complete/archived; after actual pusher review/archival,
-then update docs/wiki and commit/push. Notify meaningful results/failure only.
+The pilot-monitor reason for heartbeat **mpm-lanjut-migrasi-arsitektur** is complete;
+delete that monitor after the final evidence/docs commit and push. No background
+solver remains; no further expensive run is planned from this pilot result.
+The broader creep-to-landslide objective remains unresolved, with the limitations
+above reported honestly. Resume from saved evidence when the next study is chosen.
 The old Wang diagnosis/slower run is
 superseded by the new user request and must not start automatically.
 Keep checkpoints/evidence/docs/wiki updated, commit and push the feature branch;

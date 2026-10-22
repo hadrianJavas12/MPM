@@ -450,7 +450,7 @@ independent review and analytical0D material-capability reasoning under
 `docs/evidence/slope-creep-2026-10-22/hold-120s-001/`. The fixed-stress analytical
 post-residual constant creep rate is not a full-slope or laboratory result.
 
-### Unilateral-pusher controls passed; native pilots running
+### Unilateral-pusher controls and dynamic release pilot passed
 
 Following the user's clarification that soil may slide faster, a separate
 0.005m/s moving crest driver with compression-only release was added on ec285c0.
@@ -473,6 +473,16 @@ pilots launched23:22 WIB on2026-10-22 from ec285c0: `gravity-compat-001` and
 `pusher-pilot-001` under `output/slope-creep-2026-10-22/`. Both have adjacent
 status JSON and1h budgets. Gravity compatibility is now complete: native/audit/
 render exit0 and strict PASS,14 VTK files/all11 CSV states byte-identical to
-pilot-002,15 retained hashes in gravity-compat-001. Dynamic pusher review remains
-pending. No full120s pusher run or landslide PASS is claimed.
+pilot-002,15 retained hashes in gravity-compat-001. The pusher pilot completed
+23:27 WIB: native/audit/render exit0,1s/11states/915MPs and zero mass drift.
+Actual patch settlement10.07815mm exceeds the5mm driver command; max displacement
+13.24341mm and max speed0.0520888m/s. The0.1s saved sample has6 active contacts,
+reaction3616.041N/m and maximum compression gap22.419micrometres. Every saved
+0.2–1.0s sample has0 active/6 unloaded contacts and zero reaction; this does not
+assert zero force at every intermediate timestep. Retained evidence is in
+`docs/evidence/slope-creep-2026-10-22/pusher-pilot-001/`.
+**Dynamic release PASS; landslide NOT_VERIFIED.** No active jobs remain; full120s
+pusher is **NOT_RUN**. The slow driver loses contact, so this checkpoint does not
+justify an automatic long run or material tuning. Contact validation remains
+bounded by the tracked-surface approximation and absent integrated-work audit.
 Read [the guide](benchmarks/CLAY_CREEP_SLOPE.md) for commands and contact/work limits.

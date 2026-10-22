@@ -12,8 +12,8 @@ The user requested creep toward landslide, recorded in
 [[clay-creep-design-2026-10-22]]. Branch `codex/slope-creep-landslide` adds a
 separate sustained-self-weight scenario to the [[reusable-simulation-framework]].
 The completed gravity-only runs have a free crest; no commanded descent/failure
-trajectory drives that motion. A later unilateral-pusher experiment is in
-development and must be distinguished from those completed results.
+trajectory drives that motion. A later unilateral-pusher experiment passed a
+bounded dynamic-release pilot and remains distinct from those completed results.
 
 Material: phi_u=0 total-stress clay surrogate with J2 Perzyna overstress and
 strength loss driven by accumulated equivalent creep strain. Kirchhoff yield
@@ -77,18 +77,28 @@ collapse. It is not a fix for Wang MC. The tracked crest/finite-penalty contact
 approximation needs explicit force/gap/release/work diagnostics and limitations.
 Implementation ec285c0 passes actual Windows6 contact/3 scenario controls and
 Node check/36 tests, with19 artifact hashes in pusher-controls-001. The0.02m/s
-control verifies separated geometry and velocity non-mutation; dynamic release
-still requires native pilot evidence. The fixed original contacts have no new
+control verifies separated geometry and velocity non-mutation; separate native
+pilot evidence now demonstrates dynamic release. The fixed original contacts have no new
 surface search, and frame-level force/gap CSV is not integrated actuator work.
 
 Two1s/11-state jobs launched23:22 WIB on2026-10-22, both ec285c0 /1h budget:
 gravity-compat-001 (wrapper19844) and pusher-pilot-001 (wrapper30008) under
-output/slope-creep-2026-10-22. Read adjacent status JSON before acting. After
-completion review actual pusher command/patch settlement/contact counts/non-tensile
-mapped reaction. Gravity compatibility has completed native/audit/render exit0:
+output/slope-creep-2026-10-22. Both are complete and no active jobs remain.
+Gravity compatibility completed native/audit/render exit0:
 strict14 VTK/all11 CSV states byte-identical to pilot-002, same config/cadence,
 15 retained artifact hashes. Do not repeat that comparison or solver.
-No full120s pusher run, calibrated result or verified landslide is claimed.
+Pusher pilot completed23:27 WIB, native/audit/render exit0,1s/11states/915MPs,
+zero mass drift. Actual patch settlement10.07815mm exceeds the5mm driver command;
+max displacement13.24341mm and max speed0.0520888m/s. At the0.1s saved sample,
+all6 contacts are active with upward reaction3616.041N/m and maximum compression
+gap22.419micrometres. Every saved0.2–1.0s sample has0 active/6 unloaded contacts
+and zero reaction; no claim is made about every intermediate timestep.
+Source/native data/proof/media/review are retained under
+`docs/evidence/slope-creep-2026-10-22/pusher-pilot-001/`.
+**Dynamic release PASS; landslide NOT_VERIFIED; full120s pusher NOT_RUN.** The
+slow driver loses contact because soil descends faster; no automatic longer run
+or material tuning is justified by this result alone. This bounded proof is not
+laboratory calibration, general contact validation or an integrated work audit.
 
 Source/commands/assumptions are in `docs/benchmarks/CLAY_CREEP_SLOPE.md`;
 linked integrity and evidence practices: [[scientific-authenticity-audit-2026-10-15]].

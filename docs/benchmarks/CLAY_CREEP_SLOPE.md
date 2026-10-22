@@ -210,7 +210,7 @@ Illustrative assumed stresses demonstrate why this law can approach secondary
 creep; more duration alone does not promise a failure transition. Coupled geometry
 and stress redistribution remain relevant to the actual slope.
 
-## Unilateral crest-pusher experiment — controls passed, pilot running
+## Unilateral crest-pusher experiment — dynamic release pilot passed
 
 The user's later clarification, "tanah boleh meluncur lebih cepat", was
 communicated as a **crest driver descending at 0.005 m/s**, with compression-only
@@ -245,8 +245,8 @@ all **36 tests** also passed. The contact controls cover analytical compression
 and release, force mapping, timestep availability, lateral release and unchanged
 particle state. The named 0.02 m/s control manually places soil ahead of the
 driver and verifies velocity non-mutation; it does **not** prove dynamic release
-during time integration. That requires the bounded native pilot and its VTK/CSV.
-Gravity-only output compatibility also requires its pending pilot comparison.
+during time integration. The completed native pilot supplies that separate
+evidence. Gravity-only compatibility also passed its strict pilot comparison.
 
 `loading-history.csv` adds command, measured patch settlement, reaction/mapped
 reaction, active/unloaded counts and compression/separation gaps. Reactions and
@@ -269,15 +269,27 @@ Set-Location D:\MPM
 but the full120s pusher case is **NOT_RUN**. The1s case launched **23:22 WIB,
 2026-10-22**, source **ec285c0**, in
 `output/slope-creep-2026-10-22/pusher-pilot-001/`, wrapper30008,1h wall budget.
-Its actual state is in adjacent `pusher-pilot-001-status.json`; no reviewed
-dynamic result is claimed yet. The separate1s gravity-only compatibility run
+It completed **23:27 WIB**, native/audit/render exit0, **1 s / 11 states / 915
+MPs**, zero mass drift. Measured patch settlement was **10.07815 mm**, exceeding
+the **5 mm driver command**; maximum particle displacement was13.24341mm and
+maximum speed0.0520888m/s. At the0.1s sample all6 contacts were active, upward
+reaction3616.041N/m and maximum compression gap22.419micrometres. At every saved
+sample from0.2 through1.0s, all6 contacts were unloaded/separated with zero
+reaction. These samples demonstrate dynamic release during the pilot; they do
+not establish zero force at every intermediate timestep.18 artifact hashes
+retain native data, source, proof, media, contact CSV/plot and review in
+`docs/evidence/slope-creep-2026-10-22/pusher-pilot-001/`.
+
+The separate1s gravity-only compatibility run
 (`gravity-compat-001`, wrapper19844, same source) completed native/audit/render
 exit0 and **strict PASS:14 VTK files and all11 CSV states byte-identical** to
 pilot-002; physical configuration/cadence unchanged.15 artifact hashes are
 retained under `docs/evidence/slope-creep-2026-10-22/gravity-compat-001/`.
 The19 hashed control artifacts are in
 `docs/evidence/slope-creep-2026-10-22/pusher-controls-001/`.
-Review the short pilot before deciding whether a longer run is justified.
-No pusher-induced landslide, laboratory calibration, repair of the former Wang
-MC failure, or reference-paper agreement is claimed. Do not repeat the completed
-gravity-only 120 s job.
+**Contact implementation/dynamic release PASS; landslide NOT_VERIFIED.** No jobs
+remain active. The slow driver loses contact as the soil descends faster; this
+result alone does not justify automatically starting a longer pusher run or
+tuning material parameters. Laboratory calibration, general surface contact,
+repair of the former Wang MC failure and reference-paper agreement remain
+unverified. Do not repeat completed jobs.
