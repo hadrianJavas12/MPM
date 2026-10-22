@@ -1,5 +1,21 @@
 (in-package :cl-mpm/scenario/slope-descent)
 
+(defun elastic-energy-density (stress elastic-strain)
+  "Cauchy/engineering-Voigt Hencky proxy (Pa); shear strain is already doubled."
+  (* .5d0 (loop for i below 6 sum (* (component stress i) (component elastic-strain i)))))
+
+(defun energy-diagnostics (sim)
+  "Current-volume elastic/native-plastic proxies, J per metre; no closed budget."
+  (let ((elastic 0d0) (plastic 0d0))
+    (loop for mp across (cl-mpm:sim-mps sim) do
+      (incf elastic (* (cl-mpm/particle:mp-volume mp)
+                      (elastic-energy-density (cl-mpm/particle:mp-stress mp)
+                                              (cl-mpm/particle:mp-strain mp))))
+      (incf plastic (* (cl-mpm/particle:mp-volume mp)
+                      (cl-mpm/models/mc-evolution:particle-plastic-work mp))))
+    (unless (and (finite-p elastic) (finite-p plastic)) (error "Nonfinite energy diagnostic."))
+    (values elastic plastic)))
+
 (defun state-statistics (sim diagnostics reference-mass config)
   (let ((mass 0d0) (ke 0d0) (max-yield (- most-positive-double-float)))
     (loop for mp across (cl-mpm:sim-mps sim) do
@@ -90,6 +106,9 @@
                     "convergenceScope" "gravity initialization only"
                     "reactionConvention" "actuator reaction +Y = minus applied soil force Y; raw signed values"
                     "geometryProvenance" "height is a user-supplied assumption; no paper height is inferred"
+                    "referenceVelocityMPerS" 1d-4
+                    "loadingRateMultiplier" (/ (gethash "velocity" config) 1d-4)
+                    "energyConvention" "Ue=0.5 sum current V*(Cauchy stress dot engineering elastic Hencky strain); Wp_native=sum current V*native plastic-work density. Both are proxies; prestress can mask kinetic ratios. No closed energy balance or quasistatic PASS inferred."
                     "massScale" 1d0 "scientificallyValidated" 'yason:false))
          (settle-updates 0) (updates 0) (frame 0) (sim nil))
     (ensure-directories-exist vtk)
@@ -154,7 +173,10 @@
               (setf (gethash "reportingResetPreservedState" manifest) t)
               (let* ((bc (make-strip top-row config original-intervals))
                      (duration (gethash "duration" config))
-                     (frames (gethash "frames" config)) (next-frame 1))
+                     (frames (gethash "frames" config)) (next-frame 1)
+                     (elastic-zero (nth-value 0 (energy-diagnostics sim)))
+                     (plastic-zero (nth-value 1 (energy-diagnostics sim)))
+                     (actuator-work 0d0) (last-command 0d0) (last-reaction 0d0))
                 (cl-mpm:add-bcs-force-list sim (vector bc))
                 (setf (cl-mpm:sim-damping-factor sim) (gethash "dynamicDamping" config)
                       (gethash "phase" manifest) "prescribed-descent"
@@ -163,6 +185,11 @@
                       (gethash "initialLoadingDtS" manifest) (stable-dt sim config)
                       (gethash "plannedLoadingUpdatesEstimate" manifest) (ceiling duration (stable-dt sim config)))
                 (write-json manifest-path manifest)
+                (setf (gethash "elasticEnergyZeroJPerM" manifest) elastic-zero
+                      (gethash "nativePlasticEnergyZeroJPerM" manifest) plastic-zero)
+                (with-open-file (energy (merge-pathnames "energy-history.csv" output)
+                                       :direction :output :if-exists :supersede :if-does-not-exist :create)
+                  (format energy "frame,time_s,kinetic_J_per_m,elastic_proxy_J_per_m,native_plastic_proxy_J_per_m,delta_elastic_proxy_J_per_m,delta_native_plastic_proxy_J_per_m,kinetic_over_elastic_proxy,actuator_signed_command_work_J_per_m~%")
                 (with-open-file (csv (merge-pathnames "force-displacement.csv" output)
                                     :direction :output :if-exists :supersede :if-does-not-exist :create)
                   (format csv "frame,time_s,commanded_settlement_m,measured_settlement_m,reaction_upward_N_per_m,soil_force_y_N_per_m,nodal_force_y_N_per_m,kinetic_energy_J_per_m,mass_kg_per_m,particle_count,penalty_gap_m,free_residual_ratio,kinetic_ratio,mass_error_fraction,max_gap_m,rms_gap_m,max_yield_residual_pa,updates~%")
@@ -187,6 +214,12 @@
                                        (gethash "massErrorFraction" manifest) mass-error
                                        (gethash "finalFieldsFinite" manifest) t)
                                  (write-json manifest-path manifest)
+                                 (multiple-value-bind (elastic plastic) (energy-diagnostics sim)
+                                   (format energy "~D,~,12E,~,12E,~,12E,~,12E,~,12E,~,12E,~,12E,~,12E~%"
+                                           frame (cl-mpm::sim-time sim) ke elastic plastic
+                                           (- elastic elastic-zero) (- plastic plastic-zero)
+                                           (/ ke (max (abs elastic) 1d-30)) actuator-work)
+                                   (finish-output energy))
                                  (incf frame)))))
                     (save-state)
                     (loop while (< (cl-mpm::sim-time sim) duration) do
@@ -198,8 +231,11 @@
                         (setf (cl-mpm:sim-dt sim) (- next time)
                               (strip-target bc) (* (gethash "velocity" config) next))
                         (cl-mpm:update-sim sim) (incf updates)
+                        (incf actuator-work (* .5d0 (+ last-reaction (strip-reaction bc))
+                                               (- (strip-target bc) last-command)))
+                        (setf last-command (strip-target bc) last-reaction (strip-reaction bc))
                         (when (>= (cl-mpm::sim-time sim) save-time)
-                          (save-state) (incf next-frame))))))
+                          (save-state) (incf next-frame)))))))
                 (unless (and converged
                              (<= (abs (- (strip-target bc) (gethash "targetDisplacement" config))) 1d-12)
                              (>= (cl-mpm::sim-time sim) duration))

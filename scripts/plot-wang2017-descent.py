@@ -76,7 +76,25 @@ def inspect(run):
              "initialReactionTransientsObserved": any(row["reaction_upward_N_per_m"] < -1e-7 for row in rows),
              "quasiStaticReferenceAgreement": "NOT_VERIFIED",
              "reactionUpwardNPerM": rows[-1]["reaction_upward_N_per_m"],
+             "loadingVelocityMPerS": config["velocity"],
+             "loadingRateMultiplier": config["velocity"] / 1e-4,
+             "maxYieldResidualPa": max(row["max_yield_residual_pa"] for row in rows),
+             "finalMeanTrackingErrorFraction": abs(rows[-1]["penalty_gap_m"]) / config["targetDisplacement"],
              "sources": records}
+    energy_path = run / "energy-history.csv"
+    if energy_path.exists():
+        energies = read_rows(energy_path)
+        if len(energies) != len(rows):
+            raise ValueError("Energy/loading frame counts differ")
+        for row, energy in zip(rows, energies):
+            if not np.isfinite(list(energy.values())).all():
+                raise ValueError("Nonfinite energy observation")
+            if not np.isclose(row["time_s"], energy["time_s"], atol=1e-10, rtol=1e-10):
+                raise ValueError("Energy/loading times differ")
+            if not np.isclose(row["kinetic_energy_J_per_m"], energy["kinetic_J_per_m"], atol=1e-8, rtol=1e-10):
+                raise ValueError("Energy/loading kinetic diagnostics differ")
+        audit["kineticOverElasticProxyMax"] = max(e["kinetic_over_elastic_proxy"] for e in energies)
+        audit["energyCaveat"] = "Current-volume Hencky/native-plastic proxies, not closed energy balance. Gravity prestress can mask loading inertia; rate comparison is still required."
     return manifest, rows, snapshots, audit
 
 
@@ -112,11 +130,37 @@ def draw(manifest, rows, snapshot, index, destination):
     pad = max(.05 * (hi - lo), 1e-7)
     curve.set_ylim(lo - pad, hi + pad)
     kind = "SHORT PILOT" if config["targetDisplacement"] < .09 else "FULL TARGET"
+    if not np.isclose(config["velocity"], 1e-4, rtol=1e-12, atol=0):
+        kind = f"ACCELERATED TRIAL ({config['velocity']/1e-4:g}x reference)"
     completion = "native complete" if manifest.get("complete") else "INCOMPLETE"
     fig.suptitle(f"Wang2017 Soil1 | {kind}, {completion} | v={config['velocity']:.1e} m/s\n"
                  f"Relief {config['height']:g} m is assumed; explicit MPM with finite penalty compliance; no displacement amplification",
                  fontsize=11)
     fig.savefig(destination, dpi=140)
+    plt.close(fig)
+
+
+def draw_energy(run):
+    path = run / "energy-history.csv"
+    if not path.exists():
+        return
+    rows = read_rows(path)
+    times = [r["time_s"] for r in rows]
+    fig, axes = plt.subplots(1, 3, figsize=(14, 4), constrained_layout=True)
+    axes[0].plot(times, [r["kinetic_J_per_m"] for r in rows])
+    axes[0].set(ylabel="Kinetic energy (J/m)", title="Native kinetic energy")
+    for key, label in (("delta_elastic_proxy_J_per_m", "Elastic proxy change"),
+                       ("delta_native_plastic_proxy_J_per_m", "Native plastic proxy change"),
+                       ("actuator_signed_command_work_J_per_m", "Signed actuator command work")):
+        axes[1].plot(times, [r[key] for r in rows], label=label)
+    axes[1].set(ylabel="J/m", title="Signed observations; no closed budget")
+    axes[1].legend(fontsize=7)
+    axes[2].plot(times, [r["kinetic_over_elastic_proxy"] for r in rows])
+    axes[2].set(ylabel="K / |elastic proxy|", title="Prestress can mask loading inertia")
+    for ax in axes:
+        ax.set_xlabel("Actual loading time (s)")
+        ax.grid(alpha=.25)
+    fig.savefig(run / "energy-diagnostics.png", dpi=140)
     plt.close(fig)
 
 
@@ -128,6 +172,7 @@ def main():
     run = args.run_dir.resolve()
     manifest, rows, snapshots, audit = inspect(run)
     draw(manifest, rows, snapshots[-1], len(rows)-1, run / "descent-overview.png")
+    draw_energy(run)
     if args.video:
         executable = shutil.which("ffmpeg")
         if not executable:
