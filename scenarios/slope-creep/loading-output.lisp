@@ -8,7 +8,7 @@
            (cl-mpm/output/history:with-retained-history
                (,stream (merge-pathnames "loading-history.csv" ,output)
                         :direction :output :if-exists :supersede :if-does-not-exist :create)
-             (format ,stream "frame,time_s,commanded_settlement_m,measured_patch_settlement_m,reaction_upward_N_per_m,mapped_reaction_upward_N_per_m,active_contacts,separated_contacts,max_compression_gap_m,max_separation_gap_m~%")
+             (format ,stream "frame,time_s,commanded_settlement_m,measured_patch_settlement_m,reaction_upward_N_per_m,mapped_reaction_upward_N_per_m,active_contacts,separated_contacts,max_compression_gap_m,max_separation_gap_m,command_work_rectangle_J_per_m~%")
              (,continue ,stream))
            (,continue nil)))))
 
@@ -23,4 +23,5 @@
             (gethash "pusherMeasuredPatchSettlementM" manifest) (second values)
             (gethash "pusherReactionUpwardNPerM" manifest) (third values)
             (gethash "pusherActiveContacts" manifest) (fifth values)
-            (gethash "pusherSeparatedContacts" manifest) (sixth values)))))
+            (gethash "pusherSeparatedContacts" manifest) (sixth values)
+            (gethash "pusherCommandWorkRectangleJPerM" manifest) (ninth values)))))

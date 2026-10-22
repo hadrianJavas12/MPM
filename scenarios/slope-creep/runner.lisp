@@ -91,6 +91,8 @@
                       (gethash "pusherVelocityMPerS" manifest) (gethash "pusherVelocity" config)
                       (gethash "pusherContactCount" manifest)
                       (length (cl-mpm/scenario/slope-descent:strip-contacts pusher))
+                      (gethash "pusherCommandWorkConvention" manifest)
+                      "sum of last native reaction times nonnegative command increment; right-end rectangle diagnostic J/m; not a closed energy budget"
                       (gethash "contactApproximation" manifest) "original top contacts/profile; normal force only; lateral release; no newly exposed particle search")
                 (cl-mpm:add-bcs-force-list sim (vector pusher)))
               (with-pusher-history (pusher-stream pusher output)
@@ -122,10 +124,15 @@
                         (error "Creep update budget exhausted before duration."))
                       (setf (cl-mpm:sim-dt sim) (min (stable-dt sim config)
                                                    (- target (cl-mpm::sim-time sim))))
-                      (when pusher
-                        (set-pusher-target pusher (* (gethash "pusherVelocity" config)
-                                                    (+ (cl-mpm::sim-time sim) (cl-mpm:sim-dt sim)))))
-                      (cl-mpm:update-sim sim) (incf updates))
+                      (let ((old-target (when pusher
+                                          (cl-mpm/scenario/slope-descent:strip-target pusher))))
+                        (when pusher
+                          (set-pusher-target pusher
+                            (pusher-target-at-time config
+                              (+ (cl-mpm::sim-time sim) (cl-mpm:sim-dt sim)))))
+                        (cl-mpm:update-sim sim)
+                        (when pusher (accumulate-pusher-command-work pusher old-target)))
+                      (incf updates))
                     (setf frame next-frame) (save-state)
                     (format t "~&[creep hold] frame=~D t=~,3F max-u=~,4E max-speed=~,4E kappa=~,4E~%"
                             frame (gethash "timeS" manifest) (gethash "maxDisplacementM" manifest)

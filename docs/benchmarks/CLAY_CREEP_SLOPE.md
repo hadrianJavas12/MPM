@@ -5,8 +5,9 @@ This is a separate total-stress clay demonstration on
 It is not the Wang Soil1 Mohr-Coulomb benchmark and does not repair that model's
 recorded integration failure. The completed gravity-only runs have no crest
 actuator or imposed displacement: motion follows constant self-weight and a
-time-dependent material law. A later unilateral-pusher experiment is in
-development, separately identified below; it has not yet been tested or launched.
+time-dependent material law. The later unilateral-pusher pilot completed and
+verified sampled contact release, separately identified below. The current
+drive-and-hold experiment tests a more sustained, explicitly declared loading.
 
 ## Material and time convention
 
@@ -293,3 +294,44 @@ result alone does not justify automatically starting a longer pusher run or
 tuning material parameters. Laboratory calibration, general surface contact,
 repair of the former Wang MC failure and reference-paper agreement remain
 unverified. Do not repeat completed jobs.
+
+## Current study: driver motion followed by stationary hold, 2026-10-23
+
+The user requested continuation toward the still-unverified landslide. The
+0.005m/s pilot showed soil outrunning the driver; simply repeating that loading
+for hours has little diagnostic value. The next bounded experiment uses
+`cases/benchmarks/clay-creep-pusher-drive-hold.lisp`: **0.02m/s to0.1m driver
+travel**, then stationary driver, for **10s total /101 saved states**. Drive stops
+at5s because of the declared actuator travel, not a damage/time switch. Soil
+motion has no travel or speed limit and can lose contact throughout.
+
+The material, geometry, grid, damping, mass scale, normal contact law and penalty
+stiffness remain the previous explicit assumptions. Only loading velocity/travel,
+total duration/frame count and update budget differ. This is stronger external
+loading, not reproduction of the paper speed or natural-creep calibration.
+The fixed bottom prevents whole-domain basal sliding; side rollers limit run-out
+after the toe. Internal shear along the free slope remains possible.
+
+The optional `:travel` loading parameter compiles to `pusherTravelM`. Omitting it
+preserves unlimited historical driver motion and gravity-only configuration.
+`loading-history.csv` now appends `command_work_rectangle_J_per_m`: per native
+step, the last upward reaction times the downward command increment is summed.
+This right-end rectangle estimate is diagnostic, not a closed energy balance;
+it should remain constant while the driver is stationary. Previously archived
+CSV files and evidence remain unchanged and readable.
+
+```powershell
+Set-Location D:\MPM
+.\scripts\run-slope-creep.ps1 `
+  -Case cases/benchmarks/clay-creep-pusher-drive-hold.lisp `
+  -OutputDirectory D:\MPM\output\creep-drive-hold-FRESH -MaxWallHours 1
+```
+
+Focused native protocol/configuration and work controls, plotting compatibility,
+and the actual10s job are **pending** at this preparation checkpoint. After
+completion, review mass/count/J/finite state, force mapping and contact gaps,
+plus actual downslope displacement/velocity, kinetic trends, localization and
+run-out. Sustained deformation after5s with constant actuator work is stronger
+mechanism evidence than deformation while being pushed, but creep alone is not
+a landslide. A negative outcome must be preserved; do not force contact, tune
+material parameters or assume failure from the extra loading.

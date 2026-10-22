@@ -27,7 +27,7 @@
                   (ecase kind
                     (:compression '(:target-strain :duration :ramp-duration))
                     (:prescribed-descent '(:velocity :target-displacement :patch-start :patch-length))
-                    (:crest-pusher '(:velocity :patch-start :patch-length :penalty-scale))
+                    (:crest-pusher '(:velocity :travel :patch-start :patch-length :penalty-scale))
                     (:gravity nil))))
 
 (defun make-solver (kind &rest options)

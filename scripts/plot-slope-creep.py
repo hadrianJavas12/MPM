@@ -20,6 +20,11 @@ def read_history(path):
                 for row in csv.DictReader(stream)]
 
 
+def commanded_settlement(config, time_s):
+    command = time_s * config['pusherVelocity']
+    return min(command, config['pusherTravelM']) if 'pusherTravelM' in config else command
+
+
 def inspect(run):
     manifest = json.loads((run / 'manifest.json').read_text(encoding='utf-8-sig'))
     rows = read_history(run / 'creep-history.csv')
@@ -76,7 +81,7 @@ def inspect(run):
         for row, contact in zip(rows, loading):
             if not np.isfinite(list(contact.values())).all() or not np.isclose(row['time_s'], contact['time_s'], atol=1e-11, rtol=1e-10):
                 raise ValueError('Nonfinite or inconsistent loading record')
-            if not np.isclose(contact['commanded_settlement_m'], contact['time_s'] * manifest['config']['pusherVelocity'], atol=1e-11, rtol=1e-10):
+            if not np.isclose(contact['commanded_settlement_m'], commanded_settlement(manifest['config'], contact['time_s']), atol=1e-11, rtol=1e-10):
                 raise ValueError('Pusher command differs from declared velocity')
             reaction = contact['reaction_upward_N_per_m']
             if reaction < 0 or not np.isclose(reaction, contact['mapped_reaction_upward_N_per_m'], atol=1e-6, rtol=1e-9):
@@ -89,6 +94,23 @@ def inspect(run):
         audit['pusherVelocityMPerS'] = manifest['config']['pusherVelocity']
         audit['soilOutranPusherObserved'] = any(c['measured_patch_settlement_m'] > c['commanded_settlement_m'] + 1e-9 for c in loading)
         audit['zeroLoadFrameObserved'] = any(c['reaction_upward_N_per_m'] == 0 and c['time_s'] > 0 for c in loading)
+        work_key = 'command_work_rectangle_J_per_m'
+        work_present = [work_key in c for c in loading]
+        if any(work_present) and not all(work_present):
+            raise ValueError('Incomplete command-work history')
+        if all(work_present):
+            work = np.array([c[work_key] for c in loading])
+            if work[0] != 0 or np.min(work) < 0 or np.any(np.diff(work) < 0):
+                raise ValueError('Invalid right-end rectangle command work')
+            audit['commandWorkRectangleJPerM'] = float(work[-1])
+            audit['commandWorkScope'] = 'Per-update right-end reaction times driver increment; not a closed energy budget'
+            if 'pusherTravelM' in manifest['config']:
+                hold_start = manifest['config']['pusherTravelM'] / manifest['config']['pusherVelocity']
+                held = [c for c in loading if c['time_s'] >= hold_start]
+                if held and any(c[work_key] != held[0][work_key] for c in held):
+                    raise ValueError('Stationary driver accumulated command work')
+                audit['driverHoldStartS'] = hold_start
+                audit['stationaryDriverWorkConsistent'] = bool(len(held) >= 2)
     return manifest, rows, snapshots, audit
 
 
@@ -107,9 +129,11 @@ def overview(manifest, rows, snapshots, index, path):
     axes[1].plot([r['time_s'] for r in history], [r['crest_settlement_m'] * 1000 for r in history], label='Mean crest descent')
     axes[1].plot([r['time_s'] for r in history], [r['max_displacement_m'] * 1000 for r in history], label='Maximum displacement')
     driven = config.get('loadingKind') == 'crest-pusher'
-    command = config.get('pusherVelocity', 0) * rows[-1]['time_s'] * 1000
+    command = commanded_settlement(config, rows[-1]['time_s']) * 1000 if driven else 0
     if driven:
-        axes[1].plot([r['time_s'] for r in history], [r['time_s'] * config['pusherVelocity'] * 1000 for r in history], '--', label='Pusher command (not a soil cap)')
+        axes[1].plot([r['time_s'] for r in history], [commanded_settlement(config, r['time_s']) * 1000 for r in history], '--', label='Pusher command (not a soil cap)')
+        if 'pusherTravelM' in config:
+            axes[1].axvline(config['pusherTravelM'] / config['pusherVelocity'], color='.5', linestyle=':', label='Driver stops')
     axes[1].set(xlabel='Actual hold time (s)', ylabel='Displacement (mm)', title='Sustained self-weight; free motion',
                 xlim=(0, rows[-1]['time_s']), ylim=(min(0, min(r['crest_settlement_m'] * 1000 for r in rows)),
                     max(1e-6, command, max(r['max_displacement_m'] * 1000 for r in rows)) * 1.05))
@@ -144,6 +168,37 @@ def diagnostic_curves(rows, path):
     plt.close(fig)
 
 
+def contact_diagnostics(manifest, run, path):
+    contacts = read_history(run / 'loading-history.csv')
+    times = [c['time_s'] for c in contacts]
+    fig, axes = plt.subplots(1, 4, figsize=(16, 4), constrained_layout=True)
+    axes[0].plot(times, [c['commanded_settlement_m'] * 1000 for c in contacts], '--', label='Driver command')
+    axes[0].plot(times, [c['measured_patch_settlement_m'] * 1000 for c in contacts], label='Tracked soil patch')
+    axes[0].set(ylabel='Downward settlement (mm)', title='Command and free response')
+    axes[0].legend(fontsize=8)
+    axes[1].plot(times, [c['reaction_upward_N_per_m'] / 1000 for c in contacts])
+    axes[1].set(ylabel='Upward reaction (kN/m)', title='Saved contact reaction')
+    axes[2].step(times, [c['active_contacts'] for c in contacts], where='post', label='Active')
+    axes[2].step(times, [c['separated_contacts'] for c in contacts], where='post', label='Unloaded')
+    axes[2].set(ylabel='Tracked contact count', title='Saved contact evaluations')
+    axes[2].legend(fontsize=8)
+    key = 'command_work_rectangle_J_per_m'
+    if all(key in c for c in contacts):
+        axes[3].plot(times, [c[key] for c in contacts])
+        axes[3].set(ylabel='Discrete driver work (J/m)', title='Right-end rectangle estimate')
+    else:
+        axes[3].text(.5, .5, 'Command work unavailable', ha='center', transform=axes[3].transAxes)
+    config = manifest['config']
+    for axis in axes:
+        axis.set_xlabel('Actual simulation time (s)')
+        axis.grid(alpha=.25)
+        if 'pusherTravelM' in config:
+            axis.axvline(config['pusherTravelM'] / config['pusherVelocity'], color='.5', linestyle=':')
+    fig.suptitle('Native unilateral contact | sampled forces, free soil motion | work estimate is not a closed energy budget')
+    fig.savefig(path, dpi=140)
+    plt.close(fig)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--run-dir', type=Path, required=True)
@@ -153,6 +208,8 @@ def main():
     manifest, rows, snapshots, audit = inspect(run)
     overview(manifest, rows, snapshots, len(rows)-1, run / 'creep-overview.png')
     diagnostic_curves(rows, run / 'creep-diagnostics.png')
+    if (run / 'loading-history.csv').exists():
+        contact_diagnostics(manifest, run, run / 'contact-diagnostics.png')
     if args.video:
         executable = shutil.which('ffmpeg')
         if not executable:

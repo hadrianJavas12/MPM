@@ -38,7 +38,7 @@ def main():
     dest.mkdir(parents=True, exist_ok=False)
     (dest / '.gitattributes').write_text('* -text -whitespace\n*.gz binary\n')
     for name in ['manifest.json', 'source-provenance.json', 'output-audit.json',
-                 'creep-overview.png', 'creep-diagnostics.png', 'slope-creep.mp4']:
+                 'creep-overview.png', 'creep-diagnostics.png', 'contact-diagnostics.png', 'slope-creep.mp4']:
         if (run / name).exists():
             shutil.copyfile(run / name, dest / name)
     pack(dest / 'native-output.tar.gz', run,

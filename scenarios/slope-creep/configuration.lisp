@@ -72,6 +72,13 @@
             (gethash "patchStart" config) (cl-mpm/framework:option loading :patch-start 7d0)
             (gethash "patchLength" config) (cl-mpm/framework:option loading :patch-length 3d0)
             (gethash "penaltyScale" config) (cl-mpm/framework:option loading :penalty-scale 5d0))
+      ;; Omitting :TRAVEL retains the unlimited historical loading/configuration.
+      (multiple-value-bind (indicator travel)
+          (get-properties (cl-mpm/framework:component-options loading) '(:travel))
+        (when indicator
+          (unless (and (finite-p travel) (> travel 0d0))
+            (error "Pusher travel must be finite and positive when supplied."))
+          (setf (gethash "pusherTravelM" config) travel)))
       (dolist (key '("pusherVelocity" "patchLength" "penaltyScale"))
         (unless (and (finite-p (gethash key config)) (> (gethash key config) 0d0))
           (error "~A must be positive and finite." key)))

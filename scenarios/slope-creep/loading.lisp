@@ -7,7 +7,35 @@
    (active-count :initform 0 :accessor pusher-active-count)
    (separated-count :initform 0 :accessor pusher-separated-count)
    (max-compression-gap :initform 0d0 :accessor pusher-max-compression-gap)
-   (max-separation-gap :initform 0d0 :accessor pusher-max-separation-gap)))
+   (max-separation-gap :initform 0d0 :accessor pusher-max-separation-gap)
+   (accumulated-command-work :initform 0d0 :accessor pusher-command-work)))
+
+(defun pusher-target-at-time (config time)
+  "Commanded driver descent; optional travel stops the driver, never the soil."
+  (let ((velocity (gethash "pusherVelocity" config)))
+    (unless (and (finite-p time) (>= time 0d0)
+                 (finite-p velocity) (> velocity 0d0))
+      (error "Pusher command requires finite nonnegative time and positive velocity."))
+    (multiple-value-bind (travel supplied-p) (gethash "pusherTravelM" config)
+      (when (and supplied-p (not (and (finite-p travel) (> travel 0d0))))
+        (error "Pusher travel must be finite and positive when supplied."))
+      (let ((target (* velocity time)))
+        (unless (finite-p target) (error "Nonfinite pusher command."))
+        (if supplied-p (min target travel) target)))))
+
+(defun accumulate-pusher-command-work (bc old-target)
+  "Right-end rectangle sum of reaction times driver descent, in J/m.
+Call once after each native update. This is a command-work diagnostic, not
+a closed energy budget or a modification of particle/material state."
+  (let ((target (cl-mpm/scenario/slope-descent:strip-target bc))
+        (reaction (cl-mpm/scenario/slope-descent:strip-reaction bc)))
+    (unless (and (finite-p old-target) (>= old-target 0d0)
+                 (finite-p target) (>= target old-target)
+                 (finite-p reaction) (>= reaction 0d0))
+      (error "Pusher work requires nonnegative reaction and nondecreasing command."))
+    (let ((work (+ (pusher-command-work bc) (* reaction (- target old-target)))))
+      (unless (finite-p work) (error "Nonfinite accumulated pusher command work."))
+      (setf (pusher-command-work bc) work))))
 
 (defun capture-crest-intervals (top-row)
   "Capture original tributary x intervals before gravity moves the crest MPs."
@@ -96,11 +124,13 @@ The unilateral MIN is the contact law, not clipping of output or particle motion
 (defun pusher-observations (bc)
   "Return command, current weighted settlement, upward reaction, mapped reaction,
 active count, unloaded count (including exact touching), max compression gap,
-max separation gap. Counts/gaps/reactions are from the last predicted contact
+max separation gap, accumulated command-work rectangle diagnostic (J/m).
+Counts/gaps/reactions are from the last predicted contact
 evaluation; measured settlement uses the current MP geometry after the update."
   (list (cl-mpm/scenario/slope-descent:strip-target bc)
         (nth-value 0 (cl-mpm/scenario/slope-descent:strip-measurements bc))
         (cl-mpm/scenario/slope-descent:strip-reaction bc)
         (cl-mpm/scenario/slope-descent:strip-mapped-reaction bc)
         (pusher-active-count bc) (pusher-separated-count bc)
-        (pusher-max-compression-gap bc) (pusher-max-separation-gap bc)))
+        (pusher-max-compression-gap bc) (pusher-max-separation-gap bc)
+        (pusher-command-work bc)))
