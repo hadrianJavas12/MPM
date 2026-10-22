@@ -14,6 +14,7 @@
                   (ecase kind
                     (:rectangle '(:width :height :filter))
                     (:cylinder '(:diameter :height :filter))
+                    (:slope '(:width :height :crest-length :slope :base-height))
                     ((:cliff :joss) '(:height :shelf-aspect :slope :base-height
                                      :notch-height :notch-depth)))))
 
@@ -23,7 +24,10 @@
 
 (defun make-loading (kind &rest options)
   (make-component 'loading kind options
-                  (ecase kind (:compression '(:target-strain :duration :ramp-duration)) (:gravity nil))))
+                  (ecase kind
+                    (:compression '(:target-strain :duration :ramp-duration))
+                    (:prescribed-descent '(:velocity :target-displacement :patch-start :patch-length))
+                    (:gravity nil))))
 
 (defun make-solver (kind &rest options)
   (make-component 'solver kind options
