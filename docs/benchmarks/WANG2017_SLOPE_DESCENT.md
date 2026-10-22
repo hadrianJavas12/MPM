@@ -1,6 +1,6 @@
 # Wang (2017) prescribed crest descent: Soil#1
 
-This case studies prescribed descent of a 3 m crest patch using the existing MPM engine. It is a numerical comparison proposal based on Wang et al. (2017), [DOI](https://doi.org/10.1007/s11629-016-3951-1), Section 2, Table 1 and Figures 2–3. Source provenance is in [the reference record](../../research/references/wang2017/source.json). Current native benchmark evidence: **NOT_RUN**.
+This case studies prescribed descent of a 3 m crest patch using the existing MPM engine. It is a numerical comparison proposal based on Wang et al. (2017), [DOI](https://doi.org/10.1007/s11629-016-3951-1), Section 2, Table 1 and Figures 2–3. Source provenance is in [the reference record](../../research/references/wang2017/source.json). Current native benchmark evidence: **PILOT COMPLETE; FULL FIGURE 3 REPRODUCTION NOT_RUN**.
 
 ## Reference inputs and declared assumptions
 
@@ -48,3 +48,38 @@ if ($LASTEXITCODE -ne 0) { throw 'Run failed; retain and inspect its output.' }
 ```
 
 Record actual process exit, completed updates, target and measured descent, simulation time, force history, finite state and mass diagnostics before upgrading **NOT_RUN**. A successful pilot and a full 0.1 m run are distinct evidence. A quantitative benchmark also needs a documented reference-curve extraction and declared geometry/control tolerances.
+
+## Verified pilot, 2026-10-22
+
+Frozen native source `c2722e3` completed with exit 0: 915 material points,
+3,425 gravity steps, 3,440 loading steps, 1 s physical loading and 11 VTK states.
+The commanded strip descent was 0.100000 mm; measured mean soil descent was
+0.0992383 mm. Final signed upward reaction was 1.09678 kN/m; mass error was zero.
+The saved-output audit passes finite fields, mass, physical target trajectory
+and signed force mapping. The target was a one-second pilot, not the full paper curve.
+
+Eight native controls and ten existing framework contracts pass; Node check
+and 36 tests pass with zero skips. The expected one-step gravity-budget failure
+remains in evidence with complete=false. Modulus defaults were corrected after
+review so recorded values come from the actual native constructor.
+
+**Initial signed-reaction transients are visible and retained.** Gravity tolerance
+and undamped loading are not established as sufficient for a quasi-static reference
+curve; tighter equilibrium and damping/mesh sensitivity remain open. Do not smooth,
+clamp negative reactions or mark Figure 3 agreement PASS. Relief height and finite
+penalty compliance are additional comparison limitations. Soil#2 is not implemented.
+
+Loading took about 203 wall seconds for 1 physical second on this machine.
+A simple same-cost extrapolation puts the 1,000 s full target near 2.35 days,
+before changes in nonlinear iteration cost. This is a planning estimate.
+The user has been asked to choose pilot review, a separate quasi-static path,
+or full physical-speed explicit integration; the full target has not been launched.
+
+Artifacts: `output/wang2017-2026-10-22/pilot-001/`; retained evidence:
+`docs/evidence/wang2017-descent-2026-10-22/pilot/`. The source snapshot
+precedes a logging-only change at `131f57f`; no numerical body was edited during
+the frozen run. The Node status samples HEAD at completion, not at launch.
+
+```powershell
+.\toolchain\analysis-venv\Scripts\python.exe scripts\plot-wang2017-descent.py --run-dir $pilotOutput --video
+```

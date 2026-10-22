@@ -71,7 +71,10 @@ def inspect(run):
              "physicalTimeS": rows[-1]["time_s"],
              "commandedSettlementM": rows[-1]["commanded_settlement_m"],
              "measuredSettlementM": rows[-1]["measured_settlement_m"],
-             "maxAbsolutePenaltyGapM": max(abs(row["penalty_gap_m"]) for row in rows),
+             "maxAbsoluteMeanPenaltyGapM": max(abs(row["penalty_gap_m"]) for row in rows),
+             "maxParticlePenaltyGapM": max(row["max_gap_m"] for row in rows),
+             "initialReactionTransientsObserved": any(row["reaction_upward_N_per_m"] < -1e-7 for row in rows),
+             "quasiStaticReferenceAgreement": "NOT_VERIFIED",
              "reactionUpwardNPerM": rows[-1]["reaction_upward_N_per_m"],
              "sources": records}
     return manifest, rows, snapshots, audit
