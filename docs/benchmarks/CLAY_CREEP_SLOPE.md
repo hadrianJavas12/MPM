@@ -116,6 +116,19 @@ The material/solver equations were unchanged.
 
 **Actual replacement pilot launched18:24 WIB on2026-10-22 from7be4503**, output
 `output/slope-creep-2026-10-22/pilot-002/`; adjacent `-status.json`/`-launch.json`
-and native logs identify the job. Last observed NATIVE_RUNNING. The1s pilot has
-a1h native budget and automatic saved-output audit/media;30s run is pending pilot
-review. No completed slope or landslide result is claimed at this checkpoint.
+and native logs identify the job. It completed at18:27 WIB: native/audit/render
+exit0,1s/11frames,915 particles, zero mass drift, minJ0.98696. Crest descent was
+11.9218mm; maximum displacement13.4915mm and local speed0.053794m/s. Kappa reached
+0.00246253; minimum yield fell19.7%.14 verified artifact hashes retain native
+source/output/proofs and PNG/MP4 under `docs/evidence/slope-creep-2026-10-22/pilot-002/`.
+
+This establishes an operational pilot and computed creep/strength loss, not a
+landslide. Initial activation produces oscillatory velocity/kinetic energy;
+max creep rate decreased0.002609→0.002277/s. No accelerating slope failure is yet
+verified, and a small kinetic ratio alone cannot establish quasi-staticity.
+
+**30s observation launched19:24 WIB**, sourcea9c3e30, same preset material/mesh,
+output `output/slope-creep-2026-10-22/hold-30s-001/`, wrapper50876,4h native budget.
+Read the adjacent `-status.json` first. Automated review starts20:00 WIB without
+active waiting or repeat tests. Its actual displacement/velocity/localization
+must be reviewed before claiming a creep-to-landslide transition.

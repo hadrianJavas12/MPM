@@ -411,8 +411,13 @@ Pilot001 at04fe2c2 failed on a crest vector/list measurement mismatch; its nativ
 status/source/partial output are retained (10 hashes).7be4503 fixes the two
 sequence reductions; the expanded scenario suite3 passed, with5 hashes retained
 in `crest-sequence-regression/`. Material/solver code is unchanged.
-The replacement1s native pilot launched from7be4503 at18:24 WIB as
-`output/slope-creep-2026-10-22/pilot-002/`, NATIVE_RUNNING, not yet PASS.
+The replacement1s pilot from7be4503 completed18:27 WIB, native/audit/render exit0,
+11VTKs,915MPs, zero mass error and positive J. Crest descent11.9218mm and maximum
+displacement13.4915mm;14 retained evidence hashes in `pilot-002/`.
+Saved-output consistency PASS; a landslide or sustained acceleration is not
+verified (initial velocity/kinetic transients remain).
+The unchanged-material30s hold launched19:24 WIB at sourcea9c3e30 as
+`output/slope-creep-2026-10-22/hold-30s-001/`, native budget4h, not yet PASS.
 Native completion and saved-output consistency are separate from a verified
 creep-to-landslide transition. The new law is an assumed J2 clay surrogate,
 not the original Soil1 MC law or laboratory calibration. See the creep guide.

@@ -1,0 +1,61 @@
+{
+  "passedConsistencyChecks": true,
+  "nativeComplete": true,
+  "scope": "Saved native output consistency, not calibrated landslide validation",
+  "constantSelfWeight": "constant self-weight; free crest; no prescribed trajectory or surcharge",
+  "frames": 11,
+  "physicalTimeS": 1.0,
+  "maxDisplacementM": 0.01349150709096393,
+  "maxSpeedMPerS": 0.053794036617507555,
+  "maxCreepKappa": 0.0024625327184163897,
+  "creepObserved": true,
+  "strengthLossObserved": true,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "vtk": [
+    {
+      "path": "vtk\\particles_0000.vtk",
+      "sha256": "1042c3b4ca8b0d640ba05f638352b0b70f390962d0eec6aa2cf5f54d44127e44"
+    },
+    {
+      "path": "vtk\\particles_0001.vtk",
+      "sha256": "126ad4866a1aded19fa6ae4000e01a37c37e9ce192e3603ba70f1cfd82c73ca2"
+    },
+    {
+      "path": "vtk\\particles_0002.vtk",
+      "sha256": "364e0071a61fbe635ea6186a11c8ddfd2a1637d82804ad2cd1e6f1ebbc970469"
+    },
+    {
+      "path": "vtk\\particles_0003.vtk",
+      "sha256": "adc6d1aede4d659c357d6054b6b8ea193603267d6ccc81a3991599b27c33314d"
+    },
+    {
+      "path": "vtk\\particles_0004.vtk",
+      "sha256": "986391a575cfe03da3843464f76b9222268427969bc720cfbea9fc61f07383f5"
+    },
+    {
+      "path": "vtk\\particles_0005.vtk",
+      "sha256": "402138643d3b63e12908acdf6f9131c978e9483ad130cadd45ee0d5f5c2def62"
+    },
+    {
+      "path": "vtk\\particles_0006.vtk",
+      "sha256": "7dc1e6c9921754357b65f3f7ea0c43d117118d0cdcb222cc128636b1c53a6c79"
+    },
+    {
+      "path": "vtk\\particles_0007.vtk",
+      "sha256": "999e9a58ebd762673a0ca40fbb47048f505bf93d9bc9bb3289c23c9204542508"
+    },
+    {
+      "path": "vtk\\particles_0008.vtk",
+      "sha256": "1e99d8c59addaa15d8af51164d3a654c83e1efb24fd9e46748a739de29687e53"
+    },
+    {
+      "path": "vtk\\particles_0009.vtk",
+      "sha256": "139df2575001dba3437b1800a2a240f180e5df50897eefa8fbc930d4ea6e6dd1"
+    },
+    {
+      "path": "vtk\\particles_0010.vtk",
+      "sha256": "761f390f680f461c9845d760cdaa405ffae789c5598045e59e4c770418e8a82e"
+    }
+  ]
+}

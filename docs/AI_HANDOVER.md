@@ -47,30 +47,46 @@ operations, without changing material or solver equations. The expanded scenario
 suite **3 controls passed** on7be4503, including vector/list equivalence;5 hashes
 are in `crest-sequence-regression/`. No repeat13/4/Node suite is needed.
 
-### Active pilot002 — 2026-10-22 18:24 WIB
+### Completed pilot002 — reviewed 2026-10-22 19:24 WIB
 
 - Launched source **7be45030aa7cca62f403a86090d3d4aad5878c9b**,
   start `2026-10-22T11:24:06Z`; wrapper PID34608, native cmd in status JSON.
 - Run: `output/slope-creep-2026-10-22/pilot-002/`, adjacent
   `pilot-002-status.json`, `pilot-002-launch.json`, `.stdout.log`, `.stderr.log`.
-  Last observed **NATIVE_RUNNING**, not a completed result. Do not duplicate it.
+  **COMPLETED_REVIEW_PENDING**, native exit0, complete=true, audit/render exit0.
+  Completed18:27 WIB. Do not rerun it.
 - Case `cases/benchmarks/clay-creep-slope-pilot.lisp`:1s,11 states, max10000 hold
   updates,1h native wall budget. Elastic gravity has its own20000-update bound.
 - `scripts/run-slope-creep.ps1` automatically audits/renders PNG+MP4 after native
   exit0/complete=true. Status becomes COMPLETED_REVIEW_PENDING, not scientific PASS.
   The wrapper freezes analysis hashes; **do not edit `plot-slope-creep.py` or
   `plot_m5_cliff_comparison.py` while running**. If media fails, reuse native data.
-- Next: inspect output-audit, actual VTK/CSV and plot/video. Check finite positive
-  J/volume, mass/count, gravity/reset proof, accumulated creep and strength loss.
-  A1s operational pilot is not a landslide or time-convergence validation.
-- If pilot is credible, run the already committed `clay-creep-slope.lisp` in a
-  fresh output (30s/61states,4h wall budget). Record source/launch status first;
-  assess actual velocity/displacement/localization/run-out. Never program a
-  displacement/failure timeline or relax tolerances to obtain a desired picture.
-  If no transition occurs, report that result before tuning/long repeats.
+- Reviewed actual VTK/CSV/overview.1s/11states,915 MPs, zero mass drift;
+  crest descent11.9218mm, max displacement13.4915mm, max speed0.053794m/s;
+  kappa_max0.00246253, min yield51.9615→41.7250kPa (19.7% drop), minJ0.98696.
+  Source/raw output/proofs/media retained with14 verified artifact hashes under
+  `docs/evidence/slope-creep-2026-10-22/pilot-002/`.
+- Operationally credible for continued observation, **not a landslide PASS**:
+  activation from elastic geostatic state causes transients; kinetic energy and
+  crest speed oscillate, max creep rate drops0.002609→0.002277/s. Small kinetic
+  ratio does not prove quasi-staticity or accelerating creep. No tests repeated.
+
+### Active30s hold — 2026-10-22 19:24 WIB
+
+- Source **a9c3e30e026717a030974cc3a0074c7b99c034dd**, launched
+  `2026-10-22T12:24:05Z`; wrapper50876, native cmd in adjacent status JSON.
+- Run `output/slope-creep-2026-10-22/hold-30s-001/`, adjacent
+  `hold-30s-001-status.json`, `-launch.json`, `.stdout.log`, `.stderr.log`.
+  Case `clay-creep-slope.lisp`:30s/61states, same material/geometry/mesh as pilot,
+  no tuned strength/viscosity/timeline,4h native budget. Do not duplicate it.
+- Wrapper automatically audits/renders after complete native run; preserve its
+  analysis hashes and reuse native data if plotting fails. Review actual
+  velocity/displacement/kinetic curves, localization and run-out. If no transition
+  occurs, report that result before tuning or expensive repetition. Never equate
+  native completion/output consistency with scientific or landslide validation.
 
 Heartbeat **mpm-lanjut-migrasi-arsitektur**, named **MPM creep menuju longsor**,
-continues this new task: first check18:35 WIB then hourly, quiet status-first
+continues this new task: next check20:00 WIB then hourly, quiet status-first
 checks, no active polling or duplicate solvers, only notify
 meaningful progress/completion/failure. The old Wang diagnosis/slower run is
 superseded by the new user request and must not start automatically.

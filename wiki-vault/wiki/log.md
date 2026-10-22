@@ -551,3 +551,14 @@ Material/solver equations and13/4/Node controls remain unchanged.
 Replacement pilot002 launched18:24 WIB from7be4503, wrapper34608, NATIVE_RUNNING.
 Updated [[clay-creep-slope]], index, guide and handover. No landslide claim or
 discarded evidence; no repeat long run beyond the bounded pilot replacement.
+
+## [2026-10-22] checkpoint | Creep pilot complete; unchanged30s observation
+
+Reviewed [[clay-creep-slope]] pilot002: native/audit/render exit0,1s/11VTKs,
+915MPs, zero mass drift, minJ0.98696; crest descent11.9218mm,max13.4915mm,
+kappa_max0.00246253 and19.7% minimum strength loss.14 artifact hashes retain
+source/raw output/proofs/media. Velocity/kinetic transients and decreasing max
+creep rate mean accelerating slope failure is not established. Launched the
+already committed30s case with identical material/geometry/mesh at19:24 WIB,
+sourcea9c3e30, output hold-30s-001, wrapper50876,4h budget. Updated guide/testing/
+handover/index; no repeated controls, imposed collapse timeline or scientific PASS.

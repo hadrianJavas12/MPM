@@ -30,10 +30,16 @@ law.10 hashes preserve that failure.7be4503 fixes sequence handling;3 expanded
 scenario controls passed, with5 hashes in `crest-sequence-regression/`.
 Actual replacement1s pilot launched18:24 WIB on2026-10-22 from7be4503:
 `output/slope-creep-2026-10-22/pilot-002/`, wrapperPID34608,
-NATIVE_RUNNING at last check. No slope completion or landslide is claimed yet.
-The wrapper audits/renders saved native data after completion, with1h budget.
-Then review actual fields/curves before the30s exploratory case; remain quiet
-while healthy and avoid duplicate computation.
+Completed18:27 WIB, native/audit/render exit0,1s/11VTKs,915MPs, zero mass drift,
+minJ0.98696. Crest descent11.9218mm, max displacement13.4915mm, kappa_max0.00246253,
+minimum yield dropped19.7%.14 artifact hashes retain actual source/data/media.
+This is an operational pilot, not verified landslide/acceleration: activation
+transients cause velocity/kinetic oscillations, while max creep rate decreases.
+
+The same-material30s case launched19:24 WIB froma9c3e30:
+`output/slope-creep-2026-10-22/hold-30s-001/`, wrapper50876,4h native budget.
+Quiet status-first continuation starts20:00 WIB. Review actual plots/video and
+localization/run-out after completion; no duplicate computation or tuned timeline.
 
 Source/commands/assumptions are in `docs/benchmarks/CLAY_CREEP_SLOPE.md`;
 linked integrity and evidence practices: [[scientific-authenticity-audit-2026-10-15]].
