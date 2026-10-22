@@ -1,0 +1,7 @@
+PASS: Actual case configurations preserve material/geometry/solver physics
+PASS: Omitted travel preserves unlimited command and adds no config key
+PASS: Finite travel drives to 0.1m at 5s and holds without a soil clamp
+PASS: Invalid time and malformed/zero/negative travel are rejected
+PASS: Rectangle work rises under moving compression and is constant on hold
+PASS: Unloaded driver motion does no work; invalid diagnostic inputs fail
+SLOPE CREEP DRIVE/HOLD CONTROLS: 6 passed; no physical updates executed.

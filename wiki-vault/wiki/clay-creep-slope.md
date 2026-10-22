@@ -3,7 +3,7 @@ title: Experimental clay creep slope
 type: synthesis
 tags: [creep, clay, slope, viscoplasticity, native-windows]
 sources: [raw/clay-creep-design-2026-10-22.md, raw/clay-creep-duration-inputs-2026-10-22.md, raw/creep-pusher-clarification-2026-10-22.md, docs/benchmarks/CLAY_CREEP_SLOPE.md, docs/evidence/slope-creep-2026-10-22/hold-120s-001/review.json]
-updated: 2026-10-22
+updated: 2026-10-23
 ---
 
 # Experimental clay creep slope
@@ -102,3 +102,16 @@ laboratory calibration, general contact validation or an integrated work audit.
 
 Source/commands/assumptions are in `docs/benchmarks/CLAY_CREEP_SLOPE.md`;
 linked integrity and evidence practices: [[scientific-authenticity-audit-2026-10-15]].
+
+## Continued drive/hold study,2026-10-23
+
+[[creep-drive-hold-study-2026-10-23]] records continuation and declared experiment:
+0.02m/s driver to0.1m at5s, then stationary until10s; material/geometry unchanged,
+soil free.15 actual native controls pass on733996a, Nodecheck/36 on462f519;
+26 hashes retain controls, initial namespace failure and qualification-only fix.
+Actual drive-hold-001 launched04:36 WIB, wrapper38064/native1512,1h budget,
+source733996a. Read adjacent status; outcome pending. Command work is a per-step
+right-end rectangle estimate, not a closed budget. After completion inspect
+ID-aligned above-base downslope motion during hold, work/contact/mass/J and
+morphology. Fixed bottom/side rollers limit basal sliding/eventual run-out;
+internal shear remains possible. No failure claim, forced contact or tuning.

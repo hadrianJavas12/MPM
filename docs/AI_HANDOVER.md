@@ -1,8 +1,46 @@
 # AI Engineering Handover — CL-MPM
 
-**Operational checkpoint: 2026-10-22, Asia/Jakarta. Read this first.**
+**Operational checkpoint: 2026-10-23, Asia/Jakarta. Read this first.**
 
-## Current task: experimental clay creep toward slope failure
+## Latest continuation: drive then stationary hold — RUNNING
+
+User requested "lanjutkan dong". Branch **codex/slope-creep-landslide**;
+live main checked2026-10-23 remains9e97e00. New experiment: driver0.02m/s
+to0.1m at5s, then stationary through10s/101states. Soil stays free. Material,
+geometry, contact stiffness, grid, damping and mass remain unchanged. This is
+explicit stronger loading, not natural-creep or reference-paper validation.
+
+- Actual Windows **15 controls PASS** on733996a:6 protocol/work +6 contact +3
+  scenario. Nodecheck/36 PASS on462f519; the later commit only qualifies three
+  test helper calls. Initial namespace failure/log/source retained. New audit
+  reads both old11-state native formats. **26 hashes** retained in
+  `docs/evidence/slope-creep-2026-10-23/drive-hold-controls/`. Do not repeat.
+- ACTIVE `output/slope-creep-2026-10-23/drive-hold-001/`, adjacent-status.json
+  and launch/logs. Started **04:36:14 WIB,2026-10-23**, source
+  **733996a3799e48253691f244862d65b1932f665f**, wrapper38064/native cmd1512.
+  **1h wall /30000 update budget**. No restart. Read status/manifest/one log line
+  first; no duplicate run or active polling. Native dynamic result is pending.
+- Wrapper audits/renders automatically. Do not edit `plot-slope-creep.py` or
+  `plot_m5_cliff_comparison.py` while active. Reuse native data if media fails.
+  Optional travel leaves historical unlimited/gravity configurations unchanged.
+- New command-work column sums last reaction times command increment per native
+  step: right-end rectangle diagnostic, not a closed energy budget. It must stay
+  constant during stationary hold. Saved forces/gaps remain last predicted samples.
+- On completion run `scripts/review-creep-drive-hold.py --run-dir` for ID-aligned
+  above-base centroid/downslope velocity and hold trends, mass/J/state, reaction/
+  gaps/work and viewport. Retain real outcome, source/proof/media/hashes; update
+  guide/testing/wiki/index/log and commit/push. No landslide claim yet.
+- Fixed bottom prevents whole-domain basal sliding; side rollers bound eventual
+  run-out, while internal slope shear is possible. If motion decays on hold,
+  diagnose saved data before another run; no hidden material tuning or forced
+  contact/failure. No repeat old120s, finished pilots or unchanged material tests.
+
+Prepare one quiet continuation monitor for this new job, first after expected
+completion and then every5h for reset continuation. The prior pilot monitor was
+deleted; its stop/deletion notes below are historical. Continue the broader task
+from real evidence instead of treating a completed pilot as a completed landslide.
+
+## Previous checkpoint,2026-10-22: experimental clay creep toward slope failure
 
 Latest human instruction (2026-10-22): creep toward a landslide, with the later
 clarification "tanah boleh meluncur lebih cepat". This was communicated as a

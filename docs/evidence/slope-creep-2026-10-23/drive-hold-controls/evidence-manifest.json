@@ -1,0 +1,114 @@
+{
+  "nativeSourceCommit": "733996a3799e48253691f244862d65b1932f665f",
+  "nativeControls": 15,
+  "nodeSourceCommit": "462f519d93a386ccb10386d64a5776860b3bb1c5",
+  "nodeTests": 36,
+  "constitutiveAndLegacyGeometryUnchangedFrom": "85f0920",
+  "scope": "Native preparation/regression, not dynamic drive/hold outcome or scientific validation",
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "sha256": "ffe82f3c5b968ed009c2577fa38f32c83be167799ee565d40a18e3440c57b342"
+    },
+    {
+      "path": "analysis-compatibility.json",
+      "sha256": "90e63d6b703d2e5d6287cb7022271f507c9973ba6bddbc18eacb464885c36158"
+    },
+    {
+      "path": "check-creep-analysis-compat.py",
+      "sha256": "250e09939a6fc5b90b038130f735d0b090aa8f1183fe9c333c5cd5029c3faa5c"
+    },
+    {
+      "path": "contact-regression.log",
+      "sha256": "7ac3b87279df576dc051cf9ee48c66f64daaa7e4afd6c938abf1bfa24e7b0cb6"
+    },
+    {
+      "path": "drive-hold-002.log",
+      "sha256": "bc4bc2b30412708fcfd5e8736c4fb7d85039a3633dfffe4e455f92d0f75ca40c"
+    },
+    {
+      "path": "drive-hold.log",
+      "sha256": "fb2d9f99dc8f563b2f7a9bcfa5266cdf580b3f9bdca81da880f50bc8b250b903"
+    },
+    {
+      "path": "expected-failure-gravity-history.csv",
+      "sha256": "bab4a61f5605d4ce90cab1b69640b28bbc50385371f5a46d50ab1ece5b3d26a8"
+    },
+    {
+      "path": "expected-failure-manifest.json",
+      "sha256": "2261ca0cfcafb8b35843ce30a17976f1e084bed70433e9464e7674b66783016d"
+    },
+    {
+      "path": "initial-failed-test.lisp",
+      "sha256": "52bf79384ff5fb4e891b1713b947cc17a33e63f431e75576e9285d4aae27952e"
+    },
+    {
+      "path": "native-controls-initial-failure.json",
+      "sha256": "c6ea7599047683d1ca4b336d096e6e820a8bef37da4a1a0e71686747458ab8e3"
+    },
+    {
+      "path": "native-controls-status.json",
+      "sha256": "a8c7fefeedf54c414f831af2f59003f73c159ae2c97c6b2432d69f84d8cec31f"
+    },
+    {
+      "path": "node-check.log",
+      "sha256": "ef445b10cde3731a5b5215225895261bdd996b37947569fb0ee27d3c05ba158f"
+    },
+    {
+      "path": "node-status.json",
+      "sha256": "93c34f516ac4980321253a0aae13016dbbdc604db2548c20d7bbe7bc5299d955"
+    },
+    {
+      "path": "node-tests.log",
+      "sha256": "6a5e83e8cf6f33b1f86af37a461ac4b19e897fedb5501fc2a1e1a92b30747783"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ec645dcfdddcd141ba8c406b359f6a77c636e9abcdb9d6e953676e4fda9fd80c"
+    },
+    {
+      "path": "scenario-regression.log",
+      "sha256": "5af2d316b5f510cf66fe5c5d981c8ca0fed9f11b3c90b50c48cd052ed84c9ab9"
+    },
+    {
+      "path": "tested-sources/cases/benchmarks/clay-creep-pusher-drive-hold.lisp",
+      "sha256": "6f9d536cd9e781225d789114e1c81bc16d68de117e37ad132460896cdee4315e"
+    },
+    {
+      "path": "tested-sources/scenarios/slope-creep/configuration.lisp",
+      "sha256": "ff8a6ff624d98698c09794716e2334fe9f84b41849acee0369fb023c2cbcaf18"
+    },
+    {
+      "path": "tested-sources/scenarios/slope-creep/loading-output.lisp",
+      "sha256": "4f05fcdd8c921420622ca593af4455fb39bff93bfc39fb19f20a3be1647e3b8e"
+    },
+    {
+      "path": "tested-sources/scenarios/slope-creep/loading.lisp",
+      "sha256": "3ca017c2fb804e0202bdd9421a3d716a59a4784e6e0b7c5a58390422ecd81a7e"
+    },
+    {
+      "path": "tested-sources/scenarios/slope-creep/runner.lisp",
+      "sha256": "4435eb595750354a0f48ceac14bc53d986cd92cbcd14856cfcf0a45a8e56e938"
+    },
+    {
+      "path": "tested-sources/scripts/plot-slope-creep.py",
+      "sha256": "11ca5565c033f1926d41681b452e344bfa4d6ea958c3ebee5a81f0c0da333bd6"
+    },
+    {
+      "path": "tested-sources/src/simulation/components/specifications.lisp",
+      "sha256": "136a3f21922ef4b1cb788dbe7f675fb5ffb9667a5a87cc0e76fb1be6652b785e"
+    },
+    {
+      "path": "tested-sources/tests/benchmarks/slope-creep-contracts.lisp",
+      "sha256": "021ab8ac1004132a92b5b59019675ad4fa90b5de4cf7ce78348d2f9356bf7fad"
+    },
+    {
+      "path": "tested-sources/tests/benchmarks/slope-creep-drive-hold.lisp",
+      "sha256": "81b844ff4acae5907848020fe241c3a0ab8f1be585a095be63dfe03a4a9aad4f"
+    },
+    {
+      "path": "tested-sources/tests/benchmarks/slope-creep-pusher.lisp",
+      "sha256": "e9eab2f593994cd86b10be01886abf9ee5ec66f07930046cedcc4f9e493336e6"
+    }
+  ]
+}

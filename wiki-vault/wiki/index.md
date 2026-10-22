@@ -14,6 +14,7 @@
 - [[studio-geometry-material]] — notch/base conventions, material controls and SI units
 
 ## Sources
+- [[creep-drive-hold-study-2026-10-23]] — user continuation and explicit0.02m/s to0.1m driver then stationary hold; not paper/lab inputs
 - [[creep-pusher-clarification-2026-10-22]] — user permits faster soil motion; communicated unilateral0.005m/s crest driver with release, no particle velocity floor
 - [[clay-creep-duration-inputs-2026-10-22]] — user authorizes longer duration; speed/displacement can exceed earlier references
 - [[clay-creep-design-2026-10-22]] — immutable creep request, explicit surrogate choices and assumed time/material inputs
@@ -23,7 +24,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[clay-creep-slope]] —120s gravity without verified landslide; unilateral-pusher6/3 native and Node36 pass; gravity14VTK/11CSV exact PASS;1s dynamic release PASS, full120s pusher NOT_RUN, no active jobs
+- [[clay-creep-slope]] — prior gravity/contact results retained; new10s drive/hold running after15 native controls and Node36 PASS; landslide unverified
 - [[wang2017-prescribed-descent]] — pilot complete;0.005 m/s trial failed at77mm/100mm (MC integration); partial evidence retained, slower/paper-speed full runs NOT_RUN
 - [[mc-hardening-softening-study]] — M0–M6 COMPLETE on `codex/mc-hardening-softening-study`: dedicated `:mc-h` / `:mc-hs` model family (`34/34` unit assertions), M3 constitutive point verification (`7` pairs), M4 3D MPM Triaxial (`T-100-H` vs `T-100-HS`, $-62.33\%$ post-peak softening drop), and M5 2D MPM Cliff (`L-H` vs `L-HS`, $+51.92\%$ max displacement, $+38.79\%$ toe runout) with plots and `.mp4` videos
 - [[reusable-simulation-framework]] — canonical root ASDF (`cl-mpm-framework.asd`), Section 2/5 physical folder layout (`cases/{triaxial,cliff,benchmarks,direct-shear}/`), and post-alignment Triaxial 2D + bottom-to-top Joss cliff benchmarks exact PASS

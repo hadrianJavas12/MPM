@@ -327,8 +327,13 @@ Set-Location D:\MPM
   -OutputDirectory D:\MPM\output\creep-drive-hold-FRESH -MaxWallHours 1
 ```
 
-Focused native protocol/configuration and work controls, plotting compatibility,
-and the actual10s job are **pending** at this preparation checkpoint. After
+Actual Windows15 controls pass on733996a (6 protocol/work,6 contact,3 scenario);
+Nodecheck/36 tests pass on462f519. New audit reads both old native formats.
+26 hashes retain these controls, including the initial launcher-helper namespace
+failure and its qualification-only fix. The10s job launched **04:36 WIB,2026-10-23**,
+source733996a, wrapper38064/native1512,1h budget, in
+`output/slope-creep-2026-10-23/drive-hold-001/`. Result is **pending**; check
+adjacent-status.json before acting. After
 completion, review mass/count/J/finite state, force mapping and contact gaps,
 plus actual downslope displacement/velocity, kinetic trends, localization and
 run-out. Sustained deformation after5s with constant actuator work is stronger

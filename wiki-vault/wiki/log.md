@@ -637,3 +637,15 @@ PASS is bounded implementation evidence, not calibration/general contact or
 landslide validation. Full120s pusher NOT_RUN; no active jobs remain. The slow
 driver loses contact, so no automatic long run or material tuning is justified.
 Updated guide/testing/wiki/index; preserved raw sources and prior log entries.
+
+## [2026-10-23] checkpoint | Continuation with finite driver travel and stationary hold
+
+[[creep-drive-hold-study-2026-10-23]] records user continuation and disclosed
+0.02m/s-to0.1m then hold experiment, unchanged material/geometry.15 Windows native
+controls PASS733996a; Nodecheck/36 PASS462f519.26 hashes retain source/log/status,
+initial test-namespace failure and qualification-only fix, expected incomplete
+gravity CSV and old-data reader compatibility. Launched10s/101-state
+drive-hold-001 at04:36 WIB, source733996a, wrapper38064/native1512,1h budget.
+Outcome pending. Work is a rectangle diagnostic; review motion after driver stops
+before claiming failure or extending runs. Updated guide/testing/handover/index;
+raw sources and previous log entries preserved. Quiet continuation saves tokens.

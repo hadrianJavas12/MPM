@@ -486,3 +486,16 @@ pusher is **NOT_RUN**. The slow driver loses contact, so this checkpoint does no
 justify an automatic long run or material tuning. Contact validation remains
 bounded by the tracked-surface approximation and absent integrated-work audit.
 Read [the guide](benchmarks/CLAY_CREEP_SLOPE.md) for commands and contact/work limits.
+
+### Drive then stationary hold,2026-10-23
+
+Windows native6 protocol/work +6 contact +3 scenario controls PASS on733996a;
+Nodecheck/36 PASS on462f519. Initial test-helper namespace failure and its
+qualification-only fix are retained with26 hashes in
+`docs/evidence/slope-creep-2026-10-23/drive-hold-controls/`. New Python audit
+reads both old11-state native formats. Config comparison permits only loading
+velocity/travel, duration/frames and update budget changes; material/geometry/
+solver physics agree. Tests check unlimited compatibility, stop/hold command,
+invalid inputs, moving/held work, state non-mutation and retained failure CSV.
+Actual10s/101-state drive-hold-001 launched04:36 WIB from733996a,1h budget.
+Dynamic hold behavior/landslide remain pending; do not repeat finished controls.

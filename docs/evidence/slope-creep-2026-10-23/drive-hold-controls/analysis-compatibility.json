@@ -1,0 +1,18 @@
+{
+  "analysisSha256": "11ca5565c033f1926d41681b452e344bfa4d6ea958c3ebee5a81f0c0da333bd6",
+  "checks": [
+    {
+      "savedRun": "pilot-002",
+      "frames": 11,
+      "passed": true,
+      "scope": "New audit reads actual archived native CSV/VTK; does not rerun solver"
+    },
+    {
+      "savedRun": "pusher-pilot-001",
+      "frames": 11,
+      "passed": true,
+      "scope": "New audit reads actual archived native CSV/VTK; does not rerun solver"
+    }
+  ],
+  "scientificValidation": false
+}
