@@ -1,0 +1,52 @@
+{
+  "sourceCommit": "733996a3799e48253691f244862d65b1932f665f",
+  "nativeTimeS": 10.0,
+  "landslideVerified": false,
+  "scientificValidation": false,
+  "visualReview": "Unamplified final overview/contact plots inspected: distributed creep, no detached sliding mass or clear run-out; saved centers inside viewport",
+  "firstSavedFullyUnloadedTimeS": 9.0,
+  "lastSavedFullyUnloadedTimeS": 10.0,
+  "unloadedSamples": 11,
+  "holdCommandWorkConstant": true,
+  "commandWorkRectangleJPerM": 24723.3959330457,
+  "maximumSavedCompressionGapM": 0.002231456130180831,
+  "peakSavedReactionNPerM": 433254.64031276794,
+  "minimumSavedJ": 0.9798307543361761,
+  "gravityOnlyExactTimeReference": "D:\\MPM\\output\\slope-creep-2026-10-22\\hold-30s-001",
+  "gravityReferenceRegionParticleCount": 515,
+  "gravityOnlySamples": [
+    {
+      "timeS": 5.0,
+      "centroidDxM": 0.01156371988716512,
+      "centroidDyM": -0.03920522394451937,
+      "downslopeProjectionM": 0.03973457984059429,
+      "crestSettlementM": 0.0495591593046434,
+      "maxDisplacementM": 0.056499943922046075
+    },
+    {
+      "timeS": 7.5,
+      "centroidDxM": 0.019193526847750365,
+      "centroidDyM": -0.055189769037273156,
+      "downslopeProjectionM": 0.05739250543914958,
+      "crestSettlementM": 0.07161123816817208,
+      "maxDisplacementM": 0.08228114868120479
+    },
+    {
+      "timeS": 10.0,
+      "centroidDxM": 0.02808999729593617,
+      "centroidDyM": -0.070079752731853,
+      "downslopeProjectionM": 0.0747358448046847,
+      "crestSettlementM": 0.09349046695810279,
+      "maxDisplacementM": 0.10817997438241929
+    }
+  ],
+  "gravityOnlyDownslopeCentroidSecantsMPerS": [
+    0.007063170239422117,
+    0.006937335746214049
+  ],
+  "interpretation": "Driven hold centroid secants rise slightly, but remain below gravity-only projections; KE/max speed decay. Only one sampled second is fully unloaded. No runaway/landslide validation.",
+  "nextBoundedStudy": "Observe the unchanged command/material to20s total to resolve post-release motion, not to assume that extra time causes failure",
+  "stopRule": "If extended unloaded response decays or levels, do not repeat duration-only studies; report current mechanism limitation before a separate material/geometry study",
+  "scope": "Exact saved-time comparison, no interpolation. Downslope projection includes settlement; work is a rectangle estimate and a fixed driver can still release stored contact energy.",
+  "scriptSha256": "5e69a4fa80ce4280b729a3076c2bc9c46faca05393d49fbe47f8aa733eb0fe1a"
+}

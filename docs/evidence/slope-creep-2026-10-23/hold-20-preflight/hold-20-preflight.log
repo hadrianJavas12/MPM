@@ -1,0 +1,4 @@
+PASS: actual compiled configurations differ only in duration, frames and update budget
+PASS: 10/20s durations and 101/201 states preserve exact 0.1s output cadence
+PASS: declared computational cap increases 30000 to 60000; no physics settings differ
+SLOPE CREEP HOLD-EXTENSION PREFLIGHT: 3 controls passed; no physical updates executed.

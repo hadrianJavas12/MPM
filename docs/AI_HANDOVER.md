@@ -2,11 +2,11 @@
 
 **Operational checkpoint: 2026-10-23, Asia/Jakarta. Read this first.**
 
-## Latest continuation: drive then stationary hold — RUNNING
+## Latest continuation: 10s reviewed; 20s post-release observation — RUNNING
 
 User requested "lanjutkan dong". Branch **codex/slope-creep-landslide**;
 live main checked2026-10-23 remains9e97e00. New experiment: driver0.02m/s
-to0.1m at5s, then stationary through10s/101states. Soil stays free. Material,
+to0.1m at5s, now stationary through20s/201states. Soil stays free. Material,
 geometry, contact stiffness, grid, damping and mass remain unchanged. This is
 explicit stronger loading, not natural-creep or reference-paper validation.
 
@@ -15,11 +15,24 @@ explicit stronger loading, not natural-creep or reference-paper validation.
   test helper calls. Initial namespace failure/log/source retained. New audit
   reads both old11-state native formats. **26 hashes** retained in
   `docs/evidence/slope-creep-2026-10-23/drive-hold-controls/`. Do not repeat.
-- ACTIVE `output/slope-creep-2026-10-23/drive-hold-001/`, adjacent-status.json
-  and launch/logs. Started **04:36:14 WIB,2026-10-23**, source
-  **733996a3799e48253691f244862d65b1932f665f**, wrapper38064/native cmd1512.
-  **1h wall /30000 update budget**. No restart. Read status/manifest/one log line
-  first; no duplicate run or active polling. Native dynamic result is pending.
+- Completed drive-hold-001 source733996a: native exit0 at05:04 WIB, audit/render
+  exit0 at05:06,101states/915MPs, minJ0.979831, maxu0.116854m. **20 hashes** in
+  `docs/evidence/slope-creep-2026-10-23/drive-hold-001/`, reviewed actual data/media.
+  No detached mass/run-out. KE5→10s182.024→65.580J/m; maxspeed0.419→0.191m/s.
+  Downslope centroid secants5–7.5/7.5–10s5.169/6.129mm/s, BELOW gravity-only
+  7.063/6.937mm/s. Slight secant growth is not runaway. Rectangle work stays
+  24723.395933J/m after5s, but contact only fully releases in saved9–10s samples.
+  Thus there is only1s sampled free motion; longer post-release observation is
+  justified to resolve that phase, not because more time guarantees failure.
+- ACTIVE `output/slope-creep-2026-10-23/hold-20s-001/`, adjacent-status.json
+  and launch/logs. Started **05:17:30 WIB,2026-10-23**, source
+  **b6f499be6d011a3e60c70ad2d9707ea4630082f9**, wrapper25848/native cmd29296.
+  **2h wall /60000 update budget**,20s201states. No restart; recomputes0–10s.
+  Native3-control preflightebfa5e5 verifies ONLYduration/frames/computationalcap
+  differ, all physics/cadence unchanged. Comparator3 controls passb6f499b
+  (including expected rejection of different loading); **15 hashes** retained in
+  `docs/evidence/slope-creep-2026-10-23/hold-20-preflight/`. Do not repeat.
+  Read status/manifest/one log line first; no duplicate or active polling.
 - Wrapper audits/renders automatically. Do not edit `plot-slope-creep.py` or
   `plot_m5_cliff_comparison.py` while active. Reuse native data if media fails.
   Optional travel leaves historical unlimited/gravity configurations unchanged.
@@ -30,14 +43,19 @@ explicit stronger loading, not natural-creep or reference-paper validation.
   above-base centroid/downslope velocity and hold trends, mass/J/state, reaction/
   gaps/work and viewport. Retain real outcome, source/proof/media/hashes; update
   guide/testing/wiki/index/log and commit/push. No landslide claim yet.
+- Compare strict10s prefix with `scripts/compare-creep-prefix.py --reference
+  output/slope-creep-2026-10-23/drive-hold-001 --candidate
+  output/slope-creep-2026-10-23/hold-20s-001 --output <fresh-json>
+  --allow-increased-update-budget`. Flag only permits explicit positive-integer
+  cap30000→60000; all other physical settings/cadence, VTK and BOTH creep/loading
+  CSV prefixes (including work) stay byte-exact. Do not relax these checks.
 - Fixed bottom prevents whole-domain basal sliding; side rollers bound eventual
   run-out, while internal slope shear is possible. If motion decays on hold,
   diagnose saved data before another run; no hidden material tuning or forced
   contact/failure. No repeat old120s, finished pilots or unchanged material tests.
 
-Active quiet monitor **mpm-creep-drive-hold** checks next at **05:15 WIB,2026-10-23**.
-It checks hourly at minute15 only until this run finishes/stops, then must update
-itself to every5h for reset continuation. One monitor only. The prior pilot monitor
+Active quiet monitor **mpm-creep-drive-hold** now resumes every5h after the
+completed10s run, covering reset continuation. One monitor only. The prior pilot monitor
 was deleted; its stop/deletion notes below are historical. Continue the broader task
 from real evidence instead of treating a completed pilot as a completed landslide.
 

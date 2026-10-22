@@ -657,3 +657,19 @@ until the active run finishes/stops; its instructions then switch to every5h
 for reset continuation. No active waiting or duplicate solver. The completed
 pilot does not terminate the broader creep-to-landslide objective. Checkpoint
 e6076a9 and native source733996a are pushed; actual10s result remains pending.
+
+## [2026-10-23] checkpoint | 10s reviewed; bounded20s post-release observation
+
+[[clay-creep-slope]] drive-hold-001 completed native05:04/audit-render05:06 WIB,
+all exits0,101states/915MPs,minJ0.979831.20 hashes retain actual data/source/proof/
+media/review. Visual review finds no detached mass/run-out; KE/maxspeed decrease.
+Centroid downslope secants5.169/6.129mm/s are below gravity-only7.063/6.937 at
+exact times. Work stays24723.396J/m; fully unloaded saved contact starts9s,
+so only1s free motion observed. No runaway or calibration claim.
+
+Launched unchanged20s observation05:17 WIB, sourceb6f499b, wrapper25848/native29296,
+2h budget.3 native preflight controls and3 comparator controls pass,15 hashes;
+only duration/frames/computational cap30000→60000 differ. Actual prefix PENDING;
+all VTK/material/contact/work CSV bytes must match. No hidden tolerance/physics
+change. Stop duration-only repeats if free response decays/levels. Update quiet
+monitor to every5h; raw sources and earlier log/evidence preserved.

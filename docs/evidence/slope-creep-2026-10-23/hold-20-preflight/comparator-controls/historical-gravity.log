@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "scope": "Strict saved-state prefix regression; not scientific failure validation",
+  "reference": "D:\\MPM\\output\\slope-creep-2026-10-22\\pilot-002",
+  "candidate": "D:\\MPM\\output\\slope-creep-2026-10-22\\gravity-compat-001",
+  "prefixPhysicalTimeS": 1.0,
+  "candidatePhysicalTimeS": 1.0,
+  "physicalConfigurationIdentical": true,
+  "allowIncreasedUpdateBudgetRequested": false,
+  "updateBudgetBefore": 10000,
+  "updateBudgetAfter": 10000,
+  "updateBudgetsPositiveIntegers": true,
+  "updateBudgetNondecreasing": true,
+  "updateBudgetExcludedFromPhysicalConfigurationComparison": false,
+  "updateBudgetScope": "Declared computational update cap only; numerical tolerances and saved-state byte comparisons unchanged",
+  "outputCadenceIdentical": true,
+  "loadingHistoryPresence": {
+    "reference": false,
+    "candidate": false
+  },
+  "loadingHistoryPrefixByteIdentical": null,
+  "loadingHistoryScope": "When both exist, exact saved-line prefix including header/contact/work; neither present is not applicable; one-sided presence fails",
+  "historyPrefixByteIdentical": true,
+  "comparisonScriptSha256": "6c1dfd3b01bcd9fa5b3ccbe7ca716a03f78e4139a1b021adc37611fe5ca25104"
+}

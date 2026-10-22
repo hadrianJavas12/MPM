@@ -1,0 +1,22 @@
+{
+  "sourceCommit": "b6f499be6d011a3e60c70ad2d9707ea4630082f9",
+  "analysisOnly": true,
+  "checks": [
+    {
+      "name": "historical-gravity",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "name": "contact-and-work-self",
+      "exitCode": 0,
+      "expectedExitCode": 0
+    },
+    {
+      "name": "different-loading-rejected",
+      "exitCode": 1,
+      "expectedExitCode": 1
+    }
+  ],
+  "passed": true
+}

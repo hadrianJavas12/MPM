@@ -299,7 +299,7 @@ unverified. Do not repeat completed jobs.
 
 The user requested continuation toward the still-unverified landslide. The
 0.005m/s pilot showed soil outrunning the driver; simply repeating that loading
-for hours has little diagnostic value. The next bounded experiment uses
+for hours has little diagnostic value. The first drive/hold experiment used
 `cases/benchmarks/clay-creep-pusher-drive-hold.lisp`: **0.02m/s to0.1m driver
 travel**, then stationary driver, for **10s total /101 saved states**. Drive stops
 at5s because of the declared actuator travel, not a damage/time switch. Soil
@@ -332,11 +332,47 @@ Nodecheck/36 tests pass on462f519. New audit reads both old native formats.
 26 hashes retain these controls, including the initial launcher-helper namespace
 failure and its qualification-only fix. The10s job launched **04:36 WIB,2026-10-23**,
 source733996a, wrapper38064/native1512,1h budget, in
-`output/slope-creep-2026-10-23/drive-hold-001/`. Result is **pending**; check
-adjacent-status.json before acting. After
-completion, review mass/count/J/finite state, force mapping and contact gaps,
-plus actual downslope displacement/velocity, kinetic trends, localization and
-run-out. Sustained deformation after5s with constant actuator work is stronger
-mechanism evidence than deformation while being pushed, but creep alone is not
-a landslide. A negative outcome must be preserved; do not force contact, tune
-material parameters or assume failure from the extra loading.
+`output/slope-creep-2026-10-23/drive-hold-001/`. Native completed05:04 WIB,
+audit/render05:06, all exits0,101states/915MPs, minJ0.979831.20 artifact hashes
+retain native data/source/proof/media/review/contact CSV. Actual overview shows
+distributed creep without a detached sliding mass or clear run-out.
+
+| Measured quantity | 5s | 10s |
+| --- | ---: | ---: |
+| Kinetic energy (J/m) | 182.024 | 65.580 |
+| Maximum speed (m/s) | 0.419142 | 0.190571 |
+| Above-base centroid dx (m) | 0.015942 | 0.034253 |
+| Driver rectangle work (J/m) | 24723.396 | 24723.396 |
+
+Downslope centroid secants5–7.5/7.5–10s are5.169/6.129mm/s, below gravity-only
+7.063/6.937mm/s at those exact intervals. Projection includes settlement; slight
+growth does not establish sliding acceleration. Contact still compresses40/51
+hold samples and first fully unloads at9s. A stationary driver can release stored
+elastic/contact energy despite zero command work, so only the9–10s samples
+observe complete release. **Landslide remains NOT_VERIFIED.**
+
+### Bounded post-release extension to20s
+
+`clay-creep-pusher-drive-hold-20s.lisp` retains the same0.02m/s-to0.1m command,
+material, geometry and solver physics, extending only observation20s/201states
+and computational cap30000→60000. Actual Windows3-control preflight verifies
+that exact change set and0.1s cadence.15 hashes retain preflight/comparator
+controls (including expected rejection of different loading).
+
+`hold-20s-001` launched05:17 WIB fromb6f499b, wrapper25848/native29296,2h budget.
+This fresh run recomputes0–10s because there is no restart. Compare all VTK and
+both material/contact/work CSV prefixes exactly with:
+
+```powershell
+.\toolchain\analysis-venv\Scripts\python.exe scripts\compare-creep-prefix.py `
+  --reference output/slope-creep-2026-10-23/drive-hold-001 `
+  --candidate output/slope-creep-2026-10-23/hold-20s-001 `
+  --output output/slope-creep-2026-10-23/hold-20s-001/prefix-comparison.json `
+  --allow-increased-update-budget
+```
+
+That explicit flag permits only the increased computational cap; no numerical
+tolerance or physics changes. Actual20s regression/outcome remain pending.
+This observes the previously short post-release phase, not an assumption that
+more time creates failure. If free motion levels or decays, stop duration-only
+repeats and report the present mechanism limitation before a separate study.

@@ -498,4 +498,19 @@ velocity/travel, duration/frames and update budget changes; material/geometry/
 solver physics agree. Tests check unlimited compatibility, stop/hold command,
 invalid inputs, moving/held work, state non-mutation and retained failure CSV.
 Actual10s/101-state drive-hold-001 launched04:36 WIB from733996a,1h budget.
-Dynamic hold behavior/landslide remain pending; do not repeat finished controls.
+The completed dynamic hold review is recorded below; landslide remains unverified.
+
+### Completed10s review and20s extension gate
+
+Drive-hold-001 completed native/audit/render exit0,101VTK states,915MPs and
+minJ0.979831; identity-aligned mass/field/force/work checks pass.20 hashes retain
+actual source/data/media/review. No detached mass/run-out;5–10s KE/maxspeed fall.
+Fully unloaded saved samples begin9s, leaving only1s post-release observation.
+
+Native hold-extension preflightebfa5e5 passes3 controls: only duration10→20,
+frames101→201 and computational maxUpdates30000→60000 differ;0.1s cadence and
+all physical values agree. Comparator controlsb6f499b pass historical gravity,
+contact/work self-comparison and expected different-loading rejection.15 hashes
+retain these preparation checks. The explicit increased-budget flag does not
+relax VTK/creep/loading CSV byte checks. Actual20s before/after prefix remains
+PENDING while hold-20s-001 runs; do not call preparation checks that regression.

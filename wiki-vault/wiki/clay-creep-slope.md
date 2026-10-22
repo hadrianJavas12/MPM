@@ -110,8 +110,24 @@ linked integrity and evidence practices: [[scientific-authenticity-audit-2026-10
 soil free.15 actual native controls pass on733996a, Nodecheck/36 on462f519;
 26 hashes retain controls, initial namespace failure and qualification-only fix.
 Actual drive-hold-001 launched04:36 WIB, wrapper38064/native1512,1h budget,
-source733996a. Read adjacent status; outcome pending. Command work is a per-step
+source733996a. This10s run completed; its review is recorded below. Command work is a per-step
 right-end rectangle estimate, not a closed budget. After completion inspect
 ID-aligned above-base downslope motion during hold, work/contact/mass/J and
 morphology. Fixed bottom/side rollers limit basal sliding/eventual run-out;
 internal shear remains possible. No failure claim, forced contact or tuning.
+
+10s reviewed: native/audit/render exit0,101states/915MPs,minJ0.979831;20 hashes
+retain actual source/data/proofs/media/contact/review. No detached mass/run-out.
+KE182.024→65.580J/m and maxspeed0.419→0.191m/s across5–10s. Above-base downslope
+secants5.169/6.129mm/s remain below gravity-only7.063/6.937 at exact same times.
+Rectangle work stays24723.396J/m, but stationary contact remains until8.9s;
+full release is sampled only9–10s. Stored elastic/contact energy can be released
+with zero actuator work. One second is too short to resolve post-release trends.
+
+Bounded20s/201state observation launched05:17 WIB fromb6f499b, wrapper25848/
+native29296,2h budget: same loading/material/geometry; only duration/frames and
+computational cap60000 change.3 native configuration and3 comparator controls
+pass,15 retained hashes. Actual10s prefix/20s outcome PENDING. The cap flag is
+explicit; VTK and BOTH creep/contact/work CSV prefixes must remain byte-identical.
+If released motion decays/levels, stop duration-only repeats instead of forcing
+failure. Quiet monitor mpm-creep-drive-hold resumes every5h, without active waits.

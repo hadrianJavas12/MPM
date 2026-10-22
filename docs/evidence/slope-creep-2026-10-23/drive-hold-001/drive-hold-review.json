@@ -1,0 +1,4669 @@
+{
+  "reviewedAtUtc": "2026-10-22T22:12:58.641107+00:00",
+  "scope": "Saved native output measurements; no laboratory calibration or failure threshold",
+  "landslideVerified": false,
+  "morphologyReview": "PENDING_INDEPENDENT_VISUAL_REVIEW",
+  "nativeComplete": true,
+  "integrity": {
+    "finiteFields": true,
+    "uniqueIdentitySetUnchanged": true,
+    "identityAlignedMassUnchanged": true,
+    "particleCount": 915,
+    "massConservationConsistent": true,
+    "maximumAbsoluteRelativeMassError": 1.3350376151909447e-14,
+    "recomputed2dSpeedAndKineticEnergyConsistentWithHistory": true,
+    "nonTensileMappedContactForceConsistent": true
+  },
+  "regionDefinition": {
+    "membership": "Fixed t=0 native particle IDs whose y coordinate exceeds baseHeight",
+    "baseHeightM": 5.0,
+    "particleCount": 515,
+    "initialMassKgPerM": 262576.92484181654,
+    "weights": "Initial particle masses; identity-aligned mass invariance checked",
+    "initialCentroidXM": 6.551465315708007,
+    "initialCentroidYM": 9.551999743418573
+  },
+  "downslopeDirection": {
+    "definition": "Unit tangent to the declared initial slope, +x and -y; projection also includes settlement and alone does not establish sliding",
+    "x": 0.5000000000000001,
+    "y": -0.8660254037844386
+  },
+  "velocityConvention": "Two-dimensional vel_x/vel_y; strict sign fractions, no motion-size threshold",
+  "viewport": {
+    "limitsM": {
+      "x": [
+        0.0,
+        20.0
+      ],
+      "y": [
+        0.0,
+        16.0
+      ]
+    },
+    "testsParticleCentersOnly": true,
+    "allSavedCentersInside": true
+  },
+  "protocol": {
+    "velocityMPerS": 0.02,
+    "travelM": 0.1,
+    "driverStopTimeS": 5.0,
+    "finalTimeS": 10.0,
+    "commandWorkConvention": "sum of last native reaction times nonnegative command increment; right-end rectangle diagnostic J/m; not a closed energy budget"
+  },
+  "hold": {
+    "selection": "Nearest existing frame at/after driver stop; nearest hold midpoint and final frame; no interpolation",
+    "requestedTimesS": [
+      5.0,
+      7.5,
+      10.0
+    ],
+    "selectedFrames": [
+      50,
+      75,
+      100
+    ],
+    "selectedTimesS": [
+      5.0,
+      7.5,
+      10.0
+    ],
+    "firstHalfSecant": {
+      "startFrame": 50,
+      "endFrame": 75,
+      "startTimeS": 5.0,
+      "endTimeS": 7.5,
+      "centroidVxSecantMPerS": 0.003558793004700078,
+      "centroidVySecantMPerS": -0.00391442340366197,
+      "downslopeCentroidSecantMPerS": 0.005169386611089652
+    },
+    "secondHalfSecant": {
+      "startFrame": 75,
+      "endFrame": 100,
+      "startTimeS": 7.5,
+      "endTimeS": 10.0,
+      "centroidVxSecantMPerS": 0.003765514223050559,
+      "centroidVySecantMPerS": -0.004903711107641584,
+      "downslopeCentroidSecantMPerS": 0.00612949550356282
+    },
+    "atFirstSavedHoldFrame": {
+      "frame": 50,
+      "timeS": 5.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.567407481311011,
+      "aboveBaseCentroidYM": 9.492874115714027,
+      "aboveBaseCentroidDxM": 0.0159421656030041,
+      "aboveBaseCentroidDyM": -0.05912562770454599,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.05917537840833988,
+      "aboveBaseMassWeightedVxMPerS": 0.0022855388025278204,
+      "aboveBaseMassWeightedVyMPerS": -0.013411960287422186,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.012757867724719565,
+      "aboveBaseRightDownMassFraction": 0.5631067961165048,
+      "aboveBaseRightDownCountFraction": 0.5631067961165048,
+      "aboveBaseRightwardMassFraction": 0.6058252427184466,
+      "aboveBaseDownwardMassFraction": 0.9339805825242717,
+      "maxVelocityNormMPerS": 0.41914176226173083,
+      "totalKineticEnergyJPerM": 182.0241980017181,
+      "minimumJFromNativeHistory": 0.9813254488869542,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25007607118679787,
+          "maximum": 19.751505255215612
+        },
+        "y": {
+          "minimum": 0.2452564741259166,
+          "maximum": 14.588470306025792
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 433254.64031276794,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    "atFinalFrame": {
+      "frame": 100,
+      "timeS": 10.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.585718249380387,
+      "aboveBaseCentroidYM": 9.470828779435768,
+      "aboveBaseCentroidDxM": 0.03425293367238069,
+      "aboveBaseCentroidDyM": -0.08117096398280488,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.08742258369497106,
+      "aboveBaseMassWeightedVxMPerS": 0.0049479038770423285,
+      "aboveBaseMassWeightedVyMPerS": -0.0037848449328237456,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.005751723799731335,
+      "aboveBaseRightDownMassFraction": 0.6446601941747573,
+      "aboveBaseRightDownCountFraction": 0.6446601941747573,
+      "aboveBaseRightwardMassFraction": 0.7980582524271844,
+      "aboveBaseDownwardMassFraction": 0.825242718446602,
+      "maxVelocityNormMPerS": 0.19057073637517372,
+      "totalKineticEnergyJPerM": 65.5804875003996,
+      "minimumJFromNativeHistory": 0.9798307543361761,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25015431069967886,
+          "maximum": 19.75296333325791
+        },
+        "y": {
+          "minimum": 0.24480666483834349,
+          "maximum": 14.567231173869454
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    "commandWorkAtFirstSavedHoldFrameJPerM": 24723.3959330457,
+    "commandWorkAtFinalFrameJPerM": 24723.3959330457,
+    "commandWorkExactlyConstantAcrossSavedHold": true,
+    "sampledContact": {
+      "samples": 51,
+      "positiveReactionSamples": 40,
+      "zeroReactionSamples": 11,
+      "samplesWithActiveContacts": 40,
+      "samplesWithoutActiveContacts": 11
+    }
+  },
+  "sampledContact": {
+    "excludesUnevaluatedInitialFrame": true,
+    "allAfterTimeZero": {
+      "samples": 100,
+      "positiveReactionSamples": 89,
+      "zeroReactionSamples": 11,
+      "samplesWithActiveContacts": 89,
+      "samplesWithoutActiveContacts": 11
+    },
+    "beforeDriverStop": {
+      "samples": 49,
+      "positiveReactionSamples": 49,
+      "zeroReactionSamples": 0,
+      "samplesWithActiveContacts": 49,
+      "samplesWithoutActiveContacts": 0
+    }
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.551465315708007,
+      "aboveBaseCentroidYM": 9.551999743418573,
+      "aboveBaseCentroidDxM": 0.0,
+      "aboveBaseCentroidDyM": 0.0,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0,
+      "aboveBaseMassWeightedVxMPerS": 0.0,
+      "aboveBaseMassWeightedVyMPerS": 0.0,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.0,
+      "aboveBaseRightDownMassFraction": 0.0,
+      "aboveBaseRightDownCountFraction": 0.0,
+      "aboveBaseRightwardMassFraction": 0.0,
+      "aboveBaseDownwardMassFraction": 0.0,
+      "maxVelocityNormMPerS": 0.0,
+      "totalKineticEnergyJPerM": 0.0,
+      "minimumJFromNativeHistory": 0.9885992380442626,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24980412379676104,
+          "maximum": 19.750422771788667
+        },
+        "y": {
+          "minimum": 0.24713201150699898,
+          "maximum": 14.67243926597466
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 0.0
+    },
+    {
+      "frame": 1,
+      "timeS": 0.1,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.55153466196573,
+      "aboveBaseCentroidYM": 9.551438279357813,
+      "aboveBaseCentroidDxM": 6.93462577237014e-05,
+      "aboveBaseCentroidDyM": -0.0005614640607607413,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0005209152687926222,
+      "aboveBaseMassWeightedVxMPerS": 0.0020477622766402396,
+      "aboveBaseMassWeightedVyMPerS": -0.013379995963868551,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.012611297545563541,
+      "aboveBaseRightDownMassFraction": 0.6524271844660194,
+      "aboveBaseRightDownCountFraction": 0.6524271844660194,
+      "aboveBaseRightwardMassFraction": 0.6524271844660194,
+      "aboveBaseDownwardMassFraction": 1.0,
+      "maxVelocityNormMPerS": 0.03194540006891026,
+      "totalKineticEnergyJPerM": 30.97050356628212,
+      "minimumJFromNativeHistory": 0.9885234271118024,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24980546539864204,
+          "maximum": 19.750430651252284
+        },
+        "y": {
+          "minimum": 0.24711247328953542,
+          "maximum": 14.670602725988307
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 26903.62581610373,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 40.363030941340206
+    },
+    {
+      "frame": 2,
+      "timeS": 0.2,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.551909539946405,
+      "aboveBaseCentroidYM": 9.54952117568155,
+      "aboveBaseCentroidDxM": 0.0004442242383984052,
+      "aboveBaseCentroidDyM": -0.002478567737023596,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0023686147444621445,
+      "aboveBaseMassWeightedVxMPerS": 0.004681544568115804,
+      "aboveBaseMassWeightedVyMPerS": -0.022358284015274447,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.021703614226313117,
+      "aboveBaseRightDownMassFraction": 0.9495145631067962,
+      "aboveBaseRightDownCountFraction": 0.9495145631067962,
+      "aboveBaseRightwardMassFraction": 0.9495145631067962,
+      "aboveBaseDownwardMassFraction": 1.0,
+      "maxVelocityNormMPerS": 0.04012914674293334,
+      "totalKineticEnergyJPerM": 80.88387870256453,
+      "minimumJFromNativeHistory": 0.9882338686134658,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24985471397026096,
+          "maximum": 19.75047096677427
+        },
+        "y": {
+          "minimum": 0.24703968917292607,
+          "maximum": 14.668574260905284
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 19528.643681674395,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 87.6396224084282
+    },
+    {
+      "frame": 3,
+      "timeS": 0.3,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.552300733450038,
+      "aboveBaseCentroidYM": 9.547650860725547,
+      "aboveBaseCentroidDxM": 0.0008354177420315523,
+      "aboveBaseCentroidDyM": -0.004348882693026468,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0041839517612551795,
+      "aboveBaseMassWeightedVxMPerS": 0.002462392219376903,
+      "aboveBaseMassWeightedVyMPerS": -0.014116828171839707,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.013456727927361472,
+      "aboveBaseRightDownMassFraction": 0.5728155339805825,
+      "aboveBaseRightDownCountFraction": 0.5728155339805825,
+      "aboveBaseRightwardMassFraction": 0.6718446601941748,
+      "aboveBaseDownwardMassFraction": 0.8990291262135922,
+      "maxVelocityNormMPerS": 0.02793178967291329,
+      "totalKineticEnergyJPerM": 46.89323281707131,
+      "minimumJFromNativeHistory": 0.9879373166778548,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24980804485242608,
+          "maximum": 19.75048392943806
+        },
+        "y": {
+          "minimum": 0.24696211843712357,
+          "maximum": 14.666707562238159
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 27811.805194630782,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 129.54256016950006
+    },
+    {
+      "frame": 4,
+      "timeS": 0.4,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.552388777489987,
+      "aboveBaseCentroidYM": 9.546604525739477,
+      "aboveBaseCentroidDxM": 0.0009234617819799951,
+      "aboveBaseCentroidDyM": -0.00539521767909612,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.005134126460034157,
+      "aboveBaseMassWeightedVxMPerS": -6.709330670373655e-05,
+      "aboveBaseMassWeightedVyMPerS": -0.008368441093010255,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.007213735923268626,
+      "aboveBaseRightDownMassFraction": 0.4116504854368932,
+      "aboveBaseRightDownCountFraction": 0.4116504854368932,
+      "aboveBaseRightwardMassFraction": 0.44271844660194176,
+      "aboveBaseDownwardMassFraction": 0.9475728155339804,
+      "maxVelocityNormMPerS": 0.030367238380256976,
+      "totalKineticEnergyJPerM": 17.76777389921608,
+      "minimumJFromNativeHistory": 0.9877739341662154,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2497885326603001,
+          "maximum": 19.75050549455654
+        },
+        "y": {
+          "minimum": 0.24692083039246732,
+          "maximum": 14.664885856663606
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 46079.41522930759,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 204.9788527566859
+    },
+    {
+      "frame": 5,
+      "timeS": 0.5,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.552448625836965,
+      "aboveBaseCentroidYM": 9.545756905834402,
+      "aboveBaseCentroidDxM": 0.000983310128958692,
+      "aboveBaseCentroidDyM": -0.0062428375841712125,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.00589811100407189,
+      "aboveBaseMassWeightedVxMPerS": 0.0018487771145469544,
+      "aboveBaseMassWeightedVyMPerS": -0.009128955815448255,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008830296203477351,
+      "aboveBaseRightDownMassFraction": 0.4640776699029126,
+      "aboveBaseRightDownCountFraction": 0.4640776699029126,
+      "aboveBaseRightwardMassFraction": 0.4660194174757281,
+      "aboveBaseDownwardMassFraction": 0.9941747572815532,
+      "maxVelocityNormMPerS": 0.04617087798854114,
+      "totalKineticEnergyJPerM": 25.256191060644255,
+      "minimumJFromNativeHistory": 0.9876655310620602,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24984546722554044,
+          "maximum": 19.750522649413227
+        },
+        "y": {
+          "minimum": 0.24689466289112968,
+          "maximum": 14.662922368661535
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 59691.34793840425,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 310.1594759591957
+    },
+    {
+      "frame": 6,
+      "timeS": 0.6,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.552851563454344,
+      "aboveBaseCentroidYM": 9.544675262599634,
+      "aboveBaseCentroidDxM": 0.0013862477463373324,
+      "aboveBaseCentroidDyM": -0.007324480818938994,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.007036310331901685,
+      "aboveBaseMassWeightedVxMPerS": 0.0053655743271523665,
+      "aboveBaseMassWeightedVyMPerS": -0.01240719782946149,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.013427735673668981,
+      "aboveBaseRightDownMassFraction": 0.9126213592233009,
+      "aboveBaseRightDownCountFraction": 0.912621359223301,
+      "aboveBaseRightwardMassFraction": 0.9281553398058252,
+      "aboveBaseDownwardMassFraction": 0.978640776699029,
+      "maxVelocityNormMPerS": 0.03254344193396305,
+      "totalKineticEnergyJPerM": 34.87876767787128,
+      "minimumJFromNativeHistory": 0.9875288629935352,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24988257184600565,
+          "maximum": 19.750526977377213
+        },
+        "y": {
+          "minimum": 0.24686014435060685,
+          "maximum": 14.660984979028678
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 72444.89111695174,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 440.95158983198155
+    },
+    {
+      "frame": 7,
+      "timeS": 0.7000000000000001,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.553285010211746,
+      "aboveBaseCentroidYM": 9.543183529264576,
+      "aboveBaseCentroidDxM": 0.0018196945037391998,
+      "aboveBaseCentroidDyM": -0.008816214153997137,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.008544912674435055,
+      "aboveBaseMassWeightedVxMPerS": 0.0028529956739668893,
+      "aboveBaseMassWeightedVyMPerS": -0.0173473992048881,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.01644978623800651,
+      "aboveBaseRightDownMassFraction": 0.5941747572815534,
+      "aboveBaseRightDownCountFraction": 0.5941747572815534,
+      "aboveBaseRightwardMassFraction": 0.6349514563106796,
+      "aboveBaseDownwardMassFraction": 0.9572815533980582,
+      "maxVelocityNormMPerS": 0.041460588498473304,
+      "totalKineticEnergyJPerM": 65.92845600285536,
+      "minimumJFromNativeHistory": 0.9873373850282338,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2498524532496104,
+          "maximum": 19.750573439861622
+        },
+        "y": {
+          "minimum": 0.24680870136911134,
+          "maximum": 14.659129964964595
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 81290.82236344232,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 596.6916336712765
+    },
+    {
+      "frame": 8,
+      "timeS": 0.8,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.553380373138208,
+      "aboveBaseCentroidYM": 9.541409273289789,
+      "aboveBaseCentroidDxM": 0.0019150574302013723,
+      "aboveBaseCentroidDyM": -0.010590470128784446,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.010129144884648271,
+      "aboveBaseMassWeightedVxMPerS": -0.0005541359702159141,
+      "aboveBaseMassWeightedVyMPerS": -0.01713074613576196,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.014558593354244004,
+      "aboveBaseRightDownMassFraction": 0.458252427184466,
+      "aboveBaseRightDownCountFraction": 0.458252427184466,
+      "aboveBaseRightwardMassFraction": 0.458252427184466,
+      "aboveBaseDownwardMassFraction": 0.9922330097087378,
+      "maxVelocityNormMPerS": 0.038067139640438286,
+      "totalKineticEnergyJPerM": 46.45836316810459,
+      "minimumJFromNativeHistory": 0.9870288471985371,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24982968718120438,
+          "maximum": 19.75058480503631
+        },
+        "y": {
+          "minimum": 0.24673030518665962,
+          "maximum": 14.657261859305134
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 90401.6786180506,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 768.1121998584317
+    },
+    {
+      "frame": 9,
+      "timeS": 0.8999999999999999,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5534061586061405,
+      "aboveBaseCentroidYM": 9.540096081094832,
+      "aboveBaseCentroidDxM": 0.0019408428981337877,
+      "aboveBaseCentroidDyM": -0.01190366232374096,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.011279295419498268,
+      "aboveBaseMassWeightedVxMPerS": 0.0019318944463400107,
+      "aboveBaseMassWeightedVyMPerS": -0.008035910621461946,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.007925249963897247,
+      "aboveBaseRightDownMassFraction": 0.5533980582524272,
+      "aboveBaseRightDownCountFraction": 0.5533980582524272,
+      "aboveBaseRightwardMassFraction": 0.6174757281553398,
+      "aboveBaseDownwardMassFraction": 0.8757281553398059,
+      "maxVelocityNormMPerS": 0.050374964204648064,
+      "totalKineticEnergyJPerM": 20.84225545169504,
+      "minimumJFromNativeHistory": 0.9868608173869992,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2498495649578745,
+          "maximum": 19.750599351526613
+        },
+        "y": {
+          "minimum": 0.24668902498894535,
+          "maximum": 14.655246230219209
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 94667.03338354421,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 951.559400861512
+    },
+    {
+      "frame": 10,
+      "timeS": 1.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.553815619240411,
+      "aboveBaseCentroidYM": 9.539623445461459,
+      "aboveBaseCentroidDxM": 0.0023503035324043964,
+      "aboveBaseCentroidDyM": -0.012376297957114701,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.01189334020186898,
+      "aboveBaseMassWeightedVxMPerS": 0.00561313562443184,
+      "aboveBaseMassWeightedVyMPerS": -0.004333322431153352,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.006559335120383668,
+      "aboveBaseRightDownMassFraction": 0.8893203883495145,
+      "aboveBaseRightDownCountFraction": 0.8893203883495145,
+      "aboveBaseRightwardMassFraction": 0.9572815533980582,
+      "aboveBaseDownwardMassFraction": 0.9262135922330096,
+      "maxVelocityNormMPerS": 0.05769243691628406,
+      "totalKineticEnergyJPerM": 14.195074262987461,
+      "minimumJFromNativeHistory": 0.9868297812065878,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24988386101051074,
+          "maximum": 19.750621757301385
+        },
+        "y": {
+          "minimum": 0.24668205285323833,
+          "maximum": 14.653399173676922
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 117938.50806181892,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 1159.4220298842513
+    },
+    {
+      "frame": 11,
+      "timeS": 1.1,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.554328309925691,
+      "aboveBaseCentroidYM": 9.538585969641497,
+      "aboveBaseCentroidDxM": 0.0028629942176845447,
+      "aboveBaseCentroidDyM": -0.013413773777076088,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.013048165960407705,
+      "aboveBaseMassWeightedVxMPerS": 0.003344931877693607,
+      "aboveBaseMassWeightedVyMPerS": -0.01766086079686226,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.016967220041630204,
+      "aboveBaseRightDownMassFraction": 0.8990291262135922,
+      "aboveBaseRightDownCountFraction": 0.8990291262135922,
+      "aboveBaseRightwardMassFraction": 0.9087378640776699,
+      "aboveBaseDownwardMassFraction": 0.9902912621359222,
+      "maxVelocityNormMPerS": 0.05966713515003174,
+      "totalKineticEnergyJPerM": 53.45118009423901,
+      "minimumJFromNativeHistory": 0.98668595013343,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24990156687832357,
+          "maximum": 19.750636893010782
+        },
+        "y": {
+          "minimum": 0.24664254841370525,
+          "maximum": 14.651564118277708
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 137565.00920237612,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 1420.5977210985168
+    },
+    {
+      "frame": 12,
+      "timeS": 1.2,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5544592103313075,
+      "aboveBaseCentroidYM": 9.536485460919526,
+      "aboveBaseCentroidDxM": 0.002993894623300797,
+      "aboveBaseCentroidDyM": -0.015514282499047738,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.014932710077314065,
+      "aboveBaseMassWeightedVxMPerS": -0.0002494604429423855,
+      "aboveBaseMassWeightedVyMPerS": -0.020514139133587028,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.017641035404983667,
+      "aboveBaseRightDownMassFraction": 0.5087378640776699,
+      "aboveBaseRightDownCountFraction": 0.5087378640776699,
+      "aboveBaseRightwardMassFraction": 0.5184466019417475,
+      "aboveBaseDownwardMassFraction": 0.9825242718446601,
+      "maxVelocityNormMPerS": 0.07884833329672251,
+      "totalKineticEnergyJPerM": 71.80176134249372,
+      "minimumJFromNativeHistory": 0.9863782410476806,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24990802342860308,
+          "maximum": 19.750665698016
+        },
+        "y": {
+          "minimum": 0.24656533068865064,
+          "maximum": 14.649500682759635
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 125438.04165595418,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 1684.7108849965966
+    },
+    {
+      "frame": 13,
+      "timeS": 1.3,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.554451940829715,
+      "aboveBaseCentroidYM": 9.535056356014051,
+      "aboveBaseCentroidDxM": 0.0029866251217081086,
+      "aboveBaseCentroidDyM": -0.01694338740452217,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.016166716479331537,
+      "aboveBaseMassWeightedVxMPerS": 0.001222579886475306,
+      "aboveBaseMassWeightedVyMPerS": -0.008509321263383919,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.007980578326291222,
+      "aboveBaseRightDownMassFraction": 0.5009708737864077,
+      "aboveBaseRightDownCountFraction": 0.5009708737864078,
+      "aboveBaseRightwardMassFraction": 0.6252427184466018,
+      "aboveBaseDownwardMassFraction": 0.8699029126213591,
+      "maxVelocityNormMPerS": 0.08829099730389472,
+      "totalKineticEnergyJPerM": 22.84466729473347,
+      "minimumJFromNativeHistory": 0.9861339019223953,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24985472373647927,
+          "maximum": 19.750679838478764
+        },
+        "y": {
+          "minimum": 0.2465022354832498,
+          "maximum": 14.647667776431616
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 141433.85427452414,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 1945.3054533038169
+    },
+    {
+      "frame": 14,
+      "timeS": 1.4000000000000001,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5548159216295145,
+      "aboveBaseCentroidYM": 9.534388427978616,
+      "aboveBaseCentroidDxM": 0.003350605921507821,
+      "aboveBaseCentroidDyM": -0.01761131543995731,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.016927149525818058,
+      "aboveBaseMassWeightedVxMPerS": 0.005494959621815215,
+      "aboveBaseMassWeightedVyMPerS": -0.007330873116372697,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.009096202161606759,
+      "aboveBaseRightDownMassFraction": 0.7611650485436892,
+      "aboveBaseRightDownCountFraction": 0.7611650485436893,
+      "aboveBaseRightwardMassFraction": 0.9436893203883495,
+      "aboveBaseDownwardMassFraction": 0.7766990291262136,
+      "maxVelocityNormMPerS": 0.0905821858704305,
+      "totalKineticEnergyJPerM": 27.630111443108557,
+      "minimumJFromNativeHistory": 0.9860751595648609,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24988295766379656,
+          "maximum": 19.750700796349406
+        },
+        "y": {
+          "minimum": 0.24648617251730073,
+          "maximum": 14.645829030573612
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 163985.6720113997,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 2252.089047728256
+    },
+    {
+      "frame": 15,
+      "timeS": 1.5,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5553766112142,
+      "aboveBaseCentroidYM": 9.53336431325464,
+      "aboveBaseCentroidDxM": 0.003911295506193291,
+      "aboveBaseCentroidDyM": -0.018635430163932654,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.018094403685513127,
+      "aboveBaseMassWeightedVxMPerS": 0.004687789109949133,
+      "aboveBaseMassWeightedVyMPerS": -0.012562374988570178,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.013223230426942588,
+      "aboveBaseRightDownMassFraction": 0.8330097087378641,
+      "aboveBaseRightDownCountFraction": 0.8330097087378641,
+      "aboveBaseRightwardMassFraction": 0.8446601941747572,
+      "aboveBaseDownwardMassFraction": 0.9864077669902911,
+      "maxVelocityNormMPerS": 0.09264377217706786,
+      "totalKineticEnergyJPerM": 38.00465828541093,
+      "minimumJFromNativeHistory": 0.9860134057185076,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24995993068940503,
+          "maximum": 19.75072574097551
+        },
+        "y": {
+          "minimum": 0.24647156249021665,
+          "maximum": 14.643787598375397
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 167352.229866502,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 2583.883725102169
+    },
+    {
+      "frame": 16,
+      "timeS": 1.6,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.555619079180842,
+      "aboveBaseCentroidYM": 9.532013703447141,
+      "aboveBaseCentroidDxM": 0.004153763472835692,
+      "aboveBaseCentroidDyM": -0.01998603997143178,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.019385300072728984,
+      "aboveBaseMassWeightedVxMPerS": 0.0005145231039821411,
+      "aboveBaseMassWeightedVyMPerS": -0.014081624946199306,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.012452306481964348,
+      "aboveBaseRightDownMassFraction": 0.5242718446601942,
+      "aboveBaseRightDownCountFraction": 0.5242718446601942,
+      "aboveBaseRightwardMassFraction": 0.5766990291262136,
+      "aboveBaseDownwardMassFraction": 0.9320388349514562,
+      "maxVelocityNormMPerS": 0.12341178045935329,
+      "totalKineticEnergyJPerM": 50.50784121165556,
+      "minimumJFromNativeHistory": 0.9858192503461846,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24995697185801438,
+          "maximum": 19.750737479410006
+        },
+        "y": {
+          "minimum": 0.2464229543073616,
+          "maximum": 14.641900380993565
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 178087.4645644914,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 2927.1111137084354
+    },
+    {
+      "frame": 17,
+      "timeS": 1.7000000000000002,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5556124390716155,
+      "aboveBaseCentroidYM": 9.530504449177661,
+      "aboveBaseCentroidDxM": 0.0041471233636087845,
+      "aboveBaseCentroidDyM": -0.021495294240912344,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.020689032556255822,
+      "aboveBaseMassWeightedVxMPerS": 7.793325853397179e-05,
+      "aboveBaseMassWeightedVyMPerS": -0.01597231580453211,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.013871397873259474,
+      "aboveBaseRightDownMassFraction": 0.45436893203883494,
+      "aboveBaseRightDownCountFraction": 0.45436893203883494,
+      "aboveBaseRightwardMassFraction": 0.4796116504854369,
+      "aboveBaseDownwardMassFraction": 0.9631067961165047,
+      "maxVelocityNormMPerS": 0.13291716319655927,
+      "totalKineticEnergyJPerM": 60.47381283171625,
+      "minimumJFromNativeHistory": 0.9855551794526892,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24990589610977904,
+          "maximum": 19.750762298113926
+        },
+        "y": {
+          "minimum": 0.2463528245092146,
+          "maximum": 14.640050154995848
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 189314.16877929764,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 3297.8375690590788
+    },
+    {
+      "frame": 18,
+      "timeS": 1.7999999999999998,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.555867279069642,
+      "aboveBaseCentroidYM": 9.52903606810102,
+      "aboveBaseCentroidDxM": 0.0044019633616354525,
+      "aboveBaseCentroidDyM": -0.022963675317553722,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.022088107870076933,
+      "aboveBaseMassWeightedVxMPerS": 0.005132796073226976,
+      "aboveBaseMassWeightedVyMPerS": -0.012701050759124668,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.01356583064877108,
+      "aboveBaseRightDownMassFraction": 0.8932038834951457,
+      "aboveBaseRightDownCountFraction": 0.8932038834951457,
+      "aboveBaseRightwardMassFraction": 0.8951456310679611,
+      "aboveBaseDownwardMassFraction": 0.9844660194174757,
+      "maxVelocityNormMPerS": 0.13383728214797963,
+      "totalKineticEnergyJPerM": 42.6950630216239,
+      "minimumJFromNativeHistory": 0.9853571314668363,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24991706200230282,
+          "maximum": 19.750782587930498
+        },
+        "y": {
+          "minimum": 0.2463029629889952,
+          "maximum": 14.638109820152449
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 195185.71332096,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 3680.2177353491816
+    },
+    {
+      "frame": 19,
+      "timeS": 1.9,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.556444737071741,
+      "aboveBaseCentroidYM": 9.52809692602191,
+      "aboveBaseCentroidDxM": 0.004979421363734637,
+      "aboveBaseCentroidDyM": -0.023902817396663778,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.02319015776939877,
+      "aboveBaseMassWeightedVxMPerS": 0.005569125369538682,
+      "aboveBaseMassWeightedVyMPerS": -0.006568275595746828,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008472856209743461,
+      "aboveBaseRightDownMassFraction": 0.7553398058252426,
+      "aboveBaseRightDownCountFraction": 0.7553398058252427,
+      "aboveBaseRightwardMassFraction": 0.8757281553398059,
+      "aboveBaseDownwardMassFraction": 0.8446601941747572,
+      "maxVelocityNormMPerS": 0.14484373783026736,
+      "totalKineticEnergyJPerM": 32.9373656791913,
+      "minimumJFromNativeHistory": 0.9852973946003422,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24997347652948446,
+          "maximum": 19.750798543394446
+        },
+        "y": {
+          "minimum": 0.24628948553712848,
+          "maximum": 14.636140958236332
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 204932.2847099688,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 4077.8681571934058
+    },
+    {
+      "frame": 20,
+      "timeS": 2.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.556836270460199,
+      "aboveBaseCentroidYM": 9.527441449603502,
+      "aboveBaseCentroidDxM": 0.00537095475219207,
+      "aboveBaseCentroidDyM": -0.024558293815070797,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.023953583693549604,
+      "aboveBaseMassWeightedVxMPerS": 0.0016028631443010361,
+      "aboveBaseMassWeightedVyMPerS": -0.008779493249272376,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008404695758374381,
+      "aboveBaseRightDownMassFraction": 0.5650485436893204,
+      "aboveBaseRightDownCountFraction": 0.5650485436893203,
+      "aboveBaseRightwardMassFraction": 0.6330097087378641,
+      "aboveBaseDownwardMassFraction": 0.920388349514563,
+      "maxVelocityNormMPerS": 0.16842002388503194,
+      "totalKineticEnergyJPerM": 33.84191108643604,
+      "minimumJFromNativeHistory": 0.9852580057156259,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500046177560417,
+          "maximum": 19.75082396778211
+        },
+        "y": {
+          "minimum": 0.24627732132523003,
+          "maximum": 14.634252056670375
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 222629.1974369943,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 4503.7984486140185
+    },
+    {
+      "frame": 21,
+      "timeS": 2.1,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.556849871292272,
+      "aboveBaseCentroidYM": 9.526039234449483,
+      "aboveBaseCentroidDxM": 0.005384555584265094,
+      "aboveBaseCentroidDyM": -0.025960508969090412,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.025174738054538612,
+      "aboveBaseMassWeightedVxMPerS": -0.00014488873977602657,
+      "aboveBaseMassWeightedVyMPerS": -0.019140007435318636,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.016503288297720964,
+      "aboveBaseRightDownMassFraction": 0.49320388349514555,
+      "aboveBaseRightDownCountFraction": 0.49320388349514566,
+      "aboveBaseRightwardMassFraction": 0.5029126213592233,
+      "aboveBaseDownwardMassFraction": 0.9766990291262135,
+      "maxVelocityNormMPerS": 0.17990572456568177,
+      "totalKineticEnergyJPerM": 76.74841371157424,
+      "minimumJFromNativeHistory": 0.9849928107182637,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24997457228393682,
+          "maximum": 19.75083424430919
+        },
+        "y": {
+          "minimum": 0.24620895498729597,
+          "maximum": 14.632385866279114
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 234496.49118298054,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 4965.00692566448
+    },
+    {
+      "frame": 22,
+      "timeS": 2.2,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.557021951138709,
+      "aboveBaseCentroidYM": 9.52409579191088,
+      "aboveBaseCentroidDxM": 0.005556635430702173,
+      "aboveBaseCentroidDyM": -0.027903951507692426,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.026943848586981813,
+      "aboveBaseMassWeightedVxMPerS": 0.004097357776709881,
+      "aboveBaseMassWeightedVyMPerS": -0.016479885690370805,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.01632067854767971,
+      "aboveBaseRightDownMassFraction": 0.8718446601941747,
+      "aboveBaseRightDownCountFraction": 0.8718446601941747,
+      "aboveBaseRightwardMassFraction": 0.8893203883495145,
+      "aboveBaseDownwardMassFraction": 0.9728155339805825,
+      "maxVelocityNormMPerS": 0.19137118126343464,
+      "totalKineticEnergyJPerM": 69.68108059716063,
+      "minimumJFromNativeHistory": 0.9847295418278922,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.24996668046720663,
+          "maximum": 19.75085592270318
+        },
+        "y": {
+          "minimum": 0.2461427900247639,
+          "maximum": 14.630357945508452
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 226732.95395122754,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 5427.393824224237
+    },
+    {
+      "frame": 23,
+      "timeS": 2.3000000000000003,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.55757842860451,
+      "aboveBaseCentroidYM": 9.523075898520915,
+      "aboveBaseCentroidDxM": 0.006113112896502848,
+      "aboveBaseCentroidDyM": -0.028923844897658313,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.02810534090474444,
+      "aboveBaseMassWeightedVxMPerS": 0.0061499020983646025,
+      "aboveBaseMassWeightedVyMPerS": -0.005082578173489348,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.007476592864144389,
+      "aboveBaseRightDownMassFraction": 0.8271844660194174,
+      "aboveBaseRightDownCountFraction": 0.8271844660194175,
+      "aboveBaseRightwardMassFraction": 0.9553398058252427,
+      "aboveBaseDownwardMassFraction": 0.8679611650485437,
+      "maxVelocityNormMPerS": 0.20251786186370702,
+      "totalKineticEnergyJPerM": 39.61187976739832,
+      "minimumJFromNativeHistory": 0.9846265670883254,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2499894945216543,
+          "maximum": 19.750883193086068
+        },
+        "y": {
+          "minimum": 0.24611471911380597,
+          "maximum": 14.628489161135448
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 240344.8937480945,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 5890.415108196557
+    },
+    {
+      "frame": 24,
+      "timeS": 2.4,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.558053907445025,
+      "aboveBaseCentroidYM": 9.522556150816733,
+      "aboveBaseCentroidDxM": 0.006588591737018312,
+      "aboveBaseCentroidDyM": -0.02944359260184015,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.02879319504038228,
+      "aboveBaseMassWeightedVxMPerS": 0.0027429787071337223,
+      "aboveBaseMassWeightedVyMPerS": -0.008277327547878613,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008539865285474494,
+      "aboveBaseRightDownMassFraction": 0.7631067961165049,
+      "aboveBaseRightDownCountFraction": 0.7631067961165049,
+      "aboveBaseRightwardMassFraction": 0.8077669902912621,
+      "aboveBaseDownwardMassFraction": 0.9281553398058252,
+      "maxVelocityNormMPerS": 0.21983250082217828,
+      "totalKineticEnergyJPerM": 44.54748962390868,
+      "minimumJFromNativeHistory": 0.984599686121756,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500224368330617,
+          "maximum": 19.75089728344303
+        },
+        "y": {
+          "minimum": 0.24610762375918002,
+          "maximum": 14.626654125884693
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 264920.926882084,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 6398.1891523400745
+    },
+    {
+      "frame": 25,
+      "timeS": 2.5,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.558152750571059,
+      "aboveBaseCentroidYM": 9.521280703593037,
+      "aboveBaseCentroidDxM": 0.006687434863052566,
+      "aboveBaseCentroidDyM": -0.030719039825536143,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.02994718630030647,
+      "aboveBaseMassWeightedVxMPerS": 0.00028615262613312345,
+      "aboveBaseMassWeightedVyMPerS": -0.015492038808447564,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.013559575477596555,
+      "aboveBaseRightDownMassFraction": 0.48349514563106794,
+      "aboveBaseRightDownCountFraction": 0.48349514563106794,
+      "aboveBaseRightwardMassFraction": 0.49320388349514555,
+      "aboveBaseDownwardMassFraction": 0.9766990291262135,
+      "maxVelocityNormMPerS": 0.2296502945130377,
+      "totalKineticEnergyJPerM": 69.22600947285676,
+      "minimumJFromNativeHistory": 0.984466219482068,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25004219059626925,
+          "maximum": 19.75091412062525
+        },
+        "y": {
+          "minimum": 0.24607460579781187,
+          "maximum": 14.624589960401185
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 262052.92116991075,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 6927.026174048433
+    },
+    {
+      "frame": 26,
+      "timeS": 2.6,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5582998899578575,
+      "aboveBaseCentroidYM": 9.51976131151106,
+      "aboveBaseCentroidDxM": 0.006834574249850789,
+      "aboveBaseCentroidDyM": -0.03223843190751374,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.031336588135007115,
+      "aboveBaseMassWeightedVxMPerS": 0.003394711224880955,
+      "aboveBaseMassWeightedVyMPerS": -0.014289144206611645,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.014072117493705398,
+      "aboveBaseRightDownMassFraction": 0.6213592233009708,
+      "aboveBaseRightDownCountFraction": 0.6213592233009708,
+      "aboveBaseRightwardMassFraction": 0.7009708737864078,
+      "aboveBaseDownwardMassFraction": 0.9067961165048543,
+      "maxVelocityNormMPerS": 0.25739519744887823,
+      "totalKineticEnergyJPerM": 84.22241180983141,
+      "minimumJFromNativeHistory": 0.9842178774669571,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500296388764258,
+          "maximum": 19.750926670847676
+        },
+        "y": {
+          "minimum": 0.2460102273631782,
+          "maximum": 14.622713523356131
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 271235.4894491043,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 7459.120778061163
+    },
+    {
+      "frame": 27,
+      "timeS": 2.7,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.558797913763112,
+      "aboveBaseCentroidYM": 9.518426515984,
+      "aboveBaseCentroidDxM": 0.007332598055104889,
+      "aboveBaseCentroidDyM": -0.03357322743457303,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.03274156687292534,
+      "aboveBaseMassWeightedVxMPerS": 0.005817175473312891,
+      "aboveBaseMassWeightedVyMPerS": -0.012812296251405137,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.014004361771185428,
+      "aboveBaseRightDownMassFraction": 0.8970873786407767,
+      "aboveBaseRightDownCountFraction": 0.8970873786407767,
+      "aboveBaseRightwardMassFraction": 0.9242718446601941,
+      "aboveBaseDownwardMassFraction": 0.9631067961165047,
+      "maxVelocityNormMPerS": 0.259132872718637,
+      "totalKineticEnergyJPerM": 77.0460814981937,
+      "minimumJFromNativeHistory": 0.9840407442687118,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.250016220997822,
+          "maximum": 19.750962033945424
+        },
+        "y": {
+          "minimum": 0.2459637071667036,
+          "maximum": 14.620882776526145
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 282398.5979936339,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 8014.614363762036
+    },
+    {
+      "frame": 28,
+      "timeS": 2.8000000000000003,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.559295049041585,
+      "aboveBaseCentroidYM": 9.517284349134364,
+      "aboveBaseCentroidDxM": 0.007829733333577948,
+      "aboveBaseCentroidDyM": -0.03471539428420911,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.03397928001930716,
+      "aboveBaseMassWeightedVxMPerS": 0.003598539561490721,
+      "aboveBaseMassWeightedVyMPerS": -0.00932676044518767,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.009876481261289743,
+      "aboveBaseRightDownMassFraction": 0.7475728155339806,
+      "aboveBaseRightDownCountFraction": 0.7475728155339806,
+      "aboveBaseRightwardMassFraction": 0.7514563106796117,
+      "aboveBaseDownwardMassFraction": 0.9728155339805825,
+      "maxVelocityNormMPerS": 0.2687631721888652,
+      "totalKineticEnergyJPerM": 65.73121843515405,
+      "minimumJFromNativeHistory": 0.9839608305080392,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500474329265543,
+          "maximum": 19.750986580519783
+        },
+        "y": {
+          "minimum": 0.2459435690886491,
+          "maximum": 14.618863054788255
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 284476.9496693544,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 8579.59912572541
+    },
+    {
+      "frame": 29,
+      "timeS": 2.9,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.559502238707216,
+      "aboveBaseCentroidYM": 9.516522857081108,
+      "aboveBaseCentroidDxM": 0.008036922999209217,
+      "aboveBaseCentroidDyM": -0.03547688633746482,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.03474234631502221,
+      "aboveBaseMassWeightedVxMPerS": 0.0010874043245492808,
+      "aboveBaseMassWeightedVyMPerS": -0.007206944161740053,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.006785098889997472,
+      "aboveBaseRightDownMassFraction": 0.5009708737864077,
+      "aboveBaseRightDownCountFraction": 0.5009708737864078,
+      "aboveBaseRightwardMassFraction": 0.5398058252427185,
+      "aboveBaseDownwardMassFraction": 0.9495145631067962,
+      "maxVelocityNormMPerS": 0.2978101001883429,
+      "totalKineticEnergyJPerM": 61.23802391280557,
+      "minimumJFromNativeHistory": 0.983877394219183,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25004600932345195,
+          "maximum": 19.750986926949533
+        },
+        "y": {
+          "minimum": 0.24592402111423398,
+          "maximum": 14.6169523695681
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 299395.35608964006,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 9161.834249939586
+    },
+    {
+      "frame": 30,
+      "timeS": 3.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.559673704744555,
+      "aboveBaseCentroidYM": 9.51556744739133,
+      "aboveBaseCentroidDxM": 0.008208389036548525,
+      "aboveBaseCentroidDyM": -0.03643229602724318,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.03565548839606174,
+      "aboveBaseMassWeightedVxMPerS": 0.0030525549530460647,
+      "aboveBaseMassWeightedVyMPerS": -0.013194214330615685,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.012952802269812907,
+      "aboveBaseRightDownMassFraction": 0.6737864077669903,
+      "aboveBaseRightDownCountFraction": 0.6737864077669903,
+      "aboveBaseRightwardMassFraction": 0.712621359223301,
+      "aboveBaseDownwardMassFraction": 0.9417475728155339,
+      "maxVelocityNormMPerS": 0.308421048524516,
+      "totalKineticEnergyJPerM": 93.49160933299896,
+      "minimumJFromNativeHistory": 0.9837754973353672,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500489038456118,
+          "maximum": 19.75102096267603
+        },
+        "y": {
+          "minimum": 0.2458957869859709,
+          "maximum": 14.615590096296211
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 312298.306495471,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 9774.610960698006
+    },
+    {
+      "frame": 31,
+      "timeS": 3.1,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.560109645684394,
+      "aboveBaseCentroidYM": 9.513911021485127,
+      "aboveBaseCentroidDxM": 0.008644329976386977,
+      "aboveBaseCentroidDyM": -0.03808872193344648,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.03730796578023968,
+      "aboveBaseMassWeightedVxMPerS": 0.00527588847303733,
+      "aboveBaseMassWeightedVyMPerS": -0.018358335609381757,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.01853672924544374,
+      "aboveBaseRightDownMassFraction": 0.9359223300970873,
+      "aboveBaseRightDownCountFraction": 0.9359223300970874,
+      "aboveBaseRightwardMassFraction": 0.9533980582524271,
+      "aboveBaseDownwardMassFraction": 0.9728155339805825,
+      "maxVelocityNormMPerS": 0.3143418448909114,
+      "totalKineticEnergyJPerM": 118.50689491191235,
+      "minimumJFromNativeHistory": 0.983539286492235,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500510176589405,
+          "maximum": 19.751038302290347
+        },
+        "y": {
+          "minimum": 0.2458341262085768,
+          "maximum": 14.613135417466813
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 312912.74085720745,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 10403.087707645756
+    },
+    {
+      "frame": 32,
+      "timeS": 3.2,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.560610589328465,
+      "aboveBaseCentroidYM": 9.512363373503739,
+      "aboveBaseCentroidDxM": 0.009145273620458028,
+      "aboveBaseCentroidDyM": -0.039636369914834546,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.038898740070272976,
+      "aboveBaseMassWeightedVxMPerS": 0.004237614766222065,
+      "aboveBaseMassWeightedVyMPerS": -0.01103148442877837,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.011672353139885568,
+      "aboveBaseRightDownMassFraction": 0.8776699029126213,
+      "aboveBaseRightDownCountFraction": 0.8776699029126214,
+      "aboveBaseRightwardMassFraction": 0.9029126213592232,
+      "aboveBaseDownwardMassFraction": 0.9631067961165047,
+      "maxVelocityNormMPerS": 0.3364788237295283,
+      "totalKineticEnergyJPerM": 91.88244853526274,
+      "minimumJFromNativeHistory": 0.9833426344315245,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25005179120555077,
+          "maximum": 19.751066596714793
+        },
+        "y": {
+          "minimum": 0.24578500756399707,
+          "maximum": 14.611153404740449
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 312653.1099876573,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 11028.031500935209
+    },
+    {
+      "frame": 33,
+      "timeS": 3.3000000000000003,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.560895126955043,
+      "aboveBaseCentroidYM": 9.511731372233164,
+      "aboveBaseCentroidDxM": 0.009429811247036568,
+      "aboveBaseCentroidDyM": -0.040268371185408824,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.03958833803910362,
+      "aboveBaseMassWeightedVxMPerS": 0.0017369329709380475,
+      "aboveBaseMassWeightedVyMPerS": -0.003705721492476705,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.004077715437303835,
+      "aboveBaseRightDownMassFraction": 0.43106796116504853,
+      "aboveBaseRightDownCountFraction": 0.43106796116504853,
+      "aboveBaseRightwardMassFraction": 0.5514563106796116,
+      "aboveBaseDownwardMassFraction": 0.8213592233009708,
+      "maxVelocityNormMPerS": 0.3482048317075172,
+      "totalKineticEnergyJPerM": 79.46695065235734,
+      "minimumJFromNativeHistory": 0.9833055562487676,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500523902145604,
+          "maximum": 19.751089215032984
+        },
+        "y": {
+          "minimum": 0.2457749517707185,
+          "maximum": 14.61076152439378
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 328455.8275781535,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 11664.440819145082
+    },
+    {
+      "frame": 34,
+      "timeS": 3.4000000000000004,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.561096346260036,
+      "aboveBaseCentroidYM": 9.511066098044605,
+      "aboveBaseCentroidDxM": 0.009631030552029074,
+      "aboveBaseCentroidDyM": -0.040933645373968375,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.04026509203937451,
+      "aboveBaseMassWeightedVxMPerS": 0.003060222147236311,
+      "aboveBaseMassWeightedVyMPerS": -0.011518539842603339,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.011505459191815856,
+      "aboveBaseRightDownMassFraction": 0.916504854368932,
+      "aboveBaseRightDownCountFraction": 0.916504854368932,
+      "aboveBaseRightwardMassFraction": 0.9378640776699029,
+      "aboveBaseDownwardMassFraction": 0.9611650485436893,
+      "maxVelocityNormMPerS": 0.36262143561865223,
+      "totalKineticEnergyJPerM": 100.80564179187036,
+      "minimumJFromNativeHistory": 0.9832569509001426,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25005360412092625,
+          "maximum": 19.75109475618501
+        },
+        "y": {
+          "minimum": 0.24576127443764637,
+          "maximum": 14.61018322979148
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 346764.7757507564,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 12342.778928665222
+    },
+    {
+      "frame": 35,
+      "timeS": 3.5,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5615138352918825,
+      "aboveBaseCentroidYM": 9.50949189969145,
+      "aboveBaseCentroidDxM": 0.010048519583875759,
+      "aboveBaseCentroidDyM": -0.04250784372712246,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.041837132319724926,
+      "aboveBaseMassWeightedVxMPerS": 0.005205979600762262,
+      "aboveBaseMassWeightedVyMPerS": -0.017688523164658854,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.017921700216405212,
+      "aboveBaseRightDownMassFraction": 0.8660194174757281,
+      "aboveBaseRightDownCountFraction": 0.8660194174757282,
+      "aboveBaseRightwardMassFraction": 0.8893203883495145,
+      "aboveBaseDownwardMassFraction": 0.9669902912621358,
+      "maxVelocityNormMPerS": 0.36856462086203806,
+      "totalKineticEnergyJPerM": 140.93953612150867,
+      "minimumJFromNativeHistory": 0.983065094283391,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25005403562717116,
+          "maximum": 19.751125594842495
+        },
+        "y": {
+          "minimum": 0.24571239112294807,
+          "maximum": 14.608498806519059
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 340686.5436141615,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 13033.219596049637
+    },
+    {
+      "frame": 36,
+      "timeS": 3.5999999999999996,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.562031876057126,
+      "aboveBaseCentroidYM": 9.508003028644751,
+      "aboveBaseCentroidDxM": 0.010566560349118959,
+      "aboveBaseCentroidDyM": -0.043996714773822276,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.043385552851747694,
+      "aboveBaseMassWeightedVxMPerS": 0.0045200655345900495,
+      "aboveBaseMassWeightedVyMPerS": -0.011408545359955814,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.012140122869243842,
+      "aboveBaseRightDownMassFraction": 0.7339805825242718,
+      "aboveBaseRightDownCountFraction": 0.7339805825242719,
+      "aboveBaseRightwardMassFraction": 0.8194174757281554,
+      "aboveBaseDownwardMassFraction": 0.8990291262135922,
+      "maxVelocityNormMPerS": 0.388384730908535,
+      "totalKineticEnergyJPerM": 125.00273773252732,
+      "minimumJFromNativeHistory": 0.9828785623165428,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25005751358726885,
+          "maximum": 19.75115389496616
+        },
+        "y": {
+          "minimum": 0.2456629855992396,
+          "maximum": 14.60593730456167
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 344762.8586363294,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 13713.187414981896
+    },
+    {
+      "frame": 37,
+      "timeS": 3.7,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5623389387480575,
+      "aboveBaseCentroidYM": 9.507044468354696,
+      "aboveBaseCentroidDxM": 0.010873623040050795,
+      "aboveBaseCentroidDyM": -0.04495527506387731,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.044369221759460245,
+      "aboveBaseMassWeightedVxMPerS": 0.002129537082150272,
+      "aboveBaseMassWeightedVyMPerS": -0.009089838411140227,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008936799521418152,
+      "aboveBaseRightDownMassFraction": 0.6563106796116506,
+      "aboveBaseRightDownCountFraction": 0.6563106796116505,
+      "aboveBaseRightwardMassFraction": 0.6893203883495146,
+      "aboveBaseDownwardMassFraction": 0.9533980582524271,
+      "maxVelocityNormMPerS": 0.40140692231311725,
+      "totalKineticEnergyJPerM": 114.3562723282595,
+      "minimumJFromNativeHistory": 0.9827582731880302,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500588730649783,
+          "maximum": 19.751174667481173
+        },
+        "y": {
+          "minimum": 0.24563155685682087,
+          "maximum": 14.604595650204613
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 359240.6669303117,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 14420.192829299405
+    },
+    {
+      "frame": 38,
+      "timeS": 3.8,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5625556248849986,
+      "aboveBaseCentroidYM": 9.506121428324454,
+      "aboveBaseCentroidDxM": 0.01109030917699183,
+      "aboveBaseCentroidDyM": -0.04587831509411977,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.04527694094283069,
+      "aboveBaseMassWeightedVxMPerS": 0.0029975574809804413,
+      "aboveBaseMassWeightedVyMPerS": -0.009305198580713686,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.009557317098647175,
+      "aboveBaseRightDownMassFraction": 0.8097087378640776,
+      "aboveBaseRightDownCountFraction": 0.8097087378640777,
+      "aboveBaseRightwardMassFraction": 0.8330097087378641,
+      "aboveBaseDownwardMassFraction": 0.9553398058252427,
+      "maxVelocityNormMPerS": 0.4003239734038723,
+      "totalKineticEnergyJPerM": 123.10347373464589,
+      "minimumJFromNativeHistory": 0.9827033334041595,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500582393960002,
+          "maximum": 19.75119719790035
+        },
+        "y": {
+          "minimum": 0.24561863005379667,
+          "maximum": 14.604582928625574
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 362764.57372718345,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 15141.98898483862
+    },
+    {
+      "frame": 39,
+      "timeS": 3.9000000000000004,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.562999419693624,
+      "aboveBaseCentroidYM": 9.505191464710611,
+      "aboveBaseCentroidDxM": 0.011534103985617605,
+      "aboveBaseCentroidDyM": -0.046808278707962,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.046304210461326135,
+      "aboveBaseMassWeightedVxMPerS": 0.005503296388782134,
+      "aboveBaseMassWeightedVyMPerS": -0.010036656585556079,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.011443647766543014,
+      "aboveBaseRightDownMassFraction": 0.8679611650485437,
+      "aboveBaseRightDownCountFraction": 0.8679611650485437,
+      "aboveBaseRightwardMassFraction": 0.9262135922330096,
+      "aboveBaseDownwardMassFraction": 0.9223300970873786,
+      "maxVelocityNormMPerS": 0.4166156604388515,
+      "totalKineticEnergyJPerM": 136.0374694162208,
+      "minimumJFromNativeHistory": 0.9826065929167079,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500598140850288,
+          "maximum": 19.75120812008507
+        },
+        "y": {
+          "minimum": 0.24559288090979958,
+          "maximum": 14.603579457416382
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 372604.9799292852,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 15875.26698080913
+    },
+    {
+      "frame": 40,
+      "timeS": 4.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.56354310167467,
+      "aboveBaseCentroidYM": 9.503967365299836,
+      "aboveBaseCentroidDxM": 0.01207778596666298,
+      "aboveBaseCentroidDyM": -0.048032378118737284,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.04763615263833778,
+      "aboveBaseMassWeightedVxMPerS": 0.004791495578235886,
+      "aboveBaseMassWeightedVyMPerS": -0.014851462516189153,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.015257491611490108,
+      "aboveBaseRightDownMassFraction": 0.6970873786407766,
+      "aboveBaseRightDownCountFraction": 0.6970873786407767,
+      "aboveBaseRightwardMassFraction": 0.745631067961165,
+      "aboveBaseDownwardMassFraction": 0.9359223300970873,
+      "maxVelocityNormMPerS": 0.42890884018696396,
+      "totalKineticEnergyJPerM": 163.95156998250968,
+      "minimumJFromNativeHistory": 0.9824773305357271,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500623375722619,
+          "maximum": 19.751246308922457
+        },
+        "y": {
+          "minimum": 0.24555798667484185,
+          "maximum": 14.601599444603915
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 380360.4710061492,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 16630.230423936016
+    },
+    {
+      "frame": 41,
+      "timeS": 4.1,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.563858497063293,
+      "aboveBaseCentroidYM": 9.502418021906298,
+      "aboveBaseCentroidDxM": 0.012393181355286664,
+      "aboveBaseCentroidDyM": -0.04958172151227558,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.049135621070639374,
+      "aboveBaseMassWeightedVxMPerS": 0.0020406798257974128,
+      "aboveBaseMassWeightedVyMPerS": -0.014481576067252968,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.01356175267397652,
+      "aboveBaseRightDownMassFraction": 0.7689320388349515,
+      "aboveBaseRightDownCountFraction": 0.7689320388349514,
+      "aboveBaseRightwardMassFraction": 0.7941747572815533,
+      "aboveBaseDownwardMassFraction": 0.9572815533980582,
+      "maxVelocityNormMPerS": 0.42521883765463014,
+      "totalKineticEnergyJPerM": 154.22306173378217,
+      "minimumJFromNativeHistory": 0.982261016364621,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25006397610065656,
+          "maximum": 19.751273169695352
+        },
+        "y": {
+          "minimum": 0.2455021370313709,
+          "maximum": 14.599471930996792
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 377648.2390367875,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 17388.61849590167
+    },
+    {
+      "frame": 42,
+      "timeS": 4.2,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5640837529727065,
+      "aboveBaseCentroidYM": 9.501348785749162,
+      "aboveBaseCentroidDxM": 0.0126184372646998,
+      "aboveBaseCentroidDyM": -0.05065095766941141,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.05017423470007042,
+      "aboveBaseMassWeightedVxMPerS": 0.0030837941226915635,
+      "aboveBaseMassWeightedVyMPerS": -0.006967628879861836,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.007576040675448244,
+      "aboveBaseRightDownMassFraction": 0.8368932038834952,
+      "aboveBaseRightDownCountFraction": 0.8368932038834952,
+      "aboveBaseRightwardMassFraction": 0.8718446601941747,
+      "aboveBaseDownwardMassFraction": 0.9495145631067962,
+      "maxVelocityNormMPerS": 0.43929202907810616,
+      "totalKineticEnergyJPerM": 139.4579072953141,
+      "minimumJFromNativeHistory": 0.98213708766126,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25006440737909585,
+          "maximum": 19.75128517143051
+        },
+        "y": {
+          "minimum": 0.24547079538310412,
+          "maximum": 14.598382128920258
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 384306.1591318175,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 18148.563951451157
+    },
+    {
+      "frame": 43,
+      "timeS": 4.3,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.564535446923583,
+      "aboveBaseCentroidYM": 9.500787172440825,
+      "aboveBaseCentroidDxM": 0.013070131215576097,
+      "aboveBaseCentroidDyM": -0.05121257097774823,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.050886453067631676,
+      "aboveBaseMassWeightedVxMPerS": 0.005840980990833296,
+      "aboveBaseMassWeightedVyMPerS": -0.006358845350367319,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008427412107571305,
+      "aboveBaseRightDownMassFraction": 0.8349514563106796,
+      "aboveBaseRightDownCountFraction": 0.8349514563106796,
+      "aboveBaseRightwardMassFraction": 0.8951456310679611,
+      "aboveBaseDownwardMassFraction": 0.9262135922330096,
+      "maxVelocityNormMPerS": 0.43848777252623367,
+      "totalKineticEnergyJPerM": 149.58832722098026,
+      "minimumJFromNativeHistory": 0.9821513996393263,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500654390025099,
+          "maximum": 19.751319516833664
+        },
+        "y": {
+          "minimum": 0.2454735498981025,
+          "maximum": 14.598463328747012
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 398387.84834778094,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 18931.1250963745
+    },
+    {
+      "frame": 44,
+      "timeS": 4.4,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.565114575205266,
+      "aboveBaseCentroidYM": 9.49975181007591,
+      "aboveBaseCentroidDxM": 0.013649259497259258,
+      "aboveBaseCentroidDyM": -0.05224793334266309,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.05207266731861186,
+      "aboveBaseMassWeightedVxMPerS": 0.005070306692607561,
+      "aboveBaseMassWeightedVyMPerS": -0.014645461699844053,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.015218495228520756,
+      "aboveBaseRightDownMassFraction": 0.9281553398058252,
+      "aboveBaseRightDownCountFraction": 0.9281553398058252,
+      "aboveBaseRightwardMassFraction": 0.9533980582524271,
+      "aboveBaseDownwardMassFraction": 0.9592233009708736,
+      "maxVelocityNormMPerS": 0.4359927086344207,
+      "totalKineticEnergyJPerM": 173.7197548227373,
+      "minimumJFromNativeHistory": 0.9820625120792108,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25006703883230824,
+          "maximum": 19.751339987587777
+        },
+        "y": {
+          "minimum": 0.24544952404253934,
+          "maximum": 14.597050030141366
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 405795.5231850485,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 19737.759079338193
+    },
+    {
+      "frame": 45,
+      "timeS": 4.5,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5654771677153825,
+      "aboveBaseCentroidYM": 9.498119684350455,
+      "aboveBaseCentroidDxM": 0.014011852007375758,
+      "aboveBaseCentroidDyM": -0.05388005906811877,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.05366742591408484,
+      "aboveBaseMassWeightedVxMPerS": 0.0023754459213770115,
+      "aboveBaseMassWeightedVyMPerS": -0.01581945754096014,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.014887775065249294,
+      "aboveBaseRightDownMassFraction": 0.5475728155339806,
+      "aboveBaseRightDownCountFraction": 0.5475728155339806,
+      "aboveBaseRightwardMassFraction": 0.5786407766990291,
+      "aboveBaseDownwardMassFraction": 0.9514563106796116,
+      "maxVelocityNormMPerS": 0.4465611282170106,
+      "totalKineticEnergyJPerM": 184.0455643471716,
+      "minimumJFromNativeHistory": 0.9818458147471801,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25006859838640666,
+          "maximum": 19.75136596184596
+        },
+        "y": {
+          "minimum": 0.24539383489487607,
+          "maximum": 14.594819342361909
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 400384.13763728185,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 20545.42643948451
+    },
+    {
+      "frame": 46,
+      "timeS": 4.6000000000000005,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.565695959071171,
+      "aboveBaseCentroidYM": 9.496942187802857,
+      "aboveBaseCentroidDxM": 0.014230643363164042,
+      "aboveBaseCentroidDyM": -0.05505755561571668,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.054796563515067245,
+      "aboveBaseMassWeightedVxMPerS": 0.0028104115827267385,
+      "aboveBaseMassWeightedVyMPerS": -0.007926083848695855,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008269395756859515,
+      "aboveBaseRightDownMassFraction": 0.6058252427184466,
+      "aboveBaseRightDownCountFraction": 0.6058252427184466,
+      "aboveBaseRightwardMassFraction": 0.6776699029126213,
+      "aboveBaseDownwardMassFraction": 0.9048543689320389,
+      "maxVelocityNormMPerS": 0.44294609213261116,
+      "totalKineticEnergyJPerM": 159.66235559206334,
+      "minimumJFromNativeHistory": 0.981712476106273,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500704991134199,
+          "maximum": 19.75139712001953
+        },
+        "y": {
+          "minimum": 0.24535871201372292,
+          "maximum": 14.59328371083148
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 406734.83050401416,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 21347.174805745482
+    },
+    {
+      "frame": 47,
+      "timeS": 4.699999999999999,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5661206021496294,
+      "aboveBaseCentroidYM": 9.496228182818346,
+      "aboveBaseCentroidDxM": 0.014655286441622728,
+      "aboveBaseCentroidDyM": -0.05577156060022759,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.055627231509311745,
+      "aboveBaseMassWeightedVxMPerS": 0.005582935268866191,
+      "aboveBaseMassWeightedVyMPerS": -0.008039698016310437,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.009754050355313293,
+      "aboveBaseRightDownMassFraction": 0.9048543689320389,
+      "aboveBaseRightDownCountFraction": 0.9048543689320389,
+      "aboveBaseRightwardMassFraction": 0.9339805825242717,
+      "aboveBaseDownwardMassFraction": 0.9572815533980582,
+      "maxVelocityNormMPerS": 0.43389538459096366,
+      "totalKineticEnergyJPerM": 163.75730471323863,
+      "minimumJFromNativeHistory": 0.9816469496571201,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25007134257407915,
+          "maximum": 19.75141657119606
+        },
+        "y": {
+          "minimum": 0.2453416285089799,
+          "maximum": 14.59250884393796
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 421238.2309531648,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 22177.153914514558
+    },
+    {
+      "frame": 48,
+      "timeS": 4.8,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.566731846098508,
+      "aboveBaseCentroidYM": 9.49523302640843,
+      "aboveBaseCentroidDxM": 0.015266530390500854,
+      "aboveBaseCentroidDyM": -0.05676671701014335,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.05679468421547678,
+      "aboveBaseMassWeightedVxMPerS": 0.005967144788503264,
+      "aboveBaseMassWeightedVyMPerS": -0.011425565938153755,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.012878402749306966,
+      "aboveBaseRightDownMassFraction": 0.9378640776699029,
+      "aboveBaseRightDownCountFraction": 0.9378640776699029,
+      "aboveBaseRightwardMassFraction": 0.9631067961165047,
+      "aboveBaseDownwardMassFraction": 0.9572815533980582,
+      "maxVelocityNormMPerS": 0.4260857439529566,
+      "totalKineticEnergyJPerM": 175.22758359142475,
+      "minimumJFromNativeHistory": 0.9816155689038969,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25007132187350767,
+          "maximum": 19.751450470015598
+        },
+        "y": {
+          "minimum": 0.24533380383068054,
+          "maximum": 14.592086684387187
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 419968.960901862,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 23019.945929211328
+    },
+    {
+      "frame": 49,
+      "timeS": 4.9,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.567176589583445,
+      "aboveBaseCentroidYM": 9.494103317570872,
+      "aboveBaseCentroidDxM": 0.01571127387543836,
+      "aboveBaseCentroidDyM": -0.057896425847701494,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.057995412510150675,
+      "aboveBaseMassWeightedVxMPerS": 0.0030026339696289026,
+      "aboveBaseMassWeightedVyMPerS": -0.011384590335337176,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.011360661426895246,
+      "aboveBaseRightDownMassFraction": 0.5592233009708738,
+      "aboveBaseRightDownCountFraction": 0.5592233009708738,
+      "aboveBaseRightwardMassFraction": 0.6427184466019417,
+      "aboveBaseDownwardMassFraction": 0.8951456310679611,
+      "maxVelocityNormMPerS": 0.4262321291436066,
+      "totalKineticEnergyJPerM": 178.19207904915766,
+      "minimumJFromNativeHistory": 0.98150667871355,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25007349725418193,
+          "maximum": 19.751478261595363
+        },
+        "y": {
+          "minimum": 0.24530433811119753,
+          "maximum": 14.590555752598794
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 426069.16104027454,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 23862.366877663942
+    },
+    {
+      "frame": 50,
+      "timeS": 5.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.567407481311011,
+      "aboveBaseCentroidYM": 9.492874115714027,
+      "aboveBaseCentroidDxM": 0.0159421656030041,
+      "aboveBaseCentroidDyM": -0.05912562770454599,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.05917537840833988,
+      "aboveBaseMassWeightedVxMPerS": 0.0022855388025278204,
+      "aboveBaseMassWeightedVyMPerS": -0.013411960287422186,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.012757867724719565,
+      "aboveBaseRightDownMassFraction": 0.5631067961165048,
+      "aboveBaseRightDownCountFraction": 0.5631067961165048,
+      "aboveBaseRightwardMassFraction": 0.6058252427184466,
+      "aboveBaseDownwardMassFraction": 0.9339805825242717,
+      "maxVelocityNormMPerS": 0.41914176226173083,
+      "totalKineticEnergyJPerM": 182.0241980017181,
+      "minimumJFromNativeHistory": 0.9813254488869542,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25007607118679787,
+          "maximum": 19.751505255215612
+        },
+        "y": {
+          "minimum": 0.2452564741259166,
+          "maximum": 14.588470306025792
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 433254.64031276794,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 51,
+      "timeS": 5.1,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.567763867497671,
+      "aboveBaseCentroidYM": 9.49191871298081,
+      "aboveBaseCentroidDxM": 0.01629855178966455,
+      "aboveBaseCentroidDyM": -0.060081030437762806,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06018097453948096,
+      "aboveBaseMassWeightedVxMPerS": 0.004778651151887475,
+      "aboveBaseMassWeightedVyMPerS": -0.003916903553220296,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.0057814635572060475,
+      "aboveBaseRightDownMassFraction": 0.8466019417475728,
+      "aboveBaseRightDownCountFraction": 0.8466019417475729,
+      "aboveBaseRightwardMassFraction": 0.9281553398058252,
+      "aboveBaseDownwardMassFraction": 0.9029126213592232,
+      "maxVelocityNormMPerS": 0.39252100561135383,
+      "totalKineticEnergyJPerM": 153.94574380417356,
+      "minimumJFromNativeHistory": 0.9811866750765708,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25007670527325554,
+          "maximum": 19.751539570181084
+        },
+        "y": {
+          "minimum": 0.24522161107559912,
+          "maximum": 14.587156778791586
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 399485.58268065425,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 52,
+      "timeS": 5.2,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.568268543052292,
+      "aboveBaseCentroidYM": 9.492056319976767,
+      "aboveBaseCentroidDxM": 0.016803227344285077,
+      "aboveBaseCentroidDyM": -0.05994342344180659,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06031414116255467,
+      "aboveBaseMassWeightedVxMPerS": 0.00513875834249876,
+      "aboveBaseMassWeightedVyMPerS": 0.004857087319202768,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": -0.0016369818355794728,
+      "aboveBaseRightDownMassFraction": 0.09902912621359225,
+      "aboveBaseRightDownCountFraction": 0.09902912621359224,
+      "aboveBaseRightwardMassFraction": 0.9048543689320389,
+      "aboveBaseDownwardMassFraction": 0.11262135922330098,
+      "maxVelocityNormMPerS": 0.392214021245638,
+      "totalKineticEnergyJPerM": 154.09588999849692,
+      "minimumJFromNativeHistory": 0.9812761888303777,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25007875216718567,
+          "maximum": 19.75154656536467
+        },
+        "y": {
+          "minimum": 0.2452417550148777,
+          "maximum": 14.586827667213823
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 393961.7910004856,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 53,
+      "timeS": 5.300000000000001,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.568674672739535,
+      "aboveBaseCentroidYM": 9.492194386815324,
+      "aboveBaseCentroidDxM": 0.01720935703152815,
+      "aboveBaseCentroidDyM": -0.05980535660324904,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.060397636616565165,
+      "aboveBaseMassWeightedVxMPerS": 0.002870032968221132,
+      "aboveBaseMassWeightedVyMPerS": -0.0037391754710963485,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.00467323743128765,
+      "aboveBaseRightDownMassFraction": 0.6796116504854369,
+      "aboveBaseRightDownCountFraction": 0.6796116504854369,
+      "aboveBaseRightwardMassFraction": 0.749514563106796,
+      "aboveBaseDownwardMassFraction": 0.8990291262135922,
+      "maxVelocityNormMPerS": 0.37017672807401647,
+      "totalKineticEnergyJPerM": 147.25089297634116,
+      "minimumJFromNativeHistory": 0.9813179686224335,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25007975059957827,
+          "maximum": 19.751586757534206
+        },
+        "y": {
+          "minimum": 0.24525113858902758,
+          "maximum": 14.58773591811307
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 382850.57075622573,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 54,
+      "timeS": 5.4,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.568900897338526,
+      "aboveBaseCentroidYM": 9.491388810378218,
+      "aboveBaseCentroidDxM": 0.017435581630519614,
+      "aboveBaseCentroidDyM": -0.06061093304035481,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06120839857528465,
+      "aboveBaseMassWeightedVxMPerS": 0.0022539685175070254,
+      "aboveBaseMassWeightedVyMPerS": -0.01066216968255728,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.010360694063308381,
+      "aboveBaseRightDownMassFraction": 0.7747572815533981,
+      "aboveBaseRightDownCountFraction": 0.7747572815533981,
+      "aboveBaseRightwardMassFraction": 0.8174757281553396,
+      "aboveBaseDownwardMassFraction": 0.9242718446601941,
+      "maxVelocityNormMPerS": 0.33261077472472894,
+      "totalKineticEnergyJPerM": 160.0062097966957,
+      "minimumJFromNativeHistory": 0.9811947080629199,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25008138696892024,
+          "maximum": 19.75160277231108
+        },
+        "y": {
+          "minimum": 0.2452187289483697,
+          "maximum": 14.586154073473065
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 358290.11656655755,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 55,
+      "timeS": 5.5,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.569202846435755,
+      "aboveBaseCentroidYM": 9.490478151255996,
+      "aboveBaseCentroidDxM": 0.017737530727748307,
+      "aboveBaseCentroidDyM": -0.061521592162577576,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06214802705793195,
+      "aboveBaseMassWeightedVxMPerS": 0.004200490687526775,
+      "aboveBaseMassWeightedVyMPerS": -0.006175939002728269,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.0074487654123492,
+      "aboveBaseRightDownMassFraction": 0.5786407766990291,
+      "aboveBaseRightDownCountFraction": 0.5786407766990291,
+      "aboveBaseRightwardMassFraction": 0.6932038834951455,
+      "aboveBaseDownwardMassFraction": 0.8427184466019417,
+      "maxVelocityNormMPerS": 0.32647036773419075,
+      "totalKineticEnergyJPerM": 155.9763395365284,
+      "minimumJFromNativeHistory": 0.98104807690976,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25008459379159154,
+          "maximum": 19.751623606126053
+        },
+        "y": {
+          "minimum": 0.24517851697695783,
+          "maximum": 14.58388819695945
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 334906.0276527993,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 56,
+      "timeS": 5.6000000000000005,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.569666331090162,
+      "aboveBaseCentroidYM": 9.490210965764195,
+      "aboveBaseCentroidDxM": 0.01820101538215546,
+      "aboveBaseCentroidDyM": -0.06178877765437818,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0626111588085575,
+      "aboveBaseMassWeightedVxMPerS": 0.0048328344013749865,
+      "aboveBaseMassWeightedVyMPerS": -0.0004919380140667544,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.0028424480179565694,
+      "aboveBaseRightDownMassFraction": 0.6213592233009708,
+      "aboveBaseRightDownCountFraction": 0.6213592233009708,
+      "aboveBaseRightwardMassFraction": 0.8932038834951457,
+      "aboveBaseDownwardMassFraction": 0.6854368932038835,
+      "maxVelocityNormMPerS": 0.2878088197668048,
+      "totalKineticEnergyJPerM": 129.55304996440205,
+      "minimumJFromNativeHistory": 0.9810645760931379,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25008625186082134,
+          "maximum": 19.75167409157391
+        },
+        "y": {
+          "minimum": 0.24518163663541367,
+          "maximum": 14.583269427988444
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 321254.6704975949,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 57,
+      "timeS": 5.699999999999999,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.570096148784748,
+      "aboveBaseCentroidYM": 9.490169898786284,
+      "aboveBaseCentroidDxM": 0.01863083307674085,
+      "aboveBaseCentroidDyM": -0.06182984463228891,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06286163270197753,
+      "aboveBaseMassWeightedVxMPerS": 0.003318517691959567,
+      "aboveBaseMassWeightedVyMPerS": -0.0015071067223586597,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.0029644515537566836,
+      "aboveBaseRightDownMassFraction": 0.37087378640776697,
+      "aboveBaseRightDownCountFraction": 0.37087378640776697,
+      "aboveBaseRightwardMassFraction": 0.7533980582524271,
+      "aboveBaseDownwardMassFraction": 0.4912621359223301,
+      "maxVelocityNormMPerS": 0.24920843686676103,
+      "totalKineticEnergyJPerM": 122.78723555210351,
+      "minimumJFromNativeHistory": 0.9810437491277221,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25008685867464436,
+          "maximum": 19.751673806583938
+        },
+        "y": {
+          "minimum": 0.24517613671437422,
+          "maximum": 14.583233038116262
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 312548.64108159806,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 58,
+      "timeS": 5.8,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.570381666070153,
+      "aboveBaseCentroidYM": 9.48986648358175,
+      "aboveBaseCentroidDxM": 0.01891635036214634,
+      "aboveBaseCentroidDyM": -0.062133259836823385,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06326715661970159,
+      "aboveBaseMassWeightedVxMPerS": 0.0028140615705899625,
+      "aboveBaseMassWeightedVyMPerS": -0.004024733839034896,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.004892552533370072,
+      "aboveBaseRightDownMassFraction": 0.5728155339805825,
+      "aboveBaseRightDownCountFraction": 0.5728155339805825,
+      "aboveBaseRightwardMassFraction": 0.654368932038835,
+      "aboveBaseDownwardMassFraction": 0.8640776699029126,
+      "maxVelocityNormMPerS": 0.23279908678104666,
+      "totalKineticEnergyJPerM": 121.10132655644168,
+      "minimumJFromNativeHistory": 0.9810446055442624,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500876879086733,
+          "maximum": 19.75170333528581
+        },
+        "y": {
+          "minimum": 0.2451753303347134,
+          "maximum": 14.583331408730144
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 290725.9261835193,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 59,
+      "timeS": 5.8999999999999995,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.570672950922133,
+      "aboveBaseCentroidYM": 9.489368953368597,
+      "aboveBaseCentroidDxM": 0.019207635214126384,
+      "aboveBaseCentroidDyM": -0.06263079004997607,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06384367284943213,
+      "aboveBaseMassWeightedVxMPerS": 0.0033715357721647967,
+      "aboveBaseMassWeightedVyMPerS": -0.006484874612365213,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.007301834040747437,
+      "aboveBaseRightDownMassFraction": 0.48737864077669896,
+      "aboveBaseRightDownCountFraction": 0.487378640776699,
+      "aboveBaseRightwardMassFraction": 0.7514563106796117,
+      "aboveBaseDownwardMassFraction": 0.6990291262135921,
+      "maxVelocityNormMPerS": 0.21928488722294423,
+      "totalKineticEnergyJPerM": 130.07636004209095,
+      "minimumJFromNativeHistory": 0.9809717561830807,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2500904211312034,
+          "maximum": 19.7517332130156
+        },
+        "y": {
+          "minimum": 0.2451542911630976,
+          "maximum": 14.581794526068625
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 279429.7747827912,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 60,
+      "timeS": 6.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.571068978895035,
+      "aboveBaseCentroidYM": 9.488568065144449,
+      "aboveBaseCentroidDxM": 0.019603663187027998,
+      "aboveBaseCentroidDyM": -0.06343167827412444,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06473527638358721,
+      "aboveBaseMassWeightedVxMPerS": 0.004308314778019706,
+      "aboveBaseMassWeightedVyMPerS": -0.008651281163993784,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.009646386652310279,
+      "aboveBaseRightDownMassFraction": 0.8815533980582524,
+      "aboveBaseRightDownCountFraction": 0.8815533980582524,
+      "aboveBaseRightwardMassFraction": 0.9262135922330096,
+      "aboveBaseDownwardMassFraction": 0.9339805825242717,
+      "maxVelocityNormMPerS": 0.2039339192299887,
+      "totalKineticEnergyJPerM": 112.25922664821033,
+      "minimumJFromNativeHistory": 0.9808423263023026,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25009309594626494,
+          "maximum": 19.75175793319447
+        },
+        "y": {
+          "minimum": 0.24511920413833982,
+          "maximum": 14.57951505586089
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 262923.71563535254,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 61,
+      "timeS": 6.1,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.571479278675176,
+      "aboveBaseCentroidYM": 9.488050538261028,
+      "aboveBaseCentroidDxM": 0.02001396296716962,
+      "aboveBaseCentroidDyM": -0.06394920515754521,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0653886177018418,
+      "aboveBaseMassWeightedVxMPerS": 0.003972257476984366,
+      "aboveBaseMassWeightedVyMPerS": -0.00023284457058990826,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.002187778051756323,
+      "aboveBaseRightDownMassFraction": 0.4699029126213592,
+      "aboveBaseRightDownCountFraction": 0.46990291262135925,
+      "aboveBaseRightwardMassFraction": 0.8893203883495145,
+      "aboveBaseDownwardMassFraction": 0.4854368932038834,
+      "maxVelocityNormMPerS": 0.20595103137470083,
+      "totalKineticEnergyJPerM": 93.95697440854732,
+      "minimumJFromNativeHistory": 0.9808176660216031,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25009229971343044,
+          "maximum": 19.75179292401929
+        },
+        "y": {
+          "minimum": 0.24511417885630937,
+          "maximum": 14.579412672829246
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 236493.74949680892,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 62,
+      "timeS": 6.2,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.57182376941399,
+      "aboveBaseCentroidYM": 9.4883352902933,
+      "aboveBaseCentroidDxM": 0.020358453705982882,
+      "aboveBaseCentroidDyM": -0.06366445312527347,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06531426057752186,
+      "aboveBaseMassWeightedVxMPerS": 0.0030250607073392913,
+      "aboveBaseMassWeightedVyMPerS": 0.0030897671774657988,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": -0.0011632865137950774,
+      "aboveBaseRightDownMassFraction": 0.12621359223300968,
+      "aboveBaseRightDownCountFraction": 0.1262135922330097,
+      "aboveBaseRightwardMassFraction": 0.8077669902912621,
+      "aboveBaseDownwardMassFraction": 0.18834951456310678,
+      "maxVelocityNormMPerS": 0.21886256789377453,
+      "totalKineticEnergyJPerM": 89.83625636402357,
+      "minimumJFromNativeHistory": 0.9809236238782473,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25009417937748357,
+          "maximum": 19.751802570565538
+        },
+        "y": {
+          "minimum": 0.24513889077350448,
+          "maximum": 14.579534415694342
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 238648.5680630557,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 63,
+      "timeS": 6.3,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5721337223222935,
+      "aboveBaseCentroidYM": 9.488102983456447,
+      "aboveBaseCentroidDxM": 0.020668406614286816,
+      "aboveBaseCentroidDyM": -0.06389675996212674,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06567042065386157,
+      "aboveBaseMassWeightedVxMPerS": 0.003207928496649191,
+      "aboveBaseMassWeightedVyMPerS": -0.008167251836252077,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008677011817623998,
+      "aboveBaseRightDownMassFraction": 0.7436893203883496,
+      "aboveBaseRightDownCountFraction": 0.7436893203883496,
+      "aboveBaseRightwardMassFraction": 0.7941747572815533,
+      "aboveBaseDownwardMassFraction": 0.9184466019417474,
+      "maxVelocityNormMPerS": 0.198771211494185,
+      "totalKineticEnergyJPerM": 96.15837637349992,
+      "minimumJFromNativeHistory": 0.9808802277922622,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25009496728805236,
+          "maximum": 19.75183158250054
+        },
+        "y": {
+          "minimum": 0.24512689333327406,
+          "maximum": 14.579166801778243
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 226966.84846469137,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 64,
+      "timeS": 6.4,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5724834186265815,
+      "aboveBaseCentroidYM": 9.487065008781244,
+      "aboveBaseCentroidDxM": 0.021018102918574755,
+      "aboveBaseCentroidDyM": -0.06493473463732968,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0667441812432162,
+      "aboveBaseMassWeightedVxMPerS": 0.0038525836716669527,
+      "aboveBaseMassWeightedVyMPerS": -0.009771221552589042,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.01038841792638161,
+      "aboveBaseRightDownMassFraction": 0.8058252427184466,
+      "aboveBaseRightDownCountFraction": 0.8058252427184466,
+      "aboveBaseRightwardMassFraction": 0.8582524271844659,
+      "aboveBaseDownwardMassFraction": 0.9184466019417474,
+      "maxVelocityNormMPerS": 0.20052133793713536,
+      "totalKineticEnergyJPerM": 99.12849337528766,
+      "minimumJFromNativeHistory": 0.9807520764045561,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25009727033006984,
+          "maximum": 19.751864268731854
+        },
+        "y": {
+          "minimum": 0.2450923467661049,
+          "maximum": 14.57726916183211
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 198836.4710339496,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 65,
+      "timeS": 6.5,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.572873353871485,
+      "aboveBaseCentroidYM": 9.48652152343587,
+      "aboveBaseCentroidDxM": 0.021408038163478693,
+      "aboveBaseCentroidDyM": -0.06547821998270287,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0674098209813459,
+      "aboveBaseMassWeightedVxMPerS": 0.003774877755763344,
+      "aboveBaseMassWeightedVyMPerS": -0.0011747242880723405,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.002904779953794908,
+      "aboveBaseRightDownMassFraction": 0.48349514563106794,
+      "aboveBaseRightDownCountFraction": 0.48349514563106794,
+      "aboveBaseRightwardMassFraction": 0.7689320388349515,
+      "aboveBaseDownwardMassFraction": 0.6776699029126213,
+      "maxVelocityNormMPerS": 0.2048411728915142,
+      "totalKineticEnergyJPerM": 81.85536607229785,
+      "minimumJFromNativeHistory": 0.980658605274079,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25009998844127385,
+          "maximum": 19.751883407449466
+        },
+        "y": {
+          "minimum": 0.2450666613897667,
+          "maximum": 14.575414603728962
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 188415.11605764084,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 66,
+      "timeS": 6.6000000000000005,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.573228223552797,
+      "aboveBaseCentroidYM": 9.4865752502265,
+      "aboveBaseCentroidDxM": 0.02176290784479029,
+      "aboveBaseCentroidDyM": -0.065424493192074,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06754072705645328,
+      "aboveBaseMassWeightedVxMPerS": 0.003161511366336249,
+      "aboveBaseMassWeightedVyMPerS": 0.00047866700345101866,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.0011662178982261694,
+      "aboveBaseRightDownMassFraction": 0.3980582524271845,
+      "aboveBaseRightDownCountFraction": 0.39805825242718446,
+      "aboveBaseRightwardMassFraction": 0.8291262135922329,
+      "aboveBaseDownwardMassFraction": 0.4194174757281553,
+      "maxVelocityNormMPerS": 0.1935014290857936,
+      "totalKineticEnergyJPerM": 73.66625977661245,
+      "minimumJFromNativeHistory": 0.9807263128712752,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25010178416253886,
+          "maximum": 19.751927588761976
+        },
+        "y": {
+          "minimum": 0.24508176278300017,
+          "maximum": 14.575771603525979
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 182182.378886786,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 67,
+      "timeS": 6.7,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.573547668085362,
+      "aboveBaseCentroidYM": 9.486428367932868,
+      "aboveBaseCentroidDxM": 0.022082352377355008,
+      "aboveBaseCentroidDyM": -0.06557137548570502,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06782765312038623,
+      "aboveBaseMassWeightedVxMPerS": 0.0036241794541541413,
+      "aboveBaseMassWeightedVyMPerS": -0.0036076647652383575,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.004936419062111511,
+      "aboveBaseRightDownMassFraction": 0.8213592233009708,
+      "aboveBaseRightDownCountFraction": 0.8213592233009709,
+      "aboveBaseRightwardMassFraction": 0.9009708737864077,
+      "aboveBaseDownwardMassFraction": 0.9067961165048543,
+      "maxVelocityNormMPerS": 0.1887359654901582,
+      "totalKineticEnergyJPerM": 71.78180002599572,
+      "minimumJFromNativeHistory": 0.980754961995031,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25010145386045624,
+          "maximum": 19.751938660130403
+        },
+        "y": {
+          "minimum": 0.2450896345847031,
+          "maximum": 14.575776135348075
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 170293.2371437882,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 68,
+      "timeS": 6.800000000000001,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.573916119548283,
+      "aboveBaseCentroidYM": 9.48589394929379,
+      "aboveBaseCentroidDxM": 0.0224508038402762,
+      "aboveBaseCentroidDyM": -0.06610579412478401,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06847469896954515,
+      "aboveBaseMassWeightedVxMPerS": 0.0036733335114920297,
+      "aboveBaseMassWeightedVyMPerS": -0.006160866073785633,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.0071721332849580665,
+      "aboveBaseRightDownMassFraction": 0.545631067961165,
+      "aboveBaseRightDownCountFraction": 0.545631067961165,
+      "aboveBaseRightwardMassFraction": 0.6621359223300971,
+      "aboveBaseDownwardMassFraction": 0.8543689320388349,
+      "maxVelocityNormMPerS": 0.18651606591244593,
+      "totalKineticEnergyJPerM": 87.68493138284597,
+      "minimumJFromNativeHistory": 0.980689552366286,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501032289087611,
+          "maximum": 19.75196239158819
+        },
+        "y": {
+          "minimum": 0.24507097672570072,
+          "maximum": 14.57515246692404
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 154803.17506096244,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 69,
+      "timeS": 6.8999999999999995,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.574294031132771,
+      "aboveBaseCentroidYM": 9.485293664827978,
+      "aboveBaseCentroidDxM": 0.02282871542476439,
+      "aboveBaseCentroidDyM": -0.0667060785905953,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06918351635867899,
+      "aboveBaseMassWeightedVxMPerS": 0.003550218188576429,
+      "aboveBaseMassWeightedVyMPerS": -0.005599203261107678,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.006624161359360137,
+      "aboveBaseRightDownMassFraction": 0.5728155339805825,
+      "aboveBaseRightDownCountFraction": 0.5728155339805825,
+      "aboveBaseRightwardMassFraction": 0.7708737864077669,
+      "aboveBaseDownwardMassFraction": 0.7747572815533981,
+      "maxVelocityNormMPerS": 0.1824809422842548,
+      "totalKineticEnergyJPerM": 80.8912177883447,
+      "minimumJFromNativeHistory": 0.98061069818023,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501070880048225,
+          "maximum": 19.752009006982707
+        },
+        "y": {
+          "minimum": 0.24504738044755953,
+          "maximum": 14.575158436897087
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 142220.80248842417,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 70,
+      "timeS": 7.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5745984364894134,
+      "aboveBaseCentroidYM": 9.48479285255424,
+      "aboveBaseCentroidDxM": 0.023133120781406724,
+      "aboveBaseCentroidDyM": -0.06720689086433396,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.06976943518858487,
+      "aboveBaseMassWeightedVxMPerS": 0.0029615536823437453,
+      "aboveBaseMassWeightedVyMPerS": -0.004055406572623817,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.004992861955738481,
+      "aboveBaseRightDownMassFraction": 0.8233009708737863,
+      "aboveBaseRightDownCountFraction": 0.8233009708737864,
+      "aboveBaseRightwardMassFraction": 0.89126213592233,
+      "aboveBaseDownwardMassFraction": 0.920388349514563,
+      "maxVelocityNormMPerS": 0.16748020682131867,
+      "totalKineticEnergyJPerM": 65.1741186021769,
+      "minimumJFromNativeHistory": 0.9805511906242556,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25010832771041897,
+          "maximum": 19.752028189053803
+        },
+        "y": {
+          "minimum": 0.24503154133968072,
+          "maximum": 14.575111358443008
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 131318.38557601583,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 71,
+      "timeS": 7.1,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.574933998286686,
+      "aboveBaseCentroidYM": 9.48461049803725,
+      "aboveBaseCentroidDxM": 0.02346868257867918,
+      "aboveBaseCentroidDyM": -0.06738924538132274,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07009513973142822,
+      "aboveBaseMassWeightedVxMPerS": 0.003741882829209934,
+      "aboveBaseMassWeightedVyMPerS": 0.0006623815624854906,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.001297302154494103,
+      "aboveBaseRightDownMassFraction": 0.45631067961165045,
+      "aboveBaseRightDownCountFraction": 0.4563106796116505,
+      "aboveBaseRightwardMassFraction": 0.8485436893203884,
+      "aboveBaseDownwardMassFraction": 0.48155339805825237,
+      "maxVelocityNormMPerS": 0.17113223565641222,
+      "totalKineticEnergyJPerM": 64.09536411281694,
+      "minimumJFromNativeHistory": 0.9805924023333625,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501086130504775,
+          "maximum": 19.75205266623678
+        },
+        "y": {
+          "minimum": 0.24504187707476438,
+          "maximum": 14.574972670908993
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 115863.24799509383,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 72,
+      "timeS": 7.199999999999999,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.575338299604186,
+      "aboveBaseCentroidYM": 9.484709364078697,
+      "aboveBaseCentroidDxM": 0.023872983896179534,
+      "aboveBaseCentroidDyM": -0.0672903793398767,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07021166988671453,
+      "aboveBaseMassWeightedVxMPerS": 0.004117721070926969,
+      "aboveBaseMassWeightedVyMPerS": -0.0007454358642922369,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.002704426930832571,
+      "aboveBaseRightDownMassFraction": 0.39029126213592236,
+      "aboveBaseRightDownCountFraction": 0.39029126213592236,
+      "aboveBaseRightwardMassFraction": 0.8174757281553396,
+      "aboveBaseDownwardMassFraction": 0.5262135922330097,
+      "maxVelocityNormMPerS": 0.17920692284611284,
+      "totalKineticEnergyJPerM": 64.74784044427133,
+      "minimumJFromNativeHistory": 0.9806345964152833,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501109313090836,
+          "maximum": 19.75208207972168
+        },
+        "y": {
+          "minimum": 0.24504986023350944,
+          "maximum": 14.57500063447126
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 116257.70115674783,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 73,
+      "timeS": 7.3,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5757064684171675,
+      "aboveBaseCentroidYM": 9.484158100503588,
+      "aboveBaseCentroidDxM": 0.02424115270916083,
+      "aboveBaseCentroidDyM": -0.06784164291498485,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07087316255342986,
+      "aboveBaseMassWeightedVxMPerS": 0.0032972888800166557,
+      "aboveBaseMassWeightedVyMPerS": -0.009719896412589073,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.010066321655463695,
+      "aboveBaseRightDownMassFraction": 0.7650485436893204,
+      "aboveBaseRightDownCountFraction": 0.7650485436893204,
+      "aboveBaseRightwardMassFraction": 0.8194174757281554,
+      "aboveBaseDownwardMassFraction": 0.920388349514563,
+      "maxVelocityNormMPerS": 0.18127746082696294,
+      "totalKineticEnergyJPerM": 74.0221635881623,
+      "minimumJFromNativeHistory": 0.9805774202046239,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501122574100344,
+          "maximum": 19.752110200983136
+        },
+        "y": {
+          "minimum": 0.24503421152370322,
+          "maximum": 14.574966680847895
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 104274.70394592575,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 74,
+      "timeS": 7.4,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.57598723125544,
+      "aboveBaseCentroidYM": 9.483217442114569,
+      "aboveBaseCentroidDxM": 0.024521915547433437,
+      "aboveBaseCentroidDyM": -0.06878230130400453,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07182817803374017,
+      "aboveBaseMassWeightedVxMPerS": 0.002689572502153905,
+      "aboveBaseMassWeightedVyMPerS": -0.00634995725355156,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.0068440105455978666,
+      "aboveBaseRightDownMassFraction": 0.6970873786407766,
+      "aboveBaseRightDownCountFraction": 0.6970873786407767,
+      "aboveBaseRightwardMassFraction": 0.7708737864077669,
+      "aboveBaseDownwardMassFraction": 0.9048543689320389,
+      "maxVelocityNormMPerS": 0.18947724409799305,
+      "totalKineticEnergyJPerM": 60.24303573953654,
+      "minimumJFromNativeHistory": 0.9804580827538955,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25011460853478834,
+          "maximum": 19.752145933110747
+        },
+        "y": {
+          "minimum": 0.2450020638391902,
+          "maximum": 14.57480309915832
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 77659.35207789454,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 75,
+      "timeS": 7.5,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.576304463822761,
+      "aboveBaseCentroidYM": 9.483088057204872,
+      "aboveBaseCentroidDxM": 0.024839148114754295,
+      "aboveBaseCentroidDyM": -0.06891168621370092,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07209884493606401,
+      "aboveBaseMassWeightedVxMPerS": 0.0037053861201667786,
+      "aboveBaseMassWeightedVyMPerS": 0.0021962866660612886,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": -4.934698671871609e-05,
+      "aboveBaseRightDownMassFraction": 0.2155339805825243,
+      "aboveBaseRightDownCountFraction": 0.21553398058252426,
+      "aboveBaseRightwardMassFraction": 0.8504854368932038,
+      "aboveBaseDownwardMassFraction": 0.3087378640776699,
+      "maxVelocityNormMPerS": 0.17581009134270498,
+      "totalKineticEnergyJPerM": 51.8322819714423,
+      "minimumJFromNativeHistory": 0.980445420665153,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25011628534382596,
+          "maximum": 19.752166682677913
+        },
+        "y": {
+          "minimum": 0.24499717307612184,
+          "maximum": 14.574830191744857
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 77067.503371957,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 76,
+      "timeS": 7.6,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.576715842301925,
+      "aboveBaseCentroidYM": 9.483222218646059,
+      "aboveBaseCentroidDxM": 0.025250526593918465,
+      "aboveBaseCentroidDyM": -0.0687775247725142,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07218834695937007,
+      "aboveBaseMassWeightedVxMPerS": 0.004331912450912232,
+      "aboveBaseMassWeightedVyMPerS": -0.0011479222479571884,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.003160086053756381,
+      "aboveBaseRightDownMassFraction": 0.5980582524271845,
+      "aboveBaseRightDownCountFraction": 0.5980582524271845,
+      "aboveBaseRightwardMassFraction": 0.9029126213592232,
+      "aboveBaseDownwardMassFraction": 0.6194174757281554,
+      "maxVelocityNormMPerS": 0.17049920718297037,
+      "totalKineticEnergyJPerM": 48.74980174079991,
+      "minimumJFromNativeHistory": 0.980536420063495,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501167387965203,
+          "maximum": 19.752203538527116
+        },
+        "y": {
+          "minimum": 0.2450198234386624,
+          "maximum": 14.574792067196379
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 73306.10181575992,
+      "driverActiveContacts": 6,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 77,
+      "timeS": 7.7,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.577106925378389,
+      "aboveBaseCentroidYM": 9.482796658276186,
+      "aboveBaseCentroidDxM": 0.025641609670381982,
+      "aboveBaseCentroidDyM": -0.06920308514238727,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07275243458875581,
+      "aboveBaseMassWeightedVxMPerS": 0.0034824613567765216,
+      "aboveBaseMassWeightedVyMPerS": -0.006299916941532643,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.007197118791487493,
+      "aboveBaseRightDownMassFraction": 0.8485436893203884,
+      "aboveBaseRightDownCountFraction": 0.8485436893203884,
+      "aboveBaseRightwardMassFraction": 0.9106796116504854,
+      "aboveBaseDownwardMassFraction": 0.916504854368932,
+      "maxVelocityNormMPerS": 0.16350397722548482,
+      "totalKineticEnergyJPerM": 48.79442920649724,
+      "minimumJFromNativeHistory": 0.9805044601600963,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25011740218947737,
+          "maximum": 19.752225047496825
+        },
+        "y": {
+          "minimum": 0.24501132687630117,
+          "maximum": 14.574664009226298
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 57205.60722156875,
+      "driverActiveContacts": 4,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 78,
+      "timeS": 7.800000000000001,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.577405080491928,
+      "aboveBaseCentroidYM": 9.482166748100468,
+      "aboveBaseCentroidDxM": 0.02593976478392168,
+      "aboveBaseCentroidDyM": -0.06983299531810516,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07344703035979967,
+      "aboveBaseMassWeightedVxMPerS": 0.0026695641568647154,
+      "aboveBaseMassWeightedVyMPerS": -0.005874202498315934,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.006421990668947972,
+      "aboveBaseRightDownMassFraction": 0.5067961165048543,
+      "aboveBaseRightDownCountFraction": 0.5067961165048543,
+      "aboveBaseRightwardMassFraction": 0.6796116504854369,
+      "aboveBaseDownwardMassFraction": 0.7941747572815533,
+      "maxVelocityNormMPerS": 0.15134153317859472,
+      "totalKineticEnergyJPerM": 56.233255328073476,
+      "minimumJFromNativeHistory": 0.980425819428202,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501198458375684,
+          "maximum": 19.752247388148415
+        },
+        "y": {
+          "minimum": 0.24498882687925244,
+          "maximum": 14.57465186457978
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 49881.33911286497,
+      "driverActiveContacts": 3,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 79,
+      "timeS": 7.9,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.577687773207057,
+      "aboveBaseCentroidYM": 9.481620099668294,
+      "aboveBaseCentroidDxM": 0.026222457499049945,
+      "aboveBaseCentroidDyM": -0.07037964375027883,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07406178814656514,
+      "aboveBaseMassWeightedVxMPerS": 0.0034309439681967663,
+      "aboveBaseMassWeightedVyMPerS": -0.00504169856077345,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.006081711015951634,
+      "aboveBaseRightDownMassFraction": 0.7359223300970874,
+      "aboveBaseRightDownCountFraction": 0.7359223300970874,
+      "aboveBaseRightwardMassFraction": 0.8291262135922329,
+      "aboveBaseDownwardMassFraction": 0.8796116504854368,
+      "maxVelocityNormMPerS": 0.1504589127631963,
+      "totalKineticEnergyJPerM": 43.5505144932961,
+      "minimumJFromNativeHistory": 0.980389738173736,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501225591390459,
+          "maximum": 19.752298233373295
+        },
+        "y": {
+          "minimum": 0.244977315084235,
+          "maximum": 14.574611556937011
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 43636.00127184953,
+      "driverActiveContacts": 2,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 80,
+      "timeS": 8.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.578099754025423,
+      "aboveBaseCentroidYM": 9.48117078926359,
+      "aboveBaseCentroidDxM": 0.02663443831741663,
+      "aboveBaseCentroidDyM": -0.07082895415498314,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07465689278040707,
+      "aboveBaseMassWeightedVxMPerS": 0.00473479799765903,
+      "aboveBaseMassWeightedVyMPerS": -0.003638550536092313,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.005518476196038946,
+      "aboveBaseRightDownMassFraction": 0.9029126213592232,
+      "aboveBaseRightDownCountFraction": 0.9029126213592233,
+      "aboveBaseRightwardMassFraction": 0.9631067961165047,
+      "aboveBaseDownwardMassFraction": 0.9223300970873786,
+      "maxVelocityNormMPerS": 0.15013280233636067,
+      "totalKineticEnergyJPerM": 37.988371836736384,
+      "minimumJFromNativeHistory": 0.9803584486242166,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501236096956866,
+          "maximum": 19.752316507839595
+        },
+        "y": {
+          "minimum": 0.24496855095982392,
+          "maximum": 14.574525098322336
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 37127.093173374706,
+      "driverActiveContacts": 2,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 81,
+      "timeS": 8.100000000000001,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.578548098085184,
+      "aboveBaseCentroidYM": 9.480943217881942,
+      "aboveBaseCentroidDxM": 0.027082782377177317,
+      "aboveBaseCentroidDyM": -0.07105652553663155,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07507814740796928,
+      "aboveBaseMassWeightedVxMPerS": 0.004175439316625698,
+      "aboveBaseMassWeightedVyMPerS": -0.0011738237423430606,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.003104280838747259,
+      "aboveBaseRightDownMassFraction": 0.6135922330097087,
+      "aboveBaseRightDownCountFraction": 0.6135922330097088,
+      "aboveBaseRightwardMassFraction": 0.8233009708737863,
+      "aboveBaseDownwardMassFraction": 0.7223300970873786,
+      "maxVelocityNormMPerS": 0.1454559234514176,
+      "totalKineticEnergyJPerM": 38.82099407846541,
+      "minimumJFromNativeHistory": 0.9803830523848607,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25012435529649274,
+          "maximum": 19.752342384087058
+        },
+        "y": {
+          "minimum": 0.2449734008109185,
+          "maximum": 14.574440135074925
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 30874.44968688402,
+      "driverActiveContacts": 2,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 82,
+      "timeS": 8.2,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.578883986068047,
+      "aboveBaseCentroidYM": 9.48073491145658,
+      "aboveBaseCentroidDxM": 0.02741867036004031,
+      "aboveBaseCentroidDyM": -0.07126483196199374,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07542649005553595,
+      "aboveBaseMassWeightedVxMPerS": 0.0024703448834191614,
+      "aboveBaseMassWeightedVyMPerS": -0.004093501133039401,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.004780248413342085,
+      "aboveBaseRightDownMassFraction": 0.4893203883495145,
+      "aboveBaseRightDownCountFraction": 0.4893203883495146,
+      "aboveBaseRightwardMassFraction": 0.6757281553398058,
+      "aboveBaseDownwardMassFraction": 0.7708737864077669,
+      "maxVelocityNormMPerS": 0.15096229707299832,
+      "totalKineticEnergyJPerM": 42.32894980948253,
+      "minimumJFromNativeHistory": 0.9803967560791357,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501256619458038,
+          "maximum": 19.752379285118636
+        },
+        "y": {
+          "minimum": 0.2449762855966732,
+          "maximum": 14.574438695377996
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 29507.180901440224,
+      "driverActiveContacts": 2,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 83,
+      "timeS": 8.299999999999999,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.579133455336749,
+      "aboveBaseCentroidYM": 9.48002722204527,
+      "aboveBaseCentroidDxM": 0.027668139628742594,
+      "aboveBaseCentroidDyM": -0.07197252137330246,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0761641016980697,
+      "aboveBaseMassWeightedVxMPerS": 0.002945899143788142,
+      "aboveBaseMassWeightedVyMPerS": -0.009540068708764778,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.009734891427533376,
+      "aboveBaseRightDownMassFraction": 0.8466019417475728,
+      "aboveBaseRightDownCountFraction": 0.8466019417475729,
+      "aboveBaseRightwardMassFraction": 0.8640776699029126,
+      "aboveBaseDownwardMassFraction": 0.9417475728155339,
+      "maxVelocityNormMPerS": 0.15527461129623038,
+      "totalKineticEnergyJPerM": 49.21765012802116,
+      "minimumJFromNativeHistory": 0.9802760796190177,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25012780395700845,
+          "maximum": 19.75240322287532
+        },
+        "y": {
+          "minimum": 0.2449440920278745,
+          "maximum": 14.574384188747587
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 26540.686168168293,
+      "driverActiveContacts": 1,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 84,
+      "timeS": 8.4,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.579513112720425,
+      "aboveBaseCentroidYM": 9.479118169282952,
+      "aboveBaseCentroidDxM": 0.028047797012418663,
+      "aboveBaseCentroidDyM": -0.07288157413562146,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07714119317545641,
+      "aboveBaseMassWeightedVxMPerS": 0.004774243703116425,
+      "aboveBaseMassWeightedVyMPerS": -0.0072013460930888135,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008623670509616942,
+      "aboveBaseRightDownMassFraction": 0.8504854368932038,
+      "aboveBaseRightDownCountFraction": 0.8504854368932039,
+      "aboveBaseRightwardMassFraction": 0.8893203883495145,
+      "aboveBaseDownwardMassFraction": 0.9339805825242717,
+      "maxVelocityNormMPerS": 0.1554969603820909,
+      "totalKineticEnergyJPerM": 51.73407211461607,
+      "minimumJFromNativeHistory": 0.9802300759769799,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501295981692515,
+          "maximum": 19.752435459478296
+        },
+        "y": {
+          "minimum": 0.24493019515730177,
+          "maximum": 14.574071302211548
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 17114.660926758064,
+      "driverActiveContacts": 1,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 85,
+      "timeS": 8.5,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.580039690320308,
+      "aboveBaseCentroidYM": 9.478756586169085,
+      "aboveBaseCentroidDxM": 0.028574374612301057,
+      "aboveBaseCentroidDyM": -0.07324315724948782,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07771762213758535,
+      "aboveBaseMassWeightedVxMPerS": 0.005182679736738354,
+      "aboveBaseMassWeightedVyMPerS": -0.0006509526565218294,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.003155081405578048,
+      "aboveBaseRightDownMassFraction": 0.4640776699029126,
+      "aboveBaseRightDownCountFraction": 0.4640776699029126,
+      "aboveBaseRightwardMassFraction": 0.9184466019417474,
+      "aboveBaseDownwardMassFraction": 0.5126213592233009,
+      "maxVelocityNormMPerS": 0.1627544168263266,
+      "totalKineticEnergyJPerM": 48.4096413252939,
+      "minimumJFromNativeHistory": 0.9802301879375592,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501314566526776,
+          "maximum": 19.752470958427146
+        },
+        "y": {
+          "minimum": 0.24492899244426716,
+          "maximum": 14.573977628785887
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 14872.159601431178,
+      "driverActiveContacts": 1,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 86,
+      "timeS": 8.6,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5804192925495855,
+      "aboveBaseCentroidYM": 9.478710233728567,
+      "aboveBaseCentroidDxM": 0.028953976841578744,
+      "aboveBaseCentroidDyM": -0.07328950969000658,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07794756564324085,
+      "aboveBaseMassWeightedVxMPerS": 0.00226789024394009,
+      "aboveBaseMassWeightedVyMPerS": -0.0018285125939494185,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.0027174834794700215,
+      "aboveBaseRightDownMassFraction": 0.5339805825242718,
+      "aboveBaseRightDownCountFraction": 0.5339805825242718,
+      "aboveBaseRightwardMassFraction": 0.6796116504854369,
+      "aboveBaseDownwardMassFraction": 0.8194174757281554,
+      "maxVelocityNormMPerS": 0.17572226397623963,
+      "totalKineticEnergyJPerM": 49.11252588406167,
+      "minimumJFromNativeHistory": 0.9802475082611829,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25013309057934746,
+          "maximum": 19.752497695706996
+        },
+        "y": {
+          "minimum": 0.24493086720430002,
+          "maximum": 14.574035685753149
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 16604.998848777086,
+      "driverActiveContacts": 1,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 87,
+      "timeS": 8.7,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.580611368791083,
+      "aboveBaseCentroidYM": 9.478235860008647,
+      "aboveBaseCentroidDxM": 0.029146053083076495,
+      "aboveBaseCentroidDyM": -0.07376388340992612,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07845442345632778,
+      "aboveBaseMassWeightedVxMPerS": 0.0022668238773978755,
+      "aboveBaseMassWeightedVyMPerS": -0.007277612995247597,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.007436009671495116,
+      "aboveBaseRightDownMassFraction": 0.7902912621359223,
+      "aboveBaseRightDownCountFraction": 0.7902912621359224,
+      "aboveBaseRightwardMassFraction": 0.8213592233009708,
+      "aboveBaseDownwardMassFraction": 0.9398058252427184,
+      "maxVelocityNormMPerS": 0.18448384462332906,
+      "totalKineticEnergyJPerM": 62.441835913753096,
+      "minimumJFromNativeHistory": 0.9802299850672045,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501336484612634,
+          "maximum": 19.752524786432186
+        },
+        "y": {
+          "minimum": 0.24492650861639262,
+          "maximum": 14.573808449536735
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 10353.553068220834,
+      "driverActiveContacts": 1,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 88,
+      "timeS": 8.8,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.58097569283062,
+      "aboveBaseCentroidYM": 9.477466328519336,
+      "aboveBaseCentroidDxM": 0.029510377122613285,
+      "aboveBaseCentroidDyM": -0.07453341489923737,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.07930301929485178,
+      "aboveBaseMassWeightedVxMPerS": 0.005204267038063753,
+      "aboveBaseMassWeightedVyMPerS": -0.007186133346276318,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008825507551889645,
+      "aboveBaseRightDownMassFraction": 0.7980582524271844,
+      "aboveBaseRightDownCountFraction": 0.7980582524271844,
+      "aboveBaseRightwardMassFraction": 0.9067961165048543,
+      "aboveBaseDownwardMassFraction": 0.8679611650485437,
+      "maxVelocityNormMPerS": 0.19000175420993332,
+      "totalKineticEnergyJPerM": 77.35092749592779,
+      "minimumJFromNativeHistory": 0.9801496969514683,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25013478722749233,
+          "maximum": 19.752552385829652
+        },
+        "y": {
+          "minimum": 0.24490597662501878,
+          "maximum": 14.573638657291959
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 5117.012988158365,
+      "driverActiveContacts": 1,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 89,
+      "timeS": 8.9,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.581542828514671,
+      "aboveBaseCentroidYM": 9.476886243876944,
+      "aboveBaseCentroidDxM": 0.030077512806664153,
+      "aboveBaseCentroidDyM": -0.07511349954162938,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0800889551735339,
+      "aboveBaseMassWeightedVxMPerS": 0.0052514208123884175,
+      "aboveBaseMassWeightedVyMPerS": -0.004599026593447242,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.006608584268799728,
+      "aboveBaseRightDownMassFraction": 0.6252427184466018,
+      "aboveBaseRightDownCountFraction": 0.625242718446602,
+      "aboveBaseRightwardMassFraction": 0.7572815533980582,
+      "aboveBaseDownwardMassFraction": 0.8446601941747572,
+      "maxVelocityNormMPerS": 0.19701513413772842,
+      "totalKineticEnergyJPerM": 83.11603005628288,
+      "minimumJFromNativeHistory": 0.9801167531150701,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25013789849761675,
+          "maximum": 19.752593146037036
+        },
+        "y": {
+          "minimum": 0.24489414263566103,
+          "maximum": 14.573596382347993
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 3774.264804263794,
+      "driverActiveContacts": 1,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 90,
+      "timeS": 9.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.581939853510509,
+      "aboveBaseCentroidYM": 9.47646972159919,
+      "aboveBaseCentroidDxM": 0.030474537802501978,
+      "aboveBaseCentroidDyM": -0.0755300218193824,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.08064818654522908,
+      "aboveBaseMassWeightedVxMPerS": 0.0025669500503867457,
+      "aboveBaseMassWeightedVyMPerS": -0.003864104550147234,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.004629887728499918,
+      "aboveBaseRightDownMassFraction": 0.8174757281553396,
+      "aboveBaseRightDownCountFraction": 0.8174757281553398,
+      "aboveBaseRightwardMassFraction": 0.8737864077669901,
+      "aboveBaseDownwardMassFraction": 0.9145631067961164,
+      "maxVelocityNormMPerS": 0.2077323404668759,
+      "totalKineticEnergyJPerM": 74.65423180249905,
+      "minimumJFromNativeHistory": 0.9801271409524778,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25014012353519566,
+          "maximum": 19.752638673793953
+        },
+        "y": {
+          "minimum": 0.24489421934636119,
+          "maximum": 14.573451710662447
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 91,
+      "timeS": 9.1,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.582145758919054,
+      "aboveBaseCentroidYM": 9.476094831589867,
+      "aboveBaseCentroidDxM": 0.03068044321104768,
+      "aboveBaseCentroidDyM": -0.07590491182870629,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.08107580352120142,
+      "aboveBaseMassWeightedVxMPerS": 0.0023490868149754537,
+      "aboveBaseMassWeightedVyMPerS": -0.0038254068128255004,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.004487442887204674,
+      "aboveBaseRightDownMassFraction": 0.7922330097087379,
+      "aboveBaseRightDownCountFraction": 0.7922330097087379,
+      "aboveBaseRightwardMassFraction": 0.8427184466019417,
+      "aboveBaseDownwardMassFraction": 0.9184466019417474,
+      "maxVelocityNormMPerS": 0.2167017044058104,
+      "totalKineticEnergyJPerM": 78.60412143965337,
+      "minimumJFromNativeHistory": 0.9800991958648342,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25013968329823694,
+          "maximum": 19.752646526038266
+        },
+        "y": {
+          "minimum": 0.2448878856227587,
+          "maximum": 14.572858397379964
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 92,
+      "timeS": 9.200000000000001,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.58250886259015,
+      "aboveBaseCentroidYM": 9.475674778701752,
+      "aboveBaseCentroidDxM": 0.031043546882143502,
+      "aboveBaseCentroidDyM": -0.0763249647168216,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0816211318287902,
+      "aboveBaseMassWeightedVxMPerS": 0.004974405493278021,
+      "aboveBaseMassWeightedVyMPerS": -0.005040196729854372,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.00685214115476415,
+      "aboveBaseRightDownMassFraction": 0.6621359223300971,
+      "aboveBaseRightDownCountFraction": 0.6621359223300971,
+      "aboveBaseRightwardMassFraction": 0.7883495145631068,
+      "aboveBaseDownwardMassFraction": 0.8504854368932038,
+      "maxVelocityNormMPerS": 0.2229723596475683,
+      "totalKineticEnergyJPerM": 93.89367184205032,
+      "minimumJFromNativeHistory": 0.9801049302165868,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501411930961498,
+          "maximum": 19.752684079444993
+        },
+        "y": {
+          "minimum": 0.24488806309691408,
+          "maximum": 14.57236330004693
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 93,
+      "timeS": 9.3,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.58306237162112,
+      "aboveBaseCentroidYM": 9.475033494429855,
+      "aboveBaseCentroidDxM": 0.031597055913112904,
+      "aboveBaseCentroidDyM": -0.07696624898871818,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.08245325481478476,
+      "aboveBaseMassWeightedVxMPerS": 0.005341887151061332,
+      "aboveBaseMassWeightedVyMPerS": -0.007907186834447662,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.0095187682466322,
+      "aboveBaseRightDownMassFraction": 0.8291262135922329,
+      "aboveBaseRightDownCountFraction": 0.829126213592233,
+      "aboveBaseRightwardMassFraction": 0.9145631067961164,
+      "aboveBaseDownwardMassFraction": 0.8970873786407767,
+      "maxVelocityNormMPerS": 0.22198379841755253,
+      "totalKineticEnergyJPerM": 97.82626486839645,
+      "minimumJFromNativeHistory": 0.9800648943009159,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501438291351209,
+          "maximum": 19.75272964986482
+        },
+        "y": {
+          "minimum": 0.24487520777333419,
+          "maximum": 14.571943024938655
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 94,
+      "timeS": 9.399999999999999,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.583486549773847,
+      "aboveBaseCentroidYM": 9.47419637931707,
+      "aboveBaseCentroidDxM": 0.0320212340658399,
+      "aboveBaseCentroidDyM": -0.0778033641015039,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.08339030684471256,
+      "aboveBaseMassWeightedVxMPerS": 0.002999090597588627,
+      "aboveBaseMassWeightedVyMPerS": -0.00817095865201773,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008575803064713922,
+      "aboveBaseRightDownMassFraction": 0.8271844660194174,
+      "aboveBaseRightDownCountFraction": 0.8271844660194175,
+      "aboveBaseRightwardMassFraction": 0.8718446601941747,
+      "aboveBaseDownwardMassFraction": 0.9378640776699029,
+      "maxVelocityNormMPerS": 0.21320527576191012,
+      "totalKineticEnergyJPerM": 89.93015407086894,
+      "minimumJFromNativeHistory": 0.9799778615284607,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25014511042039833,
+          "maximum": 19.75275823631303
+        },
+        "y": {
+          "minimum": 0.24485236381620556,
+          "maximum": 14.57126374919302
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 95,
+      "timeS": 9.5,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.583729086011822,
+      "aboveBaseCentroidYM": 9.473554665320734,
+      "aboveBaseCentroidDxM": 0.03226377030381489,
+      "aboveBaseCentroidDyM": -0.07844507809783963,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.08406731558649083,
+      "aboveBaseMassWeightedVxMPerS": 0.002559990645540741,
+      "aboveBaseMassWeightedVyMPerS": -0.004507127532629743,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.005183282264124005,
+      "aboveBaseRightDownMassFraction": 0.6252427184466018,
+      "aboveBaseRightDownCountFraction": 0.625242718446602,
+      "aboveBaseRightwardMassFraction": 0.6951456310679612,
+      "aboveBaseDownwardMassFraction": 0.9029126213592232,
+      "maxVelocityNormMPerS": 0.19533144927739288,
+      "totalKineticEnergyJPerM": 81.34419264003239,
+      "minimumJFromNativeHistory": 0.9799573310653888,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.250146662507776,
+          "maximum": 19.75279447294205
+        },
+        "y": {
+          "minimum": 0.24484570107023088,
+          "maximum": 14.570064746719362
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 96,
+      "timeS": 9.6,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.5841118502482905,
+      "aboveBaseCentroidYM": 9.47326760717399,
+      "aboveBaseCentroidDxM": 0.03264653454028377,
+      "aboveBaseCentroidDyM": -0.07873213624458408,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.08450729735216925,
+      "aboveBaseMassWeightedVxMPerS": 0.004986530551769155,
+      "aboveBaseMassWeightedVyMPerS": -0.001895648995478915,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.00413494546262777,
+      "aboveBaseRightDownMassFraction": 0.5553398058252428,
+      "aboveBaseRightDownCountFraction": 0.5553398058252427,
+      "aboveBaseRightwardMassFraction": 0.8970873786407767,
+      "aboveBaseDownwardMassFraction": 0.6330097087378641,
+      "maxVelocityNormMPerS": 0.18239322576135877,
+      "totalKineticEnergyJPerM": 77.85739738678875,
+      "minimumJFromNativeHistory": 0.9799521377781183,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501481437515496,
+          "maximum": 19.752821756556376
+        },
+        "y": {
+          "minimum": 0.24484284340297,
+          "maximum": 14.569821765399425
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 97,
+      "timeS": 9.7,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.584624250430137,
+      "aboveBaseCentroidYM": 9.473004036280404,
+      "aboveBaseCentroidDxM": 0.03315893472213016,
+      "aboveBaseCentroidDyM": -0.07899570713816928,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0849917565326354,
+      "aboveBaseMassWeightedVxMPerS": 0.004812627373936163,
+      "aboveBaseMassWeightedVyMPerS": -0.0041690832803945805,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.006016845718282751,
+      "aboveBaseRightDownMassFraction": 0.6660194174757281,
+      "aboveBaseRightDownCountFraction": 0.6660194174757281,
+      "aboveBaseRightwardMassFraction": 0.8097087378640776,
+      "aboveBaseDownwardMassFraction": 0.8388349514563106,
+      "maxVelocityNormMPerS": 0.18523744246474108,
+      "totalKineticEnergyJPerM": 77.96996493012388,
+      "minimumJFromNativeHistory": 0.9799737583895036,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25014940298768557,
+          "maximum": 19.752857388172508
+        },
+        "y": {
+          "minimum": 0.24484689010578203,
+          "maximum": 14.56984659888376
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 98,
+      "timeS": 9.8,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.585010209861229,
+      "aboveBaseCentroidYM": 9.472347017534943,
+      "aboveBaseCentroidDxM": 0.03354489415322259,
+      "aboveBaseCentroidDyM": -0.07965272588362993,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.0857537311725131,
+      "aboveBaseMassWeightedVxMPerS": 0.002985261154430943,
+      "aboveBaseMassWeightedVyMPerS": -0.008705053908560996,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.009031428403342314,
+      "aboveBaseRightDownMassFraction": 0.8427184466019417,
+      "aboveBaseRightDownCountFraction": 0.8427184466019417,
+      "aboveBaseRightwardMassFraction": 0.8776699029126213,
+      "aboveBaseDownwardMassFraction": 0.9533980582524271,
+      "maxVelocityNormMPerS": 0.19350149937516012,
+      "totalKineticEnergyJPerM": 75.45496640187844,
+      "minimumJFromNativeHistory": 0.9799622962257103,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25015099826622383,
+          "maximum": 19.75290362802031
+        },
+        "y": {
+          "minimum": 0.24484251364600026,
+          "maximum": 14.568911975873863
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 99,
+      "timeS": 9.9,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.585296518042099,
+      "aboveBaseCentroidYM": 9.471437631890973,
+      "aboveBaseCentroidDxM": 0.03383120233409187,
+      "aboveBaseCentroidDyM": -0.08056211152760007,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.08668443633246276,
+      "aboveBaseMassWeightedVxMPerS": 0.003381970349595182,
+      "aboveBaseMassWeightedVyMPerS": -0.008366632203078756,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.008936701206784758,
+      "aboveBaseRightDownMassFraction": 0.8524271844660194,
+      "aboveBaseRightDownCountFraction": 0.8524271844660194,
+      "aboveBaseRightwardMassFraction": 0.9048543689320389,
+      "aboveBaseDownwardMassFraction": 0.9300970873786407,
+      "maxVelocityNormMPerS": 0.1878346555107781,
+      "totalKineticEnergyJPerM": 69.69589157561134,
+      "minimumJFromNativeHistory": 0.9798479521969807,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.2501518444241735,
+          "maximum": 19.752927656807124
+        },
+        "y": {
+          "minimum": 0.24481356717336153,
+          "maximum": 14.56779369879504
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    },
+    {
+      "frame": 100,
+      "timeS": 10.0,
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "aboveBaseCentroidXM": 6.585718249380387,
+      "aboveBaseCentroidYM": 9.470828779435768,
+      "aboveBaseCentroidDxM": 0.03425293367238069,
+      "aboveBaseCentroidDyM": -0.08117096398280488,
+      "aboveBaseCentroidDownslopeDisplacementM": 0.08742258369497106,
+      "aboveBaseMassWeightedVxMPerS": 0.0049479038770423285,
+      "aboveBaseMassWeightedVyMPerS": -0.0037848449328237456,
+      "aboveBaseMassWeightedDownslopeVelocityMPerS": 0.005751723799731335,
+      "aboveBaseRightDownMassFraction": 0.6446601941747573,
+      "aboveBaseRightDownCountFraction": 0.6446601941747573,
+      "aboveBaseRightwardMassFraction": 0.7980582524271844,
+      "aboveBaseDownwardMassFraction": 0.825242718446602,
+      "maxVelocityNormMPerS": 0.19057073637517372,
+      "totalKineticEnergyJPerM": 65.5804875003996,
+      "minimumJFromNativeHistory": 0.9798307543361761,
+      "coordinateBoundsM": {
+        "x": {
+          "minimum": 0.25015431069967886,
+          "maximum": 19.75296333325791
+        },
+        "y": {
+          "minimum": 0.24480666483834349,
+          "maximum": 14.567231173869454
+        },
+        "z": {
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "allParticleCentersInsideOverviewViewport": true,
+      "driverReactionUpwardNPerM": 0.0,
+      "driverActiveContacts": 0,
+      "driverCommandWorkRectangleJPerM": 24723.3959330457
+    }
+  ],
+  "inputs": [
+    {
+      "path": "manifest.json",
+      "sha256": "1cedebdb4979ffaab7e8709ea703a392c529c762e86b1c9de5bee9ba509b3d12",
+      "bytes": 2290
+    },
+    {
+      "path": "creep-history.csv",
+      "sha256": "c069ff9c57f74fe396f7ea68e43b02d25dba6fb8555e04e137f82d7bf76e5f92",
+      "bytes": 36123
+    },
+    {
+      "path": "loading-history.csv",
+      "sha256": "96d18c848d5813bb6a315db86a826ce707b996b2c80f9c6f5c5d0fab9668c9a6",
+      "bytes": 22742
+    },
+    {
+      "path": "vtk/particles_0000.vtk",
+      "sha256": "1042c3b4ca8b0d640ba05f638352b0b70f390962d0eec6aa2cf5f54d44127e44",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0001.vtk",
+      "sha256": "63a4ca4f3edea3e40382efce1168fa0ba99d68a6f6851ea097ae8d3dfdcc384b",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0002.vtk",
+      "sha256": "bee24c9c296a5078aee81337898ef318307e1ac23b1f9cc7d4cf9285e51f1440",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0003.vtk",
+      "sha256": "d59dcc4b74d42584caa6d4d960be4c441d1d7559b18198000e2a6619307c7b18",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0004.vtk",
+      "sha256": "29c8a19cf742e93aec0db37660bff87a882a8b945699916464ca0b378cd8b22b",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0005.vtk",
+      "sha256": "11f9a5d63fed9a6abe84e8f5bc30b04479ffd971ac7bcda3aa4fb9ac6562a011",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0006.vtk",
+      "sha256": "f33eb9c88b11df7eea25d43a1f5c47fe39395ad4da710c90971b8bed11c70de9",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0007.vtk",
+      "sha256": "18a2f4070ff0fdadf716facc6048c9d13c986f044d10da5694e69e44c8f75e04",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0008.vtk",
+      "sha256": "b92621938b59d9670af91f4c523a550adfd020345986a2238855e0664f63d419",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0009.vtk",
+      "sha256": "aad468b8a65a1321ae9cf96e365a09619f9656fc5042ae9bd1f2ba15f76bb822",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0010.vtk",
+      "sha256": "d89daaf3e2495647a1cd0b94503491f51f015c7fb8e3434e3afca46847af7433",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0011.vtk",
+      "sha256": "a6361444c881de10ab8a78804d75d382f2514f949b32314d6e4e46c4eb8e5f84",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0012.vtk",
+      "sha256": "3e7b29fe611ab85ee75f1a59c79e76516dcf28fd66a44b9ad96e8c2b27947c34",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0013.vtk",
+      "sha256": "bfef8c9f1dff477642a694e4dfecc3c83639c7c999e77f707fab5b1fdf8032ad",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0014.vtk",
+      "sha256": "098386c8e87e36b0ba976dfd2ff01b905550413bd2d70365a4ac9652ce81dc4e",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0015.vtk",
+      "sha256": "2cc3929e5168951f3fc652851a7f3174e2f3a74168455e49e9a4b2ca388ed526",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0016.vtk",
+      "sha256": "921610e886a7991749a999709f635c85721d0e91074895b5ae8016c9a9ce7109",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0017.vtk",
+      "sha256": "e1839d7c284c73512781da746dbf88aee86021740dafc228a57012a36ec353d7",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0018.vtk",
+      "sha256": "142c4d58d6e6f652cdc1d1d17f9d9bc40a67c9da8ab3de1972fad902f02c2c07",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0019.vtk",
+      "sha256": "75293344306c4e9844c51637e070b2d3d78b6ccd32a623a3e0133451329f42a6",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0020.vtk",
+      "sha256": "05c6e04f3defefa3949c60b640a2f69dcb2b410fac5bcb8d142aae09648ca355",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0021.vtk",
+      "sha256": "76d975e3029eca7c742f2f6c4f4d3e1e3f3d7f8773d73ec3f52fccc8b0a9343e",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0022.vtk",
+      "sha256": "8feb9c8e93aded4731037a0eb6937f950832e27b10f233fa547890b177d728a4",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0023.vtk",
+      "sha256": "74103659701bed1aea4d530011b9662771b7fb0333ca60e2fa74173b14d1606e",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0024.vtk",
+      "sha256": "33d50ba67285af6c452a42a0b89ef2b6ae6edcd3cafa04435d14f9caf0e3e280",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0025.vtk",
+      "sha256": "80269891017241cb75dc828947d32329004204d6ad7ec21f9bf099dbb1d60078",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0026.vtk",
+      "sha256": "4c009e8e0ec671537414bb35e18e7512ed07ac5fb411d5ae34466633be94d7e2",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0027.vtk",
+      "sha256": "5cb9ab19dd00a0e639336f3abf28b39730b2a1118f24ee0a4ee701806e2cae82",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0028.vtk",
+      "sha256": "a3e8eae671c6fa9ceb29c90829e6834e51faa7abc8b58bdb9492a6dfb52fa798",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0029.vtk",
+      "sha256": "cf237d2ed7c0b34eb5f10975a1d59fa0754e682cf2d8736fbcc40bf4837a8727",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0030.vtk",
+      "sha256": "e660938ca1df735f309bfb2a1e79d20ee55164be8d43a2b29910b3b108576626",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0031.vtk",
+      "sha256": "a7ef9ab89be677e7b709bbd4dcd71a90eedeced36b0257ce599f51937a6e78da",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0032.vtk",
+      "sha256": "2a26a429970723ebdb35e26f3678b9615d6282295b809645b863dfc3ee116b91",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0033.vtk",
+      "sha256": "0a16e136a54dbc5aabc5197a6a4ab44325d062b416eb4941deed8217681f7a0d",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0034.vtk",
+      "sha256": "1c60b223430a2e994cc014f69785247a26529b3c1701dde0320fb82056f1bf60",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0035.vtk",
+      "sha256": "c3e2f908dc2f4d14a0ca90b8d4d5533f37ecf6e2bdb103b34530149960d939df",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0036.vtk",
+      "sha256": "f88d9b093d83257d1b661d1c9cb313646f14d20a290ffbd9b764cc438ec78e86",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0037.vtk",
+      "sha256": "4d541a2b9fa91edabfc20024eb48bd4ec2409f424066604c3a370c4bb3ac94be",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0038.vtk",
+      "sha256": "7ad8b6e9b981262006a8859f7ddfbd3dbf2ff6200ca06936a7f143010a991222",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0039.vtk",
+      "sha256": "bfbff70d91178b4bd90b475522c8b62b0245ed23131acc3732c77660103f9c47",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0040.vtk",
+      "sha256": "ca0e002ffa51ac54bac083ca76c38ed44013f06255768c6390d57bcc5ccc0958",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0041.vtk",
+      "sha256": "3b3daa3d04873b08b61ff54c83fd157175c0561520f4f0adb2928a75ee78932a",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0042.vtk",
+      "sha256": "7888cc40ab4a91f94d10dfdade6a0dcb1b589e21c25aab83ca7903d73af2e016",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0043.vtk",
+      "sha256": "917f1e7c929a3b9e3e70e738aecdc5cb065217204cc03809136ed19d55e7b55b",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0044.vtk",
+      "sha256": "da468fb7eeef3d6ca89cd485e2a2473361b73f1874ae7158efab0e60f9ff0340",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0045.vtk",
+      "sha256": "0016dfb1ebfaa0cabb1423ed2193d2d7744fdbba4f116fffabcdd69608b8f708",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0046.vtk",
+      "sha256": "5de2d1d8ddaab71837a415b15fa47a62d073624923393a5650f8d5b647c19073",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0047.vtk",
+      "sha256": "8fd0e0c748c05f32b7eb8bf3b5b4cca5aa269b83c095d844421fc30a5c27e540",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0048.vtk",
+      "sha256": "4687f3106d2f7f2612533982d689118a9c0365916b1a133440e4cc3901f53ee9",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0049.vtk",
+      "sha256": "5bd6825f751f712974da17a939a793ad703dadeb25a63c62d8a2ad6e3696a4d4",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0050.vtk",
+      "sha256": "b9cdfb46bd95db70cb0d3b3e0bfeed401d01caf1fb3a09f233d30b962aa38aae",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0051.vtk",
+      "sha256": "b7f281da7fc70621b52b9611ebe11784ba2e929caedfe84a53e4fddb4adfe286",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0052.vtk",
+      "sha256": "6df4b7141bd6df028d8694aaf7f5a867e911afe0b3e18e82451015dfb76d4a14",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0053.vtk",
+      "sha256": "c25223f1c5d8a16eb5e00735f5588d07c4517f23961b1a08e9e700b501ecaa24",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0054.vtk",
+      "sha256": "0817f4211aed90a8605f23161050c3414ea2d79755560c744f3e758addc2a712",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0055.vtk",
+      "sha256": "9a004c8f7e2b42407d249b27679af6bc85339b48e665ac69ad57c02f315affde",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0056.vtk",
+      "sha256": "4de7b7ea99644ff38c758fca3289ac56369ad481ae57d61295f82a93f786b847",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0057.vtk",
+      "sha256": "93c4a6af37cca3d6a3fb4ddae39942276754694d071f819f5132c3f9e18127dd",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0058.vtk",
+      "sha256": "593d16c99a37c9e2c257e69e1b548f2187fb4413eaaf79cd8752accfb1d6c727",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0059.vtk",
+      "sha256": "3d998a02dd55881413c85fe4ea566d74cfbb3dd3ddc8b7c955ef3cc1df4455d1",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0060.vtk",
+      "sha256": "374f336227ab31b27c9dd07f3d629240e196805e62f23a854083e78b800d6d8b",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0061.vtk",
+      "sha256": "1d16d297f8da5167fdb42677d3e36beaea6edbabb2022eb08259f1cef5bf2f5b",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0062.vtk",
+      "sha256": "7f28612e373f9d0d051c7777f17a2a3db243f02eee7d7cd60d74737136c22023",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0063.vtk",
+      "sha256": "befbdcc919e959f58fd2749212c4550565ef6c319f41581acf498c4f39762891",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0064.vtk",
+      "sha256": "903e604ac2f2e713559a8fb777205141798ed75fb38993288c621f8b7517abe6",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0065.vtk",
+      "sha256": "0c0588c3c2c93fd3e818508d413da75afbabe3261d589a8692f37c045430bb55",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0066.vtk",
+      "sha256": "e0602a437d01e33fb405d8e489dc6741371b4c6ff8eb59f8ccd79d76b6a316f6",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0067.vtk",
+      "sha256": "3658631d207a580720b7c615bd208df51ae9ac00fb81d1b5a7d4affc767019d7",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0068.vtk",
+      "sha256": "99788b8e1893e3da788386362976a1c7aa6f62860fb307b13e0681ae6c3874dd",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0069.vtk",
+      "sha256": "3febf88af50b92eacb8009ff893117acf44c6803bb82e53dbe35f00e15ddfda5",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0070.vtk",
+      "sha256": "d41feb0fd42a4fc8b419af4a3a28182b0ac2fda2f32b22901b5b99f239efcb97",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0071.vtk",
+      "sha256": "ad01df8c98fa1fa0118622715d28fc7d396fd8634eb2294291339cc4e2fccce0",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0072.vtk",
+      "sha256": "090643b30bc42b9f0b33de6653963b05f63ad434940191750bcd55283f35463f",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0073.vtk",
+      "sha256": "c7e1a11aa86985b370d168f2ab827b45e16bc9ede8a3dee4324d6a7a65408366",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0074.vtk",
+      "sha256": "ca8cb7a3c12278f7feccc2524acb65c90b5bfcd654e770017368d1707e0a0caa",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0075.vtk",
+      "sha256": "adf9fb94c94644160159fe17b396a240e1752d8567d952b04f855b78f80ccb34",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0076.vtk",
+      "sha256": "185b23642301e791c347aa3d7235ca03f7b3145eed56f94b97e9d0d890020bf0",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0077.vtk",
+      "sha256": "5ab437e9136bcae75fb55859aeb4cde1dc10ea6a1093a8215f12f75f6dc5d427",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0078.vtk",
+      "sha256": "1f38d8880ea3a73b985f8c972b9ee1aefe8ab32e296501e353bbc11f4315b0ad",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0079.vtk",
+      "sha256": "d19dca73e496db8e9c09759dc9afb978a9a0f288a44d383f5399a22ffcaccca8",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0080.vtk",
+      "sha256": "ccbfb67b5f7cb00e3e5e95e324eaa784328390a161a4b9546f8d5498e8d195c1",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0081.vtk",
+      "sha256": "3a59e9b772bad8ae9fe0cc6d9eba0e2eb689d478b6f4a859645b801d4a8a6b5c",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0082.vtk",
+      "sha256": "67cae3de6750b0c47822b070ba01b1d8496fd73547a14adafd949bc300f236f2",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0083.vtk",
+      "sha256": "a6e9fd8683ddb53384e4b78ee0243b600155f0285ef916c2446a7061ed880ce6",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0084.vtk",
+      "sha256": "8067eb605e60b137e223005b3c323355f1041ac496b30432d0dd602e88dfc7bf",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0085.vtk",
+      "sha256": "e71074895e462d99ebcddb35e56786386df96495560e66a4ac8cd4ba6c4d5cc9",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0086.vtk",
+      "sha256": "ddc9fe4c919db47c531f1aea1775f1201eb1c67833178665decabd2c208e9d9a",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0087.vtk",
+      "sha256": "7d8afe9a398621ec029600224f402a5db94f9a8161bc75d0e84ed600b9d1ba5e",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0088.vtk",
+      "sha256": "ecd313f702b583760f7a59ec09f4d50109cb599d65d9a61fe2d3dff21ef903c4",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0089.vtk",
+      "sha256": "fa669a28b2becb19ea9fb4a641b1759318f5e2bd4daf4c83a386ea78295f6719",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0090.vtk",
+      "sha256": "a4a4b89f6358d1ce347129e08bad13e8fbcdeb9bdc2cd98b91ad585981e51b02",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0091.vtk",
+      "sha256": "f6dee82ab82cf4348d70e1cb3dc9264e0768a205d90b0a132197b6779633d6ce",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0092.vtk",
+      "sha256": "760133f67845e2275bb648e86f997902d926c6215e8cfa730c3b177a0ff298e7",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0093.vtk",
+      "sha256": "6a58de9b0a0528dee76c4bba9ab98d2b87eb8461edf791e3680c6e1cd076702e",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0094.vtk",
+      "sha256": "93131d4acf91e4c97aab7a3e03fa68593a11bebf39541f9c55976750551d44a0",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0095.vtk",
+      "sha256": "b25abf934bf68f8eb95daa0cf76a6e34699b32418a582a8f80957b8d774d6285",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0096.vtk",
+      "sha256": "553369deabe8f33313ed76697d606c751d24005f2ed909b789ec553133cbdd9b",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0097.vtk",
+      "sha256": "1f7e5809a2069ac1f2549c8fcdae03983d20494c90a0641495476e0ca2af7808",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0098.vtk",
+      "sha256": "de2b1a7b4d0bf570a5126221f0c65fa58a1c94226f8c5c19cc9353206fddd63e",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0099.vtk",
+      "sha256": "d6797c2c0f3c88f654310befca3bca2be5c4780e291e90efc4f460c24a69e052",
+      "bytes": 243118
+    },
+    {
+      "path": "vtk/particles_0100.vtk",
+      "sha256": "0a2f1215844112330df7c402376134b07ba68afaa7b131963607779402c8f52f",
+      "bytes": 243118
+    }
+  ],
+  "supportingScripts": [
+    {
+      "path": "analysis-support/review-creep-drive-hold.py",
+      "sha256": "5319c34ed157be9f6e41dc1767ffe84ac5ad419ce491b10845831ae9ba99acf4",
+      "bytes": 17262
+    },
+    {
+      "path": "analysis-support/plot_m5_cliff_comparison.py",
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "bytes": 23581
+    }
+  ]
+}

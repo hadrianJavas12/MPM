@@ -1,0 +1,429 @@
+{
+  "passedConsistencyChecks": true,
+  "nativeComplete": true,
+  "scope": "Saved native output consistency, not calibrated landslide validation",
+  "constantSelfWeight": "self-weight plus unilateral tracked crest pusher; soil can outrun and separate",
+  "frames": 101,
+  "physicalTimeS": 10.0,
+  "maxDisplacementM": 0.116854313178327,
+  "maxSpeedMPerS": 0.19057073637517372,
+  "maxCreepKappa": 0.022993825584895843,
+  "creepObserved": true,
+  "strengthLossObserved": true,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "vtk": [
+    {
+      "path": "vtk\\particles_0000.vtk",
+      "sha256": "1042c3b4ca8b0d640ba05f638352b0b70f390962d0eec6aa2cf5f54d44127e44"
+    },
+    {
+      "path": "vtk\\particles_0001.vtk",
+      "sha256": "63a4ca4f3edea3e40382efce1168fa0ba99d68a6f6851ea097ae8d3dfdcc384b"
+    },
+    {
+      "path": "vtk\\particles_0002.vtk",
+      "sha256": "bee24c9c296a5078aee81337898ef318307e1ac23b1f9cc7d4cf9285e51f1440"
+    },
+    {
+      "path": "vtk\\particles_0003.vtk",
+      "sha256": "d59dcc4b74d42584caa6d4d960be4c441d1d7559b18198000e2a6619307c7b18"
+    },
+    {
+      "path": "vtk\\particles_0004.vtk",
+      "sha256": "29c8a19cf742e93aec0db37660bff87a882a8b945699916464ca0b378cd8b22b"
+    },
+    {
+      "path": "vtk\\particles_0005.vtk",
+      "sha256": "11f9a5d63fed9a6abe84e8f5bc30b04479ffd971ac7bcda3aa4fb9ac6562a011"
+    },
+    {
+      "path": "vtk\\particles_0006.vtk",
+      "sha256": "f33eb9c88b11df7eea25d43a1f5c47fe39395ad4da710c90971b8bed11c70de9"
+    },
+    {
+      "path": "vtk\\particles_0007.vtk",
+      "sha256": "18a2f4070ff0fdadf716facc6048c9d13c986f044d10da5694e69e44c8f75e04"
+    },
+    {
+      "path": "vtk\\particles_0008.vtk",
+      "sha256": "b92621938b59d9670af91f4c523a550adfd020345986a2238855e0664f63d419"
+    },
+    {
+      "path": "vtk\\particles_0009.vtk",
+      "sha256": "aad468b8a65a1321ae9cf96e365a09619f9656fc5042ae9bd1f2ba15f76bb822"
+    },
+    {
+      "path": "vtk\\particles_0010.vtk",
+      "sha256": "d89daaf3e2495647a1cd0b94503491f51f015c7fb8e3434e3afca46847af7433"
+    },
+    {
+      "path": "vtk\\particles_0011.vtk",
+      "sha256": "a6361444c881de10ab8a78804d75d382f2514f949b32314d6e4e46c4eb8e5f84"
+    },
+    {
+      "path": "vtk\\particles_0012.vtk",
+      "sha256": "3e7b29fe611ab85ee75f1a59c79e76516dcf28fd66a44b9ad96e8c2b27947c34"
+    },
+    {
+      "path": "vtk\\particles_0013.vtk",
+      "sha256": "bfef8c9f1dff477642a694e4dfecc3c83639c7c999e77f707fab5b1fdf8032ad"
+    },
+    {
+      "path": "vtk\\particles_0014.vtk",
+      "sha256": "098386c8e87e36b0ba976dfd2ff01b905550413bd2d70365a4ac9652ce81dc4e"
+    },
+    {
+      "path": "vtk\\particles_0015.vtk",
+      "sha256": "2cc3929e5168951f3fc652851a7f3174e2f3a74168455e49e9a4b2ca388ed526"
+    },
+    {
+      "path": "vtk\\particles_0016.vtk",
+      "sha256": "921610e886a7991749a999709f635c85721d0e91074895b5ae8016c9a9ce7109"
+    },
+    {
+      "path": "vtk\\particles_0017.vtk",
+      "sha256": "e1839d7c284c73512781da746dbf88aee86021740dafc228a57012a36ec353d7"
+    },
+    {
+      "path": "vtk\\particles_0018.vtk",
+      "sha256": "142c4d58d6e6f652cdc1d1d17f9d9bc40a67c9da8ab3de1972fad902f02c2c07"
+    },
+    {
+      "path": "vtk\\particles_0019.vtk",
+      "sha256": "75293344306c4e9844c51637e070b2d3d78b6ccd32a623a3e0133451329f42a6"
+    },
+    {
+      "path": "vtk\\particles_0020.vtk",
+      "sha256": "05c6e04f3defefa3949c60b640a2f69dcb2b410fac5bcb8d142aae09648ca355"
+    },
+    {
+      "path": "vtk\\particles_0021.vtk",
+      "sha256": "76d975e3029eca7c742f2f6c4f4d3e1e3f3d7f8773d73ec3f52fccc8b0a9343e"
+    },
+    {
+      "path": "vtk\\particles_0022.vtk",
+      "sha256": "8feb9c8e93aded4731037a0eb6937f950832e27b10f233fa547890b177d728a4"
+    },
+    {
+      "path": "vtk\\particles_0023.vtk",
+      "sha256": "74103659701bed1aea4d530011b9662771b7fb0333ca60e2fa74173b14d1606e"
+    },
+    {
+      "path": "vtk\\particles_0024.vtk",
+      "sha256": "33d50ba67285af6c452a42a0b89ef2b6ae6edcd3cafa04435d14f9caf0e3e280"
+    },
+    {
+      "path": "vtk\\particles_0025.vtk",
+      "sha256": "80269891017241cb75dc828947d32329004204d6ad7ec21f9bf099dbb1d60078"
+    },
+    {
+      "path": "vtk\\particles_0026.vtk",
+      "sha256": "4c009e8e0ec671537414bb35e18e7512ed07ac5fb411d5ae34466633be94d7e2"
+    },
+    {
+      "path": "vtk\\particles_0027.vtk",
+      "sha256": "5cb9ab19dd00a0e639336f3abf28b39730b2a1118f24ee0a4ee701806e2cae82"
+    },
+    {
+      "path": "vtk\\particles_0028.vtk",
+      "sha256": "a3e8eae671c6fa9ceb29c90829e6834e51faa7abc8b58bdb9492a6dfb52fa798"
+    },
+    {
+      "path": "vtk\\particles_0029.vtk",
+      "sha256": "cf237d2ed7c0b34eb5f10975a1d59fa0754e682cf2d8736fbcc40bf4837a8727"
+    },
+    {
+      "path": "vtk\\particles_0030.vtk",
+      "sha256": "e660938ca1df735f309bfb2a1e79d20ee55164be8d43a2b29910b3b108576626"
+    },
+    {
+      "path": "vtk\\particles_0031.vtk",
+      "sha256": "a7ef9ab89be677e7b709bbd4dcd71a90eedeced36b0257ce599f51937a6e78da"
+    },
+    {
+      "path": "vtk\\particles_0032.vtk",
+      "sha256": "2a26a429970723ebdb35e26f3678b9615d6282295b809645b863dfc3ee116b91"
+    },
+    {
+      "path": "vtk\\particles_0033.vtk",
+      "sha256": "0a16e136a54dbc5aabc5197a6a4ab44325d062b416eb4941deed8217681f7a0d"
+    },
+    {
+      "path": "vtk\\particles_0034.vtk",
+      "sha256": "1c60b223430a2e994cc014f69785247a26529b3c1701dde0320fb82056f1bf60"
+    },
+    {
+      "path": "vtk\\particles_0035.vtk",
+      "sha256": "c3e2f908dc2f4d14a0ca90b8d4d5533f37ecf6e2bdb103b34530149960d939df"
+    },
+    {
+      "path": "vtk\\particles_0036.vtk",
+      "sha256": "f88d9b093d83257d1b661d1c9cb313646f14d20a290ffbd9b764cc438ec78e86"
+    },
+    {
+      "path": "vtk\\particles_0037.vtk",
+      "sha256": "4d541a2b9fa91edabfc20024eb48bd4ec2409f424066604c3a370c4bb3ac94be"
+    },
+    {
+      "path": "vtk\\particles_0038.vtk",
+      "sha256": "7ad8b6e9b981262006a8859f7ddfbd3dbf2ff6200ca06936a7f143010a991222"
+    },
+    {
+      "path": "vtk\\particles_0039.vtk",
+      "sha256": "bfbff70d91178b4bd90b475522c8b62b0245ed23131acc3732c77660103f9c47"
+    },
+    {
+      "path": "vtk\\particles_0040.vtk",
+      "sha256": "ca0e002ffa51ac54bac083ca76c38ed44013f06255768c6390d57bcc5ccc0958"
+    },
+    {
+      "path": "vtk\\particles_0041.vtk",
+      "sha256": "3b3daa3d04873b08b61ff54c83fd157175c0561520f4f0adb2928a75ee78932a"
+    },
+    {
+      "path": "vtk\\particles_0042.vtk",
+      "sha256": "7888cc40ab4a91f94d10dfdade6a0dcb1b589e21c25aab83ca7903d73af2e016"
+    },
+    {
+      "path": "vtk\\particles_0043.vtk",
+      "sha256": "917f1e7c929a3b9e3e70e738aecdc5cb065217204cc03809136ed19d55e7b55b"
+    },
+    {
+      "path": "vtk\\particles_0044.vtk",
+      "sha256": "da468fb7eeef3d6ca89cd485e2a2473361b73f1874ae7158efab0e60f9ff0340"
+    },
+    {
+      "path": "vtk\\particles_0045.vtk",
+      "sha256": "0016dfb1ebfaa0cabb1423ed2193d2d7744fdbba4f116fffabcdd69608b8f708"
+    },
+    {
+      "path": "vtk\\particles_0046.vtk",
+      "sha256": "5de2d1d8ddaab71837a415b15fa47a62d073624923393a5650f8d5b647c19073"
+    },
+    {
+      "path": "vtk\\particles_0047.vtk",
+      "sha256": "8fd0e0c748c05f32b7eb8bf3b5b4cca5aa269b83c095d844421fc30a5c27e540"
+    },
+    {
+      "path": "vtk\\particles_0048.vtk",
+      "sha256": "4687f3106d2f7f2612533982d689118a9c0365916b1a133440e4cc3901f53ee9"
+    },
+    {
+      "path": "vtk\\particles_0049.vtk",
+      "sha256": "5bd6825f751f712974da17a939a793ad703dadeb25a63c62d8a2ad6e3696a4d4"
+    },
+    {
+      "path": "vtk\\particles_0050.vtk",
+      "sha256": "b9cdfb46bd95db70cb0d3b3e0bfeed401d01caf1fb3a09f233d30b962aa38aae"
+    },
+    {
+      "path": "vtk\\particles_0051.vtk",
+      "sha256": "b7f281da7fc70621b52b9611ebe11784ba2e929caedfe84a53e4fddb4adfe286"
+    },
+    {
+      "path": "vtk\\particles_0052.vtk",
+      "sha256": "6df4b7141bd6df028d8694aaf7f5a867e911afe0b3e18e82451015dfb76d4a14"
+    },
+    {
+      "path": "vtk\\particles_0053.vtk",
+      "sha256": "c25223f1c5d8a16eb5e00735f5588d07c4517f23961b1a08e9e700b501ecaa24"
+    },
+    {
+      "path": "vtk\\particles_0054.vtk",
+      "sha256": "0817f4211aed90a8605f23161050c3414ea2d79755560c744f3e758addc2a712"
+    },
+    {
+      "path": "vtk\\particles_0055.vtk",
+      "sha256": "9a004c8f7e2b42407d249b27679af6bc85339b48e665ac69ad57c02f315affde"
+    },
+    {
+      "path": "vtk\\particles_0056.vtk",
+      "sha256": "4de7b7ea99644ff38c758fca3289ac56369ad481ae57d61295f82a93f786b847"
+    },
+    {
+      "path": "vtk\\particles_0057.vtk",
+      "sha256": "93c4a6af37cca3d6a3fb4ddae39942276754694d071f819f5132c3f9e18127dd"
+    },
+    {
+      "path": "vtk\\particles_0058.vtk",
+      "sha256": "593d16c99a37c9e2c257e69e1b548f2187fb4413eaaf79cd8752accfb1d6c727"
+    },
+    {
+      "path": "vtk\\particles_0059.vtk",
+      "sha256": "3d998a02dd55881413c85fe4ea566d74cfbb3dd3ddc8b7c955ef3cc1df4455d1"
+    },
+    {
+      "path": "vtk\\particles_0060.vtk",
+      "sha256": "374f336227ab31b27c9dd07f3d629240e196805e62f23a854083e78b800d6d8b"
+    },
+    {
+      "path": "vtk\\particles_0061.vtk",
+      "sha256": "1d16d297f8da5167fdb42677d3e36beaea6edbabb2022eb08259f1cef5bf2f5b"
+    },
+    {
+      "path": "vtk\\particles_0062.vtk",
+      "sha256": "7f28612e373f9d0d051c7777f17a2a3db243f02eee7d7cd60d74737136c22023"
+    },
+    {
+      "path": "vtk\\particles_0063.vtk",
+      "sha256": "befbdcc919e959f58fd2749212c4550565ef6c319f41581acf498c4f39762891"
+    },
+    {
+      "path": "vtk\\particles_0064.vtk",
+      "sha256": "903e604ac2f2e713559a8fb777205141798ed75fb38993288c621f8b7517abe6"
+    },
+    {
+      "path": "vtk\\particles_0065.vtk",
+      "sha256": "0c0588c3c2c93fd3e818508d413da75afbabe3261d589a8692f37c045430bb55"
+    },
+    {
+      "path": "vtk\\particles_0066.vtk",
+      "sha256": "e0602a437d01e33fb405d8e489dc6741371b4c6ff8eb59f8ccd79d76b6a316f6"
+    },
+    {
+      "path": "vtk\\particles_0067.vtk",
+      "sha256": "3658631d207a580720b7c615bd208df51ae9ac00fb81d1b5a7d4affc767019d7"
+    },
+    {
+      "path": "vtk\\particles_0068.vtk",
+      "sha256": "99788b8e1893e3da788386362976a1c7aa6f62860fb307b13e0681ae6c3874dd"
+    },
+    {
+      "path": "vtk\\particles_0069.vtk",
+      "sha256": "3febf88af50b92eacb8009ff893117acf44c6803bb82e53dbe35f00e15ddfda5"
+    },
+    {
+      "path": "vtk\\particles_0070.vtk",
+      "sha256": "d41feb0fd42a4fc8b419af4a3a28182b0ac2fda2f32b22901b5b99f239efcb97"
+    },
+    {
+      "path": "vtk\\particles_0071.vtk",
+      "sha256": "ad01df8c98fa1fa0118622715d28fc7d396fd8634eb2294291339cc4e2fccce0"
+    },
+    {
+      "path": "vtk\\particles_0072.vtk",
+      "sha256": "090643b30bc42b9f0b33de6653963b05f63ad434940191750bcd55283f35463f"
+    },
+    {
+      "path": "vtk\\particles_0073.vtk",
+      "sha256": "c7e1a11aa86985b370d168f2ab827b45e16bc9ede8a3dee4324d6a7a65408366"
+    },
+    {
+      "path": "vtk\\particles_0074.vtk",
+      "sha256": "ca8cb7a3c12278f7feccc2524acb65c90b5bfcd654e770017368d1707e0a0caa"
+    },
+    {
+      "path": "vtk\\particles_0075.vtk",
+      "sha256": "adf9fb94c94644160159fe17b396a240e1752d8567d952b04f855b78f80ccb34"
+    },
+    {
+      "path": "vtk\\particles_0076.vtk",
+      "sha256": "185b23642301e791c347aa3d7235ca03f7b3145eed56f94b97e9d0d890020bf0"
+    },
+    {
+      "path": "vtk\\particles_0077.vtk",
+      "sha256": "5ab437e9136bcae75fb55859aeb4cde1dc10ea6a1093a8215f12f75f6dc5d427"
+    },
+    {
+      "path": "vtk\\particles_0078.vtk",
+      "sha256": "1f38d8880ea3a73b985f8c972b9ee1aefe8ab32e296501e353bbc11f4315b0ad"
+    },
+    {
+      "path": "vtk\\particles_0079.vtk",
+      "sha256": "d19dca73e496db8e9c09759dc9afb978a9a0f288a44d383f5399a22ffcaccca8"
+    },
+    {
+      "path": "vtk\\particles_0080.vtk",
+      "sha256": "ccbfb67b5f7cb00e3e5e95e324eaa784328390a161a4b9546f8d5498e8d195c1"
+    },
+    {
+      "path": "vtk\\particles_0081.vtk",
+      "sha256": "3a59e9b772bad8ae9fe0cc6d9eba0e2eb689d478b6f4a859645b801d4a8a6b5c"
+    },
+    {
+      "path": "vtk\\particles_0082.vtk",
+      "sha256": "67cae3de6750b0c47822b070ba01b1d8496fd73547a14adafd949bc300f236f2"
+    },
+    {
+      "path": "vtk\\particles_0083.vtk",
+      "sha256": "a6e9fd8683ddb53384e4b78ee0243b600155f0285ef916c2446a7061ed880ce6"
+    },
+    {
+      "path": "vtk\\particles_0084.vtk",
+      "sha256": "8067eb605e60b137e223005b3c323355f1041ac496b30432d0dd602e88dfc7bf"
+    },
+    {
+      "path": "vtk\\particles_0085.vtk",
+      "sha256": "e71074895e462d99ebcddb35e56786386df96495560e66a4ac8cd4ba6c4d5cc9"
+    },
+    {
+      "path": "vtk\\particles_0086.vtk",
+      "sha256": "ddc9fe4c919db47c531f1aea1775f1201eb1c67833178665decabd2c208e9d9a"
+    },
+    {
+      "path": "vtk\\particles_0087.vtk",
+      "sha256": "7d8afe9a398621ec029600224f402a5db94f9a8161bc75d0e84ed600b9d1ba5e"
+    },
+    {
+      "path": "vtk\\particles_0088.vtk",
+      "sha256": "ecd313f702b583760f7a59ec09f4d50109cb599d65d9a61fe2d3dff21ef903c4"
+    },
+    {
+      "path": "vtk\\particles_0089.vtk",
+      "sha256": "fa669a28b2becb19ea9fb4a641b1759318f5e2bd4daf4c83a386ea78295f6719"
+    },
+    {
+      "path": "vtk\\particles_0090.vtk",
+      "sha256": "a4a4b89f6358d1ce347129e08bad13e8fbcdeb9bdc2cd98b91ad585981e51b02"
+    },
+    {
+      "path": "vtk\\particles_0091.vtk",
+      "sha256": "f6dee82ab82cf4348d70e1cb3dc9264e0768a205d90b0a132197b6779633d6ce"
+    },
+    {
+      "path": "vtk\\particles_0092.vtk",
+      "sha256": "760133f67845e2275bb648e86f997902d926c6215e8cfa730c3b177a0ff298e7"
+    },
+    {
+      "path": "vtk\\particles_0093.vtk",
+      "sha256": "6a58de9b0a0528dee76c4bba9ab98d2b87eb8461edf791e3680c6e1cd076702e"
+    },
+    {
+      "path": "vtk\\particles_0094.vtk",
+      "sha256": "93131d4acf91e4c97aab7a3e03fa68593a11bebf39541f9c55976750551d44a0"
+    },
+    {
+      "path": "vtk\\particles_0095.vtk",
+      "sha256": "b25abf934bf68f8eb95daa0cf76a6e34699b32418a582a8f80957b8d774d6285"
+    },
+    {
+      "path": "vtk\\particles_0096.vtk",
+      "sha256": "553369deabe8f33313ed76697d606c751d24005f2ed909b789ec553133cbdd9b"
+    },
+    {
+      "path": "vtk\\particles_0097.vtk",
+      "sha256": "1f7e5809a2069ac1f2549c8fcdae03983d20494c90a0641495476e0ca2af7808"
+    },
+    {
+      "path": "vtk\\particles_0098.vtk",
+      "sha256": "de2b1a7b4d0bf570a5126221f0c65fa58a1c94226f8c5c19cc9353206fddd63e"
+    },
+    {
+      "path": "vtk\\particles_0099.vtk",
+      "sha256": "d6797c2c0f3c88f654310befca3bca2be5c4780e291e90efc4f460c24a69e052"
+    },
+    {
+      "path": "vtk\\particles_0100.vtk",
+      "sha256": "0a2f1215844112330df7c402376134b07ba68afaa7b131963607779402c8f52f"
+    }
+  ],
+  "unilateralContactHistoryConsistent": true,
+  "pusherVelocityMPerS": 0.02,
+  "soilOutranPusherObserved": true,
+  "zeroLoadFrameObserved": true,
+  "commandWorkRectangleJPerM": 24723.3959330457,
+  "commandWorkScope": "Per-update right-end reaction times driver increment; not a closed energy budget",
+  "driverHoldStartS": 5.0,
+  "stationaryDriverWorkConsistent": true
+}
