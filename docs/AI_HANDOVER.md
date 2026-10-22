@@ -35,9 +35,10 @@ explicit stronger loading, not natural-creep or reference-paper validation.
   diagnose saved data before another run; no hidden material tuning or forced
   contact/failure. No repeat old120s, finished pilots or unchanged material tests.
 
-Prepare one quiet continuation monitor for this new job, first after expected
-completion and then every5h for reset continuation. The prior pilot monitor was
-deleted; its stop/deletion notes below are historical. Continue the broader task
+Active quiet monitor **mpm-creep-drive-hold** checks next at **05:15 WIB,2026-10-23**.
+It checks hourly at minute15 only until this run finishes/stops, then must update
+itself to every5h for reset continuation. One monitor only. The prior pilot monitor
+was deleted; its stop/deletion notes below are historical. Continue the broader task
 from real evidence instead of treating a completed pilot as a completed landslide.
 
 ## Previous checkpoint,2026-10-22: experimental clay creep toward slope failure

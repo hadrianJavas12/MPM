@@ -2,7 +2,7 @@
 title: Experimental clay creep slope
 type: synthesis
 tags: [creep, clay, slope, viscoplasticity, native-windows]
-sources: [raw/clay-creep-design-2026-10-22.md, raw/clay-creep-duration-inputs-2026-10-22.md, raw/creep-pusher-clarification-2026-10-22.md, docs/benchmarks/CLAY_CREEP_SLOPE.md, docs/evidence/slope-creep-2026-10-22/hold-120s-001/review.json]
+sources: [raw/clay-creep-design-2026-10-22.md, raw/clay-creep-duration-inputs-2026-10-22.md, raw/creep-pusher-clarification-2026-10-22.md, raw/creep-drive-hold-study-2026-10-23.md, docs/benchmarks/CLAY_CREEP_SLOPE.md, docs/evidence/slope-creep-2026-10-22/hold-120s-001/review.json]
 updated: 2026-10-23
 ---
 

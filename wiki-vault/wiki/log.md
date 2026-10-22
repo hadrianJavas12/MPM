@@ -649,3 +649,11 @@ drive-hold-001 at04:36 WIB, source733996a, wrapper38064/native1512,1h budget.
 Outcome pending. Work is a rectangle diagnostic; review motion after driver stops
 before claiming failure or extending runs. Updated guide/testing/handover/index;
 raw sources and previous log entries preserved. Quiet continuation saves tokens.
+
+## [2026-10-23] checkpoint | Quiet automatic continuation restored
+
+Monitor mpm-creep-drive-hold first checks05:15 WIB, then hourly at minute15
+until the active run finishes/stops; its instructions then switch to every5h
+for reset continuation. No active waiting or duplicate solver. The completed
+pilot does not terminate the broader creep-to-landslide objective. Checkpoint
+e6076a9 and native source733996a are pushed; actual10s result remains pending.
