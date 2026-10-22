@@ -67,6 +67,28 @@ def inspect(run):
              'creepObserved': rows[-1]['max_creep_kappa'] > 0,
              'strengthLossObserved': rows[-1]['min_yield_kirchhoff_pa'] < manifest['config']['yieldPeakPa'] - 1e-6,
              'scientificValidation': False, 'landslideVerified': False, 'vtk': hashes}
+    loading = read_history(run / 'loading-history.csv') if (run / 'loading-history.csv').exists() else []
+    if manifest['config'].get('loadingKind') == 'crest-pusher' and not loading:
+        raise ValueError('Driven case lacks native contact history')
+    if loading:
+        if len(loading) != len(rows):
+            raise ValueError('Loading/material frame counts differ')
+        for row, contact in zip(rows, loading):
+            if not np.isfinite(list(contact.values())).all() or not np.isclose(row['time_s'], contact['time_s'], atol=1e-11, rtol=1e-10):
+                raise ValueError('Nonfinite or inconsistent loading record')
+            if not np.isclose(contact['commanded_settlement_m'], contact['time_s'] * manifest['config']['pusherVelocity'], atol=1e-11, rtol=1e-10):
+                raise ValueError('Pusher command differs from declared velocity')
+            reaction = contact['reaction_upward_N_per_m']
+            if reaction < 0 or not np.isclose(reaction, contact['mapped_reaction_upward_N_per_m'], atol=1e-6, rtol=1e-9):
+                raise ValueError('Tensile pusher reaction or force mapping mismatch')
+            if min(contact['active_contacts'], contact['separated_contacts'], contact['max_compression_gap_m'], contact['max_separation_gap_m']) < 0:
+                raise ValueError('Invalid unilateral contact diagnostic')
+            if contact['time_s'] > 0 and contact['active_contacts'] + contact['separated_contacts'] != manifest['pusherContactCount']:
+                raise ValueError('Tracked contact count changed')
+        audit['unilateralContactHistoryConsistent'] = True
+        audit['pusherVelocityMPerS'] = manifest['config']['pusherVelocity']
+        audit['soilOutranPusherObserved'] = any(c['measured_patch_settlement_m'] > c['commanded_settlement_m'] + 1e-9 for c in loading)
+        audit['zeroLoadFrameObserved'] = any(c['reaction_upward_N_per_m'] == 0 and c['time_s'] > 0 for c in loading)
     return manifest, rows, snapshots, audit
 
 
@@ -84,9 +106,15 @@ def overview(manifest, rows, snapshots, index, path):
     history = rows[:index + 1]
     axes[1].plot([r['time_s'] for r in history], [r['crest_settlement_m'] * 1000 for r in history], label='Mean crest descent')
     axes[1].plot([r['time_s'] for r in history], [r['max_displacement_m'] * 1000 for r in history], label='Maximum displacement')
+    driven = config.get('loadingKind') == 'crest-pusher'
+    command = config.get('pusherVelocity', 0) * rows[-1]['time_s'] * 1000
+    if driven:
+        axes[1].plot([r['time_s'] for r in history], [r['time_s'] * config['pusherVelocity'] * 1000 for r in history], '--', label='Pusher command (not a soil cap)')
     axes[1].set(xlabel='Actual hold time (s)', ylabel='Displacement (mm)', title='Sustained self-weight; free motion',
                 xlim=(0, rows[-1]['time_s']), ylim=(min(0, min(r['crest_settlement_m'] * 1000 for r in rows)),
-                    max(1e-6, max(r['max_displacement_m'] * 1000 for r in rows)) * 1.05))
+                    max(1e-6, command, max(r['max_displacement_m'] * 1000 for r in rows)) * 1.05))
+    if driven:
+        axes[1].set_title('Gravity plus one-way pusher; free separation')
     axes[1].grid(alpha=.25)
     axes[1].legend(fontsize=8)
     completion = 'native complete' if manifest.get('complete') else 'INCOMPLETE'

@@ -10,14 +10,15 @@
   (let* ((config (make-hash-table :test 'equal))
          (material (cl-mpm/framework:simulation-material case))
          (geometry (cl-mpm/framework:simulation-geometry case))
+         (loading (cl-mpm/framework:simulation-loading case))
          (solver (cl-mpm/framework:simulation-solver case))
          (args (cl-mpm/framework:material-particle-initargs material))
          (law (getf args :creep-law)))
     (loop for (item kind) in
       (list (list material :native) (list geometry :slope) (list solver :explicit)
-            (list (cl-mpm/framework:simulation-boundary case) :rollers)
-            (list (cl-mpm/framework:simulation-loading case) :gravity)) do
+            (list (cl-mpm/framework:simulation-boundary case) :rollers)) do
         (cl-mpm/framework::check-kind item (list kind)))
+    (cl-mpm/framework::check-kind loading '(:gravity :crest-pusher))
     (unless (and (eq (cl-mpm/framework:material-particle-class material)
                      'cl-mpm/models/clay-creep:particle-clay-creep)
                  (typep law 'cl-mpm/models/clay-creep:clay-creep-law))
@@ -64,5 +65,20 @@
     (unless (and (>= (gethash "frames" config) 2)
                  (<= (gethash "settleMinUpdates" config) (gethash "settleMaxUpdates" config)))
       (error "Invalid frame or initialization budget."))
+    ;; Leave the historical gravity-only compiled config byte behavior unchanged.
+    (when (eq (cl-mpm/framework:component-kind loading) :crest-pusher)
+      (setf (gethash "loadingKind" config) "crest-pusher"
+            (gethash "pusherVelocity" config) (cl-mpm/framework:option loading :velocity .005d0)
+            (gethash "patchStart" config) (cl-mpm/framework:option loading :patch-start 7d0)
+            (gethash "patchLength" config) (cl-mpm/framework:option loading :patch-length 3d0)
+            (gethash "penaltyScale" config) (cl-mpm/framework:option loading :penalty-scale 5d0))
+      (dolist (key '("pusherVelocity" "patchLength" "penaltyScale"))
+        (unless (and (finite-p (gethash key config)) (> (gethash key config) 0d0))
+          (error "~A must be positive and finite." key)))
+      (unless (and (finite-p (gethash "patchStart" config))
+                   (>= (gethash "patchStart" config) 0d0)
+                   (<= (+ (gethash "patchStart" config) (gethash "patchLength" config))
+                       (gethash "crestLength" config)))
+        (error "Pusher patch must lie on the original crest.")))
     config))
 

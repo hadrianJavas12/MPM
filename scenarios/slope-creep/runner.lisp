@@ -60,7 +60,7 @@
                      "massScale" 1d0 "dynamicDamping" 0d0 "scientificallyValidated" 'yason:false
                      "referenceAgreement" "NOT_APPLICABLE: different material/loading from Wang2017"
                      "landslideVerified" 'yason:false))
-         (updates 0) (frame 0))
+         (updates 0) (frame 0) (pusher nil))
     (ensure-directories-exist vtk)
     (write-json manifest-path manifest)
     (handler-case
@@ -68,7 +68,8 @@
           (cl-mpm/utils:set-workers (gethash "workers" config))
           (multiple-value-bind (sim crest) (make-slope material config)
             (unless crest (error "No crest observation particles."))
-            (let ((mass (reduce #'+ (cl-mpm:sim-mps sim) :key #'cl-mpm/particle:mp-mass))
+            (let ((intervals (when (gethash "pusherVelocity" config) (capture-crest-intervals crest)))
+                  (mass (reduce #'+ (cl-mpm:sim-mps sim) :key #'cl-mpm/particle:mp-mass))
                   (count (length (cl-mpm:sim-mps sim))))
               (configure-creep-output sim)
               (setf (gethash "initialMassKgPerM" manifest) mass
@@ -83,6 +84,16 @@
               (set-creep-enabled sim t)
               (setf (cl-mpm:sim-damping-factor sim) 0d0
                     (gethash "phase" manifest) "self-weight-creep-hold")
+              (when intervals
+                (setf pusher (make-pusher crest config intervals)
+                      (gethash "loading" manifest) "self-weight plus unilateral tracked crest pusher; soil can outrun and separate"
+                      (gethash "phase" manifest) "creep-with-one-way-pusher"
+                      (gethash "pusherVelocityMPerS" manifest) (gethash "pusherVelocity" config)
+                      (gethash "pusherContactCount" manifest)
+                      (length (cl-mpm/scenario/slope-descent:strip-contacts pusher))
+                      (gethash "contactApproximation" manifest) "original top contacts/profile; normal force only; lateral release; no newly exposed particle search")
+                (cl-mpm:add-bcs-force-list sim (vector pusher)))
+              (with-pusher-history (pusher-stream pusher output)
               (cl-mpm/output/history:with-retained-history
                   (history (merge-pathnames "creep-history.csv" output)
                            :direction :output :if-exists :supersede :if-does-not-exist :create)
@@ -100,6 +111,7 @@
                                    (gethash "crestSettlementM" manifest) (nth 9 values)
                                    (gethash "maxCreepKappa" manifest) (nth 11 values)
                                    (gethash "massErrorFraction" manifest) (nth 6 values))
+                             (write-pusher-state pusher-stream pusher sim frame manifest)
                              (write-json manifest-path manifest))))
                   (save-state)
                   (loop for next-frame from 1 below (gethash "frames" config)
@@ -110,12 +122,15 @@
                         (error "Creep update budget exhausted before duration."))
                       (setf (cl-mpm:sim-dt sim) (min (stable-dt sim config)
                                                    (- target (cl-mpm::sim-time sim))))
+                      (when pusher
+                        (set-pusher-target pusher (* (gethash "pusherVelocity" config)
+                                                    (+ (cl-mpm::sim-time sim) (cl-mpm:sim-dt sim)))))
                       (cl-mpm:update-sim sim) (incf updates))
                     (setf frame next-frame) (save-state)
                     (format t "~&[creep hold] frame=~D t=~,3F max-u=~,4E max-speed=~,4E kappa=~,4E~%"
                             frame (gethash "timeS" manifest) (gethash "maxDisplacementM" manifest)
                             (gethash "maxSpeedMPerS" manifest) (gethash "maxCreepKappa" manifest))
-                    (finish-output))))
+                    (finish-output)))))
               (unless (< (abs (- (cl-mpm::sim-time sim) (gethash "duration" config))) 1d-9)
                 (error "Creep target duration not reached."))
               (setf (gethash "status" manifest) "completed" (gethash "complete" manifest) t)

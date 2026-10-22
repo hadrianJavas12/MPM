@@ -71,5 +71,7 @@
    (:file "scenarios/slope-creep/package")
    (:file "scenarios/slope-creep/configuration")
    (:file "scenarios/slope-creep/measurements")
+   (:file "scenarios/slope-creep/loading")
+   (:file "scenarios/slope-creep/loading-output")
    (:file "scenarios/slope-creep/runner")
    (:file "scenarios/slope-creep/adapter")))
