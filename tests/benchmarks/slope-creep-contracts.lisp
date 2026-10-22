@@ -9,6 +9,19 @@
                (null (gethash "targetDisplacement" config))
                (= 1d0 (gethash "duration" config))))
   (format t "~&PASS: sustained self-weight with no displacement trajectory~%")
+  (multiple-value-bind (sim crest)
+      (cl-mpm/scenario/slope-descent:make-slope
+       (cl-mpm/framework:simulation-material case) config)
+    (let* ((mass (reduce #'+ (cl-mpm:sim-mps sim) :key #'cl-mpm/particle:mp-mass))
+           (count (length (cl-mpm:sim-mps sim)))
+           (vector-values (cl-mpm/scenario/slope-creep::statistics
+                           sim mass count config (coerce crest 'vector)))
+           (list-values (cl-mpm/scenario/slope-creep::statistics
+                         sim mass count config (coerce crest 'list))))
+      (assert (equalp vector-values list-values))
+      (assert (= 0d0 (nth 9 vector-values)))
+      (assert (= 0d0 (nth 10 vector-values)))
+      (format t "PASS: crest measurements support native vector and list sequences~%")))
   (setf (gethash "settleMinUpdates" config) 1
         (gethash "settleMaxUpdates" config) 1)
   (let* ((directory (uiop:ensure-directory-pathname
@@ -27,5 +40,5 @@
       (assert (search "\"status\":\"failed\"" text)))
     (assert (probe-file (merge-pathnames "gravity-history.csv" directory)))
     (format t "PASS: bounded failure retains CSV and incomplete native manifest~%")))
-(format t "~&Slope creep scenario contracts: 2 controls passed.~%")
+(format t "~&Slope creep scenario contracts: 3 controls passed.~%")
 (uiop:quit 0)

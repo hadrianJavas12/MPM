@@ -62,9 +62,11 @@
       (list (cl-mpm::sim-time sim) mass initial-count ke
             (/ ke (* mass (- (gethash "gravity" config)) (gethash "height" config)))
             (free-residual sim) mass-error max-u max-speed
-            (- (/ (loop for mp in crest sum (component (cl-mpm/particle::mp-displacement mp) 1)) (length crest)))
-            (/ (loop for mp in crest sum (sqrt (loop for i below 3 sum
-                  (expt (component (cl-mpm/particle:mp-velocity mp) i) 2)))) (length crest))
+            (- (/ (reduce #'+ crest :key (lambda (mp)
+                      (component (cl-mpm/particle::mp-displacement mp) 1))) (length crest)))
+            (/ (reduce #'+ crest :key (lambda (mp)
+                 (sqrt (loop for i below 3 sum
+                   (expt (component (cl-mpm/particle:mp-velocity mp) i) 2))))) (length crest))
             max-kappa (/ sum-kappa initial-count) max-rate min-strength min-j))))
 
 (defun configure-creep-output (sim)
