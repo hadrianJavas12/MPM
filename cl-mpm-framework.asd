@@ -1,7 +1,7 @@
 (asdf:defsystem "cl-mpm-framework"
   :description "Composable, headless native CL-MPM simulation recipes"
   :depends-on ("cl-mpm" "cl-mpm/setup" "cl-mpm/damage" "cl-mpm/models/chalk"
-               "cl-mpm/models/mc-evolution"
+               "cl-mpm/models/mc-evolution" "cl-mpm/models/clay-creep"
                "cl-mpm/output" "cl-mpm/penalty" "cl-mpm/plotter" "vgplot"
                "jonathan" "yason" "alexandria" "uiop")
   :serial t
@@ -61,9 +61,15 @@
    (:file "scenarios/cliff/adapter" :pathname "scenarios/cliff/adapter")
    (:file "scenarios/cliff/adapter-p4-owner-2" :pathname "materials/adapters/cliff")
    (:file "scenarios/cliff/adapter-p4-owner-3" :pathname "scenarios/cliff/execute")
+   (:file "src/output/retained-history")
    (:file "scenarios/slope-descent/package")
    (:file "scenarios/slope-descent/configuration")
    (:file "scenarios/slope-descent/geometry")
    (:file "scenarios/slope-descent/boundary")
    (:file "scenarios/slope-descent/runner")
-   (:file "scenarios/slope-descent/adapter")))
+   (:file "scenarios/slope-descent/adapter")
+   (:file "scenarios/slope-creep/package")
+   (:file "scenarios/slope-creep/configuration")
+   (:file "scenarios/slope-creep/measurements")
+   (:file "scenarios/slope-creep/runner")
+   (:file "scenarios/slope-creep/adapter")))

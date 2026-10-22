@@ -841,6 +841,15 @@
       (:file "p2-03-legacy" :pathname "materials/models/viscoelastic/finite-strain/legacy")
     ))))
 
+(defsystem "cl-mpm/models/clay-creep"
+  :depends-on ("cl-mpm/particle")
+  :description "Experimental total-stress clay Perzyna creep with strain softening"
+  :serial t
+  :components ((:module "materials/models/viscoplastic/clay-creep"
+                :pathname "materials/models/viscoplastic/clay-creep"
+                :serial t
+                :components ((:file "package") (:file "law") (:file "particle")))))
+
 (defsystem "cl-mpm/models/mc-evolution"
   :depends-on ("cl-mpm/particle")
   :description "Dedicated evolving Mohr-Coulomb (Hardening / Hardening-Softening) model"

@@ -134,7 +134,7 @@
                     (gethash "initialMassKgPerM" manifest) reference-mass
                     (gethash "phase" manifest) "gravity")
               (write-json manifest-path manifest)
-              (with-open-file (history (merge-pathnames "gravity-history.csv" output)
+              (cl-mpm/output/history:with-retained-history (history (merge-pathnames "gravity-history.csv" output)
                                        :direction :output :if-exists :supersede :if-does-not-exist :create)
                 (format history "updates,time_s,kinetic_energy_J_per_m,kinetic_ratio,free_residual_ratio,mass_error_fraction,max_yield_residual_pa,consecutive_checks~%")
                 (loop while (< settle-updates (gethash "settleMaxUpdates" config)) do
@@ -187,10 +187,10 @@
                 (write-json manifest-path manifest)
                 (setf (gethash "elasticEnergyZeroJPerM" manifest) elastic-zero
                       (gethash "nativePlasticEnergyZeroJPerM" manifest) plastic-zero)
-                (with-open-file (energy (merge-pathnames "energy-history.csv" output)
+                (cl-mpm/output/history:with-retained-history (energy (merge-pathnames "energy-history.csv" output)
                                        :direction :output :if-exists :supersede :if-does-not-exist :create)
                   (format energy "frame,time_s,kinetic_J_per_m,elastic_proxy_J_per_m,native_plastic_proxy_J_per_m,delta_elastic_proxy_J_per_m,delta_native_plastic_proxy_J_per_m,kinetic_over_elastic_proxy,actuator_signed_command_work_J_per_m~%")
-                (with-open-file (csv (merge-pathnames "force-displacement.csv" output)
+                (cl-mpm/output/history:with-retained-history (csv (merge-pathnames "force-displacement.csv" output)
                                     :direction :output :if-exists :supersede :if-does-not-exist :create)
                   (format csv "frame,time_s,commanded_settlement_m,measured_settlement_m,reaction_upward_N_per_m,soil_force_y_N_per_m,nodal_force_y_N_per_m,kinetic_energy_J_per_m,mass_kg_per_m,particle_count,penalty_gap_m,free_residual_ratio,kinetic_ratio,mass_error_fraction,max_gap_m,rms_gap_m,max_yield_residual_pa,updates~%")
                   (labels ((save-state ()
