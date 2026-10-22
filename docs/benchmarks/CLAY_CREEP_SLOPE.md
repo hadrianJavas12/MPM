@@ -91,5 +91,18 @@ and VTK/CSV consistency. For the slope, inspect motion, localization and run-out
 plus velocity/strain curves before describing a creep-to-landslide transition.
 No failure threshold or simulation trajectory is tuned to force a PASS.
 
-Initial status: implementation prepared; native point/retention/scenario controls
-and slope pilot **NOT_RUN**. Update this status only from actual logs.
+## Verified controls, 2026-10-22
+
+Actual Windows native tests on **33eed96** passed:13 material controls,4 retained
+history controls,2 scenario controls (including an expected failed gravity
+initialization with CSV and complete=false). Node check and36 tests passed.
+PowerShell parsing and Python compilation passed. These checks have different
+scope from a successful full slope run; do not rerun them on an unchanged source.
+
+The material tests held q_tau=60kPa for5 physical seconds using accepted native
+point updates, including an outer stress-control solve. Constant strength produced
+secondary creep; strain softening produced increasing creep rate. The actual CSVs
+and plot are retained as material-point evidence, not laboratory or slope results.
+Their test parameters are stated in `tests/materials/clay-creep-points.lisp` and
+differ from the slope demonstration's viscosity/softening parameters.
+The slope pilot remains **NOT_RUN** at this control checkpoint.

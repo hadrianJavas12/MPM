@@ -1,0 +1,5 @@
+PASS: Two flushed rows and original error survive an abnormal exit
+PASS: Normal completion flushes output and preserves all body values
+PASS: Cleanup failure preserves the original body error
+PASS: Normal cleanup failure is signalled
+RETAINED HISTORY CONTROLS: 4 passed; no physical updates executed.

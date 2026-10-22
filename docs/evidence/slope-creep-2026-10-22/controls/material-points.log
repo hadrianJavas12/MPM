@@ -1,0 +1,15 @@
+PASS: explicit law parameters reject invalid viscosity/strength/softening
+PASS: zero time, disabled creep and under-threshold response stay elastic
+PASS: hydrostatic pressure never produces J2 creep
+PASS: analytic shear stress relaxation matches backward Euler and Voigt factors
+PASS: normal and shear deviators give the same invariant radial update
+PASS: residual strength kink is crossed by the exact piecewise BE root
+PASS: discrete dissipation equals tau dot engineering plastic strain and is nonnegative
+PASS: constant imposed stress produces secondary creep and softening acceleration
+PASS: time refinement approaches analytic stress relaxation and creep-hold strain
+PASS: native adapter trial is repeatable, commits once and resets all saved history
+PASS: failed native constitutive trial cannot alter committed or trial history
+PASS: native creep switch leaves stresses and history intact while disabling flow
+Point hold CSV evidence: output/slope-creep-2026-10-22/material-points/
+PASS: material hold CSV stores actual accepted point solutions
+CLAY CREEP POINTS PASS: 13 passed; 0 failed.
