@@ -105,4 +105,17 @@ secondary creep; strain softening produced increasing creep rate. The actual CSV
 and plot are retained as material-point evidence, not laboratory or slope results.
 Their test parameters are stated in `tests/materials/clay-creep-points.lisp` and
 differ from the slope demonstration's viscosity/softening parameters.
-The slope pilot remains **NOT_RUN** at this control checkpoint.
+Retained evidence: `docs/evidence/slope-creep-2026-10-22/controls/` (19 verified
+artifact hashes, including CSV/PNG, exact tests, logs/status and negative manifest).
+
+Pilot001 at04fe2c2 exposed a crest vector/list measurement bug, retained as
+FAILED_NATIVE/complete=false with10 evidence hashes in `pilot-001-failure/`.
+Sequence-safe reductions fix it at7be4503; the expanded scenario suite passed
+3 controls, including vector/list equivalence (5 additional retained hashes).
+The material/solver equations were unchanged.
+
+**Actual replacement pilot launched18:24 WIB on2026-10-22 from7be4503**, output
+`output/slope-creep-2026-10-22/pilot-002/`; adjacent `-status.json`/`-launch.json`
+and native logs identify the job. Last observed NATIVE_RUNNING. The1s pilot has
+a1h native budget and automatic saved-output audit/media;30s run is pending pilot
+review. No completed slope or landslide result is claimed at this checkpoint.

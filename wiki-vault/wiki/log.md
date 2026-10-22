@@ -530,3 +530,24 @@ after abnormal exit; no fabricated history, complete-run audit or PASS. Retained
 10 hashed artifacts with logs, source and partial raw output. Next gate is bounded
 material reproduction and exception-safe history retention, before expensive reruns.
 Slower comparison remains conditional and NOT_RUN. Previous log entries preserved.
+
+## [2026-10-22] ingest | Separate clay creep slope experiment
+
+Recorded [[clay-creep-design-2026-10-22]] and [[clay-creep-slope]] following the
+user's creep-to-landslide request. Dedicated J2 Perzyna softening material,
+constant self-weight, free crest, preserved elastic geostatic stress/history and
+no imposed trajectory. Parameters/phi_u=0 total-stress/Kirchhoff/compressibility
+limits are explicit; Wang MC failure remains separate. Native13/4/2 and Node36
+passed at33eed96;19 evidence hashes retain genuine held-stress curves and controls.
+Pilot1s launched18:18 WIB from04fe2c2, NATIVE_RUNNING, not a landslide PASS.
+Updated guide/handover/testing/index; raw intake and prior logs remain immutable.
+
+## [2026-10-22] checkpoint | Creep crest measurement regression
+
+Pilot001 failed at its first statistics sample because native crest particles
+are a vector and two reducers expected a list. Retained10 hashed failure artifacts;
+fixed only those reductions at7be4503, expanded scenario suite3 passed (5 hashes).
+Material/solver equations and13/4/Node controls remain unchanged.
+Replacement pilot002 launched18:24 WIB from7be4503, wrapper34608, NATIVE_RUNNING.
+Updated [[clay-creep-slope]], index, guide and handover. No landslide claim or
+discarded evidence; no repeat long run beyond the bounded pilot replacement.

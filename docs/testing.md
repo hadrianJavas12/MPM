@@ -389,3 +389,30 @@ See the benchmark guide for status paths, command,
 budget and review gates. Energy proxies and an accelerated-rate success cannot
 establish paper-speed or quasi-static agreement. Do not rerun finished tests
 while the unchanged native snapshot computes.
+
+## Experimental clay slope creep, 2026-10-22
+
+Branch `codex/slope-creep-landslide`; actual tests at33eed96:
+13 material controls,4 output-retention controls,2 scenario controls and Node36
+plus syntax check passed. Material controls include actual held-stress outer
+solutions with CSV, relaxation, shear conventions, timestep refinement, repeatable
+native trials/commit/reset and failed-trial rollback. The negative gravity control
+retains complete=false and its CSV.19 evidence hashes are retained under
+`docs/evidence/slope-creep-2026-10-22/controls/`. Do not repeat unchanged checks.
+
+```powershell
+.\windows\cl-mpm.cmd tests\materials\clay-creep-points.lisp output\creep-points-FRESH
+.\windows\cl-mpm.cmd tests\benchmarks\retained-history.lisp
+.\windows\cl-mpm.cmd tests\benchmarks\slope-creep-contracts.lisp output\creep-negative-FRESH
+.\scripts\run-slope-creep.ps1 -OutputDirectory D:\MPM\output\creep-pilot-FRESH -MaxWallHours 1
+```
+
+Pilot001 at04fe2c2 failed on a crest vector/list measurement mismatch; its native
+status/source/partial output are retained (10 hashes).7be4503 fixes the two
+sequence reductions; the expanded scenario suite3 passed, with5 hashes retained
+in `crest-sequence-regression/`. Material/solver code is unchanged.
+The replacement1s native pilot launched from7be4503 at18:24 WIB as
+`output/slope-creep-2026-10-22/pilot-002/`, NATIVE_RUNNING, not yet PASS.
+Native completion and saved-output consistency are separate from a verified
+creep-to-landslide transition. The new law is an assumed J2 clay surrogate,
+not the original Soil1 MC law or laboratory calibration. See the creep guide.

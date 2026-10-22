@@ -2,7 +2,82 @@
 
 **Operational checkpoint: 2026-10-22, Asia/Jakarta. Read this first.**
 
-## Current task: Wang2017 prescribed crest descent
+## Current task: experimental clay creep toward slope failure
+
+Latest human instruction (2026-10-22): modify the behavior toward creep leading
+to a landslide. Active branch **codex/slope-creep-landslide**, from9743448 on the
+Wang experimental branch; main remains9e97e00 (live GitHub checked this turn).
+Read [the creep guide](benchmarks/CLAY_CREEP_SLOPE.md). No UI or main change.
+
+New owned material: `materials/models/viscoplastic/clay-creep/` (package, pure law,
+transactional CLOS adapter), ASDF `cl-mpm/models/clay-creep`. New scenario:
+`scenarios/slope-creep/` (config, measurements, runner, adapter), reusing the
+existing slope builder, plus two short cases. **No prescribed crest trajectory.**
+Self-weight remains constant after elastic geostatic initialization. Creep is
+enabled at hold time0; stress/F/history are preserved, velocity/reporting origin
+zeroed and dynamic damping0. Material evolution, not a failure-time switch,
+drives weakening. The former Wang case/failure evidence are preserved.
+
+**Science scope:** a new phi_u=0 total-stress clay surrogate, not Wang Soil1 MC
+and not a fix to its integration error. J2 Perzyna linear overstress,
+kappa_dot=<q_tau-Y(kappa)>/eta; linear strain softening to a positive residual.
+Strength and viscosity use Kirchhoff units, not silently Cauchy stress; nu=.25
+allows elastic volume changes, no pore fluid or validated undrained test.
+Default eta50MPa*s, kappa_s.01, Yp=sqrt(3)*30kPa, Yr=sqrt(3)*6kPa are explicit
+demonstration assumptions. No subyield/primary creep, laboratory calibration,
+mesh-independent failure/run-out or reference-paper agreement is claimed.
+
+**Verified on33eed96:**13 actual Windows material controls,4 exception-history
+controls,2 scenario controls, Node syntax check/36 tests all pass. The expected
+one-update gravity failure remains complete=false with its CSV retained.
+Material stress-hold CSV/plot shows continued creep and softening acceleration
+under constant q_tau; its point-test parameters differ from the slope preset.
+Retained evidence: `docs/evidence/slope-creep-2026-10-22/controls/`,19 verified
+artifact hashes. Python compilation and PowerShell parsing also passed.
+No unchanged test needs repeating. New plotting/evidence commit04fe2c2 changes
+no tested numerical source. History utility now closes with abort=nil during
+exceptions; the3 opening operators in the Wang runner changed, no numerical form.
+
+Pilot001 on04fe2c2 failed during its first statistics check: the slope builder
+returns a crest vector, but two measurements used list iteration. This was an
+observational type error, not a constitutive integration failure. Source/partial
+outputs/logs are retained in `docs/evidence/slope-creep-2026-10-22/pilot-001-failure/`
+(10 artifact hashes).7be4503 replaces those two reductions with sequence-safe
+operations, without changing material or solver equations. The expanded scenario
+suite **3 controls passed** on7be4503, including vector/list equivalence;5 hashes
+are in `crest-sequence-regression/`. No repeat13/4/Node suite is needed.
+
+### Active pilot002 — 2026-10-22 18:24 WIB
+
+- Launched source **7be45030aa7cca62f403a86090d3d4aad5878c9b**,
+  start `2026-10-22T11:24:06Z`; wrapper PID34608, native cmd in status JSON.
+- Run: `output/slope-creep-2026-10-22/pilot-002/`, adjacent
+  `pilot-002-status.json`, `pilot-002-launch.json`, `.stdout.log`, `.stderr.log`.
+  Last observed **NATIVE_RUNNING**, not a completed result. Do not duplicate it.
+- Case `cases/benchmarks/clay-creep-slope-pilot.lisp`:1s,11 states, max10000 hold
+  updates,1h native wall budget. Elastic gravity has its own20000-update bound.
+- `scripts/run-slope-creep.ps1` automatically audits/renders PNG+MP4 after native
+  exit0/complete=true. Status becomes COMPLETED_REVIEW_PENDING, not scientific PASS.
+  The wrapper freezes analysis hashes; **do not edit `plot-slope-creep.py` or
+  `plot_m5_cliff_comparison.py` while running**. If media fails, reuse native data.
+- Next: inspect output-audit, actual VTK/CSV and plot/video. Check finite positive
+  J/volume, mass/count, gravity/reset proof, accumulated creep and strength loss.
+  A1s operational pilot is not a landslide or time-convergence validation.
+- If pilot is credible, run the already committed `clay-creep-slope.lisp` in a
+  fresh output (30s/61states,4h wall budget). Record source/launch status first;
+  assess actual velocity/displacement/localization/run-out. Never program a
+  displacement/failure timeline or relax tolerances to obtain a desired picture.
+  If no transition occurs, report that result before tuning/long repeats.
+
+Heartbeat **mpm-lanjut-migrasi-arsitektur**, named **MPM creep menuju longsor**,
+continues this new task: first check18:35 WIB then hourly, quiet status-first
+checks, no active polling or duplicate solvers, only notify
+meaningful progress/completion/failure. The old Wang diagnosis/slower run is
+superseded by the new user request and must not start automatically.
+Keep checkpoints/evidence/docs/wiki updated, commit and push the feature branch;
+never merge main. Preserve immutable raw sources and personal Obsidian settings.
+
+## Previous task: Wang2017 prescribed crest descent
 
 User supplied `C:/Users/ASUS/Downloads/101007s11629_016_3951_1.pdf` and requested
 the first numerical slope test with prescribed downward velocity. Actual branch:
