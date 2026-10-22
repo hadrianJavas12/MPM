@@ -117,10 +117,10 @@ native data if media generation needs repair.
 
 Actual launch: **12:32 WIB, source52f9367**, output
 `output/wang2017-fast-2026-10-22/fast-005-001/`; adjacent `-status.json`,
-`-launch.json` and `.stdout.log` identify the job. Last recorded state is
-**NATIVE_RUNNING / gravity initialization**, not a completed loading result.
-Estimated loading cost is approximately1–2h, with a4h native budget. Quiet hourly
-continuation starts14:00 WIB. Four additional native controls passed (preset,
+`-launch.json` and `.stdout.log` identify the job. Actual outcome:
+**FAILED_NATIVE**, exit1 at13:30 WIB, after about58 wall minutes. Gravity
+converged; the last saved loading state is15.4s, command77mm and measured76.518656mm
+of100mm. Four additional native controls passed (preset,
 pure-shear/hydrostatic energy, non-mutating diagnostics); Node36/check passed.
 
 Before slower loading, inspect actual command/measured descent, signed reaction,
@@ -132,3 +132,20 @@ dissipation, and Hencky/Cauchy energy is not a closed energy balance.
 No single energy ratio proves a quasi-static result. Preserve negative forces
 and raw transients. If the method is operationally credible, the next comparison
 is a separate0.002 m/s case, same mesh/material and a fresh output directory.
+
+### Failed trial evidence and next gate
+
+The MC material integrator rejected an update because it found no admissible
+coupled active-set solution (10evaluations). This is not a wall-budget stop;
+the underlying numerical cause and any effect of reducing speed remain unproven.
+There are78 saved loading VTKs. Last saved mass error is0 and finite-field flag
+true; these do not constitute an independent complete-run audit.
+The force/energy CSV files are absent after abnormal exit, so no complete curve,
+energy review or video based on those histories is available. Nothing was
+reconstructed to conceal the failure. Source/logs/remaining raw output and10
+verified artifact hashes are retained in
+[failed-trial evidence](../evidence/wang2017-descent-2026-10-22/fast-005-001-failure/README.md).
+
+Next gate: bounded constitutive reproduction of the failed update and reliable
+history retention on exceptions, followed by focused verification. Do not launch
+the slower case or repeat the full trial simply to see if the failure disappears.

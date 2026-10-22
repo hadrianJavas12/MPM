@@ -519,3 +519,14 @@ plots/renders and collects evidence, with4h native budget. Existing heartbeat
 repurposed for quiet hourly checks starting14:00 WIB; no active waiting or reruns.
 Energy proxies/prestress limitations remain explicit; accelerated completion is
 not paper agreement. Raw sources, previous results and append-only history preserved.
+
+## [2026-10-22] checkpoint | Wang2017 fast trial failed before target
+
+Corrected [[wang2017-prescribed-descent]] and index after reading actual status:
+native exit1 at13:30 WIB, gravity converged, last saved loading15.4s/77mm command,
+76.518656mm measured,78 loading VTKs. MC integration found no admissible coupled
+active-set solution; root cause is not yet established. Force/energy CSVs absent
+after abnormal exit; no fabricated history, complete-run audit or PASS. Retained
+10 hashed artifacts with logs, source and partial raw output. Next gate is bounded
+material reproduction and exception-safe history retention, before expensive reruns.
+Slower comparison remains conditional and NOT_RUN. Previous log entries preserved.

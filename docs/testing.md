@@ -380,8 +380,12 @@ hydrostatic elastic energy and non-mutating observations. Logs/status are under
 The Windows background wrapper parsed successfully and Python tools compiled.
 
 The actual full-target accelerated run `fast-005-001` launched at52f9367;
-it is **NATIVE_RUNNING**, not yet PASS. The wrapper automatically postprocesses
-only after native completion. See the benchmark guide for status paths, command,
+it ended **FAILED_NATIVE**, exit1, at15.4s saved loading time (77mm/100mm command).
+The MC constitutive update found no admissible active-set solution. Source/logs
+and78 loading VTKs are retained with10 artifact hashes; force/energy CSVs are
+absent after abnormal exit, so saved-output consistency is NOT_RUN. The wrapper
+correctly did not claim completion or run successful-output collection.
+See the benchmark guide for status paths, command,
 budget and review gates. Energy proxies and an accelerated-rate success cannot
 establish paper-speed or quasi-static agreement. Do not rerun finished tests
 while the unchanged native snapshot computes.

@@ -1,0 +1,21 @@
+[slope gravity] updates=250 residual=4.260d-1 kinetic=9.091d-6 hold=0
+[slope gravity] updates=500 residual=2.190d-1 kinetic=2.405d-6 hold=0
+[slope gravity] updates=750 residual=1.138d-1 kinetic=6.552d-7 hold=0
+[slope gravity] updates=1000 residual=5.932d-2 kinetic=1.973d-7 hold=0
+[slope gravity] updates=1250 residual=3.098d-2 kinetic=9.779d-8 hold=0
+[slope gravity] updates=1500 residual=1.622d-2 kinetic=1.075d-7 hold=0
+[slope gravity] updates=1750 residual=8.540d-3 kinetic=1.581d-7 hold=0
+[slope gravity] updates=2000 residual=4.587d-3 kinetic=2.299d-7 hold=0
+[slope gravity] updates=2250 residual=2.609d-3 kinetic=3.158d-7 hold=0
+[slope gravity] updates=2500 residual=1.680d-3 kinetic=4.122d-7 hold=0
+[slope gravity] updates=2750 residual=1.278d-3 kinetic=5.162d-7 hold=0
+[slope gravity] updates=3000 residual=1.108d-3 kinetic=6.252d-7 hold=0
+[slope gravity] updates=3250 residual=1.015d-3 kinetic=7.366d-7 hold=0
+Thread threw error: MC evolution integration failed: No admissible coupled active-set solution; no apex clamp or strength floor applied (:TRIAL
+                                                                                                                                         (42976.78027359978d0
+                                                                                                                                          42980.96616175191d0
+                                                                                                                                          42998.36671139691d0)
+                                                                                                                                         :OLD-KAPPA
+                                                                                                                                         0.020507649539384443d0
+                                                                                                                                         :EVALUATIONS
+                                                                                                                                         10)

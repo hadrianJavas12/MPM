@@ -20,7 +20,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[wang2017-prescribed-descent]] — physical-speed pilot complete; authorized0.005 m/s full-target trial running, paper-speed full curve NOT_RUN; assumptions/transients explicit
+- [[wang2017-prescribed-descent]] — pilot complete;0.005 m/s trial failed at77mm/100mm (MC integration); partial evidence retained, slower/paper-speed full runs NOT_RUN
 - [[mc-hardening-softening-study]] — M0–M6 COMPLETE on `codex/mc-hardening-softening-study`: dedicated `:mc-h` / `:mc-hs` model family (`34/34` unit assertions), M3 constitutive point verification (`7` pairs), M4 3D MPM Triaxial (`T-100-H` vs `T-100-HS`, $-62.33\%$ post-peak softening drop), and M5 2D MPM Cliff (`L-H` vs `L-HS`, $+51.92\%$ max displacement, $+38.79\%$ toe runout) with plots and `.mp4` videos
 - [[reusable-simulation-framework]] — canonical root ASDF (`cl-mpm-framework.asd`), Section 2/5 physical folder layout (`cases/{triaxial,cliff,benchmarks,direct-shear}/`), and post-alignment Triaxial 2D + bottom-to-top Joss cliff benchmarks exact PASS
 - [[upstream-development-report-2026-10-15]] — professional Git-based comparison with original CL-MPM and linked evidence

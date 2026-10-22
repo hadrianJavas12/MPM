@@ -33,10 +33,13 @@ Evidence and complete commands are linked from the maintained benchmark guide.
 User-requested0.005 m/s targets0.1 m in20s (50x reference), with unchanged
 Soil#1/geometry/mass scale. The actual native run launched12:32 WIB on2026-10-22
 from52f9367: `output/wang2017-fast-2026-10-22/fast-005-001/`.
-Current recorded state is **NATIVE_RUNNING**, healthy gravity initialization;
-no completed accelerated result or quasi-static agreement is claimed.
-The wrapper has a4h native budget and automatically audits/renders/collects
-evidence after exit0 and complete=true. Quiet monitoring starts14:00 WIB.
+Actual outcome: **FAILED_NATIVE**, exit1 at13:30 WIB, about58 wall minutes.
+Gravity converged; last saved loading state15.4s, command77mm and measured76.518656mm
+of100mm. The MC integrator found no admissible coupled active-set solution.
+There are78 loading VTKs; last saved mass error0 is not an independent full audit.
+Force/energy CSVs are absent after abnormal exit; no complete curve or energy PASS
+is claimed.10 artifact hashes retain source, logs and remaining raw output under
+`docs/evidence/wang2017-descent-2026-10-22/fast-005-001-failure/`.
 
 Four new native controls and Node36/check passed; do not repeat unchanged tests.
 Energy diagnostics are observational proxies, not a closed energy budget;
@@ -44,3 +47,7 @@ prestress can hide kinetic significance. Review raw signed reactions, tracking,
 conservation, finite fields and stability before the separately authorized slower
 0.002 m/s comparison. Preserve source/data and report actual failures.
 See [[scientific-authenticity-audit-2026-10-15]] and the benchmark guide.
+
+Next: isolate the failed material update in a bounded test and preserve histories
+on exceptions. The root cause and whether slower loading avoids it are unknown;
+the slower full run remains NOT_RUN. No repeat full trial is justified yet.

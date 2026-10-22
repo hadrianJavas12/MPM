@@ -39,7 +39,7 @@ Observed loading throughput extrapolates to about2.35 wall days, with substantia
 uncertainty. **Full paper-speed run NOT_RUN.** No silent velocity, mass, time
 scaling, force fitting, smoothing or fabricated completion is authorized.
 
-### Active authorized accelerated trial — 2026-10-22 12:32 WIB
+### Accelerated trial FAILED_NATIVE — 2026-10-22 13:30 WIB
 
 The user explicitly requested **0.005 m/s first**, then slower loading only after
 the method works, using offline computation to save tokens. Case
@@ -51,8 +51,9 @@ This is an accelerated operational trial, not Figure3 or quasi-static validation
   launched `2026-10-22T05:32:05Z`. Wrapper PID38516, cmd34716, SBCL15332.
 - Root `output/wang2017-fast-2026-10-22/`; run `fast-005-001/`;
   status `fast-005-001-status.json`, launch `fast-005-001-launch.json`,
-  native log `fast-005-001.stdout.log`. Last observed: **NATIVE_RUNNING**, healthy
-  gravity initialization at750 updates; loading completion is not yet established.
+  native log `fast-005-001.stdout.log`. **Native exit1 at13:30 WIB; no active job.**
+  Gravity converged, but constitutive integration failed after the last saved
+  loading state15.4s: commanded77mm, measured76.518656mm (target100mm).
 - `scripts/run-wang2017-trial.ps1` runs hidden with a4h native budget, then
   automatically audits, plots/renders video and collects retained evidence into
   `docs/evidence/wang2017-descent-2026-10-22/fast-005-001/` if native exit0 and
@@ -70,18 +71,26 @@ This is an accelerated operational trial, not Figure3 or quasi-static validation
   and `collect-wang2017-evidence.py`. Leave these tools unchanged during the job.
   If postprocessing fails, reuse native output; do not restart the solver for media.
 
-Existing heartbeat **mpm-lanjut-migrasi-arsitektur** was repurposed (no duplicate)
-as **MPM Wang2017 uji cepat**, ACTIVE, first check14:00 WIB then hourly. Read only
-status/manifest and one log line first. If healthy, end quietly without active
-waiting, repeated tests or a duplicate run. Native estimate ~1–2h is uncertain.
-After completion, verify target/time, finite fields, conservation, penalty tracking,
-signed force mapping and stability/energy/force transients; inspect actual media.
-If operationally credible, user permits a separate0.002 m/s sensitivity case
-(50 physical seconds, ~2.8h loading estimate), same material/mesh and fresh output,
-case committed before launch. If unstable, report evidence and plan before another
-expensive run. Never upgrade either accelerated rate to paper-speed agreement.
-Update evidence/docs/wiki and push checkpoints; no main merge. Remove heartbeat
-after the authorized fast/slower comparison is finished.
+**Failure evidence:** `docs/evidence/wang2017-descent-2026-10-22/fast-005-001-failure/`:
+10 hashed artifacts retain logs, manifests, exact source snapshot (except private
+compiled cache) and partial raw output. There are78 loading VTKs, frames0..77;
+last saved mass error0 and finite-field flag are not a full saved-output audit.
+Error: `MATERIAL-INTEGRATION-ERROR`, no admissible coupled active-set solution,
+10evaluations; trial principal stresses42976.7803/42980.9662/42998.3667Pa,
+old-kappa0.02050764954. The reject is in frozen `projection.lisp` roots-empty guard;
+root cause is not established. This was not a gravity or wall-budget failure.
+`force-displacement.csv` and `energy-history.csv` are absent after abnormal exit.
+Do not invent/reconstruct them, claim a curve/energy audit PASS or mark complete.
+
+The user was informed of the failure and next plan. Before a new expensive run,
+isolate the failed material update in a bounded constitutive reproducer (full
+failed state is not currently captured), and make history preservation robust
+to exceptions. Do not assume slower loading fixes the integration error.
+The slower0.002 m/s sensitivity run remains **NOT_RUN**, conditional on a working
+fast method. Preserve tolerances/equations and report any proposed numerical fix
+with tests. Existing heartbeat **mpm-lanjut-migrasi-arsitektur** continues the
+bounded diagnosis without duplicate solvers or repeat failure notifications;
+no full rerun until the issue is understood. Commit/push checkpoints, no main merge.
 
 Prior main study statements below are historical. The separately identified
 M4 HS triaxial issue (target22%, saved14.26%, postprocessor-created complete=true)
