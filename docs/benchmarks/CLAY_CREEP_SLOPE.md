@@ -127,8 +127,21 @@ landslide. Initial activation produces oscillatory velocity/kinetic energy;
 max creep rate decreased0.002609→0.002277/s. No accelerating slope failure is yet
 verified, and a small kinetic ratio alone cannot establish quasi-staticity.
 
-**30s observation launched19:24 WIB**, sourcea9c3e30, same preset material/mesh,
-output `output/slope-creep-2026-10-22/hold-30s-001/`, wrapper50876,4h native budget.
-Read the adjacent `-status.json` first. Automated review starts20:00 WIB without
-active waiting or repeat tests. Its actual displacement/velocity/localization
-must be reviewed before claiming a creep-to-landslide transition.
+**30s observation completed19:39 WIB**, sourcea9c3e30, same preset material/mesh,
+output `output/slope-creep-2026-10-22/hold-30s-001/`. Native/audit/render exit0;
+61VTKs,915MPs, zero mass drift, minJ0.97840. Crest descent260.8326mm, maximum
+displacement298.1695mm, kappa_max0.0582425. Sources/raw data/proofs/media and
+review are retained with16 verified hashes under
+`docs/evidence/slope-creep-2026-10-22/hold-30s-001/`.
+
+**The creep-to-landslide target is not verified.** The particle overview shows
+distributed creep and toe/base strain concentration without a detached sliding
+mass/run-out. Crest secant rates decline9.91mm/s (0–5s) to8.34mm/s (20–30s);
+local velocity peaks are transient. The minimum strength reaches residual at5.5s,
+but strength loss alone does not prove accelerating slope failure.
+
+No extra duration/parameter run has been started. Next is a bounded diagnosis
+of saved displacement/velocity topology and constant-stress response using the
+actual slope parameters. An auditable failure mechanism is needed before
+proposing a changed model; reducing viscosity/strength for an attractive collapse
+would not establish scientific validity. Do not rerun finished tests or outputs.

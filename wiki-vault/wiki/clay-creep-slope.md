@@ -36,10 +36,18 @@ minimum yield dropped19.7%.14 artifact hashes retain actual source/data/media.
 This is an operational pilot, not verified landslide/acceleration: activation
 transients cause velocity/kinetic oscillations, while max creep rate decreases.
 
-The same-material30s case launched19:24 WIB froma9c3e30:
-`output/slope-creep-2026-10-22/hold-30s-001/`, wrapper50876,4h native budget.
-Quiet status-first continuation starts20:00 WIB. Review actual plots/video and
-localization/run-out after completion; no duplicate computation or tuned timeline.
+The same-material30s case froma9c3e30 completed19:39 WIB:
+`output/slope-creep-2026-10-22/hold-30s-001/`, native/audit/render exit0,
+61VTKs/915MPs, zero mass drift,minJ0.97840. Crest descent260.8326mm,max298.1695mm,
+kappa_max0.0582425.16 verified artifact hashes retain source/data/proofs/media
+and independent review. No active solver remains.
+
+**Creep-to-landslide NOT_VERIFIED**: distributed creep/toe-base strain without
+detached mass or run-out; raw crest secant speed declines9.91→8.34mm/s instead
+of sustained acceleration. Residual strength is reached locally at5.5s.
+Completion is not calibration or failure validation. Next safe work is bounded
+mechanism diagnosis on saved fields and an actual-parameter stress-hold analysis,
+before model changes or expensive repeats. No parameter tuning has been performed.
 
 Source/commands/assumptions are in `docs/benchmarks/CLAY_CREEP_SLOPE.md`;
 linked integrity and evidence practices: [[scientific-authenticity-audit-2026-10-15]].

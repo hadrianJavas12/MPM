@@ -562,3 +562,14 @@ creep rate mean accelerating slope failure is not established. Launched the
 already committed30s case with identical material/geometry/mesh at19:24 WIB,
 sourcea9c3e30, output hold-30s-001, wrapper50876,4h budget. Updated guide/testing/
 handover/index; no repeated controls, imposed collapse timeline or scientific PASS.
+
+## [2026-10-22] checkpoint | 30s creep complete; landslide target not verified
+
+Reviewed [[clay-creep-slope]] hold-30s-001 on sourcea9c3e30: native/audit/render
+exit0,30s/61VTKs,915MPs,zero mass drift,minJ0.97840. Crest260.8326mm,max298.1695mm,
+kappa_max0.0582425.16 verified artifact hashes retain source/raw output/proofs/
+plots/video and independent review. Raw crest secant rate declines9.91→8.34mm/s;
+overview shows broad creep and toe/base concentration without detached mass/runout.
+Residual strength reached at5.5s, but accelerating failure NOT_VERIFIED. Updated
+guide/testing/handover/index; no new parameter/duration run or repeated tests.
+Next safe step is bounded failure-mechanism diagnosis, not tuning for appearance.

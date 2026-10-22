@@ -416,8 +416,13 @@ The replacement1s pilot from7be4503 completed18:27 WIB, native/audit/render exit
 displacement13.4915mm;14 retained evidence hashes in `pilot-002/`.
 Saved-output consistency PASS; a landslide or sustained acceleration is not
 verified (initial velocity/kinetic transients remain).
-The unchanged-material30s hold launched19:24 WIB at sourcea9c3e30 as
-`output/slope-creep-2026-10-22/hold-30s-001/`, native budget4h, not yet PASS.
+The unchanged-material30s hold at sourcea9c3e30 completed19:39 WIB: native,
+saved-output audit and render exit0,61VTKs/915MPs, zero mass drift, minJ0.97840.
+16 verified evidence hashes retain actual source/data/media/review in hold-30s-001.
+**Operational consistency PASS; creep-to-landslide transition NOT_VERIFIED.**
+Crest descent260.83mm, max displacement298.17mm, but raw crest secant speed
+declines9.91→8.34mm/s and reviewed overview shows no detached mass/run-out.
+No new solver job or repeat controls are justified by this completion alone.
 Native completion and saved-output consistency are separate from a verified
 creep-to-landslide transition. The new law is an assumed J2 clay surrogate,
 not the original Soil1 MC law or laboratory calibration. See the creep guide.

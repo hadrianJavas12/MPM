@@ -1,0 +1,43 @@
+{
+  "nativeSourceCommit": "a9c3e30e026717a030974cc3a0074c7b99c034dd",
+  "nativeComplete": true,
+  "nativeExitCode": 0,
+  "physicalTimeS": 30,
+  "frames": 61,
+  "crestSettlementM": 0.2608326268472979,
+  "maxDisplacementM": 0.29816954820732355,
+  "maxSpeedMPerS": 0.16231468902718463,
+  "sampledPeakMaxSpeedMPerS": 0.34640655435919476,
+  "maxCreepKappa": 0.05824253798889571,
+  "zeroMassDrift": true,
+  "particleCount": 915,
+  "minJAcrossSavedFrames": 0.9784023323311356,
+  "secantRateWindows": [
+    {
+      "startS": 0.0,
+      "endS": 5.0,
+      "crestSettlementSecantMmPerS": 9.91183186092868
+    },
+    {
+      "startS": 5.0,
+      "endS": 10.0,
+      "crestSettlementSecantMmPerS": 8.786261530691878
+    },
+    {
+      "startS": 10.0,
+      "endS": 20.0,
+      "crestSettlementSecantMmPerS": 8.39376042991627
+    },
+    {
+      "startS": 20.0,
+      "endS": 30.0,
+      "crestSettlementSecantMmPerS": 8.340455559003242
+    }
+  ],
+  "nativeCreepAndStrengthLossObserved": true,
+  "sustainedAcceleratingCreepVerified": false,
+  "macroscopicLandslideVerified": false,
+  "scientificValidation": false,
+  "visualReview": "Broad distributed deformation and toe/base strain concentration; no detached sliding mass or run-out in saved particle overview.",
+  "interpretation": "Crest displacement continues but late secant rate declines. Velocity and kinetic-energy peaks are transient, not sustained growth. Native completion is operational only. No new parameter or duration experiment launched."
+}

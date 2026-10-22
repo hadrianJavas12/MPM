@@ -71,24 +71,40 @@ are in `crest-sequence-regression/`. No repeat13/4/Node suite is needed.
   crest speed oscillate, max creep rate drops0.002609→0.002277/s. Small kinetic
   ratio does not prove quasi-staticity or accelerating creep. No tests repeated.
 
-### Active30s hold — 2026-10-22 19:24 WIB
+### Completed30s hold — reviewed 2026-10-22 21:25 WIB
 
 - Source **a9c3e30e026717a030974cc3a0074c7b99c034dd**, launched
   `2026-10-22T12:24:05Z`; wrapper50876, native cmd in adjacent status JSON.
 - Run `output/slope-creep-2026-10-22/hold-30s-001/`, adjacent
   `hold-30s-001-status.json`, `-launch.json`, `.stdout.log`, `.stderr.log`.
   Case `clay-creep-slope.lisp`:30s/61states, same material/geometry/mesh as pilot,
-  no tuned strength/viscosity/timeline,4h native budget. Do not duplicate it.
-- Wrapper automatically audits/renders after complete native run; preserve its
-  analysis hashes and reuse native data if plotting fails. Review actual
-  velocity/displacement/kinetic curves, localization and run-out. If no transition
-  occurs, report that result before tuning or expensive repetition. Never equate
-  native completion/output consistency with scientific or landslide validation.
+  no tuned strength/viscosity/timeline. Completed19:39 WIB: native exit0,
+  complete=true, audit/render exit0. **No active native job; do not repeat this run.**
+- 61VTKs/915MPs, zero mass drift, minJ0.97840; crest descent260.8326mm,
+  max displacement298.1695mm, kappa_max0.0582425. Minimum strength reached the
+  residual10.3923kPa at5.5s.16 verified artifact hashes retain sources, proofs,
+  native VTK/CSV, logs, PNG, MP4 and independent review under
+  `docs/evidence/slope-creep-2026-10-22/hold-30s-001/`.
+- **The requested creep-to-landslide transition is NOT VERIFIED.** Overview
+  shows broad deformation with toe/base strain concentration, no detached mass
+  or run-out. Raw crest secant speeds decline9.9118mm/s (0–5s),8.7863 (5–10s),
+  8.3938 (10–20s),8.3405 (20–30s). Local maximum speed is transient: sampled
+  peak0.34641m/s at5s vs final0.16231. Native completion/output consistency PASS
+  does not establish accelerating creep, a macroscopic landslide or calibration.
+- User has been told the result. No new parameter/duration experiment launched.
+  Next safe work: bounded diagnosis using saved displacement/velocity topology
+  and constitutive constant-stress response with the actual slope preset.
+  Establish whether bounded residual strength plus constant viscosity can
+  represent the requested failure mechanism before proposing numerical/model
+  changes. Do not lower viscosity/strength or extend runs just to force collapse.
+  Report a concrete evidence-based mechanism/plan before another expensive run.
 
-Heartbeat **mpm-lanjut-migrasi-arsitektur**, named **MPM creep menuju longsor**,
-continues this new task: next check20:00 WIB then hourly, quiet status-first
-checks, no active polling or duplicate solvers, only notify
-meaningful progress/completion/failure. The old Wang diagnosis/slower run is
+Heartbeat **mpm-lanjut-migrasi-arsitektur** continues only bounded diagnosis,
+next wakeup2026-10-23 02:30 WIB then every5h to save tokens. This completed-run
+monitor must not rerun/rearchive/renotify the same completed result. Only notify
+new actionable findings; if independent diagnosis finishes and human input is
+needed, save that concrete checkpoint and remove the obsolete automation.
+The old Wang diagnosis/slower run is
 superseded by the new user request and must not start automatically.
 Keep checkpoints/evidence/docs/wiki updated, commit and push the feature branch;
 never merge main. Preserve immutable raw sources and personal Obsidian settings.
