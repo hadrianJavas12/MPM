@@ -44,3 +44,7 @@ __pycache__/
 !/research/**/*.csv
 !/research/**/*.png
 !/research/**/*.mp4
+
+# Explicitly retained Wang2017 native pilot media.
+!/docs/evidence/wang2017-descent-2026-10-22/**/*.png
+!/docs/evidence/wang2017-descent-2026-10-22/**/*.mp4

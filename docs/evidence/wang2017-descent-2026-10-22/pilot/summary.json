@@ -1,0 +1,72 @@
+{
+  "scope": "Completed physical-speed pilot; not full Figure3 reproduction",
+  "sourceCommitAtNativeLaunch": "c2722e3c065c87c96ce270c2cf36cbd127ffc3f2",
+  "nativeExitCode": 0,
+  "pilot": {
+    "passedConsistencyChecks": true,
+    "nativeComplete": true,
+    "scope": "Saved output consistency, not FEM equivalence or experimental validation",
+    "scientificValidation": false,
+    "frames": 11,
+    "massKgPerM": 466520.1674374,
+    "physicalTimeS": 1.0,
+    "commandedSettlementM": 0.0001,
+    "measuredSettlementM": 9.923834392852e-05,
+    "maxAbsoluteMeanPenaltyGapM": 7.616560714832e-07,
+    "maxParticlePenaltyGapM": 1.739829530456e-06,
+    "initialReactionTransientsObserved": true,
+    "quasiStaticReferenceAgreement": "NOT_VERIFIED",
+    "reactionUpwardNPerM": 1096.784666714,
+    "sources": [
+      {
+        "path": "vtk\\particles_0000.vtk",
+        "sha256": "f43d6467f91fb8aa61160713ad9af69bbd804bea545eafb9783b297a925554ec"
+      },
+      {
+        "path": "vtk\\particles_0001.vtk",
+        "sha256": "3c7750904573903ac9ac4384fcdf622b6354aeddf59095caffbed68ad4c1a3d0"
+      },
+      {
+        "path": "vtk\\particles_0002.vtk",
+        "sha256": "3119f270ef32dafd40fe3d4e30b933514249fce98933eeffa080295ae6a4463d"
+      },
+      {
+        "path": "vtk\\particles_0003.vtk",
+        "sha256": "0c67905dae8e7dea899ffaad8ac0f87edfb5e68fa6ccc6436e816632ed868833"
+      },
+      {
+        "path": "vtk\\particles_0004.vtk",
+        "sha256": "4db2598b6a130f774fbc4c5a9c17cda36a8fcf4ea44f0ab5c7b81a6c72a2452a"
+      },
+      {
+        "path": "vtk\\particles_0005.vtk",
+        "sha256": "1343a09d4595479f727baf90f5c9ad7a629e0eb835acb732ef25ac07bf6d642f"
+      },
+      {
+        "path": "vtk\\particles_0006.vtk",
+        "sha256": "446e94eae1bc55e25c8696fdb676f2ea860d46c734edffe5ef47e8710627d237"
+      },
+      {
+        "path": "vtk\\particles_0007.vtk",
+        "sha256": "436eec52a4f047d73d85b7e569b2d7249ae84d7be799789f365b1558b59ca2e4"
+      },
+      {
+        "path": "vtk\\particles_0008.vtk",
+        "sha256": "3520f677d2cd39e718655ca00969607f47a5886252ea17cf58ea62f36cec4057"
+      },
+      {
+        "path": "vtk\\particles_0009.vtk",
+        "sha256": "0a5724ed12ab4f08b3d2a3a3acd08bd6bdbbb897288478c6c1ea17e8365cc6ba"
+      },
+      {
+        "path": "vtk\\particles_0010.vtk",
+        "sha256": "fa8b1b2b33c2b56e19c35134d1ccd53a148a897c37260adac3937b3542c8ab70"
+      }
+    ]
+  },
+  "fullTargetRun": "NOT_RUN",
+  "reliefHeightM": 10.0,
+  "reliefHeightSource": "ASSUMPTION: not numerically dimensioned in Figure2",
+  "referenceCurveAgreement": "NOT_VERIFIED: short prefix and initial reaction transients",
+  "scientificValidation": false
+}

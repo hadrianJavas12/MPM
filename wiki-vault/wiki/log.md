@@ -495,3 +495,15 @@ Added individual simulation videos (`1_triaxial_3d_hardening_t100h.mp4`, `2_tria
 
 Recorded [[wang2017-reference-inputs-2026-10-22]] and [[wang2017-prescribed-descent]], SHA-256 PDF identity, Table 1 Soil#1/Soil#2 values and Figures 2–3 provenance. Added benchmark documentation and reference JSON for `codex/wang2017-prescribed-descent`; 10 m relief is explicitly assumed, Soil#2 is deferred, and penalty-driven explicit MPM is distinguished from FEM local arc-length. Evidence remains **NOT_RUN**; raw sources and prior log entries are preserved.
 
+
+## [2026-10-22] benchmark | Wang2017 physical-speed pilot
+
+Added [[wang2017-prescribed-descent]] from immutable [[wang2017-reference-inputs-2026-10-22]].
+Native source c2722e3 completed the 1s / 0.1mm pilot:915MPs,3425 gravity+3440 loading
+steps,11VTKs,measured mean0.0992383mm,reaction1.09678kN/m,zero mass error.
+Saved-output checks pass; native8/framework10/Node36 pass. Raw signed initial
+force transients remain visible. Full Figure3 comparison NOT_RUN; assumed10m
+relief, finite penalty compliance and MPM/FEM differences remain explicit.
+Observed throughput extrapolates full1000s target to about2.35 wall days;
+user preference for full explicit versus a separate quasi-static route is pending.
+Source/evidence/media and commands are linked from docs/benchmarks/WANG2017_SLOPE_DESCENT.md.

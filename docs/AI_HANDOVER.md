@@ -1,6 +1,53 @@
 # AI Engineering Handover — CL-MPM
 
-**Operational checkpoint: 2026-10-17, Asia/Jakarta. Read this first.**
+**Operational checkpoint: 2026-10-22, Asia/Jakarta. Read this first.**
+
+## Current task: Wang2017 prescribed crest descent
+
+User supplied `C:/Users/ASUS/Downloads/101007s11629_016_3951_1.pdf` and requested
+the first numerical slope test with prescribed downward velocity. Actual branch:
+`codex/wang2017-prescribed-descent`, from merged main `9e97e00`. No main change.
+Read [the benchmark guide](benchmarks/WANG2017_SLOPE_DESCENT.md) and
+`research/references/wang2017/source.json`; the PDF SHA is recorded, not uploaded.
+
+Implemented six owned scenario modules under `scenarios/slope-descent/`, small
+new geometry/loading component kinds and two short trusted cases. Soil#1 uses
+the existing perfect MC law, not a new constitutive algorithm. Confirmed paper
+inputs: gamma20 kN/m3, E20 MPa, nu.25, c30 kPa, phi35deg, psi0, patch x7..10 m,
+velocity1e-4 m/s, width20 m, base5 m, slope60deg. Relief10 m is an explicitly
+provisional assumption because Fig.2 does not dimension it. Soil#2 is deferred.
+
+**Completed frozen pilot:** executed `c2722e3`, native exit0; 915 MPs, gravity
+converged after3425 steps; reporting reset preserved stress/strain/F/history;
+loading3440 steps, 1 s, commanded0.1 mm, measured0.0992383 mm, 11 VTKs,
+final signed reaction1.09678 kN/m, zero mass error. Saved-output consistency
+passes. Native controls8 (c8041c0), framework10 (131f57f), check/Node36 pass.
+Expected one-step gravity-budget failure is retained as complete=false, not
+mislabelled physical success. Node HEAD was sampled at completion and is labelled
+accordingly. Current-source logging-only change131f57f did not alter frozen math.
+
+Working run: `output/wang2017-2026-10-22/pilot-001/`; retained source/VTK/CSV,
+proofs, signed reactions, PNG and MP4: `docs/evidence/wang2017-descent-2026-10-22/pilot/`.
+There is no active native job. **Do not rerun the finished pilot or tests.**
+
+**Not full replication:** initial signed-force transients are visible; gravity
+tolerance, zero loading damping, finite penalty compliance, assumed height and
+coarse grid do not establish a quasi-static reference curve. Preserve negative
+reaction values. Paper solver is FEM local arc-length; this is explicit MPM.
+The full0.1 m target requires1000 physical seconds and around3.4 million steps.
+Observed loading throughput extrapolates to about2.35 wall days, with substantial
+uncertainty. An asynchronous user question asks whether to review pilot first,
+develop a separately identified quasi-static route, or run original-speed full
+explicit MPM. **Full run NOT_RUN; wait for that preference before dependent work.**
+No silent velocity, mass, time scaling, force fitting, smoothing or fabricated
+completion is authorized. Existing continuation automation remains paused.
+
+Prior main study statements below are historical. The separately identified
+M4 HS triaxial issue (target22%, saved14.26%, postprocessor-created complete=true)
+remains open and was not modified as part of this new benchmark.
+
+## Earlier merged architecture and H/HS study history
+
 **Milestones M0–M6 of the Mohr–Coulomb Hardening (Model H) vs Hardening–Softening (Model HS)
 comparative study are 100% COMPLETE on branch `codex/mc-hardening-softening-study` (branched
 from `origin/main` at `e6f9abe` after PR #8 merged the Section 2/5 architecture migration).**

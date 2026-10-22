@@ -352,3 +352,21 @@ On the final canonical root-ASDF layout (`436b561` / `9dfb58b`):
 
 No new 40-second full Joss run was started (the earlier run on `62adb50` remains
 `STOPPED_BY_USER` at 4.2 s); complete G3 and scientific validation are not claimed.
+
+## Wang2017 prescribed descent pilot, 2026-10-22
+
+Branch codex/wang2017-prescribed-descent: source c2722e3 completed actual Windows
+MPM for a one-second physical-speed pilot, 915 MPs and 11 VTKs. Native controls8,
+existing framework10 and Node36/check pass. This is not a full Figure3 run:
+initial force transients, assumed relief, mesh and penalty sensitivity remain open.
+Full 0.1m target NOT_RUN. See the benchmark guide and retained evidence.
+
+```powershell
+.\windows\cl-mpm.cmd tests\benchmarks\wang2017-descent.lisp output\wang-negative-FRESH
+.\windows\cl-mpm.cmd scripts\run-case.lisp cases\benchmarks\wang2017-soil1-pilot.lisp output\wang-pilot-FRESH
+.\toolchain\analysis-venv\Scripts\python.exe scripts\plot-wang2017-descent.py --run-dir output\wang-pilot-FRESH --video
+```
+
+The negative output must be fresh: its one-step gravity failure is expected and
+asserted as incomplete; the control process itself exits0. Never turn a partial
+run into complete merely because plotting produced a video.
