@@ -35,13 +35,13 @@
                (cl-mpm/models/clay-creep:particle-work mp)))
        (cl-mpm:sim-mps sim)))
 
-(let* ((arguments (cl-mpm-script-args))
+(let* ((arguments (cl-user::cl-mpm-script-args))
        (baseline (load-drive-hold-control-case
                   (or (first arguments)
-                      (cl-mpm-path "cases/benchmarks/clay-creep-pusher-pilot.lisp"))))
+                      (cl-user::cl-mpm-path "cases/benchmarks/clay-creep-pusher-pilot.lisp"))))
        (scheduled (load-drive-hold-control-case
                    (or (second arguments)
-                       (cl-mpm-path "cases/benchmarks/clay-creep-pusher-drive-hold.lisp"))))
+                       (cl-user::cl-mpm-path "cases/benchmarks/clay-creep-pusher-drive-hold.lisp"))))
        (baseline-config (compile-configuration baseline))
        (scheduled-config (compile-configuration scheduled)))
   (drive-hold-check "Actual case configurations preserve material/geometry/solver physics"
