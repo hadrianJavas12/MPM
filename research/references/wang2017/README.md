@@ -8,4 +8,11 @@ Table 1 and Figure 2 are on printed page 179 (PDF page 5); Figure 3, the Soil#1 
 
 Figure 2 gives width 20 m, crest segments 7 m + 3 m loaded patch, base 5 m and slope 60°. It gives no numerical slope-relief height. The proposed 10 m relief is an explicit implementation assumption. Soil#1 is perfectly plastic; Soil#2 softening parameters are recorded for future work, with no implementation claimed here.
 
-See [benchmark scope and Windows commands](../../../docs/benchmarks/WANG2017_SLOPE_DESCENT.md). Evidence status is **NOT_RUN** until actual native results are recorded. No curve was digitized or fitted.
+See [benchmark scope and Windows commands](../../../docs/benchmarks/WANG2017_SLOPE_DESCENT.md). A one-second native pilot has completed; full reference-curve comparison remains **NOT_RUN**. No curve was digitized or fitted.
+
+Boundary clarification: the support symbols in Figure 2 do not enumerate every
+constrained DOF in the text. The initial source record's "bottom vertical rollers"
+is a diagram interpretation, not a quoted boundary specification. The pilot
+explicitly fixes bottom x/y and side x, leaves top free, and constrains the loaded
+strip by finite displacement springs. Bottom tangential fixity is an additional
+implementation assumption to resolve before quantitative reproduction.

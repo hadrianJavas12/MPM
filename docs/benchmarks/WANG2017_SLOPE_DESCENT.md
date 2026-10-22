@@ -27,6 +27,10 @@ Mass density must be derived as rho = 20,000/g kg/m³ using the case's recorded 
 
 The paper uses FEM local arc-length equilibrium tracking and compares it with modified Riks and implicit dynamics. This case uses explicit MPM with a penalty approximation to prescribed crest motion. It does not implement the paper's local arc-length algorithm. Boundary discretization, assumed relief, mesh, loading control and damping can change the curve; qualitative similarity does not establish quantitative reproduction or scientific validation.
 
+The pilot constrains side x motion and bottom x/y motion, leaving the top free.
+Figure 2 shows support symbols without a textual DOF enumeration; bottom
+tangential fixity is an implementation assumption, not an explicit paper value.
+
 Mass scaling is 1 and physical time is unchanged. At 1e-4 m/s, 0.1 m target descent requires **1,000 s of simulated physical time**, potentially millions of CFL-limited updates. A short pilot is operational evidence only; it cannot demonstrate the peak, post-peak path, or agreement with Figure 3. No complete-run flag, force curve or agreement percentage is inferred from setup or partial progress.
 
 ## Windows execution
