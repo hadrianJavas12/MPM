@@ -39,6 +39,20 @@ equal physical time across cases.
   on this branch. GitHub Actions on original main were failing; do not claim CI
   success for this work.
 
+## 2026-10-22 — Long-horizon CFL 0.10 completed in user run
+
+User's isolated 65° HS run reached 300/300 frames = 12,000 MPM updates,
+t=10.5674 s; max displacement 12.6932 m, toe runout 11.9153 m,
+max kappa 9.3405, minimum friction angle 13°, final kinetic energy
+30.307 kJ. Manifest file exists. End-of-log snippet contains no negative-J
+error. The 65° HS CFL 0.35 run previously stopped at t=1.6087 s.
+
+**Not yet convergence validated**: independent manifest fields/VTK count and
+CFL=0.05 same-physical-time comparisons remain outstanding. Because
+settling duration may change with CFL, compare initial states before
+inferring timestep-only effects. A constant maximum over several frames
+does not imply global mechanical equilibrium. No solver changes made.
+
 ## 2026-10-21 CFL probe — 65° HS
 
 A native run at CFL=0.10 and 80×40 updates printed frame 80/80 with
