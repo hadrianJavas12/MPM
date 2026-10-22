@@ -614,3 +614,11 @@ pusher-pilot-001 wrapper30008. Strict compatibility and dynamic review pending;
 no full120s pusher run or landslide claim. Documented fixed original contact
 profile, no new-surface search, force/gap sampling and missing integrated work
 validation. Updated guide/testing/handover/index; raw sources remain immutable.
+
+## [2026-10-22] checkpoint | Gravity-only runner compatibility exact PASS
+
+ec285c0 gravity-compat-001 completed native/audit/render exit0. Strict comparison
+to pilot-002 PASS:14 VTK files and all11 CSV states byte-identical, with identical
+physical config/cadence.15 hashes retain source/data/media/comparison. No repeat
+run is needed. The pusher pilot remains a separate active job; dynamic release
+and landslide outcomes are not inferred from this compatibility regression.

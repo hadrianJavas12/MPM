@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "scope": "Strict saved-state prefix regression; not scientific failure validation",
+  "reference": "D:\\MPM\\output\\slope-creep-2026-10-22\\pilot-002",
+  "candidate": "D:\\MPM\\output\\slope-creep-2026-10-22\\gravity-compat-001",
+  "prefixPhysicalTimeS": 1.0,
+  "candidatePhysicalTimeS": 1.0,
+  "physicalConfigurationIdentical": true,
+  "outputCadenceIdentical": true,
+  "historyPrefixByteIdentical": true,
+  "vtk": [
+    {
+      "path": "vtk/gravity_equilibrium.vtk",
+      "referenceSha256": "c43b08ebfae38d2d74dd145da29f0bd2887f180d6e629d2b1e844a0e0ed2d18b",
+      "candidateSha256": "c43b08ebfae38d2d74dd145da29f0bd2887f180d6e629d2b1e844a0e0ed2d18b",
+      "identical": true
+    },
+    {
+      "path": "vtk/gravity_initial.vtk",
+      "referenceSha256": "c5738cb0ada268a9aefa2619216167b7b4ab4abbede8a46ca422e928dbab2f57",
+      "candidateSha256": "c5738cb0ada268a9aefa2619216167b7b4ab4abbede8a46ca422e928dbab2f57",
+      "identical": true
+    },
+    {
+      "path": "vtk/mesh.vtk",
+      "referenceSha256": "e9a20b6089a7cbcfa60fe35b657b5bd1bab099eb70f52554756bd6060daac26a",
+      "candidateSha256": "e9a20b6089a7cbcfa60fe35b657b5bd1bab099eb70f52554756bd6060daac26a",
+      "identical": true
+    },
+    {
+      "path": "vtk/particles_0000.vtk",
+      "referenceSha256": "1042c3b4ca8b0d640ba05f638352b0b70f390962d0eec6aa2cf5f54d44127e44",
+      "candidateSha256": "1042c3b4ca8b0d640ba05f638352b0b70f390962d0eec6aa2cf5f54d44127e44",
+      "identical": true
+    },
+    {
+      "path": "vtk/particles_0001.vtk",
+      "referenceSha256": "126ad4866a1aded19fa6ae4000e01a37c37e9ce192e3603ba70f1cfd82c73ca2",
+      "candidateSha256": "126ad4866a1aded19fa6ae4000e01a37c37e9ce192e3603ba70f1cfd82c73ca2",
+      "identical": true
+    },
+    {
+      "path": "vtk/particles_0002.vtk",
+      "referenceSha256": "364e0071a61fbe635ea6186a11c8ddfd2a1637d82804ad2cd1e6f1ebbc970469",
+      "candidateSha256": "364e0071a61fbe635ea6186a11c8ddfd2a1637d82804ad2cd1e6f1ebbc970469",
+      "identical": true
+    },
+    {
+      "path": "vtk/particles_0003.vtk",
+      "referenceSha256": "adc6d1aede4d659c357d6054b6b8ea193603267d6ccc81a3991599b27c33314d",
+      "candidateSha256": "adc6d1aede4d659c357d6054b6b8ea193603267d6ccc81a3991599b27c33314d",
+      "identical": true
+    },
+    {
+      "path": "vtk/particles_0004.vtk",
+      "referenceSha256": "986391a575cfe03da3843464f76b9222268427969bc720cfbea9fc61f07383f5",
+      "candidateSha256": "986391a575cfe03da3843464f76b9222268427969bc720cfbea9fc61f07383f5",
+      "identical": true
+    },
+    {
+      "path": "vtk/particles_0005.vtk",
+      "referenceSha256": "402138643d3b63e12908acdf6f9131c978e9483ad130cadd45ee0d5f5c2def62",
+      "candidateSha256": "402138643d3b63e12908acdf6f9131c978e9483ad130cadd45ee0d5f5c2def62",
+      "identical": true
+    },
+    {
+      "path": "vtk/particles_0006.vtk",
+      "referenceSha256": "7dc1e6c9921754357b65f3f7ea0c43d117118d0cdcb222cc128636b1c53a6c79",
+      "candidateSha256": "7dc1e6c9921754357b65f3f7ea0c43d117118d0cdcb222cc128636b1c53a6c79",
+      "identical": true
+    },
+    {
+      "path": "vtk/particles_0007.vtk",
+      "referenceSha256": "999e9a58ebd762673a0ca40fbb47048f505bf93d9bc9bb3289c23c9204542508",
+      "candidateSha256": "999e9a58ebd762673a0ca40fbb47048f505bf93d9bc9bb3289c23c9204542508",
+      "identical": true
+    },
+    {
+      "path": "vtk/particles_0008.vtk",
+      "referenceSha256": "1e99d8c59addaa15d8af51164d3a654c83e1efb24fd9e46748a739de29687e53",
+      "candidateSha256": "1e99d8c59addaa15d8af51164d3a654c83e1efb24fd9e46748a739de29687e53",
+      "identical": true
+    },
+    {
+      "path": "vtk/particles_0009.vtk",
+      "referenceSha256": "139df2575001dba3437b1800a2a240f180e5df50897eefa8fbc930d4ea6e6dd1",
+      "candidateSha256": "139df2575001dba3437b1800a2a240f180e5df50897eefa8fbc930d4ea6e6dd1",
+      "identical": true
+    },
+    {
+      "path": "vtk/particles_0010.vtk",
+      "referenceSha256": "761f390f680f461c9845d760cdaa405ffae789c5598045e59e4c770418e8a82e",
+      "candidateSha256": "761f390f680f461c9845d760cdaa405ffae789c5598045e59e4c770418e8a82e",
+      "identical": true
+    }
+  ],
+  "comparisonScriptSha256": "8ceffc56a331ebaa93a36f36d4d04e442d9b02d5e149a8b3d03227f00224f909"
+}

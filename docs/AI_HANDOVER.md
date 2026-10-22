@@ -71,7 +71,7 @@ The user authorizes the duration extension despite the earlier hold on repeats.
  stress histories or full-MPM/laboratory results; geometry/stress redistribution
  can still affect the coupled slope. More duration alone does not guarantee failure.
 
-### Current checkpoint: unilateral crest pusher — focused controls PASS, pilots active
+### Current checkpoint: unilateral crest pusher — controls/compatibility PASS, pusher pilot active
 
 Latest user clarification is retained in
 `wiki-vault/raw/creep-pusher-clarification-2026-10-22.md`. The communicated
@@ -92,9 +92,11 @@ not time-integrated outrunning. No material law or old bilateral boundary change
 Two bounded **1s / 11-state** jobs launched on ec285c0, each1h wall budget:
 
 - `output/slope-creep-2026-10-22/gravity-compat-001/`: start23:22:26 WIB,
-  wrapper19844 / native cmd23896. Checks changed runner preserves gravity-only
-  outputs; after completion compare strictly to pilot-002 with
-  `scripts/compare-creep-prefix.py`. Do not rerun either baseline.
+  wrapper19844 / native cmd23896. **Completed native/audit/render exit0**.
+  Strict comparison to pilot-002 **PASS:14 VTK files and all11 CSV states
+  byte-identical**, physical configuration/cadence identical.15 artifact hashes
+  archived in `docs/evidence/slope-creep-2026-10-22/gravity-compat-001/`.
+  Comparison is saved in run and evidence; do not repeat it or either solver.
 - `output/slope-creep-2026-10-22/pusher-pilot-001/`: start23:22:51 WIB,
   wrapper30008 / native cmd40432. New crest patch7–10m, driver0.005m/s,
   penaltyScale5, unchanged assumed material/geometry. Read adjacent `-status.json`
@@ -189,10 +191,10 @@ are in `crest-sequence-regression/`. No repeat13/4/Node suite is needed.
   changes. Do not lower viscosity/strength or extend runs just to force collapse.
   Report a concrete evidence-based mechanism/plan before another expensive run.
 
-Heartbeat **mpm-lanjut-migrasi-arsitektur** follows the two bounded jobs above;
+Heartbeat **mpm-lanjut-migrasi-arsitektur** follows the remaining pusher job above;
 the old120s job is complete. Check latest status once and remain quiet while
 healthy. No active polling, duplicate solver or repeated passed controls.
-After completion, strict gravity comparison and actual pusher review/archival,
+Gravity compatibility is already complete/archived; after actual pusher review/archival,
 then update docs/wiki and commit/push. Notify meaningful results/failure only.
 The old Wang diagnosis/slower run is
 superseded by the new user request and must not start automatically.

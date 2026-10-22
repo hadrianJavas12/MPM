@@ -270,8 +270,11 @@ but the full120s pusher case is **NOT_RUN**. The1s case launched **23:22 WIB,
 2026-10-22**, source **ec285c0**, in
 `output/slope-creep-2026-10-22/pusher-pilot-001/`, wrapper30008,1h wall budget.
 Its actual state is in adjacent `pusher-pilot-001-status.json`; no reviewed
-dynamic result is claimed yet. A separate1s gravity-only compatibility run
-(`gravity-compat-001`, wrapper19844, same source) will compare to pilot-002.
+dynamic result is claimed yet. The separate1s gravity-only compatibility run
+(`gravity-compat-001`, wrapper19844, same source) completed native/audit/render
+exit0 and **strict PASS:14 VTK files and all11 CSV states byte-identical** to
+pilot-002; physical configuration/cadence unchanged.15 artifact hashes are
+retained under `docs/evidence/slope-creep-2026-10-22/gravity-compat-001/`.
 The19 hashed control artifacts are in
 `docs/evidence/slope-creep-2026-10-22/pusher-controls-001/`.
 Review the short pilot before deciding whether a longer run is justified.

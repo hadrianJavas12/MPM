@@ -84,8 +84,10 @@ surface search, and frame-level force/gap CSV is not integrated actuator work.
 Two1s/11-state jobs launched23:22 WIB on2026-10-22, both ec285c0 /1h budget:
 gravity-compat-001 (wrapper19844) and pusher-pilot-001 (wrapper30008) under
 output/slope-creep-2026-10-22. Read adjacent status JSON before acting. After
-completion compare gravity output strictly to pilot-002, and review actual
-pusher command/patch settlement/contact counts/non-tensile mapped reaction.
+completion review actual pusher command/patch settlement/contact counts/non-tensile
+mapped reaction. Gravity compatibility has completed native/audit/render exit0:
+strict14 VTK/all11 CSV states byte-identical to pilot-002, same config/cadence,
+15 retained artifact hashes. Do not repeat that comparison or solver.
 No full120s pusher run, calibrated result or verified landslide is claimed.
 
 Source/commands/assumptions are in `docs/benchmarks/CLAY_CREEP_SLOPE.md`;

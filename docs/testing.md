@@ -471,6 +471,8 @@ non-mutation, inherited penalty timestep and unchanged gravity configuration.
 The named0.02m/s control is not a dynamic outrun test. Actual1s/11-state native
 pilots launched23:22 WIB on2026-10-22 from ec285c0: `gravity-compat-001` and
 `pusher-pilot-001` under `output/slope-creep-2026-10-22/`. Both have adjacent
-status JSON and1h budgets. Gravity compatibility comparison and dynamic pusher
-review remain pending. No full120s pusher run or landslide PASS is claimed.
+status JSON and1h budgets. Gravity compatibility is now complete: native/audit/
+render exit0 and strict PASS,14 VTK files/all11 CSV states byte-identical to
+pilot-002,15 retained hashes in gravity-compat-001. Dynamic pusher review remains
+pending. No full120s pusher run or landslide PASS is claimed.
 Read [the guide](benchmarks/CLAY_CREEP_SLOPE.md) for commands and contact/work limits.
