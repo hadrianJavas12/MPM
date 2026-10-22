@@ -1,5 +1,13 @@
 # AI Engineering Handover — CL-MPM
 
+## 2026-10-22 — CFL 0.10, 65° HS long native run to 300 frames
+
+User reports that the isolated headless native 65° HS case generated from `output/probe-65-cfl010-300/cases/slope_65_hs.lisp` reached CLIFF frame 300/300, updates=12000, physical t=10.5674 s at CFL=0.10. Final displayed outputs: max_kappa=9.3405, min_phi=13°, max_disp=12.6932 m, toe_runout=11.9153 m, kinetic energy=3.0307e4 J. `Test-Path output/probe-65hs-cfl010-300-native/manifest.json` returned True. Last 12 matching log lines displayed no `NUMERICAL_FAILURE` or `ERROR-DF-NEGATIVE`. Manifest completion fields and 301 expected VTK files have **not** been independently inspected.
+
+This is evidence of successful *execution through at least 10.57 physical seconds* at CFL 0.10 for this one case, NOT verified timestep convergence or physical stability. The final kinetic energy is nonzero; stable maxima of displacement/kappa in the last several output frames do not establish absence of continued motion. H/HS pair, other inclinations, mesh sensitivity, and particle-domain behavior remain unverified. Do not treat CFL reduction as a solver-wide validated fix.
+
+Next diagnostic: verify manifest `complete=true`, `frames=300`, and 301 VTK snapshots, then run separate CFL=0.05 65° HS for ~600 frames to compare displacement/runout/KE/softening metrics **at matched physical time** (~10.57 s), not matched output frames. Note the fixed 220-step elastic settling may cover a different physical duration when CFL changes; document/check its impact before claiming pure timestep convergence. No solver equations, material law, or safeguards modified.
+
 ## 2026-10-21 — CFL 0.10 probe: 65° HS reached frame 80
 
 User ran `python scripts/sweep_unnotched_slope.py --angles 65 --cfl-scale 0.10 --frames 80 --dry-run --output output/probe-65-cfl010`, then directly executed the `slope_65_hs.lisp` native case in a distinct directory `output/probe-65hs-cfl010-native`.
