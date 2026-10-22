@@ -1,0 +1,81 @@
+{
+  "nativeSourceCommit": "cfc65e9a9b33b17c84d2906055b92a52f66b979a",
+  "nativeComplete": true,
+  "physicalTimeS": 120,
+  "frames": 241,
+  "crestSettlementM": 0.9205906108573936,
+  "maxDisplacementM": 1.170413062894625,
+  "maxCreepKappa": 0.27485535764840346,
+  "maxSpeedMPerS": 0.22673731798433988,
+  "sampledPeakMaxSpeedMPerS": 0.34640655435919476,
+  "finalKineticJPerM": 84.69302967749378,
+  "sampledPeakKineticJPerM": 93.1362931862307,
+  "zeroMassDrift": true,
+  "minJAcrossSavedFrames": 0.9746700908167965,
+  "crestSecantWindows": [
+    {
+      "startS": 0,
+      "endS": 30,
+      "crestSettlementSecantMmPerS": 8.69442089490993
+    },
+    {
+      "startS": 30,
+      "endS": 60,
+      "crestSettlementSecantMmPerS": 8.078679557456004
+    },
+    {
+      "startS": 60,
+      "endS": 90,
+      "crestSettlementSecantMmPerS": 7.313627295941516
+    },
+    {
+      "startS": 90,
+      "endS": 120,
+      "crestSettlementSecantMmPerS": 6.599625946939002
+    }
+  ],
+  "selectedSnapshotBounds": [
+    {
+      "frame": 0,
+      "minXY": [
+        0.24980412379676104,
+        0.24713201150699898
+      ],
+      "maxXY": [
+        19.750422771788667,
+        14.67243926597466
+      ],
+      "insideDisplayedViewport": true
+    },
+    {
+      "frame": 60,
+      "minXY": [
+        0.25039112566923316,
+        0.2441654386107301
+      ],
+      "maxXY": [
+        19.760025745246534,
+        14.503417061281043
+      ],
+      "insideDisplayedViewport": true
+    },
+    {
+      "frame": 240,
+      "minXY": [
+        0.2512644498819287,
+        0.24221615345872557
+      ],
+      "maxXY": [
+        19.789978907704235,
+        14.03482280990768
+      ],
+      "insideDisplayedViewport": true
+    }
+  ],
+  "prefixVtkFilesByteIdentical": 64,
+  "prefixHistoryByteIdentical": true,
+  "macroscopicLandslideVerified": false,
+  "scientificValidation": false,
+  "visualReview": "Distributed creep and toe/base strain concentration; no detached mass or clear run-out in reviewed particle overview.",
+  "caveat": "Late instantaneous local speed rises but does not establish sustained crest acceleration. Constant-stress analytical examples below are not full-MPM predictions."
+}

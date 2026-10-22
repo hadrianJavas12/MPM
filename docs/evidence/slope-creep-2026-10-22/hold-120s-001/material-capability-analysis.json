@@ -1,0 +1,32 @@
+{
+  "scope": "Analytical 0D constant-stress model capability; not native MPM measurements or laboratory data",
+  "inputs": {
+    "yieldPeakPa": 51961.524227066315,
+    "yieldResidualPa": 10392.304845413264,
+    "softeningKappa": 0.01,
+    "viscosityPaS": 50000000.0
+  },
+  "softeningModulusPa": 4156921.9381653047,
+  "formulaBeforeResidual": "kappa_dot=(q-Yp+H*kappa)/eta, H=(Yp-Yr)/kappa_s",
+  "formulaAfterResidual": "kappa_dot=(q-Yr)/eta for fixed q and constant eta",
+  "exampleStressValuesAreAssumptions": true,
+  "examples": [
+    {
+      "assumedConstantKirchhoffQPa": 60000.0,
+      "analyticalResidualArrivalTimeS": 21.890072850500186,
+      "analyticalPostResidualRatePerS": 0.0009921539030917346
+    },
+    {
+      "assumedConstantKirchhoffQPa": 100000.0,
+      "analyticalResidualArrivalTimeS": 7.498804891821936,
+      "analyticalPostResidualRatePerS": 0.0017921539030917347
+    },
+    {
+      "assumedConstantKirchhoffQPa": 150000.0,
+      "analyticalResidualArrivalTimeS": 4.251659105024899,
+      "analyticalPostResidualRatePerS": 0.002792153903091735
+    }
+  ],
+  "interpretation": "Softening increases the 0D rate until residual strength; afterward constant stress/viscosity gives secondary creep. More time alone does not guarantee a failure transition. Full-slope geometry and stress redistribution can still change rates.",
+  "nextStep": "Review mechanism and localization/activation assumptions before changing parameters or running beyond the authorized120s."
+}

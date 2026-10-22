@@ -3,8 +3,10 @@
 This is a separate total-stress clay demonstration on
 `codex/slope-creep-landslide`, derived from the Wang geometry implementation.
 It is not the Wang Soil1 Mohr-Coulomb benchmark and does not repair that model's
-recorded integration failure. The crest has no actuator or imposed displacement.
-Motion follows constant self-weight and a time-dependent material law.
+recorded integration failure. The completed gravity-only runs have no crest
+actuator or imposed displacement: motion follows constant self-weight and a
+time-dependent material law. A later unilateral-pusher experiment is in
+development, separately identified below; it has not yet been tested or launched.
 
 ## Material and time convention
 
@@ -40,7 +42,7 @@ must be assessed from computed outputs, not assumed from the preset.
 | Viscosity eta | 50 MPa s |
 | Width; relief; base; crest; angle | 20 m; 10 m; 5 m; 10 m; 60 degrees |
 | Grid; particles per direction/cell | 1 m; 2 |
-| Physical hold | 1 s pilot / 30 s exploratory run |
+| Completed gravity-only holds | 1 s pilot / 30 s / 120 s observations |
 
 These are assumptions, not laboratory calibration. The relief comes from the
 earlier provisional geometry. The pressure-independent phi_u=0 material is an
@@ -140,11 +142,9 @@ mass/run-out. Crest secant rates decline9.91mm/s (0–5s) to8.34mm/s (20–30s);
 local velocity peaks are transient. The minimum strength reaches residual at5.5s,
 but strength loss alone does not prove accelerating slope failure.
 
-No extra duration/parameter run has been started. Next is a bounded diagnosis
-of saved displacement/velocity topology and constant-stress response using the
-actual slope parameters. An auditable failure mechanism is needed before
-proposing a changed model; reducing viscosity/strength for an attractive collapse
-would not establish scientific validity. Do not rerun finished tests or outputs.
+The subsequently authorized 120 s observation and mechanism review are recorded
+below. No strength/viscosity tuning was used to obtain the longer result.
+Do not rerun finished tests or outputs.
 
 ## User-authorized120s extension
 
@@ -164,14 +164,14 @@ control artifacts are retained in `duration-120-config-check/`.
   -OutputDirectory D:\MPM\output\creep-120s-FRESH -MaxWallHours 4
 ```
 
-Actual job: sourcecfc65e9,21:38 WIB on2026-10-22,
-`output/slope-creep-2026-10-22/hold-120s-001/`, wrapper4680, NATIVE_RUNNING.
-Estimate around1h based on the completed30s job; nonlinear cost can differ.
+Actual job: source **cfc65e9**, launched **21:38 WIB on 2026-10-22**,
+`output/slope-creep-2026-10-22/hold-120s-001/`, wrapper 4680. Native exit 0 and
+complete=true at **22:31 WIB**; audit/render exit 0 at **22:33 WIB**.
 There is no valid restart checkpoint, so the longer job starts from the same
 initial conditions and recomputes0–30s. VTK alone lacks complete restart state.
 The self-contained preset avoids live nested-case loads outside frozen provenance.
 
-After completion, compare the first30s against the preserved baseline:
+The completed strict comparison against the preserved first 30 s baseline used:
 
 ```powershell
 .\toolchain\analysis-venv\Scripts\python.exe scripts\compare-creep-prefix.py `
@@ -183,3 +183,50 @@ After completion, compare the first30s against the preserved baseline:
 This checks exact saved prefix/config/cadence preservation, not calibrated
 failure. Assess actual motion, rate trends, localization and run-out separately.
 Do not infer that more elapsed time necessarily yields a landslide.
+
+**Result: strict PASS**, all 64 baseline VTK files (including mesh/gravity) and
+the first 61 CSV states byte-identical, with the same physical configuration
+and 0.5 s cadence. The 120 s run has 241 states and 915 MPs, zero mass drift,
+all saved history values finite and minimum J 0.97467. Crest settlement is
+0.92059 m, maximum displacement 1.17041 m and maximum kappa 0.274855.
+
+| Raw crest settlement interval | Secant rate (mm/s) |
+| --- | ---: |
+| 30–60 s | 8.079 |
+| 60–90 s | 7.314 |
+| 90–120 s | 6.600 |
+
+The declining rates and reviewed particle morphology show continuing distributed
+creep and toe/base strain concentration, without a detached sliding mass or clear
+run-out. **A macroscopic landslide is not verified.** Retained evidence has
+18 artifact hashes in
+`docs/evidence/slope-creep-2026-10-22/hold-120s-001/`, including native/source
+archives, proofs, CSV/VTK, PNG/MP4, prefix comparison and independent review.
+
+The separate `material-capability-analysis.json` is **analytical 0D reasoning**,
+not a new full-MPM run or laboratory test. At a fixed Kirchhoff equivalent stress
+q, after residual strength, `kappa_dot=(q-Yr)/eta` is constant for constant eta.
+Illustrative assumed stresses demonstrate why this law can approach secondary
+creep; more duration alone does not promise a failure transition. Coupled geometry
+and stress redistribution remain relevant to the actual slope.
+
+## Unilateral crest-pusher experiment — implementation in progress
+
+The user's later clarification, "tanah boleh meluncur lebih cepat", was
+communicated as a **crest driver descending at 0.005 m/s**, with compression-only
+contact so that the soil can move faster and separate. This is distinct from the
+completed gravity-only case. It introduces no particle velocity floor, imposed
+particle position, time-based strength switch or programmed collapse.
+
+The same uncalibrated clay law is retained. Contact is a tracked crest
+approximation with finite penalty compliance, not validated general surface
+contact. Contact force, gap, release and actuator work must be recorded and
+reviewed. This loading change neither fixes the former Wang MC integration
+failure nor establishes reference-paper agreement.
+
+**No pusher controls, pilot launch or result are claimed yet.** Before a bounded
+pilot, verify compression and release, absence of tensile traction, correct
+reaction signs, absence of particle motion clamps, exception-safe CSV retention
+and unchanged gravity-only defaults. The next checkpoint will record actual
+tested source, launch/status paths and native outputs; no solver is active at
+this documentation checkpoint. Do not repeat the completed 120 s job.

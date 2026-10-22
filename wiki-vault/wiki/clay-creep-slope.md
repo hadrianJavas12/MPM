@@ -2,7 +2,7 @@
 title: Experimental clay creep slope
 type: synthesis
 tags: [creep, clay, slope, viscoplasticity, native-windows]
-sources: [raw/clay-creep-design-2026-10-22.md, docs/benchmarks/CLAY_CREEP_SLOPE.md, docs/evidence/slope-creep-2026-10-22/controls/summary.json]
+sources: [raw/clay-creep-design-2026-10-22.md, raw/clay-creep-duration-inputs-2026-10-22.md, raw/creep-pusher-clarification-2026-10-22.md, docs/benchmarks/CLAY_CREEP_SLOPE.md, docs/evidence/slope-creep-2026-10-22/hold-120s-001/review.json]
 updated: 2026-10-22
 ---
 
@@ -11,7 +11,9 @@ updated: 2026-10-22
 The user requested creep toward landslide, recorded in
 [[clay-creep-design-2026-10-22]]. Branch `codex/slope-creep-landslide` adds a
 separate sustained-self-weight scenario to the [[reusable-simulation-framework]].
-The crest is free; no commanded descent/failure trajectory drives motion.
+The completed gravity-only runs have a free crest; no commanded descent/failure
+trajectory drives that motion. A later unilateral-pusher experiment is in
+development and must be distinguished from those completed results.
 
 Material: phi_u=0 total-stress clay surrogate with J2 Perzyna overstress and
 strength loss driven by accumulated equivalent creep strain. Kirchhoff yield
@@ -47,16 +49,34 @@ Update: the user subsequently requested longer duration, recorded in
 cadence and all physical/solver parameters (native config comparisoncfc65e9 PASS,
 5 retained hashes). Historical0.005m/s /0.1m are not caps; no artificial minimum
 particle motion is imposed. Job `hold-120s-001` launched21:38 WIB fromcfc65e9,
-wrapper4680,4h budget, NATIVE_RUNNING. Restart support is absent, so it starts
-from the same initial conditions; compare its first30s exactly to the old run.
-No other parameter change or failure outcome is assumed.
+wrapper4680,4h budget. It completed native exit0/complete=true at22:31 WIB,
+audit/render exit0 at22:33 WIB. Restart support is absent, so it recomputed from
+the same initial conditions. Strict prefix regression PASS:64 baseline VTK files
+(including mesh/gravity) and first61 CSV states are byte-identical; physical
+configuration and0.5s cadence match. Do not repeat the run or comparison.
+
+120s/241states/915MPs have finite saved history, zero mass drift, minimum J0.97467,
+crest settlement0.92059m, maximum displacement1.17041m, kappa_max0.274855.
+18 artifact hashes retain source/native proof/output/media, strict comparison,
+independent review and material-capability analysis in hold-120s-001.
 
 **Creep-to-landslide NOT_VERIFIED**: distributed creep/toe-base strain without
-detached mass or run-out; raw crest secant speed declines9.91→8.34mm/s instead
-of sustained acceleration. Residual strength is reached locally at5.5s.
-Completion is not calibration or failure validation. Next safe work is bounded
-mechanism diagnosis on saved fields and an actual-parameter stress-hold analysis,
-before model changes or expensive repeats. No parameter tuning has been performed.
+detached mass or run-out. Beyond30s, raw crest secant rates decline8.079/7.314/
+6.600mm/s across30–60/60–90/90–120s. Residual strength is reached locally at5.5s.
+Completion is not calibration or failure validation. No strength/viscosity tuning
+was performed. Separate analytical0D fixed-stress reasoning gives constant
+`kappa_dot=(q-Yr)/eta` after residual strength; illustrative assumed stresses are
+not full-MPM or laboratory measurements. Geometry/stress redistribution can
+still change coupled slope behavior; more duration alone does not guarantee failure.
+
+The latest clarification [[creep-pusher-clarification-2026-10-22]] was communicated
+as a crest driver moving at0.005m/s with compression-only contact: soil may
+outrun the driver and release. This is a new loading experiment, with the same
+assumed clay law and no particle velocity floor, position overwrite or scheduled
+collapse. It is not a fix for Wang MC. The tracked crest/finite-penalty contact
+approximation needs explicit force/gap/release/work diagnostics and limitations.
+**IMPLEMENTATION IN PROGRESS**: new focused controls and bounded pusher pilot
+are pending; no tested pusher result or active solver is claimed here.
 
 Source/commands/assumptions are in `docs/benchmarks/CLAY_CREEP_SLOPE.md`;
 linked integrity and evidence practices: [[scientific-authenticity-audit-2026-10-15]].

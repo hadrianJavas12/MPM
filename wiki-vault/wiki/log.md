@@ -584,3 +584,21 @@ No valid restart exists; self-contained case avoids unfrozen nested loads.
 Launched hold-120s-001 at21:38 WIB fromcfc65e9, wrapper4680,4h budget.
 Strict first30s VTK/CSV prefix comparison is planned after completion; no failure
 claim, parameter tuning or repeated finished controls. Raw intake remains immutable.
+
+## [2026-10-22] checkpoint | 120s creep complete; unilateral-pusher clarification
+
+Reviewed [[clay-creep-slope]] hold-120s-001 on sourcecfc65e9: native completed
+22:31 WIB, audit/render22:33 WIB,241states/915MPs, finite history, zero mass drift,
+minimum J0.97467, crest0.92059m,max displacement1.17041m,kappa_max0.274855.
+Strict first30s prefix PASS:64 baseline VTK files and61 CSV states byte-identical,
+with unchanged physical configuration/cadence.18 hashes retain actual sources,
+output/proofs/media, comparison, review and analytical0D capability reasoning.
+Raw crest secant rates decline8.079/7.314/6.600mm/s over30–60/60–90/90–120s;
+no detached mass/clear run-out or sustained accelerating failure is verified.
+The fixed-stress post-residual constant rate is analytical0D, not a full-MPM result.
+Recorded [[creep-pusher-clarification-2026-10-22]]: communicated0.005m/s moving
+crest driver with compression-only release so soil may outrun it; no particle
+velocity floor. Same assumed clay law, tracked-contact limitation, no MC fix.
+Implementation is in progress; new controls/pilot are pending and no solver is
+active at this checkpoint. Updated guide/testing/handover/index; preserved raw
+sources and prior append-only log. No repeat solver or finished controls.

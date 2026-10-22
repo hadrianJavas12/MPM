@@ -431,10 +431,34 @@ compilation atcfc65e9 passed an exact before/after comparison: only duration and
 frame count differ (30→120s,61→241); all other compiled physical/solver values
 and0.5s cadence match.5 verified artifacts are in `duration-120-config-check/`.
 No unchanged material/history/scenario/Node suite was repeated.
-Run `hold-120s-001` launched21:38 WIB atcfc65e9,4h budget, NATIVE_RUNNING.
-After completion use `scripts/compare-creep-prefix.py` to verify all original
-VTKs and CSV rows through30s exactly, then review actual failure evidence.
+Run `hold-120s-001` launched21:38 WIB atcfc65e9,4h budget, completed native
+exit0/complete=true at22:31 WIB, audit/render exit0 at22:33 WIB.
+`scripts/compare-creep-prefix.py` strict PASS: all64 baseline VTK files and first61
+CSV states through30s byte-identical, physical parameters/cadence identical.
+Do not repeat the completed comparison or solver.
 The longer run starts from the same initial conditions; restart support is absent.
 Native completion and saved-output consistency are separate from a verified
 creep-to-landslide transition. The new law is an assumed J2 clay surrogate,
 not the original Soil1 MC law or laboratory calibration. See the creep guide.
+
+The120s output has241states/915MPs, finite saved history, zero mass drift,
+minimum J0.97467, crest settlement0.92059m, maximum displacement1.17041m and
+kappa_max0.274855. Raw crest secant rates decline8.079/7.314/6.600mm/s over
+30–60/60–90/90–120s; no detached sliding mass or clear run-out is verified.
+18 artifact hashes retain sources, native output/proofs/media, strict comparison,
+independent review and analytical0D material-capability reasoning under
+`docs/evidence/slope-creep-2026-10-22/hold-120s-001/`. The fixed-stress analytical
+post-residual constant creep rate is not a full-slope or laboratory result.
+
+### Pending unilateral-pusher controls
+
+Following the user's clarification that soil may slide faster, a separate
+0.005m/s moving crest driver with compression-only release is in development.
+The same clay law is retained; no velocity floor or position overwrite is
+authorized. The tracked crest/finite-penalty contact approximation must be
+explicit. Focused controls must cover compression, separation/no tension,
+reaction signs, absence of motion clamps, retained failure histories and unchanged
+gravity-only defaults. **These new controls and the pusher pilot are NOT_RUN at
+this checkpoint; no active solver or landslide result is claimed.** Do not rerun
+unchanged full suites merely because the loading component is added; run the
+checks that actually exercise the changed contracts before a bounded pilot.

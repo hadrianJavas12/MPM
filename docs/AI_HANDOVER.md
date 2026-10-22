@@ -4,16 +4,18 @@
 
 ## Current task: experimental clay creep toward slope failure
 
-Latest human instruction (2026-10-22): modify the behavior toward creep leading
-to a landslide. Active branch **codex/slope-creep-landslide**, from9743448 on the
+Latest human instruction (2026-10-22): creep toward a landslide, with the later
+clarification "tanah boleh meluncur lebih cepat". This was communicated as a
+moving crest driver at 0.005 m/s that can lose contact when soil moves ahead,
+not a minimum velocity imposed on particles. Active branch **codex/slope-creep-landslide**, from9743448 on the
 Wang experimental branch; main remains9e97e00 (live GitHub checked this turn).
 Read [the creep guide](benchmarks/CLAY_CREEP_SLOPE.md). No UI or main change.
 
 New owned material: `materials/models/viscoplastic/clay-creep/` (package, pure law,
 transactional CLOS adapter), ASDF `cl-mpm/models/clay-creep`. New scenario:
 `scenarios/slope-creep/` (config, measurements, runner, adapter), reusing the
-existing slope builder, plus two short cases. **No prescribed crest trajectory.**
-Self-weight remains constant after elastic geostatic initialization. Creep is
+existing slope builder. **The completed 1/30/120 s runs have gravity-only loading
+and no prescribed crest trajectory.** Self-weight remains constant after elastic geostatic initialization. Creep is
 enabled at hold time0; stress/F/history are preserved, velocity/reporting origin
 zeroed and dynamic damping0. Material evolution, not a failure-time switch,
 drives weakening. The former Wang case/failure evidence are preserved.
@@ -27,7 +29,7 @@ Default eta50MPa*s, kappa_s.01, Yp=sqrt(3)*30kPa, Yr=sqrt(3)*6kPa are explicit
 demonstration assumptions. No subyield/primary creep, laboratory calibration,
 mesh-independent failure/run-out or reference-paper agreement is claimed.
 
-### Active120s observation — latest authorization 2026-10-22 21:38 WIB
+### Completed 120 s observation — reviewed 2026-10-22
 
 User explicitly requested more duration after the30s result, then clarified that
 creep speed/displacement may exceed the earlier reference values. Current
@@ -44,21 +46,49 @@ The user authorizes the duration extension despite the earlier hold on repeats.
  `2026-10-22T14:38:05Z`, wrapper PID4680. Output
  `output/slope-creep-2026-10-22/hold-120s-001/`; adjacent `-status.json`,
  `-launch.json`, `.stdout.log`, `.stderr.log`.4h native wall budget.
- **NATIVE_RUNNING**, not yet a result. Do not duplicate this job.
+ Native exit 0 / complete=true at **22:31 WIB**; audit/render exit 0 at
+ **22:33 WIB**. No active solver remains. Do not duplicate this job.
 - No valid restart checkpoint exists; output/checkpoints and save/load-sim are
  descriptors/stubs. This is a fresh0→120s run, not a reconstructed state fromVTK.
  The case is self-contained: nested cl-mpm-path base-case loads would escape
  the current frozen source capture. Do not introduce that shortcut here.
-- Wrapper automatically audits/renders after native completion. Leave
- `plot-slope-creep.py` and `plot_m5_cliff_comparison.py` unchanged while active;
- reuse saved native data if postprocessing fails. Do not repeat finished controls.
-- After complete, run `scripts/compare-creep-prefix.py` with reference
- `hold-30s-001`, candidate `hold-120s-001`, output under the latter. It must
- honestly compare all baselineVTKs and first61 CSV states exactly, without
- changing tolerances to pass. It checks preservation of the first30s, not failure.
- Review physical curves/particle topology separately; longer time does not
- guarantee failure. Archive comparison/source/media/evidence, update docs/wiki,
- commit/push. No other material/loading changes or longer run automatically.
+- Actual result: **241 states, 915 MPs, zero mass drift, minimum J 0.97467**;
+ crest settlement **0.92059 m**, maximum displacement **1.17041 m**,
+ kappa_max **0.274855**. Saved-output consistency passes, not landslide validation.
+- `scripts/compare-creep-prefix.py` **strict PASS**: all **64 baseline VTK files**
+ (including gravity/mesh) and first **61 CSV states** are byte-identical;
+ physical configuration and 0.5 s cadence agree. Do not repeat this comparison.
+- Raw crest secant rates decrease **8.079 / 7.314 / 6.600 mm/s** over
+ 30–60 / 60–90 / 90–120 s. Reviewed particle morphology shows distributed creep
+ with toe/base strain concentration, without detached mass or clear run-out.
+ **The requested creep-to-landslide transition remains NOT VERIFIED.**
+- **18 artifact hashes** retain source, native output/proof, logs, PNG/MP4,
+ strict prefix comparison, independent review and material-capability analysis:
+ `docs/evidence/slope-creep-2026-10-22/hold-120s-001/`.
+- Separate **analytical 0D** reasoning at fixed Kirchhoff q gives
+ `kappa_dot=(q-Yr)/eta` after residual strength, hence constant creep rate for
+ constant viscosity. These illustrative held stresses are not measured slope
+ stress histories or full-MPM/laboratory results; geometry/stress redistribution
+ can still affect the coupled slope. More duration alone does not guarantee failure.
+
+### Next checkpoint: unilateral crest pusher — IMPLEMENTATION IN PROGRESS
+
+Latest user clarification is retained in
+`wiki-vault/raw/creep-pusher-clarification-2026-10-22.md`. The communicated
+interpretation adds a **0.005 m/s moving crest driver**, compression-only contact,
+and free release when soil outruns it. There is no particle velocity floor,
+position overwrite or programmed failure time. The completed gravity-only runs
+remain unchanged evidence. This is a new loading experiment using the same
+assumed clay law, not a repair of the Wang MC integration failure.
+
+Implementation and focused controls are in progress; **no pusher test result,
+pilot launch or landslide outcome is claimed at this checkpoint**. The contact
+uses a tracked crest approximation and finite penalty, rather than validated
+general surface contact; document its force/contact/gap/work conventions and
+limits. Next: exercise compression/release, force balance, no-tension/no-motion-
+clamp, preservation of gravity-only defaults and failure-history retention;
+then record committed launch source, bounded pilot status and native evidence.
+Do not start an unreviewed full-duration pusher run or rerun the completed 120 s case.
 
 **Verified on33eed96:**13 actual Windows material controls,4 exception-history
 controls,2 scenario controls, Node syntax check/36 tests all pass. The expected
@@ -112,7 +142,7 @@ are in `crest-sequence-regression/`. No repeat13/4/Node suite is needed.
   `hold-30s-001-status.json`, `-launch.json`, `.stdout.log`, `.stderr.log`.
   Case `clay-creep-slope.lisp`:30s/61states, same material/geometry/mesh as pilot,
   no tuned strength/viscosity/timeline. Completed19:39 WIB: native exit0,
-  complete=true, audit/render exit0. Do not repeat this30s job; see active120s above.
+  complete=true, audit/render exit0. Do not repeat this30s job; see completed120s above.
 - 61VTKs/915MPs, zero mass drift, minJ0.97840; crest descent260.8326mm,
   max displacement298.1695mm, kappa_max0.0582425. Minimum strength reached the
   residual10.3923kPa at5.5s.16 verified artifact hashes retain sources, proofs,
@@ -132,11 +162,12 @@ are in `crest-sequence-regression/`. No repeat13/4/Node suite is needed.
   changes. Do not lower viscosity/strength or extend runs just to force collapse.
   Report a concrete evidence-based mechanism/plan before another expensive run.
 
-Heartbeat **mpm-lanjut-migrasi-arsitektur** now monitors only the active120s job;
-next wakeup22:45 WIB then hourly. Stay quiet when healthy/unchanged, never poll
-actively, rerun or rearchive completed jobs. Notify only a meaningful result or
-failure. If120s completes without failure, report the actual result before a
-further duration/parameter experiment; no automatic extension beyond120s.
+Heartbeat **mpm-lanjut-migrasi-arsitektur** must follow this latest checkpoint:
+the 120 s job is complete and no solver is active. The unilateral-pusher pilot
+is pending focused controls and its recorded launch; do not infer a running job
+from older automation text. Once a bounded pilot is launched, record its exact
+status/source and monitor quietly, without active polling or duplicate jobs.
+Notify only meaningful completion, failure or required action.
 The old Wang diagnosis/slower run is
 superseded by the new user request and must not start automatically.
 Keep checkpoints/evidence/docs/wiki updated, commit and push the feature branch;
