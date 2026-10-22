@@ -133,10 +133,16 @@
                                      (1+ hold) 0))
                       (format history "~D,~,12E,~,12E,~,12E,~,12E,~,12E,~,12E,~D~%"
                               settle-updates (cl-mpm::sim-time sim) ke kinetic residual mass-error max-yield hold)
+                      (finish-output history)
                       (setf (gethash "gravityKineticRatio" manifest) kinetic
                             (gethash "gravityFreeResidualRatio" manifest) residual
                             (gethash "gravityMaxYieldResidualPa" manifest) max-yield
                             (gethash "settleUpdates" manifest) settle-updates)
+                      (when (zerop (mod settle-updates 250))
+                        (write-json manifest-path manifest)
+                        (format t "~&[slope gravity] updates=~D residual=~,3E kinetic=~,3E hold=~D~%"
+                                settle-updates residual kinetic hold)
+                        (finish-output))
                       (when (>= hold (gethash "settleHoldChecks" config))
                         (setf converged t) (return))))))
               (unless converged (error "Gravity failed sustained equilibrium/admissibility criteria within ~D updates." settle-updates))
