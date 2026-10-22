@@ -423,6 +423,18 @@ saved-output audit and render exit0,61VTKs/915MPs, zero mass drift, minJ0.97840.
 Crest descent260.83mm, max displacement298.17mm, but raw crest secant speed
 declines9.91→8.34mm/s and reviewed overview shows no detached mass/run-out.
 No new solver job or repeat controls are justified by this completion alone.
+
+### Authorized duration extension
+
+The user's subsequent request explicitly authorizes120s. Native configuration
+compilation atcfc65e9 passed an exact before/after comparison: only duration and
+frame count differ (30→120s,61→241); all other compiled physical/solver values
+and0.5s cadence match.5 verified artifacts are in `duration-120-config-check/`.
+No unchanged material/history/scenario/Node suite was repeated.
+Run `hold-120s-001` launched21:38 WIB atcfc65e9,4h budget, NATIVE_RUNNING.
+After completion use `scripts/compare-creep-prefix.py` to verify all original
+VTKs and CSV rows through30s exactly, then review actual failure evidence.
+The longer run starts from the same initial conditions; restart support is absent.
 Native completion and saved-output consistency are separate from a verified
 creep-to-landslide transition. The new law is an assumed J2 clay surrogate,
 not the original Soil1 MC law or laboratory calibration. See the creep guide.

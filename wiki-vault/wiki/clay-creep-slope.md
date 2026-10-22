@@ -42,6 +42,15 @@ The same-material30s case froma9c3e30 completed19:39 WIB:
 kappa_max0.0582425.16 verified artifact hashes retain source/data/proofs/media
 and independent review. No active solver remains.
 
+Update: the user subsequently requested longer duration, recorded in
+[[clay-creep-duration-inputs-2026-10-22]]. New120s/241state case preserves0.5s
+cadence and all physical/solver parameters (native config comparisoncfc65e9 PASS,
+5 retained hashes). Historical0.005m/s /0.1m are not caps; no artificial minimum
+particle motion is imposed. Job `hold-120s-001` launched21:38 WIB fromcfc65e9,
+wrapper4680,4h budget, NATIVE_RUNNING. Restart support is absent, so it starts
+from the same initial conditions; compare its first30s exactly to the old run.
+No other parameter change or failure outcome is assumed.
+
 **Creep-to-landslide NOT_VERIFIED**: distributed creep/toe-base strain without
 detached mass or run-out; raw crest secant speed declines9.91→8.34mm/s instead
 of sustained acceleration. Residual strength is reached locally at5.5s.

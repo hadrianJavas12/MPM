@@ -145,3 +145,41 @@ of saved displacement/velocity topology and constant-stress response using the
 actual slope parameters. An auditable failure mechanism is needed before
 proposing a changed model; reducing viscosity/strength for an attractive collapse
 would not establish scientific validity. Do not rerun finished tests or outputs.
+
+## User-authorized120s extension
+
+After the30s review the user requested more duration and clarified that speed
+and displacement can become greater than the earlier0.005m/s /0.1m references.
+The current self-weight scenario applies neither those caps nor artificial
+minimum particle velocities/displacements: motion remains a computed response.
+
+`cases/benchmarks/clay-creep-slope-120s.lisp` changes duration to120s and outputs
+to241states, preserving0.5s cadence. Actual Windows configuration compilation
+atcfc65e9 verified that **all other compiled values are identical**. The5 hashed
+control artifacts are retained in `duration-120-config-check/`.
+
+```powershell
+.\scripts\run-slope-creep.ps1 `
+  -Case cases/benchmarks/clay-creep-slope-120s.lisp `
+  -OutputDirectory D:\MPM\output\creep-120s-FRESH -MaxWallHours 4
+```
+
+Actual job: sourcecfc65e9,21:38 WIB on2026-10-22,
+`output/slope-creep-2026-10-22/hold-120s-001/`, wrapper4680, NATIVE_RUNNING.
+Estimate around1h based on the completed30s job; nonlinear cost can differ.
+There is no valid restart checkpoint, so the longer job starts from the same
+initial conditions and recomputes0–30s. VTK alone lacks complete restart state.
+The self-contained preset avoids live nested-case loads outside frozen provenance.
+
+After completion, compare the first30s against the preserved baseline:
+
+```powershell
+.\toolchain\analysis-venv\Scripts\python.exe scripts\compare-creep-prefix.py `
+  --reference output\slope-creep-2026-10-22\hold-30s-001 `
+  --candidate output\slope-creep-2026-10-22\hold-120s-001 `
+  --output output\slope-creep-2026-10-22\hold-120s-001\prefix-comparison.json
+```
+
+This checks exact saved prefix/config/cadence preservation, not calibrated
+failure. Assess actual motion, rate trends, localization and run-out separately.
+Do not infer that more elapsed time necessarily yields a landslide.

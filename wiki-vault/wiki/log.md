@@ -573,3 +573,14 @@ overview shows broad creep and toe/base concentration without detached mass/runo
 Residual strength reached at5.5s, but accelerating failure NOT_VERIFIED. Updated
 guide/testing/handover/index; no new parameter/duration run or repeated tests.
 Next safe step is bounded failure-mechanism diagnosis, not tuning for appearance.
+
+## [2026-10-22] ingest | User-authorized120s duration extension
+
+Recorded [[clay-creep-duration-inputs-2026-10-22]]; updated [[clay-creep-slope]]
+and index. Native configuration comparison atcfc65e9 confirms only30→120s and
+61→241states change;0.5s cadence and all other compiled values match (5 hashes).
+Speed/displacement are computed without caps or artificial minimum clamps.
+No valid restart exists; self-contained case avoids unfrozen nested loads.
+Launched hold-120s-001 at21:38 WIB fromcfc65e9, wrapper4680,4h budget.
+Strict first30s VTK/CSV prefix comparison is planned after completion; no failure
+claim, parameter tuning or repeated finished controls. Raw intake remains immutable.

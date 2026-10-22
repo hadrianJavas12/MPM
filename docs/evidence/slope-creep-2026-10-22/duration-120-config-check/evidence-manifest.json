@@ -1,0 +1,31 @@
+{
+  "sourceCommitAtLaunch": "cfc65e9a9b33b17c84d2906055b92a52f66b979a",
+  "scope": "Actual Windows configuration compilation/diff; only duration30to120 and frames61to241 differ, all remaining compiled values identical; no physics run in this control.",
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "sha256": "ffe82f3c5b968ed009c2577fa38f32c83be167799ee565d40a18e3440c57b342",
+      "bytes": 21
+    },
+    {
+      "path": "check-creep-duration.lisp",
+      "sha256": "003ae99fee8b3c203279f6b089654f926a7845d2fc1299ce4c18ebdc9298f017",
+      "bytes": 1304
+    },
+    {
+      "path": "duration-120-config-check-status.json",
+      "sha256": "3fe6d1de191fb7d65f09febc79470560c3417bf34605a5705a155fb67dcff010",
+      "bytes": 94
+    },
+    {
+      "path": "duration-120-config-check.log",
+      "sha256": "133c811aa387d5dd2b2160b9b503a6d68e29c205638f4b07f489258138ee9c92",
+      "bytes": 109
+    },
+    {
+      "path": "duration-120-config.json",
+      "sha256": "5f56d4e6b4bb9d172d6ef80f5f1d2302b65ec392d075f2aa125d601258060cc3",
+      "bytes": 496
+    }
+  ]
+}

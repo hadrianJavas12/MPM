@@ -14,6 +14,7 @@
 - [[studio-geometry-material]] — notch/base conventions, material controls and SI units
 
 ## Sources
+- [[clay-creep-duration-inputs-2026-10-22]] — user authorizes longer duration; speed/displacement can exceed earlier references
 - [[clay-creep-design-2026-10-22]] — immutable creep request, explicit surrogate choices and assumed time/material inputs
 - [[wang2017-reference-inputs-2026-10-22]] — immutable Wang et al. (2017) PDF identity, Table 1 and Figures 2–3 facts
 - [[antigravity-native-history-2026-10-15]] — native runner color change and the supplied Joss damage clip that corrects the broader stress inference
@@ -21,7 +22,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[clay-creep-slope]] —30s complete,61VTKs/zero mass drift/298.17mm max displacement; creep slows, no detached mass/run-out, landslide NOT_VERIFIED
+- [[clay-creep-slope]] —30s complete without landslide; user-authorized120s observation running with identical physics and free motion
 - [[wang2017-prescribed-descent]] — pilot complete;0.005 m/s trial failed at77mm/100mm (MC integration); partial evidence retained, slower/paper-speed full runs NOT_RUN
 - [[mc-hardening-softening-study]] — M0–M6 COMPLETE on `codex/mc-hardening-softening-study`: dedicated `:mc-h` / `:mc-hs` model family (`34/34` unit assertions), M3 constitutive point verification (`7` pairs), M4 3D MPM Triaxial (`T-100-H` vs `T-100-HS`, $-62.33\%$ post-peak softening drop), and M5 2D MPM Cliff (`L-H` vs `L-HS`, $+51.92\%$ max displacement, $+38.79\%$ toe runout) with plots and `.mp4` videos
 - [[reusable-simulation-framework]] — canonical root ASDF (`cl-mpm-framework.asd`), Section 2/5 physical folder layout (`cases/{triaxial,cliff,benchmarks,direct-shear}/`), and post-alignment Triaxial 2D + bottom-to-top Joss cliff benchmarks exact PASS

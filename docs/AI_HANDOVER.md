@@ -27,6 +27,39 @@ Default eta50MPa*s, kappa_s.01, Yp=sqrt(3)*30kPa, Yr=sqrt(3)*6kPa are explicit
 demonstration assumptions. No subyield/primary creep, laboratory calibration,
 mesh-independent failure/run-out or reference-paper agreement is claimed.
 
+### Active120s observation — latest authorization 2026-10-22 21:38 WIB
+
+User explicitly requested more duration after the30s result, then clarified that
+creep speed/displacement may exceed the earlier reference values. Current
+self-weight loading imposes **no particle speed/displacement cap or minimum
+kinematic clamp**;0.005m/s and0.1m are historical reference values, not limits.
+The user authorizes the duration extension despite the earlier hold on repeats.
+
+- Case `cases/benchmarks/clay-creep-slope-120s.lisp`:120s/241states, unchanged
+ 0.5s output cadence. Actual native configuration comparison passed atcfc65e9:
+ only duration30→120 and frames61→241 differ; all remaining compiled values
+ (material, geometry, loading, solver including150000 update budget) are identical.
+ Five evidence hashes: `docs/evidence/slope-creep-2026-10-22/duration-120-config-check/`.
+- Source **cfc65e9a9b33b17c84d2906055b92a52f66b979a**, launched
+ `2026-10-22T14:38:05Z`, wrapper PID4680. Output
+ `output/slope-creep-2026-10-22/hold-120s-001/`; adjacent `-status.json`,
+ `-launch.json`, `.stdout.log`, `.stderr.log`.4h native wall budget.
+ **NATIVE_RUNNING**, not yet a result. Do not duplicate this job.
+- No valid restart checkpoint exists; output/checkpoints and save/load-sim are
+ descriptors/stubs. This is a fresh0→120s run, not a reconstructed state fromVTK.
+ The case is self-contained: nested cl-mpm-path base-case loads would escape
+ the current frozen source capture. Do not introduce that shortcut here.
+- Wrapper automatically audits/renders after native completion. Leave
+ `plot-slope-creep.py` and `plot_m5_cliff_comparison.py` unchanged while active;
+ reuse saved native data if postprocessing fails. Do not repeat finished controls.
+- After complete, run `scripts/compare-creep-prefix.py` with reference
+ `hold-30s-001`, candidate `hold-120s-001`, output under the latter. It must
+ honestly compare all baselineVTKs and first61 CSV states exactly, without
+ changing tolerances to pass. It checks preservation of the first30s, not failure.
+ Review physical curves/particle topology separately; longer time does not
+ guarantee failure. Archive comparison/source/media/evidence, update docs/wiki,
+ commit/push. No other material/loading changes or longer run automatically.
+
 **Verified on33eed96:**13 actual Windows material controls,4 exception-history
 controls,2 scenario controls, Node syntax check/36 tests all pass. The expected
 one-update gravity failure remains complete=false with its CSV retained.
@@ -79,7 +112,7 @@ are in `crest-sequence-regression/`. No repeat13/4/Node suite is needed.
   `hold-30s-001-status.json`, `-launch.json`, `.stdout.log`, `.stderr.log`.
   Case `clay-creep-slope.lisp`:30s/61states, same material/geometry/mesh as pilot,
   no tuned strength/viscosity/timeline. Completed19:39 WIB: native exit0,
-  complete=true, audit/render exit0. **No active native job; do not repeat this run.**
+  complete=true, audit/render exit0. Do not repeat this30s job; see active120s above.
 - 61VTKs/915MPs, zero mass drift, minJ0.97840; crest descent260.8326mm,
   max displacement298.1695mm, kappa_max0.0582425. Minimum strength reached the
   residual10.3923kPa at5.5s.16 verified artifact hashes retain sources, proofs,
@@ -91,7 +124,7 @@ are in `crest-sequence-regression/`. No repeat13/4/Node suite is needed.
   8.3938 (10–20s),8.3405 (20–30s). Local maximum speed is transient: sampled
   peak0.34641m/s at5s vs final0.16231. Native completion/output consistency PASS
   does not establish accelerating creep, a macroscopic landslide or calibration.
-- User has been told the result. No new parameter/duration experiment launched.
+- User was told the result, then explicitly authorized the120s extension above.
   Next safe work: bounded diagnosis using saved displacement/velocity topology
   and constitutive constant-stress response with the actual slope preset.
   Establish whether bounded residual strength plus constant viscosity can
@@ -99,11 +132,11 @@ are in `crest-sequence-regression/`. No repeat13/4/Node suite is needed.
   changes. Do not lower viscosity/strength or extend runs just to force collapse.
   Report a concrete evidence-based mechanism/plan before another expensive run.
 
-Heartbeat **mpm-lanjut-migrasi-arsitektur** continues only bounded diagnosis,
-next wakeup2026-10-23 02:30 WIB then every5h to save tokens. This completed-run
-monitor must not rerun/rearchive/renotify the same completed result. Only notify
-new actionable findings; if independent diagnosis finishes and human input is
-needed, save that concrete checkpoint and remove the obsolete automation.
+Heartbeat **mpm-lanjut-migrasi-arsitektur** now monitors only the active120s job;
+next wakeup22:45 WIB then hourly. Stay quiet when healthy/unchanged, never poll
+actively, rerun or rearchive completed jobs. Notify only a meaningful result or
+failure. If120s completes without failure, report the actual result before a
+further duration/parameter experiment; no automatic extension beyond120s.
 The old Wang diagnosis/slower run is
 superseded by the new user request and must not start automatically.
 Keep checkpoints/evidence/docs/wiki updated, commit and push the feature branch;
