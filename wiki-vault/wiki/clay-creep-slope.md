@@ -75,8 +75,18 @@ outrun the driver and release. This is a new loading experiment, with the same
 assumed clay law and no particle velocity floor, position overwrite or scheduled
 collapse. It is not a fix for Wang MC. The tracked crest/finite-penalty contact
 approximation needs explicit force/gap/release/work diagnostics and limitations.
-**IMPLEMENTATION IN PROGRESS**: new focused controls and bounded pusher pilot
-are pending; no tested pusher result or active solver is claimed here.
+Implementation ec285c0 passes actual Windows6 contact/3 scenario controls and
+Node check/36 tests, with19 artifact hashes in pusher-controls-001. The0.02m/s
+control verifies separated geometry and velocity non-mutation; dynamic release
+still requires native pilot evidence. The fixed original contacts have no new
+surface search, and frame-level force/gap CSV is not integrated actuator work.
+
+Two1s/11-state jobs launched23:22 WIB on2026-10-22, both ec285c0 /1h budget:
+gravity-compat-001 (wrapper19844) and pusher-pilot-001 (wrapper30008) under
+output/slope-creep-2026-10-22. Read adjacent status JSON before acting. After
+completion compare gravity output strictly to pilot-002, and review actual
+pusher command/patch settlement/contact counts/non-tensile mapped reaction.
+No full120s pusher run, calibrated result or verified landslide is claimed.
 
 Source/commands/assumptions are in `docs/benchmarks/CLAY_CREEP_SLOPE.md`;
 linked integrity and evidence practices: [[scientific-authenticity-audit-2026-10-15]].

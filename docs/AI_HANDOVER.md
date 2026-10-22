@@ -71,7 +71,7 @@ The user authorizes the duration extension despite the earlier hold on repeats.
  stress histories or full-MPM/laboratory results; geometry/stress redistribution
  can still affect the coupled slope. More duration alone does not guarantee failure.
 
-### Next checkpoint: unilateral crest pusher — IMPLEMENTATION IN PROGRESS
+### Current checkpoint: unilateral crest pusher — focused controls PASS, pilots active
 
 Latest user clarification is retained in
 `wiki-vault/raw/creep-pusher-clarification-2026-10-22.md`. The communicated
@@ -81,14 +81,41 @@ position overwrite or programmed failure time. The completed gravity-only runs
 remain unchanged evidence. This is a new loading experiment using the same
 assumed clay law, not a repair of the Wang MC integration failure.
 
-Implementation and focused controls are in progress; **no pusher test result,
-pilot launch or landslide outcome is claimed at this checkpoint**. The contact
-uses a tracked crest approximation and finite penalty, rather than validated
-general surface contact; document its force/contact/gap/work conventions and
-limits. Next: exercise compression/release, force balance, no-tension/no-motion-
-clamp, preservation of gravity-only defaults and failure-history retention;
-then record committed launch source, bounded pilot status and native evidence.
-Do not start an unreviewed full-duration pusher run or rerun the completed 120 s case.
+Committed implementation **ec285c05956c1b6fd592428869fba826b7430dd9** passes
+actual Windows native **6 contact controls + 3 scenario controls**, plus Node
+syntax check / **36 tests**. All exits0. **19 artifact hashes** preserve the
+tested source/log/status and deliberate incomplete gravity failure with retained
+CSV in `docs/evidence/slope-creep-2026-10-22/pusher-controls-001/`.
+The 0.02m/s control checks static separated geometry and velocity non-mutation,
+not time-integrated outrunning. No material law or old bilateral boundary changed.
+
+Two bounded **1s / 11-state** jobs launched on ec285c0, each1h wall budget:
+
+- `output/slope-creep-2026-10-22/gravity-compat-001/`: start23:22:26 WIB,
+  wrapper19844 / native cmd23896. Checks changed runner preserves gravity-only
+  outputs; after completion compare strictly to pilot-002 with
+  `scripts/compare-creep-prefix.py`. Do not rerun either baseline.
+- `output/slope-creep-2026-10-22/pusher-pilot-001/`: start23:22:51 WIB,
+  wrapper30008 / native cmd40432. New crest patch7–10m, driver0.005m/s,
+  penaltyScale5, unchanged assumed material/geometry. Read adjacent `-status.json`
+  and run manifest before any further work. Never infer completion from this note.
+
+Wrappers audit and render automatically after native exit0/complete=true. Keep
+`plot-slope-creep.py` and `plot_m5_cliff_comparison.py` unchanged while active.
+No full120s pusher job is launched or justified yet. Review actual command vs
+measured patch settlement, active/separated contacts, non-tensile reaction and
+grid force mapping, mass/J/state and viewport. The mean-settlement audit flag
+alone does not prove every contact released. If the soil outruns the slow driver,
+zero force is the expected physical contact response; do not make it pull the
+soil or force re-contact to produce failure.
+
+Contact uses original tracked crest points and individual rebased heights, fixed
+original tributary widths and finite penalty. No new-surface/entering-particle
+search or tangential traction; not general rigid-platen contact. CSV force/gaps
+come from the last predicted contact evaluation, measured settlement from current
+MP geometry. Sparse frame diagnostics do not give integrated actuator work or
+a closed energy audit. **Dynamic release and landslide outcome remain unverified
+until actual pilot review.** Do not rerun the completed gravity-only120s case.
 
 **Verified on33eed96:**13 actual Windows material controls,4 exception-history
 controls,2 scenario controls, Node syntax check/36 tests all pass. The expected
@@ -162,12 +189,11 @@ are in `crest-sequence-regression/`. No repeat13/4/Node suite is needed.
   changes. Do not lower viscosity/strength or extend runs just to force collapse.
   Report a concrete evidence-based mechanism/plan before another expensive run.
 
-Heartbeat **mpm-lanjut-migrasi-arsitektur** must follow this latest checkpoint:
-the 120 s job is complete and no solver is active. The unilateral-pusher pilot
-is pending focused controls and its recorded launch; do not infer a running job
-from older automation text. Once a bounded pilot is launched, record its exact
-status/source and monitor quietly, without active polling or duplicate jobs.
-Notify only meaningful completion, failure or required action.
+Heartbeat **mpm-lanjut-migrasi-arsitektur** follows the two bounded jobs above;
+the old120s job is complete. Check latest status once and remain quiet while
+healthy. No active polling, duplicate solver or repeated passed controls.
+After completion, strict gravity comparison and actual pusher review/archival,
+then update docs/wiki and commit/push. Notify meaningful results/failure only.
 The old Wang diagnosis/slower run is
 superseded by the new user request and must not start automatically.
 Keep checkpoints/evidence/docs/wiki updated, commit and push the feature branch;

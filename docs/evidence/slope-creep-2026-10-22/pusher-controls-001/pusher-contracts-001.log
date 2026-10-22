@@ -1,0 +1,7 @@
+PASS: Analytic compression, touching and downward separation obey one-way law
+PASS: Unilateral subclass inherits a positive conservative penalty timestep
+PASS: Exact native touching produces no force or material/kinematic mutation
+PASS: Native compressive reaction equals analytic and independent nodal sums
+PASS: Soil descending at 0.02m/s can outrun the 0.005m/s driver and separate
+PASS: Tracked particles leaving the fixed x patch release even in compression
+SLOPE CREEP PUSHER CONTROLS: 6 passed; no physical updates executed.

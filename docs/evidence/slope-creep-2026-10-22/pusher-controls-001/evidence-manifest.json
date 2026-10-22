@@ -1,0 +1,88 @@
+{
+  "sourceCommitAtLaunch": "ec285c05956c1b6fd592428869fba826b7430dd9",
+  "nativeContactControls": 6,
+  "nativeScenarioControls": 3,
+  "nodeTests": 36,
+  "nodeCheckExitCode": 0,
+  "scope": "Actual Windows native boundary/configuration checks and Node regression; no landslide validation",
+  "dynamicReleaseProof": "Pending actual pusher pilot; small-mesh 0.02 m/s control checks separated geometry and velocity non-mutation, not a time-integrated outrun",
+  "expectedNegativeCaseComplete": false,
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "sha256": "ffe82f3c5b968ed009c2577fa38f32c83be167799ee565d40a18e3440c57b342"
+    },
+    {
+      "path": "expected-failure-gravity-history.csv",
+      "sha256": "bab4a61f5605d4ce90cab1b69640b28bbc50385371f5a46d50ab1ece5b3d26a8"
+    },
+    {
+      "path": "expected-failure-manifest.json",
+      "sha256": "2261ca0cfcafb8b35843ce30a17976f1e084bed70433e9464e7674b66783016d"
+    },
+    {
+      "path": "pusher-contracts-001-status.json",
+      "sha256": "9abee3b7947cbbfcfa8fe3f8d6f2d460272c82ed22a3a091f960e1fcf4bf1eea"
+    },
+    {
+      "path": "pusher-contracts-001.log",
+      "sha256": "7ac3b87279df576dc051cf9ee48c66f64daaa7e4afd6c938abf1bfa24e7b0cb6"
+    },
+    {
+      "path": "pusher-node-check.log",
+      "sha256": "ef445b10cde3731a5b5215225895261bdd996b37947569fb0ee27d3c05ba158f"
+    },
+    {
+      "path": "pusher-node-status.json",
+      "sha256": "1fa94f3929a7f670250fd0e723fd7722630d65eee7e011cedfb34fbcff512491"
+    },
+    {
+      "path": "pusher-node-tests.log",
+      "sha256": "bb2d53cb4049cf2d689921d27d70c6c5a0a5025d9f226cb9df6c2dbe8c0772b9"
+    },
+    {
+      "path": "pusher-scenario-contracts-001-status.json",
+      "sha256": "846c682e39cad01397c5ce28321e882162c73d27d1756cd2c5392a2f9637c23a"
+    },
+    {
+      "path": "pusher-scenario-contracts-001.log",
+      "sha256": "5af2d316b5f510cf66fe5c5d981c8ca0fed9f11b3c90b50c48cd052ed84c9ab9"
+    },
+    {
+      "path": "README.md",
+      "sha256": "298acf8bf6660fdd68b451c67a1a3381d640126a7adc0d55089ad78a9b3e9a6a"
+    },
+    {
+      "path": "tested-sources/cl-mpm-framework.asd",
+      "sha256": "0f2ffa71ce5076aeb6c0ab40cb361377792b1ee08e428d47b64399c95faa79c2"
+    },
+    {
+      "path": "tested-sources/scenarios/slope-creep/configuration.lisp",
+      "sha256": "92e3af42fd79f5067679da03fe2f68158807ef4465bd03652b02aded52aab816"
+    },
+    {
+      "path": "tested-sources/scenarios/slope-creep/loading-output.lisp",
+      "sha256": "e353174c14e0869da3e7d27eca61ef77e3519e28e3cd5a1c672248290b0c41fb"
+    },
+    {
+      "path": "tested-sources/scenarios/slope-creep/loading.lisp",
+      "sha256": "9b6b2742271be8e63dd35f5337ddbad6e4d935e1b4f0e7414c9df807419012ce"
+    },
+    {
+      "path": "tested-sources/scenarios/slope-creep/runner.lisp",
+      "sha256": "620ce7946ec844deca972ce11e70740a46338277c017be5e84231e77cd2df3f0"
+    },
+    {
+      "path": "tested-sources/src/simulation/components/specifications.lisp",
+      "sha256": "587e1b815d072edee421175178a45913d8ec801f456b5e6ebfba0eb4cd58f0f9"
+    },
+    {
+      "path": "tested-sources/tests/benchmarks/slope-creep-contracts.lisp",
+      "sha256": "021ab8ac1004132a92b5b59019675ad4fa90b5de4cf7ce78348d2f9356bf7fad"
+    },
+    {
+      "path": "tested-sources/tests/benchmarks/slope-creep-pusher.lisp",
+      "sha256": "e9eab2f593994cd86b10be01886abf9ee5ec66f07930046cedcc4f9e493336e6"
+    }
+  ]
+}

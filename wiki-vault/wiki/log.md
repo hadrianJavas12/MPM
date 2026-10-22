@@ -602,3 +602,15 @@ velocity floor. Same assumed clay law, tracked-contact limitation, no MC fix.
 Implementation is in progress; new controls/pilot are pending and no solver is
 active at this checkpoint. Updated guide/testing/handover/index; preserved raw
 sources and prior append-only log. No repeat solver or finished controls.
+
+## [2026-10-22] checkpoint | Unilateral contact controls and bounded pilot launches
+
+[[clay-creep-slope]] implementation ec285c0 passes Windows6contact/3scenario
+controls and Node check/36 tests.19 hashes retain actual source/status/logs and
+the deliberate incomplete gravity failure with its CSV. Static release controls
+do not establish dynamic outrunning. Launched two1s/11-state jobs at23:22 WIB,
+same ec285c0 source and1h budgets: gravity-compat-001 wrapper19844 and
+pusher-pilot-001 wrapper30008. Strict compatibility and dynamic review pending;
+no full120s pusher run or landslide claim. Documented fixed original contact
+profile, no new-surface search, force/gap sampling and missing integrated work
+validation. Updated guide/testing/handover/index; raw sources remain immutable.

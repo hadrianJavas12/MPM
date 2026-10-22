@@ -210,7 +210,7 @@ Illustrative assumed stresses demonstrate why this law can approach secondary
 creep; more duration alone does not promise a failure transition. Coupled geometry
 and stress redistribution remain relevant to the actual slope.
 
-## Unilateral crest-pusher experiment — implementation in progress
+## Unilateral crest-pusher experiment — controls passed, pilot running
 
 The user's later clarification, "tanah boleh meluncur lebih cepat", was
 communicated as a **crest driver descending at 0.005 m/s**, with compression-only
@@ -218,15 +218,63 @@ contact so that the soil can move faster and separate. This is distinct from the
 completed gravity-only case. It introduces no particle velocity floor, imposed
 particle position, time-based strength switch or programmed collapse.
 
-The same uncalibrated clay law is retained. Contact is a tracked crest
-approximation with finite penalty compliance, not validated general surface
-contact. Contact force, gap, release and actuator work must be recorded and
-reviewed. This loading change neither fixes the former Wang MC integration
-failure nor establishes reference-paper agreement.
+The same uncalibrated clay law and geometry are retained. The fixed crest patch
+is **x = 7–10 m**. With +Y upward, each tracked point uses
+`y_driver = y_reference - v*t` and
+`F_y = -epsilon*b*max(y_predicted - y_driver, 0)`.
+Here `epsilon = penaltyScale*M/h`, `penaltyScale = 5`, M is the material P-wave
+modulus (Pa), h the mesh spacing (m), and b the original tributary width (m).
+Thus epsilon has units Pa/m and F_y is force per out-of-plane metre (N/m);
+the reported upward actuator reaction is `-sum(F_y)`. Positive penetration
+produces downward compression; separation produces zero force. The prescribed
+**5 mm/s command belongs to the driver**, while soil motion remains a solver
+result and can exceed it. The compression-only principle is also described in
+the [official Itasca linear contact documentation](https://docs.itascacg.com/pfc700/common/contactmodel/linear/doc/manual/cmlinear.html);
+this implementation does not reproduce that complete contact model.
 
-**No pusher controls, pilot launch or result are claimed yet.** Before a bounded
-pilot, verify compression and release, absence of tensile traction, correct
-reaction signs, absence of particle motion clamps, exception-safe CSV retention
-and unchanged gravity-only defaults. The next checkpoint will record actual
-tested source, launch/status paths and native outputs; no solver is active at
-this documentation checkpoint. Do not repeat the completed 120 s job.
+This is a tracked original-surface approximation: individual reference heights
+are rebased after gravity, original tributary widths are retained, and points
+leaving the fixed x patch release. There is **no search for newly exposed or
+entering surface particles**, no tangential traction, and no general rigid
+platen contact validation. Finite penalty compliance permits penetration;
+stiffness/timestep sensitivity remains to be assessed.
+
+Actual Windows tests on **ec285c0** passed **6 contact controls** and **3 scenario
+controls**, including retained failure CSV and sequence handling. Node check and
+all **36 tests** also passed. The contact controls cover analytical compression
+and release, force mapping, timestep availability, lateral release and unchanged
+particle state. The named 0.02 m/s control manually places soil ahead of the
+driver and verifies velocity non-mutation; it does **not** prove dynamic release
+during time integration. That requires the bounded native pilot and its VTK/CSV.
+Gravity-only output compatibility also requires its pending pilot comparison.
+
+`loading-history.csv` adds command, measured patch settlement, reaction/mapped
+reaction, active/unloaded counts and compression/separation gaps. Reactions and
+gaps come from the last predicted contact evaluation; settlement uses the
+current particle geometry. Mean settlement exceeding the command is insufficient
+to prove that every contact separated. Review counts and reaction together.
+Saved contact samples do **not** provide integrated actuator-work validation or
+a closed energy balance.
+
+The bounded case requests **1 s and 11 saved states**:
+
+```powershell
+Set-Location D:\MPM
+.\scripts\run-slope-creep.ps1 `
+  -Case cases/benchmarks/clay-creep-pusher-pilot.lisp `
+  -OutputDirectory D:\MPM\output\creep-pusher-pilot-FRESH -MaxWallHours 1
+```
+
+`cases/benchmarks/clay-creep-pusher-120s.lisp` also exists (120 s, 241 states),
+but the full120s pusher case is **NOT_RUN**. The1s case launched **23:22 WIB,
+2026-10-22**, source **ec285c0**, in
+`output/slope-creep-2026-10-22/pusher-pilot-001/`, wrapper30008,1h wall budget.
+Its actual state is in adjacent `pusher-pilot-001-status.json`; no reviewed
+dynamic result is claimed yet. A separate1s gravity-only compatibility run
+(`gravity-compat-001`, wrapper19844, same source) will compare to pilot-002.
+The19 hashed control artifacts are in
+`docs/evidence/slope-creep-2026-10-22/pusher-controls-001/`.
+Review the short pilot before deciding whether a longer run is justified.
+No pusher-induced landslide, laboratory calibration, repair of the former Wang
+MC failure, or reference-paper agreement is claimed. Do not repeat the completed
+gravity-only 120 s job.

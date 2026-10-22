@@ -450,15 +450,27 @@ independent review and analytical0D material-capability reasoning under
 `docs/evidence/slope-creep-2026-10-22/hold-120s-001/`. The fixed-stress analytical
 post-residual constant creep rate is not a full-slope or laboratory result.
 
-### Pending unilateral-pusher controls
+### Unilateral-pusher controls passed; native pilots running
 
 Following the user's clarification that soil may slide faster, a separate
-0.005m/s moving crest driver with compression-only release is in development.
+0.005m/s moving crest driver with compression-only release was added on ec285c0.
 The same clay law is retained; no velocity floor or position overwrite is
 authorized. The tracked crest/finite-penalty contact approximation must be
-explicit. Focused controls must cover compression, separation/no tension,
-reaction signs, absence of motion clamps, retained failure histories and unchanged
-gravity-only defaults. **These new controls and the pusher pilot are NOT_RUN at
-this checkpoint; no active solver or landslide result is claimed.** Do not rerun
-unchanged full suites merely because the loading component is added; run the
-checks that actually exercise the changed contracts before a bounded pilot.
+explicit. Actual Windows native **6 contact controls + 3 scenario controls**
+passed, as did Node syntax check and **36 tests**.19 hashed artifacts retain
+source/log/status and the expected incomplete gravity failure with its CSV in
+`docs/evidence/slope-creep-2026-10-22/pusher-controls-001/`.
+
+```powershell
+.\windows\cl-mpm.cmd tests\benchmarks\slope-creep-pusher.lisp
+.\windows\cl-mpm.cmd tests\benchmarks\slope-creep-contracts.lisp D:/MPM/output/negative-FRESH/
+```
+
+The tests cover force signs/mapping, static contact release, particle state
+non-mutation, inherited penalty timestep and unchanged gravity configuration.
+The named0.02m/s control is not a dynamic outrun test. Actual1s/11-state native
+pilots launched23:22 WIB on2026-10-22 from ec285c0: `gravity-compat-001` and
+`pusher-pilot-001` under `output/slope-creep-2026-10-22/`. Both have adjacent
+status JSON and1h budgets. Gravity compatibility comparison and dynamic pusher
+review remain pending. No full120s pusher run or landslide PASS is claimed.
+Read [the guide](benchmarks/CLAY_CREEP_SLOPE.md) for commands and contact/work limits.
