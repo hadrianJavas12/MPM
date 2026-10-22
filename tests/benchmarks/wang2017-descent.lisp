@@ -90,6 +90,8 @@
                      (merge-pathnames "manifest.json" directory))))
         (assert (null (gethash "complete" record)))
         (assert (equal (gethash "status" record) "failed"))
+        (assert (search "Gravity failed sustained equilibrium" (gethash "error" record)))
+        (assert (= (gethash "settleUpdates" record) 1))
         (assert (= (gethash "loadingUpdates" record) 0))))))
 (format t "~&WANG2017 DESCENT CONTROLS: ~D passed; no physical loading run executed.~%" *checks*)
 (uiop:quit 0)
