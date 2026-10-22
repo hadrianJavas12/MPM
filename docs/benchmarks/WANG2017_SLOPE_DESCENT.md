@@ -76,8 +76,9 @@ penalty compliance are additional comparison limitations. Soil#2 is not implemen
 Loading took about 203 wall seconds for 1 physical second on this machine.
 A simple same-cost extrapolation puts the 1,000 s full target near 2.35 days,
 before changes in nonlinear iteration cost. This is a planning estimate.
-The user has been asked to choose pilot review, a separate quasi-static path,
-or full physical-speed explicit integration; the full target has not been launched.
+The original-speed full target has not been launched. The user subsequently
+authorized an accelerated 0.005 m/s trial, followed by slower loading after the
+method is shown to work (see below).
 
 Artifacts: `output/wang2017-2026-10-22/pilot-001/`; retained evidence:
 `docs/evidence/wang2017-descent-2026-10-22/pilot/`. The source snapshot
@@ -87,3 +88,47 @@ the frozen run. The Node status samples HEAD at completion, not at launch.
 ```powershell
 .\toolchain\analysis-venv\Scripts\python.exe scripts\plot-wang2017-descent.py --run-dir $pilotOutput --video
 ```
+
+## Authorized accelerated trial, 2026-10-22
+
+`cases/benchmarks/wang2017-soil1-fast-005.lisp` specifies **0.005 m/s**, 0.1 m
+target descent,20 physical seconds and101 output frames. It uses the same Soil#1,
+geometry and mass scale1. This is50 times the paper speed and is labelled
+**ACCELERATED TRIAL** on plots. Faster loading can introduce inertial effects;
+successful execution does not establish the reference curve.
+
+Use a fresh output name and run this wrapper in a separate PowerShell terminal:
+
+```powershell
+Set-Location D:\MPM
+.\scripts\run-wang2017-trial.ps1 `
+  -OutputDirectory D:\MPM\output\wang-fast-FRESH `
+  -MaxWallHours 4 `
+  -EvidenceDirectory D:\MPM\docs\evidence\wang2017-descent-2026-10-22\fast-FRESH
+```
+
+The default case is the0.005 m/s preset. The wrapper saves launch HEAD, source
+snapshots, process/exit status and logs; after native completion it audits the
+saved VTK/CSV, makes force–descent plots/video and collects hashed evidence.
+A native wall-budget stop stays incomplete. `COMPLETED_REVIEW_PENDING` means
+data are available for assessment; postprocessing cannot create native completion.
+Use a background terminal/automation instead of repeated polling. Reuse completed
+native data if media generation needs repair.
+
+Actual launch: **12:32 WIB, source52f9367**, output
+`output/wang2017-fast-2026-10-22/fast-005-001/`; adjacent `-status.json`,
+`-launch.json` and `.stdout.log` identify the job. Last recorded state is
+**NATIVE_RUNNING / gravity initialization**, not a completed loading result.
+Estimated loading cost is approximately1–2h, with a4h native budget. Quiet hourly
+continuation starts14:00 WIB. Four additional native controls passed (preset,
+pure-shear/hydrostatic energy, non-mutating diagnostics); Node36/check passed.
+
+Before slower loading, inspect actual command/measured descent, signed reaction,
+finite fields, mass/particle conservation, yield, tracking error and transient
+stability. `energy-history.csv` and `energy-diagnostics.png` expose kinetic energy,
+signed commanded actuator work and elastic/plastic proxies. Prestress can mask
+kinetic/elastic ratios; current-volume plastic-work density is not accumulated
+dissipation, and Hencky/Cauchy energy is not a closed energy balance.
+No single energy ratio proves a quasi-static result. Preserve negative forces
+and raw transients. If the method is operationally credible, the next comparison
+is a separate0.002 m/s case, same mesh/material and a fresh output directory.

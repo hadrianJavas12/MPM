@@ -26,9 +26,9 @@ Expected one-step gravity-budget failure is retained as complete=false, not
 mislabelled physical success. Node HEAD was sampled at completion and is labelled
 accordingly. Current-source logging-only change131f57f did not alter frozen math.
 
-Working run: `output/wang2017-2026-10-22/pilot-001/`; retained source/VTK/CSV,
+Completed pilot: `output/wang2017-2026-10-22/pilot-001/`; retained source/VTK/CSV,
 proofs, signed reactions, PNG and MP4: `docs/evidence/wang2017-descent-2026-10-22/pilot/`.
-There is no active native job. **Do not rerun the finished pilot or tests.**
+**Do not rerun the finished pilot or tests.**
 
 **Not full replication:** initial signed-force transients are visible; gravity
 tolerance, zero loading damping, finite penalty compliance, assumed height and
@@ -36,11 +36,52 @@ coarse grid do not establish a quasi-static reference curve. Preserve negative
 reaction values. Paper solver is FEM local arc-length; this is explicit MPM.
 The full0.1 m target requires1000 physical seconds and around3.4 million steps.
 Observed loading throughput extrapolates to about2.35 wall days, with substantial
-uncertainty. An asynchronous user question asks whether to review pilot first,
-develop a separately identified quasi-static route, or run original-speed full
-explicit MPM. **Full run NOT_RUN; wait for that preference before dependent work.**
-No silent velocity, mass, time scaling, force fitting, smoothing or fabricated
-completion is authorized. Existing continuation automation remains paused.
+uncertainty. **Full paper-speed run NOT_RUN.** No silent velocity, mass, time
+scaling, force fitting, smoothing or fabricated completion is authorized.
+
+### Active authorized accelerated trial — 2026-10-22 12:32 WIB
+
+The user explicitly requested **0.005 m/s first**, then slower loading only after
+the method works, using offline computation to save tokens. Case
+`cases/benchmarks/wang2017-soil1-fast-005.lisp` targets 0.1 m in20 physical seconds
+(50x reference speed); all material/geometry/mass-scale settings remain explicit.
+This is an accelerated operational trial, not Figure3 or quasi-static validation.
+
+- Frozen launch HEAD **52f9367aa2ab7ad6b60b3d70edf308c12f819b9f**;
+  launched `2026-10-22T05:32:05Z`. Wrapper PID38516, cmd34716, SBCL15332.
+- Root `output/wang2017-fast-2026-10-22/`; run `fast-005-001/`;
+  status `fast-005-001-status.json`, launch `fast-005-001-launch.json`,
+  native log `fast-005-001.stdout.log`. Last observed: **NATIVE_RUNNING**, healthy
+  gravity initialization at750 updates; loading completion is not yet established.
+- `scripts/run-wang2017-trial.ps1` runs hidden with a4h native budget, then
+  automatically audits, plots/renders video and collects retained evidence into
+  `docs/evidence/wang2017-descent-2026-10-22/fast-005-001/` if native exit0 and
+  complete=true. Completion status is **COMPLETED_REVIEW_PENDING**, never a
+  scientific PASS. Budget stop remains incomplete with actual exit/status.
+- Four new native controls passed on826b0a4 (explicit preset, engineering-Voigt
+  shear energy, hydrostatic energy, non-mutating observations); Node syntax
+  check and36 tests passed on52f9367. Logs/status are in the output root.
+  PowerShell parsing and Python compilation passed. Do not repeat unchanged tests.
+- Energy CSV reports kinetic energy, signed actuator work, elastic and native
+  plastic-work proxies. Current-volume plastic density is not accumulated
+  dissipation; Hencky/Cauchy energy is not a closed budget. Prestress masks
+  kinetic/elastic ratios. These observations alone cannot prove quasi-staticity.
+- The wrapper hashes `plot-wang2017-descent.py`, `plot_m5_cliff_comparison.py`
+  and `collect-wang2017-evidence.py`. Leave these tools unchanged during the job.
+  If postprocessing fails, reuse native output; do not restart the solver for media.
+
+Existing heartbeat **mpm-lanjut-migrasi-arsitektur** was repurposed (no duplicate)
+as **MPM Wang2017 uji cepat**, ACTIVE, first check14:00 WIB then hourly. Read only
+status/manifest and one log line first. If healthy, end quietly without active
+waiting, repeated tests or a duplicate run. Native estimate ~1–2h is uncertain.
+After completion, verify target/time, finite fields, conservation, penalty tracking,
+signed force mapping and stability/energy/force transients; inspect actual media.
+If operationally credible, user permits a separate0.002 m/s sensitivity case
+(50 physical seconds, ~2.8h loading estimate), same material/mesh and fresh output,
+case committed before launch. If unstable, report evidence and plan before another
+expensive run. Never upgrade either accelerated rate to paper-speed agreement.
+Update evidence/docs/wiki and push checkpoints; no main merge. Remove heartbeat
+after the authorized fast/slower comparison is finished.
 
 Prior main study statements below are historical. The separately identified
 M4 HS triaxial issue (target22%, saved14.26%, postprocessor-created complete=true)

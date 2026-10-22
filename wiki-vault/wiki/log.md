@@ -507,3 +507,15 @@ relief, finite penalty compliance and MPM/FEM differences remain explicit.
 Observed throughput extrapolates full1000s target to about2.35 wall days;
 user preference for full explicit versus a separate quasi-static route is pending.
 Source/evidence/media and commands are linked from docs/benchmarks/WANG2017_SLOPE_DESCENT.md.
+
+## [2026-10-22] checkpoint | Authorized Wang2017 accelerated trial
+
+Updated [[wang2017-prescribed-descent]] after the user requested0.005 m/s first,
+then slower loading once the method works. Native source52f9367 launched12:32 WIB,
+target0.1m/20s,101frames; state NATIVE_RUNNING during gravity initialization.
+Four diagnostic controls passed on826b0a4; Node36/check passed on52f9367.
+The hidden Windows wrapper saves source/exit/status and automatically audits,
+plots/renders and collects evidence, with4h native budget. Existing heartbeat
+repurposed for quiet hourly checks starting14:00 WIB; no active waiting or reruns.
+Energy proxies/prestress limitations remain explicit; accelerated completion is
+not paper agreement. Raw sources, previous results and append-only history preserved.

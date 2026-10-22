@@ -370,3 +370,18 @@ Full 0.1m target NOT_RUN. See the benchmark guide and retained evidence.
 The negative output must be fresh: its one-step gravity failure is expected and
 asserted as incomplete; the control process itself exits0. Never turn a partial
 run into complete merely because plotting produced a video.
+
+### Accelerated Wang2017 diagnostics and trial
+
+On2026-10-22, `tests/benchmarks/wang2017-fast-contracts.lisp` passed4 native
+controls at826b0a4: explicit0.005 m/s /20s preset, engineering-Voigt pure shear,
+hydrostatic elastic energy and non-mutating observations. Logs/status are under
+`output/wang2017-fast-2026-10-22/`. Node check and36 tests passed at52f9367.
+The Windows background wrapper parsed successfully and Python tools compiled.
+
+The actual full-target accelerated run `fast-005-001` launched at52f9367;
+it is **NATIVE_RUNNING**, not yet PASS. The wrapper automatically postprocesses
+only after native completion. See the benchmark guide for status paths, command,
+budget and review gates. Energy proxies and an accelerated-rate success cannot
+establish paper-speed or quasi-static agreement. Do not rerun finished tests
+while the unchanged native snapshot computes.

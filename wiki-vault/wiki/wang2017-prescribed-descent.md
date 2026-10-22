@@ -25,5 +25,22 @@ measured mean 0.0992383 mm; final reaction 1.09678 kN/m; mass error zero.
 Saved-output consistency passes. Native controls 8, framework 10 and Node 36 pass.
 Initial reaction transients are retained, so quasi-static curve agreement is not
 verified. Full 0.1 m target would take 1000 physical seconds, estimated about
-2.35 wall days at pilot throughput. User preference for the full route is pending.
+2.35 wall days at pilot throughput. The user subsequently authorized a fast trial.
 Evidence and complete commands are linked from the maintained benchmark guide.
+
+## Accelerated trial checkpoint
+
+User-requested0.005 m/s targets0.1 m in20s (50x reference), with unchanged
+Soil#1/geometry/mass scale. The actual native run launched12:32 WIB on2026-10-22
+from52f9367: `output/wang2017-fast-2026-10-22/fast-005-001/`.
+Current recorded state is **NATIVE_RUNNING**, healthy gravity initialization;
+no completed accelerated result or quasi-static agreement is claimed.
+The wrapper has a4h native budget and automatically audits/renders/collects
+evidence after exit0 and complete=true. Quiet monitoring starts14:00 WIB.
+
+Four new native controls and Node36/check passed; do not repeat unchanged tests.
+Energy diagnostics are observational proxies, not a closed energy budget;
+prestress can hide kinetic significance. Review raw signed reactions, tracking,
+conservation, finite fields and stability before the separately authorized slower
+0.002 m/s comparison. Preserve source/data and report actual failures.
+See [[scientific-authenticity-audit-2026-10-15]] and the benchmark guide.
