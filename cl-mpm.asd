@@ -1069,3 +1069,9 @@
   :depends-on ("cl-mpm/example")
   :serial t
   :components ((:file "examples/dr/quasi-time")))
+
+;; Optional pure point prototype; no existing system loads this or gains a particle.
+(defsystem "cl-mpm/models/wang2017-point"
+  :depends-on ("cl-mpm/models/wang2017" "cl-mpm/models/mc-evolution")
+  :description "Experimental fixed-frame signed-tensor Wang2017 Soil2 point return; no particle adapter"
+  :components ((:file "materials/models/plastic/wang2017/point-projection")))
