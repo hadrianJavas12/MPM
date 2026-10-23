@@ -841,6 +841,14 @@
       (:file "p2-03-legacy" :pathname "materials/models/viscoelastic/finite-strain/legacy")
     ))))
 
+(defsystem "cl-mpm/models/wang2017"
+  :description "Isolated Wang2017 paper tensor-history primitives; no particle adapter"
+  :serial t
+  :components ((:module "materials/models/plastic/wang2017"
+                :pathname "materials/models/plastic/wang2017"
+                :serial t
+                :components ((:file "package") (:file "history") (:file "law")))))
+
 (defsystem "cl-mpm/models/clay-creep"
   :depends-on ("cl-mpm/particle")
   :description "Experimental total-stress clay Perzyna creep with strain softening"
@@ -859,6 +867,7 @@
                 :serial t
                 :components ((:file "package")
                              (:file "law")
+                             (:file "diagnostics")
                              (:file "projection")
                              (:file "state")
                              (:file "material")))))

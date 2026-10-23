@@ -38,5 +38,29 @@
           (let ((case (symbol-value (find-symbol "*SIMULATION*" :cl-mpm/framework))))
             (unless case (error "The case file must SETF cl-mpm/framework:*simulation*."))
             (write-case-source-provenance directory copied nil)
-            (funcall (find-symbol "RUN-SIMULATION" :cl-mpm/framework) case :output directory))))))
+            ;; Observe a failed return without handling/retrying it. The original
+            ;; condition and exit status remain authoritative; no successful step
+            ;; allocates a diagnostic or writes a per-particle file.
+            (handler-bind
+                ((error
+                   (lambda (condition)
+                     (let* ((package (find-package :cl-mpm/models/mc-evolution))
+                            (type (and package (find-symbol "MATERIAL-INTEGRATION-ERROR" package)))
+                            (reader (and package (find-symbol "INTEGRATION-ERROR-DIAGNOSTIC" package))))
+                       (when (and type (find-class type nil) (typep condition type)
+                                  reader (fboundp reader))
+                         (let ((record (funcall reader condition)))
+                           (when record
+                             (handler-case
+                                 (with-open-file
+                                     (stream (merge-pathnames "mc-integration-failure.json" directory)
+                                             :direction :output :if-exists :error
+                                             :external-format :utf-8)
+                                   ;; Bootstrap JSON deliberately has no float
+                                   ;; support; use the already-loaded serializer.
+                                   (funcall (find-symbol "ENCODE" :yason) record stream))
+                               (error (capture-error)
+                                 (format *error-output* "~&MC diagnostic save failed: ~A~%"
+                                         capture-error))))))))))
+              (funcall (find-symbol "RUN-SIMULATION" :cl-mpm/framework) case :output directory)))))))
   (uiop:quit 0))

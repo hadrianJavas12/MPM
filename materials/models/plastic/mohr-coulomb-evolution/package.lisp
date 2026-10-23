@@ -13,6 +13,8 @@
    #:projection-max-residual #:projection-work #:projection-active
    #:projection-multipliers #:projection-iterations #:projection-residuals
    #:+plane-pairs+ #:material-integration-error
+   #:integration-error-reason #:integration-error-details #:integration-error-diagnostic
+   #:replay-integration-diagnostic
    #:particle-mc-evolution #:particle-evolution-law #:particle-kappa
    #:particle-kappa-committed #:particle-cohesion #:particle-phi #:particle-psi
    #:particle-plastic-increment #:particle-plastic-volume #:particle-plastic-volume-committed
@@ -24,7 +26,8 @@
 
 (define-condition material-integration-error (error)
   ((reason :initarg :reason :reader integration-error-reason)
-   (details :initarg :details :initform nil :reader integration-error-details))
+   (details :initarg :details :initform nil :reader integration-error-details)
+   (diagnostic :initarg :diagnostic :initform nil :reader integration-error-diagnostic))
   (:report (lambda (condition stream)
              (format stream "MC evolution integration failed: ~A ~S"
                      (integration-error-reason condition)

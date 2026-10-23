@@ -281,7 +281,8 @@ Final residual/complementarity are strict; global nonlinear uniqueness is not pr
                (finite-real-p nu) (< -1d0 nu 0.5d0)
                (finite-real-p j) (> j 0d0)
                (finite-real-p old-kappa) (>= old-kappa 0d0))
-    (integration-fail "Invalid finite principal return input" trial e nu j old-kappa))
+    (%principal-integration-fail "Invalid finite principal return input"
+                                 trial e nu j law old-kappa trial e nu j old-kappa))
   (let* ((raw-trial (map 'vector (lambda (x) (float x 1d0)) trial))
          (perm (sort-trial-permutation raw-trial))
          (sorted-trial (vector (aref raw-trial (aref perm 0))
@@ -361,11 +362,13 @@ Final residual/complementarity are strict; global nonlinear uniqueness is not pr
                                   prev-res curr-res
                                   prev-local curr-local))))))))))
     (unless roots
-      (integration-fail "No admissible coupled active-set solution; no apex clamp or strength floor applied"
-                        :trial (coerce raw-trial 'list) :old-kappa old-kappa :evaluations evaluations))
+      (%principal-integration-fail "No admissible coupled active-set solution; no apex clamp or strength floor applied"
+                                   raw-trial e nu j law old-kappa
+                                   :trial (coerce raw-trial 'list) :old-kappa old-kappa :evaluations evaluations))
     (when (rest roots)
-      (integration-fail "Multiple distinct admissible coupled roots; subdivision/continuation is not implemented"
-                        (mapcar (lambda (r) (list (projection-kappa r) (coerce (projection-tau r) 'list))) roots)))
+      (%principal-integration-fail "Multiple distinct admissible coupled roots; subdivision/continuation is not implemented"
+                                   raw-trial e nu j law old-kappa
+                                   (mapcar (lambda (r) (list (projection-kappa r) (coerce (projection-tau r) 'list))) roots)))
     (let ((answer (unpermute-projection (first roots) perm)))
       (setf (projection-iterations answer) evaluations)
       answer)))
