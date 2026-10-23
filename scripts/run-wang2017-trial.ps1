@@ -3,7 +3,8 @@ param(
   [string]$Case = 'cases/benchmarks/wang2017-soil1-fast-005.lisp',
   [double]$MaxWallHours = 4,
   [string]$EvidenceDirectory = '',
-  [switch]$AttachRunning
+  [switch]$AttachRunning,
+  [ValidateRange(0.1,3600)][double]$HeartbeatSeconds = 60
 )
 $ErrorActionPreference = 'Stop'
 $taskRepo = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
@@ -15,6 +16,56 @@ function Resolve-TaskPath([string]$Path) {
 }
 function Save-TaskStatus {
   $taskRecord | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath ($taskOutput + '-status.json') -Encoding utf8
+}
+function Get-TaskProcessIdentity([Diagnostics.Process]$Process) {
+  [ordered]@{
+    pid=$Process.Id; name=$Process.ProcessName
+    createdUtc=$Process.StartTime.ToUniversalTime().ToString('o'); sessionId=$Process.SessionId
+  }
+}
+function Assert-TaskProcessIdentity($Recorded, [Diagnostics.Process]$Process) {
+  if ($null -eq $Recorded) { return } # Historical monitor records predate identities.
+  $taskIdentity = Get-TaskProcessIdentity $Process
+  if ($Recorded.pid -ne $taskIdentity.pid -or ([DateTimeOffset]$Recorded.createdUtc) -ne ([DateTimeOffset]$taskIdentity.createdUtc) -or
+      $Recorded.sessionId -ne $taskIdentity.sessionId) { throw 'Recorded process identity differs; no process was stopped.' }
+}
+function Update-TaskHeartbeat {
+  $taskRecord.heartbeatUtc=[DateTime]::UtcNow.ToString('o')
+  $taskRecord.heartbeatSequence++
+  if ($null -eq $taskRecord.processIdentity.sbcl -and -not $taskNative.HasExited) {
+    $taskChildren = @(Get-CimInstance Win32_Process -Filter ('ParentProcessId=' + $taskNative.Id) |
+      Where-Object Name -eq 'sbcl.exe')
+    if ($taskChildren.Count -eq 1) {
+      try {
+        $taskWorkerProcess=Get-Process -Id $taskChildren[0].ProcessId -ErrorAction Stop
+        $taskRecord.processIdentity.sbcl=Get-TaskProcessIdentity $taskWorkerProcess
+      } catch { $taskRecord.workerIdentityReadError=$_.Exception.Message }
+    }
+  }
+  $taskProgress=[ordered]@{observedUtc=$taskRecord.heartbeatUtc}
+  $taskManifestFile=Join-Path $taskOutput 'manifest.json'
+  if (Test-Path -LiteralPath $taskManifestFile) {
+    $taskProgress.manifestLastWriteUtc=(Get-Item -LiteralPath $taskManifestFile).LastWriteTimeUtc.ToString('o')
+    try {
+      $taskProgressManifest=Get-Content -LiteralPath $taskManifestFile -Raw | ConvertFrom-Json -AsHashtable
+      foreach ($taskKey in @('status','complete','phase','timeS','commandedSettlementM','measuredSettlementM',
+          'gravityConverged','settleUpdates','gravityTimeS','loadingUpdates','gravityFreeResidualRatio')) {
+        if ($taskProgressManifest.ContainsKey($taskKey)) { $taskProgress[$taskKey]=$taskProgressManifest[$taskKey] }
+      }
+    } catch {
+      # Native JSON may be between truncate and flush; a later heartbeat retries it.
+      $taskProgress.manifestReadError=$_.Exception.Message
+    }
+  }
+  foreach ($taskLogName in @('stdout','stderr')) {
+    $taskLogPath=$taskOutput + '.' + $taskLogName + '.log'
+    if (Test-Path -LiteralPath $taskLogPath) {
+      $taskLogItem=Get-Item -LiteralPath $taskLogPath
+      $taskProgress[$taskLogName]=@{lastWriteUtc=$taskLogItem.LastWriteTimeUtc.ToString('o');bytes=$taskLogItem.Length}
+    }
+  }
+  $taskRecord.progress=$taskProgress
+  Save-TaskStatus
 }
 function Stop-NativeTree([int]$RootId) {
   $taskProcesses = @(Get-CimInstance Win32_Process)
@@ -36,7 +87,8 @@ $taskOutputRoot = [IO.Path]::GetFullPath((Join-Path $taskRepo 'output')) + [IO.P
 if (-not $taskOutput.StartsWith($taskOutputRoot, [StringComparison]::OrdinalIgnoreCase)) {
   throw 'Native output must be a fresh subdirectory of workspace/output.'
 }
-if ($MaxWallHours -le 0 -or $MaxWallHours -gt 24) { throw 'Wall budget must be in (0,24] hours.' }
+if (-not [double]::IsFinite($MaxWallHours) -or $MaxWallHours -le 0 -or $MaxWallHours -gt 72) { throw 'Wall budget must be finite and in (0,72] hours.' }
+if (-not [double]::IsFinite($HeartbeatSeconds)) { throw 'Heartbeat interval must be finite.' }
 if (-not $AttachRunning) {
   foreach ($taskPath in @($taskOutput,($taskOutput + '-launch.json'),($taskOutput + '-status.json'))) {
     if (Test-Path -LiteralPath $taskPath) { throw ('Refusing duplicate attempt: ' + $taskPath) }
@@ -63,7 +115,12 @@ if ($AttachRunning) {
     if ($taskHashes[$taskTool] -ne $taskRecord.postprocessorSha256[$taskTool]) { throw ('Postprocessor changed: ' + $taskTool) }
   }
   $taskOldWrapper = Get-Process -Id ([int]$taskRecord.wrapperPid) -ErrorAction Stop
+  $taskOldWrapperIdentity=Get-TaskProcessIdentity $taskOldWrapper
   $taskNative = Get-Process -Id ([int]$taskRecord.nativeCommandPid) -ErrorAction Stop
+  if ($taskRecord.processIdentity) {
+    Assert-TaskProcessIdentity $taskRecord.processIdentity.wrapper $taskOldWrapper
+    Assert-TaskProcessIdentity $taskRecord.processIdentity.nativeCommand $taskNative
+  }
   $taskNativeInfo = Get-CimInstance Win32_Process -Filter ('ProcessId=' + $taskNative.Id)
   if ($taskNative.ProcessName -ne 'cmd' -or $taskNativeInfo.ParentProcessId -ne $taskOldWrapper.Id) {
     throw 'Native command process no longer belongs to the recorded monitor.'
@@ -76,6 +133,7 @@ if ($AttachRunning) {
     Where-Object Name -eq 'sbcl.exe')
   if ($taskWorkers.Count -ne 1) { throw 'Expected exactly one existing SBCL child; no process was stopped.' }
   $taskWorker = Get-Process -Id $taskWorkers[0].ProcessId -ErrorAction Stop
+  if ($taskRecord.processIdentity) { Assert-TaskProcessIdentity $taskRecord.processIdentity.sbcl $taskWorker }
   foreach ($taskProcess in @($taskNative,$taskWorker)) {
     $taskProcessStart = [DateTimeOffset]$taskProcess.StartTime.ToUniversalTime()
     if ($taskProcessStart -lt $taskStarted.AddSeconds(-5) -or $taskProcessStart -gt $taskStarted.AddMinutes(1)) {
@@ -97,8 +155,9 @@ if ($AttachRunning) {
     activationEvent=$taskEventName;token=$taskToken;originalMaxWallHours=$taskRecord.maxWallHours
     proposedMaxWallHours=$MaxWallHours;deadlineUtc=$taskDeadline.ToString('o')
     supervisorSourceCommit=(git rev-parse HEAD).Trim();supervisorSha256=(Get-FileHash -LiteralPath $PSCommandPath -Algorithm SHA256).Hash
+    processIdentity=@{wrapper=(Get-TaskProcessIdentity (Get-Process -Id $PID));nativeCommand=(Get-TaskProcessIdentity $taskNative);sbcl=(Get-TaskProcessIdentity $taskWorker)}
   }
-  $taskReady | ConvertTo-Json | Set-Content -LiteralPath ($taskOutput + '-monitor-' + $PID + '-ready.json') -Encoding utf8
+  $taskReady | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath ($taskOutput + '-monitor-' + $PID + '-ready.json') -Encoding utf8
   try {
     if (-not $taskGate.WaitOne(60000)) { throw 'Monitor was not activated; original status remains unchanged.' }
     if (-not $taskOldWrapper.HasExited) { throw 'Previous monitor is still alive; refusing concurrent ownership.' }
@@ -110,6 +169,10 @@ if ($AttachRunning) {
   $taskRecord.wallDeadlineUtc=$taskDeadline.ToString('o')
   $taskRecord.monitorTransfer=$taskReady
   $taskRecord.monitorTransferredUtc=[DateTime]::UtcNow.ToString('o')
+  $taskRecord.previousWrapperIdentity=$taskOldWrapperIdentity
+  $taskRecord.processIdentity=$taskReady.processIdentity
+  $taskRecord.heartbeatIntervalSeconds=$HeartbeatSeconds
+  if (-not $taskRecord.ContainsKey('heartbeatSequence')) { $taskRecord.heartbeatSequence=0 }
   Save-TaskStatus
 } else {
 $taskRecord = [ordered]@{
@@ -117,6 +180,8 @@ $taskRecord = [ordered]@{
   wrapperPid=$PID; case=$Case; caseSha256=(Get-FileHash -LiteralPath $taskCase -Algorithm SHA256).Hash
   output=$taskOutput; maxWallHours=$MaxWallHours; status='STARTING'; exitCode=$null
   postprocessorSha256=$taskHashes; scientificValidation=$false
+  processIdentity=@{wrapper=(Get-TaskProcessIdentity (Get-Process -Id $PID));nativeCommand=$null;sbcl=$null}
+  heartbeatIntervalSeconds=$HeartbeatSeconds;heartbeatSequence=0
 }
 $taskRecord | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath ($taskOutput + '-launch.json') -Encoding utf8
 Save-TaskStatus
@@ -130,12 +195,22 @@ try {
   $taskNative = Start-Process -FilePath 'cmd.exe' -ArgumentList @('/d','/c',$taskCommand) -WindowStyle Hidden -PassThru `
     -RedirectStandardOutput ($taskOutput + '.stdout.log') -RedirectStandardError ($taskOutput + '.stderr.log')
   $taskRecord.nativeCommandPid=$taskNative.Id
+  $taskRecord.processIdentity.nativeCommand=Get-TaskProcessIdentity $taskNative
   $taskRecord.status='NATIVE_RUNNING'
-  Save-TaskStatus
   $taskDeadline = [DateTimeOffset]::UtcNow.AddHours($MaxWallHours)
+  $taskRecord.wallDeadlineUtc=$taskDeadline.ToString('o')
+  Update-TaskHeartbeat
   }
-  $taskRemainingMs = [Math]::Max(0,[Math]::Min([int]::MaxValue,($taskDeadline - [DateTimeOffset]::UtcNow).TotalMilliseconds))
-  if (-not $taskNative.WaitForExit([int]$taskRemainingMs)) {
+  $taskTimedOut=$false
+  while (-not $taskNative.HasExited) {
+    $taskRemainingMs = [Math]::Max(0,[Math]::Min([int]::MaxValue,($taskDeadline - [DateTimeOffset]::UtcNow).TotalMilliseconds))
+    if ($taskRemainingMs -le 0) { $taskTimedOut=$true;break }
+    $taskWaitMs=[int][Math]::Min($taskRemainingMs,($HeartbeatSeconds * 1000))
+    if ($taskNative.WaitForExit($taskWaitMs)) { break }
+    Update-TaskHeartbeat
+  }
+  Update-TaskHeartbeat
+  if ($taskTimedOut) {
     Stop-NativeTree $taskNative.Id
     $taskRecord.status='STOPPED_WALL_BUDGET'
     $taskRecord.nativeExitCode=$null
