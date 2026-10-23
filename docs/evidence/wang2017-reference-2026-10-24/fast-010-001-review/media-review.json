@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "scope": "Independent media/runtime artifact consistency; not scientific validation or FEM equivalence.",
+  "reviewedUtc": "2026-10-23T19:01:37.123273+00:00",
+  "videoPath": "D:\\MPM\\output\\wang2017-reference-2026-10-24\\fast-010-001\\slope-descent.mp4",
+  "nativeComplete": true,
+  "nativeExitCode": 0,
+  "auditAndRenderExitCode": 0,
+  "physicalTimeS": 6.0,
+  "commandedSettlementM": 0.06,
+  "velocityMPerS": 0.01,
+  "paperRateMultiplier": 100.0,
+  "copiedSourceFiles": 265,
+  "copiedSourceHashesAndSizesMatch": true,
+  "sourceLastWritesNotAfterNativeExit": true,
+  "sourceSnapshotExactLoadedBytesClaim": true,
+  "copiedByteEqualityBeforeLoadClaim": true,
+  "sourceProvenanceLastWriteUtc": "2026-10-23T18:01:48.367047+00:00",
+  "nativeEndedUtc": "2026-10-23T18:45:23.5078311Z",
+  "renderSourceVtkHashesMatchAll61RawFiles": true,
+  "renderSourceVtkCount": 61,
+  "actualMappedNativeBackend": {
+    "modulePath": "D:/MPM/output/wang2017-reference-2026-10-24/fast-010-001/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  },
+  "mappedDllHashMatchesFrozenCopy": true,
+  "wmiWorkerIdentityAndTerminalExitMatch": true,
+  "sessions": {
+    "caller": 11,
+    "workerProof": 11,
+    "workerStart": 11,
+    "sbcl": 11,
+    "wrapper": 11,
+    "nativeCommand": 11
+  },
+  "launchRequestAndWorkerHashesMatch": true,
+  "ffprobeExitCode": 0,
+  "fullDecodeExitCode": 0,
+  "selectedFramesExitCode": 0,
+  "video": {
+    "codec_name": "h264",
+    "pix_fmt": "yuv420p",
+    "width": 1680,
+    "height": 756,
+    "avg_frame_rate": "4/1",
+    "nb_read_frames": "61",
+    "duration": "15.250000"
+  },
+  "visualization": {
+    "quantity": "mc-kappa",
+    "xlim": [
+      -0.335217393973049,
+      20.335571318610114
+    ],
+    "ylim": [
+      -0.18602144976746018,
+      15.105189045538694
+    ],
+    "vmin": 0.0,
+    "vmax": 0.015110353842761104,
+    "displacementScale": 1,
+    "interpolatedStates": false,
+    "videoFps": 4
+  },
+  "originalInputsUnchanged": true,
+  "visualInspection": {
+    "method": "Direct view_image inspection of three PNGs decoded from the completed MP4, at encoded frame indices0,30,60.",
+    "inspectedFrames": [
+      {
+        "file": "video-selected-01.png",
+        "physicalTimeS": 0,
+        "observation": "Legible particle view and empty loading curve at t0; axes/colour scale and100x accelerated-trial labels visible."
+      },
+      {
+        "file": "video-selected-02.png",
+        "physicalTimeS": 3,
+        "observation": "Legible mid-run curve through30mm; geometry changes remain small at scale1."
+      },
+      {
+        "file": "video-selected-03.png",
+        "physicalTimeS": 6,
+        "observation": "Legible final curve through60mm and localized mc-kappa colour near upper slope; no gross landslide/run-out visible."
+      }
+    ],
+    "layout": "No clipping or missing panels observed. Fixed spatial/colour bounds; explicit no displacement amplification label.",
+    "interpretation": "Playable native accelerated Soil1 control, not600s paper-rate output or demonstrated landslide. mc-kappa is plastic history, not damage."
+  },
+  "limits": [
+    "Only6s at0.01m/s (100x paper rate), not600s at1e-4m/s.",
+    "Native mc-kappa is plastic history, not damage or calibrated Soil2 softening.",
+    "Hash/mtime equality supports retained bytes and snapshot claims; it is not proof every non-ASDF or external dependency was frozen.",
+    "SessionId11 stayed consistent in recorded process observations; logoff/reboot survival is not established.",
+    "Gravity convergence/output consistency do not establish quasistatic response, paper agreement or experimental validity.",
+    "Third-party dependency sources/FASLs remain installed external dependencies.",
+    "Math module probes do not enumerate every loaded process DLL.",
+    "Trusted cases may execute arbitrary non-ASDF LOADs; those are outside the ASDF source claim."
+  ],
+  "frameExtractionRetry": "Initial -vsync failure retained; current -fps_mode passthrough succeeded. No solver or prior passed checks repeated."
+}

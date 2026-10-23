@@ -9,7 +9,8 @@ updated: 2026-10-24
 # Wang 2017 prescribed crest descent
 
 Current continuation: [[wang2017-fast-trial-2026-10-24]] records the confirmed
-0.01m/s to60mm/6s trial. The earlier0.002m/s run was interrupted at6.4s/12.8mm,
+0.01m/s to60mm/6s trial, now completed exit0 with61native states/video; no verified
+coherent landslide. The earlier0.002m/s run was interrupted at6.4s/12.8mm,
 exit unknown. [[wang2017-apex-and-rate-study]] retains native evidence that legacy
 apex acceptance introduces volumetric plastic flow. No hidden convention change.
 

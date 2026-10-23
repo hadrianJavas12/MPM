@@ -1,0 +1,17 @@
+{
+  "nativeAlreadyCompleted": true,
+  "scope": "Evidence collection after native/audit/render completion; no solver or tests repeated",
+  "endedUtc": "2026-10-23T19:01:57.5188715Z",
+  "log": "output/wang2017-reference-2026-10-24/fast-010-001-evidence-collection.log",
+  "argv": [
+    "toolchain/analysis-venv/Scripts/python.exe",
+    "scripts/collect-wang2017-evidence.py",
+    "--run-dir",
+    "output/wang2017-reference-2026-10-24/fast-010-001",
+    "--destination",
+    "docs/evidence/wang2017-reference-2026-10-24/fast-010-001-completed"
+  ],
+  "startedUtc": "2026-10-23T19:01:53.4334931Z",
+  "exitCode": 0,
+  "collectorSha256": "10F770A1D3FDCAF64EA73C93D9315720249B67B9100A221229CEEB6BC171C759"
+}

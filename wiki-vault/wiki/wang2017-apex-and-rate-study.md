@@ -36,6 +36,12 @@ processes absent.24 retained evidence hashes and7 exact common-settlement pairs
 record consistent data without rate-convergencePASS. Session logoff correlated
 with stopped outputs, no exitcode/MCfailure proof. User-confirmed replacement
 trial and monitor controls are in [[wang2017-fast-trial-2026-10-24]].
+
+Fast010 subsequently completed native6s/60mm, exit0,61states; audit/video0.
+Comparison on61exact saved settlements withfast005 gives reactionend+2.5173%
+and maxpositiondistance3.390mm, with identical gravity initialization. This
+does not establish rate independence or a landslide, and it does not erase the
+different fast005 failure at77mm. No apex/tensile convention was changed.
 New [[wang2017-paper-history|Soil2 coupled point prototype]] passes19 controls
 and optional ASDF smoke independently of this frozen native source;36 hashes
 retain its evidence. It does not enable a Soil2 particle or finite-strain rule.

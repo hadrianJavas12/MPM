@@ -6,6 +6,41 @@ hasilnya tidak boleh diberi label sebagai simulasi600detik atau kurva paper yang
 tervalidasi. Model adalah Soil1 MC plastis sempurna; Soil2 dan longsor pada video
 teman belum tervalidasi oleh kontrol ini.
 
+## Hasil aktual24Oktober
+
+Run `fast-010-001` **selesai**: native exit0/complete pada01:45:23WIB,
+audit/render/worker exit0 pada01:46:32WIB.61frame asli,915partikel,20640update
+pembebanan;6detik fisik tercapai. Tidak ada solver yang dijalankan ulang.
+
+**Belum ada longsor koheren atau run-out yang terverifikasi.** Zona plastis
+berkembang dan reaksi masih meningkat hingga668,64kN/m. Warna `mc-kappa`
+adalah history plastis model Soil1, bukan damage atau softening Soil2.
+
+| Pengukuran akhir | Nilai |
+| --- | ---: |
+| Perintah turun |60mm |
+| Penurunan rata-rata permukaan kontak |59,5357mm |
+| Gap rata-rata / maksimum individual |0,4643 /1,1585mm |
+| Maksimum perpindahan pusat partikel |59,1289mm |
+| Maksimum native kappa |0,01511035 |
+
+Penurunan permukaan bukan perpindahan pusat partikel: pusat6partikel strip
+turun rata-rata57,5816mm dan setengah tinggi domain menyusut1,9540mm, sehingga
+permukaan turun59,5357mm. Rekonstruksi dari61VTK cocok dengan CSV hingga5,21e-15m.
+Maxspeed0,324m/s adalah outlier lokal **ke atas**, bukan bukti longsor cepat.
+
+[Video hasil](../evidence/wang2017-reference-2026-10-24/fast-010-001-completed/slope-descent.mp4)
+memakai61state native,4fps/15,25detik playback, skala perpindahan1 dan rentang
+warna/axes tetap. Native6detik, playback15,25detik, dan paper600detik berbeda.
+Full H264/yuv420p decodePASS. Semua61hash VTK dan265hash sumber cocok.
+
+[Paket native17hash](../evidence/wang2017-reference-2026-10-24/fast-010-001-completed/README.md)
+dan [review11hash](../evidence/wang2017-reference-2026-10-24/fast-010-001-review/README.md)
+menyimpan raw/sumber/runtime/media dan perbandingan pada displacement identik.
+Pada60mm, reaksi berbeda+2,52% terhadap run0,005m/s; ini belum membuktikan
+konvergensi laju. Tidak ada validasi kurva paper, closed energy budget atau
+quasistaticPASS; loading J tidak disimpan langsung. Reference-speed600s belum run.
+
 ## Menjalankan dari Windows native
 
 PowerShell7, folder output baru, tanpa Studio:
@@ -24,7 +59,7 @@ Jangan menilai kemajuan dari tail stdout saja. Worker merekam identitas proses
 dan membaca manifest tiap60detik; setelah exit0/complete, audit/PNG/video otomatis.
 Simpan semua data jika gagal. Jangan menjalankan ulang untuk memperbaiki media.
 
-Run aktual `fast-010-001` dimulai24Oktober01:00:46WIB pada4e3140c; batas
+Run historis `fast-010-001` dimulai24Oktober01:00:46WIB pada4e3140c; batas
 03:00:46WIB, bukan jaminan jam selesai. Worker21676/wrapper15488/cmd27480/SBCL9164.
 Jangan menggandakannya ketika masih berjalan. WMI mempertahankan worker setelah
 perintah pemanggil berakhir, tetapi worker masih di sesi pengguna11. **Komputer

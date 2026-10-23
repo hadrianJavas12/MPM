@@ -1,7 +1,8 @@
 # Persiapan Wang 2017 dengan MPM
 
-**Aktif24Oktober:** pengguna memilih uji0.01m/s, penurunan60mm/**6s fisik**.
-Run `fast-010-001` mulai01:00:46WIB, batas2jam;100x paper. Ini penurunan yang
+**Selesai24Oktober:** pengguna memilih uji0.01m/s, penurunan60mm/**6s fisik**.
+Run `fast-010-001` selesai nativeexit0 pada01:45:23WIB dan audit/video0 pada
+01:46:32WIB;61frame native, belum ada longsor koheren.100x paper. Ini penurunan yang
 sama dengan600s pada kecepatan paper, bukan durasi600s atau dorongan6m.
 [Panduan dan batas uji cepat](WANG2017_FAST_TRIAL.md).
 

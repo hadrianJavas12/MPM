@@ -1,0 +1,23 @@
+{
+  "nativeAlreadyComplete": true,
+  "support": {
+    "scripts/plot-wang2017-descent.py": {
+      "sha256AtCollection": "0d9a32dfc0f767a38874c32f58aac4105541fad8c3dffc0bc8ce20d22ef5d282",
+      "sha256RecordedAtNativeLaunch": "0D9A32DFC0F767A38874C32F58AAC4105541FAD8C3DFFC0BC8CE20D22EF5D282",
+      "matchesNativeLaunchHash": true,
+      "role": "Saved-output renderer/reader"
+    },
+    "scripts/plot_m5_cliff_comparison.py": {
+      "sha256AtCollection": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "sha256RecordedAtNativeLaunch": "1C254E7BC1490F284C1722536E6C442C4A3E033C06949D8372F9D9D38C3277E8",
+      "matchesNativeLaunchHash": true,
+      "role": "Saved-output renderer/reader"
+    },
+    "scripts/collect-wang2017-evidence.py": {
+      "sha256AtCollection": "10f770a1d3fdcaf64ea73c93d9315720249b67b9100a221229ceeb6bc171c759",
+      "sha256RecordedAtNativeLaunch": "EE66FF39A0743855C91404D7ACABEE1A8E40F270B76E11831D750DA3D5AE3393",
+      "matchesNativeLaunchHash": false,
+      "role": "Executed evidence packager after native completion; not a native-executed source"
+    }
+  }
+}

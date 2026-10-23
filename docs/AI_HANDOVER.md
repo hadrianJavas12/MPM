@@ -2,14 +2,14 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
-## Current: approved 0.01m/s / 60mm accelerated Wang trial ACTIVE
+## Current: approved 0.01m/s / 60mm accelerated Wang trial COMPLETE, reviewed
 
 Human supplied a friend FEM video and requested600physicalseconds, then chose
 0.01m/s for a quick trial. Explicit clarification: **"Penurunan60mm ->6detik
 fisik"**. The600s at paper1e-4m/s and6s at0.01m/s share60mm travel; this is
 NOT a600s/6m run. Paper/reference-speed600s remains NOT_RUN.
 
-**ACTIVE** `output/wang2017-reference-2026-10-24/fast-010-001/`, source
+**COMPLETE** `output/wang2017-reference-2026-10-24/fast-010-001/`, source
 **4e3140cf49659707e3e71ba5eb5d3bd8c2bbf896**, started **01:00:46WIB**.
 WMI worker21676 / wrapper15488 / cmd27480 / SBCL9164, SessionId11;
 **2h wall budget until03:00:46WIB**. Case `wang2017-soil1-fast-010.lisp`:
@@ -22,19 +22,46 @@ All265 frozen source/DLL records matched workspace bytes after native startup;
 actual mapped native DLL proved by Windows API.11 launch-artifact hashes and
 9 preparation-artifact hashes retain source/proof/input controls under
 `docs/evidence/wang2017-reference-2026-10-24/fast-010-launch/` and
-`fast-010-preparation/`. Native complete remains false; no result PASS yet.
+`fast-010-preparation/`. Native finished **01:45:23WIB**, exit0/complete=true;
+audit/render/worker exit0, ended **01:46:32WIB**. No active solver.61saved states,
+915stable particle IDs,20640loadingupdates; finite saved fields, positive masses/
+volumes, native massErrorFraction0. Configured60mm/6s target COMPLETE; paper600s,
+historical0.1m benchmark, reference curve and scientific validation remain NOT_RUN/
+NOT_VERIFIED. No MC failure or retry needed for this run.
 
-At wakeup read adjacent status **progress/heartbeatUtc/processIdentity**, manifest
-complete/phase/timeS, and one stdout tail. Stdout can be buffered/stale: it is
-NOT the physical phase. Verify recorded PID+creation+SessionId if needed.
-Healthy active run: no duplicate, repeated tests or active polling. Wrapper
-automatically audits/renders on complete exit0. Do not edit its three recorded
-postprocessors during the run. No EvidenceDirectory was passed: the completed
-collector assumes an older `.log` filename, so archive manually after completion
-without rerunning solver or relaxing collector completion assertions.
-The SAME heartbeat automation `mpm-creep-drive-hold` is temporarily hourly for
-this trial. After terminal result, return it to5h reset continuation before
-further work; no duplicate automation. Quiet while healthy/unchanged.
+Native/video/source review DONE:17artifact hashes in
+`docs/evidence/wang2017-reference-2026-10-24/fast-010-001-completed/`,349archive
+members verified (71native,266source including manifest,12runtimecontrol).
+Independent review11hashes/29archive members in `fast-010-001-review/`.
+All61 renderer-source hashes and265frozen-source hashes verified. Full H264/
+yuv420p decode0,61frames/4fps=15.25s playback; fixed axes/colour, scale1, no
+interpolation. Video: completed packet `slope-descent.mp4`. Initial review-only
+frame extractor failed on removedffmpeg-vsync option; narrow retry retained,
+no native/renderer/decoding failure or solver rerun.
+
+**Physical outcome: no verified coherent landslide/run-out.** Plasticity is
+localized (116MPs with delta-native-kappa>1e-8,max0.01511035); kappa is not damage
+or Soil2 paper history. Reaction still rises to668.636kN/m at60mm command.
+Contact-surface mean descent59.53567mm, mean gap0.46433mm/max individual1.15853mm.
+Surface includes domain compression: strip centroid descent57.58163mm plus
+half-height reduction1.95404mm. Independent61-frame surface reconstruction
+residual<=5.21e-15m; do not confuse with globalmax centre-displacement59.12893mm.
+Max speed0.324m/s is an upward local outlier, not downslope failure; strong local
+velocity fluctuations remain. KE92.116J/m and energy proxies are NOT a closed
+energy budget or quasistaticPASS. Loading determinantJ is not directly saved.
+61exact-settlement pairs vsfast005 through60mm: reactionend+2.5173%, maxposition
+distance3.3896mm;7pairs vsinterrupted002 through12mm: reaction-2.7841%. No
+prespecified rate-convergencePASS or paper-curve match claimed.
+
+Collector `.log` bug was fixed AFTER native completion: enumerate existing modern
+logs/detached proofs, preserve complete/audit assertions, distinguish configured
+target completion from historical0.1m. One actual collection exit0 verifies all
+archive members. Collector source is post-completion packager, not native source;
+renderer/reader still match launch hashes. Code checkpoint2482ef8.
+
+The SAME automation `mpm-creep-drive-hold` checked every15min under latest human
+instruction, then returned to5h continuation after terminal result. No duplicate
+monitor. **Do not poll old PIDs, rerun passed review/solver or restate old ACTIVE.**
 
 Windows native monitor12 controls, detached-launch9 controls and72h budget-guard3
 controls PASS, zero MPM updates. Heartbeat60s reads actual manifest, identities
@@ -64,9 +91,13 @@ Friend video is immutable raw source, SHA256cc86e80a...f011b;11.133s playback,
 no visible physical time/material/deformation-scale proof. Qualitative band
 crest-to-toe, not quantitative validation or code instructions. See
 `docs/benchmarks/WANG2017_FAST_TRIAL.md` and wiki follow-up. No UI/main merge.
-After this trial: inspect actual native result and rate/dynamic limits; if MC
-fails, replay new actual capsule once. Do not enable apex clamps, alter strength,
-or relabel accelerated6s as paper600s. Preserve independent Soil2 point scope below.
+Next authorized independent work: prepare the original600s paper-speed/.06m
+input and explicit runtime/scientific gate plan using this reviewed trial; no
+unannounced long run, target extension or rate/material tuning to make collapse.
+Soil1 technical completion is not Soil2/FEM landslide reproduction. Native Soil2
+still requires explicit finite-strain/irreversibility conventions and particle
+transactions before enabling; preserve the19-control isolated prototype scope.
+Do not enable apex clamps, alter strength or relabel accelerated6s as paper600s.
 
 ## Historical checkpoint: controlled slower rate and Soil2 point preparation
 

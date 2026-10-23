@@ -13,10 +13,31 @@ The user requested600physicalseconds, supplied a friend's FEM clip, then chose
 This100x-paper loading is the same travel as600s atpaper1e-4m/s, not a600s run.
 [[wang2017-prescribed-descent]] keeps MPM; strictSoil1 perfect MC remains unchanged.
 
-New fast010 trial started01:00:46WIB on4e3140c, target6s/60mm,61frames,45000cap;
-2h wall budget03:00:46. Worker21676/wrapper15488/cmd27480/SBCL9164, SessionId11.
-Three native input controls PASS, zero updates; native complete still pending.
-Read actual manifest/heartbeat, not buffered stdout. No duplicate healthy run.
+Fast010 trial COMPLETE: source4e3140c, start01:00:46WIB, native exit0 at01:45:23,
+audit/render/worker exit0 at01:46:32.6s/60mm,61frames,915IDs,20640loadingupdates.
+17artifact hashes retain349verifiedarchive members; independent11hash review
+retains29members. No active solver, repeated run or extra repair needed.
+
+Measured contact-surface descent59.5357mm, mean/maxgap0.4643/1.1585mm; reaction
+668.636kN/m still increases. **No verified coherent landslide/run-out.** Native
+kappa is plastic history, not damage or Soil2softening.61frame surface geometry
+reconstructs as57.5816mm strip-centroid descent plus1.9540mm half-domain-height
+reduction, residual5.21e-15m; globalmax centre-displacement59.1289mm is different.
+Fastest0.324m/s local particle moves UPWARD, not proof of sliding. Saved loadingJ
+is not directly present; finite/positive mass/volumes do not close this data gap.
+
+Video full decode0,61actualstates4fps/15.25s, fixed axes/colour and scale1, no
+interpolation; all61VTK/265frozen-source hashes match and mappedDLL verified.
+61exact-displacement pairs against0.005m/s give+2.5173% end reaction and3.390mm
+maxpositiondistance. Not a rate-convergencePASS, closed energy budget or paper
+curve validation. Reference-speed600s is still NOT_RUN; prepare its inputs and
+runtime/gate plan next without tuning strength or forcing collapse.
+
+Collector modern-log bug fixed after native completion, actual collection once0;
+native/renderer were not rerun. Updatedcollector is explicitly post-native support,
+while renderer/reader still match launch. Initial review-only ffmpeg option error
+and narrow frame-extraction retry retained. Automation returned from15min monitor
+to5h continuation; do not poll old PIDs or re-review already archived results.
 
 Previous rate002 is INTERRUPTED_UNKNOWN_EXIT:33loadingstates to6.4s/12.8mm.
 All processes gone, old adjacent NATIVE_RUNNING retained. Session10 logoff and

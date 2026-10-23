@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "artifactHashCount": 17,
+  "archiveMemberCounts": {
+    "native-output.tar.gz": 71,
+    "executed-source.tar.gz": 266,
+    "control-logs.tar.gz": 12
+  },
+  "nativeFrozenSourceFilesVerifiedAgainstPreloadManifest": 265,
+  "sourceArchiveIncludesAdditionalManifest": true,
+  "nativeVtkCount": 64,
+  "rawMembersMatchOriginals": true,
+  "controlLogsAndDetachedProofMatchOriginals": true,
+  "auditSourcesMatchArchivedBytes": 61,
+  "configuredTargetRun": "COMPLETE",
+  "actualTimeS": 6,
+  "commandedTargetM": 0.06,
+  "historicalPointOneMFullBenchmark": "NOT_RUN",
+  "referenceRateFullTarget": "NOT_RUN",
+  "scope": "Independent read-only verification of one completed accelerated run evidence collection; no solver, renderer, collector or tests rerun"
+}

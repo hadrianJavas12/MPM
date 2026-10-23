@@ -1,5 +1,29 @@
 # Native framework and Studio verification
 
+## Complete fast010 native run and independent review,2026-10-24
+
+Actual Windows native source4e3140c: exit0/complete6s/60mm at01:45:23WIB;
+audit/render/worker exit0 at01:46:32.61loadingVTKs/915stableIDs,20640updates,
+finite saved numeric fields, positive mass/volume, native massErrorFraction0.
+61rendererVTKhashes/265frozen-source hashes and mappedDLL verified; video full
+H264/yuv420p decode0,61frames4fps15.25s, fixed axes/colour/scale1,no interpolation.
+Source/runtime/raw/media:17artifact hashes/349verifiedarchive members; independent
+review11hashes/29members. Neither solver, old suites nor renderer was repeated.
+
+Configured run completion PASS is distinct from scientificValidation=false:
+no verified landslide, no paper600s/reference curve/rate independence. Native
+maximum speed is an UPWARD local outlier; no downhill-failure inference. Contact
+measurement reconstructed for61states as centroid descent plus half-domain-height
+reduction, residual<=5.21e-15m. Loading determinantJ not directly saved.
+Initial media-review extractor-vsync compatibility failure retained; narrow
+frame-only retry passed without repeating successful runtime/hash/decode checks.
+
+Evidence collector maintenance2482ef8 fixes modern split logs/detached proofs
+and explicit configured target status. Actual completed collection once, exit0;
+all349tar members byte/length/SHA checked,265source manifest entries matched.
+Completion/audit assertions remain; this does not allow partial-run PASS.
+Collector copy is labelled post-native packager; renderer/helper hash unchanged.
+
 ## Wang fast010 and Windows monitor,2026-10-24
 
 Fast010 input gate002:3 Windows native controls PASS, exit0, two native particles,
