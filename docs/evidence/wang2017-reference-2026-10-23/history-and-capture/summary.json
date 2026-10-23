@@ -1,0 +1,24 @@
+{
+  "materialSourceCommit": "db71b6350a2b7149f4bed5b421ef9425480994fb",
+  "cliSourceCommit": "9267dcb694a94d6ca256b6e81b31fe2c9b6e24ec",
+  "historyControls": 17,
+  "captureControls": 7,
+  "legacyMCGroups": 34,
+  "materialNativeExitCodes": {
+    "capture": 0,
+    "mc-regression": 0,
+    "history": 0
+  },
+  "cliNegativeExitCodeExpected": 1,
+  "cliReplayExitCode": 0,
+  "cliPositiveExitCode": 0,
+  "initialHistoryControls": 16,
+  "initialCLIFixture": "FAILED_TEST_FIXTURE; exit0/no capsule, source5c6d6f7; retained, not counted PASS",
+  "pointTestSourceIdentity": "Committed db71b63; post-test sources retained. Focused point tests did not use pre-load source freezing.",
+  "cliSourceIdentity": "Actual pre-load copied bytes/manifests, ASDF and loaded DLL identity inside both run archives; private FASLs excluded.",
+  "scope": "Coordinate/law/replay/rollback and CLI infrastructure. Positive legacy MC smoke has two updates and one particle VTK.",
+  "originalWangFailedStateCaptured": false,
+  "soil2ParticleImplemented": false,
+  "fullReferenceCurveExecuted": false,
+  "scientificallyValidated": false
+}

@@ -1,0 +1,54 @@
+Parameters:
+  E                  2.0d7
+  accelerateInterval 1.0d0
+  cliffSlope         90.0d0
+  cohesion           1000000.0d0
+  collapseInterval   0.1d0
+  constitutiveModel  CHALK
+  damageCohesion     26000.0d0
+  damageDelayExponent 2.0d0
+  damageFrictionAngle 50.0d0
+  delayTime          10.0d0
+  density            1800.0d0
+  dilatancyAngle     0.0d0
+  ductility          10.0d0
+  enableDamage       NIL
+  enablePlasticity   T
+  fractureEnergy     48.0d0
+  frictionAngle      40.0d0
+  geometryRefinement 4
+  initiationStress   200000.0d0
+  massScaleAccelerate 10000.0d0
+  maxSteps           1
+  meshSize           2.0d0
+  mpsPerCell         1
+  nonlocalLength     7.937253933193772d0
+  notchDepth         0.0d0
+  notchHeight        0.0d0
+  notchShape         RECTANGLE
+  notchTipFraction   0.5d0
+  nu                 0.25d0
+  plotMode           STRESS
+  quasiStaticTolerance 0.01d0
+  residualCompressionRatio 0.0d0
+  residualShearRatio 0.51d0
+  residualTensileRatio 1.0d0
+  runoutAspect       1.0d0
+  scenario           STUDIO-CLIFF
+  settleMaxSteps     50000
+  settleTolerance    1.0d-4
+  shelfAspect        2.0d0
+  shelfHeight        10.0d0
+  simulationTime     360.0d0
+  soilBoundary       2.0d0
+  substeps           1
+  timeStepScale      0.5d0
+  undercut           0.0d0
+  upperVerticalHeight 6.8d0
+  workers            1
+Angle: 0.0e+0
+
+(40.0d0 12.0d0 0)
+(2.0d0 2.0d0 0.0d0)
+Particles: 70, dt: 1.732d+0 s, output: D:\MPM\output\wang2017-reference-2026-10-23\cli-controls-001\negative\
+Step 1/1

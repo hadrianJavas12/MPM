@@ -1,0 +1,36 @@
+M2 MATERIAL-POINT & ADAPTER TESTS; stress tolerance 1.000d-3 Pa, strain tolerance 1.00000000000d-11.
+PASS: Law degree interpolation, endpoint clamp, and defensive source-table copy
+PASS: H and HS retain raw zero initialization, identical prepeak, and explicit postpeak endpoints
+PASS: Associated option uses the final friction angle as dilation
+PASS: Invalid laws and missing or blank strain-coordinate assumptions reject
+PASS: Invalid elastic, Jacobian, and history inputs reject without modifying the trial vector
+PASS: Compressive hydrostat stays elastic at raw zero cohesion and friction
+PASS: Strictly admissible MC stress preserves all elastic state
+PASS: Exactly on the Tresca surface does not create a plastic increment
+PASS: Analytical Tresca face fixture and independent kappa convention
+PASS: Tresca solution is invariant under all six principal-axis permutations
+PASS: Analytical nonassociated MC face uses final six-plane consistency
+PASS: Analytical nonassociated MC edge handles repeated maximum principal stress
+PASS: Associated tensile apex has hydrostatic correction and zero equivalent shear increment
+PASS: Cauchy cohesion scales with J while the explicit Kirchhoff-strength option does not
+PASS: H and HS coupled returns are identical while the entire increment remains prepeak
+PASS: Raw zero-cohesion zero-friction H and HS laws develop identical coupled prepeak strength
+PASS: Coupled hardening crosses a table knot with final rather than stale strength
+PASS: H and HS postpeak returns differ only through their declared strength law
+PASS: HS never extrapolates friction below the declared residual endpoint
+PASS: Accumulated kappa adds increment norms even when plastic tensors cancel
+PASS: Incompatible zero-dilation tensile apex rejects with untouched projector input
+PASS: Dedicated native class preserves elastic/plastic inheritance without legacy MC inheritance
+PASS: Native engineering pure shear returns tensor shear and the analytical Tresca kappa
+PASS: Native MC face correction is covariant under a general proper rigid rotation
+PASS: Native constitutive J handling returns Kirchhoff stress exactly once
+PASS: Rejected native apex leaves every bound state slot and external strain unchanged
+PASS: Snapshot and restore deeply preserve complete native and custom current/committed state
+PASS: Particle-state copy deeply preserves baseline and does not alias either direction
+PASS: Native loadstep commit/reset restores the complete accepted state after arbitrary trial mutations
+PASS: Repeated uncommitted native trials do not double-count committed kappa
+PASS: Sequential committed native increments accumulate kappa without tensor-history cancellation
+PASS: Explicit native elastic-only mode returns the full trial stress with unchanged plastic history
+PASS: Framework :mc-h and :mc-hs materials and diagnostics construct and validate cleanly
+PASS: Urmi et al. (2024) Eq. 2 exponential-linear softening law matches H prepeak and softens postpeak
+M2 MATERIAL POINTS PASS: 34 passed; 0 failed.

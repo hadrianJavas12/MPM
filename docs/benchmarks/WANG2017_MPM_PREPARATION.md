@@ -85,6 +85,19 @@ tidak memenuhi target ini. Belum ada case Soil #2 yang memakai pengganti tersebu
 
 ### Checkpoint history dan diagnostik native
 
+Bukti: [29 artifact hashes dan sumber/log](../evidence/wang2017-reference-2026-10-23/history-and-capture/README.md).
+CLI frozen9267dcb lulus: rejection exit1 dengan capsule, replay exit0, positive
+legacy MC exit0 dengan dua update/VTK. Fixture CLI awal yang tidak memicu error
+tetap diarsipkan sebagai FAILED_TEST_FIXTURE, bukan PASS.
+
+Setelah instruksi "jalankan!", diagnostik Soil1 baru dimulai23Oktober11:24WIB
+di `output/wang2017-reference-2026-10-23/diagnostic-fast-005-002/`, sumberd60335a,
+batas90menit. Preset0.005m/s tetap **50x kecepatan paper**; tujuannya menangkap
+input update gagal yang belum tersedia. Kasus/material/solver numerik tidak
+dituning; full reference-speed1000s belum dijalankan. Status dan bukti peluncuran
+ada di handover; jangan menggandakan run atau menafsirkan diagnostik sebagai
+reproduksi kecepatan paper.
+
 Pada source `db71b63`, **17 kontrol history Wang,7 kontrol capture/replay dan34
 kelompok regresi material MC lulus**, semuanya exit0 lewat launcher Windows.
 System opsional `cl-mpm/models/wang2017` memisahkan norma tensor, state bertanda

@@ -1,0 +1,18 @@
+PASS: Zero and hydrostatic plastic strain have zero paper coordinate
+PASS: Uniaxial plastic strain removes one-third trace
+PASS: All physical tensor shear components enter contraction twice
+PASS: Engineering shear conversion is explicit and uses engine component order
+PASS: Hydrostatic offset does not alter a general tensor coordinate
+PASS: Forty-five degree rotation converts deviatoric diagonal strain to shear
+PASS: Cyclic axis permutation preserves arbitrary-tensor coordinate
+PASS: Coordinate agrees with independent full-matrix contraction after rotation
+PASS: Monotonic coaxial path has proportional J2 factor sqrt(3)/2
+PASS: Nonproportional signed history differs from accumulated increment norms
+PASS: Reversal cancels tensor norm without silently imposing a maximum
+PASS: History constructor and reader own copies of retained data
+PASS: Invalid candidate cannot alter a committed coordinate state
+PASS: Malformed tensor components and non-real numbers are rejected
+PASS: Soil2 cohesion endpoints, mid-branch and residual tail match paper units
+PASS: Cohesion rejects negative, complex and nonnumeric coordinates
+PASS: Large finite hydrostatic input and residual coordinate avoid intermediate overflow
+WANG2017 HISTORY: 17 PASS, 0 FAIL; zero physical updates.

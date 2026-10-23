@@ -2,6 +2,10 @@
 
 **Operational checkpoint: 2026-10-23, Asia/Jakarta. Read this first.**
 
+**Active: Wang diagnostic002, started11:24WIB, SBCL49524,90min budget.**
+Read the "Latest native Wang preparation checkpoint" below before any new run.
+History/capture/MC controls are complete; do not repeat them at each wakeup.
+
 ## Latest human direction: prepare Wang2017 physical inputs in MPM
 
 User replaced the creep experiment: "tidak longsor ya, tolong persiapkan simulasi
@@ -21,7 +25,8 @@ J2 creep, or start more creep runs. Active branch
   constructed; **zero simulation or settling updates**. End-to-end preparation
   exits0, status PREPARED_WITH_OPEN_GATES. **18 hashes** retain proof/source/logs:
   `docs/evidence/wang2017-reference-2026-10-23/preparation/`.
-- No numerical engine/material/scenario code changed from59a564b; checked by Git.
+- At input checkpoint7319e42 no numerical engine/material/scenario code changed
+  from59a564b; checked by Git. Later failure-only diagnostic additions are below.
   This is input preparation, not a new force curve or validated landslide.
 - User PDF path now missing. Historical SHA/transcription retained unchanged.
   Author-upload13-page PDF text is accessible through web (URL in contract),
@@ -40,10 +45,11 @@ J2 creep, or start more creep runs. Active branch
   controls already exist in tests/materials/mc-evolution-points.lisp around391/439.
   Stored trial mean42985.371Pa requires J>=1.003289361 for mean(tau)<=J*c*cot(phi).
   Exact failedJ was not recorded; cause remains strongly indicated, not proven.
-  Next bounded numerical work: capture/replay trial,E,nu,J,law,kappa; do not tune
+  Capture/replay infrastructure is now tested; active diagnostic002 seeks actual
+  trial,E,nu,J,law,kappa. Do not tune
   psi or add apex/tensile clamps. Exception-safe history retention already fixed.
-- Next preparation stage: isolate the paper plastic-strain/history definition
-  and its tests, then implement/verify a dedicated Soil2 adapter while preserving
+- Next preparation stage: the isolated paper plastic-strain/history primitives
+  and17 tests are complete; implement/verify dedicated Soil2 coupling preserving
   existing models. Reconcile units/stress/reset/BC assumptions explicitly before
   claiming a faithful full curve. No costly run merely to rediscover old failure.
 - Monitor **mpm-creep-drive-hold** is reused under the new Wang name every5h;
@@ -57,11 +63,45 @@ J2 creep, or start more creep runs. Active branch
 Human subsequently said **"jalankan!"**. Continue actual native work, keeping
 the explicit MPM decision and scientific gates above. Do not restart J2 creep.
 
+**ACTIVE diagnostic:** `output/wang2017-reference-2026-10-23/diagnostic-fast-005-002/`,
+source **d60335a6e9d04d35966a8dba0b7a4dd98a6847b7**, started **11:24:15 WIB**.
+Wrapper18936 / cmd21008 / native SBCL49524; **90min wall budget**. One worker,
+BLAS/OMP1. Read adjacent `-status.json`, manifest if present and ONE stdout tail
+on wakeup. Healthy NATIVE_RUNNING: no duplicate/no active polling. Startup
+verified source/DLL proof and gravity progress. Wrapper handles completion/audit.
+
+This is the unchanged **0.005m/s accelerated Soil1 diagnostic**,50x paper rate,
+20s/0.1m target; **NOT** reference-speed replication. A new run is justified
+specifically to obtain the missing exact failed return J/inputs with tested
+capture, not to repeat a failed run unchanged. Case is byte-unchanged from
+52f9367; engine numerics unchanged, projector only failure payload, slope runner
+only existing exception-history retention since that source. Do not modify
+its postprocessors while active. Full reference1000s remains NOT_RUN.
+
+First launch `diagnostic-fast-005-001` failed **before native startup**: Windows
+PowerShell child lacked Get-FileHash. Retain wrapper logs/prelaunch JSON; no
+solver ran.002 uses bundled PowerShell7, verified real SBCL running. No physics
+or launcher was changed to work around this shell environment issue.
+
+After failure, inspect `mc-integration-failure.json`, CSVs, manifest/log and pure
+replay with `scripts/replay-mc-failure.lisp` into a fresh summary. Before replay,
+check current law/projector/diagnostics bytes against executed frozen sources;
+keep source identity explicit. Compare actual mean(trial) to J*c*cot(phi) only
+for the captured perfect law/psi0, retaining exact inputs and failure result.
+Do not substitute the old conditional inferred J, add an apex clamp or tune psi.
+If complete exit0, use saved native audit/render and review; do not call the
+accelerated curve a paper-speed result. Archive raw/capsule/source/proof/hashes,
+then continue dedicated Soil2 coupling, not more J2 creep. No solver restart just
+to repair plotting. Every5h automation remains the sole continuation.
+
 - Implemented source `db71b63`: optional `cl-mpm/models/wang2017`, isolated
   fixed-frame signed tensor history Eq5–6, shear conversion and Soil2 cohesion.
   **17 history controls,7 capture/replay controls,34 existing MC material-point
   regression groups PASS**, native exits0. No physical steps in those controls.
   `output/wang2017-reference-2026-10-23/material-controls-001/` retains results.
+  **29 verified artifact hashes** archive results, initial fixture failure and
+  exact CLI frozen sources/VTK/DLL proofs under
+  `docs/evidence/wang2017-reference-2026-10-23/history-and-capture/`.
 - Failure-only MC diagnostics retain exact supplied trial,E,nu,J,law,kappa and
   pure replay; successful projector equations and tolerances are unchanged.
   Frozen CLI writes `mc-integration-failure.json` while preserving original error

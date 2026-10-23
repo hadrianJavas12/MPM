@@ -1,0 +1,8 @@
+PASS: Known zero-dilation apex still rejects, preserving legacy reason/details and exact inputs
+PASS: Captured trial, law tables and assumption text do not alias caller inputs
+PASS: In-memory and JSON-roundtrip payloads reproduce the same pure-projector failure
+PASS: Replay uses supplied J rather than a default or inferred Jacobian
+PASS: Complete law parameters survive capture/JSON replay for all declared variants and stress measures
+PASS: Associated psi is retained and malformed replay records cannot invent J or schema
+PASS: Native rejected apex captures actual J and leaves every bound state slot/external strain unchanged
+MC FAILURE CAPTURE: 7 controls passed; no MPM updates executed.

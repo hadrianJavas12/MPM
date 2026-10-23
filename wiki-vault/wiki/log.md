@@ -691,3 +691,6 @@ Guide/testing/handover/index updated; raw sources and previous evidence intact.
 
 Added linked paper-history synthesis: 17 native coordinate/law groups, 7 MC capture/replay and 34 MC regression groups PASS on db71b63. Kept Soil2 particle/finite-strain/irreversibility gates explicit. Retained initial negative CLI fixture failure; no original failed J or full reference curve claim. Updated index, guide and handover; raw sources/settings untouched.
 
+## [2026-10-23] ingest | Wang2017 diagnostic launched
+
+Corrected frozen CLI retention/replay/positive smoke PASS on9267dcb. Preserved 29 verified artifact hashes including the initial fixture failure. After human 'jalankan!', unchanged Soil1 0.005m/s diagnostic started11:24WIB fromd60335a with90min wall cap, specifically for missing actual failed-return inputs. Initial Windows PowerShell launch failed before native; PowerShell7 launch verified SBCL/gravity. Not reference speed; no Soil2/full-curve PASS. Handover/guide/index updated; one5h continuation.

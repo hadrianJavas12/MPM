@@ -80,3 +80,9 @@ module and MC failure capsule/replay. Source db71b63 passes17 history,7 capture
 and34 legacy MC material-point groups in actual Windows native execution.
 No new Soil2 particle or full reference curve has run. Successful legacy MC
 equations/tolerances remain unchanged; missing historical failed J remains missing.
+
+29 artifact hashes archive this stage; corrected frozen CLI propagation/replay/
+positive smoke also PASS. An unchanged0.005m/s Soil1 diagnostic is active from
+d60335a at11:24WIB,90min cap, specifically to capture missing failed-return inputs.
+This is50x paper speed and cannot establish the reference curve. Status and
+continuation instructions are at the top of docs/AI_HANDOVER.md.

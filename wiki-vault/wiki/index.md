@@ -27,7 +27,7 @@
 ## Synthesis
 - [[wang2017-paper-history]] —17 native paper-history,7 capture/replay and34 MC regression groups PASS; coupled Soil2 particle remains pending
 - [[clay-creep-slope]] —10s reviewed without verified landslide; complete release only9–10s; unchanged20s post-release observation running with strict prefix gate
-- [[wang2017-prescribed-descent]] — active MPM paper-input preparation;7 native/35 data/Node36 PASS, Soil2 history adapter pending; old MC failure and geometry gaps retained
+- [[wang2017-prescribed-descent]] — MPM Wang inputs;17 history/7 capture/34 MC groups PASS, accelerated failure-capture diagnostic active; Soil2 coupling and paper curve pending
 - [[mc-hardening-softening-study]] — M0–M6 COMPLETE on `codex/mc-hardening-softening-study`: dedicated `:mc-h` / `:mc-hs` model family (`34/34` unit assertions), M3 constitutive point verification (`7` pairs), M4 3D MPM Triaxial (`T-100-H` vs `T-100-HS`, $-62.33\%$ post-peak softening drop), and M5 2D MPM Cliff (`L-H` vs `L-HS`, $+51.92\%$ max displacement, $+38.79\%$ toe runout) with plots and `.mp4` videos
 - [[reusable-simulation-framework]] — canonical root ASDF (`cl-mpm-framework.asd`), Section 2/5 physical folder layout (`cases/{triaxial,cliff,benchmarks,direct-shear}/`), and post-alignment Triaxial 2D + bottom-to-top Joss cliff benchmarks exact PASS
 - [[upstream-development-report-2026-10-15]] — professional Git-based comparison with original CL-MPM and linked evidence

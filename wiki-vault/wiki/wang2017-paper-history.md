@@ -41,3 +41,11 @@ Corrected frozen CLI source9267dcb passes expected native exit1 with capsule,
 exact replay exit0 and a positive legacy MC two-update/VTK run exit0. The full
 source/DLL provenance is retained in cli-controls-002. This tests infrastructure;
 the actual failed Wang state still requires new capture.
+
+29 artifact hashes retain completed controls, initial fixture failure and frozen
+CLI source/VTK/DLL proof. User then said "jalankan!". A new unchanged0.005m/s
+Soil1 diagnostic started11:24WIB fromd60335a,90min budget, at
+output/wang2017-reference-2026-10-23/diagnostic-fast-005-002. It specifically seeks
+the missing failed-return inputs. This50x-rate diagnostic is not reference speed;
+full1000s and native Soil2 remain NOT_RUN. The first shell launch failed before
+native startup and is retained separately. One5h automation continues the work.

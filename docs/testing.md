@@ -42,6 +42,10 @@ two native updates/VTK. Results in `cli-controls-002/`. Initial `cli-controls-00
 is retained as **FAILED_TEST_FIXTURE**: setting initial strain did not initialize
 committed strain and no rejection occurred. It is not counted as a capture PASS.
 
+29 artifact hashes preserve completed logs/results and exact frozen CLI payloads
+in `docs/evidence/wang2017-reference-2026-10-23/history-and-capture/`. The later
+90min accelerated diagnostic launch is separate; it has no completion PASS yet.
+
 ## Reusable native framework regression, 2026-10-15
 
 The initial refactor was committed as `66ea5fb` before running the requested
