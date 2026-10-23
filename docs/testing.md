@@ -1,5 +1,33 @@
 # Native framework and Studio verification
 
+## Soil2 native integration,2026-10-24
+
+Frozen Windows `tests/materials/wang2017-native.lisp` attempt003: exit0,
+18PASS/0FAIL/0NOT_RUN,28constitutive calls, zero MPM updates.271 executed-source
+hashes match before/after; actual copiedDLL mapping verified. Controls cover
+analytic softening, nonproportional signed history versus summedJ2,3D/pure/
+noncommuting rotation covariance, ownership/commit/reset/reinitialization,
+history-decrease and apex rejection/capsule replay, and outer-transaction failure.
+The outer transaction test uses a mutating dispatch probe, not a genuine mesh
+step. No plastic-substep invariance, slope or paper-validation claim follows.
+
+Attempt001 failed the test bootstrap dynamic-context binding; attempt002 passed
+18controls but failed its final fresh-only provenance filename write. Both
+nonzero exits and exact executed sources remain retained; final003 fixes only
+the harness. `integration-controls-001`: actual Windows MC34/framework10/
+Soil2input3 groups exit0. Root integration is workspace-loaded, not frozen003.
+Node check and36tests exit0. New actual MPM/output control remains pending.
+Evidence: `docs/evidence/wang2017-soil2-2026-10-24/native-integration-controls/`
+(12 artifact hashes/838 verified ZIP members) and separate `node-controls/`.
+
+Repeatable fresh native controls:
+
+```powershell
+Set-Location D:\MPM
+.\windows\cl-mpm.cmd tests\materials\wang2017-native.lisp output\FRESH-Soil2-native
+.\windows\cl-mpm.cmd tests\benchmarks\wang2017-soil2-inputs.lisp output\FRESH-Soil2-inputs.json
+```
+
 ## Complete fast010 native run and independent review,2026-10-24
 
 Actual Windows native source4e3140c: exit0/complete6s/60mm at01:45:23WIB;

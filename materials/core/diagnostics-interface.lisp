@@ -7,6 +7,12 @@
 (defgeneric material-diagnostics (material)
   (:documentation "Return a run-local adapter for the material's native class."))
 
+(defgeneric specialized-material-diagnostics (particle-class material)
+  (:documentation "Optional native-class adapter; return NIL to preserve default dispatch."))
+
+(defmethod specialized-material-diagnostics (particle-class material)
+  (declare (ignore particle-class material)) nil)
+
 (defgeneric diagnostics-particle-type (diagnostics))
 
 (defgeneric diagnostics-modes (diagnostics))

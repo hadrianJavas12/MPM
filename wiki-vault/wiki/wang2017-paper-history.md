@@ -8,6 +8,11 @@ updated: 2026-10-23
 
 # Wang2017 paper tensor history and MC failure capture
 
+Update24October: [[wang2017-soil2-native]] now implements the separate native
+particle/declared incremental-polar transport and transaction contract, with
+18actual frozen Windows controls PASS. The fixed-frame prototype described
+below stays unchanged; native full slope and scientific validation are pending.
+
 [[wang2017-prescribed-descent]] keeps MPM with paper physical inputs. Eq5–6
 uses sqrt(.5 dev(Ep):dev(Ep)), with a signed accumulated plastic tensor. Native
 summed J2 increments are not generally equivalent. Soil2 cohesion is30→15kPa

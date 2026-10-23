@@ -18,15 +18,19 @@
                                   (list loading :prescribed-descent) (list solver :explicit)
                                   (list boundary :rollers)) do
       (cl-mpm/framework::check-kind item (list kind)))
-    (unless (eq (cl-mpm/framework:material-particle-class material)
-                'cl-mpm/models/mc-evolution:particle-mc-evolution)
-      (error "Slope descent currently requires particle-mc-evolution."))
-    (let* ((args (cl-mpm/framework:material-particle-initargs material))
+    (let* ((type (cl-mpm/framework:material-particle-class material))
+           (soil2 (eq type 'cl-mpm/models/wang2017-native:particle-wang2017-soil2))
+           (args (cl-mpm/framework:material-particle-initargs material))
            (law (getf args :evolution-law)))
+      (unless (or soil2 (eq type 'cl-mpm/models/mc-evolution:particle-mc-evolution))
+        (error "Slope descent requires the perfect-MC control or explicit Wang Soil2 class."))
       (unless (and (typep law 'cl-mpm/models/mc-evolution:evolution-law)
-                   (eq (cl-mpm/models/mc-evolution:evolution-law-variant law) :perfect)
+                   (eq (cl-mpm/models/mc-evolution:evolution-law-variant law)
+                       (if soil2 :hs :perfect))
                    (getf args :enable-plasticity))
-        (error "Slope descent requires enabled perfect-plastic Mohr-Coulomb.")))
+        (error "Slope descent requires enabled plasticity and the selected model's law."))
+      (when (and soil2 (not (cl-mpm/models/wang2017-native:soil2-law-p law)))
+        (error "Wang Soil2 requires its declared paper cohesion/friction/dilation law.")))
     (dolist (entry +parameter-defaults+)
       (setf (gethash (car entry) config) (cdr entry)))
     (maphash (lambda (key value)
@@ -84,4 +88,10 @@
     (setf (gethash "gravity" config) -9.80665d0
           (gethash "duration" config) (/ (gethash "targetDisplacement" config)
                                          (gethash "velocity" config)))
+    ;; Add model metadata only for the explicit opt-in. Legacy control JSON stays unchanged.
+    (when (eq (cl-mpm/framework:material-particle-class material)
+              'cl-mpm/models/wang2017-native:particle-wang2017-soil2)
+      (setf (gethash "materialModel" config) "wang2017-soil2"
+            (gethash "paperHistoryFrame" config) "spatial-corotated-incremental-polar"
+            (gethash "historyPolicy" config) "monotonic-scope-reject"))
     config))

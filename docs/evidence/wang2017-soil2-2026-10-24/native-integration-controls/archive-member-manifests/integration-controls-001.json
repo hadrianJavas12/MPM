@@ -1,0 +1,47 @@
+{
+  "archive": "integration-controls-001.zip",
+  "scope": "Every archived member verified by decoded bytes/size/SHA256; FASL/cache exclusion listed separately.",
+  "members": [
+    {
+      "path": "integration-controls-001/framework-executed-test.lisp",
+      "bytes": 12981,
+      "sha256": "40846653ea1e6bf69f34a6ddb86d0b393ef2119be6fa427035fa8e230d849716"
+    },
+    {
+      "path": "integration-controls-001/framework.log",
+      "bytes": 964,
+      "sha256": "297ee8058c2b067d15a3e36484ce7de6fb5fd74ad13e960a10e84554440319b4"
+    },
+    {
+      "path": "integration-controls-001/old-mc-executed-test.lisp",
+      "bytes": 35854,
+      "sha256": "1b824b2f2dafb08ef0090ecdb500953b71dca0444ed65cbb9b790cac58385053"
+    },
+    {
+      "path": "integration-controls-001/old-mc.log",
+      "bytes": 3062,
+      "sha256": "f1c69d21261f4a37d3a79e36ce19e94ea964f887c8b00e5ad21e42d2dac16b30"
+    },
+    {
+      "path": "integration-controls-001/soil2-inputs-executed-test.lisp",
+      "bytes": 3318,
+      "sha256": "7fff1b6dbe5c7a25cd1339a933ef5c0e5b3d7d104826b32cc9f400c745334124"
+    },
+    {
+      "path": "integration-controls-001/soil2-inputs.json",
+      "bytes": 1291,
+      "sha256": "3d39440dce764263d0702d27c34a4132282591d9211e807cabe5eca48d0ae3a5"
+    },
+    {
+      "path": "integration-controls-001/soil2-inputs.log",
+      "bytes": 293,
+      "sha256": "5d3f5877ed998c650a7b7104c4c82216925a5b34d905980c6d53f2d3ad85c2ab"
+    },
+    {
+      "path": "integration-controls-001/status.json",
+      "bytes": 759,
+      "sha256": "99c07ba5ce7356234a38e309cad8e33d8b2e4ff3511e59d6ab8c1a46444b9e83"
+    }
+  ],
+  "excludedNativeCacheOrFasl": []
+}

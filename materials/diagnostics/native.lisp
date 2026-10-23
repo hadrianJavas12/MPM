@@ -14,7 +14,8 @@
 
 (defmethod material-diagnostics ((material material))
   (let ((type (material-particle-class material)))
-    (cond ((subtypep type 'cl-mpm/particle::particle-vm)
+    (or (specialized-material-diagnostics type material)
+        (cond ((subtypep type 'cl-mpm/particle::particle-vm)
            (make-instance 'vm-material-diagnostics :particle-class type
                           :legacy-affine-p (not (null (member (component-kind material) '(:von-mises :elastic))))))
           ((subtypep type 'cl-mpm/models/mc-evolution:particle-mc-evolution)
@@ -24,7 +25,7 @@
            (make-instance 'mc-material-diagnostics))
           ((eq type 'cl-mpm/particle::particle-elastic)
            (make-instance 'elastic-material-diagnostics))
-          (t (error "No material diagnostics adapter for ~S; specialize MATERIAL-DIAGNOSTICS." type)))))
+          (t (error "No material diagnostics adapter for ~S; specialize MATERIAL-DIAGNOSTICS." type))))))
 
 (defmethod diagnostics-particle-type ((adapter vm-material-diagnostics))
   'cl-mpm/particle::particle-vm)

@@ -172,6 +172,7 @@
               (zero-reporting-origin sim)
               (setf (gethash "reportingResetPreservedState" manifest) t)
               (let* ((bc (make-strip top-row config original-intervals))
+                     (wang-audit (make-wang2017-audit-context sim bc))
                      (duration (gethash "duration" config))
                      (frames (gethash "frames" config)) (next-frame 1)
                      (elastic-zero (nth-value 0 (energy-diagnostics sim)))
@@ -205,6 +206,9 @@
                                          ke mass (length (cl-mpm:sim-mps sim)) (- (strip-target bc) actual)
                                          residual kinetic mass-error max-gap rms-gap max-yield updates)
                                  (finish-output csv)
+                                 (write-wang2017-frame-audit
+                                  output sim bc frame (cl-mpm::sim-time sim)
+                                  (strip-target bc) wang-audit)
                                  (setf (gethash "loadingUpdates" manifest) updates
                                        (gethash "timeS" manifest) (cl-mpm::sim-time sim)
                                        (gethash "commandedSettlementM" manifest) (strip-target bc)

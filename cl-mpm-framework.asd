@@ -2,6 +2,7 @@
   :description "Composable, headless native CL-MPM simulation recipes"
   :depends-on ("cl-mpm" "cl-mpm/setup" "cl-mpm/damage" "cl-mpm/models/chalk"
                "cl-mpm/models/mc-evolution" "cl-mpm/models/clay-creep"
+               "cl-mpm/models/wang2017-native"
                "cl-mpm/output" "cl-mpm/penalty" "cl-mpm/plotter" "vgplot"
                "jonathan" "yason" "alexandria" "uiop")
   :serial t
@@ -16,6 +17,7 @@
    (:file "components/materials" :pathname "materials/adapters/native")
    (:file "components/diagnostics" :pathname "materials/core/diagnostics-interface")
    (:file "components/native-diagnostics" :pathname "materials/diagnostics/native")
+   (:file "components/wang2017-diagnostics" :pathname "materials/adapters/wang2017")
    (:file "components/material-output" :pathname "src/measurements/material-output")
    (:file "components/geometry" :pathname "src/simulation/components/geometry")
    (:file "simulation" :pathname "src/simulation/lifecycle")
@@ -66,6 +68,7 @@
    (:file "scenarios/slope-descent/configuration")
    (:file "scenarios/slope-descent/geometry")
    (:file "scenarios/slope-descent/boundary")
+   (:file "scenarios/slope-descent/wang2017-output")
    (:file "scenarios/slope-descent/runner")
    (:file "scenarios/slope-descent/adapter")
    (:file "scenarios/slope-creep/package")

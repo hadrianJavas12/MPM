@@ -1075,3 +1075,12 @@
   :depends-on ("cl-mpm/models/wang2017" "cl-mpm/models/mc-evolution")
   :description "Experimental fixed-frame signed-tensor Wang2017 Soil2 point return; no particle adapter"
   :components ((:file "materials/models/plastic/wang2017/point-projection")))
+
+(defsystem "cl-mpm/models/wang2017-native"
+  :description "Experimental Wang Soil2 native adapter with declared incremental-polar plastic history"
+  :depends-on ("cl-mpm/models/wang2017-point" "cl-mpm/models/mc-evolution")
+  :serial t
+  :components ((:module "materials/models/plastic/wang2017"
+                :pathname "materials/models/plastic/wang2017"
+                :components ((:file "native-package") (:file "transport")
+                             (:file "state") (:file "material")))))

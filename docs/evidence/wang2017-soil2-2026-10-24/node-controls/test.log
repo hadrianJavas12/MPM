@@ -1,0 +1,48 @@
+
+> cl-mpm-studio@1.0.0 test
+> node --test test/*.test.js
+
+✔ normalization rejects non-object payloads and does not coerce arrays or booleans into numbers (3.3089ms)
+✔ missing or invalid fields use defaults; decimal strings, zeros and boolean false survive (0.7996ms)
+✔ enabled API rejects missing confirmation, empty/oversized/NUL source before touching output (136.193ms)
+✔ loopback opt-in rejects a rebinding Host header and cross-site run/stop/video requests (33.3393ms)
+✔ oversized JSON receives an explicit 413 response (6.9545ms)
+✔ custom source round trips exactly, concurrent runs are locked, and built-in runs never load it (32.9969ms)
+✔ custom execution disabled by default while editor and export remain usable (110.8872ms)
+✔ custom code is rejected without explicit local server opt-in (15.8744ms)
+✔ cross-origin request is rejected before processing (9.1214ms)
+✔ non-JSON requests cannot invoke the runner (6.6695ms)
+✔ cliff face is vertical at 90 degrees, sloping at 75, and overhanging at 15 degrees (1.937ms)
+✔ base remains solid and open domain remains empty (0.7174ms)
+✔ rectangle reaches full width, ellipse and triangle taper toward notch edges (0.3489ms)
+✔ triangle tip fraction changes the penetration profile (0.5159ms)
+✔ zero height disables notches; a zero-depth setting uses legacy 1.5x height (0.3466ms)
+✔ SVG preview is finite and distinguishes notch variants (9.2431ms)
+✔ SBCL executes custom delegate/elastic methods and rejects missing, stale or invalid contracts (1010.0314ms)
+✔ SBCL reads and executes a custom export from a path with spaces using its adjacent model (726.0502ms)
+✔ SBCL exported built-in settings and production coercion match HTTP normalization (1365.0203ms)
+✔ material controls preserve original chalk defaults (3.5303ms)
+✔ zero cohesion and disabled plasticity are valid and not reset (0.336ms)
+✔ material controls clamp numeric values and ignore strings that are not numbers (0.5246ms)
+✔ custom templates target the dedicated Studio particle subclass (2.4397ms)
+✔ source checker ignores strings and comments, but checks parentheses (0.4581ms)
+✔ script input is bounded and cannot contain NUL (0.3773ms)
+✔ simulation exporter encodes numbers, booleans, allowed keywords and custom load (3.6954ms)
+✔ valid Lisp character literals and escaped symbols are not mistaken for delimiters (0.4544ms)
+✔ exported configuration uses the same schema defaults, limits and rounding as HTTP runs (1.6725ms)
+✔ unsafe export values fail closed; unknown keys are ignored (0.4744ms)
+✔ reference variants preserve the paper modulus conflict and reach API/export without mesh or ductility clamping (8.3131ms)
+✔ Joss geometry has a 31 m domain, 1 m foundation, vertical upper face and a 45 degree notch (0.9091ms)
+✔ normal Studio defaults remain selected and custom/reference combinations fail before export (1.2564ms)
+✔ validation preserves zero and clamps values within schema bounds (2.2586ms)
+✔ validation ignores invalid values and unknown keys (0.5975ms)
+✔ API returns 400 if encoding is requested without frames (112.9156ms)
+✔ GET status and schema work without SBCL (13.6953ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3395.8941

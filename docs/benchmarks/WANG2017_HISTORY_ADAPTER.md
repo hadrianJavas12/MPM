@@ -6,6 +6,13 @@ dari eksperimen creep. [Sumber paper](https://doi.org/10.1007/s11629-016-3951-1)
 dan URL salinan penulis tercatat pada
 `research/references/wang2017/mpm-reference-contract.json`.
 
+**Update24Oktober:** native particle dan transport sekarang diimplementasikan
+pada system terpisah `cl-mpm/models/wang2017-native`. Kontrak lama frame-tetap
+di bawah tetap berlaku untuk API murni, bukan batas system native baru. Lihat
+[rencana native Soil2](WANG2017_SOIL2_NATIVE_PLAN.md) untuk adaptasi corotation,
+guard tanpa healing/max,18kontrol native yang lulus dan batas validasinya.
+Belum ada run lereng Soil2 lengkap atau bukti longsor dari perubahan ini.
+
 ## Bagian yang telah diimplementasikan
 
 System ASDF opsional `cl-mpm/models/wang2017` memuat tiga file di

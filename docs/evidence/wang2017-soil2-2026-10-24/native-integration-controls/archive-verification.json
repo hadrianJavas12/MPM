@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "verifiedUtc": "2026-10-23T19:38:41.081145+00:00",
+  "archives": [
+    {
+      "path": "native-controls-001.zip",
+      "bytes": 1138678,
+      "sha256": "30c005cc973ba0a3bd3f9e5e866c4df4e4f8cae0566ac88e32481d518e9c434f",
+      "members": 274,
+      "verifiedMembers": 274,
+      "excludedFiles": 62,
+      "excludedBytes": 2154008,
+      "memberManifest": "archive-member-manifests/native-controls-001.json"
+    },
+    {
+      "path": "native-controls-002.zip",
+      "bytes": 1184107,
+      "sha256": "a2a82cf7ffae53c8c7c359f8b283d31dba0a5d345c796e1f0e5f74ab11753a3d",
+      "members": 277,
+      "verifiedMembers": 277,
+      "excludedFiles": 62,
+      "excludedBytes": 2154008,
+      "memberManifest": "archive-member-manifests/native-controls-002.json"
+    },
+    {
+      "path": "native-controls-003.zip",
+      "bytes": 1225944,
+      "sha256": "704a09454412f7eec671f82d10bfa7cbfc5072de35205ff38a90f2e304901cb9",
+      "members": 279,
+      "verifiedMembers": 279,
+      "excludedFiles": 62,
+      "excludedBytes": 2154008,
+      "memberManifest": "archive-member-manifests/native-controls-003.json"
+    },
+    {
+      "path": "integration-controls-001.zip",
+      "bytes": 16808,
+      "sha256": "2292c739fc26b94f8c9c4d47e50d0882c04a105cb605c92e0e02f32e4caad23a",
+      "members": 8,
+      "verifiedMembers": 8,
+      "excludedFiles": 0,
+      "excludedBytes": 0,
+      "memberManifest": "archive-member-manifests/integration-controls-001.json"
+    }
+  ],
+  "totalVerifiedMembers": 838,
+  "native003FrozenSources": 271,
+  "native003BeforeAfterAndCurrentFrozenHashesMatch": true,
+  "originalInputsUnchangedDuringPackaging": true,
+  "testsExecutedByCollector": 0,
+  "scope": "Archive-byte integrity only. Native003 full first-party freeze does not extend to the separate unfrozen root integration suite."
+}

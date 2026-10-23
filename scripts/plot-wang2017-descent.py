@@ -100,7 +100,7 @@ def inspect(run):
 
 def drawing_limits(snapshots):
     """Keep coordinates and physical colour meaning fixed across native frames."""
-    quantity = next(name for name in ("mc-kappa", "stress_yy", "mass")
+    quantity = next(name for name in ("wang-paper-kps", "mc-kappa", "stress_yy", "mass")
                     if all(name in fields for _, fields in snapshots))
     xy = np.concatenate([points[:, :2] for points, _ in snapshots])
     low, high = xy.min(axis=0), xy.max(axis=0)
@@ -121,7 +121,8 @@ def draw(manifest, rows, snapshot, index, destination, limits=None):
     forces = np.asarray([row["reaction_upward_N_per_m"] / 1000 for row in rows])
     config, row = manifest["config"], rows[index]
     fig, (spatial, curve) = plt.subplots(1, 2, figsize=(12, 5.4), constrained_layout=True)
-    quantity = "mc-kappa" if "mc-kappa" in fields else "stress_yy"
+    quantity = next((name for name in ("wang-paper-kps", "mc-kappa", "stress_yy")
+                     if name in fields), "mass")
     if quantity not in fields:
         quantity = "mass"
     values = fields[quantity]
@@ -156,7 +157,8 @@ def draw(manifest, rows, snapshot, index, destination, limits=None):
     if not np.isclose(config["velocity"], 1e-4, rtol=1e-12, atol=0):
         kind = f"ACCELERATED TRIAL ({config['velocity']/1e-4:g}x reference)"
     completion = "native complete" if manifest.get("complete") else "INCOMPLETE"
-    fig.suptitle(f"Wang2017 Soil1 | {kind}, {completion} | v={config['velocity']:.1e} m/s\n"
+    model = "Soil2 (declared corotated history)" if config.get("materialModel") == "wang2017-soil2" else "Soil1"
+    fig.suptitle(f"Wang2017 {model} | {kind}, {completion} | v={config['velocity']:.1e} m/s\n"
                  f"Relief {config['height']:g} m is assumed; explicit MPM with finite penalty compliance; no displacement amplification",
                  fontsize=11)
     fig.savefig(destination, dpi=140)

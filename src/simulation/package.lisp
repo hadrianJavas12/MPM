@@ -9,7 +9,7 @@
            #:simulation-geometry #:simulation-boundary #:simulation-loading
            #:simulation-solver #:simulation-parameters
            #:material-particle-class #:material-particle-initargs
-           #:material-diagnostics #:native-material-diagnostics
+           #:material-diagnostics #:specialized-material-diagnostics #:native-material-diagnostics
            #:vm-material-diagnostics #:mc-material-diagnostics #:elastic-material-diagnostics
            #:diagnostics-particle-type #:diagnostics-modes #:diagnostics-conventions
            #:diagnostics-fields #:diagnostics-legacy-values #:material-state

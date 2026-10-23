@@ -20,7 +20,7 @@
    #:particle-plastic-increment #:particle-plastic-volume #:particle-plastic-volume-committed
    #:particle-plastic-work #:particle-plastic-work-committed
    #:particle-last-projection #:snapshot-particle #:restore-particle
-   #:copy-particle-state
+   #:copy-particle-state #:particle-transaction-slots
    #:particle-phi-deg #:particle-softened-indicator #:particle-yield-residual-kirchhoff))
 (in-package :cl-mpm/models/mc-evolution)
 

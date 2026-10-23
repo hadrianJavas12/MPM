@@ -59,6 +59,12 @@ an objective accumulated finite-strain plastic tensor."))
     plastic-volume plastic-volume-committed plastic-work plastic-work-committed
     last-projection))
 
+(defgeneric particle-transaction-slots (mp)
+  (:documentation "Constitutive/kinematic slots owned by a material transaction."))
+
+(defmethod particle-transaction-slots ((mp particle-mc-evolution))
+  +particle-transaction-slots+)
+
 (defstruct (particle-state (:constructor %make-particle-state) (:copier nil))
   slots committed-state)
 
@@ -106,7 +112,7 @@ No snapshot owns a mutable array, table, or projection shared with its particle.
 (defun %capture-particle-state (mp)
   "Capture current slots without recursively embedding the committed baseline."
   (%make-particle-state
-   :slots (loop for name in +particle-transaction-slots+
+   :slots (loop for name in (particle-transaction-slots mp)
                 when (slot-exists-p mp name)
                 collect (if (slot-boundp mp name)
                             (list name t (%copy-state-value (slot-value mp name)))

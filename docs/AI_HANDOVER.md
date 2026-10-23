@@ -2,6 +2,50 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
+## Current: native Soil2 integration, before first slope run
+
+Latest human objective: **continue until the actual simulation shows a landslide**.
+Work is on `codex/wang2017-soil2-landslide`, branched from4036087; live remote
+main was refreshed at9e97e001 and is not changed/merged. Completed Soil1 fast010
+below remains a negative control, not a failed executable or a landslide.
+
+New optional `cl-mpm/models/wang2017-native` owns the Soil2 particle and
+transactional signed plastic tensor. Paper inputs remain c30→15kPa over
+kps0→.02,phi35/psi0,E20MPa,nu.25,gamma20kN/m3. The declared finite-strain MPM
+adaptation rotates committed Ep by the proper polar rotation of the engine's
+incremental strain deformation gradient, then adds the spatial plastic increment.
+This is not a unique finite-strain law prescribed by Wang or an exact log(Fp)
+model. Native summed-J2 reporting stays independent of paper kps.
+
+The adapter rejects signed-history decreases beyond1e-13 instead of inventing
+healing or a hidden irreversible maximum. Nonproportional positive-work paths
+can legitimately reach this unsupported scope; rejection is not proof those
+paths are physically invalid. Multiple signed roots remain rejected, without
+selecting a preferred branch merely because it is monotonic. No apex/psi/strength
+or numerical-tolerance remedy is enabled. See
+`docs/benchmarks/WANG2017_SOIL2_NATIVE_PLAN.md` before the experiment.
+
+Actual Windows controls: frozen `native-controls-003` exit0,18PASS/0FAIL/
+0NOT_RUN,28constitutive calls and zero MPM updates. All271 frozen files matched
+before/after and mapped copiedDLL verified. Attempts001 bootstrap dynamic-binding
+failure and002 post-test fresh-only provenance filename failure are retained;
+002's18controls passed but its process exit was1. Both repairs affect the test
+harness only. Root `integration-controls-001` exit0: oldMC34,framework10,
+Soil2input3 groups PASS. These root tests used the workspace and are not claimed
+as the frozen003 run. Node check and36tests PASS in `node-controls-001`.
+
+All current outputs live under `output/wang2017-soil2-2026-10-24/`.
+Evidence packet `docs/evidence/wang2017-soil2-2026-10-24/native-integration-controls/`
+retains12 indexed artifacts/838 verified archive members, including both failed
+harness attempts. Private caches/FASLs are excluded explicitly; original output
+is untouched. Node logs/status are in the separate `node-controls/` packet.
+Focused actual MPM/output integration is pending before first full slope.
+First case is `cases/benchmarks/wang2017-soil2-fast-010.lisp`: same approved
+0.01m/s to60mm/6s and physical/numerical inputs as Soil1; only material changes.
+It preserves plastic history formed during gravity. Additional per-particle
+F/J/Ep/cohesion/history and contact geometry/spring-energy CSVs are read-only.
+No new full slope is running yet and no landslide PASS is claimed.
+
 ## Current: approved 0.01m/s / 60mm accelerated Wang trial COMPLETE, reviewed
 
 Human supplied a friend FEM video and requested600physicalseconds, then chose
