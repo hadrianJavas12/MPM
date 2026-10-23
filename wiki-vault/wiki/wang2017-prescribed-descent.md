@@ -72,3 +72,11 @@ Paper author-upload text was re-read via web; original PDF path is missing and
 new figure-image inspection unavailable. Relief10m, bottom tangential fixity
 and0.1m endpoint remain explicit assumptions/unresolved items. The public source
 and exact open gates are in docs/benchmarks/WANG2017_MPM_PREPARATION.md.
+
+## Paper-history checkpoint,2026-10-23
+
+[[wang2017-paper-history]] records the new isolated Eq5–6 tensor state/cohesion
+module and MC failure capsule/replay. Source db71b63 passes17 history,7 capture
+and34 legacy MC material-point groups in actual Windows native execution.
+No new Soil2 particle or full reference curve has run. Successful legacy MC
+equations/tolerances remain unchanged; missing historical failed J remains missing.

@@ -686,3 +686,8 @@ Author-upload PDF text re-read via web; original path missing and figure images
 not newly inspected. Relief10m/bottom fixity/endpoint remain explicit gaps.
 Old MC failure preserved; no psi/tensile clamp, J2 substitution or full run.
 Guide/testing/handover/index updated; raw sources and previous evidence intact.
+
+## [2026-10-23] ingest | Wang2017 tensor history and failure capture
+
+Added linked paper-history synthesis: 17 native coordinate/law groups, 7 MC capture/replay and 34 MC regression groups PASS on db71b63. Kept Soil2 particle/finite-strain/irreversibility gates explicit. Retained initial negative CLI fixture failure; no original failed J or full reference curve claim. Updated index, guide and handover; raw sources/settings untouched.
+

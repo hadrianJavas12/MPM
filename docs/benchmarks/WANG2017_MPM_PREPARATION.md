@@ -75,13 +75,39 @@ sekitar2,35hari; ini estimasi historis, bukan jaminan runtime terbaru.
 | Inisialisasi | prestress/internal elastic state dipertahankan saat reset pelaporan | rekonsiliasi dengan reset strain yang disebut paper |
 | Metode dan mesh | MPM eksplisit, grid1m/915MP; pilihan pengguna | lakukan sensitivitas; bukan FEM10820segitiga |
 | Integrasi MC | fast trial lama gagal pada15,4s/77mm | capture/replay state lengkap sebelum run panjang |
-| Soil #2 | parameter disiapkan; adapter history belum tersedia | implementasikan dan verifikasi Eq5–6 terlebih dahulu |
+| Soil #2 | primitive Eq5–6/state/law tersedia; adapter particle belum tersedia | lanjutkan projector dengan tensor history, lalu transport/rollback particle |
 | Kurva referensi | belum didigitisasi/dibandingkan kuantitatif | simpan sumber dan toleransi sebelum penilaian |
 
 Pada Soil #2, kps paper adalah norma tensor plastic deviatoric strain. History
 native yang menjumlahkan increment equivalent-J2 tidak otomatis sama pada
 lintasan nonproporsional. Menyalin angka0,02 ke history native tanpa pembuktian
 tidak memenuhi target ini. Belum ada case Soil #2 yang memakai pengganti tersebut.
+
+### Checkpoint history dan diagnostik native
+
+Pada source `db71b63`, **17 kontrol history Wang,7 kontrol capture/replay dan34
+kelompok regresi material MC lulus**, semuanya exit0 lewat launcher Windows.
+System opsional `cl-mpm/models/wang2017` memisahkan norma tensor, state bertanda
+dengan salinan milik sendiri, konversi shear engineering dan hukum kohesi Soil2.
+Ini belum menjalankan particle Soil2 atau timestep lereng. Rincian kontrak dan
+gate integrasi: [WANG2017_HISTORY_ADAPTER.md](WANG2017_HISTORY_ADAPTER.md).
+
+Condition kegagalan MC sekarang membawa trial principal Kirchhoff, E,nu,J yang
+benar-benar diberikan, history dan seluruh parameter law. Input disalin hanya
+ketika gagal; persamaan, toleransi dan jalur proyeksi yang berhasil tetap sama.
+CLI menyimpan `mc-integration-failure.json` ketika condition ini muncul selama
+run, lalu membiarkan error asli menghentikan proses. File ini adalah input
+replay satu return material, **bukan checkpoint untuk melanjutkan seluruh MPM**.
+
+```powershell
+.\windows\cl-mpm.cmd scripts\replay-mc-failure.lisp `
+  output\RUN\mc-integration-failure.json output\FRESH-replay.json
+```
+
+Fixture sintetis memakai J1.0123456789012345 dan particle native J1.1 untuk
+menguji JSON/replay serta rollback. Keduanya **bukan J update Wang yang gagal**.
+Kegagalan lama belum menjadi state aktual yang berhasil direkam hanya karena
+fixture ini lulus. Tidak ada psi, tensile cap atau apex clamp yang diubah.
 
 Kegagalan MC lama dekat tensile apex dengan dilatansi nol mempunyai reproducer
 unit yang sudah ada. Trial mean tau42985,371Pa mensyaratkan J≥1,003289361 agar

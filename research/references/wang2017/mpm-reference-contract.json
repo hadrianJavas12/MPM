@@ -36,7 +36,8 @@
     "paperKpsResidual": 0.02,
     "paperCoordinate": "kps=sqrt(0.5*ep_dev:ep_dev), ep_dev=ep-tr(ep)*I/3",
     "nativeCoordinateWarning": "Native accumulated J2 equivalent increments are not automatically the norm of the accumulated plastic tensor for nonproportional paths",
-    "implementationStatus": "PENDING_PAPER_HISTORY_ADAPTER_AND_REGRESSION; no runnable Soil2 surrogate is substituted"
+    "historyPrimitivesStatus": "17 Windows native fixed-frame tensor-history/cohesion controls PASS on db71b63; no physical updates",
+    "implementationStatus": "PENDING_COUPLED_PROJECTOR_AND_NATIVE_PARTICLE_ADAPTER; pure Eq5-6 state/law available; no runnable Soil2 surrogate is substituted"
   },
   "geometry": {
     "source": "Figure 2, printed page 179",

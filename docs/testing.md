@@ -13,6 +13,35 @@ This is preparation evidence, not a new reference-speed solver run or curve.
 Soil2 paper-history adapter, relief/boundary/endpoint fidelity and MC failure gate
 remain open. See [the current guide](benchmarks/WANG2017_MPM_PREPARATION.md).
 
+## Wang2017 history and MC failure inputs,2026-10-23
+
+Actual Windows native source `db71b63`:17 fixed-frame paper-history controls,
+7 capture/replay controls and34 existing MC material-point regression groups
+all exit0. Evidence working directory:
+`output/wang2017-reference-2026-10-23/material-controls-001/`.
+The first16-control history run predates a review correction: an independently
+contracted rotated matrix and large-finite-input overflow guards were then added;
+the retained17-control run tests the final sources. No MPM timesteps in those
+controls. Synthetic J fixtures do not identify the old Wang failed-update J.
+
+```powershell
+.\windows\cl-mpm.cmd tests\materials\wang2017-history.lisp output\FRESH-history.json
+.\windows\cl-mpm.cmd tests\materials\mc-failure-capture.lisp output\FRESH-capture.json
+.\windows\cl-mpm.cmd tests\materials\mc-evolution-points.lisp
+```
+
+Only the error branches of the existing projector attach a payload; successful
+numerical forms/tolerances remain unchanged. Paper-coordinate primitive tests
+do not establish a coupled Soil2 particle or finite-strain history transport.
+See [the history contract](benchmarks/WANG2017_HISTORY_ADAPTER.md).
+The unchanged Node suite remains attributed to7319e42, not re-run at this stage.
+
+Frozen CLI source9267dcb additionally passes negative propagation (expected native
+exit1 + capsule), exact JSON replay exit0 and positive legacy MC case exit0 with
+two native updates/VTK. Results in `cli-controls-002/`. Initial `cli-controls-001/`
+is retained as **FAILED_TEST_FIXTURE**: setting initial strain did not initialize
+committed strain and no rejection occurred. It is not counted as a capture PASS.
+
 ## Reusable native framework regression, 2026-10-15
 
 The initial refactor was committed as `66ea5fb` before running the requested

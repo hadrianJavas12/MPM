@@ -52,6 +52,45 @@ J2 creep, or start more creep runs. Active branch
   exit0 at06:11 WIB; raw evidence remains in output. Its final interpretation
   is not a prerequisite for the new task. Old RUNNING notes below are historical.
 
+## Latest native Wang preparation checkpoint,2026-10-23
+
+Human subsequently said **"jalankan!"**. Continue actual native work, keeping
+the explicit MPM decision and scientific gates above. Do not restart J2 creep.
+
+- Implemented source `db71b63`: optional `cl-mpm/models/wang2017`, isolated
+  fixed-frame signed tensor history Eq5–6, shear conversion and Soil2 cohesion.
+  **17 history controls,7 capture/replay controls,34 existing MC material-point
+  regression groups PASS**, native exits0. No physical steps in those controls.
+  `output/wang2017-reference-2026-10-23/material-controls-001/` retains results.
+- Failure-only MC diagnostics retain exact supplied trial,E,nu,J,law,kappa and
+  pure replay; successful projector equations and tolerances are unchanged.
+  Frozen CLI writes `mc-integration-failure.json` while preserving original error
+  propagation/exit. `scripts/replay-mc-failure.lisp` reproduces one return, not a
+  whole-MPM restart. Synthetic J1.0123456789012345/native J1.1 are NOT the old
+  Wang failed state. No inferred failed J or corrected physics is claimed.
+- Initial negative CLI fixture on5c6d6f7 unexpectedly exited0 without a capsule:
+  initializing `:strain` did not seed the engine's committed strain state.
+  This is **FAILED_TEST_FIXTURE**, not a capture PASS. Sources/raw logs retained
+  under `cli-controls-001/`. Fixed in9267dcb using an explicitly test-only
+  scenario that calls a rejected pure return, zero MPM steps; production scenario
+  methods/physics untouched. `cli-controls-002/` on9267dcb **PASS**: intentional
+  native exit1 with exact capsule, replay exit0, positive legacy MC CLI exit0
+  with two actual updates/VTK. Frozen sources/DLL proofs retained. This verifies
+  failure retention infrastructure, not the original Wang failed update.
+- Soil2 native adapter is **NOT_IMPLEMENTED**. The old projector hardcodes
+  incremental J2 history, monotonic search and tail-root assumptions. It cannot
+  be corrected by a cohesion callback or constant scale. Next: dedicated coupled
+  fixed-frame tensor-history projector and rotated/reversed path tests, then
+  explicit finite-strain transport and complete snapshot/restore/copy/load-step
+  integration. See `docs/benchmarks/WANG2017_HISTORY_ADAPTER.md`.
+- Raw Eq5 tensor norm can decrease on reversal. Pure coordinate code exposes
+  this honestly; no irreversible maximum or material healing rule is silently
+  chosen. Native Soil2 remains disabled pending the documented convention/gates.
+- Do not repeat these passed controls or unchanged Node/input preparation/pilot
+  at a wakeup. Nodecheck/36 remain attributed to7319e42. Full reference1000s and
+  Soil2 curves remain NOT_RUN. Any accelerated diagnostic must be labelled as
+  such and capture a new missing state, not be represented as reference speed.
+
 ## Historical creep continuation: 10s reviewed; 20s post-release observation
 
 User requested "lanjutkan dong". Branch **codex/slope-creep-landslide**;
