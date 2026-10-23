@@ -49,3 +49,19 @@ output/wang2017-reference-2026-10-23/diagnostic-fast-005-002. It specifically se
 the missing failed-return inputs. This50x-rate diagnostic is not reference speed;
 full1000s and native Soil2 remain NOT_RUN. The first shell launch failed before
 native startup and is retained separately. One5h automation continues the work.
+
+User then explicitly extended the running wall limit. Source a3afef0 adds a
+tested monitor handoff; the same cmd21008/SBCL49524 now has3h total until14:24WIB,
+supervised by25584 instead of18936. Initial launch1.5h remains immutable;
+status/handoff record the change. No solver restart or physical parameter change.
+Synthetic Windows SBCL control003 verifies survival past old timeout, continued
+file logging and exact exit7 after attachment. Two initial fixture quoting
+failures remain evidence. Postprocessors unchanged; full reference still pending.
+
+The run subsequently FAILED_NATIVE exit1 at12:35WIB, before its extended deadline.
+Last saved15.4s/77mm,78 VTKs and78 force/energy rows survive. Actual failed J is
+1.0032291051924629. Six MC source files match frozen execution; exact JSON replay
+PASS. Mean trial42985.3710489162Pa exceeds the necessary perfect-MC/psi0 mean
+bound42982.78940658873Pa by2.581642Pa. This diagnoses the captured accelerated
+state, not the paper-speed trajectory. No clamp, psi/tolerance change or restart.
+Continue dedicated Soil2 work; do not repeat the full diagnostic/replay already done.

@@ -694,3 +694,11 @@ Added linked paper-history synthesis: 17 native coordinate/law groups, 7 MC capt
 ## [2026-10-23] ingest | Wang2017 diagnostic launched
 
 Corrected frozen CLI retention/replay/positive smoke PASS on9267dcb. Preserved 29 verified artifact hashes including the initial fixture failure. After human 'jalankan!', unchanged Soil1 0.005m/s diagnostic started11:24WIB fromd60335a with90min wall cap, specifically for missing actual failed-return inputs. Initial Windows PowerShell launch failed before native; PowerShell7 launch verified SBCL/gravity. Not reference speed; no Soil2/full-curve PASS. Handover/guide/index updated; one5h continuation.
+
+## [2026-10-23] ingest | Extend live Wang diagnostic budget
+
+User explicitly requested longer automatic run limit. Tested Windows monitor attachment on synthetic SBCL control003 (survival/logging beyond old deadline, exact exit7, zero MPM updates); retained two fixture quoting failures. Replaced only wrapper18936 with25584, keeping native cmd21008/SBCL49524/start time intact, deadline14:24WIB/3h total. Original launch retained; status carries supervision provenance. Updated guide/testing/handover/wiki; physics and postprocessors unchanged.
+
+## [2026-10-23] ingest | Actual Wang failed state captured and replayed
+
+Extended diagnostic naturally FAILED_NATIVE exit1 at12:35WIB before revised deadline. Last saved15.4s/77mm,78 particle VTKs and78 force/energy rows retained. Captured actual J1.0032291051924629; six MC modules match frozen bytes; exact JSON failure replay PASS. Mean trial exceeds perfect-MC/psi0 necessary bound by2.581642Pa. Fresh accelerated-state diagnosis only, not paper-speed failure or validation. No parameter/tolerance/clamp change or solver rerun. Updated linked synthesis/index/handover; original raw evidence retained.

@@ -92,11 +92,27 @@ tetap diarsipkan sebagai FAILED_TEST_FIXTURE, bukan PASS.
 
 Setelah instruksi "jalankan!", diagnostik Soil1 baru dimulai23Oktober11:24WIB
 di `output/wang2017-reference-2026-10-23/diagnostic-fast-005-002/`, sumberd60335a,
-batas90menit. Preset0.005m/s tetap **50x kecepatan paper**; tujuannya menangkap
+batas awal90menit; atas permintaan pengguna diperpanjang menjadi **3jam total,
+sampai14:24WIB**. Solver yang sama terus berjalan melalui pergantian pengawas
+yang diuji, bukan restart. Preset0.005m/s tetap **50x kecepatan paper**; tujuannya menangkap
 input update gagal yang belum tersedia. Kasus/material/solver numerik tidak
 dituning; full reference-speed1000s belum dijalankan. Status dan bukti peluncuran
 ada di handover; jangan menggandakan run atau menafsirkan diagnostik sebagai
 reproduksi kecepatan paper.
+
+**Hasil diagnostik002:** native exit1 pada12:35WIB, setelah state terakhir yang
+tersimpan15.4s/77mm. Perekaman berhasil: J aktual1.0032291051924629 dan semua
+input return tersedia. Enam sumber MC cocok byte dengan snapshot yang dieksekusi;
+replay JSON menghasilkan penolakan yang sama (exit0 kontrol replay). Mean trial
+42985.3710489162Pa melebihi batas perlu MC perfect/psi0 sebesar2.581642Pa.
+Kegagalan ini terjadi sebelum deadline baru.78 baris force/energy dan78 VTK
+particle tetap utuh. Ini diagnosis lintasan dipercepat, bukan bukti bahwa run
+kecepatan paper pasti gagal. Tidak ada parameter/clamp/toleransi yang diubah.
+
+[15 artifact hashes dan bukti kegagalan aktual](../evidence/wang2017-reference-2026-10-23/diagnostic-fast-005-002-failure/README.md)
+menyimpan raw VTK/CSV, sumber yang dieksekusi, capsule dan replay.
+[12 hash pengujian/pergantian pengawas](../evidence/wang2017-reference-2026-10-23/monitor-extension/README.md)
+terpisah dari hasil simulasi fisik.
 
 Pada source `db71b63`, **17 kontrol history Wang,7 kontrol capture/replay dan34
 kelompok regresi material MC lulus**, semuanya exit0 lewat launcher Windows.

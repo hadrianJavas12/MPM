@@ -86,3 +86,13 @@ positive smoke also PASS. An unchanged0.005m/s Soil1 diagnostic is active from
 d60335a at11:24WIB,90min cap, specifically to capture missing failed-return inputs.
 This is50x paper speed and cannot establish the reference curve. Status and
 continuation instructions are at the top of docs/AI_HANDOVER.md.
+
+Latest user extension: the same solver now has3h total, until14:24WIB. Tested
+monitor handoff replaces only the supervisor; native PID/start time, case and
+physical inputs remain unchanged. See [[wang2017-paper-history]].
+
+Latest outcome: native FAILED at12:35WIB after last saved15.4s/77mm. Fresh actual
+failed-return J/inputs now retained and source-matched JSON replay PASS. The
+perfect-MC/psi0 necessary mean bound is violated by2.581642Pa; no physical-run
+PASS or reference-speed failure claim. Budget extension succeeded; the stop is
+material integration.78 VTKs and78 force/energy rows remain available.

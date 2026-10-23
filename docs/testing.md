@@ -44,7 +44,31 @@ committed strain and no rejection occurred. It is not counted as a capture PASS.
 
 29 artifact hashes preserve completed logs/results and exact frozen CLI payloads
 in `docs/evidence/wang2017-reference-2026-10-23/history-and-capture/`. The later
-90min accelerated diagnostic launch is separate; it has no completion PASS yet.
+accelerated diagnostic launch is separate; it has no completion PASS yet.
+
+## Live wall-budget extension,2026-10-23
+
+`scripts/run-wang2017-trial.ps1 -AttachRunning -MaxWallHours 3` supports verified
+supervisor transfer for this Windows run. Native solver/source/physical controls
+are unchanged. The READY/event handshake holds process handles, verifies exact
+PID/parent/creation times and paths, and refuses concurrent status ownership.
+The actual transfer retains cmd21008/SBCL49524, replaces only supervisor18936
+with25584, extends the original deadline to14:24WIB and retains native exit-code
+handling/postprocessor hashes. Original launch JSON is immutable.
+
+Synthetic SBCL control003 PASS: output continues beyond the predecessor deadline,
+TICK14/FINISHED are retained, original native exit7 is observed by the successor,
+and extended wall budget is recorded. Zero MPM updates; no scientific validation.
+Initial controls001/002 are retained as FAILED_FIXTURE_SETUP (argument quoting),
+not PASS. No unchanged physics/Node tests were repeated for this supervision edit.
+
+Live diagnostic002 subsequently FAILED_NATIVE exit1 at12:35WIB, before the new
+deadline. Last saved15.4s/77mm,78 particle VTKs and78 force/energy rows retained.
+Actual failed return captures J1.0032291051924629. Six MC source files match the
+executed snapshot; exact JSON replay control exits0 with the same rejection.
+Necessary perfect-MC/psi0 mean bound is violated by2.581642Pa. This is a successful
+failure reproduction/control, **not a successful full physical run** or proof
+of failure at reference speed. Do not rerun the full diagnostic to rediscover it.
 
 ## Reusable native framework regression, 2026-10-15
 

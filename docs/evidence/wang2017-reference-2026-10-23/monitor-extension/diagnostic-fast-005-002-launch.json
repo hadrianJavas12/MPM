@@ -1,0 +1,17 @@
+{
+  "startedUtc": "2026-10-23T04:24:15.7450658Z",
+  "sourceCommitAtLaunch": "d60335a6e9d04d35966a8dba0b7a4dd98a6847b7",
+  "wrapperPid": 18936,
+  "case": "cases/benchmarks/wang2017-soil1-fast-005.lisp",
+  "caseSha256": "5829B205AC73DC895CD9DF2273D707B989BDD02DBCBA5710A9BD65EE2E8EDE2F",
+  "output": "D:\\MPM\\output\\wang2017-reference-2026-10-23\\diagnostic-fast-005-002",
+  "maxWallHours": 1.5,
+  "status": "STARTING",
+  "exitCode": null,
+  "postprocessorSha256": {
+    "scripts/collect-wang2017-evidence.py": "EE66FF39A0743855C91404D7ACABEE1A8E40F270B76E11831D750DA3D5AE3393",
+    "scripts/plot_m5_cliff_comparison.py": "1C254E7BC1490F284C1722536E6C442C4A3E033C06949D8372F9D9D38C3277E8",
+    "scripts/plot-wang2017-descent.py": "39DE264852EB8EF9BE51412D7103815CF1B66A04CC809BFB5275DA82F9EF4FDD"
+  },
+  "scientificValidation": false
+}

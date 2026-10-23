@@ -2,7 +2,7 @@
 
 **Operational checkpoint: 2026-10-23, Asia/Jakarta. Read this first.**
 
-**Active: Wang diagnostic002, started11:24WIB, SBCL49524,90min budget.**
+**Latest: Wang diagnostic002 FAILED_NATIVE at12:35WIB; actual failed-state replay PASS.**
 Read the "Latest native Wang preparation checkpoint" below before any new run.
 History/capture/MC controls are complete; do not repeat them at each wakeup.
 
@@ -44,9 +44,9 @@ J2 creep, or start more creep runs. Active branch
   original-speed full1000s NOT_RUN. Known zero-dilation tensile-apex/rollback
   controls already exist in tests/materials/mc-evolution-points.lisp around391/439.
   Stored trial mean42985.371Pa requires J>=1.003289361 for mean(tau)<=J*c*cot(phi).
-  Exact failedJ was not recorded; cause remains strongly indicated, not proven.
-  Capture/replay infrastructure is now tested; active diagnostic002 seeks actual
-  trial,E,nu,J,law,kappa. Do not tune
+  Historical52f9367 failedJ was not recorded. Fresh diagnostic002 now captures
+  actualJ1.0032291051924629, violating the necessary mean bound by2.581642Pa;
+  exact failed return replays with source bytes matched. Details below. Do not tune
   psi or add apex/tensile clamps. Exception-safe history retention already fixed.
 - Next preparation stage: the isolated paper plastic-strain/history primitives
   and17 tests are complete; implement/verify dedicated Soil2 coupling preserving
@@ -63,12 +63,47 @@ J2 creep, or start more creep runs. Active branch
 Human subsequently said **"jalankan!"**. Continue actual native work, keeping
 the explicit MPM decision and scientific gates above. Do not restart J2 creep.
 
-**ACTIVE diagnostic:** `output/wang2017-reference-2026-10-23/diagnostic-fast-005-002/`,
+**FAILED diagnostic:** `output/wang2017-reference-2026-10-23/diagnostic-fast-005-002/`,
 source **d60335a6e9d04d35966a8dba0b7a4dd98a6847b7**, started **11:24:15 WIB**.
-Wrapper18936 / cmd21008 / native SBCL49524; **90min wall budget**. One worker,
+Wrapper25584 / cmd21008 / native SBCL49524; **3h total wall budget, until14:24WIB**. One worker,
 BLAS/OMP1. Read adjacent `-status.json`, manifest if present and ONE stdout tail
-on wakeup. Healthy NATIVE_RUNNING: no duplicate/no active polling. Startup
-verified source/DLL proof and gravity progress. Wrapper handles completion/audit.
+on wakeup. Native exit1 at **12:35:12WIB**, last saved15.4s/command77mm.
+No processes remain active; no rerun. The extended deadline was not reached.
+
+**Actual failure gate is now captured and reproduced:** six MC module files
+match the executed frozen bytes; `failure-replay.json` and adjacent replay log
+record exact JSON-input rejection, native replay exit0. ActualJ
+**1.0032291051924629**, mean(trial tau)**42985.3710489162Pa**, necessary
+psi0/perfect-law mean bound J*c*cot(phi)**42982.78940658873Pa**, excess
+**2.58164232747Pa**. Minimum feasibleJ for this mean is1.0032893613730847.
+Thus a zero-dilation return cannot reduce the captured mean into this domain.
+No apex clamp, dilation/tolerance adjustment or restart. This diagnoses the fresh
+accelerated trajectory, not proof that reference-speed/FEM paper must fail.
+The last saved state is not the exact time of the subsequent rejected substep.
+Both force and energy CSVs now retain78 rows;78 particle VTKs retained. This
+confirms exception-history retention, not a complete-run scientific audit.
+**15 verified hashes** archive raw VTK/CSV, exact executed sources/inputs,
+runtime proofs, capsule/replay/feasibility and supervision logs in
+`docs/evidence/wang2017-reference-2026-10-23/diagnostic-fast-005-002-failure/`.
+**12 hashes** separately retain monitor extension evidence/controls in
+`docs/evidence/wang2017-reference-2026-10-23/monitor-extension/`.
+
+Human explicitly requested extending the automatic limit. Source **a3afef0**
+adds `-AttachRunning` supervision with a READY/event handshake, PID/creation-time
+checks, retained native process handles and the same completion/postprocessing
+path. Original wrapper18936 was replaced by25584; **cmd21008/SBCL49524 and native
+start04:24:16.4348816UTC remain identical**. No restart, timestep/loading/material
+change or overwritten launch record. Status records original1.5h and new3h plus
+handoff provenance; immutable launch JSON correctly still says1.5h.
+
+Synthetic Windows SBCL supervision control003 PASS: child survives beyond the
+old10.08s deadline, stdout reaches TICK14/FINISHED, exact native exit7 survives
+attachment, status records the extended36s budget. Zero simulation updates.
+Initial controls001/002 failed fixture quoting before successor activation;
+preserve them as failed setup evidence, not successful monitor tests. PowerShell
+7.6.5 Windows direct-file redirection was checked against official implementation;
+the harmless control confirms surviving logging. Never stop the native tree
+when replacing only its supervisor. Active postprocessor files remain unchanged.
 
 This is the unchanged **0.005m/s accelerated Soil1 diagnostic**,50x paper rate,
 20s/0.1m target; **NOT** reference-speed replication. A new run is justified
@@ -83,7 +118,7 @@ PowerShell child lacked Get-FileHash. Retain wrapper logs/prelaunch JSON; no
 solver ran.002 uses bundled PowerShell7, verified real SBCL running. No physics
 or launcher was changed to work around this shell environment issue.
 
-After failure, inspect `mc-integration-failure.json`, CSVs, manifest/log and pure
+Completed failure review used `mc-integration-failure.json`, CSVs, manifest/log and pure
 replay with `scripts/replay-mc-failure.lisp` into a fresh summary. Before replay,
 check current law/projector/diagnostics bytes against executed frozen sources;
 keep source identity explicit. Compare actual mean(trial) to J*c*cot(phi) only
@@ -91,7 +126,8 @@ for the captured perfect law/psi0, retaining exact inputs and failure result.
 Do not substitute the old conditional inferred J, add an apex clamp or tune psi.
 If complete exit0, use saved native audit/render and review; do not call the
 accelerated curve a paper-speed result. Archive raw/capsule/source/proof/hashes,
-then continue dedicated Soil2 coupling, not more J2 creep. No solver restart just
+then continue dedicated Soil2 coupling, not more J2 creep. Do not repeat the
+already-passed actual failure replay or full accelerated case. No solver restart just
 to repair plotting. Every5h automation remains the sole continuation.
 
 - Implemented source `db71b63`: optional `cl-mpm/models/wang2017`, isolated
