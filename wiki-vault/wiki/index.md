@@ -14,6 +14,7 @@
 - [[studio-geometry-material]] — notch/base conventions, material controls and SI units
 
 ## Sources
+- [[wang2017-mpm-return-2026-10-23]] — user replaces creep with Wang paper-input preparation and explicitly keeps MPM
 - [[creep-drive-hold-study-2026-10-23]] — user continuation and explicit0.02m/s to0.1m driver then stationary hold; not paper/lab inputs
 - [[creep-pusher-clarification-2026-10-22]] — user permits faster soil motion; communicated unilateral0.005m/s crest driver with release, no particle velocity floor
 - [[clay-creep-duration-inputs-2026-10-22]] — user authorizes longer duration; speed/displacement can exceed earlier references
@@ -25,7 +26,7 @@
 
 ## Synthesis
 - [[clay-creep-slope]] —10s reviewed without verified landslide; complete release only9–10s; unchanged20s post-release observation running with strict prefix gate
-- [[wang2017-prescribed-descent]] — pilot complete;0.005 m/s trial failed at77mm/100mm (MC integration); partial evidence retained, slower/paper-speed full runs NOT_RUN
+- [[wang2017-prescribed-descent]] — active MPM paper-input preparation;7 native/35 data/Node36 PASS, Soil2 history adapter pending; old MC failure and geometry gaps retained
 - [[mc-hardening-softening-study]] — M0–M6 COMPLETE on `codex/mc-hardening-softening-study`: dedicated `:mc-h` / `:mc-hs` model family (`34/34` unit assertions), M3 constitutive point verification (`7` pairs), M4 3D MPM Triaxial (`T-100-H` vs `T-100-HS`, $-62.33\%$ post-peak softening drop), and M5 2D MPM Cliff (`L-H` vs `L-HS`, $+51.92\%$ max displacement, $+38.79\%$ toe runout) with plots and `.mp4` videos
 - [[reusable-simulation-framework]] — canonical root ASDF (`cl-mpm-framework.asd`), Section 2/5 physical folder layout (`cases/{triaxial,cliff,benchmarks,direct-shear}/`), and post-alignment Triaxial 2D + bottom-to-top Joss cliff benchmarks exact PASS
 - [[upstream-development-report-2026-10-15]] — professional Git-based comparison with original CL-MPM and linked evidence

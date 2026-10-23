@@ -2,13 +2,16 @@
 title: Wang 2017 prescribed crest descent
 type: synthesis
 tags: [wang2017, benchmark, mpm, mohr-coulomb, native-windows]
-sources: [research/references/wang2017/source.json, docs/benchmarks/WANG2017_SLOPE_DESCENT.md, raw/wang2017-reference-inputs-2026-10-22.md]
-updated: 2026-10-22
+sources: [research/references/wang2017/source.json, research/references/wang2017/mpm-reference-contract.json, docs/benchmarks/WANG2017_MPM_PREPARATION.md, docs/benchmarks/WANG2017_SLOPE_DESCENT.md, raw/wang2017-reference-inputs-2026-10-22.md, raw/wang2017-mpm-return-2026-10-23.md]
+updated: 2026-10-23
 ---
 
 # Wang 2017 prescribed crest descent
 
-Scope: Soil#1 elastic-perfectly plastic slope from [[wang2017-reference-inputs-2026-10-22]], prepared on `codex/wang2017-prescribed-descent` using the [[reusable-simulation-framework]]. A frozen one-second native pilot completed (source c2722e3, exit 0); the full paper curve is **NOT_RUN**.
+Current scope: [[wang2017-mpm-return-2026-10-23]] explicitly keeps MPM and follows
+paper physical inputs on `codex/wang2017-reference-preparation`. The earlier
+Soil1 pilot on the Wang branch remains historical evidence. The full paper curve
+is **NOT_RUN**; no J2 creep case is substituted.
 
 Reference inputs are 20 m width, 5 m base, 60° slope, 7 m crest before the 3 m loaded patch (x=7–10 m), unit weight 20 kN/m³, E=20 MPa, nu=0.25, c=30 kPa, phi=35°, psi=0°. **Slope relief 10 m is an implementation assumption**, because the paper gives no numerical relief height. The crest target speed is 1e-4 m/s.
 
@@ -48,6 +51,24 @@ conservation, finite fields and stability before the separately authorized slowe
 0.002 m/s comparison. Preserve source/data and report actual failures.
 See [[scientific-authenticity-audit-2026-10-15]] and the benchmark guide.
 
-Next: isolate the failed material update in a bounded test and preserve histories
-on exceptions. The root cause and whether slower loading avoids it are unknown;
-the slower full run remains NOT_RUN. No repeat full trial is justified yet.
+Historical next-gate note: exception-safe history retention has since been fixed
+and tested. Exact failed-state capture/replay remains open; the slower full run
+remains NOT_RUN. Do not repeat a full trial just to rediscover the failure.
+
+## Current preparation,2026-10-23
+
+The Windows `scripts/prepare-wang2017.ps1` command passes7 native construction/
+configuration groups,35 input comparisons and Nodecheck/36 tests on7319e42.
+Two native MC particles constructed, zero physical/settling updates.18 hashes
+retain actual exports, law samples, logs and inputs. Numerical engine sources
+are unchanged from59a564b. Preparation is not a newly simulated curve.
+
+Central contract distinguishes Soil1/Figure3 perfect plastic from Soil2/Figure4
+cohesion30→15kPa over paperkps0→.02. Eq5 is the deviatoric plastic-tensor norm;
+native cumulative J2 increments are not automatically equivalent. Soil2 adapter
+is pending. No guessed .02 native-kappa case is provided.
+
+Paper author-upload text was re-read via web; original PDF path is missing and
+new figure-image inspection unavailable. Relief10m, bottom tangential fixity
+and0.1m endpoint remain explicit assumptions/unresolved items. The public source
+and exact open gates are in docs/benchmarks/WANG2017_MPM_PREPARATION.md.

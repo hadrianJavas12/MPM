@@ -2,7 +2,57 @@
 
 **Operational checkpoint: 2026-10-23, Asia/Jakarta. Read this first.**
 
-## Latest continuation: 10s reviewed; 20s post-release observation — RUNNING
+## Latest human direction: prepare Wang2017 physical inputs in MPM
+
+User replaced the creep experiment: "tidak longsor ya, tolong persiapkan simulasi
+yang sama persis seperti wang 2017 saja". Clarification explicitly answered:
+**"Tetap MPM, ikuti input paper"**. Do not implement a FEM rewrite, substitute
+J2 creep, or start more creep runs. Active branch
+**codex/wang2017-reference-preparation**, from59a564b; live main checked remains
+9e97e00. No main modification/merge. [Current preparation guide](benchmarks/WANG2017_MPM_PREPARATION.md).
+
+- Central `research/references/wang2017/mpm-reference-contract.json` distinguishes
+  verified paper constants, implementation choices and unknowns. Soil1: MC
+  perfect plastic, E20MPa/nu.25/gamma20kN/m3/c30kPa/phi35/psi0; speed1e-4m/s,
+  patch3m atx7–10. Existing reference full/pilot cases retained.
+- `scripts/prepare-wang2017.ps1 -OutputDirectory output/<FRESH>` is the tested
+  Windows entry point. Source7319e42 passes **7 native material/configuration
+  controls,35 input comparisons and Nodecheck/36tests**. Two native particles
+  constructed; **zero simulation or settling updates**. End-to-end preparation
+  exits0, status PREPARED_WITH_OPEN_GATES. **18 hashes** retain proof/source/logs:
+  `docs/evidence/wang2017-reference-2026-10-23/preparation/`.
+- No numerical engine/material/scenario code changed from59a564b; checked by Git.
+  This is input preparation, not a new force curve or validated landslide.
+- User PDF path now missing. Historical SHA/transcription retained unchanged.
+  Author-upload13-page PDF text is accessible through web (URL in contract),
+  Section2/Table1 and Eq5–6 re-read. Direct local download returned403; no bypass.
+  New figure-image/endpoint verification unavailable. Relief10m remains an
+  assumption; bottom tangential restraint unresolved;0.1m is our comparison
+  endpoint, not newly verified from Figure3. Never label these paper facts.
+- Soil1/Figure3 is perfect-plastic control. Soil2/Figure4 is cohesion30→15kPa
+  over paperkps0→.02, phi35/psi0. Paper Eq5 is sqrt(.5*ep_dev:ep_dev), Eq6
+  removes plastic trace. Native accumulated equivalent-J2 increments are not
+  automatically the norm of the accumulated tensor under nonproportional paths.
+  Soil2 DATA prepared, paper-history adapter NOT_IMPLEMENTED. Do not ship a
+  generic .02-kappa substitute, zero-friction J2 material or guessed invariant.
+- Before full reference execution: MC fast trial52f9367 failed at15.4s/77mm;
+  original-speed full1000s NOT_RUN. Known zero-dilation tensile-apex/rollback
+  controls already exist in tests/materials/mc-evolution-points.lisp around391/439.
+  Stored trial mean42985.371Pa requires J>=1.003289361 for mean(tau)<=J*c*cot(phi).
+  Exact failedJ was not recorded; cause remains strongly indicated, not proven.
+  Next bounded numerical work: capture/replay trial,E,nu,J,law,kappa; do not tune
+  psi or add apex/tensile clamps. Exception-safe history retention already fixed.
+- Next preparation stage: isolate the paper plastic-strain/history definition
+  and its tests, then implement/verify a dedicated Soil2 adapter while preserving
+  existing models. Reconcile units/stress/reset/BC assumptions explicitly before
+  claiming a faithful full curve. No costly run merely to rediscover old failure.
+- Monitor **mpm-creep-drive-hold** is reused under the new Wang name every5h;
+  its new prompt must follow this explicit MPM decision/branch and these gates.
+  No duplicate automation. The old creep run20s completed native/audit/render
+  exit0 at06:11 WIB; raw evidence remains in output. Its final interpretation
+  is not a prerequisite for the new task. Old RUNNING notes below are historical.
+
+## Historical creep continuation: 10s reviewed; 20s post-release observation
 
 User requested "lanjutkan dong". Branch **codex/slope-creep-landslide**;
 live main checked2026-10-23 remains9e97e00. New experiment: driver0.02m/s

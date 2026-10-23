@@ -1,0 +1,240 @@
+{
+  "paperInputChecksPassed": true,
+  "checks": [
+    {
+      "name": "full.material.particleClass",
+      "actual": "CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-MC-EVOLUTION",
+      "reference": "CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-MC-EVOLUTION",
+      "passed": true
+    },
+    {
+      "name": "full.material.lawKind",
+      "actual": "perfect",
+      "reference": "perfect",
+      "passed": true
+    },
+    {
+      "name": "full.material.stressMeasure",
+      "actual": "cauchy",
+      "reference": "cauchy",
+      "passed": true
+    },
+    {
+      "name": "full.material.youngsModulusPa",
+      "actual": 20000000.0,
+      "reference": 20000000.0,
+      "passed": true
+    },
+    {
+      "name": "full.material.poissonRatio",
+      "actual": 0.25,
+      "reference": 0.25,
+      "passed": true
+    },
+    {
+      "name": "full.material.unitWeightNPerM3",
+      "actual": 20000.0,
+      "reference": 20000.0,
+      "passed": true
+    },
+    {
+      "name": "full.material.cohesionPa",
+      "actual": 30000.0,
+      "reference": 30000.0,
+      "passed": true
+    },
+    {
+      "name": "full.material.frictionDeg",
+      "actual": 35.0,
+      "reference": 35.0,
+      "passed": true
+    },
+    {
+      "name": "full.material.dilationDeg",
+      "actual": 0.0,
+      "reference": 0.0,
+      "passed": true
+    },
+    {
+      "name": "full.config.width",
+      "actual": 20.0,
+      "reference": 20.0,
+      "passed": true
+    },
+    {
+      "name": "full.config.baseHeight",
+      "actual": 5.0,
+      "reference": 5.0,
+      "passed": true
+    },
+    {
+      "name": "full.config.crestLength",
+      "actual": 10.0,
+      "reference": 10.0,
+      "passed": true
+    },
+    {
+      "name": "full.config.slope",
+      "actual": 60.0,
+      "reference": 60.0,
+      "passed": true
+    },
+    {
+      "name": "full.config.patchStart",
+      "actual": 7.0,
+      "reference": 7.0,
+      "passed": true
+    },
+    {
+      "name": "full.config.patchLength",
+      "actual": 3.0,
+      "reference": 3.0,
+      "passed": true
+    },
+    {
+      "name": "full.config.velocity",
+      "actual": 0.0001,
+      "reference": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "pilot.material.particleClass",
+      "actual": "CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-MC-EVOLUTION",
+      "reference": "CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-MC-EVOLUTION",
+      "passed": true
+    },
+    {
+      "name": "pilot.material.lawKind",
+      "actual": "perfect",
+      "reference": "perfect",
+      "passed": true
+    },
+    {
+      "name": "pilot.material.stressMeasure",
+      "actual": "cauchy",
+      "reference": "cauchy",
+      "passed": true
+    },
+    {
+      "name": "pilot.material.youngsModulusPa",
+      "actual": 20000000.0,
+      "reference": 20000000.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.material.poissonRatio",
+      "actual": 0.25,
+      "reference": 0.25,
+      "passed": true
+    },
+    {
+      "name": "pilot.material.unitWeightNPerM3",
+      "actual": 20000.0,
+      "reference": 20000.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.material.cohesionPa",
+      "actual": 30000.0,
+      "reference": 30000.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.material.frictionDeg",
+      "actual": 35.0,
+      "reference": 35.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.material.dilationDeg",
+      "actual": 0.0,
+      "reference": 0.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.config.width",
+      "actual": 20.0,
+      "reference": 20.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.config.baseHeight",
+      "actual": 5.0,
+      "reference": 5.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.config.crestLength",
+      "actual": 10.0,
+      "reference": 10.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.config.slope",
+      "actual": 60.0,
+      "reference": 60.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.config.patchStart",
+      "actual": 7.0,
+      "reference": 7.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.config.patchLength",
+      "actual": 3.0,
+      "reference": 3.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.config.velocity",
+      "actual": 0.0001,
+      "reference": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "full.duration",
+      "actual": 1000.0,
+      "reference": 1000.0,
+      "passed": true
+    },
+    {
+      "name": "pilot.duration",
+      "actual": 1.0,
+      "reference": 1.0,
+      "passed": true
+    },
+    {
+      "name": "height.explicitAssumption",
+      "actual": 10.0,
+      "reference": 10.0,
+      "passed": true
+    }
+  ],
+  "scope": "Actual native Soil1 input preparation; not a simulated curve or scientific validation",
+  "fullSimulationStarted": false,
+  "referenceAgreementVerified": false,
+  "soil2ImplementationStatus": "PENDING_PAPER_HISTORY_ADAPTER_AND_REGRESSION; no runnable Soil2 surrogate is substituted",
+  "readiness": "PAPER_INPUTS_PREPARED_WITH_OPEN_GATES",
+  "methodDecision": {
+    "date": "2026-10-23",
+    "userInstruction": "Tetap MPM, ikuti input paper",
+    "implementation": "Explicit MPM; no claim of implementing paper FEM local arc-length",
+    "paper": "FEM, 10820 triangular elements, local arc-length comparison with Riks and implicit dynamics"
+  },
+  "openGates": [
+    "Relief height is not numerically dimensioned in Figure 2; never label the 10m assumption a paper value",
+    "Verify bottom tangential restraint from the original figure/data",
+    "Original user PDF is currently missing; author-upload text is accessible through web retrieval, direct local download was refused",
+    "Paper displacement/strain reset must be reconciled with preserving native prestress/internal elastic state",
+    "Resolve/capture zero-dilation MC tensile-apex failure before full reference-speed execution",
+    "Validate paper kps state/evolution before enabling Soil2",
+    "Demonstrate quasistatic, mesh, timestep and penalty sensitivity; MPM curve agreement is unverified"
+  ],
+  "inputSha256": {
+    "contract": "e8aba98d2687b6ea63f25348ada30cfe2d380e9493a2de45ec3eb5263fec46a5",
+    "nativeExport": "b3ef6241b490999691801c5acf979665ede7eb99fd6fa25e5ab688c6ca9878ca"
+  },
+  "sourceScriptSha256": "0c202393298d9b9ee7b9daa4b530913a6913507d655a8ab2dd6e2c4162716e46"
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "referenceId": "wang2017-section2",
+  "doi": "10.1007/s11629-016-3951-1",
+  "primaryPdfUrl": "https://www.researchgate.net/profile/Qiguo-Rong/publication/312201146_Stability_analysis_of_slope_in_strain-softening_soils_using_local_arc-length_solution_scheme/links/59cdde08aca272b0ec164432/Stability-analysis-of-slope-in-strain-softening-soils-using-local-arc-length-solution-scheme.pdf",
+  "methodDecision": {
+    "date": "2026-10-23",
+    "userInstruction": "Tetap MPM, ikuti input paper",
+    "implementation": "Explicit MPM; no claim of implementing paper FEM local arc-length",
+    "paper": "FEM, 10820 triangular elements, local arc-length comparison with Riks and implicit dynamics"
+  },
+  "soil1": {
+    "source": "Table 1, printed page 179; Figure 3 benchmark",
+    "model": "Mohr-Coulomb elastic-perfectly plastic",
+    "particleClass": "CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-MC-EVOLUTION",
+    "lawKind": "perfect",
+    "stressMeasure": "cauchy",
+    "youngsModulusPa": 20000000.0,
+    "poissonRatio": 0.25,
+    "unitWeightNPerM3": 20000.0,
+    "cohesionPa": 30000.0,
+    "frictionDeg": 35.0,
+    "dilationDeg": 0.0
+  },
+  "soil2": {
+    "source": "Table 1 / Figure 4; Equations 5-6 on printed page 178",
+    "model": "Mohr-Coulomb with cohesion softening",
+    "youngsModulusPa": 20000000.0,
+    "poissonRatio": 0.25,
+    "unitWeightNPerM3": 20000.0,
+    "cohesionPeakPa": 30000.0,
+    "cohesionResidualPa": 15000.0,
+    "frictionDeg": 35.0,
+    "dilationDeg": 0.0,
+    "paperKpsPeak": 0.0,
+    "paperKpsResidual": 0.02,
+    "paperCoordinate": "kps=sqrt(0.5*ep_dev:ep_dev), ep_dev=ep-tr(ep)*I/3",
+    "nativeCoordinateWarning": "Native accumulated J2 equivalent increments are not automatically the norm of the accumulated plastic tensor for nonproportional paths",
+    "implementationStatus": "PENDING_PAPER_HISTORY_ADAPTER_AND_REGRESSION; no runnable Soil2 surrogate is substituted"
+  },
+  "geometry": {
+    "source": "Figure 2, printed page 179",
+    "widthM": 20.0,
+    "baseThicknessM": 5.0,
+    "crestLengthM": 10.0,
+    "patchStartM": 7.0,
+    "patchLengthM": 3.0,
+    "slopeDeg": 60.0,
+    "reliefHeightFromPaperM": null,
+    "currentReliefAssumptionM": 10.0,
+    "bottomTangentialFixity": "UNRESOLVED: support symbols require verification; existing MPM fixes x/y"
+  },
+  "loading": {
+    "source": "Section 2 / Figure 2",
+    "velocityMPerS": 0.0001,
+    "paperEndDisplacementM": null,
+    "preparedComparisonEndDisplacementM": 0.1,
+    "preparedFullPhysicalDurationS": 1000.0,
+    "endDisplacementStatus": "COMPARISON_TARGET; Figure 3 endpoint not independently reverified",
+    "implementation": "Bilateral tracked displacement penalty; finite compliance, not the creep one-way pusher"
+  },
+  "openGates": [
+    "Relief height is not numerically dimensioned in Figure 2; never label the 10m assumption a paper value",
+    "Verify bottom tangential restraint from the original figure/data",
+    "Original user PDF is currently missing; author-upload text is accessible through web retrieval, direct local download was refused",
+    "Paper displacement/strain reset must be reconciled with preserving native prestress/internal elastic state",
+    "Resolve/capture zero-dilation MC tensile-apex failure before full reference-speed execution",
+    "Validate paper kps state/evolution before enabling Soil2",
+    "Demonstrate quasistatic, mesh, timestep and penalty sensitivity; MPM curve agreement is unverified"
+  ]
+}

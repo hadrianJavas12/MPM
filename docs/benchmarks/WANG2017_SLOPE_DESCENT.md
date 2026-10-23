@@ -1,5 +1,10 @@
 # Wang (2017) prescribed crest descent: Soil#1
 
+**2026-10-23:** the user explicitly chose MPM with paper inputs. Start with
+[the new preparation guide](WANG2017_MPM_PREPARATION.md) and central reference
+contract. The earlier assumptions/failure evidence below remain valid; no new
+creep surrogate or accelerated run is presented as the paper benchmark.
+
 This case studies prescribed descent of a 3 m crest patch using the existing MPM engine. It is a numerical comparison proposal based on Wang et al. (2017), [DOI](https://doi.org/10.1007/s11629-016-3951-1), Section 2, Table 1 and Figures 2–3. Source provenance is in [the reference record](../../research/references/wang2017/source.json). Current native benchmark evidence: **PILOT COMPLETE; FULL FIGURE 3 REPRODUCTION NOT_RUN**.
 
 ## Reference inputs and declared assumptions

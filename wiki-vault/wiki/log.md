@@ -673,3 +673,16 @@ only duration/frames/computational cap30000→60000 differ. Actual prefix PENDIN
 all VTK/material/contact/work CSV bytes must match. No hidden tolerance/physics
 change. Stop duration-only repeats if free response decays/levels. Update quiet
 monitor to every5h; raw sources and earlier log/evidence preserved.
+
+## [2026-10-23] checkpoint | Return to Wang paper physical inputs in MPM
+
+[[wang2017-mpm-return-2026-10-23]] preserves the latest request and explicit
+"Tetap MPM, ikuti input paper" decision. Switched to
+codex/wang2017-reference-preparation; main unchanged. Native preparation on
+7319e42 passes7 groups/35 input checks and Nodecheck/36, with zero physical
+updates and18 artifact hashes. Central contract separates Soil1 perfect MC
+from Soil2 cohesion30→15kPa/paperkps0→.02, whose history adapter remains pending.
+Author-upload PDF text re-read via web; original path missing and figure images
+not newly inspected. Relief10m/bottom fixity/endpoint remain explicit gaps.
+Old MC failure preserved; no psi/tensile clamp, J2 substitution or full run.
+Guide/testing/handover/index updated; raw sources and previous evidence intact.

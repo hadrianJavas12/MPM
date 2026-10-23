@@ -1,5 +1,18 @@
 # Native framework and Studio verification
 
+## Wang2017 paper-input preparation,2026-10-23
+
+User explicitly selected MPM with paper physical inputs. End-to-end Windows
+`scripts/prepare-wang2017.ps1` on7319e42 passes7 native preparation groups,
+35 actual input comparisons, Nodecheck/36 tests; all exits0. Two native MC
+particles are constructed, **zero physical/settling updates**.18 artifact hashes
+retain exports/configurations/material-law samples, logs and exact input scripts:
+`docs/evidence/wang2017-reference-2026-10-23/preparation/`.
+Numerical engine/material/scenario sources remain unchanged from59a564b.
+This is preparation evidence, not a new reference-speed solver run or curve.
+Soil2 paper-history adapter, relief/boundary/endpoint fidelity and MC failure gate
+remain open. See [the current guide](benchmarks/WANG2017_MPM_PREPARATION.md).
+
 ## Reusable native framework regression, 2026-10-15
 
 The initial refactor was committed as `66ea5fb` before running the requested

@@ -1,0 +1,19 @@
+{
+  "paperInputChecksPassed": true,
+  "scope": "Actual native Soil1 input preparation; not a simulated curve or scientific validation",
+  "fullSimulationStarted": false,
+  "referenceAgreementVerified": false,
+  "soil2ImplementationStatus": "PENDING_PAPER_HISTORY_ADAPTER_AND_REGRESSION; no runnable Soil2 surrogate is substituted",
+  "readiness": "PAPER_INPUTS_PREPARED_WITH_OPEN_GATES",
+  "methodDecision": {
+    "date": "2026-10-23",
+    "userInstruction": "Tetap MPM, ikuti input paper",
+    "implementation": "Explicit MPM; no claim of implementing paper FEM local arc-length",
+    "paper": "FEM, 10820 triangular elements, local arc-length comparison with Riks and implicit dynamics"
+  },
+  "inputSha256": {
+    "contract": "e8aba98d2687b6ea63f25348ada30cfe2d380e9493a2de45ec3eb5263fec46a5",
+    "nativeExport": "b3ef6241b490999691801c5acf979665ede7eb99fd6fa25e5ab688c6ca9878ca"
+  },
+  "sourceScriptSha256": "0c202393298d9b9ee7b9daa4b530913a6913507d655a8ab2dd6e2c4162716e46"
+}
