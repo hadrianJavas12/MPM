@@ -1,5 +1,10 @@
 # Persiapan Wang 2017 dengan MPM
 
+**Studi aktif berikutnya:** rate0.002m/s,50s target/0.1m, mulai14:35WIB dari68efa27,
+batas5jam. Tiga kontrol native memastikan material dan konfigurasi fisik lain
+tetap sama; hanya rate/derived duration/cadence count/batas komputasi berubah.
+Ini20x paper, bukan hasil reference-speed. [Diagnosis apex dan studi laju](WANG2017_APEX_REVIEW.md).
+
 [Video parsial diagnostik002](../evidence/wang2017-reference-2026-10-23/diagnostic-fast-005-002-video/slope-descent.mp4):
 78 frame asli0–15.4s, playback19.5s. Warna adalah native mc-kappa (history plastis),
 bukan damage. Run berhenti karena integrasi MC; status INCOMPLETE tetap terlihat.
@@ -79,8 +84,8 @@ sekitar2,35hari; ini estimasi historis, bukan jaminan runtime terbaru.
 | Penurunan puncak | bilateral penalty dengan compliance | uji sensitivitas tracking/penalty dan bandingkan reaksi mentah |
 | Inisialisasi | prestress/internal elastic state dipertahankan saat reset pelaporan | rekonsiliasi dengan reset strain yang disebut paper |
 | Metode dan mesh | MPM eksplisit, grid1m/915MP; pilihan pengguna | lakukan sensitivitas; bukan FEM10820segitiga |
-| Integrasi MC | fast trial lama gagal pada15,4s/77mm | capture/replay state lengkap sebelum run panjang |
-| Soil #2 | primitive Eq5–6/state/law tersedia; adapter particle belum tersedia | lanjutkan projector dengan tensor history, lalu transport/rollback particle |
+| Integrasi MC | kegagalan aktual15,4s/77mm sudah dicapture/replay; legacy menerima lewat perubahan volume plastis | studi0,002m/s aktif; tidak ada clamp tersembunyi |
+| Soil #2 | primitive Eq5–6 dan projector coupled frame tetap lulus19 kontrol; adapter particle belum tersedia | nyatakan konvensi finite-strain/irreversibility, lalu transport/rollback particle |
 | Kurva referensi | belum didigitisasi/dibandingkan kuantitatif | simpan sumber dan toleransi sebelum penilaian |
 
 Pada Soil #2, kps paper adalah norma tensor plastic deviatoric strain. History
@@ -125,6 +130,14 @@ System opsional `cl-mpm/models/wang2017` memisahkan norma tensor, state bertanda
 dengan salinan milik sendiri, konversi shear engineering dan hukum kohesi Soil2.
 Ini belum menjalankan particle Soil2 atau timestep lereng. Rincian kontrak dan
 gate integrasi: [WANG2017_HISTORY_ADAPTER.md](WANG2017_HISTORY_ADAPTER.md).
+
+Checkpoint berikutnya menambahkan **19 kontrol projector coupled Soil2 PASS**
+dan smoke ASDF opsional exit0. Snapshot sepuluh sumber cocok sebelum/sesudah;
+tidak ada perubahan numerik MC lama atau timestep MPM. Ini hanya prototipe
+small-strain/frame tetap: seluruh akar diperiksa, solusi ambigu ditolak dan
+reversal literal dapat mengurangi norma history. Native particle, transport
+objektif dan interpretasi irreversible belum diaktifkan. Jangan menyamakan
+point-test PASS dengan kurva Soil2/Figure4 yang tervalidasi.
 
 Condition kegagalan MC sekarang membawa trial principal Kirchhoff, E,nu,J yang
 benar-benar diberikan, history dan seluruh parameter law. Input disalin hanya

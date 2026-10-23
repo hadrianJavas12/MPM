@@ -706,3 +706,11 @@ Extended diagnostic naturally FAILED_NATIVE exit1 at12:35WIB before revised dead
 ## [2026-10-23] ingest | Partial Wang native video delivered
 
 Rendered78 actual saved states0–15.4s, fixed axes/colour and exact frame cap; H264/yuv420p full decode PASS,19.5s playback.78 native VTK hashes match immutable failure archive;14 media artifacts hashed. Native mc-kappa is plastic history, not damage or Soil2 coordinate. Kept INCOMPLETE/50x loading labels; renderer exit2 is expected. Updated guide/testing/handover and linked wiki, no solver/physics changes.
+
+## [2026-10-23] ingest | Native apex comparison and controlled slower run
+
+User requests continuation until success.5 actual native apex-comparison controls and3 new rate-input controls PASS, zero MPM updates;13 evidence hashes preserve source/proof/results. Legacy apex accepts by adding plastic volume; strict zero-dilation model unchanged. Source68efa27 rate0.002m/s study launched14:35WIB, target50s/0.1m with5h wall cap and frozen native sources;20x paper, no success claimed. Updated apex review, guide/testing/handover, linked wiki/index; no raw/settings edits.
+
+## [2026-10-23] ingest | Isolated Soil2 coupled point checkpoint
+
+Final frozen native19/19 controls and optional ASDF load/elastic-call exit0; zero MPM updates. All roots, both two-plane edges, rotations/permutations, signed nonproportional/reversal history and ambiguity/rollback verified; old MC sources unchanged.36 archive hashes retain initial/final sources and proofs. [[wang2017-paper-history]] records small-strain/fixed-frame scope and open native-particle/finite-strain/irreversibility gate; [[wang2017-apex-and-rate-study]] continues independently. Updated index and handover, no raw sources or personal settings changed.

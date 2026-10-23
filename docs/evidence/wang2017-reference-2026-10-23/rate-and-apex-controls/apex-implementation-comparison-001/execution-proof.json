@@ -1,0 +1,53 @@
+{
+  "sourceCommit": "68efa27271828c203aab8f86b00bf7dfba793ef7",
+  "startedUtc": "2026-10-23T07:36:04.9207302Z",
+  "scope": "Bounded native constitutive comparison; zero MPM updates",
+  "hashes": [
+    {
+      "path": "tests/materials/mc-legacy-apex-comparison.lisp",
+      "sha256": "E7428EF093EF4BB2D88FB4A6271EC2B5CF3DCA5FB20205232FCB52D9CC0D7C8A"
+    },
+    {
+      "path": "output/wang2017-reference-2026-10-23/diagnostic-fast-005-002/mc-integration-failure.json",
+      "sha256": "6772C5EABB54FFCA58105292E06A39F834E6CE9D0AAB26BF16CA982404D5B99A"
+    },
+    {
+      "path": "libs/kirchoff.dll",
+      "sha256": "57C4C9A6CEDB1ADE1202914074DAB942AFC2F15ABB114637619CA3CB5D9F074F"
+    },
+    {
+      "path": "libs/src/constitutive.h",
+      "sha256": "1A62497C3F51ABCE346F9D4D6BD9E94D784AE5192AEF9465A16385D623A8C511"
+    },
+    {
+      "path": "libs/test.cpp",
+      "sha256": "560F238E29CCF5F440C950A024C761CA014F4F67EE4253D2F5A635381F2E2BC0"
+    },
+    {
+      "path": "materials/backends/cpp/legacy-transaction.lisp",
+      "sha256": "CFF14534F13F687E85D4CE262A4A8635C9B8273879D332F846F60ABAE2BDD924"
+    },
+    {
+      "path": "materials/models/plastic/mohr-coulomb/particle.lisp",
+      "sha256": "43D773E7CEF70B6A448C06F723EFEA6DE43F545B2EAEA4A574235B7A386F9110"
+    },
+    {
+      "path": "materials/models/plastic/mohr-coulomb-evolution/projection.lisp",
+      "sha256": "01C73C007726118FA40908CB7DE929B8D17900C94B1F2FE3596D7AFE81B2CE79"
+    },
+    {
+      "path": "materials/models/plastic/mohr-coulomb-evolution/diagnostics.lisp",
+      "sha256": "10FC3D6170B04ADBB153FE2AFD562D51DAEFC9D1976A3059BA046C1B8223D0EB"
+    },
+    {
+      "path": "materials/models/plastic/mohr-coulomb-evolution/law.lisp",
+      "sha256": "505207B3BCBBD0C87625D16C96CB436436F71562DED9349AA2126ED7DAC6796A"
+    },
+    {
+      "path": "materials/models/plastic/mohr-coulomb-evolution/material.lisp",
+      "sha256": "7499BC382D7F2BD71B4CE3C5FF530C92F9C3E9E6EB407F92C4C14F8E84CA2A77"
+    }
+  ],
+  "nativeExitCode": 0,
+  "endedUtc": "2026-10-23T07:36:20.7758761Z"
+}

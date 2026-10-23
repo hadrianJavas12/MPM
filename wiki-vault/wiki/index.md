@@ -25,7 +25,8 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[wang2017-paper-history]] —17 native paper-history,7 capture/replay and34 MC regression groups PASS; coupled Soil2 particle remains pending
+- [[wang2017-apex-and-rate-study]] —5 native legacy/strict apex and3 rate-input controls PASS; unchanged-material0.002m/s rate study active
+- [[wang2017-paper-history]] —19 coupled fixed-frame Soil2 point controls plus optional ASDF smoke PASS; existing17 history/7 capture/34 MC evidence retained; native particle and finite-strain convention pending
 - [[clay-creep-slope]] —10s reviewed without verified landslide; complete release only9–10s; unchanged20s post-release observation running with strict prefix gate
 - [[wang2017-prescribed-descent]] —17 history/7 capture/34 MC groups PASS; diagnostic FAILED/replayed, verified partial video0–15.4s available; Soil2 coupling and paper curve pending
 - [[mc-hardening-softening-study]] — M0–M6 COMPLETE on `codex/mc-hardening-softening-study`: dedicated `:mc-h` / `:mc-hs` model family (`34/34` unit assertions), M3 constitutive point verification (`7` pairs), M4 3D MPM Triaxial (`T-100-H` vs `T-100-HS`, $-62.33\%$ post-peak softening drop), and M5 2D MPM Cliff (`L-H` vs `L-HS`, $+51.92\%$ max displacement, $+38.79\%$ toe runout) with plots and `.mp4` videos

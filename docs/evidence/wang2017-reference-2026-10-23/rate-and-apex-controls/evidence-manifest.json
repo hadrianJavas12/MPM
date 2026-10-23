@@ -1,0 +1,70 @@
+{
+  "scope": "Native point/input tests only; no solver success or scientific validation. Exact execution/source-match proof included for apex control; preflight case/test committed68efa27 without full preload freezing.",
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ffe82f3c5b968ed009c2577fa38f32c83be167799ee565d40a18e3440c57b342"
+    },
+    {
+      "path": "apex-implementation-comparison-001/artifact-hashes.json",
+      "bytes": 635,
+      "sha256": "72697944b81c5c0b073309dd1dbeab993f34ccc8f1641d5bfc125753134d5aff"
+    },
+    {
+      "path": "apex-implementation-comparison-001/execution-proof.json",
+      "bytes": 2106,
+      "sha256": "54ab10ece1e08bb255a9c9345a927e98a01c1e451b27f967b50c866d79c5bebe"
+    },
+    {
+      "path": "apex-implementation-comparison-001/native.log",
+      "bytes": 467,
+      "sha256": "f2f182d6aaf067911c0b3f064b1309467c38ed64866c8f4f1195860e6b213bdf"
+    },
+    {
+      "path": "apex-implementation-comparison-001/result.json",
+      "bytes": 5002,
+      "sha256": "84e7e4681fa1c7a5f563ffc9a24e6ed81cb9b1d6ae73620942fb206f81d6f353"
+    },
+    {
+      "path": "apex-implementation-comparison-001/source-match.json",
+      "bytes": 2958,
+      "sha256": "95ed812eadd2ab733c917370a64f8be05329ee285bea484bb700361f41150764"
+    },
+    {
+      "path": "apex-implementation-comparison-001/test-at-execution.lisp",
+      "bytes": 13141,
+      "sha256": "e7428ef093ef4bb2d88fb4a6271ec2b5cf3dca5fb20205232fcb52d9cc0d7c8a"
+    },
+    {
+      "path": "rate-002-preflight-001/native.log",
+      "bytes": 294,
+      "sha256": "97fe0924288d607673d68d4b0a0f29e5fc0fd3c71ce5febe9ba2d4243744c096"
+    },
+    {
+      "path": "rate-002-preflight-001/result.json",
+      "bytes": 1258,
+      "sha256": "c87c50d6eddf50054f22fc329120f9649b165a0a2f85e609259eaf74c0d144d7"
+    },
+    {
+      "path": "rate-002-preflight-001/status.json",
+      "bytes": 115,
+      "sha256": "770e76751e8175a4648549fc1afc8981db5bdaa5376f1df98f0f45d4e3c70145"
+    },
+    {
+      "path": "support/cases/benchmarks/wang2017-soil1-rate-002.lisp",
+      "bytes": 1908,
+      "sha256": "e2f9e3e2e8dd4eb8ff091d4d59f9797085e76a40de6fdfc020631d6d8d7dc55e"
+    },
+    {
+      "path": "support/tests/benchmarks/wang2017-rate-comparison.lisp",
+      "bytes": 2935,
+      "sha256": "7377cfa9a5ad2dcbfe2cd99b26e3df9133f90e2e1ef12144e0788db5af64898b"
+    },
+    {
+      "path": "support/tests/materials/mc-legacy-apex-comparison.lisp",
+      "bytes": 13141,
+      "sha256": "e7428ef093ef4bb2d88fb4a6271ec2b5cf3dca5fb20205232fcb52d9cc0d7c8a"
+    }
+  ]
+}

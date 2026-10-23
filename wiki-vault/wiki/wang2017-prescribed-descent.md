@@ -8,6 +8,10 @@ updated: 2026-10-23
 
 # Wang 2017 prescribed crest descent
 
+Current continuation: [[wang2017-apex-and-rate-study]] records the active0.002m/s
+controlled rate run and the actual native evidence that legacy apex acceptance
+introduces volumetric plastic flow. No hidden convention change was enabled.
+
 Current scope: [[wang2017-mpm-return-2026-10-23]] explicitly keeps MPM and follows
 paper physical inputs on `codex/wang2017-reference-preparation`. The earlier
 Soil1 pilot on the Wang branch remains historical evidence. The full paper curve

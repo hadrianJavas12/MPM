@@ -1,5 +1,34 @@
 # Native framework and Studio verification
 
+## Wang Soil2 coupled point prototype,2026-10-23
+
+`tests/materials/wang2017-projection.lisp`: **19 Windows native controls PASS**,
+exit0 on final frozen attempt002; initial16-control attempt001 retained. Optional
+`cl-mpm/models/wang2017-point` ASDF load and elastic call exit0. Ten source copies
+match before/after execution and current workspace; old MC and paper primitives
+unchanged. Independent review found no substantive issue. Evidence:
+`docs/evidence/wang2017-reference-2026-10-23/soil2-point-projection/`.
+
+Checks cover analytic softening/endpoint/tail/two-plane edges, all6 permutations,
+rotated tensor, signed nonproportional/reversal history, ownership/rollback,
+rejection of three admissible roots and captured apex. History residual1e-13.
+Zero MPM updates; no Soil2 particle, objective finite-strain transport, approved
+healing/max rule or slope validation. Existing/default ASDF systems do not load
+the prototype. No unchanged Node/solver suite was repeated for this isolated gate.
+
+## Wang apex implementation and rate controls,2026-10-23
+
+Five new native comparison groups PASS, exit0/zero MPM steps: strict captured and
+native adapter rejection, actual legacy raw/J-scaled apex volumetric correction,
+admissible shear agreement and verified loaded DLL. Execution/source-match proof
+in `output/wang2017-reference-2026-10-23/apex-implementation-comparison-001/`.
+No legacy default, flow or apex setting was enabled.
+
+Three native input groups for new rate002 PASS: compiled configs differ only in
+velocity,duration,frames,maxUpdates; actual class/elasticity/law match. Two native
+particles, zero time updates. `rate-002-preflight-001/`. Case/test committed68efa27;
+full0.002m/s target50s run is separate and has no completion PASS yet.
+
 ## Partial Wang diagnostic media,2026-10-23
 
 Postprocess of the stopped diagnostic002 reads78 actual CSV/VTK states0–15.4s.

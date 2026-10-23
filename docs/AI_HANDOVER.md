@@ -2,6 +2,54 @@
 
 **Operational checkpoint: 2026-10-23, Asia/Jakarta. Read this first.**
 
+## Current continuation: controlled slower rate and Soil2 point preparation
+
+Latest human direction: **"lanjutkan hingga berhasil"**, then **"lanjutkan"**.
+Branch remains `codex/wang2017-reference-preparation`; live main refreshed remains
+9e97e00. Preserve scientific controls; no hidden apex convention or strength tuning.
+
+**ACTIVE** `output/wang2017-reference-2026-10-23/rate-002-001/`, started
+**14:35:52WIB**, source **68efa27271828c203aab8f86b00bf7dfba793ef7**.
+Wrapper16236 / cmd38152 / SBCL25128; **5h wall budget (about19:35WIB)**.
+Input0.002m/s, target0.1m/50s,251 saved frames, cap375000updates. Three native
+preflight groups PASS, zero updates: only velocity/derived duration/frame count/
+computational cap differ from fast005. Same strict MC, material/geometry/BC/
+mesh/dt scale/damping/penalty; no mass/time scaling. This is **20x paper rate**,
+a rate study, not reference-speed validation. Sources/DLL already frozen/verified.
+At wakeup read adjacent-status, manifest and ONE stdout tail first. Healthy run:
+no duplicate, no active polling, no unchanged tests. Do not edit its postprocessors.
+Wrapper audits/renders after complete native exit0; reuse saved data for media.
+If failed, capture/replay that new state once, compare at common displacement;
+do not simply keep reducing velocity/restarting without diagnosis.
+
+Five actual Windows native comparison controls PASS on68efa27, zero MPM steps:
+strict return/native adapter reject actual diagnostic002 state identically;
+legacy C++ accepts an explicit apex with **nonzero plastic-volume increment**.
+Raw legacy c is Kirchhoff; J*c matches Cauchy. Admissible shear control agrees.
+Actual mapped DLL and source bytes checked. This does not justify silently
+switching to legacy behavior. [Apex review](benchmarks/WANG2017_APEX_REVIEW.md)
+records primary-source conventions and the new rate-study rationale.
+
+**Independent Soil2 point checkpoint COMPLETE:** optional system
+`cl-mpm/models/wang2017-point` / `point-projection.lisp` passes **19 Windows
+native controls, exit0**, optional ASDF load/elastic call exit0, zero MPM steps.
+Frozen attempt002 before/after proofs match10 copied source files; unchanged old
+MC/paper primitives checked. Attempt001 initial16 controls also retained. Independent
+read-only review found no substantive issue. Evidence:
+`docs/evidence/wang2017-reference-2026-10-23/soil2-point-projection/`.
+The projector solves all signed accumulated tensor Eq5–6 roots on the softening
+branch and constant tail; tests cover both two-plane edges, rotation/all6
+permutations, nonproportional/reversal, rollback and actual3-root ambiguity reject.
+Small-strain/fixed-frame ONLY: literal reversal can lower kps/increase c, not an
+approved healing convention. No native Soil2 particle, objective transport or
+irreversible maximum enabled. Next independent gate: document finite-strain
+transport/irreversibility before particle transactions/integration; do not silently
+choose a healing/max rule. Guide: `docs/benchmarks/WANG2017_HISTORY_ADAPTER.md`.
+The3 rate and5 apex controls have13 retained artifact hashes under
+`docs/evidence/wang2017-reference-2026-10-23/rate-and-apex-controls/`.
+Do not repeat the19 point/ASDF,3 rate,5 apex,17history/7capture/34MC,
+old replay, Node36/input35 or existing pilot unless relevant sources change.
+
 **Latest: Wang diagnostic002 FAILED_NATIVE at12:35WIB; actual failed-state replay PASS.**
 Read the "Latest native Wang preparation checkpoint" below before any new run.
 History/capture/MC controls are complete; do not repeat them at each wakeup.
@@ -48,7 +96,8 @@ J2 creep, or start more creep runs. Active branch
   over paperkps0→.02, phi35/psi0. Paper Eq5 is sqrt(.5*ep_dev:ep_dev), Eq6
   removes plastic trace. Native accumulated equivalent-J2 increments are not
   automatically the norm of the accumulated tensor under nonproportional paths.
-  Soil2 DATA prepared, paper-history adapter NOT_IMPLEMENTED. Do not ship a
+  Soil2 DATA and isolated fixed-frame point projector prepared; native particle
+  adapter NOT_IMPLEMENTED. Do not ship a
   generic .02-kappa substitute, zero-friction J2 material or guessed invariant.
 - Before full reference execution: MC fast trial52f9367 failed at15.4s/77mm;
   original-speed full1000s NOT_RUN. Known zero-dilation tensile-apex/rollback

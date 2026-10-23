@@ -1,0 +1,16 @@
+{
+  "status": "PURE_POINT_CONTROLS_PASS",
+  "nativeExit": 0,
+  "controls": 19,
+  "optionalAsdfSmokeExit": 0,
+  "oldMcAndPaperPrimitivesUnchangedFromHead": true,
+  "workspaceStillMatchesAttempt002CopiedSources": true,
+  "physicalUpdatesExecuted": 0,
+  "scientificScope": "Literal signed-tensor, small-strain fixed-frame coupled Soil2 projector only. No particle integration, objective transport, irreversible maximum or slope validation.",
+  "files": [
+    "materials/models/plastic/wang2017/point-projection.lisp",
+    "tests/materials/wang2017-projection.lisp",
+    "cl-mpm.asd"
+  ],
+  "timestampUtc": "2026-10-23T07:51:03.1150113Z"
+}

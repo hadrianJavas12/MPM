@@ -41,22 +41,51 @@ yang disisipkan. Pemakaian langsung fungsi kohesi setelah reversal **bukan**
 konvensi material yang telah disahkan. Interpretasi irreversible dan transport
 finite-strain harus dicatat sebelum integrasi particle diaktifkan.
 
-## Gate integrasi yang masih terbuka
+## Projector titik material yang telah diuji
+
+System ASDF opsional **`cl-mpm/models/wang2017-point`** sekarang menyediakan
+`project-paper-principal(trial,E,nu,J,history,Q)`. `trial` adalah tiga tegangan
+principal Kirchhoff; kolom matriks ortonormal Q memetakan basis principal ke
+**frame tetap yang sama dengan history**. Output memiliki data sendiri; input
+tidak diubah ketika berhasil maupun ditolak. System lama tidak memuat system ini.
+
+Untuk setiap basis aktif MC, kandidat increment dipetakan menjadi
+`deltaEp=Q diag(deltaEp_principal) Q^T`. Pada cabang kohesi linear, tensor
+deviatorik kandidat berbentuk `A+kB`, sehingga seluruh akar nyata persamaan
+`(1-.5 B:B)k²-(A:B)k-.5 A:A=0` diperiksa pada0≤k≤0.02. Cabang residual
+konstan diperiksa terpisah. Kandidat harus memenuhi residual history **tanpa
+kuadrat**, yield, multiplier, complementarity, urutan tegangan dan kerja.
+Solusi berbeda yang sama-sama admissible atau kontinum yang belum dapat
+disingkirkan **ditolak**, bukan dipilih dengan heuristik atau clamp.
+
+**19 kontrol Windows native PASS, exit0, nol timestep MPM**, ditambah pemuatan
+system ASDF opsional dan panggilan elastik exit0. Cakupan: solusi analitik
+single-plane dan kedua two-plane edge, endpoint/tail, tensor nonproporsional,
+reversal, rotasi, enam permutasi, input tidak valid, ownership/rollback,
+penolakan tiga akar admissible, serta kegagalan apex aktual. Residual history
+dites hingga1e-13. Semua file MC lama dan primitive paper tetap tidak berubah.
+Snapshot sepuluh sumber sebelum/sesudah eksekusi cocok byte. Bukti tersimpan di
+`docs/evidence/wang2017-reference-2026-10-23/soil2-point-projection/`.
+
+```powershell
+Set-Location D:\MPM
+.\windows\cl-mpm.cmd tests\materials\wang2017-projection.lisp output\FRESH-point.json
+```
+
+Ini **prototipe small-strain/frame tetap**, bukan material Soil2 yang sudah
+terpasang di particle. Norma tensor bertanda dapat turun ketika reversal dan
+fungsi kohesi kemudian dapat meningkat; tes memperlihatkan konsekuensi literal
+persamaan, bukan menyetujui healing atau membuktikan interpretasi irreversible
+paper. Tidak ada `max` history tersembunyi atau perubahan apex/dilatansi.
+
+## Gate integrasi particle yang masih terbuka
 
 Projector MC lama mengasumsikan `k_new=k_old+sqrt(2/3)*norm(dev(deltaEp))`,
 mencari akar hanya untuk k_new≥k_old, dan memakai rumus tail berdasarkan
 penjumlahan tersebut. Mengganti tabel kohesi atau callback saja akan menyisakan
 persamaan history yang salah. `project-principal` lama harus tetap kompatibel.
 
-Tahap berikut adalah entry point Soil2 terpisah dalam frame tetap. Untuk setiap
-kandidat aktif, bentuk tensor kandidat dari history yang telah committed dan
-increment principal yang dipetakan oleh basis trial; evaluasi kps dan kohesi
-secara **coupled**, lalu periksa seluruh akar, yield, complementarity dan kerja.
-Jangan commit kandidat selama pencarian. Tolak akar tidak admissible/ambigu;
-jangan menambah clamp agar lolos. Uji lintasan proporsional, nonproporsional,
-reversal, rotasi/permutasi basis dan rollback terlebih dahulu.
-
-Setelah itu baru adapter particle: state tensor dan committed copy harus masuk
+Tahap berikut adalah adapter particle: state tensor dan committed copy harus masuk
 snapshot/restore/copy/load-step; daftar transaksi induk tidak otomatis mencakup
 slot subclass baru. Engine mengangkut elastic Hencky strain tetapi belum punya
 transport tensor plastis ini. Konvensi corotation akan menjadi adaptasi MPM

@@ -19,11 +19,27 @@ new optional ASDF module owns coordinate/state/law only. Tensor component order
 xx yy zz yz zx xy matches engine Voigt order, but physical shear must be half
 engineering shear. Owned copies and candidate-state isolation are tested.
 
-This is not a native Soil2 particle, finite-strain transport or slope curve.
-A dedicated coupled projector is needed: the old residual/search/tail assume
-summed incremental J2. Preserve those models; do not substitute a law callback
-or scaled .02. Signed tensor norm may decrease on reversal; no irreversible max
-or constitutive healing convention has been silently introduced.
+An isolated coupled projector now exists in optional ASDF system
+`cl-mpm/models/wang2017-point`. Final frozen Windows native attempt002 passes
+19 controls, exit0, with optional ASDF load/elastic call exit0. Ten source copies
+match before/after; existing MC and original paper primitives remain unchanged.
+The old residual/search/tail assume summed incremental J2 and are preserved.
+Do not substitute a law callback or scaled .02.
+
+The new pure entry point maps principal increments into the history's same fixed
+frame, solves every softening quadratic root plus constant tail, checks the
+unsquared tensor norm and all MC admissibility conditions. Both two-plane edges,
+rotations/all6 permutations, nonproportional/reversal, ownership/rollback and
+actual3-root ambiguity rejection are tested.36 artifact hashes retain both
+initial16 and final19-control sources/results/proofs in docs/evidence/
+wang2017-reference-2026-10-23/soil2-point-projection.
+
+This is **small-strain/fixed-frame only**, not a native Soil2 particle,
+finite-strain transport or slope curve. Signed tensor norm may decrease on
+reversal and the literal cohesion law can increase strength; no irreversible max
+or healing convention is approved or silently introduced. Next integration gate
+is explicit finite-strain/irreversibility interpretation, then particle state
+transactions. The independent [[wang2017-apex-and-rate-study]] remains active.
 
 MC failure conditions now carry exact supplied trial,E,nu,J,law,kappa only when
 they fail, with pure JSON replay. Successful equations/tolerances are unchanged.
