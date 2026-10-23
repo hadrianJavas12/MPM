@@ -98,7 +98,23 @@ def inspect(run):
     return manifest, rows, snapshots, audit
 
 
-def draw(manifest, rows, snapshot, index, destination):
+def drawing_limits(snapshots):
+    """Keep coordinates and physical colour meaning fixed across native frames."""
+    quantity = next(name for name in ("mc-kappa", "stress_yy", "mass")
+                    if all(name in fields for _, fields in snapshots))
+    xy = np.concatenate([points[:, :2] for points, _ in snapshots])
+    low, high = xy.min(axis=0), xy.max(axis=0)
+    padding = np.maximum((high - low) * .03, 1e-9)
+    vmin = min(float(fields[quantity].min()) for _, fields in snapshots)
+    vmax = max(float(fields[quantity].max()) for _, fields in snapshots)
+    if not np.isfinite(xy).all() or not np.isfinite([vmin, vmax]).all():
+        raise ValueError("Nonfinite plotted native coordinates or scalar range")
+    return {"quantity": quantity, "xlim": [float(low[0]-padding[0]), float(high[0]+padding[0])],
+            "ylim": [float(low[1]-padding[1]), float(high[1]+padding[1])],
+            "vmin": vmin, "vmax": vmax if vmax > vmin else vmin + max(abs(vmin)*.01, 1e-12)}
+
+
+def draw(manifest, rows, snapshot, index, destination, limits=None):
     points, fields = snapshot
     reference = np.asarray([row["commanded_settlement_m"] for row in rows])
     actual = np.asarray([row["measured_settlement_m"] for row in rows])
@@ -109,7 +125,14 @@ def draw(manifest, rows, snapshot, index, destination):
     if quantity not in fields:
         quantity = "mass"
     values = fields[quantity]
-    dots = spatial.scatter(points[:, 0], points[:, 1], c=values, s=8, cmap="viridis")
+    colour_options = {}
+    if limits is not None:
+        quantity = limits["quantity"]
+        values = fields[quantity]
+        colour_options = {key: limits[key] for key in ("vmin", "vmax")}
+        spatial.set_xlim(limits["xlim"])
+        spatial.set_ylim(limits["ylim"])
+    dots = spatial.scatter(points[:, 0], points[:, 1], c=values, s=8, cmap="viridis", **colour_options)
     fig.colorbar(dots, ax=spatial, label=quantity)
     spatial.set(xlabel="x (m)", ylabel="y (m)", aspect="equal",
                 title=f"Actual MPM particles, t={row['time_s']:.4g} s")
@@ -171,7 +194,10 @@ def main():
     args = parser.parse_args()
     run = args.run_dir.resolve()
     manifest, rows, snapshots, audit = inspect(run)
-    draw(manifest, rows, snapshots[-1], len(rows)-1, run / "descent-overview.png")
+    limits = drawing_limits(snapshots)
+    audit["visualization"] = {**limits, "displacementScale": 1,
+                              "interpolatedStates": False, "videoFps": 4}
+    draw(manifest, rows, snapshots[-1], len(rows)-1, run / "descent-overview.png", limits)
     draw_energy(run)
     if args.video:
         executable = shutil.which("ffmpeg")
@@ -180,9 +206,10 @@ def main():
         frames = run / "rendered-frames"
         frames.mkdir(exist_ok=True)
         for index, snapshot in enumerate(snapshots):
-            draw(manifest, rows, snapshot, index, frames / f"frame_{index:05d}.png")
+            draw(manifest, rows, snapshot, index, frames / f"frame_{index:05d}.png", limits)
         subprocess.run([executable, "-v", "error", "-y", "-framerate", "4", "-i",
                         str(frames / "frame_%05d.png"), "-c:v", "libx264", "-pix_fmt", "yuv420p",
+                        "-frames:v", str(len(snapshots)),
                         "-movflags", "+faststart", str(run / "slope-descent.mp4")], check=True)
     (run / "output-audit.json").write_text(json.dumps(audit, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({key: value for key, value in audit.items() if key != "sources"}, indent=2))

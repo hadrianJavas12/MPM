@@ -6,6 +6,16 @@
 Read the "Latest native Wang preparation checkpoint" below before any new run.
 History/capture/MC controls are complete; do not repeat them at each wakeup.
 
+**Partial video available:** `docs/evidence/wang2017-reference-2026-10-23/diagnostic-fast-005-002-video/slope-descent.mp4`.
+78 native frames0–15.4s,4fps/19.5s playback, fixed spatial/colour bounds and no
+amplification/interpolation. Native mc-kappa is plastic history, not damage or
+Soil2 paper history. INCOMPLETE/50x loading labels retained. H264/yuv420p full
+decode PASS; all78 VTK hashes match the immutable raw archive.14 artifact hashes.
+Saved-output consistency passes available checks; native complete=false remains.
+Renderer exit2 is expected incomplete status. Plot script changed only AFTER run
+completion for fixed visual ranges and explicit frame cap; exact renderer saved
+with media. Do not regenerate the video or rerun solver just to obtain it.
+
 ## Latest human direction: prepare Wang2017 physical inputs in MPM
 
 User replaced the creep experiment: "tidak longsor ya, tolong persiapkan simulasi

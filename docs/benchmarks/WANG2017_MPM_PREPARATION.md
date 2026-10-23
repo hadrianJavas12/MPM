@@ -1,5 +1,10 @@
 # Persiapan Wang 2017 dengan MPM
 
+[Video parsial diagnostik002](../evidence/wang2017-reference-2026-10-23/diagnostic-fast-005-002-video/slope-descent.mp4):
+78 frame asli0–15.4s, playback19.5s. Warna adalah native mc-kappa (history plastis),
+bukan damage. Run berhenti karena integrasi MC; status INCOMPLETE tetap terlihat.
+Kecepatan pembebanan0.005m/s adalah50x paper, berbeda dari kecepatan playback.
+
 Keputusan pengguna pada23Oktober2026: **"Tetap MPM, ikuti input paper"**.
 Branch: `codex/wang2017-reference-preparation`. Target sekarang adalah input
 fisik Section2 Wang2017, bukan eksperimen J2 clay-creep sebelumnya. Metode MPM
@@ -140,8 +145,9 @@ fixture ini lulus. Tidak ada psi, tensile cap atau apex clamp yang diubah.
 
 Kegagalan MC lama dekat tensile apex dengan dilatansi nol mempunyai reproducer
 unit yang sudah ada. Trial mean tau42985,371Pa mensyaratkan J≥1,003289361 agar
-`mean(tau) <= J*c*cot(phi)`; J aktual pada update gagal belum direkam. Penyebab
-ini masih diagnosis bersyarat. Jangan mengubah psi, menambah tensile cap atau
+`mean(tau) <= J*c*cot(phi)`; J pada snapshot lama52f9367 belum direkam. Diagnostic002
+kini menangkap actual J dan replay yang sama, sebagaimana dijelaskan di atas.
+Jangan mengubah psi, menambah tensile cap atau
 melakukan apex clamp untuk membuat hasil lewat. Perbaikan retensi CSV saat
 exception sudah tersedia; hilangnya CSV adalah kondisi snapshot lama.
 

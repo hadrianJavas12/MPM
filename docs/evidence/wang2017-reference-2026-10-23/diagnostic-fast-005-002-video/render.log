@@ -1,0 +1,38 @@
+{
+  "passedConsistencyChecks": true,
+  "nativeComplete": false,
+  "scope": "Saved output consistency, not FEM equivalence or experimental validation",
+  "scientificValidation": false,
+  "frames": 78,
+  "massKgPerM": 466520.1674374,
+  "physicalTimeS": 15.4,
+  "commandedSettlementM": 0.077,
+  "measuredSettlementM": 0.07651865614771,
+  "maxAbsoluteMeanPenaltyGapM": 0.0004813438522916,
+  "maxParticlePenaltyGapM": 0.001131901264094,
+  "initialReactionTransientsObserved": false,
+  "quasiStaticReferenceAgreement": "NOT_VERIFIED",
+  "reactionUpwardNPerM": 693135.1192374,
+  "loadingVelocityMPerS": 0.005,
+  "loadingRateMultiplier": 50.0,
+  "maxYieldResidualPa": 5.820766091347e-11,
+  "finalMeanTrackingErrorFraction": 0.004813438522915999,
+  "kineticOverElasticProxyMax": 0.001333195260487,
+  "energyCaveat": "Current-volume Hencky/native-plastic proxies, not closed energy balance. Gravity prestress can mask loading inertia; rate comparison is still required.",
+  "visualization": {
+    "quantity": "mc-kappa",
+    "xlim": [
+      -0.33521711274566496,
+      20.3355616631366
+    ],
+    "ylim": [
+      -0.18603915262297538,
+      15.105189561155845
+    ],
+    "vmin": 0.0,
+    "vmax": 0.020460326178374816,
+    "displacementScale": 1,
+    "interpolatedStates": false,
+    "videoFps": 4
+  }
+}

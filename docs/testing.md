@@ -1,5 +1,20 @@
 # Native framework and Studio verification
 
+## Partial Wang diagnostic media,2026-10-23
+
+Postprocess of the stopped diagnostic002 reads78 actual CSV/VTK states0–15.4s.
+Available saved-output consistency checks pass; nativeComplete=false and
+scientificValidation=false remain. Renderer exit2 correctly reports incomplete
+native run while still producing media. Fixed spatial/colour bounds, explicit
+78-frame encoding cap, no coordinate amplification/interpolation. Native
+mc-kappa is not damage or the pending Wang Soil2 history.
+
+Full H264/yuv420p decode PASS,1680x756,78frames at4fps,19.5s playback. All78 input
+VTK hashes match the previously archived raw failure output.14 evidence hashes
+and exact renderer/sample frames/video:
+`docs/evidence/wang2017-reference-2026-10-23/diagnostic-fast-005-002-video/`.
+No physics, Node suite or solver was rerun for media generation.
+
 ## Wang2017 paper-input preparation,2026-10-23
 
 User explicitly selected MPM with paper physical inputs. End-to-end Windows

@@ -1,0 +1,30 @@
+{
+  "fullDecodePassed": true,
+  "archivedNativeVTKHashesMatched": 78,
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1680,
+        "height": 756,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "4/1",
+        "duration": "19.500000",
+        "nb_frames": "78"
+      }
+    ],
+    "format": {
+      "duration": "19.500000",
+      "size": "362101"
+    }
+  },
+  "physicalTimeS": 15.4,
+  "playbackDurationS": 19.5,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "fixedColourAndSpatialBounds": true,
+  "displacementScale": 1,
+  "interpolatedStates": false
+}

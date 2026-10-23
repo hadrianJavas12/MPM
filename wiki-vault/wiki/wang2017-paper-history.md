@@ -65,3 +65,9 @@ PASS. Mean trial42985.3710489162Pa exceeds the necessary perfect-MC/psi0 mean
 bound42982.78940658873Pa by2.581642Pa. This diagnoses the captured accelerated
 state, not the paper-speed trajectory. No clamp, psi/tolerance change or restart.
 Continue dedicated Soil2 work; do not repeat the full diagnostic/replay already done.
+
+Partial video now available in docs/evidence/wang2017-reference-2026-10-23/
+diagnostic-fast-005-002-video/slope-descent.mp4.78 actual states0–15.4s become
+19.5s playback at4fps. Fixed spatial/colour ranges; native mc-kappa is plastic
+history, not damage or Soil2 history. All78 VTK hashes match immutable raw output;
+full H264 decode PASS.14 media evidence hashes. Native run remains INCOMPLETE.

@@ -96,3 +96,7 @@ failed-return J/inputs now retained and source-matched JSON replay PASS. The
 perfect-MC/psi0 necessary mean bound is violated by2.581642Pa; no physical-run
 PASS or reference-speed failure claim. Budget extension succeeded; the stop is
 material integration.78 VTKs and78 force/energy rows remain available.
+
+The78 native states now have a verified partial video, fixed plotting scales,
+0–15.4s physical/19.5s playback. Media path and14 hashes are recorded in
+[[wang2017-paper-history]]. No solver rerun; INCOMPLETE title retained.

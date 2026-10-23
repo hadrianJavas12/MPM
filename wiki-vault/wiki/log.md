@@ -702,3 +702,7 @@ User explicitly requested longer automatic run limit. Tested Windows monitor att
 ## [2026-10-23] ingest | Actual Wang failed state captured and replayed
 
 Extended diagnostic naturally FAILED_NATIVE exit1 at12:35WIB before revised deadline. Last saved15.4s/77mm,78 particle VTKs and78 force/energy rows retained. Captured actual J1.0032291051924629; six MC modules match frozen bytes; exact JSON failure replay PASS. Mean trial exceeds perfect-MC/psi0 necessary bound by2.581642Pa. Fresh accelerated-state diagnosis only, not paper-speed failure or validation. No parameter/tolerance/clamp change or solver rerun. Updated linked synthesis/index/handover; original raw evidence retained.
+
+## [2026-10-23] ingest | Partial Wang native video delivered
+
+Rendered78 actual saved states0–15.4s, fixed axes/colour and exact frame cap; H264/yuv420p full decode PASS,19.5s playback.78 native VTK hashes match immutable failure archive;14 media artifacts hashed. Native mc-kappa is plastic history, not damage or Soil2 coordinate. Kept INCOMPLETE/50x loading labels; renderer exit2 is expected. Updated guide/testing/handover and linked wiki, no solver/physics changes.
