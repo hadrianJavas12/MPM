@@ -25,6 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
+- [[wang2017-fast-trial-2026-10-24]] — user-confirmed0.01m/s to60mm/6s active; previous rate002 interruption/33states preserved; monitor12/detached9/budget3 fixture controls PASS
 - [[wang2017-apex-and-rate-study]] —5 native legacy/strict apex and3 rate-input controls PASS; unchanged-material0.002m/s rate study active
 - [[wang2017-paper-history]] —19 coupled fixed-frame Soil2 point controls plus optional ASDF smoke PASS; existing17 history/7 capture/34 MC evidence retained; native particle and finite-strain convention pending
 - [[clay-creep-slope]] —10s reviewed without verified landslide; complete release only9–10s; unchanged20s post-release observation running with strict prefix gate

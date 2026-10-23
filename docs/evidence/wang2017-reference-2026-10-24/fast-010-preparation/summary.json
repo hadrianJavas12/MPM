@@ -1,0 +1,25 @@
+{
+  "status": "INPUT_GATE_PASS_NOT_SOLVER_COMPLETE",
+  "nativeControlGroups": 3,
+  "nativeExit": 0,
+  "physicalUpdates": 0,
+  "twoNativeMaterialParticles": true,
+  "activeSourceCommit": "4e3140cf49659707e3e71ba5eb5d3bd8c2bbf896",
+  "approvedVelocityMPerS": 0.01,
+  "approvedTravelM": 0.06,
+  "approvedDurationS": 6,
+  "paperRateMultiplier": 100,
+  "userConfirmedTravelRatherThan600s": true,
+  "arithmeticFixtureFailureRetained": {
+    "attempt": "001",
+    "cause": "exact equality .060000000000000005 vs .06",
+    "fixedArithmeticUnitToleranceM": 1e-15,
+    "numericSolverTolerancesChanged": false
+  },
+  "preflightProvenance": "Executed test and cases copied before002 and match workspace after; full framework/runtime not independently frozen by preflight. Actual MPM run separately freezes all first-party sources/DLL.",
+  "friendVideoRepositoryPath": "wiki-vault/raw/assets/wang2017-friend-fem-2026-10-24.mp4",
+  "friendVideoSha256": "cc86e80aeab263e1dc8e7fa02906bdb86463815ca3cca74742bc7f53384f011b",
+  "friendVideoScope": "Qualitative mesh deformation only; no verified material/time/deformation scale",
+  "scientificValidation": false,
+  "archiveMembersVerified": 9
+}

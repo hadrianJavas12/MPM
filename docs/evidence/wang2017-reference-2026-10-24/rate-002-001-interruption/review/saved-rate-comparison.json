@@ -1,0 +1,302 @@
+{
+  "scope": "Saved-output observations only; native completion and scientific validation are false. No solver calls, interpolation, time-index pairing, rate-agreement tolerance or pass/fail threshold.",
+  "scientificValidation": false,
+  "referenceSpeedReached": false,
+  "quasiStaticConvergence": "NOT_VERIFIED",
+  "energyClosure": "NOT_VERIFIED: elastic/native-plastic quantities are proxies and omit a closed balance",
+  "mcKappaMeaning": "Native accumulated plastic history, not damage or Soil2 paper tensor invariant",
+  "alignment": "Exact Decimal equality of recorded commanded settlement; sorted native unique-id alignment",
+  "slow": {
+    "run": "D:\\MPM\\output\\wang2017-reference-2026-10-23\\rate-002-001",
+    "nativeManifestStatus": "running",
+    "nativeComplete": false,
+    "nativeExitInterpretation": "Not inferred from saved outputs; wrapper/process audit handled separately",
+    "loadingFrames": 33,
+    "particleCount": 915,
+    "physicalTimeS": 6.4,
+    "lastCommandedSettlementM": 0.0128,
+    "allSavedNumericFieldsFinite": true,
+    "particleIdsStableAndUnique": true,
+    "positiveSavedVolumes": true,
+    "positiveSavedMasses": true,
+    "massKgPerM": 466520.1674374,
+    "maxAbsoluteVtkMassErrorKgPerM": 2.0954757928848267e-09,
+    "maxAbsRecomputed2DKineticMinusCsvJPerM": 4.792610752701876e-12,
+    "volumeOverInitialVolumeRange": [
+      0.9882495691793737,
+      0.9995461737817377
+    ],
+    "gravityDeterminantFRange": [
+      0.9885994963053732,
+      0.9995461737817688
+    ],
+    "loadingDeterminantJ": "NOT_DIRECTLY_SAVED: positive volume ratio is not independent det(F) evidence",
+    "maxAbsoluteMeanTrackingErrorM": 0.0001076523767083,
+    "maxAbsoluteCommandMinusMeasuredMinusGapM": 4.700029970251818e-15,
+    "maxIndividualTrackingGapM": 0.0002489584338448,
+    "maxAbsReactionPlusSoilForceNPerM": 0.0,
+    "maxAbsSoilMinusNodalForceNPerM": 0.0,
+    "reactionRangeNPerM": [
+      0.0,
+      155019.4242289
+    ],
+    "kineticRangeJPerM": [
+      0.0,
+      40.05511307092
+    ],
+    "maxKineticOverElasticProxy": 0.0003249460119193,
+    "maxFreeResidualRatio": 0.002486939640633,
+    "lastNativeKappaRange": [
+      0.0,
+      0.0016410472835748067
+    ],
+    "frozenSourcesHashVerifiedCount": 264,
+    "provenanceExactLoadedBytesClaim": true,
+    "actualBackendSha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "noInterpolation": true
+  },
+  "fast": {
+    "run": "D:\\MPM\\output\\wang2017-reference-2026-10-23\\diagnostic-fast-005-002",
+    "nativeManifestStatus": "failed",
+    "nativeComplete": false,
+    "nativeExitInterpretation": "Not inferred from saved outputs; wrapper/process audit handled separately",
+    "loadingFrames": 78,
+    "particleCount": 915,
+    "physicalTimeS": 15.4,
+    "lastCommandedSettlementM": 0.077,
+    "allSavedNumericFieldsFinite": true,
+    "particleIdsStableAndUnique": true,
+    "positiveSavedVolumes": true,
+    "positiveSavedMasses": true,
+    "massKgPerM": 466520.1674374,
+    "maxAbsoluteVtkMassErrorKgPerM": 2.0954757928848267e-09,
+    "maxAbsRecomputed2DKineticMinusCsvJPerM": 4.638422979041934e-11,
+    "volumeOverInitialVolumeRange": [
+      0.9866272643264743,
+      1.0031861510500477
+    ],
+    "gravityDeterminantFRange": [
+      0.9885994963053732,
+      0.9995461737817688
+    ],
+    "loadingDeterminantJ": "NOT_DIRECTLY_SAVED: positive volume ratio is not independent det(F) evidence",
+    "maxAbsoluteMeanTrackingErrorM": 0.0004813438522916,
+    "maxAbsoluteCommandMinusMeasuredMinusGapM": 4.898208574855012e-15,
+    "maxIndividualTrackingGapM": 0.001131901264094,
+    "maxAbsReactionPlusSoilForceNPerM": 0.0,
+    "maxAbsSoilMinusNodalForceNPerM": 0.0,
+    "reactionRangeNPerM": [
+      0.0,
+      693135.1192374
+    ],
+    "kineticRangeJPerM": [
+      0.0,
+      248.3950871435
+    ],
+    "maxKineticOverElasticProxy": 0.001333195260487,
+    "maxFreeResidualRatio": 0.01342766108154,
+    "lastNativeKappaRange": [
+      0.0,
+      0.020460326178374816
+    ],
+    "frozenSourcesHashVerifiedCount": 264,
+    "provenanceExactLoadedBytesClaim": true,
+    "actualBackendSha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "noInterpolation": true
+  },
+  "matchedSavedCommandCount": 7,
+  "commonCommandsM": [
+    0.0,
+    0.002,
+    0.004,
+    0.006,
+    0.008,
+    0.01,
+    0.012
+  ],
+  "matchedStates": [
+    {
+      "commandedSettlementM": 0.0,
+      "slowFrame": 0,
+      "fastFrame": 0,
+      "slowTimeS": 0.0,
+      "fastTimeS": 0.0,
+      "slowReactionNPerM": 0.0,
+      "fastReactionNPerM": 0.0,
+      "slowMinusFastReactionNPerM": 0.0,
+      "reactionDeltaOverAbsFastOrNull": null,
+      "slowKineticJPerM": 0.0,
+      "fastKineticJPerM": 0.0,
+      "slowMeanTrackingGapM": 0.0,
+      "fastMeanTrackingGapM": 0.0,
+      "slowFreeResidualRatio": 0.0009668842538269,
+      "fastFreeResidualRatio": 0.0009668842538269,
+      "maxParticlePositionDistanceM": 0.0,
+      "rmsParticlePositionDistanceM": 0.0,
+      "maxAbsNativeKappaDelta": 0.0,
+      "rmsNativeKappaDelta": 0.0,
+      "maxAbsStressYYDeltaPa": 0.0
+    },
+    {
+      "commandedSettlementM": 0.002,
+      "slowFrame": 5,
+      "fastFrame": 2,
+      "slowTimeS": 1.0,
+      "fastTimeS": 0.4,
+      "slowReactionNPerM": 24590.56793029,
+      "fastReactionNPerM": 24830.85286613,
+      "slowMinusFastReactionNPerM": -240.2849358400017,
+      "reactionDeltaOverAbsFastOrNull": -0.00967687002679466,
+      "slowKineticJPerM": 1.000860884102,
+      "fastKineticJPerM": 0.7719568859854,
+      "slowMeanTrackingGapM": 1.707678478794e-05,
+      "fastMeanTrackingGapM": 1.724364778899e-05,
+      "slowFreeResidualRatio": 0.002221115254762,
+      "fastFreeResidualRatio": 0.004580675917487,
+      "maxParticlePositionDistanceM": 0.00013219690519030927,
+      "rmsParticlePositionDistanceM": 6.46207253943506e-05,
+      "maxAbsNativeKappaDelta": 3.0886402173966915e-05,
+      "rmsNativeKappaDelta": 1.039169750340175e-06,
+      "maxAbsStressYYDeltaPa": 453.23253298922646
+    },
+    {
+      "commandedSettlementM": 0.004,
+      "slowFrame": 10,
+      "fastFrame": 4,
+      "slowTimeS": 2.0,
+      "fastTimeS": 0.8,
+      "slowReactionNPerM": 49007.38896382,
+      "fastReactionNPerM": 48824.30479626,
+      "slowMinusFastReactionNPerM": 183.08416755999497,
+      "reactionDeltaOverAbsFastOrNull": 0.003749857132098262,
+      "slowKineticJPerM": 3.967739776241,
+      "fastKineticJPerM": 1.655420869744,
+      "slowMeanTrackingGapM": 3.403290899954e-05,
+      "fastMeanTrackingGapM": 3.390577179329e-05,
+      "slowFreeResidualRatio": 0.002371729792835,
+      "fastFreeResidualRatio": 0.004732298875043,
+      "maxParticlePositionDistanceM": 0.00020102997135416296,
+      "rmsParticlePositionDistanceM": 7.296621818695539e-05,
+      "maxAbsNativeKappaDelta": 6.670353365845623e-05,
+      "rmsNativeKappaDelta": 2.689603280532111e-06,
+      "maxAbsStressYYDeltaPa": 571.635543809638
+    },
+    {
+      "commandedSettlementM": 0.006,
+      "slowFrame": 15,
+      "fastFrame": 6,
+      "slowTimeS": 3.0,
+      "fastTimeS": 1.2,
+      "slowReactionNPerM": 73622.84421703,
+      "fastReactionNPerM": 70868.76865955,
+      "slowMinusFastReactionNPerM": 2754.0755574799987,
+      "reactionDeltaOverAbsFastOrNull": 0.03886162564373651,
+      "slowKineticJPerM": 9.038125213342,
+      "fastKineticJPerM": 2.59732839299,
+      "slowMeanTrackingGapM": 5.112697562241e-05,
+      "fastMeanTrackingGapM": 4.921442589966e-05,
+      "slowFreeResidualRatio": 0.002388295784195,
+      "fastFreeResidualRatio": 0.00526979088317,
+      "maxParticlePositionDistanceM": 0.00013897944258512877,
+      "rmsParticlePositionDistanceM": 6.46860714610471e-05,
+      "maxAbsNativeKappaDelta": 0.0001483404914234685,
+      "rmsNativeKappaDelta": 6.234676703660897e-06,
+      "maxAbsStressYYDeltaPa": 1526.1490638255054
+    },
+    {
+      "commandedSettlementM": 0.008,
+      "slowFrame": 20,
+      "fastFrame": 8,
+      "slowTimeS": 4.0,
+      "fastTimeS": 1.6,
+      "slowReactionNPerM": 97845.48510041,
+      "fastReactionNPerM": 97400.53277284,
+      "slowMinusFastReactionNPerM": 444.95232757000485,
+      "reactionDeltaOverAbsFastOrNull": 0.004568274062809636,
+      "slowKineticJPerM": 16.12941212597,
+      "fastKineticJPerM": 3.400823638354,
+      "slowMeanTrackingGapM": 6.794825385488e-05,
+      "fastMeanTrackingGapM": 6.763925166749e-05,
+      "slowFreeResidualRatio": 0.002486939640633,
+      "fastFreeResidualRatio": 0.005352496247466,
+      "maxParticlePositionDistanceM": 0.0002526209518236746,
+      "rmsParticlePositionDistanceM": 4.7372164496128436e-05,
+      "maxAbsNativeKappaDelta": 0.00029751420647430616,
+      "rmsNativeKappaDelta": 1.1547222208095133e-05,
+      "maxAbsStressYYDeltaPa": 2831.929292772882
+    },
+    {
+      "commandedSettlementM": 0.01,
+      "slowFrame": 25,
+      "fastFrame": 10,
+      "slowTimeS": 5.0,
+      "fastTimeS": 2.0,
+      "slowReactionNPerM": 121965.646368,
+      "fastReactionNPerM": 122862.3859862,
+      "slowMinusFastReactionNPerM": -896.7396181999939,
+      "reactionDeltaOverAbsFastOrNull": -0.007298731918658298,
+      "slowKineticJPerM": 25.04037525946,
+      "fastKineticJPerM": 4.907891541049,
+      "slowMeanTrackingGapM": 8.46983656401e-05,
+      "fastMeanTrackingGapM": 8.5321099848e-05,
+      "slowFreeResidualRatio": 0.002329233346889,
+      "fastFreeResidualRatio": 0.005285704466561,
+      "maxParticlePositionDistanceM": 0.00023008788625670251,
+      "rmsParticlePositionDistanceM": 7.381245501696489e-05,
+      "maxAbsNativeKappaDelta": 0.0004664219711193792,
+      "rmsNativeKappaDelta": 1.7987529520811424e-05,
+      "maxAbsStressYYDeltaPa": 3969.1837877647777
+    },
+    {
+      "commandedSettlementM": 0.012,
+      "slowFrame": 30,
+      "fastFrame": 12,
+      "slowTimeS": 6.0,
+      "fastTimeS": 2.4,
+      "slowReactionNPerM": 146183.2564502,
+      "fastReactionNPerM": 148792.4331035,
+      "slowMinusFastReactionNPerM": -2609.1766533000045,
+      "reactionDeltaOverAbsFastOrNull": -0.01753568107515966,
+      "slowKineticJPerM": 35.51619252237,
+      "fastKineticJPerM": 7.428103871843,
+      "slowMeanTrackingGapM": 0.0001015161484547,
+      "fastMeanTrackingGapM": 0.0001033280838407,
+      "slowFreeResidualRatio": 0.002332846294355,
+      "fastFreeResidualRatio": 0.004944115208931,
+      "maxParticlePositionDistanceM": 0.00037884992463968486,
+      "rmsParticlePositionDistanceM": 6.900049668751185e-05,
+      "maxAbsNativeKappaDelta": 0.0007863631263258851,
+      "rmsNativeKappaDelta": 2.8732446953078974e-05,
+      "maxAbsStressYYDeltaPa": 6584.182954080912
+    }
+  ],
+  "configDifferences": {
+    "duration": {
+      "slow": 50.0,
+      "fast": 20.0
+    },
+    "frames": {
+      "slow": 251,
+      "fast": 101
+    },
+    "maxUpdates": {
+      "slow": 375000,
+      "fast": 150000
+    },
+    "velocity": {
+      "slow": 0.002,
+      "fast": 0.005
+    }
+  },
+  "frozenSourceDifferences": [
+    "source/case.lisp"
+  ],
+  "initialGravityAndFrame0ByteIdentity": {
+    "gravity-state.csv": true,
+    "vtk/gravity_initial.vtk": true,
+    "vtk/gravity_equilibrium.vtk": true,
+    "vtk/particles_0000.vtk": true
+  },
+  "interpretation": "Differences at identical loading settlement quantify observed rate-sensitive transient response; this short partial interval establishes neither failure nor rate/mesh/time-step convergence. No scientifically admissible apex correction follows from this comparison.",
+  "nextGate": "Establish actual interruption/exit reason independently; retain this data. Continue only a justified bounded diagnostic using unchanged constitutive physics, or resolve the documented finite-strain/Soil2 state interpretation. Do not silently lower rate repeatedly or change dilation/apex/tolerances to force completion."
+}

@@ -63,6 +63,14 @@ berskala2.5 terhadap150000 pada20s. Cap ini batas komputasi, bukan mass/time sca
 Run baru dimulai14:35:52WIB dari68efa27, batas5jam, output
 `output/wang2017-reference-2026-10-23/rate-002-001/`. Ini20x kecepatan paper,
 sebuah uji pengaruh laju, bukan reproduksi reference-speed atau jaminan lolos.
+
+**Pembaruan24Oktober:** run tersebut terputus setelah6.4s/12.8mm, bukan aktif lagi.
+Exit native tidak diketahui.33state konsisten tetap utuh; proses dan pengawas
+hilang, berdekatan dengan logoff Windows. Tidak ada capsule MC, sehingga tidak
+ada kegagalan apex baru untuk direplay. Tujuh pasangan displacement identik
+dengan fast005 sampai12mm memperlihatkan perbedaan reaksi akhir-1.75%; ini belum
+konvergensi laju. Pengguna kini memilih0.01m/s ke60mm/6s untuk uji cepat,
+didokumentasikan pada [panduan uji](WANG2017_FAST_TRIAL.md).
 Jika domain infeasible masih tercapai, simpan failure dan bandingkan pada
 penurunan yang sama. Jangan mengendurkan toleransi atau berulang kali memperlambat
 tanpa diagnosis. Keputusan model tensile/apex memerlukan konvensi eksplisit dan

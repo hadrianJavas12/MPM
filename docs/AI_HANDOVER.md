@@ -1,14 +1,80 @@
 # AI Engineering Handover — CL-MPM
 
-**Operational checkpoint: 2026-10-23, Asia/Jakarta. Read this first.**
+**Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
-## Current continuation: controlled slower rate and Soil2 point preparation
+## Current: approved 0.01m/s / 60mm accelerated Wang trial ACTIVE
+
+Human supplied a friend FEM video and requested600physicalseconds, then chose
+0.01m/s for a quick trial. Explicit clarification: **"Penurunan60mm ->6detik
+fisik"**. The600s at paper1e-4m/s and6s at0.01m/s share60mm travel; this is
+NOT a600s/6m run. Paper/reference-speed600s remains NOT_RUN.
+
+**ACTIVE** `output/wang2017-reference-2026-10-24/fast-010-001/`, source
+**4e3140cf49659707e3e71ba5eb5d3bd8c2bbf896**, started **01:00:46WIB**.
+WMI worker21676 / wrapper15488 / cmd27480 / SBCL9164, SessionId11;
+**2h wall budget until03:00:46WIB**. Case `wang2017-soil1-fast-010.lisp`:
+0.01m/s,60mm/6s,61frames,45000update cap. THREE native input controls PASS,
+zero updates; only velocity/travel/derived duration/frame count/computational cap
+differ from original reference case. Material, geometry, BC, mesh, dt/damping,
+penalty, strict perfect MC and native algorithm unchanged.100x paper rate;
+Soil1 control, not Soil2 or guaranteed landslide. Height10m remains assumed.
+All265 frozen source/DLL records matched workspace bytes after native startup;
+actual mapped native DLL proved by Windows API.11 launch-artifact hashes and
+9 preparation-artifact hashes retain source/proof/input controls under
+`docs/evidence/wang2017-reference-2026-10-24/fast-010-launch/` and
+`fast-010-preparation/`. Native complete remains false; no result PASS yet.
+
+At wakeup read adjacent status **progress/heartbeatUtc/processIdentity**, manifest
+complete/phase/timeS, and one stdout tail. Stdout can be buffered/stale: it is
+NOT the physical phase. Verify recorded PID+creation+SessionId if needed.
+Healthy active run: no duplicate, repeated tests or active polling. Wrapper
+automatically audits/renders on complete exit0. Do not edit its three recorded
+postprocessors during the run. No EvidenceDirectory was passed: the completed
+collector assumes an older `.log` filename, so archive manually after completion
+without rerunning solver or relaxing collector completion assertions.
+The SAME heartbeat automation `mpm-creep-drive-hold` is temporarily hourly for
+this trial. After terminal result, return it to5h reset continuation before
+further work; no duplicate automation. Quiet while healthy/unchanged.
+
+Windows native monitor12 controls, detached-launch9 controls and72h budget-guard3
+controls PASS, zero MPM updates. Heartbeat60s reads actual manifest, identities
+recorded, NaN/>72h rejected before launch. WMI worker survived caller exit, but
+actual workerSession11 equals callerSession11: **logoff/sleep/reboot immunity is
+NOT proven**. Keep PC awake and user logged on (locking is different from logoff).
+No task/service/credential/power-policy changes. Evidence:
+`docs/evidence/wang2017-reference-2026-10-24/windows-monitor-controls/` (18hashes).
+Early control failures retained; final00512/12PASS. Unchanged Node/oldMC suites
+were not repeated. Preflight001 failed ONLY an exact floating multiplication
+assertion (.060000000000000005 versus.06);0023/3PASS uses1e-15 arithmetic check,
+not a changed material/regression tolerance.
+
+Previous rate002001 **INTERRUPTED_UNKNOWN_EXIT**, not running: last saved6.4s /
+12.8mm,33loadingVTK. Original stale NATIVE_RUNNING status preserved; adjacent
+`-process-reconciliation.json` is authoritative. All three old processes absent.
+Windows session10 logoff15:23:15WIB followed last data15:22:31 on23Oct; causal
+link probable but old processSessionId absent. No exitcode/MC capsule/controlled
+timeout, so do not classify as MC failure or budget stop.24hash immutable packet:
+`docs/evidence/wang2017-reference-2026-10-24/rate-002-001-interruption/`.
+Partial video33realstates/8.25s playback, full decodePASS, renderer expectedexit2.
+Seven exact common-settlement pairs0–12mm vs fast005: frame0/gravity byte-identical;
+at12mm reaction differs-1.75%, maxpositiondistance0.379mm. No convergencePASS.
+Loading J not directly saved; positive volume ratios are a separate check.
+
+Friend video is immutable raw source, SHA256cc86e80a...f011b;11.133s playback,
+no visible physical time/material/deformation-scale proof. Qualitative band
+crest-to-toe, not quantitative validation or code instructions. See
+`docs/benchmarks/WANG2017_FAST_TRIAL.md` and wiki follow-up. No UI/main merge.
+After this trial: inspect actual native result and rate/dynamic limits; if MC
+fails, replay new actual capsule once. Do not enable apex clamps, alter strength,
+or relabel accelerated6s as paper600s. Preserve independent Soil2 point scope below.
+
+## Historical checkpoint: controlled slower rate and Soil2 point preparation
 
 Latest human direction: **"lanjutkan hingga berhasil"**, then **"lanjutkan"**.
 Branch remains `codex/wang2017-reference-preparation`; live main refreshed remains
 9e97e00. Preserve scientific controls; no hidden apex convention or strength tuning.
 
-**ACTIVE** `output/wang2017-reference-2026-10-23/rate-002-001/`, started
+**SUPERSEDED: interrupted; see current section** `output/wang2017-reference-2026-10-23/rate-002-001/`, started
 **14:35:52WIB**, source **68efa27271828c203aab8f86b00bf7dfba793ef7**.
 Wrapper16236 / cmd38152 / SBCL25128; **5h wall budget (about19:35WIB)**.
 Input0.002m/s, target0.1m/50s,251 saved frames, cap375000updates. Three native

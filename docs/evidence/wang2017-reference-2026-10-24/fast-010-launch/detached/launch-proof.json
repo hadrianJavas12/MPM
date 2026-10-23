@@ -1,0 +1,19 @@
+{
+  "requestedUtc": "2026-10-23T18:00:44.5065458Z",
+  "method": "local Win32_Process.Create / CIM",
+  "commandLine": "\"C:\\Users\\ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoProfile -NonInteractive -WindowStyle Hidden -File \"D:\\MPM\\output\\wang2017-reference-2026-10-24\\fast-010-001-detached\\launch-request.ps1\"",
+  "currentDirectory": "D:\\MPM",
+  "showWindow": 0,
+  "callerProcessId": 45720,
+  "callerSessionId": 11,
+  "requestSha256": "A4AF080CD805CF90D809612D225B27CD29CA2EEA70802EB00E8E523542CC6AA0",
+  "workerScriptSha256": "DEF3267A766CFCFAEEA69F4AE369DBB71A5D4B240F9F851E20DBD2B5CBF7C4E0",
+  "workerProcessId": 21676,
+  "returnValue": 0,
+  "startupObserved": true,
+  "limitation": "Local WMI creation avoids direct caller parentage. Provider jobs, logoff, sleep, reboot and policy may still stop the run.",
+  "workerSessionId": 11,
+  "workerParentProcessId": 34560,
+  "workerCreationUtc": "2026-10-23T18:00:44.6663260Z",
+  "startupWaitSeconds": 0.8430169
+}

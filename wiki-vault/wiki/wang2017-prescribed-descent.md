@@ -3,14 +3,15 @@ title: Wang 2017 prescribed crest descent
 type: synthesis
 tags: [wang2017, benchmark, mpm, mohr-coulomb, native-windows]
 sources: [research/references/wang2017/source.json, research/references/wang2017/mpm-reference-contract.json, docs/benchmarks/WANG2017_MPM_PREPARATION.md, docs/benchmarks/WANG2017_SLOPE_DESCENT.md, raw/wang2017-reference-inputs-2026-10-22.md, raw/wang2017-mpm-return-2026-10-23.md]
-updated: 2026-10-23
+updated: 2026-10-24
 ---
 
 # Wang 2017 prescribed crest descent
 
-Current continuation: [[wang2017-apex-and-rate-study]] records the active0.002m/s
-controlled rate run and the actual native evidence that legacy apex acceptance
-introduces volumetric plastic flow. No hidden convention change was enabled.
+Current continuation: [[wang2017-fast-trial-2026-10-24]] records the confirmed
+0.01m/s to60mm/6s trial. The earlier0.002m/s run was interrupted at6.4s/12.8mm,
+exit unknown. [[wang2017-apex-and-rate-study]] retains native evidence that legacy
+apex acceptance introduces volumetric plastic flow. No hidden convention change.
 
 Current scope: [[wang2017-mpm-return-2026-10-23]] explicitly keeps MPM and follows
 paper physical inputs on `codex/wang2017-reference-preparation`. The earlier

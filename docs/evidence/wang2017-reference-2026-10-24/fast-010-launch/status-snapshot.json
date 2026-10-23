@@ -1,0 +1,60 @@
+{
+  "startedUtc": "2026-10-23T18:00:46.4459520Z",
+  "sourceCommitAtLaunch": "4e3140cf49659707e3e71ba5eb5d3bd8c2bbf896",
+  "wrapperPid": 15488,
+  "case": "D:\\MPM\\cases\\benchmarks\\wang2017-soil1-fast-010.lisp",
+  "caseSha256": "7C58A0AD24FABA1E52FAFEF07AD546C91350F4104340758B85EED2D0BB4A5263",
+  "output": "D:\\MPM\\output\\wang2017-reference-2026-10-24\\fast-010-001",
+  "maxWallHours": 2.0,
+  "status": "NATIVE_RUNNING",
+  "exitCode": null,
+  "postprocessorSha256": {
+    "scripts/collect-wang2017-evidence.py": "EE66FF39A0743855C91404D7ACABEE1A8E40F270B76E11831D750DA3D5AE3393",
+    "scripts/plot-wang2017-descent.py": "0D9A32DFC0F767A38874C32F58AAC4105541FAD8C3DFFC0BC8CE20D22EF5D282",
+    "scripts/plot_m5_cliff_comparison.py": "1C254E7BC1490F284C1722536E6C442C4A3E033C06949D8372F9D9D38C3277E8"
+  },
+  "scientificValidation": false,
+  "processIdentity": {
+    "sbcl": {
+      "pid": 9164,
+      "name": "sbcl",
+      "createdUtc": "2026-10-23T18:00:46.9550863Z",
+      "sessionId": 11
+    },
+    "wrapper": {
+      "pid": 15488,
+      "name": "pwsh",
+      "createdUtc": "2026-10-23T18:00:45.7706185Z",
+      "sessionId": 11
+    },
+    "nativeCommand": {
+      "pid": 27480,
+      "name": "cmd",
+      "createdUtc": "2026-10-23T18:00:46.5748223Z",
+      "sessionId": 11
+    }
+  },
+  "heartbeatIntervalSeconds": 60.0,
+  "heartbeatSequence": 6,
+  "nativeCommandPid": 27480,
+  "wallDeadlineUtc": "2026-10-23T20:00:46.6149012+00:00",
+  "heartbeatUtc": "2026-10-23T18:05:47.2362751Z",
+  "progress": {
+    "observedUtc": "2026-10-23T18:05:47.2362751Z",
+    "manifestLastWriteUtc": "2026-10-23T18:05:28.2250918Z",
+    "status": "running",
+    "complete": false,
+    "phase": "gravity",
+    "gravityConverged": false,
+    "settleUpdates": 2250,
+    "gravityFreeResidualRatio": 0.002608593305106947,
+    "stdout": {
+      "bytes": 636,
+      "lastWriteUtc": "2026-10-23T18:05:28.2260984Z"
+    },
+    "stderr": {
+      "bytes": 0,
+      "lastWriteUtc": "2026-10-23T18:00:46.5690532Z"
+    }
+  }
+}

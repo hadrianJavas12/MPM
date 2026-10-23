@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "archives": [
+    {
+      "archive": "monitor-hardening-001.tar.gz",
+      "memberCount": 22,
+      "allMemberLengthsAndSha256Match": true
+    },
+    {
+      "archive": "monitor-hardening-002.tar.gz",
+      "memberCount": 28,
+      "allMemberLengthsAndSha256Match": true
+    },
+    {
+      "archive": "monitor-hardening-003.tar.gz",
+      "memberCount": 38,
+      "allMemberLengthsAndSha256Match": true
+    },
+    {
+      "archive": "monitor-hardening-004.tar.gz",
+      "memberCount": 40,
+      "allMemberLengthsAndSha256Match": true
+    },
+    {
+      "archive": "monitor-hardening-005.tar.gz",
+      "memberCount": 40,
+      "allMemberLengthsAndSha256Match": true
+    },
+    {
+      "archive": "detached-launch-controls-001.tar.gz",
+      "memberCount": 12,
+      "allMemberLengthsAndSha256Match": true
+    },
+    {
+      "archive": "detached-launch-budget-controls-001.tar.gz",
+      "memberCount": 11,
+      "allMemberLengthsAndSha256Match": true
+    }
+  ],
+  "archiveCount": 7,
+  "memberCount": 191,
+  "method": "Reopen every archive and compare every member SHA-256 and byte length against its original input; no solver or control repeated."
+}

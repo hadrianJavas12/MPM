@@ -1,0 +1,172 @@
+{
+  "passedConsistencyChecks": true,
+  "nativeComplete": false,
+  "scope": "Saved output consistency, not FEM equivalence or experimental validation",
+  "scientificValidation": false,
+  "frames": 33,
+  "massKgPerM": 466520.1674374,
+  "physicalTimeS": 6.4,
+  "commandedSettlementM": 0.0128,
+  "measuredSettlementM": 0.01269234762329,
+  "maxAbsoluteMeanPenaltyGapM": 0.0001076523767083,
+  "maxParticlePenaltyGapM": 0.0002489584338448,
+  "initialReactionTransientsObserved": false,
+  "quasiStaticReferenceAgreement": "NOT_VERIFIED",
+  "reactionUpwardNPerM": 155019.4242289,
+  "loadingVelocityMPerS": 0.002,
+  "loadingRateMultiplier": 20.0,
+  "maxYieldResidualPa": 2.182787284255e-11,
+  "finalMeanTrackingErrorFraction": 0.001076523767083,
+  "sources": [
+    {
+      "path": "vtk\\particles_0000.vtk",
+      "sha256": "f43d6467f91fb8aa61160713ad9af69bbd804bea545eafb9783b297a925554ec"
+    },
+    {
+      "path": "vtk\\particles_0001.vtk",
+      "sha256": "59e4246160eb5393bc7c932d0f7c9d50203eeb3a48c426fd7bddc9aea3592e85"
+    },
+    {
+      "path": "vtk\\particles_0002.vtk",
+      "sha256": "66cb06653b33c84756239c4ebb65727648b125e68ddacad38a7af35e5d4b077d"
+    },
+    {
+      "path": "vtk\\particles_0003.vtk",
+      "sha256": "64f973c4ac1b1ec03199fb65a0987a3261af8dfcaf54caa42adbe4c1723e02d1"
+    },
+    {
+      "path": "vtk\\particles_0004.vtk",
+      "sha256": "97151b5ebb3255739ecba2f04d71d4c9bb5c8c155a3f0ee01cf556c5284c19cc"
+    },
+    {
+      "path": "vtk\\particles_0005.vtk",
+      "sha256": "bfc88c8bc48d9299c864e444c9517eaf7664c3542aa3540ae2f544576be7c44c"
+    },
+    {
+      "path": "vtk\\particles_0006.vtk",
+      "sha256": "e5f12e5990af6d3b5498e1f056720ee9529512f1893cb08fa0a8e83bd5d706f6"
+    },
+    {
+      "path": "vtk\\particles_0007.vtk",
+      "sha256": "c994be815b2dd17e511e241999e6e27ad14be5ba77c982ee5e6040cb711a98b8"
+    },
+    {
+      "path": "vtk\\particles_0008.vtk",
+      "sha256": "8b890df9d9ef9b6f73eb0bba286c69c370b94616c000acc675a79a85c21a7993"
+    },
+    {
+      "path": "vtk\\particles_0009.vtk",
+      "sha256": "b7a4455fcd47a5339ffebea8564cbcd10e4eaca1f58c89a665ee772b93f9bb96"
+    },
+    {
+      "path": "vtk\\particles_0010.vtk",
+      "sha256": "c5ae11ff0a9774cffa616861093bb924cf778fb3b54101c35ba9b25ab176c931"
+    },
+    {
+      "path": "vtk\\particles_0011.vtk",
+      "sha256": "cdc14f07722bb184aed711052cbf77fcc54b65013bb7c0e424fc36c3632551f5"
+    },
+    {
+      "path": "vtk\\particles_0012.vtk",
+      "sha256": "411750ce28986a38b2c2dc67fc47b206d587f199a1074017f5312ebf8eae518d"
+    },
+    {
+      "path": "vtk\\particles_0013.vtk",
+      "sha256": "5a4f10db3d85ed2bb475b05f158ebf859e76488e990075671b4380596c569631"
+    },
+    {
+      "path": "vtk\\particles_0014.vtk",
+      "sha256": "81f34618218d9b7efd65eef020dff8b50eb438f0d8e22428e596abfc8b9fc76c"
+    },
+    {
+      "path": "vtk\\particles_0015.vtk",
+      "sha256": "81be6905e1feb2a2ad11affd30ebce0e2eac06e0680c05a3f1e322e3c87fa4e9"
+    },
+    {
+      "path": "vtk\\particles_0016.vtk",
+      "sha256": "a1ef698794c9b4fa2a66a06d98e1c3777577b139c236fe8aa457a6e3fb139701"
+    },
+    {
+      "path": "vtk\\particles_0017.vtk",
+      "sha256": "a272ffb9ce101762a40ef86d55329489a45e5ff41e7eecfa50c3a6b9c3748375"
+    },
+    {
+      "path": "vtk\\particles_0018.vtk",
+      "sha256": "74c6edb86c186a7dcc60a610cd1228bbb38e8c3d45c24adef4f8e280261faf8f"
+    },
+    {
+      "path": "vtk\\particles_0019.vtk",
+      "sha256": "b1147207317627b46c34ae648c5d9dc96d4b1dd3586c170aeb51c6357a0e777a"
+    },
+    {
+      "path": "vtk\\particles_0020.vtk",
+      "sha256": "fdd7e172fcee8312b2eb15a56c5b03d85a3a0134632071d6c9435bc972053cfd"
+    },
+    {
+      "path": "vtk\\particles_0021.vtk",
+      "sha256": "78e454f7a8e766c526994f7c8688ac43a0c98dd2c668763d8714105d77f0da32"
+    },
+    {
+      "path": "vtk\\particles_0022.vtk",
+      "sha256": "31092d7fca0fa5cf0ff09fc5d16318d1078f2213d73812e6f42fd869cb220d24"
+    },
+    {
+      "path": "vtk\\particles_0023.vtk",
+      "sha256": "33f198d64be401d0430fdaab1fe1e2e8b32e0891313bf57233f89917a8a9e38a"
+    },
+    {
+      "path": "vtk\\particles_0024.vtk",
+      "sha256": "d6b1c2871dce8eb8c13d77da1de4527311336a0364b998a014a27f0b41da3564"
+    },
+    {
+      "path": "vtk\\particles_0025.vtk",
+      "sha256": "86a9fbd8560e53d7053c633c370830d8c726ba268e527ac52617da5deba3d56a"
+    },
+    {
+      "path": "vtk\\particles_0026.vtk",
+      "sha256": "0ca4d50557c39e51ae462369fa9d0e344d40a225309199fca05a6ff3474ed5f0"
+    },
+    {
+      "path": "vtk\\particles_0027.vtk",
+      "sha256": "a8e0fb6fc480d48a9b8f7fa1e4066594a42adf7dd7b3234a41403bef63797b75"
+    },
+    {
+      "path": "vtk\\particles_0028.vtk",
+      "sha256": "68d37c385cdc58a79e989a34532aae12ec8e5d6689acb65f6299662e1f0f2abb"
+    },
+    {
+      "path": "vtk\\particles_0029.vtk",
+      "sha256": "13b70854be3cd600bba15e6e318c4bba0a53f73f270dd75424922ccba49c1274"
+    },
+    {
+      "path": "vtk\\particles_0030.vtk",
+      "sha256": "19c09e6c187f7b4bed5824693e06bda9afea0b49be8880f516451f0d8c3ae68e"
+    },
+    {
+      "path": "vtk\\particles_0031.vtk",
+      "sha256": "597cd9c8f43b4a6af435c25b886cb48965480d23e62233be9875e5c16c2faa53"
+    },
+    {
+      "path": "vtk\\particles_0032.vtk",
+      "sha256": "6d2f1fec73b7a97a433fe01491478847abd246d6095a136acb2d90825de94f78"
+    }
+  ],
+  "kineticOverElasticProxyMax": 0.0003249460119193,
+  "energyCaveat": "Current-volume Hencky/native-plastic proxies, not closed energy balance. Gravity prestress can mask loading inertia; rate comparison is still required.",
+  "visualization": {
+    "quantity": "mc-kappa",
+    "xlim": [
+      -0.33521450288494853,
+      20.335472057918665
+    ],
+    "ylim": [
+      -0.18571549024617257,
+      15.105180134096328
+    ],
+    "vmin": 0.0,
+    "vmax": 0.0016410472835748067,
+    "displacementScale": 1,
+    "interpolatedStates": false,
+    "videoFps": 4
+  }
+}

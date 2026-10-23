@@ -714,3 +714,7 @@ User requests continuation until success.5 actual native apex-comparison control
 ## [2026-10-23] ingest | Isolated Soil2 coupled point checkpoint
 
 Final frozen native19/19 controls and optional ASDF load/elastic-call exit0; zero MPM updates. All roots, both two-plane edges, rotations/permutations, signed nonproportional/reversal history and ambiguity/rollback verified; old MC sources unchanged.36 archive hashes retain initial/final sources and proofs. [[wang2017-paper-history]] records small-strain/fixed-frame scope and open native-particle/finite-strain/irreversibility gate; [[wang2017-apex-and-rate-study]] continues independently. Updated index and handover, no raw sources or personal settings changed.
+
+## [2026-10-24] ingest | Confirmed60mm fast trial and interrupted-run recovery
+
+User supplied FEM video, requested600s, then explicitly selected0.01m/s to60mm/6physicalseconds. Preserved immutable rawclip and clarification. Native3-inputcontrolsPASS; new trial started01:00:46WIB on4e3140c with2h cap. Windows monitor12/detached9/budget3 fixture controlsPASS,18 evidencehashes; logoff immunity not established. Corrected oldrate002 to INTERRUPTED_UNKNOWN_EXIT, archived24hashes/33states and7 common-settlement comparisons without convergenceclaim. Updated [[wang2017-fast-trial-2026-10-24]], index, testing, guide and handover; rawsource/settings unchanged after creation.

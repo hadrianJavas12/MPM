@@ -1,0 +1,82 @@
+{
+  "physicalUpdates": 0,
+  "controlCounts": {
+    "monitor": 12,
+    "detachedMechanism": 9,
+    "detachedBudget": 3
+  },
+  "currentSources": [
+    {
+      "repositoryPath": "scripts/run-wang2017-trial.ps1",
+      "copiedPath": "current-source/scripts/run-wang2017-trial.ps1",
+      "sha256": "ef5d708753e65a90b56c1643bd3cea87351579318c5cb87452b621da751c1007",
+      "bytes": 15108,
+      "currentSourceMatchesCopy": true
+    },
+    {
+      "repositoryPath": "scripts/start-wang2017-detached.ps1",
+      "copiedPath": "current-source/scripts/start-wang2017-detached.ps1",
+      "sha256": "a85d690d59b51f00753f741c1a27fcef5054108f401d30e6ce5ab353d56e7220",
+      "bytes": 8939,
+      "currentSourceMatchesCopy": true
+    },
+    {
+      "repositoryPath": "tests/windows/wang2017-monitor.ps1",
+      "copiedPath": "current-source/tests/windows/wang2017-monitor.ps1",
+      "sha256": "81312102888a172beb676b752bd1efec9cfce9e1db5790bce060d45bab88dc9a",
+      "bytes": 10080,
+      "currentSourceMatchesCopy": true
+    },
+    {
+      "repositoryPath": "tests/windows/detached-launch-controls.ps1",
+      "copiedPath": "current-source/tests/windows/detached-launch-controls.ps1",
+      "sha256": "ac98625656f0c5d53f3da15d07869d77e275fe009e8fcc7be3cbf0b6671b92e6",
+      "bytes": 4933,
+      "currentSourceMatchesCopy": true
+    },
+    {
+      "repositoryPath": "tests/windows/detached-launch-budget-controls.ps1",
+      "copiedPath": "current-source/tests/windows/detached-launch-budget-controls.ps1",
+      "sha256": "1119b68e61575d9043bab41790d0fc90383184d67a72f8b253a8c6f283f1a8fe",
+      "bytes": 3178,
+      "currentSourceMatchesCopy": true
+    },
+    {
+      "repositoryPath": "tests/windows/fixtures/detached-exit-fixture.ps1",
+      "copiedPath": "current-source/tests/windows/fixtures/detached-exit-fixture.ps1",
+      "sha256": "e154310fafde4ed4540454a3123a03100f751739bd82bec972caf39a544ccf1f",
+      "bytes": 920,
+      "currentSourceMatchesCopy": true
+    }
+  ],
+  "finalMonitorExecutedWrapperAndDriverMatchCurrentSource": true,
+  "finalMonitorWrapperSha256": "ef5d708753e65a90b56c1643bd3cea87351579318c5cb87452b621da751c1007",
+  "finalMonitorDriverSha256": "81312102888a172beb676b752bd1efec9cfce9e1db5790bce060d45bab88dc9a",
+  "generatedWorkersAndRequests": [
+    {
+      "control": "detached-launch-controls-001",
+      "executedGeneratedWorkerSha256": "def3267a766cfcfaeea69f4ae369dbb71a5d4b240f9f851e20dbd2b5cbf7c4e0",
+      "requestSha256": "0558ba1eb9eb0b603e457667d978809c00e4737cff0be9c2b499a4aafd639420",
+      "matchesLaunchRecordedHashes": true,
+      "callerSessionId": 11,
+      "workerSessionId": 11
+    },
+    {
+      "control": "detached-launch-budget-controls-001",
+      "executedGeneratedWorkerSha256": "def3267a766cfcfaeea69f4ae369dbb71a5d4b240f9f851e20dbd2b5cbf7c4e0",
+      "requestSha256": "b628423f1c7846a90627fad1425a98f6e554530e29869ed00378be62ed5793f2",
+      "matchesLaunchRecordedHashes": true,
+      "callerSessionId": 11,
+      "workerSessionId": 11
+    }
+  ],
+  "provenanceLimits": [
+    "Every monitor attempt retains the copied executed wrapper, generated mock Windows launcher and standalone Lisp fixture.",
+    "Early monitor test drivers were not snapshotted. Attempts003/004 record their driver hashes; final005 matches the included current driver. Do not substitute current driver bytes for early driver versions.",
+    "Detached generated executed workers and requests match launch-recorded hashes. Associated launcher/test/fixture sources are current snapshots copied after controls; no pre-control hash was recorded for those source files.",
+    "Detached controls run fixtureMode=true, so their request wrapper hashes do not establish execution of that wrapper.",
+    "The nine detached mechanism controls preceded the budget-only extension. Three separate budget controls cover the final finite72-hour bound; mechanism controls were not repeated for that guard-only change.",
+    "Observed caller/worker sessions are11, not session0; caller-command survival is not logoff/sleep/reboot immunity.",
+    "Selected interruption events contain no usernames, addresses or security messages; original run SessionId and exit cause remain unknown."
+  ]
+}

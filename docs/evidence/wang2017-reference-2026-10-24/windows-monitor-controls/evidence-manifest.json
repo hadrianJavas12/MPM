@@ -1,0 +1,95 @@
+{
+  "scope": "Windows tiny process controls only; no MPM updates",
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "bytes": 34,
+      "sha256": "b48f4e5f0241d94ee8cb1591d680ac7820df573c14a600feae5217ca2a11c096"
+    },
+    {
+      "path": "archive-input-manifest.json",
+      "bytes": 38748,
+      "sha256": "05eeb385c08f446bf857c3dd74a51f81fb450499709c37a18d3ea6e6dcd56c0d"
+    },
+    {
+      "path": "archive-verification.json",
+      "bytes": 1216,
+      "sha256": "e6cad215efa3bd7560697890166e342a62f3fe8eb6151426eba5412aef194097"
+    },
+    {
+      "path": "current-source/scripts/run-wang2017-trial.ps1",
+      "bytes": 15108,
+      "sha256": "ef5d708753e65a90b56c1643bd3cea87351579318c5cb87452b621da751c1007"
+    },
+    {
+      "path": "current-source/scripts/start-wang2017-detached.ps1",
+      "bytes": 8939,
+      "sha256": "a85d690d59b51f00753f741c1a27fcef5054108f401d30e6ce5ab353d56e7220"
+    },
+    {
+      "path": "current-source/tests/windows/detached-launch-budget-controls.ps1",
+      "bytes": 3178,
+      "sha256": "1119b68e61575d9043bab41790d0fc90383184d67a72f8b253a8c6f283f1a8fe"
+    },
+    {
+      "path": "current-source/tests/windows/detached-launch-controls.ps1",
+      "bytes": 4933,
+      "sha256": "ac98625656f0c5d53f3da15d07869d77e275fe009e8fcc7be3cbf0b6671b92e6"
+    },
+    {
+      "path": "current-source/tests/windows/fixtures/detached-exit-fixture.ps1",
+      "bytes": 920,
+      "sha256": "e154310fafde4ed4540454a3123a03100f751739bd82bec972caf39a544ccf1f"
+    },
+    {
+      "path": "current-source/tests/windows/wang2017-monitor.ps1",
+      "bytes": 10080,
+      "sha256": "81312102888a172beb676b752bd1efec9cfce9e1db5790bce060d45bab88dc9a"
+    },
+    {
+      "path": "detached-launch-budget-controls-001.tar.gz",
+      "bytes": 2736,
+      "sha256": "1851e5b1fe7e30623c06f9096f5cc6ee466a86442c343698022180328225bb8d"
+    },
+    {
+      "path": "detached-launch-controls-001.tar.gz",
+      "bytes": 2791,
+      "sha256": "bfb700a6dea54a40be0a49112bee41071ef1f20d68d22727f6b6fb5d4f01816a"
+    },
+    {
+      "path": "monitor-hardening-001.tar.gz",
+      "bytes": 8352,
+      "sha256": "25a0ac14404e227022eb64c29d2502e116a0ca5fc92d1394655b429382ed1899"
+    },
+    {
+      "path": "monitor-hardening-002.tar.gz",
+      "bytes": 8375,
+      "sha256": "24cc29347cbddb884ba3f6868fdd4f5c797ee7f9fa8d016e232f323d12cd0b7f"
+    },
+    {
+      "path": "monitor-hardening-003.tar.gz",
+      "bytes": 9724,
+      "sha256": "fa26934be59b42276c8a55fb7e1000b981bf8774e073c0c185847e386694e88d"
+    },
+    {
+      "path": "monitor-hardening-004.tar.gz",
+      "bytes": 9856,
+      "sha256": "b39d01ebcfe31354f92f6ce9d34d19514b32c75526dfe732ffb0c1a640e7fcfb"
+    },
+    {
+      "path": "monitor-hardening-005.tar.gz",
+      "bytes": 9923,
+      "sha256": "5a7d624a66bd26970279f6669801653b0471149ae5910b09fd89589226cf2791"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2212,
+      "sha256": "80809ff3adab9634639c7e01e5de8ea429ea72c6a087ff673620d23b8c2ac266"
+    },
+    {
+      "path": "source-and-scope-proof.json",
+      "bytes": 4279,
+      "sha256": "fac6a0a0f73e34f8025d8c03ffcdcbcfec25859e55056ccd16462b7b6aa65944"
+    }
+  ]
+}

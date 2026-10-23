@@ -1,0 +1,204 @@
+"""Read-only, non-interpolated Wang2017 saved-output comparison. No solver calls."""
+from __future__ import annotations
+
+import argparse
+import csv
+from decimal import Decimal
+import hashlib
+import json
+from pathlib import Path
+
+import numpy as np
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def rows(path):
+    with path.open(encoding="utf-8-sig", newline="") as stream:
+        return [{key: float(value.lower().replace("d", "e")) for key, value in row.items()}
+                for row in csv.DictReader(stream)]
+
+
+def vtk(path):
+    data, offset = path.read_bytes(), 0
+
+    def line():
+        nonlocal offset
+        end = data.index(b"\n", offset)
+        result = data[offset:end].decode("ascii").rstrip("\r")
+        offset = end + 1
+        return result
+
+    def array(count):
+        nonlocal offset
+        if offset + count * 8 > len(data):
+            raise ValueError("Truncated VTK array")
+        result = np.frombuffer(data, dtype=">f8", count=count, offset=offset).astype(float)
+        offset += count * 8
+        if line() != "" or not np.isfinite(result).all():
+            raise ValueError("Nonfinite or malformed VTK array")
+        return result
+
+    if not line().startswith("# vtk DataFile Version"):
+        raise ValueError("Missing VTK signature")
+    line()
+    if line() != "BINARY" or line() != "DATASET UNSTRUCTURED_GRID":
+        raise ValueError("Unsupported VTK layout")
+    header = line().split()
+    if header[0] != "POINTS" or header[2] != "double":
+        raise ValueError("Unsupported coordinates")
+    count = int(header[1])
+    points = array(3 * count).reshape(count, 3)
+    if line() != f"POINT_DATA {count}":
+        raise ValueError("Point count mismatch")
+    fields = {}
+    while offset < len(data):
+        text = line()
+        if not text:
+            continue
+        header = text.split()
+        if header[0] != "SCALARS" or header[2] != "double" or line() != "LOOKUP_TABLE default":
+            raise ValueError("Unsupported scalar layout")
+        fields[header[1]] = array(count)
+    ids = fields["unique-id"]
+    if len(np.unique(ids)) != count or not (ids == np.floor(ids)).all():
+        raise ValueError("Invalid particle IDs")
+    order = np.argsort(ids)
+    return points[order], {key: value[order] for key, value in fields.items()}
+
+
+def load(run):
+    manifest = json.loads((run / "manifest.json").read_text(encoding="utf-8-sig"))
+    force, energy, gravity = [rows(run / name) for name in
+                              ("force-displacement.csv", "energy-history.csv", "gravity-state.csv")]
+    if not force or len(force) != len(energy):
+        raise ValueError("Missing or inconsistent CSV rows")
+    if any(not np.isfinite(list(row.values())).all() for group in (force, energy, gravity) for row in group):
+        raise ValueError("Nonfinite CSV data")
+    initial_p, initial_f = vtk(run / "vtk/gravity_initial.vtk")
+    initial_ids, initial_volume = initial_f["unique-id"], initial_f["volume"]
+    states, consumed = [], []
+    finite_ids = positive_volume = positive_mass = True
+    max_mass_error = max_kinetic_error = 0.0
+    volume_ratio_min, volume_ratio_max = float("inf"), float("-inf")
+    for row, en in zip(force, energy):
+        path = run / "vtk" / f"particles_{int(row['frame']):04d}.vtk"
+        points, fields = vtk(path)
+        if not np.array_equal(fields["unique-id"], initial_ids):
+            raise ValueError("Particle IDs changed")
+        if len(points) != int(row["particle_count"]):
+            raise ValueError("CSV/VTK particle count mismatch")
+        positive_mass &= bool((fields["mass"] > 0).all())
+        positive_volume &= bool((fields["volume"] > 0).all())
+        ratio = fields["volume"] / initial_volume
+        volume_ratio_min, volume_ratio_max = min(volume_ratio_min, float(ratio.min())), max(volume_ratio_max, float(ratio.max()))
+        max_mass_error = max(max_mass_error, abs(float(fields["mass"].sum()) - force[0]["mass_kg_per_m"]))
+        kinetic = .5 * float(np.sum(fields["mass"] * (fields["vel_x"]**2 + fields["vel_y"]**2)))
+        max_kinetic_error = max(max_kinetic_error, abs(kinetic - row["kinetic_energy_J_per_m"]))
+        if row["time_s"] != en["time_s"] or row["frame"] != en["frame"]:
+            raise ValueError("Energy CSV alignment mismatch")
+        states.append((points, fields))
+        consumed.append({"path": path.relative_to(run).as_posix(), "sha256": sha(path)})
+    with (run / "force-displacement.csv").open(encoding="utf-8-sig", newline="") as stream:
+        commands = [Decimal(row["commanded_settlement_m"].lower().replace("d", "e")) for row in csv.DictReader(stream)]
+    if len(set(commands)) != len(commands) or commands != sorted(commands):
+        raise ValueError("Commanded displacement must increase uniquely")
+    F = np.array([[[r[f"F_{i}{j}"] for j in range(3)] for i in range(3)] for r in gravity])
+    determinants = np.linalg.det(F)
+    source_manifest = json.loads((run / "source/source-manifest.json").read_text(encoding="utf-8-sig"))
+    failed_hashes = [entry["path"] for entry in source_manifest["files"] if sha(run / entry["path"]) != entry["sha256"].lower()]
+    if failed_hashes:
+        raise ValueError(f"Frozen source mismatch: {failed_hashes}")
+    proof = json.loads((run / "source-provenance.json").read_text(encoding="utf-8-sig"))
+    sources = {entry["path"]: entry["sha256"].lower() for entry in source_manifest["files"]}
+    for path in [run / name for name in ("force-displacement.csv", "energy-history.csv", "gravity-state.csv", "manifest.json", "source/source-manifest.json", "source-provenance.json")]:
+        consumed.append({"path": path.relative_to(run).as_posix(), "sha256": sha(path)})
+    summary = {
+        "run": str(run), "nativeManifestStatus": manifest.get("status"), "nativeComplete": manifest.get("complete"),
+        "nativeExitInterpretation": "Not inferred from saved outputs; wrapper/process audit handled separately",
+        "loadingFrames": len(force), "particleCount": len(initial_ids), "physicalTimeS": force[-1]["time_s"],
+        "lastCommandedSettlementM": force[-1]["commanded_settlement_m"], "allSavedNumericFieldsFinite": True,
+        "particleIdsStableAndUnique": finite_ids, "positiveSavedVolumes": positive_volume, "positiveSavedMasses": positive_mass,
+        "massKgPerM": force[0]["mass_kg_per_m"], "maxAbsoluteVtkMassErrorKgPerM": max_mass_error,
+        "maxAbsRecomputed2DKineticMinusCsvJPerM": max_kinetic_error,
+        "volumeOverInitialVolumeRange": [volume_ratio_min, volume_ratio_max],
+        "gravityDeterminantFRange": [float(determinants.min()), float(determinants.max())],
+        "loadingDeterminantJ": "NOT_DIRECTLY_SAVED: positive volume ratio is not independent det(F) evidence",
+        "maxAbsoluteMeanTrackingErrorM": max(abs(r["penalty_gap_m"]) for r in force),
+        "maxAbsoluteCommandMinusMeasuredMinusGapM": max(abs(r["commanded_settlement_m"] - r["measured_settlement_m"] - r["penalty_gap_m"]) for r in force),
+        "maxIndividualTrackingGapM": max(r["max_gap_m"] for r in force),
+        "maxAbsReactionPlusSoilForceNPerM": max(abs(r["reaction_upward_N_per_m"] + r["soil_force_y_N_per_m"]) for r in force),
+        "maxAbsSoilMinusNodalForceNPerM": max(abs(r["soil_force_y_N_per_m"] - r["nodal_force_y_N_per_m"]) for r in force),
+        "reactionRangeNPerM": [min(r["reaction_upward_N_per_m"] for r in force), max(r["reaction_upward_N_per_m"] for r in force)],
+        "kineticRangeJPerM": [min(r["kinetic_energy_J_per_m"] for r in force), max(r["kinetic_energy_J_per_m"] for r in force)],
+        "maxKineticOverElasticProxy": max(e["kinetic_over_elastic_proxy"] for e in energy),
+        "maxFreeResidualRatio": max(r["free_residual_ratio"] for r in force),
+        "lastNativeKappaRange": [float(states[-1][1]["mc-kappa"].min()), float(states[-1][1]["mc-kappa"].max())],
+        "frozenSourcesHashVerifiedCount": len(source_manifest["files"]),
+        "provenanceExactLoadedBytesClaim": proof["sourceSnapshotExactLoadedBytes"],
+        "actualBackendSha256": proof["nativeBackend"]["sha256"],
+        "noInterpolation": True,
+    }
+    return manifest, force, energy, states, commands, sources, summary, consumed
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--slow", type=Path, required=True)
+    ap.add_argument("--fast", type=Path, required=True)
+    ap.add_argument("--output", type=Path, required=True)
+    args = ap.parse_args()
+    slow, fast = load(args.slow.resolve()), load(args.fast.resolve())
+    common = sorted(set(slow[4]) & set(fast[4]))
+    comparisons = []
+    for command in common:
+        si, fi = slow[4].index(command), fast[4].index(command)
+        sr, fr = slow[1][si], fast[1][fi]
+        sp, sf = slow[3][si]
+        fp, ff = fast[3][fi]
+        if not np.array_equal(sf["unique-id"], ff["unique-id"]):
+            raise ValueError("Cross-run particle IDs differ")
+        dpos, dk = sp - fp, sf["mc-kappa"] - ff["mc-kappa"]
+        force_delta = sr["reaction_upward_N_per_m"] - fr["reaction_upward_N_per_m"]
+        comparisons.append({
+            "commandedSettlementM": float(command), "slowFrame": si, "fastFrame": fi,
+            "slowTimeS": sr["time_s"], "fastTimeS": fr["time_s"],
+            "slowReactionNPerM": sr["reaction_upward_N_per_m"], "fastReactionNPerM": fr["reaction_upward_N_per_m"],
+            "slowMinusFastReactionNPerM": force_delta,
+            "reactionDeltaOverAbsFastOrNull": force_delta / abs(fr["reaction_upward_N_per_m"]) if fr["reaction_upward_N_per_m"] else None,
+            "slowKineticJPerM": sr["kinetic_energy_J_per_m"], "fastKineticJPerM": fr["kinetic_energy_J_per_m"],
+            "slowMeanTrackingGapM": sr["penalty_gap_m"], "fastMeanTrackingGapM": fr["penalty_gap_m"],
+            "slowFreeResidualRatio": sr["free_residual_ratio"], "fastFreeResidualRatio": fr["free_residual_ratio"],
+            "maxParticlePositionDistanceM": float(np.linalg.norm(dpos, axis=1).max()),
+            "rmsParticlePositionDistanceM": float(np.sqrt(np.mean(np.sum(dpos*dpos, axis=1)))),
+            "maxAbsNativeKappaDelta": float(np.abs(dk).max()), "rmsNativeKappaDelta": float(np.sqrt(np.mean(dk*dk))),
+            "maxAbsStressYYDeltaPa": float(np.abs(sf["sig_yy"] - ff["sig_yy"]).max()),
+        })
+    differing = [key for key in sorted(set(slow[5]) | set(fast[5])) if slow[5].get(key) != fast[5].get(key)]
+    config_differences = {key: {"slow": slow[0]["config"].get(key), "fast": fast[0]["config"].get(key)}
+                          for key in sorted(set(slow[0]["config"]) | set(fast[0]["config"]))
+                          if slow[0]["config"].get(key) != fast[0]["config"].get(key)}
+    result = {
+        "scope": "Saved-output observations only; native completion and scientific validation are false. No solver calls, interpolation, time-index pairing, rate-agreement tolerance or pass/fail threshold.",
+        "scientificValidation": False, "referenceSpeedReached": False, "quasiStaticConvergence": "NOT_VERIFIED",
+        "energyClosure": "NOT_VERIFIED: elastic/native-plastic quantities are proxies and omit a closed balance",
+        "mcKappaMeaning": "Native accumulated plastic history, not damage or Soil2 paper tensor invariant",
+        "alignment": "Exact Decimal equality of recorded commanded settlement; sorted native unique-id alignment",
+        "slow": slow[6], "fast": fast[6], "matchedSavedCommandCount": len(common),
+        "commonCommandsM": [float(v) for v in common], "matchedStates": comparisons,
+        "configDifferences": config_differences, "frozenSourceDifferences": differing,
+        "initialGravityAndFrame0ByteIdentity": {name: sha(args.slow / name) == sha(args.fast / name)
+             for name in ("gravity-state.csv", "vtk/gravity_initial.vtk", "vtk/gravity_equilibrium.vtk", "vtk/particles_0000.vtk")},
+        "interpretation": "Differences at identical loading settlement quantify observed rate-sensitive transient response; this short partial interval establishes neither failure nor rate/mesh/time-step convergence. No scientifically admissible apex correction follows from this comparison.",
+        "nextGate": "Establish actual interruption/exit reason independently; retain this data. Continue only a justified bounded diagnostic using unchanged constitutive physics, or resolve the documented finite-strain/Soil2 state interpretation. Do not silently lower rate repeatedly or change dilation/apex/tolerances to force completion.",
+    }
+    args.output.mkdir(parents=True, exist_ok=True)
+    (args.output / "saved-rate-comparison.json").write_text(json.dumps(result, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    (args.output / "analysis-input-hashes.json").write_text(json.dumps({"analysisSha256": sha(Path(__file__)), "slowInputs": slow[7], "fastInputs": fast[7]}, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"slowFrames": slow[6]["loadingFrames"], "fastFrames": fast[6]["loadingFrames"], "commonCommandsM": result["commonCommandsM"], "lastComparison": comparisons[-1], "configDifferences": config_differences, "frozenSourceDifferences": differing}, indent=2))
+
+
+if __name__ == "__main__":
+    main()

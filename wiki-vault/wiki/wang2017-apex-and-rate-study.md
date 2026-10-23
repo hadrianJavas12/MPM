@@ -3,7 +3,7 @@ title: Wang2017 apex convention and controlled rate study
 type: synthesis
 tags: [wang2017, mohr-coulomb, apex, rate-study, native-windows]
 sources: [docs/benchmarks/WANG2017_APEX_REVIEW.md, tests/materials/mc-legacy-apex-comparison.lisp, tests/benchmarks/wang2017-rate-comparison.lisp, cases/benchmarks/wang2017-soil1-rate-002.lisp]
-updated: 2026-10-23
+updated: 2026-10-24
 ---
 
 # Wang2017 apex convention and controlled rate study
@@ -26,10 +26,16 @@ damping,boundaries and penalty remain unchanged.13 artifact hashes retain the
 point/preflight sources/results/proof under docs/evidence/wang2017-reference-
 2026-10-23/rate-and-apex-controls. No legacy clamp was enabled.
 
-Actual rate002 run started14:35:52WIB on68efa27, wrapper16236/cmd38152/SBCL25128,
+Historical rate002 run started14:35:52WIB on68efa27, wrapper16236/cmd38152/SBCL25128,
 five-hour budget.0.002m/s is20x paper;0.1m requires50s,251 states at0.2s cadence.
 It tests the trajectory's rate dependence, without claiming rate independence,
 scientific validation or guaranteed completion. Do not duplicate a healthy run.
+
+Update24Oct: rate002 is INTERRUPTED_UNKNOWN_EXIT,33states to6.4s/12.8mm, all old
+processes absent.24 retained evidence hashes and7 exact common-settlement pairs
+record consistent data without rate-convergencePASS. Session logoff correlated
+with stopped outputs, no exitcode/MCfailure proof. User-confirmed replacement
+trial and monitor controls are in [[wang2017-fast-trial-2026-10-24]].
 New [[wang2017-paper-history|Soil2 coupled point prototype]] passes19 controls
 and optional ASDF smoke independently of this frozen native source;36 hashes
 retain its evidence. It does not enable a Soil2 particle or finite-strain rule.

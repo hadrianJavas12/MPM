@@ -1,0 +1,1001 @@
+{
+  "archives": [
+    {
+      "archive": "monitor-hardening-001.tar.gz",
+      "originalDirectory": "output/wang2017-reference-2026-10-23/monitor-hardening-001",
+      "members": [
+        {
+          "member": "failure.json",
+          "bytes": 243,
+          "sha256": "520654a2d6c71f5ede1bbcd4454017f4242c8a5f857dce98611ceb3e95fcd5b8"
+        },
+        {
+          "member": "fixture/cases/attach.lisp",
+          "bytes": 8,
+          "sha256": "8cc3d0ee6537835e06c5db38e7d14a61bb3b27c42f6857809822e1fe955c9b66"
+        },
+        {
+          "member": "fixture/cases/normal.lisp",
+          "bytes": 8,
+          "sha256": "72fc8ac0f8004c81ca8fe669698942e53ef9a9f2a19fc4f4bbc95295664d1357"
+        },
+        {
+          "member": "fixture/cases/timeout.lisp",
+          "bytes": 9,
+          "sha256": "efdb97b5cb7e9fdf7db0759d0e6ac1b10a4dc7ba4d3c817d7a235e96f96814c5"
+        },
+        {
+          "member": "fixture/output/invalid-budget-wrapper.stderr.log",
+          "bytes": 333,
+          "sha256": "fff38ae6b6cee8a68de26446c810227f5e91f890552adec34b8cd1a0e7a49f2a"
+        },
+        {
+          "member": "fixture/output/invalid-budget-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/normal-launch.json",
+          "bytes": 1132,
+          "sha256": "e1a4c85b579639def1aa818e2dde26e8eda711f89fe302dbbe200752f1c29bbc"
+        },
+        {
+          "member": "fixture/output/normal-status.json",
+          "bytes": 2231,
+          "sha256": "c84e804c582d87fc4e437218b40ed7e3f5ddb4803e4eae35cf12274002e74ca3"
+        },
+        {
+          "member": "fixture/output/normal-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/scripts/collect-wang2017-evidence.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/plot-wang2017-descent.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/plot_m5_cliff_comparison.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/run-case.lisp",
+          "bytes": 50,
+          "sha256": "8af80f98afbbf520c5215ae771cc7eae8202a1246be945bdb58f14b05c7f6385"
+        },
+        {
+          "member": "fixture/scripts/run-wang2017-trial.ps1",
+          "bytes": 14914,
+          "sha256": "2d18bda702df6ecc4eefbaa782c518e4ccf71abed2618f69a553313ce6180b62"
+        },
+        {
+          "member": "fixture/windows/cl-mpm.cmd",
+          "bytes": 168,
+          "sha256": "01a9ff0a4792cccaa292bc227b633cbc6139999a1503dba4130e43b9d59fb597"
+        },
+        {
+          "member": "fixture/windows/fixture.lisp",
+          "bytes": 956,
+          "sha256": "eaf7fab837adfa66f5f0a8333d6433e7e5f2988457c51820f7000052e8baf3d2"
+        },
+        {
+          "member": "normal-live-heartbeat.json",
+          "bytes": 2047,
+          "sha256": "3848e8659b8962618d09ea8e8197cc6164505247e93fd3068f5a444a608a0ba3"
+        },
+        {
+          "member": "selected-interruption-events.json",
+          "bytes": 2617,
+          "sha256": "5d18820ebcef587d8033ad4471331410e9b9bc04b9a56049fd82a0e4bc8cb985"
+        }
+      ]
+    },
+    {
+      "archive": "monitor-hardening-002.tar.gz",
+      "originalDirectory": "output/wang2017-reference-2026-10-23/monitor-hardening-002",
+      "members": [
+        {
+          "member": "failure.json",
+          "bytes": 269,
+          "sha256": "473e2fc1c1a02882e8a548f99bee3cf9ef678dcb22916fbd361f26f20e1d60ce"
+        },
+        {
+          "member": "fixture/cases/attach.lisp",
+          "bytes": 8,
+          "sha256": "8cc3d0ee6537835e06c5db38e7d14a61bb3b27c42f6857809822e1fe955c9b66"
+        },
+        {
+          "member": "fixture/cases/normal.lisp",
+          "bytes": 8,
+          "sha256": "72fc8ac0f8004c81ca8fe669698942e53ef9a9f2a19fc4f4bbc95295664d1357"
+        },
+        {
+          "member": "fixture/cases/timeout.lisp",
+          "bytes": 9,
+          "sha256": "efdb97b5cb7e9fdf7db0759d0e6ac1b10a4dc7ba4d3c817d7a235e96f96814c5"
+        },
+        {
+          "member": "fixture/output/invalid-budget-wrapper.stderr.log",
+          "bytes": 333,
+          "sha256": "214be073da4bf080fab870ec2f37db2462b4b576abf97a17a7f6aaf877be3e94"
+        },
+        {
+          "member": "fixture/output/invalid-budget-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/normal-launch.json",
+          "bytes": 1134,
+          "sha256": "bb72735a29d5c1a3d8ee8796d520184ac9356b3128126bdc88b3117319923994"
+        },
+        {
+          "member": "fixture/output/normal-status.json",
+          "bytes": 2233,
+          "sha256": "71a387bbeb239a5db6a85da83bfcc8bdba2c2792230d3367798f474e3c43c2db"
+        },
+        {
+          "member": "fixture/output/normal-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/output/timeout/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/timeout-launch.json",
+          "bytes": 1137,
+          "sha256": "c98da55224dc702af9ba6e8fd8b701536634125819ac5c0e33cf2ea061c961f9"
+        },
+        {
+          "member": "fixture/output/timeout-status.json",
+          "bytes": 2236,
+          "sha256": "3bdeecc61cbf9e12768ce464a64c694182b316c3bf2f21aebd11dd37b21aa7d0"
+        },
+        {
+          "member": "fixture/output/timeout-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/scripts/collect-wang2017-evidence.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/plot-wang2017-descent.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/plot_m5_cliff_comparison.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/run-case.lisp",
+          "bytes": 50,
+          "sha256": "8af80f98afbbf520c5215ae771cc7eae8202a1246be945bdb58f14b05c7f6385"
+        },
+        {
+          "member": "fixture/scripts/run-wang2017-trial.ps1",
+          "bytes": 14950,
+          "sha256": "d7e202278e2b999ad6616c25fd8cc9e537a4531dcba701cbfe62b38b1d014977"
+        },
+        {
+          "member": "fixture/windows/cl-mpm.cmd",
+          "bytes": 168,
+          "sha256": "01a9ff0a4792cccaa292bc227b633cbc6139999a1503dba4130e43b9d59fb597"
+        },
+        {
+          "member": "fixture/windows/fixture.lisp",
+          "bytes": 956,
+          "sha256": "eaf7fab837adfa66f5f0a8333d6433e7e5f2988457c51820f7000052e8baf3d2"
+        },
+        {
+          "member": "normal-live-heartbeat.json",
+          "bytes": 2044,
+          "sha256": "45a6f8759614c566dec7792450a0bac85eab7894d1f6583965e6e4ec6392808a"
+        }
+      ]
+    },
+    {
+      "archive": "monitor-hardening-003.tar.gz",
+      "originalDirectory": "output/wang2017-reference-2026-10-23/monitor-hardening-003",
+      "members": [
+        {
+          "member": "fixture/cases/attach.lisp",
+          "bytes": 8,
+          "sha256": "8cc3d0ee6537835e06c5db38e7d14a61bb3b27c42f6857809822e1fe955c9b66"
+        },
+        {
+          "member": "fixture/cases/normal.lisp",
+          "bytes": 8,
+          "sha256": "72fc8ac0f8004c81ca8fe669698942e53ef9a9f2a19fc4f4bbc95295664d1357"
+        },
+        {
+          "member": "fixture/cases/timeout.lisp",
+          "bytes": 9,
+          "sha256": "efdb97b5cb7e9fdf7db0759d0e6ac1b10a4dc7ba4d3c817d7a235e96f96814c5"
+        },
+        {
+          "member": "fixture/output/attach/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/attach-launch.json",
+          "bytes": 1135,
+          "sha256": "2355c929c08adef67246cf5f770616c573a180f936e29155ac23c4ea4485a4ca"
+        },
+        {
+          "member": "fixture/output/attach-monitor-36956-ready.json",
+          "bytes": 1189,
+          "sha256": "b07b14b99fd1285d39473852ca785af436dfb91ef3c70640a1f87a16afec06eb"
+        },
+        {
+          "member": "fixture/output/attach-status.json",
+          "bytes": 3791,
+          "sha256": "a4a1e0c2b1d2b2eb451148e682d1f296aad8b584c8a752ed000e8c2a1fbe4e1e"
+        },
+        {
+          "member": "fixture/output/attach-successor-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach-successor-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/output/invalid-budget-wrapper.stderr.log",
+          "bytes": 333,
+          "sha256": "cdcf64b1550b418bc93f34cdcbca97cdcc563f67028e6c0a9897bfd650d2a370"
+        },
+        {
+          "member": "fixture/output/invalid-budget-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/normal-launch.json",
+          "bytes": 1134,
+          "sha256": "e54ff432dd6f69eeadd3e7c4424e7c02b49b4526a2955c3103b3dfb1e338eb68"
+        },
+        {
+          "member": "fixture/output/normal-status.json",
+          "bytes": 2233,
+          "sha256": "8adfd24264ba2d807f3154496f90d2fc2e9ebf65041f917ba4c73b481de86978"
+        },
+        {
+          "member": "fixture/output/normal-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/output/timeout/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/timeout-launch.json",
+          "bytes": 1137,
+          "sha256": "eb052540850038b3abeebd5a382054ca4103ee99ab2ae45fb596688c9beb15da"
+        },
+        {
+          "member": "fixture/output/timeout-status.json",
+          "bytes": 2160,
+          "sha256": "33d08b5fd2f9a545cbec45e69388b2b705986fac07943a85e6ff94c34f2e990f"
+        },
+        {
+          "member": "fixture/output/timeout-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/scripts/collect-wang2017-evidence.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/plot-wang2017-descent.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/plot_m5_cliff_comparison.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/run-case.lisp",
+          "bytes": 50,
+          "sha256": "8af80f98afbbf520c5215ae771cc7eae8202a1246be945bdb58f14b05c7f6385"
+        },
+        {
+          "member": "fixture/scripts/run-wang2017-trial.ps1",
+          "bytes": 14950,
+          "sha256": "d7e202278e2b999ad6616c25fd8cc9e537a4531dcba701cbfe62b38b1d014977"
+        },
+        {
+          "member": "fixture/windows/cl-mpm.cmd",
+          "bytes": 168,
+          "sha256": "01a9ff0a4792cccaa292bc227b633cbc6139999a1503dba4130e43b9d59fb597"
+        },
+        {
+          "member": "fixture/windows/fixture.lisp",
+          "bytes": 998,
+          "sha256": "7b97df3ecdc218cdbe5ca06b9caf6fe39bef5cff75103bd6a2d94b1e11c9f266"
+        },
+        {
+          "member": "normal-live-heartbeat.json",
+          "bytes": 2048,
+          "sha256": "cc87669400414a5fce3f80003233019e5ca4cb3c30fadf71c9ed2c518bfd1d54"
+        },
+        {
+          "member": "result.json",
+          "bytes": 1343,
+          "sha256": "88870de8a6dccd50a3685575e3221d4acc1185d971b5d9d7bed7526beb804051"
+        }
+      ]
+    },
+    {
+      "archive": "monitor-hardening-004.tar.gz",
+      "originalDirectory": "output/wang2017-reference-2026-10-23/monitor-hardening-004",
+      "members": [
+        {
+          "member": "fixture/cases/attach.lisp",
+          "bytes": 8,
+          "sha256": "8cc3d0ee6537835e06c5db38e7d14a61bb3b27c42f6857809822e1fe955c9b66"
+        },
+        {
+          "member": "fixture/cases/normal.lisp",
+          "bytes": 8,
+          "sha256": "72fc8ac0f8004c81ca8fe669698942e53ef9a9f2a19fc4f4bbc95295664d1357"
+        },
+        {
+          "member": "fixture/cases/timeout.lisp",
+          "bytes": 9,
+          "sha256": "efdb97b5cb7e9fdf7db0759d0e6ac1b10a4dc7ba4d3c817d7a235e96f96814c5"
+        },
+        {
+          "member": "fixture/output/attach/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/attach-launch.json",
+          "bytes": 1135,
+          "sha256": "e2a811edf704157909d56743d15bd0c333ac8debf177c611205be3188f4b576d"
+        },
+        {
+          "member": "fixture/output/attach-monitor-24408-ready.json",
+          "bytes": 1191,
+          "sha256": "17107a0670ef721c02e1e1a576dbee08e12ce821924dade5bf768d6a01eb983d"
+        },
+        {
+          "member": "fixture/output/attach-status.json",
+          "bytes": 3793,
+          "sha256": "bd469d7f2178b269a3cbf69127221bb7ede33b21d6e6b9a20b2c9cf72fadd950"
+        },
+        {
+          "member": "fixture/output/attach-successor-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach-successor-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/output/invalid-budget-wrapper.stderr.log",
+          "bytes": 346,
+          "sha256": "b38457df156af43381d591edb4a5854b7a61ab5643cf7b41c26f139bafeee613"
+        },
+        {
+          "member": "fixture/output/invalid-budget-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/invalid-nan-wrapper.stderr.log",
+          "bytes": 346,
+          "sha256": "b38457df156af43381d591edb4a5854b7a61ab5643cf7b41c26f139bafeee613"
+        },
+        {
+          "member": "fixture/output/invalid-nan-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/normal-launch.json",
+          "bytes": 1134,
+          "sha256": "f76066a3ff4016e940be26b0a86cccd2b3747fee01c82699f6c02ef9237ff246"
+        },
+        {
+          "member": "fixture/output/normal-status.json",
+          "bytes": 2233,
+          "sha256": "78e357349d18301da8f56752ad090c0b835100c08d74ad37a6f34234370296b1"
+        },
+        {
+          "member": "fixture/output/normal-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/output/timeout/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/timeout-launch.json",
+          "bytes": 1137,
+          "sha256": "be7c62660fa89caee3afeb7e45a28649355e2bf5eaafae20fffdbb319e88594c"
+        },
+        {
+          "member": "fixture/output/timeout-status.json",
+          "bytes": 2160,
+          "sha256": "6a8b398efa99874c16590641835e8d5b450188487dd49d9da4d8598f9ad5487e"
+        },
+        {
+          "member": "fixture/output/timeout-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/scripts/collect-wang2017-evidence.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/plot-wang2017-descent.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/plot_m5_cliff_comparison.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/run-case.lisp",
+          "bytes": 50,
+          "sha256": "8af80f98afbbf520c5215ae771cc7eae8202a1246be945bdb58f14b05c7f6385"
+        },
+        {
+          "member": "fixture/scripts/run-wang2017-trial.ps1",
+          "bytes": 15099,
+          "sha256": "7b0220800e070a0f4da21a5d044176321cb18ba55f388f749ea5cc4cf84717fb"
+        },
+        {
+          "member": "fixture/windows/cl-mpm.cmd",
+          "bytes": 168,
+          "sha256": "01a9ff0a4792cccaa292bc227b633cbc6139999a1503dba4130e43b9d59fb597"
+        },
+        {
+          "member": "fixture/windows/fixture.lisp",
+          "bytes": 998,
+          "sha256": "7b97df3ecdc218cdbe5ca06b9caf6fe39bef5cff75103bd6a2d94b1e11c9f266"
+        },
+        {
+          "member": "normal-live-heartbeat.json",
+          "bytes": 2046,
+          "sha256": "806e187d0fde8352ccc3c8d5e97043b88c6d307ec270884c009e2a17520cc2b2"
+        },
+        {
+          "member": "result.json",
+          "bytes": 1437,
+          "sha256": "8381ef4f27dd2b20418d369affa2e5d3eb8c058cd484cdcde0c05fccec4b0969"
+        }
+      ]
+    },
+    {
+      "archive": "monitor-hardening-005.tar.gz",
+      "originalDirectory": "output/wang2017-reference-2026-10-23/monitor-hardening-005",
+      "members": [
+        {
+          "member": "fixture/cases/attach.lisp",
+          "bytes": 8,
+          "sha256": "8cc3d0ee6537835e06c5db38e7d14a61bb3b27c42f6857809822e1fe955c9b66"
+        },
+        {
+          "member": "fixture/cases/normal.lisp",
+          "bytes": 8,
+          "sha256": "72fc8ac0f8004c81ca8fe669698942e53ef9a9f2a19fc4f4bbc95295664d1357"
+        },
+        {
+          "member": "fixture/cases/timeout.lisp",
+          "bytes": 9,
+          "sha256": "efdb97b5cb7e9fdf7db0759d0e6ac1b10a4dc7ba4d3c817d7a235e96f96814c5"
+        },
+        {
+          "member": "fixture/output/attach/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/attach-launch.json",
+          "bytes": 1135,
+          "sha256": "9f458b13540ad3ff4202334bf963963026ae33a890bdd74458e1f15f0fdcb8f2"
+        },
+        {
+          "member": "fixture/output/attach-monitor-47884-ready.json",
+          "bytes": 1189,
+          "sha256": "ced8f7ba9fb7400aaf0c9d6aa8be498f2bb8a30fa783c74a376a14ac584a43a4"
+        },
+        {
+          "member": "fixture/output/attach-status.json",
+          "bytes": 3790,
+          "sha256": "1628355092cf6a8b9a3d14fe0e333e166b1e7935b21d94a71c720f97fc4638e7"
+        },
+        {
+          "member": "fixture/output/attach-successor-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach-successor-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/attach.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/output/invalid-budget-wrapper.stderr.log",
+          "bytes": 346,
+          "sha256": "a84c6342fb55af395df7709183e755d1f998f83832e2d3b921c406ec49c7c7ab"
+        },
+        {
+          "member": "fixture/output/invalid-budget-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/invalid-nan-wrapper.stderr.log",
+          "bytes": 346,
+          "sha256": "a84c6342fb55af395df7709183e755d1f998f83832e2d3b921c406ec49c7c7ab"
+        },
+        {
+          "member": "fixture/output/invalid-nan-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/normal-launch.json",
+          "bytes": 1134,
+          "sha256": "490320c151da1f47bd738c5c2afafc9b3e53d83b2319a05c5a2890e183552eb8"
+        },
+        {
+          "member": "fixture/output/normal-status.json",
+          "bytes": 2233,
+          "sha256": "6c414e831a730181c1a48c09f07570ec4337e26e3b02ec7b142fc7d7d1ad94a6"
+        },
+        {
+          "member": "fixture/output/normal-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/normal.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/output/timeout/manifest.json",
+          "bytes": 142,
+          "sha256": "f90962efd50458012fcef2028e1e8417fd48d93871b5a66c244a5e481b7f699d"
+        },
+        {
+          "member": "fixture/output/timeout-launch.json",
+          "bytes": 1137,
+          "sha256": "c89293f2adbcae38faa7f0f221683fe8b2f2102ab2f2d8eee1aca96cb9cb25aa"
+        },
+        {
+          "member": "fixture/output/timeout-status.json",
+          "bytes": 2159,
+          "sha256": "d5e0c983d17e98fb568d8b40ededd925ce45a5fdf590ab120ebccb0bf0f6d638"
+        },
+        {
+          "member": "fixture/output/timeout-wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout-wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture/output/timeout.stdout.log",
+          "bytes": 70,
+          "sha256": "ee349cdac73898c0f36c3f058789e63439d3017d5f31ceb907c6a489b1b1304a"
+        },
+        {
+          "member": "fixture/scripts/collect-wang2017-evidence.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/plot-wang2017-descent.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/plot_m5_cliff_comparison.py",
+          "bytes": 61,
+          "sha256": "5a27e0b91cb0b2b6339649bdc4e579f51506f5d9d55337a004b6dde88156c381"
+        },
+        {
+          "member": "fixture/scripts/run-case.lisp",
+          "bytes": 50,
+          "sha256": "8af80f98afbbf520c5215ae771cc7eae8202a1246be945bdb58f14b05c7f6385"
+        },
+        {
+          "member": "fixture/scripts/run-wang2017-trial.ps1",
+          "bytes": 15108,
+          "sha256": "ef5d708753e65a90b56c1643bd3cea87351579318c5cb87452b621da751c1007"
+        },
+        {
+          "member": "fixture/windows/cl-mpm.cmd",
+          "bytes": 168,
+          "sha256": "01a9ff0a4792cccaa292bc227b633cbc6139999a1503dba4130e43b9d59fb597"
+        },
+        {
+          "member": "fixture/windows/fixture.lisp",
+          "bytes": 998,
+          "sha256": "7b97df3ecdc218cdbe5ca06b9caf6fe39bef5cff75103bd6a2d94b1e11c9f266"
+        },
+        {
+          "member": "normal-live-heartbeat.json",
+          "bytes": 2049,
+          "sha256": "375429dbeb3b38714a18dc9152b733cfad564b5b0d8564b65b968c2dc08083c2"
+        },
+        {
+          "member": "result.json",
+          "bytes": 1664,
+          "sha256": "df61c1f8e561ce4d2b1861c82218e4747d9f5c1d20be3dcb81c87dcea76cc259"
+        }
+      ]
+    },
+    {
+      "archive": "detached-launch-controls-001.tar.gz",
+      "originalDirectory": "output/wang2017-reference-2026-10-24/detached-launch-controls-001",
+      "members": [
+        {
+          "member": "controller.json",
+          "bytes": 238,
+          "sha256": "3635b79133bb35a678043c329e83c6444a5219e4db37bef2c4537627b8cdc535"
+        },
+        {
+          "member": "fixture run with spaces-detached/fixture-release",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "fixture run with spaces-detached/fixture-start.json",
+          "bytes": 176,
+          "sha256": "0eb7838615af7e45511f59a5a59c1bbb10e87d58076a6fc2104cd2fe5e5f666e"
+        },
+        {
+          "member": "fixture run with spaces-detached/launch-proof.json",
+          "bytes": 1089,
+          "sha256": "3e88bf52f4c554aaccbfb994b3d2153cd6a71fd3a4eeba570f06eb2713bd0c0f"
+        },
+        {
+          "member": "fixture run with spaces-detached/launch-request.json",
+          "bytes": 1488,
+          "sha256": "0558ba1eb9eb0b603e457667d978809c00e4737cff0be9c2b499a4aafd639420"
+        },
+        {
+          "member": "fixture run with spaces-detached/launch-request.ps1",
+          "bytes": 2266,
+          "sha256": "def3267a766cfcfaeea69f4ae369dbb71a5d4b240f9f851e20dbd2b5cbf7c4e0"
+        },
+        {
+          "member": "fixture run with spaces-detached/worker-exit.json",
+          "bytes": 126,
+          "sha256": "cc302570a0a81d6b14658e7726a1fc098ff18b32d98f1c8ea2571a2248832ba9"
+        },
+        {
+          "member": "fixture run with spaces-detached/worker-start.json",
+          "bytes": 263,
+          "sha256": "1e5c952a4bd6b760267250cc702a889d5ead405413dd9ba58b7f3926c4e5bf7c"
+        },
+        {
+          "member": "fixture run with spaces-detached/wrapper.stderr.log",
+          "bytes": 35,
+          "sha256": "adcdc3042b2c947e1f169339d074ebb3ab3a66a6787de4ab42388d529ac34cee"
+        },
+        {
+          "member": "fixture run with spaces-detached/wrapper.stdout.log",
+          "bytes": 35,
+          "sha256": "edcdaacee34bed74f8728ed7d750243ed0a5853d7ed58c4dd5e31538268afffd"
+        },
+        {
+          "member": "launcher.stdout.json",
+          "bytes": 352,
+          "sha256": "627315a38d4e3bce51a362168c6455625628625610e8aa9116e07359859c3a9d"
+        },
+        {
+          "member": "result.json",
+          "bytes": 474,
+          "sha256": "b413c5d0f2ff77e6772ec445f59d04269df00fa0c2859682a6f68b30da3a848d"
+        }
+      ]
+    },
+    {
+      "archive": "detached-launch-budget-controls-001.tar.gz",
+      "originalDirectory": "output/wang2017-reference-2026-10-24/detached-launch-budget-controls-001",
+      "members": [
+        {
+          "member": "launcher.stdout.json",
+          "bytes": 338,
+          "sha256": "843c76d1fadf167ab66a452ad0592542145bebf74035146933cece000b49c939"
+        },
+        {
+          "member": "maximum72-detached/fixture-release",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "member": "maximum72-detached/fixture-start.json",
+          "bytes": 177,
+          "sha256": "314e410924107de28eadcabdfa83d005717a3248ab9e215b6cc4666f96c9b7db"
+        },
+        {
+          "member": "maximum72-detached/launch-proof.json",
+          "bytes": 1082,
+          "sha256": "1ba8f8632cfe4a6ec671a98c5b66fa48db49aee6fa2519ad1181a61583a9fa75"
+        },
+        {
+          "member": "maximum72-detached/launch-request.json",
+          "bytes": 1468,
+          "sha256": "b628423f1c7846a90627fad1425a98f6e554530e29869ed00378be62ed5793f2"
+        },
+        {
+          "member": "maximum72-detached/launch-request.ps1",
+          "bytes": 2266,
+          "sha256": "def3267a766cfcfaeea69f4ae369dbb71a5d4b240f9f851e20dbd2b5cbf7c4e0"
+        },
+        {
+          "member": "maximum72-detached/worker-exit.json",
+          "bytes": 126,
+          "sha256": "ec478a517ed84ad55c6cb8c1f1899f66a38148b839f70d920ec83998c3ccdc00"
+        },
+        {
+          "member": "maximum72-detached/worker-start.json",
+          "bytes": 263,
+          "sha256": "30a3a7f36b44ce7e3b4b25ef5bdb318e20a60b82db376ee121136231452b02c2"
+        },
+        {
+          "member": "maximum72-detached/wrapper.stderr.log",
+          "bytes": 35,
+          "sha256": "adcdc3042b2c947e1f169339d074ebb3ab3a66a6787de4ab42388d529ac34cee"
+        },
+        {
+          "member": "maximum72-detached/wrapper.stdout.log",
+          "bytes": 35,
+          "sha256": "edcdaacee34bed74f8728ed7d750243ed0a5853d7ed58c4dd5e31538268afffd"
+        },
+        {
+          "member": "result.json",
+          "bytes": 376,
+          "sha256": "3106c4ef5e11f62e8001ae4b91e56f329ba022339a3fd69eb31231b3e8240b1d"
+        }
+      ]
+    }
+  ]
+}

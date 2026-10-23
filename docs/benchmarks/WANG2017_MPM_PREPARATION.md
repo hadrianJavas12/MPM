@@ -1,9 +1,15 @@
 # Persiapan Wang 2017 dengan MPM
 
-**Studi aktif berikutnya:** rate0.002m/s,50s target/0.1m, mulai14:35WIB dari68efa27,
-batas5jam. Tiga kontrol native memastikan material dan konfigurasi fisik lain
-tetap sama; hanya rate/derived duration/cadence count/batas komputasi berubah.
-Ini20x paper, bukan hasil reference-speed. [Diagnosis apex dan studi laju](WANG2017_APEX_REVIEW.md).
+**Aktif24Oktober:** pengguna memilih uji0.01m/s, penurunan60mm/**6s fisik**.
+Run `fast-010-001` mulai01:00:46WIB, batas2jam;100x paper. Ini penurunan yang
+sama dengan600s pada kecepatan paper, bukan durasi600s atau dorongan6m.
+[Panduan dan batas uji cepat](WANG2017_FAST_TRIAL.md).
+
+Run rate0.002 sebelumnya terputus pada6.4s/12.8mm, exit tidak diketahui; status
+asli NATIVE_RUNNING tertinggal. Bukti proses/data dan24hash disimpan pada
+`docs/evidence/wang2017-reference-2026-10-24/rate-002-001-interruption/`.
+Kejadian logoff Windows berkorelasi dengan berhentinya keluaran; tidak ada bukti
+kegagalan MC atau timeout terkontrol. [Diagnosis apex dan studi laju](WANG2017_APEX_REVIEW.md).
 
 [Video parsial diagnostik002](../evidence/wang2017-reference-2026-10-23/diagnostic-fast-005-002-video/slope-descent.mp4):
 78 frame asli0–15.4s, playback19.5s. Warna adalah native mc-kappa (history plastis),

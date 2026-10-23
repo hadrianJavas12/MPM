@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "requestedUtc": "2026-10-23T18:00:44.5065458Z",
+  "repository": "D:\\MPM",
+  "output": "D:\\MPM\\output\\wang2017-reference-2026-10-24\\fast-010-001",
+  "case": "D:\\MPM\\cases\\benchmarks\\wang2017-soil1-fast-010.lisp",
+  "maxWallHours": 2.0,
+  "evidenceDirectory": "",
+  "powerShellPath": "C:\\Users\\ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "wrapperPath": "D:\\MPM\\scripts\\run-wang2017-trial.ps1",
+  "wrapperSha256": "EF5D708753E65A90B56C1643BD3CEA87351579318C5CB87452B621DA751C1007",
+  "caseSha256": "7C58A0AD24FABA1E52FAFEF07AD546C91350F4104340758B85EED2D0BB4A5263",
+  "fixtureMode": false,
+  "fixturePath": "D:\\MPM\\tests\\windows\\fixtures\\detached-exit-fixture.ps1",
+  "callerProcessId": 45720,
+  "callerSessionId": 11,
+  "callerCreationUtc": "2026-10-23T18:00:43.4509300Z",
+  "stdoutPath": "D:\\MPM\\output\\wang2017-reference-2026-10-24\\fast-010-001-detached\\wrapper.stdout.log",
+  "stderrPath": "D:\\MPM\\output\\wang2017-reference-2026-10-24\\fast-010-001-detached\\wrapper.stderr.log",
+  "aclAssumption": "Repository and output paths are controlled by trusted local users; ACLs are not changed.",
+  "limitation": "Local WMI creation avoids direct caller parentage. Provider jobs, logoff, sleep, reboot and policy may still stop the run."
+}

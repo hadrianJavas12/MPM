@@ -1,5 +1,28 @@
 # Native framework and Studio verification
 
+## Wang fast010 and Windows monitor,2026-10-24
+
+Fast010 input gate002:3 Windows native controls PASS, exit0, two native particles,
+zero timesteps; only velocity/target/derived duration/frames/update cap differ
+from original paper-speed case. User approved0.01m/s to60mm/6s (100x paper).
+Initial001 failed an exact binary floating arithmetic assertion at7e-18; source
+and failure retained.002 arithmetic check1e-15 is unrelated to unchanged physics
+or material/regression tolerances. Native full trial result remains pending.
+
+Monitor005:12 controls PASS with tiny SBCL fixtures (no MPM), including actual
+manifest progress despite stale stdout, PID/creation/SessionId, exit7, timeout,
+tree stop, READY/event handoff and invalid budget rejection. Earlier001/002
+fixture failures retained. Detached launcher9 controls and budget3 controls PASS;
+worker survives caller exit, but shares SessionId11. No logoff/sleep immunity claim.
+Evidence: `docs/evidence/wang2017-reference-2026-10-24/windows-monitor-controls/`.
+
+Rate002 interrupted data audit/renderer exit2 (expected incomplete),33loadingVTKs,
+8.25s H264 video, full decode0.24 artifact hashes preserve raw data/source/status,
+reconciliation and7 exact-common-displacement comparisons. No native exitcode or
+loading determinant J saved; volume ratios and gravity F checks are distinct.
+No rate-convergence/quasistatic/scientific PASS. Unchanged Node/material suites
+were not repeated for monitor/case-only changes.
+
 ## Wang Soil2 coupled point prototype,2026-10-23
 
 `tests/materials/wang2017-projection.lisp`: **19 Windows native controls PASS**,
