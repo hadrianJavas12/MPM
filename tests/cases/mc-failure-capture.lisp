@@ -1,23 +1,19 @@
-;;;; NEGATIVE CLI fixture: intentionally inadmissible initial tensile strain.
-;;;; Tests error retention only. This is NOT a Wang slope or physical benchmark.
+;;;; NEGATIVE CLI fixture: a test-only scenario with an inadmissible pure return.
+;;;; Zero MPM steps. Tests propagation/JSON retention, NOT a Wang physical case.
 (in-package :cl-mpm/framework)
-(let ((parameters (make-hash-table :test 'equal)))
-  (setf (gethash "substeps" parameters) 1)
-  (setf *simulation*
-        (make-simulation
-         :scenario :cliff :parameters parameters
-         :material
-         (make-material
-          :native :particle-class 'cl-mpm/models/mc-evolution:particle-mc-evolution
-          :youngs-modulus 20d6 :poisson-ratio .25d0 :density 1800d0
-          :initargs
-          (list :strain (cl-mpm/utils:voigt-from-list '(.01d0 .01d0 .01d0 0d0 0d0 0d0))
-                :evolution-law
-                (cl-mpm/models/mc-evolution:make-evolution-law
-                 :variant :perfect :points '((0d0 35d0)) :cohesion 30d3 :psi 0d0
-                 :stress-measure :cauchy
-                 :strain-assumption "Synthetic CLI retention fixture, intentionally inadmissible tension")))
-         :geometry (make-geometry :cliff :height 10d0 :base-height 2d0)
-         :boundary (make-boundary :rollers) :loading (make-loading :gravity)
-         :solver (make-solver :explicit :mesh-size 2d0 :mps-per-cell 1
-                              :workers 1 :frames 1))))
+(defmethod compile-scenario ((scenario (eql :test-mc-failure-capture)) (case simulation))
+  (declare (ignore case)) (make-hash-table :test 'equal))
+(defmethod execute-scenario ((scenario (eql :test-mc-failure-capture))
+                            (case simulation) config directory)
+  (declare (ignore case config directory))
+  (cl-mpm/models/mc-evolution:project-principal
+   #(40d3 40d3 40d3) 20d6 .25d0 1.0123456789012345d0
+   (cl-mpm/models/mc-evolution:make-evolution-law
+    :variant :perfect :points '((0d0 35d0)) :cohesion 10d3 :psi 0d0
+    :stress-measure :cauchy :strain-assumption "Synthetic CLI failure; zero MPM steps")
+   0d0))
+(setf *simulation*
+      (make-simulation
+       :scenario :test-mc-failure-capture :material (make-material :elastic)
+       :geometry (make-geometry :cliff) :boundary (make-boundary :rollers)
+       :loading (make-loading :gravity) :solver (make-solver :explicit)))
