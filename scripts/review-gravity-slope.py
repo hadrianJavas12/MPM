@@ -500,7 +500,10 @@ def render_static(states: list[dict], config: dict, output: Path) -> Path:
         if times[-1] > times[0]:
             ax.set_xlim(float(times[0]), float(times[-1]))
         ax.grid(alpha=0.2)
-    fig.suptitle(f"Unnotched gravity/SSR adaptation · SRF={config['strengthReductionFactor']:g} · scale1 coordinates\n"
+    scope = ("INCOMPLETE saved native states" if len(states) < config["frames"] or not close(states[-1]["time"], config["duration"])
+             else "Complete saved native states")
+    fig.suptitle(f"{scope}: 0–{states[-1]['time']:.6g} s of requested {config['duration']:g} s\n"
+                 f"Unnotched gravity/SSR adaptation · SRF={config['strengthReductionFactor']:g} · scale1 coordinates\n"
                  "Fixed bottom; coarse explicit MPM; κ is plastic history, not damage; no scientific validation inferred")
     path = output / "gravity-slope-review.png"
     fig.savefig(path, dpi=150)
@@ -516,11 +519,14 @@ def render_video(states: list[dict], config: dict, output: Path) -> dict:
     directory.mkdir(exist_ok=False)
     initial = states[0]["positions"]
     maximum = max(float(np.linalg.norm(state["positions"] - initial, axis=1).max()) for state in states)
+    partial = len(states) < config["frames"] or not close(states[-1]["time"], config["duration"])
+    scope = "INCOMPLETE saved native states" if partial else "Complete saved native states"
     for index, state in enumerate(states):
         fig, ax = plt.subplots(figsize=(12, 4), constrained_layout=True)
         plot = draw_geometry(ax, states, config, index, "displacement", maximum)
         fig.colorbar(plot, ax=ax, shrink=0.6, label="actual displacement (m)")
-        fig.suptitle(f"SRF={config['strengthReductionFactor']:g}; actual saved frame {state['frame']}; scale1; no interpolated states")
+        fig.suptitle(f"{scope}: 0–{states[-1]['time']:.6g} s of requested {config['duration']:g} s\n"
+                     f"SRF={config['strengthReductionFactor']:g}; actual saved frame {state['frame']}; scale1; no interpolated states")
         fig.savefig(directory / f"actual-{index:04d}.png", dpi=120)
         plt.close(fig)
     path = output / "gravity-slope-actual.mp4"
@@ -530,7 +536,7 @@ def render_video(states: list[dict], config: dict, output: Path) -> dict:
     subprocess.run([executable, "-v", "error", "-i", str(path), "-f", "null", "-"], check=True, capture_output=True, text=True)
     return {**file_record(path), "actualSavedStates": len(states), "playbackFramesPerSecond": 4,
             "physicalLastTimeS": states[-1]["time"], "interpolation": False, "deformationMagnification": 1,
-            "fullDecodeExit": 0}
+            "scope": "INCOMPLETE" if partial else "complete", "fullDecodeExit": 0}
 
 
 def main() -> int:

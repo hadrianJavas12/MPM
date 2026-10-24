@@ -1,0 +1,221 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9",
+      "bytes": 21
+    },
+    {
+      "path": "archive-member-verification.json",
+      "sha256": "806d463d131ebd496291be8be7a19ff9dbd5b06400a9461c4a2d8957f9c6fcc2",
+      "bytes": 184068
+    },
+    {
+      "path": "complementarity-controls-001/executed-source-output-and-runtime.zip",
+      "sha256": "f7c6b91de10138a9d023ec70e623c6e570270067973f69df0b84e418a931a4dd",
+      "bytes": 1251180
+    },
+    {
+      "path": "complementarity-controls-001/native-exit.json",
+      "sha256": "beceecaa5fed5346f7e652e405f09b352ae2b110a2bd1201bd2fa1974f4b7565",
+      "bytes": 73
+    },
+    {
+      "path": "complementarity-controls-001/native.log",
+      "sha256": "8470e340958df2ab8ad40fbe1ea9b25530cb4ce5911403f616a93aea410c6ff1",
+      "bytes": 153
+    },
+    {
+      "path": "complementarity-controls-001/result.json",
+      "sha256": "41469bc858ce9c42ea6384b4c6a651102961877703f064788acc963e52c73de3",
+      "bytes": 1359
+    },
+    {
+      "path": "complementarity-controls-001/source/source-manifest.json",
+      "sha256": "deb0a7e256c8b09151db5b295ca18bc18f3b8c60e7e374499c5ee5993440cef6",
+      "bytes": 58990
+    },
+    {
+      "path": "complementarity-controls-001/source-proof-after.json",
+      "sha256": "ea3e06996656655399238bb3fabf60accc1d6628c957f06bf26f514bb00db168",
+      "bytes": 37522
+    },
+    {
+      "path": "complementarity-controls-001/source-proof-before.json",
+      "sha256": "ea3e06996656655399238bb3fabf60accc1d6628c957f06bf26f514bb00db168",
+      "bytes": 37522
+    },
+    {
+      "path": "complementarity-controls-001/source-provenance-before.json",
+      "sha256": "26184273425980b284d47a83693b25a92d040d24f09494743552dc4811259ee3",
+      "bytes": 371259
+    },
+    {
+      "path": "complementarity-controls-001/source-provenance.json",
+      "sha256": "26184273425980b284d47a83693b25a92d040d24f09494743552dc4811259ee3",
+      "bytes": 371259
+    },
+    {
+      "path": "executed-pack-script.py",
+      "sha256": "758c2fb3f2b17492b2f70632df188b8e55ddef186954ad1ebc455361623e77b5",
+      "bytes": 15121
+    },
+    {
+      "path": "mc-regression-001/executed-source-output-and-runtime.zip",
+      "sha256": "9bd29d271a78ee8391380858984d5f275320dadc392c7dd4116a0de17103fbe2",
+      "bytes": 1258824
+    },
+    {
+      "path": "mc-regression-001/native-exit.json",
+      "sha256": "b28a299eb8b260b28e2d4eba24e80fe8b30375f555d8db53689c87c537dda117",
+      "bytes": 73
+    },
+    {
+      "path": "mc-regression-001/native.log",
+      "sha256": "f1c69d21261f4a37d3a79e36ce19e94ea964f887c8b00e5ad21e42d2dac16b30",
+      "bytes": 3062
+    },
+    {
+      "path": "mc-regression-001/result.json",
+      "sha256": "5eb9da0242ce03da4f83126b330dbc9fbd529729dcb1d38791b58dcd9770375c",
+      "bytes": 447
+    },
+    {
+      "path": "mc-regression-001/source/case.lisp",
+      "sha256": "1b824b2f2dafb08ef0090ecdb500953b71dca0444ed65cbb9b790cac58385053",
+      "bytes": 35854
+    },
+    {
+      "path": "mc-regression-001/source/control-bootstrap.lisp",
+      "sha256": "700ca29e9109187d6fa8306e6f031a1f59df6a17ab96b40f50314b1e560b10fb",
+      "bytes": 4207
+    },
+    {
+      "path": "mc-regression-001/source/source-manifest.json",
+      "sha256": "310d4dc3b0cd1dab20f3028dae9ffb5a6eee452aaf177b7852e6a0ba91b3e302",
+      "bytes": 58641
+    },
+    {
+      "path": "mc-regression-001/source-provenance-before.json",
+      "sha256": "3bb00b63e870ce578fc8158a27afc60514f74312516127ee6a108b9cb77d046c",
+      "bytes": 667458
+    },
+    {
+      "path": "mc-regression-001/source-provenance.json",
+      "sha256": "3bb00b63e870ce578fc8158a27afc60514f74312516127ee6a108b9cb77d046c",
+      "bytes": 667458
+    },
+    {
+      "path": "native-output-fixed-001/comparison-executed.py",
+      "sha256": "27c4651d891f9934d1dd16e637b5c634281a837084a02ef50bf41182c34f9325",
+      "bytes": 1972
+    },
+    {
+      "path": "native-output-fixed-001/comparison-harness-initial-failure.json",
+      "sha256": "7c5cc4b948c0efdae03ac06b300176953c0c8d6b2426d01eb33d9d166aedd579",
+      "bytes": 226
+    },
+    {
+      "path": "native-output-fixed-001/comparison-harness-initial.py",
+      "sha256": "f3138e4f2d901127bd92f18cae60d14bfcc71daf5d84bca49f021e6c96a432df",
+      "bytes": 1962
+    },
+    {
+      "path": "native-output-fixed-001/comparison-to-pre-fix.json",
+      "sha256": "aefdab73b9cc627462ced540543865e7495c4c88340ca2533cd4f667d75e3641",
+      "bytes": 1394
+    },
+    {
+      "path": "native-output-fixed-001/executed-source-output-and-runtime.zip",
+      "sha256": "d7e4d9311616565f15a72db04df14178d3891caf42d1bfa9f8b388ae8679edbf",
+      "bytes": 1385135
+    },
+    {
+      "path": "native-output-fixed-001/native-exit.json",
+      "sha256": "7fe22525802e1a716db45719da5cbbde3244e083b36c4636328ef152f8693a4e",
+      "bytes": 73
+    },
+    {
+      "path": "native-output-fixed-001/native.log",
+      "sha256": "ae1e713969aa584227164c655d7d642535aab41f3e4dede24e7ff5f6fe654a36",
+      "bytes": 309
+    },
+    {
+      "path": "native-output-fixed-001/read-only-final.vtk",
+      "sha256": "f7b1f4a3ddb21e05905b7a495b7ad81d61baf079744c55eef70926f6fcc23327",
+      "bytes": 290664
+    },
+    {
+      "path": "native-output-fixed-001/result.json",
+      "sha256": "ee588ef97eb060f22e2a83ccf04a243cb5c334e6d994ce9fb80e7ac060b8cf49",
+      "bytes": 1168
+    },
+    {
+      "path": "native-output-fixed-001/source/source-manifest.json",
+      "sha256": "27bf914c48d98b05bb5c68de0381277592d27abe4fed30abe8a87de46ea9d7f7",
+      "bytes": 59124
+    },
+    {
+      "path": "native-output-fixed-001/source-proof-after.json",
+      "sha256": "94d6d4aed6c4f2682d6dc2288c2c0a3805da710600f5fa222e812cd34967688d",
+      "bytes": 37671
+    },
+    {
+      "path": "native-output-fixed-001/source-proof-before.json",
+      "sha256": "94d6d4aed6c4f2682d6dc2288c2c0a3805da710600f5fa222e812cd34967688d",
+      "bytes": 37671
+    },
+    {
+      "path": "native-output-fixed-001/source-provenance-before.json",
+      "sha256": "cc4cdff3592e21a8b3efd1bd9a91acc18468bb2256e0a40547ee0dfd6fda303d",
+      "bytes": 676821
+    },
+    {
+      "path": "native-output-fixed-001/source-provenance.json",
+      "sha256": "cc4cdff3592e21a8b3efd1bd9a91acc18468bb2256e0a40547ee0dfd6fda303d",
+      "bytes": 676821
+    },
+    {
+      "path": "README.md",
+      "sha256": "5c65d389a92669b1bd08f4a1a553744fe5b7817000777d5389be9636f745e8c1",
+      "bytes": 2320
+    },
+    {
+      "path": "reference-pre-fix-independent-review/analysis-support/plot_m5_cliff_comparison.py",
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "bytes": 23581
+    },
+    {
+      "path": "reference-pre-fix-independent-review/analysis-support/review-gravity-slope.py",
+      "sha256": "92f509a5bc56b588e5d883d8a59676224f1aa4bdd04df30d844a2dcdc3d7fc54",
+      "bytes": 37284
+    },
+    {
+      "path": "reference-pre-fix-independent-review/gravity-slope-review.png",
+      "sha256": "1c9446f2b0fffeaccd250ae00753cab35483ceb8f43a479a1a77d6267d509fe5",
+      "bytes": 170214
+    },
+    {
+      "path": "reference-pre-fix-independent-review/inherited-analysis-provenance-limits.json",
+      "sha256": "038d4554ad6d03a4716855123a34d2465ab17985059d11ac117c2a1b72a7ad56",
+      "bytes": 1250
+    },
+    {
+      "path": "reference-pre-fix-independent-review/review.json",
+      "sha256": "15841c4de2bc948d28b8e06ba44431ea47dedda35044e3450e75f666ad001fc0",
+      "bytes": 15694
+    },
+    {
+      "path": "reference-pre-fix-independent-review/review.log",
+      "sha256": "e5fe5e88e03aa0fa93e3655c83a5dbfbf6116b1e6dbdd8a3872cc3d31c9621ef",
+      "bytes": 202
+    },
+    {
+      "path": "summary.json",
+      "sha256": "a84584211d90c46d8e95efd4ac26be5dae45e59506891813cfe9a8d02826dd66",
+      "bytes": 6480
+    }
+  ],
+  "note": "Index excludes itself; * -text preserves raw bytes. Force-add intended ignored media/VTK and verify staged Git blobs before committing."
+}

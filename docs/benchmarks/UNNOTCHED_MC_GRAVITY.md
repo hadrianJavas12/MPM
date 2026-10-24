@@ -1,6 +1,11 @@
 # Native unnotched MC gravity study
 
-Implementation checkpoint, 24 October 2026. See the
+Updated 25 October 2026: the first full SRF1.40 attempt failed during the gravity
+ramp. Its retained data does not establish a landslide. One original-source
+replay identifies a negative-multiplier acceptance defect; a scoped numerical
+check is implemented; existing34 material tests, eight focused new groups and
+four bounded MPM/output groups pass. A fresh full continuation has not started
+at this checkpoint. See the
 [journal-method decision](UNNOTCHED_LANDSLIDE_METHOD_SELECTION.md) and
 [frozen study contract](../../research/references/unnotched-mc-ssr/contract.json).
 
@@ -28,7 +33,9 @@ constant-gravity energy sum is not a closed energy budget.
 
 ## Ownership and execution
 
-The existing material and solver are unchanged. Six short files under
+At the initial additive checkpoint the existing material and solver were
+unchanged; the later scoped numerical acceptance repair is documented below.
+Six short files under
 `scenarios/gravity-slope/` own configuration, geometry, measurements, advancement
 and compatibility. The cases contain component assignments. The scenario
 inherits only an existing read-only free-force residual diagnostic; it does
@@ -60,6 +67,8 @@ CIM launcher while preserving its old Wang default. A separate native monitor
 records actual exit, deadline and process identities; completion is labelled
 `NATIVE_COMPLETE_REVIEW_PENDING`. WMI remains in a user session; logoff/sleep/
 reboot survival is unproven. Snapshots are evidence, not full restart state.
+Historical output paths above already retain evidence; choose a new unused
+suffix for another run. The launcher rejects reuse rather than overwriting it.
 
 Native output: `manifest.json`, `history.csv`, `particles.csv` and actual
 `vtk/particles_####.vtk`. Per-ID CSV includes initial positions, F9/J, physical
@@ -113,3 +122,105 @@ detachment/paths/exit/proof controls pass9assertions plus2default-selection
 checks in002. Fixture001 expired its60s release timer before delayed verifier
 invocation (exit8); preserve it rather than claiming it passed or was a native
 failure. No logoff/sleep/reboot guarantee follows from these tests.
+
+### First full trial and original-source replay, 24–25 October 2026
+
+The first SRF1.40 attempt, `srf1p4-001` on source `a4de3e6`, exits native1 at
+22:42:34WIB on24October, during the gravity ramp. Ten actual saved states cover
+0–0.9s,880 fixed particle IDs and8800 material CSV rows. The manifest records
+1265 accepted updates including work after the last saved state, and attempted
+time0.980934788134821s. Saved0.9s is not the exact failed time. The6s duration,
+post2s hold and predeclared1s persistence windows were not reached.
+
+The saved-state review passes finite/mass/IDs/F/J/volume/material-law/yield and
+CSV–VTK consistency. Maximum saved displacement is3.29489mm, maximum speed
+0.00719495m/s and zero mass crosses the toe. These early small displacements
+do not prove coherent failure; unavailable persistence/hold windows are
+`NOT_EVALUATED`. The incomplete scale1 video contains10 actual states at4fps,
+without interpolation or amplified motion, and full decode exits0.
+
+[The retained failure packet](../evidence/unnotched-gravity-2026-10-24/srf1p4-001-failed/README.md)
+contains51 indexed artifacts and909 verified ZIP members, including original
+raw/source/runtime/media, exact analysis support, both replay attempts and the
+read-only analytical note. A late launch-proof capture is explicitly
+`INCOMPLETE_CAPTURE`; it did not reconstruct a live PID after native exit.
+
+Replay001 fails in a helper-name/package-lock fixture before any projection
+call. Its source and log remain retained. Replay002 performs **one** unchanged
+production principal return, zero MPM updates, and reproduces the original
+ambiguity. All283 frozen sources match before/after; six MC modules and the
+mapped DLL match the failed-run bytes. Observation wrappers restore every
+original return and are removed afterward. Whole-MPM/particle rollback is
+`NOT_EXECUTED` from this pure-input capsule.
+
+The ordinary face candidate has nonnegative multipliers and satisfies all six
+yield inequalities. A second accepted edge candidate has a negative multiplier
+`-7.313031007122379e-13`, admitted by the absolute1e-12 allowance. Its stress
+effect5.625408467e-5Pa is32.42 times the existing1.734967080e-6Pa stress
+tolerance; its plane-residual effect is larger still. Face/edge stress distance
+exceeds the existing deduplication radius, so the ambiguity guard rejects the
+step. Positive total work does not make that negative multiplier admissible.
+This is a numerical complementarity defect, not evidence that two physically
+valid perfect-MC returns exist. The analytical Schur-complement calculation
+and retained native candidate records establish the distinction for this state.
+
+### Scoped acceptance repair and current gates, 25 October 2026
+
+Only the base MC-evolution `project-principal` adds a conservative backward
+stress-error check after the original shared admissibility predicate:
+
+```text
+sum over lambda_j < 0:
+  abs(lambda_j) * max(norm_inf(D*g_j), max_i(abs(n_i dot D*g_j)))
+  <= existing stress tolerance
+```
+
+`D` uses the actual shear/bulk moduli, `g_j` the declared plastic-flow vectors
+and `n_i` all six MC yield normals. The sum prevents cancellation from hiding
+negative-flow effects. Nonnegative multipliers return zero without allocating
+new plane arrays. No multiplier, stress, strength, history or trajectory is
+clamped or altered. This extra condition only tightens allowed candidates;
+all existing absolute/stress/history/dedup constants, the shared three-argument
+predicate and all-roots ambiguity rejection remain unchanged. Wang point,
+native and composite-apex acceptance retain their separate behavior and are
+not claimed covered by this base-projector repair.
+
+The existing material-point suite completes native exit0 with34PASS and no
+failures at `output/unnotched-gravity-2026-10-25/mc-regression-001/`. Its exact
+test bytes are unchanged and all283 copied source hashes verify afterward.
+This is a material-point regression, not a full slope continuation.
+
+The new frozen `complementarity-controls-001` suite completes exit0 with eight
+groups: source contract, actual fixed-code case, permutations, transitions,
+backward error, scaling, genuine ambiguity rejection and native rollback. It
+executes61 explicit new fixed-code point calls (one actual identity, five
+permutations,54 transition/scaling calls and one genuine ambiguity fixture),
+one native constitutive call, zero MPM updates and zero old-baseline replays.
+All284 copied files match before/after and the mapped DLL is verified.
+
+For the captured input the new code returns the nonnegative face in original
+axis order `[-73488.98698107201,-32901.247161468484,-32901.247084164526]`Pa,
+kappa2.8214309790841185e-5. The false edge's conservative stress/plane error
+1.125081693403443e-4Pa exceeds the unchanged tolerance1.734967079821152e-6Pa;
+it is rejected. A separate genuine three-root positive-multiplier fixture still
+raises ambiguity. This fixed-code regression is distinct from the one retained
+original-source failure replay. The native rollback control does not establish
+whole-MPM rollback for the historical capsule.
+
+Narrow `native-output-fixed-001` completes four missing output groups, exit0:
+1760 attempted=accepted native material calls, two real USF updates,880MPs,
+three actual VTK states and2640 material CSV rows. All285 copied source hashes
+match before/after and the mapped DLL is verified. Three particle VTKs and both
+CSV files are byte-identical to the pre-fix002 elastic control. The first
+comparison harness accidentally included mesh.vtk in its particle-file glob
+and asserted before producing a result; that failure is retained. Only file
+selection was corrected, using the saved output without another solver run.
+This confirms bounded output compatibility; it does not test slope failure.
+
+The [numerical fix/control evidence packet](../evidence/unnotched-gravity-2026-10-25/complementarity-fix-controls/README.md)
+retains43 indexed artifacts/886 archive members/852 executed source entries;
+root verified all hashes and44 staged Git blobs. A fresh full continuation has
+not started at this checkpoint. No landslide or calibrated runout follows from
+these gates. Keep the original failed run and replay as negative evidence;
+any fresh full run starts from the declared initial state with unchanged study
+inputs, preserving all previous attempts.

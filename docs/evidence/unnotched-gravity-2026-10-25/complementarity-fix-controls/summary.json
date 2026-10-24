@@ -1,0 +1,161 @@
+{
+  "schema": "cl-mpm.mc-complementarity-fix-controls.evidence.v1",
+  "createdUtc": "2026-10-24T20:56:32.095042+00:00",
+  "status": "FOCUSED_FIX_GATES_PASS",
+  "existingMcPointSuite": {
+    "passed": 34,
+    "originalNumericalTestBytesUnchanged": true,
+    "actualExecutedTest": {
+      "path": "source/case.lisp",
+      "originalPath": "D:/MPM/tests/materials/mc-evolution-points.lisp",
+      "bytes": 35854,
+      "sha256": "1b824b2f2dafb08ef0090ecdb500953b71dca0444ed65cbb9b790cac58385053"
+    },
+    "bootstrapRetained": "mc-regression-001/source/control-bootstrap.lisp"
+  },
+  "newFixedCodeControls": {
+    "passed": true,
+    "passedGroups": [
+      "source-contract",
+      "actual",
+      "permutations",
+      "transitions",
+      "backward-error",
+      "scaling",
+      "ambiguity",
+      "native-rollback"
+    ],
+    "failedGroups": [],
+    "skippedGroups": [],
+    "explicitNewFixedPointCalls": 61,
+    "newFixedActualIdentityCalls": 1,
+    "newFixedActualPermutationCalls": 5,
+    "nativeConstitutiveCalls": 1,
+    "oldBaselineReplayCalls": 0,
+    "physicalUpdatesExecuted": 0,
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/unnotched-gravity-2026-10-25/complementarity-controls-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "observations": {
+      "actualFixedTauPa": [
+        -73488.98698107201,
+        -32901.247161468484,
+        -32901.247084164526
+      ],
+      "actualFixedKappa": 2.8214309790841185e-05,
+      "actualCapsuleStatus": "NEW_FIXED_CODE_REGRESSION_NOT_OLD_BASELINE_REPLAY",
+      "transitionPointCalls": 54,
+      "falseEdgeNegativeMultiplier": -7.313031007122379e-13,
+      "falseEdgeBackwardErrorPa": 0.0001125081693403443,
+      "actualStressTolerancePa": 1.734967079821152e-06,
+      "genuinePositiveMultiplierRoots": [
+        0.0002143083672529566,
+        0.0019562700033429912,
+        0.0022516660498395407
+      ]
+    },
+    "scope": "New fixed-code regression and focused complementarity/scale/positive-root ambiguity controls; shared Wang/apex admissibility form unchanged; no old baseline replay, full MPM or landslide validation"
+  },
+  "narrowNativeOutput": {
+    "passed": true,
+    "mode": "output",
+    "passedCount": 4,
+    "passedControls": [
+      "runner",
+      "csv",
+      "vtk",
+      "read-only"
+    ],
+    "skippedControls": [
+      "inputs",
+      "invalid-inputs",
+      "geometry",
+      "boundary",
+      "ramp"
+    ],
+    "failure": null,
+    "physicalUpdatesExecuted": 2,
+    "materialCallsAttempted": 1760,
+    "materialCallsAccepted": 1760,
+    "pointCalls": 0,
+    "sourceProofBefore": "source-proof-before.json",
+    "sourceProofAfter": "source-proof-after.json",
+    "sourceManifest": "source/source-manifest.json",
+    "sourceProvenance": "source-provenance.json",
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/unnotched-gravity-2026-10-25/native-output-fixed-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "observations": {
+      "observationsDirectory": "D:/MPM/output/unnotched-gravity-2026-10-25/native-output-fixed-001/observations/",
+      "runnerWallSeconds": 0.626936,
+      "materialCsvRows": 2640,
+      "maxJReadbackResidual": 0.0,
+      "savedVtkStates": 3
+    },
+    "scope": "Exact frozen SRF1/SRF1.40 input construction plus bounded two-update native integration; no full gravity equilibration, instability, landslide, runout or scientific validation claim"
+  },
+  "originalPreFixOutputComparison": {
+    "status": "PASS",
+    "comparedFiles": [
+      {
+        "path": "observations/vtk/particles_0000.vtk",
+        "bytes": 290664,
+        "sha256": "688bebade2b53e75d67c1af2f21bd6b50485c3bcbe3e0c3815e21c85bb0ca3e8",
+        "byteIdentical": true
+      },
+      {
+        "path": "observations/vtk/particles_0001.vtk",
+        "bytes": 290664,
+        "sha256": "c43f8516f50d3c128389c687e4188be9975d556b69361a7c680c6fb0af198af9",
+        "byteIdentical": true
+      },
+      {
+        "path": "observations/vtk/particles_0002.vtk",
+        "bytes": 290664,
+        "sha256": "f7b1f4a3ddb21e05905b7a495b7ad81d61baf079744c55eef70926f6fcc23327",
+        "byteIdentical": true
+      },
+      {
+        "path": "observations/particles.csv",
+        "bytes": 1943893,
+        "sha256": "3f5f031cba1a9d1cd93aab21d52f9e5c18b374f0c9e855748e93758f73fb8622",
+        "byteIdentical": true
+      },
+      {
+        "path": "observations/history.csv",
+        "bytes": 2701,
+        "sha256": "6cdf8c858edcade2c9b600621db61d052232495e8a5ef4c8583581504eb407fc",
+        "byteIdentical": true
+      }
+    ],
+    "sourceCountVerified": 285,
+    "sourceBeforeAfterVerified": true,
+    "physicalUpdates": 2,
+    "acceptedMaterialCalls": 1760,
+    "savedStates": 3,
+    "scope": "Actual post-fix native output is byte-identical to the independently audited pre-fix two-update gate. No new solver, render, full slope or instability validation."
+  },
+  "projection": {
+    "currentWorkingFile": {
+      "path": "D:\\MPM\\materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+      "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1",
+      "bytes": 23352
+    },
+    "allThreeExecutedHashesIdentical": true,
+    "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1"
+  },
+  "oldBaselineActualCapsuleReplayCallsInThisPacket": 0,
+  "fullPostFixSlopeRunsInThisPacket": 0,
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "scope": "Tightened stress-dimensional negative-multiplier acceptance. Existing shared admissibility and Wang behavior unchanged. No relaxation of stress/history/dedup tolerances or strength/psi/rate changes.",
+  "analysisFailureRetained": "Initial comparison wildcard included mesh.vtk and stopped at assertion before producing a result; corrected particle-only comparison reran saved-byte comparison only, zero native repeats.",
+  "referenceReviewScope": "Retained pre-fix independent review only. New two-update files are byte-identical; no new independent reader run is claimed.",
+  "packagingOperations": "Read/copy/hash/ZIP/CRC/decode verification only; no native tests, replay, renderer, solver or saved-data analysis executed"
+}

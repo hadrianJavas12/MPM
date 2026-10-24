@@ -204,6 +204,33 @@
   "Lightweight residual/multiplier check used for bracket scanning and bisection."
   (eval-frame-active (build-kappa-frame trial shear bulk j law kappa) old-kappa active))
 
+(defun negative-multiplier-backward-error (candidate shear bulk)
+  "Conservative backward stress error (Pa) from negative flow multipliers.
+An absolute strain-like multiplier allowance alone can admit a resolvably
+negative KKT multiplier at high stiffness. Sum absolute negative contributions
+to both principal stress and every yield plane, without cancellation, clamping
+or changing the candidate. This additional check belongs only to the generic
+MC-evolution PROJECT-PRINCIPAL return, whose complete flow is D*g. Wang point
+and composite-apex models retain their separately gated acceptance behavior.
+Call only after the shared candidate finite-value validation."
+  (when (every (lambda (multiplier) (>= multiplier 0d0))
+               (projection-multipliers candidate))
+    (return-from negative-multiplier-backward-error 0d0))
+  (unless (and (finite-real-p shear) (> shear 0d0)
+               (finite-real-p bulk) (> bulk 0d0))
+    (integration-fail "Finite positive elastic moduli required for multiplier stress error"))
+  (let ((normals (plane-vectors (projection-phi candidate)))
+        (flows (plane-vectors (projection-psi candidate))))
+    (loop for multiplier across (projection-multipliers candidate)
+          for flow across flows
+          when (< multiplier 0d0)
+            sum (let* ((dflow (d-times flow shear bulk))
+                       (scale (max (max-abs3 dflow)
+                                   (loop for normal across normals
+                                         maximize (abs (dot3 normal dflow))))))
+                  (* (- multiplier) scale)) into error-pa
+          finally (return (float error-pa 1d0)))))
+
 (defun admissible-candidate-p (candidate residual stress-tolerance)
   (and candidate (finite-real-p residual)
        (every #'finite-real-p
@@ -325,7 +352,9 @@ Final residual/complementarity are strict; global nonlinear uniqueness is not pr
           (labels ((consider (candidate)
                      (when candidate
                        (multiple-value-bind (checked residual) (evaluate-full (projection-kappa candidate))
-                         (when (admissible-candidate-p checked residual stress-tolerance)
+                         (when (and (admissible-candidate-p checked residual stress-tolerance)
+                                    (<= (negative-multiplier-backward-error checked shear bulk)
+                                        stress-tolerance))
                            (unless (some (lambda (old) (same-projection-p old checked stress-tolerance)) roots)
                              (push checked roots)))))))
             ;; Constant-tail root is explicit; there is no arbitrary kappa search cap.

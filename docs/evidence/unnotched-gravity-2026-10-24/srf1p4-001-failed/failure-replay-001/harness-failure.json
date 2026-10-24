@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_HARNESS_BEFORE_REPLAY",
+  "actualPrincipalReplayCalls": 0,
+  "physicalUpdates": 0,
+  "reason": "Helper function BOOLEAN package-lock collision at top-level definition before capsule parsing/wrappers/project call",
+  "repair": "Rename helper to json-boolean; no production/numerical change",
+  "log": "../failure-replay-001.log"
+}

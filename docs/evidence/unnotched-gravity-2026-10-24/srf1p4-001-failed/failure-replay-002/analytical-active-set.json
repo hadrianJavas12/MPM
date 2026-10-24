@@ -1,0 +1,217 @@
+{
+  "scope": "Independent direct linear active-set arithmetic on saved capsule; no production replay, constitutive method or MPM updates",
+  "actualReplayCallsElsewhere": 1,
+  "shearPa": 38461538.461538464,
+  "bulkPa": 83333333.33333333,
+  "sortedTrialKirchhoffPa": [
+    -32893.52608312133,
+    -32901.247161468484,
+    -73496.70798211521
+  ],
+  "strengthOffsetKirchhoffPa": 13818.406108398893,
+  "oldKappa": 2.8098409018042926e-05,
+  "rows": [
+    {
+      "active": [
+        1
+      ],
+      "activeMatrixPa": [
+        [
+          153846153.84615386
+        ]
+      ],
+      "matrixRank": 1,
+      "matrixSize": 1,
+      "status": "LINEAR_SOLVE",
+      "multipliers": [
+        1.0037301356154057e-07
+      ],
+      "tauSortedPa": [
+        -32901.247084164526,
+        -32901.247161468484,
+        -73488.98698107203
+      ],
+      "allPlaneResidualsPa": [
+        -30375.27281548093,
+        1.4551915228366852e-11,
+        -30375.27297008884,
+        -9.675474575487897e-05,
+        -81175.47979381499,
+        -81175.47973596184
+      ],
+      "ordered": true,
+      "allMultipliersNonnegative": true,
+      "activeMatrixEigenvaluesPa": [
+        153846153.84615386
+      ]
+    },
+    {
+      "active": [
+        0,
+        1
+      ],
+      "activeMatrixPa": [
+        [
+          153846153.84615386,
+          96278044.4187807
+        ],
+        [
+          96278044.4187807,
+          153846153.84615386
+        ]
+      ],
+      "matrixRank": 2,
+      "matrixSize": 2,
+      "status": "LINEAR_SOLVE",
+      "multipliers": [
+        -0.0003245406889949329,
+        0.0002032003016734745
+      ],
+      "tauSortedPa": [
+        -23559.650135316842,
+        -57865.91554569409,
+        -57865.9155456941
+      ],
+      "allPlaneResidualsPa": [
+        -5.4569682106375694e-12,
+        3.637978807091713e-12,
+        -68612.5308207545,
+        -42938.22188529614,
+        -68612.53082075452,
+        -42938.22188529616
+      ],
+      "ordered": true,
+      "allMultipliersNonnegative": false,
+      "activeMatrixEigenvaluesPa": [
+        57568109.42737317,
+        250124198.26493454
+      ]
+    },
+    {
+      "active": [
+        1,
+        3
+      ],
+      "activeMatrixPa": [
+        [
+          153846153.84615386,
+          57568109.42737316
+        ],
+        [
+          57568109.42737316,
+          153846153.84615386
+        ]
+      ],
+      "matrixRank": 2,
+      "matrixSize": 2,
+      "status": "LINEAR_SOLVE",
+      "multipliers": [
+        1.0037328720983059e-07,
+        -7.313031007122379e-13
+      ],
+      "tauSortedPa": [
+        -32901.247105214396,
+        -32901.247105214396,
+        -73488.98701627624
+      ],
+      "allPlaneResidualsPa": [
+        -30375.27288392699,
+        1.0913936421275139e-11,
+        -30375.272883926988,
+        1.0913936421275139e-11,
+        -81175.47982212369,
+        -81175.47982212369
+      ],
+      "ordered": true,
+      "allMultipliersNonnegative": false,
+      "activeMatrixEigenvaluesPa": [
+        96278044.4187807,
+        211414263.27352703
+      ]
+    },
+    {
+      "active": [
+        0,
+        1,
+        4
+      ],
+      "activeMatrixPa": [
+        [
+          153846153.84615386,
+          96278044.4187807,
+          -96278044.4187807
+        ],
+        [
+          96278044.4187807,
+          153846153.84615386,
+          -153846153.84615386
+        ],
+        [
+          -57568109.427373156,
+          -153846153.84615386,
+          153846153.84615386
+        ]
+      ],
+      "matrixRank": 2,
+      "matrixSize": 3,
+      "status": "SINGULAR_PSI_ZERO_FLOW_RANK_AT_MOST_2"
+    },
+    {
+      "active": [
+        1,
+        3,
+        4
+      ],
+      "activeMatrixPa": [
+        [
+          153846153.84615386,
+          57568109.42737316,
+          -153846153.84615386
+        ],
+        [
+          57568109.42737316,
+          153846153.84615386,
+          -57568109.42737316
+        ],
+        [
+          -153846153.84615386,
+          -96278044.4187807,
+          153846153.84615386
+        ]
+      ],
+      "matrixRank": 2,
+      "matrixSize": 3,
+      "status": "SINGULAR_PSI_ZERO_FLOW_RANK_AT_MOST_2"
+    },
+    {
+      "active": [
+        0,
+        3,
+        4
+      ],
+      "activeMatrixPa": [
+        [
+          153846153.84615386,
+          -57568109.42737316,
+          -96278044.4187807
+        ],
+        [
+          -96278044.4187807,
+          153846153.84615386,
+          -57568109.42737316
+        ],
+        [
+          -57568109.427373156,
+          -96278044.4187807,
+          153846153.84615386
+        ]
+      ],
+      "matrixRank": 2,
+      "matrixSize": 3,
+      "status": "SINGULAR_PSI_ZERO_FLOW_RANK_AT_MOST_2"
+    }
+  ],
+  "stressTolerancePa": 1.734967079821152e-06,
+  "stressConsistentNegativeMultiplierToleranceForPsiZero": 2.2554572037674977e-14,
+  "interpretation": "For this actual perfect law in canonical Weyl chamber only face[1] has nonnegative multipliers. Edge[1,3] requires negative multiplier; other edge has large negative multiplier, all three-plane psi0 bases singular. This is a state-specific analytical uniqueness result, not a theorem for arbitrary nonassociated softening laws."
+}

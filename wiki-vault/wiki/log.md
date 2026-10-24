@@ -782,3 +782,22 @@ Completed four primary method families plus classical SSR/MPM bridge and actual 
 ## [2026-10-24] ingest | Reusable unnotched MC gravity native gates close
 
 [[unnotched-mc-gravity]] records additive six-file scenario on new branch codex/unnotched-gravity-benchmark, source2308a1e.001fiveinput groups PASS then worker-counter fixtureFAIL;002shared synchronized counters close four missing output groups with1760material calls/two realUSFupdates/880MPs/three VTKs/2640CSV rows. Both285source snapshots before/after match/DLLverified;3VTK+2CSV byte-identical between attempts. Independent002 actual-output/source-constant auditPASS and rootPNGinspection, firstreview fallback/source-version gap retained. Thirteen synthetic monitor plus9+2alias tests PASS; delayed001fixture expiry/exit8 preserved. No old tests/solver repeated. Contract fixes inputs/detection before results; runtime rationale for first bounded6s SRF1.40 trial recorded, baseline afterward, no achieved-landslide claim. Guide/testing/handover/index updated; raw/settings untouched.
+
+## [2026-10-25] ingest | First unnotched full-run failure and scoped MC complementarity repair
+
+[[unnotched-mc-gravity]] records source a4de3e6 SRF1.40 native failure at24October22:42:34WIB: ten saved states0–0.9s/880IDs/8800rows, later attempted time0.980934788s/1265updates, no verified landslide or toe crossing. Saved integrity and actual incomplete scale1 media retained with51indexed artifacts/909ZIP members; late launch proof remains INCOMPLETE_CAPTURE. Original replay002 performs ONE principal call/zeroMPM, reproduces ambiguity and verifies283frozen sources/mappedDLL; retained001 helper failure has zero calls. Negative edge multiplier admitted by absolute1e-12 produces32.42 existing stress tolerances of error; valid face has nonnegative multipliers. Added backward stress/plane error check only in baseproject-principal, preserving shared predicate/constants/rootdedup/inputs and separate Wang/apex behavior. Existing native34 material controls PASS/283hashes verified; new focusedcomplementarity suite PENDING while active. Updated guide/testing/page/index; no solver, tests, raw or personalsettings changed by documentation.
+
+## [2026-10-25] ingest | Focused MC backward-error verification closes
+
+Follow-up to the pending checkpoint above: [[unnotched-mc-gravity]] records complementarity-controls-001 eight groups PASS/exit0,61 NEWfixed-code point calls (actual identity1/permutations5/transition-scaling54/genuine ambiguity1), one native constitutive rollback call, zeroMPM/oldbaseline replays. All284 copied sources match before/after and mapped DLL is verified. Actual input returns nonnegative face; false-edge backward stress/plane error1.12508e-4Pa exceeds unchanged1.73497e-6Pa tolerance. Genuine three-positive-root ambiguity remains rejected, shared Wang/apex behavior unchanged. Narrow two-update native-output-fixed-001 PENDING while active; no full continuation or landslide claim. Updated guide/testing/page/index only, raw/settings untouched.
+
+## [2026-10-25] ingest | Repaired base MC bounded output compatibility closes
+
+Follow-up to the pending output checkpoint: [[unnotched-mc-gravity]] records native-output-fixed-001 four groups PASS/exit0,1760 attempted=accepted material calls/two genuine USF updates/880MPs/three VTKs/2640CSV rows; all285 sources match before/after and mapped DLL verified. Three particle VTKs and two CSVs are byte-identical to pre-fix002 elastic control. Initial comparison glob included mesh.vtk and asserted before producing a result; retained failure, selection-only correction from saved data, no repeated solver. Existing34/eight focused/four bounded gates now close, while fix evidence packaging is pending and fresh full solver NOT_STARTED. Updated guide/testing/page/index, preserving chronological pending entries; no landslide/calibrated runout claim or raw/settings changes.
+
+## [2026-10-25] ingest | MC repair evidence independently verified
+
+[[unnotched-mc-gravity]] now links completed negative and fix-gate evidence.
+Root independently verifies51+43 indexed artifacts,848+852 archived source
+entries and52+44 staged Git blobs. Native gates establish scoped numerical
+repair/compatibility, not a completed full slope or verified landslide.

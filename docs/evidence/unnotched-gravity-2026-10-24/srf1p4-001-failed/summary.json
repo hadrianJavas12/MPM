@@ -1,0 +1,57 @@
+{
+  "schema": "cl-mpm.unnotched-gravity.first-failure.evidence.v1",
+  "createdUtc": "2026-10-24T20:51:09.774398+00:00",
+  "packagingHead": "a4de3e6a4d702dee53546a521c09e3b97cf9b4e3",
+  "status": "FAILED_NATIVE_WITH_SAVED_INTEGRITY_PASS_AND_EXPECTED_REPLAY_REJECTION",
+  "nativeExit": 1,
+  "savedStates": 10,
+  "particleCount": 880,
+  "savedParticleRows": 8800,
+  "lastSavedTimeS": 0.8999999999999999,
+  "attemptedFailureTimeS": 0.980934788134821,
+  "acceptedOrAttemptedUpdateCounterAtFailure": 1265,
+  "savedIntegrity": "PASS",
+  "coherentMotionDetected": false,
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "motionWindowScope": {
+    "entire": "NOT_EVALUATED",
+    "post2s": "NOT_EVALUATED"
+  },
+  "media": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\review-001\\gravity-slope-review.png",
+      "sha256": "71e64782a8bd0fb8e14dc24d272cf22c21843ae335264061c2aff47b0056eb97",
+      "bytes": 196948
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\review-001\\gravity-slope-actual.mp4",
+      "sha256": "04c5e44c97ad4ef487307ecabc5a4adc48ce47fdbe17cf28f9745770fa061bee",
+      "bytes": 96666,
+      "actualSavedStates": 10,
+      "playbackFramesPerSecond": 4,
+      "physicalLastTimeS": 0.8999999999999999,
+      "interpolation": false,
+      "deformationMagnification": 1,
+      "scope": "INCOMPLETE",
+      "fullDecodeExit": 0
+    }
+  ],
+  "replay001": {
+    "status": "FAILED_HARNESS_BEFORE_REPLAY",
+    "actualPrincipalReplayCalls": 0,
+    "physicalUpdates": 0,
+    "reason": "Helper function BOOLEAN package-lock collision at top-level definition before capsule parsing/wrappers/project call",
+    "repair": "Rename helper to json-boolean; no production/numerical change",
+    "log": "../failure-replay-001.log"
+  },
+  "replay002": {
+    "expectedRejection": true,
+    "actualPrincipalReplayCalls": 1,
+    "physicalUpdates": 0,
+    "productionFunctionsRestored": true
+  },
+  "capsuleSha256": "d0fa089970adf81178ca486f00423d53e0dffa98ba963823e822037e6e5f15bb",
+  "interpretation": "Native ambiguity arises from accepted face and near-edge candidate; negative edge multiplier has stress effect above unchanged stress tolerance. Pure diagnostic/closed-form analysis is separate from pending repair, not evidence of successful full run.",
+  "packagingOperations": "Copy/hash/ZIP/CRC/read verification only; no solver/replay/material/render/saved-data review repetitions"
+}

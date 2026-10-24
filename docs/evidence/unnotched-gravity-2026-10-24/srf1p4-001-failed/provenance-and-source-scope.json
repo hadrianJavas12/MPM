@@ -1,0 +1,95 @@
+{
+  "executedBaselineMcModules": [
+    {
+      "path": "source/materials/models/plastic/mohr-coulomb-evolution/law.lisp",
+      "sha256ByExecutedAttempt": {
+        "srf1p4-001": "505207b3bcbbd0c87625d16c96cb436436f71562ded9349aa2126ed7dac6796a",
+        "failure-replay-001": "505207b3bcbbd0c87625d16c96cb436436f71562ded9349aa2126ed7dac6796a",
+        "failure-replay-002": "505207b3bcbbd0c87625d16c96cb436436f71562ded9349aa2126ed7dac6796a"
+      },
+      "allIdentical": true
+    },
+    {
+      "path": "source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp",
+      "sha256ByExecutedAttempt": {
+        "srf1p4-001": "01c73c007726118fa40908cb7de929b8d17900c94b1f2fe3596d7afe81b2ce79",
+        "failure-replay-001": "01c73c007726118fa40908cb7de929b8d17900c94b1f2fe3596d7afe81b2ce79",
+        "failure-replay-002": "01c73c007726118fa40908cb7de929b8d17900c94b1f2fe3596d7afe81b2ce79"
+      },
+      "allIdentical": true
+    },
+    {
+      "path": "source/materials/models/plastic/mohr-coulomb-evolution/state.lisp",
+      "sha256ByExecutedAttempt": {
+        "srf1p4-001": "d9311639dae10064985d5ff2fabfef189ff7bf07cb85699c1fd54355d6f83fd4",
+        "failure-replay-001": "d9311639dae10064985d5ff2fabfef189ff7bf07cb85699c1fd54355d6f83fd4",
+        "failure-replay-002": "d9311639dae10064985d5ff2fabfef189ff7bf07cb85699c1fd54355d6f83fd4"
+      },
+      "allIdentical": true
+    },
+    {
+      "path": "source/materials/models/plastic/mohr-coulomb-evolution/material.lisp",
+      "sha256ByExecutedAttempt": {
+        "srf1p4-001": "7499bc382d7f2bd71b4ce3c5ff530c92f9c3e9e6eb407f92c4c14f8e84ca2a77",
+        "failure-replay-001": "7499bc382d7f2bd71b4ce3c5ff530c92f9c3e9e6eb407f92c4c14f8e84ca2a77",
+        "failure-replay-002": "7499bc382d7f2bd71b4ce3c5ff530c92f9c3e9e6eb407f92c4c14f8e84ca2a77"
+      },
+      "allIdentical": true
+    },
+    {
+      "path": "source/materials/models/plastic/mohr-coulomb-evolution/diagnostics.lisp",
+      "sha256ByExecutedAttempt": {
+        "srf1p4-001": "10fc3d6170b04adbb153fe2afd562d51daefc9d1976a3059ba046c1b8223d0eb",
+        "failure-replay-001": "10fc3d6170b04adbb153fe2afd562d51daefc9d1976a3059ba046c1b8223d0eb",
+        "failure-replay-002": "10fc3d6170b04adbb153fe2afd562d51daefc9d1976a3059ba046c1b8223d0eb"
+      },
+      "allIdentical": true
+    },
+    {
+      "path": "source/materials/models/plastic/mohr-coulomb-evolution/package.lisp",
+      "sha256ByExecutedAttempt": {
+        "srf1p4-001": "6a59626dd953bc91b99b100cf74abf9c5249cf963206443e7735133afaf79bbc",
+        "failure-replay-001": "6a59626dd953bc91b99b100cf74abf9c5249cf963206443e7735133afaf79bbc",
+        "failure-replay-002": "6a59626dd953bc91b99b100cf74abf9c5249cf963206443e7735133afaf79bbc"
+      },
+      "allIdentical": true
+    }
+  ],
+  "currentWorkingTreeCompared": false,
+  "reason": "Current projection is being repaired independently after baseline replay. Archives use immutable executed snapshots only; no current-source equality is claimed.",
+  "analysisSupport": {
+    "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\review-001\\analysis-support\\review-gravity-slope.py",
+    "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+    "bytes": 38121
+  },
+  "importedReader": {
+    "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+    "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+    "bytes": 23581
+  },
+  "fullFailedRunReviewExecutedExactlyOnce": true,
+  "incompleteLaunchCapture": {
+    "status": "INCOMPLETE_CAPTURE",
+    "files": [
+      {
+        "path": "incomplete-launch-capture/README.md",
+        "sha256": "c7f5da42e72dd21ac0d62ad15b0b7f3c01220e9a7faad3441510b6d1c2db6dc7",
+        "bytes": 860
+      },
+      {
+        "path": "incomplete-launch-capture/runtime/srf1p4-001-launch.json",
+        "sha256": "1f1ae7be3062b4d19306f8c0a7580a94546047d954b97dcf97f0bd0c23166a5f",
+        "bytes": 932
+      },
+      {
+        "path": "incomplete-launch-capture/runtime/srf1p4-001-status.json",
+        "sha256": "788d73745786df4d7904c405866a8889cebc1d6a435b82f5ff6ac70142945f0c",
+        "bytes": 1468
+      }
+    ],
+    "missingLiveProof": "Capture started after native exit1 and correctly rejected missing live PID. Original partial status/launch copies and README are retained; not fabricated as live verification."
+  },
+  "replay001AfterProof": "NOT_RETAINED: top-level package-lock failure occurred before actual replay; only original before proofs exist.",
+  "runtimeScope": "Native source-provenance records actual loaded frozen bytes and mapped DLL. WMI worker remains in user session; sleep/logoff/reboot immunity is not proved.",
+  "wholeMpmRollbackFromCapsule": "NOT_EXECUTED: pure capsule lacks full particle/simulation checkpoint"
+}

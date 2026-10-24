@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "comparedFiles": [
+    {
+      "path": "observations/vtk/particles_0000.vtk",
+      "bytes": 290664,
+      "sha256": "688bebade2b53e75d67c1af2f21bd6b50485c3bcbe3e0c3815e21c85bb0ca3e8",
+      "byteIdentical": true
+    },
+    {
+      "path": "observations/vtk/particles_0001.vtk",
+      "bytes": 290664,
+      "sha256": "c43f8516f50d3c128389c687e4188be9975d556b69361a7c680c6fb0af198af9",
+      "byteIdentical": true
+    },
+    {
+      "path": "observations/vtk/particles_0002.vtk",
+      "bytes": 290664,
+      "sha256": "f7b1f4a3ddb21e05905b7a495b7ad81d61baf079744c55eef70926f6fcc23327",
+      "byteIdentical": true
+    },
+    {
+      "path": "observations/particles.csv",
+      "bytes": 1943893,
+      "sha256": "3f5f031cba1a9d1cd93aab21d52f9e5c18b374f0c9e855748e93758f73fb8622",
+      "byteIdentical": true
+    },
+    {
+      "path": "observations/history.csv",
+      "bytes": 2701,
+      "sha256": "6cdf8c858edcade2c9b600621db61d052232495e8a5ef4c8583581504eb407fc",
+      "byteIdentical": true
+    }
+  ],
+  "sourceCountVerified": 285,
+  "sourceBeforeAfterVerified": true,
+  "physicalUpdates": 2,
+  "acceptedMaterialCalls": 1760,
+  "savedStates": 3,
+  "scope": "Actual post-fix native output is byte-identical to the independently audited pre-fix two-update gate. No new solver, render, full slope or instability validation."
+}

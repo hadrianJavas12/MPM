@@ -1,0 +1,59 @@
+{
+  "scope": "Read-only visual and saved-state review; first failed SSR1.4 attempt; no new solver/replay/material calls",
+  "nativeComplete": false,
+  "lastSavedTimeS": 0.8999999999999999,
+  "actualSavedVTKs": 10,
+  "particleCountPerFrame": 880,
+  "materialCsvRows": 8800,
+  "initialMassKgPerM": 448675.13371028285,
+  "minimumSavedJ": 0.999377114343898,
+  "maximumIndependentSixPlaneResidualPa": 3.2741809263825417e-11,
+  "maximumSavedDisplacementM": 0.0032948866827399574,
+  "maximumSavedKappa": 5.581094570321355e-05,
+  "lastGravityFactor": 0.4252499999999999,
+  "lastKineticEnergyJPerM": 4.137572303929241,
+  "centroidDisplacementM": [
+    0.00022682592451217116,
+    -0.002094807110499824
+  ],
+  "movingMassFraction": 0.0,
+  "toeRunoutMassFraction": 0.0,
+  "motionGate": "NOT_EVALUATED: saved span0.9s is shorter than1s; no2s state/hold reached",
+  "visualInspection": {
+    "image": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\review-001\\gravity-slope-review.png",
+    "actualGeometryScale": 1,
+    "notchVisible": false,
+    "finding": "Initial/final unnotched slope outlines overlap at scale1. Displacements remain millimetric; plastic-history concentration does not demonstrate a throughgoing slide mechanism. Empty runout domain remains empty.",
+    "landslideVerified": false
+  },
+  "boundaryLimitation": {
+    "floorPenetratingCenterSamples": 0,
+    "domainExitCenterSamples": 0,
+    "minimumParticleDomainMarginM": -2.788387439556228e-07,
+    "runoutContactValidated": false
+  },
+  "provenance": {
+    "sourceSnapshotExactLoadedBytes": true,
+    "copiedByteEqualityBeforeLoad": true,
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/unnotched-gravity-2026-10-24/srf1p4-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    }
+  },
+  "analysisSupport": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\review-001\\analysis-support\\review-gravity-slope.py",
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+      "bytes": 38121,
+      "workspaceAfterCallMatchesCopy": true
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "bytes": 23581,
+      "workspaceAfterCallMatchesCopy": true
+    }
+  ]
+}

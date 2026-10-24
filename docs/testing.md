@@ -1,5 +1,54 @@
 # Native framework and Studio verification
 
+## Unnotched full-run failure and scoped MC acceptance repair, 2026-10-25
+
+First full SRF1.40 source `a4de3e6` exits native1 at24October22:42:34WIB during
+the gravity ramp. Ten saved states0–0.9s/880IDs/8800rows pass saved-data integrity,
+but the attempted time0.980934788s and1265 update count include later unsaved
+work. Maximum saved motion3.295mm and zero toe-crossing mass do not establish
+landslide; post2s hold and1s persistence windows are NOT_EVALUATED. The negative
+packet retains51 indexed artifacts/909 verified ZIP members and actual scale1
+incomplete media, including the incomplete late launch-proof capture.
+
+Original-source replay002 performs exactly one principal call, zero MPM updates,
+and reproduces the ambiguity; six MC source modules/DLL match the failed run,
+283 copied files match before/after and actual mapped DLL is verified. The
+retained001 helper/package-lock fixture exits before any actual call. Observed
+edge multiplier-7.313031e-13 passes the old1e-12 absolute allowance despite
+causing32.42 stress tolerances of elastic error. The alternative face has
+nonnegative multipliers. Full-MPM rollback remains NOT_EXECUTED by this capsule.
+
+Base `project-principal` now adds the sum of negative-flow backward stress/plane
+errors against the unchanged stress tolerance. Shared admissibility API/body,
+absolute multiplier/history/stress/dedup constants, all-roots rejection, material
+inputs and Wang point/native/apex behavior remain unchanged. The check rejects
+inconsistent candidates without clamping or preferred roots.
+
+Existing material-point regression `output/unnotched-gravity-2026-10-25/mc-regression-001/`
+passes34 native controls, exit0; unchanged test bytes and all283 copied hashes
+verify afterward. New frozen `complementarity-controls-001` completes eight
+groups, exit0:61 explicit fixed-code point calls (one actual identity, five
+permutations,54 transition/scaling and one genuine positive-root ambiguity),
+one native constitutive rollback call, zero MPM updates/old-baseline replays.
+All284 source hashes match before/after and actual mapped DLL is verified.
+The actual input now has one nonnegative face; the false edge's conservative
+backward error1.1250816934e-4Pa exceeds unchanged1.7349670798e-6Pa tolerance.
+Genuine positive-multiplier multiple-root rejection remains exercised.
+
+Narrow `native-output-fixed-001` completes four output groups, exit0:1760
+attempted=accepted material calls, two actual USF updates,880MPs,three VTK
+states/2640 material rows. All285 source hashes match before/after and mapped
+DLL is verified. Three particle VTKs and two CSVs are byte-identical to the
+pre-fix002 elastic control. Initial comparison glob wrongly included mesh.vtk
+and asserted before a result; its negative artifact is retained. File-selection
+correction uses saved native data without repeating the solver.
+
+Fix/control evidence packaging is pending in
+`docs/evidence/unnotched-gravity-2026-10-25/complementarity-fix-controls/`.
+Fresh full continuation has not started; no landslide is claimed. See the
+[dated study chronology](benchmarks/UNNOTCHED_MC_GRAVITY.md) and
+[negative evidence](evidence/unnotched-gravity-2026-10-24/srf1p4-001-failed/README.md).
+
 ## Gravity-only MC input/output gates, 2026-10-24
 
 New branch `codex/unnotched-gravity-benchmark`, source2308a1e. Frozen001 passes

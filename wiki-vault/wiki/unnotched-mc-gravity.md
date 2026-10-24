@@ -3,17 +3,19 @@ title: Unnotched MC gravity scenario and native gates
 type: synthesis
 tags: [mpm, unnotched, gravity, strength-reduction, windows-native]
 sources: [docs/benchmarks/UNNOTCHED_MC_GRAVITY.md, research/references/unnotched-mc-ssr/contract.json, docs/testing.md]
-updated: 2026-10-24
+updated: 2026-10-25
 ---
 
 # Unnotched MC gravity scenario and native gates
 
 Implements [[unnotched-landslide-method-selection]] on branch
 `codex/unnotched-gravity-benchmark`, first source2308a1e. Six short scenario
-owners compose the unchanged native perfect MC material/solver with unnotched
+owners compose the existing native perfect MC material/solver with unnotched
 D1-inspired polygon, independent SRFs1/1.40, smoothstep gravity ramp0–2s and
 constant gravity2–6s. No driver, initial weak seed, notch, elastic release or
 state reset is hidden. Fixed grid bottom is not Coulomb runout contact.
+The original additive checkpoint preserved the numerical implementation; the
+later scoped acceptance repair below is an intentional, separately gated change.
 
 Frozen001 passes five input/geometry/BC/ramp groups then fails a caller-local
 counter fixture. It still executes two real updates.002 uses shared synchronized
@@ -32,3 +34,59 @@ Thirteen synthetic supervision assertions and9+2gravity-alias detachment/default
 checks pass with zeroMPM; delayed001fixture expiry/exit8 is preserved. Raw/settings
 remain intact. [[wang2017-residual-history-scope]] remains a separate tested repair
 checkpoint, not an automatic full rerun or an achieved-landslide claim.
+
+## First full trial and actual failure diagnosis
+
+SRF1.40 source `a4de3e6` fails native1 on24October22:42:34WIB during the ramp.
+Ten real states0–0.9s retain880IDs/8800material rows. Attempted time0.980934788s
+and1265 updates include later unsaved work; saved0.9s is not the exact failure
+time. Saved finite/mass/ID/F/J/volume/law/yield/CSV–VTK integrity passes, maximum
+motion is3.295mm, and no mass crosses the toe. Post2s and1s persistence windows
+are NOT_EVALUATED. Coherent landslide remains unverified.
+
+The51-indexed-artifact/909-ZIP-member negative packet retains actual raw data,
+frozen sources, exact review support and scale1 incomplete media. Late launch
+capture is honestly INCOMPLETE_CAPTURE. Replay001 is a helper package-lock
+failure with zero calls;002 performs exactly one original production principal
+return, zero MPM updates, with283 before/after source hashes and mapped DLL
+verified. The six MC modules match the failed run. Full-MPM rollback is
+NOT_EXECUTED from this pure capsule.
+
+The admitted false edge has multiplier-7.313031e-13, within the old absolute
+1e-12 allowance but producing32.42 times the existing stress tolerance in
+elastic stress error. A valid face has nonnegative multipliers. Exact old
+candidate observations and a separate analytical Schur-complement check explain
+the ambiguity without preferring a root or changing physical inputs.
+
+## Scoped repair, 25 October 2026
+
+Base MC-evolution `project-principal` adds a conservative negative-multiplier
+backward-error sum inPa, using actual elasticity/flow/yield vectors and the
+unchanged stress tolerance. The original shared predicate, all constants,
+deduplication and genuine all-roots rejection remain unchanged. Wang point,
+native and composite-apex acceptance are outside this repair; no hidden fallback
+or multiplier/stress/strength clamp is introduced.
+
+Existing native material-point suite passes34 controls with283 source hashes
+verified afterward. Frozen `complementarity-controls-001` passes eight groups,
+exit0:61 new fixed-code point calls, one native constitutive rollback call,
+zero MPM updates and zero old-baseline replays. All284 source hashes match
+before/after and mapped DLL is verified. The captured input now returns the
+nonnegative face; false-edge backward stress/plane error1.12508e-4Pa exceeds
+unchanged tolerance1.73497e-6Pa. A genuine three-positive-root fixture still
+rejects ambiguity. This is new-code verification, distinct from the retained
+original-source replay; no whole-MPM rollback claim follows.
+
+Narrow `native-output-fixed-001` passes four output groups with1760 accepted
+material calls/two actual USF updates/880MPs/three VTK states/2640CSV rows.
+All285 source hashes match before/after, mapped DLL is verified, and three
+particle VTKs/two CSVs are byte-identical to pre-fix002 elastic output. Initial
+comparison included mesh.vtk by mistake and asserted before a result; retain
+the negative artifact and file-selection-only repair, with no solver repetition.
+
+Fix/control evidence retains43 indexed artifacts/886 archive members/852 source
+entries; root independently verifies every hash and44 staged Git blobs. A
+fresh full continuation has not started. No landslide or calibrated runout is
+established by these numerical gates.
+[[unnotched-landslide-method-selection]] retains the original source/provenance
+limits, and [[wang2017-residual-history-scope]] remains a separate model policy.

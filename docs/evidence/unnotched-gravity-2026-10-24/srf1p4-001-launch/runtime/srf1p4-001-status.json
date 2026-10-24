@@ -1,0 +1,47 @@
+{
+  "scenario": "gravity-slope",
+  "status": "FAILED_NATIVE",
+  "startedUtc": "2026-10-24T15:39:22.4614845Z",
+  "output": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001",
+  "case": "D:\\MPM\\cases\\benchmarks\\gravity-slope-mc-srf-1p4.lisp",
+  "sourceCommit": "a4de3e6a4d702dee53546a521c09e3b97cf9b4e3",
+  "maxWallHours": 3.0,
+  "wallDeadlineUtc": "2026-10-24T18:39:22.4614845Z",
+  "caseSha256": "994C81DF23EA13BCFB38FE8121946C215628FA655CB98181DB6BC48E0B9EA98B",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "processIdentity": {
+    "wrapper": {
+      "pid": 50220,
+      "name": "pwsh",
+      "sessionId": 11,
+      "createdUtc": "2026-10-24T15:39:21.9273187Z"
+    },
+    "sbcl": {
+      "pid": 38052,
+      "name": "sbcl",
+      "sessionId": 11,
+      "createdUtc": "2026-10-24T15:39:23.0010694Z"
+    },
+    "nativeCommand": {
+      "pid": 15776,
+      "name": "cmd",
+      "sessionId": 11,
+      "createdUtc": "2026-10-24T15:39:22.6627508Z"
+    }
+  },
+  "nativeExitCode": 1,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {
+    "updates": 1265,
+    "status": "failed",
+    "complete": false,
+    "phase": "gravity-ramp",
+    "timeS": 0.8999999999999999,
+    "particleCount": 880,
+    "savedFrames": 10
+  },
+  "heartbeatUtc": "2026-10-24T15:42:34.2959794Z",
+  "endedUtc": "2026-10-24T15:42:34.2834267Z"
+}

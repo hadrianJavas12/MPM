@@ -1,6 +1,86 @@
 # AI Engineering Handover — CL-MPM
 
-**Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
+**Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
+
+## Unnotched gravity: numerical cause repaired and scoped native gates passed
+
+Run `output/unnotched-gravity-2026-10-24/srf1p4-001`, source a4de3e6,
+started24October22:39:22WIB and FAILED_NATIVE/worker exit1 at22:42:34WIB.
+NO full solver active; do not poll old worker30152/wrapper50220/cmd15776/
+SBCL38052. This was before3h budget, not a wall stop. Last saved0.9s,
+10states/880MPs/8800rows; manifest1265updates and attemptTimeS.980934788134821
+include later unsaved work. Do not call0.9s the exact failed integration time.
+
+GenericMC principal capsule retains two near-face/edge roots under perfect
+Cauchy c7142.857Pa/phi14.573deg/psi0,E100MPa. Independent closed-form linear
+analysis finds a unique positive-multiplier face; competing edge needs negative
+lambda≈-7.313e-13, admitted by absolute1e-12 multiplier allowance. Its stress
+effect≈5.625e-5Pa exceeds unchanged stressTolerance≈1.735e-6Pa. ONE actual
+original-source replay002 reproduced the rejection, with full candidate and
+multiplier diagnostics;283 frozen files before/after and six MC modules/DLL
+match. Independent closed-form analysis confirms false complementarity
+acceptance. Replay001 hit CL BOOLEAN package lock BEFORE parsing/call
+(actual0,MPM0); retained. Do not repeat either diagnostic. Pure capsule replay
+does not establish complete particle rollback: NOT_EXECUTED for that state.
+
+Scoped production fix in generic MC `project-principal` adds a conservative
+negative-multiplier elastic/plane-error budget in Pa against the EXISTING stress
+tolerance. No multiplier/stress is clamped, no root is preferred, no material
+input or stress/history/multiplier/dedup constant changes. Shared three-argument
+`admissible-candidate-p` is unchanged; Wang point/composite-apex behavior is not
+newly filtered. All generic plastic candidate branches pass this extra check.
+This is a stricter numerical acceptance check, not a global uniqueness proof.
+Independent read-only review found no substantive issue.
+
+New Windows-native frozen gates in `output/unnotched-gravity-2026-10-25/`:
+- `mc-regression-001`: existing34 controls PASS/exit0, unchanged numerical test
+  bytes;283 copied sources verified afterward, before/after provenance retained.
+  This wrapper has no separately named source-proof-before/after files.
+- `complementarity-controls-001`:8 groups PASS/exit0,61 explicit NEW fixed-code
+  point calls (actual identity1,other permutations5,transition cases54,genuine
+  ambiguity1),one native constitutive rollback call,zero MPM/old-baseline replay
+  calls.284 copied sources before/after and mappedDLL verified. Actual unique
+  face succeeds; genuine three-positive-root ambiguity still rejects.
+- `native-output-fixed-001`: output-only4 groups PASS/exit0,1760 accepted
+  material calls/two real USF updates/880MPs/three VTK states.285 copied sources
+  before/after verified. All three particle VTK and two CSV files BYTE-IDENTICAL
+  to independently audited pre-fix002. The initial comparison wildcard included
+  mesh.vtk and asserted before results; exact failed script/reason retained,
+  file selection fixed without solver repetition.
+All three runs executed projection SHA e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1.
+Do not repeat these passed gates. No full slope success is inferred.
+
+Saved-data review already finished ONCE in `srf1p4-001/review-001`: independent
+integrityPASS, all282frozen files/DLLmatch,10realstates/video4fps2.5s/decode0,
+explicitINCOMPLETE title, root/agent actualPNGinspection. Maxdisplacement3.295mm,
+freeuppercentroid+.2268mmX/-2.0948mmY,0toe-crossing mass; no verified landslide.
+No1s interval or2s hold reached, so persistence NOT_EVALUATED, not FAIL/PASS.
+Exact analysis and imported reader bytes saved BEFORE this review. Do not repeat
+its solver/render/audit. The attempted later live launch capture failed because
+processes had already terminated; partial `srf1p4-001-launch` packet contains
+only captured status/launch, not valid live-process proof. Preserve/label that
+capture and archive actual terminal sources/raw/runtime/media instead.
+
+Failure/replay packet `docs/evidence/unnotched-gravity-2026-10-24/srf1p4-001-failed`
+retains51 indexed artifacts,three ZIPs/909 decoded members/848 executed source
+entries. Root independently verified all indexed hashes, all archived source
+bytes and52 staged Git blobs, including intended ignored PNG/MP4. Incomplete
+launch capture and missing original standalone proof files are labelled, never
+fabricated. Fix-gate packet
+`docs/evidence/unnotched-gravity-2026-10-25/complementarity-fix-controls` retains
+43 indexed artifacts/three ZIPs/886 members/852 executed source entries. Root
+independently verified every indexed hash, archived source and44 staged Git
+blobs. Both evidence packets are ready for the repair checkpoint.
+
+Next: checkpoint/push this scoped repair and evidence, then ONE fresh SAME
+SRF1.40/6s/61frames input with a3h wall budget. Old VTK is not full restart
+state: restart from its frozen initial inputs is justified by this diagnosed
+and tested numerical repair. No strength/rate/geometry/psi/damping changes.
+Inspect actual process identities at launch, then leave healthy work to passive
+15min monitoring. Baseline SRF1 follows sequentially after terminal review.
+Automation remains5h while terminal. Keep goal active: actual coherent
+unnotched landslide/runout is still unverified; old sections below are dated
+chronology, not claims about current pending work.
 
 ## Native gates closed: reusable unnotched gravity/MC scenario
 

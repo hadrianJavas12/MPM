@@ -1,0 +1,11 @@
+# Scoped MC complementarity fix: native controls
+
+The fixed projection adds a conservative Kirchhoff-stress/yield-plane bound for negative flow multipliers. Stress/history/dedup tolerances, physical inputs and the shared admissible-candidate predicate remain unchanged; the separate Wang point/apex acceptance paths are not newly filtered. This is an acceptance tightening, not a clamp, root preference or claim of global uniqueness.
+
+Three completed Windows-native gates are retained: the original unchanged34-point suite, eight focused groups with61 NEW fixed-code pure calls and one native constitutive call, and four narrow output groups recording two genuine MPM updates/1760 accepted material calls/three saved states. The61 calls are not repetitions of the old failing-code capsule replay, which belongs to the earlier negative-evidence packet. No full post-fix slope or verified landslide is included here.
+
+The three archives contain283/284/285 immutable executed source files respectively, with source manifests, available before/after hash proofs, source-provenance, mapped DLL identity, logs, exits and outputs. Every archive member is CRC-tested, decoded and compared byte for byte to originals. All three projection hashes match the current fixed file. The old34 case and actual control bootstrap are also directly accessible. That regression wrapper has no separately named source-proof-before/after files: its copied-byte/runtime provenance and original allSourceHashesVerifiedAfter result are preserved, not replaced with invented files.
+
+The new three particle VTK states and two CSV files are byte-identical to the previously independently audited pre-fix two-update output. Root's exact comparison script/result are retained, together with the initial wildcard-selection script and assertion failure. Selecting mesh.vtk with the three particle states caused that analysis harness failure before any result; correcting selection repeated no native work. The pre-fix review, analysis support and inherited provenance limitations are reference evidence, not a newly executed saved-data review.
+
+Completion of these small gates proves neither full-ramp stability nor coherent slope failure, calibrated runout or journal agreement. Packaging itself performs only file operations and archive verification.

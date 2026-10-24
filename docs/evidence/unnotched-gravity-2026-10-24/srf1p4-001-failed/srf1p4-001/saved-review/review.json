@@ -1,0 +1,1158 @@
+{
+  "schema": "cl-mpm.gravity-slope.review.v1",
+  "createdUtc": "2026-10-24T15:48:52.434326+00:00",
+  "runDirectory": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001",
+  "nativeStatus": "failed",
+  "nativeComplete": false,
+  "savedScope": "partial-saved-states-only",
+  "savedFrames": 10,
+  "lastSavedTimeS": 0.8999999999999999,
+  "integrityStatus": "PASS",
+  "scientificallyValidated": false,
+  "landslideDetected": false,
+  "coherentMotionDetected": false,
+  "runoutGateDetected": false,
+  "manualSpatialReviewRequired": false,
+  "landslideVerification": "NOT_DETECTED",
+  "criteria": {
+    "cohortCutoffH": 2,
+    "adjacencyH": 1.01,
+    "dxH": 0.25,
+    "downslopeH": 0.5,
+    "componentMassFraction": 0.1,
+    "positiveDxMassFraction": 0.75,
+    "sustainedVxMPerS": 0.001,
+    "sustainedDurationS": 1,
+    "toeOffsetH": 0.5,
+    "toeTotalMassFraction": 0.01
+  },
+  "contract": {
+    "path": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\contract.json",
+    "sha256": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55",
+    "bytes": 4055
+  },
+  "studyConfigurationDifferences": [],
+  "nativeStressTolerances": {
+    "stress-atol": 1e-06,
+    "stress-rtol": 1e-11,
+    "selectedProjection": {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+      "sha256": "01c73c007726118fa40908cb7de929b8d17900c94b1f2fe3596d7afe81b2ce79",
+      "bytes": 21515
+    },
+    "sourceScope": "frozen-projection-hash-matches-source-manifest; execution-provenance-requires-native-runtime-proof",
+    "sourceManifestCheck": {
+      "status": "PASS",
+      "manifest": {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\source\\source-manifest.json",
+        "sha256": "4c2f83359e184f3f669d4411ca7e161eae79748b1447616e4b4c2c512029566a",
+        "bytes": 58416
+      },
+      "verifiedMember": "source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp",
+      "verifiedMemberCount": 1,
+      "scope": "Selected projection hash/length only; other source members and manifest authenticity not independently certified here"
+    },
+    "scaleConvention": "atol + rtol*max(1,max(abs(current Kirchhoff principal stress))). Native projection uses trial stress scale, unavailable in saved CSV; this independent current-state bound is not enlarged to match failures."
+  },
+  "serializationChecks": {
+    "atol": 1e-11,
+    "rtol": 1e-11
+  },
+  "checks": [
+    {
+      "name": "saved-gravity-schedule",
+      "status": "PASS",
+      "scope": "Saved step endpoints only; CSV cannot prove every unsaved force evaluation"
+    },
+    {
+      "name": "saved-frame-time-grid",
+      "status": "PASS"
+    },
+    {
+      "name": "updates-monotone",
+      "status": "PASS"
+    },
+    {
+      "name": "manifest-terminal-flags",
+      "status": "PASS"
+    },
+    {
+      "name": "manifest-saved-state-scope",
+      "status": "PASS"
+    },
+    {
+      "name": "completion-consistency",
+      "status": "PASS",
+      "nativeComplete": false,
+      "savedFrames": 10,
+      "requestedFrames": 61
+    },
+    {
+      "name": "initial-coordinate-reference",
+      "status": "PASS"
+    },
+    {
+      "name": "initial-unnotched-polygon-quadrature",
+      "status": "PASS",
+      "expectedParticles": 880,
+      "actualParticles": 880,
+      "convention": "Every configured regular-lattice center under the unnotched continuous slope; no missing/notched/seeded centers"
+    },
+    {
+      "name": "initial-volume-density",
+      "status": "PASS"
+    },
+    {
+      "name": "initial-zero-velocity-stress-history",
+      "status": "PASS"
+    },
+    {
+      "name": "initial-identity-F",
+      "status": "PASS"
+    },
+    {
+      "name": "aggregate-mass-conservation",
+      "status": "PASS"
+    }
+  ],
+  "frameIntegrity": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 0.0,
+          "maximumVolumeRatioDifference": 0.0
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -13826.107398668315,
+          "maximumNativeCurrentScaleTolerancePa": 1.00001e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 0.0
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "timeS": 0.1,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 5.10702591327572e-15
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -13571.456394573022,
+          "maximumNativeCurrentScaleTolerancePa": 1.0114972299580849e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 1.8189894035458565e-12
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "timeS": 0.2,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 9.658940314238862e-15
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -12642.26245228016,
+          "maximumNativeCurrentScaleTolerancePa": 1.0517866594391745e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 3.637978807091713e-12
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "timeS": 0.30000000000000004,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 1.454392162258955e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -11164.6525170672,
+          "maximumNativeCurrentScaleTolerancePa": 1.1152606779675377e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 3.637978807091713e-12
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "timeS": 0.4,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 1.4099832412739488e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -9298.103135199282,
+          "maximumNativeCurrentScaleTolerancePa": 1.1946426534562922e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 7.275957614183426e-12
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "timeS": 0.5,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 1.4654943925052066e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -7022.633437897961,
+          "maximumNativeCurrentScaleTolerancePa": 1.296596870393647e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 1.0913936421275139e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "timeS": 0.6000000000000001,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 1.7763568394002505e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -4363.050863723109,
+          "maximumNativeCurrentScaleTolerancePa": 1.4096643830628377e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 1.6370904631912708e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "timeS": 0.7,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 2.275957200481571e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -1504.046524590387,
+          "maximumNativeCurrentScaleTolerancePa": 1.5323661724352962e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 1.6370904631912708e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "timeS": 0.8,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 2.7422508708241367e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 2.7284841053187847e-11,
+          "maximumNativeCurrentScaleTolerancePa": 1.6685216625654383e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 1.6370904631912708e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "timeS": 0.8999999999999999,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 2.842170943040401e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 3.2741809263825417e-11,
+          "maximumNativeCurrentScaleTolerancePa": 1.809926100750619e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 3.092281986027956e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "motionWindows": {
+    "entire": {
+      "label": "entire saved run including gravity ramp",
+      "referenceTimeS": 0.0,
+      "referenceFrame": 0,
+      "status": "NOT_EVALUATED",
+      "reason": "Less than one saved second; bounded gate cannot assess sustained failure",
+      "cohortMassKgPerM": 293678.26933764335,
+      "candidate": null,
+      "states": [
+        {
+          "frame": 0,
+          "timeS": 0.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0,
+            0.0
+          ],
+          "cohortMedianDxM": 0.0,
+          "cohortMeanVelocityMPerS": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "frame": 1,
+          "timeS": 0.1,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            1.1709513508971631e-06,
+            -2.9792746895934727e-05
+          ],
+          "cohortMedianDxM": 5.766266664153363e-07,
+          "cohortMeanVelocityMPerS": [
+            6.107721949621753e-05,
+            -0.0008210910253031882
+          ]
+        },
+        {
+          "frame": 2,
+          "timeS": 0.2,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            1.4767793258928087e-05,
+            -0.0001306954692162902
+          ],
+          "cohortMedianDxM": 1.4281707638730268e-05,
+          "cohortMeanVelocityMPerS": [
+            0.00013155798482720105,
+            -0.001190223589016525
+          ]
+        },
+        {
+          "frame": 3,
+          "timeS": 0.30000000000000004,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            2.6985364335945873e-05,
+            -0.0002919288603124302
+          ],
+          "cohortMedianDxM": 2.4213114683035997e-05,
+          "cohortMeanVelocityMPerS": [
+            0.0002242171306787665,
+            -0.0018739783682285144
+          ]
+        },
+        {
+          "frame": 4,
+          "timeS": 0.4,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            5.183213957384181e-05,
+            -0.0004953404968450006
+          ],
+          "cohortMedianDxM": 4.7678497612224646e-05,
+          "cohortMeanVelocityMPerS": [
+            0.0001748968883202187,
+            -0.0023790476495978404
+          ]
+        },
+        {
+          "frame": 5,
+          "timeS": 0.5,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            7.507971271984101e-05,
+            -0.0007473155901552894
+          ],
+          "cohortMedianDxM": 7.033138966328067e-05,
+          "cohortMeanVelocityMPerS": [
+            0.00035842123438575255,
+            -0.0026183857979598657
+          ]
+        },
+        {
+          "frame": 6,
+          "timeS": 0.6000000000000001,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0001049675264598754,
+            -0.0010361484497307103
+          ],
+          "cohortMedianDxM": 9.665406193093418e-05,
+          "cohortMeanVelocityMPerS": [
+            0.00023882921806105806,
+            -0.0030500833526476436
+          ]
+        },
+        {
+          "frame": 7,
+          "timeS": 0.7,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.00013771254577769825,
+            -0.0013482399774061686
+          ],
+          "cohortMedianDxM": 0.00012650344538478464,
+          "cohortMeanVelocityMPerS": [
+            0.00039731425465181446,
+            -0.0033243617628857156
+          ]
+        },
+        {
+          "frame": 8,
+          "timeS": 0.8,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0001711296086755394,
+            -0.001688054879367114
+          ],
+          "cohortMedianDxM": 0.0001600454715031674,
+          "cohortMeanVelocityMPerS": [
+            0.0003364963681847049,
+            -0.0035668369877735694
+          ]
+        },
+        {
+          "frame": 9,
+          "timeS": 0.8999999999999999,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.00022682592451217116,
+            -0.002094807110499824
+          ],
+          "cohortMedianDxM": 0.00020011311930723252,
+          "cohortMeanVelocityMPerS": [
+            0.000821982889830442,
+            -0.0044194460411419835
+          ]
+        }
+      ],
+      "selectionConvention": "Fixed initial cohort/graph; per-state displacement mask; largest component by mass, ties by smallest ID. Candidate IDs are held fixed for every saved velocity in the reported interval. No final-speed selection."
+    },
+    "post2s": {
+      "status": "NOT_EVALUATED",
+      "reason": "No actual saved2s state; no interpolation or reference substitution"
+    }
+  },
+  "toeHistory": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.25,
+      "medianXM": 10.75,
+      "centroidXM": 11.755681818181818
+    },
+    {
+      "frame": 1,
+      "timeS": 0.1,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.250000161799743,
+      "medianXM": 10.75000101019289,
+      "centroidXM": 11.755682852764211
+    },
+    {
+      "frame": 2,
+      "timeS": 0.2,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.250000688421622,
+      "medianXM": 10.75001918113393,
+      "centroidXM": 11.755693536409225
+    },
+    {
+      "frame": 3,
+      "timeS": 0.30000000000000004,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.25000146242611,
+      "medianXM": 10.750036147417196,
+      "centroidXM": 11.755703742446542
+    },
+    {
+      "frame": 4,
+      "timeS": 0.4,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.25000252380192,
+      "medianXM": 10.75006606791272,
+      "centroidXM": 11.75572325870227
+    },
+    {
+      "frame": 5,
+      "timeS": 0.5,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.25000372858479,
+      "medianXM": 10.7500981614557,
+      "centroidXM": 11.755742227817278
+    },
+    {
+      "frame": 6,
+      "timeS": 0.6000000000000001,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.250005207777754,
+      "medianXM": 10.750135455320017,
+      "centroidXM": 11.7557661351691
+    },
+    {
+      "frame": 7,
+      "timeS": 0.7,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.25000672455623,
+      "medianXM": 10.75017648548302,
+      "centroidXM": 11.755792267615826
+    },
+    {
+      "frame": 8,
+      "timeS": 0.8,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.25000843353427,
+      "medianXM": 10.750223450548782,
+      "centroidXM": 11.755819491482276
+    },
+    {
+      "frame": 9,
+      "timeS": 0.8999999999999999,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.25001028203153,
+      "medianXM": 10.750305978234458,
+      "centroidXM": 11.755864171602163
+    }
+  ],
+  "boundaryReview": {
+    "floorPenetratingCenterSamples": 0,
+    "domainExitCenterSamples": 0,
+    "minimumParticleDomainMarginM": -2.788387439556228e-07,
+    "runoutContactValidated": false
+  },
+  "limitations": [
+    "A motion candidate requires actual scale1 spatial/plastic-shear review; no automatic scientific PASS.",
+    "Fixed grid bottom is not a calibrated Coulomb runout bed; particle-domain overlap/kernel support are not certified by center tests.",
+    "Explicit ramp, FLIP ringing, coarse grid/PPC, locking, timestep, domain and basal effects have not been sensitivity-validated.",
+    "Downslope projection includes settlement; horizontal displacement/coherence are tested separately.",
+    "Native completion, yield colour, maximum speed and toe-front extremum alone do not prove landslide.",
+    "Saved-state velocity persistence does not certify unsaved substep behavior; no closed energy balance is inferred."
+  ],
+  "inputHashes": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\manifest.json",
+      "sha256": "67ae620c307377e50f9e13cd85eba6f594c885a03ed978e39a59b964333998b4",
+      "bytes": 5443
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\history.csv",
+      "sha256": "3955eddbf02835ec0c26a2a5ce50f7c5d2aa04aa15ce59b05badf255c1d46659",
+      "bytes": 7449
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\particles.csv",
+      "sha256": "c8b09dc90064eb3b69ee96e3f948cc1bfde9f936ee77baa3c8af733932ae9d10",
+      "bytes": 6506297
+    },
+    {
+      "path": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\contract.json",
+      "sha256": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55",
+      "bytes": 4055
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0000.vtk",
+      "sha256": "0e5405299adca9c750e06f87a43f346673c329e3f96a8e7c79b0b0ab46b905c7",
+      "bytes": 290664
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0001.vtk",
+      "sha256": "77acd4344e0453fd4e2ae950f8c356248903691f1d00d6789675e6e7c4fa58f4",
+      "bytes": 290664
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0002.vtk",
+      "sha256": "12d090c32881bd9f5c21c325e90c0d8850a9b8531534dd6e68af25ec86b8101b",
+      "bytes": 290664
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0003.vtk",
+      "sha256": "45cad8f4bc33da87e0ca6f3c93fc8ac07e33635d99406cf9ab010e451b6d05f2",
+      "bytes": 290664
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0004.vtk",
+      "sha256": "340750b1960e5d54151248fb845469bf77f5ef52ad679ead1a4c6d22607a411e",
+      "bytes": 290664
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0005.vtk",
+      "sha256": "aba0945d880b85ef357f8b27c3b446b95534ba2f5ae0acf1198d51e954bfd7b4",
+      "bytes": 290664
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0006.vtk",
+      "sha256": "b0b4d25d0a06d64558132616bf80f41eb107ff614b041c6d1426be0114ff667b",
+      "bytes": 290664
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0007.vtk",
+      "sha256": "a00ada4286a0156aaf3f58608be7dca07d4ccbf0a9947408e56e8952b915b9c0",
+      "bytes": 290664
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0008.vtk",
+      "sha256": "935fdc61711d7293200af5d0b8fb69ecd2494ba987e822af5683edaa48684057",
+      "bytes": 290664
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0009.vtk",
+      "sha256": "b081fb462f67f061bbbec8d12ac453d4b7bc72a75007982e7f09ec1e010a214e",
+      "bytes": 290664
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+      "sha256": "01c73c007726118fa40908cb7de929b8d17900c94b1f2fe3596d7afe81b2ce79",
+      "bytes": 21515
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\source\\source-manifest.json",
+      "sha256": "4c2f83359e184f3f669d4411ca7e161eae79748b1447616e4b4c2c512029566a",
+      "bytes": 58416
+    }
+  ],
+  "analysisScript": {
+    "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\review-001\\analysis-support\\review-gravity-slope.py",
+    "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+    "bytes": 38121
+  },
+  "vtkReaderSource": {
+    "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+    "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+    "bytes": 23581
+  },
+  "media": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\review-001\\gravity-slope-review.png",
+      "sha256": "71e64782a8bd0fb8e14dc24d272cf22c21843ae335264061c2aff47b0056eb97",
+      "bytes": 196948
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\srf1p4-001\\review-001\\gravity-slope-actual.mp4",
+      "sha256": "04c5e44c97ad4ef487307ecabc5a4adc48ce47fdbe17cf28f9745770fa061bee",
+      "bytes": 96666,
+      "actualSavedStates": 10,
+      "playbackFramesPerSecond": 4,
+      "physicalLastTimeS": 0.8999999999999999,
+      "interpolation": false,
+      "deformationMagnification": 1,
+      "scope": "INCOMPLETE",
+      "fullDecodeExit": 0
+    }
+  ]
+}
