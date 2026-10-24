@@ -10,5 +10,6 @@
            #:particle-last-paper-diagnostic #:particle-legacy-j2
            #:proper-polar-rotation #:transport-paper-tensor
            #:snapshot-particle #:restore-particle #:copy-particle-state
-           #:replay-native-diagnostic))
+           #:replay-native-diagnostic #:project-native-point
+           #:project-point-variant #:native-material-variant))
 (in-package :cl-mpm/models/wang2017-native)

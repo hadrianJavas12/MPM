@@ -1,0 +1,28 @@
+{
+  "status": "PASS_ARTIFACT_INTEGRITY",
+  "packagedUtc": "2026-10-24T05:01:21.783784+00:00",
+  "archive": "apex-controls-001.zip",
+  "archiveBytes": 1231724,
+  "archiveSha256": "925c6f9ead081ae7472bdf110db16842e07b0ae75e213cd8526ec9cbf08ddb8f",
+  "verifiedMembers": 283,
+  "originalInputBytesUnchanged": true,
+  "testsOrReplaysExecutedDuringPackaging": 0,
+  "excludedFiles": 65,
+  "excludedBytes": 2191976,
+  "nativeControlExitCode": 0,
+  "controlsCount": 11,
+  "newModelPointCalls": 12,
+  "newModelNativeConstitutiveCalls": 5,
+  "strictActualCapsuleReplayCalls": 0,
+  "physicalUpdates": 0,
+  "frozenFilesIncludingFixture": 276,
+  "allFrozenBeforeAfterRetainedHashesMatch": true,
+  "currentTestEqualsExecutedCopy": true,
+  "actualInputFixtureSha256": "05835d5429292da0b95190232c0d3fb4d6228d6fd08d975ee1346434ba99242d",
+  "mappedNativeBackend": {
+    "modulePath": "D:/MPM/output/wang2017-soil2-2026-10-24/apex-controls-001/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  }
+}

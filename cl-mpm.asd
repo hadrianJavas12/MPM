@@ -1084,3 +1084,12 @@
                 :pathname "materials/models/plastic/wang2017"
                 :components ((:file "native-package") (:file "transport")
                              (:file "state") (:file "material")))))
+
+(defsystem "cl-mpm/models/wang2017-apex"
+  :description "Opt-in Soil2 extension with explicit hydrostatic volumetric apex flow"
+  :depends-on ("cl-mpm/models/wang2017-native")
+  :serial t
+  :components ((:module "materials/models/plastic/wang2017"
+                :pathname "materials/models/plastic/wang2017"
+                :components ((:file "apex-package") (:file "apex-projection")
+                             (:file "apex-native")))))

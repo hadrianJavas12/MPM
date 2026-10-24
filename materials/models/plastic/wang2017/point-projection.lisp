@@ -12,14 +12,17 @@
            #:paper-projection-residuals #:paper-projection-max-residual
            #:paper-projection-multipliers #:paper-projection-active
            #:paper-projection-work #:paper-projection-evaluations
-           #:paper-projection-history-residual #:paper-projection-branch))
+           #:paper-projection-history-residual #:paper-projection-branch
+           #:paper-projection-apex-multiplier))
 (in-package :cl-mpm/models/wang2017-point)
 
 (defstruct (paper-projection (:constructor %make-paper-projection)
                             (:copier nil) (:conc-name %paper-))
   (native nil :read-only t) (history nil :read-only t)
   (fixed-increment nil :read-only t) (history-residual 0d0 :read-only t)
-  (evaluations 0 :read-only t) (branch nil :read-only t))
+  (evaluations 0 :read-only t) (branch nil :read-only t)
+  ;; Additional volumetric flow is zero for every original strict result.
+  (apex-multiplier 0d0 :read-only t))
 
 ;; No retained vector or tensor is exposed through the public readers.
 (defun paper-projection-tau (p) (copy-seq (mc-evolution:projection-tau (%paper-native p))))
@@ -40,6 +43,7 @@
 (defun paper-projection-evaluations (p) (%paper-evaluations p))
 (defun paper-projection-history-residual (p) (%paper-history-residual p))
 (defun paper-projection-branch (p) (%paper-branch p))
+(defun paper-projection-apex-multiplier (p) (%paper-apex-multiplier p))
 
 (defun soil2-point-law ()
   ;; A fresh, private law: callers cannot change the constants during a search.
@@ -130,12 +134,10 @@ A surviving identity is rejected: isolated-root continuation is not defined."
                   (+ stress-tolerance (aref (mc-evolution:projection-residuals end) i))))
       (values lo hi))))
 
-(defun project-paper-principal (trial e nu j history basis)
-  "Pure coupled Soil2 prototype: Kirchhoff TRIAL, E/nu, positive J, owned HISTORY,
-and orthonormal Q mapping trial principal axes into HISTORY's SAME fixed frame.
-Stress/flow arrays are returned in the caller's original principal axis order.
-Searches the entire [0,.02] branch and constant tail, INCLUDING kps<old kps.
-Rejects absent or multiple distinct admissible solutions; no apex/tensile clamp."
+(defun %collect-paper-candidates (trial e nu j history basis)
+  "Shared strict enumeration, with unchanged equations, elastic screen and roots.
+Return ALL regular roots and owned search context, or an elastic result in context.
+Optional models must add candidates before deciding uniqueness, never catch failure."
   (unless (and (typep trial 'sequence) (= (length trial) 3)
                (every #'mc-evolution::finite-real-p trial)
                (mc-evolution::finite-real-p e) (> e 0d0)
@@ -162,15 +164,15 @@ Rejects absent or multiple distinct admissible solutions; no apex/tensile clamp.
                       (lambda (n) (- (mc-evolution::dot3 n raw) (* 2d0 j c (cos phi))))
                       (mc-evolution::plane-vectors phi))))
         (when (<= (reduce #'max res) tol)
-          (return-from project-paper-principal
-            (%make-paper-projection
+          (return-from %collect-paper-candidates
+            (values nil (list :elastic (%make-paper-projection
              :native (mc-evolution::%make-projection
                       :tau raw :plastic-increment #(0d0 0d0 0d0) :kappa old-k
                       :cohesion c :phi phi :psi psi :max-residual (reduce #'max res)
                       :residuals res :work 0d0 :active nil
                       :multipliers (make-array 6 :initial-element 0d0))
              :history old :fixed-increment (make-array 6 :initial-element 0d0)
-             :branch :elastic)))))
+             :branch :elastic)))))))
     (dolist (active mc-evolution::+active-bases+)
       (labels ((evaluate-at (k)
                  (incf evaluations)
@@ -210,17 +212,33 @@ Rejects absent or multiple distinct admissible solutions; no apex/tensile clamp.
             (let* ((delta (fixed-increment (mc-evolution:projection-plastic-increment end) sorted-q))
                    (tail-k (history-kps (advance-history old delta))))
               (when (>= tail-k .02d0) (consider tail-k :residual)))))))
+    (values roots (list :permutation perm :tolerance tol :old-kps old-k
+                        :evaluations evaluations :raw raw :sorted sorted
+                        :basis sorted-q :history old :shear shear :bulk bulk
+                        :jacobian j :law law))))
+
+(defun %projection-from-root (root context)
+  "Own a regular or optional apex result, unpermuted to the caller's axes."
+  (destructuring-bind (native next delta residual branch &optional (apex 0d0)) root
+    (%make-paper-projection
+     :native (mc-evolution::unpermute-projection native (getf context :permutation))
+     :history next :fixed-increment delta :history-residual residual
+     :evaluations (getf context :evaluations) :branch branch :apex-multiplier apex)))
+
+(defun project-paper-principal (trial e nu j history basis)
+  "Pure strict Soil2 return, unchanged: no volumetric apex flow or root selector.
+All roots on [0,.02] and the constant tail are considered, including decreasing
+signed history; the native adapter separately enforces its monotonic scope."
+  (multiple-value-bind (roots context) (%collect-paper-candidates trial e nu j history basis)
+    (when (getf context :elastic) (return-from project-paper-principal (getf context :elastic)))
     (unless roots
       (mc-evolution::integration-fail
        "No admissible signed-tensor Soil2 solution; no apex clamp or irreversible maximum applied"
-       :trial (coerce raw 'list) :old-kps old-k :evaluations evaluations))
+       :trial (coerce (getf context :raw) 'list) :old-kps (getf context :old-kps)
+       :evaluations (getf context :evaluations)))
     (when (rest roots)
       (mc-evolution::integration-fail
        "Multiple distinct signed-tensor Soil2 roots; continuation is undefined"
        (mapcar (lambda (r) (list (mc-evolution:projection-kappa (first r))
                                 (coerce (mc-evolution:projection-tau (first r)) 'list))) roots)))
-    (destructuring-bind (native next delta residual branch) (first roots)
-      (%make-paper-projection
-       :native (mc-evolution::unpermute-projection native perm)
-       :history next :fixed-increment delta :history-residual residual
-       :evaluations evaluations :branch branch))))
+    (%projection-from-root (first roots) context)))

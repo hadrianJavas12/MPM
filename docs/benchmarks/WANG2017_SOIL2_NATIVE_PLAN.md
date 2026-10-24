@@ -15,6 +15,13 @@ softening. Preserve this negative experiment; no identical restart or hidden
 constitutive/tolerance change is permitted.
 [Full failure and next-gate review](WANG2017_SOIL2_FAILURE.md).
 
+**Subsequent gate,24October12WIB:** a separate explicit volumetric apex-flow
+material now passes its native/input/regression and two-step output gates.
+See [the apex-flow contract](WANG2017_APEX_FLOW.md). Strict class/defaults remain
+unchanged. A prospective paired full slope changes only this declared material
+convention; all numerical paper/loading/geometry settings remain the same.
+This extension is not uniquely prescribed by Wang and does not guarantee failure.
+
 ## Material contract before enabling a slope run
 
 Keep Table1 Soil2 inputs: E20MPa,nu.25,gamma20kN/m3,phi35/psi0; Cauchy cohesion

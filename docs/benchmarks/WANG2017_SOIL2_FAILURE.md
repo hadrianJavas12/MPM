@@ -82,6 +82,14 @@ established by these saved contact observations.
 
 ## Next model gate, before any new slope attempt
 
+**Subsequent checkpoint,24October12WIB:** the separate opt-in model and its
+native/regression/actual two-step output gates are now implemented and pass.
+[The apex-flow contract](WANG2017_APEX_FLOW.md) records the equations, all-root
+rejection policy, sufficient coexistence bound and retained weak-E ambiguity
+test. The strict failed experiment is not reclassified or rerun. The discussion
+below describes why the extension was investigated; no full new slope outcome
+is established by its passing controls.
+
 The strict model and failed raw/source evidence remain unchanged. Do not lower
 strength, change psi, select a convenient root or relax tolerances to complete it.
 The existing [apex review](WANG2017_APEX_REVIEW.md) explains why original C++

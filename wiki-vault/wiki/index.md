@@ -25,6 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
+- [[wang2017-apex-flow]] — separate explicit volumetric apex model;11 native controls, strict regressions and paired two-step output gates PASS; full slope pending
 - [[wang2017-soil2-native]] —18 native and8 actual MPM/output controls PASS; full slope FAILED_NATIVE at08:26WIB, partial states retained
 - [[wang2017-soil2-return-failure]] — one exact replay confirms no admissible coupled return;58saved states/media, no landslide; next tensile/apex model gate open
 - [[wang2017-fast-trial-2026-10-24]] — complete native0.01m/s to60mm/6s,61states/video, no verified landslide;17native+11review artifact hashes; reference-speed600s remains NOT_RUN

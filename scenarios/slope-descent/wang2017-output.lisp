@@ -8,7 +8,11 @@
   (let ((particles (cl-mpm:sim-mps sim)))
     (flet ((wang-p (particle)
              (typep particle 'cl-mpm/models/wang2017-native:particle-wang2017-soil2)))
-      (when (and (some #'wang-p particles) (not (every #'wang-p particles)))
+      (when (and (some #'wang-p particles)
+                 (not (and (every #'wang-p particles)
+                           (every (lambda (particle)
+                                    (eq (class-of particle) (class-of (aref particles 0))))
+                                  particles))))
         (error "Wang slope audit does not support silently mixed material particles."))
       (and (plusp (length particles)) (every #'wang-p particles)))))
 
@@ -70,7 +74,11 @@
                  (eq bc (wang2017-audit-context-boundary context))
                  (= frame (wang2017-audit-context-next-frame context)))
       (error "Wang audit requires its own context and sequential saved frames."))
-    (let* ((diagnostics (make-instance 'cl-mpm/framework::wang2017-material-diagnostics))
+    (let* ((diagnostics (make-instance
+                        (if (typep (aref (cl-mpm:sim-mps sim) 0)
+                                   'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex)
+                            'cl-mpm/framework::wang2017-apex-material-diagnostics
+                            'cl-mpm/framework::wang2017-material-diagnostics)))
            (fields (cl-mpm/framework:diagnostics-fields diagnostics))
            (material-headers
              (append '("frame" "time_s" "particle_id" "x_m" "y_m" "z_m"

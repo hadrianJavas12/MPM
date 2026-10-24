@@ -12,6 +12,11 @@ The human objective is an actual landslide, following the negative Soil1 control
 in [[wang2017-fast-trial-2026-10-24]]. New branch
 `codex/wang2017-soil2-landslide` preserves that evidence and all original models.
 
+Subsequent24October12WIB checkpoint: [[wang2017-apex-flow]] implements a separate
+explicit additional volumetric apex mode, with native/regression/two-step output
+gates passed. This page's strict default law and failed slope remain unchanged;
+no new full slope outcome is established yet.
+
 The optional native adapter uses the coupled signed-tensor point projector from
 [[wang2017-paper-history]], with paper c30→15kPa overkps0→.02,phi35/psi0,
 E20MPa,nu.25,gamma20kN/m3. Its finite-strain MPM adaptation rotates committed Ep

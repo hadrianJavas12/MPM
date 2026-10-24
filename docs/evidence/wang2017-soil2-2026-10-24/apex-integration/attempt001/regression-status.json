@@ -1,0 +1,40 @@
+{
+  "status": "FAILED",
+  "startedUtc": "2026-10-24T04:57:31.4266386Z",
+  "sourceCommit": "9dc364989ae9b93280193cb4ee04927bc88efe0a",
+  "tests": [
+    {
+      "log": "output\\wang2017-soil2-2026-10-24\\apex-integration-001\\strict-point.log",
+      "exitCode": 0,
+      "name": "strict-point"
+    },
+    {
+      "log": "output\\wang2017-soil2-2026-10-24\\apex-integration-001\\old-mc.log",
+      "exitCode": 0,
+      "name": "old-mc"
+    },
+    {
+      "log": "output\\wang2017-soil2-2026-10-24\\apex-integration-001\\framework.log",
+      "exitCode": 0,
+      "name": "framework"
+    },
+    {
+      "log": "output\\wang2017-soil2-2026-10-24\\apex-integration-001\\strict-native.log",
+      "exitCode": 0,
+      "name": "strict-native"
+    },
+    {
+      "log": "output\\wang2017-soil2-2026-10-24\\apex-integration-001\\strict-inputs.log",
+      "exitCode": 0,
+      "name": "strict-inputs"
+    },
+    {
+      "log": "output\\wang2017-soil2-2026-10-24\\apex-integration-001\\strict-output.log",
+      "exitCode": 1,
+      "name": "strict-output"
+    }
+  ],
+  "scope": "Native regression and two-step integration gates; no full slope",
+  "error": "Failed strict-output; inspect retained log, do not repeat blindly.",
+  "endedUtc": "2026-10-24T04:58:55.3417674Z"
+}

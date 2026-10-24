@@ -1,6 +1,16 @@
 ;;;; Spatial Hencky/Kirchhoff adapter with rotation-only signed-history transport.
 (in-package :cl-mpm/models/wang2017-native)
 
+(defgeneric project-point-variant (variant trial e nu j history basis)
+  (:documentation "Pure point dispatch. Optional models add explicit EQL variants."))
+(defmethod project-point-variant ((variant (eql :strict)) trial e nu j history basis)
+  (point:project-paper-principal trial e nu j history basis))
+(defgeneric project-native-point (mp trial e nu j history basis))
+(defmethod project-native-point ((mp particle-wang2017-soil2) trial e nu j history basis)
+  (project-point-variant :strict trial e nu j history basis))
+(defgeneric native-material-variant (mp))
+(defmethod native-material-variant ((mp particle-wang2017-soil2)) "strict")
+
 (defun %matrix-rows (matrix)
   (when (typep matrix 'magicl:matrix/double-float)
     (map 'vector (lambda (i)
@@ -37,10 +47,14 @@
     (unless (and (equal (field "schema") "cl-mpm.wang2017.native-failure")
                  (eql (field "schemaVersion") 1))
       (error "Unsupported Wang native failure schema."))
-    (let* ((rows (field "principalToSpatialBasis"))
+    (let* ((variant-name (or (field "materialVariant") "strict"))
+           (variant (cond ((equal variant-name "strict") :strict)
+                          ((equal variant-name "composite-apex") :composite-apex)
+                          (t (error "Unsupported Wang material variant ~S." variant-name))))
+           (rows (field "principalToSpatialBasis"))
            (basis (make-array '(3 3) :element-type 'double-float)))
       (dotimes (i 3) (dotimes (j 3) (setf (aref basis i j) (elt (elt rows i) j))))
-      (let ((result (point:project-paper-principal
+      (let ((result (project-point-variant variant
                      (field "trialKirchhoffPa") (field "youngsModulusPa")
                      (field "poissonRatio") (field "deformationJacobian")
                      (paper:make-paper-history (field "rotatedPlasticTensor")) basis)))
@@ -78,7 +92,7 @@ plastic increments are never rotated twice. All native mutation follows validati
                    (old-kps (paper:paper-kps committed)))
               (setf trial (map 'vector (lambda (eps) (+ (* 2d0 g eps) (* lambda-elastic trace))) principal))
               (let* ((result (when (cl-mpm/particle::mp-enable-plasticity mp)
-                               (point:project-paper-principal trial e nu j
+                               (project-native-point mp trial e nu j
                                 (paper:make-paper-history rotated) (%array-basis basis))))
                      (tau (if result (point:paper-projection-tau result) trial))
                      (plastic (if result (point:paper-projection-plastic-increment result) #(0d0 0d0 0d0)))
@@ -137,8 +151,10 @@ plastic increments are never rotated twice. All native mutation follows validati
                            (mc-evolution:integration-error-reason condition) (princ-to-string condition)))
                (diagnostic (handler-case (%failure-diagnostic reason trial e nu j committed rotated basis increment rotation)
                              (error () nil))))
-          (when diagnostic (setf (gethash "historyDecrease" diagnostic)
-                                (not (null (search "history decreased" reason :test #'char-equal)))))
+          (when diagnostic
+            (setf (gethash "materialVariant" diagnostic) (native-material-variant mp)
+                  (gethash "historyDecrease" diagnostic)
+                  (not (null (search "history decreased" reason :test #'char-equal)))))
           (error 'mc-evolution:material-integration-error :reason reason
                  :details (if (typep condition 'mc-evolution:material-integration-error)
                               (mc-evolution:integration-error-details condition) nil)

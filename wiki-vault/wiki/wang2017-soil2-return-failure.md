@@ -8,6 +8,10 @@ updated: 2026-10-24
 
 # Wang Soil2 coupled-return failure
 
+Subsequent checkpoint: [[wang2017-apex-flow]] now passes its isolated native,
+regression and actual two-step output gates. It is a declared separate material,
+not a repair/reclassification of the strict failed experiment described here.
+
 [[wang2017-soil2-native]] fullfast010001 source621146b ended native/worker1
 at08:26:52WIB, before wall budget.58actual states end5.7s/57mm/19608updates;
 the manifest19820 includes later unsaved work. Capsule time/particle ID were

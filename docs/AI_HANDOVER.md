@@ -2,6 +2,48 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
+## Current: explicit apex model gates passed; next slope pending,24October12WIB
+
+Branch `codex/wang2017-soil2-landslide`; preceding pushed checkpoint9dc3649
+preserves the strict Soil2 failure below. Live remote main refreshed9e97e001;
+do not merge/change main. No full solver is currently active. Human objective
+remains an actual verified landslide, not just native completion.
+
+A separate optional `cl-mpm/models/wang2017-apex` adds an explicit hydrostatic
+volumetric plastic flow mode at the apex. This is additional constitutive
+physics, not unchanged pure-shear psi0 or an exact Wang law. Regular psi0,
+strength curve, elasticity, geometry and computational settings are unchanged.
+Strict default behavior and its failed evidence remain available. All regular
+and apex candidates are enumerated; zero/multiple states reject, with no clamp,
+preferred root, catch-error fallback or hidden history maximum. Existing signed
+history decrease guard remains. See `docs/benchmarks/WANG2017_APEX_FLOW.md`.
+
+DONE, do not repeat: new frozen point/native controls11PASS (12 new-model point
+calls/5 native calls, zero MPM); apex input3 groups; strict point19,oldMC34,
+framework10,strict native18,input3 regressions, all Windows exit0. Two resumed
+frozen output gates each8PASS/exit0,2 genuine USF updates/25MPs/2VTKs and
+50material/4contact rows. Four MPM updates total in this stage. Strict's2VTKs
+and2CSVs are byte-identical to original strict output002. Frozen source counts:
+276 for focused apex controls including captured fixture;275 for each native
+integration/output load, all before/after match with mapped copiedDLL verified.
+Workspace-loaded regressions are distinguished from those frozen loads.
+
+The initial integration wrapper's output argument-array mistake is retained:
+its first five commands passed; operator guard stopped the malformed output
+path before any MPM update. Its FAILED overall status was not rewritten. Only
+the two missing output gates ran in `apex-integration-002`, PASS12:01:36WIB.
+Evidence packets `apex-controls/`, `apex-flow-design/`, `apex-integration/` retain
+exact sources, raw logs/results and negative harness evidence. A sufficient
+bound excludes apex-versus-regular coexistence for paper E20MPa/J near1, but
+does not prove every path unique; weak-E multi-root rejection is tested.
+
+Next: commit/push this cohesive gate, then ONE fresh native slope case
+`cases/benchmarks/wang2017-soil2-apex-fast-010.lisp`, same approved0.01m/s to
+60mm/6s and2h wall budget. Record actual source/PIDs/times and update the SAME
+automation to15min quiet monitoring. Do not repeat old solver, replay or suites.
+The explicit extension does not guarantee a landslide; evaluate actual VTK/CSV
+coherent free-mass motion/run-out rather than colour or a velocity outlier.
+
 ## Current: first native Soil2 slope FAILED,24October08:26WIB
 
 Run `output/wang2017-soil2-2026-10-24/fast-010-001` started **07:03:31WIB**,

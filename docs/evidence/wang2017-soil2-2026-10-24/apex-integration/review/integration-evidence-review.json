@@ -1,0 +1,172 @@
+{
+  "scope": "Existing native regression and bounded output gates only; no tests, constitutive replays or solvers were rerun during collection",
+  "scientificValidation": false,
+  "fullSlopeExecutedInTheseAttempts": false,
+  "initialApexInputGate": {
+    "status": "PASS",
+    "groups": 3,
+    "exitCode": 0,
+    "physicalUpdates": 0,
+    "sourceScope": "Separate workspace input process; not claimed as a frozen native/output load"
+  },
+  "attempt001": {
+    "originalStatus": "FAILED",
+    "completedRegressionGates": [
+      {
+        "name": "strict-point",
+        "groups": 19,
+        "exitCode": 0,
+        "sourceScope": "Workspace load with retained executed test; not full source freeze"
+      },
+      {
+        "name": "old-mc",
+        "groups": 34,
+        "exitCode": 0,
+        "sourceScope": "Workspace load with retained executed test; not full source freeze"
+      },
+      {
+        "name": "framework",
+        "groups": 10,
+        "exitCode": 0,
+        "sourceScope": "Workspace load with retained executed test; not full source freeze"
+      },
+      {
+        "name": "strict-native",
+        "groups": 18,
+        "exitCode": 0,
+        "sourceScope": "Own frozen process, zero MPM updates"
+      },
+      {
+        "name": "strict-inputs",
+        "groups": 3,
+        "exitCode": 0,
+        "sourceScope": "Workspace load with retained executed test; not full source freeze"
+      }
+    ],
+    "stoppedGate": "strict-output",
+    "stoppedExitCode": 1,
+    "stoppedMpmUpdates": 0,
+    "stopClassification": "OPERATOR_ARGUMENT_GUARD / HARNESS_FAILURE",
+    "reason": "Original PowerShell wrapper combined output path and variant into one argument. An operator guard file deliberately caused the fresh-output check to reject before snapshot/material/MPM execution. Original FAILED status, wrapper, raw error and guard are preserved.",
+    "apexOutputGate": "NOT_RUN in001"
+  },
+  "attempt002": {
+    "status": "PASS",
+    "scope": "Resume only two missing output gates with corrected explicit3-element argument arrays",
+    "outputs": [
+      {
+        "variant": "strict",
+        "exitCode": 0,
+        "passedCount": 8,
+        "failedCount": 0,
+        "notRunCount": 0,
+        "actualMpmUpdates": 2,
+        "observedVtkFiles": 2,
+        "observedMaterialCsvRows": 50,
+        "observedContactCsvRows": 4,
+        "actualParticleCount": 25,
+        "assertedArgumentArray": [
+          "tests/benchmarks/wang2017-soil2-output.lisp",
+          "output\\wang2017-soil2-2026-10-24\\apex-integration-002\\strict",
+          "strict"
+        ]
+      },
+      {
+        "variant": "composite-apex",
+        "exitCode": 0,
+        "passedCount": 8,
+        "failedCount": 0,
+        "notRunCount": 0,
+        "actualMpmUpdates": 2,
+        "observedVtkFiles": 2,
+        "observedMaterialCsvRows": 50,
+        "observedContactCsvRows": 4,
+        "actualParticleCount": 25,
+        "assertedArgumentArray": [
+          "tests/benchmarks/wang2017-soil2-output.lisp",
+          "output\\wang2017-soil2-2026-10-24\\apex-integration-002\\composite-apex",
+          "composite-apex"
+        ]
+      }
+    ],
+    "noCompletedRegressionRepeated": true
+  },
+  "totalActualMpmUpdatesAcrossStage": 4,
+  "frozenProcessProofs": [
+    {
+      "path": "apex-integration-001/strict-native",
+      "verifiedFrozenFiles": 275,
+      "beforeAfterProofEqual": true,
+      "selectedAsdfLoadedBytesVerified": true,
+      "mappedCopiedBackend": {
+        "modulePath": "D:/MPM/output/wang2017-soil2-2026-10-24/apex-integration-001/strict-native/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "scope": "Own selected native/output process snapshot; this does not retrospectively freeze separate workspace regression runs"
+    },
+    {
+      "path": "apex-integration-002/strict",
+      "verifiedFrozenFiles": 275,
+      "beforeAfterProofEqual": true,
+      "selectedAsdfLoadedBytesVerified": true,
+      "mappedCopiedBackend": {
+        "modulePath": "D:/MPM/output/wang2017-soil2-2026-10-24/apex-integration-002/strict/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "scope": "Own selected native/output process snapshot; this does not retrospectively freeze separate workspace regression runs"
+    },
+    {
+      "path": "apex-integration-002/composite-apex",
+      "verifiedFrozenFiles": 275,
+      "beforeAfterProofEqual": true,
+      "selectedAsdfLoadedBytesVerified": true,
+      "mappedCopiedBackend": {
+        "modulePath": "D:/MPM/output/wang2017-soil2-2026-10-24/apex-integration-002/composite-apex/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "scope": "Own selected native/output process snapshot; this does not retrospectively freeze separate workspace regression runs"
+    }
+  ],
+  "strictOutputBeforeAfterByteIdentity": {
+    "matchedFiles": 4,
+    "comparison": [
+      {
+        "byteIdentical": true,
+        "beforeSha256": "ab94d4e0d2340fd0d7c985bbaf5ae228c9158afc2a79456e02c7cc9f2d66897a",
+        "afterSha256": "ab94d4e0d2340fd0d7c985bbaf5ae228c9158afc2a79456e02c7cc9f2d66897a",
+        "file": "vtk/particles_0000.vtk"
+      },
+      {
+        "byteIdentical": true,
+        "beforeSha256": "69c11db3c62f4ede573cad5bead9dd92e3eba239af2bc909a47e448e21856c33",
+        "afterSha256": "69c11db3c62f4ede573cad5bead9dd92e3eba239af2bc909a47e448e21856c33",
+        "file": "vtk/particles_0001.vtk"
+      },
+      {
+        "byteIdentical": true,
+        "beforeSha256": "c87f267f1ff08c5277976ffc5dbae432cf0fab35f3e5c0734d7f688eeb4ceea0",
+        "afterSha256": "c87f267f1ff08c5277976ffc5dbae432cf0fab35f3e5c0734d7f688eeb4ceea0",
+        "file": "wang2017-material-history.csv"
+      },
+      {
+        "byteIdentical": true,
+        "beforeSha256": "0dc05ba5ee296c89305df84a0eb5f7f44b0cc2af1f8c5e53c595269bbfd3ef02",
+        "afterSha256": "0dc05ba5ee296c89305df84a0eb5f7f44b0cc2af1f8c5e53c595269bbfd3ef02",
+        "file": "wang2017-contact-history.csv"
+      }
+    ],
+    "beforeReference": "Retained old output-controls-002 observations and docs/evidence/wang2017-soil2-2026-10-24/output-controls/attempt-002-native-artifacts.tar.gz"
+  },
+  "limitations": [
+    "Microgeometry output gates do not establish activation of the new apex branch, plastic-path validity or full-slope completion",
+    "Separate apex material-point evidence owns the extension's numerical checks; it is not repeated here",
+    "Explicit volumetric apex is a new constitutive convention, not silent repair of strict zero-dilation Soil2",
+    "No paper agreement, rate/mesh/timestep convergence or landslide PASS"
+  ]
+}

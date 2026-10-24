@@ -1,0 +1,95 @@
+{
+  "scope": "Bounded native integration; original harness failure retained; no scientific validation",
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "bytes": 34,
+      "sha256": "b48f4e5f0241d94ee8cb1591d680ac7820df573c14a600feae5217ca2a11c096"
+    },
+    {
+      "path": "archive-input-manifest.json",
+      "bytes": 173769,
+      "sha256": "75dffa9ab3c1088589e894700f38397ef0d79a07af1429f918e5e5ed158aeae7"
+    },
+    {
+      "path": "attempt-001-raw-artifacts.tar.gz",
+      "bytes": 120779,
+      "sha256": "b06f315fb6a9ecec95659f1d5186aec14f1af0d544d99fada69d5a175c161423"
+    },
+    {
+      "path": "attempt-002-raw-artifacts.tar.gz",
+      "bytes": 265230,
+      "sha256": "a6c89d73c21ebb7d8cbc57f42d8e5d09fb1a198d4db9acef2d8be0004c92d042"
+    },
+    {
+      "path": "attempt001/apex-inputs.json",
+      "bytes": 1493,
+      "sha256": "862bffa8f6286fd0d82d826111e749b3fea596d30f8ba533fea35724710e19de"
+    },
+    {
+      "path": "attempt001/executed-wrapper.ps1",
+      "bytes": 2353,
+      "sha256": "6f2cf0372acb3c55aded9cc0ffdfa9f6fefdc0bf435a8839010ee288348080bd"
+    },
+    {
+      "path": "attempt001/input-status.json",
+      "bytes": 145,
+      "sha256": "502caafa670fc4789c616398f987d16adeddafcf6e3dc85155422188ce390bea"
+    },
+    {
+      "path": "attempt001/regression-status.json",
+      "bytes": 1303,
+      "sha256": "de4b5aceb834939fb2cb7d7f6ef9ae7a684e6a20a1830f9d4863a58df0b2fcda"
+    },
+    {
+      "path": "attempt001/WRAPPER_ARGUMENT_GUARD.txt",
+      "bytes": 189,
+      "sha256": "669a5a41eca1c4b651cc504e25afb08ead1e24dd49edc12423c900a0f296009f"
+    },
+    {
+      "path": "attempt002/composite-apex-result.json",
+      "bytes": 1976,
+      "sha256": "00724c5377497b700edf7073d82f6b606005182ddb9da4e153abcf7b18c026db"
+    },
+    {
+      "path": "attempt002/executed-wrapper.ps1",
+      "bytes": 1917,
+      "sha256": "84fabd42b1acd2d355fba7d3b5e81961d75213ed860e56473e533e8028109ffb"
+    },
+    {
+      "path": "attempt002/status.json",
+      "bytes": 764,
+      "sha256": "51aa5d0c1a254f7000c8a06970c4d1b2a05c6f55ee6269f174c4bb6fee382a9b"
+    },
+    {
+      "path": "attempt002/strict-output-byte-comparison.json",
+      "bytes": 1034,
+      "sha256": "99dd68ebed6ea7a6c2ec26ce4c28a6c8284613a5b54eb3b8ba394148ca8ad566"
+    },
+    {
+      "path": "attempt002/strict-result.json",
+      "bytes": 1925,
+      "sha256": "35e3dffe81623b2e71b309dc2a9cceac96cb6ba987820c27fc8d8536e0ba7514"
+    },
+    {
+      "path": "frozen-process-sources.tar.gz",
+      "bytes": 3092147,
+      "sha256": "c63be41dfbcc2c490304cfbac99571042e9bd0902e07ebcb1f101b5d23418f6f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2290,
+      "sha256": "6af2d60866cee1d0c449a4e111dd7fa76c5b24c5640485dc445cf88aeabd6686"
+    },
+    {
+      "path": "review/analysis-support/package_apex_integration.py",
+      "bytes": 14200,
+      "sha256": "5b2343cdd2d6632090b56eee9dd6bdea1616e500c45ddca3034443a3f2eaa854"
+    },
+    {
+      "path": "review/integration-evidence-review.json",
+      "bytes": 7227,
+      "sha256": "2b1d1ab7c0999b025e927ee51243619afeea86f90675cec84ba3969dc4c565c7"
+    }
+  ]
+}

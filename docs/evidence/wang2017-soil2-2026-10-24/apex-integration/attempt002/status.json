@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "startedUtc": "2026-10-24T05:00:04.6069623Z",
+  "tests": [
+    {
+      "exitCode": 0,
+      "variant": "strict",
+      "arguments": [
+        "tests/benchmarks/wang2017-soil2-output.lisp",
+        "output\\wang2017-soil2-2026-10-24\\apex-integration-002\\strict",
+        "strict"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "variant": "composite-apex",
+      "arguments": [
+        "tests/benchmarks/wang2017-soil2-output.lisp",
+        "output\\wang2017-soil2-2026-10-24\\apex-integration-002\\composite-apex",
+        "composite-apex"
+      ]
+    }
+  ],
+  "scope": "Only missing strict/apex output gates after corrected wrapper argument array; no full slope",
+  "endedUtc": "2026-10-24T05:01:36.4119627Z"
+}

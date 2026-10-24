@@ -1,5 +1,31 @@
 # Native framework and Studio verification
 
+## Explicit Soil2 apex extension gates,2026-10-24
+
+New optional material adds a declared hydrostatic volumetric apex flow;
+strict default physics and negative slope evidence remain. Details and limits:
+[apex-flow contract](benchmarks/WANG2017_APEX_FLOW.md).
+
+Actual Windows frozen apex controls11PASS/exit0:12 new-model point calls and
+5 native calls, zero MPM updates.276 frozen files including fixture match
+before/after; copiedDLL mapping verified. Apex input3 groups pass. Regressions
+after shared candidate extraction/default dispatch: strict point19,MC34,
+framework10,strict native18,input3, all exit0. Only native18 is a frozen load;
+the other regression/input commands use workspace sources.
+
+First wrapper's malformed output argument list was blocked by an operator
+fresh-path guard before any MPM update; overall FAILED status and exact script
+are retained. Only the two missing output gates resumed in002, both exit0/
+8PASS: strict and composite-apex each2 genuine USF updates/25MPs/2VTKs,
+50material/4contact CSV rows. Their275 frozen sources match before/after;
+actual copiedDLL verified. Strict2VTK+2CSV byte-identical to earlier output002.
+Four actual MPM updates in this stage; no slope or landslide claim follows.
+New model labels/volume diagnostics and strict/apex mixture rejection pass.
+Packets: `apex-controls`, `apex-flow-design`, `apex-integration` under
+`docs/evidence/wang2017-soil2-2026-10-24/`. The source-only historical design
+NOT_RUN evidence is distinct from subsequent native executions. No Studio JS
+changed, so the existing36 passing Node checks were not repeated.
+
 ## Soil2 full-run failure and one actual replay,2026-10-24
 
 Native source621146b exited1 at08:26:52WIB, complete=false. Last saved frame57
