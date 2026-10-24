@@ -25,6 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
+- [[wang2017-residual-history-scope]] —100mm history-guard failure, one replay with unchanged residual strength, explicit opt-in scope and native/integration gates
 - [[wang2017-apex-60mm-review]] — complete61-state apex trial, no verified landslide;100mm input gate passed and same-material endpoint trial running13:52WIB
 - [[wang2017-apex-flow]] — separate explicit volumetric apex model with passed native/regression gates; complete60mm slope reviewed without verified landslide
 - [[wang2017-soil2-native]] —18 native and8 actual MPM/output controls PASS; full slope FAILED_NATIVE at08:26WIB, partial states retained

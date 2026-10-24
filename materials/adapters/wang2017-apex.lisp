@@ -2,12 +2,31 @@
 (in-package :cl-mpm/framework)
 
 (defclass wang2017-apex-material-diagnostics (wang2017-material-diagnostics) ())
+(defclass wang2017-apex-residual-material-diagnostics (wang2017-apex-material-diagnostics) ())
 
 (defmethod specialized-material-diagnostics
     ((particle-class (eql 'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex))
      (material material))
   (declare (ignore particle-class material))
   (make-instance 'wang2017-apex-material-diagnostics))
+
+(defmethod specialized-material-diagnostics
+    ((particle-class (eql 'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex-residual))
+     (material material))
+  (declare (ignore particle-class material))
+  (make-instance 'wang2017-apex-residual-material-diagnostics))
+
+(defmethod diagnostics-particle-type ((adapter wang2017-apex-residual-material-diagnostics))
+  'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex-residual)
+
+(defmethod diagnostics-conventions ((adapter wang2017-apex-residual-material-diagnostics))
+  (append
+   (loop for (key value) on (call-next-method) by #'cddr
+         unless (member key '("materialVariant" "historyConvention") :test #'string=)
+           append (list key value))
+   (list "materialVariant" "composite-apex-residual"
+         "historyConvention"
+         "Literal tensor-derived kps may decrease beyond1e-13 only when old and new are both on the exactly constant residual tail and all law values remain exactly equal. No max-history clamp or strength recovery is added; original monotonic-scope rejection remains elsewhere.")))
 
 (defmethod diagnostics-particle-type ((adapter wang2017-apex-material-diagnostics))
   'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex)

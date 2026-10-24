@@ -38,9 +38,10 @@
     "nativeCoordinateWarning": "Native accumulated J2 equivalent increments are not automatically the norm of the accumulated plastic tensor for nonproportional paths",
     "historyPrimitivesStatus": "17 Windows native fixed-frame tensor-history/cohesion controls PASS on db71b63; no physical updates",
     "pointProjectorStatus": "19 coupled point controls and 18 native state/transport/transaction controls PASS; signed-history decrease and multiple roots remain rejected",
-    "implementationStatus": "STRICT_NATIVE_IMPLEMENTED; full 60mm trial FAILED constitutive admissibility, exact replay retained. Separate explicit volumetric-apex extension completed accelerated 60mm trial, no verified landslide",
+    "implementationStatus": "STRICT_NATIVE_IMPLEMENTED; strict60mm fails admissibility. Explicit volumetric-apex60mm completes without landslide;100mm fails history guard after last saved90mm. Separate residual-only scope passes native/integration gates; full follow-up pending",
     "finiteStrainConvention": "Declared incremental-polar corotation of committed signed Ep; not a unique Wang prescription or exact log(Fp)",
     "optionalApexConvention": "Separate opt-in gA=p hydrostatic volumetric flow; changes strict psi0 constitutive physics, not paper-specified",
+    "optionalResidualHistoryScope": "Separate opt-in allows signed-history decrease only when both endpoints lie on residual tail and all law values exactly match; no hidden maximum or added strength-recovery tolerance",
     "latestReview": "docs/benchmarks/WANG2017_APEX_TRIAL.md"
   },
   "geometry": {

@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "startedUtc": "2026-10-24T13:28:26.3991650Z",
+  "sourceCommit": "41eb0646f6867c4e7ca62c8923abc967d19d053b",
+  "tests": [
+    {
+      "exitCode": 0,
+      "name": "inputs",
+      "arguments": [
+        ".tmp/prepare-residual-scope-inputs.lisp",
+        "output\\wang2017-soil2-2026-10-24\\residual-integration-001\\input-report.json"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "name": "strict-native",
+      "arguments": [
+        "tests/materials/wang2017-native.lisp",
+        "output\\wang2017-soil2-2026-10-24\\residual-integration-001\\strict-native"
+      ]
+    },
+    {
+      "exitCode": 0,
+      "name": "residual-output",
+      "arguments": [
+        "tests/benchmarks/wang2017-soil2-output.lisp",
+        "output\\wang2017-soil2-2026-10-24\\residual-integration-001\\residual-output",
+        "composite-apex-residual"
+      ]
+    }
+  ],
+  "scope": "New input, relevant strict native regression, and two-update new output gate; no full slope",
+  "endedUtc": "2026-10-24T13:30:21.4103681Z"
+}

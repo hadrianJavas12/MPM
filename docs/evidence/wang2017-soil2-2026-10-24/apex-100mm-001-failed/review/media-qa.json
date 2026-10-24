@@ -1,0 +1,45 @@
+{
+  "scope": "Actual incomplete saved native states; no scientific-validation claim",
+  "nativeStates": 91,
+  "nativeTimeRangeS": [
+    0,
+    9
+  ],
+  "nativeCommandRangeM": [
+    0,
+    0.09
+  ],
+  "savedPhysicalIntervalS": 0.1,
+  "videoFrames": 91,
+  "videoFps": 4,
+  "durationS": 22.75,
+  "firstPtsS": 0.0,
+  "lastPtsS": 22.5,
+  "nativeToVideoIntervalFactor": 2.5,
+  "lastFrameHoldS": 0.25,
+  "spatialDisplacementScale": 1,
+  "interpolation": false,
+  "fixedAxesAndColour": {
+    "quantity": "wang-paper-kps",
+    "xlim": [
+      -0.33521707786886634,
+      20.335563730732215
+    ],
+    "ylim": [
+      -0.18601848796053408,
+      15.105187263048
+    ],
+    "vmin": 0.0,
+    "vmax": 0.03208634613243572,
+    "displacementScale": 1,
+    "interpolatedStates": false,
+    "videoFps": 4
+  },
+  "codec": "h264",
+  "pixelFormat": "yuv420p",
+  "width": 1680,
+  "height": 756,
+  "fullDecodeExitCode": 0,
+  "rendererExitCode": 2,
+  "interpretation": "Each actual .1s native interval is shown for .25s; actual native time labels, no real-time playback claim"
+}

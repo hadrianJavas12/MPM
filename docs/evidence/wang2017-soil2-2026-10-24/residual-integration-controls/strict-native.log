@@ -1,0 +1,19 @@
+PASS: Fixed Soil2 defaults, constructor and reader tensor ownership
+PASS: Native elastic trial preserves history and external engineering strain
+PASS: Native monotonic plastic return matches independent analytic k and cohesion
+PASS: Native residual tail matches independent analytic return
+PASS: Orthogonal plastic directions use accumulated tensor norm rather than summed J2
+PASS: Native stress shear and true tensor history factors remain distinct
+PASS: Cauchy cohesion is converted once into returned Kirchhoff stress
+PASS: Proper polar rotation recovers independent rotation from positive nonspherical stretch
+PASS: Nonzero plastic history under large pure rotation preserves k and strength
+PASS: Plastic path is covariant under time varying superposed 3D observer rotation
+PASS: Sequential noncommuting elastic rotations agree with refined rotation path
+PASS: Repeated uncommitted plastic trials neither double accumulate nor double rotate history
+PASS: Rejected zero dilation apex preserves every slot and external strain
+PASS: Native monotonic scope rejects real signed history decrease atomically
+PASS: Reusable snapshot restores all new current and committed slots without aliasing
+PASS: Particle copy and no argument reinitialize retain independent current and baseline arrays
+PASS: Loadstep commit and reset restore accepted tensor stress and transport state
+PASS: Production outer stress transaction restores probe mutated kinematics and stress on failure
+WANG2017 NATIVE: 18 PASS, 0 FAIL, 0 NOT_RUN; zero MPM updates.

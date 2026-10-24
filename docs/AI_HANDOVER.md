@@ -2,7 +2,84 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
-## Current:100mm endpoint run ACTIVE24October13:52:42WIB
+## Current: residual repair gated; broader unnotched literature study authorized
+
+Latest human instruction24October: explore journal methods to achieve actual
+landslide WITHOUT NOTCH. This broadens method selection; do not force the Wang
+endpoint study to stand in for that physical objective. No full solver active.
+Residual-scope repair below is implemented/gated but no fresh full run started.
+Save this cohesive checkpoint before selecting the new benchmark. Two primary
+literature notes and an engine-fit audit are being written under
+`research/notes/unnotched-landslide-2026-10-24/`; read those before duplicating
+searches. Candidate routes are gravity-driven strain-softening slopes and a
+separate classical strength-reduction benchmark. SSR deliberately reduces
+strength and must be labeled, not presented as spontaneous failure of unchanged
+soil. Require explicit geometry/material/history/trigger/boundary provenance,
+native constitutive/contact gates and actual coherent motion/run-out evidence.
+No UI/main merge, hidden strength/notch/trajectory tuning or fake validation.
+
+All96 indexed artifacts in the4 residual/failure packets are byte-verified
+against Git staged blobs, including ignored VTK/PNG/MP4 explicitly included.
+Packet text preserves original bytes with * -text; do not normalize raw evidence.
+Original collector files/archives/raw stay unchanged. Numerical gates remain
+as below; no old tests/replays/media need repeating. Automation5h while terminal.
+
+## Completed:100mm failure diagnosis and residual-history scope repair
+
+UPDATE24October20:32WIB: ONE frozen actual replay is DONE, expected rejection
+reproduced. Unique admissible hydrostatic-apex, regular roots0, positivework/
+volume, both lawvalues EXACT15kPa/35deg/0deg. Old/newkps>.02; no actualhealing.
+Replaypacket16hashes/277ZIPmembers,275failedsources+driver/DLL verified. Full
+particle rollback NOT_EXECUTED in pure replay. Do not replay capsule again.
+
+New separate opt-in class particle-wang2017-soil2-apex-residual implements
+residual-tail-only literal history; old strict/apex defaults keep1e-13 guard.
+No max/strength/root/tolerance changes. Numeric100mm inputs unchanged; only
+materialModel/historyPolicy metadata differ. IntegrationDONE20:30:21WIB:
+workspaceinput2groups, frozenstrictnative18, frozennewoutput8 allWindows0.
+Output2realUSFupdates25MPs2VTKs/50material4contact rows;2VTK+2CSV byte-identical
+to oldapex elastic baseline. New13distinctgroups across001(12PASS+constructor
+radians-fixtureFAIL,exit1) and002(constructor-onlyPASS,exit0/zeroactualcalls);
+do not repeat passedgroups. Newpoint/native counts/proofs in focusedpacket.
+See `docs/benchmarks/WANG2017_RESIDUAL_HISTORY_SCOPE.md` before fresh run.
+
+Saved91states/83265material546contact rows pass physical identities, but no
+coherent landslide. Reactionpeak644.162kN/m at6.1s falls7.12% to598.325 at9s;
+15MPs reachresidual,0freeuppermasspasttoe. Old60mm-prefix canonicalpointwise
+comparison remains FAIL on3fields (yieldresidual/shearstress/tinydecreaseflags);
+positions/reaction/Ep/kps/cohesion pass. Never replace this FAIL with fieldscale
+PASS or relax tolerances. Failedpacket44hashes/392archive members with full
+91frame video/decode0 and expectedrenderer2 is ready; force-add indexedmedia.
+Next: archive focused/integrationgates, updatewiki/docs, commitpush, thenONE
+fresh SAME100mm input with explicitresidualpolicy; no endpoint/rate/strength
+tuning. Sourcecode stable; no fullsolver active. Recordrealstart/PIDs/budget.
+
+Actual native/worker exit1, before16:52:42 wallbudget, source3caa6be. No full
+solver active; do not poll old PID27304. Last SAVED frame90 is9s/90mm with
+30960accepted loading updates; failure manifest31092 includes later unsaved
+work. Capsule lacks full-solver time/particleID, so exact failure displacement
+is not established. Actual `mc-integration-failure.json` variant composite-apex
+reports signed-history decrease old.03187108863369348 to.03187108746386819,
+delta−1.1698253e-9, exceeding1e-13 guard. Both histories are beyond residual.02;
+whether the pure projection preserves exactly15kPa strength is being replayed.
+This is a different failure from the earlier no-admissible strict return.
+
+ONE actual frozen NEW capsule replay is owned by rate002_wrapper_audit; saved
+91-state integrity/prefix/physical review, one partial render(expectedexit2)
+and failed evidence are owned by rate002_partial_comparison. Read their results
+before any repeat. No production equations, strength/rate or tolerances changed.
+Full-particle rollback cannot be proved from this capsule alone; distinguish
+one pure replay from prior synthetic transaction controls.
+
+Next possible scoped remedy: allow signed-norm reversal only on an exactly
+constant residual-strength plateau, with actual signed history and zero healing;
+keep old strict/apex guards compatible. This needs actual replay/flow/work
+review, explicit policy and new native controls before any fresh full run.
+Do not silently max history, permit strength recovery, pick a root or loosen
+tolerance to complete the run. Same automation returned5h while terminal;
+restore15min only for a justified fresh run. Goal remains verified landslide.
+
+## Historical:100mm endpoint launch24October13:52:42WIB
 
 ONE fresh `output/wang2017-soil2-2026-10-24/apex-100mm-001` started13:52:42WIB,
 native source **3caa6bea5d447be34c8bd1104311f1aa34b57986**, after result/input

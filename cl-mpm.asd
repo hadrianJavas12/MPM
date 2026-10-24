@@ -1092,4 +1092,4 @@
   :components ((:module "materials/models/plastic/wang2017"
                 :pathname "materials/models/plastic/wang2017"
                 :components ((:file "apex-package") (:file "apex-projection")
-                             (:file "apex-native")))))
+                             (:file "apex-native") (:file "apex-residual-history")))))

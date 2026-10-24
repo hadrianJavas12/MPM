@@ -74,11 +74,13 @@
                  (eq bc (wang2017-audit-context-boundary context))
                  (= frame (wang2017-audit-context-next-frame context)))
       (error "Wang audit requires its own context and sequential saved frames."))
-    (let* ((diagnostics (make-instance
-                        (if (typep (aref (cl-mpm:sim-mps sim) 0)
-                                   'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex)
-                            'cl-mpm/framework::wang2017-apex-material-diagnostics
-                            'cl-mpm/framework::wang2017-material-diagnostics)))
+    (let* ((particle (aref (cl-mpm:sim-mps sim) 0))
+           (diagnostics (make-instance
+                         (cond ((typep particle 'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex-residual)
+                                'cl-mpm/framework::wang2017-apex-residual-material-diagnostics)
+                               ((typep particle 'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex)
+                                'cl-mpm/framework::wang2017-apex-material-diagnostics)
+                               (t 'cl-mpm/framework::wang2017-material-diagnostics))))
            (fields (cl-mpm/framework:diagnostics-fields diagnostics))
            (material-headers
              (append '("frame" "time_s" "particle_id" "x_m" "y_m" "z_m"

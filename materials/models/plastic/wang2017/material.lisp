@@ -10,6 +10,15 @@
   (project-point-variant :strict trial e nu j history basis))
 (defgeneric native-material-variant (mp))
 (defmethod native-material-variant ((mp particle-wang2017-soil2)) "strict")
+(defgeneric native-history-policy (mp)
+  (:documentation "Optional explicit history-scope description; NIL preserves legacy diagnostics."))
+(defmethod native-history-policy ((mp particle-wang2017-soil2)) nil)
+
+(defun %native-variant-keyword (name)
+  (cond ((equal name "strict") :strict)
+        ((equal name "composite-apex") :composite-apex)
+        ((equal name "composite-apex-residual") :composite-apex-residual)
+        (t (error "Unsupported Wang material variant ~S." name))))
 
 (defun %matrix-rows (matrix)
   (when (typep matrix 'magicl:matrix/double-float)
@@ -21,11 +30,19 @@
     (dotimes (i 3 array) (dotimes (j 3)
       (setf (aref array i j) (magicl:tref matrix i j))))))
 
+(defconstant +history-decrease-tolerance+ 1d-13)
+
 (defun %guard-history (old new)
-  (when (< new (- old 1d-13))
+  (when (< new (- old +history-decrease-tolerance+))
     (mc-evolution::integration-fail
      "Wang signed history decreased outside the declared monotonic scope; healing/irreversible continuation is not approved"
      old new)))
+
+(defgeneric validate-history-transition (variant old new)
+  (:documentation "Validate a signed-history transition before native mutation. Default scope rejects decreases; opt-in policies must be explicit."))
+(defmethod validate-history-transition (variant old new)
+  (declare (ignore variant))
+  (%guard-history old new))
 
 (defun %failure-diagnostic (reason trial e nu j committed rotated basis increment rotation)
   (mc-evolution::%diagnostic-object
@@ -48,9 +65,7 @@
                  (eql (field "schemaVersion") 1))
       (error "Unsupported Wang native failure schema."))
     (let* ((variant-name (or (field "materialVariant") "strict"))
-           (variant (cond ((equal variant-name "strict") :strict)
-                          ((equal variant-name "composite-apex") :composite-apex)
-                          (t (error "Unsupported Wang material variant ~S." variant-name))))
+           (variant (%native-variant-keyword variant-name))
            (rows (field "principalToSpatialBasis"))
            (basis (make-array '(3 3) :element-type 'double-float)))
       (dotimes (i 3) (dotimes (j 3) (setf (aref basis i j) (elt (elt rows i) j))))
@@ -58,8 +73,9 @@
                      (field "trialKirchhoffPa") (field "youngsModulusPa")
                      (field "poissonRatio") (field "deformationJacobian")
                      (paper:make-paper-history (field "rotatedPlasticTensor")) basis)))
-        (%guard-history (paper:paper-kps (field "committedPlasticTensor"))
-                        (point:paper-projection-kps result))
+        (validate-history-transition variant
+                                     (paper:paper-kps (field "committedPlasticTensor"))
+                                     (point:paper-projection-kps result))
         result))))
 
 (defmethod cl-mpm/particle:constitutive-model ((mp particle-wang2017-soil2) strain dt)
@@ -119,7 +135,8 @@ plastic increments are never rotated twice. All native mutation follows validati
                                       :branch (if result (point:paper-projection-branch result) :plasticity-disabled)
                                       :evaluations (if result (point:paper-projection-evaluations result) 0)
                                       :transport-convention "Incremental polar corotation of committed signed spatial Ep")))
-                (%guard-history old-kps kps)
+                (validate-history-transition (%native-variant-keyword (native-material-variant mp))
+                                             old-kps kps)
                 (unless (and (every #'mc-evolution::finite-real-p (list kps j2-increment legacy-j2 volume work residual p-wave))
                              (>= j2-increment 0d0) (>= legacy-j2 0d0) (> p-wave 0d0))
                   (mc-evolution::integration-fail "Invalid Wang material result"))
@@ -155,6 +172,8 @@ plastic increments are never rotated twice. All native mutation follows validati
             (setf (gethash "materialVariant" diagnostic) (native-material-variant mp)
                   (gethash "historyDecrease" diagnostic)
                   (not (null (search "history decreased" reason :test #'char-equal)))))
+          (when (and diagnostic (native-history-policy mp))
+            (setf (gethash "historyPolicy" diagnostic) (native-history-policy mp)))
           (error 'mc-evolution:material-integration-error :reason reason
                  :details (if (typep condition 'mc-evolution:material-integration-error)
                               (mc-evolution:integration-error-details condition) nil)

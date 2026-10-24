@@ -1,0 +1,687 @@
+{
+  "checkedUtc": "2026-10-24T10:07:33.835993+00:00",
+  "frozenRecordsVerified": 275,
+  "snapshotOriginalsScope": "Current comparison is temporal; newer authorized code changes do not alter the executed snapshot",
+  "workspaceDifferencesFromExecutedSnapshot": [
+    {
+      "path": "D:/MPM/materials/models/plastic/wang2017/apex-package.lisp",
+      "snapshotSha256": "8670da868f4f35a4496b4a5e4c2641b68eb280b8c9b46fd9c94a8aa460606665",
+      "currentSha256": "895c8a58ce520c5692bdd4415aac1807426064ba96799970bf01c6f8f6fc8185"
+    },
+    {
+      "path": "D:/MPM/materials/models/plastic/wang2017/material.lisp",
+      "snapshotSha256": "285c9d9becedc81547db8b267cf43b08ed2c5218a52e7b03ed743098c6725576",
+      "currentSha256": "7217e93a7d657d0dbfe6d71f7d3217c6df889d00cb37b9e8497cb5e6b0a54b15"
+    },
+    {
+      "path": "D:/MPM/materials/models/plastic/wang2017/native-package.lisp",
+      "snapshotSha256": "02273643ee0e3d4bd6ede580f29b84414f33011ae56680ec2fca162813aee80f",
+      "currentSha256": "c3b519759df364208140b15c6bc58d915f8c5cb343be40a4803718740ac6d917"
+    },
+    {
+      "path": "D:/MPM/cl-mpm.asd",
+      "snapshotSha256": "3f4cecba8ff4f14651064a823854470c9e26384b3783fa1a72944e19b0092d5f",
+      "currentSha256": "66797c2c24506ca476be004755e5d322b056dcefe62e29ea4bbf738cff1fe9ec"
+    }
+  ],
+  "excludedPrivateCompiledCacheFiles": [
+    {
+      "path": ".native-cache/materials/adapters/chalk.fasl",
+      "bytes": 7233
+    },
+    {
+      "path": ".native-cache/materials/adapters/cliff.fasl",
+      "bytes": 3101
+    },
+    {
+      "path": ".native-cache/materials/adapters/damage-output.fasl",
+      "bytes": 5102
+    },
+    {
+      "path": ".native-cache/materials/adapters/diagnostics-call.fasl",
+      "bytes": 2134
+    },
+    {
+      "path": ".native-cache/materials/adapters/legacy-triaxial.fasl",
+      "bytes": 9399
+    },
+    {
+      "path": ".native-cache/materials/adapters/native.fasl",
+      "bytes": 13332
+    },
+    {
+      "path": ".native-cache/materials/adapters/triaxial.fasl",
+      "bytes": 2039
+    },
+    {
+      "path": ".native-cache/materials/adapters/wang2017-apex.fasl",
+      "bytes": 10296
+    },
+    {
+      "path": ".native-cache/materials/adapters/wang2017.fasl",
+      "bytes": 21522
+    },
+    {
+      "path": ".native-cache/materials/core/constitutive-package.fasl",
+      "bytes": 1491
+    },
+    {
+      "path": ".native-cache/materials/core/definition.fasl",
+      "bytes": 2332
+    },
+    {
+      "path": ".native-cache/materials/core/diagnostics-interface.fasl",
+      "bytes": 5627
+    },
+    {
+      "path": ".native-cache/materials/core/plastic-state.fasl",
+      "bytes": 9918
+    },
+    {
+      "path": ".native-cache/materials/diagnostics/chalk-reference.fasl",
+      "bytes": 3291
+    },
+    {
+      "path": ".native-cache/materials/diagnostics/native.fasl",
+      "bytes": 39202
+    },
+    {
+      "path": ".native-cache/materials/backends/cpp/legacy-transaction.fasl",
+      "bytes": 35501
+    },
+    {
+      "path": ".native-cache/materials/models/chalk/joss-reference.fasl",
+      "bytes": 9239
+    },
+    {
+      "path": ".native-cache/materials/models/chalk/legacy.fasl",
+      "bytes": 40676
+    },
+    {
+      "path": ".native-cache/materials/models/concrete/legacy.fasl",
+      "bytes": 8142
+    },
+    {
+      "path": ".native-cache/materials/models/damage/constitutive.fasl",
+      "bytes": 21076
+    },
+    {
+      "path": ".native-cache/materials/models/damage/criteria.fasl",
+      "bytes": 74869
+    },
+    {
+      "path": ".native-cache/materials/models/damage/legacy-particles.fasl",
+      "bytes": 71757
+    },
+    {
+      "path": ".native-cache/materials/models/damage/legacy-state-evolution.fasl",
+      "bytes": 35479
+    },
+    {
+      "path": ".native-cache/materials/models/damage/particle.fasl",
+      "bytes": 16750
+    },
+    {
+      "path": ".native-cache/materials/models/elastic/constitutive.fasl",
+      "bytes": 8131
+    },
+    {
+      "path": ".native-cache/materials/models/elastic/particle.fasl",
+      "bytes": 27468
+    },
+    {
+      "path": ".native-cache/materials/models/fluid/constitutive.fasl",
+      "bytes": 5190
+    },
+    {
+      "path": ".native-cache/materials/models/fluid/particle.fasl",
+      "bytes": 5403
+    },
+    {
+      "path": ".native-cache/materials/models/frictional-damage/legacy.fasl",
+      "bytes": 22044
+    },
+    {
+      "path": ".native-cache/materials/models/viscoelastic/particle.fasl",
+      "bytes": 4124
+    },
+    {
+      "path": ".native-cache/materials/models/viscoplastic/particle.fasl",
+      "bytes": 7940
+    },
+    {
+      "path": ".native-cache/materials/models/chalk/evolution/softening.fasl",
+      "bytes": 4763
+    },
+    {
+      "path": ".native-cache/materials/models/concrete/evolution/native-hooks.fasl",
+      "bytes": 6672
+    },
+    {
+      "path": ".native-cache/materials/models/concrete/evolution/softening.fasl",
+      "bytes": 4162
+    },
+    {
+      "path": ".native-cache/materials/models/damage/evolution/degradation.fasl",
+      "bytes": 49462
+    },
+    {
+      "path": ".native-cache/materials/models/damage/evolution/delayed-rate.fasl",
+      "bytes": 3579
+    },
+    {
+      "path": ".native-cache/materials/models/damage/evolution/responses.fasl",
+      "bytes": 17100
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/drucker-prager/constitutive.fasl",
+      "bytes": 51573
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/drucker-prager/particle.fasl",
+      "bytes": 13296
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/mohr-coulomb/constitutive.fasl",
+      "bytes": 32455
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/mohr-coulomb/particle.fasl",
+      "bytes": 13986
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/mohr-coulomb-evolution/diagnostics.fasl",
+      "bytes": 11857
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/mohr-coulomb-evolution/law.fasl",
+      "bytes": 29727
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/mohr-coulomb-evolution/material.fasl",
+      "bytes": 38197
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/mohr-coulomb-evolution/package.fasl",
+      "bytes": 6455
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/mohr-coulomb-evolution/projection.fasl",
+      "bytes": 76293
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/mohr-coulomb-evolution/state.fasl",
+      "bytes": 35364
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/von-mises/constitutive.fasl",
+      "bytes": 30141
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/von-mises/particle.fasl",
+      "bytes": 18160
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/wang2017/apex-native.fasl",
+      "bytes": 8293
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/wang2017/apex-package.fasl",
+      "bytes": 1474
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/wang2017/apex-projection.fasl",
+      "bytes": 19047
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/wang2017/history.fasl",
+      "bytes": 10869
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/wang2017/law.fasl",
+      "bytes": 2876
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/wang2017/material.fasl",
+      "bytes": 49241
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/wang2017/native-package.fasl",
+      "bytes": 1776
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/wang2017/package.fasl",
+      "bytes": 1360
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/wang2017/point-projection.fasl",
+      "bytes": 46113
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/wang2017/state.fasl",
+      "bytes": 22154
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/wang2017/transport.fasl",
+      "bytes": 14043
+    },
+    {
+      "path": ".native-cache/materials/models/plastic/von-mises/evolution/secant-hardening.fasl",
+      "bytes": 2774
+    },
+    {
+      "path": ".native-cache/materials/models/viscoelastic/maxwell/constitutive.fasl",
+      "bytes": 37810
+    },
+    {
+      "path": ".native-cache/materials/models/viscoplastic/clay-creep/law.fasl",
+      "bytes": 33085
+    },
+    {
+      "path": ".native-cache/materials/models/viscoplastic/clay-creep/package.fasl",
+      "bytes": 1526
+    },
+    {
+      "path": ".native-cache/materials/models/viscoplastic/clay-creep/particle.fasl",
+      "bytes": 30920
+    },
+    {
+      "path": ".native-cache/materials/models/viscoplastic/glen/constitutive.fasl",
+      "bytes": 34298
+    },
+    {
+      "path": ".native-cache/scenarios/cliff/adapter.fasl",
+      "bytes": 10047
+    },
+    {
+      "path": ".native-cache/scenarios/cliff/build.fasl",
+      "bytes": 4797
+    },
+    {
+      "path": ".native-cache/scenarios/cliff/execute.fasl",
+      "bytes": 40584
+    },
+    {
+      "path": ".native-cache/scenarios/cliff/geometry.fasl",
+      "bytes": 6538
+    },
+    {
+      "path": ".native-cache/scenarios/cliff/run.fasl",
+      "bytes": 9348
+    },
+    {
+      "path": ".native-cache/scenarios/cliff/settings.fasl",
+      "bytes": 1239
+    },
+    {
+      "path": ".native-cache/scenarios/cliff/solver.fasl",
+      "bytes": 4122
+    },
+    {
+      "path": ".native-cache/scenarios/joss/build.fasl",
+      "bytes": 8730
+    },
+    {
+      "path": ".native-cache/scenarios/joss/classes.fasl",
+      "bytes": 1584
+    },
+    {
+      "path": ".native-cache/scenarios/joss/geometry.fasl",
+      "bytes": 9271
+    },
+    {
+      "path": ".native-cache/scenarios/joss/measurements.fasl",
+      "bytes": 1820
+    },
+    {
+      "path": ".native-cache/scenarios/joss/output.fasl",
+      "bytes": 5007
+    },
+    {
+      "path": ".native-cache/scenarios/joss/phases.fasl",
+      "bytes": 6150
+    },
+    {
+      "path": ".native-cache/scenarios/joss/run.fasl",
+      "bytes": 25949
+    },
+    {
+      "path": ".native-cache/scenarios/joss/statistics.fasl",
+      "bytes": 15671
+    },
+    {
+      "path": ".native-cache/scenarios/joss/validation.fasl",
+      "bytes": 3984
+    },
+    {
+      "path": ".native-cache/scenarios/slope-creep/adapter.fasl",
+      "bytes": 4209
+    },
+    {
+      "path": ".native-cache/scenarios/slope-creep/configuration.fasl",
+      "bytes": 11016
+    },
+    {
+      "path": ".native-cache/scenarios/slope-creep/loading-output.fasl",
+      "bytes": 6294
+    },
+    {
+      "path": ".native-cache/scenarios/slope-creep/loading.fasl",
+      "bytes": 22139
+    },
+    {
+      "path": ".native-cache/scenarios/slope-creep/measurements.fasl",
+      "bytes": 16091
+    },
+    {
+      "path": ".native-cache/scenarios/slope-creep/package.fasl",
+      "bytes": 1006
+    },
+    {
+      "path": ".native-cache/scenarios/slope-creep/runner.fasl",
+      "bytes": 27486
+    },
+    {
+      "path": ".native-cache/scenarios/slope-descent/adapter.fasl",
+      "bytes": 4217
+    },
+    {
+      "path": ".native-cache/scenarios/slope-descent/boundary.fasl",
+      "bytes": 23002
+    },
+    {
+      "path": ".native-cache/scenarios/slope-descent/configuration.fasl",
+      "bytes": 11217
+    },
+    {
+      "path": ".native-cache/scenarios/slope-descent/geometry.fasl",
+      "bytes": 15408
+    },
+    {
+      "path": ".native-cache/scenarios/slope-descent/package.fasl",
+      "bytes": 5292
+    },
+    {
+      "path": ".native-cache/scenarios/slope-descent/runner.fasl",
+      "bytes": 49169
+    },
+    {
+      "path": ".native-cache/scenarios/slope-descent/wang2017-output.fasl",
+      "bytes": 23109
+    },
+    {
+      "path": ".native-cache/scenarios/triaxial/adapter.fasl",
+      "bytes": 8778
+    },
+    {
+      "path": ".native-cache/scenarios/triaxial/config.fasl",
+      "bytes": 7770
+    },
+    {
+      "path": ".native-cache/scenarios/triaxial/controls.fasl",
+      "bytes": 10520
+    },
+    {
+      "path": ".native-cache/scenarios/triaxial/geometry.fasl",
+      "bytes": 11524
+    },
+    {
+      "path": ".native-cache/scenarios/triaxial/homogeneous.fasl",
+      "bytes": 7748
+    },
+    {
+      "path": ".native-cache/scenarios/triaxial/measurements.fasl",
+      "bytes": 22780
+    },
+    {
+      "path": ".native-cache/scenarios/triaxial/mpm.fasl",
+      "bytes": 8993
+    },
+    {
+      "path": ".native-cache/scenarios/triaxial/runner.fasl",
+      "bytes": 15433
+    },
+    {
+      "path": ".native-cache/scenarios/triaxial/state.fasl",
+      "bytes": 1413
+    },
+    {
+      "path": ".native-cache/scenarios/triaxial/stress-measures.fasl",
+      "bytes": 1477
+    },
+    {
+      "path": ".native-cache/src/core/iterate.fasl",
+      "bytes": 132488
+    },
+    {
+      "path": ".native-cache/src/core/mesh-base.fasl",
+      "bytes": 135185
+    },
+    {
+      "path": ".native-cache/src/core/package.fasl",
+      "bytes": 38496
+    },
+    {
+      "path": ".native-cache/src/core/particle-base.fasl",
+      "bytes": 52237
+    },
+    {
+      "path": ".native-cache/src/core/particle-protocols.fasl",
+      "bytes": 18539
+    },
+    {
+      "path": ".native-cache/src/core/settings.fasl",
+      "bytes": 1696
+    },
+    {
+      "path": ".native-cache/src/core/simulation-base.fasl",
+      "bytes": 166601
+    },
+    {
+      "path": ".native-cache/src/core/stress-update.fasl",
+      "bytes": 48206
+    },
+    {
+      "path": ".native-cache/src/damage/package.fasl",
+      "bytes": 8058
+    },
+    {
+      "path": ".native-cache/src/geometry/setup.fasl",
+      "bytes": 100707
+    },
+    {
+      "path": ".native-cache/src/measurements/legacy-particle.fasl",
+      "bytes": 1938
+    },
+    {
+      "path": ".native-cache/src/measurements/legacy-stress.fasl",
+      "bytes": 2120
+    },
+    {
+      "path": ".native-cache/src/measurements/material-output.fasl",
+      "bytes": 9382
+    },
+    {
+      "path": ".native-cache/src/numerics/angles.fasl",
+      "bytes": 1153
+    },
+    {
+      "path": ".native-cache/src/numerics/legacy-tensors.fasl",
+      "bytes": 2119
+    },
+    {
+      "path": ".native-cache/src/output/legacy-triaxial-json.fasl",
+      "bytes": 2587
+    },
+    {
+      "path": ".native-cache/src/output/retained-history.fasl",
+      "bytes": 3981
+    },
+    {
+      "path": ".native-cache/src/output/vtk.fasl",
+      "bytes": 96393
+    },
+    {
+      "path": ".native-cache/src/parallel/damage-communication-state.fasl",
+      "bytes": 5743
+    },
+    {
+      "path": ".native-cache/src/simulation/lifecycle.fasl",
+      "bytes": 12226
+    },
+    {
+      "path": ".native-cache/src/simulation/package.fasl",
+      "bytes": 2251
+    },
+    {
+      "path": ".native-cache/src/transfer/forces.fasl",
+      "bytes": 16391
+    },
+    {
+      "path": ".native-cache/src/transfer/g2p.fasl",
+      "bytes": 49874
+    },
+    {
+      "path": ".native-cache/src/transfer/p2g.fasl",
+      "bytes": 57932
+    },
+    {
+      "path": ".native-cache/src/boundaries/constraints/bc.fasl",
+      "bytes": 62066
+    },
+    {
+      "path": ".native-cache/src/boundaries/penalty/penalty.fasl",
+      "bytes": 201604
+    },
+    {
+      "path": ".native-cache/src/boundaries/pressure/isotropic.fasl",
+      "bytes": 5412
+    },
+    {
+      "path": ".native-cache/src/damage/nonlocal/ekl.fasl",
+      "bytes": 20420
+    },
+    {
+      "path": ".native-cache/src/damage/nonlocal/legacy.fasl",
+      "bytes": 74596
+    },
+    {
+      "path": ".native-cache/src/damage/solver/solver.fasl",
+      "bytes": 15637
+    },
+    {
+      "path": ".native-cache/src/discretization/domain-update/domain-update.fasl",
+      "bytes": 46373
+    },
+    {
+      "path": ".native-cache/src/discretization/ghost-nodes/ghost.fasl",
+      "bytes": 103425
+    },
+    {
+      "path": ".native-cache/src/discretization/shape-functions/shape-function.fasl",
+      "bytes": 31320
+    },
+    {
+      "path": ".native-cache/src/discretization/splitting/splitting.fasl",
+      "bytes": 41477
+    },
+    {
+      "path": ".native-cache/src/numerics/error-handling/errors.fasl",
+      "bytes": 2255
+    },
+    {
+      "path": ".native-cache/src/numerics/fastmaths/fastmaths.fasl",
+      "bytes": 108318
+    },
+    {
+      "path": ".native-cache/src/numerics/integration/delayed-steppers.fasl",
+      "bytes": 8203
+    },
+    {
+      "path": ".native-cache/src/numerics/integration/finite-difference-tangent.fasl",
+      "bytes": 4041
+    },
+    {
+      "path": ".native-cache/src/numerics/native-bridge/cpp.fasl",
+      "bytes": 5977
+    },
+    {
+      "path": ".native-cache/src/numerics/tensors/constitutive-primitives.fasl",
+      "bytes": 21451
+    },
+    {
+      "path": ".native-cache/src/numerics/tensors/damage-primitives.fasl",
+      "bytes": 4393
+    },
+    {
+      "path": ".native-cache/src/numerics/tensors/particle-objectivity.fasl",
+      "bytes": 12392
+    },
+    {
+      "path": ".native-cache/src/numerics/tensors/principal-strains.fasl",
+      "bytes": 4814
+    },
+    {
+      "path": ".native-cache/src/numerics/tensors/utils.fasl",
+      "bytes": 168173
+    },
+    {
+      "path": ".native-cache/src/output/plotting/legacy-particle.fasl",
+      "bytes": 10253
+    },
+    {
+      "path": ".native-cache/src/output/plotting/plotter.fasl",
+      "bytes": 11083
+    },
+    {
+      "path": ".native-cache/src/simulation/compatibility/triaxial-package.fasl",
+      "bytes": 898
+    },
+    {
+      "path": ".native-cache/src/simulation/components/base.fasl",
+      "bytes": 4439
+    },
+    {
+      "path": ".native-cache/src/simulation/components/geometry.fasl",
+      "bytes": 2864
+    },
+    {
+      "path": ".native-cache/src/simulation/components/specifications.fasl",
+      "bytes": 11080
+    },
+    {
+      "path": ".native-cache/src/simulation/config/legacy-triaxial-values.fasl",
+      "bytes": 2739
+    },
+    {
+      "path": ".native-cache/src/simulation/config/package.fasl",
+      "bytes": 945
+    },
+    {
+      "path": ".native-cache/src/simulation/config/parameters.fasl",
+      "bytes": 12687
+    },
+    {
+      "path": ".native-cache/src/solvers/explicit/musl.fasl",
+      "bytes": 5997
+    },
+    {
+      "path": ".native-cache/src/solvers/explicit/usf.fasl",
+      "bytes": 10298
+    },
+    {
+      "path": ".native-cache/src/solvers/explicit/usl.fasl",
+      "bytes": 5304
+    },
+    {
+      "path": ".native-cache/src/solvers/linear-systems/linear-solver.fasl",
+      "bytes": 84993
+    },
+    {
+      "path": ".native-cache/src/stabilization/aggregate/aggregate.fasl",
+      "bytes": 126279
+    }
+  ],
+  "postprocessorOriginalsMatchLaunchHashes": true,
+  "allAuditVtkSourceHashesMatch": true
+}

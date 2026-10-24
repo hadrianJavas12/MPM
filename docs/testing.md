@@ -1,5 +1,44 @@
 # Native framework and Studio verification
 
+## 100 mm history failure and residual-scope controls, 2026-10-24
+
+The native run on3caa6be exits1 at15:55:34WIB. Last saved9s/90mm/30960updates
+differs from the failure manifest31092 including unsaved work.91states remain
+incomplete; one partial renderer exits2 as expected, video full decode0.
+Reaction drops7.12% after6.1s peak, but coherent landslide is not verified.
+The canonical0–60mm pointwise comparison stays FAIL on3fields; raw maxima and
+all failed cells remain preserved, without tolerance changes or field-scale
+PASS substitution. Failed packet44hashes/392archive members retains negative
+data, original sources and later workspace differences honestly.
+
+One frozen actual capsule replay reproduces the history guard. The unique apex
+projection has positivework/volume, and both strengths are exactly15kPa/35deg/0.
+Replay16hashes/277ZIPmembers retain275failedsources plusdriver/manifest. No full
+particle rollback is inferred from this pure replay.
+
+The separate residual-only policy preserves the original1e-13 guard elsewhere,
+old strict/apex defaults, actual signed history and all numerical inputs.
+Focused Windows001:12PASS plus constructor harness degrees/radiansFAIL,exit1;
+002 executes ONLY the missed constructor group,1PASS/exit0,12skipped. Aggregate
+13distinctgroups,1newpoint/9newnativecalls,zero oldcapsulereplay/MPM. Both277file
+snapshots before/after match, actual copiedDLL verified,572ZIPmembers retained.
+Current executable test forms match002; one trailing blank line was removed
+after execution for Git whitespace checking. Exact executed bytes and the
+original failure remain retained; no numerical test repeated for whitespace.
+
+Relevant integration: workspaceinput2groups, frozenstrictnative18, frozennew
+output8 all exit0. Output executes2genuineUSFupdates/25MPs/2VTKs/50material/
+4contact rows;2VTK+2CSV byte-identical to the old apex elastic baseline.29indexed
+artifacts/554ZIPmembers retain exact executed sources and runtime proofs.
+No point-projector, Node or unrelated suite was repeated. Renderer syntax check
+passes; only the explicit model caption changes. These gates permit a fresh
+same100mm experiment, not a scientific/landslide PASS. See
+[policy and limits](benchmarks/WANG2017_RESIDUAL_HISTORY_SCOPE.md).
+All96 indexed artifacts across failure/replay/focused/integration packets also
+match Git staged blob lengths/SHA256. Explicit byte-preserving attributes and
+indexed ignored VTK/media inclusion prevent checkout normalization or omission
+from breaking those hashes; raw artifacts are not whitespace-cleaned.
+
 ## Completed apex60mm review and next endpoint input gate,2026-10-24
 
 Source55bc85d native0/complete6s60mm at13:33:43WIB; audit/render/worker0 at

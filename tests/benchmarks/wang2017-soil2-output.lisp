@@ -1,6 +1,6 @@
 ;;;; Focused Windows native Soil2/output integration; exactly two real MPM updates.
 ;;;; windows\cl-mpm.cmd tests\benchmarks\wang2017-soil2-output.lisp output\FRESH
-;;;; Optional second argument: composite-apex (default strict).
+;;;; Optional second argument: composite-apex or composite-apex-residual (default strict).
 ;;;; The standard CLI helper freezes every selected project source/DLL BEFORE load.
 (in-package :cl-user)
 (require :asdf)
@@ -8,8 +8,8 @@
 (defvar *soil2-output-output* nil)
 (defvar *soil2-output-exit* 1)
 (defvar *soil2-output-variant* (or (second (cl-mpm-script-args)) "strict"))
-(unless (member *soil2-output-variant* '("strict" "composite-apex") :test #'string=)
-  (error "Expected strict or composite-apex output control variant."))
+(unless (member *soil2-output-variant* '("strict" "composite-apex" "composite-apex-residual") :test #'string=)
+  (error "Expected strict, composite-apex or composite-apex-residual output control variant."))
 ;; Load in a separate top-level form so the helper's DEFVAR is established
 ;; BEFORE the following bootstrap form compiles its dynamic context binding.
 (unless *soil2-output-frozen*
@@ -30,6 +30,7 @@
                           "source/materials/models/plastic/wang2017/apex-package.lisp"
                           "source/materials/models/plastic/wang2017/apex-projection.lisp"
                           "source/materials/models/plastic/wang2017/apex-native.lisp"
+                          "source/materials/models/plastic/wang2017/apex-residual-history.lisp"
                           "source/materials/models/plastic/mohr-coulomb-evolution/state.lisp"
                           "source/materials/adapters/wang2017.lisp"
                           "source/materials/adapters/wang2017-apex.lisp"
@@ -132,11 +133,15 @@
               :native :youngs-modulus 20d6 :poisson-ratio .25d0
               :density (/ 20000d0 9.80665d0)
               :particle-class (cond ((not soil2) 'mc:particle-mc-evolution)
+                                    ((string= cl-user::*soil2-output-variant* "composite-apex-residual")
+                                     'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex-residual)
                                     ((string= cl-user::*soil2-output-variant* "composite-apex")
                                      'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex)
                                     (t 'native:particle-wang2017-soil2))
               :initargs (list :evolution-law
                              (cond
+                               ((and soil2 (string= cl-user::*soil2-output-variant* "composite-apex-residual"))
+                                (cl-mpm/models/wang2017-apex:make-soil2-apex-residual-law))
                                ((and soil2 (string= cl-user::*soil2-output-variant* "composite-apex"))
                                 (cl-mpm/models/wang2017-apex:make-soil2-apex-law))
                                (soil2 (native:make-soil2-law))
@@ -246,7 +251,7 @@
         (control (fourth *labels*)
           (multiple-value-bind (header rows) (csv (merge-pathnames "wang2017-material-history.csv" output))
             (assert (= (length rows) (* 2 count)))
-            (when (string= cl-user::*soil2-output-variant* "composite-apex")
+            (when (member cl-user::*soil2-output-variant* '("composite-apex" "composite-apex-residual") :test #'string=)
               (dolist (name '("wang-apex-active" "wang-plastic-volume"
                               "wang-plastic-volume-increment" "wang-Ep-trace"))
                 (assert (member name header :test #'string=)))
@@ -335,7 +340,7 @@
                 (setf (cl-mpm:sim-mps mixed)
                       (vector (aref (cl-mpm:sim-mps sim) 0) (aref (cl-mpm:sim-mps soil1-for-negative) 0)))
                 (assert (rejected-p (lambda () (slope::make-wang2017-audit-context mixed bc)))))
-              (when (string= cl-user::*soil2-output-variant* "composite-apex")
+              (when (member cl-user::*soil2-output-variant* '("composite-apex" "composite-apex-residual") :test #'string=)
                 (let ((mixed (cl-mpm/setup:make-simple-sim 1d0 '(2 2) :sim-type 'slope::slope-sim)))
                   (setf (cl-mpm:sim-mps mixed)
                         (vector (aref (cl-mpm:sim-mps sim) 0)

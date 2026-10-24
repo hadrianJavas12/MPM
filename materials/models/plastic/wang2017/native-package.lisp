@@ -11,5 +11,6 @@
            #:proper-polar-rotation #:transport-paper-tensor
            #:snapshot-particle #:restore-particle #:copy-particle-state
            #:replay-native-diagnostic #:project-native-point
-           #:project-point-variant #:native-material-variant))
+           #:project-point-variant #:native-material-variant
+           #:validate-history-transition #:native-history-policy))
 (in-package :cl-mpm/models/wang2017-native)

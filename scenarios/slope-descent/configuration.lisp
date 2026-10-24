@@ -20,7 +20,8 @@
       (cl-mpm/framework::check-kind item (list kind)))
     (let* ((type (cl-mpm/framework:material-particle-class material))
            (soil2 (member type '(cl-mpm/models/wang2017-native:particle-wang2017-soil2
-                                cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex)))
+                                cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex
+                                cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex-residual)))
            (args (cl-mpm/framework:material-particle-initargs material))
            (law (getf args :evolution-law)))
       (unless (or soil2 (eq type 'cl-mpm/models/mc-evolution:particle-mc-evolution))
@@ -91,10 +92,13 @@
                                          (gethash "velocity" config)))
     ;; Add model metadata only for the explicit opt-in. Legacy control JSON stays unchanged.
     (let* ((type (cl-mpm/framework:material-particle-class material))
-           (apex (eq type 'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex)))
+           (residual (eq type 'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex-residual))
+           (apex (or residual (eq type 'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex))))
       (when (or apex (eq type 'cl-mpm/models/wang2017-native:particle-wang2017-soil2))
-        (setf (gethash "materialModel" config) (if apex "wang2017-soil2-apex" "wang2017-soil2")
+        (setf (gethash "materialModel" config) (cond (residual "wang2017-soil2-apex-residual")
+                                                     (apex "wang2017-soil2-apex")
+                                                     (t "wang2017-soil2"))
               (gethash "paperHistoryFrame" config) "spatial-corotated-incremental-polar"
-              (gethash "historyPolicy" config) "monotonic-scope-reject"))
+              (gethash "historyPolicy" config) (if residual "residual-plateau-only" "monotonic-scope-reject")))
       (when apex (setf (gethash "apexPolicy" config) "hydrostatic-volumetric")))
     config))

@@ -1,0 +1,1985 @@
+{
+  "scope": "Additional saved-data observations only; no completion or scientific PASS",
+  "residualStrength": {
+    "law": "paper kps>=.02 gives cohesion15000Pa, without changing friction35deg",
+    "firstSavedResidualTimeS": 6.5,
+    "finalCount": 15,
+    "finalFreeCount": 15,
+    "finalIds": [
+      388,
+      389,
+      419,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      650,
+      651,
+      652,
+      653,
+      654,
+      655
+    ],
+    "finalOriginalPositionsM": [
+      [
+        6.25,
+        14.25,
+        0.0
+      ],
+      [
+        6.25,
+        14.75,
+        0.0
+      ],
+      [
+        6.75,
+        14.75,
+        0.0
+      ],
+      [
+        10.25,
+        11.25,
+        0.0
+      ],
+      [
+        10.25,
+        11.75,
+        0.0
+      ],
+      [
+        10.25,
+        12.25,
+        0.0
+      ],
+      [
+        10.25,
+        12.75,
+        0.0
+      ],
+      [
+        10.25,
+        13.25,
+        0.0
+      ],
+      [
+        10.25,
+        13.75,
+        0.0
+      ],
+      [
+        10.75,
+        10.75,
+        0.0
+      ],
+      [
+        10.75,
+        11.25,
+        0.0
+      ],
+      [
+        10.75,
+        11.75,
+        0.0
+      ],
+      [
+        10.75,
+        12.25,
+        0.0
+      ],
+      [
+        10.75,
+        12.75,
+        0.0
+      ],
+      [
+        10.75,
+        13.25,
+        0.0
+      ]
+    ],
+    "series": [
+      {
+        "frame": 0,
+        "timeS": 0.0,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0010461466239523613,
+        "minCohesionPa": 29215.390032035728
+      },
+      {
+        "frame": 1,
+        "timeS": 0.1,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0010461466239523867,
+        "minCohesionPa": 29215.39003203571
+      },
+      {
+        "frame": 2,
+        "timeS": 0.2,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0010627206802608412,
+        "minCohesionPa": 29202.95948980437
+      },
+      {
+        "frame": 3,
+        "timeS": 0.3,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0010807822669799709,
+        "minCohesionPa": 29189.413299765023
+      },
+      {
+        "frame": 4,
+        "timeS": 0.4,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0011719036235867458,
+        "minCohesionPa": 29121.072282309942
+      },
+      {
+        "frame": 5,
+        "timeS": 0.5,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0011759991869201194,
+        "minCohesionPa": 29118.00060980991
+      },
+      {
+        "frame": 6,
+        "timeS": 0.6,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0012096271362567919,
+        "minCohesionPa": 29092.779647807405
+      },
+      {
+        "frame": 7,
+        "timeS": 0.7,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.001312525131632359,
+        "minCohesionPa": 29015.60615127573
+      },
+      {
+        "frame": 8,
+        "timeS": 0.8,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0013173512443334565,
+        "minCohesionPa": 29011.986566749907
+      },
+      {
+        "frame": 9,
+        "timeS": 0.9,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.001378264694655517,
+        "minCohesionPa": 28966.30147900836
+      },
+      {
+        "frame": 10,
+        "timeS": 1.0,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0014041585866672824,
+        "minCohesionPa": 28946.881059999538
+      },
+      {
+        "frame": 11,
+        "timeS": 1.1,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0014110641522208337,
+        "minCohesionPa": 28941.701885834376
+      },
+      {
+        "frame": 12,
+        "timeS": 1.2,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0015745860298245857,
+        "minCohesionPa": 28819.06047763156
+      },
+      {
+        "frame": 13,
+        "timeS": 1.3,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.001574794254218666,
+        "minCohesionPa": 28818.904309336
+      },
+      {
+        "frame": 14,
+        "timeS": 1.4,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0015846059258953695,
+        "minCohesionPa": 28811.545555578472
+      },
+      {
+        "frame": 15,
+        "timeS": 1.5,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0015862730848145577,
+        "minCohesionPa": 28810.29518638908
+      },
+      {
+        "frame": 16,
+        "timeS": 1.6,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0016973533494591506,
+        "minCohesionPa": 28726.98498790564
+      },
+      {
+        "frame": 17,
+        "timeS": 1.7,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0017356042002768528,
+        "minCohesionPa": 28698.29684979236
+      },
+      {
+        "frame": 18,
+        "timeS": 1.8,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0017397747693847988,
+        "minCohesionPa": 28695.168922961402
+      },
+      {
+        "frame": 19,
+        "timeS": 1.9,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.001759928042799653,
+        "minCohesionPa": 28680.05396790026
+      },
+      {
+        "frame": 20,
+        "timeS": 2.0,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.001862011975259049,
+        "minCohesionPa": 28603.491018555713
+      },
+      {
+        "frame": 21,
+        "timeS": 2.1,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0018620119752590708,
+        "minCohesionPa": 28603.4910185557
+      },
+      {
+        "frame": 22,
+        "timeS": 2.2,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0019371521452550727,
+        "minCohesionPa": 28547.135891058697
+      },
+      {
+        "frame": 23,
+        "timeS": 2.3,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0019371521452551162,
+        "minCohesionPa": 28547.135891058664
+      },
+      {
+        "frame": 24,
+        "timeS": 2.4,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0019453359669277166,
+        "minCohesionPa": 28540.998024804212
+      },
+      {
+        "frame": 25,
+        "timeS": 2.5,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.002062210310078905,
+        "minCohesionPa": 28453.34226744082
+      },
+      {
+        "frame": 26,
+        "timeS": 2.6,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0020787728319229767,
+        "minCohesionPa": 28440.920376057766
+      },
+      {
+        "frame": 27,
+        "timeS": 2.7,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0021678995594037183,
+        "minCohesionPa": 28374.075330447213
+      },
+      {
+        "frame": 28,
+        "timeS": 2.8,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0024076040088719013,
+        "minCohesionPa": 28194.296993346074
+      },
+      {
+        "frame": 29,
+        "timeS": 2.9,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0027988162146883786,
+        "minCohesionPa": 27900.887838983715
+      },
+      {
+        "frame": 30,
+        "timeS": 3.0,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0031597969268046863,
+        "minCohesionPa": 27630.152304896485
+      },
+      {
+        "frame": 31,
+        "timeS": 3.1,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.003561390045076951,
+        "minCohesionPa": 27328.95746619229
+      },
+      {
+        "frame": 32,
+        "timeS": 3.2,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0040872770744870114,
+        "minCohesionPa": 26934.54219413474
+      },
+      {
+        "frame": 33,
+        "timeS": 3.3,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.004584857452849938,
+        "minCohesionPa": 26561.35691036255
+      },
+      {
+        "frame": 34,
+        "timeS": 3.4,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.00507819172990365,
+        "minCohesionPa": 26191.356202572264
+      },
+      {
+        "frame": 35,
+        "timeS": 3.5,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0055533463875872754,
+        "minCohesionPa": 25834.990209309544
+      },
+      {
+        "frame": 36,
+        "timeS": 3.6,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.006008124225663039,
+        "minCohesionPa": 25493.90683075272
+      },
+      {
+        "frame": 37,
+        "timeS": 3.7,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.006441882935513593,
+        "minCohesionPa": 25168.587798364806
+      },
+      {
+        "frame": 38,
+        "timeS": 3.8,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.006805958646463596,
+        "minCohesionPa": 24895.531015152304
+      },
+      {
+        "frame": 39,
+        "timeS": 3.9,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0071521131041315305,
+        "minCohesionPa": 24635.915171901353
+      },
+      {
+        "frame": 40,
+        "timeS": 4.0,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0075141618818753645,
+        "minCohesionPa": 24364.378588593478
+      },
+      {
+        "frame": 41,
+        "timeS": 4.1,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.00783178516086351,
+        "minCohesionPa": 24126.161129352367
+      },
+      {
+        "frame": 42,
+        "timeS": 4.2,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.008171486365894067,
+        "minCohesionPa": 23871.385225579448
+      },
+      {
+        "frame": 43,
+        "timeS": 4.3,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.008604391725302477,
+        "minCohesionPa": 23546.70620602314
+      },
+      {
+        "frame": 44,
+        "timeS": 4.4,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.009102183251514212,
+        "minCohesionPa": 23173.36256136434
+      },
+      {
+        "frame": 45,
+        "timeS": 4.5,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.009564274864752104,
+        "minCohesionPa": 22826.793851435923
+      },
+      {
+        "frame": 46,
+        "timeS": 4.6,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.01015628806257922,
+        "minCohesionPa": 22382.783953065584
+      },
+      {
+        "frame": 47,
+        "timeS": 4.7,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.010833733626199625,
+        "minCohesionPa": 21874.69978035028
+      },
+      {
+        "frame": 48,
+        "timeS": 4.8,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.011450437927338228,
+        "minCohesionPa": 21412.17155449633
+      },
+      {
+        "frame": 49,
+        "timeS": 4.9,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.012045175207150406,
+        "minCohesionPa": 20966.118594637195
+      },
+      {
+        "frame": 50,
+        "timeS": 5.0,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.012694954178949103,
+        "minCohesionPa": 20478.784365788175
+      },
+      {
+        "frame": 51,
+        "timeS": 5.1,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.013243474958017162,
+        "minCohesionPa": 20067.39378148713
+      },
+      {
+        "frame": 52,
+        "timeS": 5.2,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.0136982350977206,
+        "minCohesionPa": 19726.32367670955
+      },
+      {
+        "frame": 53,
+        "timeS": 5.3,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.014263623725549717,
+        "minCohesionPa": 19302.282205837713
+      },
+      {
+        "frame": 54,
+        "timeS": 5.4,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.01475463060123374,
+        "minCohesionPa": 18934.0270490747
+      },
+      {
+        "frame": 55,
+        "timeS": 5.5,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.015198557780783105,
+        "minCohesionPa": 18601.08166441267
+      },
+      {
+        "frame": 56,
+        "timeS": 5.6,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.01561523335097026,
+        "minCohesionPa": 18288.574986772306
+      },
+      {
+        "frame": 57,
+        "timeS": 5.7,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.01608489604019871,
+        "minCohesionPa": 17936.327969850965
+      },
+      {
+        "frame": 58,
+        "timeS": 5.8,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.016715621822554545,
+        "minCohesionPa": 17463.28363308409
+      },
+      {
+        "frame": 59,
+        "timeS": 5.9,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.01714667479955165,
+        "minCohesionPa": 17139.99390033626
+      },
+      {
+        "frame": 60,
+        "timeS": 6.0,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.017506169052972816,
+        "minCohesionPa": 16870.373210270387
+      },
+      {
+        "frame": 61,
+        "timeS": 6.1,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.018030389406178345,
+        "minCohesionPa": 16477.20794536624
+      },
+      {
+        "frame": 62,
+        "timeS": 6.2,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.018631584683987828,
+        "minCohesionPa": 16026.311487009129
+      },
+      {
+        "frame": 63,
+        "timeS": 6.3,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.019237947382350164,
+        "minCohesionPa": 15571.53946323738
+      },
+      {
+        "frame": 64,
+        "timeS": 6.4,
+        "residualStrengthParticles": 0,
+        "residualStrengthFreeParticles": 0,
+        "maxPaperKps": 0.019937754845039367,
+        "minCohesionPa": 15046.683866220475
+      },
+      {
+        "frame": 65,
+        "timeS": 6.5,
+        "residualStrengthParticles": 1,
+        "residualStrengthFreeParticles": 1,
+        "maxPaperKps": 0.020631305690170024,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 66,
+        "timeS": 6.6,
+        "residualStrengthParticles": 1,
+        "residualStrengthFreeParticles": 1,
+        "maxPaperKps": 0.021364186111234165,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 67,
+        "timeS": 6.7,
+        "residualStrengthParticles": 2,
+        "residualStrengthFreeParticles": 2,
+        "maxPaperKps": 0.022095442861771182,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 68,
+        "timeS": 6.8,
+        "residualStrengthParticles": 2,
+        "residualStrengthFreeParticles": 2,
+        "maxPaperKps": 0.02282600563007534,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 69,
+        "timeS": 6.9,
+        "residualStrengthParticles": 2,
+        "residualStrengthFreeParticles": 2,
+        "maxPaperKps": 0.023517454867793598,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 70,
+        "timeS": 7.0,
+        "residualStrengthParticles": 3,
+        "residualStrengthFreeParticles": 3,
+        "maxPaperKps": 0.024261662440337835,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 71,
+        "timeS": 7.1,
+        "residualStrengthParticles": 3,
+        "residualStrengthFreeParticles": 3,
+        "maxPaperKps": 0.024909832061145828,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 72,
+        "timeS": 7.2,
+        "residualStrengthParticles": 3,
+        "residualStrengthFreeParticles": 3,
+        "maxPaperKps": 0.02545409264610921,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 73,
+        "timeS": 7.3,
+        "residualStrengthParticles": 3,
+        "residualStrengthFreeParticles": 3,
+        "maxPaperKps": 0.025840686817960215,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 74,
+        "timeS": 7.4,
+        "residualStrengthParticles": 4,
+        "residualStrengthFreeParticles": 4,
+        "maxPaperKps": 0.02621196705286887,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 75,
+        "timeS": 7.5,
+        "residualStrengthParticles": 4,
+        "residualStrengthFreeParticles": 4,
+        "maxPaperKps": 0.02667458840273867,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 76,
+        "timeS": 7.6,
+        "residualStrengthParticles": 7,
+        "residualStrengthFreeParticles": 7,
+        "maxPaperKps": 0.027101606842431673,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 77,
+        "timeS": 7.7,
+        "residualStrengthParticles": 9,
+        "residualStrengthFreeParticles": 9,
+        "maxPaperKps": 0.02746703069299106,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 78,
+        "timeS": 7.8,
+        "residualStrengthParticles": 10,
+        "residualStrengthFreeParticles": 10,
+        "maxPaperKps": 0.02774994356495437,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 79,
+        "timeS": 7.9,
+        "residualStrengthParticles": 10,
+        "residualStrengthFreeParticles": 10,
+        "maxPaperKps": 0.027978799263708613,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 80,
+        "timeS": 8.0,
+        "residualStrengthParticles": 10,
+        "residualStrengthFreeParticles": 10,
+        "maxPaperKps": 0.028159745333119404,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 81,
+        "timeS": 8.1,
+        "residualStrengthParticles": 11,
+        "residualStrengthFreeParticles": 11,
+        "maxPaperKps": 0.02848058165053951,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 82,
+        "timeS": 8.2,
+        "residualStrengthParticles": 11,
+        "residualStrengthFreeParticles": 11,
+        "maxPaperKps": 0.028936763015161075,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 83,
+        "timeS": 8.3,
+        "residualStrengthParticles": 12,
+        "residualStrengthFreeParticles": 12,
+        "maxPaperKps": 0.029361259887380867,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 84,
+        "timeS": 8.4,
+        "residualStrengthParticles": 13,
+        "residualStrengthFreeParticles": 13,
+        "maxPaperKps": 0.029735595197493084,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 85,
+        "timeS": 8.5,
+        "residualStrengthParticles": 13,
+        "residualStrengthFreeParticles": 13,
+        "maxPaperKps": 0.030205123648437703,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 86,
+        "timeS": 8.6,
+        "residualStrengthParticles": 13,
+        "residualStrengthFreeParticles": 13,
+        "maxPaperKps": 0.030704690784306397,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 87,
+        "timeS": 8.7,
+        "residualStrengthParticles": 13,
+        "residualStrengthFreeParticles": 13,
+        "maxPaperKps": 0.03095217114165653,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 88,
+        "timeS": 8.8,
+        "residualStrengthParticles": 13,
+        "residualStrengthFreeParticles": 13,
+        "maxPaperKps": 0.031273550888837966,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 89,
+        "timeS": 8.9,
+        "residualStrengthParticles": 13,
+        "residualStrengthFreeParticles": 13,
+        "maxPaperKps": 0.03168426578931478,
+        "minCohesionPa": 15000.0
+      },
+      {
+        "frame": 90,
+        "timeS": 9.0,
+        "residualStrengthParticles": 15,
+        "residualStrengthFreeParticles": 15,
+        "maxPaperKps": 0.03208634613243572,
+        "minCohesionPa": 15000.0
+      }
+    ]
+  },
+  "contact": {
+    "savedRows": 546,
+    "geometricGapRangeM": [
+      0.0,
+      0.0011356214895949512
+    ],
+    "negativeGeometricGapRows": 0,
+    "lastGeometricGapRangeM": [
+      0.00023463691079875226,
+      0.0008288811874469781
+    ],
+    "maxSavedGeometricSpringEnergyJPerM": 217.1383626928513,
+    "lastGeometricSpringEnergyJPerM": 151.14795732532224,
+    "lastActuatorSignedCommandWorkJPerM": 39629.71462243,
+    "caveat": "Gap uses saved particle top surface; native force uses predicted corner geometry. Spring and work proxies do not close energy. Individual actual corner tractions are not saved."
+  },
+  "prefixFailedMetricContext": {
+    "canonicalPointwiseComparisonPass": false,
+    "failedMetricNames": [
+      "vtk:mc-yield-residual-kirchhoff-pa",
+      "vtk:sig_xy",
+      "vtk:wang-history-decrease-accepted"
+    ],
+    "stressFailureRows": [
+      {
+        "field": "sig_xy",
+        "frame": 9,
+        "nativeId": 89,
+        "baselineValuePa": -0.021769241585781026,
+        "currentValuePa": -0.02176937026366544,
+        "differencePa": 1.2867788441381367e-07,
+        "unchangedTolerancePa": 1.2176924158578103e-08
+      },
+      {
+        "field": "sig_xy",
+        "frame": 10,
+        "nativeId": 209,
+        "baselineValuePa": -0.6321013112750214,
+        "currentValuePa": -0.6321014198919609,
+        "differencePa": 1.0861693944264061e-07,
+        "unchangedTolerancePa": 7.321013112750214e-08
+      },
+      {
+        "field": "mc-yield-residual-kirchhoff-pa",
+        "frame": 21,
+        "nativeId": 824,
+        "baselineValuePa": -7.175798355259758,
+        "currentValuePa": -7.175799143347831,
+        "differencePa": 7.880880730226636e-07,
+        "unchangedTolerancePa": 7.275798355259757e-07
+      },
+      {
+        "field": "mc-yield-residual-kirchhoff-pa",
+        "frame": 22,
+        "nativeId": 797,
+        "baselineValuePa": -0.03884351188025903,
+        "currentValuePa": -0.038843530834128615,
+        "differencePa": 1.8953869584947824e-08,
+        "unchangedTolerancePa": 1.3884351188025902e-08
+      },
+      {
+        "field": "sig_xy",
+        "frame": 24,
+        "nativeId": 298,
+        "baselineValuePa": -1.3755127641289009,
+        "currentValuePa": -1.375512928454705,
+        "differencePa": 1.64325804075105e-07,
+        "unchangedTolerancePa": 1.475512764128901e-07
+      },
+      {
+        "field": "mc-yield-residual-kirchhoff-pa",
+        "frame": 25,
+        "nativeId": 824,
+        "baselineValuePa": -0.11152514006244019,
+        "currentValuePa": -0.11152517331356648,
+        "differencePa": 3.3251126296818256e-08,
+        "unchangedTolerancePa": 2.1152514006244017e-08
+      },
+      {
+        "field": "sig_xy",
+        "frame": 28,
+        "nativeId": 178,
+        "baselineValuePa": -1.3714337113340551,
+        "currentValuePa": -1.3714338748158867,
+        "differencePa": 1.6348183162762098e-07,
+        "unchangedTolerancePa": 1.4714337113340552e-07
+      },
+      {
+        "field": "sig_xy",
+        "frame": 42,
+        "nativeId": 39,
+        "baselineValuePa": 0.059876404260069016,
+        "currentValuePa": 0.05987649302940052,
+        "differencePa": 8.876933150353539e-08,
+        "unchangedTolerancePa": 1.59876404260069e-08
+      },
+      {
+        "field": "mc-yield-residual-kirchhoff-pa",
+        "frame": 55,
+        "nativeId": 419,
+        "baselineValuePa": -2.9937481668312103,
+        "currentValuePa": -2.993748679939017,
+        "differencePa": 5.131078069098294e-07,
+        "unchangedTolerancePa": 3.0937481668312103e-07
+      }
+    ],
+    "differingHistoryFlagRows": 130,
+    "maxAbsLastStepPaperKpsChangeAtDifferingFlags": 2.168404344971009e-18,
+    "differingHistoryFlags": [
+      {
+        "frame": 3,
+        "nativeId": 797,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.0842021724855044e-19,
+        "baselineLastStepPaperKpsChange": 5.421010862427522e-20
+      },
+      {
+        "frame": 4,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 5,
+        "nativeId": 797,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -5.421010862427522e-20,
+        "baselineLastStepPaperKpsChange": 5.421010862427522e-20
+      },
+      {
+        "frame": 5,
+        "nativeId": 812,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -1.6263032587282567e-19
+      },
+      {
+        "frame": 8,
+        "nativeId": 797,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.0842021724855044e-19,
+        "baselineLastStepPaperKpsChange": -1.0842021724855044e-19
+      },
+      {
+        "frame": 8,
+        "nativeId": 812,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -1.0842021724855044e-19
+      },
+      {
+        "frame": 8,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.3010426069826053e-18,
+        "baselineLastStepPaperKpsChange": 6.505213034913027e-19
+      },
+      {
+        "frame": 9,
+        "nativeId": 797,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -1.0842021724855044e-19
+      },
+      {
+        "frame": 9,
+        "nativeId": 812,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -1.0842021724855044e-19
+      },
+      {
+        "frame": 11,
+        "nativeId": 811,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -8.470329472543003e-22,
+        "baselineLastStepPaperKpsChange": 3.3881317890172014e-21
+      },
+      {
+        "frame": 15,
+        "nativeId": 783,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.3552527156068805e-20,
+        "baselineLastStepPaperKpsChange": 6.776263578034403e-21
+      },
+      {
+        "frame": 15,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 6.505213034913027e-19,
+        "baselineLastStepPaperKpsChange": -2.168404344971009e-19
+      },
+      {
+        "frame": 16,
+        "nativeId": 811,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -5.421010862427522e-20
+      },
+      {
+        "frame": 18,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -2.168404344971009e-19,
+        "baselineLastStepPaperKpsChange": 1.3010426069826053e-18
+      },
+      {
+        "frame": 21,
+        "nativeId": 811,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 2.168404344971009e-19,
+        "baselineLastStepPaperKpsChange": -1.0842021724855044e-19
+      },
+      {
+        "frame": 21,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 8.673617379884035e-19,
+        "baselineLastStepPaperKpsChange": -2.168404344971009e-19
+      },
+      {
+        "frame": 22,
+        "nativeId": 797,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 8.673617379884035e-19,
+        "baselineLastStepPaperKpsChange": -8.673617379884035e-19
+      },
+      {
+        "frame": 22,
+        "nativeId": 812,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -2.168404344971009e-19
+      },
+      {
+        "frame": 22,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": -4.336808689942018e-19
+      },
+      {
+        "frame": 24,
+        "nativeId": 796,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 3.3881317890172014e-21,
+        "baselineLastStepPaperKpsChange": -1.3552527156068805e-20
+      },
+      {
+        "frame": 25,
+        "nativeId": 764,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -8.470329472543003e-22,
+        "baselineLastStepPaperKpsChange": 1.6940658945086007e-21
+      },
+      {
+        "frame": 25,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -8.673617379884035e-19,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 27,
+        "nativeId": 811,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.0842021724855044e-19,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 27,
+        "nativeId": 812,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": 8.673617379884035e-19
+      },
+      {
+        "frame": 28,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -8.673617379884035e-19,
+        "baselineLastStepPaperKpsChange": 8.673617379884035e-19
+      },
+      {
+        "frame": 29,
+        "nativeId": 764,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 2.710505431213761e-20,
+        "baselineLastStepPaperKpsChange": -5.421010862427522e-20
+      },
+      {
+        "frame": 29,
+        "nativeId": 811,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -6.505213034913027e-19,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 29,
+        "nativeId": 823,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.3552527156068805e-20,
+        "baselineLastStepPaperKpsChange": -1.3552527156068805e-20
+      },
+      {
+        "frame": 30,
+        "nativeId": 823,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.0842021724855044e-19,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 30,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -8.673617379884035e-19,
+        "baselineLastStepPaperKpsChange": 1.3010426069826053e-18
+      },
+      {
+        "frame": 31,
+        "nativeId": 811,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -6.505213034913027e-19,
+        "baselineLastStepPaperKpsChange": 1.0842021724855044e-19
+      },
+      {
+        "frame": 33,
+        "nativeId": 727,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.3552527156068805e-20,
+        "baselineLastStepPaperKpsChange": -1.3552527156068805e-20
+      },
+      {
+        "frame": 33,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -1.3010426069826053e-18
+      },
+      {
+        "frame": 34,
+        "nativeId": 727,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 4.0657581468206416e-20,
+        "baselineLastStepPaperKpsChange": -4.0657581468206416e-20
+      },
+      {
+        "frame": 34,
+        "nativeId": 823,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -5.421010862427522e-20
+      },
+      {
+        "frame": 34,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": 2.168404344971009e-18
+      },
+      {
+        "frame": 35,
+        "nativeId": 389,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -6.776263578034403e-20
+      },
+      {
+        "frame": 36,
+        "nativeId": 727,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -2.710505431213761e-20,
+        "baselineLastStepPaperKpsChange": 5.421010862427522e-20
+      },
+      {
+        "frame": 36,
+        "nativeId": 764,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 5.421010862427522e-19,
+        "baselineLastStepPaperKpsChange": -1.0842021724855044e-19
+      },
+      {
+        "frame": 36,
+        "nativeId": 796,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.0842021724855044e-19,
+        "baselineLastStepPaperKpsChange": -3.2526065174565133e-19
+      },
+      {
+        "frame": 38,
+        "nativeId": 745,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -6.776263578034403e-21,
+        "baselineLastStepPaperKpsChange": 6.776263578034403e-21
+      },
+      {
+        "frame": 39,
+        "nativeId": 783,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -2.168404344971009e-19
+      },
+      {
+        "frame": 40,
+        "nativeId": 726,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.3552527156068805e-20,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 40,
+        "nativeId": 745,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.0657581468206416e-20,
+        "baselineLastStepPaperKpsChange": 5.421010862427522e-20
+      },
+      {
+        "frame": 42,
+        "nativeId": 780,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.3552527156068805e-20,
+        "baselineLastStepPaperKpsChange": -6.776263578034403e-21
+      },
+      {
+        "frame": 42,
+        "nativeId": 823,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 5.421010862427522e-20,
+        "baselineLastStepPaperKpsChange": -1.0842021724855044e-19
+      },
+      {
+        "frame": 43,
+        "nativeId": 744,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -3.3881317890172014e-21,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 44,
+        "nativeId": 744,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.3552527156068805e-20,
+        "baselineLastStepPaperKpsChange": 2.0328790734103208e-20
+      },
+      {
+        "frame": 44,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -1.3010426069826053e-18
+      },
+      {
+        "frame": 45,
+        "nativeId": 722,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 3.3881317890172014e-21,
+        "baselineLastStepPaperKpsChange": -3.3881317890172014e-21
+      },
+      {
+        "frame": 45,
+        "nativeId": 780,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -4.0657581468206416e-20
+      },
+      {
+        "frame": 45,
+        "nativeId": 796,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 6.505213034913027e-19,
+        "baselineLastStepPaperKpsChange": -2.168404344971009e-19
+      },
+      {
+        "frame": 46,
+        "nativeId": 744,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -2.710505431213761e-20,
+        "baselineLastStepPaperKpsChange": 2.710505431213761e-20
+      },
+      {
+        "frame": 46,
+        "nativeId": 764,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 2.168404344971009e-19,
+        "baselineLastStepPaperKpsChange": -2.168404344971009e-19
+      },
+      {
+        "frame": 48,
+        "nativeId": 591,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.0842021724855044e-19,
+        "baselineLastStepPaperKpsChange": 2.710505431213761e-20
+      },
+      {
+        "frame": 48,
+        "nativeId": 620,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -2.0328790734103208e-20,
+        "baselineLastStepPaperKpsChange": 6.776263578034403e-21
+      },
+      {
+        "frame": 48,
+        "nativeId": 765,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -8.673617379884035e-19
+      },
+      {
+        "frame": 48,
+        "nativeId": 780,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -2.710505431213761e-20
+      },
+      {
+        "frame": 48,
+        "nativeId": 783,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 6.505213034913027e-19,
+        "baselineLastStepPaperKpsChange": -8.673617379884035e-19
+      },
+      {
+        "frame": 49,
+        "nativeId": 823,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -2.168404344971009e-19,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 50,
+        "nativeId": 561,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.0842021724855044e-19,
+        "baselineLastStepPaperKpsChange": 2.168404344971009e-19
+      },
+      {
+        "frame": 50,
+        "nativeId": 563,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": 2.168404344971009e-19
+      },
+      {
+        "frame": 50,
+        "nativeId": 591,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -5.421010862427522e-20,
+        "baselineLastStepPaperKpsChange": 2.710505431213761e-19
+      },
+      {
+        "frame": 50,
+        "nativeId": 723,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.0842021724855044e-19,
+        "baselineLastStepPaperKpsChange": -2.168404344971009e-19
+      },
+      {
+        "frame": 50,
+        "nativeId": 744,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -5.421010862427522e-20
+      },
+      {
+        "frame": 50,
+        "nativeId": 745,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.6263032587282567e-19,
+        "baselineLastStepPaperKpsChange": -1.6263032587282567e-19
+      },
+      {
+        "frame": 50,
+        "nativeId": 746,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 8.131516293641283e-20,
+        "baselineLastStepPaperKpsChange": -2.710505431213761e-20
+      },
+      {
+        "frame": 50,
+        "nativeId": 810,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.6263032587282567e-19,
+        "baselineLastStepPaperKpsChange": 5.421010862427522e-20
+      },
+      {
+        "frame": 50,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": 1.734723475976807e-18
+      },
+      {
+        "frame": 51,
+        "nativeId": 560,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 5.421010862427522e-20,
+        "baselineLastStepPaperKpsChange": -1.0842021724855044e-19
+      },
+      {
+        "frame": 51,
+        "nativeId": 622,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -6.505213034913027e-19,
+        "baselineLastStepPaperKpsChange": 2.168404344971009e-19
+      },
+      {
+        "frame": 51,
+        "nativeId": 651,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 51,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.734723475976807e-18,
+        "baselineLastStepPaperKpsChange": -8.673617379884035e-19
+      },
+      {
+        "frame": 52,
+        "nativeId": 699,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.6940658945086007e-21,
+        "baselineLastStepPaperKpsChange": 2.541098841762901e-21
+      },
+      {
+        "frame": 52,
+        "nativeId": 705,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.3552527156068805e-20,
+        "baselineLastStepPaperKpsChange": -6.776263578034403e-21
+      },
+      {
+        "frame": 52,
+        "nativeId": 727,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": -8.673617379884035e-19
+      },
+      {
+        "frame": 52,
+        "nativeId": 743,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.0657581468206416e-20,
+        "baselineLastStepPaperKpsChange": 4.0657581468206416e-20
+      },
+      {
+        "frame": 52,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 53,
+        "nativeId": 563,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 2.168404344971009e-19,
+        "baselineLastStepPaperKpsChange": -5.421010862427522e-19
+      },
+      {
+        "frame": 53,
+        "nativeId": 699,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.6940658945086007e-21,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 53,
+        "nativeId": 721,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.6940658945086007e-21,
+        "baselineLastStepPaperKpsChange": -1.2705494208814505e-21
+      },
+      {
+        "frame": 53,
+        "nativeId": 743,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -5.421010862427522e-20,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 53,
+        "nativeId": 780,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -2.710505431213761e-20,
+        "baselineLastStepPaperKpsChange": 5.421010862427522e-20
+      },
+      {
+        "frame": 53,
+        "nativeId": 823,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -1.0842021724855044e-19
+      },
+      {
+        "frame": 53,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -1.734723475976807e-18
+      },
+      {
+        "frame": 54,
+        "nativeId": 586,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.0657581468206416e-20,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 54,
+        "nativeId": 699,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.235164736271502e-21,
+        "baselineLastStepPaperKpsChange": 8.470329472543003e-22
+      },
+      {
+        "frame": 54,
+        "nativeId": 705,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -2.710505431213761e-20,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 55,
+        "nativeId": 419,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": 1.0842021724855044e-19
+      },
+      {
+        "frame": 55,
+        "nativeId": 563,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 6.505213034913027e-19,
+        "baselineLastStepPaperKpsChange": -2.168404344971009e-19
+      },
+      {
+        "frame": 55,
+        "nativeId": 593,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 2.168404344971009e-19,
+        "baselineLastStepPaperKpsChange": -2.168404344971009e-19
+      },
+      {
+        "frame": 55,
+        "nativeId": 674,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.6940658945086007e-21,
+        "baselineLastStepPaperKpsChange": 3.3881317890172014e-21
+      },
+      {
+        "frame": 55,
+        "nativeId": 699,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 5.082197683525802e-21,
+        "baselineLastStepPaperKpsChange": -4.235164736271502e-21
+      },
+      {
+        "frame": 55,
+        "nativeId": 764,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": -4.336808689942018e-19
+      },
+      {
+        "frame": 55,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.3010426069826053e-18,
+        "baselineLastStepPaperKpsChange": -4.336808689942018e-19
+      },
+      {
+        "frame": 56,
+        "nativeId": 699,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.6940658945086007e-21,
+        "baselineLastStepPaperKpsChange": 4.235164736271502e-21
+      },
+      {
+        "frame": 56,
+        "nativeId": 780,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -8.131516293641283e-20,
+        "baselineLastStepPaperKpsChange": 5.421010862427522e-20
+      },
+      {
+        "frame": 56,
+        "nativeId": 823,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 2.168404344971009e-19,
+        "baselineLastStepPaperKpsChange": -3.2526065174565133e-19
+      },
+      {
+        "frame": 56,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -8.673617379884035e-19
+      },
+      {
+        "frame": 57,
+        "nativeId": 780,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -2.710505431213761e-20
+      },
+      {
+        "frame": 57,
+        "nativeId": 783,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.734723475976807e-18,
+        "baselineLastStepPaperKpsChange": 8.673617379884035e-19
+      },
+      {
+        "frame": 57,
+        "nativeId": 810,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.0842021724855044e-19,
+        "baselineLastStepPaperKpsChange": 1.6263032587282567e-19
+      },
+      {
+        "frame": 58,
+        "nativeId": 503,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 8.470329472543003e-22,
+        "baselineLastStepPaperKpsChange": -8.470329472543003e-22
+      },
+      {
+        "frame": 58,
+        "nativeId": 527,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 4.235164736271502e-22,
+        "baselineLastStepPaperKpsChange": -4.235164736271502e-22
+      },
+      {
+        "frame": 58,
+        "nativeId": 556,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 5.421010862427522e-20,
+        "baselineLastStepPaperKpsChange": -5.421010862427522e-20
+      },
+      {
+        "frame": 58,
+        "nativeId": 563,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -8.673617379884035e-19
+      },
+      {
+        "frame": 58,
+        "nativeId": 565,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 2.710505431213761e-20,
+        "baselineLastStepPaperKpsChange": -1.3552527156068805e-20
+      },
+      {
+        "frame": 58,
+        "nativeId": 593,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.336808689942018e-19,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 58,
+        "nativeId": 674,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.3552527156068805e-20,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 58,
+        "nativeId": 679,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.0657581468206416e-20,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 58,
+        "nativeId": 699,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.6940658945086007e-21,
+        "baselineLastStepPaperKpsChange": -4.235164736271502e-21
+      },
+      {
+        "frame": 58,
+        "nativeId": 700,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.6940658945086007e-21,
+        "baselineLastStepPaperKpsChange": 1.6940658945086007e-21
+      },
+      {
+        "frame": 58,
+        "nativeId": 746,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.0842021724855044e-19,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 58,
+        "nativeId": 780,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -5.421010862427522e-20,
+        "baselineLastStepPaperKpsChange": 2.710505431213761e-20
+      },
+      {
+        "frame": 58,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.734723475976807e-18,
+        "baselineLastStepPaperKpsChange": -4.336808689942018e-19
+      },
+      {
+        "frame": 59,
+        "nativeId": 565,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -4.0657581468206416e-20,
+        "baselineLastStepPaperKpsChange": 5.421010862427522e-20
+      },
+      {
+        "frame": 59,
+        "nativeId": 617,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -1.0842021724855044e-19
+      },
+      {
+        "frame": 59,
+        "nativeId": 645,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -1.3552527156068805e-20
+      },
+      {
+        "frame": 59,
+        "nativeId": 674,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.3552527156068805e-20,
+        "baselineLastStepPaperKpsChange": -6.776263578034403e-21
+      },
+      {
+        "frame": 59,
+        "nativeId": 679,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.3552527156068805e-20,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 59,
+        "nativeId": 699,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.6940658945086007e-21,
+        "baselineLastStepPaperKpsChange": 3.3881317890172014e-21
+      },
+      {
+        "frame": 59,
+        "nativeId": 705,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 2.168404344971009e-19,
+        "baselineLastStepPaperKpsChange": -1.6263032587282567e-19
+      },
+      {
+        "frame": 60,
+        "nativeId": 525,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 5.082197683525802e-21,
+        "baselineLastStepPaperKpsChange": -1.6940658945086007e-21
+      },
+      {
+        "frame": 60,
+        "nativeId": 699,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 6.776263578034403e-21,
+        "baselineLastStepPaperKpsChange": -1.6940658945086007e-21
+      },
+      {
+        "frame": 60,
+        "nativeId": 742,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -5.082197683525802e-21,
+        "baselineLastStepPaperKpsChange": 6.776263578034403e-21
+      },
+      {
+        "frame": 60,
+        "nativeId": 743,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -5.421010862427522e-20,
+        "baselineLastStepPaperKpsChange": 1.6263032587282567e-19
+      },
+      {
+        "frame": 60,
+        "nativeId": 762,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -2.0328790734103208e-20,
+        "baselineLastStepPaperKpsChange": 1.3552527156068805e-20
+      },
+      {
+        "frame": 60,
+        "nativeId": 810,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 0.0,
+        "baselineLastStepPaperKpsChange": -1.0842021724855044e-19
+      },
+      {
+        "frame": 60,
+        "nativeId": 823,
+        "currentAcceptedHistoryDecrease": 1.0,
+        "baselineAcceptedHistoryDecrease": 0.0,
+        "currentLastStepPaperKpsChange": -1.0842021724855044e-19,
+        "baselineLastStepPaperKpsChange": 0.0
+      },
+      {
+        "frame": 60,
+        "nativeId": 824,
+        "currentAcceptedHistoryDecrease": 0.0,
+        "baselineAcceptedHistoryDecrease": 1.0,
+        "currentLastStepPaperKpsChange": 1.3010426069826053e-18,
+        "baselineLastStepPaperKpsChange": -8.673617379884035e-19
+      }
+    ],
+    "interpretation": "History flags differ at roundoff-scale last accepted increments. This does not remove the strict pointwise mismatch or validate the later unsaved transaction."
+  }
+}

@@ -6,5 +6,6 @@
                     (:native :cl-mpm/models/wang2017-native))
   (:import-from :cl-mpm/models/wang2017-point #:paper-projection-apex-multiplier)
   (:export #:project-paper-principal-with-apex #:paper-projection-apex-multiplier
-           #:particle-wang2017-soil2-apex #:make-soil2-apex-law))
+           #:particle-wang2017-soil2-apex #:make-soil2-apex-law
+           #:particle-wang2017-soil2-apex-residual #:make-soil2-apex-residual-law))
 (in-package :cl-mpm/models/wang2017-apex)

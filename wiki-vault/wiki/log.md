@@ -766,3 +766,11 @@ Checkpoint3caa6be pushed with completed60mm negative result/raw/evidence/media a
 ## [2026-10-24] ingest |100mm launch source/runtime provenance verified
 
 Later authorized14:08WIB capture verifies275 frozen source files against manifest/workspace, actual copiedDLL,3postprocessors and one process chain31296/38252/25892/27304 with creation/session11.6artifact hashes/292decoded ZIP members retained in apex-100mm-launch. Initial runtime-proof unavailability remains documented; capture RUNNING/complete=false, not completion/landslide. No active CSV/VTK/log reads or solver/tests repeated. Updated [[wang2017-apex-60mm-review]], handover/testing/guide; raw/settings intact, same quiet15min monitor.
+
+## [2026-10-24] ingest |100mm negative result and explicit residual-only history scope
+
+Native3caa6be exits1 at15:55:34WIB, lastsave9s90mm30960updates versus failuremanifest31092. One frozen replay proves unique positive-work apex return with unchanged15kPa/35deg/0 strengths; normguard excludes residual-tail reversal. Retained44hash/392member failedpacket and16hash/277member replay;91realstates/media decode0, incomplete renderer2, no verified landslide. Prefix canonicalpointwise FAIL on3fields preserved. [[wang2017-residual-history-scope]] documents separate explicitpolicy, olddefaults/tolerance/numerics preserved;13distinctnativegroups across retained001fixturefailure and focused002closure,1newpoint/9native/zeroMPM. Integration2/18/8groups exit0 with2realUSFupdates and4elasticfiles byte-identical. Updated linked wiki/index/testing/handover/contracts; raw/settings intact, no fullnewsolver yet.
+
+## [2026-10-24] ingest | Human authorizes broader methods for unnotched landslide
+
+Created immutable source record raw/unnotched-landslide-request-2026-10-24.md with the human request. Goal is real landslide without notch; broader primary-journal investigation proceeds before selecting another full run. Separate gravity-softening and SSR literature notes plus read-only engine-fit audit are underway. [[wang2017-residual-history-scope]] and handover record tested repair/no solver active.96indexed evidence artifacts match Git blob bytes, raw text/media preserved and tracked; no old tests/solver repeated, personal settings intact.

@@ -158,7 +158,8 @@ def draw(manifest, rows, snapshot, index, destination, limits=None):
         kind = f"ACCELERATED TRIAL ({config['velocity']/1e-4:g}x reference)"
     completion = "native complete" if manifest.get("complete") else "INCOMPLETE"
     model = {"wang2017-soil2": "Soil2 (declared corotated history)",
-             "wang2017-soil2-apex": "Soil2 + explicit volumetric apex flow"}.get(config.get("materialModel"), "Soil1")
+             "wang2017-soil2-apex": "Soil2 + explicit volumetric apex flow",
+             "wang2017-soil2-apex-residual": "Soil2 + apex flow + residual-only history scope"}.get(config.get("materialModel"), "Soil1")
     fig.suptitle(f"Wang2017 {model} | {kind}, {completion} | v={config['velocity']:.1e} m/s\n"
                  f"Relief {config['height']:g} m is assumed; explicit MPM with finite penalty compliance; no displacement amplification",
                  fontsize=11)

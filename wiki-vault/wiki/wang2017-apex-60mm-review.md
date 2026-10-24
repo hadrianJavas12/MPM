@@ -8,6 +8,11 @@ updated: 2026-10-24
 
 # Wang2017 completed apex60mm review and endpoint study
 
+The subsequent100mm experiment failed the history-scope guard after last saved
+9s/90mm. [[wang2017-residual-history-scope]] retains the actual replay, partial
+physical result and a separate tested residual-only policy; no coherent
+landslide or successful10s run is claimed.
+
 [[wang2017-apex-flow]] source55bc85d completed native0 at13:33:43WIB,
 audit/render/worker0 at13:34:44.61states/915IDs/20640updates reach6s60mm.
 Actual-output audit confirms55815material/366contact rows and mass/finite/F/J/

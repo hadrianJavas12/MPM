@@ -1,0 +1,8 @@
+PASS: Dedicated diagnostic adapter and unambiguous fields
+PASS: Initial native VTK and CSV do not mutate material or kinematics
+PASS: Two genuine bounded native USF updates and second read-only state
+PASS: Material CSV reconstructs full F/J, paper Ep/kps, cohesion and rotation
+PASS: Contact CSV reconstructs surface descent, gap and geometric spring energy
+PASS: Reader ownership and repeated diagnostic access preserve state
+PASS: Soil1 output helper is a filesystem no-op
+PASS: Duplicate frame, mixed material and invalid audit state reject honestly

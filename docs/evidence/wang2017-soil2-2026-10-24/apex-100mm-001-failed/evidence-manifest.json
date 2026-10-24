@@ -1,0 +1,225 @@
+{
+  "scope": "Failed/incomplete native output; no scientific PASS",
+  "entries": [
+    {
+      "path": ".gitattributes",
+      "bytes": 62,
+      "sha256": "ae98b4822d01710de03b2360a4715d5a9f9be3c1e5c76ab81e9022b10ead1367"
+    },
+    {
+      "path": "analysis-reference/compare-framework-runs.py",
+      "bytes": 14349,
+      "sha256": "abe1bb0bf1aaad3b4f44927dd3ba5cd521a74f36144a1fef646825a890ff47f9"
+    },
+    {
+      "path": "archive-input-manifest.json",
+      "bytes": 67953,
+      "sha256": "354653227c74f7107baebb84c16ab5f93975594ae15ed03a80ffea337aaf8cb4"
+    },
+    {
+      "path": "descent-overview.png",
+      "bytes": 233512,
+      "sha256": "fcb4fffbe57466f171af3ea257e2d042be189d6c911e1966dd21e90943646ed8"
+    },
+    {
+      "path": "energy-diagnostics.png",
+      "bytes": 113633,
+      "sha256": "6632aecb717e53d108bbb16641375b0cd6d8e8126812f4edac391952822cb72f"
+    },
+    {
+      "path": "executed-source.tar.gz",
+      "bytes": 1024875,
+      "sha256": "983d6eb1037a33c71afcc4e82168fbecebda9c419b112e5af772ef1a0d8a4970"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 2663,
+      "sha256": "e59fc5fceb6dca70b255f317a69e8609a0c166d5f7a0b2930fd3dec19cac5ac7"
+    },
+    {
+      "path": "mc-integration-failure.json",
+      "bytes": 1383,
+      "sha256": "3ad314d3416df31122a2a628056b847cbe46e687cb89c90b349964ee892da926"
+    },
+    {
+      "path": "native-partial-output.tar.gz",
+      "bytes": 31419753,
+      "sha256": "196ca770cab02b07944ba955c44beb62b29fc2ec6bc825914d98e6868dc92cd5"
+    },
+    {
+      "path": "output-audit.json",
+      "bytes": 14185,
+      "sha256": "d466eb6ce53b6344dbd14ca1e298c1c7bf9d1d6f08bc4be1b37e042fe1ca8d2e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3806,
+      "sha256": "2b5aa88da33cc387a954fe6dba84e635f56911aeaab8e6d544febb66d438547a"
+    },
+    {
+      "path": "renderer-support/collect-wang2017-evidence.py",
+      "bytes": 10545,
+      "sha256": "10f770a1d3fdcaf64ea73c93d9315720249b67b9100a221229ceeb6bc171c759"
+    },
+    {
+      "path": "renderer-support/plot-wang2017-descent.py",
+      "bytes": 12521,
+      "sha256": "0b872f21ae6dad4987dd36d37ae56909960fd2dbc4ba2fd6bc30dde2c055e4cf"
+    },
+    {
+      "path": "renderer-support/plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+    },
+    {
+      "path": "review/analysis-support/canonical_prefix_metric.py",
+      "bytes": 1231,
+      "sha256": "2ba15adb208637db8fb111a1ebf9c4e999d22bacfa1766b4618abd5ea90b5104"
+    },
+    {
+      "path": "review/analysis-support/compare_completed_prefix.py",
+      "bytes": 4321,
+      "sha256": "144185a80dd5aee6022231ab2268a808079e8781545ba93d0c69aaecfa65052f"
+    },
+    {
+      "path": "review/analysis-support/media_qa.py",
+      "bytes": 2781,
+      "sha256": "d63796be09d0fa9f7d250124cc82cc7bb00ec065f7ad976c5bad33fb59d4b17e"
+    },
+    {
+      "path": "review/analysis-support/native_saved_io.py",
+      "bytes": 8434,
+      "sha256": "50548341d998e210f4f02cf537cb0155050c54a4b35380e5a0c47f38f70782a9"
+    },
+    {
+      "path": "review/analysis-support/package_interrupted_100mm.py",
+      "bytes": 12877,
+      "sha256": "ee0c9a08cd61d3afda239fbfdaa0fe235763998aa1a03ffa6b4cf89f516e60e8"
+    },
+    {
+      "path": "review/analysis-support/review_interrupted_100mm.py",
+      "bytes": 21435,
+      "sha256": "6851553fbbc7d9cf50349e1c2f9514c8091e68741a443f45a04cca40134adf4a"
+    },
+    {
+      "path": "review/analysis-support/supplement_review.py",
+      "bytes": 7410,
+      "sha256": "f975a5917e71b0ebec67452dad0fda244f5dd5f3dfa0a04fbeea5979a493e1e5"
+    },
+    {
+      "path": "review/completed-prefix-comparison.json",
+      "bytes": 50787,
+      "sha256": "2841a3f65509b036a9d8da68cab9fabc6c32c50ce107d542bf15048d60d87e26"
+    },
+    {
+      "path": "review/completed-prefix-input-hashes.json",
+      "bytes": 23005,
+      "sha256": "e91d3edb18e94eaccecbd2e55368bf752363aebacdc9618128cce3230d05079a"
+    },
+    {
+      "path": "review/interrupted-100mm-physical-review.json",
+      "bytes": 178751,
+      "sha256": "09d32ee0e1c3b3eeac7a152215ce36c6436ff1533cae7cd0e34c74998dc13959"
+    },
+    {
+      "path": "review/media-qa-console.json",
+      "bytes": 1101,
+      "sha256": "d636ca49281e892a7ff06cd3d79002736e2ba072deb18afde822fa9fab31bebf"
+    },
+    {
+      "path": "review/media-qa.json",
+      "bytes": 1101,
+      "sha256": "d636ca49281e892a7ff06cd3d79002736e2ba072deb18afde822fa9fab31bebf"
+    },
+    {
+      "path": "review/partial-render-status.json",
+      "bytes": 91,
+      "sha256": "5b72c92c1605842a942a484ae3cad86f923a52991ebbdfdafb53c2bf8b150313"
+    },
+    {
+      "path": "review/partial-render.log",
+      "bytes": 1333,
+      "sha256": "464348b21886fc80016149f91770eabe155bca6d17a33185b110d52534079223"
+    },
+    {
+      "path": "review/physical-diagnostics.png",
+      "bytes": 155088,
+      "sha256": "39600385e8103c6b126085b1890a031e3898493330a5937d8d7f901dc52e2ef3"
+    },
+    {
+      "path": "review/prefix-console.json",
+      "bytes": 2958,
+      "sha256": "c333334366575ec512c9fd34284bf465ce69962be31f0fe72c63ba7b94050035"
+    },
+    {
+      "path": "review/process-and-budget-check.json",
+      "bytes": 1166,
+      "sha256": "d96f6ac12397da873693074f7a64e944a8ea67701b94f81e67a2fd134f04d03a"
+    },
+    {
+      "path": "review/residual-contact-prefix-context.json",
+      "bytes": 64817,
+      "sha256": "02702618dfc6ed88ae14ed364601f50700e9880520d3149308d1ebfdb8fff51b"
+    },
+    {
+      "path": "review/review-console.json",
+      "bytes": 7469,
+      "sha256": "89370938d6a7c15520e8957702765f830800f27ae1c45d67bfbd0faf564c0eb9"
+    },
+    {
+      "path": "review/review-input-hashes.json",
+      "bytes": 38356,
+      "sha256": "881d6c127efd1e7d4b94c60c394f89d3814e0ec039f5239781a4eb428b80a6d6"
+    },
+    {
+      "path": "review/supplement-console.json",
+      "bytes": 913,
+      "sha256": "e0f70d3d5f232cee327db10842dd429cba334b46aef19bfd36ad12915fa9435a"
+    },
+    {
+      "path": "review/video-decode-status.json",
+      "bytes": 111,
+      "sha256": "4b12747e97b1ae5b9853e8dbc5a50e35212d56521f3b2c82ffca466d2b51835a"
+    },
+    {
+      "path": "review/video-decode.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "review/video-frame-timestamps.json",
+      "bytes": 7259,
+      "sha256": "d0d969c52b484b7e328107a0894f38530d9423ec813b1a3fe19d89224cad45bb"
+    },
+    {
+      "path": "review/video-probe.json",
+      "bytes": 352,
+      "sha256": "b8ce2b96deaeb04e8d3ae5e93fbbe248df5be251b45e010c37b0628cb9034830"
+    },
+    {
+      "path": "runtime-and-native-logs.tar.gz",
+      "bytes": 4959,
+      "sha256": "acfd92313bcd8924e6df543e878e12f05ad6aa6016e64dd749d8984c1b2e0574"
+    },
+    {
+      "path": "slope-descent.mp4",
+      "bytes": 374742,
+      "sha256": "9ac2df45a19fd14e828cc61e7beaeadd484b6bc1633c097dab58a9d36cee2200"
+    },
+    {
+      "path": "source-provenance.json",
+      "bytes": 645453,
+      "sha256": "d0bdaef43d68d48661884d78f66ed57d5e6f1e6ca3b7cb256f96cc6c29060bef"
+    },
+    {
+      "path": "source-verification.json",
+      "bytes": 19199,
+      "sha256": "756cda1ad02c88c4128356a999c16d04dbf7d8ee6808d2f76a4d3e204f0ab7b4"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 5368,
+      "sha256": "14709fb40dd535e5f79057a1d2ec51ea721adce46be620ad63e8d4dd677c4055"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "residualFirstS": 6.5,
+  "residualCount": 15,
+  "residualIds": [
+    388,
+    389,
+    419,
+    622,
+    623,
+    624,
+    625,
+    626,
+    627,
+    650,
+    651,
+    652,
+    653,
+    654,
+    655
+  ],
+  "contact": {
+    "savedRows": 546,
+    "geometricGapRangeM": [
+      0.0,
+      0.0011356214895949512
+    ],
+    "negativeGeometricGapRows": 0,
+    "lastGeometricGapRangeM": [
+      0.00023463691079875226,
+      0.0008288811874469781
+    ],
+    "maxSavedGeometricSpringEnergyJPerM": 217.1383626928513,
+    "lastGeometricSpringEnergyJPerM": 151.14795732532224,
+    "lastActuatorSignedCommandWorkJPerM": 39629.71462243,
+    "caveat": "Gap uses saved particle top surface; native force uses predicted corner geometry. Spring and work proxies do not close energy. Individual actual corner tractions are not saved."
+  },
+  "maxFlagKpsIncrement": 2.168404344971009e-18
+}

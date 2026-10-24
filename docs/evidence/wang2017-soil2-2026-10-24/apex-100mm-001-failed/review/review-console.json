@@ -1,0 +1,225 @@
+{
+  "frames": 91,
+  "audit": {
+    "materialCsvRows": 83265,
+    "contactCsvRows": 546,
+    "allReadFieldsFinite": true,
+    "uniqueStableIds": true,
+    "actualJRange": [
+      0.9870578850242329,
+      1.0104530856043126
+    ],
+    "paperKpsRange": [
+      0.0,
+      0.03208634613243572
+    ],
+    "cohesionPaRange": [
+      15000.0,
+      30000.0
+    ],
+    "plasticVolumetricStrainRange": [
+      0.0,
+      0.008775368740661276
+    ],
+    "identityResiduals": {
+      "csvVtkPositionM": 0.0,
+      "csvVtkCommonScalar": 0.0,
+      "storedJMinusDetF": 2.220446049250313e-16,
+      "JMinusVolumeRatio": 1.0136336214827679e-13,
+      "paperInvariant": 6.938893903907228e-18,
+      "cohesionLawPa": 7.275957614183426e-12,
+      "properRotation": 1.5543122344752192e-15,
+      "epTraceMinusPlasticVolume": 2.800711051964555e-14,
+      "exportedEpTrace": 0.0,
+      "contactSurfaceM": 5.110495360227674e-15,
+      "contactMaxGapM": 1.209969624493823e-15,
+      "springEnergyJPerM": 2.2640733732259832e-10
+    },
+    "acceptedTinyHistoryDecreaseFlagRows": 622,
+    "smallestLastStepKpsChange": -6.938893903907228e-18,
+    "smallestSavedKpsChange": -3.7269449679189215e-19
+  },
+  "apexActivation": {
+    "sampledLastAcceptedApexFlagRows": 55,
+    "sampledUniqueParticleIds": [
+      387,
+      388,
+      389,
+      627
+    ],
+    "firstSampledActiveTimeS": 5.8,
+    "firstSavedNonroundoffPlasticVolumeTimeS": 5.8,
+    "particlesWithLoadingPlasticVolumeIncreaseAbove1eMinus12": 4,
+    "particles": [
+      {
+        "nativeId": 387,
+        "originalPositionM": [
+          6.25,
+          13.75,
+          0.0
+        ],
+        "lastPositionM": [
+          6.25643024908964,
+          13.626434747997083,
+          0.0
+        ],
+        "plasticVolumetricStrainAtLoadingOrigin": 0.0,
+        "lastPlasticVolumetricStrain": 0.00032753707960750703,
+        "incrementOverSavedLoadingInterval": 0.00032753707960750703,
+        "drivenContact": false
+      },
+      {
+        "nativeId": 388,
+        "originalPositionM": [
+          6.25,
+          14.25,
+          0.0
+        ],
+        "lastPositionM": [
+          6.258811676958073,
+          14.122870484682304,
+          0.0
+        ],
+        "plasticVolumetricStrainAtLoadingOrigin": 0.0,
+        "lastPlasticVolumetricStrain": 0.004065218774972771,
+        "incrementOverSavedLoadingInterval": 0.004065218774972771,
+        "drivenContact": false
+      },
+      {
+        "nativeId": 389,
+        "originalPositionM": [
+          6.25,
+          14.75,
+          0.0
+        ],
+        "lastPositionM": [
+          6.2618207277643885,
+          14.619482450415504,
+          0.0
+        ],
+        "plasticVolumetricStrainAtLoadingOrigin": 0.0,
+        "lastPlasticVolumetricStrain": 0.005272722425241855,
+        "incrementOverSavedLoadingInterval": 0.005272722425241855,
+        "drivenContact": false
+      },
+      {
+        "nativeId": 627,
+        "originalPositionM": [
+          10.25,
+          13.75,
+          0.0
+        ],
+        "lastPositionM": [
+          10.289380142310218,
+          13.60481232027018,
+          0.0
+        ],
+        "plasticVolumetricStrainAtLoadingOrigin": 0.0,
+        "lastPlasticVolumetricStrain": 0.008775368740661276,
+        "incrementOverSavedLoadingInterval": 0.008775368740661276,
+        "drivenContact": false
+      }
+    ],
+    "maximumAbsExportedTrialPlasticVolumeIncrement": 0.0,
+    "samplingCaveat": "Flags describe ONLY the last accepted return at a saved instant, not all20500+ substeps/events. Exported trial-volume increment is current minus committed and may be0 after each loadstep commit; use differences of accumulated totals across saved frames to observe interval volume change. Positive accumulated plastic volume is strain, not geometrical particle volume, porosity or exact multiplicative Fp determinant.",
+    "lastMassWeightedAverageAccumulatedPlasticVolumetricStrain": 2.015393116992723e-05
+  },
+  "freeMotion": {
+    "particleCount": 509,
+    "massKgPerM": 259517.77620288273,
+    "centroidMotionM": [
+      0.0050496313049669065,
+      -0.019907752657922294,
+      0.0
+    ],
+    "meanVelocityMPerS": [
+      0.0011739310563972693,
+      -0.0003563292144964916,
+      0.0
+    ],
+    "rmsSpeedMPerS": 0.042916795566553874,
+    "meanVelocityNormOverRmsSpeed": 0.028585985796807756,
+    "maxMotionNormM": 0.09320498231071331,
+    "maxAbsHorizontalMotionM": 0.044048444871343406,
+    "maxDownwardMotionM": 0.08483274222111348,
+    "maxSpeedMPerS": 0.3838463678075159,
+    "massFractionRightwardMotionGreater5mm": 0.2730844793713163,
+    "massFractionRightwardMotionGreater10mm": 0.17681728880157174,
+    "massFractionRightwardAndDownwardVelocity": 0.15324165029469553
+  },
+  "reaction": {
+    "peakSavedReactionNPerM": 644162.1979889,
+    "peakSavedTimeS": 6.1,
+    "lastReactionNPerM": 598325.0454726,
+    "finalDropFromSavedPeakFraction": 0.07115778084992473,
+    "largestSingleSavedReactionDecreaseNPerM": -11048.7274493,
+    "interpretation": "Reaction is native total strip actuator response per unit thickness; completion/colour/apex activation alone does not imply peak failure or landslide"
+  },
+  "runout": {
+    "originalToeXM": 15.773502691896258,
+    "freeMassFractionBeyondOriginalToe": 0.0,
+    "freeFront95thAdvanceFromSettledM": 0.005195310985259383,
+    "lastMaxFreeXM": 15.261847631959455,
+    "rightBoundaryXM": 20
+  },
+  "fastestFinal": {
+    "id": 797,
+    "positionM": [
+      14.266107161522104,
+      6.706157866635082,
+      0.0
+    ],
+    "velocityMPerS": [
+      0.11014595510773723,
+      0.36770355267854987,
+      0.0
+    ],
+    "speedMPerS": 0.3838463678075159,
+    "drivenContact": false
+  },
+  "strictLastComparison": {
+    "commandedSettlementM": 0.06,
+    "currentFrame": 60,
+    "referenceFrame": 60,
+    "currentReactionNPerM": 642296.77746,
+    "referenceReactionNPerM": 642296.7774579,
+    "reactionDifferenceNPerM": 2.100015990436077e-06,
+    "reactionDifferenceOverAbsReferenceOrNull": 3.269541533039569e-12,
+    "maxLoadingDisplacementFieldDifferenceM": 3.3403657096040547e-13,
+    "rmsLoadingDisplacementFieldDifferenceM": 7.512912163531377e-14,
+    "currentFreeCentroidMotionM": [
+      0.00210628818987779,
+      -0.0185212970923938,
+      0.0
+    ],
+    "referenceFreeCentroidMotionM": [
+      0.0021062881898842325,
+      -0.0185212970923898,
+      0.0
+    ],
+    "maxAbsPaperKpsDifference": 8.026752006118354e-13,
+    "maxAbsCohesionDifferencePa": 6.020054570399225e-07
+  },
+  "soil1LastComparison": {
+    "commandedSettlementM": 0.06,
+    "currentFrame": 60,
+    "referenceFrame": 60,
+    "currentReactionNPerM": 642296.77746,
+    "referenceReactionNPerM": 668635.8322376,
+    "reactionDifferenceNPerM": -26339.054777599988,
+    "reactionDifferenceOverAbsReferenceOrNull": -0.039392227439346075,
+    "maxLoadingDisplacementFieldDifferenceM": 0.003283129991918215,
+    "rmsLoadingDisplacementFieldDifferenceM": 0.000611979504266769,
+    "currentFreeCentroidMotionM": [
+      0.00210628818987779,
+      -0.0185212970923938,
+      0.0
+    ],
+    "referenceFreeCentroidMotionM": [
+      0.002099405748282498,
+      -0.01897399879565393,
+      0.0
+    ],
+    "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "matchedStates": 61,
+  "allPass": false,
+  "failedMetrics": {
+    "vtk:mc-yield-residual-kirchhoff-pa": {
+      "max_abs_difference": 1.6557984054088593e-05,
+      "rms_difference": 7.601800302750598e-07,
+      "max_scaled_difference": 1.658531267706198,
+      "mismatched_values": 4,
+      "pass": false,
+      "global_linf_diagnostic": {
+        "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+        "baseline_linf": 85470.58593423045,
+        "relative_linf_difference": 1.9372727907621867e-10,
+        "tolerance": 0.008547068593423045,
+        "pass": true
+      }
+    },
+    "vtk:sig_xy": {
+      "max_abs_difference": 3.3151954994536936e-06,
+      "rms_difference": 1.5757176452827155e-07,
+      "max_scaled_difference": 10.567355330300371,
+      "mismatched_values": 5,
+      "pass": false,
+      "global_linf_diagnostic": {
+        "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+        "baseline_linf": 87626.05213368396,
+        "relative_linf_difference": 3.783344586146559e-11,
+        "tolerance": 0.008762615213368396,
+        "pass": true
+      }
+    },
+    "vtk:wang-history-decrease-accepted": {
+      "max_abs_difference": 1.0,
+      "rms_difference": 0.048260988340589325,
+      "max_scaled_difference": 100000000.0,
+      "mismatched_values": 130,
+      "pass": false,
+      "global_linf_diagnostic": {
+        "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+        "baseline_linf": 1.0,
+        "relative_linf_difference": 1.0,
+        "tolerance": 1.0999999999999999e-07,
+        "pass": false
+      }
+    }
+  },
+  "positionMetric": {
+    "max_abs_difference": 2.788880237858393e-13,
+    "rms_difference": 2.5568535680707422e-14,
+    "max_scaled_difference": 5.367522516537246e-07,
+    "mismatched_values": 0,
+    "pass": true,
+    "global_linf_diagnostic": {
+      "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+      "baseline_linf": 19.750541538880498,
+      "relative_linf_difference": 1.4120525416319662e-14,
+      "tolerance": 1.9850541538880495e-06,
+      "pass": true
+    }
+  },
+  "reactionMetric": {
+    "max_abs_difference": 3.500026650726795e-06,
+    "rms_difference": 1.3319026515798573e-06,
+    "max_scaled_difference": 0.0002904253089335668,
+    "mismatched_values": 0,
+    "pass": true,
+    "global_linf_diagnostic": {
+      "basis": "max absolute difference / max absolute baseline value for this entire saved field; does not replace pointwise pass",
+      "baseline_linf": 642296.7774579,
+      "relative_linf_difference": 5.449235888399281e-12,
+      "tolerance": 0.06422968774578999,
+      "pass": true
+    }
+  }
+}

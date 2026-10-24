@@ -1,5 +1,18 @@
 # Soil2 with explicit apex flow: completed 60 mm trial
 
+[The scoped residual-history repair](WANG2017_RESIDUAL_HISTORY_SCOPE.md) now
+records the actual 100 mm failure, one replay, unchanged-tolerance prefix FAIL
+and the separate opt-in continuation policy with its native verification.
+
+**100mm follow-up:** native/worker exit1 at24October15:55:34WIB on3caa6be,
+before wallbudget. Last saved9s/90mm/30960accepted loading updates; failure
+manifest31092 includes later unsaved work. The actual composite-apex capsule
+rejects signed-history decrease.03187108863369348→.03187108746386819; both are
+past residual.02. One new frozen replay and saved-output/partial-media review
+are underway; no tolerance or material change has been applied. Exact failed
+solver time/particleID are absent from the capsule. This is not a completed10s
+or a verified landslide. The completed60mm evidence below remains unchanged.
+
 On24October2026 the Windows-native run
 `output/wang2017-soil2-2026-10-24/apex-fast-010-001` completed at13:33:43WIB
 on source55bc85d9d4567b6677439846035127751fbc4c7f. Audit/render and detached

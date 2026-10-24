@@ -1,0 +1,158 @@
+{
+  "classification": "FAILED_NATIVE / INCOMPLETE",
+  "sourceCommitAtLaunch": "3caa6bea5d447be34c8bd1104311f1aa34b57986",
+  "nativeExitCode": 1,
+  "nativeComplete": false,
+  "nativeEndedUtc": "2026-10-24T08:55:34.0992290Z",
+  "stoppedByWallBudget": false,
+  "requestedEndTimeS": 10,
+  "requestedEndSettlementM": 0.1,
+  "lastSavedTimeS": 9,
+  "lastSavedCommandedSettlementM": 0.09,
+  "savedLoadingUpdates": 30960,
+  "failureManifestLoadingUpdates": 31092,
+  "savedStates": 91,
+  "particleIds": 915,
+  "materialRows": 83265,
+  "contactRows": 546,
+  "failureReason": "Wang signed history decreased outside the declared monotonic scope; healing/irreversible continuation is not approved",
+  "failureTimingScope": "Failed transaction is later than last saved state. Capsule has no global particle ID or exact solver time.",
+  "scientificValidation": false,
+  "coherentLandslideVerified": false,
+  "frozenSourceRecordsVerified": 275,
+  "savedIdentityAudit": {
+    "materialCsvRows": 83265,
+    "contactCsvRows": 546,
+    "allReadFieldsFinite": true,
+    "uniqueStableIds": true,
+    "actualJRange": [
+      0.9870578850242329,
+      1.0104530856043126
+    ],
+    "paperKpsRange": [
+      0.0,
+      0.03208634613243572
+    ],
+    "cohesionPaRange": [
+      15000.0,
+      30000.0
+    ],
+    "plasticVolumetricStrainRange": [
+      0.0,
+      0.008775368740661276
+    ],
+    "identityResiduals": {
+      "csvVtkPositionM": 0.0,
+      "csvVtkCommonScalar": 0.0,
+      "storedJMinusDetF": 2.220446049250313e-16,
+      "JMinusVolumeRatio": 1.0136336214827679e-13,
+      "paperInvariant": 6.938893903907228e-18,
+      "cohesionLawPa": 7.275957614183426e-12,
+      "properRotation": 1.5543122344752192e-15,
+      "epTraceMinusPlasticVolume": 2.800711051964555e-14,
+      "exportedEpTrace": 0.0,
+      "contactSurfaceM": 5.110495360227674e-15,
+      "contactMaxGapM": 1.209969624493823e-15,
+      "springEnergyJPerM": 2.2640733732259832e-10
+    },
+    "acceptedTinyHistoryDecreaseFlagRows": 622,
+    "smallestLastStepKpsChange": -6.938893903907228e-18,
+    "smallestSavedKpsChange": -3.7269449679189215e-19
+  },
+  "reaction": {
+    "peakSavedReactionNPerM": 644162.1979889,
+    "peakSavedTimeS": 6.1,
+    "lastReactionNPerM": 598325.0454726,
+    "finalDropFromSavedPeakFraction": 0.07115778084992473,
+    "largestSingleSavedReactionDecreaseNPerM": -11048.7274493,
+    "interpretation": "Reaction is native total strip actuator response per unit thickness; completion/colour/apex activation alone does not imply peak failure or landslide"
+  },
+  "freeMotion": {
+    "particleCount": 509,
+    "massKgPerM": 259517.77620288273,
+    "centroidMotionM": [
+      0.0050496313049669065,
+      -0.019907752657922294,
+      0.0
+    ],
+    "meanVelocityMPerS": [
+      0.0011739310563972693,
+      -0.0003563292144964916,
+      0.0
+    ],
+    "rmsSpeedMPerS": 0.042916795566553874,
+    "meanVelocityNormOverRmsSpeed": 0.028585985796807756,
+    "maxMotionNormM": 0.09320498231071331,
+    "maxAbsHorizontalMotionM": 0.044048444871343406,
+    "maxDownwardMotionM": 0.08483274222111348,
+    "maxSpeedMPerS": 0.3838463678075159,
+    "massFractionRightwardMotionGreater5mm": 0.2730844793713163,
+    "massFractionRightwardMotionGreater10mm": 0.17681728880157174,
+    "massFractionRightwardAndDownwardVelocity": 0.15324165029469553
+  },
+  "runout": {
+    "originalToeXM": 15.773502691896258,
+    "freeMassFractionBeyondOriginalToe": 0.0,
+    "freeFront95thAdvanceFromSettledM": 0.005195310985259383,
+    "lastMaxFreeXM": 15.261847631959455,
+    "rightBoundaryXM": 20
+  },
+  "residualStrengthParticles": 15,
+  "canonicalPrefixPass": false,
+  "canonicalPrefixFailedFields": [
+    "vtk:mc-yield-residual-kirchhoff-pa",
+    "vtk:sig_xy",
+    "vtk:wang-history-decrease-accepted"
+  ],
+  "media": {
+    "scope": "Actual incomplete saved native states; no scientific-validation claim",
+    "nativeStates": 91,
+    "nativeTimeRangeS": [
+      0,
+      9
+    ],
+    "nativeCommandRangeM": [
+      0,
+      0.09
+    ],
+    "savedPhysicalIntervalS": 0.1,
+    "videoFrames": 91,
+    "videoFps": 4,
+    "durationS": 22.75,
+    "firstPtsS": 0.0,
+    "lastPtsS": 22.5,
+    "nativeToVideoIntervalFactor": 2.5,
+    "lastFrameHoldS": 0.25,
+    "spatialDisplacementScale": 1,
+    "interpolation": false,
+    "fixedAxesAndColour": {
+      "quantity": "wang-paper-kps",
+      "xlim": [
+        -0.33521707786886634,
+        20.335563730732215
+      ],
+      "ylim": [
+        -0.18601848796053408,
+        15.105187263048
+      ],
+      "vmin": 0.0,
+      "vmax": 0.03208634613243572,
+      "displacementScale": 1,
+      "interpolatedStates": false,
+      "videoFps": 4
+    },
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "width": 1680,
+    "height": 756,
+    "fullDecodeExitCode": 0,
+    "rendererExitCode": 2,
+    "interpretation": "Each actual .1s native interval is shown for .25s; actual native time labels, no real-time playback claim"
+  },
+  "actualMappedBackend": {
+    "modulePath": "D:/MPM/output/wang2017-soil2-2026-10-24/apex-100mm-001/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  }
+}

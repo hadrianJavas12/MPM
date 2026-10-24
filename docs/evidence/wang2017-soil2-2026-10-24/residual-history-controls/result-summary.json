@@ -1,0 +1,83 @@
+{
+  "scope": "Thirteen distinct control groups passed across two separate processes; not one 13-PASS process",
+  "originalFailureRetained": true,
+  "originalFailureCause": "Test expected friction degrees; law-values returns radians",
+  "attempts": [
+    {
+      "attempt": 1,
+      "actualProcessExitCode": 1,
+      "passedControlCount": 12,
+      "failedControlCount": 1,
+      "newModelPointCalls": 1,
+      "newModelNativeConstitutiveCalls": 9,
+      "originalVariantActualCapsuleReplayCalls": 0,
+      "physicalUpdatesExecuted": 0,
+      "frozenFileCount": 277,
+      "allFrozenFileHashesVerified": true,
+      "sourceProofBeforeAfterEqual": true,
+      "mappedCopiedDllVerified": true,
+      "nativeBackend": {
+        "modulePath": "D:/MPM/output/wang2017-soil2-2026-10-24/residual-history-controls-001/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "executedTestSha256": "290957797b1852696d3c763f6482a9456b9f5f95107189d9d8c93bf1d40271ea",
+      "capturedFixtureSha256": "3ad314d3416df31122a2a628056b847cbe46e687cb89c90b349964ee892da926"
+    },
+    {
+      "attempt": 2,
+      "actualProcessExitCode": 0,
+      "passedControlCount": 1,
+      "failedControlCount": 0,
+      "newModelPointCalls": 0,
+      "newModelNativeConstitutiveCalls": 0,
+      "originalVariantActualCapsuleReplayCalls": 0,
+      "physicalUpdatesExecuted": 0,
+      "frozenFileCount": 277,
+      "allFrozenFileHashesVerified": true,
+      "sourceProofBeforeAfterEqual": true,
+      "mappedCopiedDllVerified": true,
+      "nativeBackend": {
+        "modulePath": "D:/MPM/output/wang2017-soil2-2026-10-24/residual-history-controls-002/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "executedTestSha256": "d70ecb1dfb230b7112b55f73adafeef75867edf9d56f54bcdbc8253d0f3700fa",
+      "capturedFixtureSha256": "3ad314d3416df31122a2a628056b847cbe46e687cb89c90b349964ee892da926"
+    }
+  ],
+  "aggregatePassedDistinctControlGroups": 13,
+  "aggregateNewModelPointCalls": 1,
+  "aggregateNewModelNativeConstitutiveCalls": 9,
+  "aggregateOriginalVariantActualCapsuleReplayCalls": 0,
+  "aggregatePhysicalUpdatesExecuted": 0,
+  "originalFailure": [
+    [
+      "Residual history class is explicit and keeps exact Soil2 law and owned constructor storage",
+      "The assertion\n(EQUAL (MULTIPLE-VALUE-LIST (CL-MPM/MODELS/MC-EVOLUTION:LAW-VALUES LAW 0.03))\n       '(15000.0 35.0 0.0))\nfailed with\n(MULTIPLE-VALUE-LIST (CL-MPM/MODELS/MC-EVOLUTION:LAW-VALUES LAW 0.03)) =\n(15000.0 0.6108652381980153 0.0)."
+    ]
+  ],
+  "observations": {
+    "capturedPointOldKps": 0.03187108863369348,
+    "capturedPointNewKps": 0.03187108746386819,
+    "capturedPointSignedDecrease": -1.169825285252113e-09,
+    "capturedNativeKps": 0.03187108746386819,
+    "capturedNativeCohesionPa": 15000.0,
+    "capturedNativePlasticVolume": 2.2883033921470997e-07,
+    "capturedNativePlasticWorkPa": 0.004902053892468305
+  },
+  "processExitObservations": [
+    {
+      "attempt": 1,
+      "executorSessionId": 44190,
+      "observedFinalExitCode": 1
+    },
+    {
+      "attempt": 2,
+      "executorSessionId": 5812,
+      "observedFinalExitCode": 0
+    }
+  ]
+}
