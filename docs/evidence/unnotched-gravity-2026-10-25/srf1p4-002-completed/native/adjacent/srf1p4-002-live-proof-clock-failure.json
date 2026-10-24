@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_PROOF_HARNESS_CLOCK_MISMATCH",
+  "reason": "Worker record uses CIM microsecond clock, Get-Process exposes 100ns precision. Recorded and actual CIM creation time exactly agree; Get-Process differs by 200ns. Corrected proof compares each record to its original clock with exact equality.",
+  "recordedUtc": "2026-10-24T20:57:26.8554350Z",
+  "actualCimUtc": "2026-10-24T20:57:26.8554350Z",
+  "actualProcessUtc": "2026-10-24T20:57:26.8554352Z",
+  "solverRestarted": false
+}

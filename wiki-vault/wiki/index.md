@@ -25,7 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[unnotched-mc-gravity]] — scoped MC repair passes34 existing/eight focused/four bounded-output groups; same-input SRF1.40 full attempt002 active from25Oct03:57WIB, landslide unverified
+- [[unnotched-mc-gravity]] — SRF1.40 completes6s/61states with integrity PASS but no landslide; max displacement12.08mm/settling response; predeclared SRF1 baseline active from25Oct04:18WIB
 - [[unnotched-landslide-method-selection]] — primary journal methods for intact-slope failure; separate MC gravity/SSR control selected, no new full run or landslide claim
 - [[wang2017-residual-history-scope]] —100mm history-guard failure, one replay with unchanged residual strength, explicit opt-in scope and native/integration gates
 - [[wang2017-apex-60mm-review]] — complete61-state apex trial, no verified landslide;100mm input gate passed and same-material endpoint trial running13:52WIB

@@ -1,0 +1,9 @@
+# Completed6s unnotched SRF1.40 native attempt002
+
+Native source3ed36a3 completes exit0 at25October04:12:52WIB:6physical seconds,61actual saved states,880fixed particle IDs and7740accepted updates. The native status is preserved as NATIVE_COMPLETE_REVIEW_PENDING; later independent saved review is a separate operation. Actual raw outputs,282frozen sources, manifest, loaded-byte provenance, mapped DLL, modern supervisor logs and detached worker exit/start proof remain intact.
+
+The one saved-data review completes exit0. Integrity is PASS; coherent motion and landslide detection are False/False. The study's predeclared0–6s and2–6s windows are retained without redefining success. Native completion is not a verified landslide, scientific validation or calibrated runout. Fixed-grid bed, coarse mesh, explicit ramp and adapted source geometry remain limitations.
+
+Media contains61actual states at4fps,15.25s playback, scale1, no interpolation/amplification; full decode exit0 is retained. The exact review script/imported reader/contract were copied and hashed before execution. Every actual-frame PNG is retained in the review ZIP. The0–0.9s prefix comparison reports PASS:10VTK states and both CSV prefixes match exactly, without interpolation or tolerance adjustment. Its exact script/results are retained as received, with no rerun by this collector.
+
+Both archives are CRC-tested, decoded and checked byte for byte against original members. Source/cache separation preserves only manifest-indexed source; private FASL/Python caches are excluded. Historical unsuccessful live-proof clock checks remain alongside the later actual live verification. Original native, review and prefix directories remain in output/. Packaging executes only read/copy/hash/ZIP verification, with no native or analysis repetition.

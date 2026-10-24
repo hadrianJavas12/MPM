@@ -247,3 +247,49 @@ retains21 indexed artifacts; root verifies all282 actual source files and22
 staged Git blobs. Only projection differs from001; all281 other frozen source
 files, the exact executable case and full configuration match. Full raw/source
 archives and physical/media review remain due at terminal.
+
+### Completed SRF1.40 and baseline control, 25 October 2026
+
+SRF1.40 attempt002 completes native/worker exit0 at04:12:52WIB:6s,
+61actual states/880IDs/53680 material rows/7740 updates. The independent
+saved-data review/render executes once, exit0, from analysis/reader/contract
+bytes copied before execution. Integrity passes;282 actual frozen sources and
+mapped DLL match. Root also inspects its actual scale1 PNG. The retained video
+contains61 saved states at4fps (15.25s playback), without interpolation or
+amplified motion, and full decode exits0.
+
+**No landslide is detected.** Maximum displacement over the run is12.083373mm,
+maximum plastic history0.002384817. The fixed cohort moves+2.619932mmX and
+-6.475881mmY over0–6s; post-ramp2–6s adds only+0.196086mmX/-0.099476mmY.
+Kinetic energy peaks7.099245J/m at1.8s and falls to0.05890283J/m at6s. Both
+predeclared sustained-motion windows are NOT_DETECTED and no mass crosses the
+toe. MinimumJ0.998403902246/max independent yield residual1.055e-10Pa support
+integrity, not instability validation. No center exits or floor penetration
+occur; the minimum particle half-domain margin is-3.5951micrometres, retained
+as a contact/support limitation.
+
+The ten common0–0.9s particle VTK files and first8800particle/10history CSV
+rows are exactly byte/string-identical to the original failed001 prefix;
+all numeric differences are zero. The comparison script is saved before
+execution. [Completed evidence](../evidence/unnotched-gravity-2026-10-25/srf1p4-002-completed/README.md)
+retains45 indexed artifacts/445 archive members, including all282 native
+sources, raw output, exact analysis/media/runtime and saved comparison. Root
+verifies every indexed hash/archived source and46 staged Git blobs.
+
+The predeclared sequential SRF1 control starts04:18:27WIB on source8d8b544,
+target6s/61states,3h wall budget to07:18:27WIB. Current c10kPa/phi20/psi0
+differs from the reduced case only in declared SRF/cohesion/friction. Exact
+case/source/configuration and live process proofs are retained in
+[baseline launch evidence](../evidence/unnotched-gravity-2026-10-25/srf1-001-launch/README.md):
+20 indexed artifacts/282 frozen sources/21 verified staged Git blobs. The
+original inline matrix-analysis source was not separately saved; that gap is
+explicit. No input gates were repeated. Compare the pair before choosing a
+new geometry, mesh or ramp sensitivity study; do not increase SRF or extend
+duration simply to obtain collapse. Baseline results remain pending.
+
+The [conditional post-pair study review](../../research/notes/unnotched-landslide-2026-10-24/post-pair-study-review.md)
+recommends verifying source geometry and independent static stability before
+an expensive refinement. All proposed diagnostics/runs remain NOT_RUN. A later
+cross-mesh comparison must preregister identical physical observation regions
+and thresholds; the original h-scaled observer changes when h changes and
+must not silently turn a resolution change into a different success detector.

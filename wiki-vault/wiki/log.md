@@ -809,3 +809,15 @@ repair/compatibility, not a completed full slope or verified landslide.
 ## [2026-10-25] ingest | Fresh unnotched launch proof retained
 
 [[unnotched-mc-gravity]] links21 indexed launch artifacts/22 independently matched staged Git blobs. Root independently hashes282 actual frozen files:281 unchanged versus001, sole difference the gated projector; exact case/full config unchanged. Full-result review remains pending; source/raw/media archiving due at terminal. No extra native/solver/replay/render work.
+
+## [2026-10-25] ingest | Full unnotched reduced-strength run completes without slide
+
+[[unnotched-mc-gravity]] records source3ed36a3 attempt002 native/worker0 at04:12:52WIB,6s/61states/880MPs/7740updates/53680rows. One exact-source independent saved review/render passes integrity/282sourceDLL hashes,actualscale1PNG inspected byagent/root; no coherentlandslide/runout. Maxu12.083373mm,centroid/KE plateau afterramp; bothmotionwindowsNOT_DETECTED,zero toe mass.61actualvideoframes4fps15.25s/decode0/nointerp. Strictprefixfirst10VTK/8800particle/10history rows byte/stringidentical oldfailed001, allnumericdeltas0. Completed45indexedartifacts/445archive members/282sources and46stagedGitblobs verified. No duplicate solver/replay/render.
+
+## [2026-10-25] ingest | Predeclared unreduced-strength baseline starts
+
+[[unnotched-mc-gravity]] records source8d8b544 SRF1 baseline start04:18:27WIB/3h budget. Same case/config exceptSRF,c,phi; frozen inputs remain unchanged from prior gates. Live PID/session/originalcreationclock/parent chain and282sourceDLL proof verified;20indexedartifacts/21stagedGitblobs retained. Inputmatrix inline source gap explicit, not reconstructed. One quiet15min monitor; terminal paired review pending before geometry/mesh/ramp study. Actual landslide objective remains unmet, no ad-hoc strength/duration tuning. Raw/personalsettings intact.
+
+## [2026-10-25] query | Conditional post-pair scientific study gate
+
+[[unnotched-mc-gravity]] links read-only post-pair-study-review: finish pairedcontrol, then verifygeometry/staticstability before costlyhhalfexperiment. Proposals NOT_RUN. Existingobserver scales withh; refinement requires additionalpreregistered physical-metreobserver common tobothmeshes, preservingoldcontract/results. Halvedh/samedtScale iscoupledspace-time refinement. No newnumericalwork/parameterchange;actualslide goal remainsunmet.

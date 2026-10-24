@@ -1,5 +1,23 @@
 # Native framework and Studio verification
 
+## Full gravity/SSR result and sequential control, 2026-10-25
+
+SRF1.40 attempt002 reaches6s/61states/7740updates with native/worker exit0.
+One exact-source saved-data audit/render passes61VTKs/53680rows/880IDs and
+282 frozen source/DLL verification. Motion/runout gates are NOT_DETECTED:
+max displacement12.083373mm,zero toe-crossing mass; centroid/KE settle after
+gravity ramp. Source integrity/native completion are separate from the unmet
+landslide objective. Scale1 video61actualframes/4fps/15.25s/fullDecode0 retained.
+Common0–0.9s ten VTKs and8800particle/10history CSV rows exactly match failed001.
+Completed packet45 indexed artifacts/445 ZIP members/282 sources and46 staged
+Git blobs are independently verified. No solver or analysis was repeated.
+
+Baseline SRF1 launches04:18:27WIB from the predeclared case on8d8b544,3h budget.
+Only SRF/c/phi differ. Launch20 indexed artifacts/282source hashes/21 Git blobs
+and exact live process proof pass. Original inline input-matrix analysis source
+was not separately retained; the provenance limitation is labelled. Baseline
+terminal review and paired comparison remain pending; no old gates need rerun.
+
 ## Same-input full unnotched continuation, 2026-10-25
 
 Source3ed36a3 attempt `srf1p4-002` starts03:57:28WIB with unchanged SRF1.40

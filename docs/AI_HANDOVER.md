@@ -2,7 +2,66 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
-## ACTIVE: same-input unnotched SRF1.40 fresh attempt after numerical repair
+## Current: SRF1.40 completed, integrity passes; no actual landslide
+
+`output/unnotched-gravity-2026-10-25/srf1p4-002`, source3ed36a3,
+native/worker exit0 at25October04:12:52WIB. Complete6s/61states/880MPs/
+7740updates/53680material rows. ONE saved-data review/render ran from exact
+analysis/reader/contract copies saved BEFORE execution in `review-001/`;
+native integrity PASS,282 frozen sources/mappedDLL verified. Root and agent
+inspected the actual scale1 PNG. Do not repeat native/review/render/replay or
+passed tests. Completed packet
+`docs/evidence/unnotched-gravity-2026-10-25/srf1p4-002-completed` retains45
+indexed artifacts/two ZIPs/445 members/282 executed sources. Root independently
+verified all indexed hashes/archived source files and46 staged Git blobs.
+
+NO verified landslide: maximum displacement12.083373mm,maximum kappa.002384817;
+fixed-cohort centroid0–6s +2.619932mmX/-6.475881mmY,post2–6s increment only
++0.196086mmX/-0.099476mmY. KE peaks7.099245J/m at1.8s then.05890283J/m at6s.
+Both predeclared motion windows NOT_DETECTED,zero moving-threshold/component
+mass andzero toe-runout mass. Native completion is not scientific/landslide
+PASS. MinimumJ.998403902246,independent maxMCresidual1.055e-10Pa;no center
+floorpenetration/domainexit,but half-domain margin minimum-3.5951micrometres
+retained as limitation,not certified bedcontact. Actual61frame video4fps/
+15.25s playback/decode0,no interpolation or magnification; kappa is plastic
+history,not damage. Full source and original failed evidence remain intact.
+
+NEW exact saved-prefix comparison PASS: all10 common0–0.9s particle VTK files,
+8800particle CSV rows and10history rows BYTE/STRINGIDENTICAL to failed001;
+all numeric deltas0. Exact comparison script saved before execution under
+`srf1p4-002/prefix-comparison-001`. Do not repeat this comparison.
+
+Baseline prelaunch input matrix PASS (read/hash only,no test rerun): both cases
+match all retained native gates,entire case differs ONLY literalSRF1 vs1.4;
+derived config differs ONLY SRF/cohesion/friction,267 production/DLL entries
+match completed frozen source. Live main remains9e97e001;no merge.
+Sequential baseline `output/unnotched-gravity-2026-10-25/srf1-001` has now been
+launched25October04:18:27WIB on source8d8b544 with3h wall budget to07:18:27WIB;
+worker31732/wrapper48768/cmd24036/SBCL25124,allSession11. This closes the
+predeclared paired control before selecting geometry/mesh/ramp studies. It
+does not increase SRF or tune strength to manufacture collapse. Its
+initialization/real process/source proof is ALREADY retained in
+`docs/evidence/unnotched-gravity-2026-10-25/srf1-001-launch`:20 indexed artifacts,
+282 frozen source/DLL hashes,exact PID/session/original-clock/parent chain.
+Root independently verifies all20 artifact hashes/21 staged Git blobs and all
+282 actual frozen files. Only source/case differs from completed1.4; actual
+configuration differs ONLY declaredSRF,c,phi. Inputmatrix original inline
+analysis source was not separately saved; that provenance gap is explicit,
+not retroactively reconstructed. Same automation is15min; leave healthy
+advancement passive. At terminal review once and compare pair before
+any new expensive study. Do not simply extend6s or increaseSRF on negative data.
+
+Conditional next-study review saved in
+`research/notes/unnotched-landslide-2026-10-24/post-pair-study-review.md`:
+close the pair,then verify exact geometry/source and an independently checked
+static stability diagnostic BEFORE an expensiveh=.5 run. All proposals NOT_RUN.
+Important: current motion contract scales withh; halvingh also halves observer
+cutoffs/thresholds. Keep original contract/results intact and preregister the
+same physical-metre observer on BOTH meshes for any later comparison. No
+threshold changes to manufacture success; hhalf at samedtScale is coupled
+space/time refinement,not an isolated mesh-convergence proof.
+
+## Previous launch checkpoint: same-input SRF1.40 attempt
 
 Repair/evidence checkpoint **3ed36a3e11440a22490a78f511b95f166bb104b4** is pushed
 on `codex/unnotched-gravity-benchmark`. Actual fresh run

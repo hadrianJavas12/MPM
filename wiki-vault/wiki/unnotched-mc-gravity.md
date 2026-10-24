@@ -107,3 +107,35 @@ Launch packet retains21 indexed artifacts; root verifies22 staged Git blobs
 and all282 actual immutable source files. The only source change versus001 is
 the projector; all281 other sources, executable case and full config match.
 Full raw/source/media storage and physical review remain due at terminal.
+
+## Completed reduced-strength result and baseline, 25 October 2026
+
+Attempt002 completes6s/61states/7740updates/53680 material rows at04:12:52WIB,
+native/worker exit0. ONE exact-source saved-data review/render passes integrity;
+all282 immutable source/DLL hashes match. Root also inspects actual scale1 PNG.
+Video61actualstates/4fps/15.25s playback/fullDecode0 has no interpolation or
+magnification. The prefix ten0–0.9s VTKs/8800particle/10history rows exactly
+matches original failed001; all numeric deltas zero, no repeat solver/replay.
+
+**Actual landslide remains absent.** Maximum displacement12.083373mm;
+cohort+2.619932mmX/-6.475881mmY,post2–6s adds only+.196086mmX/-.099476mmY.
+KE7.099245J/m peak decays to.05890283J/m. Both motion windows NOT_DETECTED,
+zero toe runout. MinimumJ.9984039/no center penetration or domain exit support
+integrity,while half-domain margin-3.5951micrometres remains a limitation.
+Completed evidence45indexed artifacts/445 ZIP members/282 sources and46 staged
+Git blobs verified. No full-slope scientific PASS follows.
+
+Sequential predeclared baselineSRF1 starts04:18:27WIB on8d8b544,3h budget until
+07:18:27WIB. Its case/config differs ONLYSRF,c,phi; no new gates or hidden
+overrides. Baseline launch20indexed artifacts/282 actualsource hashes/21 Git
+blobs/livePIDsessioncreationclockparentchain proof verified. Inline inputmatrix
+script was not separately saved; provenance gap labelled. Compare actual pair
+at terminal before selecting geometry/mesh/ramp study, with no ad-hoc SRF or
+duration increase. One quiet15min monitor remains active.
+
+Conditional post-pair design review recommends exact source geometry/static
+cross-check before expensive refinement; proposals remain NOT_RUN. Halvingh
+also changes the current h-scaled observer. Preserve original results and
+preregister common physical-metre cutoffs/thresholds across both meshes; never
+use changed detection thresholds to manufacture a positive result. Identical
+dtScale with halvedh changes both space and time resolution.

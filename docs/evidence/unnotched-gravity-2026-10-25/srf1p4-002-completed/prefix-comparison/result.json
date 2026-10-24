@@ -1,0 +1,483 @@
+{
+  "schema": "cl-mpm.unnotched-gravity.strict-prefix-comparison.v1",
+  "createdUtc": "2026-10-24T21:18:24.372599+00:00",
+  "status": "PASS",
+  "beforeRun": "output\\unnotched-gravity-2026-10-24\\srf1p4-001",
+  "afterRun": "output\\unnotched-gravity-2026-10-25\\srf1p4-002",
+  "comparisonScope": "All ten actual saved states from0 through0.9s; exact VTK bytes and complete raw CSV row/string bytes for those frames",
+  "tolerance": "EXACT_BYTES_AND_STRINGS; no threshold, interpolation or tolerance relaxation",
+  "newProjectorOrSolverCalls": 0,
+  "executedScript": {
+    "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\prefix-comparison-001\\executed-comparison.py",
+    "bytes": 7159,
+    "sha256": "0388eb1640cf35b4190372408bfe92f13c706d35b82494c7e53144fab38b2120"
+  },
+  "inputFiles": [
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0000.vtk",
+      "bytes": 290664,
+      "sha256": "0e5405299adca9c750e06f87a43f346673c329e3f96a8e7c79b0b0ab46b905c7"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0000.vtk",
+      "bytes": 290664,
+      "sha256": "0e5405299adca9c750e06f87a43f346673c329e3f96a8e7c79b0b0ab46b905c7"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0001.vtk",
+      "bytes": 290664,
+      "sha256": "77acd4344e0453fd4e2ae950f8c356248903691f1d00d6789675e6e7c4fa58f4"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0001.vtk",
+      "bytes": 290664,
+      "sha256": "77acd4344e0453fd4e2ae950f8c356248903691f1d00d6789675e6e7c4fa58f4"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0002.vtk",
+      "bytes": 290664,
+      "sha256": "12d090c32881bd9f5c21c325e90c0d8850a9b8531534dd6e68af25ec86b8101b"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0002.vtk",
+      "bytes": 290664,
+      "sha256": "12d090c32881bd9f5c21c325e90c0d8850a9b8531534dd6e68af25ec86b8101b"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0003.vtk",
+      "bytes": 290664,
+      "sha256": "45cad8f4bc33da87e0ca6f3c93fc8ac07e33635d99406cf9ab010e451b6d05f2"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0003.vtk",
+      "bytes": 290664,
+      "sha256": "45cad8f4bc33da87e0ca6f3c93fc8ac07e33635d99406cf9ab010e451b6d05f2"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0004.vtk",
+      "bytes": 290664,
+      "sha256": "340750b1960e5d54151248fb845469bf77f5ef52ad679ead1a4c6d22607a411e"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0004.vtk",
+      "bytes": 290664,
+      "sha256": "340750b1960e5d54151248fb845469bf77f5ef52ad679ead1a4c6d22607a411e"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0005.vtk",
+      "bytes": 290664,
+      "sha256": "aba0945d880b85ef357f8b27c3b446b95534ba2f5ae0acf1198d51e954bfd7b4"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0005.vtk",
+      "bytes": 290664,
+      "sha256": "aba0945d880b85ef357f8b27c3b446b95534ba2f5ae0acf1198d51e954bfd7b4"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0006.vtk",
+      "bytes": 290664,
+      "sha256": "b0b4d25d0a06d64558132616bf80f41eb107ff614b041c6d1426be0114ff667b"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0006.vtk",
+      "bytes": 290664,
+      "sha256": "b0b4d25d0a06d64558132616bf80f41eb107ff614b041c6d1426be0114ff667b"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0007.vtk",
+      "bytes": 290664,
+      "sha256": "a00ada4286a0156aaf3f58608be7dca07d4ccbf0a9947408e56e8952b915b9c0"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0007.vtk",
+      "bytes": 290664,
+      "sha256": "a00ada4286a0156aaf3f58608be7dca07d4ccbf0a9947408e56e8952b915b9c0"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0008.vtk",
+      "bytes": 290664,
+      "sha256": "935fdc61711d7293200af5d0b8fb69ecd2494ba987e822af5683edaa48684057"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0008.vtk",
+      "bytes": 290664,
+      "sha256": "935fdc61711d7293200af5d0b8fb69ecd2494ba987e822af5683edaa48684057"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0009.vtk",
+      "bytes": 290664,
+      "sha256": "b081fb462f67f061bbbec8d12ac453d4b7bc72a75007982e7f09ec1e010a214e"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0009.vtk",
+      "bytes": 290664,
+      "sha256": "b081fb462f67f061bbbec8d12ac453d4b7bc72a75007982e7f09ec1e010a214e"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\history.csv",
+      "bytes": 7449,
+      "sha256": "3955eddbf02835ec0c26a2a5ce50f7c5d2aa04aa15ce59b05badf255c1d46659"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\history.csv",
+      "bytes": 42130,
+      "sha256": "10f8d6ae72cb7145ebd19dd161b46819c4b40ed6f41511b312658f0e31d91598"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\particles.csv",
+      "bytes": 6506297,
+      "sha256": "c8b09dc90064eb3b69ee96e3f948cc1bfde9f936ee77baa3c8af733932ae9d10"
+    },
+    {
+      "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\particles.csv",
+      "bytes": 39795829,
+      "sha256": "41e2ef69229c3ac0c679926cd3277e89abe234b4ec1044705a084cc7fadc5df1"
+    }
+  ],
+  "vtk": [
+    {
+      "frame": 0,
+      "savedTimeNominalS": 0.0,
+      "before": {
+        "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0000.vtk",
+        "bytes": 290664,
+        "sha256": "0e5405299adca9c750e06f87a43f346673c329e3f96a8e7c79b0b0ab46b905c7"
+      },
+      "after": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0000.vtk",
+        "bytes": 290664,
+        "sha256": "0e5405299adca9c750e06f87a43f346673c329e3f96a8e7c79b0b0ab46b905c7"
+      },
+      "byteIdentical": true
+    },
+    {
+      "frame": 1,
+      "savedTimeNominalS": 0.1,
+      "before": {
+        "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0001.vtk",
+        "bytes": 290664,
+        "sha256": "77acd4344e0453fd4e2ae950f8c356248903691f1d00d6789675e6e7c4fa58f4"
+      },
+      "after": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0001.vtk",
+        "bytes": 290664,
+        "sha256": "77acd4344e0453fd4e2ae950f8c356248903691f1d00d6789675e6e7c4fa58f4"
+      },
+      "byteIdentical": true
+    },
+    {
+      "frame": 2,
+      "savedTimeNominalS": 0.2,
+      "before": {
+        "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0002.vtk",
+        "bytes": 290664,
+        "sha256": "12d090c32881bd9f5c21c325e90c0d8850a9b8531534dd6e68af25ec86b8101b"
+      },
+      "after": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0002.vtk",
+        "bytes": 290664,
+        "sha256": "12d090c32881bd9f5c21c325e90c0d8850a9b8531534dd6e68af25ec86b8101b"
+      },
+      "byteIdentical": true
+    },
+    {
+      "frame": 3,
+      "savedTimeNominalS": 0.3,
+      "before": {
+        "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0003.vtk",
+        "bytes": 290664,
+        "sha256": "45cad8f4bc33da87e0ca6f3c93fc8ac07e33635d99406cf9ab010e451b6d05f2"
+      },
+      "after": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0003.vtk",
+        "bytes": 290664,
+        "sha256": "45cad8f4bc33da87e0ca6f3c93fc8ac07e33635d99406cf9ab010e451b6d05f2"
+      },
+      "byteIdentical": true
+    },
+    {
+      "frame": 4,
+      "savedTimeNominalS": 0.4,
+      "before": {
+        "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0004.vtk",
+        "bytes": 290664,
+        "sha256": "340750b1960e5d54151248fb845469bf77f5ef52ad679ead1a4c6d22607a411e"
+      },
+      "after": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0004.vtk",
+        "bytes": 290664,
+        "sha256": "340750b1960e5d54151248fb845469bf77f5ef52ad679ead1a4c6d22607a411e"
+      },
+      "byteIdentical": true
+    },
+    {
+      "frame": 5,
+      "savedTimeNominalS": 0.5,
+      "before": {
+        "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0005.vtk",
+        "bytes": 290664,
+        "sha256": "aba0945d880b85ef357f8b27c3b446b95534ba2f5ae0acf1198d51e954bfd7b4"
+      },
+      "after": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0005.vtk",
+        "bytes": 290664,
+        "sha256": "aba0945d880b85ef357f8b27c3b446b95534ba2f5ae0acf1198d51e954bfd7b4"
+      },
+      "byteIdentical": true
+    },
+    {
+      "frame": 6,
+      "savedTimeNominalS": 0.6,
+      "before": {
+        "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0006.vtk",
+        "bytes": 290664,
+        "sha256": "b0b4d25d0a06d64558132616bf80f41eb107ff614b041c6d1426be0114ff667b"
+      },
+      "after": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0006.vtk",
+        "bytes": 290664,
+        "sha256": "b0b4d25d0a06d64558132616bf80f41eb107ff614b041c6d1426be0114ff667b"
+      },
+      "byteIdentical": true
+    },
+    {
+      "frame": 7,
+      "savedTimeNominalS": 0.7,
+      "before": {
+        "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0007.vtk",
+        "bytes": 290664,
+        "sha256": "a00ada4286a0156aaf3f58608be7dca07d4ccbf0a9947408e56e8952b915b9c0"
+      },
+      "after": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0007.vtk",
+        "bytes": 290664,
+        "sha256": "a00ada4286a0156aaf3f58608be7dca07d4ccbf0a9947408e56e8952b915b9c0"
+      },
+      "byteIdentical": true
+    },
+    {
+      "frame": 8,
+      "savedTimeNominalS": 0.8,
+      "before": {
+        "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0008.vtk",
+        "bytes": 290664,
+        "sha256": "935fdc61711d7293200af5d0b8fb69ecd2494ba987e822af5683edaa48684057"
+      },
+      "after": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0008.vtk",
+        "bytes": 290664,
+        "sha256": "935fdc61711d7293200af5d0b8fb69ecd2494ba987e822af5683edaa48684057"
+      },
+      "byteIdentical": true
+    },
+    {
+      "frame": 9,
+      "savedTimeNominalS": 0.9,
+      "before": {
+        "path": "output\\unnotched-gravity-2026-10-24\\srf1p4-001\\vtk\\particles_0009.vtk",
+        "bytes": 290664,
+        "sha256": "b081fb462f67f061bbbec8d12ac453d4b7bc72a75007982e7f09ec1e010a214e"
+      },
+      "after": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\vtk\\particles_0009.vtk",
+        "bytes": 290664,
+        "sha256": "b081fb462f67f061bbbec8d12ac453d4b7bc72a75007982e7f09ec1e010a214e"
+      },
+      "byteIdentical": true
+    }
+  ],
+  "csv": [
+    {
+      "name": "history.csv",
+      "prefixRows": 10,
+      "frames": 10,
+      "headerBytesIdentical": true,
+      "prefixBytesIdentical": true,
+      "allFieldStringsIdentical": true,
+      "differingRows": 0,
+      "changedFieldStringCounts": {
+        "frame": 0,
+        "time_s": 0,
+        "updates": 0,
+        "gravity_factor": 0,
+        "gravity_m_per_s2": 0,
+        "particle_count": 0,
+        "mass_kg_per_m": 0,
+        "mass_error_fraction": 0,
+        "kinetic_energy_j_per_m": 0,
+        "min_J": 0,
+        "max_displacement_m": 0,
+        "max_speed_m_per_s": 0,
+        "max_kappa": 0,
+        "max_yield_residual_pa": 0,
+        "free_residual_ratio": 0,
+        "min_x_m": 0,
+        "min_y_m": 0,
+        "max_x_m": 0,
+        "max_y_m": 0,
+        "min_center_domain_margin_m": 0,
+        "min_particle_domain_margin_m": 0,
+        "near_boundary_mass_fraction": 0,
+        "free_upper_count": 0,
+        "free_upper_mass_kg_per_m": 0,
+        "free_upper_centroid_x_m": 0,
+        "free_upper_centroid_y_m": 0,
+        "free_upper_mean_vx_m_per_s": 0,
+        "free_upper_mean_vy_m_per_s": 0,
+        "free_upper_rms_speed_m_per_s": 0,
+        "free_upper_velocity_coherence": 0,
+        "free_upper_moving_mass_fraction": 0,
+        "free_upper_downslope_moving_mass_fraction": 0,
+        "free_upper_toe_crossing_mass_fraction": 0,
+        "free_upper_front_x_m": 0
+      },
+      "maxAbsoluteNumericDeltas": {
+        "frame": 0.0,
+        "time_s": 0.0,
+        "updates": 0.0,
+        "gravity_factor": 0.0,
+        "gravity_m_per_s2": 0.0,
+        "particle_count": 0.0,
+        "mass_kg_per_m": 0.0,
+        "mass_error_fraction": 0.0,
+        "kinetic_energy_j_per_m": 0.0,
+        "min_J": 0.0,
+        "max_displacement_m": 0.0,
+        "max_speed_m_per_s": 0.0,
+        "max_kappa": 0.0,
+        "max_yield_residual_pa": 0.0,
+        "free_residual_ratio": 0.0,
+        "min_x_m": 0.0,
+        "min_y_m": 0.0,
+        "max_x_m": 0.0,
+        "max_y_m": 0.0,
+        "min_center_domain_margin_m": 0.0,
+        "min_particle_domain_margin_m": 0.0,
+        "near_boundary_mass_fraction": 0.0,
+        "free_upper_count": 0.0,
+        "free_upper_mass_kg_per_m": 0.0,
+        "free_upper_centroid_x_m": 0.0,
+        "free_upper_centroid_y_m": 0.0,
+        "free_upper_mean_vx_m_per_s": 0.0,
+        "free_upper_mean_vy_m_per_s": 0.0,
+        "free_upper_rms_speed_m_per_s": 0.0,
+        "free_upper_velocity_coherence": 0.0,
+        "free_upper_moving_mass_fraction": 0.0,
+        "free_upper_downslope_moving_mass_fraction": 0.0,
+        "free_upper_toe_crossing_mass_fraction": 0.0,
+        "free_upper_front_x_m": 0.0
+      },
+      "beforePrefix": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\prefix-comparison-001\\before-history.csv",
+        "bytes": 7449,
+        "sha256": "3955eddbf02835ec0c26a2a5ce50f7c5d2aa04aa15ce59b05badf255c1d46659"
+      },
+      "afterPrefix": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\prefix-comparison-001\\after-history.csv",
+        "bytes": 7449,
+        "sha256": "3955eddbf02835ec0c26a2a5ce50f7c5d2aa04aa15ce59b05badf255c1d46659"
+      }
+    },
+    {
+      "name": "particles.csv",
+      "prefixRows": 8800,
+      "frames": 10,
+      "headerBytesIdentical": true,
+      "prefixBytesIdentical": true,
+      "allFieldStringsIdentical": true,
+      "differingRows": 0,
+      "changedFieldStringCounts": {
+        "frame": 0,
+        "time_s": 0,
+        "particle_id": 0,
+        "x_m": 0,
+        "y_m": 0,
+        "vx_m_per_s": 0,
+        "vy_m_per_s": 0,
+        "initial_x_m": 0,
+        "initial_y_m": 0,
+        "free_upper_reference_subset": 0,
+        "mass_kg_per_m": 0,
+        "volume_m3_per_m": 0,
+        "reference_volume_m3_per_m": 0,
+        "J": 0,
+        "F_00": 0,
+        "F_01": 0,
+        "F_02": 0,
+        "F_10": 0,
+        "F_11": 0,
+        "F_12": 0,
+        "F_20": 0,
+        "F_21": 0,
+        "F_22": 0,
+        "sig_xx_pa": 0,
+        "sig_yy_pa": 0,
+        "sig_zz_pa": 0,
+        "sig_yz_pa": 0,
+        "sig_xz_pa": 0,
+        "sig_xy_pa": 0,
+        "mc_kappa": 0,
+        "cohesion_pa": 0,
+        "friction_rad": 0,
+        "dilation_rad": 0,
+        "plastic_volume": 0,
+        "plastic_work_pa": 0,
+        "yield_residual_kirchhoff_pa": 0
+      },
+      "maxAbsoluteNumericDeltas": {
+        "frame": 0.0,
+        "time_s": 0.0,
+        "particle_id": 0.0,
+        "x_m": 0.0,
+        "y_m": 0.0,
+        "vx_m_per_s": 0.0,
+        "vy_m_per_s": 0.0,
+        "initial_x_m": 0.0,
+        "initial_y_m": 0.0,
+        "free_upper_reference_subset": 0.0,
+        "mass_kg_per_m": 0.0,
+        "volume_m3_per_m": 0.0,
+        "reference_volume_m3_per_m": 0.0,
+        "J": 0.0,
+        "F_00": 0.0,
+        "F_01": 0.0,
+        "F_02": 0.0,
+        "F_10": 0.0,
+        "F_11": 0.0,
+        "F_12": 0.0,
+        "F_20": 0.0,
+        "F_21": 0.0,
+        "F_22": 0.0,
+        "sig_xx_pa": 0.0,
+        "sig_yy_pa": 0.0,
+        "sig_zz_pa": 0.0,
+        "sig_yz_pa": 0.0,
+        "sig_xz_pa": 0.0,
+        "sig_xy_pa": 0.0,
+        "mc_kappa": 0.0,
+        "cohesion_pa": 0.0,
+        "friction_rad": 0.0,
+        "dilation_rad": 0.0,
+        "plastic_volume": 0.0,
+        "plastic_work_pa": 0.0,
+        "yield_residual_kirchhoff_pa": 0.0
+      },
+      "beforePrefix": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\prefix-comparison-001\\before-particles.csv",
+        "bytes": 6506297,
+        "sha256": "c8b09dc90064eb3b69ee96e3f948cc1bfde9f936ee77baa3c8af733932ae9d10"
+      },
+      "afterPrefix": {
+        "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\prefix-comparison-001\\after-particles.csv",
+        "bytes": 6506297,
+        "sha256": "c8b09dc90064eb3b69ee96e3f948cc1bfde9f936ee77baa3c8af733932ae9d10"
+      }
+    }
+  ],
+  "differingRawRows": 0,
+  "notClaims": [
+    "No comparison beyond the failed run's final saved0.9s",
+    "No whole-state MPM restart or paper/landslide validation",
+    "Finiteness/physical integrity/full-motion review is separate"
+  ]
+}

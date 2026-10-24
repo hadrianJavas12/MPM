@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "requestedUtc": "2026-10-24T20:57:26.7121282Z",
+  "repository": "D:\\MPM",
+  "output": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002",
+  "case": "D:\\MPM\\cases\\benchmarks\\gravity-slope-mc-srf-1p4.lisp",
+  "maxWallHours": 3.0,
+  "evidenceDirectory": "",
+  "powerShellPath": "C:\\Users\\ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "wrapperPath": "D:\\MPM\\scripts\\run-gravity-slope-trial.ps1",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "caseSha256": "994C81DF23EA13BCFB38FE8121946C215628FA655CB98181DB6BC48E0B9EA98B",
+  "fixtureMode": false,
+  "fixturePath": "D:\\MPM\\tests\\windows\\fixtures\\detached-exit-fixture.ps1",
+  "callerProcessId": 44960,
+  "callerSessionId": 11,
+  "callerCreationUtc": "2026-10-24T20:57:25.4638750Z",
+  "stdoutPath": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002-detached\\wrapper.stdout.log",
+  "stderrPath": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002-detached\\wrapper.stderr.log",
+  "aclAssumption": "Repository and output paths are controlled by trusted local users; ACLs are not changed.",
+  "limitation": "Local WMI creation avoids direct caller parentage. Provider jobs, logoff, sleep, reboot and policy may still stop the run."
+}
