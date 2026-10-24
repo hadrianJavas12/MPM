@@ -1,9 +1,11 @@
 param(
   [Parameter(Mandatory=$true)][ValidateSet('Launch','Verify')][string]$Phase,
-  [string]$OutputDirectory='output/wang2017-reference-2026-10-23/detached-launch-controls-001'
+  [string]$OutputDirectory='output/wang2017-reference-2026-10-23/detached-launch-controls-001',
+  [ValidateSet('start-wang2017-detached.ps1','start-gravity-slope.ps1')][string]$Launcher='start-wang2017-detached.ps1'
 )
 $ErrorActionPreference='Stop'
 $taskRepo=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../..'))
+$taskLauncher=Join-Path $taskRepo ('scripts/'+$Launcher)
 $taskOutput=[IO.Path]::GetFullPath((Join-Path $taskRepo $OutputDirectory))
 $taskControl=Join-Path $taskOutput 'fixture run with spaces'
 $taskLaunch=$taskControl+'-detached'
@@ -13,7 +15,7 @@ if ($Phase -eq 'Launch') {
   Assert-Task (-not (Test-Path -LiteralPath $taskOutput)) 'Control output must be fresh.'
   New-Item -ItemType Directory -Path $taskOutput | Out-Null
   $taskCaller=Get-CimInstance Win32_Process -Filter ('ProcessId='+$PID)
-  & (Join-Path $taskRepo 'scripts/start-wang2017-detached.ps1') -OutputDirectory $taskControl -LaunchControlFixture |
+  & $taskLauncher -OutputDirectory $taskControl -LaunchControlFixture |
     Set-Content -LiteralPath (Join-Path $taskOutput 'launcher.stdout.json') -Encoding utf8
   [ordered]@{ controllerPid=$PID; creationUtc=$taskCaller.CreationDate.ToUniversalTime().ToString('o'); sessionId=$taskCaller.SessionId; launchDirectory=$taskLaunch } |
     ConvertTo-Json | Set-Content -LiteralPath $taskState -Encoding utf8
@@ -41,15 +43,22 @@ Assert-Task ($taskExit.exitCode -eq 7 -and $taskExit.status -eq 'WORKER_EXITED')
 Assert-Task ((Get-Content -LiteralPath (Join-Path $taskLaunch 'wrapper.stdout.log') -Raw).Contains('fixture stdout')) 'Stdout not captured.'
 Assert-Task ((Get-Content -LiteralPath (Join-Path $taskLaunch 'wrapper.stderr.log') -Raw).Contains('fixture stderr')) 'Stderr not captured.'
 $taskDuplicateRejected=$false
-try { & (Join-Path $taskRepo 'scripts/start-wang2017-detached.ps1') -OutputDirectory $taskControl -LaunchControlFixture | Out-Null } catch { $taskDuplicateRejected=$_.Exception.Message.Contains('Refusing duplicate attempt') }
+try { & $taskLauncher -OutputDirectory $taskControl -LaunchControlFixture | Out-Null } catch { $taskDuplicateRejected=$_.Exception.Message.Contains('Refusing duplicate attempt') }
 Assert-Task $taskDuplicateRejected 'Duplicate attempt was not rejected.'
 $taskBoundaryRejected=$false
-try { & (Join-Path $taskRepo 'scripts/start-wang2017-detached.ps1') -OutputDirectory (Join-Path $taskRepo '.tmp/invalid-detached') -LaunchControlFixture | Out-Null } catch { $taskBoundaryRejected=$_.Exception.Message.Contains('fresh subdirectory') }
+try { & $taskLauncher -OutputDirectory (Join-Path $taskRepo '.tmp/invalid-detached') -LaunchControlFixture | Out-Null } catch { $taskBoundaryRejected=$_.Exception.Message.Contains('fresh subdirectory') }
 Assert-Task $taskBoundaryRejected 'Outside-output path was not rejected.'
+$taskRequest=Get-Content -LiteralPath (Join-Path $taskLaunch 'launch-request.json') -Raw | ConvertFrom-Json
+if ($Launcher -eq 'start-gravity-slope.ps1') {
+  Assert-Task ($taskRequest.wrapperPath.EndsWith('run-gravity-slope-trial.ps1')) 'Gravity launcher did not select the gravity wrapper.'
+  Assert-Task ($taskRequest.case.EndsWith('gravity-slope-mc-srf-1p4.lisp') -and $taskRequest.maxWallHours -eq 3) 'Gravity defaults were not forwarded.'
+}
 [ordered]@{
   status='PASS'; controls=9; finishedUtc=[DateTime]::UtcNow.ToString('o'); physicalUpdates=0
   sourceCommandExited=$true; workerSurvived=$true; returnValue=$taskProof.returnValue; capturedExitCode=$taskExit.exitCode
   callerSessionId=$taskStateValue.sessionId; workerSessionId=$taskProof.workerSessionId; workerParentProcessId=$taskWorker.ParentProcessId
+  launcher=$Launcher; selectedWrapper=$taskRequest.wrapperPath; selectedCase=$taskRequest.case; requestedHours=$taskRequest.maxWallHours
+  gravitySelectionAssertions= $(if ($Launcher -eq 'start-gravity-slope.ps1') {2} else {0})
   scope='Trusted tiny fixture only, with spaced paths, no MPM run. Does not prove survival of logoff, reboot, sleep or arbitrary provider job restrictions.'
 } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $taskOutput 'result.json') -Encoding utf8
 Get-Content -LiteralPath (Join-Path $taskOutput 'result.json')

@@ -2,6 +2,28 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
+## Implementing: reusable unnotched gravity/MC scenario
+
+Current branch `codex/unnotched-gravity-benchmark` starts from pushed research
+bcbd4b2. Six additive gravity-slope files, ASDF registration, two actual SRF
+cases and preregistered contract are implemented. No material/engine/old
+scenario numerical source changed. See `docs/benchmarks/UNNOTCHED_MC_GRAVITY.md`.
+Physical full runs and native input/output gates are NOT_RUN at this source
+checkpoint; next run the frozen controls once, then audit bounded runtime.
+Reference-inspired polygon220m2/880MPs, grid80x15, full6s includes smoothstep
+0–2s ramp and2–6s hold, dtScale.2/no damping/no state reset. Fixed base is not
+a calibrated Coulomb runout bed. Contract records source assumptions and
+connected-mass/velocity/toe detection conventions before results.
+
+Windows process monitor synthetic fixtures13assertions PASS, zeroMPM. New thin
+gravity alias reuses the existing CIM launcher with explicit runner selection;
+old default remains Wang. Nine detached controls plus2gravity-default checks
+PASS in002 with spaced paths/caller exit/identities/exit7. First001 verification
+was delayed beyond the fixture's60s release deadline; worker exited8 as designed,
+not a native failure. Original logs/proof retained; never relabel001 PASS.
+No full solver active. No Node or old numerical gate repeated. Next native gate
+uses `tests/benchmarks/gravity-slope-controls.lisp` and a fresh output directory.
+
 ## Current: unnotched method selected; residual repair checkpoint pushed
 
 Latest human instruction24October: explore journal methods to achieve actual
