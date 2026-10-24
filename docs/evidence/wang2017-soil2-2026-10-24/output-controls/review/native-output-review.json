@@ -1,0 +1,204 @@
+{
+  "scope": "Actual Windows native microgeometry/output integration; not gravity equilibrium, plastic-flow validation or landslide/paper calibration",
+  "scientificValidation": false,
+  "passedFinalControlGroups": 8,
+  "failedFinalControlGroups": 0,
+  "attempts": [
+    {
+      "attempt": "output-controls-001",
+      "observedNativeLauncherExitCode": 1,
+      "exitObservation": "Windows launcher LASTEXITCODE propagated by the command wrapper; native test result/logs separately retained",
+      "nativeResult": {
+        "passed": false,
+        "passedCount": 6,
+        "failedCount": 1,
+        "notRunCount": 1,
+        "passedControls": [
+          "Dedicated diagnostic adapter and unambiguous fields",
+          "Initial native VTK and CSV do not mutate material or kinematics",
+          "Two genuine bounded native USF updates and second read-only state",
+          "Material CSV reconstructs full F/J, paper Ep/kps, cohesion and rotation",
+          "Contact CSV reconstructs surface descent, gap and geometric spring energy",
+          "Reader ownership and repeated diagnostic access preserve state"
+        ],
+        "failure": [
+          "Soil1 output helper is a filesystem no-op",
+          "MC evolution integration failed: An explicit strain-coordinate assumption is required NIL"
+        ],
+        "physicalUpdatesExecuted": 2,
+        "actualSavedStates": 2,
+        "observations": {
+          "particleCount": 25,
+          "contactCount": 2,
+          "massKgPerM": 12746.452662224103,
+          "config": {
+            "settleMaxUpdates": 20000,
+            "settleMinUpdates": 200,
+            "settleTolerance": 0.001,
+            "settleHoldChecks": 5,
+            "penaltyScale": 10.0,
+            "settleDamping": 100.0,
+            "dynamicDamping": 0.0,
+            "E": 20000000.0,
+            "nu": 0.25,
+            "density": 2039.4324259558566,
+            "width": 4.0,
+            "height": 1.0,
+            "crestLength": 2.0,
+            "slope": 60.0,
+            "baseHeight": 1.0,
+            "velocity": 0.01,
+            "targetDisplacement": 2e-07,
+            "patchStart": 0.5,
+            "patchLength": 1.0,
+            "meshSize": 1.0,
+            "mpsPerCell": 2,
+            "workers": 1,
+            "timeStepScale": 0.2,
+            "frames": 2,
+            "maxUpdates": 2,
+            "gravity": -9.80665,
+            "duration": 1.9999999999999998e-05,
+            "materialModel": "wang2017-soil2",
+            "paperHistoryFrame": "spatial-corotated-incremental-polar",
+            "historyPolicy": "monotonic-scope-reject"
+          },
+          "maxPositionChangeM": 2.8999518342232022e-09,
+          "materialCsvRows": 50,
+          "maxJReadbackResidual": 0.0,
+          "maxPaperInvariantReadbackResidual": 0.0,
+          "nonidentityActualDeformationRecorded": true,
+          "contactCsvRows": 4,
+          "maxSurfaceGeometryIdentityResidualM": 8.326672684688674e-17
+        },
+        "scope": "Bounded microgeometry MPM/output integration, no gravity equilibration and no plastic-flow/landslide/paper validation claim; existing material-point controls own plastic-path verification"
+      },
+      "frozenSourcesMatchedBeforeAfter": 271,
+      "mappedCopiedBackendSha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "vtkStates": 2,
+      "nativeParticleCount": 25,
+      "nativeIdsStable": true,
+      "allReadVtkFieldsFinite": true,
+      "positiveMassVolumeAndActualJ": true,
+      "perParticleMassExactlyUnchanged": true,
+      "massKgPerM": 12746.452662224105,
+      "maxSavedPositionDistanceM": 2.8999518342232022e-09,
+      "lastPaperKpsRange": [
+        0.0,
+        0.0
+      ],
+      "vtkHashes": [
+        {
+          "path": "observations/vtk/particles_0000.vtk",
+          "sha256": "ab94d4e0d2340fd0d7c985bbaf5ae228c9158afc2a79456e02c7cc9f2d66897a"
+        },
+        {
+          "path": "observations/vtk/particles_0001.vtk",
+          "sha256": "69c11db3c62f4ede573cad5bead9dd92e3eba239af2bc909a47e448e21856c33"
+        }
+      ]
+    },
+    {
+      "attempt": "output-controls-002",
+      "observedNativeLauncherExitCode": 0,
+      "exitObservation": "Windows launcher LASTEXITCODE propagated by the command wrapper; native test result/logs separately retained",
+      "nativeResult": {
+        "passed": true,
+        "passedCount": 8,
+        "failedCount": 0,
+        "notRunCount": 0,
+        "passedControls": [
+          "Dedicated diagnostic adapter and unambiguous fields",
+          "Initial native VTK and CSV do not mutate material or kinematics",
+          "Two genuine bounded native USF updates and second read-only state",
+          "Material CSV reconstructs full F/J, paper Ep/kps, cohesion and rotation",
+          "Contact CSV reconstructs surface descent, gap and geometric spring energy",
+          "Reader ownership and repeated diagnostic access preserve state",
+          "Soil1 output helper is a filesystem no-op",
+          "Duplicate frame, mixed material and invalid audit state reject honestly"
+        ],
+        "failure": null,
+        "physicalUpdatesExecuted": 2,
+        "intendedSavedStates": 2,
+        "actualSavedStates": 2,
+        "observations": {
+          "particleCount": 25,
+          "contactCount": 2,
+          "massKgPerM": 12746.452662224103,
+          "config": {
+            "settleMaxUpdates": 20000,
+            "settleMinUpdates": 200,
+            "settleTolerance": 0.001,
+            "settleHoldChecks": 5,
+            "penaltyScale": 10.0,
+            "settleDamping": 100.0,
+            "dynamicDamping": 0.0,
+            "E": 20000000.0,
+            "nu": 0.25,
+            "density": 2039.4324259558566,
+            "width": 4.0,
+            "height": 1.0,
+            "crestLength": 2.0,
+            "slope": 60.0,
+            "baseHeight": 1.0,
+            "velocity": 0.01,
+            "targetDisplacement": 2e-07,
+            "patchStart": 0.5,
+            "patchLength": 1.0,
+            "meshSize": 1.0,
+            "mpsPerCell": 2,
+            "workers": 1,
+            "timeStepScale": 0.2,
+            "frames": 2,
+            "maxUpdates": 2,
+            "gravity": -9.80665,
+            "duration": 1.9999999999999998e-05,
+            "materialModel": "wang2017-soil2",
+            "paperHistoryFrame": "spatial-corotated-incremental-polar",
+            "historyPolicy": "monotonic-scope-reject"
+          },
+          "maxPositionChangeM": 2.8999518342232022e-09,
+          "materialCsvRows": 50,
+          "maxJReadbackResidual": 0.0,
+          "maxPaperInvariantReadbackResidual": 0.0,
+          "nonidentityActualDeformationRecorded": true,
+          "contactCsvRows": 4,
+          "maxSurfaceGeometryIdentityResidualM": 8.326672684688674e-17
+        },
+        "scope": "Bounded microgeometry MPM/output integration, no gravity equilibration and no plastic-flow/landslide/paper validation claim; existing material-point controls own plastic-path verification"
+      },
+      "frozenSourcesMatchedBeforeAfter": 271,
+      "mappedCopiedBackendSha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "vtkStates": 2,
+      "nativeParticleCount": 25,
+      "nativeIdsStable": true,
+      "allReadVtkFieldsFinite": true,
+      "positiveMassVolumeAndActualJ": true,
+      "perParticleMassExactlyUnchanged": true,
+      "massKgPerM": 12746.452662224105,
+      "maxSavedPositionDistanceM": 2.8999518342232022e-09,
+      "lastPaperKpsRange": [
+        0.0,
+        0.0
+      ],
+      "vtkHashes": [
+        {
+          "path": "observations/vtk/particles_0000.vtk",
+          "sha256": "ab94d4e0d2340fd0d7c985bbaf5ae228c9158afc2a79456e02c7cc9f2d66897a"
+        },
+        {
+          "path": "observations/vtk/particles_0001.vtk",
+          "sha256": "69c11db3c62f4ede573cad5bead9dd92e3eba239af2bc909a47e448e21856c33"
+        }
+      ]
+    }
+  ],
+  "frozenSourceDifferencesBetweenAttempts": [
+    "source/case.lisp"
+  ],
+  "harnessRepair": "Soil1 comparison fixture now declares its mandatory strain assumption; final source reports observed saved VTK count separately from intended count. No production change.",
+  "totalActualMpmUpdatesAcrossAttempts": 4,
+  "finalAttemptActualMpmUpdates": 2,
+  "acceptedIntegrationScope": "Two real USF updates, two native particle states, full actual F/J/Ep/R/cohesion/contact CSV reconstruction, read-only diagnostics and legacy Soil1 filesystem no-op",
+  "plasticEvolutionScope": "Microcase remains elastic (paper kps0); existing separately retained material-point tests own plastic-path verification"
+}

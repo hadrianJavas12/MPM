@@ -726,3 +726,7 @@ Actual native exit0/complete6s60mm at01:45:23WIB, audit/video/worker0 at01:46:32
 ## [2026-10-24] ingest | Native Soil2 integration before first slope
 
 Human requests actual landslide continuation. Separate branch and optional native Soil2 particle preserve Soil1 negative control. Declared incremental-polar signed-history transport, deep transactional ownership and no-healing/decrease-reject scope; no hidden maximum/apex/strength change. Frozen00318PASS/28constitutive calls/zeroMPMupdates,271source hashes and actual copiedDLL verified.001bootstrap and002postproof harness failures retained. Root MC34/framework10/input3 groups and Nodecheck36PASS; actual MPM/output gate pending. Updated [[wang2017-soil2-native]], linked history/index, handover/testing/plan; raw and personal settings intact.
+
+## [2026-10-24] ingest | Actual Soil2 MPM and output integration gate
+
+Checkpoint0b706fc pushed. Frozen output002 Windows exit0,8PASS with2 genuine USF updates/25MPs/2VTKs,50material and4contact CSV rows. NonidentityF and zero detF/paper-invariant readback residuals verified; surface identity8.33e-17m. Output/readers leave constitutive and kinematic snapshots intact, oldSoil1 no-op and negative guards pass. Retained001 fixture-only failure; no production change. [[wang2017-soil2-native]] documents elastic/unequilibrated microgeometry scope; first full Soil2 slope still pending at this checkpoint. Updated testing/handover/plan, raw/settings intact.

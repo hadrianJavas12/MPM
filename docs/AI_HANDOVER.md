@@ -2,7 +2,7 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
-## Current: native Soil2 integration, before first slope run
+## Current: native Soil2 integration PASS, ready for first slope run
 
 Latest human objective: **continue until the actual simulation shows a landslide**.
 Work is on `codex/wang2017-soil2-landslide`, branched from4036087; live remote
@@ -39,12 +39,32 @@ Evidence packet `docs/evidence/wang2017-soil2-2026-10-24/native-integration-cont
 retains12 indexed artifacts/838 verified archive members, including both failed
 harness attempts. Private caches/FASLs are excluded explicitly; original output
 is untouched. Node logs/status are in the separate `node-controls/` packet.
-Focused actual MPM/output integration is pending before first full slope.
+Code/evidence checkpoint **0b706fc** is committed and pushed on this branch.
+Focused frozen `output-controls-002` is now Windows exit0:8PASS/0FAIL/0NOT_RUN,
+exactly2 genuine USF updates,25particles,2 observed VTK states,50material CSV
+rows/4contact rows. Actual F is nonidentity. Independent CSV detF/paper-invariant
+residuals0 and contact surface identity residual8.33e-17m; output/reader access
+preserves native material and kinematic snapshots. Legacy Soil1 creates no extra
+files. This microgeometry is not gravity-equilibrated and does not exercise
+plastic flow, slope failure or paper agreement. Attempt001 exit1 is retained:
+6PASS/1FAIL/1NOT_RUN because the Soil1 test fixture omitted mandatory strain
+assumption metadata, not because production failed.002 also reports observed
+VTK count rather than a constant intended count. No production repair needed.
+Packet `docs/evidence/wang2017-soil2-2026-10-24/output-controls/` retains both
+attempts,22 verified artifacts and all decoded archive-member hashes/lengths.
+Each attempt's271 frozen source files match before/after; only the test/case
+source differs. Final test executable forms match002; one trailing blank line
+was removed after execution for Git whitespace checking, without rerunning MPM.
+The exact executed bytes remain in the archive. Independent
+VTK readback confirms stable IDs, actual positiveJ/mass/volume, exact per-MP mass
+and elastic kps0. Two updates per attempt/four total, not a full slope.
 First case is `cases/benchmarks/wang2017-soil2-fast-010.lisp`: same approved
 0.01m/s to60mm/6s and physical/numerical inputs as Soil1; only material changes.
 It preserves plastic history formed during gravity. Additional per-particle
 F/J/Ep/cohesion/history and contact geometry/spring-energy CSVs are read-only.
-No new full slope is running yet and no landslide PASS is claimed.
+No new full slope is running yet and no landslide PASS is claimed. Next: commit
+the actual output gate/evidence, then launch the fresh case with source freezing
+and2h wall budget; update this header with actual process identity before leaving.
 
 ## Current: approved 0.01m/s / 60mm accelerated Wang trial COMPLETE, reviewed
 

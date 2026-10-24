@@ -83,7 +83,10 @@ separate limitations. Preserve all failures, bounded attempts and raw sources.
 
 The completed point/transaction control is retained as frozen native003 in
 `docs/evidence/wang2017-soil2-2026-10-24/native-integration-controls/`.
-The actual MPM/output smoke must pass before starting this fresh first slope:
+Actual frozen output002 now passes8groups,2genuineUSFupdates/25MPs/2VTKs.
+It verifies real F/CSV/contact observations without gravity equilibration or
+plastic flow. Failed001 fixture and exact source proofs are retained. This gate
+permits starting the fresh first slope:
 
 ```powershell
 Set-Location D:\MPM

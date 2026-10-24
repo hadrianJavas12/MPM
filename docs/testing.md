@@ -16,9 +16,27 @@ Attempt001 failed the test bootstrap dynamic-context binding; attempt002 passed
 nonzero exits and exact executed sources remain retained; final003 fixes only
 the harness. `integration-controls-001`: actual Windows MC34/framework10/
 Soil2input3 groups exit0. Root integration is workspace-loaded, not frozen003.
-Node check and36tests exit0. New actual MPM/output control remains pending.
+Node check and36tests exit0.
 Evidence: `docs/evidence/wang2017-soil2-2026-10-24/native-integration-controls/`
 (12 artifact hashes/838 verified ZIP members) and separate `node-controls/`.
+
+`tests/benchmarks/wang2017-soil2-output.lisp` frozen002: Windows exit0,
+8PASS/0FAIL/0NOT_RUN, exactly2 genuine USF updates with25MPs and2 observed VTKs;
+50material/4contact CSV rows. F becomes nonidentity; detF and paper-invariant
+readback residuals0, contact surface identity8.33e-17m. Snapshot comparisons
+show read-only output; owned readers, Soil1 filesystem no-op, mixed/invalid
+audit rejection pass. Microgeometry is not equilibrated and remains elastic:
+plastic return is covered separately by the18 material controls.
+Attempt001 exit1 (6PASS/1FAIL/1NOT_RUN) retained: Soil1 test fixture omitted
+mandatory strain-assumption metadata;002 corrects that and observed VTK-count
+reporting. No production algorithm changed between these attempts.
+Both attempts'271 frozen sources match before/after; only test/case differs.
+`docs/evidence/wang2017-soil2-2026-10-24/output-controls/` retains22 verified
+artifacts and all archive member checks; actual VTK readback independently
+verifies stable IDs, finite fields and exact per-MP mass. Four actual updates
+across the two attempts. Final test executable forms match002; one trailing blank
+line was removed afterward for Git whitespace checking. Exact executed source
+bytes remain in the archive; no numerical run was repeated for whitespace.
 
 Repeatable fresh native controls:
 
@@ -26,6 +44,7 @@ Repeatable fresh native controls:
 Set-Location D:\MPM
 .\windows\cl-mpm.cmd tests\materials\wang2017-native.lisp output\FRESH-Soil2-native
 .\windows\cl-mpm.cmd tests\benchmarks\wang2017-soil2-inputs.lisp output\FRESH-Soil2-inputs.json
+.\windows\cl-mpm.cmd tests\benchmarks\wang2017-soil2-output.lisp output\FRESH-Soil2-output
 ```
 
 ## Complete fast010 native run and independent review,2026-10-24

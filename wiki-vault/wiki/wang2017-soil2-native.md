@@ -30,7 +30,13 @@ Actual Windows frozen003:18PASS,28constitutive calls, zero MPM updates;
 271source hashes and mapped copiedDLL verified. Earlier001 bootstrap and002
 final-proof harness failures remain retained. Root MC34/framework10/input3
 groups pass separately using workspace sources; Node check/36tests pass.
-Actual MPM/output integration is pending before the first Soil2 slope run.
+Frozen output002 additionally passes8groups with2 genuine USF updates,25MPs,
+2 observed VTKs and50material/4contact CSV rows. Full F becomes nonidentity;
+CSV detF/paper-invariant residuals0 and surface identity residual8.33e-17m.
+Output is read-only and oldSoil1 creates no additional files. Initial001 retained
+6PASS/1FAIL/1NOT_RUN due to missing Soil1 test-fixture metadata;002 fixes only
+the fixture and observed-count reporting. This elastic, unequilibrated miniature
+is an integration check, not a plastic-flow or landslide benchmark.
 
 The first paired experiment keeps0.01m/s to60mm/6s, mesh/contact/BC/material
 elasticity and gravity policy from Soil1. Soil2 gravity history must not be

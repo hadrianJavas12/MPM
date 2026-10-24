@@ -25,7 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[wang2017-soil2-native]] — declared corotated signed-history Soil2 adapter;18 frozen native controls PASS, no full slope/landslide claim yet
+- [[wang2017-soil2-native]] — declared corotated signed-history Soil2 adapter;18 native and8 actual MPM/output controls PASS, no full slope/landslide claim yet
 - [[wang2017-fast-trial-2026-10-24]] — complete native0.01m/s to60mm/6s,61states/video, no verified landslide;17native+11review artifact hashes; reference-speed600s remains NOT_RUN
 - [[wang2017-apex-and-rate-study]] —5 native legacy/strict apex and3 rate-input controls PASS; interrupted0.002m/s data retained and completedfast010 rate comparison reviewed
 - [[wang2017-paper-history]] —19 coupled fixed-frame Soil2 point controls plus optional ASDF smoke PASS; existing17 history/7 capture/34 MC evidence retained; native particle and finite-strain convention pending
