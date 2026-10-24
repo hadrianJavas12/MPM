@@ -762,3 +762,7 @@ Native55bc85d completes13:33:43WIB; audit/render/worker0 at13:34:44,61states/915
 ## [2026-10-24] ingest | Bounded same-material100mm endpoint run launched
 
 Checkpoint3caa6be pushed with completed60mm negative result/raw/evidence/media and100mm zero-update input gate. Fresh apex-100mm-001 started13:52:42WIB, same0.01m/s/material/numerics, target100mm/10s/101frames,45000cap unchanged. Worker31296/wrapper38252/cmd25892/SBCL27304 Session11, initial RUNNING,3h budget until16:52:42. One launch-provenance check found runtime proof not ready; no packet or completion claim fabricated. [[wang2017-apex-60mm-review]], guide/testing/handover/index updated, same quiet15min monitor. No additional constitutive/strength/rate tuning or duplicate solver; raw/settings intact.
+
+## [2026-10-24] ingest |100mm launch source/runtime provenance verified
+
+Later authorized14:08WIB capture verifies275 frozen source files against manifest/workspace, actual copiedDLL,3postprocessors and one process chain31296/38252/25892/27304 with creation/session11.6artifact hashes/292decoded ZIP members retained in apex-100mm-launch. Initial runtime-proof unavailability remains documented; capture RUNNING/complete=false, not completion/landslide. No active CSV/VTK/log reads or solver/tests repeated. Updated [[wang2017-apex-60mm-review]], handover/testing/guide; raw/settings intact, same quiet15min monitor.

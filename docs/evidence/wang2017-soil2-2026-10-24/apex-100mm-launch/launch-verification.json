@@ -1,0 +1,86 @@
+{
+  "status": "LAUNCH_PROVENANCE_VERIFIED_ONLY",
+  "captureUtc": "2026-10-24T07:08:43.953829+00:00",
+  "sourceCommitAtLaunch": "3caa6bea5d447be34c8bd1104311f1aa34b57986",
+  "nativeStatusAtCapture": "NATIVE_RUNNING",
+  "manifestCompleteAtCapture": false,
+  "phaseAtCapture": "prescribed-descent",
+  "sourceFiles": 275,
+  "frozenManifestAndWorkspaceBytesMatch": true,
+  "sourceSnapshotExactLoadedBytesClaim": true,
+  "copiedByteEqualityBeforeLoadClaim": true,
+  "nativeBackend": {
+    "modulePath": "D:/MPM/output/wang2017-soil2-2026-10-24/apex-100mm-001/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  },
+  "postprocessors": [
+    {
+      "path": "scripts/collect-wang2017-evidence.py",
+      "bytes": 10545,
+      "sha256": "10f770a1d3fdcaf64ea73c93d9315720249b67b9100a221229ceeb6bc171c759",
+      "launchRecordedSha256": "10f770a1d3fdcaf64ea73c93d9315720249b67b9100a221229ceeb6bc171c759"
+    },
+    {
+      "path": "scripts/plot-wang2017-descent.py",
+      "bytes": 12521,
+      "sha256": "0b872f21ae6dad4987dd36d37ae56909960fd2dbc4ba2fd6bc30dde2c055e4cf",
+      "launchRecordedSha256": "0b872f21ae6dad4987dd36d37ae56909960fd2dbc4ba2fd6bc30dde2c055e4cf"
+    },
+    {
+      "path": "scripts/plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "launchRecordedSha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+    }
+  ],
+  "singleIdentityObservation": {
+    "scope": "Single process-identity observation during launch capture; not a health monitor or completion proof.",
+    "observedUtc": "2026-10-24T07:08:45.306266+00:00",
+    "processes": [
+      {
+        "ProcessId": 31296,
+        "ParentProcessId": 23888,
+        "Name": "pwsh.exe",
+        "SessionId": 11,
+        "creationUtc": "2026-10-24T06:52:40.2091110Z"
+      },
+      {
+        "ProcessId": 38252,
+        "ParentProcessId": 31296,
+        "Name": "pwsh.exe",
+        "SessionId": 11,
+        "creationUtc": "2026-10-24T06:52:41.3010250Z"
+      },
+      {
+        "ProcessId": 25892,
+        "ParentProcessId": 38252,
+        "Name": "cmd.exe",
+        "SessionId": 11,
+        "creationUtc": "2026-10-24T06:52:42.1277180Z"
+      },
+      {
+        "ProcessId": 27304,
+        "ParentProcessId": 25892,
+        "Name": "sbcl.exe",
+        "SessionId": 11,
+        "creationUtc": "2026-10-24T06:52:42.5067720Z"
+      }
+    ],
+    "command": "Get-CimInstance Win32_Process -Filter 'ProcessId=31296 OR ProcessId=27304 OR ProcessId=25892 OR ProcessId=38252' | Select-Object ProcessId,ParentProcessId,Name,SessionId,@{n='creationUtc';e={$_.CreationDate.ToUniversalTime().ToString('o')}} | ConvertTo-Json"
+  },
+  "staticInputsUnchangedDuringCapture": true,
+  "archive": "frozen-launch-sources.zip",
+  "archiveBytes": 1221947,
+  "archiveSha256": "94d960a67e607468c727314dc19b11479fd11cae43070ae947ab55429a966283",
+  "verifiedArchiveMembers": 292,
+  "testsOrSolverRunsExecuted": 0,
+  "excluded": [
+    "Active CSV/VTK/logs were not read or archived.",
+    "Private native cache/FASL files are excluded; runtime provenance references may remain.",
+    "No worker-exit or final audit/render output was requested or represented as completion."
+  ],
+  "completionClaim": false,
+  "scientificValidation": false
+}

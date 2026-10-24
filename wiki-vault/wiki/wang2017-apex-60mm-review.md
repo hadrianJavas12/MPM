@@ -49,6 +49,9 @@ until16:52:42. Worker31296/wrapper38252/cmd25892/SBCL27304 Session11, initial
 native RUNNING, same quiet15min monitor. Runtime source/DLL proof was not yet
 ready at the single initial capture check; no verified launch packet claimed.
 No10s completion or landslide result is established by this launch.
+Later14:08WIB authorized capture verifies275 frozen sources/DLL/postprocessors/
+process chain,6artifact hashes/292ZIPmembers. Captured RUNNING/complete=false
+only, initial unavailable-proof history preserved, no active-data/tests rerun.
 
 See [[wang2017-soil2-native]], [[wang2017-soil2-return-failure]] and
 [[wang2017-fast-trial-2026-10-24]] for retained strict/Soil1 controls.

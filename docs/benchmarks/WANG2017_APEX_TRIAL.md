@@ -87,7 +87,7 @@ Relief10m is a declared case assumption, not a recovered paper value. Reference
 curve, bottom tangential restraint, rate/mesh sensitivity and finite-strain
 interpretation remain limitations.
 
-##100mm endpoint launch and Windows command
+## 100mm endpoint launch and Windows command
 
 Checkpoint3caa6be is committed/pushed. The fresh100mm case started
 **24October13:52:42WIB** in `output/wang2017-soil2-2026-10-24/apex-100mm-001`;
@@ -106,3 +106,9 @@ Worker31296/wrapper38252/cmd25892/SBCL27304 run in user Session11. This does not
 prove logoff/sleep/reboot survival. The same monitor checks15min, quiet while
 healthy; automatic native audit/render/video follow completion. No further
 strength, rate or constitutive change is part of this endpoint experiment.
+
+Launch-only `apex-100mm-launch/` retains6 verified artifact hashes/292 decoded
+ZIP members,275 frozen sources matching manifest/workspace, actual copiedDLL,
+3 postprocessor hashes and one process-chain identity observation. Runtime
+proof was initially unavailable; the later authorized capture preserves this
+history and only establishes launch provenance, not completion or a landslide.

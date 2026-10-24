@@ -16,6 +16,11 @@ solver/tests/oldreview. Firstwake status/manifest/one stdout tail and live PID
 identity, no activepolling. Runtime proof was not ready at ONE initial capture
 check; no verified launch packet fabricated. Capture source/DLL provenance once
 at a later wakeup if available; all frozen sources are retained by the runner.
+Later authorized14:08WIB capture is now complete: `apex-100mm-launch/` retains
+6artifact hashes/292 verified ZIP members,275 frozen files match manifest and
+workspace, actual mapped copiedDLL/3postprocessors/process chain verified.
+Captured NATIVE_RUNNING/complete=false only; initial missing-proof check remains
+documented. No active CSV/VTK/log reads or tests/solver repeated for packaging.
 After terminal, audit/media from wrapper, actual common0–60mm prefix check and
 physical review, archive once. Fixed tolerances stay; VTK is not full restart.
 If100mm remains pre-peak, resolve geometry/rate/mesh before another endpoint.

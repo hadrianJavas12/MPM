@@ -1,0 +1,35 @@
+{
+  "scope": "Launch-only retained source/runtime provenance, no completion or scientific PASS claim.",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ffe82f3c5b968ed009c2577fa38f32c83be167799ee565d40a18e3440c57b342"
+    },
+    {
+      "path": "analysis-support/collect-launch-provenance.py",
+      "bytes": 14473,
+      "sha256": "6557c57ed03e44bf347e0313ba0ed9423644875db22f802d37363ad9d5e3e5f1"
+    },
+    {
+      "path": "archive-member-manifest.json",
+      "bytes": 53625,
+      "sha256": "c6671ef3f1bde50283fb291a1241e0579e937c02971763553fa00ccd04a62c33"
+    },
+    {
+      "path": "frozen-launch-sources.zip",
+      "bytes": 1221947,
+      "sha256": "94d960a67e607468c727314dc19b11479fd11cae43070ae947ab55429a966283"
+    },
+    {
+      "path": "launch-verification.json",
+      "bytes": 3522,
+      "sha256": "5717bffbb8c00ce2f0e9a185102259dd83a6722ec3a883928174eed50f92e4b7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3380,
+      "sha256": "58803b988aad69368d628d736878d6b72bee64d69a732d3ea3351df75f5cf728"
+    }
+  ]
+}

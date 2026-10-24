@@ -27,6 +27,9 @@ prefix needs actual comparison under existing fixed tolerances. A successful
 input gate is not a10s solver or a landslide result.
 The fresh100mm case started13:52:42WIB on3caa6be,3h budget until16:52:42.
 Native initial RUNNING, results pending; no successful full10s claim yet.
+Later launch capture `apex-100mm-launch/`:6hashes/292ZIPmembers,275 frozen
+files/DLL/postprocessors/process chain verified. Captured RUNNING/complete=false
+only; initial runtime-proof unavailability retained, no numerical test repeated.
 
 ## Explicit Soil2 apex extension gates,2026-10-24
 
