@@ -2,6 +2,14 @@
 
 ## Explicit Soil2 apex extension gates,2026-10-24
 
+Gate checkpoint55bc85d committed/pushed. Fresh full slope apex-fast-010-001
+started12:08:32WIB,0.01m/s to60mm/6s,2h wall cap until14:08. Native initially
+RUNNING; this launch is not another test PASS or a landslide result. Source,
+status/process identities and runtime proof are retained separately from gates.
+`apex-fast-010-launch/` preserves6artifact hashes/292 verified ZIP members;
+275 frozen files match manifest/workspace, mapped copiedDLL and3postprocessors
+verified. One4-process identity observation, not native completion evidence.
+
 New optional material adds a declared hydrostatic volumetric apex flow;
 strict default physics and negative slope evidence remain. Details and limits:
 [apex-flow contract](benchmarks/WANG2017_APEX_FLOW.md).

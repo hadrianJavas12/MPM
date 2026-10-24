@@ -21,6 +21,8 @@ See [the apex-flow contract](WANG2017_APEX_FLOW.md). Strict class/defaults remai
 unchanged. A prospective paired full slope changes only this declared material
 convention; all numerical paper/loading/geometry settings remain the same.
 This extension is not uniquely prescribed by Wang and does not guarantee failure.
+Fresh paired trial apex-fast-010-001 started12:08:32WIB on55bc85d,2h wall cap
+until14:08; actual native launch RUNNING, full physical outcome pending.
 
 ## Material contract before enabling a slope run
 

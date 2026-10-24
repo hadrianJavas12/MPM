@@ -746,3 +746,11 @@ Actual native/worker1 at08:26:52WIB; last saved5.7s/57mm/19608updates differs fr
 ## [2026-10-24] ingest | Explicit volumetric apex model and regression gate
 
 A separate optional apex-flow material adds a declared volumetric mode, preserving strict negative evidence and all numerical strength/loading inputs. New frozen11 controls pass,12 point/5 native calls/zero MPM; apex input3 and strict point19/MC34/framework10/native18/input3 regressions exit0. Retained malformed wrapper invocation was guarded before any MPM; only missing output gates resumed, strict/apex each8PASS/2 genuine USF updates/25MPs/2VTKs. Strict2VTK+2CSV byte-identical to prior control, four updates total. [[wang2017-apex-flow]] documents full strain/work/state identities, all-root rejection and limited sufficient coexistence proof; no full slope or landslide claim. Updated linked pages/index/testing/handover/plan; raw sources and personal settings unchanged.
+
+## [2026-10-24] ingest | Explicit apex full-slope launch after passing gates
+
+Gate55bc85d committed/pushed. Fresh apex-fast-010-001 started12:08:32WIB at approved0.01m/s to60mm/6s,2h wall cap until14:08. Worker23904/wrapper21136/cmd49564/SBCL23428 Session11, initial native RUNNING/scientificValidation=false. Explicit new volumetric apex convention is labeled, strict failure retained. Updated [[wang2017-apex-flow]], linked native page/index/testing/handover/plan; same automation15min quiet monitoring, no solver/tests duplicated or physics claim. Raw sources and personal settings unchanged.
+
+## [2026-10-24] ingest | Apex launch provenance retained
+
+Launch-only apex-fast-010-launch retains6 verified artifact hashes/292 decoded ZIP members:275 frozen source files match manifest/workspace, actual copiedDLL and3 postprocessors verified, one4-process identity/creation/SessionId observation matches. Captured NATIVE_RUNNING/complete=false, not completion/landslide or continued-health proof. No active CSV/VTK/log reads or numerical runs for packaging. Updated [[wang2017-apex-flow]], handover/testing; raw/settings unchanged, same15min quiet monitor.

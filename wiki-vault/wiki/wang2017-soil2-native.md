@@ -15,7 +15,7 @@ in [[wang2017-fast-trial-2026-10-24]]. New branch
 Subsequent24October12WIB checkpoint: [[wang2017-apex-flow]] implements a separate
 explicit additional volumetric apex mode, with native/regression/two-step output
 gates passed. This page's strict default law and failed slope remain unchanged;
-no new full slope outcome is established yet.
+the fresh apex slope started12:08:32WIB on55bc85d. No full outcome is established.
 
 The optional native adapter uses the coupled signed-tensor point projector from
 [[wang2017-paper-history]], with paper c30→15kPa overkps0→.02,phi35/psi0,
@@ -54,7 +54,8 @@ The first full Soil2 case started24October07:03:31WIB on621146b in
 `output/wang2017-soil2-2026-10-24/fast-010-001`, with2h wall budget until09:03.
 It FAILED_NATIVE1 at08:26:52WIB. Last saved state5.7s/57mm has19608accepted
 loading updates; failure manifest19820 includes later unsaved work. No solver
-is active. The same automation returned5h for diagnosis/next scientific gate.
+was active after that strict attempt. Its monitor returned5h, then15min for the
+subsequent separate apex trial described in [[wang2017-apex-flow]].
 One frozen actual replay reproduces no-admissible coupled return; replay exit0
 is expected rejection, not slope PASS. See [[wang2017-soil2-return-failure]].
 Launch-only07:07:08 gravity capture verifies271 frozen source files against

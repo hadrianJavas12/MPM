@@ -2,11 +2,34 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
-## Current: explicit apex model gates passed; next slope pending,24October12WIB
+## Current: explicit apex slope RUNNING,24October12:08WIB
+
+Fresh run `output/wang2017-soil2-2026-10-24/apex-fast-010-001` started
+**12:08:32WIB**, native source **55bc85d9d4567b6677439846035127751fbc4c7f**,
+after the passing gates below were committed/pushed. Actual launch status
+NATIVE_RUNNING, scientificValidation=false. WMIworker23904/wrapper21136/
+cmd49564/SBCL23428, all Session11; exact creation timestamps in adjacent-status
+and detached worker-start. Wallbudget2h until **14:08:32WIB**. Same automation
+now15min, quiet while healthy. Do not poll actively, duplicate runs/tests or edit
+the three active postprocessors. First wakeup read adjacent status, manifest
+phase/time/complete and one stdout tail; verify live identities if needed.
+Wrapper will audit/render/video after native exit0/complete; any media repair
+must use saved native output. This is a new declared constitutive experiment,
+not a claim of Wang agreement, native completion or a verified landslide.
+
+Launch-only packet `docs/evidence/wang2017-soil2-2026-10-24/apex-fast-010-launch/`
+retains6 verified artifact hashes/292 decoded ZIP members. All275 frozen source
+files match pre-load manifest and workspace bytes, actual copiedDLL mapping and
+3postprocessor hashes verified. One Windows observation verifies all4 process
+identity/creation/parent/session links. Captured NATIVE_RUNNING/complete=false,
+not continued-health/completion proof. No active CSV/VTK/logs or tests reread/run.
+Private caches/FASLs excluded explicitly; personal settings/raw untouched.
+
+## Completed gates for the explicit apex experiment,24October12WIB
 
 Branch `codex/wang2017-soil2-landslide`; preceding pushed checkpoint9dc3649
 preserves the strict Soil2 failure below. Live remote main refreshed9e97e001;
-do not merge/change main. No full solver is currently active. Human objective
+do not merge/change main. Human objective
 remains an actual verified landslide, not just native completion.
 
 A separate optional `cl-mpm/models/wang2017-apex` adds an explicit hydrostatic
@@ -37,10 +60,9 @@ exact sources, raw logs/results and negative harness evidence. A sufficient
 bound excludes apex-versus-regular coexistence for paper E20MPa/J near1, but
 does not prove every path unique; weak-E multi-root rejection is tested.
 
-Next: commit/push this cohesive gate, then ONE fresh native slope case
+Gate committed/pushed55bc85d. The fresh native slope above uses
 `cases/benchmarks/wang2017-soil2-apex-fast-010.lisp`, same approved0.01m/s to
-60mm/6s and2h wall budget. Record actual source/PIDs/times and update the SAME
-automation to15min quiet monitoring. Do not repeat old solver, replay or suites.
+60mm/6s and2h wall budget. Do not repeat old solver, replay or suites.
 The explicit extension does not guarantee a landslide; evaluate actual VTK/CSV
 coherent free-mass motion/run-out rather than colour or a velocity outlier.
 

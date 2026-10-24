@@ -88,5 +88,9 @@ The next prospective full case is
 `cases/benchmarks/wang2017-soil2-apex-fast-010.lisp`.
 That case preserves0.01m/s to60mm/6s, geometry, mesh, BC, damping and all numerical
 strength/elasticity inputs. Metadata and volume diagnostics label the new model.
-No new full slope or landslide PASS is claimed here. Mesh/rate/boundary/reference
+The first fresh full trial started24October12:08:32WIB on55bc85d in
+`output/wang2017-soil2-2026-10-24/apex-fast-010-001`,2h wall budget until14:08.
+Initial native status RUNNING, not completion. No landslide PASS is claimed.
+The same quiet monitor checks15min; active postprocessors remain unchanged.
+Mesh/rate/boundary/reference
 and finite-strain limitations remain; this convention does not guarantee failure.

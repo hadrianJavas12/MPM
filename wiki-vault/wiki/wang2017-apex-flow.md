@@ -37,8 +37,16 @@ operator guard. Its FAILED status and original script are retained; completed
 regressions were not repeated. Evidence packets apex-controls/apex-flow-design/
 apex-integration retain exact source/runtime proof and historical NOT_RUN scope.
 
-Next prospective full case keeps approved0.01m/s to60mm/6s and all geometry/
+First full trial started24October12:08:32WIB on55bc85d in apex-fast-010-001,
+2h budget until14:08. Worker23904/wrapper21136/cmd49564/SBCL23428 Session11;
+native initial RUNNING, same quiet automation15min. This case keeps approved
+0.01m/s to60mm/6s and all geometry/
 grid/BC/damping/strength settings from [[wang2017-soil2-native]]. No landslide
 claim follows from controls. Actual coherent free-mass motion/run-out and the
 mesh/rate/boundary/reference limits still require review. See also
 [[wang2017-apex-and-rate-study]] and [[wang2017-paper-history]].
+
+Launch-only packet retains6 artifact hashes/292 verified ZIP members,275 frozen
+files matching manifest/workspace, actual copiedDLL,3 postprocessor hashes and
+one4-process identity observation. Captured RUNNING/complete=false only; active
+CSV/VTK/logs were not read or archived. No solver/tests repeated for collection.
