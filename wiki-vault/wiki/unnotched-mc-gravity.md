@@ -90,3 +90,20 @@ fresh full continuation has not started. No landslide or calibrated runout is
 established by these numerical gates.
 [[unnotched-landslide-method-selection]] retains the original source/provenance
 limits, and [[wang2017-residual-history-scope]] remains a separate model policy.
+
+## Fresh full attempt, 25 October 2026
+
+Source/checkpoint3ed36a3 is pushed; same-input `srf1p4-002` starts03:57:28WIB,
+target6s/61states,3h wall budget to06:57:28WIB. Initial conditions and all study
+physics/numerics remain unchanged; only the gated base-MC acceptance repair
+justifies this fresh attempt. Exact live process identities/parent chain and
+mapped DLL/source provenance are retained. Two launch-proof harness failures
+(typed-date parsing and different creation-clock precision) are retained;
+successful proof compares each original clock exactly, with no solver restart.
+One quiet15min monitor is active. Review actual terminal output before the
+sequential SRF1 control; no landslide or quantitative runout is established.
+
+Launch packet retains21 indexed artifacts; root verifies22 staged Git blobs
+and all282 actual immutable source files. The only source change versus001 is
+the projector; all281 other sources, executable case and full config match.
+Full raw/source/media storage and physical review remain due at terminal.

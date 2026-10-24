@@ -1,0 +1,5 @@
+{
+  "status": "FAILED_PROOF_HARNESS_DATETIME_CONVERSION",
+  "reason": "ConvertFrom-Json produced DateTime objects; Parse of their culture string dropped UTC kind and subsecond precision. No live proof was emitted. Repair uses direct DateTime cast, with exact tick/session/PID checks retained.",
+  "solverRestarted": false
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "cl-mpm.unnotched-gravity.relaunch-evidence.v1",
+  "status": "LAUNCH_PROOF_ONLY",
+  "sourceCommit": "3ed36a3e11440a22490a78f511b95f166bb104b4",
+  "storedLiveVerificationCapturedUtc": "2026-10-24T20:58:58.5303612Z",
+  "storedLiveProcesses": {
+    "wrapper": {
+      "role": "wrapper",
+      "pid": 30976,
+      "name": "pwsh",
+      "sessionId": 11,
+      "creationUtc": "2026-10-24T20:57:28.0068948Z",
+      "parentPid": 15808,
+      "creationClock": "System.Diagnostics.Process",
+      "identityMatched": true
+    },
+    "nativeCommand": {
+      "role": "nativeCommand",
+      "pid": 38056,
+      "name": "cmd",
+      "sessionId": 11,
+      "creationUtc": "2026-10-24T20:57:28.7192528Z",
+      "parentPid": 30976,
+      "creationClock": "System.Diagnostics.Process",
+      "identityMatched": true
+    },
+    "sbcl": {
+      "role": "sbcl",
+      "pid": 42572,
+      "name": "sbcl",
+      "sessionId": 11,
+      "creationUtc": "2026-10-24T20:57:29.0278566Z",
+      "parentPid": 38056,
+      "creationClock": "System.Diagnostics.Process",
+      "identityMatched": true
+    },
+    "detachedWorker": {
+      "role": "detachedWorker",
+      "pid": 15808,
+      "sessionId": 11,
+      "creationUtc": "2026-10-24T20:57:26.8554350Z",
+      "creationClock": "Win32_Process",
+      "identityMatched": true
+    }
+  },
+  "liveProcessesRecapturedByPackager": false,
+  "nativeComplete": false,
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "savedManifestScopeAtCopy": {
+    "status": "running",
+    "phase": "gravity-ramp",
+    "timeS": 1.0999999999999999,
+    "savedFrames": 12,
+    "updates": 1419
+  },
+  "sourceCount": 282,
+  "sourceDifference": [
+    {
+      "path": "source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp",
+      "oldFailedSha256": "01c73c007726118fa40908cb7de929b8d17900c94b1f2fe3596d7afe81b2ce79",
+      "newFixedSha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1"
+    }
+  ],
+  "twoProofHarnessFailuresRetained": true,
+  "failureScope": "Datetime conversion and CIM-vs-GetProcess clock mismatch are proof-helper failures; solver was not restarted. Successful helper compares exact PID/session/ticks using each record's original clock.",
+  "proofHelperSource": {
+    "path": "proof-support/capture-gravity-processes.ps1",
+    "sha256": "e0acf6e98095baf78b70e4b55114567a0cfdb59841c91ac17ce4c8556a14a9bc",
+    "bytes": 2438
+  },
+  "proofHelperSourceScope": "Retained successful executed helper; historical failed-helper versions are not claimed reconstructed.",
+  "limits": "Stored live proof establishes identities at its own capture timestamp only. Mutable status/manifest copied separately, not a simultaneous new live check. WMI user-session worker is not proved immune to sleep/logoff/reboot.",
+  "packagingOperations": "Read/copy/hash metadata only. No process query, solver, monitor, replay, rendering or scientific review run."
+}

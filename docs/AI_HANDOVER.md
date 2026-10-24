@@ -2,11 +2,53 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
+## ACTIVE: same-input unnotched SRF1.40 fresh attempt after numerical repair
+
+Repair/evidence checkpoint **3ed36a3e11440a22490a78f511b95f166bb104b4** is pushed
+on `codex/unnotched-gravity-benchmark`. Actual fresh run
+`output/unnotched-gravity-2026-10-25/srf1p4-002` started25October03:57:28WIB,
+native source3ed36a3. Budget3h to06:57:28WIB. Worker15808/wrapper30976/cmd38056/
+SBCL42572,allSession11. Adjacent live-process-verification.json matches exact
+PID/session/creation-clock and full parent chain. Native frozen source/mapped
+DLL provenance is available. WMI remains a user session, without sleep/logoff/
+reboot immunity. No parameter, geometry, ramp, timestep or output-cadence change.
+
+Launch-only packet `docs/evidence/unnotched-gravity-2026-10-25/srf1p4-002-launch`
+retains21 indexed artifacts. Root independently verifies all hashes/22 staged
+Git blobs and all282 actual frozen source bytes. Old/new source sets match:
+281 unchanged, ONLY generic MC projection differs. Exact case bytes and full
+physical/numerical configuration match. This is not full-result evidence;
+complete source ZIP/raw/media archival remains due at native terminal.
+
+This is the SAME SRF1.40 case from its initial state after the tested numerical
+repair below; old VTK is not a restart checkpoint. Target6s,gravity ramp0–2s,
+hold2–6s,61savedstates. No notch/driver/weakseed/history reset or hidden tuning.
+Review at terminal before a sequential SRF1 control. Native completion alone
+will not establish actual landslide, FoS or quantitative runout.
+
+Start-of-wakeup: actual branch/HEAD/status, adjacent-status progress/heartbeat,
+manifest complete/time and ONE stdout tail. Healthy NATIVE_RUNNING: stayquiet,
+no active polling, duplicate solver or passed-gate repetitions. Existing
+wrapper does NOT automatically review/render. At terminal use saved data once,
+save exact analysis/imported-reader bytes, inspect scale1 output and predeclared
+coherent mass/runout/integrity gates, then archive full immutable source/raw/
+runtime/media and hashes. New material failure needs its NEW actual capsule
+diagnosed once before any tested repair/fresh attempt. Do not strength/psi/rate/
+root/clamp/tolerance-tune for collapse. Same automation now15min while active,
+return5h at terminal if safe work remains. Goal remains active.
+
+Two root launch-proof harness failures are retained separately: parsing an
+already typed DateTime lost UTC/subsecond data; comparing a CIM worker record
+to the100ns Get-Process clock then differed by200ns. Successful proof directly
+casts typed dates and compares each record with its original clock at exact
+equality, without relaxed tolerances or solver restart. The native monitor
+was unaffected. Do not confuse proof-harness failures with native integration.
+
 ## Unnotched gravity: numerical cause repaired and scoped native gates passed
 
 Run `output/unnotched-gravity-2026-10-24/srf1p4-001`, source a4de3e6,
 started24October22:39:22WIB and FAILED_NATIVE/worker exit1 at22:42:34WIB.
-NO full solver active; do not poll old worker30152/wrapper50220/cmd15776/
+That failed solver is no longer active; do not poll old worker30152/wrapper50220/cmd15776/
 SBCL38052. This was before3h budget, not a wall stop. Last saved0.9s,
 10states/880MPs/8800rows; manifest1265updates and attemptTimeS.980934788134821
 include later unsaved work. Do not call0.9s the exact failed integration time.
@@ -72,7 +114,7 @@ fabricated. Fix-gate packet
 independently verified every indexed hash, archived source and44 staged Git
 blobs. Both evidence packets are ready for the repair checkpoint.
 
-Next: checkpoint/push this scoped repair and evidence, then ONE fresh SAME
+Historical pre-launch next action: checkpoint/push this scoped repair and evidence, then ONE fresh SAME
 SRF1.40/6s/61frames input with a3h wall budget. Old VTK is not full restart
 state: restart from its frozen initial inputs is justified by this diagnosed
 and tested numerical repair. No strength/rate/geometry/psi/damping changes.

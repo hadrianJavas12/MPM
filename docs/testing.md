@@ -1,5 +1,18 @@
 # Native framework and Studio verification
 
+## Same-input full unnotched continuation, 2026-10-25
+
+Source3ed36a3 attempt `srf1p4-002` starts03:57:28WIB with unchanged SRF1.40
+case/initial conditions and3h wall budget. Root verifies282 frozen files:
+281 unchanged versus failed001, only the gated MC projector differs. Launch
+packet21 indexed artifacts/22 Git blobs and actual loaded-byte/mappedDLL/live
+PID/session/creation-clock/parent-chain proof are retained. Two date/clock
+proof-harness failures are retained separately and never restart the solver.
+Native completion, physical integrity, coherent landslide and runout review
+remain pending. The single monitor is15min while active; do not repeat passed
+gates or run a duplicate solver. Evidence is under
+`docs/evidence/unnotched-gravity-2026-10-25/srf1p4-002-launch/`.
+
 ## Unnotched full-run failure and scoped MC acceptance repair, 2026-10-25
 
 First full SRF1.40 source `a4de3e6` exits native1 at24October22:42:34WIB during

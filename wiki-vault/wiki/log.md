@@ -801,3 +801,11 @@ Follow-up to the pending output checkpoint: [[unnotched-mc-gravity]] records nat
 Root independently verifies51+43 indexed artifacts,848+852 archived source
 entries and52+44 staged Git blobs. Native gates establish scoped numerical
 repair/compatibility, not a completed full slope or verified landslide.
+
+## [2026-10-25] ingest | Same-input unnotched SRF1.40 continuation starts
+
+[[unnotched-mc-gravity]] records pushed repair checkpoint3ed36a3 and fresh full attempt002 starting03:57:28WIB, target6s/61states with3h budget. Exact original physical inputs preserved; no notch/driver/weakseed/reset. Live PID/session/creation-clock/parent chain and mappedDLL/source proof retained; two proof-harness date/clock failures did not restart or affect native simulation. One quiet15min monitor active; terminal review and sequential baseline remain pending. No landslide claimed, raw/settings untouched.
+
+## [2026-10-25] ingest | Fresh unnotched launch proof retained
+
+[[unnotched-mc-gravity]] links21 indexed launch artifacts/22 independently matched staged Git blobs. Root independently hashes282 actual frozen files:281 unchanged versus001, sole difference the gated projector; exact case/full config unchanged. Full-result review remains pending; source/raw/media archiving due at terminal. No extra native/solver/replay/render work.

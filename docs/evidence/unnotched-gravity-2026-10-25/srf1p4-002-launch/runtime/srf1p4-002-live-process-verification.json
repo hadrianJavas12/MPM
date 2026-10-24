@@ -1,0 +1,46 @@
+{
+  "capturedUtc": "2026-10-24T20:58:58.5303612Z",
+  "sourceCommit": "3ed36a3e11440a22490a78f511b95f166bb104b4",
+  "status": "NATIVE_RUNNING",
+  "processes": [
+    {
+      "role": "wrapper",
+      "pid": 30976,
+      "name": "pwsh",
+      "sessionId": 11,
+      "creationUtc": "2026-10-24T20:57:28.0068948Z",
+      "parentPid": 15808,
+      "creationClock": "System.Diagnostics.Process",
+      "identityMatched": true
+    },
+    {
+      "role": "nativeCommand",
+      "pid": 38056,
+      "name": "cmd",
+      "sessionId": 11,
+      "creationUtc": "2026-10-24T20:57:28.7192528Z",
+      "parentPid": 30976,
+      "creationClock": "System.Diagnostics.Process",
+      "identityMatched": true
+    },
+    {
+      "role": "sbcl",
+      "pid": 42572,
+      "name": "sbcl",
+      "sessionId": 11,
+      "creationUtc": "2026-10-24T20:57:29.0278566Z",
+      "parentPid": 38056,
+      "creationClock": "System.Diagnostics.Process",
+      "identityMatched": true
+    },
+    {
+      "role": "detachedWorker",
+      "pid": 15808,
+      "sessionId": 11,
+      "creationUtc": "2026-10-24T20:57:26.8554350Z",
+      "creationClock": "Win32_Process",
+      "identityMatched": true
+    }
+  ],
+  "scope": "Exact live PID, session, creation-clock and parent-chain checks; no logoff/sleep/reboot guarantee"
+}

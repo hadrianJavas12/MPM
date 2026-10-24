@@ -224,3 +224,26 @@ not started at this checkpoint. No landslide or calibrated runout follows from
 these gates. Keep the original failed run and replay as negative evidence;
 any fresh full run starts from the declared initial state with unchanged study
 inputs, preserving all previous attempts.
+
+### Fresh same-input continuation, 25 October 2026
+
+Repair/evidence checkpoint `3ed36a3` is pushed. Fresh `srf1p4-002` starts at
+03:57:28WIB from the exact same SRF1.40 initial input, target6s/61states and
+3h wall budget to06:57:28WIB. This rerun is justified by the diagnosed and
+tested complementarity repair, without changes to strength, psi, geometry,
+gravity schedule, damping or timestep. Original failed output remains intact.
+
+Actual worker/wrapper/cmd/SBCL PID, session, creation-clock and parent-chain
+proof is retained. The first two proof-harness attempts handled typed dates
+and CIM/Process clock precision incorrectly; their reasons are retained. The
+correct proof uses each record's original clock and exact equality, without
+relaxed identity checks or a solver restart. This affects no native physics.
+The single automation checks every15min while active and stays quiet during
+healthy progress. Saved VTK/CSV and full sources will be archived/reviewed at
+terminal before the sequential SRF1 comparison. No landslide is claimed yet.
+
+[Launch-only evidence](../evidence/unnotched-gravity-2026-10-25/srf1p4-002-launch/README.md)
+retains21 indexed artifacts; root verifies all282 actual source files and22
+staged Git blobs. Only projection differs from001; all281 other frozen source
+files, the exact executable case and full configuration match. Full raw/source
+archives and physical/media review remain due at terminal.
