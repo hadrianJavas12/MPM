@@ -774,3 +774,7 @@ Native3caa6be exits1 at15:55:34WIB, lastsave9s90mm30960updates versus failureman
 ## [2026-10-24] ingest | Human authorizes broader methods for unnotched landslide
 
 Created immutable source record raw/unnotched-landslide-request-2026-10-24.md with the human request. Goal is real landslide without notch; broader primary-journal investigation proceeds before selecting another full run. Separate gravity-softening and SSR literature notes plus read-only engine-fit audit are underway. [[wang2017-residual-history-scope]] and handover record tested repair/no solver active.96indexed evidence artifacts match Git blob bytes, raw text/media preserved and tracked; no old tests/solver repeated, personal settings intact.
+
+## [2026-10-24] query | Primary journal methods selected for unnotched failure
+
+Completed four primary method families plus classical SSR/MPM bridge and actual engine/recipe audits. [[unnotched-landslide-method-selection]] records gravity-softening versus explicit strength reduction and selects independent perfect-MC SRF1/1.40 gravity controls as the first reusable native route. Source laws, trigger, geometry and claims remain separate; Xie full polygon not visually verified, any GL D1-inspired geometry must be named as an adaptation. PDF/text/retrieval limits retained. No new full solver, constitutive calls, Node/native tests or old gate repetitions. c5cc79c residual repair remains pushed; latest human method selection supersedes automatic restart of Wang100mm. Updated handover/testing/index/linked scope note; raw/settings untouched.

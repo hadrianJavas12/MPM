@@ -25,6 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
+- [[unnotched-landslide-method-selection]] — primary journal methods for intact-slope failure; separate MC gravity/SSR control selected, no new full run or landslide claim
 - [[wang2017-residual-history-scope]] —100mm history-guard failure, one replay with unchanged residual strength, explicit opt-in scope and native/integration gates
 - [[wang2017-apex-60mm-review]] — complete61-state apex trial, no verified landslide;100mm input gate passed and same-material endpoint trial running13:52WIB
 - [[wang2017-apex-flow]] — separate explicit volumetric apex model with passed native/regression gates; complete60mm slope reviewed without verified landslide

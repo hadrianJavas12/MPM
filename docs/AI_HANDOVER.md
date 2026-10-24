@@ -2,21 +2,33 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
-## Current: residual repair gated; broader unnotched literature study authorized
+## Current: unnotched method selected; residual repair checkpoint pushed
 
 Latest human instruction24October: explore journal methods to achieve actual
 landslide WITHOUT NOTCH. This broadens method selection; do not force the Wang
 endpoint study to stand in for that physical objective. No full solver active.
-Residual-scope repair below is implemented/gated but no fresh full run started.
-Save this cohesive checkpoint before selecting the new benchmark. Two primary
-literature notes and an engine-fit audit are being written under
-`research/notes/unnotched-landslide-2026-10-24/`; read those before duplicating
-searches. Candidate routes are gravity-driven strain-softening slopes and a
-separate classical strength-reduction benchmark. SSR deliberately reduces
-strength and must be labeled, not presented as spontaneous failure of unchanged
-soil. Require explicit geometry/material/history/trigger/boundary provenance,
-native constitutive/contact gates and actual coherent motion/run-out evidence.
-No UI/main merge, hidden strength/notch/trajectory tuning or fake validation.
+Residual-scope repair is implemented/gated and pushed as c5cc79c, but no fresh
+full run started. Primary literature notes, engine-fit and recipe audit are DONE
+under `research/notes/unnotched-landslide-2026-10-24/`; do not repeat the searches.
+Read `docs/benchmarks/UNNOTCHED_LANDSLIDE_METHOD_SELECTION.md` for the source
+matrix and decision: prepare a separate perfect-MC gravity/SSR scenario with
+independent predeclared SRF1 and1.40 controls. This uses the existing tested MC
+law, not an undocumented DP/VM substitution. SSR deliberately reduces strength;
+do not present it as unchanged-soil spontaneous failure, rainfall or creep.
+Wang2016 gravity-softening and Yu2024 DP/regularisation remain later routes.
+
+NEXT: freeze the complete geometry/provenance and explicit gravity schedule,
+then implement a small reusable gravity-slope scenario and native input/bounded
+output gates before a justified full pair. Xie Figure7 full polygon remains
+visually unverified (screenshot timeout; subsequent publisher403); use a named
+GL D1-inspired adaptation if proceeding, not an exact reproduction claim.
+Recipe audit gives the proposed polygon and exact APIs. Separate soil width
+from empty runout grid; ramp actual sim-gravity, not only mp-gravity. Fixed
+bottom is not Coulomb contact. No crest driver or elastic-then-plastic release
+is implicit. No new solver/tests/material calls ran for this literature stage.
+Require real coherent motion/run-out evidence; no UI/main merge, hidden
+strength/notch/trajectory tuning or fake validation. Refresh live main before
+changes; last read9e97e001c2eaf9be81c7b7e39e32fa87f2d6f64b on24October22:00WIB.
 
 All96 indexed artifacts in the4 residual/failure packets are byte-verified
 against Git staged blobs, including ignored VTK/PNG/MP4 explicitly included.
@@ -50,9 +62,10 @@ comparison remains FAIL on3fields (yieldresidual/shearstress/tinydecreaseflags);
 positions/reaction/Ep/kps/cohesion pass. Never replace this FAIL with fieldscale
 PASS or relax tolerances. Failedpacket44hashes/392archive members with full
 91frame video/decode0 and expectedrenderer2 is ready; force-add indexedmedia.
-Next: archive focused/integrationgates, updatewiki/docs, commitpush, thenONE
-fresh SAME100mm input with explicitresidualpolicy; no endpoint/rate/strength
-tuning. Sourcecode stable; no fullsolver active. Recordrealstart/PIDs/budget.
+Those packets and code/docs/wiki are already committed/pushed in c5cc79c.
+The same100mm residual-policy input remains available but is NOT automatically
+restarted: the later human instruction and current unnotched method selection
+at the top take precedence. Sourcecode stable; no fullsolver active.
 
 Actual native/worker exit1, before16:52:42 wallbudget, source3caa6be. No full
 solver active; do not poll old PID27304. Last SAVED frame90 is9s/90mm with

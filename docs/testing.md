@@ -1,5 +1,16 @@
 # Native framework and Studio verification
 
+## Unnotched journal-method checkpoint, 2026-10-24
+
+The primary-source matrix and actual engine-fit audit are documented in
+[method selection](benchmarks/UNNOTCHED_LANDSLIDE_METHOD_SELECTION.md).
+A separate MC gravity/SSR control is selected for preparation; no new full
+simulation, material calls or Node/native regression tests ran for this
+literature-only change. Geometry provenance and an explicit gravity schedule
+remain input gates. The tested residual-policy checkpoint and all earlier
+negative evidence remain intact. No source-based factor of safety or landslide
+PASS is inferred from the research.
+
 ## 100 mm history failure and residual-scope controls, 2026-10-24
 
 The native run on3caa6be exits1 at15:55:34WIB. Last saved9s/90mm/30960updates

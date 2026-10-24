@@ -44,7 +44,8 @@ pointwise comparison remains FAIL on yieldresidual,small shearstress and
 roundoff-decrease flags; field-scale PASS does not replace it.44hashes/392archive
 members retain raw/media/analysis, full video decode0/renderer2 incomplete.
 
-Next is a fresh SAME100mm/10s0.01m/s input under the declared residual scope,
-not another endpoint/rate/strength change or a VTK restart. Numerical gates
+The same100mm/10s0.01m/s input remains available under the declared residual
+scope, but is not automatically restarted. The broader human instruction now
+prioritizes [[unnotched-landslide-method-selection]]. Numerical gates
 do not establish full completion or a landslide. See [[wang2017-apex-flow]],
 [[wang2017-soil2-native]] and [[wang2017-soil2-return-failure]].
