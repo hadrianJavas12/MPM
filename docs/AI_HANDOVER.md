@@ -2,7 +2,25 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
-## Current: apex60mm reviewed, no landslide;100mm input gate passed24October13:50WIB
+## Current:100mm endpoint run ACTIVE24October13:52:42WIB
+
+ONE fresh `output/wang2017-soil2-2026-10-24/apex-100mm-001` started13:52:42WIB,
+native source **3caa6bea5d447be34c8bd1104311f1aa34b57986**, after result/input
+checkpoint committed/pushed. Worker31296/wrapper38252/cmd25892/SBCL27304,
+Session11; exact creation timestamps in adjacent-status/worker-start.3h budget
+until **16:52:42WIB**; actual6s runtime projects~142min, not a promise. Initial
+NATIVE_RUNNING. Target100mm/10s at SAME0.01m/s,101frames/45000cap. This declared
+endpoint study tests pre-peak termination, not an exact paperSoil2 failure datum.
+Same automation15min, quiethealthy; do not edit active3postprocessors or repeat
+solver/tests/oldreview. Firstwake status/manifest/one stdout tail and live PID
+identity, no activepolling. Runtime proof was not ready at ONE initial capture
+check; no verified launch packet fabricated. Capture source/DLL provenance once
+at a later wakeup if available; all frozen sources are retained by the runner.
+After terminal, audit/media from wrapper, actual common0–60mm prefix check and
+physical review, archive once. Fixed tolerances stay; VTK is not full restart.
+If100mm remains pre-peak, resolve geometry/rate/mesh before another endpoint.
+
+## Completed: apex60mm reviewed, no landslide;100mm input gate passed
 
 Independent actual-data review confirms61states/915IDs,55815material/366contact
 rows, finite/mass/F/J/Ep/law/contact identities consistent. Maxkps.017506169,

@@ -44,5 +44,11 @@ If still pre-peak, resolve source geometry/rate/mesh rather than extend forever.
 A hold would test relaxation/inertia; bilateral strip can restrain motion and
 exchange spring energy. It is not natural creep/free runout.
 
+The100mm experiment started13:52:42WIB on3caa6be in apex-100mm-001,3h budget
+until16:52:42. Worker31296/wrapper38252/cmd25892/SBCL27304 Session11, initial
+native RUNNING, same quiet15min monitor. Runtime source/DLL proof was not yet
+ready at the single initial capture check; no verified launch packet claimed.
+No10s completion or landslide result is established by this launch.
+
 See [[wang2017-soil2-native]], [[wang2017-soil2-return-failure]] and
 [[wang2017-fast-trial-2026-10-24]] for retained strict/Soil1 controls.

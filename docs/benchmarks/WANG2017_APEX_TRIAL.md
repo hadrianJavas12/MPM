@@ -86,3 +86,23 @@ spring energy; it does not by itself establish natural creep or zero energy inpu
 Relief10m is a declared case assumption, not a recovered paper value. Reference
 curve, bottom tangential restraint, rate/mesh sensitivity and finite-strain
 interpretation remain limitations.
+
+##100mm endpoint launch and Windows command
+
+Checkpoint3caa6be is committed/pushed. The fresh100mm case started
+**24October13:52:42WIB** in `output/wang2017-soil2-2026-10-24/apex-100mm-001`;
+initial native RUNNING, full physical outcome pending.3h cap until16:52:42WIB.
+Use a fresh directory for any separately justified run; do not duplicate it:
+
+```powershell
+Set-Location D:\MPM
+pwsh -NoProfile -File .\scripts\start-wang2017-detached.ps1 `
+  -Case cases/benchmarks/wang2017-soil2-apex-100mm.lisp `
+  -OutputDirectory output/wang2017-soil2-2026-10-24/apex-100mm-001 `
+  -MaxWallHours 3
+```
+
+Worker31296/wrapper38252/cmd25892/SBCL27304 run in user Session11. This does not
+prove logoff/sleep/reboot survival. The same monitor checks15min, quiet while
+healthy; automatic native audit/render/video follow completion. No further
+strength, rate or constitutive change is part of this endpoint experiment.

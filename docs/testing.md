@@ -25,6 +25,8 @@ only target, derivedduration,frames differ. Material/rate/grid/BC/dt/damping/
 penalty and45000cap unchanged. Same nominal output cadence, but future common
 prefix needs actual comparison under existing fixed tolerances. A successful
 input gate is not a10s solver or a landslide result.
+The fresh100mm case started13:52:42WIB on3caa6be,3h budget until16:52:42.
+Native initial RUNNING, results pending; no successful full10s claim yet.
 
 ## Explicit Soil2 apex extension gates,2026-10-24
 
