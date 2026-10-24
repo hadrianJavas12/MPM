@@ -1,5 +1,17 @@
 # Native framework and Studio verification
 
+## First full Soil2 slope launch,2026-10-24
+
+Source621146b launched07:03:31WIB, original approved0.01m/s to60mm/6s,
+2h wall budget until09:03:31WIB. Launch-only capture07:07:08: actual native
+gravity/NATIVE_RUNNING/complete=false,915MPs. All271 copied files match frozen
+manifest and original workspace; runtime loaded-byte flags/mapped copiedDLL,
+3postprocessor hashes and4 Windows process identities verified. Evidence
+`docs/evidence/wang2017-soil2-2026-10-24/fast-010-launch/`:6 artifact hashes,
+288 decoded ZIP members checked. No solver/tests repeated for this capture;
+full completion and landslide outcome remain pending. Automation15min, quiet
+while healthy; do not edit active postprocessors or duplicate the run.
+
 ## Soil2 native integration,2026-10-24
 
 Frozen Windows `tests/materials/wang2017-native.lisp` attempt003: exit0,

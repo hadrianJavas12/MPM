@@ -2,7 +2,24 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
-## Current: native Soil2 integration PASS, ready for first slope run
+## Current: first native Soil2 slope RUNNING,24October07:03WIB
+
+Run `output/wang2017-soil2-2026-10-24/fast-010-001` started **07:03:31WIB**,
+source **621146b4e26126978b8ced859a87a4f23cb07af6**,2h wall budget until
+**09:03:31WIB**. WMI worker48936 / wrapper41032 / cmd38956 / SBCL20484,
+SessionId11. Initial status NATIVE_RUNNING; source loading/compilation is not
+physical progress. Read adjacent status + manifest complete/phase/time + ONE
+stdout tail on wakeup; verify creation/session identities if needed. Do not
+launch a duplicate or poll actively. SAME automation now checks every15min,
+quiet while healthy, then returns5h after terminal result if work remains.
+Do not edit the three active postprocessors. Run completion/landslide NOT_YET.
+Launch-only capture **07:07:08WIB**: gravity/NATIVE_RUNNING/complete=false,
+915particles. All271 frozen source files match manifest/current workspace;
+runtime exact-loaded-byte flags and actual mapped copiedDLL verified. The3
+postprocessor hashes and all4 process identity/creation/session links match.
+`docs/evidence/wang2017-soil2-2026-10-24/fast-010-launch/` retains6 artifact
+hashes/288 verified ZIP members; private caches/FASLs omitted explicitly.
+This packet proves launch/source identity, not native completion or landslide.
 
 Latest human objective: **continue until the actual simulation shows a landslide**.
 Work is on `codex/wang2017-soil2-landslide`, branched from4036087; live remote
@@ -62,9 +79,11 @@ First case is `cases/benchmarks/wang2017-soil2-fast-010.lisp`: same approved
 0.01m/s to60mm/6s and physical/numerical inputs as Soil1; only material changes.
 It preserves plastic history formed during gravity. Additional per-particle
 F/J/Ep/cohesion/history and contact geometry/spring-energy CSVs are read-only.
-No new full slope is running yet and no landslide PASS is claimed. Next: commit
-the actual output gate/evidence, then launch the fresh case with source freezing
-and2h wall budget; update this header with actual process identity before leaving.
+Actual MPM/output gate and evidence are committed/pushed in621146b. The fresh
+first Soil2 slope above is now active, with actual source freezing before load.
+No landslide PASS is claimed; inspect the actual terminal result and failure
+capsule if produced. No changes to full-run numerical sources are authorized
+merely to hide a rejected history or apex path.
 
 ## Current: approved 0.01m/s / 60mm accelerated Wang trial COMPLETE, reviewed
 

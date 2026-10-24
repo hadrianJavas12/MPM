@@ -730,3 +730,11 @@ Human requests actual landslide continuation. Separate branch and optional nativ
 ## [2026-10-24] ingest | Actual Soil2 MPM and output integration gate
 
 Checkpoint0b706fc pushed. Frozen output002 Windows exit0,8PASS with2 genuine USF updates/25MPs/2VTKs,50material and4contact CSV rows. NonidentityF and zero detF/paper-invariant readback residuals verified; surface identity8.33e-17m. Output/readers leave constitutive and kinematic snapshots intact, oldSoil1 no-op and negative guards pass. Retained001 fixture-only failure; no production change. [[wang2017-soil2-native]] documents elastic/unequilibrated microgeometry scope; first full Soil2 slope still pending at this checkpoint. Updated testing/handover/plan, raw/settings intact.
+
+## [2026-10-24] ingest | First native Soil2 slope launched
+
+Gates/code/evidence621146b pushed. Started fresh fast-010-001 at07:03:31WIB with original approved0.01m/s to60mm/6s and fixed paperSoil2 law,2h wall budget until09:03:31. WMIworker48936/wrapper41032/cmd38956/SBCL20484 Session11, initialNATIVE_RUNNING. No forced trajectories, strength/psi/apex/tolerance changes. [[wang2017-soil2-native]] records actual launch without completion/landslide claim; handover/plan/index updated, same automation15min quiet monitoring. Native source files/postprocessors remain stable, raw/settings intact.
+
+## [2026-10-24] ingest | Soil2 launch provenance checkpoint
+
+07:07:08WIB launch-only capture verifies271 frozen source files against current workspace/manifest, actual mapped copiedDLL and exact-loaded-byte runtime flags,3postprocessor hashes and4 identity/creation/SessionId links.6 artifact hashes and288 decoded ZIP members retained in fast-010-launch; captured gravity/NATIVE_RUNNING/complete=false with915MPs, not completion/landslide PASS. No active CSV/VTK/log reads or solver/tests repeated for packaging. Updated [[wang2017-soil2-native]], index/testing/handover; same15min quiet monitor, raw/settings intact.

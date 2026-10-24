@@ -96,7 +96,8 @@ pwsh -NoProfile -File .\scripts\start-wang2017-detached.ps1 `
   -MaxWallHours 2
 ```
 
-This is a prospective command, not a claim that the run has started. The tested
+This exact first run started24October07:03:31WIB on621146b, with2h budget
+until09:03:31WIB; completion and landslide are not yet established. The tested
 worker freezes sources/DLL before loading and retains actual process identities.
 The2h budget bounds this first experiment; it is not predicted physical completion.
 Soil1 took about45min, but Soil2 adds tensor transport/root searches and may reject

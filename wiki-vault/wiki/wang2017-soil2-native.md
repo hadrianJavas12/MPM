@@ -45,5 +45,15 @@ the physical outcome auditable. Colour, forced settlement or a speed outlier
 alone is not landslide evidence. Rate100x, assumed10m height, local softening
 mesh dependence and unverified reference curve remain limitations.
 
+The first full Soil2 case started24October07:03:31WIB on621146b in
+`output/wang2017-soil2-2026-10-24/fast-010-001`, with2h wall budget until09:03.
+Initial native process is running; completion and landslide are not established.
+The same automation checks every15min quietly and will return to5h continuation
+after terminal status. Check actual status before starting any further run.
+Launch-only07:07:08 gravity capture verifies271 frozen source files against
+workspace/manifest, actual copiedDLL mapping,3postprocessor hashes and4 process
+identities. Packet `fast-010-launch` retains6 artifact hashes/288 verified ZIP
+members; it is not completion or scientific validation evidence.
+
 [[wang2017-apex-and-rate-study]] retains earlier apex and interrupted-rate
 evidence. [[reusable-simulation-framework]] owns the compatible integration.
