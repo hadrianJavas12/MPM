@@ -1,5 +1,31 @@
 # Native framework and Studio verification
 
+## Completed apex60mm review and next endpoint input gate,2026-10-24
+
+Source55bc85d native0/complete6s60mm at13:33:43WIB; audit/render/worker0 at
+13:34:44.61states/915IDs/20640updates. Independent actual-output review checks
+55815material/366contact rows, positiveF/J, finite/mass/tensor/law/contact
+identities. Sampled apex only ID627,5.8–6s; accumulated volume/Ep trace agree
+within8.32e-15. Post-commit current-minus-committed volume increments being0
+does not mean no flow. Reaction increases every interval; zero free upper-slope
+mass crosses toe. Coherent landslide NOT_VERIFIED. Full video decode0,61actual
+states/15.25s playback at4fps/scale1. Root inspected actual result and primary
+page179/180 images; Figure3 axis0–0.10m verified, Soil2 endpoint still unknown.
+
+Completed packet24hashes/361members preserves275 frozen sources/DLL/raw/media;
+review19hashes preserves scripts/results/input hashes/figure/next-study review.
+No solver/renderer or previous control suite repeated for collection/review.
+Git-index audit also checks that indexed evidence is actually tracked. Eight
+PNG/MP4 artifacts previously excluded by repository ignore rules are explicitly
+included, including the retained strict-failure media. Their indexed hashes
+match; no evidence bytes or simulation result changed.
+[Detailed result and next-study rationale](benchmarks/WANG2017_APEX_TRIAL.md).
+New100mm/10s case input gate3 groups exit0, zero physical updates/projections;
+only target, derivedduration,frames differ. Material/rate/grid/BC/dt/damping/
+penalty and45000cap unchanged. Same nominal output cadence, but future common
+prefix needs actual comparison under existing fixed tolerances. A successful
+input gate is not a10s solver or a landslide result.
+
 ## Explicit Soil2 apex extension gates,2026-10-24
 
 Gate checkpoint55bc85d committed/pushed. Fresh full slope apex-fast-010-001

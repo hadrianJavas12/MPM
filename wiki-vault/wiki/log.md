@@ -754,3 +754,7 @@ Gate55bc85d committed/pushed. Fresh apex-fast-010-001 started12:08:32WIB at appr
 ## [2026-10-24] ingest | Apex launch provenance retained
 
 Launch-only apex-fast-010-launch retains6 verified artifact hashes/292 decoded ZIP members:275 frozen source files match manifest/workspace, actual copiedDLL and3 postprocessors verified, one4-process identity/creation/SessionId observation matches. Captured NATIVE_RUNNING/complete=false, not completion/landslide or continued-health proof. No active CSV/VTK/log reads or numerical runs for packaging. Updated [[wang2017-apex-flow]], handover/testing; raw/settings unchanged, same15min quiet monitor.
+
+## [2026-10-24] ingest | Completed apex60mm review and controlled100mm preparation
+
+Native55bc85d completes13:33:43WIB; audit/render/worker0 at13:34:44,61states/915IDs/20640updates. Actual55815material/366contact rows pass consistency checks; apex sampled ID627, volume/Ep trace agree, but reaction rises every interval and zero free upper mass crosses toe. Coherent landslide NOT_VERIFIED. Completed24hash/361members and separate review19hash retain raw/source/runtime/media/analysis; fullvideo decode0, no solver/render repeats. Root inspected actual results and retained primary pages179/180; Figure3 axis0-.10m verified, Soil2 endpoint remains unknown. [[wang2017-apex-60mm-review]] justifies same-rate/material100mm/10s endpoint study before hold; newinput3groupsPASS/zeroMPM, onlytravel/duration/frames differ. Updated linked wiki/index/testing/handover/reference operational status; raw and personal settings unchanged.

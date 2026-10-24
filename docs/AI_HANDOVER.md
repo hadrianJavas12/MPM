@@ -2,7 +2,55 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
-## Current: explicit apex slope RUNNING,24October12:08WIB
+## Current: apex60mm reviewed, no landslide;100mm input gate passed24October13:50WIB
+
+Independent actual-data review confirms61states/915IDs,55815material/366contact
+rows, finite/mass/F/J/Ep/law/contact identities consistent. Maxkps.017506169,
+cmin16.870373kPa still above15kPa residual. Sampled apex only ID627 at5.8/5.9/6s;
+max accumulated plastic volume.000728068207, Ep trace residual8.32e-15. Exported
+trial volume increment is current-minus-committed and zero after saved commit;
+do not interpret that as zero accumulated flow.509free abovebase MPs centroid
++2.106mmX/−18.521mmY, zero free mass past toe. Fastest797 moves UP, not slide.
+Reaction rises EVERY saved interval to642.2968kN/m; coherent landslide NOT_VERIFIED.
+58shared strict-prefix snapshots have zero reaction/displacement/kps/c deltas;
+Soil1 comparison61states finalreaction−3.9392%, not convergence PASS.
+
+Completed evidence24artifact hashes/361archive members,275frozen sourcefiles/
+copiedDLL and61rendererVTKhashes verified. Separate physical/next-study review
+retains exact scripts/results/sourcehashes. Video61states/4fps/15.25s playback,
+scale1; full ffmpeg decode0. Root inspected actual overview/energy and retained
+paper pages179/180: Figure3 axis0–.10m visually verified, approximate600kN
+plateau near.05m. Soil2 endpoint, relief and bottom tangential fixity remain open.
+Git-index audit explicitly includes8 indexed PNG/MP4 artifacts previously
+ignored, including strict-failure media; all hashes match, no evidence changed.
+
+Next justified bounded study: SAME material/rate/geometry/grid/BC/numerics,
+extend to100mm/10s,101frames,45000cap unchanged; no strength/psi/rate tuning.
+New case `cases/benchmarks/wang2017-soil2-apex-100mm.lisp`; zero-update native
+input3 groups PASS in `apex-100mm-inputs-001`, no solver/point projection.
+Only target, derived duration and frame count differ. This is a declared
+endpoint study, not paperSoil2 endpoint or guaranteed landslide. Native85m11s
+for6s suggests~142min for10s; use3h wallbudget. Fresh full run required, VTK
+is not restart. Compare common0–60mm prefix with existing fixed tolerances;
+nominal0.1s cadence does not guarantee bit identity after frame-time rounding.
+Commit/push this checkpoint before ONE fresh run apex-100mm-001, then record
+actual source/time/PIDs and restore same automation15min. If100mm stillprepeak,
+resolve geometry/rate/mesh before further endpoint changes; do not extend forever.
+
+## Completed native apex60mm run,24October13:38WIB
+
+Native apex-fast-010-001 exit0/complete at13:33:43WIB,6s60mm,61states/915MPs/
+20640updates. Audit/render/worker0 at13:34:44. No solver active; do not poll
+old PID23428 or repeat solver/render/tests. Final reaction642.296777kN/m,
+measured surface descent59.553961mm. Root inspected overview/energy viewport:
+reaction still rises and scale1 geometry shows no macro-collapse. Independent
+saved-state/coherent-motion review and completion packaging are underway; read
+their artifacts, do not duplicate them. Automation returned5h during terminal
+review; if a justified next run starts, update the SAME monitor to15min.
+See `docs/benchmarks/WANG2017_APEX_TRIAL.md`. Objective still actual landslide,
+not native completion; no landslide/scientific PASS.
+
+## Historical launch: explicit apex slope24October12:08WIB
 
 Fresh run `output/wang2017-soil2-2026-10-24/apex-fast-010-001` started
 **12:08:32WIB**, native source **55bc85d9d4567b6677439846035127751fbc4c7f**,

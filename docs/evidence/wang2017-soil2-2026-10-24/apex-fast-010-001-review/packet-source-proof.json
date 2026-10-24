@@ -1,0 +1,137 @@
+{
+  "scope": "Authored physical/technical review and media-decode proof only; no native raw/source archive duplicated",
+  "scientificValidation": false,
+  "landslideValidation": false,
+  "nativeCompletionEvidence": "../apex-fast-010-001-completed/README.md",
+  "completedNativeEvidenceIndex": {
+    "path": "docs/evidence/wang2017-soil2-2026-10-24/apex-fast-010-001-completed/evidence-manifest.json",
+    "sha256": "ed4d3a60cb566e33c6feb8f4e20076735a07a912d8f17f6fcaa33101a00a357b"
+  },
+  "copiedFilesVerifiedByteForByte": [
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-fast-010-001-review\\analysis-support\\native_saved_io.py",
+      "destination": "physical-review\\analysis-support\\native_saved_io.py",
+      "bytes": 8434,
+      "sha256": "50548341d998e210f4f02cf537cb0155050c54a4b35380e5a0c47f38f70782a9"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-fast-010-001-review\\analysis-support\\review_completed_apex.py",
+      "destination": "physical-review\\analysis-support\\review_completed_apex.py",
+      "bytes": 21057,
+      "sha256": "dd7b7d35d669bd304e57b2c3f10bab06ef9f24f6e8c6987081ad4c33762cea54"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-fast-010-001-review\\completed-apex-physical-review.json",
+      "destination": "physical-review\\completed-apex-physical-review.json",
+      "bytes": 148982,
+      "sha256": "0f42608d2a2c2521c77f75629b82f99aef16ccbbf7bfcf4b02586321f03b0016"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-fast-010-001-review\\physical-diagnostics.png",
+      "destination": "physical-review\\physical-diagnostics.png",
+      "bytes": 150268,
+      "sha256": "aad9fdde84a3c7dbe31628f8ae4bbee9909fd74d01024b392310eb10bbc7f211"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-fast-010-001-review\\reference-metadata-hashes.json",
+      "destination": "physical-review\\reference-metadata-hashes.json",
+      "bytes": 1732,
+      "sha256": "cb86fdedbe9fe22f520e8d9801e2a9f23df7e77f7992ce2408bd725df9d24962"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-fast-010-001-review\\review-console.json",
+      "destination": "physical-review\\review-console.json",
+      "bytes": 5890,
+      "sha256": "32eb91a7ec28905c9ae865107f413337ae435754853adc8051d8f48548aac470"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-fast-010-001-review\\review-input-hashes.json",
+      "destination": "physical-review\\review-input-hashes.json",
+      "bytes": 33184,
+      "sha256": "972f2231659e51d13982f7910e2fa02ba5300714222504a85f6d3de551538648"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-next-study-001\\next-study-review.md",
+      "destination": "technical\\original\\next-study-review.md",
+      "bytes": 4633,
+      "sha256": "ea7f87d46fdb14608ff013af7d7ab04b5aaae06184bff65b51e6df836d47206f"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-next-study-001\\source-proof.json",
+      "destination": "technical\\original\\source-proof.json",
+      "bytes": 1453,
+      "sha256": "7b6724a9a0daeaa7073e742bf3752da847cd5b680352d732786623b2d607deac"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-next-study-001\\SHA256SUMS.json",
+      "destination": "technical\\original\\SHA256SUMS.json",
+      "bytes": 302,
+      "sha256": "293b0f362968e6e9f0a4a3ffb4eaeec0906d8da74701939a16c150e8364b0afb"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-next-study-001\\source-proof.json",
+      "destination": "technical\\source-proof.json",
+      "bytes": 1453,
+      "sha256": "7b6724a9a0daeaa7073e742bf3752da847cd5b680352d732786623b2d607deac"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-100mm-inputs-001\\completed-video-decode.json",
+      "destination": "media-qa\\completed-video-decode.json",
+      "bytes": 347,
+      "sha256": "5e3a9d537d0b9ca295bae3a9971a3e2448a9a947b3885e73acb31e21c917d434"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-100mm-inputs-001\\completed-video-decode.log",
+      "destination": "media-qa\\completed-video-decode.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "output\\wang2017-soil2-2026-10-24\\apex-review-package-support\\package_review.py",
+      "destination": "collection-support\\package_review.py",
+      "bytes": 8611,
+      "sha256": "211f9cfab97a6703ec20ff3b5239e632783c1c087d30aa564fece97e0386a552"
+    }
+  ],
+  "copyrightedSourcePolicy": "Only source-proof filenames/byte counts/SHA256 and authored reference facts are retained. No complete paper text, page render or PDF is copied into this packet.",
+  "threeExistingPrimaryArtifactHashesRechecked": [
+    {
+      "path": "output/paper-3951-2026-10-22/paper.txt",
+      "bytes": 44565,
+      "sha256": "a6b54efd8b30966ccaf18adf9e3e54ee28e1f7bdb99d7d6efe3e3cca336c6e99",
+      "scope": "Previously retained source text/render; read-only; not newly generated or edited"
+    },
+    {
+      "path": "output/paper-3951-2026-10-22/page-05.png",
+      "bytes": 614517,
+      "sha256": "2daa038be229d9c5cc755ab588fc6d52304237aafe83d8c454eeed30714c72db",
+      "scope": "Previously retained source text/render; read-only; not newly generated or edited"
+    },
+    {
+      "path": "output/paper-3951-2026-10-22/page-06.png",
+      "bytes": 490434,
+      "sha256": "d5ec72a60a9901a2acbbb6a706ab43dab925be24e2aba26b41880450bcb1d7ad",
+      "scope": "Previously retained source text/render; read-only; not newly generated or edited"
+    }
+  ],
+  "analysisExecution": "The already-completed saved-data review was copied; no analysis, test, renderer, solver, replay or decode was rerun for collection",
+  "editorialChange": {
+    "scope": "Editorial encoding correction only; original authored report bytes retained separately. No reference facts/recommendations changed.",
+    "originalPath": "original/next-study-review.md",
+    "originalSha256": "ea7f87d46fdb14608ff013af7d7ab04b5aaae06184bff65b51e6df836d47206f",
+    "editorialPath": "next-study-review.md",
+    "editorialSha256": "d1aa33277a532463a2401c542140539adae8d76184f2bae377a75464b7fd0f8d",
+    "replacementCount": 5,
+    "originalSequenceCodepoints": [
+      "U+00E2",
+      "U+20AC",
+      "U+201C"
+    ],
+    "replacementCodepoint": "U+2013",
+    "originalBytes": 4633,
+    "editorialBytes": 4608,
+    "allOtherBytesPreserved": true,
+    "inverseReplacementExactlyRestoresOriginalBytes": true
+  },
+  "noNewArchives": "Files are copied directly and individually verified; no archive or raw native output duplication is necessary"
+}

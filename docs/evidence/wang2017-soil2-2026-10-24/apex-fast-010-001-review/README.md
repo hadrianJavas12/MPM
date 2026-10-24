@@ -1,0 +1,11 @@
+# Completed apex experiment: authored physical review and next-study audit
+
+This packet contains the already-completed saved-data analysis, its exact Python sources/input hashes/results and diagnostic figure, plus the separate technical next-study review. The physical run completed6s/60mm with native exit0. This does not establish coherent landslide, paper agreement, quasistatic response or numerical/experimental validation. The original native raw/source/media evidence remains in [the completed-run packet](../apex-fast-010-001-completed/README.md); it is not duplicated here.
+
+See [physical review](physical-review/completed-apex-physical-review.json) and [diagnostic figure](physical-review/physical-diagnostics.png). The review distinguishes actual sampled apex activation from cumulative event counts, accumulated plastic-volume strain from geometric volume, and local high/upward velocity from coherent moving mass. No free above-base mass crossed the original toe, and the reaction remained increasing through60mm.
+
+The [technical review](technical/next-study-review.md) recommends a gated same-model/same-rate100mm continuation as a further experiment; the Soil2 paper endpoint remains unverified. Five visible mojibake en-dash sequences were corrected ONLY in this editorial copy. The original report, its original hash index and unchanged source-proof are retained under technical/original/. technical/editorial-normalization.json records both hashes and verifies that reversing those five replacements exactly restores every original byte. No reference fact or recommendation was changed.
+
+Only three existing primary-artifact filenames/byte counts/hashes and authored facts are retained as source proof. Full paper text, page renders and PDF are not copied. Root independently inspected the primary pages and native viewports; the collector did not repeat that work. The two copied full-video-decode proof files are existing exit0 verification, not a new decode/render or physics check.
+
+All direct copies were verified byte-for-byte and indexed with SHA-256. No tests, solver, renderer, replay, analysis or decode were rerun during collection. No production files, raw reference sources or existing evidence were modified.

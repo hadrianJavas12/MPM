@@ -1,0 +1,304 @@
+{
+  "scope": "Completed accelerated-rate trial; not verified Figure3 reproduction",
+  "sourceCommitAtNativeLaunch": "55bc85d9d4567b6677439846035127751fbc4c7f",
+  "nativeExitCode": 0,
+  "run": {
+    "passedConsistencyChecks": true,
+    "nativeComplete": true,
+    "scope": "Saved output consistency, not FEM equivalence or experimental validation",
+    "scientificValidation": false,
+    "frames": 61,
+    "massKgPerM": 466520.1674374,
+    "physicalTimeS": 6.0,
+    "commandedSettlementM": 0.06,
+    "measuredSettlementM": 0.05955396057182,
+    "maxAbsoluteMeanPenaltyGapM": 0.0004460394281786,
+    "maxParticlePenaltyGapM": 0.001135621489618,
+    "initialReactionTransientsObserved": false,
+    "quasiStaticReferenceAgreement": "NOT_VERIFIED",
+    "reactionUpwardNPerM": 642296.7774579,
+    "loadingVelocityMPerS": 0.01,
+    "loadingRateMultiplier": 100.0,
+    "maxYieldResidualPa": 7.275957614183e-11,
+    "finalMeanTrackingErrorFraction": 0.0074339904696433335,
+    "sources": [
+      {
+        "path": "vtk\\particles_0000.vtk",
+        "sha256": "f236bdc0fa10cb04e61ee979d0244ce90da045bc9c8b968a7f71152e0d744353"
+      },
+      {
+        "path": "vtk\\particles_0001.vtk",
+        "sha256": "31628d369eac42116c1ccce3e94e263a7113bd03574b7c3708a92e82c7350dbe"
+      },
+      {
+        "path": "vtk\\particles_0002.vtk",
+        "sha256": "5bd3b7bd1696dcd20593c3a2010795e0d1c48f1b7bd94ba5e78ad5c4f36fcf80"
+      },
+      {
+        "path": "vtk\\particles_0003.vtk",
+        "sha256": "6246ceecee169a3dc1b677f1dc5101edb1bd111d12d866b589f401545317f4b0"
+      },
+      {
+        "path": "vtk\\particles_0004.vtk",
+        "sha256": "716f5647a88869f73829e89ffa40befbc3173dcccdbd183be0f7cb16424cb7eb"
+      },
+      {
+        "path": "vtk\\particles_0005.vtk",
+        "sha256": "48b1475782dd88cd7a42135e2c17a18674a722b499615914906f306ed4b480c8"
+      },
+      {
+        "path": "vtk\\particles_0006.vtk",
+        "sha256": "440c9285475c20881d6af801223fc6473d01ad42467c6f4497234ac108dd580a"
+      },
+      {
+        "path": "vtk\\particles_0007.vtk",
+        "sha256": "fdcb6e4880d9fc78c75d5804388deaa49128a495e433050fd8c1e1193f426856"
+      },
+      {
+        "path": "vtk\\particles_0008.vtk",
+        "sha256": "39821df26506ac240101b9d813d716e4fbacafd6f12b15ab94ce0c405fda690c"
+      },
+      {
+        "path": "vtk\\particles_0009.vtk",
+        "sha256": "611971bee549a68eca6d9346d42d0e5146fc1ac027e3aad9366cc5cd5a019183"
+      },
+      {
+        "path": "vtk\\particles_0010.vtk",
+        "sha256": "8a90fffd513d046fb9ff25f84a9d58b31b8f24bb83e3586ff8192772871e9043"
+      },
+      {
+        "path": "vtk\\particles_0011.vtk",
+        "sha256": "2d3ff7f3a9c681dfce769ce813005ec0c4c84c5c87715abd900d5f849070c1ee"
+      },
+      {
+        "path": "vtk\\particles_0012.vtk",
+        "sha256": "1ab4ae8b92b367c5b9d746d8f09558536cf1a724f679c56419a0855bb01ce46f"
+      },
+      {
+        "path": "vtk\\particles_0013.vtk",
+        "sha256": "8e413599fa3c35ac9e288ff101b1b0b4dec3031edec35d4ed7beb205a4a766c9"
+      },
+      {
+        "path": "vtk\\particles_0014.vtk",
+        "sha256": "9f6e24d020266fb2d7ffe5ad94582e33c72166382de416ad81a30244cb9b7387"
+      },
+      {
+        "path": "vtk\\particles_0015.vtk",
+        "sha256": "00dbcb38d99a891e3fe1ab305362c557bf5727aa7049ed01e9566c8c38353710"
+      },
+      {
+        "path": "vtk\\particles_0016.vtk",
+        "sha256": "9b84f4ddc091f4e56a7b5a1b800fb916370fb1e671d9036e4cd6d61e036649af"
+      },
+      {
+        "path": "vtk\\particles_0017.vtk",
+        "sha256": "f0e246f6f7e0120de3bd01652240690aa350bdcbb6da57cc8b45c290889b8489"
+      },
+      {
+        "path": "vtk\\particles_0018.vtk",
+        "sha256": "c53d613b2d1c7b170d696b389e822ad95464c8e587e6de534846957d6b02d311"
+      },
+      {
+        "path": "vtk\\particles_0019.vtk",
+        "sha256": "d2c8e990c7219b33c5dccec8f470ef60af2f64dedf4f93daea06cb4a4b640e39"
+      },
+      {
+        "path": "vtk\\particles_0020.vtk",
+        "sha256": "de1b735e4e8f9d3be68ef9c1c9e03d3cb85188829323c01f6509d4a1bf70d874"
+      },
+      {
+        "path": "vtk\\particles_0021.vtk",
+        "sha256": "4accd3fe1c858765ce369326f2fb96f4d083f7eb2b9adda35f5a600b8a33c95e"
+      },
+      {
+        "path": "vtk\\particles_0022.vtk",
+        "sha256": "07376c42d47865a2aac916145c9af4c7f67c2bbfcf8560bdfc4a4dbed3616aa5"
+      },
+      {
+        "path": "vtk\\particles_0023.vtk",
+        "sha256": "ec970f1374ec81692cccaa24086ea3c5eebedde3253eb20724f84ba814df4f9d"
+      },
+      {
+        "path": "vtk\\particles_0024.vtk",
+        "sha256": "e9d5b0a72bef9d0b7cd604b5137a687d79b049f401f953542039aed70cd975a6"
+      },
+      {
+        "path": "vtk\\particles_0025.vtk",
+        "sha256": "264c81cf2ca140984dba166b9b1c1c9f0fcd98196422c63acec5c63945dbbb58"
+      },
+      {
+        "path": "vtk\\particles_0026.vtk",
+        "sha256": "c4a35434435f7d5948971fe0b6735486129049687ddd135b5d1f5fdf76281e10"
+      },
+      {
+        "path": "vtk\\particles_0027.vtk",
+        "sha256": "2ac41028ae0f3030876b25ca39c11aa04d2df8245ce229e97fbafc4f03988b5d"
+      },
+      {
+        "path": "vtk\\particles_0028.vtk",
+        "sha256": "3713506758229ec4857081c018db04d3e11848472a7573d4b36dcce65ede1531"
+      },
+      {
+        "path": "vtk\\particles_0029.vtk",
+        "sha256": "7039511aed84cda83ce78520781065e522941a76447d2cbed576ddcdec5cf4b1"
+      },
+      {
+        "path": "vtk\\particles_0030.vtk",
+        "sha256": "ffa0f5ebdf56cbf3db371fc29c541cb20dc27c66807bcd18223c4b7ac6731691"
+      },
+      {
+        "path": "vtk\\particles_0031.vtk",
+        "sha256": "abcac3e6ebb64ac6c9191c862388616556445a9320eccb5d97ccdb085d29f2b3"
+      },
+      {
+        "path": "vtk\\particles_0032.vtk",
+        "sha256": "1ac002a9bd36b8715a5e08ab67c66bd8405779a17593649558d4a989f4b61616"
+      },
+      {
+        "path": "vtk\\particles_0033.vtk",
+        "sha256": "aeb07c620e21b9f02a63f7d2d01b45b75f89fe85638071054be34cf79296555d"
+      },
+      {
+        "path": "vtk\\particles_0034.vtk",
+        "sha256": "8f5962096291a083eab9dc7d9104295eaa757e61b79d8cc13353673a26e8564e"
+      },
+      {
+        "path": "vtk\\particles_0035.vtk",
+        "sha256": "3637718da8b62f3ee8919f41c4a1dcbe4a28be1bfc19fc80562f2854b5a6b467"
+      },
+      {
+        "path": "vtk\\particles_0036.vtk",
+        "sha256": "3641f2f47e0397d97751f507cd1e02547c061ab05e249d9bb8bd5c5b193990b6"
+      },
+      {
+        "path": "vtk\\particles_0037.vtk",
+        "sha256": "7e636a51ae8a02ca65a04332bd211e05c67fd867551bb0bff59389fee4007f49"
+      },
+      {
+        "path": "vtk\\particles_0038.vtk",
+        "sha256": "4e15fb24b9fcf4113ec9df489696e61231da6399e53316d409b1e6e35095b71b"
+      },
+      {
+        "path": "vtk\\particles_0039.vtk",
+        "sha256": "7796ee54e863246a03a222afd87ce22acc92e1b56e91894a2d4b12a905731182"
+      },
+      {
+        "path": "vtk\\particles_0040.vtk",
+        "sha256": "2a58d9830d3d9e6dac3bfe72272ce891754b21a929d34a175d487defe9221ef9"
+      },
+      {
+        "path": "vtk\\particles_0041.vtk",
+        "sha256": "0a89e58fd9f321a5417f74eba9f80fd7b06f1133e53c2a35b6454bcb165ff10b"
+      },
+      {
+        "path": "vtk\\particles_0042.vtk",
+        "sha256": "86ba690684ce6ca73af0c7d8e83fb8f6c3b9fbdc95a302e9459e4edf70c4ca0a"
+      },
+      {
+        "path": "vtk\\particles_0043.vtk",
+        "sha256": "1f02026f50421f4c2f82d00e41999b25cc873efdfbe81c04889505f0eeb7d96f"
+      },
+      {
+        "path": "vtk\\particles_0044.vtk",
+        "sha256": "20ac4f1787967cba4a0f7b724d5425f1a1fdbbcb3a050621645fad9d17e63435"
+      },
+      {
+        "path": "vtk\\particles_0045.vtk",
+        "sha256": "8520baff5255a201d13bcbfd14b5eeba42dab104662ccd5abac8e84d8fc66cc2"
+      },
+      {
+        "path": "vtk\\particles_0046.vtk",
+        "sha256": "a4ed1e1899545b80f574b439bf73e88541d7f73030ce70ba8cc62700afd2d7ef"
+      },
+      {
+        "path": "vtk\\particles_0047.vtk",
+        "sha256": "7eb850193d315011cc396986a8fade670854702cc9bffe11c712d20a467f2273"
+      },
+      {
+        "path": "vtk\\particles_0048.vtk",
+        "sha256": "26e10be85e45e3806b3abae6186f1c87d1bdead663fdd5b4e3807a01b71aba6c"
+      },
+      {
+        "path": "vtk\\particles_0049.vtk",
+        "sha256": "c93eacf8f4536273ffb4147f950f6e0414790690083337831e6cb95116d78c6e"
+      },
+      {
+        "path": "vtk\\particles_0050.vtk",
+        "sha256": "e7890bc68a066f45440807decea25415f0374c40ca1a71a43f64e6d0c8655f5b"
+      },
+      {
+        "path": "vtk\\particles_0051.vtk",
+        "sha256": "b3c999bdada8ad621ef07dbe9e81efee401bc0adaf20d0114a54e2177085f1f0"
+      },
+      {
+        "path": "vtk\\particles_0052.vtk",
+        "sha256": "0a875fd9bc73f04993ab84f514816648cf525531295e00ded17e5fb3d1d35b9f"
+      },
+      {
+        "path": "vtk\\particles_0053.vtk",
+        "sha256": "805b60f0c965fd0d90f63ec7144d9b2364fa3c170052ef448ee67d72a6cb6bf6"
+      },
+      {
+        "path": "vtk\\particles_0054.vtk",
+        "sha256": "b53dd574518d104add3e874b8832e9ea0e4a0368b44c24924599e1ca0fddde8d"
+      },
+      {
+        "path": "vtk\\particles_0055.vtk",
+        "sha256": "2efed6b44329807728b77d0538c9f1beb01fe69b5acb8793c1579e1b20f7f71b"
+      },
+      {
+        "path": "vtk\\particles_0056.vtk",
+        "sha256": "daa10c3ff5d0812a2d0d4109ae2fd364ad9db4d5aea7e752a27db728423f2c17"
+      },
+      {
+        "path": "vtk\\particles_0057.vtk",
+        "sha256": "8969e79258a64debd77ad9afaafabd46e1b01c06fc95fcfa61faae63a930663d"
+      },
+      {
+        "path": "vtk\\particles_0058.vtk",
+        "sha256": "e3145527c0b197aff19b17e8cbb060655995df7006499642198f16359f331d49"
+      },
+      {
+        "path": "vtk\\particles_0059.vtk",
+        "sha256": "77d73a92ea91f24f2493300222f4fac6d59efda940fa69d24c4e52440aea6cc2"
+      },
+      {
+        "path": "vtk\\particles_0060.vtk",
+        "sha256": "eeabf0c3eafe074b32b68d6acc50553050e0fac3d490f3af32a3394240012621"
+      }
+    ],
+    "kineticOverElasticProxyMax": 0.0004927850747575,
+    "energyCaveat": "Current-volume Hencky/native-plastic proxies, not closed energy balance. Gravity prestress can mask loading inertia; rate comparison is still required.",
+    "visualization": {
+      "quantity": "wang-paper-kps",
+      "xlim": [
+        -0.3352170750640139,
+        20.33556363443228
+      ],
+      "ylim": [
+        -0.1860147268091004,
+        15.1051871534999
+      ],
+      "vmin": 0.0,
+      "vmax": 0.017506169052878676,
+      "displacementScale": 1,
+      "interpolatedStates": false,
+      "videoFps": 4
+    }
+  },
+  "loadingRateMultiplier": 100.0,
+  "configuredTargetRun": "COMPLETE",
+  "configuredTargetDisplacementM": 0.06,
+  "actualCommandedSettlementM": 0.06,
+  "actualMeasuredSettlementM": 0.059553960571821385,
+  "configuredDurationS": 6.0,
+  "actualPhysicalTimeS": 6.0,
+  "historicalFullBenchmarkTargetM": 0.1,
+  "historicalFullBenchmarkTargetSource": "Project comparison endpoint; not newly verified from the paper",
+  "fullTargetRun": "NOT_RUN",
+  "referenceRateFullTargetRun": "NOT_RUN",
+  "reliefHeightM": 10.0,
+  "reliefHeightSource": "ASSUMPTION: not numerically dimensioned in Figure2",
+  "referenceCurveAgreement": "NOT_VERIFIED: assumed geometry/control, possible dynamics and no digitized reference comparison",
+  "scientificValidation": false
+}

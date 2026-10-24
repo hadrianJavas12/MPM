@@ -37,8 +37,11 @@
     "paperCoordinate": "kps=sqrt(0.5*ep_dev:ep_dev), ep_dev=ep-tr(ep)*I/3",
     "nativeCoordinateWarning": "Native accumulated J2 equivalent increments are not automatically the norm of the accumulated plastic tensor for nonproportional paths",
     "historyPrimitivesStatus": "17 Windows native fixed-frame tensor-history/cohesion controls PASS on db71b63; no physical updates",
-    "pointProjectorStatus": "19 Windows native signed-tensor coupled point controls PASS, optional ASDF load/call exit0; small-strain fixed-frame prototype only, zero physical updates",
-    "implementationStatus": "PENDING_NATIVE_PARTICLE_ADAPTER_AND_FINITE_STRAIN_HISTORY_CONVENTION; isolated fixed-frame coupled projector available; no runnable Soil2 surrogate is substituted"
+    "pointProjectorStatus": "19 coupled point controls and 18 native state/transport/transaction controls PASS; signed-history decrease and multiple roots remain rejected",
+    "implementationStatus": "STRICT_NATIVE_IMPLEMENTED; full 60mm trial FAILED constitutive admissibility, exact replay retained. Separate explicit volumetric-apex extension completed accelerated 60mm trial, no verified landslide",
+    "finiteStrainConvention": "Declared incremental-polar corotation of committed signed Ep; not a unique Wang prescription or exact log(Fp)",
+    "optionalApexConvention": "Separate opt-in gA=p hydrostatic volumetric flow; changes strict psi0 constitutive physics, not paper-specified",
+    "latestReview": "docs/benchmarks/WANG2017_APEX_TRIAL.md"
   },
   "geometry": {
     "source": "Figure 2, printed page 179",
@@ -58,7 +61,7 @@
     "paperEndDisplacementM": null,
     "preparedComparisonEndDisplacementM": 0.1,
     "preparedFullPhysicalDurationS": 1000.0,
-    "endDisplacementStatus": "COMPARISON_TARGET; Figure 3 endpoint not independently reverified",
+    "endDisplacementStatus": "COMPARISON_TARGET; retained printed-page180 render visually verifies Figure3 axis0-0.10m and approximate plateau. Exact plotted endpoint and Soil2 Figure4/5 endpoint remain unverified",
     "implementation": "Bilateral tracked displacement penalty; finite compliance, not the creep one-way pusher"
   },
   "openGates": [
@@ -66,8 +69,8 @@
     "Verify bottom tangential restraint from the original figure/data",
     "Original user PDF is currently missing; author-upload text is accessible through web retrieval, direct local download was refused",
     "Paper displacement/strain reset must be reconciled with preserving native prestress/internal elastic state",
-    "Resolve/capture zero-dilation MC tensile-apex failure before full reference-speed execution",
-    "Validate paper kps state/evolution before enabling Soil2",
+    "Determine appropriate paper tensile/apex convention: strict failure captured/replayed; separate declared volumetric-apex experiment is not exact paper physics",
+    "Validate finite-strain/history interpretation and reference behavior beyond passed point/native integration controls",
     "Demonstrate quasistatic, mesh, timestep and penalty sensitivity; MPM curve agreement is unverified"
   ]
 }

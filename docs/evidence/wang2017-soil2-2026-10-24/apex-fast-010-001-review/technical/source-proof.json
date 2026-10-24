@@ -1,0 +1,33 @@
+{
+  "purpose": "Identify exact existing source artifacts inspected for geometry and Figure3 axis; do not infer Soil2 endpoint from Figure3",
+  "figure3AxisM": [
+    0,
+    0.1
+  ],
+  "figure3ApproximatePlateauOnsetM": 0.05,
+  "figure3ApproximatePlateauForceKN": 600,
+  "figure3VisualReadStatus": "Approximate visual reading, not digitized curve/endpoint or quantitative agreement",
+  "figure4Soil2Endpoint": "UNVERIFIED",
+  "reliefHeightM": "UNSPECIFIED_IN_VISIBLE_LABELS;10m implementation assumption remains",
+  "bottomTangentialFixity": "UNRESOLVED_DIAGRAM_INTERPRETATION",
+  "files": [
+    {
+      "path": "output/paper-3951-2026-10-22/paper.txt",
+      "bytes": 44565,
+      "sha256": "a6b54efd8b30966ccaf18adf9e3e54ee28e1f7bdb99d7d6efe3e3cca336c6e99",
+      "scope": "Previously retained source text/render; read-only; not newly generated or edited"
+    },
+    {
+      "path": "output/paper-3951-2026-10-22/page-05.png",
+      "bytes": 614517,
+      "sha256": "2daa038be229d9c5cc755ab588fc6d52304237aafe83d8c454eeed30714c72db",
+      "scope": "Previously retained source text/render; read-only; not newly generated or edited"
+    },
+    {
+      "path": "output/paper-3951-2026-10-22/page-06.png",
+      "bytes": 490434,
+      "sha256": "d5ec72a60a9901a2acbbb6a706ab43dab925be24e2aba26b41880450bcb1d7ad",
+      "scope": "Previously retained source text/render; read-only; not newly generated or edited"
+    }
+  ]
+}

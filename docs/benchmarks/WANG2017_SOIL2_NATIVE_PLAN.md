@@ -21,8 +21,10 @@ See [the apex-flow contract](WANG2017_APEX_FLOW.md). Strict class/defaults remai
 unchanged. A prospective paired full slope changes only this declared material
 convention; all numerical paper/loading/geometry settings remain the same.
 This extension is not uniquely prescribed by Wang and does not guarantee failure.
-Fresh paired trial apex-fast-010-001 started12:08:32WIB on55bc85d,2h wall cap
-until14:08; actual native launch RUNNING, full physical outcome pending.
+Fresh paired trial apex-fast-010-001 on55bc85d completed13:33:43WIB without
+error,6s60mm. Saved-state review finds no coherent landslide; reaction rises
+and cohesion remains above residual. [Actual result and100mm endpoint study](WANG2017_APEX_TRIAL.md)
+preserve this negative physical outcome without changing strength or rate.
 
 ## Material contract before enabling a slope run
 

@@ -1,0 +1,4270 @@
+{
+  "scope": "Actual complete declared volumetric-apex model, native0; saved-state observations/identities only. No test, solver, renderer or replay executed by this review.",
+  "nativeComplete": true,
+  "nativeExitCode": 0,
+  "sourceCommitAtLaunch": "55bc85d9d4567b6677439846035127751fbc4c7f",
+  "scientificValidation": false,
+  "actualTimeS": 6,
+  "actualCommandedSettlementM": 0.06,
+  "actualLoadingUpdates": 20640,
+  "nativeSavedOutput": {
+    "run": "D:\\MPM\\output\\wang2017-soil2-2026-10-24\\apex-fast-010-001",
+    "nativeManifestStatus": "complete",
+    "nativeComplete": true,
+    "nativeExitInterpretation": "Not inferred from saved outputs; wrapper/process audit handled separately",
+    "loadingFrames": 61,
+    "particleCount": 915,
+    "physicalTimeS": 6.0,
+    "lastCommandedSettlementM": 0.06,
+    "allSavedNumericFieldsFinite": true,
+    "particleIdsStableAndUnique": true,
+    "positiveSavedVolumes": true,
+    "positiveSavedMasses": true,
+    "massKgPerM": 466520.1674374,
+    "maxAbsoluteVtkMassErrorKgPerM": 2.0954757928848267e-09,
+    "maxAbsRecomputed2DKineticMinusCsvJPerM": 4.61142235508305e-12,
+    "volumeOverInitialVolumeRange": [
+      0.9870736957489364,
+      1.002542895157273
+    ],
+    "gravityDeterminantFRange": [
+      0.9885995979385773,
+      0.9995461949847088
+    ],
+    "loadingDeterminantJ": "NOT_DIRECTLY_SAVED: positive volume ratio is not independent det(F) evidence",
+    "maxAbsoluteMeanTrackingErrorM": 0.0004460394281786,
+    "maxAbsoluteCommandMinusMeasuredMinusGapM": 4.998497275809921e-15,
+    "maxIndividualTrackingGapM": 0.001135621489618,
+    "maxAbsReactionPlusSoilForceNPerM": 0.0,
+    "maxAbsSoilMinusNodalForceNPerM": 0.0,
+    "reactionRangeNPerM": [
+      0.0,
+      642296.7774579
+    ],
+    "kineticRangeJPerM": [
+      0.0,
+      88.64825224095
+    ],
+    "maxKineticOverElasticProxy": 0.0004927850747575,
+    "maxFreeResidualRatio": 0.01031841504618,
+    "lastHistoryRange": [
+      0.0,
+      0.017506169052878676
+    ],
+    "frozenSourcesHashVerifiedCount": 275,
+    "provenanceExactLoadedBytesClaim": true,
+    "actualBackendSha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "noInterpolation": true
+  },
+  "audit": {
+    "materialCsvRows": 55815,
+    "contactCsvRows": 366,
+    "allReadFieldsFinite": true,
+    "uniqueStableIds": true,
+    "actualJRange": [
+      0.9870736957489223,
+      1.002542895157258
+    ],
+    "paperKpsRange": [
+      0.0,
+      0.017506169052878676
+    ],
+    "cohesionPaRange": [
+      16870.373210340993,
+      30000.0
+    ],
+    "plasticVolumetricStrainRange": [
+      0.0,
+      0.0007280682071587121
+    ],
+    "identityResiduals": {
+      "csvVtkPositionM": 0.0,
+      "csvVtkCommonScalar": 0.0,
+      "storedJMinusDetF": 2.220446049250313e-16,
+      "JMinusVolumeRatio": 8.804068585277491e-14,
+      "paperInvariant": 3.469446951953614e-18,
+      "cohesionLawPa": 3.637978807091713e-12,
+      "properRotation": 1.7763568394002505e-15,
+      "epTraceMinusPlasticVolume": 8.320926413174501e-15,
+      "exportedEpTrace": 0.0,
+      "contactSurfaceM": 5.079270337660091e-15,
+      "contactMaxGapM": 9.177771390089795e-16,
+      "springEnergyJPerM": 2.0052937088621547e-10
+    },
+    "acceptedTinyHistoryDecreaseFlagRows": 116,
+    "smallestLastStepKpsChange": -2.168404344971009e-18,
+    "smallestSavedKpsChange": -3.903127820947816e-18
+  },
+  "apexActivation": {
+    "sampledLastAcceptedApexFlagRows": 3,
+    "sampledUniqueParticleIds": [
+      627
+    ],
+    "firstSampledActiveTimeS": 5.8,
+    "firstSavedNonroundoffPlasticVolumeTimeS": 5.8,
+    "particlesWithLoadingPlasticVolumeIncreaseAbove1eMinus12": 1,
+    "particles": [
+      {
+        "nativeId": 627,
+        "originalPositionM": [
+          10.25,
+          13.75,
+          0.0
+        ],
+        "lastPositionM": [
+          10.260023265594093,
+          13.628153086805888,
+          0.0
+        ],
+        "plasticVolumetricStrainAtLoadingOrigin": 0.0,
+        "lastPlasticVolumetricStrain": 0.0007280682071587121,
+        "incrementOverSavedLoadingInterval": 0.0007280682071587121,
+        "drivenContact": false
+      }
+    ],
+    "maximumAbsExportedTrialPlasticVolumeIncrement": 0.0,
+    "samplingCaveat": "Flags describe ONLY the last accepted return at a saved instant, not all20500+ substeps/events. Exported trial-volume increment is current minus committed and may be0 after each loadstep commit; use differences of accumulated totals across saved frames to observe interval volume change. Positive accumulated plastic volume is strain, not geometrical particle volume, porosity or exact multiplicative Fp determinant.",
+    "lastMassWeightedAverageAccumulatedPlasticVolumetricStrain": 7.957029586434012e-07
+  },
+  "motionDefinition": "ID-aligned native particle-centre motion from this run's settled loading origin; original above-base selection excludes6 prescribed contacts",
+  "motion": {
+    "all": {
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "centroidMotionM": [
+        0.0015544103294841088,
+        -0.012112287428945847,
+        0.0
+      ],
+      "meanVelocityMPerS": [
+        0.0005396549235792651,
+        -0.0013550446234077695,
+        0.0
+      ],
+      "rmsSpeedMPerS": 0.0194946245396112,
+      "meanVelocityNormOverRmsSpeed": 0.07481815318222458,
+      "maxMotionNormM": 0.05969580877199499,
+      "maxAbsHorizontalMotionM": 0.014687943763219025,
+      "maxDownwardMotionM": 0.05818190049850891,
+      "maxSpeedMPerS": 0.3138228788218176,
+      "massFractionRightwardMotionGreater5mm": 0.10710382513661204,
+      "massFractionRightwardMotionGreater10mm": 0.03278688524590165,
+      "massFractionRightwardAndDownwardVelocity": 0.45573770491803284
+    },
+    "freeAboveBaseExcludingSixDriven": {
+      "particleCount": 509,
+      "massKgPerM": 259517.77620288273,
+      "centroidMotionM": [
+        0.0021062881898842325,
+        -0.0185212970923898,
+        0.0
+      ],
+      "meanVelocityMPerS": [
+        0.0005948746291379901,
+        -0.0021849190694037466,
+        0.0
+      ],
+      "rmsSpeedMPerS": 0.02607963049154742,
+      "meanVelocityNormOverRmsSpeed": 0.08682841388642588,
+      "maxMotionNormM": 0.056588004655351375,
+      "maxAbsHorizontalMotionM": 0.014687943763219025,
+      "maxDownwardMotionM": 0.05509181842833755,
+      "maxSpeedMPerS": 0.3138228788218176,
+      "massFractionRightwardMotionGreater5mm": 0.18074656188605112,
+      "massFractionRightwardMotionGreater10mm": 0.04715127701375246,
+      "massFractionRightwardAndDownwardVelocity": 0.4361493123772103
+    },
+    "sixDrivenContacts": {
+      "particleCount": 6,
+      "massKgPerM": 3059.1486389337847,
+      "centroidMotionM": [
+        0.012615004086678523,
+        -0.05764578925791616,
+        0.0
+      ],
+      "meanVelocityMPerS": [
+        0.0043148491295448115,
+        -0.01102379827415986,
+        0.0
+      ],
+      "rmsSpeedMPerS": 0.012284689371231935,
+      "meanVelocityNormOverRmsSpeed": 0.9636516198180618,
+      "maxMotionNormM": 0.05969580877199499,
+      "maxAbsHorizontalMotionM": 0.013358743927637917,
+      "maxDownwardMotionM": 0.05818190049850891,
+      "maxSpeedMPerS": 0.015459178830811429,
+      "massFractionRightwardMotionGreater5mm": 1.0,
+      "massFractionRightwardMotionGreater10mm": 1.0,
+      "massFractionRightwardAndDownwardVelocity": 1.0
+    },
+    "baseOriginalYAtMost5m": {
+      "particleCount": 400,
+      "massKgPerM": 203943.24259558565,
+      "centroidMotionM": [
+        0.0006862368457670338,
+        -0.0032738201047788668,
+        0.0
+      ],
+      "meanVelocityMPerS": [
+        0.0004127599351663027,
+        -0.00015399808611660291,
+        0.0
+      ],
+      "rmsSpeedMPerS": 0.0012615309655182082,
+      "meanVelocityNormOverRmsSpeed": 0.34922022270871794,
+      "maxMotionNormM": 0.00974461965938919,
+      "maxAbsHorizontalMotionM": 0.0029028512090505387,
+      "maxDownwardMotionM": 0.009710547532183256,
+      "maxSpeedMPerS": 0.0086344723336204,
+      "massFractionRightwardMotionGreater5mm": 0.0,
+      "massFractionRightwardMotionGreater10mm": 0.0,
+      "massFractionRightwardAndDownwardVelocity": 0.4725000000000001
+    }
+  },
+  "fastestFinalParticle": {
+    "id": 797,
+    "positionM": [
+      14.264635123415895,
+      6.706196237301046,
+      0.0
+    ],
+    "velocityMPerS": [
+      0.016273579760477646,
+      0.3134006539141113,
+      0.0
+    ],
+    "speedMPerS": 0.3138228788218176,
+    "drivenContact": false
+  },
+  "runout": {
+    "originalToeXM": 15.773502691896258,
+    "freeMassFractionBeyondOriginalToe": 0.0,
+    "freeFront95thAdvanceFromSettledM": 0.00580544117723214,
+    "lastMaxFreeXM": 15.262671995600204,
+    "rightBoundaryXM": 20
+  },
+  "localization": {
+    "paperKpsAtLoadingOriginMax": 0.0010461466239523613,
+    "lastPaperKpsMax": 0.017506169052878676,
+    "incrementAbove1eMinus8Count": 105,
+    "incrementAbove1eMinus3Count": 50,
+    "top50MassWeightedIncrementShare": 0.9157324558681602,
+    "top50OriginalBoundingBoxM": [
+      [
+        6.25,
+        5.75,
+        0.0
+      ],
+      [
+        15.25,
+        14.75,
+        0.0
+      ]
+    ],
+    "top50DrivenContacts": 0,
+    "meaning": "Paper plastic tensor invariant and concentration, not damage or proof of a throughgoing slip surface"
+  },
+  "reaction": {
+    "peakSavedReactionNPerM": 642296.7774579,
+    "peakSavedTimeS": 6.0,
+    "lastReactionNPerM": 642296.7774579,
+    "finalDropFromSavedPeakFraction": 0.0,
+    "largestSingleSavedReactionDecreaseNPerM": 0.0,
+    "interpretation": "Reaction is native total strip actuator response per unit thickness; completion/colour/apex activation alone does not imply peak failure or landslide"
+  },
+  "timeSeries": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "commandedSettlementM": 0.0,
+      "reactionNPerM": 0.0,
+      "freeCentroidMotionM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.0,
+      "freeFront95thXM": 13.257010722591485,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 0.0
+    },
+    {
+      "frame": 1,
+      "timeS": 0.1,
+      "commandedSettlementM": 0.001,
+      "reactionNPerM": 14985.42898304,
+      "freeCentroidMotionM": [
+        6.224610587402782e-06,
+        -0.0001829629926964559,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0002825550674756018,
+        -0.003984393085824872,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.005003017937542469,
+      "freeFront95thXM": 13.25711796739506,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 0.11887151435004245
+    },
+    {
+      "frame": 2,
+      "timeS": 0.2,
+      "commandedSettlementM": 0.002,
+      "reactionNPerM": 22425.7640528,
+      "freeCentroidMotionM": [
+        7.04954873660601e-05,
+        -0.0006887304458939463,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0007873633889189333,
+        -0.005531356729188847,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.005968616106422996,
+      "freeFront95thXM": 13.257163413999049,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 0.251637576613542
+    },
+    {
+      "frame": 3,
+      "timeS": 0.3,
+      "commandedSettlementM": 0.003,
+      "reactionNPerM": 35088.9166657,
+      "freeCentroidMotionM": [
+        0.00013002136615532697,
+        -0.0011060116689805115,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0003637212211328011,
+        -0.0028486933206533487,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.0040561798137879485,
+      "freeFront95thXM": 13.257371108142152,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 0.592221168172419
+    },
+    {
+      "frame": 4,
+      "timeS": 0.4,
+      "commandedSettlementM": 0.004,
+      "reactionNPerM": 49812.18620131,
+      "freeCentroidMotionM": [
+        0.00013711399348190746,
+        -0.0013472675663367432,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -0.00018862368689111548,
+        -0.0025279986341471728,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.004206819918894165,
+      "freeFront95thXM": 13.257539090526407,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 1.171701382877783
+    },
+    {
+      "frame": 5,
+      "timeS": 0.5,
+      "commandedSettlementM": 0.005,
+      "reactionNPerM": 61361.85647918,
+      "freeCentroidMotionM": [
+        0.00012989218063662252,
+        -0.0016418786193748269,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.00014794317968947596,
+        -0.003113312065276284,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.004917486517808053,
+      "freeFront95thXM": 13.257469765968589,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 1.840388806276357
+    },
+    {
+      "frame": 6,
+      "timeS": 0.6,
+      "commandedSettlementM": 0.006,
+      "reactionNPerM": 73340.37241364,
+      "freeCentroidMotionM": [
+        0.0001969305829233806,
+        -0.0019603348078309005,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0009624537575382343,
+        -0.0029352749736695147,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.004199501779936422,
+      "freeFront95thXM": 13.257581361393044,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 2.6619622748022347
+    },
+    {
+      "frame": 7,
+      "timeS": 0.7,
+      "commandedSettlementM": 0.007,
+      "reactionNPerM": 85787.24966966,
+      "freeCentroidMotionM": [
+        0.00026785446902717586,
+        -0.002297382462625248,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0004919985994092438,
+        -0.0040148414402821665,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.0052828113734056156,
+      "freeFront95thXM": 13.257904994448722,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 3.558117300119433
+    },
+    {
+      "frame": 8,
+      "timeS": 0.8,
+      "commandedSettlementM": 0.008,
+      "reactionNPerM": 97895.23764042,
+      "freeCentroidMotionM": [
+        0.0002721068812777761,
+        -0.0027375351284871195,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -0.000425751873735543,
+        -0.0046160879039873785,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.005763092956430187,
+      "freeFront95thXM": 13.257893332900974,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 4.578966180522022
+    },
+    {
+      "frame": 9,
+      "timeS": 0.9,
+      "commandedSettlementM": 0.009,
+      "reactionNPerM": 107544.5751239,
+      "freeCentroidMotionM": [
+        0.0002560074895459514,
+        -0.003108389719824695,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0002234894929815908,
+        -0.0023208892916917433,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.0048227564542415655,
+      "freeFront95thXM": 13.257864129094218,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 5.675027878223349
+    },
+    {
+      "frame": 10,
+      "timeS": 1.0,
+      "commandedSettlementM": 0.01,
+      "reactionNPerM": 123557.4701172,
+      "freeCentroidMotionM": [
+        0.0003190219703983122,
+        -0.003242541770889424,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.000893882766122521,
+        -0.0011760432496082857,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.004050707316603272,
+      "freeFront95thXM": 13.258112912419461,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 7.448937846411086
+    },
+    {
+      "frame": 11,
+      "timeS": 1.1,
+      "commandedSettlementM": 0.011,
+      "reactionNPerM": 138290.6771897,
+      "freeCentroidMotionM": [
+        0.0004036973864737086,
+        -0.003542799225772692,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0003628757869878558,
+        -0.005076619276340602,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.006501715398104552,
+      "freeFront95thXM": 13.258260404521145,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 9.2857453313174
+    },
+    {
+      "frame": 12,
+      "timeS": 1.2,
+      "commandedSettlementM": 0.012,
+      "reactionNPerM": 142057.7069447,
+      "freeCentroidMotionM": [
+        0.0004117268458527794,
+        -0.004112726127036607,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -0.00018563862935088937,
+        -0.005079623766221459,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.00668860859623304,
+      "freeFront95thXM": 13.258313248988607,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 9.855003252090073
+    },
+    {
+      "frame": 13,
+      "timeS": 1.3,
+      "commandedSettlementM": 0.013,
+      "reactionNPerM": 158384.465872,
+      "freeCentroidMotionM": [
+        0.00039167040967370403,
+        -0.004422868490969309,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        3.9145438619113156e-05,
+        -0.0016182597011803795,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.004982733821686703,
+      "freeFront95thXM": 13.25837015260793,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 12.165040203778272
+    },
+    {
+      "frame": 14,
+      "timeS": 1.4,
+      "commandedSettlementM": 0.014,
+      "reactionNPerM": 173927.1573987,
+      "freeCentroidMotionM": [
+        0.0004452779307778132,
+        -0.004602502698420528,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0008059669498708716,
+        -0.0026532387554410626,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.006191477733078111,
+      "freeFront95thXM": 13.258563185191337,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 14.636490189435259
+    },
+    {
+      "frame": 15,
+      "timeS": 1.5,
+      "commandedSettlementM": 0.015,
+      "reactionNPerM": 182172.0820308,
+      "freeCentroidMotionM": [
+        0.0005267148528423808,
+        -0.004961795511726207,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0006410856244829478,
+        -0.0039292722305633715,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.0067040813162467065,
+      "freeFront95thXM": 13.258648143318288,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 16.312459629644454
+    },
+    {
+      "frame": 16,
+      "timeS": 1.6,
+      "commandedSettlementM": 0.016,
+      "reactionNPerM": 195042.8718744,
+      "freeCentroidMotionM": [
+        0.000553914299316793,
+        -0.005324574157363882,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -3.03401224343613e-06,
+        -0.0032160879215798743,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.006572578519711821,
+      "freeFront95thXM": 13.258765456936105,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 18.61575059825623
+    },
+    {
+      "frame": 17,
+      "timeS": 1.7,
+      "commandedSettlementM": 0.017,
+      "reactionNPerM": 208408.3356084,
+      "freeCentroidMotionM": [
+        0.0005417849356018219,
+        -0.005681395870787223,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -0.0002800022733572887,
+        -0.004091674293282648,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.007232912683821243,
+      "freeFront95thXM": 13.258917676363815,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 21.06661558948535
+    },
+    {
+      "frame": 18,
+      "timeS": 1.8,
+      "commandedSettlementM": 0.018,
+      "reactionNPerM": 219505.1703713,
+      "freeCentroidMotionM": [
+        0.0005665434145391686,
+        -0.006082895954856255,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0007927029187963422,
+        -0.0036895263683470836,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.007601141437539623,
+      "freeFront95thXM": 13.258943998905087,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 23.407322419794912
+    },
+    {
+      "frame": 19,
+      "timeS": 1.9,
+      "commandedSettlementM": 0.019,
+      "reactionNPerM": 231283.0501747,
+      "freeCentroidMotionM": [
+        0.0006450666931447832,
+        -0.006357820114273755,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0007646035828987168,
+        -0.0018645386469696133,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.0071586387832766165,
+      "freeFront95thXM": 13.259117912067925,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 26.259131888850504
+    },
+    {
+      "frame": 20,
+      "timeS": 2.0,
+      "commandedSettlementM": 0.02,
+      "reactionNPerM": 245604.4089027,
+      "freeCentroidMotionM": [
+        0.0007043462717035553,
+        -0.006540028481469845,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.00010755836713808383,
+        -0.0025011977919104002,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.007457352405189381,
+      "freeFront95thXM": 13.259316928189786,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 29.484521908758115
+    },
+    {
+      "frame": 21,
+      "timeS": 2.1,
+      "commandedSettlementM": 0.021,
+      "reactionNPerM": 258142.8235783,
+      "freeCentroidMotionM": [
+        0.0006811088323335087,
+        -0.006950104915509709,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -0.00028590368371577497,
+        -0.005530952508693487,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.009168863575893084,
+      "freeFront95thXM": 13.259315554637695,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 32.53782134990069
+    },
+    {
+      "frame": 22,
+      "timeS": 2.2,
+      "commandedSettlementM": 0.022,
+      "reactionNPerM": 263820.0406513,
+      "freeCentroidMotionM": [
+        0.0006899639332706891,
+        -0.007476636891822042,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0005938083578241459,
+        -0.00394444249221351,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.008789625417233809,
+      "freeFront95thXM": 13.259371116596256,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 34.14070308045339
+    },
+    {
+      "frame": 23,
+      "timeS": 2.3,
+      "commandedSettlementM": 0.023,
+      "reactionNPerM": 279405.2672982,
+      "freeCentroidMotionM": [
+        0.0007706318039904619,
+        -0.007682560134827484,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0008335764303974433,
+        -0.0009223941410843822,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.00828863933573479,
+      "freeFront95thXM": 13.259633835323836,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 38.173168536531904
+    },
+    {
+      "frame": 24,
+      "timeS": 2.4,
+      "commandedSettlementM": 0.024,
+      "reactionNPerM": 296221.3177669,
+      "freeCentroidMotionM": [
+        0.0008340984337196455,
+        -0.007850626304616769,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0002731739580927069,
+        -0.0032476078994712262,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.00937674338509445,
+      "freeFront95thXM": 13.259750091526035,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 42.91172146264811
+    },
+    {
+      "frame": 25,
+      "timeS": 2.5,
+      "commandedSettlementM": 0.025,
+      "reactionNPerM": 301251.4738388,
+      "freeCentroidMotionM": [
+        0.0008197765984524214,
+        -0.00829408076477513,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -0.00017205339924180536,
+        -0.004552658963468871,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.009875304834660863,
+      "freeFront95thXM": 13.25977170230704,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 44.88917960435313
+    },
+    {
+      "frame": 26,
+      "timeS": 2.6,
+      "commandedSettlementM": 0.026,
+      "reactionNPerM": 315275.5560714,
+      "freeCentroidMotionM": [
+        0.0008289316463026015,
+        -0.008671631140870564,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0005136858362340178,
+        -0.0031093574353348807,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.010021732714145647,
+      "freeFront95thXM": 13.259846242555813,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 48.7767251551339
+    },
+    {
+      "frame": 27,
+      "timeS": 2.7,
+      "commandedSettlementM": 0.027,
+      "reactionNPerM": 329171.5648567,
+      "freeCentroidMotionM": [
+        0.0009022369225806406,
+        -0.008989332665473804,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0007842772659159479,
+        -0.00356984273007919,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.010407467637356484,
+      "freeFront95thXM": 13.260123659598229,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 52.99628514409218
+    },
+    {
+      "frame": 28,
+      "timeS": 2.8,
+      "commandedSettlementM": 0.028,
+      "reactionNPerM": 337372.7149133,
+      "freeCentroidMotionM": [
+        0.0009573468827993203,
+        -0.009340910495604824,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.00027792104854195457,
+        -0.00301081466104674,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.010878095748772408,
+      "freeFront95thXM": 13.26023084977353,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 56.138280022152514
+    },
+    {
+      "frame": 29,
+      "timeS": 2.9,
+      "commandedSettlementM": 0.029,
+      "reactionNPerM": 351460.4458904,
+      "freeCentroidMotionM": [
+        0.0009645500464020348,
+        -0.00956371929747678,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -0.00012163446229910192,
+        -0.0019673966460842253,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.010822542330726468,
+      "freeFront95thXM": 13.260238779155129,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 61.122434254042446
+    },
+    {
+      "frame": 30,
+      "timeS": 3.0,
+      "commandedSettlementM": 0.03,
+      "reactionNPerM": 365094.5201692,
+      "freeCentroidMotionM": [
+        0.0009725924086312171,
+        -0.009827259946851383,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.000369138285797856,
+        -0.0037440391716283853,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.011714016124464556,
+      "freeFront95thXM": 13.26041115456112,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 65.88858248911092
+    },
+    {
+      "frame": 31,
+      "timeS": 3.1,
+      "commandedSettlementM": 0.031,
+      "reactionNPerM": 372717.1881849,
+      "freeCentroidMotionM": [
+        0.0010270470768201417,
+        -0.010314557384437,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0005311920941019749,
+        -0.005277700319284764,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.012732846831025714,
+      "freeFront95thXM": 13.260557642403517,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 68.60844815250576
+    },
+    {
+      "frame": 32,
+      "timeS": 3.2,
+      "commandedSettlementM": 0.032,
+      "reactionNPerM": 383006.9934249,
+      "freeCentroidMotionM": [
+        0.0010802444292724884,
+        -0.010721166000951129,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.000450519520329463,
+        -0.002463990541819749,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.012397452217293181,
+      "freeFront95thXM": 13.260653150785078,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 72.79864351359821
+    },
+    {
+      "frame": 33,
+      "timeS": 3.3,
+      "commandedSettlementM": 0.033,
+      "reactionNPerM": 397778.8623514,
+      "freeCentroidMotionM": [
+        0.001102420884931151,
+        -0.010841628816592676,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -8.12296307781454e-05,
+        -0.0008070245838070797,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.012494995417078943,
+      "freeFront95thXM": 13.260831060363031,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 78.6884017716193
+    },
+    {
+      "frame": 34,
+      "timeS": 3.4,
+      "commandedSettlementM": 0.034,
+      "reactionNPerM": 411396.2271138,
+      "freeCentroidMotionM": [
+        0.0011062281975167806,
+        -0.011076429534856685,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.00023720719390254996,
+        -0.004267980705242133,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.013626159977536797,
+      "freeFront95thXM": 13.260891109157512,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 84.23613775444025
+    },
+    {
+      "frame": 35,
+      "timeS": 3.5,
+      "commandedSettlementM": 0.035,
+      "reactionNPerM": 417402.1800823,
+      "freeCentroidMotionM": [
+        0.0011508104696946822,
+        -0.011584375071884836,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0005200015025159907,
+        -0.004915260690191865,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.014215057527330696,
+      "freeFront95thXM": 13.260952134805741,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 87.03895278741388
+    },
+    {
+      "frame": 36,
+      "timeS": 3.6,
+      "commandedSettlementM": 0.036,
+      "reactionNPerM": 430466.73151,
+      "freeCentroidMotionM": [
+        0.0012136815262710904,
+        -0.01193422966480973,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.000484884666223114,
+        -0.0021787729415813964,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.01396398058161591,
+      "freeFront95thXM": 13.261168756335005,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 92.26141703407109
+    },
+    {
+      "frame": 37,
+      "timeS": 3.7,
+      "commandedSettlementM": 0.037,
+      "reactionNPerM": 444107.9314842,
+      "freeCentroidMotionM": [
+        0.0012325143745482313,
+        -0.012169997141905418,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -3.843092749616473e-05,
+        -0.00291734354030383,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.014667174997046816,
+      "freeFront95thXM": 13.261264515365417,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 97.90571549686103
+    },
+    {
+      "frame": 38,
+      "timeS": 3.8,
+      "commandedSettlementM": 0.038,
+      "reactionNPerM": 453152.5085028,
+      "freeCentroidMotionM": [
+        0.0012315975157164703,
+        -0.012484426202570214,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.00013697011962554882,
+        -0.0030803505385132465,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.015037688522815472,
+      "freeFront95thXM": 13.261227767283334,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 102.85010941052668
+    },
+    {
+      "frame": 39,
+      "timeS": 3.9,
+      "commandedSettlementM": 0.039,
+      "reactionNPerM": 466349.9357379,
+      "freeCentroidMotionM": [
+        0.0012827686963653886,
+        -0.012752933077155203,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0007403217020440591,
+        -0.0026375766338480803,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.015351313396551467,
+      "freeFront95thXM": 13.261280672561993,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 108.63830734771597
+    },
+    {
+      "frame": 40,
+      "timeS": 4.0,
+      "commandedSettlementM": 0.04,
+      "reactionNPerM": 479069.3343824,
+      "freeCentroidMotionM": [
+        0.0013510870306769243,
+        -0.01309986748792721,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0004616318390656285,
+        -0.0045234387638082366,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.016175722276094092,
+      "freeFront95thXM": 13.261539201183615,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 114.27154636571018
+    },
+    {
+      "frame": 41,
+      "timeS": 4.1,
+      "commandedSettlementM": 0.041,
+      "reactionNPerM": 486448.4132941,
+      "freeCentroidMotionM": [
+        0.001363907545295326,
+        -0.013575220475511523,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -0.00022003629142639826,
+        -0.004214643652267018,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.01660092132857516,
+      "freeFront95thXM": 13.261556924799097,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 118.11555145428567
+    },
+    {
+      "frame": 42,
+      "timeS": 4.2,
+      "commandedSettlementM": 0.042,
+      "reactionNPerM": 498682.4540872,
+      "freeCentroidMotionM": [
+        0.0013636086261065684,
+        -0.013845698494685492,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0002876630516363591,
+        -0.0013733553797857594,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.016623987018626215,
+      "freeFront95thXM": 13.261499736763065,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 124.32449119658354
+    },
+    {
+      "frame": 43,
+      "timeS": 4.3,
+      "commandedSettlementM": 0.043,
+      "reactionNPerM": 513378.7775605,
+      "freeCentroidMotionM": [
+        0.0014147089058428265,
+        -0.013970833572907496,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0007780565447085397,
+        -0.002022294490008015,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.017175200617733782,
+      "freeFront95thXM": 13.26172520471836,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 131.90129255852344
+    },
+    {
+      "frame": 44,
+      "timeS": 4.4,
+      "commandedSettlementM": 0.044,
+      "reactionNPerM": 523496.0592661,
+      "freeCentroidMotionM": [
+        0.001482938039500602,
+        -0.014327699990272702,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.00034536958974667055,
+        -0.004949694395015123,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.018207245753546025,
+      "freeFront95thXM": 13.261750598184433,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 137.37862023289756
+    },
+    {
+      "frame": 45,
+      "timeS": 4.5,
+      "commandedSettlementM": 0.045,
+      "reactionNPerM": 528892.4834917,
+      "freeCentroidMotionM": [
+        0.001500667488391119,
+        -0.014824043952576102,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        -1.0134811337724266e-05,
+        -0.004037189615792192,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.018529054879322073,
+      "freeFront95thXM": 13.261791284338004,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 140.57952171331735
+    },
+    {
+      "frame": 46,
+      "timeS": 4.6,
+      "commandedSettlementM": 0.046,
+      "reactionNPerM": 542657.8225517,
+      "freeCentroidMotionM": [
+        0.001493681408960025,
+        -0.015062338769152635,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.00010587367816283332,
+        -0.0012837945850928247,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.018606853157624677,
+      "freeFront95thXM": 13.261932397962992,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 148.30472937733825
+    },
+    {
+      "frame": 47,
+      "timeS": 4.7,
+      "commandedSettlementM": 0.047,
+      "reactionNPerM": 553337.7744915,
+      "freeCentroidMotionM": [
+        0.0015327365037744332,
+        -0.015228683472077183,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0006157656600868841,
+        -0.002459793703484824,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.019444121570042844,
+      "freeFront95thXM": 13.26191481364879,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 155.1426737248131
+    },
+    {
+      "frame": 48,
+      "timeS": 4.8,
+      "commandedSettlementM": 0.048,
+      "reactionNPerM": 558500.8107607,
+      "freeCentroidMotionM": [
+        0.001606410579835447,
+        -0.015520046421854915,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0006162249084528322,
+        -0.002910381684383211,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.019805181316009047,
+      "freeFront95thXM": 13.261967879954838,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 159.88034660380322
+    },
+    {
+      "frame": 49,
+      "timeS": 4.9,
+      "commandedSettlementM": 0.049,
+      "reactionNPerM": 571567.9126556,
+      "freeCentroidMotionM": [
+        0.0016442456869231216,
+        -0.015796049964852586,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        2.1494748188341917e-05,
+        -0.002975440665602935,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.020341612060309138,
+      "freeFront95thXM": 13.262114118110109,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 167.2418251786479
+    },
+    {
+      "frame": 50,
+      "timeS": 5.0,
+      "commandedSettlementM": 0.05,
+      "reactionNPerM": 577035.3342336,
+      "freeCentroidMotionM": [
+        0.0016382115734697403,
+        -0.01614156459529005,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.00011033119928305677,
+        -0.0037207522676844917,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.020918984244136903,
+      "freeFront95thXM": 13.262170224513183,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 171.4854438326869
+    },
+    {
+      "frame": 51,
+      "timeS": 5.1,
+      "commandedSettlementM": 0.051,
+      "reactionNPerM": 584900.3871178,
+      "freeCentroidMotionM": [
+        0.001673021922435988,
+        -0.016455618361429808,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0005441365963658549,
+        -0.0023980815005656764,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.021216649522983397,
+      "freeFront95thXM": 13.26218746786368,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 177.61360318473427
+    },
+    {
+      "frame": 52,
+      "timeS": 5.2,
+      "commandedSettlementM": 0.052,
+      "reactionNPerM": 595590.5725651,
+      "freeCentroidMotionM": [
+        0.0017445909231048138,
+        -0.016625506814868664,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0007070502239901505,
+        -0.0013767728207400834,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.02165550616466227,
+      "freeFront95thXM": 13.262298487478779,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 184.99119284623077
+    },
+    {
+      "frame": 53,
+      "timeS": 5.3,
+      "commandedSettlementM": 0.053,
+      "reactionNPerM": 600785.4885095,
+      "freeCentroidMotionM": [
+        0.0018005084750104447,
+        -0.016800425083991558,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0003959146811561684,
+        -0.0023744203986409895,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.022316713172729152,
+      "freeFront95thXM": 13.262429271523953,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 189.47681506080087
+    },
+    {
+      "frame": 54,
+      "timeS": 5.4,
+      "commandedSettlementM": 0.054,
+      "reactionNPerM": 607951.7062228,
+      "freeCentroidMotionM": [
+        0.0018272185839369433,
+        -0.017097099712234255,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.00025670840063350003,
+        -0.003521424568429821,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.022803878195571982,
+      "freeFront95thXM": 13.262468696641195,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 193.82649904219613
+    },
+    {
+      "frame": 55,
+      "timeS": 5.5,
+      "commandedSettlementM": 0.055,
+      "reactionNPerM": 615698.543747,
+      "freeCentroidMotionM": [
+        0.0018493959281283671,
+        -0.017450556167136762,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0003528813211281327,
+        -0.003220343367957857,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.02329541164954817,
+      "freeFront95thXM": 13.262579221892626,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 199.39812226427534
+    },
+    {
+      "frame": 56,
+      "timeS": 5.6,
+      "commandedSettlementM": 0.056,
+      "reactionNPerM": 622375.3850288,
+      "freeCentroidMotionM": [
+        0.0019030194958897905,
+        -0.017699060290750857,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0006251378612854049,
+        -0.0017733408893660105,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.023791303723594004,
+      "freeFront95thXM": 13.262706350744333,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 203.87236068338467
+    },
+    {
+      "frame": 57,
+      "timeS": 5.7,
+      "commandedSettlementM": 0.057,
+      "reactionNPerM": 628164.49797,
+      "freeCentroidMotionM": [
+        0.001968907359725173,
+        -0.017826880837451632,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0007447277216822505,
+        -0.0011749564228002685,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.024383117825958187,
+      "freeFront95thXM": 13.262775506095746,
+      "sampledApexActiveCount": 0,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0,
+      "geometricSpringEnergyJPerM": 208.24040476874578
+    },
+    {
+      "frame": 58,
+      "timeS": 5.8,
+      "commandedSettlementM": 0.058,
+      "reactionNPerM": 632436.4722016,
+      "freeCentroidMotionM": [
+        0.0020382874584788458,
+        -0.01797831188259652,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0004958922985310884,
+        -0.0020566998702691032,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.024904205958560688,
+      "freeFront95thXM": 13.2628200042763,
+      "sampledApexActiveCount": 1,
+      "maxAccumulatedPlasticVolumetricStrain": 0.00012086660275408547,
+      "geometricSpringEnergyJPerM": 212.05663157988462
+    },
+    {
+      "frame": 59,
+      "timeS": 5.9,
+      "commandedSettlementM": 0.059,
+      "reactionNPerM": 638091.8643617,
+      "freeCentroidMotionM": [
+        0.0020688838826452647,
+        -0.0182439980611474,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.00022627804186747206,
+        -0.0031103654368232025,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.025536825742689735,
+      "freeFront95thXM": 13.262813883305945,
+      "sampledApexActiveCount": 1,
+      "maxAccumulatedPlasticVolumetricStrain": 0.00044853638281829933,
+      "geometricSpringEnergyJPerM": 215.67208346549
+    },
+    {
+      "frame": 60,
+      "timeS": 6.0,
+      "commandedSettlementM": 0.06,
+      "reactionNPerM": 642296.7774579,
+      "freeCentroidMotionM": [
+        0.0021062881898842325,
+        -0.0185212970923898,
+        0.0
+      ],
+      "freeMeanVelocityMPerS": [
+        0.0005948746291379901,
+        -0.0021849190694037466,
+        0.0
+      ],
+      "freeRmsSpeedMPerS": 0.02607963049154742,
+      "freeFront95thXM": 13.262816163768717,
+      "sampledApexActiveCount": 1,
+      "maxAccumulatedPlasticVolumetricStrain": 0.0007280682071587121,
+      "geometricSpringEnergyJPerM": 216.9171573007372
+    }
+  ],
+  "comparisonStrict58SavedPrefix": {
+    "scope": "Exact recorded Decimal commanded settlements and native ID alignment, no interpolation or convergence PASS",
+    "matchedSavedStates": 58,
+    "states": [
+      {
+        "commandedSettlementM": 0.0,
+        "currentFrame": 0,
+        "referenceFrame": 0,
+        "currentReactionNPerM": 0.0,
+        "referenceReactionNPerM": 0.0,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": null,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.001,
+        "currentFrame": 1,
+        "referenceFrame": 1,
+        "currentReactionNPerM": 14985.42898304,
+        "referenceReactionNPerM": 14985.42898304,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          6.224610587402782e-06,
+          -0.0001829629926964559,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          6.224610587402782e-06,
+          -0.0001829629926964559,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.002,
+        "currentFrame": 2,
+        "referenceFrame": 2,
+        "currentReactionNPerM": 22425.7640528,
+        "referenceReactionNPerM": 22425.7640528,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          7.04954873660601e-05,
+          -0.0006887304458939463,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          7.04954873660601e-05,
+          -0.0006887304458939463,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.003,
+        "currentFrame": 3,
+        "referenceFrame": 3,
+        "currentReactionNPerM": 35088.9166657,
+        "referenceReactionNPerM": 35088.9166657,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.00013002136615532697,
+          -0.0011060116689805115,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.00013002136615532697,
+          -0.0011060116689805115,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.004,
+        "currentFrame": 4,
+        "referenceFrame": 4,
+        "currentReactionNPerM": 49812.18620131,
+        "referenceReactionNPerM": 49812.18620131,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.00013711399348190746,
+          -0.0013472675663367432,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.00013711399348190746,
+          -0.0013472675663367432,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.005,
+        "currentFrame": 5,
+        "referenceFrame": 5,
+        "currentReactionNPerM": 61361.85647918,
+        "referenceReactionNPerM": 61361.85647918,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.00012989218063662252,
+          -0.0016418786193748269,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.00012989218063662252,
+          -0.0016418786193748269,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.006,
+        "currentFrame": 6,
+        "referenceFrame": 6,
+        "currentReactionNPerM": 73340.37241364,
+        "referenceReactionNPerM": 73340.37241364,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0001969305829233806,
+          -0.0019603348078309005,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0001969305829233806,
+          -0.0019603348078309005,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.007,
+        "currentFrame": 7,
+        "referenceFrame": 7,
+        "currentReactionNPerM": 85787.24966966,
+        "referenceReactionNPerM": 85787.24966966,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.00026785446902717586,
+          -0.002297382462625248,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.00026785446902717586,
+          -0.002297382462625248,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.008,
+        "currentFrame": 8,
+        "referenceFrame": 8,
+        "currentReactionNPerM": 97895.23764042,
+        "referenceReactionNPerM": 97895.23764042,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0002721068812777761,
+          -0.0027375351284871195,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0002721068812777761,
+          -0.0027375351284871195,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.009,
+        "currentFrame": 9,
+        "referenceFrame": 9,
+        "currentReactionNPerM": 107544.5751239,
+        "referenceReactionNPerM": 107544.5751239,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0002560074895459514,
+          -0.003108389719824695,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0002560074895459514,
+          -0.003108389719824695,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.01,
+        "currentFrame": 10,
+        "referenceFrame": 10,
+        "currentReactionNPerM": 123557.4701172,
+        "referenceReactionNPerM": 123557.4701172,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0003190219703983122,
+          -0.003242541770889424,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0003190219703983122,
+          -0.003242541770889424,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.011,
+        "currentFrame": 11,
+        "referenceFrame": 11,
+        "currentReactionNPerM": 138290.6771897,
+        "referenceReactionNPerM": 138290.6771897,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0004036973864737086,
+          -0.003542799225772692,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0004036973864737086,
+          -0.003542799225772692,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.012,
+        "currentFrame": 12,
+        "referenceFrame": 12,
+        "currentReactionNPerM": 142057.7069447,
+        "referenceReactionNPerM": 142057.7069447,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0004117268458527794,
+          -0.004112726127036607,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0004117268458527794,
+          -0.004112726127036607,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.013,
+        "currentFrame": 13,
+        "referenceFrame": 13,
+        "currentReactionNPerM": 158384.465872,
+        "referenceReactionNPerM": 158384.465872,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.00039167040967370403,
+          -0.004422868490969309,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.00039167040967370403,
+          -0.004422868490969309,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.014,
+        "currentFrame": 14,
+        "referenceFrame": 14,
+        "currentReactionNPerM": 173927.1573987,
+        "referenceReactionNPerM": 173927.1573987,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0004452779307778132,
+          -0.004602502698420528,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0004452779307778132,
+          -0.004602502698420528,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.015,
+        "currentFrame": 15,
+        "referenceFrame": 15,
+        "currentReactionNPerM": 182172.0820308,
+        "referenceReactionNPerM": 182172.0820308,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0005267148528423808,
+          -0.004961795511726207,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0005267148528423808,
+          -0.004961795511726207,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.016,
+        "currentFrame": 16,
+        "referenceFrame": 16,
+        "currentReactionNPerM": 195042.8718744,
+        "referenceReactionNPerM": 195042.8718744,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.000553914299316793,
+          -0.005324574157363882,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.000553914299316793,
+          -0.005324574157363882,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.017,
+        "currentFrame": 17,
+        "referenceFrame": 17,
+        "currentReactionNPerM": 208408.3356084,
+        "referenceReactionNPerM": 208408.3356084,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0005417849356018219,
+          -0.005681395870787223,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0005417849356018219,
+          -0.005681395870787223,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.018,
+        "currentFrame": 18,
+        "referenceFrame": 18,
+        "currentReactionNPerM": 219505.1703713,
+        "referenceReactionNPerM": 219505.1703713,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0005665434145391686,
+          -0.006082895954856255,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0005665434145391686,
+          -0.006082895954856255,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.019,
+        "currentFrame": 19,
+        "referenceFrame": 19,
+        "currentReactionNPerM": 231283.0501747,
+        "referenceReactionNPerM": 231283.0501747,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0006450666931447832,
+          -0.006357820114273755,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0006450666931447832,
+          -0.006357820114273755,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.02,
+        "currentFrame": 20,
+        "referenceFrame": 20,
+        "currentReactionNPerM": 245604.4089027,
+        "referenceReactionNPerM": 245604.4089027,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0007043462717035553,
+          -0.006540028481469845,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0007043462717035553,
+          -0.006540028481469845,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.021,
+        "currentFrame": 21,
+        "referenceFrame": 21,
+        "currentReactionNPerM": 258142.8235783,
+        "referenceReactionNPerM": 258142.8235783,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0006811088323335087,
+          -0.006950104915509709,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0006811088323335087,
+          -0.006950104915509709,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.022,
+        "currentFrame": 22,
+        "referenceFrame": 22,
+        "currentReactionNPerM": 263820.0406513,
+        "referenceReactionNPerM": 263820.0406513,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0006899639332706891,
+          -0.007476636891822042,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0006899639332706891,
+          -0.007476636891822042,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.023,
+        "currentFrame": 23,
+        "referenceFrame": 23,
+        "currentReactionNPerM": 279405.2672982,
+        "referenceReactionNPerM": 279405.2672982,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0007706318039904619,
+          -0.007682560134827484,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0007706318039904619,
+          -0.007682560134827484,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.024,
+        "currentFrame": 24,
+        "referenceFrame": 24,
+        "currentReactionNPerM": 296221.3177669,
+        "referenceReactionNPerM": 296221.3177669,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0008340984337196455,
+          -0.007850626304616769,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0008340984337196455,
+          -0.007850626304616769,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.025,
+        "currentFrame": 25,
+        "referenceFrame": 25,
+        "currentReactionNPerM": 301251.4738388,
+        "referenceReactionNPerM": 301251.4738388,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0008197765984524214,
+          -0.00829408076477513,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0008197765984524214,
+          -0.00829408076477513,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.026,
+        "currentFrame": 26,
+        "referenceFrame": 26,
+        "currentReactionNPerM": 315275.5560714,
+        "referenceReactionNPerM": 315275.5560714,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0008289316463026015,
+          -0.008671631140870564,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0008289316463026015,
+          -0.008671631140870564,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.027,
+        "currentFrame": 27,
+        "referenceFrame": 27,
+        "currentReactionNPerM": 329171.5648567,
+        "referenceReactionNPerM": 329171.5648567,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0009022369225806406,
+          -0.008989332665473804,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0009022369225806406,
+          -0.008989332665473804,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.028,
+        "currentFrame": 28,
+        "referenceFrame": 28,
+        "currentReactionNPerM": 337372.7149133,
+        "referenceReactionNPerM": 337372.7149133,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0009573468827993203,
+          -0.009340910495604824,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0009573468827993203,
+          -0.009340910495604824,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.029,
+        "currentFrame": 29,
+        "referenceFrame": 29,
+        "currentReactionNPerM": 351460.4458904,
+        "referenceReactionNPerM": 351460.4458904,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0009645500464020348,
+          -0.00956371929747678,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0009645500464020348,
+          -0.00956371929747678,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.03,
+        "currentFrame": 30,
+        "referenceFrame": 30,
+        "currentReactionNPerM": 365094.5201692,
+        "referenceReactionNPerM": 365094.5201692,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0009725924086312171,
+          -0.009827259946851383,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0009725924086312171,
+          -0.009827259946851383,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.031,
+        "currentFrame": 31,
+        "referenceFrame": 31,
+        "currentReactionNPerM": 372717.1881849,
+        "referenceReactionNPerM": 372717.1881849,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0010270470768201417,
+          -0.010314557384437,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0010270470768201417,
+          -0.010314557384437,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.032,
+        "currentFrame": 32,
+        "referenceFrame": 32,
+        "currentReactionNPerM": 383006.9934249,
+        "referenceReactionNPerM": 383006.9934249,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0010802444292724884,
+          -0.010721166000951129,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0010802444292724884,
+          -0.010721166000951129,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.033,
+        "currentFrame": 33,
+        "referenceFrame": 33,
+        "currentReactionNPerM": 397778.8623514,
+        "referenceReactionNPerM": 397778.8623514,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.001102420884931151,
+          -0.010841628816592676,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001102420884931151,
+          -0.010841628816592676,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.034,
+        "currentFrame": 34,
+        "referenceFrame": 34,
+        "currentReactionNPerM": 411396.2271138,
+        "referenceReactionNPerM": 411396.2271138,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0011062281975167806,
+          -0.011076429534856685,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0011062281975167806,
+          -0.011076429534856685,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.035,
+        "currentFrame": 35,
+        "referenceFrame": 35,
+        "currentReactionNPerM": 417402.1800823,
+        "referenceReactionNPerM": 417402.1800823,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0011508104696946822,
+          -0.011584375071884836,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0011508104696946822,
+          -0.011584375071884836,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.036,
+        "currentFrame": 36,
+        "referenceFrame": 36,
+        "currentReactionNPerM": 430466.73151,
+        "referenceReactionNPerM": 430466.73151,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0012136815262710904,
+          -0.01193422966480973,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0012136815262710904,
+          -0.01193422966480973,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.037,
+        "currentFrame": 37,
+        "referenceFrame": 37,
+        "currentReactionNPerM": 444107.9314842,
+        "referenceReactionNPerM": 444107.9314842,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0012325143745482313,
+          -0.012169997141905418,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0012325143745482313,
+          -0.012169997141905418,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.038,
+        "currentFrame": 38,
+        "referenceFrame": 38,
+        "currentReactionNPerM": 453152.5085028,
+        "referenceReactionNPerM": 453152.5085028,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0012315975157164703,
+          -0.012484426202570214,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0012315975157164703,
+          -0.012484426202570214,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.039,
+        "currentFrame": 39,
+        "referenceFrame": 39,
+        "currentReactionNPerM": 466349.9357379,
+        "referenceReactionNPerM": 466349.9357379,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0012827686963653886,
+          -0.012752933077155203,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0012827686963653886,
+          -0.012752933077155203,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.04,
+        "currentFrame": 40,
+        "referenceFrame": 40,
+        "currentReactionNPerM": 479069.3343824,
+        "referenceReactionNPerM": 479069.3343824,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0013510870306769243,
+          -0.01309986748792721,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0013510870306769243,
+          -0.01309986748792721,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.041,
+        "currentFrame": 41,
+        "referenceFrame": 41,
+        "currentReactionNPerM": 486448.4132941,
+        "referenceReactionNPerM": 486448.4132941,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.001363907545295326,
+          -0.013575220475511523,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001363907545295326,
+          -0.013575220475511523,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.042,
+        "currentFrame": 42,
+        "referenceFrame": 42,
+        "currentReactionNPerM": 498682.4540872,
+        "referenceReactionNPerM": 498682.4540872,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0013636086261065684,
+          -0.013845698494685492,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0013636086261065684,
+          -0.013845698494685492,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.043,
+        "currentFrame": 43,
+        "referenceFrame": 43,
+        "currentReactionNPerM": 513378.7775605,
+        "referenceReactionNPerM": 513378.7775605,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0014147089058428265,
+          -0.013970833572907496,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0014147089058428265,
+          -0.013970833572907496,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.044,
+        "currentFrame": 44,
+        "referenceFrame": 44,
+        "currentReactionNPerM": 523496.0592661,
+        "referenceReactionNPerM": 523496.0592661,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.001482938039500602,
+          -0.014327699990272702,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001482938039500602,
+          -0.014327699990272702,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.045,
+        "currentFrame": 45,
+        "referenceFrame": 45,
+        "currentReactionNPerM": 528892.4834917,
+        "referenceReactionNPerM": 528892.4834917,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.001500667488391119,
+          -0.014824043952576102,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001500667488391119,
+          -0.014824043952576102,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.046,
+        "currentFrame": 46,
+        "referenceFrame": 46,
+        "currentReactionNPerM": 542657.8225517,
+        "referenceReactionNPerM": 542657.8225517,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.001493681408960025,
+          -0.015062338769152635,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001493681408960025,
+          -0.015062338769152635,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.047,
+        "currentFrame": 47,
+        "referenceFrame": 47,
+        "currentReactionNPerM": 553337.7744915,
+        "referenceReactionNPerM": 553337.7744915,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0015327365037744332,
+          -0.015228683472077183,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0015327365037744332,
+          -0.015228683472077183,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.048,
+        "currentFrame": 48,
+        "referenceFrame": 48,
+        "currentReactionNPerM": 558500.8107607,
+        "referenceReactionNPerM": 558500.8107607,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.001606410579835447,
+          -0.015520046421854915,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001606410579835447,
+          -0.015520046421854915,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.049,
+        "currentFrame": 49,
+        "referenceFrame": 49,
+        "currentReactionNPerM": 571567.9126556,
+        "referenceReactionNPerM": 571567.9126556,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0016442456869231216,
+          -0.015796049964852586,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0016442456869231216,
+          -0.015796049964852586,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.05,
+        "currentFrame": 50,
+        "referenceFrame": 50,
+        "currentReactionNPerM": 577035.3342336,
+        "referenceReactionNPerM": 577035.3342336,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0016382115734697403,
+          -0.01614156459529005,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0016382115734697403,
+          -0.01614156459529005,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.051,
+        "currentFrame": 51,
+        "referenceFrame": 51,
+        "currentReactionNPerM": 584900.3871178,
+        "referenceReactionNPerM": 584900.3871178,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.001673021922435988,
+          -0.016455618361429808,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001673021922435988,
+          -0.016455618361429808,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.052,
+        "currentFrame": 52,
+        "referenceFrame": 52,
+        "currentReactionNPerM": 595590.5725651,
+        "referenceReactionNPerM": 595590.5725651,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0017445909231048138,
+          -0.016625506814868664,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0017445909231048138,
+          -0.016625506814868664,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.053,
+        "currentFrame": 53,
+        "referenceFrame": 53,
+        "currentReactionNPerM": 600785.4885095,
+        "referenceReactionNPerM": 600785.4885095,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0018005084750104447,
+          -0.016800425083991558,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0018005084750104447,
+          -0.016800425083991558,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.054,
+        "currentFrame": 54,
+        "referenceFrame": 54,
+        "currentReactionNPerM": 607951.7062228,
+        "referenceReactionNPerM": 607951.7062228,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0018272185839369433,
+          -0.017097099712234255,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0018272185839369433,
+          -0.017097099712234255,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.055,
+        "currentFrame": 55,
+        "referenceFrame": 55,
+        "currentReactionNPerM": 615698.543747,
+        "referenceReactionNPerM": 615698.543747,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0018493959281283671,
+          -0.017450556167136762,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0018493959281283671,
+          -0.017450556167136762,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.056,
+        "currentFrame": 56,
+        "referenceFrame": 56,
+        "currentReactionNPerM": 622375.3850288,
+        "referenceReactionNPerM": 622375.3850288,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0019030194958897905,
+          -0.017699060290750857,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0019030194958897905,
+          -0.017699060290750857,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      },
+      {
+        "commandedSettlementM": 0.057,
+        "currentFrame": 57,
+        "referenceFrame": 57,
+        "currentReactionNPerM": 628164.49797,
+        "referenceReactionNPerM": 628164.49797,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": 0.0,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.001968907359725173,
+          -0.017826880837451632,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001968907359725173,
+          -0.017826880837451632,
+          0.0
+        ],
+        "maxAbsPaperKpsDifference": 0.0,
+        "maxAbsCohesionDifferencePa": 0.0
+      }
+    ],
+    "initialMaxPositionDifferenceM": 0.0,
+    "referenceNativeComplete": false
+  },
+  "comparisonSoil1": {
+    "scope": "Exact recorded Decimal commanded settlements and native ID alignment, no interpolation or convergence PASS",
+    "matchedSavedStates": 61,
+    "states": [
+      {
+        "commandedSettlementM": 0.0,
+        "currentFrame": 0,
+        "referenceFrame": 0,
+        "currentReactionNPerM": 0.0,
+        "referenceReactionNPerM": 0.0,
+        "reactionDifferenceNPerM": 0.0,
+        "reactionDifferenceOverAbsReferenceOrNull": null,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0,
+        "currentFreeCentroidMotionM": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.001,
+        "currentFrame": 1,
+        "referenceFrame": 1,
+        "currentReactionNPerM": 14985.42898304,
+        "referenceReactionNPerM": 14995.54535329,
+        "reactionDifferenceNPerM": -10.116370249999818,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.000674625031078333,
+        "maxLoadingDisplacementFieldDifferenceM": 6.209062780598377e-07,
+        "rmsLoadingDisplacementFieldDifferenceM": 2.974989919484363e-07,
+        "currentFreeCentroidMotionM": [
+          6.224610587402782e-06,
+          -0.0001829629926964559,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          6.166883557694146e-06,
+          -0.00018260867403626708,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.002,
+        "currentFrame": 2,
+        "referenceFrame": 2,
+        "currentReactionNPerM": 22425.7640528,
+        "referenceReactionNPerM": 22441.22341864,
+        "reactionDifferenceNPerM": -15.45936583999719,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0006888824887842978,
+        "maxLoadingDisplacementFieldDifferenceM": 1.6793753941636847e-06,
+        "rmsLoadingDisplacementFieldDifferenceM": 6.88477837242001e-07,
+        "currentFreeCentroidMotionM": [
+          7.04954873660601e-05,
+          -0.0006887304458939463,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          7.03408181912231e-05,
+          -0.0006879714782907667,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.003,
+        "currentFrame": 3,
+        "referenceFrame": 3,
+        "currentReactionNPerM": 35088.9166657,
+        "referenceReactionNPerM": 35100.19249461,
+        "reactionDifferenceNPerM": -11.275828909994743,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0003212469251194638,
+        "maxLoadingDisplacementFieldDifferenceM": 4.949913130948367e-06,
+        "rmsLoadingDisplacementFieldDifferenceM": 7.237339578159089e-07,
+        "currentFreeCentroidMotionM": [
+          0.00013002136615532697,
+          -0.0011060116689805115,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.00012978806935106424,
+          -0.001105354656811379,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.004,
+        "currentFrame": 4,
+        "referenceFrame": 4,
+        "currentReactionNPerM": 49812.18620131,
+        "referenceReactionNPerM": 49822.42585427,
+        "reactionDifferenceNPerM": -10.239652959993691,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.00020552297051822715,
+        "maxLoadingDisplacementFieldDifferenceM": 8.344798966663367e-06,
+        "rmsLoadingDisplacementFieldDifferenceM": 9.050527274153155e-07,
+        "currentFreeCentroidMotionM": [
+          0.00013711399348190746,
+          -0.0013472675663367432,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.00013669684738609023,
+          -0.001346804717311252,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.005,
+        "currentFrame": 5,
+        "referenceFrame": 5,
+        "currentReactionNPerM": 61361.85647918,
+        "referenceReactionNPerM": 61381.06537819,
+        "reactionDifferenceNPerM": -19.20889900999464,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.00031294502452249663,
+        "maxLoadingDisplacementFieldDifferenceM": 7.187406859080682e-06,
+        "rmsLoadingDisplacementFieldDifferenceM": 1.1868911384101993e-06,
+        "currentFreeCentroidMotionM": [
+          0.00012989218063662252,
+          -0.0016418786193748269,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0001292041455174096,
+          -0.0016414162945669656,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.006,
+        "currentFrame": 6,
+        "referenceFrame": 6,
+        "currentReactionNPerM": 73340.37241364,
+        "referenceReactionNPerM": 73366.14154681,
+        "reactionDifferenceNPerM": -25.769133170004352,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0003512401310291451,
+        "maxLoadingDisplacementFieldDifferenceM": 7.454873621191349e-06,
+        "rmsLoadingDisplacementFieldDifferenceM": 1.016563796217714e-06,
+        "currentFreeCentroidMotionM": [
+          0.0001969305829233806,
+          -0.0019603348078309005,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0001963245409937833,
+          -0.001959714643184361,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.007,
+        "currentFrame": 7,
+        "referenceFrame": 7,
+        "currentReactionNPerM": 85787.24966966,
+        "referenceReactionNPerM": 85812.11458917,
+        "reactionDifferenceNPerM": -24.864919510000618,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0002897600138283822,
+        "maxLoadingDisplacementFieldDifferenceM": 9.073933965748311e-06,
+        "rmsLoadingDisplacementFieldDifferenceM": 1.198466501450668e-06,
+        "currentFreeCentroidMotionM": [
+          0.00026785446902717586,
+          -0.002297382462625248,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0002674120189280111,
+          -0.002296399471906837,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.008,
+        "currentFrame": 8,
+        "referenceFrame": 8,
+        "currentReactionNPerM": 97895.23764042,
+        "referenceReactionNPerM": 97943.13428813,
+        "reactionDifferenceNPerM": -47.89664770998934,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0004890250660049999,
+        "maxLoadingDisplacementFieldDifferenceM": 1.2142415437882342e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 1.8085071480635713e-06,
+        "currentFreeCentroidMotionM": [
+          0.0002721068812777761,
+          -0.0027375351284871195,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0002713181448926294,
+          -0.002736306682130481,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.009,
+        "currentFrame": 9,
+        "referenceFrame": 9,
+        "currentReactionNPerM": 107544.5751239,
+        "referenceReactionNPerM": 107581.004149,
+        "reactionDifferenceNPerM": -36.429025100005674,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.00033861949317326846,
+        "maxLoadingDisplacementFieldDifferenceM": 1.3580577994048868e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 2.0217533378888665e-06,
+        "currentFreeCentroidMotionM": [
+          0.0002560074895459514,
+          -0.003108389719824695,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0002546971950346833,
+          -0.003107708797616699,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.01,
+        "currentFrame": 10,
+        "referenceFrame": 10,
+        "currentReactionNPerM": 123557.4701172,
+        "referenceReactionNPerM": 123578.7041927,
+        "reactionDifferenceNPerM": -21.234075499989558,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.00017182633236612212,
+        "maxLoadingDisplacementFieldDifferenceM": 1.4067327824489308e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 1.8831404980945227e-06,
+        "currentFreeCentroidMotionM": [
+          0.0003190219703983122,
+          -0.003242541770889424,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.00031786072771812675,
+          -0.003242175444655096,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.011,
+        "currentFrame": 11,
+        "referenceFrame": 11,
+        "currentReactionNPerM": 138290.6771897,
+        "referenceReactionNPerM": 138331.1703418,
+        "reactionDifferenceNPerM": -40.49315209998167,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0002927261585362711,
+        "maxLoadingDisplacementFieldDifferenceM": 1.589896701162202e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 2.0655462268335212e-06,
+        "currentFreeCentroidMotionM": [
+          0.0004036973864737086,
+          -0.003542799225772692,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0004029039401265685,
+          -0.003541554885864609,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.012,
+        "currentFrame": 12,
+        "referenceFrame": 12,
+        "currentReactionNPerM": 142057.7069447,
+        "referenceReactionNPerM": 142113.3814114,
+        "reactionDifferenceNPerM": -55.674466700002085,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0003917609034917806,
+        "maxLoadingDisplacementFieldDifferenceM": 2.3818991761145415e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 2.9066395329263856e-06,
+        "currentFreeCentroidMotionM": [
+          0.0004117268458527794,
+          -0.004112726127036607,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.00041056959637696523,
+          -0.004110919723840858,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.013,
+        "currentFrame": 13,
+        "referenceFrame": 13,
+        "currentReactionNPerM": 158384.465872,
+        "referenceReactionNPerM": 158441.3795428,
+        "reactionDifferenceNPerM": -56.913670799985994,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.00035920963932664965,
+        "maxLoadingDisplacementFieldDifferenceM": 3.582013483620179e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 4.192613469033123e-06,
+        "currentFreeCentroidMotionM": [
+          0.00039167040967370403,
+          -0.004422868490969309,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0003892686395411265,
+          -0.004421346320001209,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.014,
+        "currentFrame": 14,
+        "referenceFrame": 14,
+        "currentReactionNPerM": 173927.1573987,
+        "referenceReactionNPerM": 174019.1553434,
+        "reactionDifferenceNPerM": -91.99794470000779,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0005286656202787792,
+        "maxLoadingDisplacementFieldDifferenceM": 3.9260419118523904e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 5.247063864253893e-06,
+        "currentFreeCentroidMotionM": [
+          0.0004452779307778132,
+          -0.004602502698420528,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.00044236786210581126,
+          -0.004601022310647438,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.015,
+        "currentFrame": 15,
+        "referenceFrame": 15,
+        "currentReactionNPerM": 182172.0820308,
+        "referenceReactionNPerM": 182259.7805948,
+        "reactionDifferenceNPerM": -87.69856399999117,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.00048117343120785734,
+        "maxLoadingDisplacementFieldDifferenceM": 3.300958478867014e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 4.861358555858717e-06,
+        "currentFreeCentroidMotionM": [
+          0.0005267148528423808,
+          -0.004961795511726207,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0005244989505708634,
+          -0.004960416322379255,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.016,
+        "currentFrame": 16,
+        "referenceFrame": 16,
+        "currentReactionNPerM": 195042.8718744,
+        "referenceReactionNPerM": 195100.1455734,
+        "reactionDifferenceNPerM": -57.273698999983026,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.00029356051391789294,
+        "maxLoadingDisplacementFieldDifferenceM": 3.4178643030888225e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 4.245989981920051e-06,
+        "currentFreeCentroidMotionM": [
+          0.000553914299316793,
+          -0.005324574157363882,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0005523288009299238,
+          -0.0053230353219073405,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.017,
+        "currentFrame": 17,
+        "referenceFrame": 17,
+        "currentReactionNPerM": 208408.3356084,
+        "referenceReactionNPerM": 208501.1953494,
+        "reactionDifferenceNPerM": -92.85974099999294,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.00044536790709703795,
+        "maxLoadingDisplacementFieldDifferenceM": 3.991022486173896e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 5.229870002123166e-06,
+        "currentFreeCentroidMotionM": [
+          0.0005417849356018219,
+          -0.005681395870787223,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0005393177637747174,
+          -0.005678752481398879,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.018,
+        "currentFrame": 18,
+        "referenceFrame": 18,
+        "currentReactionNPerM": 219505.1703713,
+        "referenceReactionNPerM": 219626.9483356,
+        "reactionDifferenceNPerM": -121.77796430001035,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0005544764211444949,
+        "maxLoadingDisplacementFieldDifferenceM": 5.018667174177823e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 7.1020737383178605e-06,
+        "currentFreeCentroidMotionM": [
+          0.0005665434145391686,
+          -0.006082895954856255,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0005627447643172371,
+          -0.006080272167936585,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.019,
+        "currentFrame": 19,
+        "referenceFrame": 19,
+        "currentReactionNPerM": 231283.0501747,
+        "referenceReactionNPerM": 231417.559442,
+        "reactionDifferenceNPerM": -134.509267299989,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0005812405403648764,
+        "maxLoadingDisplacementFieldDifferenceM": 5.3507594918699943e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 7.462903582043027e-06,
+        "currentFreeCentroidMotionM": [
+          0.0006450666931447832,
+          -0.006357820114273755,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0006413899981949155,
+          -0.006356369168856916,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.02,
+        "currentFrame": 20,
+        "referenceFrame": 20,
+        "currentReactionNPerM": 245604.4089027,
+        "referenceReactionNPerM": 245734.0207738,
+        "reactionDifferenceNPerM": -129.61187110000174,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0005274478100014911,
+        "maxLoadingDisplacementFieldDifferenceM": 4.6463015303549544e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 6.704831847472437e-06,
+        "currentFreeCentroidMotionM": [
+          0.0007043462717035553,
+          -0.006540028481469845,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0007016334639757091,
+          -0.0065387386131829095,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.021,
+        "currentFrame": 21,
+        "referenceFrame": 21,
+        "currentReactionNPerM": 258142.8235783,
+        "referenceReactionNPerM": 258308.5808938,
+        "reactionDifferenceNPerM": -165.7573154999991,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.000641702706609456,
+        "maxLoadingDisplacementFieldDifferenceM": 4.360220610739191e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 6.3846369210443475e-06,
+        "currentFreeCentroidMotionM": [
+          0.0006811088323335087,
+          -0.006950104915509709,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0006785668208188739,
+          -0.006947710549279483,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.022,
+        "currentFrame": 22,
+        "referenceFrame": 22,
+        "currentReactionNPerM": 263820.0406513,
+        "referenceReactionNPerM": 264034.6968434,
+        "reactionDifferenceNPerM": -214.65619210002478,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0008129847882353818,
+        "maxLoadingDisplacementFieldDifferenceM": 5.1525808252844114e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 7.112427672720856e-06,
+        "currentFreeCentroidMotionM": [
+          0.0006899639332706891,
+          -0.007476636891822042,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0006862848237112071,
+          -0.007474367182495072,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.023,
+        "currentFrame": 23,
+        "referenceFrame": 23,
+        "currentReactionNPerM": 279405.2672982,
+        "referenceReactionNPerM": 279630.3961989,
+        "reactionDifferenceNPerM": -225.12890070001595,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0008050945239153566,
+        "maxLoadingDisplacementFieldDifferenceM": 6.454313746706115e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 8.504852009341356e-06,
+        "currentFreeCentroidMotionM": [
+          0.0007706318039904619,
+          -0.007682560134827484,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0007663402114283784,
+          -0.007681891982503944,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.024,
+        "currentFrame": 24,
+        "referenceFrame": 24,
+        "currentReactionNPerM": 296221.3177669,
+        "referenceReactionNPerM": 296575.280248,
+        "reactionDifferenceNPerM": -353.9624810999958,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0011934996092864108,
+        "maxLoadingDisplacementFieldDifferenceM": 7.189483985551303e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 1.0232388491915405e-05,
+        "currentFreeCentroidMotionM": [
+          0.0008340984337196455,
+          -0.007850626304616769,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0008299600838183263,
+          -0.007851032754981934,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.025,
+        "currentFrame": 25,
+        "referenceFrame": 25,
+        "currentReactionNPerM": 301251.4738388,
+        "referenceReactionNPerM": 301636.2123651,
+        "reactionDifferenceNPerM": -384.7385263000033,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.00127550509696202,
+        "maxLoadingDisplacementFieldDifferenceM": 9.071065324946077e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 1.1825518862799718e-05,
+        "currentFreeCentroidMotionM": [
+          0.0008197765984524214,
+          -0.00829408076477513,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0008148327314962388,
+          -0.008294854496888795,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.026,
+        "currentFrame": 26,
+        "referenceFrame": 26,
+        "currentReactionNPerM": 315275.5560714,
+        "referenceReactionNPerM": 315761.9858108,
+        "reactionDifferenceNPerM": -486.42973939998774,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0015404949337107646,
+        "maxLoadingDisplacementFieldDifferenceM": 8.977080285785957e-05,
+        "rmsLoadingDisplacementFieldDifferenceM": 1.2746629405949913e-05,
+        "currentFreeCentroidMotionM": [
+          0.0008289316463026015,
+          -0.008671631140870564,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0008209368191276558,
+          -0.008671455255187968,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.027,
+        "currentFrame": 27,
+        "referenceFrame": 27,
+        "currentReactionNPerM": 329171.5648567,
+        "referenceReactionNPerM": 329964.7162883,
+        "reactionDifferenceNPerM": -793.1514315999812,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.00240374619602352,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0001065461939962809,
+        "rmsLoadingDisplacementFieldDifferenceM": 1.5601957590211934e-05,
+        "currentFreeCentroidMotionM": [
+          0.0009022369225806406,
+          -0.008989332665473804,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.000893629835660956,
+          -0.00899043851303783,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.028,
+        "currentFrame": 28,
+        "referenceFrame": 28,
+        "currentReactionNPerM": 337372.7149133,
+        "referenceReactionNPerM": 338097.510155,
+        "reactionDifferenceNPerM": -724.7952417000197,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.002143746167689135,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00012373825424060359,
+        "rmsLoadingDisplacementFieldDifferenceM": 1.6845465879690845e-05,
+        "currentFreeCentroidMotionM": [
+          0.0009573468827993203,
+          -0.009340910495604824,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0009513736120984029,
+          -0.009346837005769697,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.029,
+        "currentFrame": 29,
+        "referenceFrame": 29,
+        "currentReactionNPerM": 351460.4458904,
+        "referenceReactionNPerM": 352387.8359263,
+        "reactionDifferenceNPerM": -927.3900358999963,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0026317311250606133,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00012914075219323646,
+        "rmsLoadingDisplacementFieldDifferenceM": 1.9394526309293433e-05,
+        "currentFreeCentroidMotionM": [
+          0.0009645500464020348,
+          -0.00956371929747678,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.000957290806466646,
+          -0.009570378199553264,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.03,
+        "currentFrame": 30,
+        "referenceFrame": 30,
+        "currentReactionNPerM": 365094.5201692,
+        "referenceReactionNPerM": 366192.2009792,
+        "reactionDifferenceNPerM": -1097.6808099999907,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0029975537629277358,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00012760455968740368,
+        "rmsLoadingDisplacementFieldDifferenceM": 2.1555143924487694e-05,
+        "currentFreeCentroidMotionM": [
+          0.0009725924086312171,
+          -0.009827259946851383,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0009620349338133527,
+          -0.009834057551520415,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.031,
+        "currentFrame": 31,
+        "referenceFrame": 31,
+        "currentReactionNPerM": 372717.1881849,
+        "referenceReactionNPerM": 373847.5565585,
+        "reactionDifferenceNPerM": -1130.3683736000094,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.003023607761424885,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00012868210895222409,
+        "rmsLoadingDisplacementFieldDifferenceM": 2.2387427452848844e-05,
+        "currentFreeCentroidMotionM": [
+          0.0010270470768201417,
+          -0.010314557384437,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0010167364930593291,
+          -0.010324149049404522,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.032,
+        "currentFrame": 32,
+        "referenceFrame": 32,
+        "currentReactionNPerM": 383006.9934249,
+        "referenceReactionNPerM": 384370.4228215,
+        "reactionDifferenceNPerM": -1363.4293965999968,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.003547175629674211,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0001486799984417575,
+        "rmsLoadingDisplacementFieldDifferenceM": 2.3035899432942773e-05,
+        "currentFreeCentroidMotionM": [
+          0.0010802444292724884,
+          -0.010721166000951129,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001074484675615308,
+          -0.010732410205351903,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.033,
+        "currentFrame": 33,
+        "referenceFrame": 33,
+        "currentReactionNPerM": 397778.8623514,
+        "referenceReactionNPerM": 399343.3226708,
+        "reactionDifferenceNPerM": -1564.46031939995,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.003917582267150159,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00016216223684929125,
+        "rmsLoadingDisplacementFieldDifferenceM": 2.703482108380799e-05,
+        "currentFreeCentroidMotionM": [
+          0.001102420884931151,
+          -0.010841628816592676,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001096882893959808,
+          -0.010855129182880133,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.034,
+        "currentFrame": 34,
+        "referenceFrame": 34,
+        "currentReactionNPerM": 411396.2271138,
+        "referenceReactionNPerM": 413037.2655541,
+        "reactionDifferenceNPerM": -1641.038440299977,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.003973100194962996,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0001925435353860542,
+        "rmsLoadingDisplacementFieldDifferenceM": 3.2094647381013165e-05,
+        "currentFreeCentroidMotionM": [
+          0.0011062281975167806,
+          -0.011076429534856685,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001094406036227825,
+          -0.011094922232800716,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.035,
+        "currentFrame": 35,
+        "referenceFrame": 35,
+        "currentReactionNPerM": 417402.1800823,
+        "referenceReactionNPerM": 419215.2645783,
+        "reactionDifferenceNPerM": -1813.084496000025,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.004324948658116864,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00022959734941759263,
+        "rmsLoadingDisplacementFieldDifferenceM": 3.573277032201486e-05,
+        "currentFreeCentroidMotionM": [
+          0.0011508104696946822,
+          -0.011584375071884836,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0011385424856276102,
+          -0.011606074073135958,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.036,
+        "currentFrame": 36,
+        "referenceFrame": 36,
+        "currentReactionNPerM": 430466.73151,
+        "referenceReactionNPerM": 432618.4661907,
+        "reactionDifferenceNPerM": -2151.7346806999994,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.004973746728026875,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00024782669822799515,
+        "rmsLoadingDisplacementFieldDifferenceM": 3.640976107383989e-05,
+        "currentFreeCentroidMotionM": [
+          0.0012136815262710904,
+          -0.01193422966480973,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0012082652718830185,
+          -0.011956048822303698,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.037,
+        "currentFrame": 37,
+        "referenceFrame": 37,
+        "currentReactionNPerM": 444107.9314842,
+        "referenceReactionNPerM": 446381.577475,
+        "reactionDifferenceNPerM": -2273.645990799996,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.005093503194421893,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0002992563663742386,
+        "rmsLoadingDisplacementFieldDifferenceM": 4.0267447281364527e-05,
+        "currentFreeCentroidMotionM": [
+          0.0012325143745482313,
+          -0.012169997141905418,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0012295171854375937,
+          -0.0121962291968209,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.038,
+        "currentFrame": 38,
+        "referenceFrame": 38,
+        "currentReactionNPerM": 453152.5085028,
+        "referenceReactionNPerM": 455439.9548397,
+        "reactionDifferenceNPerM": -2287.4463369000005,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.00502249816379221,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00032660974636878156,
+        "rmsLoadingDisplacementFieldDifferenceM": 4.696316509180022e-05,
+        "currentFreeCentroidMotionM": [
+          0.0012315975157164703,
+          -0.012484426202570214,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0012221955504284462,
+          -0.012516664999000573,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.039,
+        "currentFrame": 39,
+        "referenceFrame": 39,
+        "currentReactionNPerM": 466349.9357379,
+        "referenceReactionNPerM": 468952.5470032,
+        "reactionDifferenceNPerM": -2602.611265299958,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.005549839278902987,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0003469648738437761,
+        "rmsLoadingDisplacementFieldDifferenceM": 4.983276443877353e-05,
+        "currentFreeCentroidMotionM": [
+          0.0012827686963653886,
+          -0.012752933077155203,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0012695715629735887,
+          -0.012784561778724154,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.04,
+        "currentFrame": 40,
+        "referenceFrame": 40,
+        "currentReactionNPerM": 479069.3343824,
+        "referenceReactionNPerM": 481757.2426703,
+        "reactionDifferenceNPerM": -2687.9082879000343,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.005579383244975015,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00038482738460663747,
+        "rmsLoadingDisplacementFieldDifferenceM": 5.354363579492494e-05,
+        "currentFreeCentroidMotionM": [
+          0.0013510870306769243,
+          -0.01309986748792721,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0013418740408532492,
+          -0.013134727567848038,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.041,
+        "currentFrame": 41,
+        "referenceFrame": 41,
+        "currentReactionNPerM": 486448.4132941,
+        "referenceReactionNPerM": 489309.0597197,
+        "reactionDifferenceNPerM": -2860.646425599989,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.005846297690132094,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00041716533505865264,
+        "rmsLoadingDisplacementFieldDifferenceM": 5.76450024870809e-05,
+        "currentFreeCentroidMotionM": [
+          0.001363907545295326,
+          -0.013575220475511523,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0013599139756687946,
+          -0.01361523330423592,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.042,
+        "currentFrame": 42,
+        "referenceFrame": 42,
+        "currentReactionNPerM": 498682.4540872,
+        "referenceReactionNPerM": 501912.3573589,
+        "reactionDifferenceNPerM": -3229.9032717000227,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.0064351937631024125,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00041424713446527504,
+        "rmsLoadingDisplacementFieldDifferenceM": 5.9127428318603836e-05,
+        "currentFreeCentroidMotionM": [
+          0.0013636086261065684,
+          -0.013845698494685492,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0013576783146975345,
+          -0.013886506303045549,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.043,
+        "currentFrame": 43,
+        "referenceFrame": 43,
+        "currentReactionNPerM": 513378.7775605,
+        "referenceReactionNPerM": 516960.2658262,
+        "reactionDifferenceNPerM": -3581.488265699998,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.006927975905413357,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00045304049904469585,
+        "rmsLoadingDisplacementFieldDifferenceM": 6.578098305313923e-05,
+        "currentFreeCentroidMotionM": [
+          0.0014147089058428265,
+          -0.013970833572907496,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0014028999656394172,
+          -0.014015437977646322,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.044,
+        "currentFrame": 44,
+        "referenceFrame": 44,
+        "currentReactionNPerM": 523496.0592661,
+        "referenceReactionNPerM": 527477.4300217,
+        "reactionDifferenceNPerM": -3981.3707555999863,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.007547945237080942,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0005066743813152206,
+        "rmsLoadingDisplacementFieldDifferenceM": 7.544130660942424e-05,
+        "currentFreeCentroidMotionM": [
+          0.001482938039500602,
+          -0.014327699990272702,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001473807543253156,
+          -0.014383426541584605,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.045,
+        "currentFrame": 45,
+        "referenceFrame": 45,
+        "currentReactionNPerM": 528892.4834917,
+        "referenceReactionNPerM": 533647.355056,
+        "reactionDifferenceNPerM": -4754.871564299916,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.008910137976418807,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0006043139486950147,
+        "rmsLoadingDisplacementFieldDifferenceM": 9.191769439745221e-05,
+        "currentFreeCentroidMotionM": [
+          0.001500667488391119,
+          -0.014824043952576102,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0014996693500763097,
+          -0.01489266910429066,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.046,
+        "currentFrame": 46,
+        "referenceFrame": 46,
+        "currentReactionNPerM": 542657.8225517,
+        "referenceReactionNPerM": 547376.7102549,
+        "reactionDifferenceNPerM": -4718.887703199987,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.008620914289543879,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0006669379967748404,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.00010467919312995866,
+        "currentFreeCentroidMotionM": [
+          0.001493681408960025,
+          -0.015062338769152635,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0014924115684784968,
+          -0.015144793331960204,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.047,
+        "currentFrame": 47,
+        "referenceFrame": 47,
+        "currentReactionNPerM": 553337.7744915,
+        "referenceReactionNPerM": 559616.4057324,
+        "reactionDifferenceNPerM": -6278.631240900024,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.011219526762591676,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0007503425840992197,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.00011413001859603749,
+        "currentFreeCentroidMotionM": [
+          0.0015327365037744332,
+          -0.015228683472077183,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0015259376781809613,
+          -0.0153144132820434,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.048,
+        "currentFrame": 48,
+        "referenceFrame": 48,
+        "currentReactionNPerM": 558500.8107607,
+        "referenceReactionNPerM": 565984.5014455,
+        "reactionDifferenceNPerM": -7483.69068479992,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.013222430412293795,
+        "maxLoadingDisplacementFieldDifferenceM": 0.00095298082753859,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.00015299118470324765,
+        "currentFreeCentroidMotionM": [
+          0.001606410579835447,
+          -0.015520046421854915,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0015993807282119932,
+          -0.01562932834367054,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.049,
+        "currentFrame": 49,
+        "referenceFrame": 49,
+        "currentReactionNPerM": 571567.9126556,
+        "referenceReactionNPerM": 578675.463254,
+        "reactionDifferenceNPerM": -7107.5505983999465,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.01228244681126251,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0010371300796101469,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.00017188101687521762,
+        "currentFreeCentroidMotionM": [
+          0.0016442456869231216,
+          -0.015796049964852586,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0016493060469360981,
+          -0.015937540118598676,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.05,
+        "currentFrame": 50,
+        "referenceFrame": 50,
+        "currentReactionNPerM": 577035.3342336,
+        "referenceReactionNPerM": 586556.5411439,
+        "reactionDifferenceNPerM": -9521.206910300069,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.01623237700449449,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0011519805612231974,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.00018383268890403496,
+        "currentFreeCentroidMotionM": [
+          0.0016382115734697403,
+          -0.01614156459529005,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0016444140982342433,
+          -0.016280861338808208,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.051,
+        "currentFrame": 51,
+        "referenceFrame": 51,
+        "currentReactionNPerM": 584900.3871178,
+        "referenceReactionNPerM": 596289.127345,
+        "reactionDifferenceNPerM": -11388.74022720009,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.019099359194941032,
+        "maxLoadingDisplacementFieldDifferenceM": 0.001446755190148825,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.00024162003177177722,
+        "currentFreeCentroidMotionM": [
+          0.001673021922435988,
+          -0.016455618361429808,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001661235480231896,
+          -0.01662736491338859,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.052,
+        "currentFrame": 52,
+        "referenceFrame": 52,
+        "currentReactionNPerM": 595590.5725651,
+        "referenceReactionNPerM": 606413.3525446,
+        "reactionDifferenceNPerM": -10822.779979499988,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.017847199330433612,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0015204562022254398,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0002655093868118064,
+        "currentFreeCentroidMotionM": [
+          0.0017445909231048138,
+          -0.016625506814868664,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001733923912517365,
+          -0.016843892836612882,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.053,
+        "currentFrame": 53,
+        "referenceFrame": 53,
+        "currentReactionNPerM": 600785.4885095,
+        "referenceReactionNPerM": 615198.8867856,
+        "reactionDifferenceNPerM": -14413.398276099935,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.023428843233786734,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0016931016322938321,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0002825243392911714,
+        "currentFreeCentroidMotionM": [
+          0.0018005084750104447,
+          -0.016800425083991558,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001805304293102185,
+          -0.017011296329288546,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.054,
+        "currentFrame": 54,
+        "referenceFrame": 54,
+        "currentReactionNPerM": 607951.7062228,
+        "referenceReactionNPerM": 625481.0481667,
+        "reactionDifferenceNPerM": -17529.3419439001,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.028025376620569115,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0021130158732247627,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.00037049543874321633,
+        "currentFreeCentroidMotionM": [
+          0.0018272185839369433,
+          -0.017097099712234255,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001825274403681387,
+          -0.017362210637705978,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.055,
+        "currentFrame": 55,
+        "referenceFrame": 55,
+        "currentReactionNPerM": 615698.543747,
+        "referenceReactionNPerM": 631733.4674564,
+        "reactionDifferenceNPerM": -16034.923709399998,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.025382419224934717,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0022824766596613918,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0004234844529933319,
+        "currentFreeCentroidMotionM": [
+          0.0018493959281283671,
+          -0.017450556167136762,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0018323988179474986,
+          -0.017812627868956175,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.056,
+        "currentFrame": 56,
+        "referenceFrame": 56,
+        "currentReactionNPerM": 622375.3850288,
+        "referenceReactionNPerM": 640112.739222,
+        "reactionDifferenceNPerM": -17737.354193200008,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.02770973471760331,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0022488911229943368,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.00040417401149562377,
+        "currentFreeCentroidMotionM": [
+          0.0019030194958897905,
+          -0.017699060290750857,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.001889633647872762,
+          -0.018029815784077082,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.057,
+        "currentFrame": 57,
+        "referenceFrame": 57,
+        "currentReactionNPerM": 628164.49797,
+        "referenceReactionNPerM": 649642.3622485,
+        "reactionDifferenceNPerM": -21477.86427849997,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.03306105870953701,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0025225356292800792,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0004342428617796265,
+        "currentFreeCentroidMotionM": [
+          0.001968907359725173,
+          -0.017826880837451632,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0019684495841727893,
+          -0.018108733236659087,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.058,
+        "currentFrame": 58,
+        "referenceFrame": 58,
+        "currentReactionNPerM": 632436.4722016,
+        "referenceReactionNPerM": 654027.1201514,
+        "reactionDifferenceNPerM": -21590.64794980001,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.03301185422525295,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0030249503329131877,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0005374112117952749,
+        "currentFreeCentroidMotionM": [
+          0.0020382874584788458,
+          -0.01797831188259652,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0020400368698014447,
+          -0.01835157825078708,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.059,
+        "currentFrame": 59,
+        "referenceFrame": 59,
+        "currentReactionNPerM": 638091.8643617,
+        "referenceReactionNPerM": 661488.0128159,
+        "reactionDifferenceNPerM": -23396.14845420001,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.03536896814592986,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0032490128341973383,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0005973788586330418,
+        "currentFreeCentroidMotionM": [
+          0.0020688838826452647,
+          -0.0182439980611474,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.0020800708051720435,
+          -0.018691839216520914,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      },
+      {
+        "commandedSettlementM": 0.06,
+        "currentFrame": 60,
+        "referenceFrame": 60,
+        "currentReactionNPerM": 642296.7774579,
+        "referenceReactionNPerM": 668635.8322376,
+        "reactionDifferenceNPerM": -26339.054779700004,
+        "reactionDifferenceOverAbsReferenceOrNull": -0.03939222744248683,
+        "maxLoadingDisplacementFieldDifferenceM": 0.0032831299920159655,
+        "rmsLoadingDisplacementFieldDifferenceM": 0.0006119795042828094,
+        "currentFreeCentroidMotionM": [
+          0.0021062881898842325,
+          -0.0185212970923898,
+          0.0
+        ],
+        "referenceFreeCentroidMotionM": [
+          0.002099405748282498,
+          -0.01897399879565393,
+          0.0
+        ],
+        "historyComparison": "Native Soil1 J2 and Soil2 paper tensor norm are different quantities; not subtracted"
+      }
+    ],
+    "initialMaxPositionDifferenceM": 2.7962145224383006e-05,
+    "referenceNativeComplete": true
+  },
+  "lastEnergyObservations": {
+    "frame": 60.0,
+    "time_s": 6.0,
+    "kinetic_J_per_m": 88.64825224095,
+    "elastic_proxy_J_per_m": 179892.323818,
+    "native_plastic_proxy_J_per_m": 5845.264958194,
+    "delta_elastic_proxy_J_per_m": 70419.89739263,
+    "delta_native_plastic_proxy_J_per_m": 5808.725649696,
+    "kinetic_over_elastic_proxy": 0.0004927850747575,
+    "actuator_signed_command_work_J_per_m": 21121.72794696
+  },
+  "energyCaveat": "Current-volume Hencky/native-plastic proxies and geometric spring energy do not close energy balance or establish quasistatic response",
+  "physicalVerdict": "MODEL_RUN_COMPLETE; COHERENT_LANDSLIDE_NOT_VERIFIED. Check free-mass motion and reaction/runout below; prescribed strip settlement and isolated high/upward velocities are insufficient.",
+  "limits": [
+    "Explicit volumetric apex is new constitutive physics, not exact strict psi0/Wang equivalence",
+    "100x paper loading rate; no rate/mesh/dt convergence or laboratory calibration",
+    "10m relief assumed; boundary and endpoint uncertainty retained",
+    "Fixed bottom/side rollers and local-softening mesh dependence limit runout/mechanism interpretation",
+    "No post-driver hold/release was executed"
+  ]
+}

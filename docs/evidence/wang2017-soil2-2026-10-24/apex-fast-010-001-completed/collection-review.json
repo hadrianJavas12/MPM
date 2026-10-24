@@ -1,0 +1,79 @@
+{
+  "status": "PASS_COLLECTION_INTEGRITY",
+  "reviewedUtc": "2026-10-24T06:42:39.117986+00:00",
+  "collectorInvocations": 1,
+  "collectorExitCode": 0,
+  "collectorExitSource": "Original unified exec session55197 final result, no rerun",
+  "sourceCommitAtNativeLaunch": "55bc85d9d4567b6677439846035127751fbc4c7f",
+  "nativeExitCode": 0,
+  "auditAndRenderExitCode": 0,
+  "detachedWorkerExitCode": 0,
+  "nativeComplete": true,
+  "physicalTimeS": 6.0,
+  "commandedSettlementM": 0.06,
+  "measuredSettlementM": 0.059553960571821385,
+  "sourceFiles": 275,
+  "frozenManifestHashesAndSizesMatch": true,
+  "launchMappedNativeDllProof": {
+    "modulePath": "D:/MPM/output/wang2017-soil2-2026-10-24/apex-fast-010-001/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  },
+  "rendererVtkSourceHashesMatch": 61,
+  "archives": [
+    {
+      "path": "native-output.tar.gz",
+      "bytes": 20718733,
+      "sha256": "04a8ccce5f0292b16326968e9ae4721c01e55de8464930269b4bb25ce83cadcf",
+      "verifiedMembers": 73
+    },
+    {
+      "path": "executed-source.tar.gz",
+      "bytes": 1024886,
+      "sha256": "091cbba203c991a09e9bc02643b887ba2fc95f5c6d7cbec2ec04603a34d0a25b",
+      "verifiedMembers": 276
+    },
+    {
+      "path": "control-logs.tar.gz",
+      "bytes": 3855,
+      "sha256": "d5991a637adfc48b6878b250235b054654520ffb48934c1c1268cdc9afc6fc08",
+      "verifiedMembers": 12
+    }
+  ],
+  "totalVerifiedArchiveMembers": 361,
+  "archivedCsvFiles": [
+    "energy-history.csv",
+    "force-displacement.csv",
+    "gravity-history.csv",
+    "gravity-state.csv",
+    "wang2017-contact-history.csv",
+    "wang2017-material-history.csv"
+  ],
+  "archivedVtkFiles": 64,
+  "archivedVtkNameExamples": [
+    "vtk/gravity_equilibrium.vtk",
+    "vtk/gravity_initial.vtk",
+    "vtk/mesh.vtk",
+    "vtk/particles_0000.vtk",
+    "vtk/particles_0057.vtk",
+    "vtk/particles_0058.vtk",
+    "vtk/particles_0059.vtk",
+    "vtk/particles_0060.vtk"
+  ],
+  "excludedPrivateCacheOrFaslFiles": 164,
+  "omittedRenderedPngFiles": 61,
+  "media": {
+    "codec_name": "h264",
+    "pix_fmt": "yuv420p",
+    "width": 1680,
+    "height": 756,
+    "avg_frame_rate": "4/1",
+    "nb_read_frames": "61",
+    "duration": "15.250000"
+  },
+  "constitutiveVariant": "Explicit new composite-apex flow; not exact Wang or unchanged strict model",
+  "physicalLandslideReview": "NOT_PERFORMED_HERE",
+  "scientificValidation": false,
+  "solverRenderTestReplayInvocations": 0
+}

@@ -1,5 +1,13 @@
 # Persiapan Wang 2017 dengan MPM
 
+**Perkembangan terbaru24Oktober:** native Soil2 strict sudah diimplementasikan,
+tetapi trial pertamanya gagal pada return konstitutif. Model opsional dengan
+tambahan aliran volumetrik apex kini menyelesaikan60mm/6s tanpa error; belum
+ada longsor koheren. [Hasil, bukti dan studi endpoint berikutnya](WANG2017_APEX_TRIAL.md).
+Tambahan fisika ini dinyatakan eksplisit, bukan hukum Wang yang identik.
+Render halaman180 yang sudah tersimpan memverifikasi sumbu Figure3 sampai0,10m;
+endpoint Soil2/Figure4–5 tetap belum terverifikasi.
+
 **Selesai24Oktober:** pengguna memilih uji0.01m/s, penurunan60mm/**6s fisik**.
 Run `fast-010-001` selesai nativeexit0 pada01:45:23WIB dan audit/video0 pada
 01:46:32WIB;61frame native, belum ada longsor koheren.100x paper. Ini penurunan yang

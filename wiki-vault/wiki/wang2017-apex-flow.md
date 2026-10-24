@@ -8,6 +8,10 @@ updated: 2026-10-24
 
 # Wang2017 explicit volumetric apex-flow experiment
 
+The first full trial is now complete native/audit/render0, but saved-data review
+finds no coherent landslide. [[wang2017-apex-60mm-review]] records actual apex
+activation, volume sampling, negative outcome and the bounded100mm input gate.
+
 [[wang2017-soil2-return-failure]] remains a strict negative control. A separate
 optional material adds a hydrostatic apex support surface and volumetric flow
 potential. This explicitly changes the constitutive flow graph; it is not an

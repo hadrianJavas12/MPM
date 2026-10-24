@@ -15,7 +15,9 @@ in [[wang2017-fast-trial-2026-10-24]]. New branch
 Subsequent24October12WIB checkpoint: [[wang2017-apex-flow]] implements a separate
 explicit additional volumetric apex mode, with native/regression/two-step output
 gates passed. This page's strict default law and failed slope remain unchanged;
-the fresh apex slope started12:08:32WIB on55bc85d. No full outcome is established.
+the fresh apex slope started12:08:32WIB on55bc85d and completed13:33:43WIB.
+[[wang2017-apex-60mm-review]] establishes
+saved-data consistency but no coherent landslide, followed by100mm input study.
 
 The optional native adapter uses the coupled signed-tensor point projector from
 [[wang2017-paper-history]], with paper c30→15kPa overkps0→.02,phi35/psi0,

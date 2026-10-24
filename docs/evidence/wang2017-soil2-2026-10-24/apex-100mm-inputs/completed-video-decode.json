@@ -1,0 +1,8 @@
+{
+  "video": "docs/evidence/wang2017-soil2-2026-10-24/apex-fast-010-001-completed/slope-descent.mp4",
+  "sha256": "32328E3E327233EB513660770DA9E9E6B20CFE33950A3D673F78C1FE62B00037",
+  "command": "ffmpeg -v error -i VIDEO -f null -",
+  "exitCode": 0,
+  "logBytes": 0,
+  "scope": "Full completed-video decode only, no rendering or solver"
+}

@@ -1,0 +1,26 @@
+;;;; Experimental explicit apex-flow extension; numerical paper inputs unchanged.
+;;;; This is a declared new material, not an unchanged pure-shear psi=0 result.
+(in-package :cl-mpm/framework)
+(let ((parameters (make-hash-table :test 'equal)))
+  (setf (gethash "settleMaxUpdates" parameters) 30000
+        (gethash "settleMinUpdates" parameters) 1000
+        (gethash "settleTolerance" parameters) 1d-3
+        (gethash "settleHoldChecks" parameters) 5
+        (gethash "penaltyScale" parameters) 20d0)
+  (setf *simulation*
+        (make-simulation
+         :scenario :slope-descent :parameters parameters
+         :material (make-material
+                    :native :youngs-modulus 20d6 :poisson-ratio .25d0
+                    :density (/ 20000d0 9.80665d0)
+                    :particle-class 'cl-mpm/models/wang2017-apex:particle-wang2017-soil2-apex
+                    :initargs (list :evolution-law
+                                    (cl-mpm/models/wang2017-apex:make-soil2-apex-law)))
+         :geometry (make-geometry :slope :width 20d0 :height 10d0
+                                  :crest-length 10d0 :slope 60d0 :base-height 5d0)
+         :boundary (make-boundary :rollers)
+         :loading (make-loading :prescribed-descent :velocity .01d0
+                                :target-displacement .06d0 :patch-start 7d0 :patch-length 3d0)
+         :solver (make-solver :explicit :mesh-size 1d0 :mps-per-cell 2
+                             :workers 1 :time-step-scale .2d0
+                             :frames 61 :max-updates 45000))))

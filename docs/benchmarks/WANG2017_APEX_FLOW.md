@@ -6,6 +6,10 @@ volumetric flow mode at the hydrostatic apex. This changes the constitutive
 flow graph; it is not unchanged pure-shear psi0 physics or an exact Wang law.
 The original strict material and all its negative evidence remain available.
 
+The first60mm/6s full trial now completes native/audit/render0. Its independent
+review finds no coherent landslide; [results and the bounded100mm study](WANG2017_APEX_TRIAL.md)
+record actual apex activation and remaining scientific limits.
+
 ## Contract
 
 Optional ASDF system `cl-mpm/models/wang2017-apex`, package of the same name:
@@ -90,7 +94,7 @@ That case preserves0.01m/s to60mm/6s, geometry, mesh, BC, damping and all numeri
 strength/elasticity inputs. Metadata and volume diagnostics label the new model.
 The first fresh full trial started24October12:08:32WIB on55bc85d in
 `output/wang2017-soil2-2026-10-24/apex-fast-010-001`,2h wall budget until14:08.
-Initial native status RUNNING, not completion. No landslide PASS is claimed.
-The same quiet monitor checks15min; active postprocessors remain unchanged.
+It finished native0 at13:33:43WIB and audit/render/worker0 at13:34:44.
+No landslide PASS is claimed; the saved-state review is linked above.
 Mesh/rate/boundary/reference
 and finite-strain limitations remain; this convention does not guarantee failure.
