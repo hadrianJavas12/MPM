@@ -1,0 +1,28 @@
+{
+  "schema": "cl-mpm.unnotched-mc-ssr.runtime-plan.v1",
+  "sourceCheckpoint": "2308a1e",
+  "pilot": {
+    "directory": "output/unnotched-gravity-2026-10-24/native-controls-002/observations",
+    "scope": "Full880MP reference geometry, two genuine elastic native USF updates and three saved VTK/CSV states; no plastic-cost benchmark",
+    "physicalDurationS": 0.00002,
+    "updates": 2,
+    "materialCallsAttemptedAndAccepted": 1760,
+    "runnerWallSecondsIncludingConstructionAndThreeRichOutputs": 0.568538,
+    "initialStableDtS": 0.0007784618025300353,
+    "unchangedNumericalOutputFrom001": "Three VTK files and particles.csv/history.csv byte-identical; only shared test-counter instrumentation changed"
+  },
+  "fullTrial": {
+    "firstCase": "cases/benchmarks/gravity-slope-mc-srf-1p4.lisp",
+    "physicalDurationS": 6,
+    "maxUpdates": 60000,
+    "maxWallHours": 3,
+    "initialConstantDtExtrapolationUpdates": 7708,
+    "naivePilotTimeExtrapolationSeconds": 2191.145452,
+    "interpretation": "Rough resource indication only. Pilot cost includes excessive output per step and no significant plasticity; evolving modulus, native plastic projection cost, timestep and boundary motion can change runtime. Not an ETA or guaranteed completion.",
+    "reason": "Source-based independent reduced-strength trial, short bounded6s physical interval with predeclared2s gravity ramp; tests and actual native-output integrity passed; no expensive1000s paper-speed run",
+    "secondCase": "cases/benchmarks/gravity-slope-mc-srf-1.lisp",
+    "sequence": "Review terminal first trial, then independent baseline with identical numerical/ramp settings; no concurrent solver or automatic SRF search",
+    "failureHandling": "Retain native error/capsule/raw state/source; diagnose actual state once; never clamp/change psi/strength/tolerance merely for collapse"
+  },
+  "landslideResult": "NOT_RUN"
+}

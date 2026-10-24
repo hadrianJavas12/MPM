@@ -1,0 +1,73 @@
+{
+  "schema": "cl-mpm.unnotched-gravity.native-controls.evidence.v1",
+  "createdUtc": "2026-10-24T15:35:41.531566+00:00",
+  "baselineCommit": "2308a1eee996e2e0e9c4730b2591b54b0860ddac",
+  "status": "FOCUSED_GATES_PASS_WITH_RETAINED_NEGATIVE_FIXTURES",
+  "native001": {
+    "harnessExit": 1,
+    "passedGroups": [
+      "inputs",
+      "invalid-inputs",
+      "geometry",
+      "boundary",
+      "ramp"
+    ],
+    "failure": [
+      "runner",
+      "The assertion (> *MATERIAL-CALLS* 0) failed with *MATERIAL-CALLS* = 0."
+    ],
+    "actualMpmUpdates": 2,
+    "scope": "Real solver and outputs completed; caller-thread-only instrumentation flag missed worker constitutive calls. This is a test harness failure, not a zero-material-call production claim."
+  },
+  "native002": {
+    "harnessExit": 0,
+    "passedGroups": [
+      "runner",
+      "csv",
+      "vtk",
+      "read-only"
+    ],
+    "skippedGroups": [
+      "inputs",
+      "invalid-inputs",
+      "geometry",
+      "boundary",
+      "ramp"
+    ],
+    "actualMpmUpdates": 2,
+    "materialCallsAttempted": 1760,
+    "materialCallsAccepted": 1760,
+    "wallSecondsForRunnerOnly": 0.568538,
+    "savedStates": 3,
+    "particleRows": 2640,
+    "historyRows": 3,
+    "particleCount": 880
+  },
+  "aggregateDistinctNativeGroupsPassed": 9,
+  "totalActualMpmUpdatesBothAttempts": 4,
+  "native001And002NumericalOutputsByteIdentical": true,
+  "independentSavedAudits": {
+    "attempt001": "PASS",
+    "attempt002": "PASS"
+  },
+  "monitor": {
+    "status": "PASS",
+    "syntheticAssertions": 13,
+    "actualMpmUpdates": 0
+  },
+  "detached001": {
+    "status": "RETAINED_NEGATIVE_FIXTURE",
+    "workerExit": 8,
+    "reason": "Verify arrived after the fixture 60-second release deadline; no MPM run."
+  },
+  "detached002": {
+    "status": "PASS",
+    "controls": 9,
+    "gravitySelectionAssertions": 2,
+    "actualMpmUpdates": 0
+  },
+  "nativeFullSlopeStatus": "NOT_RUN_AT_THIS_GATE",
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "scope": "Input/boundary/ramp/material binding, source freezing, two-step native integration and process monitoring; no full-duration instability, runout or journal reproduction claim."
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "controls": 9,
+  "finishedUtc": "2026-10-24T15:23:05.8654722Z",
+  "physicalUpdates": 0,
+  "sourceCommandExited": true,
+  "workerSurvived": true,
+  "returnValue": 0,
+  "capturedExitCode": 7,
+  "callerSessionId": 11,
+  "workerSessionId": 11,
+  "workerParentProcessId": 21136,
+  "launcher": "start-gravity-slope.ps1",
+  "selectedWrapper": "D:\\MPM\\scripts\\run-gravity-slope-trial.ps1",
+  "selectedCase": "D:\\MPM\\cases\\benchmarks\\gravity-slope-mc-srf-1p4.lisp",
+  "requestedHours": 3.0,
+  "gravitySelectionAssertions": 2,
+  "scope": "Trusted tiny fixture only, with spaced paths, no MPM run. Does not prove survival of logoff, reboot, sleep or arbitrary provider job restrictions."
+}

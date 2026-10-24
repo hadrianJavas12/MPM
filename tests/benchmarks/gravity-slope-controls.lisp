@@ -1,5 +1,6 @@
 ;;;; Focused frozen Windows-native gravity/SSR recipe and two-step output gate.
-;;;; windows\cl-mpm.cmd tests\benchmarks\gravity-slope-controls.lisp output\FRESH [all|input|saved] [EXISTING_OBSERVATIONS]
+;;;; windows\cl-mpm.cmd tests\benchmarks\gravity-slope-controls.lisp output\FRESH [all|input|output|saved] [EXISTING_OBSERVATIONS]
+;;;; OUTPUT skips already-passed input gates, but loads the exact frozen inputs.
 ;;;; SAVED rechecks only saved CSV/VTK, with zero solver/material calls.
 (in-package :cl-user)
 (require :asdf)
@@ -7,8 +8,8 @@
 (defvar *gravity-controls-output* nil)
 (defvar *gravity-controls-exit* 1)
 (defvar *gravity-controls-mode* (or (second (cl-mpm-script-args)) "all"))
-(unless (member *gravity-controls-mode* '("all" "input" "saved") :test #'string=)
-  (error "Expected all, input or saved mode."))
+(unless (member *gravity-controls-mode* '("all" "input" "output" "saved") :test #'string=)
+  (error "Expected all, input, output or saved mode."))
 (unless *gravity-controls-frozen*
   (load (cl-mpm-path "scripts/lisp/native-source-snapshot.lisp")))
 (unless *gravity-controls-frozen*
@@ -85,16 +86,19 @@
 (defvar *material-calls* 0)
 (defvar *accepted-material-calls* 0)
 (defvar *count-calls* nil)
+(defvar *count-lock* (sb-thread:make-mutex :name "gravity control counters"))
 (defvar *observations* (make-hash-table :test #'equal))
 (defparameter *groups*
   '("inputs" "invalid-inputs" "geometry" "boundary" "ramp"
     "runner" "csv" "vtk" "read-only"))
 
 (defmethod cl-mpm:update-sim :around ((sim gravity::gravity-slope-sim))
-  (multiple-value-prog1 (call-next-method) (when *count-calls* (incf *updates*))))
+  (multiple-value-prog1 (call-next-method)
+    (sb-thread:with-mutex (*count-lock*) (when *count-calls* (incf *updates*)))))
 (defmethod cl-mpm/particle:constitutive-model :around ((mp mc:particle-mc-evolution) strain dt)
-  (when *count-calls* (incf *material-calls*))
-  (multiple-value-prog1 (call-next-method) (when *count-calls* (incf *accepted-material-calls*))))
+  (sb-thread:with-mutex (*count-lock*) (when *count-calls* (incf *material-calls*)))
+  (multiple-value-prog1 (call-next-method)
+    (sb-thread:with-mutex (*count-lock*) (when *count-calls* (incf *accepted-material-calls*)))))
 
 (defmacro control (name &body body)
   `(handler-case
@@ -225,6 +229,7 @@
 (defun run-controls (directory)
   (let* ((saved-mode (string= cl-user::*gravity-controls-mode* "saved"))
          (input-mode (string= cl-user::*gravity-controls-mode* "input"))
+         (output-mode (string= cl-user::*gravity-controls-mode* "output"))
          (observations (if saved-mode
                            (let ((argument (third (cl-user::cl-mpm-script-args))))
                              (unless argument (error "SAVED mode requires an existing observations directory."))
@@ -232,7 +237,14 @@
                            (merge-pathnames "observations/" directory)))
          (case1 nil) (case14 nil) (config1 nil) (config14 nil) (built nil) (final nil))
     (setf (gethash "observationsDirectory" *observations*) (namestring observations))
-    (unless saved-mode
+    (when output-mode
+      ;; Loading/compilation establishes the actual fixture, not a repeat of
+      ;; the five input/geometry/BC/ramp assertions that passed in attempt001.
+      (setf case1 (load-case directory "gravity-slope-mc-srf-1.lisp")
+            case14 (load-case directory "gravity-slope-mc-srf-1p4.lisp")
+            config1 (gravity:compile-configuration case1)
+            config14 (gravity:compile-configuration case14)))
+    (unless (or saved-mode output-mode)
       (control "inputs"
         (setf case1 (load-case directory "gravity-slope-mc-srf-1.lisp")
               case14 (load-case directory "gravity-slope-mc-srf-1p4.lisp")
@@ -341,8 +353,19 @@
           (setf (gethash "duration" parameters) 2d-5 (gethash "gravityRampDuration" parameters) 1d-5
                 (getf options :frames) 3 (getf options :max-updates) 2)
           (let* ((tiny (clone-case case1 :parameters parameters :solver (apply #'fw:make-solver :explicit options)))
-                 (config (gravity:compile-configuration tiny)) (*count-calls* t))
-            (setf final (gravity:run (fw:simulation-material tiny) config observations))))
+                 (config (gravity:compile-configuration tiny))
+                 (started (get-internal-real-time)))
+            ;; Worker threads do not inherit a main-thread LET binding of a
+            ;; special variable. Set its shared global value under a mutex and
+            ;; always restore it, without altering any numerical calculation.
+            (unwind-protect
+                 (progn
+                   (sb-thread:with-mutex (*count-lock*) (setf *count-calls* t))
+                   (setf final (gravity:run (fw:simulation-material tiny) config observations)
+                         (gethash "runnerWallSeconds" *observations*)
+                         (/ (- (get-internal-real-time) started)
+                            (float internal-time-units-per-second 1d0))))
+              (sb-thread:with-mutex (*count-lock*) (setf *count-calls* nil)))))
         (assert (= *updates* 2))
         (assert (= *material-calls* *accepted-material-calls*))
         (assert (> *material-calls* 0))
@@ -437,6 +460,9 @@
         (gethash "mode" report) cl-user::*gravity-controls-mode*
         (gethash "passedCount" report) (length *passed*)
         (gethash "passedControls" report) (coerce (reverse *passed*) 'vector)
+        (gethash "skippedControls" report)
+        (coerce (remove-if (lambda (name) (or (member name *passed* :test #'string=)
+                                             (and *failed* (string= name (first *failed*))))) *groups*) 'vector)
         (gethash "failure" report) (and *failed* (coerce *failed* 'vector))
         (gethash "physicalUpdatesExecuted" report) *updates*
         (gethash "materialCallsAttempted" report) *material-calls*

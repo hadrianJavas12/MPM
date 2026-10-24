@@ -1,0 +1,27 @@
+{
+  "scenario": "gravity-slope",
+  "status": "STARTING",
+  "startedUtc": "2026-10-24T15:19:54.4876720Z",
+  "output": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\monitor-controls-001\\fixture with spaces\\output\\timeout",
+  "case": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\monitor-controls-001\\fixture with spaces\\cases\\timeout.lisp",
+  "sourceCommit": "bcbd4b2bb68b285805d717aa4281662017d43c8b",
+  "maxWallHours": 0.0008,
+  "wallDeadlineUtc": "2026-10-24T15:19:57.3676720Z",
+  "caseSha256": "EFDB97B5CB7E9FDF7DB0759D0E6AC1B10A4DC7BA4D3C817D7A235E96F96814C5",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "processIdentity": {
+    "nativeCommand": null,
+    "wrapper": {
+      "pid": 33988,
+      "name": "pwsh",
+      "sessionId": 11,
+      "createdUtc": "2026-10-24T15:19:53.9144561Z"
+    },
+    "sbcl": null
+  },
+  "nativeExitCode": null,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {}
+}

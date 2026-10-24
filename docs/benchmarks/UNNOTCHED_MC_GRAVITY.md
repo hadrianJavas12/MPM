@@ -78,3 +78,38 @@ sustained motion convention, inspecting scale1 geometry/plastic localisation.
 Report initial-to-final and post-ramp response separately, and toe crossing as
 a separate runout gate. Solver completion, plastic colour or one fast particle
 does not prove a landslide. No automatic scientific PASS is produced.
+
+### Native gate closure, 24 October 2026
+
+Source2308a1e attempt001 passes inputs/invalid-inputs/geometry/boundary/ramp,
+then exits1 because its main-thread-only dynamic counter is invisible to the
+constitutive worker. Two genuine updates and three saved states remain valid;
+this is a harness failure, not disabled material physics. Attempt002 fixes only
+the shared, mutex-protected test counters and skips those five passed groups.
+Runner/CSV/VTK/read-only all pass:1760attempted=accepted material calls, two
+updates,880MPs,2640material rows and three VTKs. Both285-file source snapshots
+match before/after; actual mapped DLL is verified. All three VTKs and both CSVs
+from001 and002 are byte-identical. No production numerical source changed.
+
+Independent Python readback of002 passes finite/mass/IDs/F/J/volume/law/yield,
+CSV/VTK identities, initial complete polygon and saved gravity schedule. Its
+selected frozen projection matches the source manifest hash/length. Root
+visually inspected its scale1 PNG. The original001 review is retained with its
+honestly labelled workspace-constant fallback; its earlier analysis source
+version was not separately saved.002 retains its exact executed script. A later
+metadata-only addition records the imported VTK reader hash for future reviews;
+it does not alter numerical audit/thresholds or require repeating solver gates.
+These tiny elastic states do not test slope instability or plastic-flow cost.
+
+The native runner took0.568538s for construction/two updates/three rich saved
+states. Initial stable dt is0.0007784618025300353s; a constant-initial-dt6s
+extrapolation gives7708updates. The rough wall extrapolation is not an ETA:
+plastic cost and evolving timestep remain unknown. A bounded3h wall budget is
+declared for the first6s SRF1.40 trial; baseline SRF1 follows sequentially.
+See [runtime rationale](../../research/references/unnotched-mc-ssr/runtime-plan.json).
+
+Thirteen new synthetic monitor assertions pass with zero MPM updates. New alias
+detachment/paths/exit/proof controls pass9assertions plus2default-selection
+checks in002. Fixture001 expired its60s release timer before delayed verifier
+invocation (exit8); preserve it rather than claiming it passed or was a native
+failure. No logoff/sleep/reboot guarantee follows from these tests.

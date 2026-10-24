@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "physicalUpdatesExecuted": 0,
+  "controls": [
+    {
+      "name": "success terminal status",
+      "passed": true
+    },
+    {
+      "name": "success scientific flags remain false",
+      "passed": true
+    },
+    {
+      "name": "success process identities captured",
+      "passed": true
+    },
+    {
+      "name": "Native0/complete captured",
+      "passed": true
+    },
+    {
+      "name": "nonzero terminal status",
+      "passed": true
+    },
+    {
+      "name": "nonzero scientific flags remain false",
+      "passed": true
+    },
+    {
+      "name": "nonzero process identities captured",
+      "passed": true
+    },
+    {
+      "name": "Native7 retained without MPM failure inference",
+      "passed": true
+    },
+    {
+      "name": "timeout terminal status",
+      "passed": true
+    },
+    {
+      "name": "timeout scientific flags remain false",
+      "passed": true
+    },
+    {
+      "name": "timeout process identities captured",
+      "passed": true
+    },
+    {
+      "name": "Budget exit3 without invented native exit",
+      "passed": true
+    },
+    {
+      "name": "Exact native child terminated by retained root handle",
+      "passed": true
+    }
+  ],
+  "finishedUtc": "2026-10-24T15:19:58.0273064Z",
+  "scope": "Trusted synthetic process fixtures, zero MPM updates; no logoff/sleep/reboot immunity claim"
+}

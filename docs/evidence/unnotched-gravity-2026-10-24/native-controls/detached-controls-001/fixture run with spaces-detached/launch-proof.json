@@ -1,0 +1,19 @@
+{
+  "requestedUtc": "2026-10-24T15:20:46.3871906Z",
+  "method": "local Win32_Process.Create / CIM",
+  "commandLine": "\"C:\\Users\\ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoProfile -NonInteractive -WindowStyle Hidden -File \"D:\\MPM\\output\\unnotched-gravity-2026-10-24\\detached-controls-001\\fixture run with spaces-detached\\launch-request.ps1\"",
+  "currentDirectory": "D:\\MPM",
+  "showWindow": 0,
+  "callerProcessId": 8200,
+  "callerSessionId": 11,
+  "requestSha256": "4473E7AC666D45BB0173136D284215250A906860F27FB8917810290E75623F97",
+  "workerScriptSha256": "DEF3267A766CFCFAEEA69F4AE369DBB71A5D4B240F9F851E20DBD2B5CBF7C4E0",
+  "workerProcessId": 19940,
+  "returnValue": 0,
+  "startupObserved": true,
+  "limitation": "Local WMI creation avoids direct caller parentage. Provider jobs, logoff, sleep, reboot and policy may still stop the run.",
+  "workerSessionId": 11,
+  "workerParentProcessId": 21136,
+  "workerCreationUtc": "2026-10-24T15:20:46.5077310Z",
+  "startupWaitSeconds": 0.6274607
+}

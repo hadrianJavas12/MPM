@@ -2,14 +2,26 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
-## Implementing: reusable unnotched gravity/MC scenario
+## Native gates closed: reusable unnotched gravity/MC scenario
 
 Current branch `codex/unnotched-gravity-benchmark` starts from pushed research
 bcbd4b2. Six additive gravity-slope files, ASDF registration, two actual SRF
 cases and preregistered contract are implemented. No material/engine/old
 scenario numerical source changed. See `docs/benchmarks/UNNOTCHED_MC_GRAVITY.md`.
-Physical full runs and native input/output gates are NOT_RUN at this source
-checkpoint; next run the frozen controls once, then audit bounded runtime.
+Physical full runs remain NOT_RUN here. Native0015input groups PASS then exit1
+for main-thread-only counter fixture;002global/mutex counter repair runs only
+the4missing output groups, allPASS/exit0.1760attempted=accepted material calls,
+2realupdates/880MPs/3VTKs/2640CSV rows. Both285file frozen sources before/after
+match/DLLverified;001vs002 all3VTK+2CSV BYTEIDENTICAL. Independent002Python
+auditPASS/actualPNGvisuallyinspected. No old numerical/Node suite repeated.
+Original001 counter failure, firstreview fallback/provenance gap and fixtures
+remain retained honestly. Exact002 analysis bytes are retained in its packet;
+the current script additionally records the imported VTK reader hash (metadata
+only; numerical audit/thresholds unchanged, syntax checked without solver rerun).
+NEXT: finish gate evidence checkpoint/commit/push, then ONE fresh SRF1.40 full
+6s bounded3h trial; baseline SRF1 afterward sequentially. See runtime-plan.json
+for indicative .568538s micro-run and .0007784618s initialdt/7708constant-dt steps;
+plastic cost unknown, not an ETA. No new full solver active at this checkpoint.
 Reference-inspired polygon220m2/880MPs, grid80x15, full6s includes smoothstep
 0–2s ramp and2–6s hold, dtScale.2/no damping/no state reset. Fixed base is not
 a calibrated Coulomb runout bed. Contract records source assumptions and
@@ -21,8 +33,7 @@ old default remains Wang. Nine detached controls plus2gravity-default checks
 PASS in002 with spaced paths/caller exit/identities/exit7. First001 verification
 was delayed beyond the fixture's60s release deadline; worker exited8 as designed,
 not a native failure. Original logs/proof retained; never relabel001 PASS.
-No full solver active. No Node or old numerical gate repeated. Next native gate
-uses `tests/benchmarks/gravity-slope-controls.lisp` and a fresh output directory.
+No full solver active. Do not repeat native001/002 gates or monitor fixtures.
 
 ## Current: unnotched method selected; residual repair checkpoint pushed
 

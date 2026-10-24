@@ -1,5 +1,24 @@
 # Native framework and Studio verification
 
+## Gravity-only MC input/output gates, 2026-10-24
+
+New branch `codex/unnotched-gravity-benchmark`, source2308a1e. Frozen001 passes
+five input/geometry/BC/ramp groups, then fixture counter fails across a worker
+thread. Its actual two-update/three-state native data remains retained.002
+repairs only shared test instrumentation and executes four missing output
+groups, all exit0:1760material calls, two actual updates,880MPs,2640CSV rows,
+three VTK states. All3VTK+2CSV files are byte-identical between attempts;
+both285file frozen snapshots before/after match and mapped DLL is verified.
+Independent saved-output review passes, including F/J/volume, physical stress,
+six-plane yield, mass/IDs and actual source-backed constants. No old numerical
+suite or Node tests repeated for this additive headless scenario.
+
+Monitor fixtures13assertions and detached gravity alias9+2assertions pass with
+zero MPM steps; earlier delayed detached fixture exit8 remains negative evidence.
+The gate is a bounded elastic integration, not a landslide or plastic-cost
+benchmark. Full6s/ramp2s SRF1.40 and later baseline remain separate experiments.
+See [native guide and chronology](benchmarks/UNNOTCHED_MC_GRAVITY.md).
+
 ## Unnotched journal-method checkpoint, 2026-10-24
 
 The primary-source matrix and actual engine-fit audit are documented in

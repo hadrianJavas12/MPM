@@ -1,0 +1,26 @@
+{
+  "firstReview": {
+    "status": "HISTORICAL_SCRIPT_BYTES_NOT_RETAINED",
+    "recordedAnalysisScript": {
+      "path": "D:\\MPM\\scripts\\review-gravity-slope.py",
+      "sha256": "cde116b55fe1ffd3d9cee6732d6673d09d5af8a046a0f0e6cf809689990e5d9a",
+      "bytes": 34849
+    },
+    "currentAnalysisIsNotThoseExecutedBytes": true,
+    "limitations": "Original first review JSON/PNG/log are retained; historical analysis script cannot be reconstructed from untracked pre-support version. No exact-first-script claim is made."
+  },
+  "secondReview": {
+    "status": "EXACT_SCRIPT_BYTES_RETAINED",
+    "recordedAnalysisScript": {
+      "path": "D:\\MPM\\scripts\\review-gravity-slope.py",
+      "sha256": "92f509a5bc56b588e5d883d8a59676224f1aa4bdd04df30d844a2dcdc3d7fc54",
+      "bytes": 37284
+    },
+    "savedPath": "analysis-and-process-support/scripts/review-gravity-slope.py"
+  },
+  "importedVtkReader": {
+    "path": "analysis-and-process-support/scripts/plot_m5_cliff_comparison.py",
+    "status": "CURRENT_BYTES_MATCH_BASELINE; no separate at-review support hash was recorded"
+  },
+  "detached001VerifyConsole": "NOT_RETAINED; worker-exit8 and deadline fixture/request/start/log proof are retained, not retrospectively invented console output"
+}

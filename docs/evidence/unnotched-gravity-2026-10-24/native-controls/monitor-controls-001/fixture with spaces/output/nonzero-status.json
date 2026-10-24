@@ -1,0 +1,46 @@
+{
+  "scenario": "gravity-slope",
+  "status": "FAILED_NATIVE",
+  "startedUtc": "2026-10-24T15:19:51.9174218Z",
+  "output": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\monitor-controls-001\\fixture with spaces\\output\\nonzero",
+  "case": "D:\\MPM\\output\\unnotched-gravity-2026-10-24\\monitor-controls-001\\fixture with spaces\\cases\\nonzero.lisp",
+  "sourceCommit": "bcbd4b2bb68b285805d717aa4281662017d43c8b",
+  "maxWallHours": 0.02,
+  "wallDeadlineUtc": "2026-10-24T15:21:03.9174218Z",
+  "caseSha256": "4320776D1045778AA0A248CB4810E28B470584C5CFA2A9C7A1F027709C36D314",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "processIdentity": {
+    "wrapper": {
+      "pid": 27764,
+      "name": "pwsh",
+      "sessionId": 11,
+      "createdUtc": "2026-10-24T15:19:51.3508387Z"
+    },
+    "nativeCommand": {
+      "pid": 25912,
+      "name": "cmd",
+      "sessionId": 11,
+      "createdUtc": "2026-10-24T15:19:52.0843418Z"
+    },
+    "sbcl": {
+      "pid": 20952,
+      "name": "sbcl",
+      "sessionId": 11,
+      "createdUtc": "2026-10-24T15:19:52.1798018Z"
+    }
+  },
+  "nativeExitCode": 7,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {
+    "status": "fixture",
+    "complete": false,
+    "savedFrames": 0,
+    "updates": 0,
+    "timeS": 1.2,
+    "phase": "synthetic"
+  },
+  "heartbeatUtc": "2026-10-24T15:19:53.7782784Z",
+  "endedUtc": "2026-10-24T15:19:53.7699570Z"
+}

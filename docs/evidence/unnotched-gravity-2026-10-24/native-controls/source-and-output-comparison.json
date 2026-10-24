@@ -1,0 +1,105 @@
+{
+  "baselineCommit": "2308a1eee996e2e0e9c4730b2591b54b0860ddac",
+  "packagingHead": "2308a1eee996e2e0e9c4730b2591b54b0860ddac",
+  "productionGitDiffPathsFromBaseline": [],
+  "numericalSourceEntriesChecked": 263,
+  "executedSourcesMatchWorkingTree": true,
+  "snapshotFileSetCount": 285,
+  "identicalSourceEntriesBetweenAttempts": 284,
+  "changedSourceEntriesBetweenAttempts": [
+    {
+      "path": "source/case.lisp",
+      "attempt001": "00ff22e39c742a17ca7b15ba93bb8718ead4686462fba889b414a5d74fad868e",
+      "attempt002": "e1cf6e24f8f4a815c1685746e75e2e6cc4a1f49b0c96ff1f157743564d95ecc3"
+    }
+  ],
+  "onlyTestHarnessChanged": true,
+  "outputs": [
+    {
+      "path": "history.csv",
+      "sha256": "6cdf8c858edcade2c9b600621db61d052232495e8a5ef4c8583581504eb407fc",
+      "bytes": 2701,
+      "byteIdentical": true
+    },
+    {
+      "path": "particles.csv",
+      "sha256": "3f5f031cba1a9d1cd93aab21d52f9e5c18b374f0c9e855748e93758f73fb8622",
+      "bytes": 1943893,
+      "byteIdentical": true
+    },
+    {
+      "path": "vtk/particles_0000.vtk",
+      "sha256": "688bebade2b53e75d67c1af2f21bd6b50485c3bcbe3e0c3815e21c85bb0ca3e8",
+      "bytes": 290664,
+      "byteIdentical": true
+    },
+    {
+      "path": "vtk/particles_0001.vtk",
+      "sha256": "c43f8516f50d3c128389c687e4188be9975d556b69361a7c680c6fb0af198af9",
+      "bytes": 290664,
+      "byteIdentical": true
+    },
+    {
+      "path": "vtk/particles_0002.vtk",
+      "sha256": "f7b1f4a3ddb21e05905b7a495b7ad81d61baf079744c55eef70926f6fcc23327",
+      "bytes": 290664,
+      "byteIdentical": true
+    }
+  ],
+  "supportSources": [
+    {
+      "path": "scripts/review-gravity-slope.py",
+      "bytes": 37284,
+      "sha256": "92f509a5bc56b588e5d883d8a59676224f1aa4bdd04df30d844a2dcdc3d7fc54"
+    },
+    {
+      "path": "scripts/plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "matchesBaselineGitBlobExactly": false,
+      "matchesBaselineIgnoringCRLFOnly": true
+    },
+    {
+      "path": "scripts/run-gravity-slope-trial.ps1",
+      "bytes": 5748,
+      "sha256": "a92f3baefd7ee19d54a75faafd451f15ce039e7cf2dd6d296d8ce4fdc8028c32",
+      "matchesBaselineGitBlobExactly": true,
+      "matchesBaselineIgnoringCRLFOnly": true
+    },
+    {
+      "path": "scripts/start-gravity-slope.ps1",
+      "bytes": 721,
+      "sha256": "e1bfe58d8fcff74a037ce1bd72073f70e685a01c1f89de61419ee40cc189781c",
+      "matchesBaselineGitBlobExactly": true,
+      "matchesBaselineIgnoringCRLFOnly": true
+    },
+    {
+      "path": "scripts/start-wang2017-detached.ps1",
+      "bytes": 9148,
+      "sha256": "c45e24e7e01a3916228d2fed955eb2ef8876364912cdf3ae56d48ab32b1b1f82",
+      "matchesBaselineGitBlobExactly": true,
+      "matchesBaselineIgnoringCRLFOnly": true
+    },
+    {
+      "path": "tests/windows/gravity-slope-monitor.ps1",
+      "bytes": 5445,
+      "sha256": "6000aed1be798b8651822078a21775c6e5906761876f195cc3edf78311176a76",
+      "matchesBaselineGitBlobExactly": true,
+      "matchesBaselineIgnoringCRLFOnly": true
+    },
+    {
+      "path": "tests/windows/detached-launch-controls.ps1",
+      "bytes": 5646,
+      "sha256": "6f84580d846fc42ff46a27df60e57c0eb857b4c1583463678f323f263d67b3cd",
+      "matchesBaselineGitBlobExactly": true,
+      "matchesBaselineIgnoringCRLFOnly": true
+    },
+    {
+      "path": "tests/windows/fixtures/detached-exit-fixture.ps1",
+      "bytes": 920,
+      "sha256": "e154310fafde4ed4540454a3123a03100f751739bd82bec972caf39a544ccf1f",
+      "matchesBaselineGitBlobExactly": true,
+      "matchesBaselineIgnoringCRLFOnly": true
+    }
+  ]
+}
