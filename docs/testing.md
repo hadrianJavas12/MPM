@@ -1,5 +1,29 @@
 # Native framework and Studio verification
 
+## Soil2 full-run failure and one actual replay,2026-10-24
+
+Native source621146b exited1 at08:26:52WIB, complete=false. Last saved frame57
+is5.7s/57mm with19608updates; failure manifest19820 includes later unsaved work.
+Actual capsule has no admissible coupled signed-history solution, not guard or
+multi-root failure. One exact frozen native replay002 reproduces the rejection;
+its exit0 is an expected-rejection test, not a successful simulation.271original
+source files plus the new driver272match before/after; copiedDLL verified.
+Replay harness001 failed before the capsule call on a COMMON-LISP:BOOLEAN name
+collision and is retained;002 renames only that helper, actual replaycalls=1.
+
+Complete candidate/admissibility and independent apex certificate are recorded
+in [the failure review](benchmarks/WANG2017_SOIL2_FAILURE.md). At old strength,
+mean remains below apex by0.40894Pa; coupled softening roots violate the new
+bound. Do not substitute the old Soil1 mean-exceeds-bound explanation.58saved
+states pass finite/mass/F/J/Ep/law/contact checks, but do not show a landslide.
+Renderer exit2 is expected for incomplete data;58actual frames/14.5s playback,
+H264/yuv420p full decode0, scale1/no interpolation. No solver or old suites rerun.
+Automation returned5h while diagnosis/next constitutive gate continues.
+Packets: `docs/evidence/wang2017-soil2-2026-10-24/failure-replay/`16hashes/
+566verified ZIP members; `fast-010-001-failed/`34hashes and71native/272source/
+11runtime tar members verified. Root visually inspected the actual overview and
+reconstructed-tension diagnostic. Source/postprocessor bytes remain unchanged.
+
 ## First full Soil2 slope launch,2026-10-24
 
 Source621146b launched07:03:31WIB, original approved0.01m/s to60mm/6s,

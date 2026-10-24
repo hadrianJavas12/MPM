@@ -25,7 +25,8 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[wang2017-soil2-native]] —18 native and8 actual MPM/output controls PASS; Soil2 slope started24October07:03WIB with271 frozen sources verified, outcome pending
+- [[wang2017-soil2-native]] —18 native and8 actual MPM/output controls PASS; full slope FAILED_NATIVE at08:26WIB, partial states retained
+- [[wang2017-soil2-return-failure]] — one exact replay confirms no admissible coupled return;58saved states/media, no landslide; next tensile/apex model gate open
 - [[wang2017-fast-trial-2026-10-24]] — complete native0.01m/s to60mm/6s,61states/video, no verified landslide;17native+11review artifact hashes; reference-speed600s remains NOT_RUN
 - [[wang2017-apex-and-rate-study]] —5 native legacy/strict apex and3 rate-input controls PASS; interrupted0.002m/s data retained and completedfast010 rate comparison reviewed
 - [[wang2017-paper-history]] —19 coupled fixed-frame Soil2 point controls plus optional ASDF smoke PASS; existing17 history/7 capture/34 MC evidence retained; native particle and finite-strain convention pending

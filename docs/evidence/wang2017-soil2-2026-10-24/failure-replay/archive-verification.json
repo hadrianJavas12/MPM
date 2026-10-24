@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "verifiedUtc": "2026-10-24T01:46:42.505295+00:00",
+  "archives": [
+    {
+      "path": "failure-replay-001.zip",
+      "bytes": 1186309,
+      "sha256": "5a83c06671e197cd8296f1a7e80bf4c317bb1af6f9423ec3bdccfa4b03f854ed",
+      "verifiedMembers": 281,
+      "memberManifest": "archive-member-manifests/failure-replay-001.json",
+      "excludedFiles": 62,
+      "excludedBytes": 2153196
+    },
+    {
+      "path": "failure-replay-002.zip",
+      "bytes": 1219232,
+      "sha256": "ba68e9d4094aed6c631af0aea315b6cbcbb1637e3d246e51715242327dcecef8",
+      "verifiedMembers": 285,
+      "memberManifest": "archive-member-manifests/failure-replay-002.json",
+      "excludedFiles": 62,
+      "excludedBytes": 2153196
+    }
+  ],
+  "totalVerifiedMembers": 566,
+  "originalInputsUnchangedDuringPackaging": true,
+  "numericalTestsOrReplaysExecutedByCollector": 0,
+  "scope": "Archive/hash verification only; native002 exit0 means expected captured rejection reproduced once, not simulation or scientific PASS."
+}

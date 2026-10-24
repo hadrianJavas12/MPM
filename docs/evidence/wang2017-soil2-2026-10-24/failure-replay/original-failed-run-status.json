@@ -1,0 +1,71 @@
+{
+  "startedUtc": "2026-10-24T00:03:31.3920122Z",
+  "sourceCommitAtLaunch": "621146b4e26126978b8ced859a87a4f23cb07af6",
+  "wrapperPid": 41032,
+  "case": "D:\\MPM\\cases\\benchmarks\\wang2017-soil2-fast-010.lisp",
+  "caseSha256": "F0BE6DDDEC15C770DA35BBDCF228B2184663FBAB98B0C3A857BF1B5EEF3EE2C3",
+  "output": "D:\\MPM\\output\\wang2017-soil2-2026-10-24\\fast-010-001",
+  "maxWallHours": 2.0,
+  "status": "FAILED_NATIVE",
+  "exitCode": 1,
+  "postprocessorSha256": {
+    "scripts/collect-wang2017-evidence.py": "10F770A1D3FDCAF64EA73C93D9315720249B67B9100A221229CEEB6BC171C759",
+    "scripts/plot-wang2017-descent.py": "66415FC26F998DBC8B460DAC93B182EDA60F352469449F9F1E85371EF759ABB7",
+    "scripts/plot_m5_cliff_comparison.py": "1C254E7BC1490F284C1722536E6C442C4A3E033C06949D8372F9D9D38C3277E8"
+  },
+  "scientificValidation": false,
+  "processIdentity": {
+    "wrapper": {
+      "pid": 41032,
+      "name": "pwsh",
+      "createdUtc": "2026-10-24T00:03:30.7740317Z",
+      "sessionId": 11
+    },
+    "nativeCommand": {
+      "pid": 38956,
+      "name": "cmd",
+      "createdUtc": "2026-10-24T00:03:31.5163263Z",
+      "sessionId": 11
+    },
+    "sbcl": {
+      "pid": 20484,
+      "name": "sbcl",
+      "createdUtc": "2026-10-24T00:03:31.8217596Z",
+      "sessionId": 11
+    }
+  },
+  "heartbeatIntervalSeconds": 60.0,
+  "heartbeatSequence": 85,
+  "nativeCommandPid": 38956,
+  "wallDeadlineUtc": "2026-10-24T02:03:31.5505012+00:00",
+  "heartbeatUtc": "2026-10-24T01:26:52.4506843Z",
+  "progress": {
+    "observedUtc": "2026-10-24T01:26:52.4506843Z",
+    "manifestLastWriteUtc": "2026-10-24T01:26:52.2796453Z",
+    "status": "failed",
+    "complete": false,
+    "phase": "prescribed-descent",
+    "timeS": 5.699999999999999,
+    "commandedSettlementM": 0.056999999999999995,
+    "measuredSettlementM": 0.05656377465709609,
+    "gravityConverged": true,
+    "settleUpdates": 3400,
+    "gravityTimeS": 6.235869503110743,
+    "loadingUpdates": 19820,
+    "gravityFreeResidualRatio": 0.0009713887844605897,
+    "stdout": {
+      "bytes": 2194,
+      "lastWriteUtc": "2026-10-24T01:26:52.2472040Z"
+    },
+    "stderr": {
+      "bytes": 10812,
+      "lastWriteUtc": "2026-10-24T01:26:52.3000103Z"
+    }
+  },
+  "nativeExitCode": 1,
+  "nativeEndedUtc": "2026-10-24T01:26:52.4616283Z",
+  "nativeComplete": false,
+  "timeS": 5.699999999999999,
+  "commandedSettlementM": 0.056999999999999995,
+  "measuredSettlementM": 0.05656377465709609
+}

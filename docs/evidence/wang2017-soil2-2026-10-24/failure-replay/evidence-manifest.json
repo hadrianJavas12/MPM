@@ -1,0 +1,85 @@
+{
+  "scope": "Immutable actual-capsule replay evidence; expected rejection reproduced once, no physics PASS claim.",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ffe82f3c5b968ed009c2577fa38f32c83be167799ee565d40a18e3440c57b342"
+    },
+    {
+      "path": "analysis-support/collect-failure-replay.py",
+      "bytes": 12074,
+      "sha256": "e0852e3d2ecef8117c020522033ff8e2aa672420e9bf057e15131c647a10df92"
+    },
+    {
+      "path": "archive-member-manifests/failure-replay-001.json",
+      "bytes": 64262,
+      "sha256": "e87abf29a51de428823a9a82862591ddaae6394ef68ff94317234ed2ad0bb1df"
+    },
+    {
+      "path": "archive-member-manifests/failure-replay-002.json",
+      "bytes": 64996,
+      "sha256": "fb85d5750436f5438ae07fad30ea1fe134afbb383073d65c5fc72ab710fefce4"
+    },
+    {
+      "path": "archive-verification.json",
+      "bytes": 1054,
+      "sha256": "b5ce2018e16fcfef6279e8974594b3188ce78d19c0fb2497cc801cb8407684fe"
+    },
+    {
+      "path": "candidate-admissibility.json",
+      "bytes": 5230,
+      "sha256": "dd8a78cc653354ee9a0ce5edeee4d392368247f3d9640a7cf983ca1d9d032dff"
+    },
+    {
+      "path": "diagnosis.md",
+      "bytes": 4191,
+      "sha256": "8b04f46f3240bf4e38e78c23a6ea63e18d648aff661fd5369f66d9bd57b2b456"
+    },
+    {
+      "path": "failure-replay-001.zip",
+      "bytes": 1186309,
+      "sha256": "5a83c06671e197cd8296f1a7e80bf4c317bb1af6f9423ec3bdccfa4b03f854ed"
+    },
+    {
+      "path": "failure-replay-002.zip",
+      "bytes": 1219232,
+      "sha256": "ba68e9d4094aed6c631af0aea315b6cbcbb1637e3d246e51715242327dcecef8"
+    },
+    {
+      "path": "original-failed-run-status.json",
+      "bytes": 2498,
+      "sha256": "7dbcd316a6e5a3bf0cf0fe42336a70791d006dea2195ed7e5fd5412e87f9e310"
+    },
+    {
+      "path": "original-failed-source-manifest.json",
+      "bytes": 55996,
+      "sha256": "451295330ab61a80c17f7b7c700fe60ca22d5642c4dd5f073c95a58f94cc64b9"
+    },
+    {
+      "path": "original-failed-source-provenance.json",
+      "bytes": 634884,
+      "sha256": "784a5dd1c92d80c0b76ca15f50afa09a31fcc51cd5e0936fa132b2ed311d8a64"
+    },
+    {
+      "path": "original-mc-integration-failure.json",
+      "bytes": 1316,
+      "sha256": "05835d5429292da0b95190232c0d3fb4d6228d6fd08d975ee1346434ba99242d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3281,
+      "sha256": "054c6f22b436084bcca987f6e3e84e55d34f69c578c7d2e547f973a189047f93"
+    },
+    {
+      "path": "replay-result.json",
+      "bytes": 507,
+      "sha256": "c28049d6a784139fd9076598c7ac9b5e14167ac7835a324ca4ea76ff3000c98f"
+    },
+    {
+      "path": "source-integrity-verification.json",
+      "bytes": 128047,
+      "sha256": "750e76752d4945be3874180257fa81fd51edb0c2f1dcf8a4169b8e8a875348f8"
+    }
+  ]
+}

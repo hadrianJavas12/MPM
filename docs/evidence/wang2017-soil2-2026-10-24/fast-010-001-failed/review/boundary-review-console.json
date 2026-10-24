@@ -1,0 +1,47 @@
+{
+  "negativeSavedGapCount": 0,
+  "lastContactObservation": {
+    "frame": 57,
+    "timeS": 5.7,
+    "commandedSettlementM": 0.057,
+    "negativeSavedGeometricGapCount": 0,
+    "minSavedGeometricGapM": 0.00013311034448509895,
+    "maxSavedGeometricGapM": 0.0011135868420857897,
+    "nominalGeometricSoilForceYSumNPerM": -628164.4937816199,
+    "nominalGeometricUpwardSoilForceSumNPerM": 0.0,
+    "nativeActualTotalSoilForceYNPerM": -628164.49797,
+    "nativeActualReactionUpNPerM": 628164.49797,
+    "geometricSpringEnergyJPerM": 208.24040476893026,
+    "nativeSignedActuatorCommandWorkJPerM": 19216.3368794
+  },
+  "lastStressObservation": {
+    "frame": 57,
+    "timeS": 5.7,
+    "maxReconstructedMeanKirchhoffPa": 23600.35323754352,
+    "positiveMeanCountAbove1eMinus6Pa": 19,
+    "positiveMeanDrivenContactCount": 0,
+    "positiveMeanWithin1mOriginalFreeSurfaceCount": 19,
+    "positiveMeanWithin1mDrivenCentreCount": 0
+  },
+  "reconstructionResidualPa": 1.7462298274040222e-10,
+  "yieldResidualDifferencePa": 2.3283064365386963e-10,
+  "closestInferredSavedSignature": {
+    "nativeId": 627,
+    "lastSavedPositionM": [
+      10.258463420036557,
+      13.630832253121296,
+      0.0
+    ],
+    "originalPositionM": [
+      10.25,
+      13.75,
+      0.0
+    ],
+    "plasticTensorFrobeniusDistance": 0.0006567474038708477,
+    "lastSavedActualJMinusFailureTrialJ": -0.00011922554966070642,
+    "lastSavedReconstructedMeanKirchhoffPa": 23600.35323754352,
+    "drivenContact": false,
+    "originalNormalDistanceToFreeSurfaceM": 0.40849364905389074,
+    "originalDistanceToNearestDrivenCentreM": 1.118033988749895
+  }
+}

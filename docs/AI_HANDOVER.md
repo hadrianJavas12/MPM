@@ -2,17 +2,48 @@
 
 **Operational checkpoint: 2026-10-24, Asia/Jakarta. Read this first.**
 
-## Current: first native Soil2 slope RUNNING,24October07:03WIB
+## Current: first native Soil2 slope FAILED,24October08:26WIB
 
 Run `output/wang2017-soil2-2026-10-24/fast-010-001` started **07:03:31WIB**,
-source **621146b4e26126978b8ced859a87a4f23cb07af6**,2h wall budget until
-**09:03:31WIB**. WMI worker48936 / wrapper41032 / cmd38956 / SBCL20484,
-SessionId11. Initial status NATIVE_RUNNING; source loading/compilation is not
-physical progress. Read adjacent status + manifest complete/phase/time + ONE
-stdout tail on wakeup; verify creation/session identities if needed. Do not
-launch a duplicate or poll actively. SAME automation now checks every15min,
-quiet while healthy, then returns5h after terminal result if work remains.
-Do not edit the three active postprocessors. Run completion/landslide NOT_YET.
+source **621146b4e26126978b8ced859a87a4f23cb07af6**. Native and WMI worker
+exited1 at **08:26:52WIB**, before the2h wall budget09:03:31. No solver is active;
+do not poll dead PIDs or restart this attempt. Historical identities: worker48936 /
+wrapper41032 / cmd38956 / SBCL20484,SessionId11. Manifest complete=false.
+Last SAVED state is5.7s/57mm/frame57 with19608accepted loading updates; failure
+manifest19820updates includes later unsaved work. The capsule has no full-solver
+time/particle ID, so exact failure displacement is not proven to be57mm.
+Gravity converged after3400updates. The same automation returned to5h after
+terminal status, pending diagnosis/next justified work. No landslide PASS.
+
+Actual `mc-integration-failure.json` reports **No admissible signed-tensor Soil2
+solution**, not history-decrease guard or multiple roots. Trial principal tau
+25160.399761995257/25178.161014574966/25222.80382584027Pa; J1.0018908194640175,
+committed paperkps.016529047726561334. At OLD cohesion17603.214205079Pa,
+mean25187.121534137Pa is0.408937501Pa BELOW theold-strength apex bound
+25187.530471637Pa. Do not repeat the old Soil1 mean-exceeds-bound diagnosis.
+For psi0, mean is preserved and softening can lower the admissible bound.
+ONE frozen native replay002 reproduced the actual rejection; replay exit0 is
+expected rejection, not slope PASS. All positive face/edge roots exceed fixed-mean
+kmax0.016529428794191926; independent apex history requires0.016530943069873974.
+The mismatch1.5143e-6 is far above1e-13. No missing singular solve is established.
+Replay001 harness name collision occurred BEFORE any capsule call and is retained.
+Do not repeat the actual capsule replay or completed saved-state/media review.
+See `docs/benchmarks/WANG2017_SOIL2_FAILURE.md` for the exact certificate.
+
+Retained packets: `failure-replay/`16artifact hashes/566verified ZIP members;
+`fast-010-001-failed/`34artifact hashes, native71/source272/runtime11verified
+tar members.58actual states/915stable IDs,53070material and348contact rows
+pass finite/mass/F/J/Ep/law/contact checks. Partial58-frame video full decode0,
+14.5s playback at4fps, scale1/no interpolation; renderer exit2 retained.
+Root inspected overview and reconstructed-tension viewport. No coherent landslide:
+free above-base509MP centroid+1.969mmX/−17.827mmY, zero free mass beyond toe.
+All saved contact geometric gaps are nonnegative; positive reconstructed mean
+tension is near free surfaces, not a demonstrated upward-pulling spring artifact.
+The inferred closest-history MP627 is NOT the captured particle identification.
+No production equations/parameters/tolerances were changed. Next: review an
+explicit opt-in apex-flow extension and its uniqueness/dissipation/history gate,
+not a catch-all clamp. Keep strict class and all negative evidence unchanged.
+
 Launch-only capture **07:07:08WIB**: gravity/NATIVE_RUNNING/complete=false,
 915particles. All271 frozen source files match manifest/current workspace;
 runtime exact-loaded-byte flags and actual mapped copiedDLL verified. The3
@@ -79,11 +110,12 @@ First case is `cases/benchmarks/wang2017-soil2-fast-010.lisp`: same approved
 0.01m/s to60mm/6s and physical/numerical inputs as Soil1; only material changes.
 It preserves plastic history formed during gravity. Additional per-particle
 F/J/Ep/cohesion/history and contact geometry/spring-energy CSVs are read-only.
-Actual MPM/output gate and evidence are committed/pushed in621146b. The fresh
-first Soil2 slope above is now active, with actual source freezing before load.
-No landslide PASS is claimed; inspect the actual terminal result and failure
-capsule if produced. No changes to full-run numerical sources are authorized
-merely to hide a rejected history or apex path.
+Actual MPM/output gate and evidence are committed/pushed in621146b. The first
+Soil2 slope above is terminal FAILED_NATIVE, with actual source freezing before
+load. No landslide PASS is claimed. Preserve the actual failure capsule and
+partial states; numerical sources are not to be changed merely to hide a rejected
+history or apex path. A new tensile/apex convention would be a declared model
+extension, not an unchanged-physics numerical fix.
 
 ## Current: approved 0.01m/s / 60mm accelerated Wang trial COMPLETE, reviewed
 

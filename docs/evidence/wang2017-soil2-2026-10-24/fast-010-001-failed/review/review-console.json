@@ -1,0 +1,193 @@
+{
+  "frames": 58,
+  "materialRows": 53070,
+  "contactRows": 348,
+  "lastComparison": {
+    "commandedSettlementM": 0.057,
+    "soil2Frame": 57,
+    "soil1Frame": 57,
+    "soil2ReactionNPerM": 628164.49797,
+    "soil1ReactionNPerM": 649642.3622485,
+    "reactionDifferenceNPerM": -21477.86427849997,
+    "reactionDifferenceOverAbsSoil1OrNull": -0.03306105870953701,
+    "maxAbsolutePositionDistanceM": 0.0025214633408439636,
+    "maxLoadingDisplacementFieldDifferenceM": 0.0025225356292800792,
+    "rmsLoadingDisplacementFieldDifferenceM": 0.0004342428617796265,
+    "soil2KineticJPerM": 77.56316372844,
+    "soil1KineticJPerM": 79.75550366467,
+    "paperKpsMinusJ2History": "NOT_COMPARED: distinct invariants on different material models"
+  },
+  "identities": {
+    "materialRows": 53070,
+    "contactRows": 348,
+    "idsStable": true,
+    "allAuditDataFinite": true,
+    "actualJDetFRange": [
+      0.9871373129673168,
+      1.0017715939143568
+    ],
+    "volumeOverReferenceVolumeRange": [
+      0.9871373129673119,
+      1.0017715939143677
+    ],
+    "cohesionPaRange": [
+      17936.32796992322,
+      30000.0
+    ],
+    "maxStoredJMinusDetF": 2.220446049250313e-16,
+    "maxActualJMinusVolumeRatio": 8.72635297355373e-14,
+    "maxPaperInvariantResidual": 1.734723475976807e-18,
+    "maxSoil2CohesionLawResidualPa": 3.637978807091713e-12,
+    "maxProperRotationResidual": 1.7763568394002505e-15,
+    "maxMaterialCsvVtkPositionDifferenceM": 0.0,
+    "maxMaterialCsvVtkCommonFieldDifference": 0.0,
+    "maxSurfaceDescentIdentityResidualM": 5.079270337660091e-15,
+    "maxIndividualGapIdentityResidualM": 1.582067810090848e-15,
+    "maxGeometricSpringEnergyIdentityResidualJPerM": 2.0052937088621547e-10,
+    "acceptedHistoryDecreaseFlagCount": 92,
+    "smallestLastAcceptedStepKpsChange": -2.168404344971009e-18,
+    "smallestSavedFrameKpsChange": 0.0,
+    "transportScope": "Last accepted-step polar rotations are proper at saved instants; sparse frames do not reconstruct every unsaved Ep transport/update. Independent material controls own path/objectivity verification."
+  },
+  "motion": {
+    "all": {
+      "particleCount": 915,
+      "massKgPerM": 466520.1674374021,
+      "centroidMotionM": [
+        0.001465211811351187,
+        -0.011660984686899795,
+        0.0
+      ],
+      "maxMotionNormM": 0.05642519606249391,
+      "maxAbsHorizontalMotionM": 0.013128098205683614,
+      "maxDownwardMotionM": 0.05517715772942289,
+      "meanVelocityMPerS": [
+        0.0004805717411769878,
+        -0.000681776377992113,
+        0.0
+      ],
+      "rmsSpeedMPerS": 0.018235074586370758,
+      "meanVelocityNormOverRmsSpeed": 0.045743011434402424,
+      "massFractionRightwardMotionGreater5mm": 0.10054644808743173,
+      "massFractionRightwardMotionGreater10mm": 0.02295081967213115,
+      "massFractionRightwardAndDownwardVelocity": 0.27759562841530055
+    },
+    "aboveBaseExcludingSixDrivenContacts": {
+      "particleCount": 509,
+      "massKgPerM": 259517.77620288273,
+      "centroidMotionM": [
+        0.001968907359725173,
+        -0.017826880837451632,
+        0.0
+      ],
+      "maxMotionNormM": 0.05327550462510185,
+      "maxAbsHorizontalMotionM": 0.013128098205683614,
+      "maxDownwardMotionM": 0.05201468616240135,
+      "meanVelocityMPerS": [
+        0.0007447277216822505,
+        -0.0011749564228002685,
+        0.0
+      ],
+      "rmsSpeedMPerS": 0.024383117825958187,
+      "meanVelocityNormOverRmsSpeed": 0.05705151470576543,
+      "massFractionRightwardMotionGreater5mm": 0.168958742632613,
+      "massFractionRightwardMotionGreater10mm": 0.029469548133595286,
+      "massFractionRightwardAndDownwardVelocity": 0.3143418467583497
+    },
+    "drivenContacts": {
+      "particleCount": 6,
+      "massKgPerM": 3059.1486389337847,
+      "centroidMotionM": [
+        0.011312610130396345,
+        -0.054712573141816406,
+        0.0
+      ],
+      "maxMotionNormM": 0.05642519606249391,
+      "maxAbsHorizontalMotionM": 0.011907823174555077,
+      "maxDownwardMotionM": 0.05517715772942289,
+      "meanVelocityMPerS": [
+        0.007982709061834523,
+        -0.010961957387384385,
+        0.0
+      ],
+      "rmsSpeedMPerS": 0.013678023111378893,
+      "meanVelocityNormOverRmsSpeed": 0.991410565757492,
+      "massFractionRightwardMotionGreater5mm": 1.0,
+      "massFractionRightwardMotionGreater10mm": 1.0,
+      "massFractionRightwardAndDownwardVelocity": 1.0
+    },
+    "baseOriginalYAtMost5m": {
+      "particleCount": 400,
+      "massKgPerM": 203943.24259558565,
+      "centroidMotionM": [
+        0.0006765482512596121,
+        -0.003169108008498845,
+        0.0
+      ],
+      "maxMotionNormM": 0.009408059505809113,
+      "maxAbsHorizontalMotionM": 0.0028582136072419217,
+      "maxDownwardMotionM": 0.009351894278203154,
+      "meanVelocityMPerS": [
+        3.190119617417812e-05,
+        9.999794416715162e-05,
+        0.0
+      ],
+      "rmsSpeedMPerS": 0.0011317514767920428,
+      "meanVelocityNormOverRmsSpeed": 0.0927440438386468,
+      "massFractionRightwardMotionGreater5mm": 0.0,
+      "massFractionRightwardMotionGreater10mm": 0.0,
+      "massFractionRightwardAndDownwardVelocity": 0.22
+    }
+  },
+  "fastest": {
+    "id": 797,
+    "positionM": [
+      14.264473858910963,
+      6.706382810564737,
+      0.0
+    ],
+    "velocityMPerS": [
+      0.011124047242163593,
+      0.3001601045125619,
+      0.0
+    ],
+    "speedMPerS": 0.30036616448601194,
+    "drivenContact": false
+  },
+  "localization": {
+    "paperKpsLastRange": [
+      0.0,
+      0.016084896040102374
+    ],
+    "paperKpsAtLoadingOriginRange": [
+      0.0,
+      0.0010461466239523613
+    ],
+    "incrementGreater1eMinus8Count": 80,
+    "incrementGreater1eMinus3Count": 42,
+    "top50IncrementMassWeightedShare": 0.9513097706016884,
+    "top50IncrementOriginalBoundingBoxM": [
+      [
+        6.25,
+        5.75,
+        0.0
+      ],
+      [
+        15.25,
+        14.75,
+        0.0
+      ]
+    ],
+    "top50IncrementDrivenContacts": 0,
+    "definition": "Signed paper tensor invariant, not damage; concentration alone is not a throughgoing shear-band or landslide proof"
+  },
+  "runout": {
+    "originalToeXM": 15.773502691896258,
+    "freeMassFractionBeyondOriginalToe": 0.0,
+    "freeFront95thAdvanceFromSettledM": 0.0057647835042615725,
+    "maxFreeXAtLoadingOriginM": 15.259531527362162,
+    "maxFreeXLastM": 15.26267543400973,
+    "rightBoundaryXM": 20.0,
+    "definition": "Only particles originally above base and outside driven strip; stationary base particles do not count as run-out"
+  }
+}

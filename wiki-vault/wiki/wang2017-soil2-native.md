@@ -47,9 +47,11 @@ mesh dependence and unverified reference curve remain limitations.
 
 The first full Soil2 case started24October07:03:31WIB on621146b in
 `output/wang2017-soil2-2026-10-24/fast-010-001`, with2h wall budget until09:03.
-Initial native process is running; completion and landslide are not established.
-The same automation checks every15min quietly and will return to5h continuation
-after terminal status. Check actual status before starting any further run.
+It FAILED_NATIVE1 at08:26:52WIB. Last saved state5.7s/57mm has19608accepted
+loading updates; failure manifest19820 includes later unsaved work. No solver
+is active. The same automation returned5h for diagnosis/next scientific gate.
+One frozen actual replay reproduces no-admissible coupled return; replay exit0
+is expected rejection, not slope PASS. See [[wang2017-soil2-return-failure]].
 Launch-only07:07:08 gravity capture verifies271 frozen source files against
 workspace/manifest, actual copiedDLL mapping,3postprocessor hashes and4 process
 identities. Packet `fast-010-launch` retains6 artifact hashes/288 verified ZIP

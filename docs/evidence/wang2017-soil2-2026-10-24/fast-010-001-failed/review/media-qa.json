@@ -1,0 +1,44 @@
+{
+  "scope": "Actual partial native states only; not completed simulation or scientific validation",
+  "nativeFrames": 58,
+  "nativeTimeRangeS": [
+    0,
+    5.7
+  ],
+  "savedPhysicalCadenceS": 0.1,
+  "videoFrames": 58,
+  "videoFps": 4,
+  "videoDurationS": 14.5,
+  "firstVideoPresentationTimestampS": 0.0,
+  "lastVideoPresentationTimestampS": 14.25,
+  "playbackTimePerPhysicalTimeBetweenFrames": 2.5,
+  "lastFrameHoldS": 0.25,
+  "temporalInterpretation": "Each displayed label uses actual native time;4fps playback slows .1s saved intervals to .25s. This is not real-time playback.",
+  "displacementScale": 1,
+  "interpolation": false,
+  "fixedAxesAndColour": {
+    "quantity": "wang-paper-kps",
+    "xlim": [
+      -0.33521702949026533,
+      20.335562069733577
+    ],
+    "ylim": [
+      -0.18599940194812592,
+      15.105186707144727
+    ],
+    "vmin": 0.0,
+    "vmax": 0.016084896040102374,
+    "displacementScale": 1,
+    "interpolatedStates": false,
+    "videoFps": 4
+  },
+  "codec": "h264",
+  "pixelFormat": "yuv420p",
+  "width": 1680,
+  "height": 756,
+  "fullDecodeExitCode": 0,
+  "rendererExitCode": 2,
+  "renderScope": "Expected incomplete exit retained; completion assertion was not weakened",
+  "viewportInspection": "Overview and boundary-diagnosis PNG visually inspected; labels explicitly show INCOMPLETE, assumed geometry,100x reference,actual coordinates and non-damage paper kps",
+  "nativeVtkHashesVerified": 58
+}

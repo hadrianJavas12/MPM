@@ -5,6 +5,16 @@ Branch `codex/wang2017-soil2-landslide` starts from4036087. This is not permissi
 to force particle trajectories or tune parameters for a collapse. Completed
 Soil1 fast010 remains a negative control, with immutable native/source evidence.
 
+**24October result:** first full Soil2 trial exited1 at08:26:52WIB, before its
+wall budget. Last saved state5.7s/57mm has19608loading updates; manifest19820
+includes later unsaved work. Exact failure time/displacement is not recorded.
+Actual captured point has no admissible coupled signed-history return, not a
+history-decrease or multi-root rejection. The old-strength apex bound exceeds
+trial mean by0.40894Pa; the relevant issue to audit is the bound after coupled
+softening. Preserve this negative experiment; no identical restart or hidden
+constitutive/tolerance change is permitted.
+[Full failure and next-gate review](WANG2017_SOIL2_FAILURE.md).
+
 ## Material contract before enabling a slope run
 
 Keep Table1 Soil2 inputs: E20MPa,nu.25,gamma20kN/m3,phi35/psi0; Cauchy cohesion
@@ -96,8 +106,9 @@ pwsh -NoProfile -File .\scripts\start-wang2017-detached.ps1 `
   -MaxWallHours 2
 ```
 
-This exact first run started24October07:03:31WIB on621146b, with2h budget
-until09:03:31WIB; completion and landslide are not yet established. The tested
+This exact first run started24October07:03:31WIB on621146b and FAILED_NATIVE1
+at08:26:52WIB, before2h budget09:03:31. Do not reuse the attempt directory or
+repeat it without a diagnosed, tested reason. The tested
 worker freezes sources/DLL before loading and retains actual process identities.
 The2h budget bounds this first experiment; it is not predicted physical completion.
 Soil1 took about45min, but Soil2 adds tensor transport/root searches and may reject
