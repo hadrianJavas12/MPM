@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "reference": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\native-output-fixed-001",
+  "newRun": "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-output-001",
+  "sourceCountVerified": 289,
+  "sourceBeforeAfterCurrentMatched": true,
+  "physicalUpdates": 2,
+  "standalonePointCalls": 0,
+  "materialCallsAttempted": 1760,
+  "materialCallsAccepted": 1760,
+  "savedStates": 3,
+  "comparedFiles": [
+    {
+      "path": "observations/vtk/particles_0000.vtk",
+      "baseline": {
+        "bytes": 290664,
+        "sha256": "688bebade2b53e75d67c1af2f21bd6b50485c3bcbe3e0c3815e21c85bb0ca3e8"
+      },
+      "current": {
+        "bytes": 290664,
+        "sha256": "688bebade2b53e75d67c1af2f21bd6b50485c3bcbe3e0c3815e21c85bb0ca3e8"
+      },
+      "byteIdentical": true
+    },
+    {
+      "path": "observations/vtk/particles_0001.vtk",
+      "baseline": {
+        "bytes": 290664,
+        "sha256": "c43f8516f50d3c128389c687e4188be9975d556b69361a7c680c6fb0af198af9"
+      },
+      "current": {
+        "bytes": 290664,
+        "sha256": "c43f8516f50d3c128389c687e4188be9975d556b69361a7c680c6fb0af198af9"
+      },
+      "byteIdentical": true
+    },
+    {
+      "path": "observations/vtk/particles_0002.vtk",
+      "baseline": {
+        "bytes": 290664,
+        "sha256": "f7b1f4a3ddb21e05905b7a495b7ad81d61baf079744c55eef70926f6fcc23327"
+      },
+      "current": {
+        "bytes": 290664,
+        "sha256": "f7b1f4a3ddb21e05905b7a495b7ad81d61baf079744c55eef70926f6fcc23327"
+      },
+      "byteIdentical": true
+    },
+    {
+      "path": "observations/particles.csv",
+      "baseline": {
+        "bytes": 1943893,
+        "sha256": "3f5f031cba1a9d1cd93aab21d52f9e5c18b374f0c9e855748e93758f73fb8622"
+      },
+      "current": {
+        "bytes": 1943893,
+        "sha256": "3f5f031cba1a9d1cd93aab21d52f9e5c18b374f0c9e855748e93758f73fb8622"
+      },
+      "byteIdentical": true
+    },
+    {
+      "path": "observations/history.csv",
+      "baseline": {
+        "bytes": 2701,
+        "sha256": "6cdf8c858edcade2c9b600621db61d052232495e8a5ef4c8583581504eb407fc"
+      },
+      "current": {
+        "bytes": 2701,
+        "sha256": "6cdf8c858edcade2c9b600621db61d052232495e8a5ef4c8583581504eb407fc"
+      },
+      "byteIdentical": true
+    }
+  ],
+  "executedComparisonScript": {
+    "path": "D:\\MPM\\.tmp\\compare-mc-default-hook-output.py",
+    "bytes": 4360,
+    "sha256": "61b93aa51bb35f963ec01d6dbb3edc1d286a7be59649b30dd602ef604370fd2a"
+  },
+  "scope": "Five existing native output files compared byte for byte, frozen source records checked. No numerical/test/replay/audit/render execution, no interpolation or changed tolerance.",
+  "landslideVerified": false,
+  "scientificallyValidated": false
+}

@@ -249,3 +249,22 @@ and the numerical cap band continue through strict rejection/success behavior.
 Point/default/native output gates are required before a new slope case. Local
 yield is distinct from global instability; the prior tensile-apex rejection
 does not verify a landslide. No full run or SRF2.0 has been started.
+
+## Subsequent native point and default compatibility evidence
+
+FIRST Windows new-model gate on `ac767e1` passes 15 groups with 38 explicit
+new pure calls, 6 strict comparisons, 10 native calls and zero MPM updates.
+Point evidence has 18 indexed artifacts / 296 ZIP members; root verifies 19
+Git blobs and all 287 archived/actual source copies plus mapped DLL. The old
+failure replay is not repeated. The new flow on the retained input records
+actual apex volume multiplier 1.0893174239569781e-6 and plastic work
+0.029938655183461227 Pa. No full-slope result follows from this point success.
+
+Default strict34 and bounded two-USF-update/four-output-group controls pass
+once; three VTKs and both CSVs are byte-identical to the pre-hook strict fixture.
+Actual 287/289 source sets, runtime and unloaded optional systems are verified;
+corrected default packet passes root checks: 42 indexed / 43 Git blobs /
+two archives / 612 members / 576 sources. Original archive-layout and subsequent
+packaging-only filesystem failures are preserved; verifier/tests unchanged.
+New optional-framework
+MPM output remains pending. All prior negative evidence and raw settings stay.

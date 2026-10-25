@@ -1,0 +1,39 @@
+{
+  "originalPacket": "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-compatibility-evidence-001",
+  "originalPacketIndex": {
+    "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-compatibility-evidence-001\\artifact-index.json",
+    "bytes": 5813,
+    "sha256": "c6a71f81e7b1ba900d43ef8a005a86035a9722b622e7740c4e49e0d38c122fdc"
+  },
+  "originalCombinedArchiveRetainedInPlace": {
+    "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-compatibility-evidence-001\\exact-default-source-native-output-runtime-and-comparison.zip",
+    "bytes": 2716559,
+    "sha256": "5db3ae58923c7e35c08201c06bc10259af6dc57269a307713d04d337eaaf30a9"
+  },
+  "initialRootCopyPreserved": "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-initial-root-copy-001",
+  "initialRootCopyIndex": {
+    "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-initial-root-copy-001\\artifact-index.json",
+    "bytes": 5813,
+    "sha256": "c6a71f81e7b1ba900d43ef8a005a86035a9722b622e7740c4e49e0d38c122fdc"
+  },
+  "initialRootCopyByteIdenticalToOriginalPacket": true,
+  "rootFailureRecord": {
+    "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-compatibility-evidence-001-root-failure.json",
+    "bytes": 404,
+    "sha256": "9adcee9c340ec78325b80ac5503166212627a1c21fd097a0f548076bde692b67"
+  },
+  "firstRepackHelperFailure": {
+    "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-controls-repack-001-failure.json",
+    "bytes": 897,
+    "sha256": "c86d0a89255f3372edeadae4f2fc2f3008b64c18df82b8fb0ab3e017823a53b1"
+  },
+  "firstRepackPartialRetainedInPlace": "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-controls-repack-partial-001",
+  "failureClassification": "Packaging layout did not satisfy the unchanged one-manifest-per-ZIP verifier; native results and bytes did not fail",
+  "remedy": "Two complete per-run ZIPs; original combined ZIP remains untouched under output, referenced by hash rather than copied into this corrected packet",
+  "unchangedVerifier": {
+    "path": "D:\\MPM\\.tmp\\verify-indexed-evidence.py",
+    "bytes": 3229,
+    "sha256": "5a5c09eb87cd6c46b78fe9cbbf2d15774b1c431da7140232c537e765630b602d"
+  },
+  "newRootVerification": "NOT_RUN_BY_PACKAGER: root owns verifier/staging"
+}

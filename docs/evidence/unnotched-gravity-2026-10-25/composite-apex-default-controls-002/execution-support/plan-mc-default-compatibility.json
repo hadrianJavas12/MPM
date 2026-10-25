@@ -1,0 +1,53 @@
+{
+  "schema": "cl-mpm.mc-composite-apex.default-compatibility-plan.v1",
+  "status": "PREPARED_NOT_EXECUTED_AWAIT_ROOT_SOURCE_CHECKPOINT",
+  "branch": "codex/unnotched-mc-composite-apex",
+  "purpose": "Verify that the new particle projection dispatch preserves the default strict model and bounded native output; no composite slope or old failure replay",
+  "workingDirectory": "D:/MPM",
+  "invocations": [
+    {
+      "name": "existing-strict34",
+      "argv": ["D:/MPM/windows/cl-mpm.cmd", "D:/MPM/.tmp/run-frozen-mc-regression.lisp", "D:/MPM/output/mc-composite-apex-2026-10-25/default-strict34-001"],
+      "expected": "Existing unchanged34 point/native/transaction/framework groups; native exit0, passedCount34, failedCount0, no full MPM slope",
+      "script": ".tmp/run-frozen-mc-regression.lisp",
+      "scriptSha256": "700ca29e9109187d6fa8306e6f031a1f59df6a17ab96b40f50314b1e560b10fb",
+      "unchangedTest": "tests/materials/mc-evolution-points.lisp",
+      "unchangedTestSha256": "1b824b2f2dafb08ef0090ecdb500953b71dca0444ed65cbb9b790cac58385053"
+    },
+    {
+      "name": "existing-bounded-default-output",
+      "argv": ["D:/MPM/windows/cl-mpm.cmd", "D:/MPM/tests/benchmarks/gravity-slope-controls.lisp", "D:/MPM/output/mc-composite-apex-2026-10-25/default-output-001", "output"],
+      "expected": "Only runner/csv/vtk/read-only groups;2 genuine USF updates,1760 attempted=accepted material calls,3VTK,2640 per-ID rows, zero standalone point calls",
+      "scriptSha256": "e1cf6e24f8f4a815c1685746e75e2e6cc4a1f49b0c96ff1f157743564d95ecc3",
+      "inputGroupsSkipped": ["inputs", "invalid-inputs", "geometry", "boundary", "ramp"],
+      "declaredTinyOverridesOnly": {"durationS": 0.00002, "gravityRampDurationS": 0.00001, "frames": 3, "maxUpdates": 2},
+      "actualCase": "cases/benchmarks/gravity-slope-mc-srf-1.lisp",
+      "otherMaterialGeometryNumerics": "Unchanged exact frozen old fixture"
+    },
+    {
+      "name": "exact-old-byte-comparison-after-success",
+      "argv": ["D:/MPM/toolchain/analysis-venv/Scripts/python.exe", "D:/MPM/.tmp/compare-mc-default-hook-output.py", "--new-run", "D:/MPM/output/mc-composite-apex-2026-10-25/default-output-001"],
+      "reference": "output/unnotched-gravity-2026-10-25/native-output-fixed-001",
+      "expected": "Exactly3particleVTK+particles.csv+history.csv byte-identical, with all actual new frozen source before/after/current hashes verified; no interpolation/tolerance/solver/replay/render"
+    }
+  ],
+  "sourceFreezing": {
+    "freshSeparateRuntimeForEachNativeInvocation": true,
+    "nativeLauncher": "Existing windows/cl-mpm.cmd; do not load optional model/diagnostics into these default controls",
+    "beforeAnyFirstPartyLoad": "Each existing bootstrap loads scripts/lisp/native-source-snapshot.lisp, calls snapshot-require-fresh-runtime and snapshots every first-party source/ASDF/native DLL plus the actual driver/test. No warm FASL reuse.",
+    "strict34": "Original test bytes become source/case.lisp; exact bootstrap is independently copied to source/control-bootstrap.lisp before snapshot-register-native. Temporary UIOP exit interception only retains proof and is restored with unwind-protect.",
+    "bounded": "Existing driver copies both actual SRF1/SRF1.4 cases and original contract to source/inputs and registers their hashes before project load. Output mode loads exact frozen cases/config but skips five previously passed input groups.",
+    "runtimeOwnership": "ASDF registrations load from copied root; plan checks enforce first-party sources under snapshot and private cache outputs; actual mapped DLL is verified with GetModuleHandleW/GetModuleFileNameW.",
+    "beforeAndAfter": "Retain exact source manifest, source proof before/after, runtime provenance before/after and native DLL proof. Derive snapshot count from actual manifest because four optional source files are new; do not pretend old283/285 counts remain current.",
+    "defaultNoGlobalOptIn": "Optional composite systems must not occur among loaded ASDF components. Merely copying optional source bytes is not loading their model or diagnostic methods.",
+    "checkpoint": "Root must commit/review source first, record actual HEAD and command before invoking, and ensure current strict projection remains e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1. Save logs/exit codes even on failure. This plan does not authorize execution."
+  },
+  "priorEvidence": {
+    "strict34": "docs/evidence/unnotched-gravity-2026-10-25/complementarity-fix-controls/mc-regression-001/result.json",
+    "bounded": "docs/evidence/unnotched-gravity-2026-10-25/complementarity-fix-controls/native-output-fixed-001/result.json",
+    "byteIdentity": "docs/evidence/unnotched-gravity-2026-10-25/complementarity-fix-controls/native-output-fixed-001/comparison-to-pre-fix.json"
+  },
+  "repeatPolicy": "Execute each native invocation once only after root authorization. If one fixture fails, preserve it and diagnose before a fresh attempt; do not repeat the other passed invocation. Exact comparison can inspect completed outputs without any native rerun.",
+  "excluded": ["full slope", "old capsule", "new composite material run", "old input groups", "Node suite", "render", "scientific landslide validation"],
+  "nativeExecutedByPreparation": false
+}

@@ -2,6 +2,47 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
+## Latest: new apex point and default compatibility gates pass
+
+Source `ac767e1` is committed and pushed on `codex/unnotched-mc-composite-apex`.
+FIRST Windows gate `output/unnotched-gravity-2026-10-25/composite-apex-point-001`
+exits 0: 15 groups PASS, 38 explicit new pure calls, 6 strict comparisons,
+10 native constitutive calls, zero MPM updates and zero old failure replays.
+The retained failed input is evaluated once with the NEW model: actual apex
+multiplier 1.0893174239569781e-6 and Kirchhoff plastic work
+0.029938655183461227 Pa. This proves point integration, not a slope result.
+
+All 287 copied sources match before/after/runtime; actual mapped DLL verified.
+Packet `docs/evidence/unnotched-gravity-2026-10-25/composite-apex-point-controls`
+has 18 indexed artifacts / 296 ZIP members; root unchanged verifier passes
+19 staged Git blobs, 287 archived and 287 actual source copies. Do not repeat
+this gate or old replay. Non-fatal test style warnings remain in the log.
+
+Default compatibility also completes ONCE on ac767e1: strict34 native0 at
+19:03:49 WIB; bounded default output native0 at19:04:44 WIB. Four output groups
+execute two genuine USF updates, 1760 accepted calls, 2640 rows / three VTKs;
+all three VTKs and two CSVs are byte-identical to the pre-hook baseline. The
+agent verifies 287/289 frozen source sets, DLL and unloaded optional systems.
+Actual runs are under `output/mc-composite-apex-2026-10-25/default-{strict34,output}-001`.
+Read results and source/runtime verification; do not rerun. Corrected packet
+`composite-apex-default-controls-002` is root verified: 42 indexed artifacts,
+43 staged Git blobs, two ZIPs / 612 members / 576 source copies. Initial
+combined-ZIP layout failed the unchanged verifier's one-manifest-per-archive
+assumption; original packet, root failure and a later packaging-only mkdir
+failure are retained. Two complete per-run archives close packaging without
+changing tests or the verifier. No numerical or comparison work repeated.
+
+NEXT source phase is prepared, not executed: optional-framework output gate
+`tests/framework/mc-composite-apex-output.lisp` has independent source approval;
+minimal scenario class validation/optional metadata/new SRF1.6 case and new
+variant-aware Python review/contract are being reviewed. Controls agent prepares
+a targeted scenario input/output gate. Freeze and commit the source before
+FIRST new executions. New MPM output/variant-aware audit and scenario gates
+still precede a full slope. Do not repeat the passed point/default suites.
+No full solver or SRF2.0 is active. Automation is five-hour continuation until
+a justified new full run needs the quiet 15-minute monitor. Preserve all prior
+failures; local yield and global sliding remain distinct.
+
 ## WIP: optional perfect composite-apex; no full solver active
 
 Development branch NOW codex/unnotched-mc-composite-apex from2a22d4e, which is

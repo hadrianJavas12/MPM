@@ -1,0 +1,25 @@
+{
+  "createdUtc": "2026-10-25T17:00:45.198549+00:00",
+  "sourceCheckpoint": "ac767e10e2856195aab4c51fade2d11c6cf70c61",
+  "status": "PASS",
+  "existingStrictGroupsPassed": 34,
+  "boundedGroupsPassed": 4,
+  "genuineMpmUpdates": 2,
+  "boundedMaterialCallsAttempted": 1760,
+  "boundedMaterialCallsAccepted": 1760,
+  "frozenSourceCounts": {
+    "default-strict34-001": 287,
+    "default-output-001": 289
+  },
+  "exactOutputFilesMatched": 5,
+  "defaultOptionalCompositeLoaded": false,
+  "strictProjectorUnchanged": true,
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "scope": "Default dispatch compatibility only. Existing34 tests plus existing four output groups with2USF updates. New optional model/output and full slope not invoked by this gate.",
+  "packagingOperations": "Read/copy/hash/ZIP/CRC/all-member decoded byte verification only; no tests, solver, replay, comparison or renderer rerun",
+  "packetLayout": "Two complete source/output/runtime ZIPs, one per executed native control",
+  "packagingFailureRetained": "packaging-failure/root-layout-failure.json",
+  "originalNativeResultsUnchanged": true,
+  "newNativeOrNumericalExecutions": 0
+}

@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "ac767e10e2856195aab4c51fade2d11c6cf70c61",
+  "startedUtc": "2026-10-25T12:02:57.9886255Z",
+  "workingDirectory": "D:\\MPM",
+  "executable": "D:\\MPM\\windows\\cl-mpm.cmd",
+  "arguments": [
+    "D:\\MPM\\.tmp\\run-frozen-mc-regression.lisp",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-strict34-001"
+  ],
+  "kind": "strict34",
+  "orchestratorSha256": "D28662BB5F32A1A7B5292C0DEAAD36B66FBDB338FA1C86EB79849749A7550842",
+  "driverSha256": "700CA29E9109187D6FA8306E6F031A1F59DF6A17AB96B40F50314B1E560B10FB",
+  "strictProjectorSha256": "E26B736914A8FA2CC3F4EB7F6619C1331E787F72D365D5BB7C0A5B3F4D8CEDA1",
+  "scope": "FIRST authorized default-compatibility invocation; fresh frozen runtime; no full slope or old capsule"
+}

@@ -1,0 +1,54 @@
+
+; file: D:/MPM/output/unnotched-gravity-2026-10-25/composite-apex-point-001/source/case.lisp
+; in: DEFUN RUN-CONTROLS
+;     (DOTIMES (CL-MPM/TESTS/MC-COMPOSITE-APEX::I 2)
+;       (DECLARE (IGNORE CL-MPM/TESTS/MC-COMPOSITE-APEX::I))
+;       (CL-MPM/TESTS/MC-COMPOSITE-APEX::MUTATE-PROJECTION
+;        CL-MPM/TESTS/MC-COMPOSITE-APEX::SOURCE)
+;       (CL-MPM/MODELS/MC-EVOLUTION:RESTORE-PARTICLE
+;        CL-MPM/TESTS/MC-COMPOSITE-APEX::SOURCE
+;        CL-MPM/TESTS/MC-COMPOSITE-APEX::SAVED)
+;       (ASSERT
+;        (EQUALP CL-MPM/TESTS/MC-COMPOSITE-APEX::BEFORE
+;                (CL-MPM/TESTS/MC-COMPOSITE-APEX::FINGERPRINT
+;                 (CL-MPM/MODELS/MC-EVOLUTION:SNAPSHOT-PARTICLE
+;                  CL-MPM/TESTS/MC-COMPOSITE-APEX::SOURCE)))))
+; --> BLOCK LET TAGBODY PSETQ PROGN 
+; ==>
+;   (SETQ CL-MPM/TESTS/MC-COMPOSITE-APEX::I
+;           (1+ CL-MPM/TESTS/MC-COMPOSITE-APEX::I))
+; 
+; caught STYLE-WARNING:
+;   I is being set even though it was declared to be ignored.
+
+; --> BLOCK LET TAGBODY PSETQ PROGN SETQ THE 1+ 
+; ==>
+;   1
+; 
+; caught STYLE-WARNING:
+;   reading an ignored variable: I
+
+; --> BLOCK LET TAGBODY UNLESS IF >= 
+; ==>
+;   CL-MPM/TESTS/MC-COMPOSITE-APEX::I
+; 
+; caught STYLE-WARNING:
+;   reading an ignored variable: I
+; 
+; compilation unit finished
+;   caught 3 STYLE-WARNING conditions
+PASS: actual-failed-inputs-new-model
+PASS: hydrostatic-tension-keeps-shear-history
+PASS: deviatoric-apex-all-six-permutations
+PASS: current-J-and-stiffness-scale
+PASS: elastic-and-regular-are-exact-strict-projections
+PASS: certified-domain-boundary-and-no-rejection-fallback
+PASS: unsupported-laws-and-invalid-inputs-reject
+PASS: pure-return-input-and-output-ownership
+PASS: native-current-J-volume-work-and-engineering-shear
+PASS: native-repeated-trials-use-committed-history
+PASS: derived-projection-deep-copy-and-reusable-restore
+PASS: native-commit-reset-retains-apex-scalar-and-owned-arrays
+PASS: rejected-native-law-retains-complete-owned-state
+PASS: native-initialization-and-reinitialization-validate-before-mutation
+PASS: derived-class-opt-in-and-elastic-only-native-mode

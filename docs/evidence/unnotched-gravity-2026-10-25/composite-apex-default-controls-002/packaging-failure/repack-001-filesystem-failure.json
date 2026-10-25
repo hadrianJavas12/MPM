@@ -1,0 +1,13 @@
+{
+  "status": "FAILED_PACKAGING_HELPER_FILESYSTEM",
+  "error": "FileExistsError: [WinError 183] archive.parent.mkdir(parents=True) encountered an already copied default-strict34-001 directory",
+  "stage": "Before first ZIP write",
+  "helperSha256": "aa2a1b41e04ac7f5b81a88ed6b59baca5da23019b220b4c44b8d6d56a617fc50",
+  "exactExecutedHelper": "default-controls-repack-partial-001/executed-repack-script.py",
+  "preservedPartial": "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-controls-repack-partial-001",
+  "recordedUtc": "2026-10-25T17:00:01.8292529Z",
+  "sourceOfFailureRecord": "Observed tool process stderr; initial invocation was not redirected to an independent process log",
+  "nativeTestsRepeated": 0,
+  "solverOrReplayRepeated": 0,
+  "remedy": "Preserve partial packet, allow already copied archive parent directory, rebuild original requested fresh destination"
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9",
+      "bytes": 21
+    },
+    {
+      "path": "archive-member-verification.json",
+      "sha256": "e81f1a40992135789f995231c604c869a6e38b83d2bc969df4f9e9b6f19b005b",
+      "bytes": 62965
+    },
+    {
+      "path": "composite-apex-point-001/adjacent/composite-apex-point-001.command.json",
+      "sha256": "14592c5199762d99cdc3f3400423dac1af9c638be36bb048e9a25155d2d677d7",
+      "bytes": 378
+    },
+    {
+      "path": "composite-apex-point-001/adjacent/composite-apex-point-001.exit.json",
+      "sha256": "c77650cf82cd4057156bb6d4d86c03de299d34eb4350607e0537de4d6a8ee09c",
+      "bytes": 68
+    },
+    {
+      "path": "composite-apex-point-001/adjacent/composite-apex-point-001.log",
+      "sha256": "d2af717581885b5e10a8582c4348a7c12e6726031e775fbceaec7eccf30fdc7b",
+      "bytes": 2152
+    },
+    {
+      "path": "composite-apex-point-001/executed-source-output-runtime.zip",
+      "sha256": "21c64466b85c5161b9d255d61b5a43b933f595f925e744202b57ff731a0e6067",
+      "bytes": 1253591
+    },
+    {
+      "path": "composite-apex-point-001/result.json",
+      "sha256": "05ee3fd5e089039ad4ca330b344d141caae9a6dd2b0d2c1618d00bb752e39a1e",
+      "bytes": 1805
+    },
+    {
+      "path": "composite-apex-point-001/source/case.lisp",
+      "sha256": "faed3e1675cd23d3894a65e8c02b0e1164ed960932f772d82f20ab61295282e3",
+      "bytes": 23965
+    },
+    {
+      "path": "composite-apex-point-001/source/source-manifest.json",
+      "sha256": "74ff658ed4a3ff177efb81259129ab8e1872f80eba384ec64e7f55f36f1ee75c",
+      "bytes": 59627
+    },
+    {
+      "path": "composite-apex-point-001/source-proof-after.json",
+      "sha256": "d1ef7420da11be65be10ce43fd77048adf58861303a7f74616fcfc2451c57adb",
+      "bytes": 37982
+    },
+    {
+      "path": "composite-apex-point-001/source-proof-before.json",
+      "sha256": "d1ef7420da11be65be10ce43fd77048adf58861303a7f74616fcfc2451c57adb",
+      "bytes": 37982
+    },
+    {
+      "path": "composite-apex-point-001/source-provenance-after.json",
+      "sha256": "ea3cfd0aa9d2dba88272d68c48fa06efa79aa33411d6a066725c6489f0382193",
+      "bytes": 375761
+    },
+    {
+      "path": "composite-apex-point-001/source-provenance-before.json",
+      "sha256": "ea3cfd0aa9d2dba88272d68c48fa06efa79aa33411d6a066725c6489f0382193",
+      "bytes": 375761
+    },
+    {
+      "path": "design/PERFECT_MC_APEX_PLAN.md",
+      "sha256": "e21ba6e29a85890ae4ae56f0b24df0d644111f5c9b2e6d18d9fd6bc7a510d3c3",
+      "bytes": 5731
+    },
+    {
+      "path": "design/PERFECT_MC_APEX_REVIEW.md",
+      "sha256": "2637b7d917e742d1832f4e63a7f99c440368f7e0e4d05832b498737a1fb25b70",
+      "bytes": 1339
+    },
+    {
+      "path": "executed-pack-script.py",
+      "sha256": "78cd15f9f15ae026d92ef32d289acc669fb1ebfbf8456086a2cd72ab70b245c0",
+      "bytes": 13698
+    },
+    {
+      "path": "README.md",
+      "sha256": "b7ac9e96e714421c9f73001ef503413d2590240875a953529a99b7a1ccce8972",
+      "bytes": 1110
+    },
+    {
+      "path": "summary.json",
+      "sha256": "a12a42d867be3cd11a352be475c46f89a0ddfaf294db32e47fb8ae3d1db9b4dd",
+      "bytes": 3585
+    }
+  ],
+  "note": "Index excludes itself; raw bytes preserved by * -text."
+}

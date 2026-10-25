@@ -511,3 +511,12 @@ an unchanged strict law, and it does not guarantee sliding. No strength,
 geometry, loading, root preference or tolerance is changed to obtain collapse.
 See the approved design and technical review linked above. New point/native,
 default compatibility and bounded actual output gates precede any new full run.
+
+Subsequent FIRST Windows controls on `ac767e1` pass all 15 new point groups:
+38 new pure calls, 6 strict comparisons, 10 native calls and zero MPM updates.
+The NEW declared flow accepts the retained failed input and passes independent
+compliance, six-plane, nonnegative multiplier, volume/work and owned-state
+checks. Its 287-source/DLL proof and 18-artifact / 296-member packet are root
+verified. Default strict34 and bounded two-update output also pass once, with
+all three VTKs and both CSVs byte-identical to the pre-hook baseline. These
+gates establish neither optional-model full MPM output nor a landslide.

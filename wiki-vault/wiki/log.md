@@ -907,3 +907,23 @@ default compatibility and actual bounded MPM/CSV/VTK gates remain required.
 The extra volumetric apex flow is an explicit constitutive assumption, not
 unchanged MC or guaranteed sliding. No old tests/replay/solver repeated, no
 SRF2.0 or full solver launched. Immutable raw and private settings remain intact.
+
+## [2026-10-25] ingest | Optional apex native point and default gates pass
+
+[[unnotched-mc-gravity]] records FIRST new-model 15-group native0, 38 new pure
+calls / 6 strict comparisons / 10 native calls / zero MPM and old replay calls.
+Point packet 18 indexed / 296 ZIP members / root19 Git blobs / 287 sources and
+mapped DLL verifies. Default strict34 and bounded two-USF-update output pass
+once; three VTKs and two CSVs match the pre-hook baseline byte for byte. Agent
+source/runtime verification passes; default archive/root verification follows.
+New optional-framework output and full scenario remain pending, no full solver
+or SRF2.0. Point/default success is separate from actual verified sliding.
+
+## [2026-10-26] ingest | Default evidence archive closure
+
+[[unnotched-mc-gravity]] closes the corrected default packet with unchanged
+root verification: 42 indexed artifacts / 43 staged Git blobs / two ZIPs /
+612 members / 576 complete source copies. The initial combined archive layout
+and later mkdir packaging failures remain preserved. No native, comparison,
+replay or tolerance change was needed. Separate new output/scenario gates and
+variant-aware review are source preparation only; no full solver is active.

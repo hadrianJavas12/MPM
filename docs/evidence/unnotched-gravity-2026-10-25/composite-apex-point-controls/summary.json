@@ -1,0 +1,74 @@
+{
+  "schema": "cl-mpm.composite-apex-point-controls.evidence.v1",
+  "createdUtc": "2026-10-25T12:01:58.450125+00:00",
+  "status": "ALL_RETAINED_POINT_GATES_PASS",
+  "attempts": [
+    {
+      "attempt": "composite-apex-point-001",
+      "status": "POINT_GATE_PASS",
+      "nativeExit": {
+        "exitCode": 0,
+        "endedUtc": "2026-10-25T11:59:42.3470309Z"
+      },
+      "result": {
+        "passed": true,
+        "passedGroups": [
+          "actual-failed-inputs-new-model",
+          "hydrostatic-tension-keeps-shear-history",
+          "deviatoric-apex-all-six-permutations",
+          "current-J-and-stiffness-scale",
+          "elastic-and-regular-are-exact-strict-projections",
+          "certified-domain-boundary-and-no-rejection-fallback",
+          "unsupported-laws-and-invalid-inputs-reject",
+          "pure-return-input-and-output-ownership",
+          "native-current-J-volume-work-and-engineering-shear",
+          "native-repeated-trials-use-committed-history",
+          "derived-projection-deep-copy-and-reusable-restore",
+          "native-commit-reset-retains-apex-scalar-and-owned-arrays",
+          "rejected-native-law-retains-complete-owned-state",
+          "native-initialization-and-reinitialization-validate-before-mutation",
+          "derived-class-opt-in-and-elastic-only-native-mode"
+        ],
+        "failedGroups": [],
+        "explicitNewPureProjectorCalls": 38,
+        "explicitStrictComparatorCalls": 6,
+        "nativeConstitutiveCalls": 10,
+        "physicalUpdateAttempts": 0,
+        "oldOriginalFailureReplayCalls": 0,
+        "nativeBackend": {
+          "modulePath": "D:/MPM/output/unnotched-gravity-2026-10-25/composite-apex-point-001/source/libs/kirchoff.dll",
+          "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+          "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+          "nativeMcEntryPresent": true
+        },
+        "observations": {
+          "actualNewModel": {
+            "tauKirchhoffPa": [
+              27483.866984069227,
+              27483.866984069227,
+              27483.866984069227
+            ],
+            "plasticPrincipalIncrement": [
+              -2.5292250498750037e-06,
+              -9.01921142286155e-08,
+              3.7087345880605496e-06
+            ],
+            "lambdaA": 1.0893174239569781e-06,
+            "kappa": 0.0007629602569266996,
+            "workKirchhoffPa": 0.029938655183461227,
+            "scope": "One NEW-model call on retained failed input; no original-projector replay"
+          }
+        },
+        "scope": "New separate perfect-Cauchy composite-apex material controls; zero MPM; actual strict capsule is input data, not an original-model replay; no landslide or scientific validation"
+      },
+      "sourceFiles": 287
+    }
+  ],
+  "approvedDesignSha256": "e21ba6e29a85890ae4ae56f0b24df0d644111f5c9b2e6d18d9fd6bc7a510d3c3",
+  "unchangedStrictProjectorSha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1",
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "scope": "New separately declared perfect-Cauchy composite-apex point controls only. Strict original failure remains evidence; default compatibility and bounded MPM output are separate gates.",
+  "provenanceLimits": "Executed immutable snapshot bytes are authoritative. No claim that later working files equal every earlier attempt; no full slope or whole-failure-capsule rollback.",
+  "packagingOperations": "Read/copy/hash/ZIP/CRC/decode verification only; no tests, replay, solver or saved-data analysis executed."
+}

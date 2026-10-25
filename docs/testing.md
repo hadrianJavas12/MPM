@@ -1,5 +1,28 @@
 # Native framework and Studio verification
 
+## Optional apex point and default compatibility, 2026-10-25
+
+On committed source `ac767e1`, FIRST Windows point invocation exits 0:
+**15 groups PASS**, 38 explicit new pure projections, 6 strict comparisons,
+10 native calls, **zero MPM updates** and no original failure replay repeated.
+Actual source/runtime/DLL proof verifies 287 copied files. Root evidence
+verification passes 18 indexed artifacts / 19 staged Git blobs / 296 ZIP
+members, including all executed sources. Non-fatal style warnings are retained.
+See [point controls](evidence/unnotched-gravity-2026-10-25/composite-apex-point-controls/README.md).
+
+The changed default dispatch is separately tested once: unchanged strict34
+passes native0; four bounded output groups pass native0 with two genuine USF
+updates, 1760 accepted material calls, 2640 rows and three VTKs. All three VTKs
+plus both CSVs are byte-identical to the pre-hook strict fixture. Actual DLL,
+287/289 before/after/current sources and absence of optional ASDF loads are
+verified by the agent. Corrected [default packet](evidence/unnotched-gravity-2026-10-25/composite-apex-default-controls-002/README.md)
+passes the unchanged root verifier: 42 indexed / 43 Git blobs / two ZIPs /
+612 members / 576 source copies. Initial archive-layout and later packaging
+filesystem failures are preserved; no native or comparison was repeated.
+Runs: `output/mc-composite-apex-2026-10-25/default-strict34-001` and
+`default-output-001`. No full solver, old input controls or Node suite repeated.
+New optional-model framework MPM/CSV/VTK integration remains NOT_RUN.
+
 ## Optional perfect MC composite-apex source checkpoint, 2026-10-25
 
 Branch `codex/unnotched-mc-composite-apex` adds optional model/framework ASDF

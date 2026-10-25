@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_PACKAGING_LAYOUT_ASSERTION",
+  "nativeControls": "PASS",
+  "verifier": ".tmp/verify-indexed-evidence.py",
+  "failure": "assert len(manifests) <= 1 at line34; one ZIP holds two complete run source manifests",
+  "action": "Preserve original packet and make two separate complete-source ZIPs without changing verifier or tests",
+  "recordedUtc": "2026-10-25T12:08:05.6771917Z"
+}

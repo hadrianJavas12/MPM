@@ -1,0 +1,16 @@
+{
+  "sourceCommit": "ac767e10e2856195aab4c51fade2d11c6cf70c61",
+  "startedUtc": "2026-10-25T12:03:50.1023079Z",
+  "workingDirectory": "D:\\MPM",
+  "executable": "D:\\MPM\\windows\\cl-mpm.cmd",
+  "arguments": [
+    "D:\\MPM\\tests\\benchmarks\\gravity-slope-controls.lisp",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-25\\default-output-001",
+    "output"
+  ],
+  "kind": "output",
+  "orchestratorSha256": "D28662BB5F32A1A7B5292C0DEAAD36B66FBDB338FA1C86EB79849749A7550842",
+  "driverSha256": "E1CF6E24F8F4A815C1685746E75E2E6CC4A1F49B0C96FF1F157743564D95ECC3",
+  "strictProjectorSha256": "E26B736914A8FA2CC3F4EB7F6619C1331E787F72D365D5BB7C0A5B3F4D8CEDA1",
+  "scope": "FIRST authorized default-compatibility invocation; fresh frozen runtime; no full slope or old capsule"
+}
