@@ -172,3 +172,27 @@ on both meshes. Coarse CSVs are anchored to their existing audit without
 repeating coarse analysis/render; IDs are not matched between meshes. See the
 benchmark guide for the command. Full workflow and refined result remain
 NOT_RUN; actual spatial review is required before any landslide claim.
+
+## Same-strength refinement completes without sliding
+
+Native/worker exit0 at25October16:56:33WIB;6s61states3520MP15471updates. The
+first frozen review/render exits0, with source282/DLL and actual scale1 video
+verified; root inspects both plots. The common physical cohort has identical
+mass on both meshes. Fine hold centroid dx2.363mm versus coarse0.196mm and
+stronger plastic localisation show resolution sensitivity, but KE falls from
+27.440 to0.0738J/m. Both physical motion windows and toe runout remain negative.
+This is not a converged result or verified landslide. The small negative
+particle-domain margin and fixed-bottom/runout limits remain explicit.
+
+Completed evidence53indexed artifacts/766ZIPmembers/root54Gitblobs retains
+raw/source/runtime/media and the first packaging-only verifier failure. The
+corrected launch archive adds282 verified originals; no solver/review/render
+was repeated. Raw and personal settings remain intact.
+
+The next preregistered response study screens h1 atSRF1.6 then2.0, capped2.0,
+stopping at the first integrity-valid coherent motion and confirming the SAME
+factor on h0.5. It is deliberate disclosed strength reduction, not unchanged
+soil collapse or a factor-of-safety estimate. Geometry, boundaries,6s/ramp2s,
+solver and metre observer remain fixed. Native input gates/full runs are
+pending. See `response-ladder-contract.json` and the post-refinement design note
+linked from the benchmark guide. Actual unnotched sliding remains the goal.

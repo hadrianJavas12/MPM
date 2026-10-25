@@ -1,0 +1,6558 @@
+{
+  "schema": "cl-mpm.gravity-slope.review.v1",
+  "createdUtc": "2026-10-25T09:57:13.410177+00:00",
+  "runDirectory": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001",
+  "nativeStatus": "complete",
+  "nativeComplete": true,
+  "savedScope": "complete",
+  "savedFrames": 61,
+  "lastSavedTimeS": 6.0,
+  "integrityStatus": "PASS",
+  "scientificallyValidated": false,
+  "landslideDetected": false,
+  "coherentMotionDetected": false,
+  "runoutGateDetected": false,
+  "manualSpatialReviewRequired": false,
+  "landslideVerification": "NOT_DETECTED",
+  "criteria": {
+    "cohortCutoffH": 2,
+    "adjacencyH": 1.01,
+    "dxH": 0.25,
+    "downslopeH": 0.5,
+    "componentMassFraction": 0.1,
+    "positiveDxMassFraction": 0.75,
+    "sustainedVxMPerS": 0.001,
+    "sustainedDurationS": 1,
+    "toeOffsetH": 0.5,
+    "toeTotalMassFraction": 0.01
+  },
+  "contract": {
+    "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\fine-audit-contract.json",
+    "sha256": "17940cf810d9020ceb779f68b5962b57265a1097cd34a5ec12836382f5f685a2",
+    "bytes": 5479
+  },
+  "studyConfigurationDifferences": [],
+  "nativeStressTolerances": {
+    "stress-atol": 1e-06,
+    "stress-rtol": 1e-11,
+    "selectedProjection": {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+      "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1",
+      "bytes": 23352
+    },
+    "sourceScope": "frozen-projection-hash-matches-source-manifest; execution-provenance-requires-native-runtime-proof",
+    "sourceManifestCheck": {
+      "status": "PASS",
+      "manifest": {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\source\\source-manifest.json",
+        "sha256": "049a6612b4e111133945ff13006e8224aa6ad49ea8f84d8942f5f3a336aa9751",
+        "bytes": 58420
+      },
+      "verifiedMember": "source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp",
+      "verifiedMemberCount": 1,
+      "scope": "Selected projection hash/length only; other source members and manifest authenticity not independently certified here"
+    },
+    "scaleConvention": "atol + rtol*max(1,max(abs(current Kirchhoff principal stress))). Native projection uses trial stress scale, unavailable in saved CSV; this independent current-state bound is not enlarged to match failures."
+  },
+  "serializationChecks": {
+    "atol": 1e-11,
+    "rtol": 1e-11
+  },
+  "checks": [
+    {
+      "name": "saved-gravity-schedule",
+      "status": "PASS",
+      "scope": "Saved step endpoints only; CSV cannot prove every unsaved force evaluation"
+    },
+    {
+      "name": "saved-frame-time-grid",
+      "status": "PASS"
+    },
+    {
+      "name": "updates-monotone",
+      "status": "PASS"
+    },
+    {
+      "name": "manifest-terminal-flags",
+      "status": "PASS"
+    },
+    {
+      "name": "manifest-saved-state-scope",
+      "status": "PASS"
+    },
+    {
+      "name": "completion-consistency",
+      "status": "PASS",
+      "nativeComplete": true,
+      "savedFrames": 61,
+      "requestedFrames": 61
+    },
+    {
+      "name": "initial-coordinate-reference",
+      "status": "PASS"
+    },
+    {
+      "name": "initial-unnotched-polygon-quadrature",
+      "status": "PASS",
+      "expectedParticles": 3520,
+      "actualParticles": 3520,
+      "convention": "Every configured regular-lattice center under the unnotched continuous slope; no missing/notched/seeded centers"
+    },
+    {
+      "name": "initial-volume-density",
+      "status": "PASS"
+    },
+    {
+      "name": "initial-zero-velocity-stress-history",
+      "status": "PASS"
+    },
+    {
+      "name": "initial-identity-F",
+      "status": "PASS"
+    },
+    {
+      "name": "aggregate-mass-conservation",
+      "status": "PASS"
+    }
+  ],
+  "frameIntegrity": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 0.0,
+          "maximumVolumeRatioDifference": 0.0
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -13826.107398668315,
+          "maximumNativeCurrentScaleTolerancePa": 1.00001e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 0.0
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "timeS": 0.1,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 1.0325074129013956e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -13571.93764375557,
+          "maximumNativeCurrentScaleTolerancePa": 1.011878337656903e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 1.8189894035458565e-12
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "timeS": 0.2,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 2.5091040356528538e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -12656.665629821968,
+          "maximumNativeCurrentScaleTolerancePa": 1.0530792169369867e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 3.637978807091713e-12
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "timeS": 0.30000000000000004,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 3.885780586188048e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -11186.712461757212,
+          "maximumNativeCurrentScaleTolerancePa": 1.1182910810044805e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 5.4569682106375694e-12
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "timeS": 0.4,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 5.684341886080802e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -9330.13208248431,
+          "maximumNativeCurrentScaleTolerancePa": 1.1996214074010146e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 7.275957614183426e-12
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "timeS": 0.5,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 6.394884621840902e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -7081.068183246913,
+          "maximumNativeCurrentScaleTolerancePa": 1.3038989863404683e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 1.0913936421275139e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "timeS": 0.6000000000000001,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.4495964952348e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -4448.508558084324,
+          "maximumNativeCurrentScaleTolerancePa": 1.4202296298564843e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 1.6370904631912708e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "timeS": 0.7,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 7.838174553853605e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -1605.2632528127815,
+          "maximumNativeCurrentScaleTolerancePa": 1.5456737423787835e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 2.000888343900442e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "timeS": 0.8,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 7.416289804496046e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 3.2741809263825417e-11,
+          "maximumNativeCurrentScaleTolerancePa": 1.6851796958754332e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 2.546585164964199e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "timeS": 0.8999999999999999,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.538414337204813e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 3.637978807091713e-11,
+          "maximumNativeCurrentScaleTolerancePa": 1.8307227474248528e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 2.9103830456733704e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "timeS": 1.0,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 1.1102230246251565e-16,
+          "maximumVolumeRatioDifference": 7.494005416219807e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 1.0558615031186491e-06,
+          "maximumNativeCurrentScaleTolerancePa": 1.978636812250156e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 4.18367562815547e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "timeS": 1.0999999999999999,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.394085344003543e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 5.093170329928398e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.134037536229683e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 4.9112713895738125e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "timeS": 1.2000000000000002,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.582823258189819e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 5.275069270282984e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.2833531881414414e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 4.18367562815547e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "timeS": 1.3,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.471800955727304e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 6.730260793119669e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.4274910169352977e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 4.547473508864641e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "timeS": 1.4,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.4495964952348e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 7.821654435247183e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.5650313814501157e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 7.09405867382884e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "timeS": 1.5,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.349676423018536e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 8.36735125631094e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.68627592449354e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 7.09405867382884e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "timeS": 1.6,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.338574192772285e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 8.913048077374697e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.790850317184915e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "timeS": 1.7,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.616129948928574e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 9.640643838793039e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.868635512780335e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "timeS": 1.7999999999999998,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.649436639667329e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 8.36735125631094e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.926839659575865e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 8.549250196665525e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "timeS": 1.9,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.01581023779363e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 1.000444171950221e-10,
+          "maximumNativeCurrentScaleTolerancePa": 2.9600615616127128e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 7.457856554538012e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "timeS": 2.0,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.938094626069869e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 8.549250196665525e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.9687620922650065e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 7.09405867382884e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "timeS": 2.0999999999999996,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.949196856316121e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 8.185452315956354e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.968012988516177e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "timeS": 2.1999999999999997,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.038014698286133e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 7.457856554538012e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.9641989396215418e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 7.09405867382884e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "timeS": 2.3000000000000003,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.193445921733655e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 6.548361852765083e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.964979920653694e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 8.549250196665525e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "timeS": 2.4000000000000004,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.337774914934926e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 5.820766091346741e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.962652508341077e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 7.09405867382884e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "timeS": 2.5,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.304468224196171e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 1.8189894035458565e-12,
+          "maximumNativeCurrentScaleTolerancePa": 2.9629908268794224e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "timeS": 2.6,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.72635297355373e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -47.02280800592962,
+          "maximumNativeCurrentScaleTolerancePa": 2.9642471818194445e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "timeS": 2.7,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.903988657493755e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 6.002665031701326e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.965157707218697e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "timeS": 2.8,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.915090887740007e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -59.825590933580315,
+          "maximumNativeCurrentScaleTolerancePa": 2.963291529275447e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "timeS": 2.9,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.659739592076221e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -36.705254416225216,
+          "maximumNativeCurrentScaleTolerancePa": 2.963653932404361e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "timeS": 3.0,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.770761894538737e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -59.9509863771309,
+          "maximumNativeCurrentScaleTolerancePa": 2.9613185375213222e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 8.549250196665525e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "timeS": 3.1000000000000005,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.704148513061227e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -71.47463572703236,
+          "maximumNativeCurrentScaleTolerancePa": 2.9613879941869846e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "timeS": 3.2,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.359979375427429e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 4.18367562815547e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.9630393763236326e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 7.09405867382884e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "timeS": 3.3000000000000003,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.171241461241152e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -85.2868075104725,
+          "maximumNativeCurrentScaleTolerancePa": 2.9618339317470777e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "timeS": 3.4,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.071321389024888e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 3.637978807091713e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.9604479961299727e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 7.09405867382884e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "timeS": 3.5,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.693845560652335e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -42.20745580127186,
+          "maximumNativeCurrentScaleTolerancePa": 2.963538590845162e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "timeS": 3.5999999999999996,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.671641100159832e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -1.0913936421275139e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.9577381037810435e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "timeS": 3.7,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.482903185973555e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -50.200294482607205,
+          "maximumNativeCurrentScaleTolerancePa": 2.9623836139050856e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "timeS": 3.8,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.260858581048524e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 0.0,
+          "maximumNativeCurrentScaleTolerancePa": 2.9621985590394723e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "timeS": 3.9000000000000004,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.205347429817266e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -62.085749414260135,
+          "maximumNativeCurrentScaleTolerancePa": 2.960371881778268e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 4.547473508864641e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "timeS": 4.0,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.172040739078511e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -23.138967005907034,
+          "maximumNativeCurrentScaleTolerancePa": 2.9631456886011835e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 4.547473508864641e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "timeS": 4.1,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.349676423018536e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -65.25225740852147,
+          "maximumNativeCurrentScaleTolerancePa": 2.961674413356237e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "timeS": 4.199999999999999,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.249756350802272e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -68.81672917447759,
+          "maximumNativeCurrentScaleTolerancePa": 2.9599764961604e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "timeS": 4.3,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.172040739078511e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -24.92441889197835,
+          "maximumNativeCurrentScaleTolerancePa": 2.9630221209696258e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 5.638867150992155e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "timeS": 4.3999999999999995,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.405187574249794e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -92.29540926334994,
+          "maximumNativeCurrentScaleTolerancePa": 2.960485355586148e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 5.638867150992155e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "timeS": 4.5,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.394085344003543e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -21.045685217415667,
+          "maximumNativeCurrentScaleTolerancePa": 2.9594470030778207e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 8.549250196665525e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "timeS": 4.6000000000000005,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.405187574249794e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -42.44869311936236,
+          "maximumNativeCurrentScaleTolerancePa": 2.963207792296814e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 5.820766091346741e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "timeS": 4.7,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.238654120556021e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 2.3646862246096134e-11,
+          "maximumNativeCurrentScaleTolerancePa": 2.958863930293296e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 8.549250196665525e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "timeS": 4.800000000000001,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 6.905587213168474e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -47.58861097260524,
+          "maximumNativeCurrentScaleTolerancePa": 2.9615654692603793e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 4.547473508864641e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "timeS": 4.9,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.127631818093505e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -16.717589045281784,
+          "maximumNativeCurrentScaleTolerancePa": 2.9608609106096754e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 8.549250196665525e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "timeS": 5.0,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.482903185973555e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -84.51291306941857,
+          "maximumNativeCurrentScaleTolerancePa": 2.96032450299171e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 5.820766091346741e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "timeS": 5.1,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.37188088351104e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -26.31335305052562,
+          "maximumNativeCurrentScaleTolerancePa": 2.9622291544861214e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 8.549250196665525e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "timeS": 5.2,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.283063041541027e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -55.68520974659077,
+          "maximumNativeCurrentScaleTolerancePa": 2.9611382918730076e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "timeS": 5.3,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.549516567451064e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -71.82396219500879,
+          "maximumNativeCurrentScaleTolerancePa": 2.9599290984569723e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 5.820766091346741e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "timeS": 5.4,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.460698725481052e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -21.359211025524928,
+          "maximumNativeCurrentScaleTolerancePa": 2.964436075272817e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "timeS": 5.5,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.549516567451064e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -80.01992563153726,
+          "maximumNativeCurrentScaleTolerancePa": 2.9604987836280616e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "timeS": 5.6,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.405187574249794e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -54.764250623977205,
+          "maximumNativeCurrentScaleTolerancePa": 2.960547842965624e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 8.913048077374697e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "timeS": 5.699999999999999,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.593925488436071e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -50.98245625688651,
+          "maximumNativeCurrentScaleTolerancePa": 2.9633991855808505e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "timeS": 5.8,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.860379014346108e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -35.850527488741136,
+          "maximumNativeCurrentScaleTolerancePa": 2.958267877716984e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 8.913048077374697e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "timeS": 5.8999999999999995,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 7.815970093361102e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": -46.912552090647296,
+          "maximumNativeCurrentScaleTolerancePa": 2.9615386934303215e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 6.002665031701326e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "timeS": 6.0,
+      "checks": [
+        {
+          "name": "identity-count-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "reference-state-constant",
+          "status": "PASS"
+        },
+        {
+          "name": "CSV-VTK-position-mass",
+          "status": "PASS"
+        },
+        {
+          "name": "F-determinant-and-volume-J",
+          "status": "PASS",
+          "maximumDeterminantCsvDifference": 2.220446049250313e-16,
+          "maximumVolumeRatioDifference": 8.237854842718662e-14
+        },
+        {
+          "name": "perfect-Cauchy-SSR-law",
+          "status": "PASS"
+        },
+        {
+          "name": "six-plane-current-state-admissibility",
+          "status": "PASS",
+          "maximumYieldResidualPa": 5.4569682106375694e-12,
+          "maximumNativeCurrentScaleTolerancePa": 2.960943928455863e-06,
+          "violatingParticles": 0
+        },
+        {
+          "name": "independent-yield-diagnostic",
+          "status": "PASS",
+          "maximumDifferencePa": 5.820766091346741e-11
+        },
+        {
+          "name": "nonnegative-history-work",
+          "status": "PASS"
+        },
+        {
+          "name": "accumulated-kappa-monotone",
+          "status": "PASS"
+        },
+        {
+          "name": "fixed-upper-cohort",
+          "status": "PASS"
+        },
+        {
+          "name": "saved-time",
+          "status": "PASS"
+        },
+        {
+          "name": "center-domain-and-floor",
+          "status": "PASS",
+          "floorPenetratingCenters": 0,
+          "centerDomainExits": 0
+        },
+        {
+          "name": "aggregate-history-identities",
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "motionWindows": {
+    "entire": {
+      "label": "entire saved run including gravity ramp",
+      "referenceTimeS": 0.0,
+      "referenceFrame": 0,
+      "status": "NOT_DETECTED",
+      "reason": null,
+      "cohortMassKgPerM": 367097.83667205414,
+      "candidate": null,
+      "states": [
+        {
+          "frame": 0,
+          "timeS": 0.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0,
+            0.0
+          ],
+          "cohortMedianDxM": 0.0,
+          "cohortMeanVelocityMPerS": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "frame": 1,
+          "timeS": 0.1,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            1.168059126495059e-06,
+            -2.671028397034446e-05
+          ],
+          "cohortMedianDxM": 5.616977709621551e-07,
+          "cohortMeanVelocityMPerS": [
+            5.895114593106828e-05,
+            -0.0007367860531466904
+          ]
+        },
+        {
+          "frame": 2,
+          "timeS": 0.2,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            1.3597486592162012e-05,
+            -0.00011784353759898443
+          ],
+          "cohortMedianDxM": 1.2829860711605079e-05,
+          "cohortMeanVelocityMPerS": [
+            0.00011757919433084548,
+            -0.0010715763604208716
+          ]
+        },
+        {
+          "frame": 3,
+          "timeS": 0.30000000000000004,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            2.535451679611774e-05,
+            -0.000263381439468425
+          ],
+          "cohortMedianDxM": 2.2591492488288623e-05,
+          "cohortMeanVelocityMPerS": [
+            0.00020899051461674968,
+            -0.0016894972421885998
+          ]
+        },
+        {
+          "frame": 4,
+          "timeS": 0.4,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            4.801908559224642e-05,
+            -0.00044712724743372977
+          ],
+          "cohortMedianDxM": 4.3469476985080746e-05,
+          "cohortMeanVelocityMPerS": [
+            0.00016204230849564037,
+            -0.002140745334342233
+          ]
+        },
+        {
+          "frame": 5,
+          "timeS": 0.5,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            7.00817197767609e-05,
+            -0.0006750295548203844
+          ],
+          "cohortMedianDxM": 6.404919536073805e-05,
+          "cohortMeanVelocityMPerS": [
+            0.0003258844642052659,
+            -0.002359044621287589
+          ]
+        },
+        {
+          "frame": 6,
+          "timeS": 0.6000000000000001,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            9.769163226828052e-05,
+            -0.0009359384040069327
+          ],
+          "cohortMedianDxM": 8.888796722494874e-05,
+          "cohortMeanVelocityMPerS": [
+            0.0002289081697225749,
+            -0.0027510060286154835
+          ]
+        },
+        {
+          "frame": 7,
+          "timeS": 0.7,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.00012827444792797788,
+            -0.0012181633241389947
+          ],
+          "cohortMedianDxM": 0.00011552334972542155,
+          "cohortMeanVelocityMPerS": [
+            0.00036554038930117986,
+            -0.0029848760957176456
+          ]
+        },
+        {
+          "frame": 8,
+          "timeS": 0.8,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.00015942847149435195,
+            -0.0015261422759205179
+          ],
+          "cohortMedianDxM": 0.00014587643702768105,
+          "cohortMeanVelocityMPerS": [
+            0.00031372868007372085,
+            -0.003223372247206636
+          ]
+        },
+        {
+          "frame": 9,
+          "timeS": 0.8999999999999999,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.00021247209326496588,
+            -0.0018939926147444278
+          ],
+          "cohortMedianDxM": 0.00018366764033217464,
+          "cohortMeanVelocityMPerS": [
+            0.0007654919235896389,
+            -0.003986696379243593
+          ]
+        },
+        {
+          "frame": 10,
+          "timeS": 1.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0002853434933819879,
+            -0.00228156073683617
+          ],
+          "cohortMedianDxM": 0.0002400000992341944,
+          "cohortMeanVelocityMPerS": [
+            0.0006447059892635089,
+            -0.003959235028120039
+          ]
+        },
+        {
+          "frame": 11,
+          "timeS": 1.0999999999999999,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.00037295768388947515,
+            -0.002696831893605779
+          ],
+          "cohortMedianDxM": 0.00031024487217656826,
+          "cohortMeanVelocityMPerS": [
+            0.0011516586527169522,
+            -0.004153296784578672
+          ]
+        },
+        {
+          "frame": 12,
+          "timeS": 1.2000000000000002,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0004800034948858826,
+            -0.00310955946862786
+          ],
+          "cohortMedianDxM": 0.0003997920612839323,
+          "cohortMeanVelocityMPerS": [
+            0.0009419269167058848,
+            -0.004140041526875953
+          ]
+        },
+        {
+          "frame": 13,
+          "timeS": 1.3,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0005922332112670756,
+            -0.003513168506954293
+          ],
+          "cohortMedianDxM": 0.0004923039855668776,
+          "cohortMeanVelocityMPerS": [
+            0.001341737475497542,
+            -0.003984625570002623
+          ]
+        },
+        {
+          "frame": 14,
+          "timeS": 1.4,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0007262903628066508,
+            -0.003911308949018729
+          ],
+          "cohortMedianDxM": 0.0006048832798999371,
+          "cohortMeanVelocityMPerS": [
+            0.0013402820365977274,
+            -0.003862949226220898
+          ]
+        },
+        {
+          "frame": 15,
+          "timeS": 1.5,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0008743993628402059,
+            -0.0042796229631578515
+          ],
+          "cohortMedianDxM": 0.0007350708175035692,
+          "cohortMeanVelocityMPerS": [
+            0.001675763905408818,
+            -0.003630177089567581
+          ]
+        },
+        {
+          "frame": 16,
+          "timeS": 1.6,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0010753719591221644,
+            -0.0046377413074300535
+          ],
+          "cohortMedianDxM": 0.0008938250160479555,
+          "cohortMeanVelocityMPerS": [
+            0.0024910366878912672,
+            -0.003476093704783018
+          ]
+        },
+        {
+          "frame": 17,
+          "timeS": 1.7,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.001379796767127702,
+            -0.004990452946394412
+          ],
+          "cohortMedianDxM": 0.0011389079367010169,
+          "cohortMeanVelocityMPerS": [
+            0.003617139285828264,
+            -0.003674992848177998
+          ]
+        },
+        {
+          "frame": 18,
+          "timeS": 1.7999999999999998,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0018082255555818153,
+            -0.005358884392634882
+          ],
+          "cohortMedianDxM": 0.0014451368193029168,
+          "cohortMeanVelocityMPerS": [
+            0.005053375197866605,
+            -0.0036827789175630154
+          ]
+        },
+        {
+          "frame": 19,
+          "timeS": 1.9,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002382009529289566,
+            -0.005735454585826457
+          ],
+          "cohortMedianDxM": 0.00167720450732034,
+          "cohortMeanVelocityMPerS": [
+            0.006337451175139719,
+            -0.003758531501469827
+          ]
+        },
+        {
+          "frame": 20,
+          "timeS": 2.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0030519562099491416,
+            -0.006088535814597603
+          ],
+          "cohortMedianDxM": 0.0019339312181312351,
+          "cohortMeanVelocityMPerS": [
+            0.0070278852616625495,
+            -0.003335497889219932
+          ]
+        },
+        {
+          "frame": 21,
+          "timeS": 2.0999999999999996,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.003746255114206859,
+            -0.006416702499669293
+          ],
+          "cohortMedianDxM": 0.002107317362691319,
+          "cohortMeanVelocityMPerS": [
+            0.006696706934449212,
+            -0.003202424255208691
+          ]
+        },
+        {
+          "frame": 22,
+          "timeS": 2.1999999999999997,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.00437227550310821,
+            -0.0067140494248750186
+          ],
+          "cohortMedianDxM": 0.0023707077329433446,
+          "cohortMeanVelocityMPerS": [
+            0.005794048150925556,
+            -0.0027712320390095775
+          ]
+        },
+        {
+          "frame": 23,
+          "timeS": 2.3000000000000003,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.00485577574143419,
+            -0.0069388015298194935
+          ],
+          "cohortMedianDxM": 0.0025179831904260652,
+          "cohortMeanVelocityMPerS": [
+            0.003748932566847987,
+            -0.0017130437160196475
+          ]
+        },
+        {
+          "frame": 24,
+          "timeS": 2.4000000000000004,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005142867962559549,
+            -0.00707891472376162
+          ],
+          "cohortMedianDxM": 0.0026367560393936174,
+          "cohortMeanVelocityMPerS": [
+            0.002075887507259705,
+            -0.0009495680688030693
+          ]
+        },
+        {
+          "frame": 25,
+          "timeS": 2.5,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005211424280158528,
+            -0.0071069286558675575
+          ],
+          "cohortMedianDxM": 0.0026540709790268124,
+          "cohortMeanVelocityMPerS": [
+            -0.0006941671009735367,
+            0.00025004348441034607
+          ]
+        },
+        {
+          "frame": 26,
+          "timeS": 2.6,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005187995784832316,
+            -0.007105342082095513
+          ],
+          "cohortMedianDxM": 0.002631899343596089,
+          "cohortMeanVelocityMPerS": [
+            0.0007827361851610494,
+            -0.0001546196607660669
+          ]
+        },
+        {
+          "frame": 27,
+          "timeS": 2.7,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005201624947535761,
+            -0.007103031163337073
+          ],
+          "cohortMedianDxM": 0.002647878889856514,
+          "cohortMeanVelocityMPerS": [
+            -0.0008695900066701837,
+            5.3185627739380144e-05
+          ]
+        },
+        {
+          "frame": 28,
+          "timeS": 2.8,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005201521339429121,
+            -0.007102974980442376
+          ],
+          "cohortMedianDxM": 0.002648851644677208,
+          "cohortMeanVelocityMPerS": [
+            0.0008549944457894944,
+            -2.052672671207196e-05
+          ]
+        },
+        {
+          "frame": 29,
+          "timeS": 2.9,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005191097886145996,
+            -0.007106978804600205
+          ],
+          "cohortMedianDxM": 0.002634814019880416,
+          "cohortMeanVelocityMPerS": [
+            -0.0007269508717932387,
+            0.00010301124475325954
+          ]
+        },
+        {
+          "frame": 30,
+          "timeS": 3.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005213336347439046,
+            -0.00710432553839213
+          ],
+          "cohortMedianDxM": 0.0026541542178826205,
+          "cohortMeanVelocityMPerS": [
+            0.0006610572963710359,
+            -0.0002583328015838947
+          ]
+        },
+        {
+          "frame": 31,
+          "timeS": 3.1000000000000005,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005182739064278448,
+            -0.0070997796680556885
+          ],
+          "cohortMedianDxM": 0.0026262130140128903,
+          "cohortMeanVelocityMPerS": [
+            -0.0005086221339951214,
+            0.0002493714479905172
+          ]
+        },
+        {
+          "frame": 32,
+          "timeS": 3.2,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005219248876683358,
+            -0.0071128171162233205
+          ],
+          "cohortMedianDxM": 0.0026580850704185366,
+          "cohortMeanVelocityMPerS": [
+            0.00037921763152731845,
+            -8.928649152144878e-05
+          ]
+        },
+        {
+          "frame": 33,
+          "timeS": 3.3000000000000003,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0051767631081861614,
+            -0.007100046415744942
+          ],
+          "cohortMedianDxM": 0.0026204413398680515,
+          "cohortMeanVelocityMPerS": [
+            -0.00023914179100523644,
+            -0.00011421217532307752
+          ]
+        },
+        {
+          "frame": 34,
+          "timeS": 3.4,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005222377036122244,
+            -0.007108851044767352
+          ],
+          "cohortMedianDxM": 0.002657545004225881,
+          "cohortMeanVelocityMPerS": [
+            3.221579197693246e-05,
+            8.109212479552107e-05
+          ]
+        },
+        {
+          "frame": 35,
+          "timeS": 3.5,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005176274111881703,
+            -0.007104724649850888
+          ],
+          "cohortMedianDxM": 0.0026201700002967954,
+          "cohortMeanVelocityMPerS": [
+            0.00017593269846730272,
+            -4.7594420669883177e-05
+          ]
+        },
+        {
+          "frame": 36,
+          "timeS": 3.5999999999999996,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005220552437098079,
+            -0.0071084618280420645
+          ],
+          "cohortMedianDxM": 0.0026606610997426117,
+          "cohortMeanVelocityMPerS": [
+            -0.0003532718579775236,
+            -4.403408009721929e-05
+          ]
+        },
+        {
+          "frame": 37,
+          "timeS": 3.7,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005182399263043436,
+            -0.00710188362331117
+          ],
+          "cohortMedianDxM": 0.002622947578985624,
+          "cohortMeanVelocityMPerS": [
+            0.0004873980290467516,
+            -2.0336789832182584e-05
+          ]
+        },
+        {
+          "frame": 38,
+          "timeS": 3.8,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0052130327718174965,
+            -0.007108991670917884
+          ],
+          "cohortMedianDxM": 0.002652873516417742,
+          "cohortMeanVelocityMPerS": [
+            -0.0006528801462978187,
+            0.00014853231990835685
+          ]
+        },
+        {
+          "frame": 39,
+          "timeS": 3.9000000000000004,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0051909445655554404,
+            -0.007103929403334666
+          ],
+          "cohortMedianDxM": 0.0026340702606120203,
+          "cohortMeanVelocityMPerS": [
+            0.0007182562033170854,
+            -0.00011113266283574681
+          ]
+        },
+        {
+          "frame": 40,
+          "timeS": 4.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005203240830771111,
+            -0.007106445758697148
+          ],
+          "cohortMedianDxM": 0.002649124681724402,
+          "cohortMeanVelocityMPerS": [
+            -0.0007429328671465025,
+            0.00014554043065768667
+          ]
+        },
+        {
+          "frame": 41,
+          "timeS": 4.1,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005202823969632807,
+            -0.0071043806357767554
+          ],
+          "cohortMedianDxM": 0.0026502362800222556,
+          "cohortMeanVelocityMPerS": [
+            0.0007914707674426093,
+            -0.00012581844845777824
+          ]
+        },
+        {
+          "frame": 42,
+          "timeS": 4.199999999999999,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0051930295790710975,
+            -0.007104222700187095
+          ],
+          "cohortMedianDxM": 0.0026376275706621044,
+          "cohortMeanVelocityMPerS": [
+            -0.0007209917339357331,
+            0.00020780042273678862
+          ]
+        },
+        {
+          "frame": 43,
+          "timeS": 4.3,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005212383786601017,
+            -0.0071081473175012
+          ],
+          "cohortMedianDxM": 0.0026539335292490307,
+          "cohortMeanVelocityMPerS": [
+            0.0006291071869762826,
+            -0.0002138038727927158
+          ]
+        },
+        {
+          "frame": 44,
+          "timeS": 4.3999999999999995,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005184008599920212,
+            -0.007099021988193468
+          ],
+          "cohortMedianDxM": 0.0026285944120418847,
+          "cohortMeanVelocityMPerS": [
+            -0.0005379213211665771,
+            7.589393648483853e-05
+          ]
+        },
+        {
+          "frame": 45,
+          "timeS": 4.5,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005219590385294586,
+            -0.007110119633317188
+          ],
+          "cohortMedianDxM": 0.0026594719267940548,
+          "cohortMeanVelocityMPerS": [
+            0.000428285761219644,
+            6.66155631588202e-05
+          ]
+        },
+        {
+          "frame": 46,
+          "timeS": 4.6000000000000005,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005177343426325336,
+            -0.007103879855265461
+          ],
+          "cohortMedianDxM": 0.00262140807633493,
+          "cohortMeanVelocityMPerS": [
+            -0.00022969077379788035,
+            -8.964753623791254e-05
+          ]
+        },
+        {
+          "frame": 47,
+          "timeS": 4.7,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005223407484615207,
+            -0.007106470983164449
+          ],
+          "cohortMedianDxM": 0.0026607633691497767,
+          "cohortMeanVelocityMPerS": [
+            3.4361902502777926e-05,
+            -4.808401868078239e-05
+          ]
+        },
+        {
+          "frame": 48,
+          "timeS": 4.800000000000001,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0051773413309222,
+            -0.0071038286973128875
+          ],
+          "cohortMedianDxM": 0.0026198129380503588,
+          "cohortMeanVelocityMPerS": [
+            0.00016284972303207883,
+            8.164106369210178e-05
+          ]
+        },
+        {
+          "frame": 49,
+          "timeS": 4.9,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005219754377120914,
+            -0.007112097465308787
+          ],
+          "cohortMedianDxM": 0.0026605339384779825,
+          "cohortMeanVelocityMPerS": [
+            -0.0003923051499318489,
+            -8.705780108568936e-05
+          ]
+        },
+        {
+          "frame": 50,
+          "timeS": 5.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005182591389046068,
+            -0.007099486823223125
+          ],
+          "cohortMedianDxM": 0.002625184178125295,
+          "cohortMeanVelocityMPerS": [
+            0.000471270380511656,
+            -0.00011473381373566662
+          ]
+        },
+        {
+          "frame": 51,
+          "timeS": 5.1,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005213172495667411,
+            -0.007109302612394724
+          ],
+          "cohortMedianDxM": 0.002651582917106765,
+          "cohortMeanVelocityMPerS": [
+            -0.0005657434516004732,
+            0.00023844369540162075
+          ]
+        },
+        {
+          "frame": 52,
+          "timeS": 5.2,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005191255968777095,
+            -0.007105863783930597
+          ],
+          "cohortMedianDxM": 0.0026374181651078743,
+          "cohortMeanVelocityMPerS": [
+            0.0007015423633414245,
+            -0.00016942248982291069
+          ]
+        },
+        {
+          "frame": 53,
+          "timeS": 5.3,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005204568725638741,
+            -0.007104229558272528
+          ],
+          "cohortMedianDxM": 0.002649496065906476,
+          "cohortMeanVelocityMPerS": [
+            -0.0007714050942289838,
+            0.00016244790966310634
+          ]
+        },
+        {
+          "frame": 54,
+          "timeS": 5.4,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005201808191362257,
+            -0.00710639351516057
+          ],
+          "cohortMedianDxM": 0.0026490374341658907,
+          "cohortMeanVelocityMPerS": [
+            0.0007698279851986921,
+            -5.046601685179354e-05
+          ]
+        },
+        {
+          "frame": 55,
+          "timeS": 5.5,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005193032154617013,
+            -0.007104502527083934
+          ],
+          "cohortMedianDxM": 0.0026380102245902037,
+          "cohortMeanVelocityMPerS": [
+            -0.0007324815455780126,
+            0.00011685741102327097
+          ]
+        },
+        {
+          "frame": 56,
+          "timeS": 5.6,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005212673317091219,
+            -0.007106999346321662
+          ],
+          "cohortMedianDxM": 0.0026528574768889257,
+          "cohortMeanVelocityMPerS": [
+            0.0006869215492110064,
+            -0.00010800348981070404
+          ]
+        },
+        {
+          "frame": 57,
+          "timeS": 5.699999999999999,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005184135329161373,
+            -0.007101894486865756
+          ],
+          "cohortMedianDxM": 0.002625159296333557,
+          "cohortMeanVelocityMPerS": [
+            -0.0005287423427508908,
+            8.086904642225478e-05
+          ]
+        },
+        {
+          "frame": 58,
+          "timeS": 5.8,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005220419846710004,
+            -0.007107317879165733
+          ],
+          "cohortMedianDxM": 0.002658781470431748,
+          "cohortMeanVelocityMPerS": [
+            0.00040377590143004686,
+            -3.338404117450593e-05
+          ]
+        },
+        {
+          "frame": 59,
+          "timeS": 5.8999999999999995,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.005178207148200399,
+            -0.007103267241086961
+          ],
+          "cohortMedianDxM": 0.002623063857488006,
+          "cohortMeanVelocityMPerS": [
+            -0.00021188847494302382,
+            3.963612780189009e-05
+          ]
+        },
+        {
+          "frame": 60,
+          "timeS": 6.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0052226440866946135,
+            -0.007109327347996728
+          ],
+          "cohortMedianDxM": 0.0026599295562910186,
+          "cohortMeanVelocityMPerS": [
+            -3.325706980084027e-06,
+            -0.00012076497407600781
+          ]
+        }
+      ],
+      "selectionConvention": "Fixed initial cohort/graph; per-state displacement mask; largest component by mass, ties by smallest ID. Candidate IDs are held fixed for every saved velocity in the reported interval. No final-speed selection."
+    },
+    "post2s": {
+      "label": "constant-gravity hold; displacement relative to saved2s",
+      "referenceTimeS": 2.0,
+      "referenceFrame": 20,
+      "status": "NOT_DETECTED",
+      "reason": null,
+      "cohortMassKgPerM": 367097.83667205414,
+      "candidate": null,
+      "states": [
+        {
+          "frame": 20,
+          "timeS": 2.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0,
+            0.0
+          ],
+          "cohortMedianDxM": 0.0,
+          "cohortMeanVelocityMPerS": [
+            0.0070278852616625495,
+            -0.003335497889219932
+          ]
+        },
+        {
+          "frame": 21,
+          "timeS": 2.0999999999999996,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0006942989042577204,
+            -0.0003281666850717065
+          ],
+          "cohortMedianDxM": 0.0001900575048257025,
+          "cohortMeanVelocityMPerS": [
+            0.006696706934449212,
+            -0.003202424255208691
+          ]
+        },
+        {
+          "frame": 22,
+          "timeS": 2.1999999999999997,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0013203192931590705,
+            -0.0006255136102774218
+          ],
+          "cohortMedianDxM": 0.00041546315436491454,
+          "cohortMeanVelocityMPerS": [
+            0.005794048150925556,
+            -0.0027712320390095775
+          ]
+        },
+        {
+          "frame": 23,
+          "timeS": 2.3000000000000003,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0018038195314850525,
+            -0.0008502657152219347
+          ],
+          "cohortMedianDxM": 0.0005720821403105703,
+          "cohortMeanVelocityMPerS": [
+            0.003748932566847987,
+            -0.0017130437160196475
+          ]
+        },
+        {
+          "frame": 24,
+          "timeS": 2.4000000000000004,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002090911752610413,
+            -0.0009903789091640146
+          ],
+          "cohortMedianDxM": 0.0006673442038866995,
+          "cohortMeanVelocityMPerS": [
+            0.002075887507259705,
+            -0.0009495680688030693
+          ]
+        },
+        {
+          "frame": 25,
+          "timeS": 2.5,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002159468070209389,
+            -0.0010183928412699575
+          ],
+          "cohortMedianDxM": 0.0007012352557733692,
+          "cohortMeanVelocityMPerS": [
+            -0.0006941671009735367,
+            0.00025004348441034607
+          ]
+        },
+        {
+          "frame": 26,
+          "timeS": 2.6,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021360395748831694,
+            -0.001016806267497944
+          ],
+          "cohortMedianDxM": 0.0006656001042024684,
+          "cohortMeanVelocityMPerS": [
+            0.0007827361851610494,
+            -0.0001546196607660669
+          ]
+        },
+        {
+          "frame": 27,
+          "timeS": 2.7,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002149668737586627,
+            -0.001014495348739487
+          ],
+          "cohortMedianDxM": 0.0006863566388339848,
+          "cohortMeanVelocityMPerS": [
+            -0.0008695900066701837,
+            5.3185627739380144e-05
+          ]
+        },
+        {
+          "frame": 28,
+          "timeS": 2.8,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021495651294799944,
+            -0.0010144391658447876
+          ],
+          "cohortMedianDxM": 0.0006859545009536561,
+          "cohortMeanVelocityMPerS": [
+            0.0008549944457894944,
+            -2.052672671207196e-05
+          ]
+        },
+        {
+          "frame": 29,
+          "timeS": 2.9,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002139141676196847,
+            -0.0010184429900026112
+          ],
+          "cohortMedianDxM": 0.0006712288939905164,
+          "cohortMeanVelocityMPerS": [
+            -0.0007269508717932387,
+            0.00010301124475325954
+          ]
+        },
+        {
+          "frame": 30,
+          "timeS": 3.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021613801374899097,
+            -0.0010157897237945462
+          ],
+          "cohortMedianDxM": 0.0007044001777671838,
+          "cohortMeanVelocityMPerS": [
+            0.0006610572963710359,
+            -0.0002583328015838947
+          ]
+        },
+        {
+          "frame": 31,
+          "timeS": 3.1000000000000005,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002130782854329313,
+            -0.0010112438534580965
+          ],
+          "cohortMedianDxM": 0.0006603432932639208,
+          "cohortMeanVelocityMPerS": [
+            -0.0005086221339951214,
+            0.0002493714479905172
+          ]
+        },
+        {
+          "frame": 32,
+          "timeS": 3.2,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021672926667342164,
+            -0.0010242813016257284
+          ],
+          "cohortMedianDxM": 0.0007117240337706221,
+          "cohortMeanVelocityMPerS": [
+            0.00037921763152731845,
+            -8.928649152144878e-05
+          ]
+        },
+        {
+          "frame": 33,
+          "timeS": 3.3000000000000003,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002124806898237023,
+            -0.0010115106011473526
+          ],
+          "cohortMedianDxM": 0.0006541078391926192,
+          "cohortMeanVelocityMPerS": [
+            -0.00023914179100523644,
+            -0.00011421217532307752
+          ]
+        },
+        {
+          "frame": 34,
+          "timeS": 3.4,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.00217042082617311,
+            -0.0010203152301697636
+          ],
+          "cohortMedianDxM": 0.0007068250082582495,
+          "cohortMeanVelocityMPerS": [
+            3.221579197693246e-05,
+            8.109212479552107e-05
+          ]
+        },
+        {
+          "frame": 35,
+          "timeS": 3.5,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021243179019325696,
+            -0.001016188835253315
+          ],
+          "cohortMedianDxM": 0.0006529021161600923,
+          "cohortMeanVelocityMPerS": [
+            0.00017593269846730272,
+            -4.7594420669883177e-05
+          ]
+        },
+        {
+          "frame": 36,
+          "timeS": 3.5999999999999996,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002168596227148935,
+            -0.0010199260134444717
+          ],
+          "cohortMedianDxM": 0.000709760477633381,
+          "cohortMeanVelocityMPerS": [
+            -0.0003532718579775236,
+            -4.403408009721929e-05
+          ]
+        },
+        {
+          "frame": 37,
+          "timeS": 3.7,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002130443053094289,
+            -0.0010133478087135806
+          ],
+          "cohortMedianDxM": 0.0006625054757520843,
+          "cohortMeanVelocityMPerS": [
+            0.0004873980290467516,
+            -2.0336789832182584e-05
+          ]
+        },
+        {
+          "frame": 38,
+          "timeS": 3.8,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002161076561868355,
+            -0.0010204558563202916
+          ],
+          "cohortMedianDxM": 0.00070496276210541,
+          "cohortMeanVelocityMPerS": [
+            -0.0006528801462978187,
+            0.00014853231990835685
+          ]
+        },
+        {
+          "frame": 39,
+          "timeS": 3.9000000000000004,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021389883556062945,
+            -0.0010153935887370672
+          ],
+          "cohortMedianDxM": 0.0006693132484549835,
+          "cohortMeanVelocityMPerS": [
+            0.0007182562033170854,
+            -0.00011113266283574681
+          ]
+        },
+        {
+          "frame": 40,
+          "timeS": 4.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002151284620821971,
+            -0.0010179099440995524
+          ],
+          "cohortMedianDxM": 0.0006901672979058304,
+          "cohortMeanVelocityMPerS": [
+            -0.0007429328671465025,
+            0.00014554043065768667
+          ]
+        },
+        {
+          "frame": 41,
+          "timeS": 4.1,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021508677596836657,
+            -0.0010158448211791842
+          ],
+          "cohortMedianDxM": 0.0006878063003181722,
+          "cohortMeanVelocityMPerS": [
+            0.0007914707674426093,
+            -0.00012581844845777824
+          ]
+        },
+        {
+          "frame": 42,
+          "timeS": 4.199999999999999,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021410733691219516,
+            -0.0010156868855895052
+          ],
+          "cohortMedianDxM": 0.0006711645091854734,
+          "cohortMeanVelocityMPerS": [
+            -0.0007209917339357331,
+            0.00020780042273678862
+          ]
+        },
+        {
+          "frame": 43,
+          "timeS": 4.3,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021604275766518694,
+            -0.0010196115029036002
+          ],
+          "cohortMedianDxM": 0.0007034978005417969,
+          "cohortMeanVelocityMPerS": [
+            0.0006291071869762826,
+            -0.0002138038727927158
+          ]
+        },
+        {
+          "frame": 44,
+          "timeS": 4.3999999999999995,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021320523899710747,
+            -0.0010104861735958678
+          ],
+          "cohortMedianDxM": 0.0006626222089849421,
+          "cohortMeanVelocityMPerS": [
+            -0.0005379213211665771,
+            7.589393648483853e-05
+          ]
+        },
+        {
+          "frame": 45,
+          "timeS": 4.5,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002167634175345444,
+            -0.001021583818719585
+          ],
+          "cohortMedianDxM": 0.0007109900691837368,
+          "cohortMeanVelocityMPerS": [
+            0.000428285761219644,
+            6.66155631588202e-05
+          ]
+        },
+        {
+          "frame": 46,
+          "timeS": 4.6000000000000005,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021253872163761955,
+            -0.0010153440406678788
+          ],
+          "cohortMedianDxM": 0.0006539832993812666,
+          "cohortMeanVelocityMPerS": [
+            -0.00022969077379788035,
+            -8.964753623791254e-05
+          ]
+        },
+        {
+          "frame": 47,
+          "timeS": 4.7,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002171451274666057,
+            -0.0010179351685668503
+          ],
+          "cohortMedianDxM": 0.000710114655497307,
+          "cohortMeanVelocityMPerS": [
+            3.4361902502777926e-05,
+            -4.808401868078239e-05
+          ]
+        },
+        {
+          "frame": 48,
+          "timeS": 4.800000000000001,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021253851209730563,
+            -0.001015292882715296
+          ],
+          "cohortMedianDxM": 0.0006543541286223586,
+          "cohortMeanVelocityMPerS": [
+            0.00016284972303207883,
+            8.164106369210178e-05
+          ]
+        },
+        {
+          "frame": 49,
+          "timeS": 4.9,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021677981671717745,
+            -0.001023561650711202
+          ],
+          "cohortMedianDxM": 0.0007096231916072782,
+          "cohortMeanVelocityMPerS": [
+            -0.0003923051499318489,
+            -8.705780108568936e-05
+          ]
+        },
+        {
+          "frame": 50,
+          "timeS": 5.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021306351790969335,
+            -0.0010109510086255486
+          ],
+          "cohortMedianDxM": 0.0006615004496790533,
+          "cohortMeanVelocityMPerS": [
+            0.000471270380511656,
+            -0.00011473381373566662
+          ]
+        },
+        {
+          "frame": 51,
+          "timeS": 5.1,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002161216285718264,
+            -0.001020766797797136
+          ],
+          "cohortMedianDxM": 0.0007051445863552885,
+          "cohortMeanVelocityMPerS": [
+            -0.0005657434516004732,
+            0.00023844369540162075
+          ]
+        },
+        {
+          "frame": 52,
+          "timeS": 5.2,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021392997588279552,
+            -0.001017327969333009
+          ],
+          "cohortMedianDxM": 0.0006716984098389389,
+          "cohortMeanVelocityMPerS": [
+            0.0007015423633414245,
+            -0.00016942248982291069
+          ]
+        },
+        {
+          "frame": 53,
+          "timeS": 5.3,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021526125156896116,
+            -0.0010156937436749491
+          ],
+          "cohortMedianDxM": 0.0006895964322151116,
+          "cohortMeanVelocityMPerS": [
+            -0.0007714050942289838,
+            0.00016244790966310634
+          ]
+        },
+        {
+          "frame": 54,
+          "timeS": 5.4,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002149851981413111,
+            -0.0010178577005629992
+          ],
+          "cohortMedianDxM": 0.0006880335167220863,
+          "cohortMeanVelocityMPerS": [
+            0.0007698279851986921,
+            -5.046601685179354e-05
+          ]
+        },
+        {
+          "frame": 55,
+          "timeS": 5.5,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021410759446678835,
+            -0.0010159667124863374
+          ],
+          "cohortMedianDxM": 0.0006723358515703381,
+          "cohortMeanVelocityMPerS": [
+            -0.0007324815455780126,
+            0.00011685741102327097
+          ]
+        },
+        {
+          "frame": 56,
+          "timeS": 5.6,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002160717107142088,
+            -0.0010184635317240756
+          ],
+          "cohortMedianDxM": 0.0007018805145317941,
+          "cohortMeanVelocityMPerS": [
+            0.0006869215492110064,
+            -0.00010800348981070404
+          ]
+        },
+        {
+          "frame": 57,
+          "timeS": 5.699999999999999,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021321791192122396,
+            -0.0010133586722681548
+          ],
+          "cohortMedianDxM": 0.0006641731663137307,
+          "cohortMeanVelocityMPerS": [
+            -0.0005287423427508908,
+            8.086904642225478e-05
+          ]
+        },
+        {
+          "frame": 58,
+          "timeS": 5.8,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021684636367608665,
+            -0.0010187820645681462
+          ],
+          "cohortMedianDxM": 0.0007122727330877154,
+          "cohortMeanVelocityMPerS": [
+            0.00040377590143004686,
+            -3.338404117450593e-05
+          ]
+        },
+        {
+          "frame": 59,
+          "timeS": 5.8999999999999995,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.002126250938251257,
+            -0.0010147314264893914
+          ],
+          "cohortMedianDxM": 0.0006546756246645913,
+          "cohortMeanVelocityMPerS": [
+            -0.00021188847494302382,
+            3.963612780189009e-05
+          ]
+        },
+        {
+          "frame": 60,
+          "timeS": 6.0,
+          "movingMassFraction": 0.0,
+          "largestConnectedMovingMassFraction": 0.0,
+          "cohortCentroidDisplacementM": [
+            0.0021706878767454763,
+            -0.0010207915333991541
+          ],
+          "cohortMedianDxM": 0.0007095687103628734,
+          "cohortMeanVelocityMPerS": [
+            -3.325706980084027e-06,
+            -0.00012076497407600781
+          ]
+        }
+      ],
+      "selectionConvention": "Fixed initial cohort/graph; per-state displacement mask; largest component by mass, ties by smallest ID. Candidate IDs are held fixed for every saved velocity in the reported interval. No final-speed selection."
+    }
+  },
+  "toeHistory": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625,
+      "medianXM": 11.125,
+      "centroidXM": 11.757102272727272
+    },
+    {
+      "frame": 1,
+      "timeS": 0.1,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625000048029317,
+      "medianXM": 11.124999396335847,
+      "centroidXM": 11.75710331180198
+    },
+    {
+      "frame": 2,
+      "timeS": 0.2,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625000196736302,
+      "medianXM": 11.12500085537772,
+      "centroidXM": 11.757113990266967
+    },
+    {
+      "frame": 3,
+      "timeS": 0.30000000000000004,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625000423841154,
+      "medianXM": 11.124989198185379,
+      "centroidXM": 11.75712426204196
+    },
+    {
+      "frame": 4,
+      "timeS": 0.4,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62500072866375,
+      "medianXM": 11.12499666465586,
+      "centroidXM": 11.757143740411594
+    },
+    {
+      "frame": 5,
+      "timeS": 0.5,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625001089073876,
+      "medianXM": 11.124986029388145,
+      "centroidXM": 11.757162888381982
+    },
+    {
+      "frame": 6,
+      "timeS": 0.6000000000000001,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625001507375877,
+      "medianXM": 11.124983588340193,
+      "centroidXM": 11.757186745120313
+    },
+    {
+      "frame": 7,
+      "timeS": 0.7,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62500196714778,
+      "medianXM": 11.12498491415218,
+      "centroidXM": 11.757213134186548
+    },
+    {
+      "frame": 8,
+      "timeS": 0.8,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625002452708166,
+      "medianXM": 11.12497080125407,
+      "centroidXM": 11.757240189811537
+    },
+    {
+      "frame": 9,
+      "timeS": 0.8999999999999999,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62500301125326,
+      "medianXM": 11.124968459317254,
+      "centroidXM": 11.75728609060839
+    },
+    {
+      "frame": 10,
+      "timeS": 1.0,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625003633933595,
+      "medianXM": 11.124991551320674,
+      "centroidXM": 11.757348899735426
+    },
+    {
+      "frame": 11,
+      "timeS": 1.0999999999999999,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625004386043972,
+      "medianXM": 11.12502099310191,
+      "centroidXM": 11.757424431382844
+    },
+    {
+      "frame": 12,
+      "timeS": 1.2000000000000002,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62500533893772,
+      "medianXM": 11.125029375514652,
+      "centroidXM": 11.757516548605523
+    },
+    {
+      "frame": 13,
+      "timeS": 1.3,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.6250066440092,
+      "medianXM": 11.125033468300446,
+      "centroidXM": 11.757613356699522
+    },
+    {
+      "frame": 14,
+      "timeS": 1.4,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625009275582766,
+      "medianXM": 11.125037465592149,
+      "centroidXM": 11.75772923450855
+    },
+    {
+      "frame": 15,
+      "timeS": 1.5,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62501475815764,
+      "medianXM": 11.125040722465188,
+      "centroidXM": 11.757857877141467
+    },
+    {
+      "frame": 16,
+      "timeS": 1.6,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625033323616584,
+      "medianXM": 11.125044740244759,
+      "centroidXM": 11.758033053852142
+    },
+    {
+      "frame": 17,
+      "timeS": 1.7,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625098697168358,
+      "medianXM": 11.12504810397831,
+      "centroidXM": 11.758298140551508
+    },
+    {
+      "frame": 18,
+      "timeS": 1.7999999999999998,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625269639170916,
+      "medianXM": 11.125049952610972,
+      "centroidXM": 11.75867378504086
+    },
+    {
+      "frame": 19,
+      "timeS": 1.9,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.625524635341247,
+      "medianXM": 11.12505128267092,
+      "centroidXM": 11.75917494960465
+    },
+    {
+      "frame": 20,
+      "timeS": 2.0,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62588460475661,
+      "medianXM": 11.12505124529415,
+      "centroidXM": 11.759762369990801
+    },
+    {
+      "frame": 21,
+      "timeS": 2.0999999999999996,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626201911185866,
+      "medianXM": 11.125051261636191,
+      "centroidXM": 11.760367593491875
+    },
+    {
+      "frame": 22,
+      "timeS": 2.1999999999999997,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626478855826438,
+      "medianXM": 11.12505089446815,
+      "centroidXM": 11.76091436133897
+    },
+    {
+      "frame": 23,
+      "timeS": 2.3000000000000003,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62669181052026,
+      "medianXM": 11.125051295997105,
+      "centroidXM": 11.761335202839055
+    },
+    {
+      "frame": 24,
+      "timeS": 2.4000000000000004,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626785186228993,
+      "medianXM": 11.125050905192731,
+      "centroidXM": 11.761584284837289
+    },
+    {
+      "frame": 25,
+      "timeS": 2.5,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.6268017875235,
+      "medianXM": 11.125050915685106,
+      "centroidXM": 11.761642402711377
+    },
+    {
+      "frame": 26,
+      "timeS": 2.6,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801654561657,
+      "medianXM": 11.125050029570744,
+      "centroidXM": 11.761622769756945
+    },
+    {
+      "frame": 27,
+      "timeS": 2.7,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801533836836,
+      "medianXM": 11.125050562555503,
+      "centroidXM": 11.761634191229952
+    },
+    {
+      "frame": 28,
+      "timeS": 2.8,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801485169494,
+      "medianXM": 11.125050464389743,
+      "centroidXM": 11.761634042474691
+    },
+    {
+      "frame": 29,
+      "timeS": 2.9,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801751053335,
+      "medianXM": 11.12505031184958,
+      "centroidXM": 11.761625409441727
+    },
+    {
+      "frame": 30,
+      "timeS": 3.0,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801815957634,
+      "medianXM": 11.125051161952937,
+      "centroidXM": 11.761643996995025
+    },
+    {
+      "frame": 31,
+      "timeS": 3.1000000000000005,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801802378168,
+      "medianXM": 11.125049840902728,
+      "centroidXM": 11.76161834033761
+    },
+    {
+      "frame": 32,
+      "timeS": 3.2,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62680186030457,
+      "medianXM": 11.125051408112647,
+      "centroidXM": 11.761648927332756
+    },
+    {
+      "frame": 33,
+      "timeS": 3.3000000000000003,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801845829405,
+      "medianXM": 11.125049626112064,
+      "centroidXM": 11.761613296462878
+    },
+    {
+      "frame": 34,
+      "timeS": 3.4,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801883040415,
+      "medianXM": 11.125051480914848,
+      "centroidXM": 11.761651459378918
+    },
+    {
+      "frame": 35,
+      "timeS": 3.5,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801767760888,
+      "medianXM": 11.12504967657189,
+      "centroidXM": 11.761612903811752
+    },
+    {
+      "frame": 36,
+      "timeS": 3.5999999999999996,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801901531902,
+      "medianXM": 11.125051397799114,
+      "centroidXM": 11.761649980586293
+    },
+    {
+      "frame": 37,
+      "timeS": 3.7,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801879990815,
+      "medianXM": 11.125049997952614,
+      "centroidXM": 11.761618070106383
+    },
+    {
+      "frame": 38,
+      "timeS": 3.8,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801908100216,
+      "medianXM": 11.125051100081375,
+      "centroidXM": 11.761643731203852
+    },
+    {
+      "frame": 39,
+      "timeS": 3.9000000000000004,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62680187374165,
+      "medianXM": 11.125050015982515,
+      "centroidXM": 11.761625177306055
+    },
+    {
+      "frame": 40,
+      "timeS": 4.0,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801940465846,
+      "medianXM": 11.125050657034047,
+      "centroidXM": 11.761635575756323
+    },
+    {
+      "frame": 41,
+      "timeS": 4.1,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801714985127,
+      "medianXM": 11.125050717833574,
+      "centroidXM": 11.761635233138986
+    },
+    {
+      "frame": 42,
+      "timeS": 4.199999999999999,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801681552685,
+      "medianXM": 11.125050196601915,
+      "centroidXM": 11.761627013997424
+    },
+    {
+      "frame": 43,
+      "timeS": 4.3,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801407419244,
+      "medianXM": 11.125051196478715,
+      "centroidXM": 11.761643219313783
+    },
+    {
+      "frame": 44,
+      "timeS": 4.3999999999999995,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62680131993118,
+      "medianXM": 11.125050075875137,
+      "centroidXM": 11.76161943216824
+    },
+    {
+      "frame": 45,
+      "timeS": 4.5,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801391904454,
+      "medianXM": 11.125051343666394,
+      "centroidXM": 11.761649181582774
+    },
+    {
+      "frame": 46,
+      "timeS": 4.6000000000000005,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801202433683,
+      "medianXM": 11.12504962906271,
+      "centroidXM": 11.761613824189537
+    },
+    {
+      "frame": 47,
+      "timeS": 4.7,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62680151179807,
+      "medianXM": 11.125051515310847,
+      "centroidXM": 11.761652356715375
+    },
+    {
+      "frame": 48,
+      "timeS": 4.800000000000001,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62680112721642,
+      "medianXM": 11.12504964347832,
+      "centroidXM": 11.761613807002337
+    },
+    {
+      "frame": 49,
+      "timeS": 4.9,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.6268011763079,
+      "medianXM": 11.125051356751662,
+      "centroidXM": 11.761649307993968
+    },
+    {
+      "frame": 50,
+      "timeS": 5.0,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.6268011537139,
+      "medianXM": 11.125049871397332,
+      "centroidXM": 11.761618170062759
+    },
+    {
+      "frame": 51,
+      "timeS": 5.1,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801117623494,
+      "medianXM": 11.125051196509416,
+      "centroidXM": 11.761643845857915
+    },
+    {
+      "frame": 52,
+      "timeS": 5.2,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801290488313,
+      "medianXM": 11.125050305586978,
+      "centroidXM": 11.761625505405618
+    },
+    {
+      "frame": 53,
+      "timeS": 5.3,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62680157858228,
+      "medianXM": 11.125050655849925,
+      "centroidXM": 11.761636689978369
+    },
+    {
+      "frame": 54,
+      "timeS": 5.4,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62680147921967,
+      "medianXM": 11.125050732625962,
+      "centroidXM": 11.761634360420286
+    },
+    {
+      "frame": 55,
+      "timeS": 5.5,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801629074453,
+      "medianXM": 11.12505005548418,
+      "centroidXM": 11.76162697294752
+    },
+    {
+      "frame": 56,
+      "timeS": 5.6,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801816521695,
+      "medianXM": 11.125051154673903,
+      "centroidXM": 11.761643456177707
+    },
+    {
+      "frame": 57,
+      "timeS": 5.699999999999999,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626801570579524,
+      "medianXM": 11.125050039721497,
+      "centroidXM": 11.761619560020897
+    },
+    {
+      "frame": 58,
+      "timeS": 5.8,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62680210548194,
+      "medianXM": 11.125051356668891,
+      "centroidXM": 11.761649900475001
+    },
+    {
+      "frame": 59,
+      "timeS": 5.8999999999999995,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.62680191987871,
+      "medianXM": 11.125049738209025,
+      "centroidXM": 11.761614569727863
+    },
+    {
+      "frame": 60,
+      "timeS": 6.0,
+      "totalMassFractionPastToePlusHalfH": 0.0,
+      "frontXM": 31.626802157645315,
+      "medianXM": 11.125051598552554,
+      "centroidXM": 11.761651746348187
+    }
+  ],
+  "boundaryReview": {
+    "floorPenetratingCenterSamples": 0,
+    "domainExitCenterSamples": 0,
+    "minimumParticleDomainMarginM": -9.953651314426049e-07,
+    "runoutContactValidated": false
+  },
+  "limitations": [
+    "A motion candidate requires actual scale1 spatial/plastic-shear review; no automatic scientific PASS.",
+    "Fixed grid bottom is not a calibrated Coulomb runout bed; particle-domain overlap/kernel support are not certified by center tests.",
+    "Explicit ramp, FLIP ringing, coarse grid/PPC, locking, timestep, domain and basal effects have not been sensitivity-validated.",
+    "Downslope projection includes settlement; horizontal displacement/coherence are tested separately.",
+    "Native completion, yield colour, maximum speed and toe-front extremum alone do not prove landslide.",
+    "Saved-state velocity persistence does not certify unsaved substep behavior; no closed energy balance is inferred."
+  ],
+  "inputHashes": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\manifest.json",
+      "sha256": "c2e42e2004368736a7ec6d070668880b1307975726ed4ac78236d281dc13ef94",
+      "bytes": 4197
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\history.csv",
+      "sha256": "7dc2edb6528d0e1e0e5dc49bace8191b2853331f7ad2bc0b6772bb089ec32808",
+      "bytes": 42278
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\particles.csv",
+      "sha256": "472e702e5e84c832eb327da3fef13d8969e6df5361d6edbc025744aa8aa3cc85",
+      "bytes": 159366876
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\fine-audit-contract.json",
+      "sha256": "17940cf810d9020ceb779f68b5962b57265a1097cd34a5ec12836382f5f685a2",
+      "bytes": 5479
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0000.vtk",
+      "sha256": "0c9cfafb9a92c34f9dbd9d0063c371e711f65ca513a37aea00a691febe0a3454",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0001.vtk",
+      "sha256": "a85804000a042dbd612fbfbfa231113ffc2744f1846adcb671857f678dcd59db",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0002.vtk",
+      "sha256": "d87b5da112c6e7f18a6e48f1f760081b2340daa03a0f2661bd0d6dfc2adcdab8",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0003.vtk",
+      "sha256": "65f24e3b2e27b4d69c5e30e0a2aa5754fd676112d1a1fd23608c55c052059849",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0004.vtk",
+      "sha256": "3a994b665fc74558648bd6bf0b79a1f4f43ebf2c71d555bd107497fcc8d1bf42",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0005.vtk",
+      "sha256": "65f96e4aab7ade3e9e7f34f09873c7d0ef01e15f9e64d6c2285b6595ec845101",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0006.vtk",
+      "sha256": "e0323f042a4d5d0d2ce5abe6bab02a34a0d4ca22e5211197ea15b265f792539d",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0007.vtk",
+      "sha256": "9126803318311d1c988f59d88586a2ad7aa0167b10761bcad72e31cb2da79730",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0008.vtk",
+      "sha256": "7d79213ee426ed660181b6249c12793b69bfd9eb49dc751323a98c520c9e0382",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0009.vtk",
+      "sha256": "35d89f2e839814ce3f8d3d6cb65d4f3141bca7e79c5ccdb578598eccb8d6a058",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0010.vtk",
+      "sha256": "f152a3a46c99e8c47faffcdcb57ccc7a68a3bb219f3a22f92c0cc5c1a4e5e000",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0011.vtk",
+      "sha256": "355a2613319ec776e6ba06fe5a2f4d1f9aa6565b3785d2c1b34ff682c31d7854",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0012.vtk",
+      "sha256": "eb5c0bb9a8bebf74c6a6126ba0f7065f5134b0b167e0fb816df15137904f7bc3",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0013.vtk",
+      "sha256": "df805d7de7400aa05c6a6c97a69b3536dd3a03a21a4c1788595639da1b5dae76",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0014.vtk",
+      "sha256": "e2750c6b5c6ef534d09ae3543219fae48c88d824ff0df44d29e525bdb8990943",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0015.vtk",
+      "sha256": "71eec92be9847661541b18a0b9b3c94d6043e0de08b2d37a7e1954751aa04454",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0016.vtk",
+      "sha256": "3ee7bac202d53f257fd2228a12583f32ea3c4f764e9c68103b783b4c3f4cc85e",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0017.vtk",
+      "sha256": "d73f62201c745f03c68b1c7db8e7704c0e7c660db45fe807a927d7babf153676",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0018.vtk",
+      "sha256": "7622ab2635e200779a6e6ca880d930f2725a5e86f33c94761e04ac9ec4277f76",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0019.vtk",
+      "sha256": "6a4568569a65923cd9e69fab9806425b223fcb5119ac2c530d727b797df159a7",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0020.vtk",
+      "sha256": "098c7fe45915a6e9ab9aca1770becc8ce57c529a56a653ceacfa33aec1eb3cda",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0021.vtk",
+      "sha256": "81825f9285fb5ec58c86d70ac1fce1da5b91f1aa220c2db017fbe50e6ae9e334",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0022.vtk",
+      "sha256": "2d75b829fd5a34174355c0d563a1f10e7906921b3991f8103463bcbb9e769e18",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0023.vtk",
+      "sha256": "02a9055ed3054c655608453e1c92f57841ddc178a66dcaf660c8a8dc7862f21f",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0024.vtk",
+      "sha256": "5b24d386380d151f2b5d6e76d0d76215be9e9301d20ec29a18d6dc6000507054",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0025.vtk",
+      "sha256": "0922986f89453e30dbc24553004e038074a6ad85f6d35385e8322f6929956c9d",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0026.vtk",
+      "sha256": "bcffbf4ede795d68a9aa0b741114c12f25fd1e38c9c9cd53e0559252103894a0",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0027.vtk",
+      "sha256": "b2b535ac5497bc112dfc0831c3a1a9a438e23f555b0095f6a4317057602c3203",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0028.vtk",
+      "sha256": "117dc05934bb7d7ea3d5df604b902d88e328c3ded8d685931889fef51c8ae3f2",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0029.vtk",
+      "sha256": "abadae7dd44aad14e36b78c66f682e13eb1515d72798f8648a91b58d75d615e1",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0030.vtk",
+      "sha256": "f3b8e2b6ca18d07aedaf6af0ccc6fb85d8d81d5d438069d890816fe14fce9a53",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0031.vtk",
+      "sha256": "23a97cc09370411bf14dd9d1aeb20a18da2a5b9a0c6b39a2023e7052a599aa7c",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0032.vtk",
+      "sha256": "7aa003f432e063d7e2c470d7eddbd83caab87ee74ee5c5b8a6642ad233f4a5ec",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0033.vtk",
+      "sha256": "1b7b0277b854d7f29154f1a2c9e720da0a0760cb98fe31b800b5a38cf9904e7a",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0034.vtk",
+      "sha256": "c0980b971c92ba02ea30769867c9927e0d23421827d8529ea2d32375b5e70c6c",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0035.vtk",
+      "sha256": "cf5385e95cf3ffcdd35c50e076529a77f6714a8995a77f93e9e30cdbc7583701",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0036.vtk",
+      "sha256": "9f67d62eb9833cdda33d9630b881416ec532e1dd0894a4c50315b387826758f2",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0037.vtk",
+      "sha256": "f2c63f9cb9aef2f6372143e4362007a3afae2edaaf8223f66e496ea09112aad4",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0038.vtk",
+      "sha256": "3ce63ecfab2cd8dc2c79cbe08d128e932a1728cbe272454631ca029aea0f6b3e",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0039.vtk",
+      "sha256": "094a5f846f42dd14a9762596f60e8c6c42f2f816c30f8facff164a626a4598ab",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0040.vtk",
+      "sha256": "c1467de0046b96f4ba7107cc32bf0a9b7709bfed35ce8141d501a14d96b4949b",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0041.vtk",
+      "sha256": "595458c95716627178d2ec758eb7c65b96f87a008bb6818cf026c1e773771645",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0042.vtk",
+      "sha256": "b8c483cccf4ae5dbe002c250f3688ef3bf5775eca60ea734a51f6d848f6f365a",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0043.vtk",
+      "sha256": "dfb51565fb5e6f557ecc90c7f01ea5e3a0e25d406e0d129ce4112a1aab218bd0",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0044.vtk",
+      "sha256": "86e28a8aa7975a40537948dd52d6ebc5148ba050d35ab123f499ae6f965b8675",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0045.vtk",
+      "sha256": "5d7a95b149f6c27f7f236f2439ce8e265b4a8b478122e76bcecc43b65bc7ede5",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0046.vtk",
+      "sha256": "4774c9a6ca4ccab2a53a881131e01be1c6b507c7082892adc15bf51bf0fb968b",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0047.vtk",
+      "sha256": "323d2b85ea0c3fafaacbc037d9bda54db58b6e30c0da223551c55d161565c52a",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0048.vtk",
+      "sha256": "d380661a65c25f294bdaa1ebb15fef567cc73bbd6ef1f1dad8df8d8069c22edf",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0049.vtk",
+      "sha256": "95e6870f6f9e7e9b568b735679beadcada522e93edc5f6161bb9d141ab00abca",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0050.vtk",
+      "sha256": "b3637d71a64b7c7f0238fc484369317e54627ec9b6f66b66915c90efc58b9684",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0051.vtk",
+      "sha256": "18b3d58055ef43e2772446e89457c8017063791fbfacfd6accb10d227570c9bd",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0052.vtk",
+      "sha256": "41fdbfc84a316d700d4b503deea64f62c823bbca081c52370dd5ccb461884d32",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0053.vtk",
+      "sha256": "b12b1dad2e752b354f3ed7aaaf47e3725ede30204c40bddbf9c79558837f37c5",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0054.vtk",
+      "sha256": "a866a975b12b7505efbcc3c423e6141c7f11cf064bd96edacb446534e95c615b",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0055.vtk",
+      "sha256": "df9080f20ab9b28d7ab97b4c8a632d13eabf281e880cc76ae93492924f582770",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0056.vtk",
+      "sha256": "e29222bf204e48f0807ba0af839cf8a4bfe16750cae46b5951ca81a117aff7a2",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0057.vtk",
+      "sha256": "0f88c86ae63ba49261a6d01e2c65d9f71dc170ff7f010e7271b6731e113c0b84",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0058.vtk",
+      "sha256": "25fe7afc1023c36322cb7e9ef8be93a996c3cd19b8b3efed870e6b04ad924e0e",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0059.vtk",
+      "sha256": "8ef5eb62f9af2a486e4739bb726ad1cef8e7517c5793ec2865f64c13944827b2",
+      "bytes": 1156586
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\vtk\\particles_0060.vtk",
+      "sha256": "f1275aa1528ff50f795202a836a9b7d5c7b48ec403253e24f61186cd4f7d6543",
+      "bytes": 1156586
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+      "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1",
+      "bytes": 23352
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\source\\source-manifest.json",
+      "sha256": "049a6612b4e111133945ff13006e8224aa6ad49ea8f84d8942f5f3a336aa9751",
+      "bytes": 58420
+    }
+  ],
+  "analysisScript": {
+    "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\review-gravity-slope.py",
+    "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+    "bytes": 38121
+  },
+  "vtkReaderSource": {
+    "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+    "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+    "bytes": 23581
+  },
+  "auditRole": "FINE_NATIVE_INTEGRITY_AND_SEPARATE_H_SCALED_DIAGNOSTICS",
+  "crossMeshComparisonIsSeparate": true
+}

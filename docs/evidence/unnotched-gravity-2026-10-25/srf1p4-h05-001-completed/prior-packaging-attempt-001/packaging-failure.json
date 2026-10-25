@@ -1,0 +1,16 @@
+{
+  "schema": "cl-mpm.evidence.packaging-failure.v1",
+  "attempt": 1,
+  "packet": "packet",
+  "status": "COLLECTOR_EXIT0_ROOT_ARCHIVE_SCOPE_VERIFIER_FAILED",
+  "reportedBy": "Parent/root agent",
+  "reportedIndexedArtifacts": 45,
+  "reportedDecodedZipMembers": 485,
+  "finding": "original-launch-evidence.zip retained metadata-only source/source-manifest.json without every manifest-indexed native source member. The unchanged generic full-source verifier therefore rejected that archive. The separate native-source-raw-and-runtime.zip correctly contained all282 matching sources.",
+  "failureScope": "Archive contents/scope only; no native, numerical, saved-data review or media failure.",
+  "preservation": "Original completed packet and its executed script/helper/index retained unchanged under packet/. This separate file records the parent-reported verifier finding; no unrecorded traceback or verifier exit code is fabricated.",
+  "repair": "Fresh packet will augment the launch ZIP with all282 verified original frozen native sources and label the augmented archive honestly. No verifier, original launch artifact, source, raw output, review, tolerance or numerical gate is changed.",
+  "nativeOrAnalysisRepeated": false,
+  "landslideVerified": false,
+  "scientificallyValidated": false
+}

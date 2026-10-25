@@ -1,0 +1,42 @@
+{
+  "preparedUtc": "2026-10-25T09:56:55.023290+00:00",
+  "copies": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\review-gravity-refinement.py",
+      "sha256": "b2a319511279ab11256244547b16096e468fbeef1a75cf956ff45807569e1b49",
+      "bytes": 26366,
+      "originalPath": "D:\\MPM\\scripts\\review-gravity-refinement.py"
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\review-gravity-slope.py",
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+      "bytes": 38121,
+      "originalPath": "D:\\MPM\\scripts\\review-gravity-slope.py"
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "bytes": 23581,
+      "originalPath": "D:\\MPM\\scripts\\plot_m5_cliff_comparison.py"
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\fine-audit-contract.json",
+      "sha256": "17940cf810d9020ceb779f68b5962b57265a1097cd34a5ec12836382f5f685a2",
+      "bytes": 5479,
+      "originalPath": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\refinement-audit-contract.json"
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\refinement-contract.json",
+      "sha256": "97cea2dc7e1f13f514e4ccbaf32219b2728fa5906066e9b88e8a84ce7d97f8c5",
+      "bytes": 3202,
+      "originalPath": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\refinement-contract.json"
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\original-study-contract.json",
+      "sha256": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55",
+      "bytes": 4055,
+      "originalPath": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\contract.json"
+    }
+  ],
+  "scope": "Copied wrapper/modules/contracts before any saved-data audit, detector or render"
+}

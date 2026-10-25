@@ -2,7 +2,47 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
-## ACTIVE: same-strength h0.5 full run, source1a9f29a
+## Latest: h0.5 completes; no verified unnotched landslide
+
+Run `output/unnotched-gravity-2026-10-25/srf1p4-h05-001`, native source1a9f29a,
+completes25Oct16:56:33WIB: native/worker exit0,6s/61states/3520MPs/15471updates.
+NO solver is active. Do not query old PID32684 or rerun the simulation.
+FIRST frozen refinement-review-001 completes16:58:02WIB, exit0. Fine integrity/source282/mappedDLL,
+actual61-state video/fullDecode0/4fps/scale1/no interpolation all pass. Root
+inspects both actual PNGs. Native completion is not landslide/scientific PASS.
+
+Common-metre observer on BOTH meshes finds whole/hold motion NOT_DETECTED,
+zero mass beyond32.5m. Fine common cohort2304MPs has the SAME293678.269338kg/m
+mass as coarse576MPs. Fine centroid0–6s:+5.663399mmX/-8.101346mmY;
+2–6s:+2.363090mmX/-1.229986mmY. Max displacement19.710859mm; maxkappa.009860387.
+KE27.440033J/m at2s falls to.07378533 at6s. MinimumJ.998360165; no center
+domain exit/floor penetration. Particle-domain margin reaches-0.995365micrometres,
+so full particle-domain containment/runout-contact validation is not asserted.
+Plastic localisation and displacement increase with refinement, but no coherent
+sliding or runout appears. Space/time response remains unconverged.
+
+Completed packet `docs/evidence/unnotched-gravity-2026-10-25/srf1p4-h05-001-completed`
+retains53indexed artifacts/766ZIPmembers. Root independently verifies54Gitblobs,
+all282 actual sources and564 archived source copies (raw plus augmented launch).
+The FIRST archive verifier failure was packaging-only: launch metadata included
+a source manifest without source payloads. Its packet/error/exact packers remain
+under output/archive-pack-attempt-001 and indexed metadata. The corrected launch
+ZIP explicitly adds282 verified original native sources; the unchanged verifier
+then passes. No solver, saved analysis or rendering was repeated.
+
+NEXT: finite preregistered SSR response screen, NOT_RUN. Read
+research/references/unnotched-mc-ssr/response-ladder-contract.json and
+research/notes/unnotched-landslide-2026-10-24/post-refinement-study-review.md.
+Screen h1 at1.6 then2.0, stop at first integrity-valid coherent motion; cap2.0,
+no automatic further weakening. Confirm THAT SAME factor at h0.5 after review
+and input/integration gates. These new factors are disclosed experimental
+assumptions, not paper values or a FoS bracket. Only literal SRF and derived
+c/phi may change; physical geometry/BC/ramp/duration/observer and algorithms stay.
+Agent gravity_slope_implementation owns new input-only cases/gate/evidence;
+inspect actual status before duplicating. No full ladder run yet. Goal remains
+actual unnotched sliding; preserve every negative result and numerical failure.
+
+## Historical launch: same-strength h0.5 full run, source1a9f29a
 
 `output/unnotched-gravity-2026-10-25/srf1p4-h05-001` started25Oct14:53:10WIB,
 native source1a9f29a85cf268cf812d0e2e4ce99473e19098a6. Three-hour wall budget

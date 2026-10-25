@@ -1,0 +1,12 @@
+{
+  "status": "PROOF_HELPER_FAILED_BEFORE_COMPLETE_CHAIN",
+  "recordedUtc": "2026-10-25T07:56:03.331291+00:00",
+  "executedHelper": ".tmp\\capture-gravity-h05-processes.ps1",
+  "helperSha256": "fb85dc043fc041b045eea8334e7fdfcb7e020b21f3608c32a412d517090cba25",
+  "exitCode": 1,
+  "reportedError": "Get-Process: Cannot bind argument to parameter Id because it is null. capture-gravity-h05-processes.ps1 line8",
+  "cause": "Invocation preceded population of nativeCommand/SBCL processIdentity fields. Wrapper identity was available and may have been queried; no complete unreturned process records are invented.",
+  "exactFailedPartialProcessRecords": "NOT_RETAINED",
+  "nativeEffect": "No solver start/stop/restart or source change; proof-only failure",
+  "subsequentSuccessfulCapture": "srf1p4-h05-001-live-process-verification.json"
+}

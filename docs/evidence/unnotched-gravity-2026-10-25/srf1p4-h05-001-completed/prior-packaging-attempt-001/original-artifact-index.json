@@ -1,0 +1,231 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9"
+    },
+    {
+      "path": "archive-member-verification.json",
+      "bytes": 96628,
+      "sha256": "b5dbe70df3783d67b3b2550d83ee3cc6e9c2165b7e6c3ed6718ddeb5d85a44fd"
+    },
+    {
+      "path": "executed-copy-hash-zip-helpers.py",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0"
+    },
+    {
+      "path": "executed-pack-script.py",
+      "bytes": 16502,
+      "sha256": "df6f9971c5f2c6e43e015576b446001726c24a48f75cbdba41d424d6de96c5e5"
+    },
+    {
+      "path": "existing-observer-controls.zip",
+      "bytes": 40226,
+      "sha256": "7c159c4673c99e94f42581d38430a54e14619de3b5788c8b95a87e3f8c116a46"
+    },
+    {
+      "path": "native/adjacent/srf1p4-h05-001-launch-root-verification.json",
+      "bytes": 283,
+      "sha256": "7e730cf322d6954874dacd7634ef93f8384168556ac33319c1925f90a885f019"
+    },
+    {
+      "path": "native/adjacent/srf1p4-h05-001-launch.json",
+      "bytes": 940,
+      "sha256": "3f36ba307b1e8fec047c1a11e021092f29abcaac02e273e11e69cbdaa703ab7f"
+    },
+    {
+      "path": "native/adjacent/srf1p4-h05-001-live-process-verification.json",
+      "bytes": 1331,
+      "sha256": "31a3f60d25645f048f928b277ff6b4c5db43915789c186048d4515f404c27e35"
+    },
+    {
+      "path": "native/adjacent/srf1p4-h05-001-live-proof-initial-failure.json",
+      "bytes": 848,
+      "sha256": "19eb3c5a3464dfa6864d6de742eb50e47085e1e4d7ad1143b9ffb474e9b5f10f"
+    },
+    {
+      "path": "native/adjacent/srf1p4-h05-001-status.json",
+      "bytes": 1476,
+      "sha256": "0692825c37b1a31149418f297f110d9850e9af4478c2bd5e029f8a51752db6e0"
+    },
+    {
+      "path": "native/adjacent/srf1p4-h05-001.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native/adjacent/srf1p4-h05-001.stdout.log",
+      "bytes": 5374,
+      "sha256": "1d2bfb5f827773fa2b962eb190f81a409c36ee69d5e416911408da4898a58825"
+    },
+    {
+      "path": "native/detached/launch-proof.json",
+      "bytes": 1049,
+      "sha256": "84e1de4283a895550fa0f2ce048879e5739228fad8981d7f35317320edd83421"
+    },
+    {
+      "path": "native/detached/launch-request.json",
+      "bytes": 1379,
+      "sha256": "207e147037f79a94c75095031b57f7febfb8cfd67946dd8034b17a27ad07a7b0"
+    },
+    {
+      "path": "native/detached/launch-request.ps1",
+      "bytes": 2266,
+      "sha256": "def3267a766cfcfaeea69f4ae369dbb71a5d4b240f9f851e20dbd2b5cbf7c4e0"
+    },
+    {
+      "path": "native/detached/worker-exit.json",
+      "bytes": 126,
+      "sha256": "4b33e95abccba95fbbe9caa1c3902f247092d512181f0d7290c955adf1f4d2bb"
+    },
+    {
+      "path": "native/detached/worker-start.json",
+      "bytes": 263,
+      "sha256": "1e8a8513f0c282943a78bac1b223e11907daf7680f150bb4655a75df029a1335"
+    },
+    {
+      "path": "native/detached/wrapper.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native/detached/wrapper.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native/manifest.json",
+      "bytes": 4197,
+      "sha256": "c2e42e2004368736a7ec6d070668880b1307975726ed4ac78236d281dc13ef94"
+    },
+    {
+      "path": "native/source/source-manifest.json",
+      "bytes": 58420,
+      "sha256": "049a6612b4e111133945ff13006e8224aa6ad49ea8f84d8942f5f3a336aa9751"
+    },
+    {
+      "path": "native/source-provenance.json",
+      "bytes": 662801,
+      "sha256": "d010ca36a8a7e7e329b9c4fd532cd8d2df2a264c01f51a9577b0869100aa5424"
+    },
+    {
+      "path": "native-source-raw-and-runtime.zip",
+      "bytes": 76150789,
+      "sha256": "eb23482ecb61f5cfbf12886ce679037f7775916eb6cffa787b2293972e2bc9f2"
+    },
+    {
+      "path": "original-launch-evidence.zip",
+      "bytes": 113944,
+      "sha256": "2ed5f5d34b98dfc7069939f9581618e505df303b2383dac43e9c9b16011f9476"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1543,
+      "sha256": "3418d6305869da419bdca91397fe123ad835ebeb9d5e81c9db72e12467b1e809"
+    },
+    {
+      "path": "recorded-proof-byte-checks.json",
+      "bytes": 63095,
+      "sha256": "816eaf41e591293e4c86ad165f4f70e98a7db51c33876883ade74b19a07bd766"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/analysis-support/fine-audit-contract.json",
+      "bytes": 5479,
+      "sha256": "17940cf810d9020ceb779f68b5962b57265a1097cd34a5ec12836382f5f685a2"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/analysis-support/original-study-contract.json",
+      "bytes": 4055,
+      "sha256": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/analysis-support/plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/analysis-support/refinement-contract.json",
+      "bytes": 3202,
+      "sha256": "97cea2dc7e1f13f514e4ccbaf32219b2728fa5906066e9b88e8a84ce7d97f8c5"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/analysis-support/review-gravity-refinement.py",
+      "bytes": 26366,
+      "sha256": "b2a319511279ab11256244547b16096e468fbeef1a75cf956ff45807569e1b49"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/analysis-support/review-gravity-slope.py",
+      "bytes": 38121,
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/common-initial-1m-spatial-bins.csv",
+      "bytes": 4252813,
+      "sha256": "85736348a969544e911caa0c7b72fb32192bdc26a7b404e238a6efd70537a742"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/common-physical-histories.png",
+      "bytes": 156282,
+      "sha256": "b5e51dbf3ebe37a019d02e47f52b602f076d6a14b2c6d2be40ad710e5ff6af5d"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/common-physical-review.json",
+      "bytes": 390404,
+      "sha256": "eb623e295030d870a8dcf1639721af65d052138587e729e815f99d24bfe6f13a"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/fine-media.json",
+      "bytes": 784,
+      "sha256": "dbd2df6efc8fd7bd9225502e1d94d31b42257c8f0fe35b066aecbda50a881303"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/fine-native-review.json",
+      "bytes": 193687,
+      "sha256": "2b25aba036df0ace34db93056b9528ce91ed033782b68bcf13d116e8edc2e3c1"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/fine-terminal-source-verification.json",
+      "bytes": 52826,
+      "sha256": "ef7dc513fce8f7ef007f11c7bf4e8a17a714835d02665e9f0133b0c387c152c4"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/frozen-execution.log",
+      "bytes": 413,
+      "sha256": "992a7e88c92000a6738685449e657950bdf9da564c1fa5190f668d838ca76e3d"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/gravity-slope-actual.mp4",
+      "bytes": 79485,
+      "sha256": "66770165806d5e68cfe61fce4f9f8cedf5a18efb29840285abd74df725df3da2"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/gravity-slope-review.png",
+      "bytes": 211572,
+      "sha256": "6810e128b22bb8290cd61266b191417088908a817bc9004bc19b688d10466693"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/refinement-review-exit.json",
+      "bytes": 1455,
+      "sha256": "afea8e562664b97df41f656529a1234f855bcffe81e1957250bbfd8e86099dc7"
+    },
+    {
+      "path": "saved-analysis/refinement-review-001/support-pre-execution.json",
+      "bytes": 2304,
+      "sha256": "8bb3b79139807256f8ec306c7a881b383ac0e54347eabc565bc62ac438b6bcfc"
+    },
+    {
+      "path": "saved-analysis-all-attempts-and-media.zip",
+      "bytes": 6610292,
+      "sha256": "24c2e26702795bff3c3a554b8b03f72500b993ca6d2ce5413f9ca688e19cc006"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 197522,
+      "sha256": "a86ec92f2b17d1ed8a4d79c4f46f0a9fbd8afe42d7ee07610fab2d7d68882617"
+    }
+  ],
+  "note": "Index excludes itself; raw bytes protected by * -text; root must verify staged blobs"
+}

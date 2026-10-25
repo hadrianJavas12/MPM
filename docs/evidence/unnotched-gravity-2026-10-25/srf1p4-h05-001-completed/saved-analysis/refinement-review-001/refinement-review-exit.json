@@ -1,0 +1,27 @@
+{
+  "exitCode": 0,
+  "finishedUtc": "2026-10-25T09:58:02.195994+00:00",
+  "command": [
+    "D:\\MPM\\toolchain\\analysis-venv\\Scripts\\python.exe",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\review-gravity-refinement.py",
+    "--execute-frozen",
+    "--run-dir",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001",
+    "--coarse-run-dir",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002",
+    "--coarse-review",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002\\review-001\\review.json",
+    "--output-dir",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001",
+    "--source-root",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\source",
+    "--fine-contract",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\fine-audit-contract.json",
+    "--refinement-contract",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\refinement-contract.json",
+    "--original-contract",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-h05-001\\refinement-review-001\\analysis-support\\original-study-contract.json",
+    "--video"
+  ],
+  "scope": "One fine saved-data audit/render and common physical comparison; no native process launched"
+}

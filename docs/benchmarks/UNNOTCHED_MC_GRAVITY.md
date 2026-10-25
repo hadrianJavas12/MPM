@@ -383,3 +383,47 @@ claim. Automatic scientific/landslide validation remains false. Analysis or
 media failures retain stage evidence and use saved data for repair; they do
 not justify rerunning the solver. The full workflow and refined physical
 result remain NOT_RUN at this checkpoint.
+
+### Completed h0.5 result: no verified sliding
+
+Native and worker exit0 at25October16:56:33WIB:6s,61states,3520MPs and15471
+updates. The first frozen review/render exits0 at16:58:02WIB. All282 source
+hashes and the mapped DLL match; actual61-state/4fps video decodes with exit0,
+uses scale1 and no interpolation. Root inspects both actual PNGs.
+
+| Same physical observer | h1 | h0.5 |
+| --- | ---: | ---: |
+| Cohort count / mass | 576 /293678.269338kg/m | 2304 /293678.269338kg/m |
+| Centroid dx,0–6s | 2.619932mm | 5.663399mm |
+| Centroid dy,0–6s | -6.475881mm | -8.101346mm |
+| Centroid dx,2–6s | 0.196086mm | 2.363090mm |
+| Centroid dy,2–6s | -0.099476mm | -1.229986mm |
+| Whole/hold motion | NOT_DETECTED | NOT_DETECTED |
+| Mass past physical x32.5m | 0 | 0 |
+
+Fine max displacement19.710859mm and max plastic history0.009860387 show
+increased deformation/localisation, with no coherent slide or runout. KE peaks
+at27.440033J/m at2s and falls to0.07378533J/m at6s. MinimumJ0.998360165;
+no center domain exit or floor penetration. Minimum particle-domain margin
+-0.995365micrometres remains a limitation; full particle-domain containment
+and quantitative runout contact are not validated. Space/time convergence
+and scientific validity are not established by this pair.
+
+[Completed evidence](../evidence/unnotched-gravity-2026-10-25/srf1p4-h05-001-completed/README.md)
+retains53 indexed artifacts/766ZIP members/282 original sources. Root verifies
+54 Git blobs and564 archived source copies. The first packaging-only verifier
+failure is preserved: a metadata launch ZIP lacked its manifest payloads.
+The corrected archive explicitly includes verified original native sources;
+the unchanged verifier passes. No solver, analysis or render was repeated.
+
+### Next finite response study, not yet run
+
+The [post-refinement review](../../research/notes/unnotched-landslide-2026-10-24/post-refinement-study-review.md)
+and [frozen response protocol](../../research/references/unnotched-mc-ssr/response-ladder-contract.json)
+define a bounded h1 SSR screen at1.6 then2.0, stopping at the first integrity-valid
+coherent motion and confirming that SAME factor at h0.5. Cap2.0; no automatic
+further reduction. Only SRF and derived cohesion/friction change. These are
+disclosed experimental assumptions, not paper values or a factor-of-safety
+claim. Common metre thresholds,6s/ramp2s,geometry/material form/BC/solver remain.
+Stop on material/integrity failure or unsuccessful planned factors; preserve
+negative evidence and diagnose. New input controls precede any full run.

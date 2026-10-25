@@ -1,5 +1,16 @@
 # Native framework and Studio verification
 
+## Full same-strength refinement closes, 2026-10-25
+
+Native/worker exit0:6s61states3520MP15471updates on source1a9f29a. FIRST frozen
+saved review/render exit0; source282/DLL,61actual-state video/fullDecode0 pass.
+Fine native integrity and the common physical-metre comparison remain separate.
+Both common motion windows and toe runout are NOT_DETECTED; no landslide or
+scientific PASS. Completed packet53indexed/766ZIPmembers/root54Gitblobs verified.
+One packaging-only failure and corrected source augmentation are retained;
+the verifier was unchanged and no solver/review/render was repeated. See
+[the result and next protocol](benchmarks/UNNOTCHED_MC_GRAVITY.md).
+
 ## Common physical refinement observer, 2026-10-25
 
 The first frozen invocation of `tests/analysis/gravity-refinement-observer.py`

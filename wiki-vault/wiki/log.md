@@ -852,3 +852,16 @@ h-scaled diagnostics and compares both meshes in metres without cross-mesh ID
 matching or repeating coarse audit/render. Full workflow and refined physical
 result remain pending; raw/private/settings and old negative evidence remain
 intact. The native h0.5 run continues with one quiet 15-minute monitor.
+
+## [2026-10-25] ingest | Same-strength refinement closes; bounded SSR study frozen
+
+[[unnotched-mc-gravity]] records native/worker0,6s61states3520MP15471updates
+and FIRST frozen saved review/render0/source282/DLL/actual video proof. Both
+common-metre motion windows and runout are negative; resolution sensitivity
+does not establish convergence or landslide. Completed packet53indexed/
+766members/root54Gitblobs preserves the packaging-only first failure and its
+source-augmentation repair without changing the verifier or repeating physics.
+The new finite SSR response protocol caps screening at1.6/2.0 and confirms the
+same first positive factor on h0.5; input gates/full runs remain pending. New
+factors are disclosed assumptions, no FoS/paper reproduction claim. Raw/private
+settings and negative evidence remain intact.

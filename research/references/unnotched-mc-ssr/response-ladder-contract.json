@@ -1,0 +1,40 @@
+{
+  "schema": "cl-mpm.unnotched-ssr-response-ladder.v1",
+  "createdDate": "2026-10-25",
+  "frozenBeforeLadderResults": true,
+  "purpose": "Find an integrity-valid unnotched gravity-driven sliding response using a finite declared SSR study, then confirm the same factor on the finer mesh",
+  "basis": {
+    "completedFactors": [1.0, 1.4],
+    "completedMeshesAt1p4M": [1.0, 0.5],
+    "observedResponse": "Both meshes settle at SRF1.4; common-metre coherent motion and runout remain NOT_DETECTED",
+    "refinementSensitivity": "Fine common-cohort hold dx2.363mm versus coarse0.196mm; plastic localisation increases but terminal motion/kinetic energy settle",
+    "staticDiagnosticLimit": "Restricted Bishop minimum0.98848 at1.4 includes negative slice normals and cannot establish a physical critical factor"
+  },
+  "screening": {
+    "meshSizeM": 1.0,
+    "orderedFactors": [1.6, 2.0],
+    "stopAtFirstIntegrityValidCoherentMotion": true,
+    "maximumFactor": 2.0,
+    "noAutomaticFurtherReduction": true,
+    "wallBudgetHoursPerRun": 1
+  },
+  "confirmation": {
+    "factor": "Same FIRST integrity-valid coherent-motion screening factor, without increasing it",
+    "meshSizeM": 0.5,
+    "wallBudgetHours": 3,
+    "requiresScreeningSpatialReview": true,
+    "separateMeshInputAndNativeIntegrationGatesBeforeRun": true
+  },
+  "referenceMaterial": {"youngsModulusPa": 100000000, "poissonRatio": 0.3, "unitWeightNPerM3": 20000, "cohesionCauchyPa": 10000, "frictionDeg": 20, "dilationDeg": 0},
+  "onlyScreeningAssignmentDifferenceFromCoarse1p4": "Literal SRF; only derived SRF/cohesion/friction configuration values may differ",
+  "strengthReduction": {"cohesion": "10000/SRF Pa", "frictionRad": "atan(tan(20deg)/SRF)", "interpretation": "Deliberate disclosed strength reduction, not unchanged-soil spontaneous collapse or calibrated field material"},
+  "unchanged": ["unnotched polygon (0,0)(32,0)(12,10)(0,10) and80x15m domain", "perfect Cauchy MC law and numerical tolerances", "elasticity/density/psi", "fixed bottom and side x rollers", "2MPs per axis per cell", "USF/FLIP/noFbar/dtScale0.2", "massScale1/damping0/no deletion/reset", "zero initial stress/velocity with plasticity active", "gravity smoothstep0-2s then constant2-6s", "6s61states/cap60000"],
+  "comparisonObserver": "Use exactly refinement-contract.json comparisonObserver in physical metres on BOTH meshes; preserve separate native h-scaled diagnostics; no cross-mesh ID matching",
+  "integrityAndMechanism": ["native0/complete is not a landslide result", "finite fields/positiveJ/mass/count/ID/F/law/yield integrity", "inspect actual scale1 geometry and plastic localisation", "coherent connected moving mass and persistence in declared whole/hold windows", "report toe runout separately", "solver or constitutive rejection is NOT an unstable upper bound"],
+  "stopAndDiagnose": ["first native/material/integrity failure", "no valid coherent sliding at either1.6or2.0", "coarse positive not reproduced at SAME factor on fine mesh", "boundary/domain/floor failure invalidating mechanism"],
+  "limits": ["new1.6and2.0 levels are experimental assumptions, not paper values", "six-second response transition only, not a factor-of-safety estimate", "adapted geometry and fixed base are not exact paper/runout validation", "coupled space/time response remains unconverged", "localisation and gravity-ramp sensitivity remain open"],
+  "prohibitions": ["further factor increase without new evidence and preregistration", "notch/driver/weakseed", "root preference/clamp/tolerance/psi/geometry tuning", "calling constitutive rejection landslide", "changing observer thresholds after seeing a result"],
+  "screeningStatus": "NOT_RUN",
+  "confirmationStatus": "NOT_RUN",
+  "automaticScientificPass": false
+}
