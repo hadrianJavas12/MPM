@@ -66,7 +66,9 @@ freezes the existing observer in physical metres for both grids, separate from
 native h-scaled reports. Particle IDs do not correspond across meshes. Require
 new focused input/output gates and provenance before launch;3h wall budget,
 about2h6m planning estimate from the actual coarse work, not an ETA. At this
-checkpoint the fine study is **NOT_RUN**.
+checkpoint the fine study is **NOT_RUN**. Its new case/focused gate and CSV-only
+comparison wrapper are saved as source for continuation; static checks are not
+native execution. Review those sources and run only new controls after reset.
 
 **Finite stop rule:** after this pair, no automatic h0.25, SRF increase or time
 extension. A negative pair requires resolving the physical foundation/base/

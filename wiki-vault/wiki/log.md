@@ -1000,3 +1000,11 @@ CSV summary7indexed/8blobs verify. Collector schema failure is retained without
 repeating the gate. One same1.6/composite h0.5/6s study is preregistered,
 NOT_RUN pending its own targeted gate; same physical observer and finite stop
 rule prohibit automatic SRF/time/finer-grid escalation after that pair.
+
+## [2026-10-26] ingest | Fine-study source checkpoint before reset
+
+[[unnotched-mc-gravity]] records the new h0.5 case, focused four-group fixture
+and CSV-only comparison/binding sources as NOT_RUN. Actual source/native gates
+and launch remain pending review/execution after26October10:49:51WIB reset.
+Completed native/basal evidence is already pushed; no old tests or slope runs
+repeat. The single5h continuation remains; weekly budget is separate.

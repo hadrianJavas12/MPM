@@ -2,6 +2,40 @@
 
 **Operational checkpoint: 2026-10-26, Asia/Jakarta. Read this first.**
 
+## Continuation checkpoint: fine-study sources only; no solver active
+
+Completed native-result evidence is pushed at eb6c22de; basal diagnostic,
+saved summary and fine-study preregistration are pushed at796f4bca. New fine
+case/test and CSV-only comparison sources below are a **NOT_RUN source
+checkpoint**, requiring root/source review and their new controls before use.
+No new fine solver, test, comparison or launch is claimed successful.
+
+- `cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6-h05.lisp`:
+  only executable assignment delta is mesh1→0.5; comments name resolution.
+- `tests/benchmarks/gravity-composite-apex-refinement-controls.lisp`:
+  four NEW focused groups, input/saved modes; no old suite is loaded/run.
+  Planned proof:3520MPs, same mass/BC, two genuine USF updates/7040 calls,
+  three VTK/10560particle rows, variant q/work/volume/yield/read-only output.
+- `scripts/review-gravity-composite-refinement.py` and its new binding controls:
+  compare saved CSVs anchored to completed coarse/fine variant audits, using
+  the existing common-metre helpers; no repeated VTK audit or rendering.
+- Audit/comparison contracts are already committed. The[launch-helper
+  checkpoint](../research/notes/unnotched-landslide-2026-10-24/support/COMPOSITE_H05_LAUNCH_CHECKPOINT.md)
+  archives its local draft as text. It is explicitly NOT_READY/NOT_RUN and
+  refuses execution: finish actual gate/profile/counter TODOs after new gates
+  close, then review it before prepare/capture. Do not launch the current draft.
+
+Resume after the quota reset **26 October10:49:51 WIB**. Last quota reading:
+81% of5h /60% weekly consumed; the5h reset does not restore weekly usage.
+Keep one5h continuation alarm; no polling of completed PIDs. Review only new
+source, run only its new controls from a fresh frozen directory, preserve any
+failure and selectively repair. Then close evidence, commit/push and prepare
+ONE same1.6/model h0.5/6s run with3h wall bound and15min quiet monitoring.
+Do not launch until actual input/output and saved-comparison binding controls
+pass. No UI/main merge, automatic SRF/time/finer-grid escalation or numerical
+parameter/tolerance/root changes to obtain collapse. The finite stop rule in
+the comparison contract still applies after that pair.
+
 ## Latest: full composite-apex SRF1.6 completed; no sustained landslide
 
 Native `output/mc-composite-apex-2026-10-26/srf1p6-composite-001`, source

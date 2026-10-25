@@ -29,6 +29,10 @@ See[results](benchmarks/UNNOTCHED_BASAL_REPRESENTATION.md) and the
 [saved-result diagnosis](../research/notes/unnotched-landslide-2026-10-24/COMPOSITE_SRF1P6_POST_RUN.md).
 One same-factor fine-grid study is preregistered; its new gate/full run are
 NOT_RUN. Do not repeat any completed control or infer locking from kinematics.
+The fine case, four-group fixture and CSV-only comparison/binding-test sources
+are a continuation checkpoint only: native compile/controls, comparison and
+launch remain NOT_RUN until executed after source review. No old passed test
+is a substitute for these new bindings, and no old suite should be repeated.
 
 ## Historical full composite-apex launch, 2026-10-26
 
