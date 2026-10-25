@@ -1,0 +1,307 @@
+{
+  "schema": "cl-mpm.static-diagnostic.result.v1",
+  "status": "FORMAL_DIAGNOSTIC_COMPLETED",
+  "summaries": [
+    {
+      "search": {
+        "name": "coarse-200",
+        "entryCount": 9,
+        "exitCount": 17,
+        "rhoCount": 13,
+        "slices": 200
+      },
+      "strengthReductionFactor": 1,
+      "candidateCount": 1989,
+      "formalRoots": 1778,
+      "rejectionReasons": {
+        "ARC_BELOW_BASE": 211
+      },
+      "restrictedFamilyMinimum": {
+        "search": "coarse-200",
+        "slices": 200,
+        "entry": 9.0,
+        "exit": 30.78125,
+        "rho": 0.7937005259840998,
+        "strengthReductionFactor": 1,
+        "status": "FORMAL_ROOT",
+        "reason": "",
+        "centerX": 27.34396900181944,
+        "centerY": 22.592477081591174,
+        "radius": 22.25020624151856,
+        "arcMinimumX": 27.34396900181944,
+        "arcMinimumY": 0.3422708400726151,
+        "baseRoundoffDeficitM": 0.0,
+        "formalFactor": 1.40029371858518,
+        "iterations": 35,
+        "factorBracketWidth": 7.48072714884529e-11,
+        "domainBarrier": 0.05598735895059983,
+        "equilibriumResidualNPerM": -1.283071469515562e-06,
+        "drivingNPerM": 523431.5348521858,
+        "minimumMAlpha": 0.7831533596263606,
+        "negativeNormalCount": 3,
+        "minimumNormalForceNPerM": -1213.784170197731,
+        "minimumNormalStressPa": -6347.174727478715,
+        "normalForcesNonnegative": false,
+        "physicalAdmissibility": false,
+        "scientificallyValidated": false
+      },
+      "minimumOnSearchBoundary": {
+        "entry": false,
+        "exit": false,
+        "rho": false
+      }
+    },
+    {
+      "search": {
+        "name": "coarse-200",
+        "entryCount": 9,
+        "exitCount": 17,
+        "rhoCount": 13,
+        "slices": 200
+      },
+      "strengthReductionFactor": 1.4,
+      "candidateCount": 1989,
+      "formalRoots": 1778,
+      "rejectionReasons": {
+        "ARC_BELOW_BASE": 211
+      },
+      "restrictedFamilyMinimum": {
+        "search": "coarse-200",
+        "slices": 200,
+        "entry": 9.0,
+        "exit": 30.78125,
+        "rho": 0.7937005259840998,
+        "strengthReductionFactor": 1.4,
+        "status": "FORMAL_ROOT",
+        "reason": "",
+        "centerX": 27.34396900181944,
+        "centerY": 22.592477081591174,
+        "radius": 22.25020624151856,
+        "arcMinimumX": 27.34396900181944,
+        "arcMinimumY": 0.3422708400726151,
+        "baseRoundoffDeficitM": 0.0,
+        "formalFactor": 1.0002097989761032,
+        "iterations": 35,
+        "factorBracketWidth": 6.174927236202166e-11,
+        "domainBarrier": 0.039990970678999885,
+        "equilibriumResidualNPerM": 4.970876034349203e-06,
+        "drivingNPerM": 523431.5348521858,
+        "minimumMAlpha": 0.783153359629204,
+        "negativeNormalCount": 3,
+        "minimumNormalForceNPerM": -1213.7841702124,
+        "minimumNormalStressPa": -6347.1747275554235,
+        "normalForcesNonnegative": false,
+        "physicalAdmissibility": false,
+        "scientificallyValidated": false
+      },
+      "minimumOnSearchBoundary": {
+        "entry": false,
+        "exit": false,
+        "rho": false
+      }
+    },
+    {
+      "search": {
+        "name": "coarse-400",
+        "entryCount": 9,
+        "exitCount": 17,
+        "rhoCount": 13,
+        "slices": 400
+      },
+      "strengthReductionFactor": 1,
+      "candidateCount": 1989,
+      "formalRoots": 1778,
+      "rejectionReasons": {
+        "ARC_BELOW_BASE": 211
+      },
+      "restrictedFamilyMinimum": {
+        "search": "coarse-400",
+        "slices": 400,
+        "entry": 9.0,
+        "exit": 30.78125,
+        "rho": 0.7937005259840998,
+        "strengthReductionFactor": 1,
+        "status": "FORMAL_ROOT",
+        "reason": "",
+        "centerX": 27.34396900181944,
+        "centerY": 22.592477081591174,
+        "radius": 22.25020624151856,
+        "arcMinimumX": 27.34396900181944,
+        "arcMinimumY": 0.3422708400726151,
+        "baseRoundoffDeficitM": 0.0,
+        "formalFactor": 1.4003141889126636,
+        "iterations": 35,
+        "factorBracketWidth": 7.480793762226767e-11,
+        "domainBarrier": 0.056448765566273006,
+        "equilibriumResidualNPerM": -1.1918717063963413e-05,
+        "drivingNPerM": 523417.61848723196,
+        "minimumMAlpha": 0.7816980423425722,
+        "negativeNormalCount": 6,
+        "minimumNormalForceNPerM": -666.1984318288726,
+        "minimumNormalStressPa": -6945.771741394276,
+        "normalForcesNonnegative": false,
+        "physicalAdmissibility": false,
+        "scientificallyValidated": false
+      },
+      "minimumOnSearchBoundary": {
+        "entry": false,
+        "exit": false,
+        "rho": false
+      }
+    },
+    {
+      "search": {
+        "name": "coarse-400",
+        "entryCount": 9,
+        "exitCount": 17,
+        "rhoCount": 13,
+        "slices": 400
+      },
+      "strengthReductionFactor": 1.4,
+      "candidateCount": 1989,
+      "formalRoots": 1778,
+      "rejectionReasons": {
+        "ARC_BELOW_BASE": 211
+      },
+      "restrictedFamilyMinimum": {
+        "search": "coarse-400",
+        "slices": 400,
+        "entry": 9.0,
+        "exit": 30.78125,
+        "rho": 0.7937005259840998,
+        "strengthReductionFactor": 1.4,
+        "status": "FORMAL_ROOT",
+        "reason": "",
+        "centerX": 27.34396900181944,
+        "centerY": 22.592477081591174,
+        "radius": 22.25020624151856,
+        "arcMinimumX": 27.34396900181944,
+        "arcMinimumY": 0.3422708400726151,
+        "baseRoundoffDeficitM": 0.0,
+        "formalFactor": 1.0002244206310476,
+        "iterations": 35,
+        "factorBracketWidth": 6.174971645123151e-11,
+        "domainBarrier": 0.040320546833052154,
+        "equilibriumResidualNPerM": -2.120796125382185e-06,
+        "drivingNPerM": 523417.61848723196,
+        "minimumMAlpha": 0.7816980423470336,
+        "negativeNormalCount": 6,
+        "minimumNormalForceNPerM": -666.1984318401103,
+        "minimumNormalStressPa": -6945.77174151144,
+        "normalForcesNonnegative": false,
+        "physicalAdmissibility": false,
+        "scientificallyValidated": false
+      },
+      "minimumOnSearchBoundary": {
+        "entry": false,
+        "exit": false,
+        "rho": false
+      }
+    },
+    {
+      "search": {
+        "name": "fine-400",
+        "entryCount": 17,
+        "exitCount": 33,
+        "rhoCount": 25,
+        "slices": 400
+      },
+      "strengthReductionFactor": 1,
+      "candidateCount": 14025,
+      "formalRoots": 12680,
+      "rejectionReasons": {
+        "ARC_BELOW_BASE": 1345
+      },
+      "restrictedFamilyMinimum": {
+        "search": "fine-400",
+        "slices": 400,
+        "entry": 9.75,
+        "exit": 31.390625,
+        "rho": 0.7937005259840998,
+        "strengthReductionFactor": 1,
+        "status": "FORMAL_ROOT",
+        "reason": "",
+        "centerX": 28.265487130830216,
+        "centerY": 22.32851919512466,
+        "radius": 22.244452100164136,
+        "arcMinimumX": 28.265487130830216,
+        "arcMinimumY": 0.084067094960524,
+        "baseRoundoffDeficitM": 0.0,
+        "formalFactor": 1.3838702355950987,
+        "iterations": 35,
+        "factorBracketWidth": 7.451150807469276e-11,
+        "domainBarrier": 0.051190722532942254,
+        "equilibriumResidualNPerM": -4.893576260656118e-06,
+        "drivingNPerM": 511961.8380832461,
+        "minimumMAlpha": 0.7746503594606292,
+        "negativeNormalCount": 6,
+        "minimumNormalForceNPerM": -697.7376026235885,
+        "minimumNormalStressPa": -7171.283864883566,
+        "normalForcesNonnegative": false,
+        "physicalAdmissibility": false,
+        "scientificallyValidated": false
+      },
+      "minimumOnSearchBoundary": {
+        "entry": false,
+        "exit": false,
+        "rho": false
+      }
+    },
+    {
+      "search": {
+        "name": "fine-400",
+        "entryCount": 17,
+        "exitCount": 33,
+        "rhoCount": 25,
+        "slices": 400
+      },
+      "strengthReductionFactor": 1.4,
+      "candidateCount": 14025,
+      "formalRoots": 12680,
+      "rejectionReasons": {
+        "ARC_BELOW_BASE": 1345
+      },
+      "restrictedFamilyMinimum": {
+        "search": "fine-400",
+        "slices": 400,
+        "entry": 9.75,
+        "exit": 31.390625,
+        "rho": 0.7937005259840998,
+        "strengthReductionFactor": 1.4,
+        "status": "FORMAL_ROOT",
+        "reason": "",
+        "centerX": 28.265487130830216,
+        "centerY": 22.32851919512466,
+        "radius": 22.244452100164136,
+        "arcMinimumX": 28.265487130830216,
+        "arcMinimumY": 0.084067094960524,
+        "baseRoundoffDeficitM": 0.0,
+        "formalFactor": 0.9884787397231105,
+        "iterations": 35,
+        "factorBracketWidth": 6.153799692043549e-11,
+        "domainBarrier": 0.03656480180924447,
+        "equilibriumResidualNPerM": -1.0596530046314001e-05,
+        "drivingNPerM": 511961.8380832461,
+        "minimumMAlpha": 0.7746503594579035,
+        "negativeNormalCount": 6,
+        "minimumNormalForceNPerM": -697.7376026166373,
+        "minimumNormalStressPa": -7171.283864812122,
+        "normalForcesNonnegative": false,
+        "physicalAdmissibility": false,
+        "scientificallyValidated": false
+      },
+      "minimumOnSearchBoundary": {
+        "entry": false,
+        "exit": false,
+        "rho": false
+      }
+    }
+  ],
+  "globalFactorOfSafetyCertified": false,
+  "physicalAdmissibility": false,
+  "mpmValidation": false,
+  "scientificallyValidated": false,
+  "mpmStepsExecuted": 0,
+  "negativeNormals": "Retained without clamping or tension-crack assumption; see all candidate counts/minimum stresses",
+  "limits": "Restricted circular family and midpoint slice quadrature; simplified Bishop does not enforce all force equilibrium; no dynamic landslide/runout validation"
+}

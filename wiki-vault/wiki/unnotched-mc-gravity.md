@@ -2,7 +2,7 @@
 title: Unnotched MC gravity scenario and native gates
 type: synthesis
 tags: [mpm, unnotched, gravity, strength-reduction, windows-native]
-sources: [docs/benchmarks/UNNOTCHED_MC_GRAVITY.md, research/references/unnotched-mc-ssr/contract.json, docs/testing.md]
+sources: [docs/benchmarks/UNNOTCHED_MC_GRAVITY.md, docs/benchmarks/UNNOTCHED_STATIC_DIAGNOSTIC.md, research/references/unnotched-mc-ssr/contract.json, docs/testing.md]
 updated: 2026-10-25
 ---
 
@@ -143,3 +143,7 @@ dtScale with halvedh changes both space and time resolution.
 ## Paired result closure and static gate
 
 Baseline completes native/worker0 at25Oct04:33:41WIB,6s/61states/7740updates; ONE review/render/source282/DLL audit passes. Maxu7.588638mm versus12.083373mm atSRF1.4; both settle, no motion/runout detected. ONE saved comparison aligns53680 time/ID rows. Baseline+pair46indexed artifacts/444ZIP members/282sources and47Gitblobs independently verified. No old audit/render repeated. New static-reference audit/contract preregisters bounded Bishop circles/slice refinement before results; report negative normals without clamp/physicalPASS. Static controls/search NOT_RUN; actual landslide goal unmet.
+
+## Independent static gate and same-strength refinement
+
+Five new mathematical controls pass; ONE frozen36,006-candidate Bishop search gives fine formal factors1.383870236/SRF1 and0.988478740/SRF1.4. Six negative slice normals/min-7.171kPa, bounded family and near-base arc0.084067m remain limitations, with no clamp/physical/globalFoS PASS. Exactbackend+contract copied beforesearch;19indexed artifacts/20Gitblobs verified. New refinementcontract freezesmesh1→.5 asONLYassignmentchange, unchangedstrength/loading, commonphysicalmetreobserver, bounded3h budget. Native refinedgate/fullrun stillNOT_RUN atcheckpoint; no actuallandslide claimed.

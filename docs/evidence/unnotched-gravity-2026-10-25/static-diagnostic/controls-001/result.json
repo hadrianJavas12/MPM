@@ -1,0 +1,19 @@
+{
+  "exitCode": 0,
+  "sourceBeforeAfterMatch": true,
+  "command": [
+    "D:\\MPM\\toolchain\\analysis-venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/analysis",
+    "-p",
+    "test_slope_stability.py",
+    "-v"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "mpmStepsExecuted": 0,
+  "scope": "New independent static-equilibrium Python controls; unchanged workspace test/backend bytes retained before execution; no native MPM or full family search"
+}

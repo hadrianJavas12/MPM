@@ -1,5 +1,15 @@
 # Native framework and Studio verification
 
+## Independent static controls, 2026-10-25
+
+Five new Python controls PASS once, source before/after hashes identical:
+independent phi0 continuous-circle moment, SRF identity/negative-normal flag,
+unit/length similarity, geometry/sign rejection and valid vertical endpoint.
+One exact-source/contract search completes36,006 outcomes, zero MPM steps.
+Static packet19 indexed artifacts/20 Git blobs verified. This formal diagnostic
+is separate from native/scientific validation; see
+`docs/benchmarks/UNNOTCHED_STATIC_DIAGNOSTIC.md`. Do not repeat passed controls.
+
 ## Paired gravity results closed, 2026-10-25
 
 Baseline native/worker0,6s/61states/7740updates; ONE saved review/render/source282/

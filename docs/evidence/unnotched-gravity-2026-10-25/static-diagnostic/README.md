@@ -1,0 +1,3 @@
+# Independent formal static diagnostic
+
+Five new mathematical controls and one preregistered dry simplified-Bishop search. No native MPM updates or old tests/reviews were repeated. Exact sources and contract were copied before the numerical search; the copied backend was executed. All candidate outcomes, negative base-normal forces, boundary minima and restricted-family/slice results are retained. Negative normals are not clamped; no tension-crack model is adopted. This is not a certified global FoS, physical-admissibility PASS, exact-paper reproduction or validation of MPM/dynamic landslide/runout. Original raw evidence remains in output.

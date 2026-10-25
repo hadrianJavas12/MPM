@@ -2,6 +2,34 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
+## Latest static gate: completed once; same-physics refinement preregistered
+
+NO full native solver active. Paired native runs/reviews/videos below areDONE,
+no landslide. NEW independent static Python controls5PASS/zeroMPM; ONE frozen
+search36006candidates completed at `output/unnotched-statics-2026-10-25/search-001`.
+Formal fine-family factors1.383870235595/SRF1 and.988478739723/SRF1.4; coarse
+200/400 factors1.400293719/1.400314189. Interior fine minimum, but six negative
+slice normals/min-7.171kPa and near-base arc minimum0.084067m are retained.
+No clamp/tension-crack assumption/global-FoS/physical-admissibility PASS.
+Source/contract copied BEFORE search; copied backend executed. Do NOT repeat
+these tests/search. Evidence19indexed artifacts/20rootverifiedGitblobs.
+Read `docs/benchmarks/UNNOTCHED_STATIC_DIAGNOSTIC.md` for exact commands/limits.
+
+Near-critical formal result versus coarse settlement motivates mesh/locking
+diagnostic with unchanged physical inputs. Separate refinement-contract.json
+is frozen BEFORE refined results; oldcase h1→h.5 is the ONLY assignmentchange.
+3520MPs expected,2MP/axis,dtScale.2/noFbar/damping0/mass1,6s61frames/ramp2s,
+60000updatecap. Coupled space/time refinement,not pure mesh convergence. Common
+physical-metre observer is frozen for BOTH meshes; original h-scaled outputs
+stay separate. Three-hour wall budget,rough8xcoarsework estimate,not an ETA.
+
+Agentgravity_slope_implementation owns new case
+`gravity-slope-mc-srf-1p4-h05.lisp` and focused frozen native refinement-controls
+gate. Inspect actual files/status before duplicate work. New gate/full refined
+run NOT_RUN here. Next review/run new grid-specific gate ONCE,checkpoint/push,
+then one justified refined6s native run if relevant gates pass. No strength/
+SRF/geometry/psi/tolerance changes. Goal actual unnotched landslide still unmet.
+
 ## Latest: paired runs COMPLETE; no solver active, no landslide detected
 
 Baseline `srf1-001` source8d8b544 finished native/worker0 at25Oct04:33:41WIB:

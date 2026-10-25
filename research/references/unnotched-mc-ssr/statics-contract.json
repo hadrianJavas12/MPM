@@ -13,6 +13,8 @@
     "entryXM": [0, 12],
     "exitXM": [12.5, 32],
     "rho": [0.25, 4],
+    "rhoSpacing": "geometric",
+    "entryExitSpacing": "linear",
     "center": "midpoint(P,Q)+rho*(-dy,dx)",
     "radius": "length(Q-P)*sqrt(0.25+rho*rho)",
     "branch": "lower semicircle, center at or above both ground endpoints",

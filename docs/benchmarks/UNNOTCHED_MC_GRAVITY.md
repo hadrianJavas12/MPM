@@ -311,3 +311,12 @@ define an independent restricted-circle Bishop diagnostic before an expensive
 refinement. Negative normals/boundary optima must be retained; no clamping,
 tension-crack assumption, global-FoS or dynamic validation follows. Static
 implementation/controls/search are NOT_RUN at this checkpoint.
+
+### Static gate closes; same-strength resolution study
+
+The [independent diagnostic](UNNOTCHED_STATIC_DIAGNOSTIC.md) now completes five
+new mathematical controls and one36,006-candidate search, without MPM steps.
+Formal fine minima1.383870236/SRF1 and0.988478740/SRF1.4 suggest near-critical
+conditions; negative normals/restricted search prohibit validation claims.
+The preregistered h0.5 study keeps all physical inputs unchanged and freezes
+a common physical observer. New native resolution gates precede the full run.

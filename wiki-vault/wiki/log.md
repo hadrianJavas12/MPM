@@ -825,3 +825,7 @@ repair/compatibility, not a completed full slope or verified landslide.
 ## [2026-10-25] ingest | Paired unnotched result closes; static gate frozen
 
 [[unnotched-mc-gravity]] records baseline+pair native completion with no coherent slide, exact53680rowcomparison and46indexed artifacts/47verifiedGitblobs. Originalraw/source/media/negative results preserved. Static primaryaudit and separatecontract frozen before calculations; formalnegative-normal/global-FoS limitations explicit. No old solver/review/render repeated; raw/settings intact.
+
+## [2026-10-25] ingest | Formal static diagnostic completes; resolution study frozen
+
+[[unnotched-mc-gravity]] links independentstatic guide/19indexedartifacts/20verifiedGitblobs. Five newPythoncontrols PASS, ONE36006candidateformalsearch;negative normals andlimitedfamily reported, zeroMPMsteps. FineformalF1.383870236/.988478740 motivates same-strengthmeshresolutionstudy, notvalidation. Refinementcontract frozenbeforeresults includingcommonphysicalobserver; newnativegate/fullrunNOT_RUN. No oldtests/solver/review/render repeated;raw/settings intact.
