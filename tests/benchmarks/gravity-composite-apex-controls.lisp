@@ -249,6 +249,12 @@
 (defclass unapproved-strict-child (mc:particle-mc-evolution) ())
 (defclass unapproved-composite-child (ap:particle-mc-composite-apex) ())
 
+(defun required-vtk-values (fields name count)
+  (let ((values (gethash name fields)))
+    (unless (and (vectorp values) (= (length values) count))
+      (error "Required 2D VTK field ~S is missing or has the wrong length (expected ~D)." name count))
+    values))
+
 (defun check-saved (observations)
   (let ((manifest (fw::read-parameter-json (merge-pathnames "manifest.json" observations))))
     (assert (and (eq (gethash "complete" manifest) t) (= (gethash "updates" manifest) 2)
@@ -265,7 +271,7 @@
           (multiple-value-bind (count points fields)
               (read-vtk (merge-pathnames (format nil "vtk/particles_~4,'0D.vtk" frame) observations))
             (assert (= count (length selected) 880))
-            (let ((ids (coerce (gethash "unique-id" fields) 'list)))
+            (let ((ids (coerce (required-vtk-values fields "unique-id" count) 'list)))
               (assert (= (length (remove-duplicates ids :test #'=)) 880))
               (if ids0 (assert (equalp ids0 ids)) (setf ids0 ids)))
             (loop for row in selected for id from 0 do
@@ -275,8 +281,8 @@
               (incf mass (value header row "mass_kg_per_m"))
               (let* ((j (det3 (row-matrix header row)))
                      (c (value header row "cohesion_pa")) (phi (value header row "friction_rad"))
-                     (q (aref (gethash "mc-apex-lambda-last" fields) id))
-                     (active (aref (gethash "mc-apex-active-last" fields) id)))
+                     (q (aref (required-vtk-values fields "mc-apex-lambda-last" count) id))
+                     (active (aref (required-vtk-values fields "mc-apex-active-last" count) id)))
                 (assert (> j 0d0)) (near j (value header row "J"))
                 (near (value header row "volume_m3_per_m") (* j (value header row "reference_volume_m3_per_m")))
                 (near c 6250d0 1d-9) (near phi (atan (/ (tan (* 20d0 (/ pi 180d0))) 1.6d0)))
@@ -307,13 +313,15 @@
                 (assert (>= (value header row "plastic_work_pa") 0d0)))
               (near (aref points (* 3 id)) (value header row "x_m"))
               (near (aref points (1+ (* 3 id))) (value header row "y_m"))
+              ;; The actual 2D writer exports xx/yy/xy only. The CSV's full
+              ;; six-component stress is still independently checked above,
+              ;; including zz and the zero yz/xz plane-strain components.
               (loop for (vtk-name csv-name) in '(("mass" "mass_kg_per_m") ("volume" "volume_m3_per_m")
                         ("vel_x" "vx_m_per_s") ("vel_y" "vy_m_per_s")
-                        ("sig_xx" "sig_xx_pa") ("sig_yy" "sig_yy_pa") ("sig_zz" "sig_zz_pa")
-                        ("sig_yz" "sig_yz_pa") ("sig_xz" "sig_xz_pa") ("sig_xy" "sig_xy_pa")
+                        ("sig_xx" "sig_xx_pa") ("sig_yy" "sig_yy_pa") ("sig_xy" "sig_xy_pa")
                         ("mc-plastic-volume" "plastic_volume") ("mc-plastic-work-j-m3" "plastic_work_pa")
                         ("mc-kappa" "mc_kappa") ("mc-cohesion-pa" "cohesion_pa")) do
-                (near (aref (gethash vtk-name fields) id) (value header row csv-name) 1d-9))
+                (near (aref (required-vtk-values fields vtk-name count) id) (value header row csv-name) 1d-9))
               (when (> frame 0)
                 (when (/= (value header row "y_m") (value header row "initial_y_m")) (setf moved t))
                 (when (/= (value header row "F_11") 1d0) (setf deformed t)))))

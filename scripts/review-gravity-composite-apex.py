@@ -35,6 +35,25 @@ def require(condition, message: str) -> None:
         raise ValueError(message)
 
 
+def verify_evidence_root(run: Path, native_root: Path | None, bounded: bool) -> Path:
+    """Bind the short fixture's observations to its parent's actual native proof."""
+    run = run.resolve()
+    if native_root is None or native_root.resolve() == run:
+        return run
+    native_root = native_root.resolve()
+    require(bounded, "Separate native evidence root is restricted to bounded controls")
+    require(run == (native_root / "observations").resolve(), "Observations are not the native gate's child")
+    result = load_json(native_root / "result.json")
+    require("short-output" in result.get("passedGroups", []) and result.get("physicalUpdatesExecuted") == 2,
+            "Native short-output group did not complete two updates")
+    require(result.get("materialCallsAttempted") == result.get("materialCallsAccepted") == 1760,
+            "Native short-output accepted-call count differs")
+    recorded = result.get("observations", {}).get("observationsDirectory")
+    require(isinstance(recorded, str) and Path(recorded).resolve() == run,
+            "Native result does not bind these observations")
+    return native_root
+
+
 def verify_native_sources(run: Path) -> dict:
     """Check retained bytes and actual runtime provenance, not current workspace."""
     manifest = load_json(run / "source/source-manifest.json")
@@ -71,7 +90,8 @@ def verify_native_sources(run: Path) -> dict:
             "scope": "Retained source hashes and native runtime proof; no post-exit process remapping"}
 
 
-def verify_variant(base, run: Path, contract: dict, states: list, bounded: bool = False) -> dict:
+def verify_variant(base, run: Path, contract: dict, states: list, bounded: bool = False,
+                   native_root: Path | None = None) -> dict:
     import numpy as np
     manifest = load_json(run / "manifest.json")
     config = manifest["config"]
@@ -118,7 +138,7 @@ def verify_variant(base, run: Path, contract: dict, states: list, bounded: bool 
             "Unexpected notch, driver, mass scale or damping")
     particles = base.native_csv(run / "particles.csv")
     frames = base.integral(particles["frame"], "particle frames")
-    constants, _ = base.stress_constants(run, run / "source")
+    constants, _ = base.stress_constants(run, (native_root or run) / "source")
     frame_results = []
     previous_volume = None
     for state in states:
@@ -174,6 +194,8 @@ def main() -> int:
     parser.add_argument("--bounded-control", action="store_true",
                         help="Explicit two-update/three-state output fixture; cannot establish full slope completion")
     parser.add_argument("--frozen-analysis-dir", type=Path, help=argparse.SUPPRESS)
+    parser.add_argument("--native-evidence-root", type=Path,
+                        help="Bounded fixture only: parent native gate retaining source/provenance and bound observations")
     args = parser.parse_args()
     run, output = args.run_dir.resolve(), args.output_dir.resolve()
     status = Path(str(run) + "-status.json")
@@ -199,6 +221,8 @@ def main() -> int:
                 command.append("--video")
             if args.bounded_control:
                 command.append("--bounded-control")
+            if args.native_evidence_root:
+                command.extend(["--native-evidence-root", str(args.native_evidence_root.resolve())])
             (output / "child-command.json").write_text(json.dumps(command, indent=2) + "\n", encoding="utf-8")
             completed = subprocess.run(command, capture_output=True, text=True)
             (output / "child-stdout.log").write_text(completed.stdout, encoding="utf-8")
@@ -237,11 +261,14 @@ def main() -> int:
         load_module("plot_m5_cliff_comparison", "plot_m5_cliff_comparison.py")
         base = load_module("gravity_base_frozen", "review-gravity-slope.py")
         report["executedWrapperPath"] = str(Path(__file__).resolve())
-        report["sourceVerification"] = verify_native_sources(run)
-        base_report, states, config = base.inspect(run, source / args.contract.name, run / "source")
+        evidence_root = verify_evidence_root(run, args.native_evidence_root, args.bounded_control)
+        report["nativeEvidenceRoot"] = str(evidence_root)
+        report["sourceVerification"] = verify_native_sources(evidence_root)
+        base_report, states, config = base.inspect(run, source / args.contract.name, evidence_root / "source")
         report["baseReview"] = base_report
         require(base_report["integrityStatus"] == "PASS", "Shared unchanged native integrity audit failed")
-        report["variantReview"] = verify_variant(base, run, load_json(source / args.contract.name), states, args.bounded_control)
+        report["variantReview"] = verify_variant(base, run, load_json(source / args.contract.name), states,
+                                                 args.bounded_control, evidence_root)
         report["integrityStatus"] = "PASS"
         report["nativeComplete"] = base_report["nativeComplete"]
         report["boundedControlOnly"] = args.bounded_control
