@@ -833,3 +833,11 @@ repair/compatibility, not a completed full slope or verified landslide.
 ## [2026-10-25] ingest | Native same-strength refinement gate closes
 
 [[unnotched-mc-gravity]] links25indexedartifacts/26verifiedGitblobs,4nativegroupsPASS/3520MP/2updates/7040calls/3VTK/10560rows/frozen285sourceDLLproof. Newcaseonlymeshsizechanges; noengine/material/SRF/psi/geometryloadingtuning. Nativehscaledfineauditcontractseparatefromfrozenmetreobserver. Checkpointprecedesfullrun,goalunmet;raw/settings intact.
+
+## [2026-10-25] ingest | Same-strength refined full run starts
+
+[[unnotched-mc-gravity]] records source1a9f29a start14:53:10WIB/3hbudget for preregisteredh0.5case. Grid-specific4PASSgate/evidenceprecedesfullrun; physicalinputsunchanged. Liveproofandinitialhelperfailurepreserved. Commonmetreobserverwillbeappliedseparatelyfromnativehscaledcriteria; no result/scientificPASS. Onequiet15minmonitor,raw/settingsintact.
+
+## [2026-10-25] ingest | Refined launch provenance checkpoint
+
+[[unnotched-mc-gravity]] links30indexed launchartifacts/31rootverifiedGitblobs/282actualsourcehashes.281sourcefilesunchangedvscoarse1.4,onlycase/mesh differs; all3protocolJSONsexactlaunchcommit. Observercode/tests pendingatlaunch explicitlynotclaimedexecuted. Fullnative result stillpending; no additionalqueries/solver/tests.

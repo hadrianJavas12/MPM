@@ -1,0 +1,35 @@
+{
+  "status": "FROZEN_PROTOCOL_ONLY_IMPLEMENTATION_TESTS_PENDING_AT_CAPTURE",
+  "source": {
+    "path": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\refinement-contract.json",
+    "bytes": 3202,
+    "sha256": "97cea2dc7e1f13f514e4ccbaf32219b2728fa5906066e9b88e8a84ce7d97f8c5",
+    "matchesLaunchCommitGitBlobExactly": true
+  },
+  "comparisonObserver": {
+    "units": "physical metres for BOTH meshes; preserve native h-scaled diagnostics separately",
+    "initialCohort": {
+      "xGreaterThanM": 2,
+      "yGreaterThanM": 2
+    },
+    "initialAdjacencyRadiusM": 1.01,
+    "movingMinimumDxM": 0.25,
+    "movingMinimumDownslopeDisplacementM": 0.5,
+    "minimumConnectedMovingFractionOfCohortMass": 0.1,
+    "minimumPositiveDxFractionOfComponentMass": 0.75,
+    "componentVelocity": {
+      "minimumMeanVxMPerS": 0.001,
+      "allSavedStatesDurationS": 1,
+      "fixedComponentIDsWithinEachInterval": true
+    },
+    "runoutMinimumFractionOfInitialTotalMass": 0.01,
+    "runoutXGreaterThanM": 32.5,
+    "windows": [
+      "0-6s",
+      "2-6s relative to saved2s"
+    ],
+    "crossMeshMatching": "same physical regions/common 1m spatial bins and mass-weighted distributions; particle ID numbers are not transferable across meshes"
+  },
+  "nativeAuditRole": "NATIVE_INTEGRITY_AND_H_SCALED_DIAGNOSTICS_ONLY",
+  "limits": "No executed metre-observer test/result existed at capture. Do not infer observer verification from native mesh/input gates or reinterpret h-scaled diagnostics as cross-mesh success."
+}

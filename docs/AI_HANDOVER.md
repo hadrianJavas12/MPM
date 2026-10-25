@@ -2,6 +2,47 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
+## ACTIVE: same-strength h0.5 full run, source1a9f29a
+
+`output/unnotched-gravity-2026-10-25/srf1p4-h05-001` started25Oct14:53:10WIB,
+native source1a9f29a85cf268cf812d0e2e4ce99473e19098a6. Three-hour wall budget
+to17:53:10WIB. Worker37804/wrapper51720/cmd52116/SBCL32684,allSession11;
+actual original-clock creation timestamps and full parent chain match in the
+adjacent live-process-verification.json. Initial proof-helper attempt lacked
+complete identity fields and failed before producing a full proof; retained
+as a helper failure,not native failure. Do not recapture/repeat healthy work.
+
+Launch-only packet `docs/evidence/unnotched-gravity-2026-10-25/srf1p4-h05-001-launch`
+retains30 indexed artifacts. Root verifies all hashes/31 staged Git blobs and
+all282 actual frozen source files.281sourcefiles match coarse1.4,onlycasefile
+differs; full actual configuration ONLYmesh differs. Three protocol JSONs
+match launchcommit1a9f29a. Observer code/tests were pending at launch; packet
+does not invent executed-observer evidence. Fullsource/raw/media archival due
+at terminal; current packet is not full-result validation.
+
+This is the preregistered resolution study: ONLY mesh1→.5,3520MPs, same strength/
+material/geometry/BC/gravity/psi/damping/dtScale,6s61frames/ramp2s/cap60000.
+Actual unnotched landslide still unverified. First wakeup read adjacent-status
+progress/heartbeat,manifestcomplete/time andONEstdouttail; healthy running:
+endquiet,noactivepoll/solverduplicate/tests/researchrepeat. Same automation15min.
+
+Wrapper does NOT automatically postprocess. Fine integrity requires the
+separate refinement-audit-contract.json (h.5/expected3520/SRF1.4,original
+h-scaled criteria unchanged). Common metre observer remains SEPARATE in
+refinement-contract.json and must be applied to BOTH meshes,without cross-mesh
+IDmatching. Agentgravity_scope_review prepares a reusable refinement review and
+small synthetic controls; inspect actual code/status before duplicating.
+Preserve exact source/reader/contracts before executing terminal analysis.
+Fine audit/renderONCE; compare already audited coarse saved data without
+coarse re-audit/render. No colour/nativecompletion/outlier as landslidePASS.
+
+At native failure diagnose NEW actual capsule once before a relevant tested
+repair/fresh attempt; no root/clamp/psi/strength/tolerance changes to force
+collapse. At completion inspect actual scale1 output/F/J/mass/IDs/law/MCyield/
+coherence/localisation/runout,archive full frozen raw/source/runtime/media and
+hashes,then return automation5h if no solver active. Fixedbottom and near-base
+resolution/formal static negative normals remain limits. Goal stays active.
+
 ## Refined native gate CLOSED; next is one same-strength full h0.5 run
 
 `refnative-controls-001` completes4groups PASS/exit0 (case-delta,grid-contract,

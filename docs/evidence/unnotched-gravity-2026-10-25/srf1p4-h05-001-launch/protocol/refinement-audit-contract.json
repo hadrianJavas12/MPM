@@ -1,0 +1,145 @@
+{
+  "schema": "cl-mpm.gravity-refinement.native-audit.v1",
+  "frozenBeforeFirstResult": true,
+  "createdDate": "2026-10-25",
+  "purpose": "Fine h0.5 native integrity and ORIGINAL h-scaled diagnostics ONLY; common physical metre observer is separate in refinement-contract.json. Coarse results are already known; no calibrated mesh or failure claim.",
+  "sources": [
+    {
+      "doi": "10.1680/geot.1999.49.3.387",
+      "role": "Classical MC SSR method; indexed D1 geometry dimensions, figure not freshly visually verified"
+    },
+    {
+      "doi": "10.1002/nag.3599",
+      "role": "MC MPM bridge; Table1 Section3.2 material inputs, H10m, slope26.57deg, independent SRFs and gravity loading"
+    }
+  ],
+  "independentTrials": [
+    1.4
+  ],
+  "referenceMaterial": {
+    "youngsModulusPa": 100000000,
+    "poissonRatio": 0.3,
+    "unitWeightNPerM3": 20000,
+    "cohesionCauchyPa": 10000,
+    "frictionDeg": 20,
+    "dilationDeg": 0
+  },
+  "reduction": {
+    "cohesion": "reference_c/SRF",
+    "frictionRad": "atan(tan(reference_phi_rad)/SRF)",
+    "elasticityDensityDilation": "unchanged"
+  },
+  "geometry": {
+    "status": "DECLARED_ADAPTATION",
+    "polygonM": [
+      [
+        0,
+        0
+      ],
+      [
+        32,
+        0
+      ],
+      [
+        12,
+        10
+      ],
+      [
+        0,
+        10
+      ]
+    ],
+    "heightM": 10,
+    "rearCrestM": 12,
+    "faceHorizontalM": 20,
+    "foundationDepthM": 0,
+    "analyticalAreaM2": 220,
+    "domainWidthM": 80,
+    "domainHeightM": 15,
+    "notch": false,
+    "excavation": false,
+    "weakSeed": false,
+    "crestDriver": false
+  },
+  "boundaries": {
+    "leftRight": "zero x nodal velocity, free y",
+    "bottom": "zero x/y nodal velocity",
+    "top": "free",
+    "coulombBed": false,
+    "quantitativeRunoutContactValidated": false
+  },
+  "initialState": "zero stress/velocity; plasticity active; no elastic settle or reporting reset",
+  "gravity": {
+    "fullAccelerationMPerS2": -9.80665,
+    "densityKgPerM3": "20000/9.80665",
+    "rampDurationS": 2,
+    "factor": "r*r*(3-2*r), r=min(t_step_end/2,1)",
+    "variableActuallyChanged": "sim-gravity",
+    "constantGravityHoldS": [
+      2,
+      6
+    ],
+    "physicalRampIsAnExplicitMPMAssumption": true
+  },
+  "numerics": {
+    "method": "native explicit USF/FLIP, 2D plane strain unit thickness",
+    "meshSizeM": 0.5,
+    "particlesPerAxisPerCell": 2,
+    "workers": 1,
+    "timeStepScale": 0.2,
+    "durationS": 6,
+    "frames": 61,
+    "maxUpdates": 60000,
+    "massScale": 1,
+    "damping": 0,
+    "fbar": false,
+    "splittingRemoval": false
+  },
+  "detectionConventions": {
+    "status": "PREDECLARED_DIAGNOSTIC_NOT_UNIVERSAL_GEOTECHNICAL_CRITERIA",
+    "cohort": "fixed initial particle IDs with x0>2h AND y0>2h; same for both trials",
+    "adjacency": "initial-center distance <=1.01h within the fixed cohort",
+    "movingNodes": "dx>=0.25h AND downslope projection of actual displacement>=0.5h",
+    "minimumLargestConnectedMovingFractionOfCohortMass": 0.1,
+    "minimumPositiveDxMassFractionOfComponent": 0.75,
+    "sustainedVelocity": "component mass-weighted vx>0.001m/s for all saved states of some 1s interval; IDs remain the same over that interval",
+    "windowsReportedSeparately": [
+      "entire0-6s including changing-gravity loading",
+      "2-6s constant-gravity hold; displacements relative to saved2s"
+    ],
+    "runoutGateSeparate": "at least1% initial total mass has center x>initial_toe+0.5h; also report front, median and centroid",
+    "spatialMechanism": "inspect actual scale1 geometry and plastic-shear localization; colour or scalar extremum alone does not pass",
+    "integrity": "stable IDs/count/mass, finite fields, positive J, constitutive admissibility, no center domain exit/hidden deletion/clamping; floor penetration invalidates runout",
+    "stableControl": "same cohorts/metrics/windows; no-damping ringing is permitted but must be distinguished from secular sliding",
+    "automaticScientificPass": false
+  },
+  "gatesBeforeFullRun": [
+    "native source/input/geometry/reduction/ramp/BC contracts",
+    "bounded genuine MPM updates with independent saved VTK/CSV audit",
+    "runtime estimate from actual pilot",
+    "review predeclared physics/geometry limitations"
+  ],
+  "prohibitions": [
+    "hidden SRF or parameter search after result",
+    "MC replaced by DP or VM without mapping",
+    "fallback/clamp or tolerance relaxation to make collapse",
+    "paper implicit steps interpreted as physical explicit time",
+    "scientific validation inferred from solver completion"
+  ],
+  "currentPhysicalResult": "NOT_RUN",
+  "frozenBeforeRefinedResult": true,
+  "refinementRole": "NATIVE_INTEGRITY_AND_H_SCALED_DIAGNOSTICS_ONLY",
+  "expectedParticleCount": 3520,
+  "freezeScope": "Before fine full-run results. The copied frozenBeforeFirstResult field refers to the original study; this derived contract does not claim coarse results are unknown.",
+  "sourceContracts": {
+    "originalStudy": {
+      "path": "research/references/unnotched-mc-ssr/contract.json",
+      "sha256": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55"
+    },
+    "refinementStudy": {
+      "path": "research/references/unnotched-mc-ssr/refinement-contract.json",
+      "sha256": "97cea2dc7e1f13f514e4ccbaf32219b2728fa5906066e9b88e8a84ce7d97f8c5"
+    }
+  },
+  "commonPhysicalObserver": "Use refinement-contract.json comparisonObserver separately; do not use these h-scaled diagnostics to infer cross-mesh success."
+}

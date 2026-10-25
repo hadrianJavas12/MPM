@@ -1,0 +1,131 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9"
+    },
+    {
+      "path": "adjacent/refnative-controls-001-exit.json",
+      "bytes": 73,
+      "sha256": "29bab0f419f7d0dc393a6d79b1b14b527d44254a45a0acdcea6bbcc43c6c36c1"
+    },
+    {
+      "path": "adjacent/refnative-controls-001.log",
+      "bytes": 324,
+      "sha256": "6ec50aeaa330ae086be7b09fb7e6e93f266ff4f639192096919bfe76d2501f34"
+    },
+    {
+      "path": "archive-member-verification.json",
+      "bytes": 53812,
+      "sha256": "50d43e358db0b3741d4a37eb9e07015bcb9a2f671c8d0e4d9febc12ec97198aa"
+    },
+    {
+      "path": "executed-pack-copy-helpers.py",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0"
+    },
+    {
+      "path": "executed-pack-script.py",
+      "bytes": 8061,
+      "sha256": "186692131feeb0cb40d4b7189bf572a0096f148858c69f21cd4cbf25fe32d49a"
+    },
+    {
+      "path": "executed-source-raw-and-runtime.zip",
+      "bytes": 1559615,
+      "sha256": "3eac48053af0db9fc91f15fc8b4f591714a4462ee3699d88f64f8b167b40b4d6"
+    },
+    {
+      "path": "observations/history.csv",
+      "bytes": 2707,
+      "sha256": "5fb53c89a01172535cc59ac332e9ffe69c31e791a365c8f042b9f17c1e6fcc6d"
+    },
+    {
+      "path": "observations/manifest.json",
+      "bytes": 4136,
+      "sha256": "00f39e7a67ce079caf51b8597feb051ead66814087e45ec3942a38a0af49e958"
+    },
+    {
+      "path": "observations/particles.csv",
+      "bytes": 7780979,
+      "sha256": "a4a7e39a5f8e89f3a1b6faf93b7159efc8c7cbe38930690291475c256d3d3ec4"
+    },
+    {
+      "path": "observations/vtk/mesh.vtk",
+      "bytes": 223963,
+      "sha256": "37480fee99505e196d5f35f55cedbfa11329c72b1b72f7aacaff76636291e8b1"
+    },
+    {
+      "path": "observations/vtk/particles_0000.vtk",
+      "bytes": 1156586,
+      "sha256": "0c9cfafb9a92c34f9dbd9d0063c371e711f65ca513a37aea00a691febe0a3454"
+    },
+    {
+      "path": "observations/vtk/particles_0001.vtk",
+      "bytes": 1156586,
+      "sha256": "0265471dd48a50778cfd8c0cf63e8faad6779ef2f5da5afa91a968caab65bdb3"
+    },
+    {
+      "path": "observations/vtk/particles_0002.vtk",
+      "bytes": 1156586,
+      "sha256": "79922f6f05e24abb2950df7e3315dd1ef13ba1c0257808d30d31d8284a21cd8a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1289,
+      "sha256": "5f20ffe52c4f11183fd1d134409dcb02e3017002c0794eae78d889731f47f1a0"
+    },
+    {
+      "path": "result.json",
+      "bytes": 896,
+      "sha256": "dc0cb18b74882632e5202b472fecf3a63910f161c27b0e160a1ebdd6e1c27086"
+    },
+    {
+      "path": "source/inputs/cases/benchmarks/gravity-slope-mc-srf-1p4-h05.lisp",
+      "bytes": 1917,
+      "sha256": "2782115feed76c6e0929818287202c5c9025ba967c9facf65215162a98a3a353"
+    },
+    {
+      "path": "source/inputs/cases/benchmarks/gravity-slope-mc-srf-1p4.lisp",
+      "bytes": 1916,
+      "sha256": "994c81df23ea13bcfb38fe8121946c215628fa655cb98181db6bc48e0b9ea98b"
+    },
+    {
+      "path": "source/inputs/research/references/unnotched-mc-ssr/refinement-contract.json",
+      "bytes": 3202,
+      "sha256": "97cea2dc7e1f13f514e4ccbaf32219b2728fa5906066e9b88e8a84ce7d97f8c5"
+    },
+    {
+      "path": "source/source-manifest.json",
+      "bytes": 59203,
+      "sha256": "89e0addc4b481d77792ed4866f1299cdb022f1c86bff6b207d95e8154af62fe6"
+    },
+    {
+      "path": "source-proof-after.json",
+      "bytes": 37730,
+      "sha256": "3b6f6ed7074637803e93b489fc2110f80b371ad51e554d98668a22f81bbc72fb"
+    },
+    {
+      "path": "source-proof-before.json",
+      "bytes": 37730,
+      "sha256": "3b6f6ed7074637803e93b489fc2110f80b371ad51e554d98668a22f81bbc72fb"
+    },
+    {
+      "path": "source-provenance-before.json",
+      "bytes": 675339,
+      "sha256": "daa36f13ac0812c8f27eb868c580ce59455b85488bf0ca1345a798a56d3b0993"
+    },
+    {
+      "path": "source-provenance.json",
+      "bytes": 675339,
+      "sha256": "daa36f13ac0812c8f27eb868c580ce59455b85488bf0ca1345a798a56d3b0993"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 1337,
+      "sha256": "b32a9f20d5b19f8ff25985eb1b8a8540f1bd173d5f2fa9758fdcab2e82747261"
+    }
+  ],
+  "note": "Index excludes itself; * -text preserves raw bytes. Stage indexed ignored VTK and verify Git blob bytes."
+}

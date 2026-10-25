@@ -151,3 +151,7 @@ Five new mathematical controls pass; ONE frozen36,006-candidate Bishop search gi
 ## Native h0.5 integration gate closes
 
 Four frozennativegroups PASS once: onlymeshdiff,3520MP/samemassgeometryBC,2actualupdates/7040acceptedcalls,3VTK/10560CSVindependentreadback.285source/input hashes andmappedDLLmatchbefore/after;25indexedartifacts/300ZIPmembers/26Gitblobs verified. Fineauditcontractkeepsnativehscaledcriteria; physicalmetrecomparison remainsseparate. Full6s refinement NOT_RUN atcheckpoint; no oldtests repeated.
+
+## Full refined study starts
+
+Source1a9f29a h0.5 runstarts25Oct14:53:10WIB,3h budgetto17:53:10WIB;3520MP/6s61frames,onlymeshassignmentchanged. ExactlivePID/session/originalclock/parentchainproofretained; initialincompleteidentityhelperfailureisnotnativefailure. Onequiet15minmonitor. Finehscaledintegrity andcommonmetrecomparisonpending; no actuallandslide claim.

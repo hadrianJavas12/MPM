@@ -1,0 +1,73 @@
+{
+  "schema": "cl-mpm.unnotched-gravity.refinement-launch-evidence.v1",
+  "status": "LAUNCH_PROOF_ONLY",
+  "sourceCommit": "1a9f29a85cf268cf812d0e2e4ce99473e19098a6",
+  "startedUtc": "2026-10-25T07:53:10.3903311Z",
+  "wallDeadlineUtc": "2026-10-25T10:53:10.3903311Z",
+  "maxWallHours": 3.0,
+  "storedLiveProofCapturedUtc": "2026-10-25T07:56:02.2577517Z",
+  "storedLiveProcesses": {
+    "wrapper": {
+      "role": "wrapper",
+      "pid": 51720,
+      "name": "pwsh",
+      "sessionId": 11,
+      "creationUtc": "2026-10-25T07:53:09.8006979Z",
+      "parentPid": 37804,
+      "creationClock": "System.Diagnostics.Process",
+      "identityMatched": true
+    },
+    "nativeCommand": {
+      "role": "nativeCommand",
+      "pid": 52116,
+      "name": "cmd",
+      "sessionId": 11,
+      "creationUtc": "2026-10-25T07:53:10.5976222Z",
+      "parentPid": 51720,
+      "creationClock": "System.Diagnostics.Process",
+      "identityMatched": true
+    },
+    "sbcl": {
+      "role": "sbcl",
+      "pid": 32684,
+      "name": "sbcl",
+      "sessionId": 11,
+      "creationUtc": "2026-10-25T07:53:11.1958856Z",
+      "parentPid": 52116,
+      "creationClock": "System.Diagnostics.Process",
+      "identityMatched": true
+    },
+    "detachedWorker": {
+      "role": "detachedWorker",
+      "pid": 37804,
+      "sessionId": 11,
+      "creationUtc": "2026-10-25T07:53:08.5020190Z",
+      "creationClock": "Win32_Process",
+      "identityMatched": true
+    }
+  },
+  "processesRecapturedByPackager": false,
+  "capturedNativeState": {
+    "status": "running",
+    "phase": "gravity-ramp",
+    "timeS": 0.1,
+    "updates": 257,
+    "savedFrames": 2,
+    "complete": false
+  },
+  "sourceCount": 282,
+  "actualConfigDifferences": [
+    {
+      "key": "meshSize",
+      "coarse": 1.0,
+      "fine": 0.5
+    }
+  ],
+  "physicalObserverImplementationStatus": "PENDING_AT_CAPTURE; protocol frozen in launch commit",
+  "initialProofHelperFailureRetained": true,
+  "initialFailureScope": "Proof helper called before nativeCommand/SBCL identities populated, Id=null binding failure; wrapper may already have been queried; exact partial unreturned process records not fabricated. No solver effect.",
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "limits": "Stored live identity applies only to its timestamp; mutable state/logs captured separately, not atomically. User-session worker has no demonstrated sleep/logoff/reboot immunity. Launch does not establish motion or completion.",
+  "packagingOperations": "Read/copy/hash only; no new process query, replay, native test, solver, rendering or result analysis by this packager."
+}

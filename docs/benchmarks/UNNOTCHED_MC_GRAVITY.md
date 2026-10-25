@@ -339,3 +339,16 @@ The full refined command, after this checkpoint is pushed, is:
 Native fine integrity uses `refinement-audit-contract.json`; its original
 h-scaled diagnostics are separate from the common physical-metre comparison.
 Full refined results remain NOT_RUN at this checkpoint. Do not rerun gates.
+
+### Refined full run launched
+
+Source1a9f29a starts `srf1p4-h05-001` at25Oct14:53:10WIB with3h wall budget
+until17:53:10WIB. Exact live PID/session/creation/parent-chain proof is retained.
+All physical inputs are unchanged; the gate above precedes this6s/61state run.
+One quiet15min monitor is active. Terminal native-h-scaled integrity and the
+separate common-metre comparison remain pending; no landslide claim follows.
+
+[Refined launch evidence](../evidence/unnotched-gravity-2026-10-25/srf1p4-h05-001-launch/README.md)
+retains30 indexed artifacts/282 frozen files and31 independently verified Git
+blobs. All281 non-case sources match coarse1.4; only actual mesh differs.
+Frozen protocols are included; observer execution was not claimed at launch.
