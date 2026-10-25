@@ -1,5 +1,5 @@
 ;;;; New optional-framework output gate; no full slope or scientific validation.
-;;;; windows\cl-mpm.cmd tests\framework\mc-composite-apex-output.lisp output\FRESH
+;;;; windows\cl-mpm.cmd tests\framework\mc-composite-apex-output.lisp output\FRESH [all|remaining]
 ;;;; One separate native apex fixture; exactly two genuine USF updates on 32 MPs.
 (in-package :cl-user)
 (require :asdf)
@@ -7,6 +7,9 @@
 (defvar *apex-output-frozen* nil)
 (defvar *apex-output-directory* nil)
 (defvar *apex-output-exit* 1)
+(defvar *apex-output-mode* (or (second (cl-mpm-script-args)) "all"))
+(unless (member *apex-output-mode* '("all" "remaining") :test #'string=)
+  (error "Expected all or remaining output-control mode."))
 (unless *apex-output-frozen*
   (load (cl-mpm-path "scripts/lisp/native-source-snapshot.lisp")))
 (unless *apex-output-frozen*
@@ -77,6 +80,13 @@
 (defvar *point-accepted* 0)
 (defvar *lock* (sb-thread:make-mutex :name "apex output counters"))
 (defvar *observations* (make-hash-table :test #'equal))
+(defparameter *groups*
+  '("optional-framework-loading-and-unique-diagnostics"
+    "point-apex-diagnostic-storage-and-postcommit-q"
+    "two-genuine-usf-updates-with-readonly-exports"
+    "independent-vtk-csv-finite-F-J-mass-IDs-and-q"))
+(defparameter *selected-groups*
+  (if (string= cl-user::*apex-output-mode* "remaining") (rest *groups*) *groups*))
 (defparameter *base-columns*
   (append '("frame" "time_s" "particle_id" "unique_id" "x_m" "y_m" "vx_m_per_s" "vy_m_per_s"
             "mass_kg_per_m" "volume_m3_per_m" "reference_volume_m3_per_m" "J")
@@ -94,9 +104,10 @@
     (sb-thread:with-mutex (*lock*)
       (case *phase* (:mpm (incf *mpm-accepted*)) (:point (incf *point-accepted*))))))
 (defmacro control (name &body body)
-  `(handler-case (progn ,@body (push ,name *passed*) (format t "~&PASS: ~A~%" ,name))
-     (error (condition) (setf *failure* (list ,name (princ-to-string condition)))
-       (format t "~&FAIL: ~A: ~A~%" ,name condition) (return-from controls nil))))
+  `(when (member ,name *selected-groups* :test #'string=)
+     (handler-case (progn ,@body (push ,name *passed*) (format t "~&PASS: ~A~%" ,name))
+       (error (condition) (setf *failure* (list ,name (princ-to-string condition)))
+         (format t "~&FAIL: ~A: ~A~%" ,name condition) (return-from controls nil)))))
 (defmacro in-phase (phase &body body)
   `(unwind-protect
        (progn (sb-thread:with-mutex (*lock*) (setf *phase* ,phase)) ,@body)
@@ -227,6 +238,9 @@
          (sim (build material)) (particles (cl-mpm:sim-mps sim))
          (observations (merge-pathnames "observations/" directory))
          (names (mapcar #'first (fw:diagnostics-fields adapter))) (dt nil))
+    ;; Required fresh-simulation setup is independent of the already-passed
+    ;; adapter assertions. REMAINING skips those assertions, not configuration.
+    (fw:configure-material-output adapter sim)
     (control "optional-framework-loading-and-unique-diagnostics"
       (assert (asdf:find-system "cl-mpm-framework/mc-composite-apex" nil))
       (assert (eq (fw:diagnostics-particle-type adapter) 'ap:particle-mc-composite-apex))
@@ -235,7 +249,7 @@
                           when (string= key "materialVariant") return value)
                      "perfect-mc-composite-apex"))
       (fw:validate-material-diagnostics adapter particles "mpm")
-      (fw:configure-material-output adapter sim) (fw:configure-material-output adapter sim)
+      (fw:configure-material-output adapter sim)
       (assert (= (length names) (length (remove-duplicates names :test #'string=))))
       (dolist (name '("mc-apex-active-last" "mc-apex-lambda-last"))
         (assert (= (count name (cl-mpm::sim-output-list-scalar sim) :key #'first :test #'string=) 1))))
@@ -262,12 +276,16 @@
         (near (- (mc:particle-plastic-volume mp) (mc:particle-plastic-volume-committed mp)) 0d0 0d0)
         (near (ap:particle-last-apex-multiplier mp) q 0d0)
         (assert (ap:particle-last-apex-active mp))
-        (cl-user::snapshot-write-json (merge-pathnames "point-apex-diagnostics.json" directory)
-         (cl-user::snapshot-object "nativeConstitutiveCalls" 1 "physicalUpdates" 0 "lambdaA" q
-          "plasticVolume" (mc:particle-plastic-volume mp) "plasticWorkCauchyPa" (mc:particle-plastic-work mp)
-          "postCommitCurrentMinusCommittedVolume" 0d0 "lastActiveAfterCommit" t
-          "diagnosticFieldNames" (coerce names 'vector) "diagnosticFieldValues" (coerce (field-values adapter mp) 'vector)
-          "scope" "Separate constitutive fixture and adapter storage; not an MPM kinematic state or slope trajectory"))))
+        ;; The bootstrap manifest writer intentionally supports only a restricted
+        ;; value set. Runtime floating-point diagnostics use the project encoder.
+        (with-open-file (stream (merge-pathnames "point-apex-diagnostics.json" directory)
+                                :direction :output :if-exists :error)
+          (yason:encode
+           (cl-user::snapshot-object "nativeConstitutiveCalls" 1 "physicalUpdates" 0 "lambdaA" q
+            "plasticVolume" (mc:particle-plastic-volume mp) "plasticWorkCauchyPa" (mc:particle-plastic-work mp)
+            "postCommitCurrentMinusCommittedVolume" 0d0 "lastActiveAfterCommit" t
+            "diagnosticFieldNames" (coerce names 'vector) "diagnosticFieldValues" (coerce (field-values adapter mp) 'vector)
+            "scope" "Separate constitutive fixture and adapter storage; not an MPM kinematic state or slope trajectory") stream))))
     (control "two-genuine-usf-updates-with-readonly-exports"
       (ensure-directories-exist observations)
       (setf dt (* .2d0 (cl-mpm/setup:estimate-elastic-dt sim)))
@@ -314,7 +332,7 @@
                   (dolist (name names) (near (aref (gethash name fields) id) (cell header row name) 1d-9))
                   (assert (>= (cell header row "mc-apex-lambda-last") 0d0))
                   (when (> frame 0)
-                    (when (/= (cell header row "y_m") (cell header row (nth id rows) "y_m")) (setf moved t))
+                    (when (/= (cell header row "y_m") (cell header (nth id rows) "y_m")) (setf moved t))
                     (when (/= (cell header row "F_11") 1d0) (setf strain-changed t)))))
               (near mass (* .02d0 .04d0 2000d0) 1d-12)))
           (assert moved) (assert strain-changed)))
@@ -334,6 +352,8 @@
                         :direction :output :if-exists :error)
   (yason:encode (cl-user::snapshot-object
    "passed" (if *failure* 'yason:false t) "passedGroups" (coerce (reverse *passed*) 'vector)
+   "mode" cl-user::*apex-output-mode* "selectedGroups" (coerce *selected-groups* 'vector)
+   "skippedGroups" (coerce (set-difference *groups* *selected-groups* :test #'string=) 'vector)
    "failure" (and *failure* (coerce *failure* 'vector)) "physicalUpdatesExecuted" *updates*
    "materialCallsAttempted" *mpm-attempts* "materialCallsAccepted" *mpm-accepted*
    "pointNativeCallsAttempted" *point-attempts* "pointNativeCallsAccepted" *point-accepted*
