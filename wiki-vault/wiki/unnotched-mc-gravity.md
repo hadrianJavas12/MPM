@@ -147,3 +147,7 @@ Baseline completes native/worker0 at25Oct04:33:41WIB,6s/61states/7740updates; ON
 ## Independent static gate and same-strength refinement
 
 Five new mathematical controls pass; ONE frozen36,006-candidate Bishop search gives fine formal factors1.383870236/SRF1 and0.988478740/SRF1.4. Six negative slice normals/min-7.171kPa, bounded family and near-base arc0.084067m remain limitations, with no clamp/physical/globalFoS PASS. Exactbackend+contract copied beforesearch;19indexed artifacts/20Gitblobs verified. New refinementcontract freezesmesh1→.5 asONLYassignmentchange, unchangedstrength/loading, commonphysicalmetreobserver, bounded3h budget. Native refinedgate/fullrun stillNOT_RUN atcheckpoint; no actuallandslide claimed.
+
+## Native h0.5 integration gate closes
+
+Four frozennativegroups PASS once: onlymeshdiff,3520MP/samemassgeometryBC,2actualupdates/7040acceptedcalls,3VTK/10560CSVindependentreadback.285source/input hashes andmappedDLLmatchbefore/after;25indexedartifacts/300ZIPmembers/26Gitblobs verified. Fineauditcontractkeepsnativehscaledcriteria; physicalmetrecomparison remainsseparate. Full6s refinement NOT_RUN atcheckpoint; no oldtests repeated.

@@ -320,3 +320,22 @@ Formal fine minima1.383870236/SRF1 and0.988478740/SRF1.4 suggest near-critical
 conditions; negative normals/restricted search prohibit validation claims.
 The preregistered h0.5 study keeps all physical inputs unchanged and freezes
 a common physical observer. New native resolution gates precede the full run.
+
+### Native refinement gate, 25 October 2026
+
+`refnative-controls-001` passes4groups/exit0: mesh-only case/config delta,
+3520MP/same220m2-mass-polygon-BC,2realUSFupdates/7040accepted material calls,
+3VTKs/10560CSV rows with finite/ID/F/J/volume/stress readback. All285 frozen
+files before/after and mapped DLL match. [Gate evidence](../evidence/unnotched-gravity-2026-10-25/refinement-controls/README.md)
+retains25 indexed artifacts/300ZIPmembers/26 independently verified Git blobs.
+These tiny states establish integration, not full plastic-failure validation.
+
+The full refined command, after this checkpoint is pushed, is:
+
+```powershell
+.\scripts\start-gravity-slope.ps1 -Case cases/benchmarks/gravity-slope-mc-srf-1p4-h05.lisp -OutputDirectory output/unnotched-gravity-2026-10-25/srf1p4-h05-001 -MaxWallHours 3
+```
+
+Native fine integrity uses `refinement-audit-contract.json`; its original
+h-scaled diagnostics are separate from the common physical-metre comparison.
+Full refined results remain NOT_RUN at this checkpoint. Do not rerun gates.

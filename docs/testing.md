@@ -1,5 +1,13 @@
 # Native framework and Studio verification
 
+## Grid-specific native refinement gate, 2026-10-25
+
+Four new groups PASS/exit0 once on frozen285files/mappedDLL: strict mesh-only
+case/config diff;3520MP/same mass/polygon/BC;2genuineUSFupdates/7040accepted
+material calls;3VTK/10560CSV independent readback/finite/IDs/F/J/volume/stress.
+Gate packet25indexed artifacts/300ZIPmembers/26Gitblobs verified. Full refined
+plastic simulation remains separate/NOT_RUN. No old gates or Node tests repeated.
+
 ## Independent static controls, 2026-10-25
 
 Five new Python controls PASS once, source before/after hashes identical:

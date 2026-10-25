@@ -1,0 +1,37 @@
+{
+  "schema": "cl-mpm.gravity-refinement.controls.evidence.v1",
+  "createdUtc": "2026-10-25T07:50:22.581247+00:00",
+  "nativeExit": 0,
+  "passedGroups": [
+    "case-delta",
+    "grid-contract",
+    "runner",
+    "csv-vtk"
+  ],
+  "actualFrozenSourceFiles": 285,
+  "allSourceBeforeAfterAndCurrentBytesMatch": true,
+  "physicalUpdatesExecuted": 2,
+  "materialCallsAttempted": 7040,
+  "materialCallsAccepted": 7040,
+  "refinedParticles": 3520,
+  "savedParticleStates": 3,
+  "materialCsvRows": 10560,
+  "productionCaseOnlyAssignedChange": "meshSize1m->0.5m; exact full compiled/spec comparison in native controls",
+  "frozenCaseBytesDifferOnlyMeshLiteral": true,
+  "tinyFixtureOverrides": {
+    "durationS": 2e-05,
+    "gravityRampDurationS": 1e-05,
+    "frames": 3,
+    "maxUpdates": 2
+  },
+  "nativeBackend": {
+    "modulePath": "D:/MPM/output/unnotched-gravity-2026-10-25/refnative-controls-001/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  },
+  "fullRefinedRunExecuted": false,
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "operations": "Read/copy/hash/ZIP/CRC/decoded-byte comparison only; no controls, native solver, material, replay or analysis repeated"
+}

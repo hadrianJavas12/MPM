@@ -2,6 +2,35 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
+## Refined native gate CLOSED; next is one same-strength full h0.5 run
+
+`refnative-controls-001` completes4groups PASS/exit0 (case-delta,grid-contract,
+runner,csv-vtk). Only actualcase mesh1→.5 differs; full config/component values
+otherwise identical.3520vs880MPs,same220m2/mass/polygon/BC. Exact2genuinefineUSF
+updates,7040attempted=accepted material calls,3particleVTKs/10560CSVrows with
+independent binary readback/IDs/finite/Fdet/J/volume/mass/stress checks.
+All285frozen sources/inputs before/after and mappedDLL verified. Evidence
+`docs/evidence/unnotched-gravity-2026-10-25/refinement-controls` retains25indexed
+artifacts/300ZIPmembers; root independently verifies26 stagedGitblobs and all
+archived sourcehashes. Do NOT rerun this gate or old tests.
+
+New case `cases/benchmarks/gravity-slope-mc-srf-1p4-h05.lisp` is byte-exactcoarse
+case exceptmesh literal. Checkpoint/push,then launch ONE fresh full6s case with
+3h wall budget. Fullrefined run NOT_RUN at this checkpoint. Native algorithms,
+material/SRF/psi,geometry/gravity/BC/damping/dtScale unchanged. Source snapshots
+must be frozen before execution; no oldVTK restart.
+
+Fine integrity audit has separate `refinement-audit-contract.json` copiedfrom
+originalstudy withmesh.5/expected3520/SRF1.4; original h-scaled detection text
+is EXACTunchanged and labelled native-h-scaled-only. Common physical-metre
+observer is separate and preregistered in refinement-contract.json. Agent
+gravity_scope_review prepares `scripts/review-gravity-refinement.py` and small
+synthetic observer controls; inspectactualfilesbeforeduplicating. Do not use
+the unchanged coarse mesh1 contract to declare fine integrity failure, or
+compare h-scaled movement thresholds as equivalent. At terminal auditfineONCE,
+renderactualscale1,then compare physical-region/mass distributions/coherence
+using the frozen metre observer on BOTH meshes. No cross-mesh ID equivalence.
+
 ## Latest static gate: completed once; same-physics refinement preregistered
 
 NO full native solver active. Paired native runs/reviews/videos below areDONE,

@@ -829,3 +829,7 @@ repair/compatibility, not a completed full slope or verified landslide.
 ## [2026-10-25] ingest | Formal static diagnostic completes; resolution study frozen
 
 [[unnotched-mc-gravity]] links independentstatic guide/19indexedartifacts/20verifiedGitblobs. Five newPythoncontrols PASS, ONE36006candidateformalsearch;negative normals andlimitedfamily reported, zeroMPMsteps. FineformalF1.383870236/.988478740 motivates same-strengthmeshresolutionstudy, notvalidation. Refinementcontract frozenbeforeresults includingcommonphysicalobserver; newnativegate/fullrunNOT_RUN. No oldtests/solver/review/render repeated;raw/settings intact.
+
+## [2026-10-25] ingest | Native same-strength refinement gate closes
+
+[[unnotched-mc-gravity]] links25indexedartifacts/26verifiedGitblobs,4nativegroupsPASS/3520MP/2updates/7040calls/3VTK/10560rows/frozen285sourceDLLproof. Newcaseonlymeshsizechanges; noengine/material/SRF/psi/geometryloadingtuning. Nativehscaledfineauditcontractseparatefromfrozenmetreobserver. Checkpointprecedesfullrun,goalunmet;raw/settings intact.

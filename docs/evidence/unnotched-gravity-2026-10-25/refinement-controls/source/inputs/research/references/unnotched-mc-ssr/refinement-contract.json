@@ -1,0 +1,32 @@
+{
+  "schema": "cl-mpm.gravity-refinement.v1",
+  "createdDate": "2026-10-25",
+  "frozenBeforeRefinedResults": true,
+  "purpose": "Same-physics coupled spatial/time refinement of the declared unnotched D1 adaptation; investigate coarse-grid response, not guarantee collapse or tune strength",
+  "basis": {"pairedRuns": "Both completed six-second native cases settle without landslide", "staticDiagnostic": "Restricted Bishop search gives formal F=1.383870235595 at SRF1 and 0.988478739723 at SRF1.4; negative normals and restricted search prohibit physical/global-FoS validation", "hypothesis": "Near-critical formal diagnostic versus coarse MPM settlement motivates a resolution/locking study without strength changes"},
+  "coarseCase": "cases/benchmarks/gravity-slope-mc-srf-1p4.lisp",
+  "refinedCase": "cases/benchmarks/gravity-slope-mc-srf-1p4-h05.lisp",
+  "onlyAssignedDifference": {"meshSizeM": [1, 0.5]},
+  "expectedParticleCount": [880, 3520],
+  "unchanged": ["polygon and empty domain", "SRF1.4/c/phi/psi/E/nu/density and native perfect Cauchy MC", "boundary masks", "2 MPs per axis per cell", "USF/FLIP/no F-bar", "timeStepScale0.2", "massScale1/damping0/no deletion", "gravity smoothstep0-2s and total6s", "61savedstates/60000updatecap"],
+  "runtime": {"wallBudgetHours": 3, "workRatioEstimate": 8, "basis": "Fourfold MP count and approximately doubled stable-dt update count; about two hours from actual fifteen-minute coarse run, not a completion promise"},
+  "comparisonObserver": {
+    "units": "physical metres for BOTH meshes; preserve native h-scaled diagnostics separately",
+    "initialCohort": {"xGreaterThanM": 2, "yGreaterThanM": 2},
+    "initialAdjacencyRadiusM": 1.01,
+    "movingMinimumDxM": 0.25,
+    "movingMinimumDownslopeDisplacementM": 0.5,
+    "minimumConnectedMovingFractionOfCohortMass": 0.1,
+    "minimumPositiveDxFractionOfComponentMass": 0.75,
+    "componentVelocity": {"minimumMeanVxMPerS": 0.001, "allSavedStatesDurationS": 1, "fixedComponentIDsWithinEachInterval": true},
+    "runoutMinimumFractionOfInitialTotalMass": 0.01,
+    "runoutXGreaterThanM": 32.5,
+    "windows": ["0-6s", "2-6s relative to saved2s"],
+    "crossMeshMatching": "same physical regions/common 1m spatial bins and mass-weighted distributions; particle ID numbers are not transferable across meshes"
+  },
+  "gates": ["new-case frozen native diff and geometry/BC/mass/count proof", "two genuine native updates with actual saved CSV/VTK check", "full immutable-source/mapped-DLL provenance", "saved finite/mass/ID/F/J/law/yield integrity and scale1 inspection"],
+  "limits": ["coupled space/time refinement, not isolated mesh convergence", "fixed bottom not validated Coulomb runout bed", "adapted geometry not exact Xie foundation", "localization/observer sensitivity and near-critical duration remain unresolved", "formal static negative normals are not dynamic validation"],
+  "prohibitions": ["strength/SRF/psi/damping/geometry tuning for collapse", "changing detector thresholds to obtain success", "clamping or root preference/tolerance loosening", "claiming native completion or colour proves landslide"],
+  "currentRefinedPhysicalResult": "NOT_RUN",
+  "automaticScientificPass": false
+}
