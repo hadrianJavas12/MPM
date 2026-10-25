@@ -1,0 +1,12 @@
+{
+  "status": "COLLECTOR_FAILED_BEFORE_PACKET_CREATION",
+  "exitCode": 1,
+  "error": "KeyError: 'runnerSha256'",
+  "executedScript": "failed-executed-pack-script.py",
+  "failedOperation": "Assumed an invocation-helper SHA field while reading the actual command record",
+  "actualCommandSchema": ["sourceCommit", "arguments", "executable", "startedUtc"],
+  "scope": "Collector metadata assumption only; before source hashing or archive creation. No gate/kernel/native/test/audit invocation repeated.",
+  "repair": "Use actual direct launcher command metadata; retain no unsupported claim that run-native-gate.ps1 was used or recorded.",
+  "landslideVerified": false,
+  "scientificallyValidated": false
+}

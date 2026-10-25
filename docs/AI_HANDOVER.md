@@ -58,13 +58,33 @@ constant/affine controls, zero MPM/material calls. No new static search or
 change to boundary/strength/psi is allowed. Freeze protocol/code before its
 first execution; record the prescribed test field as kinematics, never simulated
 motion or FoS. The old arc's negative normals still prevent a physical FoS claim.
-This gate is NOT_RUN at this completed-result checkpoint.
+This gate now completes native0 on source4eeb2fe9: six new groups,0material/
+MPM calls, actual880+3520particle states unchanged. See[results and finite next
+study](benchmarks/UNNOTCHED_BASAL_REPRESENTATION.md). Native packet22indexed/
+23Git blobs/302ZIPmembers/290source+input files and separate saved-summary
+7indexed/8Git blobs are root verified. Collector-only schema failure retained;
+native and CSV summary both succeed on their first executions.
 Source is now ready: `tests/benchmarks/gravity-basal-representation.lisp` and
 `research/references/unnotched-mc-ssr/basal-representation-contract.json`.
 Root and independent hash-bound[technical review](../research/notes/unnotched-landslide-2026-10-24/BASAL_REPRESENTATION_REVIEW.md)
-approve the first frozen no-timestep invocation. Hypothetical floor-crossing
+approved that first frozen no-timestep invocation. Hypothetical floor-crossing
 probes/inactive-node sampling are not actual solution fields. Follow the
-fresh-directory command in that review; preserve failures, no old gate repeats.
+historical command in that review; **do not repeat it**. Actual partition and
+summed-gradient errors are zero. Positive basal-weight footprint extends to
+actual centres0.75m versus0.375m; no kernel defect/locking diagnosis follows.
+
+NEXT: one finite same1.6/composite h0.5 resolution study is selected, NOT_RUN.
+New audit/comparison contracts are `composite-apex-srf1p6-h05-contract.json`
+and `composite-apex-refinement-contract.json` under the same reference directory.
+Case and focused native gate are being prepared by implementation; scope agent
+prepares a CSV-only common-metre comparison of completed variant reviews;
+controls agent prepares pre-launch capture. Read actual new files/messages,
+review/freeze/commit then execute only the new gate once. Do not repeat closed
+default/native suites or any old slope. Full launch requires its actual gates,
+3h wall bound and exact prepared source/analysis; same15min quiet monitor while
+active. Fine h-scaled detection is separate from fixed-metre cross-grid judgement.
+After this pair no automatic h0.25, SRF change or duration extension: review the
+physical foundation/base/reference first. No full solver is active yet.
 
 ## Historical launch: first full unnotched composite-apex SRF1.6 trial
 

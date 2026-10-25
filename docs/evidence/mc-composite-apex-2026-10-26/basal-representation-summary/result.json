@@ -1,0 +1,85 @@
+{
+  "schema": "cl-mpm.basal.saved-summary.v1",
+  "executedSource": {
+    "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\basal-summary-001\\executed-summary.py",
+    "bytes": 4802,
+    "sha256": "3c45e0b8c595a1b6504d2abe101a2c8c9f0f8b65074881c3cb33647d91031684"
+  },
+  "inputsBeforeAfterMatch": true,
+  "inputs": [
+    {
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\basal-representation-001\\result.json",
+      "bytes": 1563,
+      "sha256": "124f4c34c67015ec6d572d922892bf4531b5237d07667aadfa0b84bf063c181e"
+    },
+    {
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\basal-representation-001\\actual-initial-mp-footprints.csv",
+      "bytes": 2634732,
+      "sha256": "a34eeb836dd61da4e2ee8670595b6dda777d4c0270ba41e44023a3e82da71ba7"
+    },
+    {
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\basal-representation-001\\hypothetical-arc-profiles.csv",
+      "bytes": 1564244,
+      "sha256": "0af9c4f57f6c08d7477dce3a432c70ae4054c0b15aed48993695a01ad0421fa1"
+    }
+  ],
+  "meshes": [
+    {
+      "meshSizeM": 1.0,
+      "actualMPs": 880,
+      "actualMPsWithPositiveBaseWeight": 124,
+      "positiveBaseWeightCountFraction": 0.1409090909090909,
+      "highestActualCenterWithPositiveBaseWeightM": 0.75,
+      "actualMPsWithPositiveBaseAbsGradient": 124,
+      "maximumActualPartitionError": 0.0,
+      "maximumActualPartitionGradientNormPerM": 0.0,
+      "maximumRawMinusMaskedFieldNormMPerS": 0.0,
+      "prescribedCapActualSamples": 265,
+      "prescribedCapSampleErrorRmsMPerS": 0.22730050867878462,
+      "minimumArcHypotheticalProbes": [
+        {
+          "x_m": "28.265487130830216    ",
+          "y_m": "8.40670949605240000e-2",
+          "domain_half_m": "0.25000000000000000    ",
+          "domain_edge_margin_m": "-0.16593290503947600    ",
+          "sum_w": "0.97246627102516030    ",
+          "base_w": "0.86086544708979650    ",
+          "base_signed_grad_y": "-0.33626837984209600    ",
+          "base_abs_gradient_norm": "1.7610797502100504    ",
+          "status": "NON_ADMISSIBLE_AS_INITIAL_MP_GRID_DOMAIN_CROSSES_BOUNDARY"
+        }
+      ]
+    },
+    {
+      "meshSizeM": 0.5,
+      "actualMPs": 3520,
+      "actualMPsWithPositiveBaseWeight": 252,
+      "positiveBaseWeightCountFraction": 0.0715909090909091,
+      "highestActualCenterWithPositiveBaseWeightM": 0.375,
+      "actualMPsWithPositiveBaseAbsGradient": 252,
+      "maximumActualPartitionError": 0.0,
+      "maximumActualPartitionGradientNormPerM": 0.0,
+      "maximumRawMinusMaskedFieldNormMPerS": 0.0,
+      "prescribedCapActualSamples": 1056,
+      "prescribedCapSampleErrorRmsMPerS": 0.12785689723503843,
+      "minimumArcHypotheticalProbes": [
+        {
+          "x_m": "28.265487130830216    ",
+          "y_m": "8.40670949605240000e-2",
+          "domain_half_m": "0.12500000000000000    ",
+          "domain_edge_margin_m": "-4.09329050394760000e-2",
+          "sum_w": "0.99329798914011690    ",
+          "base_w": "0.81846178835918590    ",
+          "base_signed_grad_y": "-1.3450735193683840    ",
+          "base_abs_gradient_norm": "3.5402314613512970    ",
+          "status": "NON_ADMISSIBLE_AS_INITIAL_MP_GRID_DOMAIN_CROSSES_BOUNDARY"
+        }
+      ]
+    }
+  ],
+  "actualRows": 4400,
+  "hypotheticalRows": 2448,
+  "scope": "Saved CSV aggregation only; prescribed nodal fields are not simulated motion, best approximation or proof of locking. Near-floor hypothetical probes cross the particle-domain boundary. A zero mask difference does not disprove smear; the prescribed cap field already vanishes at the base.",
+  "landslideVerified": false,
+  "scientificallyValidated": false
+}

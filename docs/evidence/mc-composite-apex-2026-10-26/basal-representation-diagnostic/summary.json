@@ -1,0 +1,50 @@
+{
+  "createdUtc": "2026-10-25T23:13:10.552632+00:00",
+  "nativeLauncherExit": {
+    "exitCode": 0,
+    "startedUtc": "2026-10-25T23:10:14.8831589+00:00",
+    "finishedUtc": "2026-10-25T23:11:17.0422397+00:00"
+  },
+  "sourceCheckpoint": "4eeb2fe9adb2b0e64b14c3ade0b3eadab53234a4",
+  "actualInvocation": {
+    "sourceCommit": "4eeb2fe9adb2b0e64b14c3ade0b3eadab53234a4",
+    "arguments": [
+      "tests/benchmarks/gravity-basal-representation.lisp",
+      "output/mc-composite-apex-2026-10-26/basal-representation-001"
+    ],
+    "executable": "windows/cl-mpm.cmd",
+    "startedUtc": "2026-10-25T23:10:14.8831589+00:00"
+  },
+  "invocationHelperProofScope": "Actual record is direct windows/cl-mpm.cmd invocation without invoker-helper SHA; no unrelated helper is claimed executed. Original selected launcher/driver bytes remain in the native snapshot.",
+  "priorCollectorFailure": "Metadata-schema assumption KeyError before packet/source hashing; exact failed collector and error retained; no diagnostic repeat",
+  "diagnosticStatusAsReceived": "READ_ONLY_KINEMATIC_DIAGNOSTIC_COMPLETE",
+  "failureAsReceived": null,
+  "nativeSourceCount": 290,
+  "mpmCallsAttempted": 0,
+  "constitutiveCallsAttempted": 0,
+  "actualInitialMpUnchangedProofAsReceived": [
+    {
+      "meshSizeM": 1.0,
+      "actualInitialParticleCount": 880,
+      "actualInitialMassKgPerM": 448675.13371028285,
+      "actualInitialMPsWithBaseNodeFootprint": 124,
+      "minimumActualSumWeight": 1.0,
+      "minimumActualDomainEdgeMarginM": 0.0,
+      "actualInitialParticleStateUnchanged": true
+    },
+    {
+      "meshSizeM": 0.5,
+      "actualInitialParticleCount": 3520,
+      "actualInitialMassKgPerM": 448675.1337103164,
+      "actualInitialMPsWithBaseNodeFootprint": 252,
+      "minimumActualSumWeight": 1.0,
+      "minimumActualDomainEdgeMarginM": 0.0,
+      "actualInitialParticleStateUnchanged": true
+    }
+  ],
+  "physicalResult": "NOT_EVALUATED_PRESCRIBED_KINEMATICS_ONLY",
+  "scientificallyValidated": false,
+  "landslideVerified": false,
+  "scope": "Actual native GIMP stencil/representation diagnostic using hypothetical prescribed kinematics; not a time integration, solved velocity, trajectory, new static search or landslide result",
+  "operations": "Read/copy/hash/ZIP/CRC/all-member decoded-byte comparison only; no native, kernel, test, analysis, renderer or process query"
+}

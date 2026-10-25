@@ -1,0 +1,116 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9"
+    },
+    {
+      "path": "archive-member-verification.json",
+      "bytes": 60583,
+      "sha256": "b68a88f1ba7549549af3deab607a76a8197b39261e1ea1c42b6dbf9a52619675"
+    },
+    {
+      "path": "complete-source-native-kernel-diagnostic-and-runtime.zip",
+      "bytes": 1674192,
+      "sha256": "410a8040a23d24c1aff97227e6a8230ff4879fae8f473c3f9058904c6b3831d4"
+    },
+    {
+      "path": "executed-copy-hash-zip-helpers.py",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0"
+    },
+    {
+      "path": "executed-pack-script.py",
+      "bytes": 8960,
+      "sha256": "54c756d9f24800abc7c5c00d5a530ef3099e4c397ae6e56d1bb1bac50b3405b0"
+    },
+    {
+      "path": "metadata/native-source-manifest-index.json",
+      "bytes": 60460,
+      "sha256": "7434ab618ef3ed772515077e79acf7e98fad6bc2cd91f219e7b60a5175606e52"
+    },
+    {
+      "path": "prior-collector-attempt-001/failed-executed-pack-script.py",
+      "bytes": 8307,
+      "sha256": "4e08bd814b8b43600abf91c8e96af666816d66a359993457ebaba09217092066"
+    },
+    {
+      "path": "prior-collector-attempt-001/failure.json",
+      "bytes": 703,
+      "sha256": "76e64fc9c739d5788ff1d5a2fb44073e069e6425ed31575f519e7ec1172c362f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1151,
+      "sha256": "19b021b16fd8d58bd61c665b8c9e8438e6018d09908fd63ba1e07be3dfcc3469"
+    },
+    {
+      "path": "retained-diagnostic/actual-initial-mp-footprints.csv",
+      "bytes": 2634732,
+      "sha256": "a34eeb836dd61da4e2ee8670595b6dda777d4c0270ba41e44023a3e82da71ba7"
+    },
+    {
+      "path": "retained-diagnostic/adjacent/basal-representation-001.command.json",
+      "bytes": 312,
+      "sha256": "486251e37b42f209efcbb27efea6bf59f44e4023b14fd2597f4dd07ea1396d87"
+    },
+    {
+      "path": "retained-diagnostic/adjacent/basal-representation-001.exit.json",
+      "bytes": 132,
+      "sha256": "15918c63f393d5890507c9793cd9948031713502a50e45e1c31c9ad1fbc9c848"
+    },
+    {
+      "path": "retained-diagnostic/adjacent/basal-representation-001.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "retained-diagnostic/hypothetical-arc-profiles.csv",
+      "bytes": 1564244,
+      "sha256": "0af9c4f57f6c08d7477dce3a432c70ae4054c0b15aed48993695a01ad0421fa1"
+    },
+    {
+      "path": "retained-diagnostic/result.json",
+      "bytes": 1563,
+      "sha256": "124f4c34c67015ec6d572d922892bf4531b5237d07667aadfa0b84bf063c181e"
+    },
+    {
+      "path": "retained-diagnostic/selected-native-stencils.json",
+      "bytes": 3203,
+      "sha256": "a144bfbb237e841b5713dcc519cfb843828dc0d8c1a18223d333f324c90cf90f"
+    },
+    {
+      "path": "retained-diagnostic/source-proof-after.json",
+      "bytes": 38500,
+      "sha256": "d700184fa34f1e900f8d735feeca3c453595c7cfc498d3b5491767e9deddd306"
+    },
+    {
+      "path": "retained-diagnostic/source-proof-before.json",
+      "bytes": 38500,
+      "sha256": "d700184fa34f1e900f8d735feeca3c453595c7cfc498d3b5491767e9deddd306"
+    },
+    {
+      "path": "retained-diagnostic/source-provenance-before.json",
+      "bytes": 689064,
+      "sha256": "005f63939afa0b56c823cbf9c30e18d22fcf95625a2e8fe3a33d509168a0ee14"
+    },
+    {
+      "path": "retained-diagnostic/source-provenance.json",
+      "bytes": 689064,
+      "sha256": "005f63939afa0b56c823cbf9c30e18d22fcf95625a2e8fe3a33d509168a0ee14"
+    },
+    {
+      "path": "source-and-runtime-verification.json",
+      "bytes": 53305,
+      "sha256": "f48dff6565f5604d33fe942b63d41be9598f1d4c0bf5e4830883cc71d7f8f858"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 2360,
+      "sha256": "5d331a50acc7d74716b51c5b8ec90bb511cc31492fff322d452db2d8c6528528"
+    }
+  ],
+  "note": "Index excludes itself. Raw bytes protected by * -text; source payload appears once."
+}

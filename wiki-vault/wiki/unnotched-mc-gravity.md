@@ -351,7 +351,17 @@ expensive study; no automatic duration extension/SRF2.0. A justified same-factor
 h0.5 study tests resolution with common metre thresholds and coupled space/time
 refinement, rather than confirming an already observed slide. Idle automation
 returns to5hours; no old native/review/render/gate repetition.
-The immediate next gate is cheaper: actual basal GIMP weight/gradient and
-prescribed-field representation at h1/h0.5, independent constant/affine controls,
-zero material/MPM calls. Freeze code/protocol before execution. It is NOT_RUN;
-the field is a diagnostic input, not simulated motion or a physical FoS result.
+The basal GIMP gate now passes six new controls on source4eeb2fe9,0material/
+MPM calls and unchanged actual particles. Actual partition/gradient errors0;
+positive basal weights affect centres up to0.75m versus0.375m. Hypothetical
+minimum-arc probes cross the floor at both domain sizes, so their partition
+loss is not an actual-MP defect. Prescribed-field RMS values use different
+particle samples and prove neither convergence nor locking. Root22indexed/
+23Git blobs/302members/290sources and separate summary7indexed/8blobs verify;
+collector-only schema failure remains. No native diagnostic is repeated.
+
+Root/independent review select one same1.6/composite h0.5/6s resolution study,
+NOT_RUN until new targeted gate closes. Physical-metre observer stays fixed;
+native h-scaled detection remains separate. Same CFL couples space/time and
+MP sampling. After that pair, no automatic finer mesh/SRF/time extension;
+resolve physical foundation/base/reference definition before another experiment.

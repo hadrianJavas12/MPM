@@ -20,9 +20,15 @@ Both unchanged connected-motion windows and runout gate are NOT_DETECTED:
 transient upper-cohort motion settles. Native and saved-integrity completion
 are separate from landslide/scientific validation, both still false. No active
 solver or old PID polling; further studies need an explicit physical rationale.
-Next is a frozen basal GIMP/interpolation diagnostic with independent elementary
-controls and zero material/MPM calls, NOT_RUN at this checkpoint. See the
+The basal GIMP/interpolation diagnostic now passes six new native groups on
+source4eeb2fe9, zero material/MPM calls; actual MPs unchanged, partition and
+gradient completeness pass on both meshes. Root22indexed/23Git blobs/302members/
+290sources verify, plus separate saved-summary7indexed/8Git blobs. The only
+collector schema failure is preserved and fixed without repeating the diagnostic.
+See[results](benchmarks/UNNOTCHED_BASAL_REPRESENTATION.md) and the
 [saved-result diagnosis](../research/notes/unnotched-landslide-2026-10-24/COMPOSITE_SRF1P6_POST_RUN.md).
+One same-factor fine-grid study is preregistered; its new gate/full run are
+NOT_RUN. Do not repeat any completed control or infer locking from kinematics.
 
 ## Historical full composite-apex launch, 2026-10-26
 

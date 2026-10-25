@@ -988,3 +988,15 @@ verification passes. Root spatial review and diagnosis are retained. Next
 selection is a cheap frozen basal GIMP/kinematic representation gate, currently
 NOT_RUN, with independent elementary controls and zero material/MPM calls;
 no new static search or physical boundary/strength change is authorized by it.
+
+## [2026-10-26] ingest | Basal representation gate closes; finite refinement selected
+
+[[unnotched-mc-gravity]] records source4eeb2fe9 native0/six new groups with
+zero material/MPM calls. Actual MP state/partition/gradient completeness pass;
+basal weights affect centres0.75m versus0.375m. Floor-crossing hypothetical
+probes and different prescribed-field samplings are explicit, not engine/locking/
+FoS proof. Native22indexed/23blobs/302members/290sources and separate copied
+CSV summary7indexed/8blobs verify. Collector schema failure is retained without
+repeating the gate. One same1.6/composite h0.5/6s study is preregistered,
+NOT_RUN pending its own targeted gate; same physical observer and finite stop
+rule prohibit automatic SRF/time/finer-grid escalation after that pair.
