@@ -278,3 +278,19 @@ gate is NOT_RUN. It separates a single constitutive apex fixture from a tiny
 32-MP/two-update MPM export fixture. New variant contract and saved-data review
 are source-only; Python AST passes. Targeted scenario and analysis gates precede
 a full run. No new full solver, hidden strength change or verified slide.
+
+## Bounded optional integration and first actual variant review
+
+Framework002 closes three remaining groups after001's retained serializer
+failure: two genuine USF updates / 64 calls / 32 MPs / three VTK / 96+3 CSV
+rows and one separate native apex fixture. Root verifies 41 indexed artifacts,
+42 Git blobs, two ZIPs / 602 members / 578 sources. Eleven reviewer helper
+controls and three new binding controls pass without native calls.
+
+Scenario001's first four groups and two updates/1760 calls pass; saved reader
+fails on nonexistent out-of-plane2D VTK fields. Test repair retains six-stress
+CSV/yield checks. Saved-only002 retains a CMD comma-argument failure, zero MPM;
+003 will use a single-token alias/absolute path. FIRST independent frozen-child
+variant review already passes on actual001's three saved states/291-source/DLL
+proof and root-inspected PNG. These20 microseconds have no apex flow/slide;
+full6s study and same-factor refinement remain separate future evidence.

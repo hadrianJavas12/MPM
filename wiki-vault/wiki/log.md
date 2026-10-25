@@ -936,3 +936,15 @@ The four-group framework output source has independent approval; execution is
 NOT_RUN. It separates a native apex diagnostic fixture from actual tiny MPM
 exports. Python AST only; targeted scenario/analysis gates remain pending.
 All earlier point/default evidence is pushed at3bcd1da; no passed tests repeated.
+
+## [2026-10-26] ingest | Actual bounded optional output and variant review
+
+[[unnotched-mc-gravity]] records framework002 native0 and root41indexed/42Git
+blobs/602ZIPmembers/578sources verification after retained001 harness failure.
+First11 reviewer helper tests and only three new binding tests pass. Scenario001
+passes input guards and two genuine updates/1760 calls, then its reader fails
+on absent2D fields; saved-only002 retains CMD argument failure without updates.
+Test-only fixes preserve physics/tolerances and all negative evidence. FIRST
+frozen-child variant audit passes actual291-source/DLL/three-state CSV/VTK and
+root PNG inspection. Saved-only003 closure precedes a fresh full6s experiment;
+no completed landslide is claimed and no old passed solver/tests repeated.

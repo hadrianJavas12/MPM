@@ -1,5 +1,25 @@
 # Native framework and Studio verification
 
+## Actual optional integration gates, 2026-10-26
+
+Framework002 closes the three remaining native groups after preserving001's
+float-serializer failure and passed adapter group: native0, two real USF
+updates / 64 accepted calls / 32 MPs / three VTK / 96 per-MP + three aggregate
+CSV rows, plus one separate native apex diagnostic fixture. Root verifies
+[framework evidence](evidence/mc-composite-apex-2026-10-26/framework-output-controls/README.md):
+41 indexed / 42 Git blobs / two ZIPs / 602 members / 578 source copies and
+all289 actual002 files. No production numerical change or passed-group repeat.
+
+Reviewer helper controls pass11 initially, then only three new bounded-parent
+binding tests; five copied sources verified in each. FIRST actual frozen-child
+variant audit passes on three real scenario states,291-source/DLL proof and
+root-inspected scale1 PNG. This is20 microseconds of a bounded fixture.
+Scenario001 passes four groups/two updates/1760 calls then its test reader
+fails on absent2D out-of-plane VTK fields. CSV's six stress checks remain;
+test reader is repaired. Saved-only002 preserves a Windows comma-tokenization
+failure with zero MPM. Saved-only003 will use single-token alias/absolute path;
+its controls and final evidence archive are pending. No full slope or slide.
+
 ## Optional MPM/scenario integration source, 2026-10-26
 
 The new four-group optional-framework gate is source-reviewed, **NOT_RUN**:

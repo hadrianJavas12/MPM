@@ -2,6 +2,48 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
+## Latest 2026-10-26: bounded MPM and variant review close; no full run yet
+
+Framework-output-001 retained one passing adapter group then failed its test
+float serializer (one accepted native point call, zero MPM). Test-only repair
+on919f815 skips that passed group. Framework-output-002 exits0: the remaining
+three groups PASS, one separate accepted native apex fixture and two genuine
+USF updates / 64 accepted calls / 32 MPs / three VTK / 96 per-MP CSV rows /
+three aggregate rows. Source count289; actual mapped DLL verified. Packet
+`docs/evidence/mc-composite-apex-2026-10-26/framework-output-controls` is root
+verified: 41 indexed artifacts / 42 Git blobs / two ZIPs / 602 members /
+578 source copies, plus all289 actual002 source files. Do not rerun.
+
+FIRST synthetic reviewer11 controls pass on copied five-source snapshot under
+`output/mc-composite-apex-2026-10-26/analysis-controls-001`; subsequent three
+new evidence-binding controls pass under binding-controls-001. No repeats or
+native updates in those Python tests. These are helper tests, separate from
+the FIRST actual frozen-child variant review below.
+
+Scenario-controls-001 passes strict-default, optional-input, hidden-input
+rejection and short-output: two real updates / 1760 accepted calls / 880 MPs /
+three states. Its test reader then expects nonexistent out-of-plane VTK fields
+(actual 2D writer exports xx/yy/xy; CSV has all six), exit1. Test-only fix keeps
+all CSV/yield checks. Scenario-controls-002 attempts only saved reading but
+Windows CMD splits an unquoted comma selector, making `read-only` the path:
+zero MPM, retained argument failure. New single-token `saved` alias and absolute
+observations path are prepared for003, zero MPM; root must execute it once.
+Never rerun001's passed input groups or two updates for these harness fixes.
+
+FIRST actual `scenario-controls-001/variant-review-001` exits0 from copied
+wrapper/base/reader/contract: 291 native sources/DLL, config/metadata, F/J,
+three VTK/CSV states and q/volume/work checks PASS. Root inspects scale1 PNG.
+All q/flags are zero in this tiny gravity fixture; no MPM apex activation or
+slide is claimed. Parent evidence binding explicitly proves001's short-output
+group / two updates / 1760 calls / observations path even though its later
+reader failed. Complete20 microseconds is not completion of a6s slope.
+
+Next finish003 saved/read-only controls, archive negative/positive evidence,
+update docs/wiki and push. Then a fresh explicit composite SRF1.6 full6s run
+may start with the same nonmaterial inputs, frozen variant contract/reviewer,
+one quiet monitor. No full solver or SRF2.0 is currently active. No physics,
+tolerance or observer threshold was changed for the harness repairs.
+
 ## Source phase prepared on 2026-10-26: optional MPM/scenario integration
 
 Source checkpoint `fd73947` is pushed. FIRST framework-output-001 exits1:

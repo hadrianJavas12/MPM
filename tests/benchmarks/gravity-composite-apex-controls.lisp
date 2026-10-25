@@ -1,5 +1,5 @@
 ;;;; Focused optional gravity integration; no full slope or forced apex loading.
-;;;; windows\cl-mpm.cmd tests\benchmarks\gravity-composite-apex-controls.lisp FRESH [all|input|output|GROUPS] [SAVED_OBSERVATIONS]
+;;;; windows\cl-mpm.cmd tests\benchmarks\gravity-composite-apex-controls.lisp FRESH [all|input|output|saved|GROUPS] [SAVED_OBSERVATIONS]
 ;;;; GROUPS is a comma-separated subset; saved-output alone reuses retained data.
 (in-package :cl-user)
 (require :asdf)
@@ -14,6 +14,9 @@
     (cond ((string= choice "all") all)
           ((string= choice "input") (subseq all 0 3))
           ((string= choice "output") (subseq all 3))
+          ;; Windows CMD treats an unquoted comma as an argument separator.
+          ;; SAVED is a single-token alias for the two non-stepping tail groups.
+          ((string= choice "saved") (subseq all 4))
           (t (let ((selected (uiop:split-string choice :separator ",")))
                (unless (and selected (every (lambda (x) (member x all :test #'string=)) selected)
                             (= (length selected) (length (remove-duplicates selected :test #'string=))))

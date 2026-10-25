@@ -1,0 +1,17 @@
+
+; file: D:/MPM/output/mc-composite-apex-2026-10-26/framework-output-001/source/case.lisp
+; in: DEFUN CONTROLS
+;     (CL-MPM/TESTS/MC-COMPOSITE-APEX-OUTPUT::CELL
+;      CL-MPM/TESTS/MC-COMPOSITE-APEX-OUTPUT::HEADER
+;      CL-MPM/TESTS/MC-COMPOSITE-APEX-OUTPUT::ROW
+;      (NTH CL-MPM/TESTS/MC-COMPOSITE-APEX-OUTPUT::ID
+;           CL-MPM/TESTS/MC-COMPOSITE-APEX-OUTPUT::ROWS)
+;      "y_m")
+; 
+; caught STYLE-WARNING:
+;   The function CELL is called with four arguments, but wants exactly three.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+PASS: optional-framework-loading-and-unique-diagnostics
+FAIL: point-apex-diagnostic-storage-and-postcommit-q: Unsupported bootstrap JSON value 2.721539030917347e-4

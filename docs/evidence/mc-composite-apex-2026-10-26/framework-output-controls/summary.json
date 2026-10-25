@@ -1,0 +1,119 @@
+{
+  "schema": "cl-mpm.mc-composite-apex.framework-output.evidence.v1",
+  "createdUtc": "2026-10-25T17:13:04.662657+00:00",
+  "attempts": [
+    {
+      "attempt": "framework-output-001",
+      "nativeExit": 1,
+      "result": {
+        "passed": false,
+        "passedGroups": [
+          "optional-framework-loading-and-unique-diagnostics"
+        ],
+        "failure": [
+          "point-apex-diagnostic-storage-and-postcommit-q",
+          "Unsupported bootstrap JSON value 2.721539030917347e-4"
+        ],
+        "physicalUpdatesExecuted": 0,
+        "materialCallsAttempted": 0,
+        "materialCallsAccepted": 0,
+        "pointNativeCallsAttempted": 1,
+        "pointNativeCallsAccepted": 1,
+        "observations": {},
+        "nativeBackend": {
+          "modulePath": "D:/MPM/output/mc-composite-apex-2026-10-26/framework-output-001/source/libs/kirchoff.dll",
+          "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+          "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+          "nativeMcEntryPresent": true
+        },
+        "scope": "New optional-framework output smoke: declared tiny32-MP affine-velocity fixture/two native USF updates, separate one native apex diagnostic call; no full slope, guaranteed MPM apex activation or scientific PASS"
+      },
+      "frozenSources": 289,
+      "allFrozenCurrentBytesBeforeAfterMatch": true,
+      "actualMappedDll": {
+        "modulePath": "D:/MPM/output/mc-composite-apex-2026-10-26/framework-output-001/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "archive": {
+        "path": "framework-output-001-complete-source-and-output.zip",
+        "bytes": 1298104,
+        "sha256": "6fbf1c75f3941b68b2f610f537a86a2f470a953ad070b6d122f912a7e9090dd6"
+      },
+      "decodedMembers": 298
+    },
+    {
+      "attempt": "framework-output-002",
+      "nativeExit": 0,
+      "result": {
+        "passed": true,
+        "passedGroups": [
+          "point-apex-diagnostic-storage-and-postcommit-q",
+          "two-genuine-usf-updates-with-readonly-exports",
+          "independent-vtk-csv-finite-F-J-mass-IDs-and-q"
+        ],
+        "mode": "remaining",
+        "selectedGroups": [
+          "point-apex-diagnostic-storage-and-postcommit-q",
+          "two-genuine-usf-updates-with-readonly-exports",
+          "independent-vtk-csv-finite-F-J-mass-IDs-and-q"
+        ],
+        "skippedGroups": [
+          "optional-framework-loading-and-unique-diagnostics"
+        ],
+        "failure": null,
+        "physicalUpdatesExecuted": 2,
+        "materialCallsAttempted": 64,
+        "materialCallsAccepted": 64,
+        "pointNativeCallsAttempted": 1,
+        "pointNativeCallsAccepted": 1,
+        "observations": {
+          "stepSizeS": 7.708992893275452e-06,
+          "savedVtkStates": 3,
+          "savedParticleRows": 96,
+          "savedAggregateRows": 3,
+          "tinyMpmApexActivationRequired": false
+        },
+        "nativeBackend": {
+          "modulePath": "D:/MPM/output/mc-composite-apex-2026-10-26/framework-output-002/source/libs/kirchoff.dll",
+          "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+          "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+          "nativeMcEntryPresent": true
+        },
+        "scope": "New optional-framework output smoke: declared tiny32-MP affine-velocity fixture/two native USF updates, separate one native apex diagnostic call; no full slope, guaranteed MPM apex activation or scientific PASS"
+      },
+      "frozenSources": 289,
+      "allFrozenCurrentBytesBeforeAfterMatch": true,
+      "actualMappedDll": {
+        "modulePath": "D:/MPM/output/mc-composite-apex-2026-10-26/framework-output-002/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "archive": {
+        "path": "framework-output-002-complete-source-and-output.zip",
+        "bytes": 1310106,
+        "sha256": "264abf6a3e0f4fc9daeb6ce5a8af9a30a9ff8ea7f89d14119502663427f925b2"
+      },
+      "decodedMembers": 304
+    }
+  ],
+  "combinedDistinctGroupsPassed": 4,
+  "firstFailureRetained": true,
+  "totalActualMpmUpdatesAcrossAttempts": 2,
+  "totalMpmConstitutiveAccepted": 64,
+  "separateNativeApexAcceptedAcrossAttempts": 2,
+  "successfulFixture": {
+    "particles": 32,
+    "savedVtkStates": 3,
+    "perParticleCsvRows": 96,
+    "aggregateCsvRows": 3,
+    "oldPassedFirstGroupRepeated": false
+  },
+  "tinyMpmApexActivationRequired": false,
+  "fullSlopeExecutedByThisPacket": false,
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "operations": "Read/copy/hash/ZIP/CRC/decoded-byte verification only. No test, material, MPM, replay, rendering or analysis rerun."
+}
