@@ -1,5 +1,16 @@
 # Native framework and Studio verification
 
+## First full composite-apex trial launched, 2026-10-26
+
+After all closed gates/evidence below, source35427376 starts one full6s/61-state
+SRF1.6 trial at00:29:14 WIB with one-hour wall budget. It is **RUNNING**, not a
+test/scientific/landslide PASS. Pre-launch case/contract/analysis snapshots,
+actual four-process creation/parent proof,287 native source/DLL copies and273
+shared numerical files matching the native gate are verified. Root verifies
+[launch packet](evidence/unnotched-gravity-2026-10-26/srf1p6-composite-001-launch/README.md):
+35 indexed / 36 Git blobs / 288 ZIP members / 287 sources. First capture0.5s
+is partial. No solver/test/analysis/render is repeated while it runs.
+
 ## Actual optional integration gates, 2026-10-26
 
 Targeted saved-only003 now exits0: saved-output/read-only PASS with zero MPM,

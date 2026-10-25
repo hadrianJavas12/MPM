@@ -958,3 +958,14 @@ members/873 native source copies and291 actual003 files verify. Framework,
 full-study documentation preregisters one same-input SRF1.6 six-second trial,
 one-hour wall budget and conditional same-factor refinement. No full solver
 or verified slide yet; all negative evidence/physics limits remain explicit.
+
+## [2026-10-26] ingest | First full unnotched composite trial launched
+
+[[unnotched-mc-gravity]] records source35427376 start00:29:14 WIB, one-hour
+wall deadline01:29:14. Pre-launch freeze follows committed gates; actual four
+PID/creation/session/parent proof and287-source/DLL/273 shared numerical file
+matching verify. Root35indexed/36Git blobs/288ZIPmembers/287sources verifies
+the launch packet; captured0.5s remains incomplete, not physical success.
+One15-minute quiet monitor replaces the idle5-hour continuation. No closed
+tests/solver/replay/audit/render repeated. All preparation failures and raw
+bytes/settings are retained. Actual sliding is still the open objective.

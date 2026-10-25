@@ -1,0 +1,5 @@
+# Optional composite SRF1.6: launch evidence
+
+The case, declared variant contract, reviewer/base/reader and exact-clock capture source were frozen after the committed gate archive and before root-authorized launch. Actual full configuration matches the native tiny gate apart from duration/ramp/frame count/update cap; all numerical sources and DLL match that gate. The one-source-manifest ZIP carries every actual native source payload. Exact worktree/runtime bytes are authoritative; per-file checkpoint bindings separately record raw Git byte equality, Git blob SHA and Git hash-object --path. A raw mismatch is permitted only for UTF-8 CRLF/LF-equivalent text whose filtered Git hash equals HEAD; it is never called byte-identical. The committed gate artifact-index still requires exact raw Git bytes.
+
+Stored PID/session/creation-clock/parent proof is a single timestamp observation, not a current-process or survival guarantee. Native Process clocks and the worker CIM clock are compared separately. The Python collector performs no process query or launch. This packet proves no slope failure, runout, paper agreement or scientific validation.

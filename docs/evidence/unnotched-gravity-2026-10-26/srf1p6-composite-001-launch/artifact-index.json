@@ -1,0 +1,181 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9"
+    },
+    {
+      "path": "archive-member-verification.json",
+      "bytes": 57791,
+      "sha256": "1b4994d58a54af7abf420213090a2af7bbe27125a0a1bc1513e09ac5d869879f"
+    },
+    {
+      "path": "complete-native-source-at-launch.zip",
+      "bytes": 1155963,
+      "sha256": "a69dbc6ecd7a762a93a9f1fd8fe1ccd9174580da608308aadaca108021dac7b2"
+    },
+    {
+      "path": "detached/launch-proof.json",
+      "bytes": 1054,
+      "sha256": "e21398fd47263b93ca5aa7e347efb582b7f8256701d2890425508ec68ff5d1b7"
+    },
+    {
+      "path": "detached/launch-request.json",
+      "bytes": 1408,
+      "sha256": "bf70e47f7317bde80ff0465535b934af296590c0975e591551672282802298c1"
+    },
+    {
+      "path": "detached/launch-request.ps1",
+      "bytes": 2266,
+      "sha256": "def3267a766cfcfaeea69f4ae369dbb71a5d4b240f9f851e20dbd2b5cbf7c4e0"
+    },
+    {
+      "path": "detached/worker-start.json",
+      "bytes": 262,
+      "sha256": "955010c5ac06916969b8b62b95e7d441c736c8678319989f4d77f9f3431d0033"
+    },
+    {
+      "path": "detached/wrapper.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "detached/wrapper.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "executed-capture-helper.py",
+      "bytes": 19982,
+      "sha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 6072,
+      "sha256": "3c5570cac6339a7c49877f38a625b7a389f63c7a91200bd33e216db2272f8840"
+    },
+    {
+      "path": "metadata/native-source-manifest-index.json",
+      "bytes": 59619,
+      "sha256": "ef8af1c778f2e50df574a00ec1cc0b6b28db3b9f2467f9ce9d013cb5945b5309"
+    },
+    {
+      "path": "prelaunch/analysis/plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+    },
+    {
+      "path": "prelaunch/analysis/review-gravity-composite-apex.py",
+      "bytes": 18498,
+      "sha256": "edec92168deaf06b942f0a36e9468be958f00c3e5b06f34e1d91e368340f4a3b"
+    },
+    {
+      "path": "prelaunch/analysis/review-gravity-slope.py",
+      "bytes": 38121,
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+    },
+    {
+      "path": "prelaunch/capture-helper.py",
+      "bytes": 19982,
+      "sha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9"
+    },
+    {
+      "path": "prelaunch/case.lisp",
+      "bytes": 2260,
+      "sha256": "dae3bb89d1cdb941bb653d8cb3e2290e81236f488415c3f61e5e5f94ca0b768c"
+    },
+    {
+      "path": "prelaunch/copy-hash-zip-helpers.py",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0"
+    },
+    {
+      "path": "prelaunch/expected-full-configuration.json",
+      "bytes": 1786,
+      "sha256": "18cbb0c9baf77bc8dd7e3c124f58e5da64f3ab792b0f02da109b737a4e8d55d6"
+    },
+    {
+      "path": "prelaunch/prelaunch-snapshot.json",
+      "bytes": 9720,
+      "sha256": "b5aee19925c8e062b5680e59a6e1ff7386fa135713a6f34640ace631d989cc1c"
+    },
+    {
+      "path": "prelaunch/proof-support/capture-processes.ps1",
+      "bytes": 3095,
+      "sha256": "0631eacc8609b67b31a601d17a63d92fa586088c5a896cd6f5e4056e73eb2144"
+    },
+    {
+      "path": "prelaunch/proof-support/reference-exact-clock-helper.ps1",
+      "bytes": 2438,
+      "sha256": "0d86faedc7a012be10d0c9b2b25214e57ec14b3deafca443bc0cd5f9b60f5a64"
+    },
+    {
+      "path": "prelaunch/protocol/composite-apex-srf1p6-contract.json",
+      "bytes": 7458,
+      "sha256": "aa13974b57d29b0d9f29d2d1997dd5c295eca29ae91d8d88a62576180dbffd27"
+    },
+    {
+      "path": "prelaunch/protocol/PERFECT_MC_APEX_PLAN.md",
+      "bytes": 5731,
+      "sha256": "e21ba6e29a85890ae4ae56f0b24df0d644111f5c9b2e6d18d9fd6bc7a510d3c3"
+    },
+    {
+      "path": "prelaunch/protocol/PERFECT_MC_APEX_REVIEW.md",
+      "bytes": 1339,
+      "sha256": "2637b7d917e742d1832f4e63a7f99c440368f7e0e4d05832b498737a1fb25b70"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1151,
+      "sha256": "695789d33dfe5c9c07f7f2b7b3837ede9d1abd7649963be7902d3c024e22e4c2"
+    },
+    {
+      "path": "runtime/srf1p6-composite-001-launch.json",
+      "bytes": 957,
+      "sha256": "cdcd05aa529d0013f3629f1846a5666f49cef3d318645f7e87633d06020c93da"
+    },
+    {
+      "path": "runtime/srf1p6-composite-001-live-process-verification.json",
+      "bytes": 1331,
+      "sha256": "31a2403d6b89d875e590495b026c16669873fc7379e059e295cf5e12b8036533"
+    },
+    {
+      "path": "runtime/srf1p6-composite-001-preparation-failed-helper-001.py",
+      "bytes": 17923,
+      "sha256": "918d53e6eb32cf3636ab65846f0e0300668e1280befbf13de03150371ece4357"
+    },
+    {
+      "path": "runtime/srf1p6-composite-001-preparation-failure-001.json",
+      "bytes": 515,
+      "sha256": "7981c806c870459fe5ccf23e63e32eb811e1e601b8da4e2e21b95c3e9bb28165"
+    },
+    {
+      "path": "runtime/srf1p6-composite-001-status.json",
+      "bytes": 1434,
+      "sha256": "c823a372feb01fccd0430aedb232f592e2e2e46b96649f33982426389954291e"
+    },
+    {
+      "path": "runtime/srf1p6-composite-001.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runtime/srf1p6-composite-001.stdout.log",
+      "bytes": 514,
+      "sha256": "e7f71b2a842599b9f90761f7177ff8d577b64ba375044bcb4eee40690b646178"
+    },
+    {
+      "path": "source-provenance.json",
+      "bytes": 682477,
+      "sha256": "948b7bc25bad04a3f52dc8666491849b7f8c092859ee2141a37b96fdde9691c3"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 3365,
+      "sha256": "47e7e831a18af572694197fa718a05b74e99d272a99d4a1d5d3a2081538225cd"
+    }
+  ],
+  "note": "Index excludes itself; direct native-source-manifest-index is metadata only; complete payload is in the verified ZIP."
+}

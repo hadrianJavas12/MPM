@@ -305,3 +305,15 @@ and11+3 Python controls/actual frozen variant review are complete. The separate
 full-study document preregisters6s/61states/SRF1.6 and unchanged nonmaterial
 inputs. Freeze launch evidence and run once after checkpoint; no new solver
 or verified slide yet. Same-factor h0.5 confirmation remains conditional.
+
+## First full optional run active
+
+Native source35427376 starts `srf1p6-composite-001` on26October00:29:14 WIB,
+one-hour wall deadline01:29:14 WIB. Full6s/61states/SRF1.6; all nonmaterial
+inputs stay fixed and the extra volumetric flow remains explicit. Root verifies
+the pre-launch/captured case/config,287 sources/DLL and273 shared numerical
+files, plus ONE exact-clock four-process parent proof. Launch packet35indexed/
+36Git blobs/288ZIP members/287sources is verified; capture0.5s is incomplete.
+One quiet15-minute monitor continues. No full result, slide or scientific PASS
+yet; do not repeat closed gates or poll while healthy. Preserve all failure
+evidence and use prepared analysis bytes once actual native execution ends.

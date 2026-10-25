@@ -2,6 +2,45 @@
 
 **Operational checkpoint: 2026-10-26, Asia/Jakarta. Read this first.**
 
+## ACTIVE: first full unnotched composite-apex SRF1.6 trial
+
+`output/mc-composite-apex-2026-10-26/srf1p6-composite-001` starts
+**26 October00:29:14.8395097 WIB**, native source
+`354273763ad43f3efc48163c7d2d245d977d3402`. One-hour wall deadline
+**01:29:14.8395097 WIB**, not an ETA. Worker13752 / wrapper13316 / cmd17084 /
+SBCL51756, Session11. ONE actual Process/CIM creation-clock/parent proof is
+stored and verified. No process re-query is needed while status remains healthy.
+
+Full6s/61states/880MPs/SRF1.6; same nonmaterial inputs as strict1.6, explicitly
+different optional volumetric apex flow. No notch/driver/weak seed/reset or
+further weakening. Root launch proof verifies all287 actual frozen sources,
+DLL,273 identical shared numerical files versus the closed native gate and
+exact full configuration except its four declared tiny-gate time/frame/cap
+overrides. Case/contract/analysis/plan were frozen BEFORE launch at the committed
+gate checkpoint. Initial preparation's LF/CRLF check failed before any stage or
+launch; retained fix binds normalized Git content separately from exact runtime
+bytes. Neither the failed helper nor its failure evidence was discarded.
+
+Launch packet `docs/evidence/unnotched-gravity-2026-10-26/srf1p6-composite-001-launch`
+is root verified: 35 indexed artifacts / 36 Git blobs / one ZIP / 288 members /
+287 archived and287 actual source files. Captured state0.5s/645updates/six saved
+states, gravity ramp, incomplete; this is launch proof only, not a slide result.
+
+NEXT: one quiet15-minute automation checks status/manifest/ONEstdout tail. If
+healthy, end without active polling, duplicate solver or test repeats. Wrapper
+does NOT auto audit/render. Terminal: read actual native/worker exit+completion;
+run ONE review from the prepared analysis/contract bytes (exact command in the
+automation), inspect actual PNG/video and archive source/raw/runtime/media.
+Use a fresh review directory; analysis/media repairs use saved data. Compare
+aligned0–1.7s strict prefix once, without interpolation/tolerance changes.
+Native completion/local yield/colour alone are not verified sliding. Confirm
+any valid coherent motion at the SAME factor/model on h0.5. If it settles or
+fails, preserve negative evidence and diagnose; do not resume SRF2.0 blindly.
+
+All gates below are CLOSED historical checkpoints. Their old WIP/NOT_RUN notes
+describe earlier snapshots, not instructions to repeat work. Full source remains
+35427376 even when later documentation/evidence commits move branch HEAD.
+
 ## Latest 2026-10-26: bounded MPM and variant review close; no full run yet
 
 All six targeted scenario groups are now closed across preserved attempts:

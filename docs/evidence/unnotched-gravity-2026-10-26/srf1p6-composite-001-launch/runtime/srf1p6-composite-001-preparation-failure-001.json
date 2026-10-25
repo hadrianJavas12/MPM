@@ -1,0 +1,9 @@
+{
+  "status": "FAILED_PREPARATION_BEFORE_STAGE",
+  "sourceHead": "354273763ad43f3efc48163c7d2d245d977d3402",
+  "error": "Pre-launch source differs from archive checkpoint: scripts/plot_m5_cliff_comparison.py",
+  "diagnosis": "Clean worktree text has CRLF while Git canonical text blob has LF; require only line-ending equivalence plus normalized Git blob identity, retaining exact executed worktree bytes",
+  "nativeStarted": false,
+  "processQuery": false,
+  "recordedUtc": "2026-10-25T17:27:15.3817526Z"
+}

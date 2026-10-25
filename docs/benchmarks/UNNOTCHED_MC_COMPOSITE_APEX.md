@@ -3,6 +3,13 @@
 Prepared 2026-10-26 on `codex/unnotched-mc-composite-apex`. This is a separate
 material experiment, with no verified landslide or scientific calibration yet.
 
+The first full trial starts **26 October00:29:14 WIB**, native source35427376,
+one-hour wall deadline01:29:14 WIB. It is RUNNING at this checkpoint. The
+[launch packet](../evidence/unnotched-gravity-2026-10-26/srf1p6-composite-001-launch/README.md)
+verifies actual identities,287 native sources/DLL and273 unchanged shared
+numerical files against the closed gate, with the full planned configuration.
+Captured0.5s is incomplete evidence; no physical result is inferred yet.
+
 The strict SRF1.6 trial stopped at a tensile principal state outside the
 closure available to its zero-dilation shear flow. Its actual input/replay and
 negative evidence remain in [the gravity benchmark](UNNOTCHED_MC_GRAVITY.md).
