@@ -1,0 +1,111 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9"
+    },
+    {
+      "path": "adjacent/response-ladder-inputs-001-exit.json",
+      "bytes": 135,
+      "sha256": "b53e6e7759e3bc09eafd4f5eb4025e1db8a634904c63c436eb438e7e190bcc95"
+    },
+    {
+      "path": "adjacent/response-ladder-inputs-001.log",
+      "bytes": 154,
+      "sha256": "1f7ae5ce0d623071cbdcf1f1c57d05ab1386ae3924041f78e908a966974319f0"
+    },
+    {
+      "path": "archive-member-verification.json",
+      "bytes": 53081,
+      "sha256": "a618e7c7721c4e866a39aff6defb3c7c37dcd655ad82ef8d6a411eb7222c41ec"
+    },
+    {
+      "path": "executed-pack-copy-helpers.py",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0"
+    },
+    {
+      "path": "executed-pack-script.py",
+      "bytes": 8070,
+      "sha256": "28a1e647e40f4503c72d8c6771856af34e8d357f07fd647e71b9dfa467175293"
+    },
+    {
+      "path": "executed-source-native-input-and-runtime.zip",
+      "bytes": 1289913,
+      "sha256": "dddcb75047d320377b43d6bac0df39b747a3ddc8330923be196368cb7f36b37b"
+    },
+    {
+      "path": "native-command.json",
+      "bytes": 359,
+      "sha256": "8e9009065541b6c9fa3244ba6876b937ab6499523fac7cc1fd68ae10a557ab96"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1416,
+      "sha256": "8ce9c6e8ede2b7d1a131f298abab8194beb04d04c745b39af96bf127fd08c246"
+    },
+    {
+      "path": "result.json",
+      "bytes": 1151,
+      "sha256": "b7627a676b391771bc60875b5299e94593df48040ee4668947259a61e4a8b658"
+    },
+    {
+      "path": "source/inputs/cases/benchmarks/gravity-slope-mc-srf-1p4.lisp",
+      "bytes": 1916,
+      "sha256": "994c81df23ea13bcfb38fe8121946c215628fa655cb98181db6bc48e0b9ea98b"
+    },
+    {
+      "path": "source/inputs/cases/benchmarks/gravity-slope-mc-srf-1p6.lisp",
+      "bytes": 1916,
+      "sha256": "9969aee9904007edaa57e1806811aef20097f1a3827c4f475609c410b3c35f6e"
+    },
+    {
+      "path": "source/inputs/cases/benchmarks/gravity-slope-mc-srf-2.lisp",
+      "bytes": 1914,
+      "sha256": "b5d54fc747ef608eacbc1595012413ab0282f2c62069ecc3cb211db121120510"
+    },
+    {
+      "path": "source/inputs/research/references/unnotched-mc-ssr/response-ladder-audit-contract.json",
+      "bytes": 4890,
+      "sha256": "a1745feefed39d1be7568fcb0ff2a8f979aa14338f9cb9fef72cb190a739e47e"
+    },
+    {
+      "path": "source/inputs/research/references/unnotched-mc-ssr/response-ladder-contract.json",
+      "bytes": 3763,
+      "sha256": "5ef854b8a72f18cafbb106f4d3c04474823cb371ee2ec8b37f881ff71895d788"
+    },
+    {
+      "path": "source/source-manifest.json",
+      "bytes": 59718,
+      "sha256": "75a16db521df4731d2dbf77f661ce4d39010e0a9fc1bd3a52a608c3273403044"
+    },
+    {
+      "path": "source-proof-after.json",
+      "bytes": 38051,
+      "sha256": "2548104de65329d81af106dd05914324eb2eb79210eb17a59acab5b10f1aeced"
+    },
+    {
+      "path": "source-proof-before.json",
+      "bytes": 38051,
+      "sha256": "2548104de65329d81af106dd05914324eb2eb79210eb17a59acab5b10f1aeced"
+    },
+    {
+      "path": "source-provenance-before.json",
+      "bytes": 681654,
+      "sha256": "7bed980804885fd074d2b263bd0dd9b4816678df83c7c3214b4e8bbb7c6d92fc"
+    },
+    {
+      "path": "source-provenance.json",
+      "bytes": 681654,
+      "sha256": "7bed980804885fd074d2b263bd0dd9b4816678df83c7c3214b4e8bbb7c6d92fc"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 1213,
+      "sha256": "59157d6d489b0d052618a898d9111fb279fef2868f805d595e8c5b40007d0d34"
+    }
+  ],
+  "note": "Index excludes itself; * -text preserves exact raw/source bytes for Git blob verification"
+}

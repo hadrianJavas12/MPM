@@ -196,3 +196,10 @@ soil collapse or a factor-of-safety estimate. Geometry, boundaries,6s/ramp2s,
 solver and metre observer remain fixed. Native input gates/full runs are
 pending. See `response-ladder-contract.json` and the post-refinement design note
 linked from the benchmark guide. Actual unnotched sliding remains the goal.
+
+The first response input gate closes3 new groups/exit0,three native constructors
+and zero material/MPM updates.287 frozen source/input hashes and actual DLL
+match; cases differ only literal SRF and actual config/components onlySRF/c/phi.
+Input packet21indexed/295ZIPmembers/root22Gitblobs is retained, including the
+honestly labelled after-execution command transcription. No full response run
+yet; the next authorized run is ONLY1.6 after this checkpoint is pushed.

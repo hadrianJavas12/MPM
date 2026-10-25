@@ -1,0 +1,31 @@
+{
+  "schema": "cl-mpm.response-ladder.inputs.evidence.v1",
+  "createdUtc": "2026-10-25T10:10:44.710279+00:00",
+  "nativeExit": 0,
+  "passedGroups": [
+    "preregistered-inputs-and-literal-only-change",
+    "actual-config-and-component-differences",
+    "native-constructor-law-values-with-zero-updates"
+  ],
+  "actualFrozenSources": 287,
+  "allOriginalSourceBeforeAfterCurrentBytesMatched": true,
+  "nativeBackend": {
+    "modulePath": "D:/MPM/output/unnotched-gravity-2026-10-25/response-ladder-inputs-001/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  },
+  "constructedParticles": 3,
+  "constitutiveUpdates": 0,
+  "physicalUpdatesExecuted": 0,
+  "onlyExecutableDifference": "Literal SRF1.4->1.6 or2.0; all remaining case bytes identical",
+  "onlyCompiledConfigDifferences": [
+    "strengthReductionFactor",
+    "cohesionPa",
+    "frictionRad"
+  ],
+  "screeningStatus": "NOT_RUN",
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "operations": "Copy/hash/ZIP/CRC/decoded-byte verification only; no input gate or numerical work repeated"
+}

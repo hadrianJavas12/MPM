@@ -865,3 +865,13 @@ The new finite SSR response protocol caps screening at1.6/2.0 and confirms the
 same first positive factor on h0.5; input gates/full runs remain pending. New
 factors are disclosed assumptions, no FoS/paper reproduction claim. Raw/private
 settings and negative evidence remain intact.
+
+## [2026-10-25] ingest | Finite SSR response input gate closes
+
+[[unnotched-mc-gravity]] records FIRST Windows3newgroupsPASS/exit0,three native
+constructors/zero material and MPM updates. Both executable cases only change
+the SRF literal; compiled configuration/components onlySRF/c/phi.287before/
+after/current source hashes and actualDLL match. Packet21indexed/295members/
+root22Gitblobs preserves exact test/runtime/exit and after-execution command
+transcription limitation. No full response run or old test repeats. Next is
+the preregistered1.6 screen after commit/push, not an uncontrolled strength search.

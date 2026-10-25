@@ -427,3 +427,24 @@ disclosed experimental assumptions, not paper values or a factor-of-safety
 claim. Common metre thresholds,6s/ramp2s,geometry/material form/BC/solver remain.
 Stop on material/integrity failure or unsuccessful planned factors; preserve
 negative evidence and diagnose. New input controls precede any full run.
+
+The first Windows input-only gate now passes3 new groups/exit0: literal-only
+case changes and frozen protocol; compiled config/component changes restricted
+to SRF/c/phi; three native particle constructors with actual perfect-Cauchy
+law values. SRF1.6 uses c6250Pa and phi0.22367501236rad; SRF2 uses c5000Pa and
+phi0.18001508843rad, both psi0. No material integration or MPM updates occur.
+All287 source/input hashes and actual DLL match before/after/current. The
+[input evidence](../evidence/unnotched-gravity-2026-10-25/response-ladder-inputs/README.md)
+retains21indexed artifacts/295ZIPmembers/root22Gitblobs. Invocation transcription
+was saved after execution and is labelled; no full run or old tests repeated.
+
+After this input checkpoint is pushed, launch ONLY the first screen:
+
+```powershell
+.\scripts\start-gravity-slope.ps1 -Case cases/benchmarks/gravity-slope-mc-srf-1p6.lisp -OutputDirectory output/unnotched-gravity-2026-10-25/srf1p6-001 -MaxWallHours 1
+```
+
+The second factor is conditional on the first integrity-valid negative result.
+Use `response-ladder-audit-contract.json` for the h1 saved-data audit, freezing
+reviewer/reader/contract before execution. Do not apply the old1.0/1.4 contract
+to a new factor or interpret input-only PASS as a dynamic result.

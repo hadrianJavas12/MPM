@@ -1,0 +1,7 @@
+# Finite SSR response ladder: native input gate
+
+Three NEW input-only groups pass Windows native exit0. All287project/native/input files, including original SRF1.4 case, new SRF1.6/2.0 cases and both preregistered contracts, were copied before project loading. Recorded before/after/current frozen hashes and actual mapped DLL proof match. New executable case bytes differ only at the one visible SRF literal; compiled configurations differ only in SRF/derived cohesion/friction. Material class/perfect Cauchy law, elasticity/density/dilation, geometry/BCs/grid/loading/ramp/solver/defaults remain unchanged.
+
+Three actual native particle constructors verify c=10000/SRF, phi=atan(tan20deg/SRF), psi0 and unchanged class/law with zero initial state. Constitutive and MPM calls are trapped: both counters remain0. No old passed test suite, tiny solver, full screen, rendering or scientific validation is repeated or claimed. The declared finite study screens1.6 then2.0, caps at2.0 and stops for integrity-valid coherent motion before same-factor fine confirmation. This input gate does not execute or prove that future response.
+
+Original source/raw/provenance/log/exit files remain in output/. The ZIP is CRC-tested and every decoded member matches its original byte for byte. Byte-preserving attributes and artifact index support staged Git blob verification; packaging itself repeats no native/material/MPM work.

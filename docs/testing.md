@@ -1,5 +1,15 @@
 # Native framework and Studio verification
 
+## Finite SSR response inputs, 2026-10-25
+
+FIRST Windows input-only gate passes3 new groups/exit0: literal-only SRF delta,
+actual compiled config/components limited to SRF/c/phi, and actual native
+constructors/law values. Three particles,zero material or MPM updates; no new
+constitutive integration/long-run claim.287 copied source/input hashes and
+actual DLL match before/after/current. Packet21indexed artifacts/295ZIPmembers/
+root22Gitblobs verified. Command transcription is explicitly after execution;
+actual frozen test/runtime/exit proof is retained. No old tests/Node repeated.
+
 ## Full same-strength refinement closes, 2026-10-25
 
 Native/worker exit0:6s61states3520MP15471updates on source1a9f29a. FIRST frozen

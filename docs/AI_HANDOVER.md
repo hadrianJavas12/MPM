@@ -38,8 +38,16 @@ no automatic further weakening. Confirm THAT SAME factor at h0.5 after review
 and input/integration gates. These new factors are disclosed experimental
 assumptions, not paper values or a FoS bracket. Only literal SRF and derived
 c/phi may change; physical geometry/BC/ramp/duration/observer and algorithms stay.
-Agent gravity_slope_implementation owns new input-only cases/gate/evidence;
-inspect actual status before duplicating. No full ladder run yet. Goal remains
+New INPUT-ONLY gate response-ladder-inputs-001 is CLOSED: native exit0,3newgroups
+PASS,3native particle constructors,0material/MPM updates.287frozen sources/inputs
+before/after/current and mappedDLL match; exact case bytes differ only literal
+SRF, actual config/components only SRF/c/phi. Packet response-ladder-inputs has
+21indexed artifacts/295ZIPmembers; root verifies22Gitblobs/all287 actual sources.
+Invocation transcription was saved AFTER execution and is labelled accordingly;
+actual test/source/runtime/exit proof is retained. Do NOT repeat this gate.
+Cases gravity-slope-mc-srf-1p6.lisp and gravity-slope-mc-srf-2.lisp are ready.
+Commit/push this input checkpoint, then launch ONLY1.6 into fresh srf1p6-001
+with1h wall budget. No full ladder run yet at this checkpoint. Goal remains
 actual unnotched sliding; preserve every negative result and numerical failure.
 
 ## Historical launch: same-strength h0.5 full run, source1a9f29a
