@@ -4,6 +4,25 @@
 
 ## Source phase prepared on 2026-10-26: optional MPM/scenario integration
 
+Source checkpoint `fd73947` is pushed. FIRST framework-output-001 exits1:
+optional loading/unique fields group PASS, then the separate native apex call
+is accepted but its test export uses the integer-only bootstrap JSON writer
+on a float. This is a harness serializer failure, not material rejection:
+one native point call accepted, zero MPM updates. Source/log/result/proofs
+remain under `output/mc-composite-apex-2026-10-26/framework-output-001`.
+Implementation agent repairs test-only float serialization and a separately
+noticed four-argument helper call, adding selection to skip the passed group.
+No native rerun is authorized until source review/commit.
+
+Reviewer source review found pre-execution blockers: wrapper copy did not
+execute its own frozen bytes, duplicate source keys mixed path separators,
+and conventions/input angle needed exact binding. Root source fixes add a
+frozen child process, explicit copied reader/base imports, retained stage/media
+failures, normalized keys and exact metadata/slope/integer/bounded scope checks.
+Python AST passes; tests and real saved-state analysis are still NOT_RUN.
+The variant contract adds exact convention strings; the initial hash below
+records the prior source checkpoint, not the final executed contract identity.
+
 Checkpoint `3bcd1da` pushed all point/default evidence below. Subsequent source
 adds an exact-class gravity validator hook, optional variant metadata and a
 new explicit SRF1.6 case; default numerical build/run bodies are reused. The

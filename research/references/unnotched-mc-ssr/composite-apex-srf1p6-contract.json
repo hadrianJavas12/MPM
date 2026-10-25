@@ -154,5 +154,9 @@
     "histories": "VTK mc-plastic-volume/work match CSV plastic_volume/plastic_work_pa, initially zero",
     "stress": "Active last return has hydrostatic Kirchhoff stress at J*c*cot(phi) within existing native stress tolerance",
     "limits": "Sparse saved data cannot reconstruct unsaved trial compliance or closed energy balance; point/native controls cover narrower identities"
+  },
+  "variantMetadata": {
+    "apexConvention": "Explicit additional gA=p flow at pA=J*c*cot(phi); constant perfect Cauchy strength and regular psi0. Positive apex plastic volume changes the constitutive response; not strict MC at all states or a fracture model.",
+    "apexCapBandPolicy": "Preserve the old elastic screen. Analytic apex only when mean excess exceeds the EXISTING stressTolerance/(2*sin(phi)); equality and the entire remaining band delegate unchanged strict projection, including rejection."
   }
 }
