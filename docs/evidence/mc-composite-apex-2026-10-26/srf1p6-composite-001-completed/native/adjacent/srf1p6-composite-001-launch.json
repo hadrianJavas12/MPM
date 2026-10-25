@@ -1,0 +1,27 @@
+{
+  "scenario": "gravity-slope",
+  "status": "STARTING",
+  "startedUtc": "2026-10-25T17:29:14.8395097Z",
+  "output": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-001",
+  "case": "D:\\MPM\\cases\\benchmarks\\gravity-slope-mc-composite-apex-srf-1p6.lisp",
+  "sourceCommit": "354273763ad43f3efc48163c7d2d245d977d3402",
+  "maxWallHours": 1.0,
+  "wallDeadlineUtc": "2026-10-25T18:29:14.8395097Z",
+  "caseSha256": "DAE3BB89D1CDB941BB653D8CB3E2290E81236F488415C3F61E5E5F94CA0B768C",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "processIdentity": {
+    "wrapper": {
+      "pid": 13316,
+      "name": "pwsh",
+      "sessionId": 11,
+      "createdUtc": "2026-10-25T17:29:14.2974052Z"
+    },
+    "sbcl": null,
+    "nativeCommand": null
+  },
+  "nativeExitCode": null,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {}
+}

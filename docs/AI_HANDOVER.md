@@ -2,7 +2,65 @@
 
 **Operational checkpoint: 2026-10-26, Asia/Jakarta. Read this first.**
 
-## ACTIVE: first full unnotched composite-apex SRF1.6 trial
+## Latest: full composite-apex SRF1.6 completed; no sustained landslide
+
+Native `output/mc-composite-apex-2026-10-26/srf1p6-composite-001`, source
+`354273763ad43f3efc48163c7d2d245d977d3402`, completes **26 October00:44:59 WIB**:
+native/worker exit0,6s/61states/880MPs/7740updates. **No solver is active.** Do
+not query obsolete PIDs or repeat any closed gate, run, review, render or replay.
+Live main remains9e97e001; work stays on `codex/unnotched-mc-composite-apex`.
+
+The FIRST actual frozen saved review is `variant-review-002`, exit0,
+integrityPASS:287 original sources/DLL,61VTK/53680particle rows, IDs/mass/F/J,
+six-plane current-state yield, law and apex work/volume checks. Invocation001
+fails before Python opens the intended script because PowerShell concatenates
+its argument array incorrectly; command/log/exit2 remain. It is a caller failure,
+not a native or numerical audit failure. Do not repeat the successful002 review.
+
+Root inspects its actual scale1 PNG: localized lower-face/toe plastic history,
+no separated upper mass, transient motion followed by settling. Upper-cohort
+final centroid displacement is (+63.987,-36.197)mm; the post2s increment is
+(+44.893,-21.262)mm. Final cohort vx=-0.00033955m/s. Both fixed whole/hold
+connected-motion tests and toe-runout gate are NOT_DETECTED. Native completion
+and integrity pass; **landslide and scientific validation remain false**.
+Last native max displacement0.18279m is an extremum, not coherent slide proof.
+Minimum particle-domain boundary margin -8.525micrometres limits containment claims;
+no sampled centre exits or floor penetrations are found.
+
+Existing `variant-review-002/gravity-slope-actual.mp4` represents61 actual
+states/6physical seconds at4fps/15.25s playback, scale1/no interpolation,
+recorded full-decode0. Root review is `root-spatial-review.md`. Last apex q is
+the final accepted return, not a sparse-frame cumulative volume increment.
+
+ONE frozen `prefix-comparison-001` exits0: exact0–1.7s/18states,18 history and
+15840particle rows,38 common VTK fields/positions/IDs all byte/string/numeric/
+IEEE-identical in their respective comparisons. Full VTK bytes differ because
+of the two declared additional apex fields. No extrapolation beyond the strict
+run's last saved state. All evidence and failures are retained in the completed
+[packet](evidence/mc-composite-apex-2026-10-26/srf1p6-composite-001-completed/README.md).
+Root verifies58 indexed artifacts/59 staged Git blobs/four ZIPs/509 members,
+287 archived and287 original frozen files. Root spatial review and saved-result
+diagnosis are in the native archive; every caller failure remains intact.
+
+The goal remains actual unnotched sliding. Diagnose saved mechanism, fixed-base/
+adapted foundation and resolution before another expensive study. Do not extend
+duration or resume SRF2.0 automatically. Any justified same-factor/model h0.5
+run is a resolution study, not confirmation of an already detected slide;
+preregister the common physical-metre observer and space/time coupling. Keep
+the single automation at5hours while no solver is active;15minutes only for a
+new justified bounded full run. Private settings/raw sources remain untouched.
+
+The[post-run diagnosis](../research/notes/unnotched-landslide-2026-10-24/COMPOSITE_SRF1P6_POST_RUN.md)
+selects a cheaper **basal interpolation/kinematic representation gate first**.
+Construct h1/h0.5 at the same material/factor; evaluate actual GIMP weights and
+gradients against fixed basal nodes and the retained formal arc, with independent
+constant/affine controls, zero MPM/material calls. No new static search or
+change to boundary/strength/psi is allowed. Freeze protocol/code before its
+first execution; record the prescribed test field as kinematics, never simulated
+motion or FoS. The old arc's negative normals still prevent a physical FoS claim.
+This gate is NOT_RUN at this completed-result checkpoint.
+
+## Historical launch: first full unnotched composite-apex SRF1.6 trial
 
 `output/mc-composite-apex-2026-10-26/srf1p6-composite-001` starts
 **26 October00:29:14.8395097 WIB**, native source

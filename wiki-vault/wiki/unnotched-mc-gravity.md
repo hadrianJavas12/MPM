@@ -3,7 +3,7 @@ title: Unnotched MC gravity scenario and native gates
 type: synthesis
 tags: [mpm, unnotched, gravity, strength-reduction, windows-native]
 sources: [docs/benchmarks/UNNOTCHED_MC_GRAVITY.md, docs/benchmarks/UNNOTCHED_STATIC_DIAGNOSTIC.md, research/references/unnotched-mc-ssr/contract.json, docs/testing.md]
-updated: 2026-10-25
+updated: 2026-10-26
 ---
 
 # Unnotched MC gravity scenario and native gates
@@ -314,6 +314,44 @@ inputs stay fixed and the extra volumetric flow remains explicit. Root verifies
 the pre-launch/captured case/config,287 sources/DLL and273 shared numerical
 files, plus ONE exact-clock four-process parent proof. Launch packet35indexed/
 36Git blobs/288ZIP members/287sources is verified; capture0.5s is incomplete.
-One quiet15-minute monitor continues. No full result, slide or scientific PASS
-yet; do not repeat closed gates or poll while healthy. Preserve all failure
-evidence and use prepared analysis bytes once actual native execution ends.
+At that launch checkpoint one quiet15-minute monitor continues. The result
+below supersedes this historical active status; do not repeat closed work.
+
+## Full composite SRF1.6: completed, transient deformation settles
+
+Native source35427376 completes26October00:44:59WIB, native/worker0,
+6s/61states/880MPs/7740updates. FIRST actual frozen review002 exits0 with
+integrityPASS:287 sources/DLL and61VTK/53680particle rows, F/J/mass/IDs/law,
+six-plane yield and apex work/volume. Invocation001 fails before Python opens
+the script because of PowerShell argument concatenation; negative caller
+evidence is preserved, not called a native/material failure.
+
+Root views the real scale1 summary. Plasticity localizes near lower face/toe;
+upper-cohort final displacement is(+63.987,-36.197)mm and2–6s increment
+(+44.893,-21.262)mm, followed by a plateau. Final mean vx=-0.00033955m/s.
+Whole/hold connected-motion and toe-runout tests are NOT_DETECTED. Local yield
+occurs but no sustained global landslide is verified. The0.18279m maximum
+displacement and colour are not sufficient evidence. Minimum half-support
+margin-8.525micrometres limits containment claims; no sampled centre exits or
+floor penetrations. The declared volumetric apex extension is still not
+unchanged strictMC, fracture or exact paper physics.
+
+Existing61-state/4fps/15.25s video represents6physical seconds, scale1/no
+interpolation/full-decode0. ONE frozen prefix comparison passes exact0–1.7s:
+18history/15840particle rows and positions/IDs/38commonVTK fields all match.
+Two declared extra apex fields explain full VTK byte differences. Full
+source/raw/runtime/review/media/prefix and caller failure are retained in
+`docs/evidence/mc-composite-apex-2026-10-26/srf1p6-composite-001-completed`.
+Root verifies58 indexed/59 Git blobs/509 members/287 archived and287 actual
+sources. Root spatial review and saved-result diagnosis are included.
+
+The goal of [[unnotched-landslide-method-selection|unnotched failure]] remains
+open. Diagnose fixed-base/adapted-foundation and resolution before a new
+expensive study; no automatic duration extension/SRF2.0. A justified same-factor
+h0.5 study tests resolution with common metre thresholds and coupled space/time
+refinement, rather than confirming an already observed slide. Idle automation
+returns to5hours; no old native/review/render/gate repetition.
+The immediate next gate is cheaper: actual basal GIMP weight/gradient and
+prescribed-field representation at h1/h0.5, independent constant/affine controls,
+zero material/MPM calls. Freeze code/protocol before execution. It is NOT_RUN;
+the field is a diagnostic input, not simulated motion or a physical FoS result.

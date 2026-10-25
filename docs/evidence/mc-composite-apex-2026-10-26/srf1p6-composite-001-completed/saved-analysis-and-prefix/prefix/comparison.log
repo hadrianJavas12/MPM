@@ -1,0 +1,21 @@
+{
+  "status": "PASS_EXACT_COMMON_PREFIX",
+  "vtkFrames": 18,
+  "csv": {
+    "history.csv": {
+      "commonActualTimeIdRows": 18,
+      "prefixRawBytesIdentical": true,
+      "stringDifferences": 0,
+      "numericFloatDifferences": 0,
+      "ieeeFloatBitDifferences": 0
+    },
+    "particles.csv": {
+      "commonActualTimeIdRows": 15840,
+      "prefixRawBytesIdentical": true,
+      "stringDifferences": 0,
+      "numericFloatDifferences": 0,
+      "ieeeFloatBitDifferences": 0
+    }
+  },
+  "error": null
+}

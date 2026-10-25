@@ -969,3 +969,22 @@ the launch packet; captured0.5s remains incomplete, not physical success.
 One15-minute quiet monitor replaces the idle5-hour continuation. No closed
 tests/solver/replay/audit/render repeated. All preparation failures and raw
 bytes/settings are retained. Actual sliding is still the open objective.
+
+## [2026-10-26] ingest | Full composite trial completes without sustained sliding
+
+[[unnotched-mc-gravity]] records native/worker0 at00:44:59WIB,6s/61states/
+880MPs/7740updates. FIRST actual frozen review002 passes saved integrity with
+287sources/DLL and53680particle rows; caller001 fails before script opening
+and stays preserved. Root scale1 inspection and unchanged whole/hold observers
+find transient plastic deformation followed by settling, no coherent landslide
+or toe-runout. Upper-cohort final centroid(+63.987,-36.197)mm. Existing actual
+61-state video remains4fps/15.25s, no interpolation. ONE exact18-state prefix
+comparison passes history/15840particle rows/commonVTK fields; two additional
+apex fields are explicit. Completion evidence stays separate from scientific
+validation. Continue saved-mechanism/boundary/resolution diagnosis before a
+new study; no blind extension or weakening, no closed-run/gate repetition.
+Root58indexed/59Git blobs/four ZIPs/509members/287archived+287actual source
+verification passes. Root spatial review and diagnosis are retained. Next
+selection is a cheap frozen basal GIMP/kinematic representation gate, currently
+NOT_RUN, with independent elementary controls and zero material/MPM calls;
+no new static search or physical boundary/strength change is authorized by it.

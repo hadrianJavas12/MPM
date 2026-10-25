@@ -1,0 +1,15 @@
+{
+  "executable": "D:\\MPM\\toolchain\\analysis-venv\\Scripts\\python.exe",
+  "arguments": [
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-001\\prefix-comparison-001\\analysis-support\\compare-gravity-composite-prefix.py",
+    "--reference-dir",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001",
+    "--run-dir",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-001",
+    "--output-dir",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-001\\prefix-comparison-001"
+  ],
+  "cwd": "D:\\MPM",
+  "startedUtc": "2026-10-25T22:54:11.5443464Z",
+  "scope": "First and only exact saved prefix comparison; zero native, replay, full audit or render"
+}

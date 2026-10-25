@@ -1,0 +1,15 @@
+{
+  "argv": [
+    ".tmp/pack-full-gravity-composite.py",
+    "--review-dir",
+    "output/mc-composite-apex-2026-10-26/srf1p6-composite-001/variant-review-002",
+    "--prefix-dir",
+    "output/mc-composite-apex-2026-10-26/srf1p6-composite-001/prefix-comparison-001",
+    "--prefix-result",
+    "output/mc-composite-apex-2026-10-26/srf1p6-composite-001/prefix-comparison-001/result.json",
+    "--prefix-exit",
+    "output/mc-composite-apex-2026-10-26/srf1p6-composite-001/prefix-comparison-001/comparison-exit.json"
+  ],
+  "createdUtc": "2026-10-25T22:55:49.583881+00:00",
+  "scope": "Copy/hash/archive collection only; no solver/test/replay/audit/render or process query"
+}

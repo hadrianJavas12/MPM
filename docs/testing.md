@@ -1,9 +1,33 @@
 # Native framework and Studio verification
 
-## First full composite-apex trial launched, 2026-10-26
+## Full composite-apex result, 2026-10-26
+
+Native source35427376 completes6s/61states/880MPs/7740updates at00:44:59WIB,
+native/worker0. FIRST actual frozen review002 exits0:287 sources/DLL and
+61VTK/53680particle rows pass saved integrity, law, F/J/mass/yield and apex
+work/volume checks. Invocation001's PowerShell argument failure occurs before
+the intended Python script opens; its command/log/exit2 remain. No numerical
+audit or solver is repeated. Root inspects the actual scale1 summary PNG;
+existing61-state/4fps video decodes0,15.25s playback for6physical seconds.
+
+ONE exact0–1.7s prefix comparison passes18 history/15840particle rows and
+positions/IDs/38 common VTK fields, with zero string/numeric/IEEE differences.
+Two added apex fields explain full VTK byte differences. See the[completion
+packet](evidence/mc-composite-apex-2026-10-26/srf1p6-composite-001-completed/README.md).
+Root verifies58 indexed/59 staged Git blobs/four ZIPs/509 members/287 archived
+and287 actual sources; indexed ignored media are explicitly Git-tracked.
+Both unchanged connected-motion windows and runout gate are NOT_DETECTED:
+transient upper-cohort motion settles. Native and saved-integrity completion
+are separate from landslide/scientific validation, both still false. No active
+solver or old PID polling; further studies need an explicit physical rationale.
+Next is a frozen basal GIMP/interpolation diagnostic with independent elementary
+controls and zero material/MPM calls, NOT_RUN at this checkpoint. See the
+[saved-result diagnosis](../research/notes/unnotched-landslide-2026-10-24/COMPOSITE_SRF1P6_POST_RUN.md).
+
+## Historical full composite-apex launch, 2026-10-26
 
 After all closed gates/evidence below, source35427376 starts one full6s/61-state
-SRF1.6 trial at00:29:14 WIB with one-hour wall budget. It is **RUNNING**, not a
+SRF1.6 trial at00:29:14 WIB with one-hour wall budget. At launch it is RUNNING, not a
 test/scientific/landslide PASS. Pre-launch case/contract/analysis snapshots,
 actual four-process creation/parent proof,287 native source/DLL copies and273
 shared numerical files matching the native gate are verified. Root verifies

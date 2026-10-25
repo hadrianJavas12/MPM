@@ -1,0 +1,16 @@
+{
+  "sourceHead": "5e87b015465b38c604ed1f1541b7a08a79bb754b",
+  "executable": "toolchain/analysis-venv/Scripts/python.exe",
+  "arguments": [
+    "output/mc-composite-apex-2026-10-26/srf1p6-composite-001-launch-preparation/analysis/review-gravity-composite-apex.py",
+    "--run-dir",
+    "output/mc-composite-apex-2026-10-26/srf1p6-composite-001",
+    "--contract",
+    "output/mc-composite-apex-2026-10-26/srf1p6-composite-001-launch-preparation/protocol/composite-apex-srf1p6-contract.json",
+    "--output-dir",
+    "output/mc-composite-apex-2026-10-26/srf1p6-composite-001/variant-review-002",
+    "--video"
+  ],
+  "startedUtc": "2026-10-25T17:48:50.1474079Z",
+  "scope": "FIRST actual saved full-state audit/render; preceding invocation failed before script open"
+}
