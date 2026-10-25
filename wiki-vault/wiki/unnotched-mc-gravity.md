@@ -139,3 +139,7 @@ also changes the current h-scaled observer. Preserve original results and
 preregister common physical-metre cutoffs/thresholds across both meshes; never
 use changed detection thresholds to manufacture a positive result. Identical
 dtScale with halvedh changes both space and time resolution.
+
+## Paired result closure and static gate
+
+Baseline completes native/worker0 at25Oct04:33:41WIB,6s/61states/7740updates; ONE review/render/source282/DLL audit passes. Maxu7.588638mm versus12.083373mm atSRF1.4; both settle, no motion/runout detected. ONE saved comparison aligns53680 time/ID rows. Baseline+pair46indexed artifacts/444ZIP members/282sources and47Gitblobs independently verified. No old audit/render repeated. New static-reference audit/contract preregisters bounded Bishop circles/slice refinement before results; report negative normals without clamp/physicalPASS. Static controls/search NOT_RUN; actual landslide goal unmet.

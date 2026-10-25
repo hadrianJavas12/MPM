@@ -1,0 +1,160 @@
+{
+  "schema": "cl-mpm.unnotched-gravity.baseline-prelaunch-comparison.v1",
+  "createdUtc": "2026-10-24T21:16:57.767358+00:00",
+  "scope": "Read/hash/static input comparison only; no Lisp compile, tests, projector or solver executed",
+  "branch": "codex/unnotched-gravity-benchmark",
+  "head": "8d8b544d4e79d31d76f6d94c1304b883ba431b4e",
+  "liveMain": {
+    "sha": "9e97e001c2eaf9be81c7b7e39e32fa87f2d6f64b",
+    "expectedUnchanged": "9e97e001c2eaf9be81c7b7e39e32fa87f2d6f64b",
+    "matches": true
+  },
+  "baselineCase": {
+    "path": "cases\\benchmarks\\gravity-slope-mc-srf-1.lisp",
+    "sha256": "538322b330614245db2ef0ab50ea5157c6e4674941e6442b60c502f24fce25b6",
+    "bytes": 1914
+  },
+  "reducedCase": {
+    "path": "cases\\benchmarks\\gravity-slope-mc-srf-1p4.lisp",
+    "sha256": "994c81df23ea13bcfb38fe8121946c215628fa655cb98181db6bc48e0b9ea98b",
+    "bytes": 1916
+  },
+  "completedNativeSourceCase": {
+    "path": "output\\unnotched-gravity-2026-10-25\\srf1p4-002\\source\\case.lisp",
+    "sha256": "994c81df23ea13bcfb38fe8121946c215628fa655cb98181db6bc48e0b9ea98b",
+    "bytes": 1916
+  },
+  "previousFrozenGateCases": [
+    {
+      "gate": "output/unnotched-gravity-2026-10-24/native-controls-001",
+      "case": "gravity-slope-mc-srf-1.lisp",
+      "byteIdentical": true,
+      "sha256": "538322b330614245db2ef0ab50ea5157c6e4674941e6442b60c502f24fce25b6"
+    },
+    {
+      "gate": "output/unnotched-gravity-2026-10-24/native-controls-001",
+      "case": "gravity-slope-mc-srf-1p4.lisp",
+      "byteIdentical": true,
+      "sha256": "994c81df23ea13bcfb38fe8121946c215628fa655cb98181db6bc48e0b9ea98b"
+    },
+    {
+      "gate": "output/unnotched-gravity-2026-10-24/native-controls-002",
+      "case": "gravity-slope-mc-srf-1.lisp",
+      "byteIdentical": true,
+      "sha256": "538322b330614245db2ef0ab50ea5157c6e4674941e6442b60c502f24fce25b6"
+    },
+    {
+      "gate": "output/unnotched-gravity-2026-10-24/native-controls-002",
+      "case": "gravity-slope-mc-srf-1p4.lisp",
+      "byteIdentical": true,
+      "sha256": "994c81df23ea13bcfb38fe8121946c215628fa655cb98181db6bc48e0b9ea98b"
+    },
+    {
+      "gate": "output/unnotched-gravity-2026-10-25/native-output-fixed-001",
+      "case": "gravity-slope-mc-srf-1.lisp",
+      "byteIdentical": true,
+      "sha256": "538322b330614245db2ef0ab50ea5157c6e4674941e6442b60c502f24fce25b6"
+    },
+    {
+      "gate": "output/unnotched-gravity-2026-10-25/native-output-fixed-001",
+      "case": "gravity-slope-mc-srf-1p4.lisp",
+      "byteIdentical": true,
+      "sha256": "994c81df23ea13bcfb38fe8121946c215628fa655cb98181db6bc48e0b9ea98b"
+    }
+  ],
+  "caseByteComparison": {
+    "identicalAfterOnlySRFBindingReplacement": true,
+    "onlyLiteralDifference": "(srf 1d0) versus (srf 1.4d0)",
+    "materialFormulaUnchanged": "c=10000/SRF; phi=atan(tan(20deg)/SRF); all other source bytes identical"
+  },
+  "completedRun": {
+    "directory": "output\\unnotched-gravity-2026-10-25\\srf1p4-002",
+    "complete": true,
+    "timeS": 6,
+    "updates": 7740,
+    "savedFrames": 61,
+    "scientificallyValidated": false,
+    "landslideVerified": false
+  },
+  "expectedBaselineConfigDifferences": [
+    {
+      "key": "strengthReductionFactor",
+      "completedSRF1p4": 1.4,
+      "expectedBaselineSRF1": 1.0
+    },
+    {
+      "key": "cohesionPa",
+      "completedSRF1p4": 7142.857142857143,
+      "expectedBaselineSRF1": 10000.0
+    },
+    {
+      "key": "frictionRad",
+      "completedSRF1p4": 0.25434814346473733,
+      "expectedBaselineSRF1": 0.3490658503988659
+    }
+  ],
+  "otherCompiledConfigFieldsUnchangedByIdenticalRecipeBytes": [
+    "domainWidth",
+    "domainHeight",
+    "duration",
+    "gravityRampDuration",
+    "gravity",
+    "referenceCohesionPa",
+    "referenceFrictionDeg",
+    "geometryProvenance",
+    "width",
+    "height",
+    "crestLength",
+    "slope",
+    "baseHeight",
+    "meshSize",
+    "mpsPerCell",
+    "workers",
+    "timeStepScale",
+    "frames",
+    "maxUpdates",
+    "damping",
+    "toeX",
+    "dilationRad",
+    "E",
+    "nu",
+    "density"
+  ],
+  "expectedBaselineConfiguration": {
+    "domainWidth": 80.0,
+    "domainHeight": 15.0,
+    "duration": 6.0,
+    "gravityRampDuration": 2.0,
+    "gravity": -9.80665,
+    "strengthReductionFactor": 1.0,
+    "referenceCohesionPa": 10000.0,
+    "referenceFrictionDeg": 20.0,
+    "geometryProvenance": "GL-D1-inspired adaptation; Xie Figure7 polygon not visually verified",
+    "width": 32.0,
+    "height": 10.0,
+    "crestLength": 12.0,
+    "slope": 26.56505117707799,
+    "baseHeight": 0.0,
+    "meshSize": 1.0,
+    "mpsPerCell": 2,
+    "workers": 1,
+    "timeStepScale": 0.2,
+    "frames": 61,
+    "maxUpdates": 60000,
+    "damping": 0.0,
+    "toeX": 32.0,
+    "cohesionPa": 10000.0,
+    "frictionRad": 0.3490658503988659,
+    "dilationRad": 0.0,
+    "E": 100000000.0,
+    "nu": 0.3,
+    "density": 2039.4324259558566
+  },
+  "baselineConfigurationScope": "Derived from identical executable input bytes and explicit SRF formulas; not a new compiled/native gate result",
+  "sameProductionSourceEntriesChecked": 267,
+  "productionSourceMismatchCount": 0,
+  "launchOverrides": [],
+  "rationale": "Previously predeclared SRF1 control paired with completed1.40 study; needed to compare actual gravity response under identical coarse geometry/ramp/numerics, not a parameter search or guarantee of stable/unstable bracket",
+  "recommendedCommand": "powershell -NoProfile -NonInteractive -File scripts/start-gravity-slope.ps1 -OutputDirectory output/unnotched-gravity-2026-10-25/srf1-001 -Case cases/benchmarks/gravity-slope-mc-srf-1.lisp -MaxWallHours 3",
+  "nextOutputIsFresh": true
+}

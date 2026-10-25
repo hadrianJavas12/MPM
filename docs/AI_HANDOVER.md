@@ -2,6 +2,34 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
+## Latest: paired runs COMPLETE; no solver active, no landslide detected
+
+Baseline `srf1-001` source8d8b544 finished native/worker0 at25Oct04:33:41WIB:
+6s/61states/880MPs/7740updates/53680rows. ONE saved review/render/source282/DLL
+verification PASS; root and agent inspected actual PNG. Maxu7.588638mm versus
+12.083373mm atSRF1.4. Both cohort trajectories settle after gravity ramp,
+both motion windows/runout NOT_DETECTED. Baseline finalKE.00420176J/m.
+Do not poll oldPIDs or rerun either solver/review/video/passed gate.
+
+ONE new `output/unnotched-gravity-2026-10-25/paired-review-001` comparison aligns
+53680 actual time/ID rows,initial geometry/mass/cohort identical,onlySRF/c/phi
+differ. Exact script saved BEFORE execution; both settle without coherent
+landslide. Baseline+paired packet `docs/evidence/unnotched-gravity-2026-10-25/srf1-001-completed`
+retains46 indexed artifacts/444 ZIP members/282 executed source entries; root
+verifies all hashes and47 staged Git blobs. No SRF1.4 audit/render repeated.
+
+NEXT: cheap independent static diagnostic BEFORE another expensive MPM run.
+`research/notes/unnotched-landslide-2026-10-24/static-reference-audit.md/.json`
+records official USACE/Bishop equations and negative-normal warning. Xie full
+foundation polygon remains unverified; our D1 polygon is an adaptation.
+`research/references/unnotched-mc-ssr/statics-contract.json` freezes circle
+families,200/400 slices,same strengths and geometry checks BEFORE results.
+Formal factors must report raw negative normals/boundary optima,without clamps,
+tension-crack assumption or physical/global-FoS PASS. Implementation/controls/
+search NOT_RUN here. No automatic SRF/geometry/duration tuning. Common physical
+observer required for any later mesh study. Automation5h while terminal; goal
+actual unnotched landslide remains unmet. Preserve all negative evidence.
+
 ## Current: SRF1.40 completed, integrity passes; no actual landslide
 
 `output/unnotched-gravity-2026-10-25/srf1p4-002`, source3ed36a3,

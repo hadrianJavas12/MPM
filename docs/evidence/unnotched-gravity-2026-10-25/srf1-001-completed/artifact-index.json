@@ -1,0 +1,236 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9"
+    },
+    {
+      "path": "archive-member-verification.json",
+      "bytes": 87031,
+      "sha256": "ee659c0a040f71f4c5a14c0f866a3739599698a629f3087482bee45a57fab246"
+    },
+    {
+      "path": "baseline-native-source-raw-and-runtime.zip",
+      "bytes": 18487294,
+      "sha256": "2e050c6c897966f21a59d18e429c4df85771aff345d080cd696d8878f78aa5c8"
+    },
+    {
+      "path": "baseline-saved-review-and-paired.zip",
+      "bytes": 11985435,
+      "sha256": "794b057967b51eb4edba04420ada4f28e09a673a1066d68b764f337f0dce6199"
+    },
+    {
+      "path": "executed-pack-copy-helpers.py",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0"
+    },
+    {
+      "path": "executed-pack-script.py",
+      "bytes": 12478,
+      "sha256": "80c4faaac9370592c142a9b612bface598b68c212c1aa2349a3ec5f7fca2a43c"
+    },
+    {
+      "path": "native/adjacent/srf1-001-launch-root-verification.json",
+      "bytes": 283,
+      "sha256": "b973b8f57b6f567828210dcc1b930e5a7ca6229721f7435c73906fe053c0c598"
+    },
+    {
+      "path": "native/adjacent/srf1-001-launch.json",
+      "bytes": 928,
+      "sha256": "c92da86e40bb02486178c8a183b35491f39be4be715786b0c1857efcdf3227d0"
+    },
+    {
+      "path": "native/adjacent/srf1-001-live-process-verification.json",
+      "bytes": 1331,
+      "sha256": "23f9652020a3cf28d12d3d03705748eb2af111794d720b0ea007322084d26ba8"
+    },
+    {
+      "path": "native/adjacent/srf1-001-status.json",
+      "bytes": 1462,
+      "sha256": "d5e9dd90d97801bf49eba827d5a642a689b377801136af218f60539b71f22046"
+    },
+    {
+      "path": "native/adjacent/srf1-001.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native/adjacent/srf1-001.stdout.log",
+      "bytes": 5348,
+      "sha256": "da778b716711ccb03b4f29e646a8eb599807ce109c3a32019dcc8fc019689f68"
+    },
+    {
+      "path": "native/detached/launch-proof.json",
+      "bytes": 1041,
+      "sha256": "48c8d53f608ef6b4f774687d1a092938ba9d8e9717622e415d5032e57824c4b8"
+    },
+    {
+      "path": "native/detached/launch-request.json",
+      "bytes": 1354,
+      "sha256": "0065df2fec9e4ae14b5f5fc916263cafc6128a2b4b035e7b01cb665181b0ed4a"
+    },
+    {
+      "path": "native/detached/launch-request.ps1",
+      "bytes": 2266,
+      "sha256": "def3267a766cfcfaeea69f4ae369dbb71a5d4b240f9f851e20dbd2b5cbf7c4e0"
+    },
+    {
+      "path": "native/detached/worker-exit.json",
+      "bytes": 126,
+      "sha256": "a624819042a2c80a194c35aaaafde5f338fc6b56d20ec0f1482361323fdbb19f"
+    },
+    {
+      "path": "native/detached/worker-start.json",
+      "bytes": 261,
+      "sha256": "254fec460df26aee9d36bef6c786c0835450336212b9782824ef4afcf807e027"
+    },
+    {
+      "path": "native/detached/wrapper.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native/detached/wrapper.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native/manifest.json",
+      "bytes": 4141,
+      "sha256": "2ab08499aadc6a302f083aa9a0672cd987c35d045e78179e6246f5c6c92400c8"
+    },
+    {
+      "path": "native/prelaunch/baseline-input-comparison.json",
+      "bytes": 5763,
+      "sha256": "e5f40cf76ccb245d2f33cc9135b63f3be9ce9bab37e13295e380040e83d3f178"
+    },
+    {
+      "path": "native/source/source-manifest.json",
+      "bytes": 58414,
+      "sha256": "ae521d7804db82d801530eba6eab90459e8f72964d57d43c8b34f6665006e8ab"
+    },
+    {
+      "path": "native/source-provenance.json",
+      "bytes": 653555,
+      "sha256": "4b24c378d546135f2ef7a8b79edf31659b0c2ce0efbddfdbec865523f873a754"
+    },
+    {
+      "path": "paired-review/compare-srf-pair.py",
+      "bytes": 14344,
+      "sha256": "f6d1795a3600f4e3d1933d474b0084b4221e804b31eaf16f08ef590634954588"
+    },
+    {
+      "path": "paired-review/comparison-execution.log",
+      "bytes": 817,
+      "sha256": "613af04a265930df2c2bf2180ff9b0494cf39e9590b437a99c973c6185fdc5f8"
+    },
+    {
+      "path": "paired-review/comparison-exit.json",
+      "bytes": 182,
+      "sha256": "41369c193e63e6d882b30c276fbcd11e2d523e11515616408a09673540a6f1cc"
+    },
+    {
+      "path": "paired-review/comparison-pre-execution.json",
+      "bytes": 258,
+      "sha256": "4748efa1753a9dcc0e408bd46db6c706a2595b94affa8bb103af915ab42d8bbf"
+    },
+    {
+      "path": "paired-review/final-initial-1m-spatial-bins.csv",
+      "bytes": 32922,
+      "sha256": "8314631bd3ec7bfc6242e4c382603f9692aeb6c210066f13393c6aea96b24f0a"
+    },
+    {
+      "path": "paired-review/paired-observables.png",
+      "bytes": 158125,
+      "sha256": "343b5227077ae52cec8e3e75d384f675d9f0de10135186bfc6049cf082dcda51"
+    },
+    {
+      "path": "paired-review/paired-result.json",
+      "bytes": 98234,
+      "sha256": "c8ecfa415a78694009d7234bdd8529041a20fdca93246f3638d45d020f3e41a4"
+    },
+    {
+      "path": "paired-review/same-id-saved-differences.csv",
+      "bytes": 8551793,
+      "sha256": "f375136d0f2da600c37b4c62101ca8606ebd7155cc36933cf38023b8f2cb4990"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1948,
+      "sha256": "245823c2e2b206f776cab49b028f33321b73e4d7021ef184112a38f6fdd951bd"
+    },
+    {
+      "path": "reduced-run-evidence-reference.json",
+      "bytes": 1003,
+      "sha256": "7d793e48e4f9eba8c10718e0e34cb9ac79a286ddedaff72c06b5931e6d1ba22d"
+    },
+    {
+      "path": "saved-review/analysis-pre-execution.json",
+      "bytes": 966,
+      "sha256": "5eaddd45b5d5b4ac7c4ee523eb2d18d947b34050de3cc8f81ba2f5c778124680"
+    },
+    {
+      "path": "saved-review/analysis-support/contract.json",
+      "bytes": 4055,
+      "sha256": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55"
+    },
+    {
+      "path": "saved-review/analysis-support/plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+    },
+    {
+      "path": "saved-review/analysis-support/review-gravity-slope.py",
+      "bytes": 38121,
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+    },
+    {
+      "path": "saved-review/analysis-support/summarize-terminal-saved-review.py",
+      "bytes": 6068,
+      "sha256": "403188c9fab1afcdb5fae50ee04386cf471f63b918b56d971236787d41c28686"
+    },
+    {
+      "path": "saved-review/gravity-slope-actual.mp4",
+      "bytes": 178397,
+      "sha256": "099354c51353b34449a71798aaacb92a4386858cecc8760316022168d05a6b22"
+    },
+    {
+      "path": "saved-review/gravity-slope-review.png",
+      "bytes": 183201,
+      "sha256": "2cd8a1c79ccc344b5b3bd70fe7f47c8aafa26b1ac8ec8c4b8b579761153723a3"
+    },
+    {
+      "path": "saved-review/physical-spatial-review.json",
+      "bytes": 5306,
+      "sha256": "f3d9746064ee9d90e99633cd07fd778e3a2f68b72d293206cb9f4e1ede9b85a3"
+    },
+    {
+      "path": "saved-review/review-execution.log",
+      "bytes": 184,
+      "sha256": "6bfc1154a2f89ad2b9ceb147f01e24ca78add23296d3099b5ebbc42e93ae7d47"
+    },
+    {
+      "path": "saved-review/review-exit.json",
+      "bytes": 160,
+      "sha256": "bb3283915c2522f265f75ea974fe89b982628a111e77ae6c5e93e77a5ae058e3"
+    },
+    {
+      "path": "saved-review/review.json",
+      "bytes": 193982,
+      "sha256": "ff48de85bd33b69db5976802f5ac08712d3bd2714c5ee7c6b43e25874c64470c"
+    },
+    {
+      "path": "saved-review/source-files-terminal-verification.json",
+      "bytes": 55256,
+      "sha256": "8a6f2096a0495c5d3250c579f4e181c4c2e4b316ba1668e974643f8a06148cc6"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 104721,
+      "sha256": "596b81d04627c7329ad93a90af34c67eeb3f3cc3ed4b4dc70b326208b0f67eb6"
+    }
+  ],
+  "note": "Index excludes itself. * -text preserves raw bytes. Indexed ignored PNG/MP4 need explicit staging and staged-blob verification."
+}

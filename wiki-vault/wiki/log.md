@@ -821,3 +821,7 @@ repair/compatibility, not a completed full slope or verified landslide.
 ## [2026-10-25] query | Conditional post-pair scientific study gate
 
 [[unnotched-mc-gravity]] links read-only post-pair-study-review: finish pairedcontrol, then verifygeometry/staticstability before costlyhhalfexperiment. Proposals NOT_RUN. Existingobserver scales withh; refinement requires additionalpreregistered physical-metreobserver common tobothmeshes, preservingoldcontract/results. Halvedh/samedtScale iscoupledspace-time refinement. No newnumericalwork/parameterchange;actualslide goal remainsunmet.
+
+## [2026-10-25] ingest | Paired unnotched result closes; static gate frozen
+
+[[unnotched-mc-gravity]] records baseline+pair native completion with no coherent slide, exact53680rowcomparison and46indexed artifacts/47verifiedGitblobs. Originalraw/source/media/negative results preserved. Static primaryaudit and separatecontract frozen before calculations; formalnegative-normal/global-FoS limitations explicit. No old solver/review/render repeated; raw/settings intact.

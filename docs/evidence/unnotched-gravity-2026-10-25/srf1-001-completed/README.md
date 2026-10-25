@@ -1,0 +1,9 @@
+# Completed unnotched SRF1 baseline and paired review
+
+Baseline srf1-001 native source8d8b544 completes exit0 at25October04:33:41WIB:6physical seconds,61actual states,880fixed particle IDs and7740accepted updates. The original supervisor status remains NATIVE_COMPLETE_REVIEW_PENDING; subsequent independent saved review is retained separately. All282actual immutable native sources, raw CSV/VTK, loaded-byte provenance, mapped DLL and original status/modern logs/detached worker exit/start/live proofs are preserved.
+
+The one baseline saved-data audit/render completes exit0; integrity is PASS. Baseline coherent-motion/landslide/runout observations are False/False/False. Complete video contains61actual states at4fps,15.25s playback, scale1, no interpolation or amplification, full decode exit0. Exact review script/imported reader/contract were copied and hashed before execution; all61frame PNGs remain in the review ZIP.
+
+The one separately executed paired review and its exact scripts/results/plots are retained without rerunning it. Its time/ID/input alignment status is PASS_TIME_ID_INPUT_ALIGNMENT_AND_METRIC_EXTRACTION; physical result is BOTH_TRIALS_SETTLE_NO_COHERENT_LANDSLIDE_DETECTED. The prior SRF1.40 completion packet remains separate and is referenced by its artifact-index/summary/archive hashes rather than duplicating its archives. Neither native completion nor a paired numerical comparison is a verified landslide, scientific validation or calibrated field runout. Predeclared detection windows, fixed-grid floor, coarse mesh and adapted geometry limits remain intact.
+
+Both new ZIPs were CRC-tested, decoded and compared byte for byte against original members. Only manifest-indexed source files are included; private FASL/Python caches are excluded. All original baseline/reduced/review/paired directories remain in output/. Packaging executes read/copy/hash/ZIP verification only, with no native or analysis repetition.

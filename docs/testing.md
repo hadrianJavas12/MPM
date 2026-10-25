@@ -1,5 +1,15 @@
 # Native framework and Studio verification
 
+## Paired gravity results closed, 2026-10-25
+
+Baseline native/worker0,6s/61states/7740updates; ONE saved review/render/source282/
+DLL verification passes. No landslide/runout. ONE exact-source paired comparison
+aligns53680 time/ID rows,identical initial geometry/mass/cohort,onlySRF/c/phi
+differences. Both settle. Baseline+pair46 indexed artifacts/444 ZIP members/
+282sources and47 Git blobs verified. No old solver/audit/render/gate repeated.
+Static diagnostic contract is frozen before results; controls/search NOT_RUN,
+separate from native MPM/scientific validation.
+
 ## Full gravity/SSR result and sequential control, 2026-10-25
 
 SRF1.40 attempt002 reaches6s/61states/7740updates with native/worker exit0.

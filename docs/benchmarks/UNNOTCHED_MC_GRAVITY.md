@@ -293,3 +293,21 @@ an expensive refinement. All proposed diagnostics/runs remain NOT_RUN. A later
 cross-mesh comparison must preregister identical physical observation regions
 and thresholds; the original h-scaled observer changes when h changes and
 must not silently turn a resolution change into a different success detector.
+
+### Pair closed and static diagnostic preregistered
+
+Baseline completes native/worker0 at25Oct04:33:41WIB,6s/61states/7740updates.
+One saved review/render passes integrity/source282/DLL. Maxu7.588638mm,final
+KE.00420176J/m; no coherent motion or toe runout. The53680-row same-time/ID
+comparison confirms identical initial geometry/mass/cohort and onlySRF/c/phi
+differences. Both trials settle. Exact analysis, data, plots and videos remain
+in [baseline+paired evidence](../evidence/unnotched-gravity-2026-10-25/srf1-001-completed/README.md):
+46 indexed artifacts/444 ZIP members/282sources; root verifies47 Git blobs.
+No old solver/audit/render repeated; actual landslide remains unmet.
+
+[Static reference audit](../../research/notes/unnotched-landslide-2026-10-24/static-reference-audit.md)
+and [preregistered contract](../../research/references/unnotched-mc-ssr/statics-contract.json)
+define an independent restricted-circle Bishop diagnostic before an expensive
+refinement. Negative normals/boundary optima must be retained; no clamping,
+tension-crack assumption, global-FoS or dynamic validation follows. Static
+implementation/controls/search are NOT_RUN at this checkpoint.

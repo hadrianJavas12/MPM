@@ -1,0 +1,27 @@
+{
+  "scope": "Referenced reduced-run packet retained separately; no archive duplication",
+  "packet": "docs\\evidence\\unnotched-gravity-2026-10-25\\srf1p4-002-completed",
+  "artifactIndex": {
+    "path": "docs/evidence/unnotched-gravity-2026-10-25/srf1p4-002-completed/artifact-index.json",
+    "bytes": 7947,
+    "sha256": "6e52146c1ecabf87aae7162aaf20ab34d8ee053a58c96949ccb23ceb5d84c9b2"
+  },
+  "indexedArtifactsVerified": 45,
+  "archives": [
+    {
+      "path": "native-source-raw-and-runtime.zip",
+      "bytes": 20147468,
+      "sha256": "f18f99c579049a1b3f622ba0d0baf2d6e6cc3298bc3656e95dfd04d473a33683"
+    },
+    {
+      "path": "saved-review-and-prefix.zip",
+      "bytes": 11052849,
+      "sha256": "d2a363c8d63923fa41bcd7c6cf0a8da1b9e52a4c35d0cc3895bddb573d742135"
+    }
+  ],
+  "summary": {
+    "path": "docs/evidence/unnotched-gravity-2026-10-25/srf1p4-002-completed/summary.json",
+    "bytes": 20864,
+    "sha256": "b31f0ed34c7bf02c26f4a5bbb03d6531843c18611393dde1bb133aa16302a1cd"
+  }
+}

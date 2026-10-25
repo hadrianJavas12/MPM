@@ -1,0 +1,140 @@
+{
+  "scope": "Read already emitted review/history and recorded completion; no native or independent saved-data audit repetition",
+  "nativeExit": 0,
+  "workerExit": 0,
+  "nativeComplete": true,
+  "physicalDurationS": 6.0,
+  "nativeUpdates": 7740,
+  "savedStates": 61,
+  "particlesPerState": 880,
+  "materialCsvRows": 53680,
+  "initialMassKgPerM": 448675.13371028285,
+  "minimumSavedJ": 0.9985933525854891,
+  "maximumSavedDisplacementM": 0.007588637575742193,
+  "maximumSavedSpeedMPerS": 0.006115494581833103,
+  "maximumSavedKappa": 9.608773921746705e-05,
+  "maximumIndependentYieldResidualPa": 6.548361852765083e-11,
+  "kineticPeak": {
+    "timeS": 0.8999999999999999,
+    "joulesPerM": 2.7160801505626426
+  },
+  "kineticFinalJPerM": 0.004201757498632444,
+  "motionWindows": {
+    "entire": {
+      "status": "NOT_DETECTED",
+      "referenceTimeS": 0.0,
+      "final": {
+        "frame": 60,
+        "timeS": 6.0,
+        "movingMassFraction": 0.0,
+        "largestConnectedMovingMassFraction": 0.0,
+        "cohortCentroidDisplacementM": [
+          0.0005136334788365741,
+          -0.004830197998983019
+        ],
+        "cohortMedianDxM": 0.0004392146343707992,
+        "cohortMeanVelocityMPerS": [
+          -4.5177422066215695e-05,
+          6.606588142919764e-05
+        ]
+      }
+    },
+    "post2s": {
+      "status": "NOT_DETECTED",
+      "referenceTimeS": 2.0,
+      "final": {
+        "frame": 60,
+        "timeS": 6.0,
+        "movingMassFraction": 0.0,
+        "largestConnectedMovingMassFraction": 0.0,
+        "cohortCentroidDisplacementM": [
+          -3.4873977896186947e-06,
+          2.754744139095124e-06
+        ],
+        "cohortMedianDxM": -3.3028902679532735e-06,
+        "cohortMeanVelocityMPerS": [
+          -4.5177422066215695e-05,
+          6.606588142919764e-05
+        ]
+      }
+    }
+  },
+  "maximumToeMassFraction": 0.0,
+  "toeFinal": {
+    "frame": 60,
+    "timeS": 6.0,
+    "totalMassFractionPastToePlusHalfH": 0.0,
+    "frontXM": 31.250024097520452,
+    "medianXM": 10.75065062555173,
+    "centroidXM": 11.756092293557835
+  },
+  "boundaryReview": {
+    "floorPenetratingCenterSamples": 0,
+    "domainExitCenterSamples": 0,
+    "minimumParticleDomainMarginM": -2.188964699501028e-07,
+    "runoutContactValidated": false
+  },
+  "coherentMotionDetected": false,
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "visualInspection": {
+    "image": {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\gravity-slope-review.png",
+      "sha256": "2cd8a1c79ccc344b5b3bd70fe7f47c8aafa26b1ac8ec8c4b8b579761153723a3",
+      "bytes": 183201
+    },
+    "coordinatesMagnification": 1,
+    "finding": "Actual initial/final unnotched slope outlines remain almost coincident at scale1. Cohort motion plateaus after2s and kinetic energy falls. Native plastic history remains localized internally above the base; colour concentration alone does not establish a throughgoing sliding mechanism. Runout air remains empty."
+  },
+  "media": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\gravity-slope-review.png",
+      "sha256": "2cd8a1c79ccc344b5b3bd70fe7f47c8aafa26b1ac8ec8c4b8b579761153723a3",
+      "bytes": 183201
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\gravity-slope-actual.mp4",
+      "sha256": "099354c51353b34449a71798aaacb92a4386858cecc8760316022168d05a6b22",
+      "bytes": 178397,
+      "actualSavedStates": 61,
+      "playbackFramesPerSecond": 4,
+      "physicalLastTimeS": 6.0,
+      "interpolation": false,
+      "deformationMagnification": 1,
+      "scope": "complete",
+      "fullDecodeExit": 0
+    }
+  ],
+  "reviewExecution": {
+    "exitCode": 0,
+    "finishedUtc": "2026-10-24T21:37:01.2932266Z",
+    "scope": "One saved-data audit/render invocation; no solver/replay/material calls"
+  },
+  "analysisPreparedBeforeExecution": {
+    "preparedUtc": "2026-10-24T21:36:37.3006079Z",
+    "contractMatchesFirstPredeclaredReview": true,
+    "contractSha256": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55",
+    "sourceCopies": [
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\analysis-support\\contract.json",
+        "sha256": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55",
+        "bytes": 4055
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+        "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+        "bytes": 23581
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\analysis-support\\review-gravity-slope.py",
+        "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+        "bytes": 38121
+      }
+    ]
+  },
+  "summaryScript": {
+    "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\analysis-support\\summarize-terminal-saved-review.py",
+    "sha256": "403188c9fab1afcdb5fae50ee04386cf471f63b918b56d971236787d41c28686",
+    "bytes": 6068
+  }
+}

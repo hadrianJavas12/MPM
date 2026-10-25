@@ -25,7 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[unnotched-mc-gravity]] — SRF1.40 completes6s/61states with integrity PASS but no landslide; max displacement12.08mm/settling response; predeclared SRF1 baseline active from25Oct04:18WIB
+- [[unnotched-mc-gravity]] — SRF1.40 completes6s/61states with integrity PASS but no landslide; max displacement12.08mm/settling response; SRF1 baseline also complete/no slide; paired evidence closed, static diagnostic preregistered
 - [[unnotched-landslide-method-selection]] — primary journal methods for intact-slope failure; separate MC gravity/SSR control selected, no new full run or landslide claim
 - [[wang2017-residual-history-scope]] —100mm history-guard failure, one replay with unchanged residual strength, explicit opt-in scope and native/integration gates
 - [[wang2017-apex-60mm-review]] — complete61-state apex trial, no verified landslide;100mm input gate passed and same-material endpoint trial running13:52WIB
@@ -47,3 +47,4 @@
 - [[joss-reference-reproduction]] — experimental reference path, visually accepted actual DP collapse, preserved evidence and quantitative limits in D:\MPM
 - [[joss-reference-reproduction#Workspace and latest state, 2026-10-15|Windows native rerun guide]] — fresh-start config, command-line run, VTK rendering and checks in docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md
 - [[joss-damage-diagnosis-2026-10-15]] — accepted 40 s DP collapse/run-out, measured mismatch, completed no-collapse 40 kPa case and paused continuation
+

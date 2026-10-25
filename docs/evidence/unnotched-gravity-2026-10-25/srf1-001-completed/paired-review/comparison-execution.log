@@ -1,0 +1,33 @@
+{
+  "comparisonStatus": "PASS_TIME_ID_INPUT_ALIGNMENT_AND_METRIC_EXTRACTION",
+  "physicalResult": "BOTH_TRIALS_SETTLE_NO_COHERENT_LANDSLIDE_DETECTED",
+  "actualPairedRows": 53680,
+  "srf1p4MinusSrf1FinalCentroidDisplacementM": {
+    "entire": [
+      0.0021062987436505994,
+      -0.0016456828472668208
+    ],
+    "post2s": [
+      0.00019957335073832636,
+      -0.00010223037352030754
+    ]
+  },
+  "kineticPeaks": {
+    "srf1": {
+      "timeS": 0.8999999999999999,
+      "energyJPerM": 2.7160801505626426
+    },
+    "srf1p4": {
+      "timeS": 1.7999999999999998,
+      "energyJPerM": 7.09924483858864
+    }
+  },
+  "kineticFinalJPerM": {
+    "srf1": 0.004201757498632444,
+    "srf1p4": 0.058902826915468325
+  },
+  "maximumToeMassFractions": {
+    "srf1": 0.0,
+    "srf1p4": 0.0
+  }
+}

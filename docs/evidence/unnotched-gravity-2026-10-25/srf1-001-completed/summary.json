@@ -1,0 +1,2723 @@
+{
+  "schema": "cl-mpm.unnotched-gravity.baseline-and-pair.evidence.v1",
+  "createdUtc": "2026-10-24T21:41:33.519961+00:00",
+  "packagingHead": "74258143811acb569602e4471347a408373fab69",
+  "nativeSourceCommit": "8d8b544d4e79d31d76f6d94c1304b883ba431b4e",
+  "nativeExit": 0,
+  "nativeComplete": true,
+  "savedFrames": 61,
+  "physicalTimeS": 6.0,
+  "particleCount": 880,
+  "acceptedUpdates": 7740,
+  "actualSourceFiles": 282,
+  "savedIntegrity": "PASS",
+  "coherentMotionDetected": false,
+  "landslideDetected": false,
+  "runoutGateDetected": false,
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "motionWindows": {
+    "entire": "NOT_DETECTED",
+    "post2s": "NOT_DETECTED"
+  },
+  "media": {
+    "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\gravity-slope-actual.mp4",
+    "sha256": "099354c51353b34449a71798aaacb92a4386858cecc8760316022168d05a6b22",
+    "bytes": 178397,
+    "actualSavedStates": 61,
+    "playbackFramesPerSecond": 4,
+    "physicalLastTimeS": 6.0,
+    "interpolation": false,
+    "deformationMagnification": 1,
+    "scope": "complete",
+    "fullDecodeExit": 0
+  },
+  "pairedReview": {
+    "schema": "cl-mpm.unnotched-gravity.paired-review.v1",
+    "createdUtc": "2026-10-24T21:40:19.848063+00:00",
+    "comparisonStatus": "PASS_TIME_ID_INPUT_ALIGNMENT_AND_METRIC_EXTRACTION",
+    "physicalResult": "BOTH_TRIALS_SETTLE_NO_COHERENT_LANDSLIDE_DETECTED",
+    "nativeCompleteBoth": true,
+    "savedTimes": 61,
+    "particlesPerTime": 880,
+    "actualPairedRows": 53680,
+    "interpolation": false,
+    "sameInitialGeometryIdsMassCohort": true,
+    "configChanges": [
+      {
+        "key": "cohesionPa",
+        "srf1": 10000.0,
+        "srf1p4": 7142.857142857143
+      },
+      {
+        "key": "frictionRad",
+        "srf1": 0.3490658503988659,
+        "srf1p4": 0.25434814346473733
+      },
+      {
+        "key": "strengthReductionFactor",
+        "srf1": 1.0,
+        "srf1p4": 1.4
+      }
+    ],
+    "changedSourceMembers": [
+      "source/case.lisp"
+    ],
+    "allOtherFrozenSourceHashesIdentical": true,
+    "caseDifferenceOnlyLiteralSrf": true,
+    "wholeAndHoldWindows": {
+      "srf1": {
+        "entire": {
+          "status": "NOT_DETECTED",
+          "referenceTimeS": 0.0,
+          "final": {
+            "frame": 60,
+            "timeS": 6.0,
+            "movingMassFraction": 0.0,
+            "largestConnectedMovingMassFraction": 0.0,
+            "cohortCentroidDisplacementM": [
+              0.0005136334788365741,
+              -0.004830197998983019
+            ],
+            "cohortMedianDxM": 0.0004392146343707992,
+            "cohortMeanVelocityMPerS": [
+              -4.5177422066215695e-05,
+              6.606588142919764e-05
+            ]
+          }
+        },
+        "post2s": {
+          "status": "NOT_DETECTED",
+          "referenceTimeS": 2.0,
+          "final": {
+            "frame": 60,
+            "timeS": 6.0,
+            "movingMassFraction": 0.0,
+            "largestConnectedMovingMassFraction": 0.0,
+            "cohortCentroidDisplacementM": [
+              -3.4873977896186947e-06,
+              2.754744139095124e-06
+            ],
+            "cohortMedianDxM": -3.3028902679532735e-06,
+            "cohortMeanVelocityMPerS": [
+              -4.5177422066215695e-05,
+              6.606588142919764e-05
+            ]
+          }
+        }
+      },
+      "srf1p4": {
+        "entire": {
+          "status": "NOT_DETECTED",
+          "referenceTimeS": 0.0,
+          "final": {
+            "frame": 60,
+            "timeS": 6.0,
+            "movingMassFraction": 0.0,
+            "largestConnectedMovingMassFraction": 0.0,
+            "cohortCentroidDisplacementM": [
+              0.0026199322224871734,
+              -0.00647588084624984
+            ],
+            "cohortMedianDxM": 0.00234582962693608,
+            "cohortMeanVelocityMPerS": [
+              0.00043218862090110203,
+              -0.00019851855000480148
+            ]
+          }
+        },
+        "post2s": {
+          "status": "NOT_DETECTED",
+          "referenceTimeS": 2.0,
+          "final": {
+            "frame": 60,
+            "timeS": 6.0,
+            "movingMassFraction": 0.0,
+            "largestConnectedMovingMassFraction": 0.0,
+            "cohortCentroidDisplacementM": [
+              0.00019608595294870766,
+              -9.947562938121242e-05
+            ],
+            "cohortMedianDxM": 0.00011816310890289117,
+            "cohortMeanVelocityMPerS": [
+              0.00043218862090110203,
+              -0.00019851855000480148
+            ]
+          }
+        }
+      }
+    },
+    "srf1p4MinusSrf1FinalCentroidDisplacementM": {
+      "entire": [
+        0.0021062987436505994,
+        -0.0016456828472668208
+      ],
+      "post2s": [
+        0.00019957335073832636,
+        -0.00010223037352030754
+      ]
+    },
+    "kineticPeaks": {
+      "srf1": {
+        "timeS": 0.8999999999999999,
+        "energyJPerM": 2.7160801505626426
+      },
+      "srf1p4": {
+        "timeS": 1.7999999999999998,
+        "energyJPerM": 7.09924483858864
+      }
+    },
+    "kineticFinalJPerM": {
+      "srf1": 0.004201757498632444,
+      "srf1p4": 0.058902826915468325
+    },
+    "maximumToeMassFractions": {
+      "srf1": 0.0,
+      "srf1p4": 0.0
+    },
+    "maximumAllTimePositionComponentDifferenceM": 0.004978207428862902,
+    "maximumAllTimeVelocityComponentDifferenceMPerS": 0.011331637309853471,
+    "maximumAllTimeKappaDifference": 0.0023848171865399623,
+    "maximumAllTimeCauchyStressComponentDifferencePa": 46494.830708373986,
+    "perFrame": [
+      {
+        "frame": 0,
+        "timeS": 0.0,
+        "maximumIdAlignedPositionDifferenceM": 0.0,
+        "massWeightedRmsPositionDifferenceM": 0.0,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0,
+        "maximumIdAlignedKappaDifference": 0.0,
+        "maximumIdAlignedCauchyStressDifferencePa": 0.0,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0,
+              0.0
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0,
+              0.0
+            ],
+            "cohortRmsSpeedMPerS": 0.0,
+            "kineticEnergyJPerM": 0.0,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0,
+              0.0
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0,
+              0.0
+            ],
+            "cohortRmsSpeedMPerS": 0.0,
+            "kineticEnergyJPerM": 0.0,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          }
+        }
+      },
+      {
+        "frame": 1,
+        "timeS": 0.1,
+        "maximumIdAlignedPositionDifferenceM": 0.0,
+        "massWeightedRmsPositionDifferenceM": 0.0,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0,
+        "maximumIdAlignedKappaDifference": 0.0,
+        "maximumIdAlignedCauchyStressDifferencePa": 0.0,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              1.1709513508971631e-06,
+              -2.9792746895934727e-05
+            ],
+            "cohortMeanVelocityMPerS": [
+              6.107721949621753e-05,
+              -0.0008210910253031882
+            ],
+            "cohortRmsSpeedMPerS": 0.0008963262846271728,
+            "kineticEnergyJPerM": 0.13863775970582468,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              1.1709513508971631e-06,
+              -2.9792746895934727e-05
+            ],
+            "cohortMeanVelocityMPerS": [
+              6.107721949621753e-05,
+              -0.0008210910253031882
+            ],
+            "cohortRmsSpeedMPerS": 0.0008963262846271728,
+            "kineticEnergyJPerM": 0.13863775970582468,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          }
+        }
+      },
+      {
+        "frame": 2,
+        "timeS": 0.2,
+        "maximumIdAlignedPositionDifferenceM": 0.0,
+        "massWeightedRmsPositionDifferenceM": 0.0,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0,
+        "maximumIdAlignedKappaDifference": 0.0,
+        "maximumIdAlignedCauchyStressDifferencePa": 0.0,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              1.4767793258928087e-05,
+              -0.0001306954692162902
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00013155798482720105,
+              -0.001190223589016525
+            ],
+            "cohortRmsSpeedMPerS": 0.0012740930364646666,
+            "kineticEnergyJPerM": 0.28051834080794313,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              1.4767793258928087e-05,
+              -0.0001306954692162902
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00013155798482720105,
+              -0.001190223589016525
+            ],
+            "cohortRmsSpeedMPerS": 0.0012740930364646666,
+            "kineticEnergyJPerM": 0.28051834080794313,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          }
+        }
+      },
+      {
+        "frame": 3,
+        "timeS": 0.30000000000000004,
+        "maximumIdAlignedPositionDifferenceM": 0.0,
+        "massWeightedRmsPositionDifferenceM": 0.0,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0,
+        "maximumIdAlignedKappaDifference": 0.0,
+        "maximumIdAlignedCauchyStressDifferencePa": 0.0,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              2.6985364335945873e-05,
+              -0.0002919288603124302
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0002242171306787665,
+              -0.0018739783682285144
+            ],
+            "cohortRmsSpeedMPerS": 0.00204218345786526,
+            "kineticEnergyJPerM": 0.732984152278496,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              2.6985364335945873e-05,
+              -0.0002919288603124302
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0002242171306787665,
+              -0.0018739783682285144
+            ],
+            "cohortRmsSpeedMPerS": 0.00204218345786526,
+            "kineticEnergyJPerM": 0.732984152278496,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          }
+        }
+      },
+      {
+        "frame": 4,
+        "timeS": 0.4,
+        "maximumIdAlignedPositionDifferenceM": 0.0,
+        "massWeightedRmsPositionDifferenceM": 0.0,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0,
+        "maximumIdAlignedKappaDifference": 0.0,
+        "maximumIdAlignedCauchyStressDifferencePa": 0.0,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              5.183213957384181e-05,
+              -0.0004953404968450006
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0001748968883202187,
+              -0.0023790476495978404
+            ],
+            "cohortRmsSpeedMPerS": 0.00258129097237854,
+            "kineticEnergyJPerM": 1.1392560407252268,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              5.183213957384181e-05,
+              -0.0004953404968450006
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0001748968883202187,
+              -0.0023790476495978404
+            ],
+            "cohortRmsSpeedMPerS": 0.00258129097237854,
+            "kineticEnergyJPerM": 1.1392560407252268,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          }
+        }
+      },
+      {
+        "frame": 5,
+        "timeS": 0.5,
+        "maximumIdAlignedPositionDifferenceM": 0.0,
+        "massWeightedRmsPositionDifferenceM": 0.0,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0,
+        "maximumIdAlignedKappaDifference": 0.0,
+        "maximumIdAlignedCauchyStressDifferencePa": 0.0,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              7.507971271984101e-05,
+              -0.0007473155901552894
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00035842123438575255,
+              -0.0026183857979598657
+            ],
+            "cohortRmsSpeedMPerS": 0.002842920473441896,
+            "kineticEnergyJPerM": 1.3861146159765325,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              7.507971271984101e-05,
+              -0.0007473155901552894
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00035842123438575255,
+              -0.0026183857979598657
+            ],
+            "cohortRmsSpeedMPerS": 0.002842920473441896,
+            "kineticEnergyJPerM": 1.3861146159765325,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          }
+        }
+      },
+      {
+        "frame": 6,
+        "timeS": 0.6000000000000001,
+        "maximumIdAlignedPositionDifferenceM": 0.0,
+        "massWeightedRmsPositionDifferenceM": 0.0,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0,
+        "maximumIdAlignedKappaDifference": 0.0,
+        "maximumIdAlignedCauchyStressDifferencePa": 0.0,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0001049675264598754,
+              -0.0010361484497307103
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00023882921806105806,
+              -0.0030500833526476436
+            ],
+            "cohortRmsSpeedMPerS": 0.0033165153640648507,
+            "kineticEnergyJPerM": 1.9341190563781248,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0001049675264598754,
+              -0.0010361484497307103
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00023882921806105806,
+              -0.0030500833526476436
+            ],
+            "cohortRmsSpeedMPerS": 0.0033165153640648507,
+            "kineticEnergyJPerM": 1.9341190563781248,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          }
+        }
+      },
+      {
+        "frame": 7,
+        "timeS": 0.7,
+        "maximumIdAlignedPositionDifferenceM": 0.0,
+        "massWeightedRmsPositionDifferenceM": 0.0,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0,
+        "maximumIdAlignedKappaDifference": 0.0,
+        "maximumIdAlignedCauchyStressDifferencePa": 0.0,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.00013771254577769825,
+              -0.0013482399774061686
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00039731425465181446,
+              -0.0033243617628857156
+            ],
+            "cohortRmsSpeedMPerS": 0.003603713389586712,
+            "kineticEnergyJPerM": 2.2269047693744666,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.00013771254577769825,
+              -0.0013482399774061686
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00039731425465181446,
+              -0.0033243617628857156
+            ],
+            "cohortRmsSpeedMPerS": 0.003603713389586712,
+            "kineticEnergyJPerM": 2.2269047693744666,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          }
+        }
+      },
+      {
+        "frame": 8,
+        "timeS": 0.8,
+        "maximumIdAlignedPositionDifferenceM": 9.973864973478186e-06,
+        "massWeightedRmsPositionDifferenceM": 3.1188552577140675e-06,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0005677077976990754,
+        "maximumIdAlignedKappaDifference": 1.4690706397265823e-05,
+        "maximumIdAlignedCauchyStressDifferencePa": 963.9886605130814,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0001707167474587599,
+              -0.001686172998584921
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0003077560013171729,
+              -0.0034317223612299426
+            ],
+            "cohortRmsSpeedMPerS": 0.0037026994403823684,
+            "kineticEnergyJPerM": 2.365751472664669,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0001711296086755394,
+              -0.001688054879367114
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0003364963681847049,
+              -0.0035668369877735694
+            ],
+            "cohortRmsSpeedMPerS": 0.0038474396577783385,
+            "kineticEnergyJPerM": 2.5474127517480922,
+            "maximumKappa": 1.4690706397265823e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.15454545454545454
+          }
+        }
+      },
+      {
+        "frame": 9,
+        "timeS": 0.8999999999999999,
+        "maximumIdAlignedPositionDifferenceM": 0.0001198925687964092,
+        "massWeightedRmsPositionDifferenceM": 6.441780879729833e-05,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0017454360289920591,
+        "maximumIdAlignedKappaDifference": 5.581094570321355e-05,
+        "maximumIdAlignedCauchyStressDifferencePa": 3820.370540685235,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.00020833179503272853,
+              -0.0020364236601288976
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0004066374921420176,
+              -0.0036069783864460417
+            ],
+            "cohortRmsSpeedMPerS": 0.003928457418973995,
+            "kineticEnergyJPerM": 2.7160801505626426,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.00022682592451217116,
+              -0.002094807110499824
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.000821982889830442,
+              -0.0044194460411419835
+            ],
+            "cohortRmsSpeedMPerS": 0.0049197942049030345,
+            "kineticEnergyJPerM": 4.137572303929241,
+            "maximumKappa": 5.581094570321355e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.33295454545454545
+          }
+        }
+      },
+      {
+        "frame": 10,
+        "timeS": 1.0,
+        "maximumIdAlignedPositionDifferenceM": 0.00026621009876404145,
+        "massWeightedRmsPositionDifferenceM": 0.00014976395514303763,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0018989047478585822,
+        "maximumIdAlignedKappaDifference": 0.00010103066561750289,
+        "maximumIdAlignedCauchyStressDifferencePa": 6763.597118248279,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0002427056405403332,
+              -0.002393721230186686
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00034109654968886554,
+              -0.0035598194998975726
+            ],
+            "cohortRmsSpeedMPerS": 0.0038497152082771183,
+            "kineticEnergyJPerM": 2.5337147803170996,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0003063144181905227,
+              -0.002525644429463297
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0007141776798796094,
+              -0.004401211843639996
+            ],
+            "cohortRmsSpeedMPerS": 0.004878507391280914,
+            "kineticEnergyJPerM": 3.972681250735749,
+            "maximumKappa": 0.00010103066561750289,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.4420454545454545
+          }
+        }
+      },
+      {
+        "frame": 11,
+        "timeS": 1.0999999999999999,
+        "maximumIdAlignedPositionDifferenceM": 0.0004917817479324071,
+        "massWeightedRmsPositionDifferenceM": 0.00026731205080484315,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0022841734768106,
+        "maximumIdAlignedKappaDifference": 0.00015814889378107453,
+        "maximumIdAlignedCauchyStressDifferencePa": 10024.882076276062,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0002814208317783418,
+              -0.002753034226861039
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0003946789039803626,
+              -0.003604098240926998
+            ],
+            "cohortRmsSpeedMPerS": 0.003916656813440239,
+            "kineticEnergyJPerM": 2.638176220011908,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0003988729148448502,
+              -0.0029866506634342494
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0012587533449406887,
+              -0.00466318895455615
+            ],
+            "cohortRmsSpeedMPerS": 0.005300987244762109,
+            "kineticEnergyJPerM": 4.70236980828563,
+            "maximumKappa": 0.00015814889378107453,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.5136363636363637
+          }
+        }
+      },
+      {
+        "frame": 12,
+        "timeS": 1.2000000000000002,
+        "maximumIdAlignedPositionDifferenceM": 0.0007394973915442193,
+        "massWeightedRmsPositionDifferenceM": 0.00040620766661183475,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0030315081785410695,
+        "maximumIdAlignedKappaDifference": 0.00021593156598317503,
+        "maximumIdAlignedCauchyStressDifferencePa": 13386.911052420743,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0003146620241665333,
+              -0.0031002804962227447
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0003320052678743216,
+              -0.0034530836728092506
+            ],
+            "cohortRmsSpeedMPerS": 0.00375383599743541,
+            "kineticEnergyJPerM": 2.4702378144291495,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0005161089997376106,
+              -0.003445750730337572
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0010085918577161536,
+              -0.004608306164702248
+            ],
+            "cohortRmsSpeedMPerS": 0.00520487233582662,
+            "kineticEnergyJPerM": 4.499709107190759,
+            "maximumKappa": 0.00021593156598317503,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.5738636363636364
+          }
+        }
+      },
+      {
+        "frame": 13,
+        "timeS": 1.3,
+        "maximumIdAlignedPositionDifferenceM": 0.0010124918465201915,
+        "massWeightedRmsPositionDifferenceM": 0.0005486098779840748,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0029329357812595495,
+        "maximumIdAlignedKappaDifference": 0.0002783675686679427,
+        "maximumIdAlignedCauchyStressDifferencePa": 16719.03031011831,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.00035185872886404483,
+              -0.00343971302375647
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0003610017780616222,
+              -0.003215343724719556
+            ],
+            "cohortRmsSpeedMPerS": 0.0034724007382348973,
+            "kineticEnergyJPerM": 2.066197296672511,
+            "maximumKappa": 0.0,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.0
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0006349718374941748,
+              -0.0038969484316255204
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0014599993163323121,
+              -0.004469908155361561
+            ],
+            "cohortRmsSpeedMPerS": 0.00517474648119698,
+            "kineticEnergyJPerM": 4.4216089421105105,
+            "maximumKappa": 0.0002783675686679427,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.6204545454545455
+          }
+        }
+      },
+      {
+        "frame": 14,
+        "timeS": 1.4,
+        "maximumIdAlignedPositionDifferenceM": 0.0013205100494229072,
+        "massWeightedRmsPositionDifferenceM": 0.0007230450828401495,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0032961704188576883,
+        "maximumIdAlignedKappaDifference": 0.00034446742857958463,
+        "maximumIdAlignedCauchyStressDifferencePa": 20196.6425149836,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0003801319043370995,
+              -0.003752872944174654
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0002958086147489115,
+              -0.003144519295682498
+            ],
+            "cohortRmsSpeedMPerS": 0.0034089345228883114,
+            "kineticEnergyJPerM": 2.0084724662845983,
+            "maximumKappa": 4.0436960278038275e-06,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.010227272727272727
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0007794265364781908,
+              -0.004338624685522536
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0014005774727896413,
+              -0.004358630789967365
+            ],
+            "cohortRmsSpeedMPerS": 0.005096287608725546,
+            "kineticEnergyJPerM": 4.272444392392297,
+            "maximumKappa": 0.00034446742857958463,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.6693181818181819
+          }
+        }
+      },
+      {
+        "frame": 15,
+        "timeS": 1.5,
+        "maximumIdAlignedPositionDifferenceM": 0.0016267974015438114,
+        "massWeightedRmsPositionDifferenceM": 0.0008939891100086192,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0041743533831538615,
+        "maximumIdAlignedKappaDifference": 0.00041886072953150504,
+        "maximumIdAlignedCauchyStressDifferencePa": 23597.21139801821,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0004154701104277957,
+              -0.00403952152963976
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00030550265485651545,
+              -0.0027818785958594254
+            ],
+            "cohortRmsSpeedMPerS": 0.0030223658048806395,
+            "kineticEnergyJPerM": 1.5742378546766795,
+            "maximumKappa": 2.6962532756831754e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.08522727272727273
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0009275771144861935,
+              -0.0047457744562596806
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0016575689543908293,
+              -0.003984928131898992
+            ],
+            "cohortRmsSpeedMPerS": 0.004797744901180736,
+            "kineticEnergyJPerM": 3.821804451709757,
+            "maximumKappa": 0.00041886072953150504,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.7352272727272728
+          }
+        }
+      },
+      {
+        "frame": 16,
+        "timeS": 1.6,
+        "maximumIdAlignedPositionDifferenceM": 0.001929904300425278,
+        "massWeightedRmsPositionDifferenceM": 0.001094612497745388,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.006568762903177411,
+        "maximumIdAlignedKappaDifference": 0.000529999513562832,
+        "maximumIdAlignedCauchyStressDifferencePa": 27002.52985286845,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.00044302814087723554,
+              -0.004304157332933107
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00035551556229579596,
+              -0.002364195524446755
+            ],
+            "cohortRmsSpeedMPerS": 0.0025849939947674453,
+            "kineticEnergyJPerM": 1.121515412335282,
+            "maximumKappa": 4.926871716015552e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.13636363636363635
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.00111724176148917,
+              -0.005134361683500421
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.002194594953022114,
+              -0.003776692833090752
+            ],
+            "cohortRmsSpeedMPerS": 0.004958416067699534,
+            "kineticEnergyJPerM": 4.049736630329846,
+            "maximumKappa": 0.000529999513562832,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.8022727272727272
+          }
+        }
+      },
+      {
+        "frame": 17,
+        "timeS": 1.7,
+        "maximumIdAlignedPositionDifferenceM": 0.0023186461155226823,
+        "massWeightedRmsPositionDifferenceM": 0.00136453482745878,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.01081732009224841,
+        "maximumIdAlignedKappaDifference": 0.0007520812388682517,
+        "maximumIdAlignedCauchyStressDifferencePa": 30793.90727150542,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0004739078203977288,
+              -0.004522087829582458
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00019690991486660464,
+              -0.002042805940641518
+            ],
+            "cohortRmsSpeedMPerS": 0.002244288316733204,
+            "kineticEnergyJPerM": 0.857429375750915,
+            "maximumKappa": 6.726563215640017e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.19886363636363638
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.001368400100123166,
+              -0.005497037114109556
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0028889385577327833,
+              -0.003674895746693121
+            ],
+            "cohortRmsSpeedMPerS": 0.005544610106659103,
+            "kineticEnergyJPerM": 5.327035526131419,
+            "maximumKappa": 0.0007520812388682517,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.8374999999999999
+          }
+        }
+      },
+      {
+        "frame": 18,
+        "timeS": 1.7999999999999998,
+        "maximumIdAlignedPositionDifferenceM": 0.002830805094653499,
+        "massWeightedRmsPositionDifferenceM": 0.0017519158311001786,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.011047015581019403,
+        "maximumIdAlignedKappaDifference": 0.0011887635853721928,
+        "maximumIdAlignedCauchyStressDifferencePa": 35369.51223985896,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0004962059591782361,
+              -0.004688754971128519
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0002735569912874925,
+              -0.0013405676674103926
+            ],
+            "cohortRmsSpeedMPerS": 0.0014805120918953516,
+            "kineticEnergyJPerM": 0.3704564482534957,
+            "maximumKappa": 8.218691077664056e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.22159090909090912
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.001701897261533867,
+              -0.005847651424352025
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.003781762250349794,
+              -0.0033835453978290787
+            ],
+            "cohortRmsSpeedMPerS": 0.00645943042648396,
+            "kineticEnergyJPerM": 7.09924483858864,
+            "maximumKappa": 0.0011887635853721928,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.8704545454545455
+          }
+        }
+      },
+      {
+        "frame": 19,
+        "timeS": 1.9,
+        "maximumIdAlignedPositionDifferenceM": 0.0035806946066365697,
+        "massWeightedRmsPositionDifferenceM": 0.002226627396618028,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.011331637309853471,
+        "maximumIdAlignedKappaDifference": 0.0016649692792158172,
+        "maximumIdAlignedCauchyStressDifferencePa": 40279.27294033551,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005107289039444051,
+              -0.004799991442639666
+            ],
+            "cohortMeanVelocityMPerS": [
+              5.0329905200609685e-05,
+              -0.0007381387918130936
+            ],
+            "cohortRmsSpeedMPerS": 0.0008052439998723429,
+            "kineticEnergyJPerM": 0.10679291757289319,
+            "maximumKappa": 9.226968270793694e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.2409090909090909
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0020861522402889853,
+              -0.006164922211968422
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.003834648641444005,
+              -0.0027538375681848424
+            ],
+            "cohortRmsSpeedMPerS": 0.006265694347016542,
+            "kineticEnergyJPerM": 6.73867977263985,
+            "maximumKappa": 0.0016649692792158172,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.884090909090909
+          }
+        }
+      },
+      {
+        "frame": 20,
+        "timeS": 2.0,
+        "maximumIdAlignedPositionDifferenceM": 0.004421430717634678,
+        "massWeightedRmsPositionDifferenceM": 0.002659931079118497,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.010566636765739355,
+        "maximumIdAlignedKappaDifference": 0.002099023982891773,
+        "maximumIdAlignedCauchyStressDifferencePa": 44060.722026846255,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005171208766261929,
+              -0.0048329527431221035
+            ],
+            "cohortMeanVelocityMPerS": [
+              3.330649154497635e-05,
+              -8.235574645938547e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00014482497220708954,
+            "kineticEnergyJPerM": 0.003601731344797505,
+            "maximumKappa": 9.560595267865107e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0024238462695384644,
+              -0.006376405216868638
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0028056914741933173,
+              -0.0014887766844763476
+            ],
+            "cohortRmsSpeedMPerS": 0.004546831140445947,
+            "kineticEnergyJPerM": 3.604995746094761,
+            "maximumKappa": 0.002099023982891773,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.8954545454545454
+          }
+        }
+      },
+      {
+        "frame": 21,
+        "timeS": 2.0999999999999996,
+        "maximumIdAlignedPositionDifferenceM": 0.004928145566438502,
+        "massWeightedRmsPositionDifferenceM": 0.0029205852667751765,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0032625622061883985,
+        "maximumIdAlignedKappaDifference": 0.0023594149108182826,
+        "maximumIdAlignedCauchyStressDifferencePa": 46243.73801158634,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.000513093911911649,
+              -0.004828345154569121
+            ],
+            "cohortMeanVelocityMPerS": [
+              -3.532239643167576e-05,
+              -1.1952470654813984e-05
+            ],
+            "cohortRmsSpeedMPerS": 8.234849808823073e-05,
+            "kineticEnergyJPerM": 0.0011607882531926709,
+            "maximumKappa": 9.560595267865107e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002616610615636394,
+              -0.00647335395425506
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0010055932471268706,
+              -0.0006640357058133564
+            ],
+            "cohortRmsSpeedMPerS": 0.0016410093020828012,
+            "kineticEnergyJPerM": 0.46001882138662403,
+            "maximumKappa": 0.0023594149108182826,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 22,
+        "timeS": 2.1999999999999997,
+        "maximumIdAlignedPositionDifferenceM": 0.004941874496193321,
+        "massWeightedRmsPositionDifferenceM": 0.002922505903242055,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0013804385771037427,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46352.30080843413,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005175503306804129,
+              -0.004832176434251965
+            ],
+            "cohortMeanVelocityMPerS": [
+              2.0809155785953704e-05,
+              4.6014755969664353e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00011463909709664866,
+            "kineticEnergyJPerM": 0.0021111435157584813,
+            "maximumKappa": 9.560595267865107e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.00261673381782939,
+              -0.006475320835861396
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.0006324757116874465,
+              0.00029181165352194256
+            ],
+            "cohortRmsSpeedMPerS": 0.0008080724292141346,
+            "kineticEnergyJPerM": 0.10110657954638679,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 23,
+        "timeS": 2.3000000000000003,
+        "maximumIdAlignedPositionDifferenceM": 0.0049604479509604005,
+        "massWeightedRmsPositionDifferenceM": 0.002939833931530982,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0019089079098891786,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46450.10983045931,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005125096574552949,
+              -0.0048306710877019194
+            ],
+            "cohortMeanVelocityMPerS": [
+              -1.1440586727881472e-05,
+              -7.822775708781853e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.000125814527137871,
+            "kineticEnergyJPerM": 0.0035270316114648223,
+            "maximumKappa": 9.560595267865107e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002628439083044814,
+              -0.006487287163556802
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0005954304636202218,
+              -8.552528424485143e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0007374571709432226,
+            "kineticEnergyJPerM": 0.08420708738418017,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 24,
+        "timeS": 2.4000000000000004,
+        "maximumIdAlignedPositionDifferenceM": 0.004941899461513799,
+        "massWeightedRmsPositionDifferenceM": 0.0029228936041347012,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0016445668247273293,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46382.96142357176,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005180655853234171,
+              -0.004829584427073637
+            ],
+            "cohortMeanVelocityMPerS": [
+              -2.059909060596807e-05,
+              3.142153105222679e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0001069130888651562,
+            "kineticEnergyJPerM": 0.00257553183211018,
+            "maximumKappa": 9.569393213420606e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026122728458131744,
+              -0.006478693993744915
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.0005570015187369532,
+              -0.0001871543533694017
+            ],
+            "cohortRmsSpeedMPerS": 0.000680291667373439,
+            "kineticEnergyJPerM": 0.0786253374837383,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 25,
+        "timeS": 2.5,
+        "maximumIdAlignedPositionDifferenceM": 0.004965596328720068,
+        "massWeightedRmsPositionDifferenceM": 0.0029398045480873267,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0013477142533390462,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46494.830708373986,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005127039406605839,
+              -0.004831507319321107
+            ],
+            "cohortMeanVelocityMPerS": [
+              5.452895358184283e-05,
+              2.174724661707621e-05
+            ],
+            "cohortRmsSpeedMPerS": 8.598865242983626e-05,
+            "kineticEnergyJPerM": 0.0011624497922303066,
+            "maximumKappa": 9.576308685784282e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002637046370374647,
+              -0.006479553136946667
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0004071507199249636,
+              -1.805323473403001e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0005798443125080174,
+            "kineticEnergyJPerM": 0.05295619401798485,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 26,
+        "timeS": 2.6,
+        "maximumIdAlignedPositionDifferenceM": 0.004949181314088946,
+        "massWeightedRmsPositionDifferenceM": 0.002925175352296177,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0011962615952409667,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46386.577864374965,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005171866175055007,
+              -0.0048307117653879185
+            ],
+            "cohortMeanVelocityMPerS": [
+              -7.077664314652395e-05,
+              -1.9372061963583387e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0001371774881362165,
+            "kineticEnergyJPerM": 0.0032091278111694385,
+            "maximumKappa": 9.576308685784282e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026091738711734223,
+              -0.006483380182596624
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.00027320207004162403,
+              4.363757039984937e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0004828734701567969,
+            "kineticEnergyJPerM": 0.03796217527265927,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 27,
+        "timeS": 2.7,
+        "maximumIdAlignedPositionDifferenceM": 0.004978207428862902,
+        "massWeightedRmsPositionDifferenceM": 0.0029454593533999717,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.001336619532438971,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46465.77101870161,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005140542049403948,
+              -0.004830706337813426
+            ],
+            "cohortMeanVelocityMPerS": [
+              9.093338048832436e-05,
+              3.134123035706676e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00016528451745306577,
+            "kineticEnergyJPerM": 0.004943910576092823,
+            "maximumKappa": 9.576308685784282e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002640293017089186,
+              -0.006483603391290142
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00011632955707164226,
+              -0.00030467811322050536
+            ],
+            "cohortRmsSpeedMPerS": 0.00043838793267379365,
+            "kineticEnergyJPerM": 0.03181601850587621,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 28,
+        "timeS": 2.8,
+        "maximumIdAlignedPositionDifferenceM": 0.004952942535943805,
+        "massWeightedRmsPositionDifferenceM": 0.002921031987293028,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0015712457639579936,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46376.33704678363,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005156849884824476,
+              -0.004831997277091803
+            ],
+            "cohortMeanVelocityMPerS": [
+              -9.323160009500224e-05,
+              -2.711261501177493e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00012805299008440625,
+            "kineticEnergyJPerM": 0.00285499505929615,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026096279641829342,
+              -0.006473818060123696
+            ],
+            "cohortMeanVelocityMPerS": [
+              -2.048062955316299e-05,
+              3.0243966249983825e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00025831199404707214,
+            "kineticEnergyJPerM": 0.01423950092048676,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 29,
+        "timeS": 2.9,
+        "maximumIdAlignedPositionDifferenceM": 0.004975973840309678,
+        "massWeightedRmsPositionDifferenceM": 0.0029452292575893107,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0017300596103487537,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46458.753882542376,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005155807860034729,
+              -0.004829450591166441
+            ],
+            "cohortMeanVelocityMPerS": [
+              8.253858867974093e-05,
+              -1.9035366670620803e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00011436280996106722,
+            "kineticEnergyJPerM": 0.002449554192290152,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026395390871750677,
+              -0.0064861777117022415
+            ],
+            "cohortMeanVelocityMPerS": [
+              -8.559399711330426e-05,
+              0.00014973143747443068
+            ],
+            "cohortRmsSpeedMPerS": 0.000404890486045857,
+            "kineticEnergyJPerM": 0.029114056851398316,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 30,
+        "timeS": 3.0,
+        "maximumIdAlignedPositionDifferenceM": 0.00495310746576294,
+        "massWeightedRmsPositionDifferenceM": 0.0029264850126193022,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0015707802789851218,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46423.985717231546,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005145530528996237,
+              -0.004831879849969346
+            ],
+            "cohortMeanVelocityMPerS": [
+              -7.272724060548485e-05,
+              6.274388762517539e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0001497363956471776,
+            "kineticEnergyJPerM": 0.004449955178087759,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026103487128656196,
+              -0.006480827751866057
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00019252773954894675,
+              -0.0001227511265883372
+            ],
+            "cohortRmsSpeedMPerS": 0.0004678390422594528,
+            "kineticEnergyJPerM": 0.03681931041542974,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 31,
+        "timeS": 3.1000000000000005,
+        "maximumIdAlignedPositionDifferenceM": 0.004965909320599593,
+        "massWeightedRmsPositionDifferenceM": 0.0029382855264848623,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0015891553282162637,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46460.947392003014,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005162072123212133,
+              -0.004831159099856198
+            ],
+            "cohortMeanVelocityMPerS": [
+              6.296761735491823e-05,
+              -8.213668614102257e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00015642485237214276,
+            "kineticEnergyJPerM": 0.004256115089734608,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026366174209665224,
+              -0.00648145138466031
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.0003060189377063062,
+              5.8150484649724125e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0004895327287440013,
+            "kineticEnergyJPerM": 0.040009388219029156,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 32,
+        "timeS": 3.2,
+        "maximumIdAlignedPositionDifferenceM": 0.004949910572364047,
+        "massWeightedRmsPositionDifferenceM": 0.002928285325255591,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0017668808577030828,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46443.99601961256,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005141540394893174,
+              -0.00482915285898243
+            ],
+            "cohortMeanVelocityMPerS": [
+              -5.973980001706515e-05,
+              6.681956549876854e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00011056734789161585,
+            "kineticEnergyJPerM": 0.0021224854833806397,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002615436770079603,
+              -0.006481484416210327
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0004173464325704593,
+              5.5205780143932566e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0005815395790531861,
+            "kineticEnergyJPerM": 0.06061029625448188,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 33,
+        "timeS": 3.3000000000000003,
+        "maximumIdAlignedPositionDifferenceM": 0.004957419322696666,
+        "massWeightedRmsPositionDifferenceM": 0.0029361777284058407,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0018602897429848136,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46484.83495527382,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005167521758275578,
+              -0.004833656411694184
+            ],
+            "cohortMeanVelocityMPerS": [
+              6.439992326420892e-05,
+              1.4154104589128293e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00010348202451704799,
+            "kineticEnergyJPerM": 0.0018827772034551858,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026301669797723776,
+              -0.006486117806367271
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.0004690790656266681,
+              2.727251951432361e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0005933285620954206,
+            "kineticEnergyJPerM": 0.056212127020206754,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 34,
+        "timeS": 3.4,
+        "maximumIdAlignedPositionDifferenceM": 0.0049524214783005505,
+        "massWeightedRmsPositionDifferenceM": 0.002930622540911612,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0016714106602935025,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46437.6365930679,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005130971659955393,
+              -0.004829838451035952
+            ],
+            "cohortMeanVelocityMPerS": [
+              -6.485376717230121e-05,
+              -9.757674158540203e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00014721141166476026,
+            "kineticEnergyJPerM": 0.003929577700491786,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026224290957130884,
+              -0.0064798702136408814
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0004972092862211515,
+              -0.0001814152785222503
+            ],
+            "cohortRmsSpeedMPerS": 0.0006468451336434956,
+            "kineticEnergyJPerM": 0.06585050141046991,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 35,
+        "timeS": 3.5,
+        "maximumIdAlignedPositionDifferenceM": 0.004952369725018002,
+        "massWeightedRmsPositionDifferenceM": 0.002929031993788848,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.001730807586106236,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46393.576677255776,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005181878138677806,
+              -0.004829864307860902
+            ],
+            "cohortMeanVelocityMPerS": [
+              4.0743478633808625e-05,
+              6.393092480008895e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0001321001679752742,
+            "kineticEnergyJPerM": 0.002833369635746706,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026240387429173387,
+              -0.006479515359405529
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.0004868078347410595,
+              0.00020867993527621972
+            ],
+            "cohortRmsSpeedMPerS": 0.0006951741248915864,
+            "kineticEnergyJPerM": 0.07536660627925694,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 36,
+        "timeS": 3.5999999999999996,
+        "maximumIdAlignedPositionDifferenceM": 0.004965204070071394,
+        "massWeightedRmsPositionDifferenceM": 0.0029393567673173873,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0016303288315971894,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46463.43842066768,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005121849014544808,
+              -0.004832734790255509
+            ],
+            "cohortMeanVelocityMPerS": [
+              -3.1933618095215064e-06,
+              -5.887718910404953e-06
+            ],
+            "cohortRmsSpeedMPerS": 4.331893391891946e-05,
+            "kineticEnergyJPerM": 0.00035828913253263794,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002629405925879369,
+              -0.006486172984381925
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0005131317532817898,
+              -1.6315417475665737e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0006488081009716597,
+            "kineticEnergyJPerM": 0.06656113427232556,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 37,
+        "timeS": 3.7,
+        "maximumIdAlignedPositionDifferenceM": 0.004950454025077988,
+        "massWeightedRmsPositionDifferenceM": 0.002926162916237626,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0014476441451375427,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46380.16434282582,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005182576066282304,
+              -0.0048296437698771184
+            ],
+            "cohortMeanVelocityMPerS": [
+              -3.295663227546927e-05,
+              -6.508970093474995e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00011716927872469991,
+            "kineticEnergyJPerM": 0.0022730468884964014,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026168531801909686,
+              -0.006480579132540645
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.00048636064216628,
+              -7.862523375775927e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0006346861581579387,
+            "kineticEnergyJPerM": 0.06685471532709578,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 38,
+        "timeS": 3.8,
+        "maximumIdAlignedPositionDifferenceM": 0.004970462139343823,
+        "massWeightedRmsPositionDifferenceM": 0.0029407752123578788,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.001463706110549555,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46438.85689532504,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005130847973007823,
+              -0.0048299557287813585
+            ],
+            "cohortMeanVelocityMPerS": [
+              5.885400323814913e-05,
+              9.947290941337505e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00014708232652478002,
+            "kineticEnergyJPerM": 0.004069735406376702,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002636773061418437,
+              -0.00647965097949559
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.000381066286797797,
+              2.8969485191501027e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0005355818778221207,
+            "kineticEnergyJPerM": 0.04894529002378701,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 39,
+        "timeS": 3.9000000000000004,
+        "maximumIdAlignedPositionDifferenceM": 0.004953922523302623,
+        "massWeightedRmsPositionDifferenceM": 0.002926240361742348,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0012167124524068795,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46374.919709167334,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005168017321503741,
+              -0.004833539727430327
+            ],
+            "cohortMeanVelocityMPerS": [
+              -6.0242957112638544e-05,
+              -1.1081562800706635e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00010787964703586055,
+            "kineticEnergyJPerM": 0.0021466233305352527,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026115204601795143,
+              -0.0064823054773066316
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.0002663487349146906,
+              0.00017374694578511178
+            ],
+            "cohortRmsSpeedMPerS": 0.00043006555003241505,
+            "kineticEnergyJPerM": 0.03071227400844324,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 40,
+        "timeS": 4.0,
+        "maximumIdAlignedPositionDifferenceM": 0.004975706857003104,
+        "massWeightedRmsPositionDifferenceM": 0.002945355006243272,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0012574570499513454,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46456.90505629088,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005141122329653519,
+              -0.004829116099202174
+            ],
+            "cohortMeanVelocityMPerS": [
+              6.008334807759933e-05,
+              -5.582590457915979e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00010365059811108532,
+            "kineticEnergyJPerM": 0.0017600790960376038,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002640047024473354,
+              -0.006484051828040142
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00016635933179403627,
+              -0.00020417584489809456
+            ],
+            "cohortRmsSpeedMPerS": 0.0004194586245234631,
+            "kineticEnergyJPerM": 0.02884682938470365,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 41,
+        "timeS": 4.1,
+        "maximumIdAlignedPositionDifferenceM": 0.004948277866660078,
+        "massWeightedRmsPositionDifferenceM": 0.0029208318243364876,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.001082263513554384,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46386.70516272268,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005162532225058541,
+              -0.004831465093016834
+            ],
+            "cohortMeanVelocityMPerS": [
+              -5.94700167415355e-05,
+              7.65738604271442e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0001529296625857921,
+            "kineticEnergyJPerM": 0.004046503534977808,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002610736463932068,
+              -0.006473146187464119
+            ],
+            "cohortMeanVelocityMPerS": [
+              -3.5359796505288e-05,
+              0.0001290713564861603
+            ],
+            "cohortRmsSpeedMPerS": 0.00028327271432718675,
+            "kineticEnergyJPerM": 0.014222462696184074,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 42,
+        "timeS": 4.199999999999999,
+        "maximumIdAlignedPositionDifferenceM": 0.004971790236211859,
+        "massWeightedRmsPositionDifferenceM": 0.002945033518696,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0011123471624726407,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46453.373215626896,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.000514583571260952,
+              -0.004831805102877724
+            ],
+            "cohortMeanVelocityMPerS": [
+              6.955721626545328e-05,
+              -6.344467421658488e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00014375608385748499,
+            "kineticEnergyJPerM": 0.004674086143148719,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002640621003778918,
+              -0.006486702586410263
+            ],
+            "cohortMeanVelocityMPerS": [
+              6.541801839183063e-06,
+              0.0002677152065694439
+            ],
+            "cohortRmsSpeedMPerS": 0.0003907528586659994,
+            "kineticEnergyJPerM": 0.025494099539758844,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 43,
+        "timeS": 4.3,
+        "maximumIdAlignedPositionDifferenceM": 0.004947214984898807,
+        "massWeightedRmsPositionDifferenceM": 0.0029248271528184624,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0016117740533800966,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46335.123155825786,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005156563424781811,
+              -0.004829428616499194
+            ],
+            "cohortMeanVelocityMPerS": [
+              -8.225617293506488e-05,
+              2.216986667288246e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00011207990755360716,
+            "kineticEnergyJPerM": 0.0024835315643903146,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026101437913395578,
+              -0.0064808866536403276
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0001646446147051414,
+              -0.0001308322756928454
+            ],
+            "cohortRmsSpeedMPerS": 0.0004299834117517019,
+            "kineticEnergyJPerM": 0.03039214185177753,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 44,
+        "timeS": 4.3999999999999995,
+        "maximumIdAlignedPositionDifferenceM": 0.0049624410262509855,
+        "massWeightedRmsPositionDifferenceM": 0.002937995550719595,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.001304062763455662,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46417.59672670569,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005156501758469881,
+              -0.0048320440129230625
+            ],
+            "cohortMeanVelocityMPerS": [
+              9.229820357352341e-05,
+              1.9832534100269863e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00012186975742234017,
+            "kineticEnergyJPerM": 0.002571314353949729,
+            "maximumKappa": 9.588057688174841e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026395139480255114,
+              -0.006479491858935439
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.00024791844787186516,
+              7.936521051402282e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0004014164211012654,
+            "kineticEnergyJPerM": 0.026231693140113563,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 45,
+        "timeS": 4.5,
+        "maximumIdAlignedPositionDifferenceM": 0.0049441918262971285,
+        "massWeightedRmsPositionDifferenceM": 0.0029261580022712547,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0016640362015232129,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46361.39667455338,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005141879285110252,
+              -0.004830665712993018
+            ],
+            "cohortMeanVelocityMPerS": [
+              -8.973529002670156e-05,
+              -2.63493351881855e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00016273134996062908,
+            "kineticEnergyJPerM": 0.004693253326329084,
+            "maximumKappa": 9.607031681257111e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026142920852004832,
+              -0.006481911306561488
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0003899706558315708,
+              0.0001020835296446192
+            ],
+            "cohortRmsSpeedMPerS": 0.000505545208880606,
+            "kineticEnergyJPerM": 0.044145738919659935,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 46,
+        "timeS": 4.6000000000000005,
+        "maximumIdAlignedPositionDifferenceM": 0.004957392308842401,
+        "massWeightedRmsPositionDifferenceM": 0.0029375505905309286,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0015339239242916716,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46404.62727666494,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005171833021380824,
+              -0.00483089377308902
+            ],
+            "cohortMeanVelocityMPerS": [
+              7.472189626072558e-05,
+              2.6605097928573986e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00013994487400612157,
+            "kineticEnergyJPerM": 0.003483285415485067,
+            "maximumKappa": 9.607031681257111e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026334486434597825,
+              -0.006485090466840741
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.0004700538517352171,
+              -7.166661207834988e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0005602578610055614,
+            "kineticEnergyJPerM": 0.05001126512094977,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 47,
+        "timeS": 4.7,
+        "maximumIdAlignedPositionDifferenceM": 0.004950471902958498,
+        "massWeightedRmsPositionDifferenceM": 0.0029282054136897983,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0016796533574035513,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46361.260418741804,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005128506193645053,
+              -0.004831838365412173
+            ],
+            "cohortMeanVelocityMPerS": [
+              -5.781993356557205e-05,
+              -3.0118029781401238e-05
+            ],
+            "cohortRmsSpeedMPerS": 8.56464099127056e-05,
+            "kineticEnergyJPerM": 0.0011815381045890982,
+            "maximumKappa": 9.607031681257111e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026212303989305704,
+              -0.0064765479135488815
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0004604787128281525,
+              -0.00013708259138382403
+            ],
+            "cohortRmsSpeedMPerS": 0.000626631534723414,
+            "kineticEnergyJPerM": 0.06088906443479819,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 48,
+        "timeS": 4.800000000000001,
+        "maximumIdAlignedPositionDifferenceM": 0.004953480531611376,
+        "massWeightedRmsPositionDifferenceM": 0.002931808652846493,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0017504831904169627,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46367.03802398205,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005181234205160634,
+              -0.004829699624537045
+            ],
+            "cohortMeanVelocityMPerS": [
+              2.517181373615894e-05,
+              -2.9270996663946807e-05
+            ],
+            "cohortRmsSpeedMPerS": 9.109095741217674e-05,
+            "kineticEnergyJPerM": 0.0021921535006769258,
+            "maximumKappa": 9.607031681257111e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002626832646528034,
+              -0.006481161091347051
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.0004898525237836235,
+              0.0001998959185407269
+            ],
+            "cohortRmsSpeedMPerS": 0.0006913152705546708,
+            "kineticEnergyJPerM": 0.07458408259932739,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 49,
+        "timeS": 4.9,
+        "maximumIdAlignedPositionDifferenceM": 0.004961771687259642,
+        "massWeightedRmsPositionDifferenceM": 0.0029380812627390757,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.001419041310056872,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46422.651231735705,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005127356237045092,
+              -0.004830888223024579
+            ],
+            "cohortMeanVelocityMPerS": [
+              5.650701116623173e-06,
+              7.205324265489512e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00012587665072848395,
+            "kineticEnergyJPerM": 0.0033836450368647138,
+            "maximumKappa": 9.607031681257111e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002627469269295635,
+              -0.006484023828067325
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00048681412928359784,
+              -0.0001443259445948476
+            ],
+            "cohortRmsSpeedMPerS": 0.0006385432833560162,
+            "kineticEnergyJPerM": 0.06268950887527203,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 50,
+        "timeS": 5.0,
+        "maximumIdAlignedPositionDifferenceM": 0.004954902257168214,
+        "massWeightedRmsPositionDifferenceM": 0.0029275634696142422,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0015819003185864803,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46397.01072570096,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005176449133756512,
+              -0.004832280389993469
+            ],
+            "cohortMeanVelocityMPerS": [
+              -1.9723414642550178e-05,
+              -5.933503586643899e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0001172876405805893,
+            "kineticEnergyJPerM": 0.0022207612422534646,
+            "maximumKappa": 9.607031681257111e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026205486039770896,
+              -0.00647866239317924
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.00046957825477634597,
+              -4.76421327427387e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0006002361427764343,
+            "kineticEnergyJPerM": 0.06197028859824235,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 51,
+        "timeS": 5.1,
+        "maximumIdAlignedPositionDifferenceM": 0.004971093401930915,
+        "massWeightedRmsPositionDifferenceM": 0.0029403579698618547,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0014911423431654585,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46411.71226636495,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005133529142530418,
+              -0.004828561379383801
+            ],
+            "cohortMeanVelocityMPerS": [
+              2.9301133850959087e-05,
+              2.6002502408256727e-05
+            ],
+            "cohortRmsSpeedMPerS": 7.167556246865818e-05,
+            "kineticEnergyJPerM": 0.0008737719062916085,
+            "maximumKappa": 9.607031681257111e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026346477123088663,
+              -0.006480570555224623
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00040089532905527024,
+              -2.7389104557246062e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0005545100886631993,
+            "kineticEnergyJPerM": 0.05011541526475341,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 52,
+        "timeS": 5.2,
+        "maximumIdAlignedPositionDifferenceM": 0.004955803248002155,
+        "massWeightedRmsPositionDifferenceM": 0.0029271512243671752,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0013493200096859424,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46357.69463053014,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005171504530803064,
+              -0.004833207924597674
+            ],
+            "cohortMeanVelocityMPerS": [
+              -2.6000228638611118e-05,
+              7.487999367575954e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00011866893430201229,
+            "kineticEnergyJPerM": 0.002703173996418695,
+            "maximumKappa": 9.607031681257111e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026144801635484133,
+              -0.006480891733224493
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.0003221647569088018,
+              7.406887387481024e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0004618622640955913,
+            "kineticEnergyJPerM": 0.03366144215735936,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 53,
+        "timeS": 5.3,
+        "maximumIdAlignedPositionDifferenceM": 0.004973088662108438,
+        "massWeightedRmsPositionDifferenceM": 0.002943289068282678,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.001170998850745969,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46430.364569701844,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005133204657111643,
+              -0.004831147753838673
+            ],
+            "cohortMeanVelocityMPerS": [
+              3.612839657887295e-05,
+              -0.00011897801223463937
+            ],
+            "cohortRmsSpeedMPerS": 0.00014728272981421388,
+            "kineticEnergyJPerM": 0.004316790440011282,
+            "maximumKappa": 9.607031681257111e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026388879458590763,
+              -0.006483286288011701
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.0002088981548468968,
+              -0.00018682596059998543
+            ],
+            "cohortRmsSpeedMPerS": 0.00047148405072351956,
+            "kineticEnergyJPerM": 0.03616182692064031,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 54,
+        "timeS": 5.4,
+        "maximumIdAlignedPositionDifferenceM": 0.004946136453565231,
+        "massWeightedRmsPositionDifferenceM": 0.002921493790348914,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0014876404140131718,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46352.31859199878,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.000517295278480552,
+              -0.00482907601381345
+            ],
+            "cohortMeanVelocityMPerS": [
+              -6.325516253438268e-05,
+              5.07956361249096e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00011615083121801566,
+            "kineticEnergyJPerM": 0.0022139229125150628,
+            "maximumKappa": 9.608773921746705e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.00261179089709263,
+              -0.006475313715715462
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.0001146473084983506,
+              6.947002078839843e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00037641134013706364,
+            "kineticEnergyJPerM": 0.024508379195761307,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 55,
+        "timeS": 5.5,
+        "maximumIdAlignedPositionDifferenceM": 0.004969844296507375,
+        "massWeightedRmsPositionDifferenceM": 0.002944284315954794,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0012419280598610033,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46468.41083660988,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.000513897123787236,
+              -0.004832856318271513
+            ],
+            "cohortMeanVelocityMPerS": [
+              8.673134647726957e-05,
+              2.634014415994452e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00011450813360177584,
+            "kineticEnergyJPerM": 0.0020016859269990947,
+            "maximumKappa": 9.608773921746705e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026403004320875345,
+              -0.0064862267430988345
+            ],
+            "cohortMeanVelocityMPerS": [
+              1.265367783129272e-05,
+              0.00016070292521777783
+            ],
+            "cohortRmsSpeedMPerS": 0.0003704434916085392,
+            "kineticEnergyJPerM": 0.022745516597437298,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 56,
+        "timeS": 5.6,
+        "maximumIdAlignedPositionDifferenceM": 0.004943159139379816,
+        "massWeightedRmsPositionDifferenceM": 0.0029239198452678194,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0012812560539103945,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46391.3572066606,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005158084832081823,
+              -0.004830484313683906
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.00010750361249588756,
+              -7.865698782624673e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00017642041561309767,
+            "kineticEnergyJPerM": 0.004861861484283651,
+            "maximumKappa": 9.608773921746705e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002610080431567777,
+              -0.0064821651226151696
+            ],
+            "cohortMeanVelocityMPerS": [
+              9.360597926418454e-05,
+              -0.0001632532842404709
+            ],
+            "cohortRmsSpeedMPerS": 0.0003744175753215672,
+            "kineticEnergyJPerM": 0.024230394577635938,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 57,
+        "timeS": 5.699999999999999,
+        "maximumIdAlignedPositionDifferenceM": 0.00495975751720934,
+        "massWeightedRmsPositionDifferenceM": 0.0029387729164763584,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0014153549777978214,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46470.30344555422,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005158567447920112,
+              -0.00482959993067396
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00010497678783285217,
+              5.7669923050990175e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00015216456840609516,
+            "kineticEnergyJPerM": 0.004324329804403416,
+            "maximumKappa": 9.608773921746705e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.002639574643825401,
+              -0.006480498156027575
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.00024132377081934089,
+              -4.3284575849870955e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.0003478094541212173,
+            "kineticEnergyJPerM": 0.02046808168085777,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 58,
+        "timeS": 5.8,
+        "maximumIdAlignedPositionDifferenceM": 0.004945905090863789,
+        "massWeightedRmsPositionDifferenceM": 0.0029255122301996154,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0017677896872578451,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46375.02779695222,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005140059278008839,
+              -0.00483305224662269
+            ],
+            "cohortMeanVelocityMPerS": [
+              -8.039709625662391e-05,
+              1.831050447196117e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00011322722911009193,
+            "kineticEnergyJPerM": 0.0020017022617632714,
+            "maximumKappa": 9.608773921746705e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026135383539291793,
+              -0.006481339904648966
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00035805109081902723,
+              7.063135752391684e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.000516188513768169,
+            "kineticEnergyJPerM": 0.04226927874282886,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 59,
+        "timeS": 5.8999999999999995,
+        "maximumIdAlignedPositionDifferenceM": 0.004963636687087103,
+        "massWeightedRmsPositionDifferenceM": 0.0029396116197191557,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.001403123976042269,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46419.79546424308,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005170012125862043,
+              -0.004830242960613409
+            ],
+            "cohortMeanVelocityMPerS": [
+              5.664150153911614e-05,
+              -8.732764431491202e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00012241306040453482,
+            "kineticEnergyJPerM": 0.0026003510246646777,
+            "maximumKappa": 9.608773921746705e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026344665381621284,
+              -0.006486810696212413
+            ],
+            "cohortMeanVelocityMPerS": [
+              -0.00044902347238630027,
+              -0.00012782382939196583
+            ],
+            "cohortRmsSpeedMPerS": 0.0005558949596768053,
+            "kineticEnergyJPerM": 0.0509523077453673,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      },
+      {
+        "frame": 60,
+        "timeS": 6.0,
+        "maximumIdAlignedPositionDifferenceM": 0.004954454215091886,
+        "massWeightedRmsPositionDifferenceM": 0.002928096958571701,
+        "maximumIdAlignedVelocityDifferenceMPerS": 0.0015861417383731906,
+        "maximumIdAlignedKappaDifference": 0.0023848171865399623,
+        "maximumIdAlignedCauchyStressDifferencePa": 46356.509949432526,
+        "trials": {
+          "srf1": {
+            "cohortCentroidDisplacementM": [
+              0.0005136334788365741,
+              -0.004830197998983019
+            ],
+            "cohortMeanVelocityMPerS": [
+              -4.5177422066215695e-05,
+              6.606588142919764e-05
+            ],
+            "cohortRmsSpeedMPerS": 0.00015181839086606425,
+            "kineticEnergyJPerM": 0.004201757498632444,
+            "maximumKappa": 9.608773921746705e-05,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.24659090909090908
+          },
+          "srf1p4": {
+            "cohortCentroidDisplacementM": [
+              0.0026199322224871734,
+              -0.00647588084624984
+            ],
+            "cohortMeanVelocityMPerS": [
+              0.00043218862090110203,
+              -0.00019851855000480148
+            ],
+            "cohortRmsSpeedMPerS": 0.0006148724513427708,
+            "kineticEnergyJPerM": 0.058902826915468325,
+            "maximumKappa": 0.0023848171865399623,
+            "totalMassWithAccumulatedPlasticHistoryFraction": 0.9034090909090908
+          }
+        }
+      }
+    ],
+    "landslideVerified": false,
+    "scientificallyValidated": false,
+    "limitations": [
+      "Strength reduction increases plastic history/deformation here but neither run establishes coherent failure.",
+      "The same coarse explicit geometry/ramp/fixed-base adaptation remains different from a fully verified paper benchmark.",
+      "Kappa-weighted spatial bins are history distribution diagnostics, not measured shear-band width or damage.",
+      "No factor of safety, mesh convergence, calibrated runout or energy closure is inferred.",
+      "Existing SRF1.40 audit/render were not repeated; only new paired arithmetic and aggregate history plots were executed."
+    ],
+    "inputHashes": [
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\manifest.json",
+        "sha256": "2ab08499aadc6a302f083aa9a0672cd987c35d045e78179e6246f5c6c92400c8",
+        "bytes": 4141
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\history.csv",
+        "sha256": "815a5a855195ba47b1783556729159a936922d086f7ae223c4b3e26a0fc317f2",
+        "bytes": 42129
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\particles.csv",
+        "sha256": "d8659ac61b26102df19fb8f244bf0863241b0b19e326032ff12648ed649af224",
+        "bytes": 39751823
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\source\\source-manifest.json",
+        "sha256": "ae521d7804db82d801530eba6eab90459e8f72964d57d43c8b34f6665006e8ab",
+        "bytes": 58414
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\source\\case.lisp",
+        "sha256": "538322b330614245db2ef0ab50ea5157c6e4674941e6442b60c502f24fce25b6",
+        "bytes": 1914
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\review.json",
+        "sha256": "ff48de85bd33b69db5976802f5ac08712d3bd2714c5ee7c6b43e25874c64470c",
+        "bytes": 193982
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\physical-spatial-review.json",
+        "sha256": "f3d9746064ee9d90e99633cd07fd778e3a2f68b72d293206cb9f4e1ede9b85a3",
+        "bytes": 5306
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002\\manifest.json",
+        "sha256": "892b7c7851cdea2e1f8858dfbb0e5e13c41866d5ff3859060bbea05f87c8e632",
+        "bytes": 4180
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002\\history.csv",
+        "sha256": "10f8d6ae72cb7145ebd19dd161b46819c4b40ed6f41511b312658f0e31d91598",
+        "bytes": 42130
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002\\particles.csv",
+        "sha256": "41e2ef69229c3ac0c679926cd3277e89abe234b4ec1044705a084cc7fadc5df1",
+        "bytes": 39795829
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002\\source\\source-manifest.json",
+        "sha256": "ea8023a8a7d7be7e978f6b6cb59fbaa6a393e02d3edc7d530313d20829bfbe37",
+        "bytes": 58416
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002\\source\\case.lisp",
+        "sha256": "994c81df23ea13bcfb38fe8121946c215628fa655cb98181db6bc48e0b9ea98b",
+        "bytes": 1916
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002\\review-001\\review.json",
+        "sha256": "dd943b3dd78088c9abd6ac8dbe0fb73d58a6299574a23d55fab7ccf35a3df9d5",
+        "bytes": 194054
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p4-002\\review-001\\physical-spatial-review.json",
+        "sha256": "b878c2bddd5e22c7c125948c1078cd001547e7f3efc55432203b02462bc3e363",
+        "bytes": 5309
+      }
+    ],
+    "comparisonScript": {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\paired-review-001\\compare-srf-pair.py",
+      "sha256": "f6d1795a3600f4e3d1933d474b0084b4221e804b31eaf16f08ef590634954588",
+      "bytes": 14344
+    },
+    "outputs": [
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\paired-review-001\\same-id-saved-differences.csv",
+        "sha256": "f375136d0f2da600c37b4c62101ca8606ebd7155cc36933cf38023b8f2cb4990",
+        "bytes": 8551793
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\paired-review-001\\final-initial-1m-spatial-bins.csv",
+        "sha256": "8314631bd3ec7bfc6242e4c382603f9692aeb6c210066f13393c6aea96b24f0a",
+        "bytes": 32922
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\paired-review-001\\paired-observables.png",
+        "sha256": "343b5227077ae52cec8e3e75d384f675d9f0de10135186bfc6049cf082dcda51",
+        "bytes": 158125
+      }
+    ]
+  },
+  "pairedAnalysisPreExecutionRecord": {
+    "preparedUtc": "2026-10-24T21:40:13.3026503Z",
+    "scriptSha256": "f6d1795a3600f4e3d1933d474b0084b4221e804b31eaf16f08ef590634954588",
+    "scope": "Saved exact paired comparison script before execution; no native or SRF1.40 audit/render repetitions"
+  },
+  "reducedRunEvidence": {
+    "scope": "Referenced reduced-run packet retained separately; no archive duplication",
+    "packet": "docs\\evidence\\unnotched-gravity-2026-10-25\\srf1p4-002-completed",
+    "artifactIndex": {
+      "path": "docs/evidence/unnotched-gravity-2026-10-25/srf1p4-002-completed/artifact-index.json",
+      "bytes": 7947,
+      "sha256": "6e52146c1ecabf87aae7162aaf20ab34d8ee053a58c96949ccb23ceb5d84c9b2"
+    },
+    "indexedArtifactsVerified": 45,
+    "archives": [
+      {
+        "path": "native-source-raw-and-runtime.zip",
+        "bytes": 20147468,
+        "sha256": "f18f99c579049a1b3f622ba0d0baf2d6e6cc3298bc3656e95dfd04d473a33683"
+      },
+      {
+        "path": "saved-review-and-prefix.zip",
+        "bytes": 11052849,
+        "sha256": "d2a363c8d63923fa41bcd7c6cf0a8da1b9e52a4c35d0cc3895bddb573d742135"
+      }
+    ],
+    "summary": {
+      "path": "docs/evidence/unnotched-gravity-2026-10-25/srf1p4-002-completed/summary.json",
+      "bytes": 20864,
+      "sha256": "b31f0ed34c7bf02c26f4a5bbb03d6531843c18611393dde1bb133aa16302a1cd"
+    }
+  },
+  "baselineAnalysisPreExecutionRecord": {
+    "preparedUtc": "2026-10-24T21:36:37.3006079Z",
+    "contractMatchesFirstPredeclaredReview": true,
+    "contractSha256": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55",
+    "sourceCopies": [
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\analysis-support\\contract.json",
+        "sha256": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55",
+        "bytes": 4055
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+        "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+        "bytes": 23581
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1-001\\review-001\\analysis-support\\review-gravity-slope.py",
+        "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+        "bytes": 38121
+      }
+    ]
+  },
+  "runtimeScope": "Original modern supervisor/detached logs and live proof retained; user-session WMI does not guarantee logoff/sleep/reboot survival",
+  "operations": "Read/copy/hash/ZIP/CRC/decoded-byte verification only; no native/replay/material/test/render/review/paired-analysis repeated"
+}

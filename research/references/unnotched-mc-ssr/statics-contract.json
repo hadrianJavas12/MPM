@@ -1,0 +1,33 @@
+{
+  "schema": "cl-mpm.static-diagnostic.v1",
+  "frozenBeforeResults": true,
+  "createdDate": "2026-10-25",
+  "purpose": "Independent restricted-family dry simplified-Bishop diagnostic of the declared D1 adaptation; no engine changes, no global FoS or dynamic landslide validation",
+  "sourceAudit": "research/notes/unnotched-landslide-2026-10-24/static-reference-audit.md",
+  "sources": ["https://doi.org/10.1680/geot.1955.5.1.7", "https://www.publications.usace.army.mil/Portals/76/Publications/EngineerManuals/EM_1110-2-1902.pdf?ver=2014-05-07-083439-823"],
+  "surfaceXYM": [[0, 10], [12, 10], [32, 0]],
+  "baseYM": 0,
+  "material": {"unitWeightNPerM3": 20000, "cohesionPa": 10000, "frictionDeg": 20},
+  "strengthReductionFactors": [1, 1.4],
+  "circleFamily": {
+    "entryXM": [0, 12],
+    "exitXM": [12.5, 32],
+    "rho": [0.25, 4],
+    "center": "midpoint(P,Q)+rho*(-dy,dx)",
+    "radius": "length(Q-P)*sqrt(0.25+rho*rho)",
+    "branch": "lower semicircle, center at or above both ground endpoints",
+    "boundsAreDiagnosticConvention": true
+  },
+  "searches": [
+    {"name": "coarse-200", "entryCount": 9, "exitCount": 17, "rhoCount": 13, "slices": 200},
+    {"name": "coarse-400", "entryCount": 9, "exitCount": 17, "rhoCount": 13, "slices": 400},
+    {"name": "fine-400", "entryCount": 17, "exitCount": 33, "rhoCount": 25, "slices": 400}
+  ],
+  "numerics": {"weightQuadrature": "vertical midpoint slices", "factorAbsoluteTolerance": 1e-10, "maximumBisections": 100, "geometryRoundoffM": 1e-9},
+  "rejection": ["arc outside soil or below fixed base", "center below endpoint or nonreal lower arc", "nonpositive slice weight or driving moment", "nonpositive m_alpha domain", "no converged positive root"],
+  "negativeNormals": "Retain formal factor and raw negative-normal counts/minimum normal stress, without clamping, tension crack or physical-admissibility PASS. USACE warns of this limitation.",
+  "report": ["all candidate factors/rejection reasons for both strengths", "search-boundary optimum flags", "same-family slice refinement", "search refinement", "raw negative base normals", "restricted-family/global-search and model limitations"],
+  "futureDecision": "Interpret only after independent implementation controls and paired MPM review. No automatic strength, geometry, duration, detector or constitutive tuning; any later simulation requires a separately stated rationale.",
+  "mpmStepsExecuted": 0,
+  "scientificallyValidated": false
+}
