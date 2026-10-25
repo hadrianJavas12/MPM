@@ -2,6 +2,34 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
+## Source phase prepared on 2026-10-26: optional MPM/scenario integration
+
+Checkpoint `3bcd1da` pushed all point/default evidence below. Subsequent source
+adds an exact-class gravity validator hook, optional variant metadata and a
+new explicit SRF1.6 case; default numerical build/run bodies are reused. The
+new case differs only in the declared material extension/class and description.
+`tests/framework/mc-composite-apex-output.lisp` has root and independent source
+approval: four groups, a separate native apex fixture, then two actual USF
+updates on a declared 32-MP affine-velocity output fixture. It is NOT_RUN.
+
+New variant contract is `research/references/unnotched-mc-ssr/composite-apex-srf1p6-contract.json`,
+initial SHA4a42339d96c1b6a5a77afb7bd9d2627eb54c875175e0d9f2945cc96d06eb8a00.
+It preserves physical inputs and the old coarse observer, declaring the extra
+volumetric flow. `scripts/review-gravity-composite-apex.py` freezes analysis
+support before importing the old auditor, then checks optional loaded sources,
+metadata, input contract, last-return q/flag, current cap stress and cumulative
+work/volume. Python AST only; review/tests and actual saved-data execution
+pending. An explicit bounded-control flag cannot validate a full 6s slope.
+Controls agent prepares `tests/benchmarks/gravity-composite-apex-controls.lisp`
+for default config identity, opt-in input guards and short actual scenario
+output; inspect its source before authorizing execution.
+
+Commit the source checkpoint before FIRST new integration executions. Do not
+rerun closed point/default suites. No full solver or SRF2.0 is active. Actual
+landslide remains unverified. Source/runtime checks must stay honest about each
+executed snapshot; subsequent optional scenario source changes do not alter
+the earlier native material proof or retroactively change its source identity.
+
 ## Latest: new apex point and default compatibility gates pass
 
 Source `ac767e1` is committed and pushed on `codex/unnotched-mc-composite-apex`.

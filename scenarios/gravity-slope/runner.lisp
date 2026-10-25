@@ -6,7 +6,7 @@
     dt))
 
 (defun make-manifest (config)
-  (json-object
+  (let ((manifest (json-object
    "scenario" "gravity-slope" "status" "running" "complete" 'yason:false
    "phase" "initialization" "timeS" 0d0 "updates" 0 "savedFrames" 0 "config" config
    "scientificallyValidated" 'yason:false "landslideVerified" 'yason:false
@@ -23,7 +23,14 @@
    "motionObservables" "mass-weighted centroid/velocity/RMS on fixed subset; coherence=norm(mean velocity)/RMS speed; moving threshold=0.001 m/s; downslope=(cos(beta),-sin(beta)) includes settlement; toe crossing compares current center x to initial geometric toe"
    "boundaryObservables" "center and half-particle-domain distances to grid edges; near-boundary mass uses center distance < meshSize; kernel-support adequacy is not certified. Center outside grid fails without deletion or clamping"
    "massScale" 1d0 "damping" 0d0 "driverCount" 0 "notchCount" 0
-   "limits" "coarse explicit gravity/SSR onset adaptation; ramp/inertia/mesh/dt and fixed-base effects remain unvalidated; completion and color alone do not establish landslide or quantitative runout"))
+   "limits" "coarse explicit gravity/SSR onset adaptation; ramp/inertia/mesh/dt and fixed-base effects remain unvalidated; completion and color alone do not establish landslide or quantitative runout")))
+    ;; No keys or values change for the original strict configuration. Only a
+    ;; reviewed class validator can add these optional compiled metadata keys.
+    (dolist (key '("materialVariant" "materialClass" "apexConvention"
+                   "apexCapBandPolicy" "apexMultiplierConvention" "strengthReduction"))
+      (multiple-value-bind (value present-p) (gethash key config)
+        (when present-p (setf (gethash key manifest) value))))
+    manifest))
 
 (defun run (material config directory)
   "Run real native MPM and retain paired CSV/VTK evidence, including on failure."

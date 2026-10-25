@@ -927,3 +927,12 @@ root verification: 42 indexed artifacts / 43 staged Git blobs / two ZIPs /
 and later mkdir packaging failures remain preserved. No native, comparison,
 replay or tolerance change was needed. Separate new output/scenario gates and
 variant-aware review are source preparation only; no full solver is active.
+
+## [2026-10-26] ingest | Optional scenario and output source checkpoint
+
+[[unnotched-mc-gravity]] records the minimal class-validation/metadata adapter,
+explicit same-input SRF1.6 case, variant contract and new saved-data reviewer.
+The four-group framework output source has independent approval; execution is
+NOT_RUN. It separates a native apex diagnostic fixture from actual tiny MPM
+exports. Python AST only; targeted scenario/analysis gates remain pending.
+All earlier point/default evidence is pushed at3bcd1da; no passed tests repeated.

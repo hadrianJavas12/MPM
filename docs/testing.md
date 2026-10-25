@@ -1,5 +1,20 @@
 # Native framework and Studio verification
 
+## Optional MPM/scenario integration source, 2026-10-26
+
+The new four-group optional-framework gate is source-reviewed, **NOT_RUN**:
+`tests/framework/mc-composite-apex-output.lisp`. It distinguishes one isolated
+native apex diagnostic call from two genuine USF updates on a 32-MP tiny
+affine-velocity fixture. Independent VTK/CSV reading checks 96 rows / three
+states, actual F/J/mass/identity and diagnostics; activation of apex during
+that tiny MPM fixture is not required or claimed.
+
+Minimal optional gravity integration and explicit SRF1.6 case reuse the same
+numerical runner. A new variant contract and saved-data reviewer are prepared;
+the Python source has AST verification only. New targeted input/short-output
+and variant-analysis gates remain mandatory before full execution. Previous
+native point/default passes below are not repeated for this source preparation.
+
 ## Optional apex point and default compatibility, 2026-10-25
 
 On committed source `ac767e1`, FIRST Windows point invocation exits 0:

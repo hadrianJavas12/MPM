@@ -90,4 +90,5 @@
   :description "Optional explicit apex-flow material diagnostics for native framework cases"
   :depends-on ("cl-mpm-framework" "cl-mpm/models/mc-composite-apex")
   :serial t
-  :components ((:file "materials/adapters/mc-composite-apex")))
+  :components ((:file "materials/adapters/mc-composite-apex")
+               (:file "scenarios/gravity-slope/mc-composite-apex-adapter")))

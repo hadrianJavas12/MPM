@@ -268,3 +268,13 @@ two archives / 612 members / 576 sources. Original archive-layout and subsequent
 packaging-only filesystem failures are preserved; verifier/tests unchanged.
 New optional-framework
 MPM output remains pending. All prior negative evidence and raw settings stay.
+
+## Subsequent optional scenario source phase
+
+On 2026-10-26, source preparation adds a narrow exact-class validation hook,
+explicit optional metadata and the separate composite SRF1.6 case, reusing the
+existing numerical runner. A reviewed four-group optional-framework output
+gate is NOT_RUN. It separates a single constitutive apex fixture from a tiny
+32-MP/two-update MPM export fixture. New variant contract and saved-data review
+are source-only; Python AST passes. Targeted scenario and analysis gates precede
+a full run. No new full solver, hidden strength change or verified slide.

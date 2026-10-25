@@ -10,11 +10,21 @@
     (when (eq value missing) (error "Gravity slope requires explicit ~S." key))
     value))
 
+(defgeneric check-gravity-material-class (particle-class material config)
+  (:documentation "Exact-class gate; optional reviewed integrations may add metadata, never select a class from strings."))
+
+(defmethod check-gravity-material-class (particle-class material config)
+  (declare (ignore particle-class material config))
+  (error "Gravity slope requires the exact native MC-evolution particle class."))
+
+(defmethod check-gravity-material-class
+    ((particle-class (eql 'cl-mpm/models/mc-evolution:particle-mc-evolution)) material config)
+  (declare (ignore particle-class material config))
+  t)
+
 (defun check-material (material config)
   "Bind the independently reduced perfect Cauchy law to its declared SRF."
-  (unless (eq (cl-mpm/framework:material-particle-class material)
-              'cl-mpm/models/mc-evolution:particle-mc-evolution)
-    (error "Gravity slope requires the exact native MC-evolution particle class."))
+  (check-gravity-material-class (cl-mpm/framework:material-particle-class material) material config)
   (let* ((args (cl-mpm/framework:material-particle-initargs material))
          (law (getf args :evolution-law))
          (srf (gethash "strengthReductionFactor" config))
