@@ -1,0 +1,50 @@
+{
+  "schema": "cl-mpm.basal-representation.v1",
+  "purpose": "Read-only native GIMP kinematic diagnostic before another full resolution trial; no simulated motion, stability factor or scientific validation",
+  "createdDate": "2026-10-26",
+  "frozenBeforeDiagnostic": true,
+  "case": "cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6.lisp",
+  "caseSha256": "dae3bb89d1cdb941bb653d8cb3e2290e81236f488415c3f61e5e5f94ca0b768c",
+  "retainedStaticResult": "output/unnotched-statics-2026-10-25/search-001/result.json",
+  "retainedStaticResultSha256": "36a9f8ebafc75bb12eb96c0d590a727be228bb2f82632bc2b3d863691f2306cc",
+  "retainedSelection": {"searchName": "fine-400", "strengthReductionFactor": 1},
+  "circle": {
+    "entry": 9.75, "exit": 31.390625, "rho": 0.7937005259840998,
+    "centerX": 28.265487130830216, "centerY": 22.32851919512466,
+    "radius": 22.244452100164136,
+    "arcMinimumX": 28.265487130830216, "arcMinimumY": 0.084067094960524,
+    "formalFactor": 1.3838702355950987, "negativeNormalCount": 6,
+    "minimumNormalStressPa": -7171.283864883566, "physicalAdmissibility": false
+  },
+  "meshesM": [1, 0.5],
+  "expectedActualParticleCount": [880, 3520],
+  "onlyCompiledConfigurationDifference": "meshSize",
+  "unchanged": "Actual SRF1.6 perfect Cauchy MC composite-apex law, polygon, grid extent, PPC2, fixed basal xy/side x rollers and every solver/loading assignment; constructors only",
+  "arcSampling": {"equalXIntervals": 100, "includeEndpoints": true, "includeExactMinimum": true,
+    "normalOffsetsM": [-1, -0.5, -0.25, -0.125, -0.0625, 0, 0.0625, 0.125, 0.25, 0.5, 1],
+    "positiveNormal": "((cx-x)/R,(cy-y_arc)/R), into cap", "includeBaseAtEveryX": true},
+  "prescribedField": {
+    "classification": "Hypothetical nodal kinematic sampling, never actual MPM velocities or best approximation",
+    "movingRegion": "entry<=x<=exit AND lowerArc(x)<y<=surface(x); strict arc equality uses stationary side",
+    "velocityMPerS": "((cy-y)/R,(x-cx)/R) inside cap, otherwise zero; unit magnitude on arc only",
+    "maskApplication": "Apply actual bc-fixed component masks to temporary nodal values only; zero is constrained, nil is free",
+    "gradient": "Actual non-Fbar native GIMP gradient; no normalization of weights or gradients",
+    "interpretation": "Pointwise jump errors include finite-domain/nodal sampling smear; they do not prove grid locking or an engine defect"
+  },
+  "particleDomains": {
+    "actualFullSizeM": "h/PPC=h/2", "actualHalfSizeM": "h/4",
+    "actualInitialParticles": "Reported separately, including physical x>2m,y>2m cohort flag",
+    "hypotheticalProbes": "Not inserted into sim; domain crossing grid floor is explicitly NON_ADMISSIBLE_AS_INITIAL_MP even if center inside",
+    "kernelSupport": "Full kernel support is distinct from finite MP-domain clearance; report raw partition and signed gradients without renormalizing",
+    "outsideGridCenters": "NOT_EVALUATED_CENTER_OUTSIDE_GRID; no native iterator call or coordinate clamp"
+  },
+  "controls": {
+    "fullSupport": "Constant and general affine field reproduction at (4.125h,4.375h), half-domain h/4",
+    "zeroBase": "Prescribed ux=y,uy=0 sampled on native nodes, temporary y0 probes with half-domain l; sumW=1-l/(4h), baseW=1-l/(2h), represented ux=l/4, d(ux)/dy=1/2; floor-crossing hypothetical probes, not actual MPs",
+    "zeroBaseHalfDomainOverH": [0.25, 0.125, 0.0625, 0.0009765625],
+    "absoluteTolerance": 1e-10,
+    "forbiddenCalls": "Actual around-method counters trap all update-sim and composite constitutive-model attempts; require zero"
+  },
+  "limitations": ["Retained formal circle has negative normal forces and is not a physical/global FoS", "Fixed base is an actual physical anchoring assumption, not an interpolation defect", "No trajectory, factor search, stress update, convergence proof, slide detection or automatic next-run authorization", "A hypothetical domain crossing the floor may have truncated partition; this is not evidence that actual initial MPs lose support"],
+  "automaticScientificPass": false
+}

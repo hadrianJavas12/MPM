@@ -59,6 +59,12 @@ change to boundary/strength/psi is allowed. Freeze protocol/code before its
 first execution; record the prescribed test field as kinematics, never simulated
 motion or FoS. The old arc's negative normals still prevent a physical FoS claim.
 This gate is NOT_RUN at this completed-result checkpoint.
+Source is now ready: `tests/benchmarks/gravity-basal-representation.lisp` and
+`research/references/unnotched-mc-ssr/basal-representation-contract.json`.
+Root and independent hash-bound[technical review](../research/notes/unnotched-landslide-2026-10-24/BASAL_REPRESENTATION_REVIEW.md)
+approve the first frozen no-timestep invocation. Hypothetical floor-crossing
+probes/inactive-node sampling are not actual solution fields. Follow the
+fresh-directory command in that review; preserve failures, no old gate repeats.
 
 ## Historical launch: first full unnotched composite-apex SRF1.6 trial
 
