@@ -1,0 +1,232 @@
+{
+  "schema": "cl-mpm.gravity-composite-apex.scenario-controls.evidence.v1",
+  "createdUtc": "2026-10-25T17:21:49.606626+00:00",
+  "nativeAttempts": {
+    "scenario-controls-001": {
+      "launcherExit": {
+        "exitCode": 1,
+        "endedUtc": "2026-10-25T17:10:28.0184831Z"
+      },
+      "command": {
+        "sourceHead": "a525754217b7a2db6d78302060aa3a5685c1e2f4",
+        "executable": "windows/cl-mpm.cmd",
+        "arguments": [
+          "tests/benchmarks/gravity-composite-apex-controls.lisp",
+          "output/mc-composite-apex-2026-10-26/scenario-controls-001",
+          "all"
+        ],
+        "startedUtc": "2026-10-25T17:09:42.9639921Z",
+        "runnerSha256": "98C2A11AFD9E4DA3C6A0336D4E82A02426210BFFA40B19B12AA06F0CFF5E0815"
+      },
+      "result": {
+        "passed": false,
+        "passedGroups": [
+          "strict-default",
+          "optional-input",
+          "reject-hidden-inputs",
+          "short-output"
+        ],
+        "selectedGroups": [
+          "strict-default",
+          "optional-input",
+          "reject-hidden-inputs",
+          "short-output",
+          "saved-output",
+          "read-only"
+        ],
+        "skippedGroups": [],
+        "failure": [
+          "saved-output",
+          "The value\n  NIL\nis not of type\n  VECTOR"
+        ],
+        "physicalUpdatesExecuted": 2,
+        "materialCallsAttempted": 1760,
+        "materialCallsAccepted": 1760,
+        "standaloneConstitutiveCallsAttempted": 0,
+        "standaloneConstitutiveCallsAccepted": 0,
+        "standaloneMaterialConstructors": 2,
+        "observations": {
+          "observationsDirectory": "D:/MPM/output/mc-composite-apex-2026-10-26/scenario-controls-001/observations/"
+        },
+        "nativeBackend": {
+          "modulePath": "D:/MPM/output/mc-composite-apex-2026-10-26/scenario-controls-001/source/libs/kirchoff.dll",
+          "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+          "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+          "nativeMcEntryPresent": true
+        },
+        "scope": "Exact strict1.6 config/constructor compatibility and explicit optional metadata; selected tiny880-MP gravity output, no forced apex/standalone constitutive call/full slope or scientific PASS"
+      },
+      "sourceCount": 291,
+      "sourceBeforeAfterAndCurrentMatched": true
+    },
+    "scenario-controls-002": {
+      "launcherExit": {
+        "exitCode": 1,
+        "endedUtc": "2026-10-25T17:14:27.1573118Z"
+      },
+      "command": {
+        "sourceHead": "b593f80ffedf89891e21ff1205aeb215ed0caccb",
+        "executable": "windows/cl-mpm.cmd",
+        "arguments": [
+          "tests/benchmarks/gravity-composite-apex-controls.lisp",
+          "output/mc-composite-apex-2026-10-26/scenario-controls-002",
+          "saved-output,read-only",
+          "output/mc-composite-apex-2026-10-26/scenario-controls-001/observations/"
+        ],
+        "startedUtc": "2026-10-25T17:13:45.3758984Z",
+        "runnerSha256": "9B4FA09C4EEFB81586E38D1C6A15710670A536B591A4218731B0818E1CF52C2F",
+        "scope": "Saved-state reader repair/read-only gate; skips four passed groups, zero MPM updates"
+      },
+      "result": {
+        "passed": false,
+        "passedGroups": [],
+        "selectedGroups": [
+          "saved-output"
+        ],
+        "skippedGroups": [
+          "read-only",
+          "short-output",
+          "reject-hidden-inputs",
+          "optional-input",
+          "strict-default"
+        ],
+        "failure": [
+          "saved-output",
+          "Select short-output first, or supply existing saved observations as third argument."
+        ],
+        "physicalUpdatesExecuted": 0,
+        "materialCallsAttempted": 0,
+        "materialCallsAccepted": 0,
+        "standaloneConstitutiveCallsAttempted": 0,
+        "standaloneConstitutiveCallsAccepted": 0,
+        "standaloneMaterialConstructors": 0,
+        "observations": {
+          "observationsDirectory": "D:/MPM/read-only/"
+        },
+        "nativeBackend": {
+          "modulePath": "D:/MPM/output/mc-composite-apex-2026-10-26/scenario-controls-002/source/libs/kirchoff.dll",
+          "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+          "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+          "nativeMcEntryPresent": true
+        },
+        "scope": "Exact strict1.6 config/constructor compatibility and explicit optional metadata; selected tiny880-MP gravity output, no forced apex/standalone constitutive call/full slope or scientific PASS"
+      },
+      "sourceCount": 291,
+      "sourceBeforeAfterAndCurrentMatched": true
+    },
+    "scenario-controls-003": {
+      "launcherExit": {
+        "exitCode": 0,
+        "endedUtc": "2026-10-25T17:18:14.5806639Z"
+      },
+      "command": {
+        "sourceHead": "ffecc34502ab06a055bd0e31290a0edd21e86039",
+        "executable": "windows/cl-mpm.cmd",
+        "arguments": [
+          "tests/benchmarks/gravity-composite-apex-controls.lisp",
+          "output/mc-composite-apex-2026-10-26/scenario-controls-003",
+          "saved",
+          "D:/MPM/output/mc-composite-apex-2026-10-26/scenario-controls-001/observations/"
+        ],
+        "startedUtc": "2026-10-25T17:17:32.7149808Z",
+        "runnerSha256": "89D7A2D5A905514774103FF75A0763EF4A889AC44075D39564313E03637BA5A3",
+        "scope": "Saved-state reader repair/read-only gate; skips four passed groups, zero MPM updates"
+      },
+      "result": {
+        "passed": true,
+        "passedGroups": [
+          "saved-output",
+          "read-only"
+        ],
+        "selectedGroups": [
+          "saved-output",
+          "read-only"
+        ],
+        "skippedGroups": [
+          "short-output",
+          "reject-hidden-inputs",
+          "optional-input",
+          "strict-default"
+        ],
+        "failure": null,
+        "physicalUpdatesExecuted": 0,
+        "materialCallsAttempted": 0,
+        "materialCallsAccepted": 0,
+        "standaloneConstitutiveCallsAttempted": 0,
+        "standaloneConstitutiveCallsAccepted": 0,
+        "standaloneMaterialConstructors": 0,
+        "observations": {
+          "observationsDirectory": "D:/MPM/output/mc-composite-apex-2026-10-26/scenario-controls-001/observations/",
+          "savedApexActiveRows": 0,
+          "savedParticleRows": 2640,
+          "savedVtkStates": 3,
+          "idMappingConvention": "VTK unique IDs stable across frames; CSV IDs are captured vector indices, not assumed equal to unique IDs",
+          "apexActivationRequired": false
+        },
+        "nativeBackend": {
+          "modulePath": "D:/MPM/output/mc-composite-apex-2026-10-26/scenario-controls-003/source/libs/kirchoff.dll",
+          "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+          "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+          "nativeMcEntryPresent": true
+        },
+        "scope": "Exact strict1.6 config/constructor compatibility and explicit optional metadata; selected tiny880-MP gravity output, no forced apex/standalone constitutive call/full slope or scientific PASS"
+      },
+      "sourceCount": 291,
+      "sourceBeforeAfterAndCurrentMatched": true
+    }
+  },
+  "originalShortSolverComplete": true,
+  "totalGenuineMpmUpdatesAcrossAttempts": 2,
+  "shortMaterialCallsAttempted": 1760,
+  "shortMaterialCallsAccepted": 1760,
+  "zeroUpdateReaderAttempts": [
+    "scenario-controls-002",
+    "scenario-controls-003"
+  ],
+  "finalReaderGroups": [
+    "saved-output",
+    "read-only"
+  ],
+  "syntheticControls": {
+    "analysis-controls-001": {
+      "testCount": 11,
+      "result": {
+        "exitCode": 0,
+        "copiedSourcesUnchanged": true,
+        "currentSourcesMatch": true,
+        "sourceCount": 5,
+        "nativeCalls": 0,
+        "scope": "Synthetic reviewer helper controls only; no full CLI/native/actual-state audit/render"
+      },
+      "copiedSourcesVerified": 5,
+      "scope": "Each invocation retains its own historical copied version; not assumed identical to later reviewer"
+    },
+    "binding-controls-001": {
+      "testCount": 3,
+      "result": {
+        "exitCode": 0,
+        "copiedSourcesUnchanged": true,
+        "currentSourcesMatch": true,
+        "sourceCount": 5,
+        "nativeCalls": 0,
+        "scope": "Synthetic reviewer helper controls only; no full CLI/native/actual-state audit/render"
+      },
+      "copiedSourcesVerified": 5,
+      "scope": "Each invocation retains its own historical copied version; not assumed identical to later reviewer"
+    }
+  },
+  "actualIndependentReviewExit": {
+    "exitCode": 0,
+    "endedUtc": "2026-10-25T17:14:21.1801554Z"
+  },
+  "actualIndependentReviewIntegrity": "PASS",
+  "actualAnalysisSourceCopies": 4,
+  "actualReviewedSavedStates": 3,
+  "readerFailure001": "Harness requested nonexistent2D VTK zz/yz/xz fields; underlying2USF/3-state runner completed",
+  "argumentFailure002": "Unquoted comma was tokenized by WindowsCMD; read-only became observations arg; zero MPM/material calls",
+  "repair003": "Single-token saved alias and absolute original observations; saved-output/read-only pass with zero new MPM/material calls",
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "scope": "Focused optional gravity integration, exact input/default compatibility, genuine short output and independent saved-reader verification; not full slope, forced MPM apex activation, paper reproduction or physical slide validation",
+  "operations": "Read/copy/hash/ZIP/CRC/all-member decoded-byte comparison only; no numerical/test/analysis/render repeated"
+}

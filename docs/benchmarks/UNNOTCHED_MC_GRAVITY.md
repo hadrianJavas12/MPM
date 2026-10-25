@@ -520,3 +520,9 @@ checks. Its 287-source/DLL proof and 18-artifact / 296-member packet are root
 verified. Default strict34 and bounded two-update output also pass once, with
 all three VTKs and both CSVs byte-identical to the pre-hook baseline. These
 gates establish neither optional-model full MPM output nor a landslide.
+
+Subsequent optional MPM/scenario gates are closed with actual short outputs,
+frozen variant review and retained harness failures. The separate
+[composite-apex study](UNNOTCHED_MC_COMPOSITE_APEX.md) preregisters one full
+same-SRF1.6 trial after those gates. It does not resume the strict ladder's
+SRF2.0 or alter this historical strict experiment's outcome.

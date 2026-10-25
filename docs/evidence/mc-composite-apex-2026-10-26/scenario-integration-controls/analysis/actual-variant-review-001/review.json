@@ -1,0 +1,613 @@
+{
+  "schema": "cl-mpm.gravity-composite-apex.review.v1",
+  "createdUtc": "2026-10-25T17:14:18.622259+00:00",
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "analysisSources": [
+    {
+      "originalPath": "D:\\MPM\\scripts\\review-gravity-composite-apex.py",
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\variant-review-001\\analysis-source\\review-gravity-composite-apex.py",
+      "sha256": "edec92168deaf06b942f0a36e9468be958f00c3e5b06f34e1d91e368340f4a3b"
+    },
+    {
+      "originalPath": "D:\\MPM\\scripts\\review-gravity-slope.py",
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\variant-review-001\\analysis-source\\review-gravity-slope.py",
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+    },
+    {
+      "originalPath": "D:\\MPM\\scripts\\plot_m5_cliff_comparison.py",
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\variant-review-001\\analysis-source\\plot_m5_cliff_comparison.py",
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+    },
+    {
+      "originalPath": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\composite-apex-srf1p6-contract.json",
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\variant-review-001\\analysis-source\\composite-apex-srf1p6-contract.json",
+      "sha256": "aa13974b57d29b0d9f29d2d1997dd5c295eca29ae91d8d88a62576180dbffd27"
+    }
+  ],
+  "executedWrapperPath": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\variant-review-001\\analysis-source\\review-gravity-composite-apex.py",
+  "nativeEvidenceRoot": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001",
+  "sourceVerification": {
+    "status": "PASS",
+    "frozenSourcesVerified": 291,
+    "optionalLoadedSources": [
+      "materials/models/plastic/mc-composite-apex/package.lisp",
+      "materials/models/plastic/mc-composite-apex/projection.lisp",
+      "materials/models/plastic/mc-composite-apex/native.lisp",
+      "materials/adapters/mc-composite-apex.lisp",
+      "scenarios/gravity-slope/mc-composite-apex-adapter.lisp"
+    ],
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/mc-composite-apex-2026-10-26/scenario-controls-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "scope": "Retained source hashes and native runtime proof; no post-exit process remapping"
+  },
+  "baseReview": {
+    "schema": "cl-mpm.gravity-slope.review.v1",
+    "createdUtc": "2026-10-25T17:14:19.965763+00:00",
+    "runDirectory": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\observations",
+    "nativeStatus": "complete",
+    "nativeComplete": true,
+    "savedScope": "complete",
+    "savedFrames": 3,
+    "lastSavedTimeS": 2e-05,
+    "integrityStatus": "PASS",
+    "scientificallyValidated": false,
+    "landslideDetected": false,
+    "coherentMotionDetected": false,
+    "runoutGateDetected": false,
+    "manualSpatialReviewRequired": false,
+    "landslideVerification": "NOT_DETECTED",
+    "criteria": {
+      "cohortCutoffH": 2,
+      "adjacencyH": 1.01,
+      "dxH": 0.25,
+      "downslopeH": 0.5,
+      "componentMassFraction": 0.1,
+      "positiveDxMassFraction": 0.75,
+      "sustainedVxMPerS": 0.001,
+      "sustainedDurationS": 1,
+      "toeOffsetH": 0.5,
+      "toeTotalMassFraction": 0.01
+    },
+    "contract": {
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\variant-review-001\\analysis-source\\composite-apex-srf1p6-contract.json",
+      "sha256": "aa13974b57d29b0d9f29d2d1997dd5c295eca29ae91d8d88a62576180dbffd27",
+      "bytes": 7458
+    },
+    "studyConfigurationDifferences": [
+      {
+        "key": "duration",
+        "study": 6,
+        "actual": 2e-05
+      },
+      {
+        "key": "frames",
+        "study": 61,
+        "actual": 3
+      },
+      {
+        "key": "gravityRampDuration",
+        "study": 2,
+        "actual": 1e-05
+      }
+    ],
+    "nativeStressTolerances": {
+      "stress-atol": 1e-06,
+      "stress-rtol": 1e-11,
+      "selectedProjection": {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+        "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1",
+        "bytes": 23352
+      },
+      "sourceScope": "frozen-projection-hash-matches-source-manifest; execution-provenance-requires-native-runtime-proof",
+      "sourceManifestCheck": {
+        "status": "PASS",
+        "manifest": {
+          "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\source\\source-manifest.json",
+          "sha256": "ef35d870000cd6eadc2ccc7a171d1e1a4b211315e10584d93909792354729776",
+          "bytes": 60657
+        },
+        "verifiedMember": "source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp",
+        "verifiedMemberCount": 1,
+        "scope": "Selected projection hash/length only; other source members and manifest authenticity not independently certified here"
+      },
+      "scaleConvention": "atol + rtol*max(1,max(abs(current Kirchhoff principal stress))). Native projection uses trial stress scale, unavailable in saved CSV; this independent current-state bound is not enlarged to match failures."
+    },
+    "serializationChecks": {
+      "atol": 1e-11,
+      "rtol": 1e-11
+    },
+    "checks": [
+      {
+        "name": "saved-gravity-schedule",
+        "status": "PASS",
+        "scope": "Saved step endpoints only; CSV cannot prove every unsaved force evaluation"
+      },
+      {
+        "name": "saved-frame-time-grid",
+        "status": "PASS"
+      },
+      {
+        "name": "updates-monotone",
+        "status": "PASS"
+      },
+      {
+        "name": "manifest-terminal-flags",
+        "status": "PASS"
+      },
+      {
+        "name": "manifest-saved-state-scope",
+        "status": "PASS"
+      },
+      {
+        "name": "completion-consistency",
+        "status": "PASS",
+        "nativeComplete": true,
+        "savedFrames": 3,
+        "requestedFrames": 3
+      },
+      {
+        "name": "initial-coordinate-reference",
+        "status": "PASS"
+      },
+      {
+        "name": "initial-unnotched-polygon-quadrature",
+        "status": "PASS",
+        "expectedParticles": 880,
+        "actualParticles": 880,
+        "convention": "Every configured regular-lattice center under the unnotched continuous slope; no missing/notched/seeded centers"
+      },
+      {
+        "name": "initial-volume-density",
+        "status": "PASS"
+      },
+      {
+        "name": "initial-zero-velocity-stress-history",
+        "status": "PASS"
+      },
+      {
+        "name": "initial-identity-F",
+        "status": "PASS"
+      },
+      {
+        "name": "aggregate-mass-conservation",
+        "status": "PASS"
+      }
+    ],
+    "frameIntegrity": [
+      {
+        "frame": 0,
+        "timeS": 0.0,
+        "checks": [
+          {
+            "name": "identity-count-mass",
+            "status": "PASS"
+          },
+          {
+            "name": "reference-state-constant",
+            "status": "PASS"
+          },
+          {
+            "name": "CSV-VTK-position-mass",
+            "status": "PASS"
+          },
+          {
+            "name": "F-determinant-and-volume-J",
+            "status": "PASS",
+            "maximumDeterminantCsvDifference": 0.0,
+            "maximumVolumeRatioDifference": 0.0
+          },
+          {
+            "name": "perfect-Cauchy-SSR-law",
+            "status": "PASS"
+          },
+          {
+            "name": "six-plane-current-state-admissibility",
+            "status": "PASS",
+            "maximumYieldResidualPa": -12188.610806057797,
+            "maximumNativeCurrentScaleTolerancePa": 1.00001e-06,
+            "violatingParticles": 0
+          },
+          {
+            "name": "independent-yield-diagnostic",
+            "status": "PASS",
+            "maximumDifferencePa": 0.0
+          },
+          {
+            "name": "nonnegative-history-work",
+            "status": "PASS"
+          },
+          {
+            "name": "accumulated-kappa-monotone",
+            "status": "PASS"
+          },
+          {
+            "name": "fixed-upper-cohort",
+            "status": "PASS"
+          },
+          {
+            "name": "saved-time",
+            "status": "PASS"
+          },
+          {
+            "name": "center-domain-and-floor",
+            "status": "PASS",
+            "floorPenetratingCenters": 0,
+            "centerDomainExits": 0
+          },
+          {
+            "name": "aggregate-history-identities",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "frame": 1,
+        "timeS": 1e-05,
+        "checks": [
+          {
+            "name": "identity-count-mass",
+            "status": "PASS"
+          },
+          {
+            "name": "reference-state-constant",
+            "status": "PASS"
+          },
+          {
+            "name": "CSV-VTK-position-mass",
+            "status": "PASS"
+          },
+          {
+            "name": "F-determinant-and-volume-J",
+            "status": "PASS",
+            "maximumDeterminantCsvDifference": 0.0,
+            "maximumVolumeRatioDifference": 0.0
+          },
+          {
+            "name": "perfect-Cauchy-SSR-law",
+            "status": "PASS"
+          },
+          {
+            "name": "six-plane-current-state-admissibility",
+            "status": "PASS",
+            "maximumYieldResidualPa": -12188.610806057797,
+            "maximumNativeCurrentScaleTolerancePa": 1.00001e-06,
+            "violatingParticles": 0
+          },
+          {
+            "name": "independent-yield-diagnostic",
+            "status": "PASS",
+            "maximumDifferencePa": 0.0
+          },
+          {
+            "name": "nonnegative-history-work",
+            "status": "PASS"
+          },
+          {
+            "name": "accumulated-kappa-monotone",
+            "status": "PASS"
+          },
+          {
+            "name": "fixed-upper-cohort",
+            "status": "PASS"
+          },
+          {
+            "name": "saved-time",
+            "status": "PASS"
+          },
+          {
+            "name": "center-domain-and-floor",
+            "status": "PASS",
+            "floorPenetratingCenters": 0,
+            "centerDomainExits": 0
+          },
+          {
+            "name": "aggregate-history-identities",
+            "status": "PASS"
+          }
+        ]
+      },
+      {
+        "frame": 2,
+        "timeS": 2e-05,
+        "checks": [
+          {
+            "name": "identity-count-mass",
+            "status": "PASS"
+          },
+          {
+            "name": "reference-state-constant",
+            "status": "PASS"
+          },
+          {
+            "name": "CSV-VTK-position-mass",
+            "status": "PASS"
+          },
+          {
+            "name": "F-determinant-and-volume-J",
+            "status": "PASS",
+            "maximumDeterminantCsvDifference": 0.0,
+            "maximumVolumeRatioDifference": 0.0
+          },
+          {
+            "name": "perfect-Cauchy-SSR-law",
+            "status": "PASS"
+          },
+          {
+            "name": "six-plane-current-state-admissibility",
+            "status": "PASS",
+            "maximumYieldResidualPa": -12188.583493188875,
+            "maximumNativeCurrentScaleTolerancePa": 1.00001e-06,
+            "violatingParticles": 0
+          },
+          {
+            "name": "independent-yield-diagnostic",
+            "status": "PASS",
+            "maximumDifferencePa": 0.0
+          },
+          {
+            "name": "nonnegative-history-work",
+            "status": "PASS"
+          },
+          {
+            "name": "accumulated-kappa-monotone",
+            "status": "PASS"
+          },
+          {
+            "name": "fixed-upper-cohort",
+            "status": "PASS"
+          },
+          {
+            "name": "saved-time",
+            "status": "PASS"
+          },
+          {
+            "name": "center-domain-and-floor",
+            "status": "PASS",
+            "floorPenetratingCenters": 0,
+            "centerDomainExits": 0
+          },
+          {
+            "name": "aggregate-history-identities",
+            "status": "PASS"
+          }
+        ]
+      }
+    ],
+    "failures": [],
+    "motionWindows": {
+      "entire": {
+        "label": "entire saved run including gravity ramp",
+        "referenceTimeS": 0.0,
+        "referenceFrame": 0,
+        "status": "NOT_EVALUATED",
+        "reason": "Less than one saved second; bounded gate cannot assess sustained failure",
+        "cohortMassKgPerM": 293678.26933764335,
+        "candidate": null,
+        "states": [
+          {
+            "frame": 0,
+            "timeS": 0.0,
+            "movingMassFraction": 0.0,
+            "largestConnectedMovingMassFraction": 0.0,
+            "cohortCentroidDisplacementM": [
+              0.0,
+              0.0
+            ],
+            "cohortMedianDxM": 0.0,
+            "cohortMeanVelocityMPerS": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "frame": 1,
+            "timeS": 1e-05,
+            "movingMassFraction": 0.0,
+            "largestConnectedMovingMassFraction": 0.0,
+            "cohortCentroidDisplacementM": [
+              0.0,
+              -9.80665030662444e-10
+            ],
+            "cohortMedianDxM": 0.0,
+            "cohortMeanVelocityMPerS": [
+              0.0,
+              -9.806650000000094e-05
+            ]
+          },
+          {
+            "frame": 2,
+            "timeS": 2e-05,
+            "movingMassFraction": 0.0,
+            "largestConnectedMovingMassFraction": 0.0,
+            "cohortCentroidDisplacementM": [
+              0.0,
+              -2.9419949362477336e-09
+            ],
+            "cohortMedianDxM": 0.0,
+            "cohortMeanVelocityMPerS": [
+              3.730061421034973e-15,
+              -0.0001961329892598446
+            ]
+          }
+        ],
+        "selectionConvention": "Fixed initial cohort/graph; per-state displacement mask; largest component by mass, ties by smallest ID. Candidate IDs are held fixed for every saved velocity in the reported interval. No final-speed selection."
+      },
+      "post2s": {
+        "status": "NOT_EVALUATED",
+        "reason": "No actual saved2s state; no interpolation or reference substitution"
+      }
+    },
+    "toeHistory": [
+      {
+        "frame": 0,
+        "timeS": 0.0,
+        "totalMassFractionPastToePlusHalfH": 0.0,
+        "frontXM": 31.25,
+        "medianXM": 10.75,
+        "centroidXM": 11.755681818181818
+      },
+      {
+        "frame": 1,
+        "timeS": 1e-05,
+        "totalMassFractionPastToePlusHalfH": 0.0,
+        "frontXM": 31.25,
+        "medianXM": 10.75,
+        "centroidXM": 11.755681818181818
+      },
+      {
+        "frame": 2,
+        "timeS": 2e-05,
+        "totalMassFractionPastToePlusHalfH": 0.0,
+        "frontXM": 31.25,
+        "medianXM": 10.75,
+        "centroidXM": 11.755681818181818
+      }
+    ],
+    "boundaryReview": {
+      "floorPenetratingCenterSamples": 0,
+      "domainExitCenterSamples": 0,
+      "minimumParticleDomainMarginM": -4.903316641602373e-10,
+      "runoutContactValidated": false
+    },
+    "limitations": [
+      "A motion candidate requires actual scale1 spatial/plastic-shear review; no automatic scientific PASS.",
+      "Fixed grid bottom is not a calibrated Coulomb runout bed; particle-domain overlap/kernel support are not certified by center tests.",
+      "Explicit ramp, FLIP ringing, coarse grid/PPC, locking, timestep, domain and basal effects have not been sensitivity-validated.",
+      "Downslope projection includes settlement; horizontal displacement/coherence are tested separately.",
+      "Native completion, yield colour, maximum speed and toe-front extremum alone do not prove landslide.",
+      "Saved-state velocity persistence does not certify unsaved substep behavior; no closed energy balance is inferred."
+    ],
+    "inputHashes": [
+      {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\observations\\manifest.json",
+        "sha256": "6f733a74a7f20707850483219531b779841a428f06a2cd4d98707e142324e25e",
+        "bytes": 6034
+      },
+      {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\observations\\history.csv",
+        "sha256": "eb5e9b66c49adf6082863d4e24a934a77854c5686255a6ad3df27ae69f40d0d7",
+        "bytes": 2701
+      },
+      {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\observations\\particles.csv",
+        "sha256": "8694b45097382bb3c02c3483df729ddada3f5218e5538c5d3627e9462cfe88ff",
+        "bytes": 1943893
+      },
+      {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\variant-review-001\\analysis-source\\composite-apex-srf1p6-contract.json",
+        "sha256": "aa13974b57d29b0d9f29d2d1997dd5c295eca29ae91d8d88a62576180dbffd27",
+        "bytes": 7458
+      },
+      {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\observations\\vtk\\particles_0000.vtk",
+        "sha256": "b5c15e3df43cab74e82af4ad46df16e1e614dd03584bea4c90a22497026bec43",
+        "bytes": 304862
+      },
+      {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\observations\\vtk\\particles_0001.vtk",
+        "sha256": "f859b49d40ffb5b5c7322365033caa83d8a89624660203e5e45d09f0e9514b10",
+        "bytes": 304862
+      },
+      {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\observations\\vtk\\particles_0002.vtk",
+        "sha256": "42b165ed80c28fcd2e4135118bd5f495f8069f769a4d0f566de87807a441fce6",
+        "bytes": 304862
+      }
+    ],
+    "sourceHashes": [
+      {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+        "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1",
+        "bytes": 23352
+      },
+      {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\source\\source-manifest.json",
+        "sha256": "ef35d870000cd6eadc2ccc7a171d1e1a4b211315e10584d93909792354729776",
+        "bytes": 60657
+      }
+    ],
+    "analysisScript": {
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\variant-review-001\\analysis-source\\review-gravity-slope.py",
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+      "bytes": 38121
+    },
+    "vtkReaderSource": {
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\variant-review-001\\analysis-source\\plot_m5_cliff_comparison.py",
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "bytes": 23581
+    }
+  },
+  "variantReview": {
+    "status": "PASS",
+    "materialVariant": "perfect-mc-composite-apex",
+    "boundedControlOnly": true,
+    "inputSettingsVerified": {
+      "E": 100000000,
+      "nu": 0.3,
+      "referenceCohesionPa": 10000,
+      "referenceFrictionDeg": 20,
+      "density": 2039.4324259558566,
+      "domainWidth": 80,
+      "domainHeight": 15,
+      "height": 10,
+      "crestLength": 12,
+      "width": 32,
+      "baseHeight": 0,
+      "meshSize": 1,
+      "mpsPerCell": 2,
+      "workers": 1,
+      "timeStepScale": 0.2,
+      "duration": 2e-05,
+      "frames": 3,
+      "maxUpdates": 2,
+      "damping": 0,
+      "gravity": -9.80665,
+      "gravityRampDuration": 1e-05,
+      "slope": 26.56505117707799
+    },
+    "frames": [
+      {
+        "frame": 0,
+        "timeS": 0.0,
+        "activeLastReturnCount": 0,
+        "maximumLastMultiplier": 0.0,
+        "maximumCumulativePlasticVolume": 0.0,
+        "maximumActiveHydrostaticErrorPa": null
+      },
+      {
+        "frame": 1,
+        "timeS": 1e-05,
+        "activeLastReturnCount": 0,
+        "maximumLastMultiplier": 0.0,
+        "maximumCumulativePlasticVolume": 0.0,
+        "maximumActiveHydrostaticErrorPa": null
+      },
+      {
+        "frame": 2,
+        "timeS": 2e-05,
+        "activeLastReturnCount": 0,
+        "maximumLastMultiplier": 0.0,
+        "maximumCumulativePlasticVolume": 0.0,
+        "maximumActiveHydrostaticErrorPa": null
+      }
+    ],
+    "limitations": "Last q is not a sparse-frame history difference; unsaved trial compliance/full energy balance are not reconstructed"
+  },
+  "integrityStatus": "PASS",
+  "nativeComplete": true,
+  "boundedControlOnly": true,
+  "media": [
+    {
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\scenario-controls-001\\variant-review-001\\gravity-slope-review.png",
+      "sha256": "1fadc3a6132cde0f3dc5f1e528727d6a4bf8fd96289b2c92fdd1ee0586c23898",
+      "bytes": 178429
+    }
+  ],
+  "scope": "Explicit added volumetric apex flow; unchanged kinematic observer; human spatial mechanism review and same-factor refinement required before landslide verification",
+  "analysisSourceAfterMatch": true
+}

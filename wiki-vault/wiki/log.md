@@ -948,3 +948,13 @@ Test-only fixes preserve physics/tolerances and all negative evidence. FIRST
 frozen-child variant audit passes actual291-source/DLL/three-state CSV/VTK and
 root PNG inspection. Saved-only003 closure precedes a fresh full6s experiment;
 no completed landslide is claimed and no old passed solver/tests repeated.
+
+## [2026-10-26] ingest | Scenario gates closed; full study preregistered
+
+[[unnotched-mc-gravity]] closes saved-only003 with zero native updates;001's
+passed input groups/two updates are reused. Root55indexed/56Git blobs/944ZIP
+members/873 native source copies and291 actual003 files verify. Framework,
+11+3 helper tests and FIRST actual frozen variant review also close. Separate
+full-study documentation preregisters one same-input SRF1.6 six-second trial,
+one-hour wall budget and conditional same-factor refinement. No full solver
+or verified slide yet; all negative evidence/physics limits remain explicit.

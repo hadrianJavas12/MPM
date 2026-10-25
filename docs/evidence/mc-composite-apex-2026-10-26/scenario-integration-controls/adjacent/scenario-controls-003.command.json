@@ -1,0 +1,13 @@
+{
+  "sourceHead": "ffecc34502ab06a055bd0e31290a0edd21e86039",
+  "executable": "windows/cl-mpm.cmd",
+  "arguments": [
+    "tests/benchmarks/gravity-composite-apex-controls.lisp",
+    "output/mc-composite-apex-2026-10-26/scenario-controls-003",
+    "saved",
+    "D:/MPM/output/mc-composite-apex-2026-10-26/scenario-controls-001/observations/"
+  ],
+  "startedUtc": "2026-10-25T17:17:32.7149808Z",
+  "runnerSha256": "89D7A2D5A905514774103FF75A0763EF4A889AC44075D39564313E03637BA5A3",
+  "scope": "Saved-state reader repair/read-only gate; skips four passed groups, zero MPM updates"
+}

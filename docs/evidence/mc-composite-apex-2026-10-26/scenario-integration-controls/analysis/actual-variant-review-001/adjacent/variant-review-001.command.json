@@ -1,0 +1,15 @@
+{
+  "sourceHead": "b593f80ffedf89891e21ff1205aeb215ed0caccb",
+  "executable": "toolchain/analysis-venv/Scripts/python.exe",
+  "arguments": [
+    "scripts/review-gravity-composite-apex.py",
+    "--run-dir",
+    "output/mc-composite-apex-2026-10-26/scenario-controls-001/observations",
+    "--native-evidence-root",
+    "output/mc-composite-apex-2026-10-26/scenario-controls-001",
+    "--bounded-control",
+    "--output-dir",
+    "output/mc-composite-apex-2026-10-26/scenario-controls-001/variant-review-001"
+  ],
+  "startedUtc": "2026-10-25T17:14:18.1640434Z"
+}

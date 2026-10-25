@@ -294,3 +294,14 @@ CSV/yield checks. Saved-only002 retains a CMD comma-argument failure, zero MPM;
 variant review already passes on actual001's three saved states/291-source/DLL
 proof and root-inspected PNG. These20 microseconds have no apex flow/slide;
 full6s study and same-factor refinement remain separate future evidence.
+
+## Scenario closure and full-study preregistration
+
+Saved-only003 passes both remaining groups with zero updates, reusing001's
+three real states. All six groups close without repeating four passed inputs
+or the two native updates. Root verifies55indexed/56Git blobs/fourZIPs/944
+members/873 native source copies plus291 actual003 files. Framework evidence
+and11+3 Python controls/actual frozen variant review are complete. The separate
+full-study document preregisters6s/61states/SRF1.6 and unchanged nonmaterial
+inputs. Freeze launch evidence and run once after checkpoint; no new solver
+or verified slide yet. Same-factor h0.5 confirmation remains conditional.

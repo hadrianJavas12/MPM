@@ -1,8 +1,28 @@
 # AI Engineering Handover — CL-MPM
 
-**Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
+**Operational checkpoint: 2026-10-26, Asia/Jakarta. Read this first.**
 
 ## Latest 2026-10-26: bounded MPM and variant review close; no full run yet
+
+All six targeted scenario groups are now closed across preserved attempts:
+003 exits0 with saved-output/read-only PASS, zero MPM/material calls, reading
+001's unchanged2640 rows / three VTKs. No four passed001 groups or its two
+updates were repeated. Scenario/analysis packet is root verified: 55 indexed
+artifacts / 56 staged Git blobs / four ZIPs / 944 members / 873 native source
+copies, plus all291 actual003 files. Framework packet is already verified
+below. Eleven plus three separate Python controls and the FIRST actual frozen
+variant review remain completed; do not repeat them.
+
+Read `docs/benchmarks/UNNOTCHED_MC_COMPOSITE_APEX.md` for the preregistered full
+study. After this evidence checkpoint is pushed, prepare/capture launch proof
+then start ONE fresh `srf1p6-composite-001` (same directory parent as gates),
+6s/61states/880MPs/SRF1.6, one-hour wall budget. No full solver is active yet.
+Scope agent prepares `.tmp/capture-gravity-composite-apex-launch.py`; root must
+read/approve and invoke prepare before launch and ONE generated live PS proof
+after launch. All shared production sources/config must match the closed gate.
+Only class/declared material extension differs from strict full1.6. No SRF2.0.
+Existing strict-branch capsules identify that pure subcall; an absent analytic
+failure record is not a whole-MP restart or license to invent replay inputs.
 
 Framework-output-001 retained one passing adapter group then failed its test
 float serializer (one accepted native point call, zero MPM). Test-only repair

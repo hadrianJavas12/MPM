@@ -2,6 +2,15 @@
 
 ## Actual optional integration gates, 2026-10-26
 
+Targeted saved-only003 now exits0: saved-output/read-only PASS with zero MPM,
+using001's actual2640 particle rows / three VTK states. All six groups close
+across retained attempts without repeating the four passed001 groups or its
+two updates. Root verifies [scenario evidence](evidence/mc-composite-apex-2026-10-26/scenario-integration-controls/README.md):
+55 indexed / 56 Git blobs / four ZIPs / 944 members / 873 archived and291
+actual003 source files. All14 Python helper controls and FIRST actual frozen
+variant audit are complete. See the [full study plan](benchmarks/UNNOTCHED_MC_COMPOSITE_APEX.md);
+it is a separate six-second full run, not yet launched at this checkpoint.
+
 Framework002 closes the three remaining native groups after preserving001's
 float-serializer failure and passed adapter group: native0, two real USF
 updates / 64 accepted calls / 32 MPs / three VTK / 96 per-MP + three aggregate

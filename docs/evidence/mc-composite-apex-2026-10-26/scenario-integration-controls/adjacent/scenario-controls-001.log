@@ -1,0 +1,11 @@
+PASS: strict-default
+PASS: optional-input
+PASS: reject-hidden-inputs
+[gravity-slope] frame=0 time=0.00000 updates=0 maxdisp=0.0000e+0 maxspeed=0.0000e+0
+[gravity-slope] frame=1 time=0.00001 updates=1 maxdisp=9.8067e-10 maxspeed=9.8067e-5
+[gravity-slope] frame=2 time=0.00002 updates=2 maxdisp=2.9420e-9 maxspeed=1.9613e-4
+PASS: short-output
+FAIL: saved-output: The value
+                      NIL
+                    is not of type
+                      VECTOR
