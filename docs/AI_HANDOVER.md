@@ -4,6 +4,23 @@
 
 ## Continuation checkpoint: fine-study sources only; no solver active
 
+**Latest continuation update,26October06:33WIB:** the FIRST six new Python
+binding/glue controls now PASS/exit0 in `fine-binding-controls-001`, executed
+from two copied sources with before/after hashes unchanged. CSV tamper is
+restored before the separate contract-tamper assertion, so the latter cannot
+pass merely from a stale CSV. No old observer tests, actual comparison, native
+call, audit or rendering runs. Evidence packet
+`docs/evidence/mc-composite-apex-2026-10-26/fine-binding-controls-001` retains
+exact commands/logs/exits/sources. **Do not repeat these six tests.** Native
+fine input/output gate and full fine solver remain NOT_RUN, not replaced by
+these Python controls. Previous turn made progress through committed evidence
+and the read-only basal gate; this turn closes this new glue gate.
+
+Quota checked at continuation:96%5h/62%weekly; reset remains10:49:51WIB.
+Preserve the5h alarm and continue remaining source review/new native gate
+after reset. Goal remains active: actual verified unnotched sliding, not merely
+passed controls or native completion. No source-ready launch draft is approved.
+
 Completed native-result evidence is pushed at eb6c22de; basal diagnostic,
 saved summary and fine-study preregistration are pushed at796f4bca. New fine
 case/test and CSV-only comparison sources below are a **NOT_RUN source

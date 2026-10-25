@@ -365,3 +365,9 @@ NOT_RUN until new targeted gate closes. Physical-metre observer stays fixed;
 native h-scaled detection remains separate. Same CFL couples space/time and
 MP sampling. After that pair, no automatic finer mesh/SRF/time extension;
 resolve physical foundation/base/reference definition before another experiment.
+
+The FIRST six new CSV-comparison binding controls now PASS from two copied
+sources, before/after hashes unchanged. CSV is restored before testing contract
+tamper separately. This is synthetic glue verification only: no old observer
+tests/native/audit/render repeats, no actual fine comparison or fine solver.
+Native fine input/output gate remains NOT_RUN; do not repeat these six controls.

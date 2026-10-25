@@ -1,0 +1,50 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "command.json",
+      "bytes": 340,
+      "sha256": "32c9c3cab29b405aa45c55050ee7ef96358bf332e1d4f19b9d3b6e416769c8ea"
+    },
+    {
+      "path": "exit.json",
+      "bytes": 112,
+      "sha256": "a6a4a3800375c15e43432f7e3f82c10c96f7eb363376f29e3f2e66059140825e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 405,
+      "sha256": "3fdb96bed75cf767a02cbf59af3e2d0ad21918d44e414f9bc2651d3b94fdc18c"
+    },
+    {
+      "path": "source/scripts/review-gravity-composite-refinement.py",
+      "bytes": 14435,
+      "sha256": "4af62e51fa619410a124049c410bebbe34fd5736db8187270973d1a865a50752"
+    },
+    {
+      "path": "source/tests/analysis/test_gravity_composite_refinement.py",
+      "bytes": 5808,
+      "sha256": "1920571323ceed792e1704d75c6ae6d9913b433f60d47d5fad077a8e9d1481c7"
+    },
+    {
+      "path": "source-after.json",
+      "bytes": 363,
+      "sha256": "13854404b1e930efe7b28ca79866a5a46f2c6cc1a8673c3ffdb25a11ff88f0bc"
+    },
+    {
+      "path": "source-before.json",
+      "bytes": 363,
+      "sha256": "13854404b1e930efe7b28ca79866a5a46f2c6cc1a8673c3ffdb25a11ff88f0bc"
+    },
+    {
+      "path": "test.log",
+      "bytes": 973,
+      "sha256": "eb46cfd3666509119ccb40fc1491d7e28f46a0111c35850fd2944d436d443f75"
+    }
+  ]
+}

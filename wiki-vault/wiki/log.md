@@ -1008,3 +1008,11 @@ and CSV-only comparison/binding sources as NOT_RUN. Actual source/native gates
 and launch remain pending review/execution after26October10:49:51WIB reset.
 Completed native/basal evidence is already pushed; no old tests or slope runs
 repeat. The single5h continuation remains; weekly budget is separate.
+
+## [2026-10-26] ingest | Fine comparison glue controls pass
+
+[[unnotched-mc-gravity]] closes FIRST six new synthetic binding controls,
+exit0/two copied sources unchanged. Independent CSV/contract tamper cases are
+isolated. No native call, actual comparison, old observer test, audit or render;
+fine native gate/full run remain NOT_RUN. Exact sources/commands/logs/exits
+retained. Continue after quota reset without repeating this new passed gate.

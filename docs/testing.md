@@ -1,5 +1,14 @@
 # Native framework and Studio verification
 
+## Fine comparison glue controls,26October2026
+
+FIRST six new synthetic controls PASS/exit0 from two copied sources;
+before/after hashes match. Source-binding, isolated CSV/contract tamper,
+incomplete/bounded/proof rejection, mesh-only config drift and last-q semantics
+are covered. No old observer controls/native calls/audit/render are repeated.
+See[evidence](evidence/mc-composite-apex-2026-10-26/fine-binding-controls-001/README.md).
+Actual fine workflow/comparison and native fine fixture/full run remain NOT_RUN.
+
 ## Full composite-apex result, 2026-10-26
 
 Native source35427376 completes6s/61states/880MPs/7740updates at00:44:59WIB,

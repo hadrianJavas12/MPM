@@ -59,6 +59,9 @@ class CompletedReviewBindingControls(unittest.TestCase):
         (self.run / "particles.csv").write_text("changed particles", encoding="utf-8")
         with self.assertRaises(ValueError):
             self.bind()
+        # Isolate the second rejection: a stale CSV must not mask a missing
+        # contract-byte check.
+        (self.run / "particles.csv").write_text("synthetic particles", encoding="utf-8")
         self.contract.write_text('{"changed":true}', encoding="utf-8")
         with self.assertRaises(ValueError):
             self.bind()
