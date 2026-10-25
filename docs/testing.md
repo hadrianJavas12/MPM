@@ -1,5 +1,22 @@
 # Native framework and Studio verification
 
+## Common physical refinement observer, 2026-10-25
+
+The first frozen invocation of `tests/analysis/gravity-refinement-observer.py`
+passes nine synthetic tests, exit 0. Seven copied source/support files match
+before/after. Tests cover physical cohort/graph/thresholds, mass equivalence,
+post-2s reference, persistence, contract drift and input non-mutation. Evidence:
+`docs/evidence/unnotched-gravity-2026-10-25/refinement-observer-controls/`.
+These are observer helper tests, with zero actual saved-run analysis, native
+calls, full workflow or plotting. Do not repeat passed controls.
+
+`scripts/review-gravity-refinement.py` is prepared for one terminal fine audit
+and comparison against already audited coarse CSVs; its full workflow remains
+NOT_RUN while the native h0.5 simulation is active. Exact source/reader/three
+contracts are copied before execution. Native h-scaled integrity and the
+preregistered common physical-metre observer stay separate; see the command in
+[the benchmark guide](benchmarks/UNNOTCHED_MC_GRAVITY.md).
+
 ## Grid-specific native refinement gate, 2026-10-25
 
 Four new groups PASS/exit0 once on frozen285files/mappedDLL: strict mesh-only

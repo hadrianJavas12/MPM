@@ -352,3 +352,34 @@ separate common-metre comparison remain pending; no landslide claim follows.
 retains30 indexed artifacts/282 frozen files and31 independently verified Git
 blobs. All281 non-case sources match coarse1.4; only actual mesh differs.
 Frozen protocols are included; observer execution was not claimed at launch.
+
+### Terminal refinement review and observer controls
+
+The first frozen synthetic invocation passes nine tests with exit 0. Seven
+copied sources/support files match before and after execution. Controls cover
+the fixed physical cohort, graph radius, displacement, persistence and toe
+thresholds; equivalent coarse/fine mass; post-2s reference; contract drift and
+input non-mutation. They exercise observer helpers only. No native simulation,
+actual saved-run analysis, full orchestration or plotting was performed.
+See [observer evidence](../evidence/unnotched-gravity-2026-10-25/refinement-observer-controls/README.md).
+
+After the native run terminates, use a fresh output directory and run ONCE:
+
+```powershell
+.\toolchain\analysis-venv\Scripts\python.exe scripts/review-gravity-refinement.py --run-dir output/unnotched-gravity-2026-10-25/srf1p4-h05-001 --coarse-run-dir output/unnotched-gravity-2026-10-25/srf1p4-002 --output-dir output/unnotched-gravity-2026-10-25/srf1p4-h05-001/refinement-review-001 --video
+```
+
+The workflow freezes the wrapper, existing native reviewer, VTK reader and
+three contracts before execution. Active native status blocks review; failed
+fine integrity is retained and blocks downstream comparison. It saves the
+fine h-scaled audit separately from the common physical-metre comparison.
+Coarse CSV hashes must match their existing audit; coarse audit/render are
+not repeated. IDs are followed within each mesh, with common initial 1 m bins
+and mass-weighted distributions across meshes. Actual positions use scale 1;
+video uses saved fine states without interpolation.
+
+Inspect actual spatial localisation and coherent motion before any landslide
+claim. Automatic scientific/landslide validation remains false. Analysis or
+media failures retain stage evidence and use saved data for repair; they do
+not justify rerunning the solver. The full workflow and refined physical
+result remain NOT_RUN at this checkpoint.

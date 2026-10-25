@@ -155,3 +155,20 @@ Four frozennativegroups PASS once: onlymeshdiff,3520MP/samemassgeometryBC,2actua
 ## Full refined study starts
 
 Source1a9f29a h0.5 runstarts25Oct14:53:10WIB,3h budgetto17:53:10WIB;3520MP/6s61frames,onlymeshassignmentchanged. ExactlivePID/session/originalclock/parentchainproofretained; initialincompleteidentityhelperfailureisnotnativefailure. Onequiet15minmonitor. Finehscaledintegrity andcommonmetrecomparisonpending; no actuallandslide claim.
+
+## Common physical observer controls
+
+The first frozen invocation passes nine synthetic tests with exit 0; seven
+source/support files match before and after. Controls verify the physical
+cohort, graph, motion/persistence and toe thresholds, equivalent coarse/fine
+mass, post-2s reference, contract rejection and non-mutation. No actual native
+or saved-run analysis, full workflow or plotting occurred. Evidence is in
+`docs/evidence/unnotched-gravity-2026-10-25/refinement-observer-controls/`.
+
+`scripts/review-gravity-refinement.py` now prepares one terminal fine audit
+and render, freezing exact wrapper/reader/reviewer/contracts before execution.
+The fine h-scaled report remains separate from the common physical observer
+on both meshes. Coarse CSVs are anchored to their existing audit without
+repeating coarse analysis/render; IDs are not matched between meshes. See the
+benchmark guide for the command. Full workflow and refined result remain
+NOT_RUN; actual spatial review is required before any landslide claim.

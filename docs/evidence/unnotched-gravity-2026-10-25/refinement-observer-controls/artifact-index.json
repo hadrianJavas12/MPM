@@ -1,0 +1,101 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9",
+      "bytes": 21
+    },
+    {
+      "path": "archive-member-verification.json",
+      "sha256": "2601814823abae8f74a8648254092d464b8061c1b4dc5dd672bad86504ab070d",
+      "bytes": 2428
+    },
+    {
+      "path": "command-before-execution.json",
+      "sha256": "57bc2055eb7b7f1ee4d3322d7feb5978425dd2242ba807bff0ad595958f5d760",
+      "bytes": 519
+    },
+    {
+      "path": "exact-synthetic-source-command-and-result.zip",
+      "sha256": "af99f3552f479e0dbbfb8a74140285b29c313ae9d1363cfb071a62863f5fc144",
+      "bytes": 40226
+    },
+    {
+      "path": "executed-orchestration.py",
+      "sha256": "4c518747df94cccdfbbfadc417a02c4dd18b50d564f78d025423c254df191b5f",
+      "bytes": 3142
+    },
+    {
+      "path": "executed-pack-script.py",
+      "sha256": "2d3dcc9f5d902195060d2e49f26e2b2f899cdf95defafde0e0196c335428fbd4",
+      "bytes": 5211
+    },
+    {
+      "path": "README.md",
+      "sha256": "9ea7aa7ba007e6fe1dcefbe10ba528711befbd1ec33381254bfb363182ee8199",
+      "bytes": 1113
+    },
+    {
+      "path": "result.json",
+      "sha256": "12ed9dc73a7028c05a00f376abcf827fc27388e423070e3713d85bb2751b3802",
+      "bytes": 436
+    },
+    {
+      "path": "source/research/references/unnotched-mc-ssr/contract.json",
+      "sha256": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55",
+      "bytes": 4055
+    },
+    {
+      "path": "source/research/references/unnotched-mc-ssr/refinement-audit-contract.json",
+      "sha256": "17940cf810d9020ceb779f68b5962b57265a1097cd34a5ec12836382f5f685a2",
+      "bytes": 5479
+    },
+    {
+      "path": "source/research/references/unnotched-mc-ssr/refinement-contract.json",
+      "sha256": "97cea2dc7e1f13f514e4ccbaf32219b2728fa5906066e9b88e8a84ce7d97f8c5",
+      "bytes": 3202
+    },
+    {
+      "path": "source/scripts/plot_m5_cliff_comparison.py",
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "bytes": 23581
+    },
+    {
+      "path": "source/scripts/review-gravity-refinement.py",
+      "sha256": "b2a319511279ab11256244547b16096e468fbeef1a75cf956ff45807569e1b49",
+      "bytes": 26366
+    },
+    {
+      "path": "source/scripts/review-gravity-slope.py",
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+      "bytes": 38121
+    },
+    {
+      "path": "source/tests/analysis/gravity-refinement-observer.py",
+      "sha256": "8515b914abe300097a003b18623441719508d1b35fdfefb37415f86589ac2d63",
+      "bytes": 8305
+    },
+    {
+      "path": "source-proof-after.json",
+      "sha256": "81647248e5af5ce96c5e4ebf7c84fdf58e12a311351c3ae1f3f5ef4f68b2088c",
+      "bytes": 1429
+    },
+    {
+      "path": "source-proof-before.json",
+      "sha256": "78938865bc4249ac7fdc06b17ccabf99cb7e8c8d394fd387de299433b642d244",
+      "bytes": 1430
+    },
+    {
+      "path": "summary.json",
+      "sha256": "87e8be3c1058ced04b18f9618aea769406d6fe49263b1db951b84c8a5cfa8eb2",
+      "bytes": 520
+    },
+    {
+      "path": "test.log",
+      "sha256": "de98638241f2311606e2dab7a1712e0fde2d5ad76aa426503f18b466cb7b8d6a",
+      "bytes": 1347
+    }
+  ],
+  "note": "Index excludes itself. * -text preserves exact indexed source/log bytes."
+}

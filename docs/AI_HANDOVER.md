@@ -27,14 +27,26 @@ progress/heartbeat,manifestcomplete/time andONEstdouttail; healthy running:
 endquiet,noactivepoll/solverduplicate/tests/researchrepeat. Same automation15min.
 
 Wrapper does NOT automatically postprocess. Fine integrity requires the
-separate refinement-audit-contract.json (h.5/expected3520/SRF1.4,original
-h-scaled criteria unchanged). Common metre observer remains SEPARATE in
-refinement-contract.json and must be applied to BOTH meshes,without cross-mesh
-IDmatching. Agentgravity_scope_review prepares a reusable refinement review and
-small synthetic controls; inspect actual code/status before duplicating.
-Preserve exact source/reader/contracts before executing terminal analysis.
-Fine audit/renderONCE; compare already audited coarse saved data without
-coarse re-audit/render. No colour/nativecompletion/outlier as landslidePASS.
+separate refinement-audit-contract.json (h.5/expected3520/SRF1.4, original
+h-scaled criteria unchanged). The common metre observer remains SEPARATE in
+refinement-contract.json and applies to BOTH meshes without matching IDs
+between meshes. The terminal workflow is now scripts/review-gravity-refinement.py;
+see the exact command in docs/benchmarks/UNNOTCHED_MC_GRAVITY.md. It copies its
+wrapper, reader, reviewer and all three contracts before execution, audits and
+renders the fine run ONCE, and reads the already audited coarse CSVs without
+repeating coarse audit/render. Active native status and failed fine integrity
+block downstream comparison. Preserve stage-failure.json and completed stages
+if analysis fails; repair saved-data analysis without rerunning the solver.
+
+FIRST frozen observer-controls-001 invocation passes all NINE synthetic tests,
+exit0; seven copied source/support files have identical before/after hashes.
+Evidence: docs/evidence/unnotched-gravity-2026-10-25/refinement-observer-controls.
+Packet retains19 indexed artifacts/13 ZIP members; root independently verifies
+20 staged Git blobs and all seven before/after/current source hashes.
+This covers the common physical observer helpers only: no actual saved-run
+analysis, full orchestration, plotting or native calls occurred. Do NOT repeat
+these controls. Full fine analysis remains NOT_RUN until native termination.
+No colour/native completion/outlier is a landslide PASS.
 
 At native failure diagnose NEW actual capsule once before a relevant tested
 repair/fresh attempt; no root/clamp/psi/strength/tolerance changes to force

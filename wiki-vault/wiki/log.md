@@ -841,3 +841,14 @@ repair/compatibility, not a completed full slope or verified landslide.
 ## [2026-10-25] ingest | Refined launch provenance checkpoint
 
 [[unnotched-mc-gravity]] links30indexed launchartifacts/31rootverifiedGitblobs/282actualsourcehashes.281sourcefilesunchangedvscoarse1.4,onlycase/mesh differs; all3protocolJSONsexactlaunchcommit. Observercode/tests pendingatlaunch explicitlynotclaimedexecuted. Fullnative result stillpending; no additionalqueries/solver/tests.
+
+## [2026-10-25] ingest | Common physical refinement observer controls
+
+[[unnotched-mc-gravity]] records the first frozen nine-test synthetic invocation,
+exit 0, with seven source/support files unchanged. Tests cover physical
+observer helpers only; zero native or actual saved-run analysis calls. The new
+terminal workflow freezes analysis sources/contracts, preserves separate native
+h-scaled diagnostics and compares both meshes in metres without cross-mesh ID
+matching or repeating coarse audit/render. Full workflow and refined physical
+result remain pending; raw/private/settings and old negative evidence remain
+intact. The native h0.5 run continues with one quiet 15-minute monitor.
