@@ -1,5 +1,17 @@
 # Native framework and Studio verification
 
+## Actual SRF1.6 rejection and partial evidence, 2026-10-25
+
+Native/worker1 at1.7334542479310375s attempted;18saved states through1.7s.
+FIRST frozen saved review passes18VTKs/15840rows/source282/DLL and actual
+video decode. Reviewer0 and incomplete orchestration2 are distinct; no native
+completion claim. ONE original-frozen principal replay exits0 confirming the
+expected rejection,1call/0MPM,283source before/after/DLL proof. Trace/apex math
+proves no regular psi0 solution for the captured mean excess90.776452Pa.
+Failed packet71indexed/653members/root72Gitblobs verified. No full solver or
+passed tests repeated;2.0 NOT_RUN. New composite-apex design is unimplemented
+and requires its own scoped numerical/default/transaction/integration gates.
+
 ## Finite SSR response inputs, 2026-10-25
 
 FIRST Windows input-only gate passes3 new groups/exit0: literal-only SRF delta,

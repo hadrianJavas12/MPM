@@ -448,3 +448,45 @@ The second factor is conditional on the first integrity-valid negative result.
 Use `response-ladder-audit-contract.json` for the h1 saved-data audit, freezing
 reviewer/reader/contract before execution. Do not apply the old1.0/1.4 contract
 to a new factor or interpret input-only PASS as a dynamic result.
+
+### First response screen launched
+
+SRF1.6 `srf1p6-001` starts25October17:12:41WIB on native sourceb079f05 with
+one-hour wall budget until18:12:41WIB. This is a wall limit, not an ETA. The
+three input-only groups above precede the launch. Source/raw/runtime are
+frozen; native completion and physical outcome remain pending. The same quiet
+15-minute monitor is used. No SRF2.0 simulation has been started.
+
+### SRF1.6 terminates at the strict tensile apex
+
+Native and worker exit1 at25October17:18:19WIB, before budget. Last saved1.7s,
+18states/880MPs; attempted time1.7334542479310375s/2236updates includes unsaved
+work. One frozen partial review passes18VTKs/15840rows/source282/DLL integrity
+and actual4.5s playback video. The unchanged reviewer returns0 for valid saved
+data; orchestration2 records incomplete native scope. Root inspects the scale1
+PNG. Entire motion NOT_DETECTED,hold NOT_EVALUATED,zero toe mass. Rising KE
+354.9446J/m during the ramp and21.5742mm max displacement do not verify a slide.
+MinimumJ.998454423; no center exit/floor penetration; minimum particle-domain
+margin-8.525micrometres is retained as a support-containment limitation.
+
+One original-frozen principal replay confirms the rejection with1call/zeroMPM.
+The actual mean Kirchhoff trial27574.643436Pa exceeds the apex27483.866984Pa
+by90.776452Pa. All regular psi0 plastic flows have zero trace and preserve that
+mean, while all-six-plane admissibility requires mean<=J*c*cot(phi). The mean
+excess is far above the unchanged numerical allowance2.8815e-6Pa. More root
+search cannot close this constitutive scope. Reaching shear yield is expected
+in a landslide; this particular tensile-apex state requires an additional flow
+convention. It is not evidence of a completed or unstable simulation.
+
+[Failed evidence](../evidence/unnotched-gravity-2026-10-25/srf1p6-001-failed/README.md)
+retains71indexed artifacts/653ZIPmembers/root72Gitblobs, original raw/runtime/
+sources and the single replay/partial media. The successful historical live
+capture is preserved; a launch packet prepared before quota exhaustion was
+never executed and is explicitly labelled. No solver/replay/review was repeated.
+
+The finite response ladder stops here:2.0 remains NOT_RUN. A
+[separate composite-apex design](../../research/notes/unnotched-landslide-2026-10-24/PERFECT_MC_APEX_PLAN.md)
+is proposed for perfect Cauchy MC, with explicit volumetric flow, strict-default
+compatibility and new energy/transaction/native evidence gates. It is a new
+constitutive assumption, not a clamp, fracture model or validated paper law.
+No implementation or new full run has yet been performed.

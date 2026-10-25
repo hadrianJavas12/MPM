@@ -2,6 +2,86 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
+## Latest: strict SRF1.6 failed at tensile apex; no full solver active
+
+`srf1p6-001`, sourceb079f05, ends FAILED_NATIVE1/worker1 at25Oct17:18:19WIB.
+Last saved1.7s/18states/880MPs; manifest attemptTimeS1.7334542479310375 and2236
+updates include unsaved work. Do NOT query old PID51928 or repeat the solver.
+SRF2.0 is NOT_RUN: an incomplete constitutive failure is not the required
+integrity-valid negative result or an unstable SSR bound.
+
+FIRST partial saved review passes integrity for18VTK/15840rows/880IDs, source282/
+DLL and actual18-state video/4fps/4.5s playback/fullDecode0/scale1. Root inspects
+the PNG. Existing reviewer returns0 for valid partial data; frozen orchestration
+returns2 for incomplete scope, with PowerShell normalization noted separately.
+Neither native nor scientific success follows. Entire motion NOT_DETECTED;
+post2s NOT_EVALUATED; zero toe mass. KE rises to354.9446J/m during gravity ramp,
+max displacement21.5742mm; this is incomplete, not verified sliding. MinimumJ
+.998454423; zero center exit/floor penetration, but particle-domain margin
+-8.525micrometres limits full support containment claims.
+
+ONE original-frozen point replay exits0 with expected rejection:1principalcall,
+0MPM,283sources before/after and281shared failed-run modules/DLL match. Mean
+Kirchhoff stress27574.643436Pa exceeds J*c*cot(phi)=27483.866984Pa by90.776452Pa,
+versus existing numerical mean allowance2.8815e-6Pa. All six regular psi0 flows
+have zero trace, preserving mean stress; summing the six yield planes requires
+mean<=apex. Thus regular admissibility is impossible independently of searching
+more roots. It is a constitutive tensile/apex scope limit, not a new instance
+of the earlier negative-multiplier defect. No whole-MP restart/rollback is
+claimed from this principal-only capsule. Do not repeat replay/partial review.
+
+Failed evidence docs/evidence/unnotched-gravity-2026-10-25/srf1p6-001-failed:
+71indexed artifacts/653ZIPmembers; root verifies72Gitblobs,565archived native+
+replay source copies and282 actual run sources. Historical full live identity
+capture completed17:15:08WIB; its prepared launch packer was NEVER executed
+because quota interrupted. This gap is retained, without invented launch archive.
+
+NEXT: a separate opt-in perfect MC composite-apex design, not strict-law repair.
+Read research/notes/unnotched-landslide-2026-10-24/PERFECT_MC_APEX_PLAN.md,
+SHA256 e21ba6e29a85890ae4ae56f0b24df0d644111f5c9b2e6d18d9fd6bc7a510d3c3.
+Hash-bound technical review APPROVED, recorded in PERFECT_MC_APEX_REVIEW.md;
+production code NOT_IMPLEMENTED. It adds declared volumetric gA=p only in a certified apex
+domain, keeps the old elastic screen and unchanged strict delegation in the
+existing-tolerance cap band, with explicit rejections. Restrict perfect/Cauchy/
+psi0/positivephi, preserve strict defaults/Wang, test flow/work/energy/owned
+state/default byte-equivalence and bounded MPM diagnostics before any new slope.
+Do not silently reuse Soil2 history or call this fracture/paper validation.
+Goal remains actual verified unnotched sliding. No further strength reduction,
+root preference/clamp/tolerance change or identical restart is authorized here.
+
+## Historical launch: first bounded response screen SRF1.6
+
+`output/unnotched-gravity-2026-10-25/srf1p6-001` starts25Oct17:12:41WIB,
+native sourceb079f050c5c665640e5c479384938b3c7b1d0e53. One-hour wall budget
+until18:12:41WIB; do not confuse this limit with a completion estimate.
+Worker51384/wrapper24532/cmd25552/SBCL51928,Session11. Exact creation times
+are in adjacent-status.json. Agent gravity_slope_controls owns ONE launch
+identity/source/config proof and launch packet; inspect its actual result
+before duplicating. Input checkpointb079f05 is pushed; source remains frozen.
+
+This is the preregistered FIRST h1 screen, not another h0.5 run or a hidden
+strength change. SRF1.6 means c6250Pa,phi0.22367501236rad,psi0. Geometry/BC,
+elasticity/density,MC algorithm/tolerances,USF/FLIP/grid/PPC/dtScale/damping,
+mass/gravity ramp2s and total6s61states remain as declared. No notch/driver/
+weakseed/reset. No full2.0 run is authorized until this first result is reviewed
+as an integrity-valid negative; stop at first valid coherent motion and confirm
+THAT SAME factor at h0.5. Cap2.0, no automatic further weakening.
+
+Wakeup: adjacent status/progress/heartbeat/identities,manifestcomplete/time,
+ONEstdouttail. Healthy recorded live native: endquiet, no active polling,
+solver duplicate or passed tests. Missing/stale process needs exact identity/
+exit reconciliation; no invented material failure. Wrapper does NOT audit/render.
+At terminal freeze exact scripts/review-gravity-slope.py, imported
+plot_m5_cliff_comparison.py and response-ladder-audit-contract.json BEFORE
+ONE saved-data review --video into fresh review-001; save command/exit/proof.
+The h1 detector is already the preregistered physical-metre observer. Preserve
+source/raw/runtime/media and inspect actual scale1 motion/localisation/F/J/
+mass/IDs/yield/KE/boundaries/runout. Native completion is not scientific PASS.
+NEW material error: one actual capsule replay and relevant tested repair before
+fresh attempt; no identical restart/clamp/root/tolerance/physics remedy.
+Use the same15min quiet monitor while active,5h only when terminal without a
+new solver. Goal remains actual verified unnotched sliding, not pilot completion.
+
 ## Latest: h0.5 completes; no verified unnotched landslide
 
 Run `output/unnotched-gravity-2026-10-25/srf1p4-h05-001`, native source1a9f29a,

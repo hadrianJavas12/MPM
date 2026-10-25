@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "Read-only bytes/runtime/result verification after the sole completed principal replay; no material call or solver execution",
+  "frozenFilesVerified": 283,
+  "failedRunCommonSourcesByteIdentical": 281,
+  "beforeAfterAllFilesIdentical": true,
+  "nativeMappedDllSha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+  "nativeMappedDllVerifiedBeforeAndAfter": true,
+  "actualPrincipalReplayCalls": 1,
+  "physicalUpdates": 0,
+  "expectedRejection": true,
+  "wholeParticleRollback": "NOT_EXECUTED: complete particle/simulation state absent",
+  "capsuleSha256": "d557e0d82e1f1a2dd11e4365db0794076ea6397b6eab1257caec0ad101f6ef17",
+  "executedHelperSha256": "67412ce7182fb12deca0a5b5b461f73c202d2d099f79da34354a81e5a168e73b",
+  "verificationScriptSha256": "c770aa4ea2d4317797938f9178641988543bd1a759c75c7049ea9fc20ff69194",
+  "resultSha256": "603b1d0d14fe03053d213584da44107301c7c3b7f4720cb94ba86fda1bb94e58",
+  "mathSha256": "dfcb464b5ecffadb5527acbbf24aade81eca25315865be005c64cbcdef026d7c"
+}

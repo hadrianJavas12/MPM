@@ -1,0 +1,8 @@
+{
+  "unchangedReviewerExitCode": 0,
+  "recordedFrozenPartialOrchestrationExitCode": 2,
+  "nativeExitCode": 1,
+  "workerExitCode": 1,
+  "powershellToolExitCode": 1,
+  "scope": "The Python orchestration returned2 to mark successfully reviewed incomplete saved states. The invoking PowerShell tool normalized the nonzero command status to1. Its stdout and review-exit.json retain the explicit reviewer0/partial2 distinction. No command was repeated to alter the observed shell status."
+}

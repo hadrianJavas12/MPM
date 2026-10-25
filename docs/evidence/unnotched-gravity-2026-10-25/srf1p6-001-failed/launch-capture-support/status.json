@@ -1,0 +1,10 @@
+{
+  "status": "LIVE_CAPTURE_COMPLETED_LAUNCH_PACKER_NOT_EXECUTED_BEFORE_NATIVE_FAILURE",
+  "liveCaptureCalls": 1,
+  "liveCapturedUtc": "2026-10-25T10:15:08.3783289Z",
+  "liveHelperExit": "0 as observed from original invocation; exact helper stdout and stored proof retained",
+  "launchPackerExecuted": false,
+  "preparedLaunchPackerScope": "Retained exact prepared source, not represented as an executed archive operation",
+  "processesRecapturedAfterFailure": false,
+  "limits": "Only the historical timestamped NATIVE_RUNNING proof is asserted; no active process or completed launch archive is invented"
+}

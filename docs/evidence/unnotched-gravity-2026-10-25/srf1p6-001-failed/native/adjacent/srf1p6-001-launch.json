@@ -1,0 +1,27 @@
+{
+  "scenario": "gravity-slope",
+  "status": "STARTING",
+  "startedUtc": "2026-10-25T10:12:41.4698521Z",
+  "output": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001",
+  "case": "D:\\MPM\\cases\\benchmarks\\gravity-slope-mc-srf-1p6.lisp",
+  "sourceCommit": "b079f050c5c665640e5c479384938b3c7b1d0e53",
+  "maxWallHours": 1.0,
+  "wallDeadlineUtc": "2026-10-25T11:12:41.4698521Z",
+  "caseSha256": "9969AEE9904007EDAA57E1806811AEF20097F1A3827C4F475609C410B3C35F6E",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "processIdentity": {
+    "sbcl": null,
+    "wrapper": {
+      "pid": 24532,
+      "name": "pwsh",
+      "sessionId": 11,
+      "createdUtc": "2026-10-25T10:12:40.9156424Z"
+    },
+    "nativeCommand": null
+  },
+  "nativeExitCode": null,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {}
+}

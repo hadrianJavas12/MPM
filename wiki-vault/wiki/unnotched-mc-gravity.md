@@ -203,3 +203,32 @@ match; cases differ only literal SRF and actual config/components onlySRF/c/phi.
 Input packet21indexed/295ZIPmembers/root22Gitblobs is retained, including the
 honestly labelled after-execution command transcription. No full response run
 yet; the next authorized run is ONLY1.6 after this checkpoint is pushed.
+
+The first1.6 screen now starts25October17:12:41WIB on sourceb079f05, with a
+one-hour wall budget until18:12:41WIB. It uses the disclosed reduced c6250Pa/
+phi0.22367501236rad and unchanged geometry/BC/ramp/grid/solver. The input gate
+precedes the full run; actual motion remains pending. One quiet15-minute
+monitor follows this run;2.0 has not started and remains conditional.
+
+## Strict1.6 rejection: tensile/apex constitutive scope
+
+Native/worker exit1 at25October17:18:19WIB. Last saved1.7s/18states/880MPs,
+attempt1.7334542479310375s/2236updates. FIRST partial review passes integrity
+for15840rows/source282/DLL/actual18-state scale1 video; root inspects PNG.
+Reviewer0 is separate from incomplete orchestration2/native1. Whole motion is
+NOT_DETECTED; post2s NOT_EVALUATED,zero toe mass. Partial rising KE does not
+verify sliding. Small negative particle-domain margin remains explicit.
+
+ONE frozen principal replay proves regular psi0 flow cannot return the actual
+mean27574.643436Pa to the admissible apex27483.866984Pa: all six flow traces
+are zero. Excess90.776452Pa is far above existing mean allowance2.8815e-6Pa.
+This is a tensile/apex flow-scope issue, not a newly found multiplier bug or
+evidence of successful failure. Reaching shear yield and obtaining an
+admissible plastic update remain necessary parts of a valid landslide run.
+
+Failed evidence71indexed/653ZIPmembers/root72Gitblobs retains raw sources,
+one replay and partial media. Live proof exists, but the prepared launch packer
+was never executed during quota exhaustion; the gap is labelled. No repeated
+solver/analysis.2.0 remains NOT_RUN. The separate perfect composite-apex plan
+adds declared volumetric flow and requires technical review plus new/default/
+transaction/native gates; implementation is pending. Actual slide remains unmet.

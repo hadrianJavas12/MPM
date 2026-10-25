@@ -1,0 +1,57 @@
+{
+  "startedUtc": "2026-10-25T11:19:28.169914+00:00",
+  "finishedUtc": "2026-10-25T11:19:38.005311+00:00",
+  "reviewerExitCode": 0,
+  "orchestrationExitCode": 2,
+  "nativeExitCode": 1,
+  "workerExitCode": 1,
+  "nativeComplete": false,
+  "savedScope": "partial-saved-states-only",
+  "integrityStatus": "PASS",
+  "allAnalysisSourcesUnchanged": true,
+  "sourceCopiesBefore": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\response-ladder-audit-contract.json",
+      "bytes": 4890,
+      "sha256": "a1745feefed39d1be7568fcb0ff2a8f979aa14338f9cb9fef72cb190a739e47e"
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\review-gravity-slope.py",
+      "bytes": 38121,
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\run-srf1p6-partial-review.py",
+      "bytes": 9857,
+      "sha256": "282ca692ae6a184d69f595528aa22488e02cc666ab11b603aec4850977a54548"
+    }
+  ],
+  "sourceCopiesAfter": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\response-ladder-audit-contract.json",
+      "bytes": 4890,
+      "sha256": "a1745feefed39d1be7568fcb0ff2a8f979aa14338f9cb9fef72cb190a739e47e"
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\review-gravity-slope.py",
+      "bytes": 38121,
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\run-srf1p6-partial-review.py",
+      "bytes": 9857,
+      "sha256": "282ca692ae6a184d69f595528aa22488e02cc666ab11b603aec4850977a54548"
+    }
+  ],
+  "scope": "Exit2 marks successfully reviewed incomplete saved states; no completion requirement weakened"
+}

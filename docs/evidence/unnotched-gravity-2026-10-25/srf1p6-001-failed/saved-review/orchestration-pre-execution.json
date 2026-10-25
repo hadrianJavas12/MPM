@@ -1,0 +1,61 @@
+{
+  "preparedUtc": "2026-10-25T11:19:28.008424+00:00",
+  "copies": [
+    {
+      "original": {
+        "path": "D:\\MPM\\scripts\\review-gravity-slope.py",
+        "bytes": 38121,
+        "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+      },
+      "copied": {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\review-gravity-slope.py",
+        "bytes": 38121,
+        "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+      }
+    },
+    {
+      "original": {
+        "path": "D:\\MPM\\scripts\\plot_m5_cliff_comparison.py",
+        "bytes": 23581,
+        "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+      },
+      "copied": {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+        "bytes": 23581,
+        "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+      }
+    },
+    {
+      "original": {
+        "path": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\response-ladder-audit-contract.json",
+        "bytes": 4890,
+        "sha256": "a1745feefed39d1be7568fcb0ff2a8f979aa14338f9cb9fef72cb190a739e47e"
+      },
+      "copied": {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\response-ladder-audit-contract.json",
+        "bytes": 4890,
+        "sha256": "a1745feefed39d1be7568fcb0ff2a8f979aa14338f9cb9fef72cb190a739e47e"
+      }
+    },
+    {
+      "original": {
+        "path": "D:\\MPM\\.tmp\\run-srf1p6-partial-review.py",
+        "bytes": 9857,
+        "sha256": "282ca692ae6a184d69f595528aa22488e02cc666ab11b603aec4850977a54548"
+      },
+      "copied": {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\run-srf1p6-partial-review.py",
+        "bytes": 9857,
+        "sha256": "282ca692ae6a184d69f595528aa22488e02cc666ab11b603aec4850977a54548"
+      }
+    }
+  ],
+  "command": [
+    "D:\\MPM\\toolchain\\analysis-venv\\Scripts\\python.exe",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\run-srf1p6-partial-review.py",
+    "--frozen",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001",
+    "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001"
+  ],
+  "scope": "First saved partial audit/video only; no solver, constitutive capsule or previous review execution"
+}

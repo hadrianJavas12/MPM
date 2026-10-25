@@ -875,3 +875,23 @@ after/current source hashes and actualDLL match. Packet21indexed/295members/
 root22Gitblobs preserves exact test/runtime/exit and after-execution command
 transcription limitation. No full response run or old test repeats. Next is
 the preregistered1.6 screen after commit/push, not an uncontrolled strength search.
+
+## [2026-10-25] ingest | First bounded SRF1.6 response screen starts
+
+[[unnotched-mc-gravity]] records sourceb079f05 start17:12:41WIB/one-hour wall
+budget for the first preregistered h1 factor1.6. Frozen native input gates
+precede this run; no notch/driver or unreported physics change. Source/runtime
+and exact identities are captured; physical outcome remains pending. Only one
+15-minute monitor is used.2.0 is conditional, not running. Actual verified
+sliding remains the objective; raw/settings and all negative evidence remain.
+
+## [2026-10-25] ingest | Strict1.6 tensile-apex rejection confirmed once
+
+[[unnotched-mc-gravity]] records native/worker1,18saved states to1.7s and
+attempt1.7334542479310375s. FIRST partial review/video passes saved integrity;
+ONE frozen1call/zeroMPM replay and trace/apex proof confirm constitutive scope
+excess90.776452Pa, not solver success.71indexed artifacts/653members/root72
+Gitblobs preserve raw/runtime/source/replay/media and interrupted launch-pack
+gap. No numerical work repeated;2.0 NOT_RUN. A separate optional perfect-apex
+design is proposed with technical review and new/default/transaction/native
+gates; no implementation or new full run. Raw/settings remain intact.

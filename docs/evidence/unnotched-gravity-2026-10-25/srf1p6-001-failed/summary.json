@@ -1,0 +1,127 @@
+{
+  "schema": "cl-mpm.unnotched-gravity.failed-native-evidence.v1",
+  "createdUtc": "2026-10-25T11:33:16.951382+00:00",
+  "nativeSourceCommit": "b079f050c5c665640e5c479384938b3c7b1d0e53",
+  "nativeExit": 1,
+  "workerExit": 1,
+  "nativeComplete": false,
+  "supervisorStatus": "FAILED_NATIVE",
+  "manifestTimeS": 1.7,
+  "lastSavedTimeS": 1.7,
+  "savedFrames": 18,
+  "acceptedUpdates": 2236,
+  "lastSavedTimeIsNotAssertedAsExactFailureTime": true,
+  "actualNativeSources": 282,
+  "actualConfigurationChanges": [
+    {
+      "key": "cohesionPa",
+      "coarse1p4": 7142.857142857143,
+      "srf1p6": 6250.0
+    },
+    {
+      "key": "frictionRad",
+      "coarse1p4": 0.25434814346473733,
+      "srf1p6": 0.22367501235860557
+    },
+    {
+      "key": "strengthReductionFactor",
+      "coarse1p4": 1.4,
+      "srf1p6": 1.6
+    }
+  ],
+  "partialReviewExitAsReceived": {
+    "startedUtc": "2026-10-25T11:19:28.169914+00:00",
+    "finishedUtc": "2026-10-25T11:19:38.005311+00:00",
+    "reviewerExitCode": 0,
+    "orchestrationExitCode": 2,
+    "nativeExitCode": 1,
+    "workerExitCode": 1,
+    "nativeComplete": false,
+    "savedScope": "partial-saved-states-only",
+    "integrityStatus": "PASS",
+    "allAnalysisSourcesUnchanged": true,
+    "sourceCopiesBefore": [
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+        "bytes": 23581,
+        "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\response-ladder-audit-contract.json",
+        "bytes": 4890,
+        "sha256": "a1745feefed39d1be7568fcb0ff2a8f979aa14338f9cb9fef72cb190a739e47e"
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\review-gravity-slope.py",
+        "bytes": 38121,
+        "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\run-srf1p6-partial-review.py",
+        "bytes": 9857,
+        "sha256": "282ca692ae6a184d69f595528aa22488e02cc666ab11b603aec4850977a54548"
+      }
+    ],
+    "sourceCopiesAfter": [
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\plot_m5_cliff_comparison.py",
+        "bytes": 23581,
+        "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\response-ladder-audit-contract.json",
+        "bytes": 4890,
+        "sha256": "a1745feefed39d1be7568fcb0ff2a8f979aa14338f9cb9fef72cb190a739e47e"
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\review-gravity-slope.py",
+        "bytes": 38121,
+        "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+      },
+      {
+        "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\analysis-support\\run-srf1p6-partial-review.py",
+        "bytes": 9857,
+        "sha256": "282ca692ae6a184d69f595528aa22488e02cc666ab11b603aec4850977a54548"
+      }
+    ],
+    "scope": "Exit2 marks successfully reviewed incomplete saved states; no completion requirement weakened"
+  },
+  "savedIntegrity": "PASS",
+  "savedScope": "partial-saved-states-only",
+  "savedMediaAsReceived": [
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\gravity-slope-review.png",
+      "sha256": "8997ff16ce0328a44c74505f1a32e580a6659b4827ca121d5fc4a765207e4ea8",
+      "bytes": 204786
+    },
+    {
+      "path": "D:\\MPM\\output\\unnotched-gravity-2026-10-25\\srf1p6-001\\review-001\\gravity-slope-actual.mp4",
+      "sha256": "f160e65d2304fa7235365e5a2244062bc1ac5ea2609a910cd1a3186a25a2ed75",
+      "bytes": 106041,
+      "actualSavedStates": 18,
+      "playbackFramesPerSecond": 4,
+      "physicalLastTimeS": 1.7,
+      "interpolation": false,
+      "deformationMagnification": 1,
+      "scope": "INCOMPLETE",
+      "fullDecodeExit": 0
+    }
+  ],
+  "replayExitAsReceived": {
+    "startedUtc": "2026-10-25T11:26:04.9420676Z",
+    "finishedUtc": "2026-10-25T11:26:44.0491032Z",
+    "exitCode": 0,
+    "helperSha256": "67412ce7182fb12deca0a5b5b461f73c202d2d099f79da34354a81e5a168e73b",
+    "log": "output/unnotched-gravity-2026-10-25/srf1p6-failure-replay-001.log",
+    "result": "output/unnotched-gravity-2026-10-25/srf1p6-failure-replay-001/replay-result.json"
+  },
+  "replayExecutedByCollector": false,
+  "historicalLiveCaptureUtc": "2026-10-25T10:15:08.3783289Z",
+  "launchPacketNeverExecutedBeforeFailure": true,
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "classification": "Numerical/material rejection is not a landslide or unstable FoS bound; factor2 not launched by this collector",
+  "legacyMetadata": "Runner's fixed SRF1.40 narrative is historical wording; actual original case/config/law recordsSRF1.6",
+  "scope": "Original failed native attempt, first saved partial review/media and first actual capsule replay preserved separately. Partial review success cannot relabel native failure as complete.",
+  "operations": "Read/copy/hash/ZIP/CRC/all-member decoded-byte verification only; no process query, solver, material test, replay, audit, comparison, rendering or media decode invoked"
+}
