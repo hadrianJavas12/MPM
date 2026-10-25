@@ -58,6 +58,14 @@
         (let ((principal (coerce principal-list 'vector)))
           (%adapter-max-plane-value principal law kappa j))))))
 
+(defgeneric project-particle-principal (particle trial e nu j law old-kappa)
+  (:documentation "Select a particle's principal projection within the shared owned constitutive transaction."))
+
+(defmethod project-particle-principal
+    ((particle particle-mc-evolution) trial e nu j law old-kappa)
+  (declare (ignore particle))
+  (project-principal trial e nu j law old-kappa))
+
 (defmethod cl-mpm/particle:constitutive-model
     ((mp particle-mc-evolution) strain dt)
   "Return Kirchhoff stress from engineering-Voigt trial elastic Hencky strain.
@@ -88,7 +96,7 @@ The core stress update remains responsible for dividing returned tau by J."
                                                        (* lambda-elastic trace)))
                              principal))
              (result (when (cl-mpm/particle::mp-enable-plasticity mp)
-                       (project-principal trial-tau e nu j law kappa-old)))
+                       (project-particle-principal mp trial-tau e nu j law kappa-old)))
              (tau (if result (projection-tau result) trial-tau))
              (plastic (if result (projection-plastic-increment result)
                           (vector 0d0 0d0 0d0)))

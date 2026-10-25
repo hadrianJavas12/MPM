@@ -872,6 +872,15 @@
                              (:file "state")
                              (:file "material")))))
 
+(defsystem "cl-mpm/models/mc-composite-apex"
+  :description "Opt-in perfect Cauchy MC with an explicit volumetric hydrostatic-apex flow"
+  :depends-on ("cl-mpm/models/mc-evolution")
+  :serial t
+  :components ((:module "materials/models/plastic/mc-composite-apex"
+                :pathname "materials/models/plastic/mc-composite-apex"
+                :serial t
+                :components ((:file "package") (:file "projection") (:file "native")))))
+
 (defsystem "cl-mpm/examples/ice-visco"
   :depends-on ("cl-mpm/example"
                "cl-mpm/erosion"

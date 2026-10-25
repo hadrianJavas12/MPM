@@ -85,3 +85,9 @@
    (:file "scenarios/gravity-slope/measurements")
    (:file "scenarios/gravity-slope/runner")
    (:file "scenarios/gravity-slope/adapter")))
+
+(asdf:defsystem "cl-mpm-framework/mc-composite-apex"
+  :description "Optional explicit apex-flow material diagnostics for native framework cases"
+  :depends-on ("cl-mpm-framework" "cl-mpm/models/mc-composite-apex")
+  :serial t
+  :components ((:file "materials/adapters/mc-composite-apex")))

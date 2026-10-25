@@ -8,7 +8,8 @@
    #:evolution-law-variant #:evolution-law-points #:evolution-law-cohesion-points
    #:evolution-law-psi #:evolution-law-stress-measure
    #:evolution-law-strain-assumption #:evolution-law-peak-kappa
-   #:project-principal #:projection #:projection-tau #:projection-plastic-increment
+   #:project-principal #:project-particle-principal
+   #:projection #:projection-tau #:projection-plastic-increment
    #:projection-kappa #:projection-cohesion #:projection-phi #:projection-psi
    #:projection-max-residual #:projection-work #:projection-active
    #:projection-multipliers #:projection-iterations #:projection-residuals

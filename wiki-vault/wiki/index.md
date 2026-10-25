@@ -25,7 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[unnotched-mc-gravity]] — strict1.6 fails at tensile apex; one replay proves zero-trace closure limit; partial evidence retained,2.0 stopped; separate perfect composite-apex design pending review
+- [[unnotched-mc-gravity]] — strict1.6 tensile-apex failure retained; separate optional perfect composite-apex source reviewed, 15-group native gate NOT_RUN; no full solver or SRF2.0
 - [[unnotched-landslide-method-selection]] — primary journal methods for intact-slope failure; separate MC gravity/SSR control selected, no new full run or landslide claim
 - [[wang2017-residual-history-scope]] —100mm history-guard failure, one replay with unchanged residual strength, explicit opt-in scope and native/integration gates
 - [[wang2017-apex-60mm-review]] — complete61-state apex trial, no verified landslide;100mm input gate passed and same-material endpoint trial running13:52WIB

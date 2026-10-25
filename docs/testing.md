@@ -1,5 +1,24 @@
 # Native framework and Studio verification
 
+## Optional perfect MC composite-apex source checkpoint, 2026-10-25
+
+Branch `codex/unnotched-mc-composite-apex` adds optional model/framework ASDF
+systems and a narrow particle projection dispatch inside the existing owned
+native transaction. Source and integration review are complete. Compilation,
+native controls and MPM integration are **NOT_RUN** at this checkpoint.
+The original strict projector and Wang numerical sources are unchanged.
+
+The first new gate is `tests/materials/mc-composite-apex.lisp`: 15 groups,
+SHA256 `faed3e1675cd23d3894a65e8c02b0e1164ed960932f772d82f20ab61295282e3`.
+It freezes source and the retained strict capsule before loading, forbids MPM
+updates, and checks apex mathematics, exact strict delegation, current J,
+engineering shear, work/volume and owned copy/commit/reset/rollback. A call
+to the **new** model on retained inputs is distinct from repeating the old
+failure replay. Command, exit, actual mapped DLL and before/after source proof
+must be retained. Relevant default controls and a bounded legacy output byte
+comparison follow because dispatch changed. New bounded MPM/CSV/VTK and
+variant-aware diagnostics are required before a slope launch.
+
 ## Actual SRF1.6 rejection and partial evidence, 2026-10-25
 
 Native/worker1 at1.7334542479310375s attempted;18saved states through1.7s.

@@ -895,3 +895,15 @@ Gitblobs preserve raw/runtime/source/replay/media and interrupted launch-pack
 gap. No numerical work repeated;2.0 NOT_RUN. A separate optional perfect-apex
 design is proposed with technical review and new/default/transaction/native
 gates; no implementation or new full run. Raw/settings remain intact.
+
+## [2026-10-25] ingest | Optional perfect composite-apex source ready
+
+[[unnotched-mc-gravity]] records the separate model/optional ASDF/read-only
+diagnostics and narrow native dispatch on `codex/unnotched-mc-composite-apex`.
+Root model/test review and independent integration review have no blocking
+finding. The strict projector and Wang sources remain unchanged. Fifteen
+frozen point/native ownership control groups are source-ready, **NOT_RUN**;
+default compatibility and actual bounded MPM/CSV/VTK gates remain required.
+The extra volumetric apex flow is an explicit constitutive assumption, not
+unchanged MC or guaranteed sliding. No old tests/replay/solver repeated, no
+SRF2.0 or full solver launched. Immutable raw and private settings remain intact.

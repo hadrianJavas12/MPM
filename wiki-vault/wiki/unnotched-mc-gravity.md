@@ -232,3 +232,20 @@ was never executed during quota exhaustion; the gap is labelled. No repeated
 solver/analysis.2.0 remains NOT_RUN. The separate perfect composite-apex plan
 adds declared volumetric flow and requires technical review plus new/default/
 transaction/native gates; implementation is pending. Actual slide remains unmet.
+
+## Optional perfect composite-apex source checkpoint
+
+Subsequent work is on `codex/unnotched-mc-composite-apex`. The approved separate
+model and optional framework diagnostics are implemented and source-reviewed;
+native compilation/testing is **NOT_RUN**. The strict projector and Wang
+sources remain unchanged. A narrow dispatch hook reuses the owned transaction.
+The derived projection stores the actual apex multiplier separately from shear
+multipliers and preserves its scalar through copied state; native tests must
+verify that behavior. Fifteen frozen source-ready groups cover mathematics,
+strict delegation, current J, work/volume and copy/commit/reset/rollback.
+
+The additional `g_A=p` flow is a declared constitutive assumption. Equality
+and the numerical cap band continue through strict rejection/success behavior.
+Point/default/native output gates are required before a new slope case. Local
+yield is distinct from global instability; the prior tensile-apex rejection
+does not verify a landslide. No full run or SRF2.0 has been started.

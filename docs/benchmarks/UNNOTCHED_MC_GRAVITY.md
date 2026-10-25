@@ -490,3 +490,24 @@ is proposed for perfect Cauchy MC, with explicit volumetric flow, strict-default
 compatibility and new energy/transaction/native evidence gates. It is a new
 constitutive assumption, not a clamp, fracture model or validated paper law.
 No implementation or new full run has yet been performed.
+
+### Optional implementation checkpoint (subsequent to the strict failure)
+
+Branch `codex/unnotched-mc-composite-apex` now contains the separate optional
+perfect/Cauchy/psi0 model, a derived projection recording the actual apex
+multiplier, and read-only framework diagnostics. Optional ASDF systems leave
+default dependencies intact; a narrow native dispatch reuses the existing
+owned transaction. The strict projector and Wang numerical files are unchanged.
+Root source review and an independent integration review found no blocking
+issue. Compilation and native verification remain **NOT_RUN** at this source
+checkpoint; the 15-group frozen test source is ready.
+
+The extension adds `g_A=p` volumetric plastic flow. Its analytic branch applies
+only when the mean excess exceeds the existing stress tolerance divided by
+`2 sin(phi)`; the old elastic screen, cap band, equality and remaining states
+delegate to the strict projector, including its rejection behavior. This is
+an explicit additional material assumption. It is not fracture modelling or
+an unchanged strict law, and it does not guarantee sliding. No strength,
+geometry, loading, root preference or tolerance is changed to obtain collapse.
+See the approved design and technical review linked above. New point/native,
+default compatibility and bounded actual output gates precede any new full run.

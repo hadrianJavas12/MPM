@@ -2,6 +2,30 @@
 
 **Operational checkpoint: 2026-10-25, Asia/Jakarta. Read this first.**
 
+## WIP: optional perfect composite-apex; no full solver active
+
+Development branch NOW codex/unnotched-mc-composite-apex from2a22d4e, which is
+pushed on the prior unnotched-gravity branch. The strict1.6 failure, single
+replay and partial media are fully checkpointed below. No2.0 run.
+
+Approved design SHAe21ba6e29a85890ae4ae56f0b24df0d644111f5c9b2e6d18d9fd6bc7a510d3c3.
+Three optional model modules under materials/models/plastic/mc-composite-apex/
+and native dispatch/optional ASDF/read-only diagnostics integration are ready,
+source-reviewed only. No Lisp compile/native verification yet. Strict projector
+SHAe26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1 and Wang
+files remain unchanged. The new particle reuses owned transactions and stores
+a separate scalar apex multiplier in a derived projection; this needs testing.
+
+Agent gravity_scope_review prepared tests/materials/mc-composite-apex.lisp,
+15groups/378lines, SHAfaed3e1675cd23d3894a65e8c02b0e1164ed960932f772d82f20ab61295282e3,
+NOT_EXECUTED. Root has now reviewed the complete gate and model source without
+a blocking finding; commit this source checkpoint before authorizing FIRST
+frozen point/native ownership tests. Relevant default regressions and
+bounded legacy-byte controls are needed for the changed dispatch path; old
+full solvers are not. A new full case/contract and bounded actual MPM/CSV/VTK/
+variant-aware audit are still required before slope launch. Do not call this
+strict MC, fracture modelling, paper validation or guaranteed sliding.
+
 ## Latest: strict SRF1.6 failed at tensile apex; no full solver active
 
 `srf1p6-001`, sourceb079f05, ends FAILED_NATIVE1/worker1 at25Oct17:18:19WIB.
