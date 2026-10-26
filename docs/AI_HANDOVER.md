@@ -2,6 +2,16 @@
 
 ## NEW26October human request: slope40 and actual damage
 
+SUPERSEDED by explicit human reply: retain soil MC, develop damage, use an
+Urmi-like MC model. Stop Joss branch work; no further Joss launch. FIRST native
+tiny controls below ran, but4s smoke001 wrapper exited1 BEFORE native launch
+on a string/DateTime identity comparison. Retained worker clocks prove equal;
+scoped UTC-ticks repair2d960464 is committed, not a solver/material repair.
+No4s/full Joss native solver is active or has been executed. Preserve prototype,
+raw controls/failed wrapper and branch, then continue new Urmi MC scope from
+pre-Joss c2cd4069. User's newer material instruction takes precedence over the
+working Joss assumption below.
+
 User requests40deg, real damage display, longer run and token economy. New
 branch `codex/slope40-damage` fromc2cd4069; see
 [new experiment](benchmarks/SLOPE40_DAMAGE_STUDY.md). Existing MC has no damage;

@@ -5,6 +5,15 @@ The human requests a 40-degree slope, actual damage display, a sufficiently
 long run, and low token use. The earlier completed MC numerical sliding
 experiment and its original outputs remain closed and unchanged.
 
+**Superseded before any long or4s native run:** the human explicitly chooses
+soil MC and development of damage, with an Urmi-like MC model. This Joss
+prototype is retained as unused work. Smoke001 failed in wrapper identity
+checking before native launch; actual identical creation clocks compare equal
+after JSON conversion when measured in UTC ticks. Repair2d960464 changes only
+that wrapper check. No subsequent Joss launch is authorized by the new choice.
+The tiny native controls below remain genuine completed evidence, not a40deg
+damage evolution trajectory.
+
 ## Explicit experiment choice
 
 The current perfect MC composite model has no damage variable. This separate
