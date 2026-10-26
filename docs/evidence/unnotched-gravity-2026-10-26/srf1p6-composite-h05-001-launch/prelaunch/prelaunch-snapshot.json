@@ -1,0 +1,343 @@
+{
+  "status": "PREPARED_NOT_LAUNCHED",
+  "preparedUtc": "2026-10-26T04:03:47.918467+00:00",
+  "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+  "branch": "codex/unnotched-mc-composite-apex",
+  "run": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-001",
+  "case": "D:\\MPM\\cases\\benchmarks\\gravity-slope-mc-composite-apex-srf-1p6-h05.lisp",
+  "maxWallHours": 3,
+  "wallBudgetSeconds": 10800,
+  "budgetScope": "Three-hour wall bound; coupled resolution estimate is not an ETA",
+  "gateProfile": {
+    "nativeGate": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-controls-001",
+    "nativeSourceCommit": "f0b5fb69fd5d583986d475efc255fbc045a65aab",
+    "nativeSourceFiles": 290,
+    "nativeRuntimeProof": {
+      "status": "PASS",
+      "frozenSourcesVerified": 290,
+      "optionalLoadedSources": [
+        "materials/models/plastic/mc-composite-apex/package.lisp",
+        "materials/models/plastic/mc-composite-apex/projection.lisp",
+        "materials/models/plastic/mc-composite-apex/native.lisp",
+        "materials/adapters/mc-composite-apex.lisp",
+        "scenarios/gravity-slope/mc-composite-apex-adapter.lisp"
+      ],
+      "nativeBackend": {
+        "modulePath": "D:/MPM/output/mc-composite-apex-2026-10-26/fine-controls-001/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "scope": "Retained source hashes and native runtime proof; no post-exit process remapping"
+    },
+    "nativeGateArtifactIndex": {
+      "path": "D:\\MPM\\docs\\evidence\\mc-composite-apex-2026-10-26\\fine-native-controls-001\\artifact-index.json",
+      "bytes": 1845,
+      "sha256": "c255f0e79bdb23abd5cecf38b20fa9196ebd5089a768512bd7792af06643d277"
+    },
+    "bindingGateArtifactIndex": {
+      "path": "D:\\MPM\\docs\\evidence\\mc-composite-apex-2026-10-26\\fine-binding-controls-001\\artifact-index.json",
+      "bytes": 1528,
+      "sha256": "1aa7089cf15d654025ff2c9adb49245b60601865da2462ba8431bf1fe36c539c"
+    },
+    "actualNativeCounters": {
+      "physicalUpdatesExecuted": 2,
+      "materialCallsAttempted": 7040,
+      "materialCallsAccepted": 7040,
+      "standaloneConstitutiveCallsAttempted": 0,
+      "standaloneConstitutiveCallsAccepted": 0
+    },
+    "actualObservations": {
+      "observationsDirectory": "D:/MPM/output/mc-composite-apex-2026-10-26/fine-controls-001/observations/",
+      "onlyConfigDifference": "meshSize",
+      "coarseMeshM": 1.0,
+      "fineMeshM": 0.5,
+      "coarseParticleCount": 880,
+      "fineParticleCount": 3520,
+      "savedApexActiveRows": 0,
+      "savedParticleRows": 10560,
+      "savedVtkStates": 3,
+      "idMappingConvention": "VTK unique IDs stable across frames; CSV IDs are captured vector indices, not assumed equal to unique IDs",
+      "apexActivationRequired": false
+    },
+    "pythonBindingControls": 6,
+    "coarseReference": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-001",
+    "onlyFullConfigurationDelta": "meshSize1m->0.5m",
+    "expectedSourceMemberDelta": [
+      "source/inputs/cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6-h05.lisp",
+      "source/inputs/cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6.lisp",
+      "source/inputs/research/references/unnotched-mc-ssr/composite-apex-srf1p6-h05-contract.json"
+    ]
+  },
+  "checkpointTextBindings": [
+    {
+      "repositoryPath": "cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6-h05.lisp",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "e74f552da5312531363ddcc9d95391090bcc17b2",
+      "gitHashObjectWithPathSha": "e74f552da5312531363ddcc9d95391090bcc17b2",
+      "headBlobSha256": "4eb467eb545a6c5e0bf85f2bea0899870ce5639f4744e038917dd28c966c2879",
+      "headBlobBytes": 2340,
+      "worktreeBytes": 2340,
+      "worktreeSha256": "4eb467eb545a6c5e0bf85f2bea0899870ce5639f4744e038917dd28c966c2879",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/references/unnotched-mc-ssr/composite-apex-srf1p6-h05-contract.json",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "33f4f3b36cbc2cddb5e41d9d29ba6579b791f220",
+      "gitHashObjectWithPathSha": "33f4f3b36cbc2cddb5e41d9d29ba6579b791f220",
+      "headBlobSha256": "a299fcaaadb9e3583d4b522b67826b7383f518e595cac214df5b819f5d594e7a",
+      "headBlobBytes": 7828,
+      "worktreeBytes": 7828,
+      "worktreeSha256": "a299fcaaadb9e3583d4b522b67826b7383f518e595cac214df5b819f5d594e7a",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/references/unnotched-mc-ssr/composite-apex-refinement-contract.json",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "a51b6f34dc70ec881f27d42478292aca8a8bfd94",
+      "gitHashObjectWithPathSha": "a51b6f34dc70ec881f27d42478292aca8a8bfd94",
+      "headBlobSha256": "0836d61273184248868a0ce1c8bd4d7312d9b83be052ec5f9ce01d465a905827",
+      "headBlobBytes": 4592,
+      "worktreeBytes": 4592,
+      "worktreeSha256": "0836d61273184248868a0ce1c8bd4d7312d9b83be052ec5f9ce01d465a905827",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "scripts/review-gravity-composite-apex.py",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "379c0295bb0e4ba3c4119d08efda56348014b2d0",
+      "gitHashObjectWithPathSha": "379c0295bb0e4ba3c4119d08efda56348014b2d0",
+      "headBlobSha256": "edec92168deaf06b942f0a36e9468be958f00c3e5b06f34e1d91e368340f4a3b",
+      "headBlobBytes": 18498,
+      "worktreeBytes": 18498,
+      "worktreeSha256": "edec92168deaf06b942f0a36e9468be958f00c3e5b06f34e1d91e368340f4a3b",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "scripts/review-gravity-slope.py",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "4a58fc2548261743f615d81a1562305bcfb222e7",
+      "gitHashObjectWithPathSha": "4a58fc2548261743f615d81a1562305bcfb222e7",
+      "headBlobSha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+      "headBlobBytes": 38121,
+      "worktreeBytes": 38121,
+      "worktreeSha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "scripts/plot_m5_cliff_comparison.py",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "da224e401b1e48375ee2faef9f12b4e22d32a418",
+      "gitHashObjectWithPathSha": "da224e401b1e48375ee2faef9f12b4e22d32a418",
+      "headBlobSha256": "4d6e11c907954723bb5ac6ce19d99051b2608b2029f0cf083f800d7264748c90",
+      "headBlobBytes": 23033,
+      "worktreeBytes": 23581,
+      "worktreeSha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "rawGitBlobEqualsWorktree": false,
+      "crlfLfEquivalenceAccepted": true,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "scripts/review-gravity-composite-refinement.py",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "11527f74396209b640fe0793647d4b797d7ffdbf",
+      "gitHashObjectWithPathSha": "11527f74396209b640fe0793647d4b797d7ffdbf",
+      "headBlobSha256": "4af62e51fa619410a124049c410bebbe34fd5736db8187270973d1a865a50752",
+      "headBlobBytes": 14435,
+      "worktreeBytes": 14435,
+      "worktreeSha256": "4af62e51fa619410a124049c410bebbe34fd5736db8187270973d1a865a50752",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "tests/analysis/test_gravity_composite_refinement.py",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "08adcae762d9bfec807b1888d2fe1435cf71578c",
+      "gitHashObjectWithPathSha": "08adcae762d9bfec807b1888d2fe1435cf71578c",
+      "headBlobSha256": "1920571323ceed792e1704d75c6ae6d9913b433f60d47d5fad077a8e9d1481c7",
+      "headBlobBytes": 5808,
+      "worktreeBytes": 5808,
+      "worktreeSha256": "1920571323ceed792e1704d75c6ae6d9913b433f60d47d5fad077a8e9d1481c7",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/notes/unnotched-landslide-2026-10-24/support/capture-composite-apex-launch-shared.py.txt",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "07b899acb0302faf3425f5ad1f2ded8be8366c6d",
+      "gitHashObjectWithPathSha": "07b899acb0302faf3425f5ad1f2ded8be8366c6d",
+      "headBlobSha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9",
+      "headBlobBytes": 19982,
+      "worktreeBytes": 19982,
+      "worktreeSha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/notes/unnotched-landslide-2026-10-24/support/capture-copy-hash-zip-shared.py.txt",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "245613a18ed1738e1c1d835109770b0a355977c7",
+      "gitHashObjectWithPathSha": "245613a18ed1738e1c1d835109770b0a355977c7",
+      "headBlobSha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0",
+      "headBlobBytes": 13671,
+      "worktreeBytes": 13671,
+      "worktreeSha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/notes/unnotched-landslide-2026-10-24/support/capture-exact-clock-reference.ps1.txt",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "e1f777916dafa634f3a91079df5b576802053c19",
+      "gitHashObjectWithPathSha": "e1f777916dafa634f3a91079df5b576802053c19",
+      "headBlobSha256": "0d86faedc7a012be10d0c9b2b25214e57ec14b3deafca443bc0cd5f9b60f5a64",
+      "headBlobBytes": 2438,
+      "worktreeBytes": 2438,
+      "worktreeSha256": "0d86faedc7a012be10d0c9b2b25214e57ec14b3deafca443bc0cd5f9b60f5a64",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/notes/unnotched-landslide-2026-10-24/support/capture-composite-h05-launch.py.txt",
+      "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+      "headGitBlobSha": "fa9f22931581d8b7b8753acf13beadc0b7a77de3",
+      "gitHashObjectWithPathSha": "fa9f22931581d8b7b8753acf13beadc0b7a77de3",
+      "headBlobSha256": "59274dc1bca9a666a710e78fa22661445b00e379d1025ea15710432a324e8bf9",
+      "headBlobBytes": 24283,
+      "worktreeBytes": 24284,
+      "worktreeSha256": "70934762ab503a74f2f9cac6d915b055050f718c9bb95e06ebf4662bc1859954",
+      "rawGitBlobEqualsWorktree": false,
+      "crlfLfEquivalenceAccepted": true,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    }
+  ],
+  "frozenFiles": [
+    {
+      "path": "case.lisp",
+      "bytes": 2340,
+      "sha256": "4eb467eb545a6c5e0bf85f2bea0899870ce5639f4744e038917dd28c966c2879",
+      "originalPath": "D:\\MPM\\cases\\benchmarks\\gravity-slope-mc-composite-apex-srf-1p6-h05.lisp"
+    },
+    {
+      "path": "protocol/composite-apex-srf1p6-h05-contract.json",
+      "bytes": 7828,
+      "sha256": "a299fcaaadb9e3583d4b522b67826b7383f518e595cac214df5b819f5d594e7a",
+      "originalPath": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\composite-apex-srf1p6-h05-contract.json"
+    },
+    {
+      "path": "protocol/composite-apex-refinement-contract.json",
+      "bytes": 4592,
+      "sha256": "0836d61273184248868a0ce1c8bd4d7312d9b83be052ec5f9ce01d465a905827",
+      "originalPath": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\composite-apex-refinement-contract.json"
+    },
+    {
+      "path": "analysis/review-gravity-composite-apex.py",
+      "bytes": 18498,
+      "sha256": "edec92168deaf06b942f0a36e9468be958f00c3e5b06f34e1d91e368340f4a3b",
+      "originalPath": "D:\\MPM\\scripts\\review-gravity-composite-apex.py"
+    },
+    {
+      "path": "analysis/review-gravity-slope.py",
+      "bytes": 38121,
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+      "originalPath": "D:\\MPM\\scripts\\review-gravity-slope.py"
+    },
+    {
+      "path": "analysis/plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "originalPath": "D:\\MPM\\scripts\\plot_m5_cliff_comparison.py"
+    },
+    {
+      "path": "analysis/review-gravity-composite-refinement.py",
+      "bytes": 14435,
+      "sha256": "4af62e51fa619410a124049c410bebbe34fd5736db8187270973d1a865a50752",
+      "originalPath": "D:\\MPM\\scripts\\review-gravity-composite-refinement.py"
+    },
+    {
+      "path": "analysis/test_gravity_composite_refinement.py",
+      "bytes": 5808,
+      "sha256": "1920571323ceed792e1704d75c6ae6d9913b433f60d47d5fad077a8e9d1481c7",
+      "originalPath": "D:\\MPM\\tests\\analysis\\test_gravity_composite_refinement.py"
+    },
+    {
+      "path": "helper-source-checkpoint/capture-composite-apex-launch-shared.py.txt",
+      "bytes": 19982,
+      "sha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9",
+      "originalPath": "D:\\MPM\\research\\notes\\unnotched-landslide-2026-10-24\\support\\capture-composite-apex-launch-shared.py.txt"
+    },
+    {
+      "path": "helper-source-checkpoint/capture-copy-hash-zip-shared.py.txt",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0",
+      "originalPath": "D:\\MPM\\research\\notes\\unnotched-landslide-2026-10-24\\support\\capture-copy-hash-zip-shared.py.txt"
+    },
+    {
+      "path": "helper-source-checkpoint/capture-exact-clock-reference.ps1.txt",
+      "bytes": 2438,
+      "sha256": "0d86faedc7a012be10d0c9b2b25214e57ec14b3deafca443bc0cd5f9b60f5a64",
+      "originalPath": "D:\\MPM\\research\\notes\\unnotched-landslide-2026-10-24\\support\\capture-exact-clock-reference.ps1.txt"
+    },
+    {
+      "path": "helper-source-checkpoint/capture-composite-h05-launch.py.txt",
+      "bytes": 24284,
+      "sha256": "70934762ab503a74f2f9cac6d915b055050f718c9bb95e06ebf4662bc1859954",
+      "originalPath": "D:\\MPM\\research\\notes\\unnotched-landslide-2026-10-24\\support\\capture-composite-h05-launch.py.txt"
+    },
+    {
+      "path": "capture-helper.py",
+      "bytes": 24284,
+      "sha256": "70934762ab503a74f2f9cac6d915b055050f718c9bb95e06ebf4662bc1859954",
+      "originalPath": "D:\\MPM\\.tmp\\capture-gravity-composite-h05-launch.py"
+    },
+    {
+      "path": "shared-launch-helpers.py",
+      "bytes": 19982,
+      "sha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9",
+      "originalPath": "D:\\MPM\\.tmp\\capture-gravity-composite-apex-launch.py"
+    },
+    {
+      "path": "copy-hash-zip-helpers.py",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0",
+      "originalPath": "D:\\MPM\\.tmp\\pack-gravity-completed-002.py"
+    },
+    {
+      "path": "proof-support/reference-exact-clock-helper.ps1",
+      "bytes": 2438,
+      "sha256": "0d86faedc7a012be10d0c9b2b25214e57ec14b3deafca443bc0cd5f9b60f5a64",
+      "originalPath": "D:\\MPM\\.tmp\\capture-gravity-srf1p6-processes.ps1"
+    },
+    {
+      "path": "proof-support/capture-processes.ps1",
+      "bytes": 3099,
+      "sha256": "cd38715b48366171608c3e82801d7d18f1ec0abc21b6f0a07d8e4990ab3d1670",
+      "originalPath": "Generated before launch; root runs once only"
+    },
+    {
+      "path": "expected-full-configuration.json",
+      "bytes": 1786,
+      "sha256": "e5c2577c9fc8b534258f6ebb4d5af1f3eeb014c1fce92d4f6474b772f1f7f332"
+    }
+  ],
+  "expectedPhysicalDurationS": 6,
+  "expectedFrames": 61,
+  "expectedParticles": 3520,
+  "scope": "No launch/tests/native/process query/audit/render. Root owns later launch and one generated proof."
+}

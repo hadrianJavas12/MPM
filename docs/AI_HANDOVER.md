@@ -1,5 +1,43 @@
 # AI Engineering Handover — CL-MPM
 
+## ACTIVE: same-factor h0.5 resolution trial
+
+Output `output/mc-composite-apex-2026-10-26/srf1p6-composite-h05-001`, native
+source `a07eb8f8d8276a03a211266362518c323983ea13`. Starts26October11:04:18.0292316WIB;
+3h wall deadline14:04:18.0292316WIB, not ETA. Worker2908/wrapper23432/cmd3224/
+SBCL13996,Session11. ONE exact Process/CIM creation-clock/parent proof matches.
+Full6s/61states/3520MPs; sameSRF1.6/composite material, geometry, BC/loading.
+Only assigned grid1->0.5 changes; sampling/stable dt also change, not convergence.
+No notch/driver/seed/reset/extra weakening. All older full-fine NOT_RUN notes
+below are historical. Main9e97e001 unchanged, no UI/merge.
+
+FIRST prepare/capture exit0.18 records freeze case/contracts/four Python
+scripts/helpers BEFORE launch. Actual287sources/DLL and285shared members match
+fine gate/coarse. Root verifies launch packet42indexed/43Git blobs/288ZIPmembers,
+287archived+actual sources. Captured0s/0updates/one state is initialization only.
+Packet: `docs/evidence/unnotched-gravity-2026-10-26/srf1p6-composite-h05-001-launch`.
+Do not repeat any closed gate, preparation, capture, source proof or process query.
+
+NEXT wake: adjacent-status status/progress/heartbeat, manifestcomplete/time and
+ONEstdouttail. Healthy NATIVE_RUNNING: endquiet, no activepoll/duplicates.
+Stale/lostprocess requires actual identity/exit reconciliation. Same automation
+15min active. Wrapper does NOT autoaudit/render. No active physics/postprocessor edits.
+
+TERMINAL: actual native/worker exit+complete, ONE variant review from prepared
+launch-preparation/analysis/review-gravity-composite-apex.py with prepared
+protocol/composite-apex-srf1p6-h05-contract.json, fresh output and --video,
+no bounded flag. Then CSV-only common-metre pair against coarse variant-review-002.
+Use repository CSV wrapper after byte-matching prepared copy: outer discovery
+expects repo placement. It freezes common-observer helper/reports before that
+comparison; the helper is not among four pre-launch Python copies. Record
+provenance honestly. No repeated coarse audit/render; media/analysis repair uses
+saved native data. No complete/colour/outlier as landslide/scientificPASS.
+
+Finite stop: no automatich0.25/SRF/time change after pair. Urmi comparison below
+identifies a separate stable drained->undrained softening hypothesis, not changes
+to this run. Preserve raw/private/negative evidence.
+
+
 **Operational checkpoint: 2026-10-26, Asia/Jakarta. Read this first.**
 
 ## Latest human steering: compare the earlier Urmi collapse

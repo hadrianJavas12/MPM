@@ -393,3 +393,7 @@ parameter switch; this is distinct from disabling plasticity. A separate
 faithful drained→undrained softening hypothesis is retained for after the
 finite resolution pair, not silently enabled in the perfect control. Old raw
 data/video/source are preserved; no old run/audit/render repeated.
+
+## Fine full run active
+
+Sourcea07eb8f8 starts26October11:04:18WIB,3h deadline14:04:18WIB,6s/61states/3520MP. No physical inputs other than resolution change. FIRST prepare/capture0;287sources/DLL/285shared files and exactfour-role proof match. Root42indexed/43Git blobs/288members/287sources verifies. Capture0s is initialization only; no slide claim. Quiet15min monitoring; no old repeats. Finite one-pair stop rule retained.

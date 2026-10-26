@@ -1,5 +1,14 @@
 # Final Comparative Study: Mohr–Coulomb Strain Hardening (Model H) vs Strain Hardening–Softening (Model HS) in CL-MPM
 
+ > **Scope clarification,26October2026:** Section5.4 Urmi-long bulk metrics use
+> domain/displacement/frame-speed exclusions and conditional KE substitution.
+> Raw HS output includes severe numerical outliers; the tables are not whole-run
+> physical-integrity proof. Old recipes include toe notches; elastic-only
+> initialization differs from the paper's stable drained elastoplastic stage.
+> See[dated audit](../../docs/benchmarks/URMI_LEGACY_COMPARISON.md). Original raw
+> data, summaries, plots and videos remain unchanged.
+
+
 - **Date:** 2026-10-17
 - **Branch:** `codex/mc-hardening-softening-study`
 - **Master Plan Reference:** [`research/plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md`](../plans/MASTER_PLAN_CL_MPM_HARDENING_SOFTENING.md)

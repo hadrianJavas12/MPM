@@ -1,0 +1,94 @@
+{
+  "schema": "cl-mpm.composite-apex-refinement.v1",
+  "createdDate": "2026-10-26",
+  "frozenBeforeRefinedResults": true,
+  "purpose": "ONE finite same1.6/composite material h0.5 resolution sensitivity study; no detected coarse landslide to confirm",
+  "basis": {
+    "coarse": "Native0 complete6s; transient elastoplastic deformation arrests, both motion windows/runout NOT_DETECTED",
+    "basalGate": "Actual initial MP partition and gradient completeness pass at both meshes. Positive basal-node weight footprint extends to actual y0.75m vs0.375m; hypothetical arc-minimum domains cross floor at both meshes. Prescribed-field RMS errors are different sample sets, not convergence proof.",
+    "hypothesis": "Resolution changes the kinematic representation materially; test bulk response at same physical problem without claiming a kernel defect, locking or resolution of the formal0.084m arc."
+  },
+  "coarseCase": "cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6.lisp",
+  "refinedCase": "cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6-h05.lisp",
+  "onlyAssignedDifference": {
+    "meshSizeM": [
+      1,
+      0.5
+    ]
+  },
+  "expectedParticleCount": [
+    880,
+    3520
+  ],
+  "unchanged": [
+    "polygon and empty domain",
+    "SRF1.6/c6250Pa/phi atan(tan20/1.6)/psi0/E100MPa/nu0.3/density and declared composite-apex gA=p law",
+    "boundary masks",
+    "2 MPs per axis per cell",
+    "USF/FLIP/no F-bar",
+    "timeStepScale0.2",
+    "massScale1/damping0/no deletion",
+    "gravity smoothstep0-2s and total6s",
+    "61savedstates/60000updatecap"
+  ],
+  "runtime": {
+    "wallBudgetHours": 3,
+    "workRatioEstimate": 8,
+    "basis": "Actual coarse15m45s times approximately8 material-update work; about2h6m planning estimate,3h wall bound, not ETA or guaranteed completion"
+  },
+  "comparisonObserver": {
+    "units": "physical metres for BOTH meshes; preserve native h-scaled diagnostics separately",
+    "initialCohort": {
+      "xGreaterThanM": 2,
+      "yGreaterThanM": 2
+    },
+    "initialAdjacencyRadiusM": 1.01,
+    "movingMinimumDxM": 0.25,
+    "movingMinimumDownslopeDisplacementM": 0.5,
+    "minimumConnectedMovingFractionOfCohortMass": 0.1,
+    "minimumPositiveDxFractionOfComponentMass": 0.75,
+    "componentVelocity": {
+      "minimumMeanVxMPerS": 0.001,
+      "allSavedStatesDurationS": 1,
+      "fixedComponentIDsWithinEachInterval": true
+    },
+    "runoutMinimumFractionOfInitialTotalMass": 0.01,
+    "runoutXGreaterThanM": 32.5,
+    "windows": [
+      "0-6s",
+      "2-6s relative to saved2s"
+    ],
+    "crossMeshMatching": "same physical regions/common 1m spatial bins and mass-weighted distributions; particle ID numbers are not transferable across meshes"
+  },
+  "gates": [
+    "new-case frozen native diff and geometry/BC/mass/count proof",
+    "two genuine native updates with actual saved CSV/VTK check",
+    "full immutable-source/mapped-DLL provenance",
+    "saved finite/mass/ID/F/J/law/yield integrity and scale1 inspection"
+  ],
+  "limits": [
+    "coupled space/time refinement, not isolated mesh convergence",
+    "fixed bottom not validated Coulomb runout bed",
+    "adapted geometry not exact Xie foundation",
+    "localization/observer sensitivity and near-critical duration remain unresolved",
+    "formal static negative normals are not dynamic validation",
+    "Basal prescribed-field errors are interpolation diagnostics on different MP samplings, not proof of constitutive locking or admissibility of the formal negative-normal circle"
+  ],
+  "prohibitions": [
+    "strength/SRF/psi/damping/geometry tuning for collapse",
+    "changing detector thresholds to obtain success",
+    "clamping or root preference/tolerance loosening",
+    "claiming native completion or colour proves landslide"
+  ],
+  "currentRefinedPhysicalResult": "NOT_RUN",
+  "automaticScientificPass": false,
+  "coarseAudit": {
+    "path": "research/references/unnotched-mc-ssr/composite-apex-srf1p6-contract.json",
+    "sha256": "aa13974b57d29b0d9f29d2d1997dd5c295eca29ae91d8d88a62576180dbffd27"
+  },
+  "fineAudit": {
+    "path": "research/references/unnotched-mc-ssr/composite-apex-srf1p6-h05-contract.json",
+    "sha256": "a299fcaaadb9e3583d4b522b67826b7383f518e595cac214df5b819f5d594e7a"
+  },
+  "stopRule": "After this one pair, no automatic h0.25, increasedSRF or longer duration. If negative, resolve physical foundation/base/reference geometry before further collapse-seeking runs; if positive, report resolution-sensitive onset, not validated failure."
+}

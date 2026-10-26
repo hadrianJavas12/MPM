@@ -1,5 +1,15 @@
 # Native framework and Studio verification
 
+## Full same-factor fine run ACTIVE,26October2026
+
+Sourcea07eb8f8 starts11:04:18WIB,3h deadline14:04:18(not ETA),6s/61states/3520MP.
+Four new native/six glue controls CLOSED. FIRST prepare/capture exit0 and exact
+four-role creation/parent proof;287sources/DLL and285shared files match gate/coarse.
+Root launch packet42indexed/43Git blobs/288members/287sources verified at
+`docs/evidence/unnotched-gravity-2026-10-26/srf1p6-composite-h05-001-launch`.
+Capture0s is initialization only; no full-run/slide/scientificPASS. No old repeats.
+
+
 ## FIRST fine native gate,26October2026
 
 Sourcef0b5fb69 native0: four NEW groups PASS,3520MPs,2USF updates/7040 accepted

@@ -1032,3 +1032,7 @@ control; filtered metrics are not whole-run integrity. Paperp6 stable drained
 MC→undrained transition differs from elastic-only initialization in oldrunner.
 All raw/media remain intact; no solver/audit/render repeat. Fine preflight
 checkpoint8351c132 is pushed; its planned one-pair experiment remains pending.
+
+## [2026-10-26] ingest | Same-factor fine full run launched
+
+[[unnotched-mc-gravity]] records native sourcea07eb8f8 start11:04:18WIB,3h wall deadline,6s/61states/3520MP. FIRST prepare/capture0, exact creation/parent proof and287source/DLL/285shared matches. Root42indexed/43Git blobs/288members verifies; initial0s is not slide proof. Quiet15min monitoring, no repeated gates/native/audit/render. Actual goal remains open; old Urmi results remain a separate audited adaptation.

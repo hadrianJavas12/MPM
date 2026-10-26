@@ -1,5 +1,14 @@
 # Basal interpolation diagnostic and finite next study
 
+**Current26October2026:** full same1.6/composite h0.5 run starts11:04:18WIB,
+sourcea07eb8f8,3h deadline14:04:18WIB(not ETA). Output
+`output/mc-composite-apex-2026-10-26/srf1p6-composite-h05-001`;6s/61states/3520MPs.
+Root[launch proof](../evidence/unnotched-gravity-2026-10-26/srf1p6-composite-h05-001-launch/README.md)
+verifies42indexed/43Git blobs/288members/287sources and285shared members.
+ACTIVE, no motion/slide result. Older NOT_RUN notes below are historical.
+The earlier Urmi case is compared[separately](URMI_LEGACY_COMPARISON.md).
+
+
 26 October 2026, `codex/unnotched-mc-composite-apex`. The completed6s
 [composite trial](UNNOTCHED_MC_COMPOSITE_APEX.md) has transient plastic motion
 that arrests. This diagnostic tests its numerical representation without

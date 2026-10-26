@@ -1,0 +1,95 @@
+{
+  "status": "LAUNCH_PROOF_ONLY",
+  "createdUtc": "2026-10-26T04:05:53.582125+00:00",
+  "nativeSourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+  "actualSourceFiles": 287,
+  "preparedBeforeLaunch": true,
+  "startedUtc": "2026-10-26T04:04:18.0292316Z",
+  "wallDeadlineUtc": "2026-10-26T07:04:18.0292316Z",
+  "maxWallHours": 3,
+  "actualRuntimeProof": {
+    "status": "PASS",
+    "frozenSourcesVerified": 287,
+    "optionalLoadedSources": [
+      "materials/models/plastic/mc-composite-apex/package.lisp",
+      "materials/models/plastic/mc-composite-apex/projection.lisp",
+      "materials/models/plastic/mc-composite-apex/native.lisp",
+      "materials/adapters/mc-composite-apex.lisp",
+      "scenarios/gravity-slope/mc-composite-apex-adapter.lisp"
+    ],
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/mc-composite-apex-2026-10-26/srf1p6-composite-h05-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "scope": "Retained source hashes and native runtime proof; no post-exit process remapping"
+  },
+  "actualLiveProof": {
+    "capturedUtc": "2026-10-26T04:04:52.4546021Z",
+    "sourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+    "status": "NATIVE_RUNNING",
+    "processes": [
+      {
+        "role": "wrapper",
+        "pid": 23432,
+        "name": "pwsh",
+        "sessionId": 11,
+        "creationUtc": "2026-10-26T04:04:17.5188017Z",
+        "parentPid": 2908,
+        "creationClock": "System.Diagnostics.Process",
+        "identityMatched": true
+      },
+      {
+        "role": "nativeCommand",
+        "pid": 3224,
+        "name": "cmd",
+        "sessionId": 11,
+        "creationUtc": "2026-10-26T04:04:18.1865858Z",
+        "parentPid": 23432,
+        "creationClock": "System.Diagnostics.Process",
+        "identityMatched": true
+      },
+      {
+        "role": "sbcl",
+        "pid": 13996,
+        "name": "sbcl",
+        "sessionId": 11,
+        "creationUtc": "2026-10-26T04:04:18.4893107Z",
+        "parentPid": 3224,
+        "creationClock": "System.Diagnostics.Process",
+        "identityMatched": true
+      },
+      {
+        "role": "detachedWorker",
+        "pid": 2908,
+        "sessionId": 11,
+        "creationUtc": "2026-10-26T04:04:16.5644460Z",
+        "creationClock": "Win32_Process",
+        "identityMatched": true
+      }
+    ],
+    "scope": "Exact live PID, session, creation-clock and parent-chain checks; no logoff/sleep/reboot guarantee"
+  },
+  "sharedMembersMatchingFineGate": 285,
+  "sharedMembersMatchingCoarse": 285,
+  "allowedFineGateOnlyInputMembers": [
+    "source/inputs/cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6-h05.lisp",
+    "source/inputs/cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6.lisp",
+    "source/inputs/research/references/unnotched-mc-ssr/composite-apex-srf1p6-h05-contract.json"
+  ],
+  "fullConfigurationMatchesFineGateExceptFourTinyOverrides": true,
+  "fullConfigurationDiffersFromCoarseOnlyMeshSize": true,
+  "actualCapturedState": {
+    "status": "running",
+    "phase": "gravity-ramp",
+    "complete": false,
+    "timeS": 0.0,
+    "updates": 0,
+    "savedFrames": 1
+  },
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "limits": "Timestamp-specific stored proof; non-atomic file moments; no worker survival guarantee. Coupled space/time study, not convergence or landslide evidence.",
+  "operations": "Read/copy/hash/ZIP only; no launch, process re-query, native/test, saved-state audit or rendering."
+}
