@@ -1,0 +1,1621 @@
+{
+  "status": "PREPARED_NOT_LAUNCHED",
+  "preparedUtc": "2026-10-26T06:53:22.127749+00:00",
+  "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+  "branch": "codex/unnotched-mc-composite-apex",
+  "run": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-002",
+  "case": "D:\\MPM\\cases\\benchmarks\\gravity-slope-mc-composite-apex-srf-1p6-h05.lisp",
+  "maxWallHours": 3,
+  "wallBudgetSeconds": 10800,
+  "budgetScope": "Three-hour wall bound; coupled resolution estimate is not an ETA",
+  "gateProfile": {
+    "nativeGate": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001",
+    "nativeSourceFiles": 291,
+    "nativeRuntimeProof": {
+      "status": "PASS",
+      "frozenSourcesVerified": 291,
+      "optionalLoadedSources": [
+        "materials/models/plastic/mc-composite-apex/package.lisp",
+        "materials/models/plastic/mc-composite-apex/projection.lisp",
+        "materials/models/plastic/mc-composite-apex/native.lisp",
+        "materials/adapters/mc-composite-apex.lisp",
+        "scenarios/gravity-slope/mc-composite-apex-adapter.lisp"
+      ],
+      "nativeBackend": {
+        "modulePath": "D:/MPM/output/mc-composite-apex-2026-10-26/fine-repair-controls-001/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "scope": "Retained source hashes and native runtime proof; no post-exit process remapping"
+    },
+    "nativeGateArtifactIndex": {
+      "path": "D:\\MPM\\docs\\evidence\\mc-composite-apex-2026-10-26\\composite-apex-repair-gates-001\\artifact-index.json",
+      "bytes": 11983,
+      "sha256": "78bd874a2e320b5acb1ea47bf34410cb8ed2468ce120ba7e948c4322b6380db0"
+    },
+    "gates": [
+      "stable-math-001",
+      "stable-regression-001",
+      "capture-controls-001",
+      "fine-repair-controls-001"
+    ],
+    "freshRepairAttempt": {
+      "previousRun": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-001",
+      "previousStatus": "FAILED_NATIVE",
+      "previousLastSavedTimeS": 5.2,
+      "previousSavedStates": 53,
+      "actualFailedTrialCapsuleAvailable": false,
+      "actualFailedTrialReplayed": false,
+      "rationale": "Synthetic false-work-rejection class demonstrated; symmetric pair-difference deviator is algebraically equal. Original mean/q/branch/law/checks/tolerances retained; optional failure-only owned diagnostics added.",
+      "changes": [
+        "source/cl-mpm.asd",
+        "source/materials/models/plastic/mc-composite-apex/package.lisp",
+        "source/materials/models/plastic/mc-composite-apex/projection.lisp"
+      ],
+      "addedSource": "source/materials/models/plastic/mc-composite-apex/diagnostics.lisp",
+      "physicalInputsChanged": false,
+      "identicalRestart": false,
+      "restartFromSavedState": false,
+      "initialState": "Fresh original zero-stress/zero-velocity initial state, same6s/SRF1.6/h0.5",
+      "failureCauseLimit": "Missing actual failed trial/predicate remains unavailable; synthetic witness is not actual cause proof.",
+      "trajectoryLimit": "New evaluation can round apex fields differently; no identity with the old5.2s trajectory is promised.",
+      "stopRule": "One fresh repaired attempt; no SRF/grid/duration/strength/psi/tolerance escalation; registered observers and physical limits remain."
+    },
+    "repairedNumericalSources": {
+      "source/src/boundaries/buoyancy/buoyancy.lisp": [
+        78231,
+        "a9318298ab971141f344c46f634156639a2de859e09123ff672aece032fadba9"
+      ],
+      "source/src/boundaries/constraints/bc.lisp": [
+        21899,
+        "00a722288bc7e7baad930cdb349a325a90c8b4c864c6a387eec26ecff579c0fa"
+      ],
+      "source/src/boundaries/erosion/dr-erosion.lisp": [
+        881,
+        "1e6ac4b978a0bab15da7f24b856cff477fbc339a6f3afcbac33490ad0e5cba1f"
+      ],
+      "source/src/boundaries/erosion/erosion.lisp": [
+        5558,
+        "db394ab4ba4e747626ae1523d2447ba5f7d69a7a8e8027026ec97b480a5fba85"
+      ],
+      "source/src/boundaries/inflow/inflow.lisp": [
+        3342,
+        "d9119416720cf986c91d3ea9488c0e9bab5015663a92e72cbb3f862ac4f3de2a"
+      ],
+      "source/src/boundaries/penalty/penalty.lisp": [
+        63098,
+        "f24eb709210e127f357d66f494091f770ef0a5a309b7463f75e3b3e39fbfcbb3"
+      ],
+      "source/src/boundaries/pressure/isotropic.lisp": [
+        891,
+        "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13"
+      ],
+      "source/src/core/domain-state.lisp": [
+        163,
+        "1a6cef77f8ff1c538f87118f6243d93d51d5ff4f205bf88bdd979102016432ba"
+      ],
+      "source/src/core/iterate-test.lisp": [
+        5860,
+        "ee36f0ec55a97ec6dbb07cbb7f7bab09fa448b2cc33da7bb5229f9ad883e2984"
+      ],
+      "source/src/core/iterate.lisp": [
+        82697,
+        "39c0e79ee1d3e25db71d22c413b609ff12208598e50bdbe40fbf50a6c4722e2d"
+      ],
+      "source/src/core/mesh-base.lisp": [
+        51125,
+        "57bd47f0b8a9932e9d2042173d0b20fb5fd75037c16725cdbf626ccca8570eba"
+      ],
+      "source/src/core/package.lisp": [
+        7473,
+        "54c2c4e068fd81bc2b2d79d0ba3835e695e1d0de9f8c0ed6a8ac8513983b92c1"
+      ],
+      "source/src/core/particle-base.lisp": [
+        10894,
+        "5e8fdaa9b6b312b30565239e72f3add2773b190d3808d42937c93dc08cc5285d"
+      ],
+      "source/src/core/particle-protocols.lisp": [
+        7004,
+        "ea55acd4fa27cbec3530a2c5eceb67d3a050953490d028cc37232d05433ee506"
+      ],
+      "source/src/core/settings.lisp": [
+        492,
+        "97307ee66180541a6ea3c3155c2da24f20669420e9e59f8747776253e0e0b710"
+      ],
+      "source/src/core/simulation-base.lisp": [
+        52544,
+        "90f6ad05fc51456410df291e7782e9acde2f124fa2f16cc5044891238514c1b0"
+      ],
+      "source/src/core/stress-update.lisp": [
+        25523,
+        "7014b54e59be3b4f8f4b0fc4ddfea750795f71dd3011d5c3fd50b325a628d2e1"
+      ],
+      "source/src/core/timestep.lisp": [
+        151,
+        "946029c9ccaf05b8e071f1c5b236e835cda6fdc20ae7a6957f79c07709c82537"
+      ],
+      "source/src/damage/package.lisp": [
+        1972,
+        "0983111fb3acf696939d7ee54d948ed9345cfbd94ec9c529e84e9e528ddb08ef"
+      ],
+      "source/src/damage/eigenerosion/eigenerosion.lisp": [
+        12320,
+        "3396b21038537944ef0572653fc75c7b14ba070a29257a3c61f12a8169a0c0b7"
+      ],
+      "source/src/damage/nonlocal/ekl.lisp": [
+        7162,
+        "f3ea1ed92c931f1dfb2437118374806d675a4e37839dd2ac55b858026811e671"
+      ],
+      "source/src/damage/nonlocal/legacy.lisp": [
+        42911,
+        "fe26d093a1e911beee8fdbe67a53c10f0c619f44eea5a3eaa25c410d42c8337f"
+      ],
+      "source/src/damage/nonlocal/nonlocal-stress-based.lisp": [
+        0,
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "source/src/damage/solver/solver.lisp": [
+        7492,
+        "16117cbb17fae425c1e1ea058a29ed7077e087cd7e63862797e5edbd590bdab1"
+      ],
+      "source/src/discretization/domain-update/domain-update.lisp": [
+        31495,
+        "7cf4a1d2ad39b5076ccb322ea19896754c32893d1657b98cb5af4c662bfa7026"
+      ],
+      "source/src/discretization/ghost-nodes/ghost.lisp": [
+        49776,
+        "e74fb0200ba0f0f6edbfb77cb0e9821cdc532c718808a89a0d92cef806276e44"
+      ],
+      "source/src/discretization/shape-functions/shape-function.lisp": [
+        23457,
+        "91fbe2afc519fa5eb0728d54630a8f5f0c47b03ebfda73371076a58a3458452f"
+      ],
+      "source/src/discretization/splitting/splitting.lisp": [
+        15070,
+        "26e57f4399dcc6e87a74b1910c60b3ecc9c6467f551b983a7332171d037436b3"
+      ],
+      "source/src/formulations/octree/buoyancy.lisp": [
+        18341,
+        "f0eab46ca3f2e510a516ddbf24991d5a70a739c7005489d47048074f25392e78"
+      ],
+      "source/src/formulations/octree/penalty.lisp": [
+        6365,
+        "b2c1993fef297d6efcc887da5fea440a7e6be1ffbc7361ce0ce5ca01dd80602e"
+      ],
+      "source/src/formulations/ssa/mesh.lisp": [
+        58,
+        "bb3af7f3bd5c55b79b142bd997bfa34906d263355aae190686431eefbfd49063"
+      ],
+      "source/src/formulations/ssa/p2g.lisp": [
+        4814,
+        "dafd5769cf207aa6f46049b1d8fc939cc6053d9966ffdfda9bbbbdd5715161c0"
+      ],
+      "source/src/formulations/ssa/package.lisp": [
+        228,
+        "dee67a4760e9f82162ced9533e5316ee3f350f36e5b7e3b360cec02e4908feb8"
+      ],
+      "source/src/formulations/ssa/particles.lisp": [
+        3133,
+        "2f72160e9723bcc5a176d7634d46135a0dcbf629df8250f541b5055a586e2c0f"
+      ],
+      "source/src/formulations/ssa/solvers.lisp": [
+        1838,
+        "0f15f7124f900f8cd406e1ac470e335a8cc823a003c7627394c74d123a231423"
+      ],
+      "source/src/geometry/setup.lisp": [
+        36567,
+        "0bd74167f9125a16b53fc55d6747039525943adffe6746004632781eec62b057"
+      ],
+      "source/src/loading/displacement.lisp": [
+        192,
+        "5b69184b836299e6302f8fb09ae26b70a4d25e8dec01c520a14e8f22fc8f4f05"
+      ],
+      "source/src/loading/force.lisp": [
+        185,
+        "b8008de11ea20434fdac96f37e00c21874aca584c1c64e501b5e806d43c4bbb1"
+      ],
+      "source/src/loading/gravity.lisp": [
+        187,
+        "4a2412609df8c572d81d3759430c7d57a8b585a510065245eadbd0ad5ded5225"
+      ],
+      "source/src/loading/pressure.lisp": [
+        181,
+        "066b63638de05017d0fc0228f111a97b9a31c4727fd696d776af7433db5a40d7"
+      ],
+      "source/src/loading/sequences.lisp": [
+        189,
+        "1e8217f94f8758e7ff65ac895f3a8be0efd52725272861b235cd16d0438bf529"
+      ],
+      "source/src/loading/time-functions.lisp": [
+        194,
+        "194c047ff36c9b4164ee8c6297644ba646451c4fd7b8dcfc039a081126c3e82b"
+      ],
+      "source/src/measurements/displacement.lisp": [
+        198,
+        "0051a1406ec11ab54cfcef0478c956b21d95179a7080b0289d07d1a5495ba7fd"
+      ],
+      "source/src/measurements/energy.lisp": [
+        192,
+        "30c343bb3103ec4c60d1d09eaaef0fb65bf4d62b941b67d6b3e426d1ddbb57b7"
+      ],
+      "source/src/measurements/legacy-particle.lisp": [
+        139,
+        "e3173eb888b753f1770628a612552ea24848e62c120bd351e4db942577f674b6"
+      ],
+      "source/src/measurements/legacy-stress.lisp": [
+        173,
+        "95e88e09e19a36d810e9a682f7d9e4bf6575cb8e6e4bedbc24dd9bb461ad30d0"
+      ],
+      "source/src/measurements/mass-balance.lisp": [
+        198,
+        "3d3773e63657152fe044f94314e943dc723c2494d02036861d893c93f67bec6c"
+      ],
+      "source/src/measurements/material-output.lisp": [
+        3158,
+        "61c3b5aed49ef1965bb2ca8800f454310b35ff5f4e71f7202b5a0527e4132019"
+      ],
+      "source/src/measurements/stress-strain.lisp": [
+        197,
+        "3c658f7042cbe0e9003f048090e73248145ee35ed710de919d081111992cb9a5"
+      ],
+      "source/src/measurements/volume.lisp": [
+        192,
+        "63daa4d5a1939a576b5ea0882b9ba7a2d750c2739fec2e2744d50237541475b6"
+      ],
+      "source/src/numerics/angles.lisp": [
+        85,
+        "4edf2316d646f21dcd67bae6ee87abf3c5d14d58a4b8a8256b006888ac467c12"
+      ],
+      "source/src/numerics/legacy-tensors.lisp": [
+        251,
+        "4738b0b9a66506b54b743539fbc78c8371d16b6b9d6a6adc7f80becb6d0b3cba"
+      ],
+      "source/src/numerics/error-handling/errors.lisp": [
+        443,
+        "e857aa6fae6d4385f571d52903d9755799e39d384547f4fb3622eb7759914bcb"
+      ],
+      "source/src/numerics/fastmaths/fastmaths.lisp": [
+        79025,
+        "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d"
+      ],
+      "source/src/numerics/integration/delayed-steppers.lisp": [
+        5269,
+        "95271a7b90f61780a5d2c2e2705a77be5a9a40f2d30e3a11eb8523543f36443d"
+      ],
+      "source/src/numerics/integration/finite-difference-tangent.lisp": [
+        1310,
+        "e566c19c99889fd6f41b28beb35b0dfffdd4f95826a00f57bcad2f5a879caaa9"
+      ],
+      "source/src/numerics/linear-algebra/symbolic-derivation.lisp": [
+        5093,
+        "f707ec327b569f93f504ff08dfec333a0684b2df99b5b80028fc7f4f18516928"
+      ],
+      "source/src/numerics/native-bridge/cpp.lisp": [
+        5705,
+        "3b3c47ef825a28a4d3da7cce9051857460d2d93cb7b985ac253a431b13430e7b"
+      ],
+      "source/src/numerics/tensors/constitutive-primitives.lisp": [
+        5737,
+        "e9897f81b3ed9ecd206b46fa12fefa09d3a04cb49555c7aa31cb37a834dfcf95"
+      ],
+      "source/src/numerics/tensors/damage-primitives.lisp": [
+        1710,
+        "3ed032ad1782ba8310b40b4544e3a7b262d6dd8ac04e5527d5eb447766262196"
+      ],
+      "source/src/numerics/tensors/particle-objectivity.lisp": [
+        5181,
+        "aa5c713ade5833c0b4525e64a6b9339619597b44db2e68ecb20c4dd4847fcbaf"
+      ],
+      "source/src/numerics/tensors/principal-strains.lisp": [
+        1298,
+        "054eb75fe8a1e36f94e43cba7b1bda635f88b9859b8260a0a8b419a154c31593"
+      ],
+      "source/src/numerics/tensors/utils.lisp": [
+        57848,
+        "8ed1bfb0d0662107c8d56694b5388e571c41944cda07448337ebef1665015f57"
+      ],
+      "source/src/numerics/tensors/voigt-2d.lisp": [
+        285,
+        "bbd1cf217257f1f6530fab141d5f75286bd6a06086da038b5a341c7940156bab"
+      ],
+      "source/src/output/checkpoints.lisp": [
+        161,
+        "dfac7a3bc187707b79905488b697489781d25ed6adf72e9f414c463e9e024fa4"
+      ],
+      "source/src/output/csv.lisp": [
+        153,
+        "ac19340a880f20f1f8ff0027cb18d85e671bd18f3284b1d5c599e1e8088ce62a"
+      ],
+      "source/src/output/legacy-triaxial-json.lisp": [
+        338,
+        "c26f7e820344d1f7b949a0efe57ba82d0a071226627cc1f9701dc3f2bbdac31c"
+      ],
+      "source/src/output/metadata.lisp": [
+        175,
+        "fb821fe38513daf8d8e27175fe0932a4371830990a87b8ed7f78e5a3dba87f57"
+      ],
+      "source/src/output/plotting.lisp": [
+        172,
+        "b2497939ad4d4ac8b049ca91442b87a72dd0fd1590879a4589d4a708e278aadb"
+      ],
+      "source/src/output/provenance.lisp": [
+        177,
+        "2cff3ceb567dbca3003ca0a22582c7a92cbbf37dfe25819d1dad42dddd5d936a"
+      ],
+      "source/src/output/retained-history.lisp": [
+        1134,
+        "0868b129c7f565b88e765594bac1a4b9d5c740b492af600b42621ce09b698a03"
+      ],
+      "source/src/output/vtk.lisp": [
+        44215,
+        "479a747f01a5e1015be69934f0489378751e462b62b5a954ddadd04adf74971a"
+      ],
+      "source/src/output/plotting/legacy-particle.lisp": [
+        2391,
+        "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba"
+      ],
+      "source/src/output/plotting/plotter.lisp": [
+        5128,
+        "88ba44d5bebd69ddd8a8e80902787997b3c4e036608168f254ccbcb210c68caa"
+      ],
+      "source/src/parallel/damage-communication-state.lisp": [
+        1148,
+        "0d6f4a271354e4d7874f1c0b46ec539600ea8ecf18758a4af7d2ef65bede7b37"
+      ],
+      "source/src/parallel/mpi/damage-stub.lisp": [
+        26,
+        "ddea8f5abcf32496f6204b41c3c3232e73e54ae1d8813dcbf565a169c8e6d0a6"
+      ],
+      "source/src/parallel/mpi/damage.lisp": [
+        2578,
+        "7d58a28779311ac70514dcebe1431c75e31410eaecde37abc71371c0663ba7ef"
+      ],
+      "source/src/parallel/mpi/domain.lisp": [
+        25818,
+        "d4c057480d124cb24782eec31a69a77c9a11c3421a68c5f7427a3217450767dd"
+      ],
+      "source/src/parallel/mpi/dr-solvers.lisp": [
+        13394,
+        "a6c5feb9e8269cfe48bdd71373d7ec38fef1a7b7a509b2296ace79de1c677bce"
+      ],
+      "source/src/parallel/mpi/dr.lisp": [
+        2722,
+        "63b112fb0c02f0df46803d39bc4a94c0f9308478fef543c8a0edcd7117d8b23a"
+      ],
+      "source/src/parallel/mpi/legacy-mpi.lisp": [
+        100388,
+        "7936696762e57e14f16bff0c2f93ce09c248f4741d36752dbba0450d18b6eb2c"
+      ],
+      "source/src/parallel/mpi/mpi.lisp": [
+        13033,
+        "ba3ed1eb2ef7b261d3870643c90ce7971e3e22828fac105169e01efd3f8fe657"
+      ],
+      "source/src/parallel/mpi/package.lisp": [
+        7981,
+        "23e9f74d42da9ca4af15df60fdc4893e71d73c0c1a9d25fec5843fe95f8ec923"
+      ],
+      "source/src/parallel/mpi/sync.lisp": [
+        37612,
+        "4d181e0d032494984dca997bd90a7993d966c2a6523a43954eca8431ed15cd26"
+      ],
+      "source/src/parallel/serial/serial.lisp": [
+        3677,
+        "4941b42947f196dca693901d9fda73d18e6b653d743e73acac6643fd8b1c2c3c"
+      ],
+      "source/src/parallel/serial/serialise.lisp": [
+        7210,
+        "64f4b75622833d0b4cbcd8e32f99859b710b60e17d00dca2099147e1612babbe"
+      ],
+      "source/src/simulation/builder.lisp": [
+        174,
+        "5087da3146032eeffb12b4b8d190937a28116a1f9614d317168178ff251ee6ec"
+      ],
+      "source/src/simulation/controller.lisp": [
+        177,
+        "5fa1a99284320b48de5d1dde9a89aa957f564eab7a59fdde1e64f2399ba67fad"
+      ],
+      "source/src/simulation/lifecycle.lisp": [
+        3702,
+        "df8d91fe4b5e5c3f72800ca65fd3abf6d58bc5d294029a4cc3e6a9fb9eeca22f"
+      ],
+      "source/src/simulation/material-assignment.lisp": [
+        187,
+        "ad5f3e87b3b1a9142556135d62f1168e0f39af9a2429555f1ba25ae3aca2a0cf"
+      ],
+      "source/src/simulation/package.lisp": [
+        1459,
+        "dde2bb5d241d9f30050cb1c980f88e51df775a606d3df0a644491fd6d8d7acc7"
+      ],
+      "source/src/simulation/stages.lisp": [
+        173,
+        "95875895498d5cdc3504f164567ee173bf82fd49926fb471947a0c91a28867a1"
+      ],
+      "source/src/simulation/validation.lisp": [
+        192,
+        "8edbae27ea5dd891278af24535a608dc305fb856f206c59bb0141d28ae56a1fd"
+      ],
+      "source/src/simulation/compatibility/triaxial-package.lisp": [
+        109,
+        "1d5c90cddff8cb5d81b3b3f91576dd8fd01ee8f31063c3b44fcf829dab3e009d"
+      ],
+      "source/src/simulation/components/base.lisp": [
+        934,
+        "0ca404e1ad941223ce91a6214dba77a6eb2013267ac7ecce584928f209a0b302"
+      ],
+      "source/src/simulation/components/geometry.lisp": [
+        377,
+        "039dba870ec44b1ae7eadcf04f60130da27c81470db729241463068982dd87d5"
+      ],
+      "source/src/simulation/components/specifications.lisp": [
+        3227,
+        "136a3f21922ef4b1cb788dbe7f675fb5ffb9667a5a87cc0e76fb1be6652b785e"
+      ],
+      "source/src/simulation/config/legacy-triaxial-values.lisp": [
+        522,
+        "a808236f0015a187838036c4dbf19c7973b86cd8be72cc8b72fdb53c457533be"
+      ],
+      "source/src/simulation/config/package.lisp": [
+        204,
+        "221838a3c3746928e4cf1da9fe492e77a37e8013ce0d4ba0a6b78a615331c9f2"
+      ],
+      "source/src/simulation/config/parameters.lisp": [
+        4101,
+        "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86"
+      ],
+      "source/src/solvers/dynamic-relaxation/algorithms.lisp": [
+        95842,
+        "b0552b31151c7bd1a4da664f426715dcef0898e8005397885c7012462ae0b6bf"
+      ],
+      "source/src/solvers/dynamic-relaxation/dynamic-relaxation.lisp": [
+        18096,
+        "c5827ab6c324ee2d74dd10d1f27d87f01281100616c68d1840278705f3c2a10a"
+      ],
+      "source/src/solvers/dynamic-relaxation/package.lisp": [
+        2959,
+        "e9950da927acf0eace931c02a2814226109428c9943065d8ea499fb84e848b99"
+      ],
+      "source/src/solvers/dynamic-relaxation/convergence/criteria.lisp": [
+        45579,
+        "ae74b9f93db587f39df7de627494baa115d0967c75bfd0257cbd36a650b6342a"
+      ],
+      "source/src/solvers/dynamic-relaxation/dynamic/dynamic.lisp": [
+        18899,
+        "581cf8f2f0c2d66cbba0891e27e3c19c79fcc54ce18afee043d15d0b4abc2681"
+      ],
+      "source/src/solvers/dynamic-relaxation/multigrid/multigrid.lisp": [
+        97808,
+        "ef9858a372fab83ae1355bded25db37673591cdf2ffc0651a616472211153251"
+      ],
+      "source/src/solvers/dynamic-relaxation/quasi-static/quasi-static.lisp": [
+        32054,
+        "96c785c5b1981b09cdba1cdddc0e75dce7cdb25164462d44bd1f2f6bd42aee58"
+      ],
+      "source/src/solvers/explicit/musl.lisp": [
+        2302,
+        "37e58cfc2a43957b259f89e8f27d8fd20adb87fdeed0b6e2b3c4cfe3fc886639"
+      ],
+      "source/src/solvers/explicit/usf.lisp": [
+        4540,
+        "7cefb3fe86a9124715392ad73de19ec34ef6939bf824b0170394c1e312c8120e"
+      ],
+      "source/src/solvers/explicit/usl.lisp": [
+        2651,
+        "fabc02dda085ce46545d2843456455a5a6fe45c6396463432dd946e5338921b2"
+      ],
+      "source/src/solvers/implicit/implicit.lisp": [
+        83220,
+        "ed262829375b11f92f70148ee4d421dd1ac9f9abe221795399e9436b6b49b357"
+      ],
+      "source/src/solvers/linear-systems/linear-solver.lisp": [
+        31152,
+        "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011"
+      ],
+      "source/src/stabilization/aggregate/aggregate.lisp": [
+        46719,
+        "8308aaa8b8e01133828d1215eb8d2a754a8bef8208f8d67d9fb7cb21b1e303bd"
+      ],
+      "source/src/transfer/forces.lisp": [
+        14831,
+        "938207f2951a1edd7113155bf1c59a3e667629497020507fab78912c750ca80f"
+      ],
+      "source/src/transfer/g2p.lisp": [
+        12586,
+        "b969f82a01f8fab4d13cf62b34783fc17fdb49c82efb0c66ceb99c413651530e"
+      ],
+      "source/src/transfer/momentum.lisp": [
+        155,
+        "14c53751a132d228550242bfa6238fb83eefa9faf2a0e3ffc178c5254d21b594"
+      ],
+      "source/src/transfer/p2g.lisp": [
+        14584,
+        "1faedbbfe015f201414773a5d5cdb7314cd0d9de8b21bf4f89b41846daa3bfbc"
+      ],
+      "source/materials/cl-mpm-materials.asd": [
+        472,
+        "babf46b087d75b95c4a513f906cffd5debb8cdad295d356832e56741f2b8cc12"
+      ],
+      "source/materials/adapters/chalk.lisp": [
+        2538,
+        "f38e20f2f3f70139954f5c861dd7f7abc9e06ef0b0c6826a1753fe505938a265"
+      ],
+      "source/materials/adapters/cliff.lisp": [
+        641,
+        "a4ac33ef2cdfda963285059ef2cddd67eede5859d63c53003b706434d2256ad3"
+      ],
+      "source/materials/adapters/damage-output.lisp": [
+        21614,
+        "e449445ed45405670a6841972854969b312f55e9ff7d42e21bae673fb35c782b"
+      ],
+      "source/materials/adapters/diagnostics-call.lisp": [
+        473,
+        "232965022a96a2e11536f577944ef969fa115ab396f123cdf3e0622017ff1381"
+      ],
+      "source/materials/adapters/legacy-triaxial.lisp": [
+        3883,
+        "127c346c4682b85418d396b75c7be75a638ced5d88f0cacc954d0ec5370772b1"
+      ],
+      "source/materials/adapters/mc-composite-apex.lisp": [
+        2240,
+        "1b0d90c211e9a20054d6361c54a2680e3c4fb5dd44183612c42a2d87c6db6514"
+      ],
+      "source/materials/adapters/native.lisp": [
+        5402,
+        "56bb3083976f0303d273f9167d20d0ca29464553a4df86a75e21e95db9c08673"
+      ],
+      "source/materials/adapters/triaxial.lisp": [
+        485,
+        "f3d20fd721a65a72ea24c6b07ec487ca1bd6e922cd6861ef152c1c84387d6fb4"
+      ],
+      "source/materials/adapters/wang2017-apex.lisp": [
+        3533,
+        "d6c09f6a6c6832c200c3198bdf7a728d489869152cc13fabe572af4d69d4a820"
+      ],
+      "source/materials/adapters/wang2017.lisp": [
+        7102,
+        "eadea18e1b93c46e625475980b59583d711b2669a86ef2dad7d85a426d4cd344"
+      ],
+      "source/materials/backends/cpp/legacy-transaction.lisp": [
+        10369,
+        "cff14534f13f687e85d4ce262a4a8635c9b8273879d332f846f60abae2bdd924"
+      ],
+      "source/materials/core/constitutive-package.lisp": [
+        364,
+        "681fb05352f6c689560e2de4f93b571c865566cb0a12750b90306b5e159e4d30"
+      ],
+      "source/materials/core/definition.lisp": [
+        925,
+        "77e250e35380de2e9d69c6b1358f17fc7552aa03e272df87d4e13d1588b76832"
+      ],
+      "source/materials/core/diagnostics-interface.lisp": [
+        1130,
+        "dd764532680ed3d9b07946502b9148a0a2e75265e061159ddf4a5e770b13e6db"
+      ],
+      "source/materials/core/factory.lisp": [
+        175,
+        "0d442cf66705ab1f57cdf05c2a325fb3ece9eaa63505de6cfbef1cd8855b422a"
+      ],
+      "source/materials/core/interface.lisp": [
+        177,
+        "bc8ecddd2a71c141aed94f7b0ce42bd2795c491b37d261420413067c51997669"
+      ],
+      "source/materials/core/parameters.lisp": [
+        178,
+        "c4584b76ef8c8ed411329de08bd984bb36a92e7481da6bdec779c4fa0900ae9a"
+      ],
+      "source/materials/core/plastic-state.lisp": [
+        1793,
+        "146e0847313ee3c74f82b37f5599b0574ecfe7a93a6df8f591845f0da24e6af2"
+      ],
+      "source/materials/core/registry.lisp": [
+        176,
+        "f0c161decd170795ca611ad6999f8b451fddb34db7cf8dd90293b71fcd7635cd"
+      ],
+      "source/materials/core/state-interface.lisp": [
+        194,
+        "6efc47a8fba4e0980d2ca2e0586397eff5f78ad9415cd631d67a977b3943aa87"
+      ],
+      "source/materials/core/validation.lisp": [
+        178,
+        "0d98c86ba08f8dbfd68ea82ec7119ed3cdcc60c65f756122764e04dd65734484"
+      ],
+      "source/materials/core/visco-package.lisp": [
+        182,
+        "8cfcf703f5491d98327864a45fde29658e19c05f5dd05caa84f99170ee6df495"
+      ],
+      "source/materials/diagnostics/chalk-reference.lisp": [
+        1371,
+        "2ab3ca7cfff08cb05ceebc9f5c2412cf02c1a99a3ca4e04e044090cb13d0adac"
+      ],
+      "source/materials/diagnostics/native.lisp": [
+        11955,
+        "451b09f6c83801bf4f65cd32cf7231af7b44035af650f87169ead424244128dc"
+      ],
+      "source/materials/models/chalk/constitutive.lisp": [
+        198,
+        "84c059a2dd680976c95c3340c01341e431ed6854fc17ac99546233d6956f5ec7"
+      ],
+      "source/materials/models/chalk/joss-reference.lisp": [
+        2091,
+        "bb05c72cf895a586e983e5015cfb2a6c5fdf24384344bf880537b8be23d8f552"
+      ],
+      "source/materials/models/chalk/legacy.lisp": [
+        61023,
+        "257225c99b45c758d066dae11c1792f61b19e7601a3466cd15e9ee2b612a7db5"
+      ],
+      "source/materials/models/chalk/state.lisp": [
+        186,
+        "22b6c226dc7e98ff45f3a35ab688f0408979904820ebcfb8031e1f43dbe232c3"
+      ],
+      "source/materials/models/chalk/evolution/softening.lisp": [
+        1059,
+        "ab4d31e6728e944766d0df06092a0de5b9fc7cea95015ba06b69601f008b595d"
+      ],
+      "source/materials/models/concrete/legacy.lisp": [
+        4100,
+        "8224b9bbe474fc2898c1145cf3b82671f885bd633483b3f7dcdda2177546fc59"
+      ],
+      "source/materials/models/concrete/evolution/native-hooks.lisp": [
+        4186,
+        "95c44eefcef45cfa8d4cb2602a4df90723d162e19504d07b008c9038f530696e"
+      ],
+      "source/materials/models/concrete/evolution/softening.lisp": [
+        847,
+        "0d6aebe20d43e42e39c06cfd872f9ad6507bc23960897f1b2e4f04a24d9f7403"
+      ],
+      "source/materials/models/damage/constitutive.lisp": [
+        8247,
+        "5ee75605b1cfafda3d59367fac25ecb466420e41ee1ba2f3080f9673d049a53f"
+      ],
+      "source/materials/models/damage/criteria.lisp": [
+        21031,
+        "ab574dbb03b8a8ee2bd60e92f6fedaaefc07fa1d30a336b13a7df21dc4c6463e"
+      ],
+      "source/materials/models/damage/legacy-particles.lisp": [
+        27294,
+        "e4cbd050ca74f763a95b17d70dcfbd10aa9c0a241b2c493b1990ffaeecfbad0c"
+      ],
+      "source/materials/models/damage/legacy-state-evolution.lisp": [
+        15814,
+        "63e624ca8c62d81d92398e1a56225f8aaf4664854cd18367668978b1118658dc"
+      ],
+      "source/materials/models/damage/particle.lisp": [
+        4205,
+        "9ea0abec8e17a05735eed4a57af25fea12f7fb0c64d29e28db255db16ab0829c"
+      ],
+      "source/materials/models/damage/evolution/degradation.lisp": [
+        17274,
+        "3e473fa389a6d0994a0046ff3b4ec741922b90acfc4244f8ab7b968064dfe288"
+      ],
+      "source/materials/models/damage/evolution/delayed-rate.lisp": [
+        9889,
+        "47a84f8e9ea12ffb4e092d25d548d87eacb6c859a6ddef10dcf984ac814c15c6"
+      ],
+      "source/materials/models/damage/evolution/responses.lisp": [
+        6640,
+        "f26542cc6f2246f1eecc590fa53fd1a967a3756163c2a713af639cb31622f8bf"
+      ],
+      "source/materials/models/elastic/constitutive.lisp": [
+        2726,
+        "385f803c7b3a8a9482ced32c55ae304006eeb62761c48a7854e73373df1e264e"
+      ],
+      "source/materials/models/elastic/particle.lisp": [
+        9002,
+        "4f2357047f838c54e29da14d9ecde21c626d440252b3cec57f6b8a9a12d2e9e4"
+      ],
+      "source/materials/models/elastic/linear-elastic/package.lisp": [
+        130,
+        "0accd221eab1441b071fbab926ed97b837655beae52f2ba74fa9ae6cce090b1c"
+      ],
+      "source/materials/models/fluid/constitutive.lisp": [
+        844,
+        "f5bd1e970e8d1779ac455e377eff45ffb342ad135d76f23e7d566fe0778548c1"
+      ],
+      "source/materials/models/fluid/particle.lisp": [
+        1073,
+        "6a8fd3990f10345dc5005441d23dcbba713ea4d55b1796db26b8b6d68b71f8bf"
+      ],
+      "source/materials/models/frictional-damage/legacy.lisp": [
+        8129,
+        "81ab1297bb8113cfd7333e3912418dc3b15de87b91d8c8c71958e370a8892db8"
+      ],
+      "source/materials/models/ice/legacy.lisp": [
+        40657,
+        "9c698a5e07fd9ced64ffeef2dc4659d61c6548fdb0076fc2be696ce8aac2e5ed"
+      ],
+      "source/materials/models/limestone/legacy.lisp": [
+        7179,
+        "c663f6c0c82814da2308adb7fd74e79b761d39feffa6e24fbfdf805ee9cda023"
+      ],
+      "source/materials/models/plastic/drucker-prager/constitutive.lisp": [
+        11637,
+        "db96248bf72353d302ec6613d6b4914714dc97ab14f09a2ab636899e4cf5cf92"
+      ],
+      "source/materials/models/plastic/drucker-prager/particle.lisp": [
+        3737,
+        "6a5a5228d0277e65a894a0a554c6f302f295d331a0cce85e984a4d42e6db7bfd"
+      ],
+      "source/materials/models/plastic/mc-composite-apex/diagnostics.lisp": [
+        6077,
+        "6fe2771fc156e25ae13380f537e232bd4875a91a77d960a0290877068f23b360"
+      ],
+      "source/materials/models/plastic/mc-composite-apex/native.lisp": [
+        2405,
+        "85c90f4b8a4eac515498ed77cedf583ee147b80b79387cc3de391b562d7c1069"
+      ],
+      "source/materials/models/plastic/mc-composite-apex/package.lisp": [
+        468,
+        "fa96f836cc01faec4f18c9852e450ab2b8957e8be9108b22777bf3a053d39eb5"
+      ],
+      "source/materials/models/plastic/mc-composite-apex/projection.lisp": [
+        10339,
+        "eb16237ecda3b08c17632e84c782f99f71a223eaf49b83bc2df63ebeaad1dd6d"
+      ],
+      "source/materials/models/plastic/mohr-coulomb-evolution/diagnostics.lisp": [
+        4746,
+        "10fc3d6170b04adbb153fe2afd562d51daefc9d1976a3059ba046c1b8223d0eb"
+      ],
+      "source/materials/models/plastic/mohr-coulomb-evolution/law.lisp": [
+        8393,
+        "505207b3bcbbd0c87625d16c96cb436436f71562ded9349aa2126ed7dac6796a"
+      ],
+      "source/materials/models/plastic/mohr-coulomb-evolution/material.lisp": [
+        9155,
+        "376bb5465ae7e1553dfb23d0f3ea26b125fbd6430724fcac0ee5233125302aeb"
+      ],
+      "source/materials/models/plastic/mohr-coulomb-evolution/package.lisp": [
+        2441,
+        "3ec1f8ccbbf15732ab450708413728987aa843d89b1e2eeefdc6773a4930b028"
+      ],
+      "source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp": [
+        23352,
+        "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1"
+      ],
+      "source/materials/models/plastic/mohr-coulomb-evolution/state.lisp": [
+        11424,
+        "d9311639dae10064985d5ff2fabfef189ff7bf07cb85699c1fd54355d6f83fd4"
+      ],
+      "source/materials/models/plastic/mohr-coulomb/constitutive.lisp": [
+        24271,
+        "784ed026c5fb7b211948e2f83d4578d25be7bad1e62e41ed61505cde2acdd66d"
+      ],
+      "source/materials/models/plastic/mohr-coulomb/particle.lisp": [
+        5530,
+        "43d773e7cef70b6a448c06f723efea6de43f545b2eaea4a574235b7a386f9110"
+      ],
+      "source/materials/models/plastic/mohr-coulomb/plastic-potential.lisp": [
+        236,
+        "c36cd6f1eceb92c1b29d1e393bce92f7396be3ad9e81cab3b0077a81a9b66b86"
+      ],
+      "source/materials/models/plastic/mohr-coulomb/return-mapping.lisp": [
+        233,
+        "574433429c982167978a4c426af17d2c6606216bee789b8916ed700263c0f09e"
+      ],
+      "source/materials/models/plastic/mohr-coulomb/state.lisp": [
+        216,
+        "d6a24a75858826cbd2cf034b6fc1b7baceb76131a10dfcb081f8db3b1be6a6ed"
+      ],
+      "source/materials/models/plastic/mohr-coulomb/yield-function.lisp": [
+        233,
+        "889a469b62b52ce43833e2bf947a46c444b036e7f7f1ad6cd1de368ad1d438a9"
+      ],
+      "source/materials/models/plastic/mohr-coulomb/evolution/hardening-softening.lisp": [
+        240,
+        "c1e9adf74ad08f3be7f4a8a6e07190abec7e2b6326d344ee3c633ec41392e6c9"
+      ],
+      "source/materials/models/plastic/mohr-coulomb/evolution/hardening.lisp": [
+        230,
+        "a454e7dcde029ef9a6d85e03908c113bd3f794798980b75a990874705cf380dd"
+      ],
+      "source/materials/models/plastic/mohr-coulomb/evolution/perfect-plastic.lisp": [
+        236,
+        "76ddf9770602432da28128ee51d982fe26c19983f6d527e0d08579260dda490e"
+      ],
+      "source/materials/models/plastic/von-mises/constitutive.lisp": [
+        9758,
+        "41e16eb202d3584b55f1895c0b165fd153783fb8d321475bb433325011dfc702"
+      ],
+      "source/materials/models/plastic/von-mises/particle.lisp": [
+        8298,
+        "487093df140e692a8826bef85f8e8143b1699b46261013cb529de58b6ed637bb"
+      ],
+      "source/materials/models/plastic/von-mises/state.lisp": [
+        210,
+        "142147708c7c8dc8fb959b7735a2fdbc4b11bea313775e2b2055df6afc3e26f2"
+      ],
+      "source/materials/models/plastic/von-mises/evolution/secant-hardening.lisp": [
+        1753,
+        "ffc6204dc65439dd8ffa1ce1188bbff6e3444fe2089c848ce3623e97c07e41e3"
+      ],
+      "source/materials/models/plastic/wang2017/apex-native.lisp": [
+        1364,
+        "b87f642c8f995c10b35427efe790186ff57e4950532b98df300d9c6da7f3bb82"
+      ],
+      "source/materials/models/plastic/wang2017/apex-package.lisp": [
+        659,
+        "895c8a58ce520c5692bdd4415aac1807426064ba96799970bf01c6f8f6fc8185"
+      ],
+      "source/materials/models/plastic/wang2017/apex-projection.lisp": [
+        6864,
+        "6c6abaefa78e2a90f076a4fd9556df489727a9704e079caad40a04126f5370b0"
+      ],
+      "source/materials/models/plastic/wang2017/apex-residual-history.lisp": [
+        2552,
+        "6bb463d741f749967d90aaab00667a54214b4a96c6f74e5788071220511bba98"
+      ],
+      "source/materials/models/plastic/wang2017/history.lisp": [
+        3185,
+        "28c3a6b9f2f0ca9bf30f40a722ceb9c9aaf931e859f17416dceccfb323e857a6"
+      ],
+      "source/materials/models/plastic/wang2017/law.lisp": [
+        593,
+        "039efbcd85aa334dfdd1b00e3a5cb8ddebc725994b92cbc8da0064fa3c09aeaa"
+      ],
+      "source/materials/models/plastic/wang2017/material.lisp": [
+        13299,
+        "7217e93a7d657d0dbfe6d71f7d3217c6df889d00cb37b9e8497cb5e6b0a54b15"
+      ],
+      "source/materials/models/plastic/wang2017/native-package.lisp": [
+        936,
+        "c3b519759df364208140b15c6bc58d915f8c5cb343be40a4803718740ac6d917"
+      ],
+      "source/materials/models/plastic/wang2017/package.lisp": [
+        374,
+        "a2acf539faccb920a8314ca1a8e273126dde1d33dc224541133e63727e3a04e7"
+      ],
+      "source/materials/models/plastic/wang2017/point-projection.lisp": [
+        15126,
+        "c852770744c265705a828b24d550440343ad93466b1ffea72b11a1514a4d320a"
+      ],
+      "source/materials/models/plastic/wang2017/state.lisp": [
+        5567,
+        "f9caaad2cffecca5dae54405b0fd1cec4dcc30d3c68f9236452ae706476d3a53"
+      ],
+      "source/materials/models/plastic/wang2017/transport.lisp": [
+        2121,
+        "0eeac6948b6e0ad938d41635c221a8938c3eacc45cb62a5804c9b04105df86dc"
+      ],
+      "source/materials/models/viscoelastic/particle.lisp": [
+        776,
+        "63104b7ffae5479daeaf5bb3cd6522c5690ede369f015c359a1971ab83e604a4"
+      ],
+      "source/materials/models/viscoelastic/finite-strain/legacy.lisp": [
+        29348,
+        "c40e712e6acfd2e120d49b104b98ef7898e98bd114b5a82d6382564c08a79782"
+      ],
+      "source/materials/models/viscoelastic/maxwell/constitutive.lisp": [
+        7171,
+        "629ed67e46ea7e10e441662475749e158f132ace27f0d35db5a722bcd1c6a81d"
+      ],
+      "source/materials/models/viscoplastic/particle.lisp": [
+        2219,
+        "790b0ddce5edd69b6953ec9f143bd521e98a00a9e33a83011761c9d8139f1908"
+      ],
+      "source/materials/models/viscoplastic/clay-creep/law.lisp": [
+        7212,
+        "4573621e6522b487aac0ac10df91fdb5f93b91e3850d056b0184100efdb6fcb3"
+      ],
+      "source/materials/models/viscoplastic/clay-creep/package.lisp": [
+        839,
+        "f5a29159c46e6b9ec9fba872f2981f81aa32f611ff8a6ac1a07570a376722794"
+      ],
+      "source/materials/models/viscoplastic/clay-creep/particle.lisp": [
+        10660,
+        "5f1cede2a3ad9df9b7d81c4a1bcb07e518bbea0b824cc7567fc9b40b3e1e1515"
+      ],
+      "source/materials/models/viscoplastic/glen/constitutive.lisp": [
+        8087,
+        "55598a7174cd908704123c9646227a49314e94a04193e2ad4ffc2f32fe1c70b2"
+      ],
+      "source/scenarios/cliff/adapter.lisp": [
+        3419,
+        "a00e7b5f4a2a0fa6158bba37404d93a3f084814a27667692ed0417a8b3effa32"
+      ],
+      "source/scenarios/cliff/boundaries.lisp": [
+        181,
+        "d8aa12bd6b9f315ca2c769493f98a3f8c2685e48b2830032468e803d23f177d4"
+      ],
+      "source/scenarios/cliff/build.lisp": [
+        2097,
+        "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac"
+      ],
+      "source/scenarios/cliff/execute.lisp": [
+        16551,
+        "59f0c151960b68c58c92c99dda27dfc5c24cd91f406e9c83894216df7eb0bf37"
+      ],
+      "source/scenarios/cliff/geometry.lisp": [
+        3294,
+        "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999"
+      ],
+      "source/scenarios/cliff/initial-conditions.lisp": [
+        189,
+        "df2417378ea3bcfcaace99f0efcf58a9c7a0b4e3e770e64f2fb386be4ba54cde"
+      ],
+      "source/scenarios/cliff/loading.lisp": [
+        178,
+        "ba770dd2f75667248a99f1cf964e517545afb59d4e638bbfa548a721d1f2bce4"
+      ],
+      "source/scenarios/cliff/measurements.lisp": [
+        181,
+        "f5306ad09ca14f0c13e62a95b235dde94ee32a5bdc597842ce8d14f1ac7a732b"
+      ],
+      "source/scenarios/cliff/notch.lisp": [
+        179,
+        "40db6c51ae5ee8fd5f83c09dc3ddc065c8f6e032633ec5125b8250f29b1ff0e5"
+      ],
+      "source/scenarios/cliff/run.lisp": [
+        2470,
+        "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c"
+      ],
+      "source/scenarios/cliff/settings.lisp": [
+        268,
+        "4467b347b00c8e5102ce9b7d2ad9c842180aa62d6d19c274cfb0dd7314d60440"
+      ],
+      "source/scenarios/cliff/solver.lisp": [
+        1397,
+        "1d11bcd99794f6440e39b9cdead22be55f3a29b88ea6cc0a606939689f6ba930"
+      ],
+      "source/scenarios/gravity-slope/adapter.lisp": [
+        385,
+        "385e29bf7a5fe5fb6c0195687a04f80172876578f6bb69b608c1b26e0f6b8af0"
+      ],
+      "source/scenarios/gravity-slope/configuration.lisp": [
+        8076,
+        "b9d078c27d896a1a4aa325345eefcbd0cec3fc4db463a5755adfc89a4527243b"
+      ],
+      "source/scenarios/gravity-slope/geometry.lisp": [
+        3351,
+        "434e457f40ff912c1308a8291419a316f50138ca067272094b9a40680c28bd47"
+      ],
+      "source/scenarios/gravity-slope/mc-composite-apex-adapter.lisp": [
+        2070,
+        "cc12cc0d7666c984010b12f5f5d4607cba8e94abe5e7b3da701483e7e35b8c0f"
+      ],
+      "source/scenarios/gravity-slope/measurements.lisp": [
+        10758,
+        "f23f0337bcc519954d94e1a06193ac8d6bda113ce8b60d7ced2886ec1a1ed0b5"
+      ],
+      "source/scenarios/gravity-slope/package.lisp": [
+        956,
+        "5a40608bcde4f7d9b2173bffe87795c1c0710b2ce1940586d6975092afb62c33"
+      ],
+      "source/scenarios/gravity-slope/runner.lisp": [
+        9211,
+        "dc235f18f1153c0f1e70245d4ae8d4780e3c37221afd56bebed39b1693bc95b7"
+      ],
+      "source/scenarios/joss/build.lisp": [
+        3187,
+        "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e"
+      ],
+      "source/scenarios/joss/classes.lisp": [
+        429,
+        "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd"
+      ],
+      "source/scenarios/joss/geometry.lisp": [
+        2956,
+        "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d"
+      ],
+      "source/scenarios/joss/measurements.lisp": [
+        332,
+        "4556047f2058577e8906f1036e72f8323df98343a757232dc1121c533763a27d"
+      ],
+      "source/scenarios/joss/output.lisp": [
+        1176,
+        "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641"
+      ],
+      "source/scenarios/joss/phases.lisp": [
+        1395,
+        "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91"
+      ],
+      "source/scenarios/joss/run.lisp": [
+        11888,
+        "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684"
+      ],
+      "source/scenarios/joss/stages.lisp": [
+        176,
+        "afb2bed0e9fea39cb37f85478a6d8f22383d8469ac1166fe3dc0ea91828ec143"
+      ],
+      "source/scenarios/joss/statistics.lisp": [
+        6450,
+        "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec"
+      ],
+      "source/scenarios/joss/validation.lisp": [
+        1249,
+        "ff38516f64c0a75eeef5347331a0619bbab690cccfe0aae1f27133d30fa47fc1"
+      ],
+      "source/scenarios/slope-creep/adapter.lisp": [
+        378,
+        "c037c1fa86d265024b65feb53e81fe75bbfc66f730be55585a87e16b04ac935c"
+      ],
+      "source/scenarios/slope-creep/configuration.lisp": [
+        5886,
+        "ff8a6ff624d98698c09794716e2334fe9f84b41849acee0369fb023c2cbcaf18"
+      ],
+      "source/scenarios/slope-creep/loading-output.lisp": [
+        1611,
+        "4f05fcdd8c921420622ca593af4455fb39bff93bfc39fb19f20a3be1647e3b8e"
+      ],
+      "source/scenarios/slope-creep/loading.lisp": [
+        8317,
+        "3ca017c2fb804e0202bdd9421a3d716a59a4784e6e0b7c5a58390422ecd81a7e"
+      ],
+      "source/scenarios/slope-creep/measurements.lisp": [
+        4999,
+        "c190c1ceb12e3eee9398be20996741ba5643e28135b8dad80d33898c3905e475"
+      ],
+      "source/scenarios/slope-creep/package.lisp": [
+        367,
+        "ed440aa878bb11dc80214db3b07bf92a4a4999d192e0dc7bc9b69f01ad31208c"
+      ],
+      "source/scenarios/slope-creep/runner.lisp": [
+        10085,
+        "4435eb595750354a0f48ceac14bc53d986cd92cbcd14856cfcf0a45a8e56e938"
+      ],
+      "source/scenarios/slope-descent/adapter.lisp": [
+        385,
+        "2a469c90d2f3a662e4c095a261e03cdbf2e15a152fa085445766431dadeadade"
+      ],
+      "source/scenarios/slope-descent/boundary.lisp": [
+        4468,
+        "b6145bc1c3860cd47c6baf7c636b260c134e9c175f36c6d3137855858b49206c"
+      ],
+      "source/scenarios/slope-descent/configuration.lisp": [
+        7147,
+        "2ce37f1c510d3425e0ef36fd0ca0d9f4d02969926fef314ddfbffb3aebd588b4"
+      ],
+      "source/scenarios/slope-descent/geometry.lisp": [
+        3941,
+        "92c3100d3ea18aa6fe8370b256fab7321a095466bb838a0ec3aecf2a36fe14b1"
+      ],
+      "source/scenarios/slope-descent/package.lisp": [
+        1133,
+        "0f09d670173492c62fb87319a7ec863f1e62ca9dad23333b86de4fb2897f4478"
+      ],
+      "source/scenarios/slope-descent/runner.lisp": [
+        18544,
+        "4425f3e8ed3640a9f234fd5b55c90d3e03eec2aec8f2aac3f270229ae23fd8f8"
+      ],
+      "source/scenarios/slope-descent/wang2017-output.lisp": [
+        7853,
+        "d5b8a642536de89c070cb734617cc160abe1bf6012ce57a2118ee80214f8c36e"
+      ],
+      "source/scenarios/triaxial/adapter.lisp": [
+        4076,
+        "92b3ffee405aa0d68fe55d253a6177579462728009a538730b0ca0ac098a4d70"
+      ],
+      "source/scenarios/triaxial/boundaries.lisp": [
+        207,
+        "5c922c21bf89d35ccfc971e187ee1ce5679b90ea12b683cd2d2193675bf053de"
+      ],
+      "source/scenarios/triaxial/build.lisp": [
+        186,
+        "1a7b73a8e97d1186e1693c5664ca13387e1b7f886e478800cb9d084f0f481852"
+      ],
+      "source/scenarios/triaxial/config.lisp": [
+        3157,
+        "1eee11c1bec5af052d1c06473c8484bbfa96dfd301cf4e7aa852d4a8ce80809c"
+      ],
+      "source/scenarios/triaxial/controls.lisp": [
+        4294,
+        "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948"
+      ],
+      "source/scenarios/triaxial/geometry.lisp": [
+        3589,
+        "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc"
+      ],
+      "source/scenarios/triaxial/homogeneous.lisp": [
+        3220,
+        "542285f6d5ca253259bb385b7e48f3d86297609aa0f2e7c07c1485cbf35d32f3"
+      ],
+      "source/scenarios/triaxial/initial-conditions.lisp": [
+        207,
+        "77554f72ee147ac3190fa630271a43848243de5080d2fb0892a21398163e5eb8"
+      ],
+      "source/scenarios/triaxial/loading.lisp": [
+        204,
+        "74a2e03fbd97b8f48fd03d4cb578b194c39bcb9d228362d4fb7eb3c17f448dcc"
+      ],
+      "source/scenarios/triaxial/measurements.lisp": [
+        6658,
+        "5702f1c392ae52f1216b98a2562ccd589ef4a2654abb5428c922e068a2710454"
+      ],
+      "source/scenarios/triaxial/mpm.lisp": [
+        3570,
+        "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518"
+      ],
+      "source/scenarios/triaxial/runner.lisp": [
+        7743,
+        "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96"
+      ],
+      "source/scenarios/triaxial/stages.lisp": [
+        184,
+        "6605c0348ca60e4626e54997cdabdd4395cbd7dac4464e043762ed1502ba19b9"
+      ],
+      "source/scenarios/triaxial/state.lisp": [
+        237,
+        "46bfb37ea16004a0c13affcde1bca8bf952d64b1db130f26c3927b087c60cd20"
+      ],
+      "source/scenarios/triaxial/stress-measures.lisp": [
+        168,
+        "10b2ca8702641d4deffce31efb652ff7bcbe008039c5eceafcc46dd56c95d6f3"
+      ],
+      "source/cl-mpm.asd": [
+        39964,
+        "257e7fcd4f853a5aab2e61f8a594292f4dc8d0c2396362c10759b00c10ff5890"
+      ],
+      "source/libs/kirchoff.dll": [
+        2885169,
+        "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f"
+      ],
+      "source/cl-mpm-framework.asd": [
+        6468,
+        "28fce2e4cc6cc0111fb4ed483a9a1e0de8c90fc428b73a8e487523d6f456cb23"
+      ],
+      "source/run-case.lisp": [
+        4588,
+        "26d0ae574b00e66da6dca605735fa9abab047c71e479b5e5129f10bd17e7a1f9"
+      ],
+      "source/scripts/lisp/native-source-snapshot.lisp": [
+        20460,
+        "1c863bc9eb94cc62134c18b3ff7b9f67d793f0991a2e6785cbab475cd6de02ce"
+      ]
+    },
+    "actualNativeCounters": {
+      "physicalUpdatesExecuted": 2,
+      "materialCallsAttempted": 7040,
+      "materialCallsAccepted": 7040,
+      "standaloneConstitutiveCallsAttempted": 0,
+      "standaloneConstitutiveCallsAccepted": 0
+    },
+    "actualObservations": {
+      "observationsDirectory": "D:/MPM/output/mc-composite-apex-2026-10-26/fine-repair-controls-001/observations/",
+      "onlyConfigDifference": "meshSize",
+      "coarseMeshM": 1.0,
+      "fineMeshM": 0.5,
+      "coarseParticleCount": 880,
+      "fineParticleCount": 3520,
+      "savedApexActiveRows": 0,
+      "savedParticleRows": 10560,
+      "savedVtkStates": 3,
+      "idMappingConvention": "VTK unique IDs stable across frames; CSV IDs are captured vector indices, not assumed equal to unique IDs",
+      "apexActivationRequired": false
+    },
+    "onlyFullPhysicalDeltaFromPreviousAttempt": "none",
+    "boundedOutputByteComparison": {
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001\\original-output-byte-comparison.json",
+      "bytes": 3558,
+      "sha256": "2ffbf5c777b2ab7ffe0d618caded4a069100d23b03a25599e6700c78ba813984"
+    },
+    "expectedSourceMemberDelta": [
+      "source/inputs/cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6-h05.lisp",
+      "source/inputs/cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6.lisp",
+      "source/inputs/research/references/unnotched-mc-ssr/composite-apex-srf1p6-h05-contract.json"
+    ]
+  },
+  "checkpointTextBindings": [
+    {
+      "repositoryPath": "cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6-h05.lisp",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "e74f552da5312531363ddcc9d95391090bcc17b2",
+      "gitHashObjectWithPathSha": "e74f552da5312531363ddcc9d95391090bcc17b2",
+      "headBlobSha256": "4eb467eb545a6c5e0bf85f2bea0899870ce5639f4744e038917dd28c966c2879",
+      "headBlobBytes": 2340,
+      "worktreeBytes": 2340,
+      "worktreeSha256": "4eb467eb545a6c5e0bf85f2bea0899870ce5639f4744e038917dd28c966c2879",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/references/unnotched-mc-ssr/composite-apex-srf1p6-h05-contract.json",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "33f4f3b36cbc2cddb5e41d9d29ba6579b791f220",
+      "gitHashObjectWithPathSha": "33f4f3b36cbc2cddb5e41d9d29ba6579b791f220",
+      "headBlobSha256": "a299fcaaadb9e3583d4b522b67826b7383f518e595cac214df5b819f5d594e7a",
+      "headBlobBytes": 7828,
+      "worktreeBytes": 7828,
+      "worktreeSha256": "a299fcaaadb9e3583d4b522b67826b7383f518e595cac214df5b819f5d594e7a",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/references/unnotched-mc-ssr/composite-apex-refinement-contract.json",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "a51b6f34dc70ec881f27d42478292aca8a8bfd94",
+      "gitHashObjectWithPathSha": "a51b6f34dc70ec881f27d42478292aca8a8bfd94",
+      "headBlobSha256": "0836d61273184248868a0ce1c8bd4d7312d9b83be052ec5f9ce01d465a905827",
+      "headBlobBytes": 4592,
+      "worktreeBytes": 4592,
+      "worktreeSha256": "0836d61273184248868a0ce1c8bd4d7312d9b83be052ec5f9ce01d465a905827",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "scripts/review-gravity-composite-apex.py",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "379c0295bb0e4ba3c4119d08efda56348014b2d0",
+      "gitHashObjectWithPathSha": "379c0295bb0e4ba3c4119d08efda56348014b2d0",
+      "headBlobSha256": "edec92168deaf06b942f0a36e9468be958f00c3e5b06f34e1d91e368340f4a3b",
+      "headBlobBytes": 18498,
+      "worktreeBytes": 18498,
+      "worktreeSha256": "edec92168deaf06b942f0a36e9468be958f00c3e5b06f34e1d91e368340f4a3b",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "scripts/review-gravity-slope.py",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "4a58fc2548261743f615d81a1562305bcfb222e7",
+      "gitHashObjectWithPathSha": "4a58fc2548261743f615d81a1562305bcfb222e7",
+      "headBlobSha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+      "headBlobBytes": 38121,
+      "worktreeBytes": 38121,
+      "worktreeSha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "scripts/plot_m5_cliff_comparison.py",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "da224e401b1e48375ee2faef9f12b4e22d32a418",
+      "gitHashObjectWithPathSha": "da224e401b1e48375ee2faef9f12b4e22d32a418",
+      "headBlobSha256": "4d6e11c907954723bb5ac6ce19d99051b2608b2029f0cf083f800d7264748c90",
+      "headBlobBytes": 23033,
+      "worktreeBytes": 23581,
+      "worktreeSha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "rawGitBlobEqualsWorktree": false,
+      "crlfLfEquivalenceAccepted": true,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "scripts/review-gravity-composite-refinement.py",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "11527f74396209b640fe0793647d4b797d7ffdbf",
+      "gitHashObjectWithPathSha": "11527f74396209b640fe0793647d4b797d7ffdbf",
+      "headBlobSha256": "4af62e51fa619410a124049c410bebbe34fd5736db8187270973d1a865a50752",
+      "headBlobBytes": 14435,
+      "worktreeBytes": 14435,
+      "worktreeSha256": "4af62e51fa619410a124049c410bebbe34fd5736db8187270973d1a865a50752",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "docs/benchmarks/COMPOSITE_APEX_ROUNDOFF_REPAIR.md",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "0cb7a64bef4c0cac0b261e82c5fb95bb18465b4d",
+      "gitHashObjectWithPathSha": "0cb7a64bef4c0cac0b261e82c5fb95bb18465b4d",
+      "headBlobSha256": "98c47d90522e0ecfa7b7db72985d152961018eec1467b510423b1375d308d651",
+      "headBlobBytes": 6764,
+      "worktreeBytes": 6764,
+      "worktreeSha256": "98c47d90522e0ecfa7b7db72985d152961018eec1467b510423b1375d308d651",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "tests/materials/mc-composite-apex-stable-math.protocol.json",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "0a49fa07951451023162bcf5bec3dc875f5dc65a",
+      "gitHashObjectWithPathSha": "0a49fa07951451023162bcf5bec3dc875f5dc65a",
+      "headBlobSha256": "f61fdce228f85dbd59135c436a2f6ab40d8770727cee3ee5e3261addf40ca1c5",
+      "headBlobBytes": 2335,
+      "worktreeBytes": 2335,
+      "worktreeSha256": "f61fdce228f85dbd59135c436a2f6ab40d8770727cee3ee5e3261addf40ca1c5",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "cl-mpm.asd",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "e5e9af050f6bf004709e363547da106384113988",
+      "gitHashObjectWithPathSha": "e5e9af050f6bf004709e363547da106384113988",
+      "headBlobSha256": "5d26e4b22e055b9be24fa1c70f4f1d49d7cf6df3602e00b519183b0722f36128",
+      "headBlobBytes": 38860,
+      "worktreeBytes": 39964,
+      "worktreeSha256": "257e7fcd4f853a5aab2e61f8a594292f4dc8d0c2396362c10759b00c10ff5890",
+      "rawGitBlobEqualsWorktree": false,
+      "crlfLfEquivalenceAccepted": true,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "materials/models/plastic/mc-composite-apex/diagnostics.lisp",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "5d60a2224c5dab99ac241d121644a249f8f52218",
+      "gitHashObjectWithPathSha": "5d60a2224c5dab99ac241d121644a249f8f52218",
+      "headBlobSha256": "6fe2771fc156e25ae13380f537e232bd4875a91a77d960a0290877068f23b360",
+      "headBlobBytes": 6077,
+      "worktreeBytes": 6077,
+      "worktreeSha256": "6fe2771fc156e25ae13380f537e232bd4875a91a77d960a0290877068f23b360",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "materials/models/plastic/mc-composite-apex/package.lisp",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "8c99318a339cec22b4cdbbc47b628afdf0274172",
+      "gitHashObjectWithPathSha": "8c99318a339cec22b4cdbbc47b628afdf0274172",
+      "headBlobSha256": "fa96f836cc01faec4f18c9852e450ab2b8957e8be9108b22777bf3a053d39eb5",
+      "headBlobBytes": 468,
+      "worktreeBytes": 468,
+      "worktreeSha256": "fa96f836cc01faec4f18c9852e450ab2b8957e8be9108b22777bf3a053d39eb5",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "materials/models/plastic/mc-composite-apex/projection.lisp",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "6164d25b60c255d37b9e397ccb13962c9063064e",
+      "gitHashObjectWithPathSha": "6164d25b60c255d37b9e397ccb13962c9063064e",
+      "headBlobSha256": "eb16237ecda3b08c17632e84c782f99f71a223eaf49b83bc2df63ebeaad1dd6d",
+      "headBlobBytes": 10339,
+      "worktreeBytes": 10339,
+      "worktreeSha256": "eb16237ecda3b08c17632e84c782f99f71a223eaf49b83bc2df63ebeaad1dd6d",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "tests/analysis/test_gravity_composite_refinement.py",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "08adcae762d9bfec807b1888d2fe1435cf71578c",
+      "gitHashObjectWithPathSha": "08adcae762d9bfec807b1888d2fe1435cf71578c",
+      "headBlobSha256": "1920571323ceed792e1704d75c6ae6d9913b433f60d47d5fad077a8e9d1481c7",
+      "headBlobBytes": 5808,
+      "worktreeBytes": 5808,
+      "worktreeSha256": "1920571323ceed792e1704d75c6ae6d9913b433f60d47d5fad077a8e9d1481c7",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/notes/unnotched-landslide-2026-10-24/support/capture-composite-apex-launch-shared.py.txt",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "07b899acb0302faf3425f5ad1f2ded8be8366c6d",
+      "gitHashObjectWithPathSha": "07b899acb0302faf3425f5ad1f2ded8be8366c6d",
+      "headBlobSha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9",
+      "headBlobBytes": 19982,
+      "worktreeBytes": 19982,
+      "worktreeSha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/notes/unnotched-landslide-2026-10-24/support/capture-copy-hash-zip-shared.py.txt",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "245613a18ed1738e1c1d835109770b0a355977c7",
+      "gitHashObjectWithPathSha": "245613a18ed1738e1c1d835109770b0a355977c7",
+      "headBlobSha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0",
+      "headBlobBytes": 13671,
+      "worktreeBytes": 13671,
+      "worktreeSha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/notes/unnotched-landslide-2026-10-24/support/capture-exact-clock-reference.ps1.txt",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "e1f777916dafa634f3a91079df5b576802053c19",
+      "gitHashObjectWithPathSha": "e1f777916dafa634f3a91079df5b576802053c19",
+      "headBlobSha256": "0d86faedc7a012be10d0c9b2b25214e57ec14b3deafca443bc0cd5f9b60f5a64",
+      "headBlobBytes": 2438,
+      "worktreeBytes": 2438,
+      "worktreeSha256": "0d86faedc7a012be10d0c9b2b25214e57ec14b3deafca443bc0cd5f9b60f5a64",
+      "rawGitBlobEqualsWorktree": true,
+      "crlfLfEquivalenceAccepted": false,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/notes/unnotched-landslide-2026-10-24/support/capture-composite-h05-launch.py.txt",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "fa9f22931581d8b7b8753acf13beadc0b7a77de3",
+      "gitHashObjectWithPathSha": "fa9f22931581d8b7b8753acf13beadc0b7a77de3",
+      "headBlobSha256": "59274dc1bca9a666a710e78fa22661445b00e379d1025ea15710432a324e8bf9",
+      "headBlobBytes": 24283,
+      "worktreeBytes": 24284,
+      "worktreeSha256": "70934762ab503a74f2f9cac6d915b055050f718c9bb95e06ebf4662bc1859954",
+      "rawGitBlobEqualsWorktree": false,
+      "crlfLfEquivalenceAccepted": true,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    },
+    {
+      "repositoryPath": "research/notes/unnotched-landslide-2026-10-24/support/capture-composite-h05-repair-launch.py.txt",
+      "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+      "headGitBlobSha": "2b8f98748b6996d27cf0779feacf7d2e2ef9ca53",
+      "gitHashObjectWithPathSha": "2b8f98748b6996d27cf0779feacf7d2e2ef9ca53",
+      "headBlobSha256": "3435c506b11f3055e6fa66eec0319b2e803894d454cf93d8a9025ba0fcb17371",
+      "headBlobBytes": 16201,
+      "worktreeBytes": 16202,
+      "worktreeSha256": "2f8f6de76dbdc88ab85c710e8642080dd8a9044c42ec6184e74235cc668162c8",
+      "rawGitBlobEqualsWorktree": false,
+      "crlfLfEquivalenceAccepted": true,
+      "scope": "Exact runtime copies retain worktree bytes. Git blob identity and line-ending equivalence are recorded separately, never claimed byte-identical when false."
+    }
+  ],
+  "frozenFiles": [
+    {
+      "path": "case.lisp",
+      "bytes": 2340,
+      "sha256": "4eb467eb545a6c5e0bf85f2bea0899870ce5639f4744e038917dd28c966c2879",
+      "originalPath": "D:\\MPM\\cases\\benchmarks\\gravity-slope-mc-composite-apex-srf-1p6-h05.lisp"
+    },
+    {
+      "path": "protocol/composite-apex-srf1p6-h05-contract.json",
+      "bytes": 7828,
+      "sha256": "a299fcaaadb9e3583d4b522b67826b7383f518e595cac214df5b819f5d594e7a",
+      "originalPath": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\composite-apex-srf1p6-h05-contract.json"
+    },
+    {
+      "path": "protocol/composite-apex-refinement-contract.json",
+      "bytes": 4592,
+      "sha256": "0836d61273184248868a0ce1c8bd4d7312d9b83be052ec5f9ce01d465a905827",
+      "originalPath": "D:\\MPM\\research\\references\\unnotched-mc-ssr\\composite-apex-refinement-contract.json"
+    },
+    {
+      "path": "analysis/review-gravity-composite-apex.py",
+      "bytes": 18498,
+      "sha256": "edec92168deaf06b942f0a36e9468be958f00c3e5b06f34e1d91e368340f4a3b",
+      "originalPath": "D:\\MPM\\scripts\\review-gravity-composite-apex.py"
+    },
+    {
+      "path": "analysis/review-gravity-slope.py",
+      "bytes": 38121,
+      "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831",
+      "originalPath": "D:\\MPM\\scripts\\review-gravity-slope.py"
+    },
+    {
+      "path": "analysis/plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "originalPath": "D:\\MPM\\scripts\\plot_m5_cliff_comparison.py"
+    },
+    {
+      "path": "analysis/review-gravity-composite-refinement.py",
+      "bytes": 14435,
+      "sha256": "4af62e51fa619410a124049c410bebbe34fd5736db8187270973d1a865a50752",
+      "originalPath": "D:\\MPM\\scripts\\review-gravity-composite-refinement.py"
+    },
+    {
+      "path": "analysis/COMPOSITE_APEX_ROUNDOFF_REPAIR.md",
+      "bytes": 6764,
+      "sha256": "98c47d90522e0ecfa7b7db72985d152961018eec1467b510423b1375d308d651",
+      "originalPath": "D:\\MPM\\docs\\benchmarks\\COMPOSITE_APEX_ROUNDOFF_REPAIR.md"
+    },
+    {
+      "path": "analysis/mc-composite-apex-stable-math.protocol.json",
+      "bytes": 2335,
+      "sha256": "f61fdce228f85dbd59135c436a2f6ab40d8770727cee3ee5e3261addf40ca1c5",
+      "originalPath": "D:\\MPM\\tests\\materials\\mc-composite-apex-stable-math.protocol.json"
+    },
+    {
+      "path": "analysis/cl-mpm.asd",
+      "bytes": 39964,
+      "sha256": "257e7fcd4f853a5aab2e61f8a594292f4dc8d0c2396362c10759b00c10ff5890",
+      "originalPath": "D:\\MPM\\cl-mpm.asd"
+    },
+    {
+      "path": "analysis/diagnostics.lisp",
+      "bytes": 6077,
+      "sha256": "6fe2771fc156e25ae13380f537e232bd4875a91a77d960a0290877068f23b360",
+      "originalPath": "D:\\MPM\\materials\\models\\plastic\\mc-composite-apex\\diagnostics.lisp"
+    },
+    {
+      "path": "analysis/package.lisp",
+      "bytes": 468,
+      "sha256": "fa96f836cc01faec4f18c9852e450ab2b8957e8be9108b22777bf3a053d39eb5",
+      "originalPath": "D:\\MPM\\materials\\models\\plastic\\mc-composite-apex\\package.lisp"
+    },
+    {
+      "path": "analysis/projection.lisp",
+      "bytes": 10339,
+      "sha256": "eb16237ecda3b08c17632e84c782f99f71a223eaf49b83bc2df63ebeaad1dd6d",
+      "originalPath": "D:\\MPM\\materials\\models\\plastic\\mc-composite-apex\\projection.lisp"
+    },
+    {
+      "path": "analysis/test_gravity_composite_refinement.py",
+      "bytes": 5808,
+      "sha256": "1920571323ceed792e1704d75c6ae6d9913b433f60d47d5fad077a8e9d1481c7",
+      "originalPath": "D:\\MPM\\tests\\analysis\\test_gravity_composite_refinement.py"
+    },
+    {
+      "path": "helper-source-checkpoint/capture-composite-apex-launch-shared.py.txt",
+      "bytes": 19982,
+      "sha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9",
+      "originalPath": "D:\\MPM\\research\\notes\\unnotched-landslide-2026-10-24\\support\\capture-composite-apex-launch-shared.py.txt"
+    },
+    {
+      "path": "helper-source-checkpoint/capture-copy-hash-zip-shared.py.txt",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0",
+      "originalPath": "D:\\MPM\\research\\notes\\unnotched-landslide-2026-10-24\\support\\capture-copy-hash-zip-shared.py.txt"
+    },
+    {
+      "path": "helper-source-checkpoint/capture-exact-clock-reference.ps1.txt",
+      "bytes": 2438,
+      "sha256": "0d86faedc7a012be10d0c9b2b25214e57ec14b3deafca443bc0cd5f9b60f5a64",
+      "originalPath": "D:\\MPM\\research\\notes\\unnotched-landslide-2026-10-24\\support\\capture-exact-clock-reference.ps1.txt"
+    },
+    {
+      "path": "helper-source-checkpoint/capture-composite-h05-launch.py.txt",
+      "bytes": 24284,
+      "sha256": "70934762ab503a74f2f9cac6d915b055050f718c9bb95e06ebf4662bc1859954",
+      "originalPath": "D:\\MPM\\research\\notes\\unnotched-landslide-2026-10-24\\support\\capture-composite-h05-launch.py.txt"
+    },
+    {
+      "path": "helper-source-checkpoint/capture-composite-h05-repair-launch.py.txt",
+      "bytes": 16202,
+      "sha256": "2f8f6de76dbdc88ab85c710e8642080dd8a9044c42ec6184e74235cc668162c8",
+      "originalPath": "D:\\MPM\\research\\notes\\unnotched-landslide-2026-10-24\\support\\capture-composite-h05-repair-launch.py.txt"
+    },
+    {
+      "path": "capture-helper.py",
+      "bytes": 16202,
+      "sha256": "2f8f6de76dbdc88ab85c710e8642080dd8a9044c42ec6184e74235cc668162c8",
+      "originalPath": "D:\\MPM\\.tmp\\capture-gravity-composite-h05-repair-launch.py"
+    },
+    {
+      "path": "shared-launch-helpers.py",
+      "bytes": 19982,
+      "sha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9",
+      "originalPath": "D:\\MPM\\.tmp\\capture-gravity-composite-apex-launch.py"
+    },
+    {
+      "path": "copy-hash-zip-helpers.py",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0",
+      "originalPath": "D:\\MPM\\.tmp\\pack-gravity-completed-002.py"
+    },
+    {
+      "path": "proof-support/reference-exact-clock-helper.ps1",
+      "bytes": 2438,
+      "sha256": "0d86faedc7a012be10d0c9b2b25214e57ec14b3deafca443bc0cd5f9b60f5a64",
+      "originalPath": "D:\\MPM\\.tmp\\capture-gravity-srf1p6-processes.ps1"
+    },
+    {
+      "path": "proof-support/capture-processes.ps1",
+      "bytes": 3099,
+      "sha256": "f994e72b4bad03012195f91bce81ea068098613d95a84186841959efe6f92795",
+      "originalPath": "Generated before launch; root runs once only"
+    },
+    {
+      "path": "expected-full-configuration.json",
+      "bytes": 1786,
+      "sha256": "e5c2577c9fc8b534258f6ebb4d5af1f3eeb014c1fce92d4f6474b772f1f7f332"
+    }
+  ],
+  "expectedPhysicalDurationS": 6,
+  "expectedFrames": 61,
+  "expectedParticles": 3520,
+  "scope": "No launch/tests/native/process query/audit/render. Root owns later launch and one generated proof.",
+  "freshRepairAttempt": {
+    "previousRun": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-001",
+    "previousStatus": "FAILED_NATIVE",
+    "previousLastSavedTimeS": 5.2,
+    "previousSavedStates": 53,
+    "actualFailedTrialCapsuleAvailable": false,
+    "actualFailedTrialReplayed": false,
+    "rationale": "Synthetic false-work-rejection class demonstrated; symmetric pair-difference deviator is algebraically equal. Original mean/q/branch/law/checks/tolerances retained; optional failure-only owned diagnostics added.",
+    "changes": [
+      "source/cl-mpm.asd",
+      "source/materials/models/plastic/mc-composite-apex/package.lisp",
+      "source/materials/models/plastic/mc-composite-apex/projection.lisp"
+    ],
+    "addedSource": "source/materials/models/plastic/mc-composite-apex/diagnostics.lisp",
+    "physicalInputsChanged": false,
+    "identicalRestart": false,
+    "restartFromSavedState": false,
+    "initialState": "Fresh original zero-stress/zero-velocity initial state, same6s/SRF1.6/h0.5",
+    "failureCauseLimit": "Missing actual failed trial/predicate remains unavailable; synthetic witness is not actual cause proof.",
+    "trajectoryLimit": "New evaluation can round apex fields differently; no identity with the old5.2s trajectory is promised.",
+    "stopRule": "One fresh repaired attempt; no SRF/grid/duration/strength/psi/tolerance escalation; registered observers and physical limits remain."
+  }
+}

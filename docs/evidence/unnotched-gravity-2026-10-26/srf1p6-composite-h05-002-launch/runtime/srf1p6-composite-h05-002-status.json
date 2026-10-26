@@ -1,0 +1,46 @@
+{
+  "scenario": "gravity-slope",
+  "status": "NATIVE_RUNNING",
+  "startedUtc": "2026-10-26T06:54:03.2984528Z",
+  "output": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-002",
+  "case": "D:\\MPM\\cases\\benchmarks\\gravity-slope-mc-composite-apex-srf-1p6-h05.lisp",
+  "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+  "maxWallHours": 3.0,
+  "wallDeadlineUtc": "2026-10-26T09:54:03.2984528Z",
+  "caseSha256": "4EB467EB545A6C5E0BF85F2BEA0899870CE5639F4744E038917DD28C966C2879",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "processIdentity": {
+    "sbcl": {
+      "pid": 20436,
+      "name": "sbcl",
+      "sessionId": 11,
+      "createdUtc": "2026-10-26T06:54:03.7757073Z"
+    },
+    "nativeCommand": {
+      "pid": 28604,
+      "name": "cmd",
+      "sessionId": 11,
+      "createdUtc": "2026-10-26T06:54:03.4800512Z"
+    },
+    "wrapper": {
+      "pid": 51652,
+      "name": "pwsh",
+      "sessionId": 11,
+      "createdUtc": "2026-10-26T06:54:02.7308169Z"
+    }
+  },
+  "nativeExitCode": null,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {
+    "timeS": 0.0,
+    "status": "running",
+    "updates": 0,
+    "savedFrames": 1,
+    "complete": false,
+    "phase": "gravity-ramp",
+    "particleCount": 3520
+  },
+  "heartbeatUtc": "2026-10-26T06:56:04.1021483Z"
+}

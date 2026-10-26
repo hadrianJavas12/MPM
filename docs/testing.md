@@ -1,5 +1,16 @@
 # Native framework and Studio verification
 
+## Fresh repaired full run ACTIVE,26October13:54WIB
+
+Native source139005c2, `srf1p6-composite-h05-002`, same6s/61frames/3520MP/
+SRF1.6/physical inputs. Three-hour deadline16:54:03WIB is a bound, not ETA.
+FIRSTprepare/capture exit0;25prelaunch records, ONEexact process/clock/parent
+proof,288sources/DLL and actual diagnostic load verified. Root launch proof
+52indexed/53Git blobs/289members/288actual+archived sources;286match repaired
+gate,282coarse after declared repair allowance. Initialization/launch proof is
+not full simulation/slide/scientificPASS. All scoped repair gates below closed.
+Prepared variant review/full common-metre CSV pair remain NOT_RUN for002.
+
 ## Fine failure and scoped arithmetic gates,26October2026
 
 Fine sourcea07eb8f8 ends native/worker1 at13:06:10WIB. Last save5.2s/53states,

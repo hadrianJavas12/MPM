@@ -8,6 +8,13 @@ updated: 2026-10-26
 
 # Unnotched MC gravity scenario and native gates
 
+Fresh repaired002 is ACTIVE26October13:54:03WIB, native source139005c2.
+Same6s/SRF1.6/h0.5/3520MPs/physical inputs;3h wall deadline16:54WIB is not ETA.
+FIRSTprepare/capture0,25prelaunch records,288sources/DLL/actual diagnostic load
+and ONEexact process/clock/parent proof verified. Root52indexed/53Git blobs/
+289members closes launch evidence. Scoped four repair gates below are CLOSED;
+full002result/CSV pair remain NOT_RUN. Quiet15min monitor, no old repeats.
+
 ## Latest26October: partial fine motion, failed native, scoped repair
 
 Fine compositeSRF1.6 sourcea07eb8f8 fails13:06:10WIB. Last save5.2s/53states/

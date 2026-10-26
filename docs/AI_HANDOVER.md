@@ -1,5 +1,39 @@
 # AI Engineering Handover — CL-MPM
 
+## ACTIVE26October13:54WIB: fresh repaired h0.5 attempt002
+
+Run `output/mc-composite-apex-2026-10-26/srf1p6-composite-h05-002`, native
+source `139005c28ff579fe7cbce410f8e07917ec6cf17c`, starts13:54:03.2984528WIB.
+Three-hour wall deadline16:54:03.2984528WIB, not ETA. Worker26708/wrapper51652/
+cmd28604/SBCL20436,Session11. ONE exact creation-clock/parent proof matches;
+do not query these processes again while status is healthy. Native full6s/
+61frames/3520MP/h0.5, same SRF1.6 and physical case/contracts/solver settings.
+Only the reviewed numerical evaluation/failure capture differs from failed001.
+Missing old trial remains unavailable; no exact old-cause/trajectory claim.
+
+FIRSTprepare/capture exit0,25prelaunch records. Actual288sources/DLL plus actual
+diagnostics load verified;286shared members match new gate and282match coarse
+after exact declared repair allowance. Root closes launch packet52indexed/
+53Git blobs/289ZIPmembers/288original+archived sources. See
+`docs/evidence/unnotched-gravity-2026-10-26/srf1p6-composite-h05-002-launch`.
+All repair gates/evidence below CLOSED; no repeats. Sourcecommit139005c2 stays
+launch attribution even after documentation HEAD advances. WMI session is not
+proven logoff/sleep/reboot immune. Wrapper does NOT automatically audit/render.
+
+Same automation15min quiet: status/progress/heartbeat, manifestcomplete/time,
+ONEstdouttail only. Healthy: endquiet/no activepoll/tests/native duplicates.
+Terminal: ONE variant review from002prepared analysis + h05contract/freshoutput/
+--video/no boundedflag; saved-data repairs only. If complete, ONE repository
+full CSV pair against coarse variant-review-002 after prepared-byte match.
+Full comparator must reject incomplete; old partial wrapper belongs only to001.
+Source count is dynamic (288), not hard287. Inspect actual scale1 motion/band,
+connected physical cohort/persistence/F/J/mass/work-volume/boundaries/runout.
+No completion/colour/outlier as scientificPASS. New failure: preserve NEWcapsule,
+replay once with optional schema/API/original frozen projector, never strict
+replay or invented missing state. No automatic SRF/grid/time/strength/tolerance
+escalation; goal remains active. Terminal no newsolver returns sameautomation5h.
+Quota checkpoint95%5h/15%weekly; prioritize this checkpoint, no repeated work.
+
 ## Latest26October13:46WIB: numerical repair gates PASS; fresh launch pending
 
 The formerly ACTIVE `srf1p6-composite-h05-001` is now **FAILED_NATIVE/worker1**,

@@ -1,0 +1,16 @@
+{
+  "executable": "D:/MPM/scripts/start-wang2017-detached.ps1",
+  "arguments": [
+    "-OutputDirectory",
+    "output/mc-composite-apex-2026-10-26/srf1p6-composite-h05-002",
+    "-Case",
+    "cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6-h05.lisp",
+    "-MaxWallHours",
+    "3",
+    "-Runner",
+    "gravity-slope"
+  ],
+  "sourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+  "requestedUtc": "2026-10-26T06:54:00.7146980Z",
+  "scope": "One fresh initial-state repaired full attempt; same physical inputs and limits"
+}

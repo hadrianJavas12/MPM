@@ -1048,3 +1048,7 @@ Repair8996a015 FIRST33new fixed-point calls pass. Relevant optional regression p
 ## [2026-10-26] verify | Repair source and evidence checkpoint ready
 
 Root independently verifies composite-apex-repair-gates-001:65indexed/66Git blobs/4ZIPs/1206members,1158archived+actual source/input payloads. New fresh h05-002 source-only helper reviewed; imported original dependency is checked beforeimport against archived/prepared bytes, full/newgate source set must match exactly, actual diagnostics ASDFload required. Same physicalcase/contracts/fourpostprocessors, no full solver yet. FIRSTprepare awaits committedcheckpoint. [[unnotched-mc-gravity]].
+
+## [2026-10-26] run | Fresh repaired unnotched fine attempt002 launched
+
+Source139005c2 starts13:54:03.2984528WIB, same6s/SRF1.6/h0.5/3520MP/physicalcase/contracts after four scoped repair gates. FIRSTprepare/capture0,25prelaunch records,288sources/DLL/actual optional diagnostics load,ONEexact creation-clock/parent proof match. Root launchpacket52indexed/53Git blobs/289members/288actual+archived sources verified;286shared with newgate,282coarse after declared numerical repair allowance. Oldfailed trial unavailable; no exact cause/trajectory/slide/scientificPASS. Sameautomation15minquiet,deadline16:54:03WIB is a bound not ETA, no logoff immunity. Full saved review/CSV pair NOT_RUN. [[unnotched-mc-gravity]].

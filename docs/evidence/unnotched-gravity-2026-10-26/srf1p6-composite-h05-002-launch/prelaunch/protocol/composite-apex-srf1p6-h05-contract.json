@@ -1,0 +1,166 @@
+{
+  "schema": "cl-mpm.unnotched-composite-apex.native-audit.v1",
+  "frozenBeforeFirstResult": false,
+  "createdDate": "2026-10-26",
+  "purpose": "ONE same SRF1.6/composite-apex coupled resolution study at h0.5; coarse result is known negative, not slide confirmation or exact paper reproduction",
+  "sources": [
+    {
+      "doi": "10.1680/geot.1999.49.3.387",
+      "role": "Classical MC SSR method; indexed D1 geometry dimensions, figure not freshly visually verified"
+    },
+    {
+      "doi": "10.1002/nag.3599",
+      "role": "MC MPM bridge; Table1 Section3.2 material inputs, H10m, slope26.57deg, independent SRFs and gravity loading"
+    }
+  ],
+  "independentTrials": [
+    1.6
+  ],
+  "referenceMaterial": {
+    "youngsModulusPa": 100000000,
+    "poissonRatio": 0.3,
+    "unitWeightNPerM3": 20000,
+    "cohesionCauchyPa": 10000,
+    "frictionDeg": 20,
+    "dilationDeg": 0
+  },
+  "reduction": {
+    "cohesion": "reference_c/SRF",
+    "frictionRad": "atan(tan(reference_phi_rad)/SRF)",
+    "elasticityDensityDilation": "unchanged"
+  },
+  "geometry": {
+    "status": "DECLARED_ADAPTATION",
+    "polygonM": [
+      [
+        0,
+        0
+      ],
+      [
+        32,
+        0
+      ],
+      [
+        12,
+        10
+      ],
+      [
+        0,
+        10
+      ]
+    ],
+    "heightM": 10,
+    "rearCrestM": 12,
+    "faceHorizontalM": 20,
+    "foundationDepthM": 0,
+    "analyticalAreaM2": 220,
+    "domainWidthM": 80,
+    "domainHeightM": 15,
+    "notch": false,
+    "excavation": false,
+    "weakSeed": false,
+    "crestDriver": false
+  },
+  "boundaries": {
+    "leftRight": "zero x nodal velocity, free y",
+    "bottom": "zero x/y nodal velocity",
+    "top": "free",
+    "coulombBed": false,
+    "quantitativeRunoutContactValidated": false
+  },
+  "initialState": "zero stress/velocity; plasticity active; no elastic settle or reporting reset",
+  "gravity": {
+    "fullAccelerationMPerS2": -9.80665,
+    "densityKgPerM3": "20000/9.80665",
+    "rampDurationS": 2,
+    "factor": "r*r*(3-2*r), r=min(t_step_end/2,1)",
+    "variableActuallyChanged": "sim-gravity",
+    "constantGravityHoldS": [
+      2,
+      6
+    ],
+    "physicalRampIsAnExplicitMPMAssumption": true
+  },
+  "numerics": {
+    "method": "native explicit USF/FLIP, 2D plane strain unit thickness",
+    "meshSizeM": 0.5,
+    "particlesPerAxisPerCell": 2,
+    "workers": 1,
+    "timeStepScale": 0.2,
+    "durationS": 6,
+    "frames": 61,
+    "maxUpdates": 60000,
+    "massScale": 1,
+    "damping": 0,
+    "fbar": false,
+    "splittingRemoval": false
+  },
+  "detectionConventions": {
+    "status": "PREDECLARED_DIAGNOSTIC_NOT_UNIVERSAL_GEOTECHNICAL_CRITERIA",
+    "cohort": "fixed initial particle IDs with x0>2h AND y0>2h; same for both trials",
+    "adjacency": "initial-center distance <=1.01h within the fixed cohort",
+    "movingNodes": "dx>=0.25h AND downslope projection of actual displacement>=0.5h",
+    "minimumLargestConnectedMovingFractionOfCohortMass": 0.1,
+    "minimumPositiveDxMassFractionOfComponent": 0.75,
+    "sustainedVelocity": "component mass-weighted vx>0.001m/s for all saved states of some 1s interval; IDs remain the same over that interval",
+    "windowsReportedSeparately": [
+      "entire0-6s including changing-gravity loading",
+      "2-6s constant-gravity hold; displacements relative to saved2s"
+    ],
+    "runoutGateSeparate": "at least1% initial total mass has center x>initial_toe+0.5h; also report front, median and centroid",
+    "spatialMechanism": "inspect actual scale1 geometry and plastic-shear localization; colour or scalar extremum alone does not pass",
+    "integrity": "stable IDs/count/mass, finite fields, positive J, constitutive admissibility, no center domain exit/hidden deletion/clamping; floor penetration invalidates runout",
+    "stableControl": "same cohorts/metrics/windows; no-damping ringing is permitted but must be distinguished from secular sliding",
+    "automaticScientificPass": false
+  },
+  "gatesBeforeFullRun": [
+    "native source/input/geometry/reduction/ramp/BC contracts",
+    "bounded genuine MPM updates with independent saved VTK/CSV audit",
+    "runtime estimate from actual pilot",
+    "review predeclared physics/geometry limitations"
+  ],
+  "prohibitions": [
+    "hidden SRF or parameter search after result",
+    "MC replaced by DP or VM without mapping",
+    "fallback/clamp or tolerance relaxation to make collapse",
+    "paper implicit steps interpreted as physical explicit time",
+    "scientific validation inferred from solver completion"
+  ],
+  "currentPhysicalResult": "NOT_RUN",
+  "parentContracts": {
+    "contract.json": "0917afdf0d99c37ca182d96775662cb3757fa5e055cc9fa10c3f59a238b4da55",
+    "response-ladder-contract.json": "5ef854b8a72f18cafbb106f4d3c04474823cb371ee2ec8b37f881ff71895d788"
+  },
+  "materialVariant": "perfect-mc-composite-apex",
+  "parentAuditContract": {
+    "path": "research/references/unnotched-mc-ssr/composite-apex-srf1p6-contract.json",
+    "sha256": "aa13974b57d29b0d9f29d2d1997dd5c295eca29ae91d8d88a62576180dbffd27"
+  },
+  "constitutiveExtension": {
+    "class": "CL-MPM/MODELS/MC-COMPOSITE-APEX:PARTICLE-MC-COMPOSITE-APEX",
+    "flowPotential": "g_A=p; gradient I/3; lambda_A is plastic volume",
+    "apexKirchhoffPa": "J*c*cot(phi)",
+    "analyticDomain": "Preserve strict elastic screen; mean_trial-p_A > existing_stress_tolerance/(2*sin(phi))",
+    "remainingDomain": "Unchanged strict projection including cap band/equality, admissibility and ambiguity rejection; no exception fallback",
+    "strengthHistory": "Perfect Cauchy strength; existing accumulated J2-increment history; separate actual apex multiplier",
+    "work": "Kirchhoff work=p_A*lambda_A; stored Cauchy plastic work increment divides by current J",
+    "limitations": "Declared extra volumetric tensile/apex convention; not fracture or a calibrated soil law; no guarantee of global instability",
+    "approvedPlanSha256": "e21ba6e29a85890ae4ae56f0b24df0d644111f5c9b2e6d18d9fd6bc7a510d3c3"
+  },
+  "repeatPolicy": "One fine6s run only. Common metre observer is separate from native h-scaled diagnostics. No automatic h0.25, SRF change or longer duration after this pair; review physical foundation/base/reference definition first.",
+  "savedApexObservations": {
+    "active": "VTK mc-apex-active-last is exactly 0 or 1; active=>lambda>0, inactive=>lambda=0",
+    "multiplier": "VTK mc-apex-lambda-last is the last accepted native return, not a sparse-frame cumulative increment",
+    "histories": "VTK mc-plastic-volume/work match CSV plastic_volume/plastic_work_pa, initially zero",
+    "stress": "Active last return has hydrostatic Kirchhoff stress at J*c*cot(phi) within existing native stress tolerance",
+    "limits": "Sparse saved data cannot reconstruct unsaved trial compliance or closed energy balance; point/native controls cover narrower identities"
+  },
+  "variantMetadata": {
+    "apexConvention": "Explicit additional gA=p flow at pA=J*c*cot(phi); constant perfect Cauchy strength and regular psi0. Positive apex plastic volume changes the constitutive response; not strict MC at all states or a fracture model.",
+    "apexCapBandPolicy": "Preserve the old elastic screen. Analytic apex only when mean excess exceeds the EXISTING stressTolerance/(2*sin(phi)); equality and the entire remaining band delegate unchanged strict projection, including rejection."
+  },
+  "frozenBeforeRefinedResult": true,
+  "freezeScope": "Before this fine result; original coarse result and basal kinematic diagnostic are already known",
+  "expectedParticleCount": 3520,
+  "resolutionRole": "NATIVE_VARIANT_INTEGRITY_AND_H_SCALED_DIAGNOSTICS; cross-mesh judgement requires separate common-metre comparison"
+}
