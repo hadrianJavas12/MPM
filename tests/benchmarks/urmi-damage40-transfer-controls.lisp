@@ -194,6 +194,8 @@
       (setf (magicl:tref (cl-mpm/particle:mp-position candidate) 0 0) 999d0)
       (rejects (lambda () (tr:commit-transfer (tiny-sim originals) batch)))))
   (assert (zerop *mpm-attempted*))
+  (assert (= *material-attempted* *material-accepted* 6))
+  (assert (= (length *passed*) 4))
   t)
 (handler-case (controls)
   (error (condition) (push (list "harness" (princ-to-string condition)) *failures*)))
