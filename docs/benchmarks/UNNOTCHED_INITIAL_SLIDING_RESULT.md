@@ -85,7 +85,9 @@ retains77indexed artifacts,2ZIPs/497decoded members and288actual source files.
 Root independently verifies all78Git blobs, full original/archive sources and
 indexed PNG/MP4/manual acceptance bytes. Original source/runtime/raw/caller/
 prelaunch/analysis records remain intact; the old launch ZIP is referenced,
-not duplicated. The earlier failed001, synthetic diagnosis and four repair gates
+not duplicated. Result checkpoint1922fb8a is pushed; the obsolete run monitor
+is deleted after completing the simulation and review. The earlier failed001,
+synthetic diagnosis and four repair gates
 remain in their original packets. The[repair](COMPOSITE_APEX_ROUNDOFF_REPAIR.md)
 uses equivalent symmetric principal differences with unchanged physical law,
 branch/mean/q/checks/tolerances plus owned failure capture. Missing old trial

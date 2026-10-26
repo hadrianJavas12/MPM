@@ -26,8 +26,11 @@ exit0:77indexed artifacts/78Git blobs/2ZIPs/497members/288original+archived sour
 independently verified by root. Indexed MP4/PNG/manual JSON are Gittracked,
 including ignored media. All native/source/raw/runtime/prelaunch/caller/control
 records retained; closed launch source ZIP referenced without duplication.
-No tests/solver/audit/render repeats. Final docs/wiki/evidence checkpoint is
-being committed/pushed; obsolete monitor will be deleted once push succeeds.
+No tests/solver/audit/render repeats. Final docs/wiki/evidence checkpoint
+`1922fb8a` is pushed. Automation `mpm-creep-drive-hold` is DELETED after successful
+push because this finite simulation/review deliverable is complete. No monitor,
+solver or automatic follow-on study remains. Do not recreate it without a new
+user request or new authorized scope.
 No automatic finer grid/SRF/time/strength/psi/tolerance change. All old raw,
 negative evidence and personal settings remain intact. No automatic work remains
 for this finite experiment; future calibrated foundation/material/mesh studies
