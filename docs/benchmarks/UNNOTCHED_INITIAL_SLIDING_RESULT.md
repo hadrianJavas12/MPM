@@ -25,6 +25,31 @@ no interpolation, full decode0.
 [Actual scale1 summary](../evidence/mc-composite-apex-2026-10-26/srf1p6-composite-h05-002-completed/saved-analysis/variant-review-001/gravity-slope-review.png)
 was visually inspected by root. Plastic-history colour is not damage.
 
+## Mesh and the apparent crack origin: human follow-up
+
+A new descriptive saved-data query, without another solver/audit/render, finds
+the first saved nonzero plastic history at frame7/t0.7s (previous saved0.6s).
+There are711particles with positive kappa, spanning y0.124948–3.623775m; maximum
+kappa2.134099342238181e-5 is near(x7.125013,y0.374846)m. Thus early saved
+plasticity already occurs in the lower body. This is not an exact substep
+initiation time, unique nucleation point or a modeled crack. The
+[transcribed numerical output](../../research/notes/unnotched-landslide-2026-10-24/saved-plasticity-onset-002.json)
+records the query scope and method honestly after execution.
+
+The video uses a fixed full-run kappa colour scale (maximum about0.966), so
+this early signal is almost invisible. Current perfect MC keeps c/phi constant
+during the run; kappa is plastic history, not damage or crack opening. Finer
+mesh alone cannot introduce a fracture/damage law. h1 versus h0.5 changes the
+qualitative response, so adequacy/convergence of h0.5 remains unestablished.
+
+The [accepted older Joss pilot](../JOSS_DAMAGE_DIAGNOSIS_2026-10-15.md) instead
+shows actual damage0–1, first saved at4s on the lower cliff face near
+(13.125,3.625)m; the protected base remains undamaged. The
+[legacy Urmi renderer](URMI_LEGACY_COMPARISON.md) shows kappa/friction evolution,
+not that Joss damage field. Different laws/geometry/preparation preclude
+attributing differing band paths solely to mesh or colour. No new simulation,
+monitor or parameter change is authorized by this explanatory query.
+
 ## Criteria fixed before results
 
 The full CSV-only pair comparison exits0 using unchanged

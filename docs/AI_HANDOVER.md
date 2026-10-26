@@ -1,5 +1,14 @@
 # AI Engineering Handover — CL-MPM
 
+26October human mesh/crack follow-up: descriptive saved-data query only finds
+first saved positive kappa at0.7s, max2.1341e-5 near y0.374846m; lower-body
+plasticity is almost invisible on the fixed full-run scale about0.966. See
+the completed-result follow-up and linked transcribed output. This is plastic
+history, not crack/damage onset. Old Joss shows damage0–1 on lower cliff face,
+protected base undamaged; old Urmi displays kappa/friction. h1/h0.5 qualitative
+disagreement remains nonconvergence. No new solver/gate/audit/render, parameter
+change or monitor; completed scope below stays closed.
+
 ## COMPLETE26October: requested unnotched numerical sliding example delivered
 
 Read[completed result](benchmarks/UNNOTCHED_INITIAL_SLIDING_RESULT.md).

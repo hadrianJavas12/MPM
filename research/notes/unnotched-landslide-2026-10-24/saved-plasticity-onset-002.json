@@ -1,0 +1,21 @@
+{
+  "scope": "Descriptive saved-data query for the human mesh/crack question; no solver, tests, rendering or repeated integrity audit",
+  "provenance": "Numerical output transcribed after the executed inline Python query; not a preregistered control or an independent integrity audit",
+  "run": "output/mc-composite-apex-2026-10-26/srf1p6-composite-h05-002",
+  "nativeSource": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+  "method": "Find first history.csv max_kappa > 0; read that saved VTK with scripts/plot_m5_cliff_comparison.py read_cliff_vtk; select mc-kappa > 0 and argmax",
+  "firstSavedPositivePlasticFrame": 7,
+  "timeS": 0.7,
+  "previousSavedTimeS": 0.6000000000000001,
+  "maximumKappa": 2.134099342238181e-05,
+  "maximumKappaPositionM": [7.125013479150258, 0.3748461284700434, 0.0],
+  "positiveKappaParticles": 711,
+  "positiveKappaXRangeM": [0.12500005242462373, 19.625056713987895],
+  "positiveKappaYRangeM": [0.12494799543852171, 3.6237745166831465],
+  "limits": [
+    "First saved nonzero plastic history, not exact unsaved substep initiation",
+    "Maximum location is not a unique crack nucleation point",
+    "Plastic history is not damage, crack opening or percentage strength loss",
+    "No causal boundary or mesh claim follows from this query"
+  ]
+}

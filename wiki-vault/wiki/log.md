@@ -1060,3 +1060,7 @@ Full002 source139005c2 completes6s/61states/3520MP15470updates/nativeworker0 at1
 ## [2026-10-26] close | Result pushed and obsolete monitor removed
 
 Result/evidence/docs checkpoint1922fb8a pushed successfully. Deleted automation mpm-creep-drive-hold through app tool after completed simulation, audits, root spatial acceptance and Gitblob verification. No solver or automatic follow-on study remains. Scope is delivered numerical initial sliding withoutnotch; scientific calibration/convergence/runout validation remain explicitly outside this result. Preserve all raw/failures/private settings. [[unnotched-mc-gravity]].
+
+## [2026-10-26] query | Mesh and apparent crack origin
+
+New descriptive saved-data query only: first saved positive kappa at0.7s, maximum2.134099342238181e-5 near(7.125013,0.374846)m,711positive particles spanning lower-body y0.124948–3.623775m. Fixed video scale about0.966 hides early small values. This is plastic history, not exact crack/damage initiation. Old Joss displays damage0–1 on lower face with protected base undamaged; legacy Urmi displays kappa/friction. h1/h0.5 qualitative disagreement does not establish convergence; smaller mesh cannot supply a damage/fracture law. Output transcribed after executed query, no solver/tests/audit/render repeat or monitor. [[unnotched-mc-gravity]], [[antigravity-native-history-2026-10-15]], [[urmi-legacy-comparison]].

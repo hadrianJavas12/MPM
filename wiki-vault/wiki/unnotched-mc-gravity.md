@@ -8,6 +8,24 @@ updated: 2026-10-26
 
 # Unnotched MC gravity scenario and native gates
 
+## Mesh, plasticity and older damage displays
+
+The human follow-up asks whether mesh is too coarse and why a crack appears
+not to start at the bottom. A new saved-data descriptive query finds first
+saved positive kappa at0.7s, maximum2.134099342238181e-5 near y0.374846m;
+711positive particles span y0.124948–3.623775m. Early lower-body plasticity is
+almost invisible on the fixed full-run scale about0.966. This is first saved
+plasticity, not exact substep/crack initiation. The current perfect MC has
+constant c/phi and no damage/crack-opening law. h1/h0.5 disagree qualitatively,
+so finer response is not convergence and refinement alone adds no crack law.
+
+Old Joss uses actual damage0–1 with lower-face damage and an undamaged protected
+base; old Urmi uses kappa/friction fields, not the Joss damage variable. See
+[[antigravity-native-history-2026-10-15]] and [[urmi-legacy-comparison]].
+Query scope/output: research/notes/unnotched-landslide-2026-10-24/saved-plasticity-onset-002.json;
+interpretation: docs/benchmarks/UNNOTCHED_INITIAL_SLIDING_RESULT.md.
+No solver/audit/render/test repeat or new automatic study follows this query.
+
 ## Completed unnotched numerical sliding example
 
 Full002 source139005c2 completes6s61states3520MP15470updates/nativeworker0.
