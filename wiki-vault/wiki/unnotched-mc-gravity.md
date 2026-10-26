@@ -8,6 +8,19 @@ updated: 2026-10-26
 
 # Unnotched MC gravity scenario and native gates
 
+## New27October scope: Urmi-like soil MC and strength damage
+
+Human chooses soil MC rather than provisional Joss, requests40deg/longer
+run/damage and sayscontinue. Branchcodex/urmi-mc-damage-slope40 fromc2cd4069.
+New model is declared normalized Urmi-inspired S1 cohesion degradation with
+phi0 and D_s=1-su/sup; elasticstiffness unchanged, not Joss crack/damage.
+Corrected total-DSS to equivalentplastic mapping is source/math reviewed;
+native point/edge/currentJ/transaction tests and actualrecipe/transfer remain
+NOT_RUN. No solver active. Original completedMC below stays closed. Preserve
+unused Joss prototypebranch and failed pre-native launcher; do not launch it.
+See docs/benchmarks/URMI_MC_DAMAGE40.md and research/notes/urmi-mc-damage40-2026-10-26/constitutive-plan.md.
+[[urmi-legacy-comparison]] distinguishes the older notched/filtered result.
+
 ## Mesh, plasticity and older damage displays
 
 The human follow-up asks whether mesh is too coarse and why a crack appears

@@ -1102,3 +1102,13 @@
                 :pathname "materials/models/plastic/wang2017"
                 :components ((:file "apex-package") (:file "apex-projection")
                              (:file "apex-native") (:file "apex-residual-history")))))
+
+;; Explicit optional adaptation; existing MC/Wang systems do not load this.
+(defsystem "cl-mpm/models/urmi-strength-damage"
+  :description "Urmi-inspired S1 MC strength degradation, not stiffness/fracture damage"
+  :depends-on ("cl-mpm/models/mc-evolution")
+  :serial t
+  :components ((:module "materials/models/plastic/urmi-strength-damage"
+                :pathname "materials/models/plastic/urmi-strength-damage"
+                :serial t
+                :components ((:file "package") (:file "law") (:file "particle")))))

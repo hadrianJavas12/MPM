@@ -92,3 +92,10 @@
   :serial t
   :components ((:file "materials/adapters/mc-composite-apex")
                (:file "scenarios/gravity-slope/mc-composite-apex-adapter")))
+
+(asdf:defsystem "cl-mpm-framework/urmi-strength-transfer"
+  :description "Optional atomic drained-to-undrained native material transfer; no MPM runner"
+  :depends-on ("cl-mpm-framework" "cl-mpm/models/urmi-strength-damage")
+  :serial t
+  :components ((:file "scenarios/urmi-damage40/package")
+               (:file "scenarios/urmi-damage40/transfer")))

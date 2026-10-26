@@ -1064,3 +1064,16 @@ Result/evidence/docs checkpoint1922fb8a pushed successfully. Deleted automation 
 ## [2026-10-26] query | Mesh and apparent crack origin
 
 New descriptive saved-data query only: first saved positive kappa at0.7s, maximum2.134099342238181e-5 near(7.125013,0.374846)m,711positive particles spanning lower-body y0.124948–3.623775m. Fixed video scale about0.966 hides early small values. This is plastic history, not exact crack/damage initiation. Old Joss displays damage0–1 on lower face with protected base undamaged; legacy Urmi displays kappa/friction. h1/h0.5 qualitative disagreement does not establish convergence; smaller mesh cannot supply a damage/fracture law. Output transcribed after executed query, no solver/tests/audit/render repeat or monitor. [[unnotched-mc-gravity]], [[antigravity-native-history-2026-10-15]], [[urmi-legacy-comparison]].
+
+## [2026-10-27] plan | Human selects Urmi-like MC strength damage at40degrees
+
+Human explicitly retains soilMC/developdamage/modelUrmi then requestscontinue.
+Newcodex/urmi-mc-damage-slope40 fromc2cd4069; provisional Joss branch preserved
+but no4s/fullJoss native everlaunched. CorrectedC0normalizedtotal-DSS curve,
+elastic-unloadingmapping to nativeκ, actualcohesion-derivedD_s and localJ/edge
+limits source/mathreviewed. Directplasticcurve/singularconnector rejected;
+no root/tolerance/strength remedy. Optionalmaterialimplementation and FIRST
+point/currentJ/transaction controls pending; strictdrainedelastoplasticeq and
+stress/history/cachetransfer need ownedrecipe before60s. No solver active,
+no old native/tests/render/research repeats. See docs/benchmarks/URMI_MC_DAMAGE40.md.
+[[unnotched-mc-gravity]], [[urmi-legacy-comparison]].

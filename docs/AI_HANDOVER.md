@@ -1,5 +1,32 @@
 # AI Engineering Handover — CL-MPM
 
+## ACTIVE27October: human selects Urmi-like soil MC, slope40, strength damage
+
+Latest user: retain soil MC and develop damage; model likeUrmi;40deg/longer
+run/token economy;27October sayscontinue. Work branch
+`codex/urmi-mc-damage-slope40` fromc2cd4069. Read
+[current scope](benchmarks/URMI_MC_DAMAGE40.md) and
+research/notes/urmi-mc-damage40-2026-10-26/constitutive-plan.md.
+No solver active. New optional material/point controls are source preparation,
+NOT_RUN; old complete result below stays closed and is not this experiment.
+
+Joss was only a provisional assumption. Human explicitly rejects that material;
+prototype branchcodex/slope40-damage retained/pushedb36e79f1. Its3tiny native
+groups ran, but4s smoke001 failed wrapper identity before native launch;
+UTC-ticks wrapper repair retained. No4s/full Joss run. Do not launch Joss.
+
+Urmi primary Eq2 is not old generalized c/phi function. New declared C0
+strength-damage adaptation uses S1 undrainedphi0/Tresca, sup40.5/suR3.8475/
+sur1kPa,G4.05MPa, beta105 at h.5; D_s=1-su/sup, elasticstiffnessunchanged.
+Normalized curve in postpeakTOTAL DSSincrement then unloading correction
+q=s+(sup-c)/G and κ=q/sqrt3. Root+independent mathreview acceptlocalmapping,
+withfiniteJ/edge limits; no exactpaper/calibration claim. Directplasticcurve
+and singularpeakconnector rejected. Tableerror<=101.25Pa/64segments.
+FIRST frozenpoint/ownership/currentJ/edgecontrols must precede stage-transfer
+and boundedMPM/VTKaudit before60s. Stable drainedelastoplastic initialization
+and stress/history/cache transfer remain separate unresolved recipe contracts.
+No clamps/rootpreference/tolerance/strength tuning; no old native/test repeats.
+
 26October human mesh/crack follow-up: descriptive saved-data query only finds
 first saved positive kappa at0.7s, max2.1341e-5 near y0.374846m; lower-body
 plasticity is almost invisible on the fixed full-run scale about0.966. See
