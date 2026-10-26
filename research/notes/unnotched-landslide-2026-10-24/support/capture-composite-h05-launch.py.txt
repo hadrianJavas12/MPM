@@ -1,87 +1,347 @@
-"""SOURCE-ONLY checkpoint: h0.5 composite launch glue, NOT_READY / NOT_RUN.
+"""SOURCE ONLY / NOT_RUN: h0.5 launch preparation and stored-proof collection.
 
-Copy the archived .py.txt back to D:/MPM/.tmp before continuing this draft.
-ROOT relies on this helper being directly inside the workspace .tmp folder.
-This file intentionally refuses preparation/capture until the remaining TODOs
-are implemented and reviewed after the native and saved-binding gates close.
-It never launches a solver, queries processes, changes automation or runs tests.
+ROOT requires this helper directly in D:/MPM/.tmp. Neither mode launches,
+runs tests, queries processes, audits saved states or changes automation.
+Root reviews/commits source and selects any later operation. The historical
+h1 helper supplies pure utilities only; its prepare/capture modes never run.
 """
-from pathlib import Path
+from datetime import datetime, timezone
 import argparse
 import importlib.util
+import json
+from pathlib import Path
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
+SUPPORT = ROOT / "research/notes/unnotched-landslide-2026-10-24/support"
 RAW = ROOT / "output/mc-composite-apex-2026-10-26"
 NAME = "srf1p6-composite-h05-001"
 RUN = RAW / NAME
 STAGE = RAW / (NAME + "-launch-preparation")
 PACKET = ROOT / "docs/evidence/unnotched-gravity-2026-10-26" / (NAME + "-launch")
-CASE_NAME = "gravity-slope-mc-composite-apex-srf-1p6-h05.lisp"
-CASE = ROOT / "cases/benchmarks" / CASE_NAME
+CASE = ROOT / "cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6-h05.lisp"
 CONTRACT = ROOT / "research/references/unnotched-mc-ssr/composite-apex-srf1p6-h05-contract.json"
+PAIR_CONTRACT = CONTRACT.with_name("composite-apex-refinement-contract.json")
 BASE_HELPER = ROOT / ".tmp/capture-gravity-composite-apex-launch.py"
 NATIVE_GATE = RAW / "fine-controls-001"
-GATE_CASE = NATIVE_GATE / "source/inputs/cases/benchmarks" / CASE_NAME
+NATIVE_INDEX = ROOT / "docs/evidence/mc-composite-apex-2026-10-26/fine-native-controls-001/artifact-index.json"
+BINDING_INDEX = NATIVE_INDEX.parent.with_name("fine-binding-controls-001") / "artifact-index.json"
 COARSE = RAW / "srf1p6-composite-001"
 MAX_WALL_HOURS = 3
-EXPECTED_GROUPS = {
-    "mesh-only-actual-variant-input", "fine-grid-mass-geometry-and-bc",
-    "two-fine-usf-updates", "fine-saved-variant-output-and-read-only",
+VARIANT = "perfect-mc-composite-apex"
+PARTICLE_CLASS = "CL-MPM/MODELS/MC-COMPOSITE-APEX:PARTICLE-MC-COMPOSITE-APEX"
+EXPECTED_GROUPS = {"mesh-only-actual-variant-input", "fine-grid-mass-geometry-and-bc",
+                   "two-fine-usf-updates", "fine-saved-variant-output-and-read-only"}
+EXPECTED_GATE = dict(physicalUpdatesExecuted=2, materialCallsAttempted=7040,
+    materialCallsAccepted=7040, standaloneConstitutiveCallsAttempted=0,
+    standaloneConstitutiveCallsAccepted=0)
+EXPECTED_OBSERVATIONS = dict(fineParticleCount=3520, coarseParticleCount=880,
+    fineMeshM=0.5, coarseMeshM=1, onlyConfigDifference="meshSize",
+    savedVtkStates=3, savedParticleRows=10560, apexActivationRequired=False)
+GATE_INPUTS = {
+    "source/inputs/" + CASE.relative_to(ROOT).as_posix(): CASE,
+    "source/inputs/cases/benchmarks/gravity-slope-mc-composite-apex-srf-1p6.lisp":
+        CASE.with_name("gravity-slope-mc-composite-apex-srf-1p6.lisp"),
+    "source/inputs/" + CONTRACT.relative_to(ROOT).as_posix(): CONTRACT,
 }
-EXPECTED_GATE = {
-    "physicalUpdatesExecuted": 2,
-    "materialCallsAttempted": 7040,
-    "materialCallsAccepted": 7040,
-    "standaloneConstitutiveCallsAttempted": 0,
-    "standaloneConstitutiveCallsAccepted": 0,
+FROZEN_ANALYSIS = ("scripts/review-gravity-composite-apex.py", "scripts/review-gravity-slope.py",
+    "scripts/plot_m5_cliff_comparison.py", "scripts/review-gravity-composite-refinement.py")
+SHARED_ARCHIVES = {
+    "capture-composite-apex-launch-shared.py.txt": BASE_HELPER,
+    "capture-copy-hash-zip-shared.py.txt": ROOT / ".tmp/pack-gravity-completed-002.py",
+    "capture-exact-clock-reference.ps1.txt": ROOT / ".tmp/capture-gravity-srf1p6-processes.ps1",
+    "capture-composite-h05-launch.py.txt": Path(__file__),
 }
-EXPECTED_OBSERVATIONS = {
-    "fineParticleCount": 3520, "savedVtkStates": 3, "savedParticleRows": 10560,
-}
-FROZEN_ANALYSIS = (
-    "scripts/review-gravity-composite-apex.py",
-    "scripts/review-gravity-slope.py",
-    "scripts/plot_m5_cliff_comparison.py",
-)
 
 
 def base_definitions():
-    """Reuse pure copy/hash/text-binding/clock-source functions; no old main."""
     spec = importlib.util.spec_from_file_location("_h05_launch_shared", BASE_HELPER)
     base = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(base)
-    # Only reused pure helpers observe these new-run values. Do NOT call the old
-    # prepare/capture: they require h1/880MP/1760calls/one-hour constants.
-    for key, value in {"NAME": NAME, "RUN": RUN, "STAGE": STAGE,
-                       "PACKET": PACKET, "CASE": CASE, "CONTRACT": CONTRACT}.items():
+    for key, value in dict(NAME=NAME, RUN=RUN, STAGE=STAGE, PACKET=PACKET,
+                           CASE=CASE, CONTRACT=CONTRACT).items():
         setattr(base, key, value)
     return base
 
 
-# TODO after reset, before any prepare/capture authorization:
-# 1. Accept native/saved gate paths and committed gate artifact-index. Require
-#    actual PASS groups/counters above, exact GATE_CASE bytes and saved-binding
-#    closure; the gate has NOT RUN at this checkpoint.
-# 2. Derive full config from the actual tiny manifest: restore duration6/ramp2/
-#    frames61/maxUpdates60000 only. Compare with completed coarse config using
-#    identical keysets and values except declared meshSize1 -> .5. No numerical
-#    parameter, material/variant/class, SRF, damping, BC or loading override.
-# 3. Freeze case/contract and FROZEN_ANALYSIS plus exact shared/new helpers and
-#    generated exact-clock PowerShell BEFORE launch. Preserve Git-proven CRLF/
-#    LF text binding; raw executed bytes are authoritative. If the separately
-#    planned common-observer is ready, bind its contract and source explicitly;
-#    do not claim its tests or results exist while they remain pending.
-# 4. Only after root-authorized launch and ONE generated live query, capture
-#    stored status/worker identities with original Process-vs-CIM clocks and
-#    parent chain. Check the exact 10800s deadline and prepared source checkpoint.
-# 5. Verify every actual frozen source and mapped DLL, compare numerical-member
-#    sets/hashes to executed fine gate and unchanged coarse model/solver, allow
-#    only selected case/input differences. Do not hardcode an unseen file count.
-# 6. Fresh launch packet: one COMPLETE source ZIP, metadata-only indexes named
-#    explicitly, byte/CRC proof and * -text artifact index. No staging/verifier,
-#    process re-query, saved-state audit, renderer or native invocation here.
-# Quiet15min monitor while active is root-owned; wrapper has no automatic audit.
-# This is one coupled space/time resolution study, not convergence/slide proof.
+def same_bytes(left, right, require):
+    require(left.read_bytes() == right.read_bytes(), f"Bytes differ: {left} / {right}")
+
+
+def committed_index(path, commit, base, h):
+    path = path.resolve()
+    base.require(path.is_relative_to((ROOT / "docs/evidence").resolve()), "Gate index outside evidence")
+    rows = h.read_json(path)["artifacts"]
+    base.require(len({r["path"] for r in rows}) == len(rows) > 0, "Empty/duplicate gate index")
+    base.verify_index(path, h)
+    for source in [path] + [(path.parent / r["path"]).resolve() for r in rows]:
+        base.require(base.git("show", commit + ":" + source.relative_to(ROOT).as_posix()) == source.read_bytes(),
+                     "Gate artifact is not committed as exact bytes: " + str(source))
+    return path
+
+
+def load_reviewer(path):
+    spec = importlib.util.spec_from_file_location("_h05_source_metadata_only", path)
+    reviewer = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(reviewer)
+    return reviewer
+
+
+def frozen_sources(run, reviewer, h, require):
+    proof = reviewer.verify_native_sources(run)  # Metadata only; no saved-state audit.
+    files = h.read_json(run / "source/source-manifest.json")["files"]
+    rows = {r["path"]: r for r in files}
+    require(len(rows) == len(files) > 0, "Duplicate/empty actual source manifest")
+    return rows, proof
+
+
+def matching_members(left, right, require, *, right_only=()):
+    """Exact declared set delta; no unseen source count is assumed."""
+    require(set(right_only) <= set(right)
+            and set(left) == set(right) - set(right_only), "Unexpected source member-set delta")
+    changed = {"source/case.lisp", "source/config/git-commit-version.txt"}
+    for key in set(left) - changed:
+        require((left[key]["bytes"], left[key]["sha256"]) == (right[key]["bytes"], right[key]["sha256"]),
+                "Frozen shared source/input changed: " + key)
+    return len(set(left) - changed)
+
+
+def gate_profile(args, commit, base, h, reviewer):
+    require = base.require
+    gate = args.native_gate.resolve()
+    require(gate == NATIVE_GATE.resolve(), "This finite profile binds fine-controls-001 only")
+    native_index = committed_index(args.gate_index, commit, base, h)
+    binding_index = committed_index(args.binding_index, commit, base, h)
+    require(native_index == NATIVE_INDEX.resolve() and binding_index == BINDING_INDEX.resolve(),
+            "Wrong preregistered native/binding evidence packets")
+    packet, binding = native_index.parent, binding_index.parent
+    result = h.read_json(gate / "result.json")
+    require(result.get("passed") is True and result.get("failure") is None
+            and set(result["passedGroups"]) == set(result["selectedGroups"]) == EXPECTED_GROUPS
+            and len(result["passedGroups"]) == len(result["selectedGroups"]) == len(EXPECTED_GROUPS),
+            "Fine native groups incomplete")
+    require(all(result.get(k) == v for k, v in EXPECTED_GATE.items()), "Actual update/call counters differ")
+    observed = result["observations"]
+    require(all(observed.get(k) == v for k, v in EXPECTED_OBSERVATIONS.items()), "Saved observations differ")
+    require(Path(observed["observationsDirectory"]).resolve() == (gate / "observations").resolve(),
+            "Result refers to other observations")
+    require(h.read_json(packet / "fine-controls-001.exit.json")["exitCode"] == 0, "Native exit not zero")
+    for name in ("result.json", "source-proof-before.json", "source-proof-after.json", "source-provenance.json"):
+        same_bytes(gate / name, packet / name, require)
+    rows, proof = frozen_sources(gate, reviewer, h, require)
+    wanted = {k: v["sha256"] for k, v in rows.items()}
+    for phase in ("before", "after"):
+        recorded = h.read_json(gate / f"source-proof-{phase}.json")["files"]
+        require(len(recorded) == len(rows) and {r["path"]: r["sha256"] for r in recorded} == wanted,
+                "Before/after source proof differs")
+    require(result["nativeBackend"] == proof["nativeBackend"], "Result mapped DLL differs")
+    with zipfile.ZipFile(packet / "native-source-and-saved-output.zip") as archive:
+        for relative in ["source/source-manifest.json"] + list(rows):
+            require(archive.read(relative) == (gate / relative).read_bytes(), "Gate archive differs: " + relative)
+    for relative, current in GATE_INPUTS.items():
+        require(relative in rows, "Executed gate input missing: " + relative)
+        same_bytes(current, gate / relative, require)
+    binding_exit = h.read_json(binding / "exit.json")
+    require(binding_exit["exitCode"] == 0 and binding_exit["sourceBeforeAfterMatch"] is True,
+            "Python saved-binding controls did not pass unchanged")
+    before = h.read_json(binding / "source-before.json")
+    require(before == h.read_json(binding / "source-after.json") and len(before) == 2
+            and {r["path"] for r in before} == {"scripts/review-gravity-composite-refinement.py",
+                "tests/analysis/test_gravity_composite_refinement.py"}, "Wrong Python binding sources")
+    for row in before:
+        for source in (binding / "source" / row["path"], ROOT / row["path"]):
+            actual = h.record(source)
+            require((actual["bytes"], actual["sha256"]) == (row["bytes"], row["sha256"]), "Tested source changed")
+    log = (binding / "test.log").read_text(encoding="utf-8-sig")
+    require("Ran 6 tests in " in log and log.rstrip().endswith("OK") and log.count(" ... ok") == 6,
+            "Actual six-control success log missing")
+    tiny = h.read_json(gate / "observations/manifest.json")
+    require(tiny["particleCount"] == 3520 and tiny["complete"] is True and tiny["updates"] == 2
+            and tiny["savedFrames"] == 3, "Tiny observation manifest differs")
+    config = tiny["config"]
+    require({k: config[k] for k in ("duration", "gravityRampDuration", "frames", "maxUpdates")}
+            == dict(duration=2e-5, gravityRampDuration=1e-5, frames=3, maxUpdates=2), "Unexpected tiny overrides")
+    contract, pair = h.read_json(CONTRACT), h.read_json(PAIR_CONTRACT)
+    expected = dict(config, duration=contract["numerics"]["durationS"],
+        gravityRampDuration=contract["gravity"]["rampDurationS"], frames=contract["numerics"]["frames"],
+        maxUpdates=contract["numerics"]["maxUpdates"])
+    require(expected["duration"] == 6 and expected["gravityRampDuration"] == 2
+            and expected["frames"] == 61 and expected["maxUpdates"] == 60000
+            and expected["meshSize"] == 0.5 and expected["strengthReductionFactor"] == 1.6
+            and contract["expectedParticleCount"] == 3520 and pair["runtime"]["wallBudgetHours"] == MAX_WALL_HOURS,
+            "Unexpected full fine profile")
+    for record in (tiny, config):
+        require(record["materialVariant"] == VARIANT and record["materialClass"] == PARTICLE_CLASS,
+                "Wrong actual material class/variant")
+        require(all(record[k] == contract["variantMetadata"][k] for k in contract["variantMetadata"]),
+                "Variant convention differs")
+    coarse = h.read_json(COARSE / "manifest.json")
+    require(coarse["complete"] is True and coarse["timeS"] == 6 and coarse["savedFrames"] == 61
+            and coarse["particleCount"] == 880, "Wrong completed coarse reference")
+    require(set(coarse["config"]) == set(expected)
+            and {k for k in expected if coarse["config"][k] != expected[k]} == {"meshSize"}
+            and coarse["config"]["meshSize"] == 1, "Full configs differ beyond meshSize1->0.5")
+    coarse_rows, _ = frozen_sources(COARSE, reviewer, h, require)
+    matching_members(coarse_rows, rows, require, right_only=GATE_INPUTS)
+    for key, row in rows.items():
+        if base.numerical_member(key):
+            actual = h.record(Path(row["originalPath"]))
+            require((actual["bytes"], actual["sha256"]) == (row["bytes"], row["sha256"]),
+                    "Workspace numerical source changed since gate: " + key)
+    return expected, {"nativeGate": str(gate), "nativeSourceCommit":
+        h.read_json(packet / "fine-controls-001.command.json")["sourceCommit"],
+        "nativeSourceFiles": len(rows), "nativeRuntimeProof": proof,
+        "nativeGateArtifactIndex": h.record(native_index), "bindingGateArtifactIndex": h.record(binding_index),
+        "actualNativeCounters": EXPECTED_GATE, "actualObservations": observed,
+        "pythonBindingControls": 6, "coarseReference": str(COARSE),
+        "onlyFullConfigurationDelta": "meshSize1m->0.5m", "expectedSourceMemberDelta": list(GATE_INPUTS)}
+
+
+def prepare(args, base, h):
+    require = base.require
+    require(args.checkpoint, "Preparation needs explicit --checkpoint COMMIT reviewed by root")
+    commit = base.git("rev-parse", args.checkpoint + "^{commit}").decode().strip()
+    require(base.git("rev-parse", "HEAD").decode().strip() == commit, "HEAD differs from reviewed checkpoint")
+    branch = base.git("branch", "--show-current").decode().strip()
+    require(branch == "codex/unnotched-mc-composite-apex", "Wrong experiment branch")
+    require(not RUN.exists() and not STAGE.exists() and not PACKET.exists()
+            and not Path(str(RUN) + "-launch.json").exists(), "Preparation must be fresh and before launch")
+    for archive, original in SHARED_ARCHIVES.items():
+        same_bytes(original, SUPPORT / archive, require)
+    expected, profile = gate_profile(args, commit, base, h, load_reviewer(ROOT / FROZEN_ANALYSIS[0]))
+    files = [(CASE, "case.lisp"), (CONTRACT, "protocol/" + CONTRACT.name),
+             (PAIR_CONTRACT, "protocol/" + PAIR_CONTRACT.name)]
+    files += [(ROOT / name, "analysis/" + Path(name).name) for name in FROZEN_ANALYSIS]
+    files += [(ROOT / "tests/analysis/test_gravity_composite_refinement.py", "analysis/test_gravity_composite_refinement.py")]
+    files += [(SUPPORT / name, "helper-source-checkpoint/" + name) for name in SHARED_ARCHIVES]
+    bindings = [base.checkpoint_text_binding(source, commit, h) for source, _ in files]
+    STAGE.mkdir(parents=True)
+    records = []
+    support = [(Path(__file__), "capture-helper.py"), (BASE_HELPER, "shared-launch-helpers.py"),
+               (base.HELPER, "copy-hash-zip-helpers.py"),
+               (base.CAPTURE_REFERENCE, "proof-support/reference-exact-clock-helper.ps1")]
+    for source, relative in files + support:
+        target = STAGE / relative
+        h.copy(source, target)
+        records.append({**h.record(target, STAGE), "originalPath": str(source)})
+    proof = STAGE / "proof-support/capture-processes.ps1"
+    proof.write_text(base.process_source(), encoding="utf-8", newline="\n")
+    records.append({**h.record(proof, STAGE), "originalPath": "Generated before launch; root runs once only"})
+    h.write_json(STAGE / "expected-full-configuration.json", expected)
+    records.append(h.record(STAGE / "expected-full-configuration.json", STAGE))
+    h.write_json(STAGE / "prelaunch-snapshot.json", dict(status="PREPARED_NOT_LAUNCHED",
+        preparedUtc=datetime.now(timezone.utc).isoformat(), sourceCommit=commit, branch=branch,
+        run=str(RUN), case=str(CASE), maxWallHours=MAX_WALL_HOURS, wallBudgetSeconds=10800,
+        budgetScope="Three-hour wall bound; coupled resolution estimate is not an ETA",
+        gateProfile=profile, checkpointTextBindings=bindings, frozenFiles=records,
+        expectedPhysicalDurationS=6, expectedFrames=61, expectedParticles=3520,
+        scope="No launch/tests/native/process query/audit/render. Root owns later launch and one generated proof."))
+    print(json.dumps(dict(stage=str(STAGE), sourceCommit=commit, preparedFiles=len(records),
+                          status="PREPARED_NOT_LAUNCHED"), indent=2))
+
+
+def capture(base, h):
+    require = base.require
+    require(not PACKET.exists(), "Fresh launch packet required; preserve failures")
+    prep = h.read_json(STAGE / "prelaunch-snapshot.json")
+    for original, frozen in ((Path(__file__), "capture-helper.py"), (BASE_HELPER, "shared-launch-helpers.py"),
+                             (base.HELPER, "copy-hash-zip-helpers.py")):
+        same_bytes(original, STAGE / frozen, require)
+    for row in prep["frozenFiles"]:
+        actual = h.record(STAGE / row["path"], STAGE)
+        require((actual["bytes"], actual["sha256"]) == (row["bytes"], row["sha256"]), "Pre-launch bytes changed")
+    status = h.read_json(Path(str(RUN) + "-status.json"))
+    launch = h.read_json(Path(str(RUN) + "-launch.json"))
+    worker = h.read_json(Path(str(RUN) + "-detached/worker-start.json"))
+    live = h.read_json(Path(str(RUN) + "-live-process-verification.json"))
+    require(not Path(str(RUN) + "-live-proof-failure.json").exists(), "Preserve failed first live proof")
+    require(status["sourceCommit"] == launch["sourceCommit"] == live["sourceCommit"] == prep["sourceCommit"],
+            "Launch differs from prepared checkpoint; current HEAD is not launch attribution")
+    require(Path(launch["output"]).resolve() == RUN.resolve() and Path(launch["case"]).resolve() == CASE.resolve()
+            and launch["caseSha256"].lower() == h.record(STAGE / "case.lisp")["sha256"], "Wrong launched output/case")
+    require(launch["maxWallHours"] == prep["maxWallHours"] == MAX_WALL_HOURS
+            and prep["wallBudgetSeconds"] == 10800, "Wrong wall budget")
+    started = datetime.fromisoformat(launch["startedUtc"].replace("Z", "+00:00"))
+    deadline = datetime.fromisoformat(launch["wallDeadlineUtc"].replace("Z", "+00:00"))
+    require((deadline - started).total_seconds() == 10800
+            and started > datetime.fromisoformat(prep["preparedUtc"]), "Wrong deadline/preparation order")
+    roles = {r["role"]: r for r in live["processes"]}
+    require(len(live["processes"]) == len(roles) == 4
+            and set(roles) == {"wrapper", "nativeCommand", "sbcl", "detachedWorker"}, "Incomplete stored role proof")
+    for role in ("wrapper", "nativeCommand", "sbcl"):
+        expected, actual = status["processIdentity"][role], roles[role]
+        require(actual["identityMatched"] is True and actual["creationClock"] == "System.Diagnostics.Process"
+                and actual["pid"] == expected["pid"] and actual["sessionId"] == expected["sessionId"]
+                and actual["creationUtc"] == expected["createdUtc"], "Exact native Process clock differs")
+    detached = roles["detachedWorker"]
+    require(detached["identityMatched"] is True and detached["creationClock"] == "Win32_Process"
+            and detached["pid"] == worker["processId"] and detached["sessionId"] == worker["sessionId"]
+            and detached["creationUtc"] == worker["creationUtc"], "Exact worker CIM clock differs")
+    require(roles["wrapper"]["parentPid"] == detached["pid"]
+            and roles["nativeCommand"]["parentPid"] == roles["wrapper"]["pid"]
+            and roles["sbcl"]["parentPid"] == roles["nativeCommand"]["pid"], "Stored parent chain differs")
+    reviewer = load_reviewer(STAGE / "analysis/review-gravity-composite-apex.py")
+    rows, runtime_proof = frozen_sources(RUN, reviewer, h, require)
+    gate_rows, _ = frozen_sources(Path(prep["gateProfile"]["nativeGate"]), reviewer, h, require)
+    coarse_rows, _ = frozen_sources(COARSE, reviewer, h, require)
+    shared_gate = matching_members(rows, gate_rows, require, right_only=GATE_INPUTS)
+    shared_coarse = matching_members(rows, coarse_rows, require)
+    same_bytes(RUN / "source/case.lisp", STAGE / "case.lisp", require)
+    same_bytes(STAGE / "case.lisp", NATIVE_GATE / next(k for k, v in GATE_INPUTS.items() if v == CASE), require)
+    captured = h.read_json(RUN / "manifest.json")
+    require(captured["config"] == h.read_json(STAGE / "expected-full-configuration.json")
+            and captured["particleCount"] == 3520, "Actual full fine inputs/count differ")
+    require(captured["materialVariant"] == VARIANT and captured["materialClass"] == PARTICLE_CLASS
+            and captured["notchCount"] == captured["driverCount"] == 0
+            and captured["massScale"] == 1 and captured["damping"] == 0, "Wrong material/loading metadata")
+    PACKET.mkdir(parents=True)
+    (PACKET / ".gitattributes").write_bytes(b"* -text\n*.zip binary\n")
+    h.copy(Path(__file__), PACKET / "executed-capture-helper.py")
+    for name, source in h.tree_files(STAGE).items():
+        h.copy(source, PACKET / "prelaunch" / name)
+    for name in ("manifest.json", "source-provenance.json"):
+        h.copy(RUN / name, PACKET / name)
+    h.copy(RUN / "source/source-manifest.json", PACKET / "metadata/native-source-manifest-index.json")
+    members = {r["path"]: RUN / r["path"] for r in rows.values()}
+    members["source/source-manifest.json"] = RUN / "source/source-manifest.json"
+    archive = h.archive("complete-native-source-at-launch", members)
+    for source in sorted(RAW.glob(NAME + "*")):
+        if source.is_file():
+            h.copy(source, PACKET / "runtime" / source.name)
+    for name, source in h.tree_files(Path(str(RUN) + "-detached")).items():
+        h.copy(source, PACKET / "detached" / name)
+    h.write_json(PACKET / "archive-member-verification.json", dict(archives=[archive],
+        nativeSourceEntries=len(rows), allCrcAndDecodedPayloadChecksPassed=True))
+    h.write_json(PACKET / "summary.json", dict(status="LAUNCH_PROOF_ONLY",
+        createdUtc=datetime.now(timezone.utc).isoformat(), nativeSourceCommit=prep["sourceCommit"],
+        actualSourceFiles=len(rows), preparedBeforeLaunch=True, startedUtc=launch["startedUtc"],
+        wallDeadlineUtc=launch["wallDeadlineUtc"], maxWallHours=MAX_WALL_HOURS,
+        actualRuntimeProof=runtime_proof, actualLiveProof=live, sharedMembersMatchingFineGate=shared_gate,
+        sharedMembersMatchingCoarse=shared_coarse, allowedFineGateOnlyInputMembers=list(GATE_INPUTS),
+        fullConfigurationMatchesFineGateExceptFourTinyOverrides=True,
+        fullConfigurationDiffersFromCoarseOnlyMeshSize=True,
+        actualCapturedState={k: captured.get(k) for k in ("status", "phase", "complete", "timeS", "updates", "savedFrames")},
+        landslideVerified=False, scientificallyValidated=False,
+        limits="Timestamp-specific stored proof; non-atomic file moments; no worker survival guarantee. Coupled space/time study, not convergence or landslide evidence.",
+        operations="Read/copy/hash/ZIP only; no launch, process re-query, native/test, saved-state audit or rendering."))
+    (PACKET / "README.md").write_text("# Composite SRF1.6 h0.5: launch proof only\n\n"
+        "Exact committed case/contracts/analysis/helpers were frozen before root-authorized launch. "
+        "Completed fine native and Python binding gates are bound separately to their actual schemas. "
+        "Full configuration restores only duration/ramp/frames/cap from the tiny gate and differs from coarse "
+        "only by meshSize1->0.5. Actual source member sets and mapped DLL are checked; no count is assumed. "
+        "One complete source ZIP carries all payloads; native-source-manifest-index.json is metadata only. "
+        "Git line-ending identity and raw runtime bytes remain separately recorded.\n\n"
+        "Process identities use native Process clocks and worker CIM clock without mixing them. "
+        "Stored proof is one observation, not a present process/survival guarantee. "
+        "Three-hour wall deadline is a bound, not an ETA. No completed run, saved-state audit, comparison, "
+        "convergence or landslide/scientific validation is claimed.\n", encoding="utf-8", newline="\n")
+    artifacts = [h.record(p, PACKET) for p in sorted(PACKET.rglob("*")) if p.is_file()]
+    h.write_json(PACKET / "artifact-index.json", dict(schema="cl-mpm.evidence.artifact-index.v1",
+        artifacts=artifacts, note="Index excludes itself; source index is metadata, verified ZIP is complete payload."))
+    for row in artifacts:
+        require(h.record(PACKET / row["path"], PACKET) == row, "Final indexed bytes changed")
+    print(json.dumps(dict(packet=str(PACKET), indexedArtifacts=len(artifacts), sourceFilesVerified=len(rows),
+        zipMembers=archive["decodedMembers"], status="LAUNCH_PROOF_ONLY", processesRequeriedByPython=False), indent=2))
 
 
 def main():
@@ -89,11 +349,17 @@ def main():
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--prepare", action="store_true")
     mode.add_argument("--capture", action="store_true")
-    parser.add_argument("--gate-index", type=Path)
+    parser.add_argument("--checkpoint", help="Explicit reviewed committed checkpoint; required for prepare")
+    parser.add_argument("--gate-index", type=Path, default=NATIVE_INDEX)
+    parser.add_argument("--binding-index", type=Path, default=BINDING_INDEX)
     parser.add_argument("--native-gate", type=Path, default=NATIVE_GATE)
-    parser.add_argument("--saved-gate", type=Path)
-    parser.parse_args()
-    raise NotImplementedError("NOT_READY / NOT_RUN: source checkpoint only; finish and review the numbered TODOs after gates close. No preparation or capture performed.")
+    args = parser.parse_args()
+    base = base_definitions()
+    h = base.helpers()
+    if args.prepare:
+        prepare(args, base, h)
+    else:
+        capture(base, h)
 
 
 if __name__ == "__main__":
