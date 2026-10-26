@@ -1,0 +1,205 @@
+;;;; ONE SYNTHETIC roundoff witness. Not an actual failed-trial replay; zero MPM.
+;;;; windows\cl-mpm.cmd tests\materials\mc-composite-apex-roundoff-witness.lisp output\FRESH
+(in-package :cl-user)
+(require :asdf)
+(setf *read-default-float-format* 'double-float)
+(defvar *rw-frozen* nil) (defvar *rw-output* nil) (defvar *rw-exit* 1)
+(unless *rw-frozen*
+  (load (cl-mpm-path "scripts/lisp/native-source-snapshot.lisp"))
+  (let ((directory (uiop:ensure-directory-pathname
+                    (merge-pathnames (or (first (cl-mpm-script-args)) (error "Fresh output required."))))))
+    (when (and (probe-file directory) (or (uiop:directory-files directory) (uiop:subdirectories directory)))
+      (error "Preserve existing witness output."))
+    (snapshot-require-fresh-runtime)
+    (multiple-value-bind (copied records) (snapshot-case-sources directory *load-truename*)
+      (dolist (fixture
+                '(("tests/materials/mc-composite-apex-roundoff-witness.protocol.json"
+                   "source/inputs/protocol.json" nil)
+                  ("output/mc-composite-apex-2026-10-26/srf1p6-composite-h05-001/source/materials/models/plastic/mc-composite-apex/projection.lisp"
+                   "source/inputs/failed-optional-projector.lisp"
+                   "0468832da6087b854563cacebdb61b2581ae224f627ccc8cd7fe69ba2e7c0d86")
+                  ("output/mc-composite-apex-2026-10-26/srf1p6-composite-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp"
+                   "source/inputs/failed-shared-projector.lisp"
+                   "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1")))
+        (destructuring-bind (relative destination expected) fixture
+          (let* ((from (cl-mpm-path relative)) (to (merge-pathnames destination directory))
+                 (bytes (case-source-bytes from)) (sha (snapshot-sha256-bytes bytes)))
+            (when expected (assert (string= expected sha)))
+            (ensure-directories-exist to) (uiop:copy-file from to)
+            (assert (equalp bytes (case-source-bytes to)))
+            (push to copied)
+            (push (snapshot-object "path" destination "originalPath" (namestring (truename from))
+                                   "bytes" (length bytes) "sha256" sha) records))))
+      ;; Failed sources remain DATA. The current, called projectors must match.
+      (dolist (binding '(("source/materials/models/plastic/mc-composite-apex/projection.lisp"
+                          "source/inputs/failed-optional-projector.lisp")
+                         ("source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp"
+                          "source/inputs/failed-shared-projector.lisp")))
+        (assert (equalp (case-source-bytes (merge-pathnames (first binding) directory))
+                        (case-source-bytes (merge-pathnames (second binding) directory)))))
+      (snapshot-write-json (merge-pathnames "source/source-manifest.json" directory)
+        (snapshot-object "scope" "One synthetic witness/protocol, unchanged projectors and native payload frozen before project load; failed projector copies are data only"
+                         "files" (coerce records 'vector)))
+      (let ((*native-snapshot-context* (snapshot-register-native directory records))
+            (*rw-frozen* t) (*rw-output* directory))
+        (snapshot-check-plan "cl-mpm/settings") (ql:quickload :cl-mpm/settings :silent t)
+        (setf (symbol-value (find-symbol "*OPTIMISE-SETTING*" "CL-MPM/SETTINGS"))
+              '(optimize (speed 3) (safety 1) (debug 1) (compilation-speed 0)))
+        (dolist (system '("yason" "cl-mpm" "cl-mpm/models/mc-composite-apex"))
+          (snapshot-check-plan system) (ql:quickload system :silent t))
+        (write-case-source-provenance directory copied nil)
+        (rename-file (merge-pathnames "source-provenance.json" directory)
+                     (merge-pathnames "source-provenance-before.json" directory))
+        (flet ((proof (name)
+                 (snapshot-write-json (merge-pathnames name directory)
+                   (snapshot-object "files" (coerce (mapcar (lambda (path)
+                     (snapshot-object "path" (enough-namestring path directory)
+                                      "sha256" (snapshot-sha256 path))) copied) 'vector)))))
+          (proof "source-proof-before.json")
+          (snapshot-verify-file (merge-pathnames "source/case.lisp" directory))
+          (load (merge-pathnames "source/case.lisp" directory))
+          (dolist (path copied) (snapshot-verify-file path))
+          (write-case-source-provenance directory copied nil)
+          (proof "source-proof-after.json")))))
+  (uiop:quit *rw-exit*))
+
+(defpackage :cl-mpm/tests/composite-apex-roundoff (:use :cl)
+  (:local-nicknames (:mc :cl-mpm/models/mc-evolution) (:ap :cl-mpm/models/mc-composite-apex)))
+(in-package :cl-mpm/tests/composite-apex-roundoff)
+(defvar *calls* 0) (defvar *updates* 0) (defvar *failure* nil)
+(defvar *observations* (make-hash-table :test #'equal))
+(defun obj (&rest pairs) (apply #'cl-user::snapshot-object pairs))
+(defun yes (value) (if value t 'yason:false))
+(defun dot3 (a b) (loop for i below 3 sum (* (aref a i) (aref b i))))
+(defun maxabs (v) (loop for x across v maximize (abs x)))
+(defun difference (a b) (map 'vector #'- a b))
+(defun exact-string (value) (princ-to-string value))
+
+(defun exact-witness (trial mean p g k)
+  "Independent rational algebra, on exact values of supplied binary64 constants."
+  (let* ((rt (map 'vector #'rational trial)) (rp (rational p))
+         (rg (rational g)) (rk (rational k)) (rm (/ (reduce #'+ rt) 3))
+         (d (map 'vector (lambda (x) (/ (- x rm) (* 2 rg))) rt))
+         (q (/ (- rm rp) rk)) (b (map 'vector (lambda (x) (+ x (/ q 3))) d))
+         (trace (reduce #'+ b))
+         (returned (map 'vector (lambda (x y) (- x (* 2 rg y) (* (- rk (/ (* 2 rg) 3)) trace))) rt b))
+         (work (* rp trace)) (release (+ (* rg (dot3 d d)) (* rp q) (* 1/2 rk q q)))
+         (checks (list (= (reduce #'+ d) 0) (= trace q)
+                       (every (lambda (x) (= x rp)) returned) (= work (* rp q))
+                       (>= (- release work) 0))))
+    (setf (gethash "exactRationalWitness" *observations*)
+      (obj "scope" "Exact rational identities using evaluated binary64 cap/G/K; transcendental rounding is outside this witness"
+           "checks" (map 'vector #'yes checks) "allIdentitiesHold" (yes (every #'identity checks))
+           "sumDeviatorExact" (exact-string (reduce #'+ d))
+           "volumeResidualExact" (exact-string (- trace q))
+           "workResidualExact" (exact-string (- work (* rp q)))
+           "energyMarginExact" (exact-string (- release work))
+           "exactMeanMinusFloatingMeanPa" (exact-string (- rm (rational mean)))
+           "predictedMeanRoundingWorkErrorPa" (exact-string (* rp (/ (* 3 (- rm (rational mean))) (* 2 rg))))))
+    (assert (every #'identity checks))))
+
+(defun floating-checks (trial c phi j old e nu)
+  "Reconstruct original floating expressions for named diagnostics, never acceptance."
+  (let* ((g (/ e (* 2d0 (+ 1d0 nu)))) (k (/ e (* 3d0 (- 1d0 (* 2d0 nu)))))
+         (mean (/ (reduce #'+ trial) 3d0)) (p (/ (* j c (cos phi)) (sin phi)))
+         (tol (+ mc::+stress-atol+ (* mc::+stress-rtol+ (max 1d0 (maxabs trial)))))
+         (d (map 'vector (lambda (x) (/ (- x mean) (* 2d0 g))) trial))
+         (q (/ (- mean p) k)) (b (map 'vector (lambda (x) (+ x (/ q 3d0))) d))
+         (tau (make-array 3 :initial-element p))
+         (multipliers (ap::%nonnegative-shear-representation d))
+         (flow (make-array 3 :initial-element 0d0))
+         (returned (map 'vector #'- trial (mc::d-times b g k)))
+         (offset (* 2d0 j c (cos phi)))
+         (residuals (map 'vector (lambda (normal) (- (dot3 normal tau) offset)) (mc::plane-vectors phi)))
+         (work (dot3 tau b)) (wtol (* tol (max 1d-12 (maxabs b))))
+         (release (+ (* g (dot3 d d)) (* p q) (* .5d0 k q q)))
+         (candidate (ap::%make-apex-projection
+                     :tau tau :plastic-increment b :kappa (+ old (mc::plastic-kappa-increment b))
+                     :cohesion c :phi phi :psi 0d0 :residuals residuals :max-residual (reduce #'max residuals)
+                     :work work :active '(0 1 2 3 4 5) :multipliers multipliers :iterations 1
+                     :branch :hydrostatic-apex :apex-multiplier q)))
+    (loop for (i axis) in mc:+plane-pairs+ for value across multipliers do
+      (incf (aref flow i) value) (decf (aref flow axis) value))
+    (let* ((shear-error (* 2d0 g (maxabs (difference flow d))))
+           (compliance-error (maxabs (difference returned tau)))
+           (volume-error (* k (abs (- (reduce #'+ b) q))))
+           (work-error (- work (* p q))) (energy-margin (- release work))
+           (checks (list (cons "admissible-candidate" (mc::admissible-candidate-p candidate 0d0 tol))
+                         (cons "nonnegative-multipliers" (every (lambda (x) (>= x 0d0)) multipliers))
+                         (cons "shear-flow" (<= shear-error tol))
+                         (cons "compliance" (<= compliance-error tol))
+                         (cons "plastic-volume" (<= volume-error tol))
+                         (cons "work-identity" (<= (abs work-error) wtol))
+                         (cons "finite-energy" (mc::finite-real-p release))
+                         (cons "energy-inequality" (>= energy-margin (- wtol))))))
+      (setf (gethash "floatingGuardReconstruction" *observations*)
+        (obj "checks" (map 'vector (lambda (row) (obj "name" (car row) "passed" (yes (cdr row)))) checks)
+             "meanPa" mean "capPa" p "shearPa" g "bulkPa" k "stressTolerancePa" tol
+             "deviator" d "sumDeviator" (reduce #'+ d) "plastic" b "apexMultiplier" q
+             "shearMultipliers" multipliers "returnedKirchhoffPa" returned "yieldResidualsPa" residuals
+             "shearErrorPa" shear-error "complianceErrorPa" compliance-error "volumeErrorPa" volume-error
+             "workPa" work "workIdentityResidualPa" work-error "workTolerancePa" wtol
+             "energyReleasePa" release "energyMarginPa" energy-margin))
+      (exact-witness trial mean p g k)
+      (assert (> (- mean p) (/ tol (* 2d0 (sin phi)))))
+      (assert (equal (loop for (name . passed) in checks unless passed collect name) '("work-identity"))))))
+
+(defun run-witness ()
+  (let* ((protocol (with-open-file (stream (merge-pathnames "source/inputs/protocol.json" cl-user::*rw-output*))
+                     (yason:parse stream :object-as :hash-table :json-arrays-as-vectors t)))
+         (e (float (gethash "youngsModulusPa" protocol) 1d0)) (nu (gethash "poissonRatio" protocol))
+         (j (float (gethash "deformationJacobian" protocol) 1d0)) (old (gethash "oldKappa" protocol))
+         (c (float (gethash "cohesionPa" protocol) 1d0))
+         (phi-deg (* (/ 180d0 pi) (atan (/ (tan (* (gethash "unreducedFrictionDegrees" protocol) (/ pi 180d0)))
+                                                          (gethash "strengthReduction" protocol)))))
+         (law (mc:make-evolution-law :variant :perfect :points (list (list 0d0 phi-deg))
+                                    :cohesion c :psi 0d0 :stress-measure :cauchy
+                                    :strain-assumption "SYNTHETIC roundoff witness; actual failed fine-run trial is unavailable"))
+         (phi (nth-value 1 (mc:law-values law 0d0))) (p (/ (* j c (cos phi)) (sin phi)))
+         (start (+ p (gethash "meanExcessPa" protocol)))
+         (significand (nth-value 0 (integer-decode-float start)))
+         (exponent (nth-value 1 (integer-decode-float start)))
+         (centre (scale-float (float (+ significand (mod (- 2 significand) 4)) 1d0) exponent))
+         (ulp (scale-float 1d0 exponent)) (h (scale-float 1d0 (gethash "deviatorPowerOfTwo" protocol)))
+         (trial (vector (+ centre h) centre (+ (- centre h) ulp))) (before (copy-seq trial))
+         (condition nil) (accepted nil))
+    (setf (gethash "protocol" *observations*) protocol
+          (gethash "fixture" *observations*)
+          (obj "label" "SYNTHETIC; never an actual failed-trial replay" "trialKirchhoffPa" (copy-seq trial)
+               "centrePa" centre "ulpPa" ulp "deviatorOffsetPa" h "capPa" p "oldKappa" old))
+    ;; The one actual production call precedes diagnostic assertions; retain any outcome.
+    (handler-case (progn (incf *calls*)
+                        (ap:project-principal-with-apex trial e nu j law old) (setf accepted t))
+      (mc:material-integration-error (error) (setf condition error)))
+    (setf (gethash "productionOutcome" *observations*)
+      (obj "accepted" (yes accepted) "materialError" (yes condition)
+           "reason" (and condition (mc:integration-error-reason condition))
+           "details" (and condition (princ-to-string (mc:integration-error-details condition)))
+           "diagnosticPresent" (yes (and condition (mc:integration-error-diagnostic condition)))))
+    (assert (and (= (float-digits centre) 53) (= exponent -38)))
+    (assert (and (= e 1d8) (= nu .3d0) (= j 1d0) (= old .8d0) (= c 6250d0)))
+    (assert (= (- (rational (/ (reduce #'+ trial) 3d0)) (rational centre)) (rational ulp)))
+    (assert (equalp before trial))
+    (floating-checks trial c phi j old e nu)
+    (assert (and (= *calls* 1) condition (not accepted)
+                 (string= (mc:integration-error-reason condition) (gethash "expectedFailureReason" protocol))))))
+
+(let ((original (symbol-function 'cl-mpm:update-sim)))
+  (unwind-protect
+       (progn (setf (symbol-function 'cl-mpm:update-sim)
+                    (lambda (&rest arguments) (declare (ignore arguments))
+                      (incf *updates*) (error "Synthetic witness forbids MPM updates.")))
+              (handler-case (run-witness)
+                (error (condition) (setf *failure* (princ-to-string condition)))))
+    (setf (symbol-function 'cl-mpm:update-sim) original)))
+(let ((passed (and (null *failure*) (= *calls* 1) (zerop *updates*))))
+  (with-open-file (stream (merge-pathnames "result.json" cl-user::*rw-output*)
+                          :direction :output :if-exists :error :external-format :utf-8)
+    (yason:encode (obj "passed" (yes passed) "failure" *failure*
+                       "explicitProductionProjectorCalls" *calls* "physicalUpdateAttempts" *updates*
+                       "nativeConstitutiveCalls" 0 "oldControlsCalled" 0 "actualFailedTrialReplayCalls" 0
+                       "nativeBackend" (cl-user::snapshot-native-proof) "observations" *observations*
+                       "scope" "ONE SYNTHETIC arithmetic witness on unchanged optional production projector; actual failed trial unavailable; no MPM or scientific validation") stream))
+  (format t "~&SYNTHETIC roundoff witness: ~A; production calls ~D; MPM attempts ~D~@[; ~A~]~%"
+          (if passed "PASS" "FAIL") *calls* *updates* *failure*)
+  (setf cl-user::*rw-exit* (if passed 0 1)))

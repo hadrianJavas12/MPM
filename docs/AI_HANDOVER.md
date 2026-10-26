@@ -1,5 +1,37 @@
 # AI Engineering Handover — CL-MPM
 
+## Latest26October13:22WIB: h0.5 trial failed; saved review closed
+
+The formerly ACTIVE `srf1p6-composite-h05-001` is now **FAILED_NATIVE/worker1**,
+ended13:06:10WIB. Native source remains `a07eb8f8`. Last save is5.2s/53states/
+3520MPs;13590updates and attempted time5.27147981362577 include later unsaved
+work. Error: `Composite apex compliance, flow, yield or work identity failed NIL`.
+There is no analytic failure capsule: exact failed trial/predicate and whole-MP
+rollback replay are unavailable, not silently reconstructed from saved VTK.
+No full solver is active; never query the obsolete13996PID or restart identically.
+
+FIRST prepared saved-data variant review `variant-review-001` exits0 with saved
+integrity/variant/source287/DLL PASS, nativeComplete=false. Actual53-frame video
+is INCOMPLETE0–5.2s,4fps/scale1/no interpolation/full decode0. Root inspected the
+PNG: downslope upper-wedge motion and localized plastic band, no toe runout.
+Native h-scaled coherent-motion flags are positive but remain distinct from
+the frozen common-metre observer. Full complete-pair CSV comparison is NOT_RUN
+and must continue rejecting incomplete input. Goal/scientific verification
+remain open. All source/raw/failure/media evidence must be retained.
+
+One source-ready synthetic roundoff witness is being frozen for FIRST execution:
+`tests/materials/mc-composite-apex-roundoff-witness.lisp` and its protocol.
+It calls the unchanged optional projector once,0MPM, on a nonzero hydrostatic
+cap near-hydrostatic trial, with independent exact-rational identities. It is
+NOT the missing actual failed-trial replay. Source review suggests subtracting
+the rounded mean can contaminate deviator trace and amplify work cancellation;
+this is a hypothesis pending native witness, not a proven actual failure cause.
+No production arithmetic, material, strength, tolerances or strict/Wang code
+has changed. Close actual evidence before a scoped tested repair/fresh attempt.
+
+Same automation returns5h while terminal;15min only for a justified new full
+solver. Preserve raw/private/settings and finite no-extra-SRF/grid/time rule.
+
 ## ACTIVE: same-factor h0.5 resolution trial
 
 Output `output/mc-composite-apex-2026-10-26/srf1p6-composite-h05-001`, native
