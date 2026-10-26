@@ -1,0 +1,10 @@
+{
+  "arguments": [
+    "tests/benchmarks/gravity-composite-apex-refinement-controls.lisp",
+    "output/mc-composite-apex-2026-10-26/fine-controls-001"
+  ],
+  "executable": "windows/cl-mpm.cmd",
+  "startedUtc": "2026-10-25T23:35:44.8105576+00:00",
+  "sourceCommit": "f0b5fb69fd5d583986d475efc255fbc045a65aab",
+  "scope": "FIRST new bounded fine-grid controls; no full slope or old suite"
+}

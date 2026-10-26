@@ -1016,3 +1016,10 @@ exit0/two copied sources unchanged. Independent CSV/contract tamper cases are
 isolated. No native call, actual comparison, old observer test, audit or render;
 fine native gate/full run remain NOT_RUN. Exact sources/commands/logs/exits
 retained. Continue after quota reset without repeating this new passed gate.
+
+## [2026-10-26] ingest | FIRST native fine-grid gate closes
+
+[[unnotched-mc-gravity]] records native0/four new groups on sourcef0b5fb69:
+3520MPs/two genuine USF updates/7040 calls/3VTK10560CSV rows, source/DLL proof.
+No old suite or slope repeat. Actual fine run/review/pair comparison remain
+NOT_RUN; complete and review launch profile after reset without repeating gates.

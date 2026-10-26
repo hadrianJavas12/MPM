@@ -1,5 +1,13 @@
 # Native framework and Studio verification
 
+## FIRST fine native gate,26October2026
+
+Sourcef0b5fb69 native0: four NEW groups PASS,3520MPs,2USF updates/7040 accepted
+calls,3VTK/10560CSV rows. Same material/geometry/BC/mass; only grid assignment
+changes. Source before/after/original and mapped DLL hashes match. No old suite
+or slope is repeated. See[evidence](evidence/mc-composite-apex-2026-10-26/fine-native-controls-001/README.md).
+Full fine slope, actual variant review and pair comparison remain NOT_RUN.
+
 ## Fine comparison glue controls,26October2026
 
 FIRST six new synthetic controls PASS/exit0 from two copied sources;

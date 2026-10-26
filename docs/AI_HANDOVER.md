@@ -4,6 +4,23 @@
 
 ## Continuation checkpoint: fine-study sources only; no solver active
 
+**Latest26October06:36WIB: FIRST fine native gate now PASS/exit0**, source
+f0b5fb69, `fine-controls-001`. Four NEW groups close: mesh-only actual recipe
+delta,3520MP/same mass/geometry/BC, two genuine USF updates/7040 accepted
+material calls,3VTK/10560CSV rows and read-only output. Zero standalone calls;
+no apex activation required or seen. Original copied sources before/after and
+recorded mapped DLL match; full packet is `fine-native-controls-001` under
+the26October composite evidence directory. No full fine slope is active.
+**Do not repeat these four groups or the already passed six Python controls.**
+Previous goal turn completed the Python gate; this goal turn completes native
+MPM preflight, rather than merely restating status.
+
+NEXT after reset: close launch helper actual profile/counter TODOs against this
+completed gate; review/freeze before prepare/capture. Full native fine run,
+actual fine variant audit and CSV-only pair comparison remain NOT_RUN. Preserve
+the finite one-pair contract, no automatic SRF/time/finer-grid escalation. Older
+NOT_RUN/source-ready descriptions below are superseded only for these gates.
+
 **Latest continuation update,26October06:33WIB:** the FIRST six new Python
 binding/glue controls now PASS/exit0 in `fine-binding-controls-001`, executed
 from two copied sources with before/after hashes unchanged. CSV tamper is

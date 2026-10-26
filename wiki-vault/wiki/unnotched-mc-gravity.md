@@ -371,3 +371,10 @@ sources, before/after hashes unchanged. CSV is restored before testing contract
 tamper separately. This is synthetic glue verification only: no old observer
 tests/native/audit/render repeats, no actual fine comparison or fine solver.
 Native fine input/output gate remains NOT_RUN; do not repeat these six controls.
+
+Subsequent FIRST native fine gate sourcef0b5fb69 exits0: four NEW groups,
+3520MPs/2USF/7040 accepted calls/3VTK/10560CSV rows and source/DLL proof.
+No standalone constitutive calls or apex activation, no old test/slope repeat.
+This supersedes the prior native-gate NOT_RUN; full fine run/actual review and
+pair comparison remain NOT_RUN. Launch draft still requires actual profile
+completion/review before use; no verified landslide is claimed.
