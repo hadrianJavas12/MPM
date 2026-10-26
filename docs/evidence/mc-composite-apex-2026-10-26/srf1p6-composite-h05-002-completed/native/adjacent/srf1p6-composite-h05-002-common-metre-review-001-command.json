@@ -1,0 +1,17 @@
+{
+  "executable": "D:/MPM/toolchain/analysis-venv/Scripts/python.exe",
+  "arguments": [
+    "D:\\MPM\\scripts\\review-gravity-composite-refinement.py",
+    "--coarse-run-dir",
+    "D:/MPM/output/mc-composite-apex-2026-10-26/srf1p6-composite-001",
+    "--fine-run-dir",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-002",
+    "--fine-review",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-002\\variant-review-001\\review.json",
+    "--output-dir",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-002\\common-metre-review-001"
+  ],
+  "startedUtc": "2026-10-26T11:15:33.4787088Z",
+  "preparedWrapperBytesMatched": true,
+  "scope": "FIRST full CSV-only common-metre pair; helper timing frozen by wrapper after native, no VTK audit/render or solver"
+}

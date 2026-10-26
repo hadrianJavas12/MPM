@@ -8,12 +8,32 @@ updated: 2026-10-26
 
 # Unnotched MC gravity scenario and native gates
 
-Fresh repaired002 is ACTIVE26October13:54:03WIB, native source139005c2.
+## Completed unnotched numerical sliding example
+
+Full002 source139005c2 completes6s61states3520MP15470updates/nativeworker0.
+FIRST complete variant audit/render0 and full physical-metre CSV pair0 pass;
+288sources/DLL/61VTK214720rows agree. Root sees coherent upper-wedge translation
+over localized plasticity at scale1. Fine whole/hold criteria pass3.4/3.5s;
+hold427particles/18.533%physical cohort, median dx.479058m/downslope.516897m,
+positive dx100%, fixed IDs sustain mean vx over saved2–3s. Final cohort centroid
+(+.505536,-.248127)m. Coarse both negative; toe runout0both is a separate measure.
+Manual root acceptance is numerical initial sliding in the declared adapted
+SRF1.6/composite-apex case, not validated physical failure/convergence/paperFoS.
+Automatic report flags remain unmodified. The requested unnotched simulation
+is delivered within this scope; no automatic refinement/weakening/longer run.
+The repository result is docs/benchmarks/UNNOTCHED_INITIAL_SLIDING_RESULT.md.
+Actual video61states4fps15.25s for6physical seconds, scale1/nointerp/decode0.
+No old solver/audit/render/gate is repeated; raw/negative sources stay intact.
+Root completion packet77indexed/78Git blobs/497ZIPmembers/288original+archived
+sources verifies; intended indexed media/manual JSON are tracked. This finite
+deliverable is closed; future calibrated studies require a new scope.
+
+Historical launch entry: repaired002 starts26October13:54:03WIB, source139005c2.
 Same6s/SRF1.6/h0.5/3520MPs/physical inputs;3h wall deadline16:54WIB is not ETA.
 FIRSTprepare/capture0,25prelaunch records,288sources/DLL/actual diagnostic load
 and ONEexact process/clock/parent proof verified. Root52indexed/53Git blobs/
 289members closes launch evidence. Scoped four repair gates below are CLOSED;
-full002result/CSV pair remain NOT_RUN. Quiet15min monitor, no old repeats.
+full002review/CSV pair were NOT_RUN at launch, superseded by completion above.
 
 ## Latest26October: partial fine motion, failed native, scoped repair
 

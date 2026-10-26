@@ -1,0 +1,109 @@
+{
+  "schema": "cl-mpm.gravity-slope.root-numerical-onset-review.v1",
+  "reviewedUtc": "2026-10-26T11:19:56.4831150Z",
+  "nativeSourceCommit": "139005c28ff579fe7cbce410f8e07917ec6cf17c",
+  "nativeComplete": true,
+  "numericalInitialBulkSlideVerified": true,
+  "scope": "Resolution-sensitive numerical onset in declared adapted SRF1.6 composite-apex experiment; not validated physical failure, convergence, paper reproduction or quantitative FoS/runout",
+  "criteriaChangedAfterResults": false,
+  "rootScale1SummaryImageInspected": true,
+  "manualFullVideoPlaybackClaimed": false,
+  "automaticReviewFlagsPreserved": true,
+  "scientificallyValidated": false,
+  "meshConvergenceEstablished": false,
+  "physicalCohortCount": 2304,
+  "physicalCohortMassKgPerM": 293678.26933764335,
+  "motionWindows": {
+    "entire": {
+      "status": "PASS",
+      "referenceTimeS": 0.0,
+      "detectionTimeS": 3.4,
+      "componentParticles": 626,
+      "componentMassFractionOfCohort": 0.2717013888888889,
+      "componentMedianDxM": 0.5017061735308133,
+      "componentMedianDownslopeM": 0.5349458031890627,
+      "positiveDxMassFraction": 1.0,
+      "savedVelocityPersistence": {
+        "status": "PASS",
+        "startTimeS": 0.8,
+        "endTimeS": 1.7999999999999998,
+        "savedStates": 11,
+        "minimumMeanVxMPerS": 0.0012156822523790697
+      }
+    },
+    "post2s": {
+      "status": "PASS",
+      "referenceTimeS": 2.0,
+      "detectionTimeS": 3.5,
+      "componentParticles": 427,
+      "componentMassFractionOfCohort": 0.18532986111111108,
+      "componentMedianDxM": 0.4790578112494508,
+      "componentMedianDownslopeM": 0.5168972202182062,
+      "positiveDxMassFraction": 1.0,
+      "savedVelocityPersistence": {
+        "status": "PASS",
+        "startTimeS": 2.0,
+        "endTimeS": 3.0,
+        "savedStates": 11,
+        "minimumMeanVxMPerS": 0.18736168488959273
+      }
+    }
+  },
+  "coarseWholeStatus": "NOT_DETECTED",
+  "coarseHoldStatus": "NOT_DETECTED",
+  "fineFinalPhysicalCohort": {
+    "frame": 60,
+    "timeS": 6.0,
+    "kineticEnergyJPerM": 874.6916310999449,
+    "cohortMeanVelocityMPerS": [
+      0.04127752172279802,
+      -0.018291843698313125
+    ],
+    "cohortCentroidDisplacementM": [
+      0.5055361652257938,
+      -0.24812692378368434
+    ],
+    "massWeightedQuantiles": {
+      "dxM": {
+        "0.5": 0.1296187502507209,
+        "0.9": 1.3669131004530222,
+        "0.95": 1.436004639851074
+      },
+      "downslopeDisplacementM": {
+        "0.5": 0.1580930550736865,
+        "0.9": 1.4195029534135803,
+        "0.95": 1.4451057837334629
+      },
+      "speedMPerS": {
+        "0.5": 0.00861033258837101,
+        "0.9": 0.11969549465050439,
+        "0.95": 0.1217706245065477
+      },
+      "nativeKappa": {
+        "0.5": 0.01720916718460218,
+        "0.9": 0.31995642629371684,
+        "0.95": 0.35125919999656846
+      }
+    }
+  },
+  "toeRunoutDetected": false,
+  "maximumToeRunoutMassFraction": 0,
+  "separateRunoutContractMeasure": true,
+  "sourceReview": {
+    "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-002\\variant-review-001\\review.json",
+    "sha256": "de0dcd710e62575651fe86794de214dcaa08bc4cdabc91be932485f179b14731"
+  },
+  "sourcePair": {
+    "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-002\\common-metre-review-001\\common-physical-review.json",
+    "sha256": "15545df2ff2dd6ba6dda4a224f8c55ada48533613c49ae9a181420e8aed2bfe1"
+  },
+  "spatialInterpretation": "Connected upper wedge translates downslope above a localized plastic-history band at actual scale; no isolated-outlier or colour-only claim",
+  "limits": [
+    "h1 negative versus h0.5 positive: resolution-sensitive, coupled space-time/sampling refinement",
+    "Fixed grid bottom is not a calibrated Coulomb runout bed; adapted geometry/foundation",
+    "Explicit SSR deliberately reduces strength; extra gA=p plastic volume is declared model extension",
+    "No calibration, paper/FoS validation or closed energy balance",
+    "Particle-domain margin minimum -1.2094293276310175e-6m; center containment alone does not certify kernel support",
+    "Persistence refers to actual recorded >=1s interval, not every unsaved update or future motion"
+  ]
+}

@@ -1,6 +1,24 @@
 # Native framework and Studio verification
 
-## Fresh repaired full run ACTIVE,26October13:54WIB
+## Complete numerical sliding result,26October2026
+
+Full002 native source139005c2 exits0/worker0 at16:09WIB:6s61states3520MP15470updates.
+FIRST prepared audit/render0: complete saved integrity/variant/288sources/DLL,
+61VTK214720material rows; video61actualstates4fps15.25s/scale1/nointerp/decode0.
+Root inspects actual upper-wedge motion/localized plasticity. FIRST full CSV
+physical pair0,61exact matched times, no coarse audit/render repeat. Fine whole/
+post2s motion PASS3.4/3.5s, coarse both NOT_DETECTED; separate toe runout0both.
+Manual numerical-onset acceptance binds report hashes, unchanged physical
+criteria and actual scale1 inspection. This is resolution-sensitive numerical
+sliding, not scientific validation/convergence. Automatic flags stay untouched.
+See[full result and limits](benchmarks/UNNOTCHED_INITIAL_SLIDING_RESULT.md).
+All prior failed/witness/repair controls are retained and not rerun.
+Root completion proof:77indexed artifacts/78Git blobs/2ZIPs/497decoded members,
+288original+archived sources; intended indexed PNG/MP4/manual JSON are Gittracked.
+The finite simulation/showing-onset deliverable is closed; scientific calibration
+and convergence are separate, unperformed work rather than a hidden PASS.
+
+## Historical repaired launch (complete above),26October13:54WIB
 
 Native source139005c2, `srf1p6-composite-h05-002`, same6s/61frames/3520MP/
 SRF1.6/physical inputs. Three-hour deadline16:54:03WIB is a bound, not ETA.

@@ -1,0 +1,15 @@
+{
+  "executable": "D:\\MPM\\toolchain\\analysis-venv\\Scripts\\python.exe",
+  "arguments": [
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-002-launch-preparation\\analysis\\review-gravity-composite-apex.py",
+    "--run-dir",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-002",
+    "--contract",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-002-launch-preparation\\protocol\\composite-apex-srf1p6-h05-contract.json",
+    "--output-dir",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-002\\variant-review-001",
+    "--video"
+  ],
+  "startedUtc": "2026-10-26T11:12:51.9163191Z",
+  "scope": "FIRST saved complete002 variant review/media; no solver"
+}

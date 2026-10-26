@@ -1,6 +1,39 @@
 # AI Engineering Handover — CL-MPM
 
-## ACTIVE26October13:54WIB: fresh repaired h0.5 attempt002
+## COMPLETE26October: requested unnotched numerical sliding example delivered
+
+Read[completed result](benchmarks/UNNOTCHED_INITIAL_SLIDING_RESULT.md).
+Full002 source139005c2 native/worker0 at16:09WIB,6s/61states/3520MP/15470updates.
+No solver active: do not query PID20436 or rerun anything. FIRST prepared
+variant review/render exits0: complete integrity/variant/288sources/DLL PASS,
+61VTK/214720rows, actual61-frame video4fps/15.25s/scale1/nointerp/decode0.
+Root actually inspects the summary PNG: upper wedge translates downslope above
+a localized plastic band. FIRST full common-metre CSV pair exits0 with all61
+matched times identical, source/support binding unchanged, no coarse audit/
+render repeated. Fine whole/hold criteria pass3.4/3.5s; coarse both negative.
+First hold component427MP/18.533%physical cohort, median dx.479058m/downslope
+.516897m, positive dx100%; same-ID persistence2–3s/11saved states/minvx.187362.
+Final physical-cohort centroid(+.505536,-.248127)m; separate toe runout0both.
+
+Manual scoped result: VERIFIED NUMERICAL INITIAL/BULK SLIDING ONSET without
+notch, in the declared adapted SRF1.6/composite-apex h0.5 experiment. Contract
+runout is separate, not a new prerequisite. This satisfies the user's simulation
+showing an unnotched slide, while remaining resolution-sensitive onset, not
+validated physical failure/convergence/paper/FoS/runout. Automatic raw flags
+remain false/unmodified; separate root acceptance JSON binds actual hashes and
+manual spatial review. Root note/acceptance are retained. Completion collector
+exit0:77indexed artifacts/78Git blobs/2ZIPs/497members/288original+archived sources
+independently verified by root. Indexed MP4/PNG/manual JSON are Gittracked,
+including ignored media. All native/source/raw/runtime/prelaunch/caller/control
+records retained; closed launch source ZIP referenced without duplication.
+No tests/solver/audit/render repeats. Final docs/wiki/evidence checkpoint is
+being committed/pushed; obsolete monitor will be deleted once push succeeds.
+No automatic finer grid/SRF/time/strength/psi/tolerance change. All old raw,
+negative evidence and personal settings remain intact. No automatic work remains
+for this finite experiment; future calibrated foundation/material/mesh studies
+are a separate scope. Do not resurrect old ACTIVE/NOT_RUN historical notes.
+
+## Historical launch26October13:54WIB (now complete; superseded above)
 
 Run `output/mc-composite-apex-2026-10-26/srf1p6-composite-h05-002`, native
 source `139005c28ff579fe7cbce410f8e07917ec6cf17c`, starts13:54:03.2984528WIB.

@@ -1,16 +1,25 @@
 # Unnotched slope: explicit perfect MC composite-apex trial
 
 Prepared 2026-10-26 on `codex/unnotched-mc-composite-apex`. This is a separate
-material experiment, with no verified landslide or scientific calibration yet.
+material experiment. Numerical initial sliding is reviewed below; scientific
+calibration remains open.
 
-Fresh repaired fine attempt002 starts26October13:54:03WIB, native source139005c2,
+**Latest26October: the completed fine002 result now shows numerical initial
+bulk sliding without notch.** Full integrity, frozen physical-metre whole/hold
+criteria and root scale1 spatial review pass. It is resolution-sensitive onset,
+not validated physical failure: coarse control stays negative, separate toe
+runout is0. No scientific calibration/convergence/paper claim. Read the
+[completed result](UNNOTCHED_INITIAL_SLIDING_RESULT.md) for exact gates and limits.
+No full solver is active and no automatic follow-on run is needed.
+
+Historical launch: repaired fine002 starts26October13:54:03WIB, source139005c2,
 same6s/SRF1.6/h0.5/input physics,3h wall deadline16:54:03WIB(not ETA). All four
 repair gates below pass. FIRSTprepare/capture0 freezes25records and verifies
 288native sources/DLL/actual diagnostics load; root launch packet52indexed/
 53Git blobs/289members closes. ONE exact live identities/parent proof matches.
 This is a fresh initial-state attempt after numerical repair, no identical
-restart, old failed-trial replay or promised trajectory identity. Full result
-and completed CSV pair remain NOT_RUN; quiet15min monitor is active.
+restart, old failed-trial replay or promised trajectory identity. At launch,
+full review/pair were NOT_RUN; the completed result above supersedes that status.
 
 ## Latest fine result and arithmetic repair,26October2026
 

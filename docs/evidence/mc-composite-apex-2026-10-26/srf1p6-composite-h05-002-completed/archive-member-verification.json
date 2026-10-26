@@ -1,0 +1,2516 @@
+{
+  "archives": [
+    {
+      "archive": {
+        "path": "complete-native-source-raw-and-runtime.zip",
+        "bytes": 76985688,
+        "sha256": "37d45f681f8873700fde251c0f3e29ce9f3e02b91cea421200838fbf4b749101"
+      },
+      "decodedMembers": 377,
+      "crcPass": true,
+      "allDecodedBytesMatchOriginals": true,
+      "members": [
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-capture-command.json",
+          "bytes": 317,
+          "sha256": "3907ce3b0a1d4d8460d7ca030e0651c93af791894592ce019a4127a75810f8cc"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-capture-exit.json",
+          "bytes": 70,
+          "sha256": "e75805dfb03f0413c5727850d0c1eef4dbccbf7b78d0dd91786b83162f020aef"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-capture.log",
+          "bytes": 262,
+          "sha256": "b96444c2ad137b4b75aa91a817c2d66d34d42659fad36524250c94f3210a0364"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-common-metre-review-001-caller.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-common-metre-review-001-command.json",
+          "bytes": 843,
+          "sha256": "9c1190e3e53d0514a591c8a38aff0aa09347fadbeaaf9d46c5d60f4346ed9a23"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-common-metre-review-001-exit.json",
+          "bytes": 70,
+          "sha256": "8684591a923967f8d730d269312d7c9469527f11de7ad7d6c1c631d581d78d7f"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-launch-command.json",
+          "bytes": 551,
+          "sha256": "416af4953c3faf5ce4b93464147c92ab0f451bcd57d16b7a116fbb14ef61f17e"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-launch.json",
+          "bytes": 965,
+          "sha256": "8becae21d5d027368871fac75898dbaade4c442ef2c8d8e58c3c5564b6784946"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-live-process-verification.json",
+          "bytes": 1331,
+          "sha256": "dec2202799b136ab1090e1771de28c8f4319da09f1f2e483719269d7b58e5402"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-prepare-command.json",
+          "bytes": 362,
+          "sha256": "b2c0e6ea35573b534366700c10d966787ffc897f4322a60474afb550d0a1e698"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-prepare-exit.json",
+          "bytes": 70,
+          "sha256": "fd2a9464fa1080fb70ea2435a1d359c5941f391d3f87a68265aafd2e7331ef12"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-prepare.log",
+          "bytes": 236,
+          "sha256": "c088387e4b7c59d7bb16c17c2f12633d8dc1ed2ada733e639a5bc49784f3055d"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002-status.json",
+          "bytes": 1501,
+          "sha256": "58d28d04cac9f7594bd80e1832b951efbc84b21a46196d5f670dd6cfdfb4c29b"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "adjacent/srf1p6-composite-h05-002.stdout.log",
+          "bytes": 5374,
+          "sha256": "4f0e30f835cdab544a3c86f40606568dac86247018162f558b323a55815316e6"
+        },
+        {
+          "path": "detached/launch-proof.json",
+          "bytes": 1059,
+          "sha256": "c18f60ad8c1d667575019b4473b380d28494d1bdbe9ea44d39e3cd441b6e0c50"
+        },
+        {
+          "path": "detached/launch-request.json",
+          "bytes": 1424,
+          "sha256": "33919cc3e0544cb5fb0936c98e6821d53388b6ae2a444c976aa381ac666f174c"
+        },
+        {
+          "path": "detached/launch-request.ps1",
+          "bytes": 2266,
+          "sha256": "def3267a766cfcfaeea69f4ae369dbb71a5d4b240f9f851e20dbd2b5cbf7c4e0"
+        },
+        {
+          "path": "detached/worker-exit.json",
+          "bytes": 126,
+          "sha256": "c6bf3bb27df484048d0c712b80b0ab9fd0ccaf9928e7f646e06288a4b7d16965"
+        },
+        {
+          "path": "detached/worker-start.json",
+          "bytes": 263,
+          "sha256": "3583b67a3b0c3a14388118b02c539a355aa8f51f1eb4ac9f3a701b42b63dcb39"
+        },
+        {
+          "path": "detached/wrapper.stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "detached/wrapper.stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "history.csv",
+          "bytes": 42277,
+          "sha256": "0d586206c25b98894c7cd4534cbf54da040c9e74ecfbec7dc0b2ece5e3af3bdb"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 6086,
+          "sha256": "cfc0a49c506c8d1bed3d217e83090a803eef611d3fd2073922f68b07e089b966"
+        },
+        {
+          "path": "particles.csv",
+          "bytes": 159292222,
+          "sha256": "02897b570394add12c6696f7c81d3ab1400316437446a003cdc709b3be8791ef"
+        },
+        {
+          "path": "source-provenance.json",
+          "bytes": 691003,
+          "sha256": "dcdf68c738c854b15724973d07a1008cba37283298a37401dbfec5aae0c24b40"
+        },
+        {
+          "path": "source/bootstrap/windows/cl-mpm.cmd",
+          "bytes": 1121,
+          "sha256": "0b328d24ebc18fc6c7960a5044efc3e93c04752d1be50daece09c575ef86c536"
+        },
+        {
+          "path": "source/bootstrap/windows/env.cmd",
+          "bytes": 2833,
+          "sha256": "20719f3bbef22a95f9b68fd0d794184118fb2c43f266284d21f52d263eb2b7e8"
+        },
+        {
+          "path": "source/bootstrap/windows/init.lisp",
+          "bytes": 2925,
+          "sha256": "dd68bc9bcecb6abd66b8c03ee9eb2d24141488a257e84b22a47ca6266ed39218"
+        },
+        {
+          "path": "source/case.lisp",
+          "bytes": 2340,
+          "sha256": "4eb467eb545a6c5e0bf85f2bea0899870ce5639f4744e038917dd28c966c2879"
+        },
+        {
+          "path": "source/cl-mpm-framework.asd",
+          "bytes": 6468,
+          "sha256": "28fce2e4cc6cc0111fb4ed483a9a1e0de8c90fc428b73a8e487523d6f456cb23"
+        },
+        {
+          "path": "source/cl-mpm.asd",
+          "bytes": 39964,
+          "sha256": "257e7fcd4f853a5aab2e61f8a594292f4dc8d0c2396362c10759b00c10ff5890"
+        },
+        {
+          "path": "source/config/git-commit-version.txt",
+          "bytes": 34,
+          "sha256": "7aa5da4c3df0df35d0f7959783dd37a85710b93cd898530e41470e9f51804ea6"
+        },
+        {
+          "path": "source/inputs/calibration/triaxial-2d.json",
+          "bytes": 525,
+          "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35"
+        },
+        {
+          "path": "source/inputs/calibration/triaxial-controls.json",
+          "bytes": 268,
+          "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861"
+        },
+        {
+          "path": "source/inputs/calibration/triaxial-demo.json",
+          "bytes": 498,
+          "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0"
+        },
+        {
+          "path": "source/inputs/calibration/triaxial-homogeneous.json",
+          "bytes": 370,
+          "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17"
+        },
+        {
+          "path": "source/inputs/studio/reference/joss-bay-accepted-collapse.json",
+          "bytes": 1256,
+          "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0"
+        },
+        {
+          "path": "source/inputs/studio/reference/joss-bay-prose.json",
+          "bytes": 1726,
+          "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b"
+        },
+        {
+          "path": "source/inputs/studio/reference/joss-bay-table.json",
+          "bytes": 1721,
+          "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88"
+        },
+        {
+          "path": "source/inputs/studio/reference/joss-bay-video-candidate.json",
+          "bytes": 2575,
+          "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b"
+        },
+        {
+          "path": "source/inputs/studio/schema.json",
+          "bytes": 9059,
+          "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9"
+        },
+        {
+          "path": "source/libs/kirchoff.dll",
+          "bytes": 2885169,
+          "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f"
+        },
+        {
+          "path": "source/materials/adapters/chalk.lisp",
+          "bytes": 2538,
+          "sha256": "f38e20f2f3f70139954f5c861dd7f7abc9e06ef0b0c6826a1753fe505938a265"
+        },
+        {
+          "path": "source/materials/adapters/cliff.lisp",
+          "bytes": 641,
+          "sha256": "a4ac33ef2cdfda963285059ef2cddd67eede5859d63c53003b706434d2256ad3"
+        },
+        {
+          "path": "source/materials/adapters/damage-output.lisp",
+          "bytes": 21614,
+          "sha256": "e449445ed45405670a6841972854969b312f55e9ff7d42e21bae673fb35c782b"
+        },
+        {
+          "path": "source/materials/adapters/diagnostics-call.lisp",
+          "bytes": 473,
+          "sha256": "232965022a96a2e11536f577944ef969fa115ab396f123cdf3e0622017ff1381"
+        },
+        {
+          "path": "source/materials/adapters/legacy-triaxial.lisp",
+          "bytes": 3883,
+          "sha256": "127c346c4682b85418d396b75c7be75a638ced5d88f0cacc954d0ec5370772b1"
+        },
+        {
+          "path": "source/materials/adapters/mc-composite-apex.lisp",
+          "bytes": 2240,
+          "sha256": "1b0d90c211e9a20054d6361c54a2680e3c4fb5dd44183612c42a2d87c6db6514"
+        },
+        {
+          "path": "source/materials/adapters/native.lisp",
+          "bytes": 5402,
+          "sha256": "56bb3083976f0303d273f9167d20d0ca29464553a4df86a75e21e95db9c08673"
+        },
+        {
+          "path": "source/materials/adapters/triaxial.lisp",
+          "bytes": 485,
+          "sha256": "f3d20fd721a65a72ea24c6b07ec487ca1bd6e922cd6861ef152c1c84387d6fb4"
+        },
+        {
+          "path": "source/materials/adapters/wang2017-apex.lisp",
+          "bytes": 3533,
+          "sha256": "d6c09f6a6c6832c200c3198bdf7a728d489869152cc13fabe572af4d69d4a820"
+        },
+        {
+          "path": "source/materials/adapters/wang2017.lisp",
+          "bytes": 7102,
+          "sha256": "eadea18e1b93c46e625475980b59583d711b2669a86ef2dad7d85a426d4cd344"
+        },
+        {
+          "path": "source/materials/backends/cpp/legacy-transaction.lisp",
+          "bytes": 10369,
+          "sha256": "cff14534f13f687e85d4ce262a4a8635c9b8273879d332f846f60abae2bdd924"
+        },
+        {
+          "path": "source/materials/cl-mpm-materials.asd",
+          "bytes": 472,
+          "sha256": "babf46b087d75b95c4a513f906cffd5debb8cdad295d356832e56741f2b8cc12"
+        },
+        {
+          "path": "source/materials/core/constitutive-package.lisp",
+          "bytes": 364,
+          "sha256": "681fb05352f6c689560e2de4f93b571c865566cb0a12750b90306b5e159e4d30"
+        },
+        {
+          "path": "source/materials/core/definition.lisp",
+          "bytes": 925,
+          "sha256": "77e250e35380de2e9d69c6b1358f17fc7552aa03e272df87d4e13d1588b76832"
+        },
+        {
+          "path": "source/materials/core/diagnostics-interface.lisp",
+          "bytes": 1130,
+          "sha256": "dd764532680ed3d9b07946502b9148a0a2e75265e061159ddf4a5e770b13e6db"
+        },
+        {
+          "path": "source/materials/core/factory.lisp",
+          "bytes": 175,
+          "sha256": "0d442cf66705ab1f57cdf05c2a325fb3ece9eaa63505de6cfbef1cd8855b422a"
+        },
+        {
+          "path": "source/materials/core/interface.lisp",
+          "bytes": 177,
+          "sha256": "bc8ecddd2a71c141aed94f7b0ce42bd2795c491b37d261420413067c51997669"
+        },
+        {
+          "path": "source/materials/core/parameters.lisp",
+          "bytes": 178,
+          "sha256": "c4584b76ef8c8ed411329de08bd984bb36a92e7481da6bdec779c4fa0900ae9a"
+        },
+        {
+          "path": "source/materials/core/plastic-state.lisp",
+          "bytes": 1793,
+          "sha256": "146e0847313ee3c74f82b37f5599b0574ecfe7a93a6df8f591845f0da24e6af2"
+        },
+        {
+          "path": "source/materials/core/registry.lisp",
+          "bytes": 176,
+          "sha256": "f0c161decd170795ca611ad6999f8b451fddb34db7cf8dd90293b71fcd7635cd"
+        },
+        {
+          "path": "source/materials/core/state-interface.lisp",
+          "bytes": 194,
+          "sha256": "6efc47a8fba4e0980d2ca2e0586397eff5f78ad9415cd631d67a977b3943aa87"
+        },
+        {
+          "path": "source/materials/core/validation.lisp",
+          "bytes": 178,
+          "sha256": "0d98c86ba08f8dbfd68ea82ec7119ed3cdcc60c65f756122764e04dd65734484"
+        },
+        {
+          "path": "source/materials/core/visco-package.lisp",
+          "bytes": 182,
+          "sha256": "8cfcf703f5491d98327864a45fde29658e19c05f5dd05caa84f99170ee6df495"
+        },
+        {
+          "path": "source/materials/diagnostics/chalk-reference.lisp",
+          "bytes": 1371,
+          "sha256": "2ab3ca7cfff08cb05ceebc9f5c2412cf02c1a99a3ca4e04e044090cb13d0adac"
+        },
+        {
+          "path": "source/materials/diagnostics/native.lisp",
+          "bytes": 11955,
+          "sha256": "451b09f6c83801bf4f65cd32cf7231af7b44035af650f87169ead424244128dc"
+        },
+        {
+          "path": "source/materials/models/chalk/constitutive.lisp",
+          "bytes": 198,
+          "sha256": "84c059a2dd680976c95c3340c01341e431ed6854fc17ac99546233d6956f5ec7"
+        },
+        {
+          "path": "source/materials/models/chalk/evolution/softening.lisp",
+          "bytes": 1059,
+          "sha256": "ab4d31e6728e944766d0df06092a0de5b9fc7cea95015ba06b69601f008b595d"
+        },
+        {
+          "path": "source/materials/models/chalk/joss-reference.lisp",
+          "bytes": 2091,
+          "sha256": "bb05c72cf895a586e983e5015cfb2a6c5fdf24384344bf880537b8be23d8f552"
+        },
+        {
+          "path": "source/materials/models/chalk/legacy.lisp",
+          "bytes": 61023,
+          "sha256": "257225c99b45c758d066dae11c1792f61b19e7601a3466cd15e9ee2b612a7db5"
+        },
+        {
+          "path": "source/materials/models/chalk/state.lisp",
+          "bytes": 186,
+          "sha256": "22b6c226dc7e98ff45f3a35ab688f0408979904820ebcfb8031e1f43dbe232c3"
+        },
+        {
+          "path": "source/materials/models/concrete/evolution/native-hooks.lisp",
+          "bytes": 4186,
+          "sha256": "95c44eefcef45cfa8d4cb2602a4df90723d162e19504d07b008c9038f530696e"
+        },
+        {
+          "path": "source/materials/models/concrete/evolution/softening.lisp",
+          "bytes": 847,
+          "sha256": "0d6aebe20d43e42e39c06cfd872f9ad6507bc23960897f1b2e4f04a24d9f7403"
+        },
+        {
+          "path": "source/materials/models/concrete/legacy.lisp",
+          "bytes": 4100,
+          "sha256": "8224b9bbe474fc2898c1145cf3b82671f885bd633483b3f7dcdda2177546fc59"
+        },
+        {
+          "path": "source/materials/models/damage/constitutive.lisp",
+          "bytes": 8247,
+          "sha256": "5ee75605b1cfafda3d59367fac25ecb466420e41ee1ba2f3080f9673d049a53f"
+        },
+        {
+          "path": "source/materials/models/damage/criteria.lisp",
+          "bytes": 21031,
+          "sha256": "ab574dbb03b8a8ee2bd60e92f6fedaaefc07fa1d30a336b13a7df21dc4c6463e"
+        },
+        {
+          "path": "source/materials/models/damage/evolution/degradation.lisp",
+          "bytes": 17274,
+          "sha256": "3e473fa389a6d0994a0046ff3b4ec741922b90acfc4244f8ab7b968064dfe288"
+        },
+        {
+          "path": "source/materials/models/damage/evolution/delayed-rate.lisp",
+          "bytes": 9889,
+          "sha256": "47a84f8e9ea12ffb4e092d25d548d87eacb6c859a6ddef10dcf984ac814c15c6"
+        },
+        {
+          "path": "source/materials/models/damage/evolution/responses.lisp",
+          "bytes": 6640,
+          "sha256": "f26542cc6f2246f1eecc590fa53fd1a967a3756163c2a713af639cb31622f8bf"
+        },
+        {
+          "path": "source/materials/models/damage/legacy-particles.lisp",
+          "bytes": 27294,
+          "sha256": "e4cbd050ca74f763a95b17d70dcfbd10aa9c0a241b2c493b1990ffaeecfbad0c"
+        },
+        {
+          "path": "source/materials/models/damage/legacy-state-evolution.lisp",
+          "bytes": 15814,
+          "sha256": "63e624ca8c62d81d92398e1a56225f8aaf4664854cd18367668978b1118658dc"
+        },
+        {
+          "path": "source/materials/models/damage/particle.lisp",
+          "bytes": 4205,
+          "sha256": "9ea0abec8e17a05735eed4a57af25fea12f7fb0c64d29e28db255db16ab0829c"
+        },
+        {
+          "path": "source/materials/models/elastic/constitutive.lisp",
+          "bytes": 2726,
+          "sha256": "385f803c7b3a8a9482ced32c55ae304006eeb62761c48a7854e73373df1e264e"
+        },
+        {
+          "path": "source/materials/models/elastic/linear-elastic/package.lisp",
+          "bytes": 130,
+          "sha256": "0accd221eab1441b071fbab926ed97b837655beae52f2ba74fa9ae6cce090b1c"
+        },
+        {
+          "path": "source/materials/models/elastic/particle.lisp",
+          "bytes": 9002,
+          "sha256": "4f2357047f838c54e29da14d9ecde21c626d440252b3cec57f6b8a9a12d2e9e4"
+        },
+        {
+          "path": "source/materials/models/fluid/constitutive.lisp",
+          "bytes": 844,
+          "sha256": "f5bd1e970e8d1779ac455e377eff45ffb342ad135d76f23e7d566fe0778548c1"
+        },
+        {
+          "path": "source/materials/models/fluid/particle.lisp",
+          "bytes": 1073,
+          "sha256": "6a8fd3990f10345dc5005441d23dcbba713ea4d55b1796db26b8b6d68b71f8bf"
+        },
+        {
+          "path": "source/materials/models/frictional-damage/legacy.lisp",
+          "bytes": 8129,
+          "sha256": "81ab1297bb8113cfd7333e3912418dc3b15de87b91d8c8c71958e370a8892db8"
+        },
+        {
+          "path": "source/materials/models/ice/legacy.lisp",
+          "bytes": 40657,
+          "sha256": "9c698a5e07fd9ced64ffeef2dc4659d61c6548fdb0076fc2be696ce8aac2e5ed"
+        },
+        {
+          "path": "source/materials/models/limestone/legacy.lisp",
+          "bytes": 7179,
+          "sha256": "c663f6c0c82814da2308adb7fd74e79b761d39feffa6e24fbfdf805ee9cda023"
+        },
+        {
+          "path": "source/materials/models/plastic/drucker-prager/constitutive.lisp",
+          "bytes": 11637,
+          "sha256": "db96248bf72353d302ec6613d6b4914714dc97ab14f09a2ab636899e4cf5cf92"
+        },
+        {
+          "path": "source/materials/models/plastic/drucker-prager/particle.lisp",
+          "bytes": 3737,
+          "sha256": "6a5a5228d0277e65a894a0a554c6f302f295d331a0cce85e984a4d42e6db7bfd"
+        },
+        {
+          "path": "source/materials/models/plastic/mc-composite-apex/diagnostics.lisp",
+          "bytes": 6077,
+          "sha256": "6fe2771fc156e25ae13380f537e232bd4875a91a77d960a0290877068f23b360"
+        },
+        {
+          "path": "source/materials/models/plastic/mc-composite-apex/native.lisp",
+          "bytes": 2405,
+          "sha256": "85c90f4b8a4eac515498ed77cedf583ee147b80b79387cc3de391b562d7c1069"
+        },
+        {
+          "path": "source/materials/models/plastic/mc-composite-apex/package.lisp",
+          "bytes": 468,
+          "sha256": "fa96f836cc01faec4f18c9852e450ab2b8957e8be9108b22777bf3a053d39eb5"
+        },
+        {
+          "path": "source/materials/models/plastic/mc-composite-apex/projection.lisp",
+          "bytes": 10339,
+          "sha256": "eb16237ecda3b08c17632e84c782f99f71a223eaf49b83bc2df63ebeaad1dd6d"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb-evolution/diagnostics.lisp",
+          "bytes": 4746,
+          "sha256": "10fc3d6170b04adbb153fe2afd562d51daefc9d1976a3059ba046c1b8223d0eb"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb-evolution/law.lisp",
+          "bytes": 8393,
+          "sha256": "505207b3bcbbd0c87625d16c96cb436436f71562ded9349aa2126ed7dac6796a"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb-evolution/material.lisp",
+          "bytes": 9155,
+          "sha256": "376bb5465ae7e1553dfb23d0f3ea26b125fbd6430724fcac0ee5233125302aeb"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb-evolution/package.lisp",
+          "bytes": 2441,
+          "sha256": "3ec1f8ccbbf15732ab450708413728987aa843d89b1e2eeefdc6773a4930b028"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp",
+          "bytes": 23352,
+          "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb-evolution/state.lisp",
+          "bytes": 11424,
+          "sha256": "d9311639dae10064985d5ff2fabfef189ff7bf07cb85699c1fd54355d6f83fd4"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb/constitutive.lisp",
+          "bytes": 24271,
+          "sha256": "784ed026c5fb7b211948e2f83d4578d25be7bad1e62e41ed61505cde2acdd66d"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb/evolution/hardening-softening.lisp",
+          "bytes": 240,
+          "sha256": "c1e9adf74ad08f3be7f4a8a6e07190abec7e2b6326d344ee3c633ec41392e6c9"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb/evolution/hardening.lisp",
+          "bytes": 230,
+          "sha256": "a454e7dcde029ef9a6d85e03908c113bd3f794798980b75a990874705cf380dd"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb/evolution/perfect-plastic.lisp",
+          "bytes": 236,
+          "sha256": "76ddf9770602432da28128ee51d982fe26c19983f6d527e0d08579260dda490e"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb/particle.lisp",
+          "bytes": 5530,
+          "sha256": "43d773e7cef70b6a448c06f723efea6de43f545b2eaea4a574235b7a386f9110"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb/plastic-potential.lisp",
+          "bytes": 236,
+          "sha256": "c36cd6f1eceb92c1b29d1e393bce92f7396be3ad9e81cab3b0077a81a9b66b86"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb/return-mapping.lisp",
+          "bytes": 233,
+          "sha256": "574433429c982167978a4c426af17d2c6606216bee789b8916ed700263c0f09e"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb/state.lisp",
+          "bytes": 216,
+          "sha256": "d6a24a75858826cbd2cf034b6fc1b7baceb76131a10dfcb081f8db3b1be6a6ed"
+        },
+        {
+          "path": "source/materials/models/plastic/mohr-coulomb/yield-function.lisp",
+          "bytes": 233,
+          "sha256": "889a469b62b52ce43833e2bf947a46c444b036e7f7f1ad6cd1de368ad1d438a9"
+        },
+        {
+          "path": "source/materials/models/plastic/von-mises/constitutive.lisp",
+          "bytes": 9758,
+          "sha256": "41e16eb202d3584b55f1895c0b165fd153783fb8d321475bb433325011dfc702"
+        },
+        {
+          "path": "source/materials/models/plastic/von-mises/evolution/secant-hardening.lisp",
+          "bytes": 1753,
+          "sha256": "ffc6204dc65439dd8ffa1ce1188bbff6e3444fe2089c848ce3623e97c07e41e3"
+        },
+        {
+          "path": "source/materials/models/plastic/von-mises/particle.lisp",
+          "bytes": 8298,
+          "sha256": "487093df140e692a8826bef85f8e8143b1699b46261013cb529de58b6ed637bb"
+        },
+        {
+          "path": "source/materials/models/plastic/von-mises/state.lisp",
+          "bytes": 210,
+          "sha256": "142147708c7c8dc8fb959b7735a2fdbc4b11bea313775e2b2055df6afc3e26f2"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/apex-native.lisp",
+          "bytes": 1364,
+          "sha256": "b87f642c8f995c10b35427efe790186ff57e4950532b98df300d9c6da7f3bb82"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/apex-package.lisp",
+          "bytes": 659,
+          "sha256": "895c8a58ce520c5692bdd4415aac1807426064ba96799970bf01c6f8f6fc8185"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/apex-projection.lisp",
+          "bytes": 6864,
+          "sha256": "6c6abaefa78e2a90f076a4fd9556df489727a9704e079caad40a04126f5370b0"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/apex-residual-history.lisp",
+          "bytes": 2552,
+          "sha256": "6bb463d741f749967d90aaab00667a54214b4a96c6f74e5788071220511bba98"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/history.lisp",
+          "bytes": 3185,
+          "sha256": "28c3a6b9f2f0ca9bf30f40a722ceb9c9aaf931e859f17416dceccfb323e857a6"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/law.lisp",
+          "bytes": 593,
+          "sha256": "039efbcd85aa334dfdd1b00e3a5cb8ddebc725994b92cbc8da0064fa3c09aeaa"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/material.lisp",
+          "bytes": 13299,
+          "sha256": "7217e93a7d657d0dbfe6d71f7d3217c6df889d00cb37b9e8497cb5e6b0a54b15"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/native-package.lisp",
+          "bytes": 936,
+          "sha256": "c3b519759df364208140b15c6bc58d915f8c5cb343be40a4803718740ac6d917"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/package.lisp",
+          "bytes": 374,
+          "sha256": "a2acf539faccb920a8314ca1a8e273126dde1d33dc224541133e63727e3a04e7"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/point-projection.lisp",
+          "bytes": 15126,
+          "sha256": "c852770744c265705a828b24d550440343ad93466b1ffea72b11a1514a4d320a"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/state.lisp",
+          "bytes": 5567,
+          "sha256": "f9caaad2cffecca5dae54405b0fd1cec4dcc30d3c68f9236452ae706476d3a53"
+        },
+        {
+          "path": "source/materials/models/plastic/wang2017/transport.lisp",
+          "bytes": 2121,
+          "sha256": "0eeac6948b6e0ad938d41635c221a8938c3eacc45cb62a5804c9b04105df86dc"
+        },
+        {
+          "path": "source/materials/models/viscoelastic/finite-strain/legacy.lisp",
+          "bytes": 29348,
+          "sha256": "c40e712e6acfd2e120d49b104b98ef7898e98bd114b5a82d6382564c08a79782"
+        },
+        {
+          "path": "source/materials/models/viscoelastic/maxwell/constitutive.lisp",
+          "bytes": 7171,
+          "sha256": "629ed67e46ea7e10e441662475749e158f132ace27f0d35db5a722bcd1c6a81d"
+        },
+        {
+          "path": "source/materials/models/viscoelastic/particle.lisp",
+          "bytes": 776,
+          "sha256": "63104b7ffae5479daeaf5bb3cd6522c5690ede369f015c359a1971ab83e604a4"
+        },
+        {
+          "path": "source/materials/models/viscoplastic/clay-creep/law.lisp",
+          "bytes": 7212,
+          "sha256": "4573621e6522b487aac0ac10df91fdb5f93b91e3850d056b0184100efdb6fcb3"
+        },
+        {
+          "path": "source/materials/models/viscoplastic/clay-creep/package.lisp",
+          "bytes": 839,
+          "sha256": "f5a29159c46e6b9ec9fba872f2981f81aa32f611ff8a6ac1a07570a376722794"
+        },
+        {
+          "path": "source/materials/models/viscoplastic/clay-creep/particle.lisp",
+          "bytes": 10660,
+          "sha256": "5f1cede2a3ad9df9b7d81c4a1bcb07e518bbea0b824cc7567fc9b40b3e1e1515"
+        },
+        {
+          "path": "source/materials/models/viscoplastic/glen/constitutive.lisp",
+          "bytes": 8087,
+          "sha256": "55598a7174cd908704123c9646227a49314e94a04193e2ad4ffc2f32fe1c70b2"
+        },
+        {
+          "path": "source/materials/models/viscoplastic/particle.lisp",
+          "bytes": 2219,
+          "sha256": "790b0ddce5edd69b6953ec9f143bd521e98a00a9e33a83011761c9d8139f1908"
+        },
+        {
+          "path": "source/run-case.lisp",
+          "bytes": 4588,
+          "sha256": "26d0ae574b00e66da6dca605735fa9abab047c71e479b5e5129f10bd17e7a1f9"
+        },
+        {
+          "path": "source/scenarios/cliff/adapter.lisp",
+          "bytes": 3419,
+          "sha256": "a00e7b5f4a2a0fa6158bba37404d93a3f084814a27667692ed0417a8b3effa32"
+        },
+        {
+          "path": "source/scenarios/cliff/boundaries.lisp",
+          "bytes": 181,
+          "sha256": "d8aa12bd6b9f315ca2c769493f98a3f8c2685e48b2830032468e803d23f177d4"
+        },
+        {
+          "path": "source/scenarios/cliff/build.lisp",
+          "bytes": 2097,
+          "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac"
+        },
+        {
+          "path": "source/scenarios/cliff/execute.lisp",
+          "bytes": 16551,
+          "sha256": "59f0c151960b68c58c92c99dda27dfc5c24cd91f406e9c83894216df7eb0bf37"
+        },
+        {
+          "path": "source/scenarios/cliff/geometry.lisp",
+          "bytes": 3294,
+          "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999"
+        },
+        {
+          "path": "source/scenarios/cliff/initial-conditions.lisp",
+          "bytes": 189,
+          "sha256": "df2417378ea3bcfcaace99f0efcf58a9c7a0b4e3e770e64f2fb386be4ba54cde"
+        },
+        {
+          "path": "source/scenarios/cliff/loading.lisp",
+          "bytes": 178,
+          "sha256": "ba770dd2f75667248a99f1cf964e517545afb59d4e638bbfa548a721d1f2bce4"
+        },
+        {
+          "path": "source/scenarios/cliff/measurements.lisp",
+          "bytes": 181,
+          "sha256": "f5306ad09ca14f0c13e62a95b235dde94ee32a5bdc597842ce8d14f1ac7a732b"
+        },
+        {
+          "path": "source/scenarios/cliff/notch.lisp",
+          "bytes": 179,
+          "sha256": "40db6c51ae5ee8fd5f83c09dc3ddc065c8f6e032633ec5125b8250f29b1ff0e5"
+        },
+        {
+          "path": "source/scenarios/cliff/run.lisp",
+          "bytes": 2470,
+          "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c"
+        },
+        {
+          "path": "source/scenarios/cliff/settings.lisp",
+          "bytes": 268,
+          "sha256": "4467b347b00c8e5102ce9b7d2ad9c842180aa62d6d19c274cfb0dd7314d60440"
+        },
+        {
+          "path": "source/scenarios/cliff/solver.lisp",
+          "bytes": 1397,
+          "sha256": "1d11bcd99794f6440e39b9cdead22be55f3a29b88ea6cc0a606939689f6ba930"
+        },
+        {
+          "path": "source/scenarios/gravity-slope/adapter.lisp",
+          "bytes": 385,
+          "sha256": "385e29bf7a5fe5fb6c0195687a04f80172876578f6bb69b608c1b26e0f6b8af0"
+        },
+        {
+          "path": "source/scenarios/gravity-slope/configuration.lisp",
+          "bytes": 8076,
+          "sha256": "b9d078c27d896a1a4aa325345eefcbd0cec3fc4db463a5755adfc89a4527243b"
+        },
+        {
+          "path": "source/scenarios/gravity-slope/geometry.lisp",
+          "bytes": 3351,
+          "sha256": "434e457f40ff912c1308a8291419a316f50138ca067272094b9a40680c28bd47"
+        },
+        {
+          "path": "source/scenarios/gravity-slope/mc-composite-apex-adapter.lisp",
+          "bytes": 2070,
+          "sha256": "cc12cc0d7666c984010b12f5f5d4607cba8e94abe5e7b3da701483e7e35b8c0f"
+        },
+        {
+          "path": "source/scenarios/gravity-slope/measurements.lisp",
+          "bytes": 10758,
+          "sha256": "f23f0337bcc519954d94e1a06193ac8d6bda113ce8b60d7ced2886ec1a1ed0b5"
+        },
+        {
+          "path": "source/scenarios/gravity-slope/package.lisp",
+          "bytes": 956,
+          "sha256": "5a40608bcde4f7d9b2173bffe87795c1c0710b2ce1940586d6975092afb62c33"
+        },
+        {
+          "path": "source/scenarios/gravity-slope/runner.lisp",
+          "bytes": 9211,
+          "sha256": "dc235f18f1153c0f1e70245d4ae8d4780e3c37221afd56bebed39b1693bc95b7"
+        },
+        {
+          "path": "source/scenarios/joss/build.lisp",
+          "bytes": 3187,
+          "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e"
+        },
+        {
+          "path": "source/scenarios/joss/classes.lisp",
+          "bytes": 429,
+          "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd"
+        },
+        {
+          "path": "source/scenarios/joss/geometry.lisp",
+          "bytes": 2956,
+          "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d"
+        },
+        {
+          "path": "source/scenarios/joss/measurements.lisp",
+          "bytes": 332,
+          "sha256": "4556047f2058577e8906f1036e72f8323df98343a757232dc1121c533763a27d"
+        },
+        {
+          "path": "source/scenarios/joss/output.lisp",
+          "bytes": 1176,
+          "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641"
+        },
+        {
+          "path": "source/scenarios/joss/phases.lisp",
+          "bytes": 1395,
+          "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91"
+        },
+        {
+          "path": "source/scenarios/joss/run.lisp",
+          "bytes": 11888,
+          "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684"
+        },
+        {
+          "path": "source/scenarios/joss/stages.lisp",
+          "bytes": 176,
+          "sha256": "afb2bed0e9fea39cb37f85478a6d8f22383d8469ac1166fe3dc0ea91828ec143"
+        },
+        {
+          "path": "source/scenarios/joss/statistics.lisp",
+          "bytes": 6450,
+          "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec"
+        },
+        {
+          "path": "source/scenarios/joss/validation.lisp",
+          "bytes": 1249,
+          "sha256": "ff38516f64c0a75eeef5347331a0619bbab690cccfe0aae1f27133d30fa47fc1"
+        },
+        {
+          "path": "source/scenarios/slope-creep/adapter.lisp",
+          "bytes": 378,
+          "sha256": "c037c1fa86d265024b65feb53e81fe75bbfc66f730be55585a87e16b04ac935c"
+        },
+        {
+          "path": "source/scenarios/slope-creep/configuration.lisp",
+          "bytes": 5886,
+          "sha256": "ff8a6ff624d98698c09794716e2334fe9f84b41849acee0369fb023c2cbcaf18"
+        },
+        {
+          "path": "source/scenarios/slope-creep/loading-output.lisp",
+          "bytes": 1611,
+          "sha256": "4f05fcdd8c921420622ca593af4455fb39bff93bfc39fb19f20a3be1647e3b8e"
+        },
+        {
+          "path": "source/scenarios/slope-creep/loading.lisp",
+          "bytes": 8317,
+          "sha256": "3ca017c2fb804e0202bdd9421a3d716a59a4784e6e0b7c5a58390422ecd81a7e"
+        },
+        {
+          "path": "source/scenarios/slope-creep/measurements.lisp",
+          "bytes": 4999,
+          "sha256": "c190c1ceb12e3eee9398be20996741ba5643e28135b8dad80d33898c3905e475"
+        },
+        {
+          "path": "source/scenarios/slope-creep/package.lisp",
+          "bytes": 367,
+          "sha256": "ed440aa878bb11dc80214db3b07bf92a4a4999d192e0dc7bc9b69f01ad31208c"
+        },
+        {
+          "path": "source/scenarios/slope-creep/runner.lisp",
+          "bytes": 10085,
+          "sha256": "4435eb595750354a0f48ceac14bc53d986cd92cbcd14856cfcf0a45a8e56e938"
+        },
+        {
+          "path": "source/scenarios/slope-descent/adapter.lisp",
+          "bytes": 385,
+          "sha256": "2a469c90d2f3a662e4c095a261e03cdbf2e15a152fa085445766431dadeadade"
+        },
+        {
+          "path": "source/scenarios/slope-descent/boundary.lisp",
+          "bytes": 4468,
+          "sha256": "b6145bc1c3860cd47c6baf7c636b260c134e9c175f36c6d3137855858b49206c"
+        },
+        {
+          "path": "source/scenarios/slope-descent/configuration.lisp",
+          "bytes": 7147,
+          "sha256": "2ce37f1c510d3425e0ef36fd0ca0d9f4d02969926fef314ddfbffb3aebd588b4"
+        },
+        {
+          "path": "source/scenarios/slope-descent/geometry.lisp",
+          "bytes": 3941,
+          "sha256": "92c3100d3ea18aa6fe8370b256fab7321a095466bb838a0ec3aecf2a36fe14b1"
+        },
+        {
+          "path": "source/scenarios/slope-descent/package.lisp",
+          "bytes": 1133,
+          "sha256": "0f09d670173492c62fb87319a7ec863f1e62ca9dad23333b86de4fb2897f4478"
+        },
+        {
+          "path": "source/scenarios/slope-descent/runner.lisp",
+          "bytes": 18544,
+          "sha256": "4425f3e8ed3640a9f234fd5b55c90d3e03eec2aec8f2aac3f270229ae23fd8f8"
+        },
+        {
+          "path": "source/scenarios/slope-descent/wang2017-output.lisp",
+          "bytes": 7853,
+          "sha256": "d5b8a642536de89c070cb734617cc160abe1bf6012ce57a2118ee80214f8c36e"
+        },
+        {
+          "path": "source/scenarios/triaxial/adapter.lisp",
+          "bytes": 4076,
+          "sha256": "92b3ffee405aa0d68fe55d253a6177579462728009a538730b0ca0ac098a4d70"
+        },
+        {
+          "path": "source/scenarios/triaxial/boundaries.lisp",
+          "bytes": 207,
+          "sha256": "5c922c21bf89d35ccfc971e187ee1ce5679b90ea12b683cd2d2193675bf053de"
+        },
+        {
+          "path": "source/scenarios/triaxial/build.lisp",
+          "bytes": 186,
+          "sha256": "1a7b73a8e97d1186e1693c5664ca13387e1b7f886e478800cb9d084f0f481852"
+        },
+        {
+          "path": "source/scenarios/triaxial/config.lisp",
+          "bytes": 3157,
+          "sha256": "1eee11c1bec5af052d1c06473c8484bbfa96dfd301cf4e7aa852d4a8ce80809c"
+        },
+        {
+          "path": "source/scenarios/triaxial/controls.lisp",
+          "bytes": 4294,
+          "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948"
+        },
+        {
+          "path": "source/scenarios/triaxial/geometry.lisp",
+          "bytes": 3589,
+          "sha256": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc"
+        },
+        {
+          "path": "source/scenarios/triaxial/homogeneous.lisp",
+          "bytes": 3220,
+          "sha256": "542285f6d5ca253259bb385b7e48f3d86297609aa0f2e7c07c1485cbf35d32f3"
+        },
+        {
+          "path": "source/scenarios/triaxial/initial-conditions.lisp",
+          "bytes": 207,
+          "sha256": "77554f72ee147ac3190fa630271a43848243de5080d2fb0892a21398163e5eb8"
+        },
+        {
+          "path": "source/scenarios/triaxial/loading.lisp",
+          "bytes": 204,
+          "sha256": "74a2e03fbd97b8f48fd03d4cb578b194c39bcb9d228362d4fb7eb3c17f448dcc"
+        },
+        {
+          "path": "source/scenarios/triaxial/measurements.lisp",
+          "bytes": 6658,
+          "sha256": "5702f1c392ae52f1216b98a2562ccd589ef4a2654abb5428c922e068a2710454"
+        },
+        {
+          "path": "source/scenarios/triaxial/mpm.lisp",
+          "bytes": 3570,
+          "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518"
+        },
+        {
+          "path": "source/scenarios/triaxial/runner.lisp",
+          "bytes": 7743,
+          "sha256": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96"
+        },
+        {
+          "path": "source/scenarios/triaxial/stages.lisp",
+          "bytes": 184,
+          "sha256": "6605c0348ca60e4626e54997cdabdd4395cbd7dac4464e043762ed1502ba19b9"
+        },
+        {
+          "path": "source/scenarios/triaxial/state.lisp",
+          "bytes": 237,
+          "sha256": "46bfb37ea16004a0c13affcde1bca8bf952d64b1db130f26c3927b087c60cd20"
+        },
+        {
+          "path": "source/scenarios/triaxial/stress-measures.lisp",
+          "bytes": 168,
+          "sha256": "10b2ca8702641d4deffce31efb652ff7bcbe008039c5eceafcc46dd56c95d6f3"
+        },
+        {
+          "path": "source/scripts/lisp/native-source-snapshot.lisp",
+          "bytes": 20460,
+          "sha256": "1c863bc9eb94cc62134c18b3ff7b9f67d793f0991a2e6785cbab475cd6de02ce"
+        },
+        {
+          "path": "source/source-manifest.json",
+          "bytes": 59875,
+          "sha256": "2501269387bf8f6c9e0d5609fae917343fc8dc0172ad97386f03091996a139ea"
+        },
+        {
+          "path": "source/src/boundaries/buoyancy/buoyancy.lisp",
+          "bytes": 78231,
+          "sha256": "a9318298ab971141f344c46f634156639a2de859e09123ff672aece032fadba9"
+        },
+        {
+          "path": "source/src/boundaries/constraints/bc.lisp",
+          "bytes": 21899,
+          "sha256": "00a722288bc7e7baad930cdb349a325a90c8b4c864c6a387eec26ecff579c0fa"
+        },
+        {
+          "path": "source/src/boundaries/erosion/dr-erosion.lisp",
+          "bytes": 881,
+          "sha256": "1e6ac4b978a0bab15da7f24b856cff477fbc339a6f3afcbac33490ad0e5cba1f"
+        },
+        {
+          "path": "source/src/boundaries/erosion/erosion.lisp",
+          "bytes": 5558,
+          "sha256": "db394ab4ba4e747626ae1523d2447ba5f7d69a7a8e8027026ec97b480a5fba85"
+        },
+        {
+          "path": "source/src/boundaries/inflow/inflow.lisp",
+          "bytes": 3342,
+          "sha256": "d9119416720cf986c91d3ea9488c0e9bab5015663a92e72cbb3f862ac4f3de2a"
+        },
+        {
+          "path": "source/src/boundaries/penalty/penalty.lisp",
+          "bytes": 63098,
+          "sha256": "f24eb709210e127f357d66f494091f770ef0a5a309b7463f75e3b3e39fbfcbb3"
+        },
+        {
+          "path": "source/src/boundaries/pressure/isotropic.lisp",
+          "bytes": 891,
+          "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13"
+        },
+        {
+          "path": "source/src/core/domain-state.lisp",
+          "bytes": 163,
+          "sha256": "1a6cef77f8ff1c538f87118f6243d93d51d5ff4f205bf88bdd979102016432ba"
+        },
+        {
+          "path": "source/src/core/iterate-test.lisp",
+          "bytes": 5860,
+          "sha256": "ee36f0ec55a97ec6dbb07cbb7f7bab09fa448b2cc33da7bb5229f9ad883e2984"
+        },
+        {
+          "path": "source/src/core/iterate.lisp",
+          "bytes": 82697,
+          "sha256": "39c0e79ee1d3e25db71d22c413b609ff12208598e50bdbe40fbf50a6c4722e2d"
+        },
+        {
+          "path": "source/src/core/mesh-base.lisp",
+          "bytes": 51125,
+          "sha256": "57bd47f0b8a9932e9d2042173d0b20fb5fd75037c16725cdbf626ccca8570eba"
+        },
+        {
+          "path": "source/src/core/package.lisp",
+          "bytes": 7473,
+          "sha256": "54c2c4e068fd81bc2b2d79d0ba3835e695e1d0de9f8c0ed6a8ac8513983b92c1"
+        },
+        {
+          "path": "source/src/core/particle-base.lisp",
+          "bytes": 10894,
+          "sha256": "5e8fdaa9b6b312b30565239e72f3add2773b190d3808d42937c93dc08cc5285d"
+        },
+        {
+          "path": "source/src/core/particle-protocols.lisp",
+          "bytes": 7004,
+          "sha256": "ea55acd4fa27cbec3530a2c5eceb67d3a050953490d028cc37232d05433ee506"
+        },
+        {
+          "path": "source/src/core/settings.lisp",
+          "bytes": 492,
+          "sha256": "97307ee66180541a6ea3c3155c2da24f20669420e9e59f8747776253e0e0b710"
+        },
+        {
+          "path": "source/src/core/simulation-base.lisp",
+          "bytes": 52544,
+          "sha256": "90f6ad05fc51456410df291e7782e9acde2f124fa2f16cc5044891238514c1b0"
+        },
+        {
+          "path": "source/src/core/stress-update.lisp",
+          "bytes": 25523,
+          "sha256": "7014b54e59be3b4f8f4b0fc4ddfea750795f71dd3011d5c3fd50b325a628d2e1"
+        },
+        {
+          "path": "source/src/core/timestep.lisp",
+          "bytes": 151,
+          "sha256": "946029c9ccaf05b8e071f1c5b236e835cda6fdc20ae7a6957f79c07709c82537"
+        },
+        {
+          "path": "source/src/damage/eigenerosion/eigenerosion.lisp",
+          "bytes": 12320,
+          "sha256": "3396b21038537944ef0572653fc75c7b14ba070a29257a3c61f12a8169a0c0b7"
+        },
+        {
+          "path": "source/src/damage/nonlocal/ekl.lisp",
+          "bytes": 7162,
+          "sha256": "f3ea1ed92c931f1dfb2437118374806d675a4e37839dd2ac55b858026811e671"
+        },
+        {
+          "path": "source/src/damage/nonlocal/legacy.lisp",
+          "bytes": 42911,
+          "sha256": "fe26d093a1e911beee8fdbe67a53c10f0c619f44eea5a3eaa25c410d42c8337f"
+        },
+        {
+          "path": "source/src/damage/nonlocal/nonlocal-stress-based.lisp",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "source/src/damage/package.lisp",
+          "bytes": 1972,
+          "sha256": "0983111fb3acf696939d7ee54d948ed9345cfbd94ec9c529e84e9e528ddb08ef"
+        },
+        {
+          "path": "source/src/damage/solver/solver.lisp",
+          "bytes": 7492,
+          "sha256": "16117cbb17fae425c1e1ea058a29ed7077e087cd7e63862797e5edbd590bdab1"
+        },
+        {
+          "path": "source/src/discretization/domain-update/domain-update.lisp",
+          "bytes": 31495,
+          "sha256": "7cf4a1d2ad39b5076ccb322ea19896754c32893d1657b98cb5af4c662bfa7026"
+        },
+        {
+          "path": "source/src/discretization/ghost-nodes/ghost.lisp",
+          "bytes": 49776,
+          "sha256": "e74fb0200ba0f0f6edbfb77cb0e9821cdc532c718808a89a0d92cef806276e44"
+        },
+        {
+          "path": "source/src/discretization/shape-functions/shape-function.lisp",
+          "bytes": 23457,
+          "sha256": "91fbe2afc519fa5eb0728d54630a8f5f0c47b03ebfda73371076a58a3458452f"
+        },
+        {
+          "path": "source/src/discretization/splitting/splitting.lisp",
+          "bytes": 15070,
+          "sha256": "26e57f4399dcc6e87a74b1910c60b3ecc9c6467f551b983a7332171d037436b3"
+        },
+        {
+          "path": "source/src/formulations/octree/buoyancy.lisp",
+          "bytes": 18341,
+          "sha256": "f0eab46ca3f2e510a516ddbf24991d5a70a739c7005489d47048074f25392e78"
+        },
+        {
+          "path": "source/src/formulations/octree/penalty.lisp",
+          "bytes": 6365,
+          "sha256": "b2c1993fef297d6efcc887da5fea440a7e6be1ffbc7361ce0ce5ca01dd80602e"
+        },
+        {
+          "path": "source/src/formulations/ssa/mesh.lisp",
+          "bytes": 58,
+          "sha256": "bb3af7f3bd5c55b79b142bd997bfa34906d263355aae190686431eefbfd49063"
+        },
+        {
+          "path": "source/src/formulations/ssa/p2g.lisp",
+          "bytes": 4814,
+          "sha256": "dafd5769cf207aa6f46049b1d8fc939cc6053d9966ffdfda9bbbbdd5715161c0"
+        },
+        {
+          "path": "source/src/formulations/ssa/package.lisp",
+          "bytes": 228,
+          "sha256": "dee67a4760e9f82162ced9533e5316ee3f350f36e5b7e3b360cec02e4908feb8"
+        },
+        {
+          "path": "source/src/formulations/ssa/particles.lisp",
+          "bytes": 3133,
+          "sha256": "2f72160e9723bcc5a176d7634d46135a0dcbf629df8250f541b5055a586e2c0f"
+        },
+        {
+          "path": "source/src/formulations/ssa/solvers.lisp",
+          "bytes": 1838,
+          "sha256": "0f15f7124f900f8cd406e1ac470e335a8cc823a003c7627394c74d123a231423"
+        },
+        {
+          "path": "source/src/geometry/setup.lisp",
+          "bytes": 36567,
+          "sha256": "0bd74167f9125a16b53fc55d6747039525943adffe6746004632781eec62b057"
+        },
+        {
+          "path": "source/src/loading/displacement.lisp",
+          "bytes": 192,
+          "sha256": "5b69184b836299e6302f8fb09ae26b70a4d25e8dec01c520a14e8f22fc8f4f05"
+        },
+        {
+          "path": "source/src/loading/force.lisp",
+          "bytes": 185,
+          "sha256": "b8008de11ea20434fdac96f37e00c21874aca584c1c64e501b5e806d43c4bbb1"
+        },
+        {
+          "path": "source/src/loading/gravity.lisp",
+          "bytes": 187,
+          "sha256": "4a2412609df8c572d81d3759430c7d57a8b585a510065245eadbd0ad5ded5225"
+        },
+        {
+          "path": "source/src/loading/pressure.lisp",
+          "bytes": 181,
+          "sha256": "066b63638de05017d0fc0228f111a97b9a31c4727fd696d776af7433db5a40d7"
+        },
+        {
+          "path": "source/src/loading/sequences.lisp",
+          "bytes": 189,
+          "sha256": "1e8217f94f8758e7ff65ac895f3a8be0efd52725272861b235cd16d0438bf529"
+        },
+        {
+          "path": "source/src/loading/time-functions.lisp",
+          "bytes": 194,
+          "sha256": "194c047ff36c9b4164ee8c6297644ba646451c4fd7b8dcfc039a081126c3e82b"
+        },
+        {
+          "path": "source/src/measurements/displacement.lisp",
+          "bytes": 198,
+          "sha256": "0051a1406ec11ab54cfcef0478c956b21d95179a7080b0289d07d1a5495ba7fd"
+        },
+        {
+          "path": "source/src/measurements/energy.lisp",
+          "bytes": 192,
+          "sha256": "30c343bb3103ec4c60d1d09eaaef0fb65bf4d62b941b67d6b3e426d1ddbb57b7"
+        },
+        {
+          "path": "source/src/measurements/legacy-particle.lisp",
+          "bytes": 139,
+          "sha256": "e3173eb888b753f1770628a612552ea24848e62c120bd351e4db942577f674b6"
+        },
+        {
+          "path": "source/src/measurements/legacy-stress.lisp",
+          "bytes": 173,
+          "sha256": "95e88e09e19a36d810e9a682f7d9e4bf6575cb8e6e4bedbc24dd9bb461ad30d0"
+        },
+        {
+          "path": "source/src/measurements/mass-balance.lisp",
+          "bytes": 198,
+          "sha256": "3d3773e63657152fe044f94314e943dc723c2494d02036861d893c93f67bec6c"
+        },
+        {
+          "path": "source/src/measurements/material-output.lisp",
+          "bytes": 3158,
+          "sha256": "61c3b5aed49ef1965bb2ca8800f454310b35ff5f4e71f7202b5a0527e4132019"
+        },
+        {
+          "path": "source/src/measurements/stress-strain.lisp",
+          "bytes": 197,
+          "sha256": "3c658f7042cbe0e9003f048090e73248145ee35ed710de919d081111992cb9a5"
+        },
+        {
+          "path": "source/src/measurements/volume.lisp",
+          "bytes": 192,
+          "sha256": "63daa4d5a1939a576b5ea0882b9ba7a2d750c2739fec2e2744d50237541475b6"
+        },
+        {
+          "path": "source/src/numerics/angles.lisp",
+          "bytes": 85,
+          "sha256": "4edf2316d646f21dcd67bae6ee87abf3c5d14d58a4b8a8256b006888ac467c12"
+        },
+        {
+          "path": "source/src/numerics/error-handling/errors.lisp",
+          "bytes": 443,
+          "sha256": "e857aa6fae6d4385f571d52903d9755799e39d384547f4fb3622eb7759914bcb"
+        },
+        {
+          "path": "source/src/numerics/fastmaths/fastmaths.lisp",
+          "bytes": 79025,
+          "sha256": "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d"
+        },
+        {
+          "path": "source/src/numerics/integration/delayed-steppers.lisp",
+          "bytes": 5269,
+          "sha256": "95271a7b90f61780a5d2c2e2705a77be5a9a40f2d30e3a11eb8523543f36443d"
+        },
+        {
+          "path": "source/src/numerics/integration/finite-difference-tangent.lisp",
+          "bytes": 1310,
+          "sha256": "e566c19c99889fd6f41b28beb35b0dfffdd4f95826a00f57bcad2f5a879caaa9"
+        },
+        {
+          "path": "source/src/numerics/legacy-tensors.lisp",
+          "bytes": 251,
+          "sha256": "4738b0b9a66506b54b743539fbc78c8371d16b6b9d6a6adc7f80becb6d0b3cba"
+        },
+        {
+          "path": "source/src/numerics/linear-algebra/symbolic-derivation.lisp",
+          "bytes": 5093,
+          "sha256": "f707ec327b569f93f504ff08dfec333a0684b2df99b5b80028fc7f4f18516928"
+        },
+        {
+          "path": "source/src/numerics/native-bridge/cpp.lisp",
+          "bytes": 5705,
+          "sha256": "3b3c47ef825a28a4d3da7cce9051857460d2d93cb7b985ac253a431b13430e7b"
+        },
+        {
+          "path": "source/src/numerics/tensors/constitutive-primitives.lisp",
+          "bytes": 5737,
+          "sha256": "e9897f81b3ed9ecd206b46fa12fefa09d3a04cb49555c7aa31cb37a834dfcf95"
+        },
+        {
+          "path": "source/src/numerics/tensors/damage-primitives.lisp",
+          "bytes": 1710,
+          "sha256": "3ed032ad1782ba8310b40b4544e3a7b262d6dd8ac04e5527d5eb447766262196"
+        },
+        {
+          "path": "source/src/numerics/tensors/particle-objectivity.lisp",
+          "bytes": 5181,
+          "sha256": "aa5c713ade5833c0b4525e64a6b9339619597b44db2e68ecb20c4dd4847fcbaf"
+        },
+        {
+          "path": "source/src/numerics/tensors/principal-strains.lisp",
+          "bytes": 1298,
+          "sha256": "054eb75fe8a1e36f94e43cba7b1bda635f88b9859b8260a0a8b419a154c31593"
+        },
+        {
+          "path": "source/src/numerics/tensors/utils.lisp",
+          "bytes": 57848,
+          "sha256": "8ed1bfb0d0662107c8d56694b5388e571c41944cda07448337ebef1665015f57"
+        },
+        {
+          "path": "source/src/numerics/tensors/voigt-2d.lisp",
+          "bytes": 285,
+          "sha256": "bbd1cf217257f1f6530fab141d5f75286bd6a06086da038b5a341c7940156bab"
+        },
+        {
+          "path": "source/src/output/checkpoints.lisp",
+          "bytes": 161,
+          "sha256": "dfac7a3bc187707b79905488b697489781d25ed6adf72e9f414c463e9e024fa4"
+        },
+        {
+          "path": "source/src/output/csv.lisp",
+          "bytes": 153,
+          "sha256": "ac19340a880f20f1f8ff0027cb18d85e671bd18f3284b1d5c599e1e8088ce62a"
+        },
+        {
+          "path": "source/src/output/legacy-triaxial-json.lisp",
+          "bytes": 338,
+          "sha256": "c26f7e820344d1f7b949a0efe57ba82d0a071226627cc1f9701dc3f2bbdac31c"
+        },
+        {
+          "path": "source/src/output/metadata.lisp",
+          "bytes": 175,
+          "sha256": "fb821fe38513daf8d8e27175fe0932a4371830990a87b8ed7f78e5a3dba87f57"
+        },
+        {
+          "path": "source/src/output/plotting.lisp",
+          "bytes": 172,
+          "sha256": "b2497939ad4d4ac8b049ca91442b87a72dd0fd1590879a4589d4a708e278aadb"
+        },
+        {
+          "path": "source/src/output/plotting/legacy-particle.lisp",
+          "bytes": 2391,
+          "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba"
+        },
+        {
+          "path": "source/src/output/plotting/plotter.lisp",
+          "bytes": 5128,
+          "sha256": "88ba44d5bebd69ddd8a8e80902787997b3c4e036608168f254ccbcb210c68caa"
+        },
+        {
+          "path": "source/src/output/provenance.lisp",
+          "bytes": 177,
+          "sha256": "2cff3ceb567dbca3003ca0a22582c7a92cbbf37dfe25819d1dad42dddd5d936a"
+        },
+        {
+          "path": "source/src/output/retained-history.lisp",
+          "bytes": 1134,
+          "sha256": "0868b129c7f565b88e765594bac1a4b9d5c740b492af600b42621ce09b698a03"
+        },
+        {
+          "path": "source/src/output/vtk.lisp",
+          "bytes": 44215,
+          "sha256": "479a747f01a5e1015be69934f0489378751e462b62b5a954ddadd04adf74971a"
+        },
+        {
+          "path": "source/src/parallel/damage-communication-state.lisp",
+          "bytes": 1148,
+          "sha256": "0d6f4a271354e4d7874f1c0b46ec539600ea8ecf18758a4af7d2ef65bede7b37"
+        },
+        {
+          "path": "source/src/parallel/mpi/damage-stub.lisp",
+          "bytes": 26,
+          "sha256": "ddea8f5abcf32496f6204b41c3c3232e73e54ae1d8813dcbf565a169c8e6d0a6"
+        },
+        {
+          "path": "source/src/parallel/mpi/damage.lisp",
+          "bytes": 2578,
+          "sha256": "7d58a28779311ac70514dcebe1431c75e31410eaecde37abc71371c0663ba7ef"
+        },
+        {
+          "path": "source/src/parallel/mpi/domain.lisp",
+          "bytes": 25818,
+          "sha256": "d4c057480d124cb24782eec31a69a77c9a11c3421a68c5f7427a3217450767dd"
+        },
+        {
+          "path": "source/src/parallel/mpi/dr-solvers.lisp",
+          "bytes": 13394,
+          "sha256": "a6c5feb9e8269cfe48bdd71373d7ec38fef1a7b7a509b2296ace79de1c677bce"
+        },
+        {
+          "path": "source/src/parallel/mpi/dr.lisp",
+          "bytes": 2722,
+          "sha256": "63b112fb0c02f0df46803d39bc4a94c0f9308478fef543c8a0edcd7117d8b23a"
+        },
+        {
+          "path": "source/src/parallel/mpi/legacy-mpi.lisp",
+          "bytes": 100388,
+          "sha256": "7936696762e57e14f16bff0c2f93ce09c248f4741d36752dbba0450d18b6eb2c"
+        },
+        {
+          "path": "source/src/parallel/mpi/mpi.lisp",
+          "bytes": 13033,
+          "sha256": "ba3ed1eb2ef7b261d3870643c90ce7971e3e22828fac105169e01efd3f8fe657"
+        },
+        {
+          "path": "source/src/parallel/mpi/package.lisp",
+          "bytes": 7981,
+          "sha256": "23e9f74d42da9ca4af15df60fdc4893e71d73c0c1a9d25fec5843fe95f8ec923"
+        },
+        {
+          "path": "source/src/parallel/mpi/sync.lisp",
+          "bytes": 37612,
+          "sha256": "4d181e0d032494984dca997bd90a7993d966c2a6523a43954eca8431ed15cd26"
+        },
+        {
+          "path": "source/src/parallel/serial/serial.lisp",
+          "bytes": 3677,
+          "sha256": "4941b42947f196dca693901d9fda73d18e6b653d743e73acac6643fd8b1c2c3c"
+        },
+        {
+          "path": "source/src/parallel/serial/serialise.lisp",
+          "bytes": 7210,
+          "sha256": "64f4b75622833d0b4cbcd8e32f99859b710b60e17d00dca2099147e1612babbe"
+        },
+        {
+          "path": "source/src/simulation/builder.lisp",
+          "bytes": 174,
+          "sha256": "5087da3146032eeffb12b4b8d190937a28116a1f9614d317168178ff251ee6ec"
+        },
+        {
+          "path": "source/src/simulation/compatibility/triaxial-package.lisp",
+          "bytes": 109,
+          "sha256": "1d5c90cddff8cb5d81b3b3f91576dd8fd01ee8f31063c3b44fcf829dab3e009d"
+        },
+        {
+          "path": "source/src/simulation/components/base.lisp",
+          "bytes": 934,
+          "sha256": "0ca404e1ad941223ce91a6214dba77a6eb2013267ac7ecce584928f209a0b302"
+        },
+        {
+          "path": "source/src/simulation/components/geometry.lisp",
+          "bytes": 377,
+          "sha256": "039dba870ec44b1ae7eadcf04f60130da27c81470db729241463068982dd87d5"
+        },
+        {
+          "path": "source/src/simulation/components/specifications.lisp",
+          "bytes": 3227,
+          "sha256": "136a3f21922ef4b1cb788dbe7f675fb5ffb9667a5a87cc0e76fb1be6652b785e"
+        },
+        {
+          "path": "source/src/simulation/config/legacy-triaxial-values.lisp",
+          "bytes": 522,
+          "sha256": "a808236f0015a187838036c4dbf19c7973b86cd8be72cc8b72fdb53c457533be"
+        },
+        {
+          "path": "source/src/simulation/config/package.lisp",
+          "bytes": 204,
+          "sha256": "221838a3c3746928e4cf1da9fe492e77a37e8013ce0d4ba0a6b78a615331c9f2"
+        },
+        {
+          "path": "source/src/simulation/config/parameters.lisp",
+          "bytes": 4101,
+          "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86"
+        },
+        {
+          "path": "source/src/simulation/controller.lisp",
+          "bytes": 177,
+          "sha256": "5fa1a99284320b48de5d1dde9a89aa957f564eab7a59fdde1e64f2399ba67fad"
+        },
+        {
+          "path": "source/src/simulation/lifecycle.lisp",
+          "bytes": 3702,
+          "sha256": "df8d91fe4b5e5c3f72800ca65fd3abf6d58bc5d294029a4cc3e6a9fb9eeca22f"
+        },
+        {
+          "path": "source/src/simulation/material-assignment.lisp",
+          "bytes": 187,
+          "sha256": "ad5f3e87b3b1a9142556135d62f1168e0f39af9a2429555f1ba25ae3aca2a0cf"
+        },
+        {
+          "path": "source/src/simulation/package.lisp",
+          "bytes": 1459,
+          "sha256": "dde2bb5d241d9f30050cb1c980f88e51df775a606d3df0a644491fd6d8d7acc7"
+        },
+        {
+          "path": "source/src/simulation/stages.lisp",
+          "bytes": 173,
+          "sha256": "95875895498d5cdc3504f164567ee173bf82fd49926fb471947a0c91a28867a1"
+        },
+        {
+          "path": "source/src/simulation/validation.lisp",
+          "bytes": 192,
+          "sha256": "8edbae27ea5dd891278af24535a608dc305fb856f206c59bb0141d28ae56a1fd"
+        },
+        {
+          "path": "source/src/solvers/dynamic-relaxation/algorithms.lisp",
+          "bytes": 95842,
+          "sha256": "b0552b31151c7bd1a4da664f426715dcef0898e8005397885c7012462ae0b6bf"
+        },
+        {
+          "path": "source/src/solvers/dynamic-relaxation/convergence/criteria.lisp",
+          "bytes": 45579,
+          "sha256": "ae74b9f93db587f39df7de627494baa115d0967c75bfd0257cbd36a650b6342a"
+        },
+        {
+          "path": "source/src/solvers/dynamic-relaxation/dynamic-relaxation.lisp",
+          "bytes": 18096,
+          "sha256": "c5827ab6c324ee2d74dd10d1f27d87f01281100616c68d1840278705f3c2a10a"
+        },
+        {
+          "path": "source/src/solvers/dynamic-relaxation/dynamic/dynamic.lisp",
+          "bytes": 18899,
+          "sha256": "581cf8f2f0c2d66cbba0891e27e3c19c79fcc54ce18afee043d15d0b4abc2681"
+        },
+        {
+          "path": "source/src/solvers/dynamic-relaxation/multigrid/multigrid.lisp",
+          "bytes": 97808,
+          "sha256": "ef9858a372fab83ae1355bded25db37673591cdf2ffc0651a616472211153251"
+        },
+        {
+          "path": "source/src/solvers/dynamic-relaxation/package.lisp",
+          "bytes": 2959,
+          "sha256": "e9950da927acf0eace931c02a2814226109428c9943065d8ea499fb84e848b99"
+        },
+        {
+          "path": "source/src/solvers/dynamic-relaxation/quasi-static/quasi-static.lisp",
+          "bytes": 32054,
+          "sha256": "96c785c5b1981b09cdba1cdddc0e75dce7cdb25164462d44bd1f2f6bd42aee58"
+        },
+        {
+          "path": "source/src/solvers/explicit/musl.lisp",
+          "bytes": 2302,
+          "sha256": "37e58cfc2a43957b259f89e8f27d8fd20adb87fdeed0b6e2b3c4cfe3fc886639"
+        },
+        {
+          "path": "source/src/solvers/explicit/usf.lisp",
+          "bytes": 4540,
+          "sha256": "7cefb3fe86a9124715392ad73de19ec34ef6939bf824b0170394c1e312c8120e"
+        },
+        {
+          "path": "source/src/solvers/explicit/usl.lisp",
+          "bytes": 2651,
+          "sha256": "fabc02dda085ce46545d2843456455a5a6fe45c6396463432dd946e5338921b2"
+        },
+        {
+          "path": "source/src/solvers/implicit/implicit.lisp",
+          "bytes": 83220,
+          "sha256": "ed262829375b11f92f70148ee4d421dd1ac9f9abe221795399e9436b6b49b357"
+        },
+        {
+          "path": "source/src/solvers/linear-systems/linear-solver.lisp",
+          "bytes": 31152,
+          "sha256": "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011"
+        },
+        {
+          "path": "source/src/stabilization/aggregate/aggregate.lisp",
+          "bytes": 46719,
+          "sha256": "8308aaa8b8e01133828d1215eb8d2a754a8bef8208f8d67d9fb7cb21b1e303bd"
+        },
+        {
+          "path": "source/src/transfer/forces.lisp",
+          "bytes": 14831,
+          "sha256": "938207f2951a1edd7113155bf1c59a3e667629497020507fab78912c750ca80f"
+        },
+        {
+          "path": "source/src/transfer/g2p.lisp",
+          "bytes": 12586,
+          "sha256": "b969f82a01f8fab4d13cf62b34783fc17fdb49c82efb0c66ceb99c413651530e"
+        },
+        {
+          "path": "source/src/transfer/momentum.lisp",
+          "bytes": 155,
+          "sha256": "14c53751a132d228550242bfa6238fb83eefa9faf2a0e3ffc178c5254d21b594"
+        },
+        {
+          "path": "source/src/transfer/p2g.lisp",
+          "bytes": 14584,
+          "sha256": "1faedbbfe015f201414773a5d5cdb7314cd0d9de8b21bf4f89b41846daa3bfbc"
+        },
+        {
+          "path": "vtk/mesh.vtk",
+          "bytes": 223963,
+          "sha256": "37480fee99505e196d5f35f55cedbfa11329c72b1b72f7aacaff76636291e8b1"
+        },
+        {
+          "path": "vtk/particles_0000.vtk",
+          "bytes": 1213024,
+          "sha256": "7d7b249d72a9b3db39c7a561905086f70eb7c65d9d59088778534ddf7e398e16"
+        },
+        {
+          "path": "vtk/particles_0001.vtk",
+          "bytes": 1213024,
+          "sha256": "c8b454e007a20b85c46ab28ce7316945609927593733a12a6613d932a70e580a"
+        },
+        {
+          "path": "vtk/particles_0002.vtk",
+          "bytes": 1213024,
+          "sha256": "6c8fdc4092c09764738c002c0bf9f51991b54e1c6c36ee0b1a8189fd3278380e"
+        },
+        {
+          "path": "vtk/particles_0003.vtk",
+          "bytes": 1213024,
+          "sha256": "0fa61a1f9aaefe91bb77a1c88eadee0ad818428608f734f0426e5cf543996b69"
+        },
+        {
+          "path": "vtk/particles_0004.vtk",
+          "bytes": 1213024,
+          "sha256": "4185e2e0b5305bfea57bffa0881afaeb16240146db060562d84a90fb71d6625d"
+        },
+        {
+          "path": "vtk/particles_0005.vtk",
+          "bytes": 1213024,
+          "sha256": "a4673c130715550ead75f002d5adf5fda5ed09fc850d5feb355ef54dbf94b80a"
+        },
+        {
+          "path": "vtk/particles_0006.vtk",
+          "bytes": 1213024,
+          "sha256": "e08abeb67c96715ff853ffc0a82c14a9e812b55b03148ff62295b994fb3ba178"
+        },
+        {
+          "path": "vtk/particles_0007.vtk",
+          "bytes": 1213024,
+          "sha256": "84ace044590e7da0802ae739c53dc013d0c6c88ef0265a859ec553cc925f673a"
+        },
+        {
+          "path": "vtk/particles_0008.vtk",
+          "bytes": 1213024,
+          "sha256": "2752fb8b4ac5779ede2b8c9f6e2a4bd2132910af3fa0417838091cc5e574e07b"
+        },
+        {
+          "path": "vtk/particles_0009.vtk",
+          "bytes": 1213024,
+          "sha256": "4e71c911b00ec4244d21b0ce868ff037157a8061843a99e0ecf1a2f4fbe61821"
+        },
+        {
+          "path": "vtk/particles_0010.vtk",
+          "bytes": 1213024,
+          "sha256": "1efa31f4dda9487465c06dc425d3fc8af0ae39955b1dfcc423e59ea30dae077a"
+        },
+        {
+          "path": "vtk/particles_0011.vtk",
+          "bytes": 1213024,
+          "sha256": "3ae2fba888c6d00d2f9a7136cad58cfca765069e50db89e4e0270741595ffc36"
+        },
+        {
+          "path": "vtk/particles_0012.vtk",
+          "bytes": 1213024,
+          "sha256": "dc9c1e810245da167f859893c0c75a1932a557c6b08ff36974dc6c6d29bc3534"
+        },
+        {
+          "path": "vtk/particles_0013.vtk",
+          "bytes": 1213024,
+          "sha256": "aa1e9b24aa7b747b2ac637a5162a460d11e565bdb1602010ea0111ead9d3a548"
+        },
+        {
+          "path": "vtk/particles_0014.vtk",
+          "bytes": 1213024,
+          "sha256": "eb6f26051a726139b9463bf85efbc72143f1bb0800dbc9fd759270725a53bdfa"
+        },
+        {
+          "path": "vtk/particles_0015.vtk",
+          "bytes": 1213024,
+          "sha256": "05e4d7fd580cd4f0259c2dd8bdb38f406ebc739c6c62c490f13d099a5910e9b6"
+        },
+        {
+          "path": "vtk/particles_0016.vtk",
+          "bytes": 1213024,
+          "sha256": "0062363c60eb7b5f03061a500c98c1ff79dd6ac5352c4c3d1591f28039796626"
+        },
+        {
+          "path": "vtk/particles_0017.vtk",
+          "bytes": 1213024,
+          "sha256": "c06e9abacd1728695811a1dc63a10607a1d044887dbc66d6c101d8c3c3a1b1ca"
+        },
+        {
+          "path": "vtk/particles_0018.vtk",
+          "bytes": 1213024,
+          "sha256": "d0e758d20c25a82712d77ae862e76b398e5cd4ccdea1c5276b8a06fe87dd161f"
+        },
+        {
+          "path": "vtk/particles_0019.vtk",
+          "bytes": 1213024,
+          "sha256": "fe0a63e35e825555c60c4435785eaff99c0b76aaed271a6d9d6eb47bdfb1009b"
+        },
+        {
+          "path": "vtk/particles_0020.vtk",
+          "bytes": 1213024,
+          "sha256": "6ae0d2e6721da34a813172d93048b07422c0a2080301ee8e6d420a70bcdaebb1"
+        },
+        {
+          "path": "vtk/particles_0021.vtk",
+          "bytes": 1213024,
+          "sha256": "a3958ee4555054fb4aabc6ce23ad6852e256c5e6b056f4080d464fb0e4a30754"
+        },
+        {
+          "path": "vtk/particles_0022.vtk",
+          "bytes": 1213024,
+          "sha256": "2b0568710c8fbc1e8d728ce80d502b70788a5c2654dceeafb83aa17e7cf1790f"
+        },
+        {
+          "path": "vtk/particles_0023.vtk",
+          "bytes": 1213024,
+          "sha256": "64015358477ef4a9c895c6f2c35e787bf82ef6cafdf1d11bece30e5432a8b661"
+        },
+        {
+          "path": "vtk/particles_0024.vtk",
+          "bytes": 1213024,
+          "sha256": "d573bf165f5183b8164abbd518d6b317da8aef8d5e85f5c9eb1773b106705a63"
+        },
+        {
+          "path": "vtk/particles_0025.vtk",
+          "bytes": 1213024,
+          "sha256": "1ea071f251d62013ed07b2ce691bc1230d4a3e8fbbb3b9d3dca9e78bc481f3f4"
+        },
+        {
+          "path": "vtk/particles_0026.vtk",
+          "bytes": 1213024,
+          "sha256": "f9463235d7e02194db11a8f8ed316203d16d6760bbc96c17bc76557f566bec82"
+        },
+        {
+          "path": "vtk/particles_0027.vtk",
+          "bytes": 1213024,
+          "sha256": "127782d8bf2e433eda0a5501be7e86f90361857858b96beb18fdb5df20d1b30c"
+        },
+        {
+          "path": "vtk/particles_0028.vtk",
+          "bytes": 1213024,
+          "sha256": "660f2c5b9aad905e6a7e702a24a75f7217a4b8eb9805bda4354b39b170ba26fc"
+        },
+        {
+          "path": "vtk/particles_0029.vtk",
+          "bytes": 1213024,
+          "sha256": "1a4b0bfee8e7f8fab66bc88affba15f3da01e77cac03cc6daeb1c12b64998ff5"
+        },
+        {
+          "path": "vtk/particles_0030.vtk",
+          "bytes": 1213024,
+          "sha256": "f59c457d04857045efa35075a93bf764cfcb20ab2938d7f5577a2dbcdcdb1478"
+        },
+        {
+          "path": "vtk/particles_0031.vtk",
+          "bytes": 1213024,
+          "sha256": "0d228ee96af624c8dd96a7a8fb81b4d811e980c88a66ecb44223f0b107eb4c28"
+        },
+        {
+          "path": "vtk/particles_0032.vtk",
+          "bytes": 1213024,
+          "sha256": "9905a0414726ee9032b30d49e95b57e7f1336498ebafe56bcf73db4ba4f933e7"
+        },
+        {
+          "path": "vtk/particles_0033.vtk",
+          "bytes": 1213024,
+          "sha256": "846bf9166f582e282a63588360b86cdf894082d8def34399d92985844592f793"
+        },
+        {
+          "path": "vtk/particles_0034.vtk",
+          "bytes": 1213024,
+          "sha256": "e4e32bb797537361dd6ccb0364704be8565479fc1a8dc88beb78815a8694fa10"
+        },
+        {
+          "path": "vtk/particles_0035.vtk",
+          "bytes": 1213024,
+          "sha256": "60399c2d963777dbc32fc9560a8ba3207e0fe5806c5124ec18396374543be975"
+        },
+        {
+          "path": "vtk/particles_0036.vtk",
+          "bytes": 1213024,
+          "sha256": "3c52ead756c76ed85388bf3195d0303210d751ebb7f1cec55365bbde9026b04d"
+        },
+        {
+          "path": "vtk/particles_0037.vtk",
+          "bytes": 1213024,
+          "sha256": "4d34af73e10d401a5cc709eeebc901f806e7af7289b00222a39abc86bb3fdd88"
+        },
+        {
+          "path": "vtk/particles_0038.vtk",
+          "bytes": 1213024,
+          "sha256": "d884e4bf17182f8d8b23893f452b6958f5493e1e7b267f6a305f7e294f23cbac"
+        },
+        {
+          "path": "vtk/particles_0039.vtk",
+          "bytes": 1213024,
+          "sha256": "403644bcb776d1fc049e3e1a5a3beaa3246d892df5ef611fa2a77f1adda985a1"
+        },
+        {
+          "path": "vtk/particles_0040.vtk",
+          "bytes": 1213024,
+          "sha256": "9935f9fab61a054f93ff049d1b8fe691530dbba0b7c5c7161528f1098b82029f"
+        },
+        {
+          "path": "vtk/particles_0041.vtk",
+          "bytes": 1213024,
+          "sha256": "daa3d24d3493688262e5ab8caf48cd1aed64f61b78d349d89488ccdad27bc2f7"
+        },
+        {
+          "path": "vtk/particles_0042.vtk",
+          "bytes": 1213024,
+          "sha256": "d613bdd6b0b46d47f8d3abcd1b5075d9e274e305cb27602885bb333c77d4bcd7"
+        },
+        {
+          "path": "vtk/particles_0043.vtk",
+          "bytes": 1213024,
+          "sha256": "0fc274d37d360faac9c374253086b411aa3b85787a193123c4b4b446a6060172"
+        },
+        {
+          "path": "vtk/particles_0044.vtk",
+          "bytes": 1213024,
+          "sha256": "3f24caa2383d8dabb93a4cfdacc100f0414467e26e352ccb2aeec217fe64134d"
+        },
+        {
+          "path": "vtk/particles_0045.vtk",
+          "bytes": 1213024,
+          "sha256": "7a910df8646398d8d95e23425a84ae9e11d452e012ba28fafdcae545443a1fa6"
+        },
+        {
+          "path": "vtk/particles_0046.vtk",
+          "bytes": 1213024,
+          "sha256": "e00fd5fdcf7b54eaa58c929a9e337eed235ee25b8b2799ddb784b8d99c57959b"
+        },
+        {
+          "path": "vtk/particles_0047.vtk",
+          "bytes": 1213024,
+          "sha256": "c32b70ed85bccafe2c3061ba86888e8358f12e816d340981cb028b7a5c695093"
+        },
+        {
+          "path": "vtk/particles_0048.vtk",
+          "bytes": 1213024,
+          "sha256": "b0c3b1f7d91256aedc9f9d3f30c9812ac28a11c0371724467ef6aba23d21776d"
+        },
+        {
+          "path": "vtk/particles_0049.vtk",
+          "bytes": 1213024,
+          "sha256": "419880e7ae761b8bf0ac7621455856d490920f31d6cb7a17c30d72f95f98c14b"
+        },
+        {
+          "path": "vtk/particles_0050.vtk",
+          "bytes": 1213024,
+          "sha256": "a28d7945c7c292b73cc1b2fb1eb4e7679f3f55b4c1688875b3c54fbf740ef5e3"
+        },
+        {
+          "path": "vtk/particles_0051.vtk",
+          "bytes": 1213024,
+          "sha256": "fc9167802d9d8d79472e123c489be0530898d59aef10c5549cfc7569776803b4"
+        },
+        {
+          "path": "vtk/particles_0052.vtk",
+          "bytes": 1213024,
+          "sha256": "48a7297c842d490dc6da873956edb0dcf269f74cf8e90b4776661dcb01c69c8b"
+        },
+        {
+          "path": "vtk/particles_0053.vtk",
+          "bytes": 1213024,
+          "sha256": "d6d283530ed5f09110562ee747002ba01b64ef153fc488044b3ca18ce97366fb"
+        },
+        {
+          "path": "vtk/particles_0054.vtk",
+          "bytes": 1213024,
+          "sha256": "a1df43f58df51c1cc704b521a728364a05e894114d1655a4008472085218ac11"
+        },
+        {
+          "path": "vtk/particles_0055.vtk",
+          "bytes": 1213024,
+          "sha256": "df265714adfeff7baaa249be8974dde1968a38732abb83bf0ff2277ce6edb283"
+        },
+        {
+          "path": "vtk/particles_0056.vtk",
+          "bytes": 1213024,
+          "sha256": "4edb529d95dd96d94709082e11c78a2fa8fefe40fd59b62bcd5903c1e04cf2ad"
+        },
+        {
+          "path": "vtk/particles_0057.vtk",
+          "bytes": 1213024,
+          "sha256": "307de3e5fb292593869beeb9bbd7e96f8137153e3cc5e11da6430cbcdbe70545"
+        },
+        {
+          "path": "vtk/particles_0058.vtk",
+          "bytes": 1213024,
+          "sha256": "09f8f0cb3d7f2a4273f3965cec3b779a1a74eab2678bd35c7edebb7f7ed845c3"
+        },
+        {
+          "path": "vtk/particles_0059.vtk",
+          "bytes": 1213024,
+          "sha256": "ec7b4032bf3f5227ee5d42dccc92aed2abb97a79c20d5e7b43423a9063144b01"
+        },
+        {
+          "path": "vtk/particles_0060.vtk",
+          "bytes": 1213024,
+          "sha256": "50f2e560f22b8f9a03b35646d77cea7b9ed2429aeba5d806cc4b3564c12f2296"
+        }
+      ]
+    },
+    {
+      "archive": {
+        "path": "terminal-saved-analyses-and-original-prelaunch.zip",
+        "bytes": 6278578,
+        "sha256": "4fff5fc7f2fcdfce3446b4c770490d19f856dd1546d6db232cb53ef1a1ce0483"
+      },
+      "decodedMembers": 120,
+      "crcPass": true,
+      "allDecodedBytesMatchOriginals": true,
+      "members": [
+        {
+          "path": "caller/adjacent/srf1p6-composite-h05-002-variant-review-001-caller.log",
+          "bytes": 180,
+          "sha256": "bc5388443dd2332b72577a1c1efa27b67ab00886e3359962821ce2c4513e0f50"
+        },
+        {
+          "path": "caller/adjacent/srf1p6-composite-h05-002-variant-review-001-command.json",
+          "bytes": 770,
+          "sha256": "d99ff4ce0e24601adbed665c34eab094b6cbbb44e41ad345d515b834e7df1fc4"
+        },
+        {
+          "path": "caller/adjacent/srf1p6-composite-h05-002-variant-review-001-exit.json",
+          "bytes": 70,
+          "sha256": "2aef623048f306a189babcfad6047045b529741d38b09055142e680a0fbddb6a"
+        },
+        {
+          "path": "full-saved-csv-comparison/analysis-support/coarse_h1-prior-review.json",
+          "bytes": 228131,
+          "sha256": "63eec7300eb6ae03c5a57d2148089b038af8b56d51fd77aedaa6f2606ceef4f0"
+        },
+        {
+          "path": "full-saved-csv-comparison/analysis-support/comparison-contract.json",
+          "bytes": 4592,
+          "sha256": "0836d61273184248868a0ce1c8bd4d7312d9b83be052ec5f9ce01d465a905827"
+        },
+        {
+          "path": "full-saved-csv-comparison/analysis-support/fine_h05-prior-review.json",
+          "bytes": 1862089,
+          "sha256": "de0dcd710e62575651fe86794de214dcaa08bc4cdabc91be932485f179b14731"
+        },
+        {
+          "path": "full-saved-csv-comparison/analysis-support/plot_m5_cliff_comparison.py",
+          "bytes": 23581,
+          "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+        },
+        {
+          "path": "full-saved-csv-comparison/analysis-support/review-gravity-composite-refinement.py",
+          "bytes": 14435,
+          "sha256": "4af62e51fa619410a124049c410bebbe34fd5736db8187270973d1a865a50752"
+        },
+        {
+          "path": "full-saved-csv-comparison/analysis-support/review-gravity-refinement.py",
+          "bytes": 26366,
+          "sha256": "b2a319511279ab11256244547b16096e468fbeef1a75cf956ff45807569e1b49"
+        },
+        {
+          "path": "full-saved-csv-comparison/analysis-support/review-gravity-slope.py",
+          "bytes": 38121,
+          "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+        },
+        {
+          "path": "full-saved-csv-comparison/coarse_h1-bound-base-review.json",
+          "bytes": 193705,
+          "sha256": "056d4b9243e4a3ee1996462f4afa29b70907f30317f1f90b28fc4fd9f1e75b76"
+        },
+        {
+          "path": "full-saved-csv-comparison/command.json",
+          "bytes": 775,
+          "sha256": "a085f9b746b50cf8c3e3e0f7df8d27b8b509fa31695a06016d9f80af43aac091"
+        },
+        {
+          "path": "full-saved-csv-comparison/common-initial-1m-spatial-bins.csv",
+          "bytes": 4216619,
+          "sha256": "594a6713edcdb6a22f4ceb65334d636396dc25c31af7f95c523cd203b3867ad8"
+        },
+        {
+          "path": "full-saved-csv-comparison/common-physical-review.json",
+          "bytes": 3513229,
+          "sha256": "15545df2ff2dd6ba6dda4a224f8c55ada48533613c49ae9a181420e8aed2bfe1"
+        },
+        {
+          "path": "full-saved-csv-comparison/comparison-exit.json",
+          "bytes": 134,
+          "sha256": "6a9bb3f66ba923b7c34eaf8534e31988ef50449a0b1ed49cb7c76130e3626c71"
+        },
+        {
+          "path": "full-saved-csv-comparison/comparison.log",
+          "bytes": 192,
+          "sha256": "2ea1d7e846e3f319a0f5057e40bb3d104f7494e94e433e87a693fd29be716e54"
+        },
+        {
+          "path": "full-saved-csv-comparison/fine_h05-bound-base-review.json",
+          "bytes": 1672509,
+          "sha256": "9aba75e516f2cd0bc66a535c31c90a2c76152ee7216b3e01d7e9a1acf150f05a"
+        },
+        {
+          "path": "full-saved-csv-comparison/support-after-execution.json",
+          "bytes": 2041,
+          "sha256": "43684666b639d2445d48fc1b2be377e48b07e6598fa0e8b1c1e476cb2fd2c0dd"
+        },
+        {
+          "path": "full-saved-csv-comparison/support-pre-execution.json",
+          "bytes": 2742,
+          "sha256": "91cbcac712c442e0ae5dfcaef7ab7727ad03176f651968cf6a3bd88f053492de"
+        },
+        {
+          "path": "original-prelaunch/analysis/COMPOSITE_APEX_ROUNDOFF_REPAIR.md",
+          "bytes": 6764,
+          "sha256": "98c47d90522e0ecfa7b7db72985d152961018eec1467b510423b1375d308d651"
+        },
+        {
+          "path": "original-prelaunch/analysis/cl-mpm.asd",
+          "bytes": 39964,
+          "sha256": "257e7fcd4f853a5aab2e61f8a594292f4dc8d0c2396362c10759b00c10ff5890"
+        },
+        {
+          "path": "original-prelaunch/analysis/diagnostics.lisp",
+          "bytes": 6077,
+          "sha256": "6fe2771fc156e25ae13380f537e232bd4875a91a77d960a0290877068f23b360"
+        },
+        {
+          "path": "original-prelaunch/analysis/mc-composite-apex-stable-math.protocol.json",
+          "bytes": 2335,
+          "sha256": "f61fdce228f85dbd59135c436a2f6ab40d8770727cee3ee5e3261addf40ca1c5"
+        },
+        {
+          "path": "original-prelaunch/analysis/package.lisp",
+          "bytes": 468,
+          "sha256": "fa96f836cc01faec4f18c9852e450ab2b8957e8be9108b22777bf3a053d39eb5"
+        },
+        {
+          "path": "original-prelaunch/analysis/plot_m5_cliff_comparison.py",
+          "bytes": 23581,
+          "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+        },
+        {
+          "path": "original-prelaunch/analysis/projection.lisp",
+          "bytes": 10339,
+          "sha256": "eb16237ecda3b08c17632e84c782f99f71a223eaf49b83bc2df63ebeaad1dd6d"
+        },
+        {
+          "path": "original-prelaunch/analysis/review-gravity-composite-apex.py",
+          "bytes": 18498,
+          "sha256": "edec92168deaf06b942f0a36e9468be958f00c3e5b06f34e1d91e368340f4a3b"
+        },
+        {
+          "path": "original-prelaunch/analysis/review-gravity-composite-refinement.py",
+          "bytes": 14435,
+          "sha256": "4af62e51fa619410a124049c410bebbe34fd5736db8187270973d1a865a50752"
+        },
+        {
+          "path": "original-prelaunch/analysis/review-gravity-slope.py",
+          "bytes": 38121,
+          "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+        },
+        {
+          "path": "original-prelaunch/analysis/test_gravity_composite_refinement.py",
+          "bytes": 5808,
+          "sha256": "1920571323ceed792e1704d75c6ae6d9913b433f60d47d5fad077a8e9d1481c7"
+        },
+        {
+          "path": "original-prelaunch/capture-helper.py",
+          "bytes": 16202,
+          "sha256": "2f8f6de76dbdc88ab85c710e8642080dd8a9044c42ec6184e74235cc668162c8"
+        },
+        {
+          "path": "original-prelaunch/case.lisp",
+          "bytes": 2340,
+          "sha256": "4eb467eb545a6c5e0bf85f2bea0899870ce5639f4744e038917dd28c966c2879"
+        },
+        {
+          "path": "original-prelaunch/copy-hash-zip-helpers.py",
+          "bytes": 13671,
+          "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0"
+        },
+        {
+          "path": "original-prelaunch/expected-full-configuration.json",
+          "bytes": 1786,
+          "sha256": "e5c2577c9fc8b534258f6ebb4d5af1f3eeb014c1fce92d4f6474b772f1f7f332"
+        },
+        {
+          "path": "original-prelaunch/helper-source-checkpoint/capture-composite-apex-launch-shared.py.txt",
+          "bytes": 19982,
+          "sha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9"
+        },
+        {
+          "path": "original-prelaunch/helper-source-checkpoint/capture-composite-h05-launch.py.txt",
+          "bytes": 24284,
+          "sha256": "70934762ab503a74f2f9cac6d915b055050f718c9bb95e06ebf4662bc1859954"
+        },
+        {
+          "path": "original-prelaunch/helper-source-checkpoint/capture-composite-h05-repair-launch.py.txt",
+          "bytes": 16202,
+          "sha256": "2f8f6de76dbdc88ab85c710e8642080dd8a9044c42ec6184e74235cc668162c8"
+        },
+        {
+          "path": "original-prelaunch/helper-source-checkpoint/capture-copy-hash-zip-shared.py.txt",
+          "bytes": 13671,
+          "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0"
+        },
+        {
+          "path": "original-prelaunch/helper-source-checkpoint/capture-exact-clock-reference.ps1.txt",
+          "bytes": 2438,
+          "sha256": "0d86faedc7a012be10d0c9b2b25214e57ec14b3deafca443bc0cd5f9b60f5a64"
+        },
+        {
+          "path": "original-prelaunch/prelaunch-snapshot.json",
+          "bytes": 71066,
+          "sha256": "e50cc3a23eb65ace8fcf52c37da1c4c3474fb1ecb75fce0b1469e8bf719cb2b0"
+        },
+        {
+          "path": "original-prelaunch/proof-support/capture-processes.ps1",
+          "bytes": 3099,
+          "sha256": "f994e72b4bad03012195f91bce81ea068098613d95a84186841959efe6f92795"
+        },
+        {
+          "path": "original-prelaunch/proof-support/reference-exact-clock-helper.ps1",
+          "bytes": 2438,
+          "sha256": "0d86faedc7a012be10d0c9b2b25214e57ec14b3deafca443bc0cd5f9b60f5a64"
+        },
+        {
+          "path": "original-prelaunch/protocol/composite-apex-refinement-contract.json",
+          "bytes": 4592,
+          "sha256": "0836d61273184248868a0ce1c8bd4d7312d9b83be052ec5f9ce01d465a905827"
+        },
+        {
+          "path": "original-prelaunch/protocol/composite-apex-srf1p6-h05-contract.json",
+          "bytes": 7828,
+          "sha256": "a299fcaaadb9e3583d4b522b67826b7383f518e595cac214df5b819f5d594e7a"
+        },
+        {
+          "path": "original-prelaunch/shared-launch-helpers.py",
+          "bytes": 19982,
+          "sha256": "6bb560c278ed8008d65fda5f7d9ce7b0a1e0f7ce206de5e65f6f30744c5f67e9"
+        },
+        {
+          "path": "root/root-spatial-review.md",
+          "bytes": 4417,
+          "sha256": "8228025ff0b3cd451c025eb4e0bbded883ad9eb55903dbe0d0ec82be92aaf471"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0000.png",
+          "bytes": 46721,
+          "sha256": "238bf97372ba9e3f24d6c78f08659ac31d4f62e8ca5b9228040f0a5d4c64270e"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0001.png",
+          "bytes": 46488,
+          "sha256": "11b62eec0c8353a31e7f3d94f5e1038881d31fc0624d6b5e43449cb385d96488"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0002.png",
+          "bytes": 46935,
+          "sha256": "6c42f1ab029c775be685381293b9c9a71a1a06e70d150650a9a79bcb9258e9e1"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0003.png",
+          "bytes": 47049,
+          "sha256": "6b4292922a527b2c09f30335f4e4441e703b207e413be8e47cc66efc878f3b44"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0004.png",
+          "bytes": 46811,
+          "sha256": "fb285719ab9a95cb945fa5c64c0350bc5fe493a1ae490e0d7b31bbcb04cbecae"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0005.png",
+          "bytes": 46923,
+          "sha256": "b2d43286800553e20f50691976cd745571708afc62cc9c115af0bb35ee2c8fa5"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0006.png",
+          "bytes": 46797,
+          "sha256": "2ad40e3b77776027da5191ca282f8f6151bb49e6727173c49f56dce686c15a8a"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0007.png",
+          "bytes": 46820,
+          "sha256": "8e5ff94f4744c7cf05896115b5b3bdfff0fcf1817bc40abaa9235abb21a5905f"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0008.png",
+          "bytes": 47196,
+          "sha256": "6e8649fb21cc25a6d4defd5be60d246b9a4a4e2152a551d1624192eec160a049"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0009.png",
+          "bytes": 47176,
+          "sha256": "1fd10cc35c82727fbd775b0e09fe3fb2cf07b6fafd3ff121405407284304dd8b"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0010.png",
+          "bytes": 46439,
+          "sha256": "3a8143f4319fd963352860f0b0b39c69ff77f0a9beee3e519ddbf8dcae576615"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0011.png",
+          "bytes": 46268,
+          "sha256": "4319469852655dd4986a36bd5f15532de83d04a60493aa5b043ff96efabd01e4"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0012.png",
+          "bytes": 47238,
+          "sha256": "f0ca2af4c46c2b0995a638916648ed3753b49e8812d450605f94aef48914c033"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0013.png",
+          "bytes": 47617,
+          "sha256": "deecbc33be90d46937f662d2dc2216a10f6d62a14202b96e6c5b35ae44876fd8"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0014.png",
+          "bytes": 47718,
+          "sha256": "dbc45c50e4c8a57a5d9ccc3468946ea76699d1b8149ef8e72134ad3c24aa1621"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0015.png",
+          "bytes": 48667,
+          "sha256": "4cd8bfc6f926e8fad56f8d5f0af45a42778791fcfa6c69172a81f12c83753255"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0016.png",
+          "bytes": 49658,
+          "sha256": "9208afaeb3834843a6bf1baf054c8824c0afc17bd12fae798de9692aa81c0d0c"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0017.png",
+          "bytes": 51481,
+          "sha256": "00573859d885a4fe312a1644131a4eb09b6a87115a30da11ed57fd96fd318eec"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0018.png",
+          "bytes": 53379,
+          "sha256": "3b7339ba76d329859892ab08bd2abcba8ba41cb493cbb2666f71fa19bd040ca9"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0019.png",
+          "bytes": 54908,
+          "sha256": "41bb0e15a4e3ce5c8a6bf2ee35a6ee4c4df7db7a3e0861c0db542d7c31a2bc78"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0020.png",
+          "bytes": 56961,
+          "sha256": "09ad3ec9a543b1919162fed8fc376321015afc0fa93161a1ce26c625695d5c26"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0021.png",
+          "bytes": 58589,
+          "sha256": "cc82c27b500ab43a572a2ba945b7bb6fbba7b4eec9c25386da34d3c1be1381e3"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0022.png",
+          "bytes": 59665,
+          "sha256": "06dba931f05b7b4877fb8af0c61f81bf51ef3ffb6e89c1eb3c0f84f56788e8f6"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0023.png",
+          "bytes": 62608,
+          "sha256": "2a60300b2f3e4fa51da809a7bd890139a6d89746b7d6a8cf377a7206752de1ec"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0024.png",
+          "bytes": 63939,
+          "sha256": "db96bc313434d15ba1d6bf9db3ec30a817326f38524a5f8fc384805c4390ca95"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0025.png",
+          "bytes": 65036,
+          "sha256": "b608641ed752f6324e19acfb706ddd0c0db12c681da52dbe1cd23bb034919b4a"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0026.png",
+          "bytes": 66969,
+          "sha256": "7a8f9b5aae1f486bf978ef46eadbff66a3238d01a1cc85d430a069db3489be76"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0027.png",
+          "bytes": 69126,
+          "sha256": "a5fd02ff092fc2a84a6eba7a5b565707abd9ef233a6dc3718ba31353487826fd"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0028.png",
+          "bytes": 70830,
+          "sha256": "72640d929efbe7c8d1fa6f5f693a72ee8d2fab88e783a454b66c80dc216e4920"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0029.png",
+          "bytes": 72388,
+          "sha256": "484176e0e614c7e6cd1af3256b2dc7b53e571d423cef82377fc885fe132bc5eb"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0030.png",
+          "bytes": 73452,
+          "sha256": "fd8e98c53fd3c930ebff2fed4575513a3b4f51094a4f06b40fcaa4886541af70"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0031.png",
+          "bytes": 74637,
+          "sha256": "f624d63403b52f36d434a7053ce0e2bdcdce252026105c254c54570b998b7024"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0032.png",
+          "bytes": 76193,
+          "sha256": "e65108e2c9d42ebdac6f70cee4f32435dc6e9724bdc5d3b74de2370927a32ff1"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0033.png",
+          "bytes": 76160,
+          "sha256": "7210093a071ea907f73ea93b62e6f65ddabfaa28450357f35773523480ed07c4"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0034.png",
+          "bytes": 77066,
+          "sha256": "c52d022b555f0162c6bc660769d7b8e254eebcf42c822c8bbb7a241d83394275"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0035.png",
+          "bytes": 77764,
+          "sha256": "9efcdc218a578913fe526fa4a5f03a9f0395f90b4eb768067500e13ebe9912a8"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0036.png",
+          "bytes": 78077,
+          "sha256": "7ad9247c58cfd0f911a9852a57a77c456dc5f0a6470e3656a93723e3eef0b3a7"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0037.png",
+          "bytes": 78799,
+          "sha256": "bbd6159a2a2976dcb7083ded297b580c540ad29417edeeb5147eaec09d809a6a"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0038.png",
+          "bytes": 79988,
+          "sha256": "7efa02fd6aea2df39c705972ae660c9d78f34f8f9df2bfc60b0e696adf65e0d6"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0039.png",
+          "bytes": 81033,
+          "sha256": "04acb4a450132b892f32d41e358729766295e63da54c4bb6259e9818ad3ec169"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0040.png",
+          "bytes": 81454,
+          "sha256": "2c42fc75d73962e17ba420f428cfae38e846684614de4a39fd136353c8d6af08"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0041.png",
+          "bytes": 82674,
+          "sha256": "b8e2917ea3074bb3b8640042c7b63127a3e5f15eab08d3e370fb58fe931ab362"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0042.png",
+          "bytes": 84176,
+          "sha256": "ff8427b0b7b2a54e240a2d91512f7e1800c58977e36c7b76007834bda8fea1a5"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0043.png",
+          "bytes": 86133,
+          "sha256": "78ef089981d78f44101f98061583219f85b9c296c3218c9c02cad8f84e1e4a4f"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0044.png",
+          "bytes": 87180,
+          "sha256": "ce537ccae5cf625312fcf1447dc0e60d48acb833c543f209fcc1b018a49bfabc"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0045.png",
+          "bytes": 89250,
+          "sha256": "471f93f4f5ee76e708c94ebfea002221cea14354d1b504e39f1a421b3f32fa7d"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0046.png",
+          "bytes": 90162,
+          "sha256": "f58924fde065f3fde384e47022e66a789f2d420bbb116477b545acf7aff6bfb7"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0047.png",
+          "bytes": 91371,
+          "sha256": "6bb8068ea5f1f5f40d6f2176b55152d20d81675dd8828287b29c71fa6fc311e4"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0048.png",
+          "bytes": 91842,
+          "sha256": "cefe98a4f4eeac0b2d026941932c2eb757fffc43283ba544c52756765b51d928"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0049.png",
+          "bytes": 92624,
+          "sha256": "e292a814dd6db9d30a12adaf0622f9508e6a82e9582343d2e949706625a9a207"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0050.png",
+          "bytes": 92941,
+          "sha256": "acfc8d95c1cc5183af3dc0d1e3a7c20eeabcf6ce12566bc99be2457a2d4ee616"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0051.png",
+          "bytes": 93200,
+          "sha256": "147ecb3b1a7cebceafaced3627f6aa6522580ef950f69f36950da65eb9fbe91e"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0052.png",
+          "bytes": 94485,
+          "sha256": "3c8145ee20122b698a5df46d86c4f4c21aa8e01229bcbd17f52f4c0cb03c9662"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0053.png",
+          "bytes": 94703,
+          "sha256": "197e17436dffc295a4bb23fc908cf5136e86c0078ef2940e684e714d21dd12fe"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0054.png",
+          "bytes": 94767,
+          "sha256": "0539bcfdf9e4f01bf9b4170b2aa385f3824f0968b78482a7ccb170b026acbc2b"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0055.png",
+          "bytes": 94849,
+          "sha256": "a95d345d05207503d8514d3667d188d57360e907bf7abea14f491fa96c8511b8"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0056.png",
+          "bytes": 94909,
+          "sha256": "51b71ccc75a53d7f49e291ea32c8482300aab355ae0b5bcc06520bbbfa68dbd3"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0057.png",
+          "bytes": 94748,
+          "sha256": "82f91886d2f5db4d92acc62cb7d4b153d28e72c6e97f3670ee4009a59589be31"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0058.png",
+          "bytes": 95102,
+          "sha256": "54943a40da39f91642a5bde235a6502ebaf92de86eb9bb1ac8e77d666d0db087"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0059.png",
+          "bytes": 95291,
+          "sha256": "655b79d9a75ac9a6112828b67741aac684e58f74c532299fabc050c695849619"
+        },
+        {
+          "path": "variant-review-001/actual-frames/actual-0060.png",
+          "bytes": 94590,
+          "sha256": "65ddd7f30d27d03af5a9afb1a29d4375d9267c5184c3903e5e4e05ac1f598f0b"
+        },
+        {
+          "path": "variant-review-001/analysis-source-before.json",
+          "bytes": 1635,
+          "sha256": "2d3a4fdf758aa7324f8ff06e8ee031e383529c9507c84fe8c58745edc66dcf70"
+        },
+        {
+          "path": "variant-review-001/analysis-source/composite-apex-srf1p6-h05-contract.json",
+          "bytes": 7828,
+          "sha256": "a299fcaaadb9e3583d4b522b67826b7383f518e595cac214df5b819f5d594e7a"
+        },
+        {
+          "path": "variant-review-001/analysis-source/plot_m5_cliff_comparison.py",
+          "bytes": 23581,
+          "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+        },
+        {
+          "path": "variant-review-001/analysis-source/review-gravity-composite-apex.py",
+          "bytes": 18498,
+          "sha256": "edec92168deaf06b942f0a36e9468be958f00c3e5b06f34e1d91e368340f4a3b"
+        },
+        {
+          "path": "variant-review-001/analysis-source/review-gravity-slope.py",
+          "bytes": 38121,
+          "sha256": "b9ba10dafae54bca49e0bd6e1d25029eb1a65a9355b9c9a3d6179e3770412831"
+        },
+        {
+          "path": "variant-review-001/child-command.json",
+          "bytes": 756,
+          "sha256": "eb463b3018e5d1a89189c3df2e7b94c6b25e6db3b2d20bc61e9c9bb7b4e8003f"
+        },
+        {
+          "path": "variant-review-001/child-exit.json",
+          "bytes": 17,
+          "sha256": "d45db54bba0c56e2691a52869729c0a3eade7f5d50545e7832a20e3262a9d422"
+        },
+        {
+          "path": "variant-review-001/child-stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "variant-review-001/child-stdout.log",
+          "bytes": 180,
+          "sha256": "bc5388443dd2332b72577a1c1efa27b67ab00886e3359962821ce2c4513e0f50"
+        },
+        {
+          "path": "variant-review-001/gravity-slope-actual.mp4",
+          "bytes": 87819,
+          "sha256": "fbbb2d7fd74eab3160088c90a61e4c3732a7501f7ffd4440850517007172db12"
+        },
+        {
+          "path": "variant-review-001/gravity-slope-review.png",
+          "bytes": 221603,
+          "sha256": "3f74759025f231d7430d1e0bd961fb4da1b3e6d39637aa171ff28572fead98db"
+        },
+        {
+          "path": "variant-review-001/review.json",
+          "bytes": 1862089,
+          "sha256": "de0dcd710e62575651fe86794de214dcaa08bc4cdabc91be932485f179b14731"
+        },
+        {
+          "path": "variant-review-001/root-numerical-onset-acceptance.json",
+          "bytes": 4334,
+          "sha256": "c3dec5e68d29e6a3e46a1bbe9bf5f373f083de15bd1ed58714712c6212f8943f"
+        }
+      ]
+    }
+  ],
+  "actualNativeSourceMembers": 288,
+  "totalDecodedMembers": 497,
+  "allCrcAndDecodedPayloadChecksPassed": true
+}
