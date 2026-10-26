@@ -2,6 +2,25 @@
 
 **Operational checkpoint: 2026-10-26, Asia/Jakarta. Read this first.**
 
+## Latest human steering: compare the earlier Urmi collapse
+
+User asks why the earlier Urmi-based MC case could slide. Read the new
+[source/data/paper comparison](benchmarks/URMI_LEGACY_COMPARISON.md).
+The old H/HS long runs have2.5x2.5m notches,72degree faces,4m soil foundation,
+hardening/softening and elastic-only initialization followed by plastic enable/
+resets. They are not unnotched evidence. Their filtered summary differs from
+raw HS outliers; preserve all and do not claim whole-run scientificPASS.
+Paper page6 instead uses stable drained elastoplastic MC initialization then
+undrained parameters; old runner is an adaptation, not full reproduction.
+No old simulation/audit/render was repeated. After the preregistered fine pair,
+a faithful drained→undrained unnotched experiment is a separate candidate,
+requiring new parameter/state-transfer/equilibrium contracts, not hidden tuning.
+
+The completed fine native evidence/docs have now been committed/pushed at
+8351c132. Full fine solver remains NOT_RUN; launcher profile is being closed
+against the actual290-source gate. Do not repeat the four native or six Python
+groups. Main remains9e97e001; no UI/main merge.
+
 ## Continuation checkpoint: fine-study sources only; no solver active
 
 **Latest26October06:36WIB: FIRST fine native gate now PASS/exit0**, source

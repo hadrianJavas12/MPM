@@ -378,3 +378,18 @@ No standalone constitutive calls or apex activation, no old test/slope repeat.
 This supersedes the prior native-gate NOT_RUN; full fine run/actual review and
 pair comparison remain NOT_RUN. Launch draft still requires actual profile
 completion/review before use; no verified landslide is claimed.
+
+## Earlier Urmi-inspired collapse is a different control
+
+User's recollection is correct that the old videos show slumping. Read
+`docs/benchmarks/URMI_LEGACY_COMPARISON.md`: actual H/HS recipes use a2.5x2.5m
+notch,72degree face,4m soil foundation and elastic-only stage1 followed by
+plastic enable/resets. They are not unnotched evidence. Their bulk summary
+filters domain/displacement/speed outliers and conditionally replaces KE;
+raw HS outliers prohibit interpreting its PASS as full physical integrity.
+
+Actual paper p6 uses stable drained elastoplastic MC before an undrained
+parameter switch; this is distinct from disabling plasticity. A separate
+faithful drained→undrained softening hypothesis is retained for after the
+finite resolution pair, not silently enabled in the perfect control. Old raw
+data/video/source are preserved; no old run/audit/render repeated.

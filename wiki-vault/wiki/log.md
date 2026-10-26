@@ -1023,3 +1023,12 @@ retained. Continue after quota reset without repeating this new passed gate.
 3520MPs/two genuine USF updates/7040 calls/3VTK10560CSV rows, source/DLL proof.
 No old suite or slope repeat. Actual fine run/review/pair comparison remain
 NOT_RUN; complete and review launch profile after reset without repeating gates.
+
+## [2026-10-26] query | Earlier Urmi collapse versus current unnotched study
+
+[[unnotched-mc-gravity]] records read-only recipe/CSV/filter/paper comparison.
+Old notched72degree H/HS slumping is different from current unnotched perfect
+control; filtered metrics are not whole-run integrity. Paperp6 stable drained
+MC→undrained transition differs from elastic-only initialization in oldrunner.
+All raw/media remain intact; no solver/audit/render repeat. Fine preflight
+checkpoint8351c132 is pushed; its planned one-pair experiment remains pending.
