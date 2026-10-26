@@ -79,7 +79,7 @@ if (Test-Path -LiteralPath $taskWorkerPath -PathType Leaf) {
   if ($taskSelf.ParentProcessId -ne $taskWorker.processId) { throw 'Detached worker is not this wrapper parent.' }
   $taskParent = Get-CimInstance Win32_Process -Filter ('ProcessId='+$taskWorker.processId)
   if (-not $taskParent -or $taskParent.SessionId -ne $taskWorker.sessionId -or
-      $taskParent.CreationDate.ToUniversalTime().ToString('o') -ne $taskWorker.creationUtc) { throw 'Detached worker identity changed.' }
+      $taskParent.CreationDate.ToUniversalTime().Ticks -ne ([datetime]$taskWorker.creationUtc).ToUniversalTime().Ticks) { throw 'Detached worker identity changed.' }
   $taskStatus.processIdentity.worker = $taskWorker
 }
 $taskNative = $null
