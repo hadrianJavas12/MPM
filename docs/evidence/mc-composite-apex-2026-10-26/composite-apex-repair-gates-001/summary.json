@@ -1,0 +1,199 @@
+{
+  "schema": "cl-mpm.mc-composite-apex.repair-gates.evidence.v1",
+  "createdUtc": "2026-10-26T06:47:31.815718+00:00",
+  "status": "FOUR_RELEVANT_GATES_PASS",
+  "gates": [
+    {
+      "name": "stable-math-001",
+      "nativeExit": 0,
+      "nativeEndedUtc": "2026-10-26T06:36:13.2495308Z",
+      "nativeSourceCommit": "8996a015a4bc45b44f2ad6f22b97bfe4215f9a14",
+      "nativeSourceFiles": 290,
+      "selectedGroupCount": 0,
+      "fixedSyntheticCaseCount": 33,
+      "counters": {
+        "explicitProductionProjectorCalls": 33,
+        "physicalUpdateAttempts": 0,
+        "nativeConstitutiveCalls": 0,
+        "oldControlsCalled": 0,
+        "unchangedOldProjectorCalls": 0,
+        "actualFailedTrialReplayCalls": 0
+      },
+      "provenanceAfterOriginalFilename": "source-provenance.json",
+      "directArtifacts": "gates/stable-math-001",
+      "archive": {
+        "path": "archives/stable-math-001-complete-native-source-runtime.zip",
+        "bytes": 1270825,
+        "sha256": "aa22ee649a21bb65de8b2560ed7501aab6ac4f200be255f37f198f95c4adb26b"
+      },
+      "archiveMembers": 301,
+      "scopeAsReceived": "Focused SYNTHETIC stable-deviator arithmetic; retained witness is DATA, actual fine-run failed trial unavailable; zero MPM/scientific validation"
+    },
+    {
+      "name": "stable-regression-001",
+      "nativeExit": 0,
+      "nativeEndedUtc": "2026-10-26T06:37:34.1909548Z",
+      "nativeSourceCommit": "8996a015a4bc45b44f2ad6f22b97bfe4215f9a14",
+      "nativeSourceFiles": 289,
+      "selectedGroupCount": 15,
+      "fixedSyntheticCaseCount": 0,
+      "counters": {
+        "explicitNewPureProjectorCalls": 38,
+        "explicitStrictComparatorCalls": 6,
+        "nativeConstitutiveCalls": 10,
+        "physicalUpdateAttempts": 0,
+        "oldOriginalFailureReplayCalls": 0
+      },
+      "provenanceAfterOriginalFilename": "source-provenance-after.json",
+      "directArtifacts": "gates/stable-regression-001",
+      "archive": {
+        "path": "archives/stable-regression-001-complete-native-source-runtime.zip",
+        "bytes": 1258530,
+        "sha256": "e2a8ab8b171b3e244d5456bce1b944704c4e220d638e2ff7ef75827b16b33ba7"
+      },
+      "archiveMembers": 298,
+      "scopeAsReceived": "New separate perfect-Cauchy composite-apex material controls; zero MPM; actual strict capsule is input data, not an original-model replay; no landslide or scientific validation"
+    },
+    {
+      "name": "capture-controls-001",
+      "nativeExit": 0,
+      "nativeEndedUtc": "2026-10-26T06:40:34.2911761Z",
+      "nativeSourceCommit": "8b3087bf5177d73ddf6064592e5db1265e160704",
+      "nativeSourceFiles": 288,
+      "selectedGroupCount": 8,
+      "fixedSyntheticCaseCount": 0,
+      "counters": {
+        "explicitHelperOnlyFailures": 6,
+        "optionalProjectorCalls": 7,
+        "nativeConstitutiveCalls": 2,
+        "optionalReplayAttempts": 9,
+        "optionalReplayProjectorCalls": 2,
+        "strictReplaySchemaRejectionAttempts": 1,
+        "syntheticStrictDelegateCalls": 1,
+        "physicalUpdateAttempts": 0,
+        "originalFineFailureReplayCalls": 0
+      },
+      "provenanceAfterOriginalFilename": "source-provenance-after.json",
+      "directArtifacts": "gates/capture-controls-001",
+      "archive": {
+        "path": "archives/capture-controls-001-complete-native-source-runtime.zip",
+        "bytes": 1257475,
+        "sha256": "7a64bd2d3559bf7f431bbd3c5543b2c8646c6c50e8a26f21e54c619e5369bc92"
+      },
+      "archiveMembers": 297,
+      "scopeAsReceived": "Eight NEW optional failure-capture controls; synthetic injected admissibility rejections and owned native state; no actual lost fine-update replay, old suite, MPM update, landslide or scientific validation"
+    },
+    {
+      "name": "fine-repair-controls-001",
+      "nativeExit": 0,
+      "nativeEndedUtc": "2026-10-26T06:42:57.9009629Z",
+      "nativeSourceCommit": "8b3087bf5177d73ddf6064592e5db1265e160704",
+      "nativeSourceFiles": 291,
+      "selectedGroupCount": 4,
+      "fixedSyntheticCaseCount": 0,
+      "counters": {
+        "physicalUpdatesExecuted": 2,
+        "materialCallsAttempted": 7040,
+        "materialCallsAccepted": 7040,
+        "standaloneConstitutiveCallsAttempted": 0,
+        "standaloneConstitutiveCallsAccepted": 0
+      },
+      "provenanceAfterOriginalFilename": "source-provenance.json",
+      "directArtifacts": "gates/fine-repair-controls-001",
+      "archive": {
+        "path": "archives/fine-repair-controls-001-complete-native-source-runtime.zip",
+        "bytes": 1603368,
+        "sha256": "36ad364c5aef80ca9dc77a22e45e5617081a22f0e20b17b145adf9d9d4938f42"
+      },
+      "archiveMembers": 310,
+      "scopeAsReceived": "New optional composite SRF1.6 fine grid only: mesh-only full input delta, construction and two real USF updates; no full simulation, forced apex activation, locking/convergence or scientific PASS"
+    }
+  ],
+  "boundedOutputComparisonAsReceived": {
+    "status": "PASS",
+    "executedScriptBefore": {
+      "path": "D:\\MPM\\.tmp\\compare-apex-repair-bounded.py",
+      "bytes": 1594,
+      "sha256": "6a49e9becd1c07caf55d001c651b3007c67eb977349966e5ae64b500d825ae2d"
+    },
+    "comparedFiles": [
+      {
+        "relative": "history.csv",
+        "original": {
+          "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-controls-001\\observations\\history.csv",
+          "bytes": 2707,
+          "sha256": "98ed733c8bdd54eb93f50924c249ee3c3ec3737cd0acaa77fc93ff4fe83232ab"
+        },
+        "repaired": {
+          "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001\\observations\\history.csv",
+          "bytes": 2707,
+          "sha256": "98ed733c8bdd54eb93f50924c249ee3c3ec3737cd0acaa77fc93ff4fe83232ab"
+        },
+        "bytesIdentical": true
+      },
+      {
+        "relative": "particles.csv",
+        "original": {
+          "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-controls-001\\observations\\particles.csv",
+          "bytes": 7780979,
+          "sha256": "e07b35ff47f705e61c7d8262783776dd19d1d058b8c76e7f2cc9981c8a3b8c99"
+        },
+        "repaired": {
+          "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001\\observations\\particles.csv",
+          "bytes": 7780979,
+          "sha256": "e07b35ff47f705e61c7d8262783776dd19d1d058b8c76e7f2cc9981c8a3b8c99"
+        },
+        "bytesIdentical": true
+      },
+      {
+        "relative": "vtk/particles_0000.vtk",
+        "original": {
+          "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-controls-001\\observations\\vtk\\particles_0000.vtk",
+          "bytes": 1213024,
+          "sha256": "7d7b249d72a9b3db39c7a561905086f70eb7c65d9d59088778534ddf7e398e16"
+        },
+        "repaired": {
+          "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001\\observations\\vtk\\particles_0000.vtk",
+          "bytes": 1213024,
+          "sha256": "7d7b249d72a9b3db39c7a561905086f70eb7c65d9d59088778534ddf7e398e16"
+        },
+        "bytesIdentical": true
+      },
+      {
+        "relative": "vtk/particles_0001.vtk",
+        "original": {
+          "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-controls-001\\observations\\vtk\\particles_0001.vtk",
+          "bytes": 1213024,
+          "sha256": "49eed30ff10134ce2a6c54b94fcb737595097b6bfa97ad8c53bb27c9e9fe6ba8"
+        },
+        "repaired": {
+          "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001\\observations\\vtk\\particles_0001.vtk",
+          "bytes": 1213024,
+          "sha256": "49eed30ff10134ce2a6c54b94fcb737595097b6bfa97ad8c53bb27c9e9fe6ba8"
+        },
+        "bytesIdentical": true
+      },
+      {
+        "relative": "vtk/particles_0002.vtk",
+        "original": {
+          "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-controls-001\\observations\\vtk\\particles_0002.vtk",
+          "bytes": 1213024,
+          "sha256": "9bdab4ff147553d8811145dc040d271dbf2136d12cd129e3d943229d41e48b91"
+        },
+        "repaired": {
+          "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001\\observations\\vtk\\particles_0002.vtk",
+          "bytes": 1213024,
+          "sha256": "9bdab4ff147553d8811145dc040d271dbf2136d12cd129e3d943229d41e48b91"
+        },
+        "bytesIdentical": true
+      }
+    ],
+    "createdUtc": "2026-10-26T06:44:29.604614+00:00",
+    "scope": "Two CSVs and three VTKs from two existing bounded native gates; no apex activation guaranteed; zero new native, test, audit or rendering calls"
+  },
+  "fullRepairedFineSolverRun": "NOT_RUN",
+  "actualOriginalFineFailureReplayCalls": 0,
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "operations": "Collect original four native gates and root's existing bounded comparison; no test/native/projector/MPM/replay/audit/render/PID operation repeated"
+}

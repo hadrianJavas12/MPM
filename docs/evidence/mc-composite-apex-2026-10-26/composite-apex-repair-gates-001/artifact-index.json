@@ -1,0 +1,331 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9"
+    },
+    {
+      "path": "archive-member-verification.json",
+      "bytes": 241332,
+      "sha256": "7b710110de265f9cf976fa483fddf71c0be86bb374f9ed241988ad7bc80c442d"
+    },
+    {
+      "path": "archives/capture-controls-001-complete-native-source-runtime.zip",
+      "bytes": 1257475,
+      "sha256": "7a64bd2d3559bf7f431bbd3c5543b2c8646c6c50e8a26f21e54c619e5369bc92"
+    },
+    {
+      "path": "archives/fine-repair-controls-001-complete-native-source-runtime.zip",
+      "bytes": 1603368,
+      "sha256": "36ad364c5aef80ca9dc77a22e45e5617081a22f0e20b17b145adf9d9d4938f42"
+    },
+    {
+      "path": "archives/stable-math-001-complete-native-source-runtime.zip",
+      "bytes": 1270825,
+      "sha256": "aa22ee649a21bb65de8b2560ed7501aab6ac4f200be255f37f198f95c4adb26b"
+    },
+    {
+      "path": "archives/stable-regression-001-complete-native-source-runtime.zip",
+      "bytes": 1258530,
+      "sha256": "e2a8ab8b171b3e244d5456bce1b944704c4e220d638e2ff7ef75827b16b33ba7"
+    },
+    {
+      "path": "collector-source-before.json",
+      "bytes": 659,
+      "sha256": "ffc5a055b8ab4e47bee0304ed31161ed2868667b8bc9b0993a8d3c87da51e809"
+    },
+    {
+      "path": "executed-copy-hash-zip-helpers.py",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0"
+    },
+    {
+      "path": "executed-pack-script.py",
+      "bytes": 16712,
+      "sha256": "b9000d64fb5dbc24c5aac7ccfe570e97b3094702fa6951b0f6cfb46c347f68d4"
+    },
+    {
+      "path": "existing-comparison-byte-bindings.json",
+      "bytes": 3012,
+      "sha256": "70e112c09f74dc4a85081aecec5975ea1f518077c82af3b188af1aa9eb32f050"
+    },
+    {
+      "path": "gates/capture-controls-001/command.json",
+      "bytes": 431,
+      "sha256": "62e445c23e47ac91f431d931374e2bdd3368b2b767dc40db617545b8926ea3eb"
+    },
+    {
+      "path": "gates/capture-controls-001/current-source-bindings.json",
+      "bytes": 118639,
+      "sha256": "f9ec240056071dd358a5f1c325479ccda320b54cb3a17c791bcff8c025acc58f"
+    },
+    {
+      "path": "gates/capture-controls-001/executed-test.lisp",
+      "bytes": 25023,
+      "sha256": "1c39c86c07c0abedfd85a94947be0372f34cac8b54e107459771b0924ce6a682"
+    },
+    {
+      "path": "gates/capture-controls-001/exit.json",
+      "bytes": 70,
+      "sha256": "f52cba25de7637eb6f57bba26c0d8801f9cd503c5d0aa84cc9f759e0ceccc256"
+    },
+    {
+      "path": "gates/capture-controls-001/native.log",
+      "bytes": 560,
+      "sha256": "857c447dec1a52d42be8b808ccb335b266432ecc5a31035f55879191b9c7b26c"
+    },
+    {
+      "path": "gates/capture-controls-001/recorded-source-byte-bindings.json",
+      "bytes": 73179,
+      "sha256": "84e34facd73b0554b6faa97194587b2c59dfdba89dca66823b05d19ead4d8656"
+    },
+    {
+      "path": "gates/capture-controls-001/result.json",
+      "bytes": 6235,
+      "sha256": "0d42adc9a941c1978a623c74af23854d0a80d693eb360bf2d677b905256a9185"
+    },
+    {
+      "path": "gates/capture-controls-001/source-manifest-index.json",
+      "bytes": 59900,
+      "sha256": "1b627353035fc7871871dd74e4da71e0dcf99f1755eaa773847ae6d8f3b0f7c6"
+    },
+    {
+      "path": "gates/capture-controls-001/source-proof-after.json",
+      "bytes": 38158,
+      "sha256": "ec6f49d1ebcbeb95be66618ae31766dae6bc50ff353f2fdf1ab7be24017eca3d"
+    },
+    {
+      "path": "gates/capture-controls-001/source-proof-before.json",
+      "bytes": 38158,
+      "sha256": "ec6f49d1ebcbeb95be66618ae31766dae6bc50ff353f2fdf1ab7be24017eca3d"
+    },
+    {
+      "path": "gates/capture-controls-001/source-provenance-after.json",
+      "bytes": 375869,
+      "sha256": "9cb6f278547a5144db79ef98eaa01fbc8b36a77cef74b48f6bd93355aa5dac56"
+    },
+    {
+      "path": "gates/capture-controls-001/source-provenance-before.json",
+      "bytes": 375869,
+      "sha256": "9cb6f278547a5144db79ef98eaa01fbc8b36a77cef74b48f6bd93355aa5dac56"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/command.json",
+      "bytes": 505,
+      "sha256": "3e34cff0b205df80e18ec4b590cf9fb7027bb74e3eba30226d9d6444b89cb9ce"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/current-source-bindings.json",
+      "bytes": 120182,
+      "sha256": "2e15c47909ee31a5657acbdd2bc36ef080e61283dcc11635b016d0ebd1fa63f4"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/executed-test.lisp",
+      "bytes": 26971,
+      "sha256": "6dce261b7228eebfa6b366a2a1508ca70dedca4dd75051b3fce8258fcb4e73a2"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/exit.json",
+      "bytes": 70,
+      "sha256": "f17026bb12ed9f712b26bb2d0e42fd652121b63a4014b57ef4abf4a6d17d2a1e"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/native.log",
+      "bytes": 407,
+      "sha256": "1774b33a8af7bdde7168714b196e0772af288ed78ee4547799e2e5d676969c92"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/original-output-byte-comparison-executed.py",
+      "bytes": 1594,
+      "sha256": "6a49e9becd1c07caf55d001c651b3007c67eb977349966e5ae64b500d825ae2d"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/original-output-byte-comparison.json",
+      "bytes": 3558,
+      "sha256": "2ffbf5c777b2ab7ffe0d618caded4a069100d23b03a25599e6700c78ba813984"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/recorded-source-byte-bindings.json",
+      "bytes": 75210,
+      "sha256": "7cf23524818f193c99be6bb5d787280c17fc243393367920907f72db8d553aff"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/result.json",
+      "bytes": 1457,
+      "sha256": "3ce1377ace0633f63727a76f52e4f8586e703f3350b114c70a7e16798e97f1b2"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/source-manifest-index.json",
+      "bytes": 60774,
+      "sha256": "7ec9430d2839bb7f7d866ccd439a50ad7d88f5cf255087c99007f2d7bb89bd4c"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/source-proof-after.json",
+      "bytes": 38666,
+      "sha256": "aaec760ac9916e8fdf3e3c9f0c8af3c5d7816eda9fbbf949e79b16cc173f8437"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/source-proof-before.json",
+      "bytes": 38666,
+      "sha256": "aaec760ac9916e8fdf3e3c9f0c8af3c5d7816eda9fbbf949e79b16cc173f8437"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/source-provenance-before.json",
+      "bytes": 691258,
+      "sha256": "ae74d4e28faf7283cc5dfcea9b4fd0c5c345f1dc5ce6551660adcc651ee8f67d"
+    },
+    {
+      "path": "gates/fine-repair-controls-001/source-provenance.json",
+      "bytes": 691258,
+      "sha256": "ae74d4e28faf7283cc5dfcea9b4fd0c5c345f1dc5ce6551660adcc651ee8f67d"
+    },
+    {
+      "path": "gates/stable-math-001/command.json",
+      "bytes": 400,
+      "sha256": "888fba52a8364aaad3a964ba101e6ab97855dcdb43b92e5944daaf12fb8bd0dc"
+    },
+    {
+      "path": "gates/stable-math-001/current-source-bindings.json",
+      "bytes": 119561,
+      "sha256": "515f3c67d0703abc4555aac524d2456f1dfe688dd6bd6b64cc02e7e081f38fac"
+    },
+    {
+      "path": "gates/stable-math-001/executed-test.lisp",
+      "bytes": 17264,
+      "sha256": "7fdee87afe78764017903e0508d80bb9271ee44eb50ca39d9ed7a1cb65e591a5"
+    },
+    {
+      "path": "gates/stable-math-001/exit.json",
+      "bytes": 70,
+      "sha256": "749cfe6facc954c273fadcd6670916ef07fef3e70e448ab32d211639bacdade8"
+    },
+    {
+      "path": "gates/stable-math-001/native.log",
+      "bytes": 66,
+      "sha256": "1b85dff63de9aca97e6029847feef00ab23c1d89f9f4689168673a48f74aa350"
+    },
+    {
+      "path": "gates/stable-math-001/planned-fixtures.json",
+      "bytes": 6445,
+      "sha256": "989a617735f04e93872ad16f69d67b9c6c8c7858549e11496b42ef4655d23733"
+    },
+    {
+      "path": "gates/stable-math-001/recorded-source-byte-bindings.json",
+      "bytes": 72202,
+      "sha256": "3ba848d245c3ac33cc5f8d1a280d176be78215597ee72018c5c1aaa804a9d6c0"
+    },
+    {
+      "path": "gates/stable-math-001/result.json",
+      "bytes": 91303,
+      "sha256": "f6282a726a9a22354ce294419ffea7267368fcea36d740f2156092b58c30ca7e"
+    },
+    {
+      "path": "gates/stable-math-001/runtime-before.json",
+      "bytes": 296,
+      "sha256": "6f8b8a79683481f71c2d94c7d07dae4acf6be5f2450f189925e2bac6ce10326c"
+    },
+    {
+      "path": "gates/stable-math-001/source-manifest-index.json",
+      "bytes": 60453,
+      "sha256": "f81cd2af9e7caafb1aa1fd736186701578b1a7653ac977b125b3793f8c49833e"
+    },
+    {
+      "path": "gates/stable-math-001/source-proof-after.json",
+      "bytes": 38406,
+      "sha256": "d667183b26a108f31c18154605c4bb381e296170228a391fc54e62b3999d201e"
+    },
+    {
+      "path": "gates/stable-math-001/source-proof-before.json",
+      "bytes": 38406,
+      "sha256": "d667183b26a108f31c18154605c4bb381e296170228a391fc54e62b3999d201e"
+    },
+    {
+      "path": "gates/stable-math-001/source-provenance-before.json",
+      "bytes": 373327,
+      "sha256": "be567377fe3f20d530dd6216d01ddf0d22c3f0f0586fa9f4db7e323888f92b17"
+    },
+    {
+      "path": "gates/stable-math-001/source-provenance.json",
+      "bytes": 373327,
+      "sha256": "be567377fe3f20d530dd6216d01ddf0d22c3f0f0586fa9f4db7e323888f92b17"
+    },
+    {
+      "path": "gates/stable-regression-001/command.json",
+      "bytes": 429,
+      "sha256": "834efab52d6384370362f43cb8244fa210d24afffe79233ca3b27a76b9a55786"
+    },
+    {
+      "path": "gates/stable-regression-001/current-source-bindings.json",
+      "bytes": 119086,
+      "sha256": "c1c88a827585eeb5525f60b1341caae427a6950a58b1fb0229677b444ddfb38a"
+    },
+    {
+      "path": "gates/stable-regression-001/executed-test.lisp",
+      "bytes": 23965,
+      "sha256": "faed3e1675cd23d3894a65e8c02b0e1164ed960932f772d82f20ab61295282e3"
+    },
+    {
+      "path": "gates/stable-regression-001/exit.json",
+      "bytes": 70,
+      "sha256": "242d6d750a7a3168884f395c9c23379196629fab28076ef635f90870dccd2595"
+    },
+    {
+      "path": "gates/stable-regression-001/native.log",
+      "bytes": 2149,
+      "sha256": "43a9e80021e5b24b020ed97cdef30f5a5df0c6b7d77001c4288754490ed8c767"
+    },
+    {
+      "path": "gates/stable-regression-001/recorded-source-byte-bindings.json",
+      "bytes": 73713,
+      "sha256": "72d1246f26c5bcb7f9377bf8e823b3ad1e0a197e3cf8fb433283adb4f15bbd09"
+    },
+    {
+      "path": "gates/stable-regression-001/result.json",
+      "bytes": 1803,
+      "sha256": "d432b15c59fa3196c797dc02272e3cc5406efe076304870a25499231ea78c5e9"
+    },
+    {
+      "path": "gates/stable-regression-001/source-manifest-index.json",
+      "bytes": 60120,
+      "sha256": "bf3f4d9de37631f5612d597b0884738611ddc10cc6ea620cdb11869d3faca2fc"
+    },
+    {
+      "path": "gates/stable-regression-001/source-proof-after.json",
+      "bytes": 38285,
+      "sha256": "177b5c5b0e97ec50527912743dd0d91da1bfd613821cc30bc98cd77785f84216"
+    },
+    {
+      "path": "gates/stable-regression-001/source-proof-before.json",
+      "bytes": 38285,
+      "sha256": "177b5c5b0e97ec50527912743dd0d91da1bfd613821cc30bc98cd77785f84216"
+    },
+    {
+      "path": "gates/stable-regression-001/source-provenance-after.json",
+      "bytes": 376435,
+      "sha256": "960bebb50dd43312dae6bb7e08d1c77956870886e09c6043e5085348f5d6c7fd"
+    },
+    {
+      "path": "gates/stable-regression-001/source-provenance-before.json",
+      "bytes": 376435,
+      "sha256": "960bebb50dd43312dae6bb7e08d1c77956870886e09c6043e5085348f5d6c7fd"
+    },
+    {
+      "path": "packaging-invocation.json",
+      "bytes": 313,
+      "sha256": "d86a659d08fd997e210b546b51a259a3b8f1a4ca2174561db61a365991676e41"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2081,
+      "sha256": "a284aa2d02099fc135742d46dea780f1b5de80454586178d17b0f42ba1eb5204"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 8869,
+      "sha256": "78950efcd9a0c1354ac7cccac0255b1aad7ed07cc8f687748d7a664198e371f3"
+    }
+  ],
+  "note": "Index excludes itself. Four native source ZIPs, one per actual gate; original bytes preserved."
+}

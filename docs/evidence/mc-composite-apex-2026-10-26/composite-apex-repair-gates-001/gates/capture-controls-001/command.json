@@ -1,0 +1,10 @@
+{
+  "executable": "D:/MPM/windows/cl-mpm.cmd",
+  "arguments": [
+    "tests/materials/mc-composite-apex-failure-capture.lisp",
+    "output/mc-composite-apex-2026-10-26/capture-controls-001"
+  ],
+  "sourceCommit": "8b3087bf5177d73ddf6064592e5db1265e160704",
+  "startedUtc": "2026-10-26T06:40:09.3440103Z",
+  "scope": "FIRST8focused synthetic capture/ownership/native rollback groups; no missing actual fine-trial replay"
+}

@@ -1,6 +1,6 @@
 # AI Engineering Handover — CL-MPM
 
-## Latest26October13:38WIB: h0.5 failed; numerical repair gates underway
+## Latest26October13:46WIB: numerical repair gates PASS; fresh launch pending
 
 The formerly ACTIVE `srf1p6-composite-h05-001` is now **FAILED_NATIVE/worker1**,
 ended13:06:10WIB. Native source remains `a07eb8f8`. Last save is5.2s/53states/
@@ -37,10 +37,26 @@ strict/Wang sources and dispatch remain unchanged. FIRST stable-math-001 passes
 33NEWfixed-point calls/0MPM, rational compliance/work at existing tolerances,
 six witness permutations and27finite J/offset/deviator combinations. Original
 work reference retains binary64q; exact-mean discrepancy is reported separately.
-Relevant old15optional regression is in progress because this projector changed;
-new capture tests are source-ready/NOT_RUN pending independent review. No full
-fresh solver is active. Archive these gate results before a justified same-input
-fresh attempt; no identical restart or physical/tolerance tuning for collapse.
+Relevant stable-regression-001 now passes15optional groups:38new pure/6strict
+comparator/10native calls,0MPM. New capture-controls-001 passes8groups:helper6,
+optional7/native2,9optional replay attempts of which2reach projector,1strict
+schema rejection/1synthetic strict delegate,0MPM/actual fine-failure replay.
+This validates owned JSON capture, optional schema/dispatch, complete native
+rollback/external strain and original-error preservation on capture failure;
+writer subprocess/path-error behavior remains source-review-only/unchanged.
+FIRST fine-repair-controls-001 passes4relevant groups/2USF/7040accepted calls/
+3520MPs/3VTK/10560rows.3VTK+2CSV are byte-identical to the original tiny fine
+gate. It does not activate apex; point/native material controls cover that scope.
+All four gate source sets/runtime DLL match. Root independently closes repair
+packet65indexed/66Git blobs/4ZIPs/1206members/1158archived+actual source/input
+payloads, and confirms all five bounded outputs byte-identical. No gate repeats.
+Fresh h05-002 source-only launch profile has root/independent review, including
+binding the imported helper before import, exact new-gate/full source sets and
+actual optional diagnostics load. No full solver yet; FIRSTprepare requires the
+committed checkpoint. See support/COMPOSITE_H05_REPAIR_LAUNCH_CHECKPOINT.md under
+research/notes/unnotched-landslide-2026-10-24. Physical case/contracts unchanged.
+Archive/commit gate proof and prepare before justified same-input fresh attempt;
+no identical restart or physical/tolerance tuning for collapse.
 
 Same automation returns5h while terminal;15min only for a justified new full
 solver. Preserve raw/private/settings and finite no-extra-SRF/grid/time rule.

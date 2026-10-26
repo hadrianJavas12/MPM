@@ -1,0 +1,9 @@
+PASS: helper-preserves-condition-and-owns-json-tree
+PASS: synthetic-analytic-rejection-captures-named-checks
+PASS: optional-in-memory-and-json-replay
+PASS: strict-and-optional-replay-variant-firewall
+PASS: base-and-detailed-capture-failures-preserve-original-error
+PASS: native-rejection-preserves-complete-state-and-external-strain
+PASS: successful-return-does-not-build-diagnostic
+PASS: delegated-strict-condition-is-untouched
+COMPOSITE CAPTURE: 8/8 new groups; 6 helper failures, 7 optional calls, 2 native calls, 9 replay attempts; 0 MPM updates.

@@ -25,8 +25,11 @@ native witness proving a rounded-mean trace/work false rejection, not the missin
 actual trial's cause. Source8996a015 evaluates the same deviator via symmetric
 principal differences and adds optional-only owned failure diagnostics. Material,
 cap/mean/q/branch/tolerances and strict/Wang sources are unchanged. FIRST33new
-native math calls pass; relevant optional regression/capture gates precede any
-fresh full attempt. Original failed/witness outputs remain immutable.
+native math calls,15relevant optional groups,8new capture groups and4relevant
+fine integration groups now pass. The latter2USF/7040calls produce3VTK+2CSV
+byte-identical to the original tiny gate, without claimed apex activation.
+Fresh same-input full attempt is pending evidence/launch preparation.
+Original failed/witness outputs remain immutable.
 
 The first full trial starts **26 October00:29:14 WIB**, native source35427376,
 and completes native/worker exit0 at**00:44:59 WIB**:6physical seconds,

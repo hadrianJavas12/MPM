@@ -82,8 +82,26 @@ FIRST `stable-math-001`, repair source8996a015, now passes33new production
 projector calls/zeroMPM: six original synthetic witness permutations and27fixed
 J/mean-offset/deviator combinations. All planned cases execute and pass the
 independent rational checks. The original witness result is immutable input
-data, not another old-projector invocation. Capture controls are NOT_RUN and
-the relevant old15optional regression is still being completed; no full retry.
+data, not another old-projector invocation. The relevant old15optional regression
+passes38pure+6strict comparator+10native calls/zeroMPM. FIRST8capture groups
+pass, including2native calls/complete rollback, distinct optional/strict schema
+rejection, JSON ownership/roundtrip, guarded capture and unchanged successful/
+strict-delegated return behavior. These use injected synthetic rejections, not
+the absent real fine-run trial. Existing writer path/subprocess behavior is
+source-reviewed only, unchanged. All planned counters and actual exits agree.
+
+FIRST relevant fine repair integration gate passes4groups/2genuineUSF updates/
+7040accepted calls/3520MPs/3VTK10560rows. Its3VTK+2CSV are byte-identical to the
+original tiny gate. No apex activation is required or observed in that tiny
+trajectory. Frozen source counts are290math/289optional/288capture/291fine and
+stored actual DLL proof agrees; full-slope source/runtime will freeze separately.
+Root independently verifies the[repair packet](../evidence/mc-composite-apex-2026-10-26/composite-apex-repair-gates-001/README.md):
+65indexed artifacts/66Git blobs,4separate complete source ZIPs/1206members,
+1158original and archived source/input payloads. The reviewed fresh002 launch
+profile binds these committed gates, exact allowed repair sources, imported
+helper/prepared bytes and actual diagnostics load. Physical case/contracts and
+all four prepared postprocessors remain unchanged. FIRSTprepare/full retry is
+pending the committed source checkpoint; no full solver is running yet.
 
 A fresh full run is justified only after these relevant gates close and its
 new source/runtime are frozen. It starts from the original initial state, with

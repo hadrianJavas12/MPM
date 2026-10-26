@@ -25,7 +25,9 @@ exact rational identities hold. It is not the missing real failed update.
 Source8996a015 uses equivalent symmetric principal differences and optional-only
 owned diagnostics with distinct replay schema. Material/branch/tolerances and
 strict/Wang bytes stay unchanged. FIRST33new math calls pass; relevant optional
-regression and capture controls are pending before any fresh full attempt.
+regression15groups and capture8groups now also pass; relevant fine integration
+passes2USF/7040calls with3VTK+2CSV byte-identical to the old tiny gate. Fresh
+same-input full attempt is pending evidence/launch preparation, no full solver.
 See ../../docs/benchmarks/COMPOSITE_APEX_ROUNDOFF_REPAIR.md and
 [[urmi-legacy-comparison]] for the separate historical notched/filtered case.
 

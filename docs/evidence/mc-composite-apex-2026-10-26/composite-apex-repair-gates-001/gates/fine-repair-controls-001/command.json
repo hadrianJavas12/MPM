@@ -1,0 +1,11 @@
+{
+  "executable": "D:/MPM/windows/cl-mpm.cmd",
+  "arguments": [
+    "tests/benchmarks/gravity-composite-apex-refinement-controls.lisp",
+    "output/mc-composite-apex-2026-10-26/fine-repair-controls-001",
+    "all"
+  ],
+  "sourceCommit": "8b3087bf5177d73ddf6064592e5db1265e160704",
+  "startedUtc": "2026-10-26T06:42:06.7160140Z",
+  "scope": "Relevant new-source two-USF/output gate after optional arithmetic+ASDF change; byte comparison with original finecontrols planned, no old full solver"
+}

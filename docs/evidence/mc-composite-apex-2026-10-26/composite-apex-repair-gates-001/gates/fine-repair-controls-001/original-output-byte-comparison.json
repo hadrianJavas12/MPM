@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "executedScriptBefore": {
+    "path": "D:\\MPM\\.tmp\\compare-apex-repair-bounded.py",
+    "bytes": 1594,
+    "sha256": "6a49e9becd1c07caf55d001c651b3007c67eb977349966e5ae64b500d825ae2d"
+  },
+  "comparedFiles": [
+    {
+      "relative": "history.csv",
+      "original": {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-controls-001\\observations\\history.csv",
+        "bytes": 2707,
+        "sha256": "98ed733c8bdd54eb93f50924c249ee3c3ec3737cd0acaa77fc93ff4fe83232ab"
+      },
+      "repaired": {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001\\observations\\history.csv",
+        "bytes": 2707,
+        "sha256": "98ed733c8bdd54eb93f50924c249ee3c3ec3737cd0acaa77fc93ff4fe83232ab"
+      },
+      "bytesIdentical": true
+    },
+    {
+      "relative": "particles.csv",
+      "original": {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-controls-001\\observations\\particles.csv",
+        "bytes": 7780979,
+        "sha256": "e07b35ff47f705e61c7d8262783776dd19d1d058b8c76e7f2cc9981c8a3b8c99"
+      },
+      "repaired": {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001\\observations\\particles.csv",
+        "bytes": 7780979,
+        "sha256": "e07b35ff47f705e61c7d8262783776dd19d1d058b8c76e7f2cc9981c8a3b8c99"
+      },
+      "bytesIdentical": true
+    },
+    {
+      "relative": "vtk/particles_0000.vtk",
+      "original": {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-controls-001\\observations\\vtk\\particles_0000.vtk",
+        "bytes": 1213024,
+        "sha256": "7d7b249d72a9b3db39c7a561905086f70eb7c65d9d59088778534ddf7e398e16"
+      },
+      "repaired": {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001\\observations\\vtk\\particles_0000.vtk",
+        "bytes": 1213024,
+        "sha256": "7d7b249d72a9b3db39c7a561905086f70eb7c65d9d59088778534ddf7e398e16"
+      },
+      "bytesIdentical": true
+    },
+    {
+      "relative": "vtk/particles_0001.vtk",
+      "original": {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-controls-001\\observations\\vtk\\particles_0001.vtk",
+        "bytes": 1213024,
+        "sha256": "49eed30ff10134ce2a6c54b94fcb737595097b6bfa97ad8c53bb27c9e9fe6ba8"
+      },
+      "repaired": {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001\\observations\\vtk\\particles_0001.vtk",
+        "bytes": 1213024,
+        "sha256": "49eed30ff10134ce2a6c54b94fcb737595097b6bfa97ad8c53bb27c9e9fe6ba8"
+      },
+      "bytesIdentical": true
+    },
+    {
+      "relative": "vtk/particles_0002.vtk",
+      "original": {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-controls-001\\observations\\vtk\\particles_0002.vtk",
+        "bytes": 1213024,
+        "sha256": "9bdab4ff147553d8811145dc040d271dbf2136d12cd129e3d943229d41e48b91"
+      },
+      "repaired": {
+        "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\fine-repair-controls-001\\observations\\vtk\\particles_0002.vtk",
+        "bytes": 1213024,
+        "sha256": "9bdab4ff147553d8811145dc040d271dbf2136d12cd129e3d943229d41e48b91"
+      },
+      "bytesIdentical": true
+    }
+  ],
+  "createdUtc": "2026-10-26T06:44:29.604614+00:00",
+  "scope": "Two CSVs and three VTKs from two existing bounded native gates; no apex activation guaranteed; zero new native, test, audit or rendering calls"
+}

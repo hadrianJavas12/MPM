@@ -20,8 +20,19 @@ Repair source8996a015 changes only optional apex deviator evaluation and
 failure-only capture/replay. FIRST stable-math-001 passes33new calls,0MPM:
 six witness permutations and27J/offset/deviator combinations, rational
 compliance/work/yield/flow/energy checks and ownership at unchanged tolerances.
-Relevant15optional regression is in progress; new capture controls NOT_RUN.
-See[repair scope](benchmarks/COMPOSITE_APEX_ROUNDOFF_REPAIR.md). No full rerun yet.
+Relevant stable-regression-001 passes15optional groups/38pure+6strict comparator+
+10native calls/0MPM. FIRST capture-controls-001 passes8groups (helper6/optional7/
+native2/replay9,only2reach optional projector/strictschema1/syntheticdelegate1,
+0MPM/actual fine replay). Owned JSON/schema/dispatch, complete native rollback,
+capture-failure/original-error and no capture on success are covered. Existing
+writer filesystem/subprocess behavior is source-reviewed only, unchanged.
+FIRST fine-repair-controls-001 passes4relevant groups/2USF/7040calls/3VTK10560rows;
+3VTK+2CSV actual bytes equal original fine tiny control. No tiny apex activation
+is claimed. Source counts290/289/288/291 respectively, original snapshots and
+stored actual DLL before/after match. See[repair scope](benchmarks/COMPOSITE_APEX_ROUNDOFF_REPAIR.md).
+Root independently verifies repair packet65indexed/66Git blobs/4ZIPs/1206members,
+1158archived and original source/input payloads. Fresh same-input full launch is
+pending FIRSTprepare from reviewed/committed helper; no full rerun yet.
 
 ## Historical full fine launch (terminal above),26October2026
 

@@ -1,0 +1,10 @@
+{
+  "executable": "D:/MPM/windows/cl-mpm.cmd",
+  "arguments": [
+    "tests/materials/mc-composite-apex.lisp",
+    "output/mc-composite-apex-2026-10-26/stable-regression-001"
+  ],
+  "sourceCommit": "8996a015a4bc45b44f2ad6f22b97bfe4215f9a14",
+  "startedUtc": "2026-10-26T06:37:08.7411060Z",
+  "scope": "Relevant15optional projector/ownership/native rollback regression after arithmetic change; no unrelated old suites"
+}
