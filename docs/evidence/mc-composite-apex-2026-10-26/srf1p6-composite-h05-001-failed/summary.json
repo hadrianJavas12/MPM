@@ -1,0 +1,52 @@
+{
+  "schema": "cl-mpm.gravity-composite-apex.failed.evidence.v1",
+  "createdUtc": "2026-10-26T06:33:58.867415+00:00",
+  "nativeSourceCommit": "a07eb8f8d8276a03a211266362518c323983ea13",
+  "nativeExit": 1,
+  "workerExit": 1,
+  "nativeComplete": false,
+  "nativeEndedUtc": "2026-10-26T06:06:10.8675778Z",
+  "workerFinishedUtc": "2026-10-26T06:06:10.9659823Z",
+  "lastSavedTimeS": 5.2,
+  "manifestTimeS": 5.2,
+  "attemptTimeS": 5.27147981362577,
+  "savedFrames": 53,
+  "particleCount": 3520,
+  "manifestUpdates": 13590,
+  "nativeError": "MC evolution integration failed: Composite apex compliance, flow, yield or work identity failed NIL",
+  "nativeSourceFiles": 287,
+  "savedReviewExit": {
+    "exitCode": 0,
+    "endedUtc": "2026-10-26T06:20:17.3683846Z"
+  },
+  "savedReviewIntegrityAsReceived": "PASS",
+  "savedReviewNativeCompleteAsReceived": false,
+  "savedReviewErrorAsReceived": null,
+  "savedMediaAsReceived": [
+    {
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-001\\variant-review-001\\gravity-slope-review.png",
+      "sha256": "9c70dff30a006ae5a811a07a66dd9c994f03ca818addf4626edbf88344e3ef30",
+      "bytes": 220365
+    },
+    {
+      "path": "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-001\\variant-review-001\\gravity-slope-actual.mp4",
+      "sha256": "60ef7c26f225a530177e944fce14abd2a52594dd0cbdc44fbd0d8fcd92c34bde",
+      "bytes": 82635,
+      "actualSavedStates": 53,
+      "playbackFramesPerSecond": 4,
+      "physicalLastTimeS": 5.2,
+      "interpolation": false,
+      "deformationMagnification": 1,
+      "scope": "INCOMPLETE",
+      "fullDecodeExit": 0
+    }
+  ],
+  "nativeFailureNamedArtifactCandidates": [],
+  "failureSearchScope": "This run's retained native output filenames only, excluding source, analysis and adjacent/detached metadata; no old trees searched",
+  "failureReplay": "NOT_RUN; manifest records an error/attempt clock, not a serialized failed constitutive input; no capsule or failed-particle state invented",
+  "updateScope": "Manifest counter includes unsaved evolution after lastSavedTimeS; it is not 13590 saved-state transitions or evidence that the failed global step committed",
+  "physicalResultScope": "Partial53-state saved review and root spatial note only; failure at5.27147981362577s prevents complete0-6s fine comparison or convergence claim",
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "operations": "Read/copy/hash/ZIP/CRC/decoded-byte comparison only; no native/gate/launch/audit/render/replay/comparison or obsolete PID query"
+}

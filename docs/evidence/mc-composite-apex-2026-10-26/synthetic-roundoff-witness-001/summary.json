@@ -1,0 +1,45 @@
+{
+  "schema": "cl-mpm.mc-composite-apex.synthetic-roundoff.evidence.v1",
+  "createdUtc": "2026-10-26T06:35:55.096690+00:00",
+  "nativeSourceCommit": "017f00abc122f4c7381166d884a4bbf911207605",
+  "nativeExit": 0,
+  "nativeEndedUtc": "2026-10-26T06:23:53.8616772Z",
+  "nativeSourceFiles": 290,
+  "originalResultPassed": true,
+  "explicitProductionProjectorCalls": 1,
+  "physicalUpdateAttempts": 0,
+  "nativeConstitutiveCalls": 0,
+  "oldControlsCalled": 0,
+  "actualFailedTrialReplayCalls": 0,
+  "negativeProductionOutcomeAsReceived": {
+    "accepted": false,
+    "materialError": true,
+    "reason": "Composite apex compliance, flow, yield or work identity failed",
+    "details": "NIL",
+    "diagnosticPresent": false
+  },
+  "soleFailedFloatingGuardAsReceived": [
+    "work-identity"
+  ],
+  "exactRationalWitnessAsReceived": {
+    "scope": "Exact rational identities using evaluated binary64 cap/G/K; transcendental rounding is outside this witness",
+    "checks": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "allIdentitiesHold": true,
+    "sumDeviatorExact": "0",
+    "volumeResidualExact": "0",
+    "workResidualExact": "0",
+    "energyMarginExact": "8120559588476400622489200236671/41790679128403167082308896880527324057155141632",
+    "exactMeanMinusFloatingMeanPa": "-1/412316860416",
+    "predictedMeanRoundingWorkErrorPa": "-3776104212177945/1453035840882967844667992834048"
+  },
+  "scope": "ONE SYNTHETIC arithmetic witness on unchanged optional production projector; actual failed trial unavailable; no MPM or scientific validation",
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "operations": "Collect existing original record bytes only; no witness/projector/native/MPM/test/replay/audit/render or process query repeated"
+}

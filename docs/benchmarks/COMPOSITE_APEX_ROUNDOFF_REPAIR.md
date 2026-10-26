@@ -78,7 +78,12 @@ existing optional15-control regression because its arithmetic changed; do not
 repeat unrelated historical gates. Capture controls must test optional schema,
 JSON ownership/replay and preservation of the original failure on capture
 errors, including native transaction rollback. Retain every failed attempt.
-At this source checkpoint these repair controls are **NOT_RUN**.
+FIRST `stable-math-001`, repair source8996a015, now passes33new production
+projector calls/zeroMPM: six original synthetic witness permutations and27fixed
+J/mean-offset/deviator combinations. All planned cases execute and pass the
+independent rational checks. The original witness result is immutable input
+data, not another old-projector invocation. Capture controls are NOT_RUN and
+the relevant old15optional regression is still being completed; no full retry.
 
 A fresh full run is justified only after these relevant gates close and its
 new source/runtime are frozen. It starts from the original initial state, with

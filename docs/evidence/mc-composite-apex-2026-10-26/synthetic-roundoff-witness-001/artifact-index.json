@@ -1,0 +1,106 @@
+{
+  "schema": "cl-mpm.evidence.artifact-index.v1",
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 21,
+      "sha256": "ed52ccb3541226d583cf18fa3a3c271a8fbf1c66fbc6d0ddc761f8034f25fff9"
+    },
+    {
+      "path": "archive-member-verification.json",
+      "bytes": 59936,
+      "sha256": "938688959b6381c62889534cfb08adb6f2419eaa009884ed027b1ab0619e7b8d"
+    },
+    {
+      "path": "complete-native-source-result-runtime-and-negative-rejection.zip",
+      "bytes": 1262685,
+      "sha256": "41a7243eb67d3af683194211630bf2586fc547d7b8da8c500b6b0480a2e0386d"
+    },
+    {
+      "path": "executed-copy-hash-zip-helpers.py",
+      "bytes": 13671,
+      "sha256": "4c0296af8d677b589f905f3f310dad42f4458e53fb3c538840093b58287119a0"
+    },
+    {
+      "path": "executed-pack-script.py",
+      "bytes": 10773,
+      "sha256": "7b614944e79a2a09f74aed9aac1bfd792c9f31369f456609d69f73a94d571bb0"
+    },
+    {
+      "path": "metadata/native-source-manifest-index.json",
+      "bytes": 60516,
+      "sha256": "2bcf5b50a6f94f535d10536be503944c684a00901a1a225d0b44e80a77610867"
+    },
+    {
+      "path": "original-records/adjacent/synthetic-roundoff-witness-001-command.json",
+      "bytes": 417,
+      "sha256": "4b7c0524ff4ac1069aaf97818d992d16733d4fadabdb13b3bda826de07128154"
+    },
+    {
+      "path": "original-records/adjacent/synthetic-roundoff-witness-001-exit.json",
+      "bytes": 70,
+      "sha256": "3eb8176881894ca3fb4645c96c79dfec2854db3fe79467fd4f53cf3543da1c25"
+    },
+    {
+      "path": "original-records/adjacent/synthetic-roundoff-witness-001-native.log",
+      "bytes": 70,
+      "sha256": "3a6b9bfe1444a36c2747776210b268a8e903963c15a54916792b4af8bbd333e6"
+    },
+    {
+      "path": "original-records/result.json",
+      "bytes": 4558,
+      "sha256": "fa04bc5d5551c0b715805637b0fd996959fbb163f633fd1e2506b46d91d5b571"
+    },
+    {
+      "path": "original-records/source-proof-after.json",
+      "bytes": 38381,
+      "sha256": "98abdb8ac31b513f1e7f0a9184a18d900f2af0bc60a4d0fbc4f12e373010633e"
+    },
+    {
+      "path": "original-records/source-proof-before.json",
+      "bytes": 38381,
+      "sha256": "98abdb8ac31b513f1e7f0a9184a18d900f2af0bc60a4d0fbc4f12e373010633e"
+    },
+    {
+      "path": "original-records/source-provenance-before.json",
+      "bytes": 378995,
+      "sha256": "75acafcc09d4b346df6bb9a16f8fd186cc7470d596aef07b8890da84d05c7437"
+    },
+    {
+      "path": "original-records/source-provenance.json",
+      "bytes": 378995,
+      "sha256": "75acafcc09d4b346df6bb9a16f8fd186cc7470d596aef07b8890da84d05c7437"
+    },
+    {
+      "path": "original-test-and-protocol/mc-composite-apex-roundoff-witness.lisp",
+      "bytes": 14912,
+      "sha256": "06c9c30d2090211624d635d0f1628f3c0768001b4083b369468996321185678d"
+    },
+    {
+      "path": "original-test-and-protocol/mc-composite-apex-roundoff-witness.protocol.json",
+      "bytes": 1563,
+      "sha256": "cd1269d64423960e6763dedbf8e3872bd6f3186493ef8cbaf8dcae4aa351a207"
+    },
+    {
+      "path": "packaging-invocation.json",
+      "bytes": 257,
+      "sha256": "a5fb6bd598aa9db8a6c3e00e74ca6e715f99bf0413a53959b8938bca9009d466"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1574,
+      "sha256": "ee6423b3a4548c67aca82e39b68eef8551125de39b41415c320e607cd5952ecc"
+    },
+    {
+      "path": "recorded-byte-bindings.json",
+      "bytes": 76515,
+      "sha256": "c931df7e335edf5754f056d624fa9da6644f74d342a831b60fa1378dee514d4a"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 1784,
+      "sha256": "c9d10a9d4ab193483d868b0c9d471fbb4201d4b1195ee6358d88e9b50dc6c879"
+    }
+  ],
+  "note": "Index excludes itself. * -text preserves exact bytes; single complete source ZIP."
+}

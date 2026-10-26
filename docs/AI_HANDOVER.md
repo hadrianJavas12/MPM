@@ -1,6 +1,6 @@
 # AI Engineering Handover — CL-MPM
 
-## Latest26October13:22WIB: h0.5 trial failed; saved review closed
+## Latest26October13:38WIB: h0.5 failed; numerical repair gates underway
 
 The formerly ACTIVE `srf1p6-composite-h05-001` is now **FAILED_NATIVE/worker1**,
 ended13:06:10WIB. Native source remains `a07eb8f8`. Last save is5.2s/53states/
@@ -14,25 +14,38 @@ FIRST prepared saved-data variant review `variant-review-001` exits0 with saved
 integrity/variant/source287/DLL PASS, nativeComplete=false. Actual53-frame video
 is INCOMPLETE0–5.2s,4fps/scale1/no interpolation/full decode0. Root inspected the
 PNG: downslope upper-wedge motion and localized plastic band, no toe runout.
-Native h-scaled coherent-motion flags are positive but remain distinct from
-the frozen common-metre observer. Full complete-pair CSV comparison is NOT_RUN
-and must continue rejecting incomplete input. Goal/scientific verification
-remain open. All source/raw/failure/media evidence must be retained.
+FIRST separate partial CSV observer exits0, using the unchanged common-metre
+thresholds on matched0–5.2s. Fine entire/post2s candidates appear3.4/3.5s;
+coarse both NOT_DETECTED. Fine physical-cohort final dx+.447998m/dy-.222043m,
+runout0both. Source timing is explicitly AFTER native failure/both audits.
+Full complete-pair CSV comparison stays NOT_RUN and must reject incomplete input.
+This is resolution-sensitive partial motion, not convergence/scientificPASS.
+Root independently verifies failed packet66indexed/67Git blobs/514ZIPmembers/
+287original+archived sources, and witness packet20indexed/21blobs/299members/
+290sources+inputs. See composite evidence26October; never repeat these closures.
 
-One source-ready synthetic roundoff witness is being frozen for FIRST execution:
-`tests/materials/mc-composite-apex-roundoff-witness.lisp` and its protocol.
-It calls the unchanged optional projector once,0MPM, on a nonzero hydrostatic
-cap near-hydrostatic trial, with independent exact-rational identities. It is
-NOT the missing actual failed-trial replay. Source review suggests subtracting
-the rounded mean can contaminate deviator trace and amplify work cancellation;
-this is a hypothesis pending native witness, not a proven actual failure cause.
-No production arithmetic, material, strength, tolerances or strict/Wang code
-has changed. Close actual evidence before a scoped tested repair/fresh attempt.
+The FIRST synthetic-roundoff-witness-001 native0 reproduces ONLY a false work
+identity rejection in one unchanged optional projector call,0MPM. Rational
+identities hold exactly; floating work error2.599e-15Pa exceeds2.074e-18Pa
+allowance from rounded-mean deviator trace. Original sources/protocol/result
+are immutable. This is NOT the missing actual failed-trial replay/cause proof.
+
+Repair source8996a015 uses symmetric principal differences for the same exact
+deviator algebra, unchanged mean/q/branch/checks/tolerances. New optional-only
+failure capture/replay has its own schema/variant and owned input/check tree;
+strict/Wang sources and dispatch remain unchanged. FIRST stable-math-001 passes
+33NEWfixed-point calls/0MPM, rational compliance/work at existing tolerances,
+six witness permutations and27finite J/offset/deviator combinations. Original
+work reference retains binary64q; exact-mean discrepancy is reported separately.
+Relevant old15optional regression is in progress because this projector changed;
+new capture tests are source-ready/NOT_RUN pending independent review. No full
+fresh solver is active. Archive these gate results before a justified same-input
+fresh attempt; no identical restart or physical/tolerance tuning for collapse.
 
 Same automation returns5h while terminal;15min only for a justified new full
 solver. Preserve raw/private/settings and finite no-extra-SRF/grid/time rule.
 
-## ACTIVE: same-factor h0.5 resolution trial
+## Historical launch: same-factor h0.5 trial (now terminal; superseded above)
 
 Output `output/mc-composite-apex-2026-10-26/srf1p6-composite-h05-001`, native
 source `a07eb8f8d8276a03a211266362518c323983ea13`. Starts26October11:04:18.0292316WIB;

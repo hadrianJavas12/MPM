@@ -3,6 +3,31 @@
 Prepared 2026-10-26 on `codex/unnotched-mc-composite-apex`. This is a separate
 material experiment, with no verified landslide or scientific calibration yet.
 
+## Latest fine result and arithmetic repair,26October2026
+
+Fine sourcea07eb8f8 fails native/worker1 at13:06:10WIB.53 actual states through
+5.2s are retained; attempted5.27147981362577s includes unsaved work. The bare
+apex identity error has no trial capsule, so exact failure replay is unavailable.
+FIRST prepared saved variant review/render exits0 with retained integrity,
+287sources/DLL and variant checks PASS; video is explicitly INCOMPLETE.
+Root inspects actual scale1 upper-wedge motion above a localized plastic band.
+
+A separate CSV-only observer uses the unchanged physical-metre criteria and
+matches0–5.2s without interpolation. Fine connected-motion candidates first
+appear3.4/3.5s, coarse remains NOT_DETECTED. Fine fixed physical-cohort final
+displacement is(+.447998,-.222043)m; no mass crosses the runout observer in either.
+This is resolution-sensitive partial motion, not a completed/converged pair.
+[Failure evidence](../evidence/mc-composite-apex-2026-10-26/srf1p6-composite-h05-001-failed/README.md)
+retains raw/source/runtime/media and exact analysis provenance.
+
+The[scoped repair](COMPOSITE_APEX_ROUNDOFF_REPAIR.md) follows one frozen synthetic
+native witness proving a rounded-mean trace/work false rejection, not the missing
+actual trial's cause. Source8996a015 evaluates the same deviator via symmetric
+principal differences and adds optional-only owned failure diagnostics. Material,
+cap/mean/q/branch/tolerances and strict/Wang sources are unchanged. FIRST33new
+native math calls pass; relevant optional regression/capture gates precede any
+fresh full attempt. Original failed/witness outputs remain immutable.
+
 The first full trial starts **26 October00:29:14 WIB**, native source35427376,
 and completes native/worker exit0 at**00:44:59 WIB**:6physical seconds,
 61states,880MPs,7740updates. It is terminal; no solver is active. The

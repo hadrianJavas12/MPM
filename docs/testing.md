@@ -1,6 +1,29 @@
 # Native framework and Studio verification
 
-## Full same-factor fine run ACTIVE,26October2026
+## Fine failure and scoped arithmetic gates,26October2026
+
+Fine sourcea07eb8f8 ends native/worker1 at13:06:10WIB. Last save5.2s/53states,
+attempt5.27147981362577; no analytic trial capsule exists. FIRST prepared saved
+variant review/render exits0, integrity/variant/287sources/DLL PASS for retained
+data only. Video53states/4fps/13.25s/scale1/nointerp/decode0. FIRST CSV-only
+partial common-metre observer finds fine connected motion from3.4/3.5s versus
+coarse NOT_DETECTED, no runout either; incomplete fullpair/convergence remain false.
+Failed packet66indexed/67Git blobs/514members/287actual+archived sources verified.
+
+FIRST frozen synthetic-roundoff-witness-001 exits0: exactly one unchanged
+production projector call rejects solely work identity,0MPM/replay. Exact
+rational identities hold. Witness packet20indexed/21Git blobs/299members/
+290sources+inputs verified. This proves a numerical rejection class, not the
+missing actual failed-trial cause. No old run/replay/audit/render repeated.
+
+Repair source8996a015 changes only optional apex deviator evaluation and
+failure-only capture/replay. FIRST stable-math-001 passes33new calls,0MPM:
+six witness permutations and27J/offset/deviator combinations, rational
+compliance/work/yield/flow/energy checks and ownership at unchanged tolerances.
+Relevant15optional regression is in progress; new capture controls NOT_RUN.
+See[repair scope](benchmarks/COMPOSITE_APEX_ROUNDOFF_REPAIR.md). No full rerun yet.
+
+## Historical full fine launch (terminal above),26October2026
 
 Sourcea07eb8f8 starts11:04:18WIB,3h deadline14:04:18(not ETA),6s/61states/3520MP.
 Four new native/six glue controls CLOSED. FIRST prepare/capture exit0 and exact

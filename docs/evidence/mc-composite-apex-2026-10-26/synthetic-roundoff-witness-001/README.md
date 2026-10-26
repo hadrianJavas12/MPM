@@ -1,0 +1,7 @@
+# ONE synthetic roundoff witness: original native evidence
+
+FIRST synthetic witness completes native exit0 on26October2026. It makes one explicit unchanged production projector call, zero native constitutive calls, zero MPM updates, zero old controls and zero actual failed-trial replay calls. The expected production result is rejection, with the retained material-error reason and NIL/no diagnostic. The independently reconstructed floating guards fail only work-identity; the five exact rational identities all hold.
+
+This is a preregistered synthetic arithmetic fixture on exact binary64 trial values and evaluated binary64 cap/G/K. It demonstrates a cancellation-sensitive rejection mechanism; it does not identify the unavailable actual failed fine-run trial, evaluate transcendental functions exactly, establish a full-MPM restart or validate scientific landslide behavior. No production tolerance or source was changed by collection.
+
+One ZIP retains all290original frozen source/input files, original test and protocol, source manifest, before/after source and runtime proofs, mapped DLL record, exact command, native exit/log and the complete negative production result. Original test/protocol are also directly inspectable. Private caches are excluded. Every archived member is CRC-tested, decoded and byte-compared; all source bytes bind to their original pre-load and before/after hashes. Stored runtime mapping remains the original record, without an after-exit process query. No witness, arithmetic reconstruction, native, test or MPM operation was repeated.

@@ -1,0 +1,16 @@
+{
+  "originalIndex": {
+    "path": "D:\\MPM\\docs\\evidence\\unnotched-gravity-2026-10-26\\srf1p6-composite-h05-001-launch\\artifact-index.json",
+    "bytes": 7526,
+    "sha256": "735c8a82139b006164838982f2d6270b02afe50860ba6913ef1239ee05565037"
+  },
+  "omittedOriginalSourceArchives": [
+    {
+      "path": "D:\\MPM\\docs\\evidence\\unnotched-gravity-2026-10-26\\srf1p6-composite-h05-001-launch\\complete-native-source-at-launch.zip",
+      "bytes": 1156013,
+      "sha256": "241ccf55058d9d3b2a0b29fb59a483f6d08b870ba6149dd688b12d72b3162a6d",
+      "reason": "Closed launch source ZIP referenced; current full native source archived once"
+    }
+  ],
+  "scope": "Selected original launch metadata retained; full original source ZIP remains in its closed packet, referenced without duplicate payload"
+}

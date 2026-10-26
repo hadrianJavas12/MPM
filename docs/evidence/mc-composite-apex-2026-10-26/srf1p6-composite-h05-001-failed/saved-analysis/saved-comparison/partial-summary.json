@@ -1,0 +1,56 @@
+{
+  "status": "PARTIAL_CSV_OBSERVER_COMPLETED",
+  "scope": "ACTUAL_MATCHED_SAVED_PREFIX_0_TO_5.2S_ONLY",
+  "fullPairCompleted": false,
+  "convergenceEstablished": false,
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "trials": {
+    "coarse_h1": {
+      "nativeComplete": true,
+      "matchedSavedFrames": 53,
+      "firstMatchedTimeS": 0.0,
+      "lastMatchedTimeS": 5.2,
+      "motionWindows": {
+        "entire": {
+          "status": "NOT_DETECTED",
+          "firstDetectionTimeS": null
+        },
+        "post2s": {
+          "status": "NOT_DETECTED",
+          "firstDetectionTimeS": null
+        }
+      },
+      "maximumMassFractionPastPhysicalToe": 0.0,
+      "coherentMotionCandidate": false,
+      "separateRunoutCandidate": false,
+      "finalCohortCentroidDxM": 0.06399301344652386,
+      "finalCohortCentroidDyM": -0.03620780527974615,
+      "finalCohortMeanVxMPerS": 0.00039244243146404576,
+      "finalCohortMeanVyMPerS": -5.298901054510115e-05
+    },
+    "fine_h05": {
+      "nativeComplete": false,
+      "matchedSavedFrames": 53,
+      "firstMatchedTimeS": 0.0,
+      "lastMatchedTimeS": 5.2,
+      "motionWindows": {
+        "entire": {
+          "status": "PASS",
+          "firstDetectionTimeS": 3.4
+        },
+        "post2s": {
+          "status": "PASS",
+          "firstDetectionTimeS": 3.5
+        }
+      },
+      "maximumMassFractionPastPhysicalToe": 0.0,
+      "coherentMotionCandidate": true,
+      "separateRunoutCandidate": false,
+      "finalCohortCentroidDxM": 0.4479980686133455,
+      "finalCohortCentroidDyM": -0.22204262989412893,
+      "finalCohortMeanVxMPerS": 0.10122030892038551,
+      "finalCohortMeanVyMPerS": -0.04625412883097321
+    }
+  }
+}

@@ -8,6 +8,27 @@ updated: 2026-10-26
 
 # Unnotched MC gravity scenario and native gates
 
+## Latest26October: partial fine motion, failed native, scoped repair
+
+Fine compositeSRF1.6 sourcea07eb8f8 fails13:06:10WIB. Last save5.2s/53states/
+3520MPs; attempt5.27147981362577 includes unsaved work. No actual analytic
+trial capsule exists. FIRST prepared saved variant audit/render exits0 with
+retained integrity/287sources/DLL PASS, explicitly incomplete scale1 media.
+Root sees an upper wedge moving over a localized plastic band, no toe runout.
+FIRST common-metre CSV prefix observer detects fine connected-motion candidates
+at3.4/3.5s versus coarse NOT_DETECTED; fullpair/convergence/scientific flags stay
+false. Preserve the66-artifact failed packet and its exact post-failure analysis.
+
+One frozen native synthetic witness reproduces a false work-identity rejection
+from rounded-mean deviator trace: one unchanged projector call,0MPM/replay,
+exact rational identities hold. It is not the missing real failed update.
+Source8996a015 uses equivalent symmetric principal differences and optional-only
+owned diagnostics with distinct replay schema. Material/branch/tolerances and
+strict/Wang bytes stay unchanged. FIRST33new math calls pass; relevant optional
+regression and capture controls are pending before any fresh full attempt.
+See ../../docs/benchmarks/COMPOSITE_APEX_ROUNDOFF_REPAIR.md and
+[[urmi-legacy-comparison]] for the separate historical notched/filtered case.
+
 Implements [[unnotched-landslide-method-selection]] on branch
 `codex/unnotched-gravity-benchmark`, first source2308a1e. Six short scenario
 owners compose the existing native perfect MC material/solver with unnotched

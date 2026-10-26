@@ -1,0 +1,10 @@
+{
+  "executable": "D:/MPM/windows/cl-mpm.cmd",
+  "arguments": [
+    "tests/materials/mc-composite-apex-roundoff-witness.lisp",
+    "output/mc-composite-apex-2026-10-26/synthetic-roundoff-witness-001"
+  ],
+  "sourceCommit": "017f00abc122f4c7381166d884a4bbf911207605",
+  "startedUtc": "2026-10-26T06:23:23.4578680Z",
+  "scope": "FIRST one synthetic arithmetic fixture; no actual failed-trial replay or MPM"
+}

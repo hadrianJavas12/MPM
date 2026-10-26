@@ -1,0 +1,15 @@
+{
+  "executable": "D:\\MPM\\toolchain\\analysis-venv\\Scripts\\python.exe",
+  "arguments": [
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-001-launch-preparation\\analysis\\review-gravity-composite-apex.py",
+    "--run-dir",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-001",
+    "--contract",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-001-launch-preparation\\protocol\\composite-apex-srf1p6-h05-contract.json",
+    "--output-dir",
+    "D:\\MPM\\output\\mc-composite-apex-2026-10-26\\srf1p6-composite-h05-001\\variant-review-001",
+    "--video"
+  ],
+  "startedUtc": "2026-10-26T06:19:38.8346187Z",
+  "scope": "First saved-data partial review; native failed. No solver execution."
+}
