@@ -879,7 +879,7 @@
   :components ((:module "materials/models/plastic/mc-composite-apex"
                 :pathname "materials/models/plastic/mc-composite-apex"
                 :serial t
-                :components ((:file "package") (:file "projection") (:file "native")))))
+                :components ((:file "package") (:file "diagnostics") (:file "projection") (:file "native")))))
 
 (defsystem "cl-mpm/examples/ice-visco"
   :depends-on ("cl-mpm/example"

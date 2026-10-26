@@ -42,8 +42,21 @@ in stress units before accepting the candidate."
             (decf (aref negative j) amount)))))
     multipliers))
 
-(defun %analytic-apex (trial shear bulk j c phi old-kappa pressure mean tolerance)
-  (let* ((deviator (map 'vector (lambda (x) (/ (- x mean) (* 2d0 shear))) trial))
+(defun %principal-deviator (trial shear)
+  "Compute (trial-mean(trial)I)/(2G) using principal differences.
+The symmetric algebra avoids subtracting a rounded, much larger hydrostatic
+mean. Every component uses the same formula; no component is forced to close
+the trace. Existing flow, compliance and work checks still govern acceptance."
+  (let ((d01 (- (aref trial 0) (aref trial 1)))
+        (d02 (- (aref trial 0) (aref trial 2)))
+        (d12 (- (aref trial 1) (aref trial 2)))
+        (denominator (* 6d0 shear)))
+    (vector (/ (+ d01 d02) denominator)
+            (/ (+ (- d01) d12) denominator)
+            (/ (- (+ d02 d12)) denominator))))
+
+(defun %analytic-apex (trial shear bulk j c phi old-kappa pressure mean tolerance e nu law)
+  (let* ((deviator (%principal-deviator trial shear))
          ;; grad(g_A)=I/3, therefore q is both lambda_A and plastic volume.
          (q (/ (- mean pressure) bulk))
          (plastic (map 'vector (lambda (x) (+ x (/ q 3d0))) deviator))
@@ -51,7 +64,13 @@ in stress units before accepting the candidate."
     (unless (and (every #'mc::finite-real-p deviator)
                  (every #'mc::finite-real-p plastic)
                  (mc::finite-real-p q) (>= q 0d0))
-      (mc::integration-fail "Nonfinite or negative composite apex flow"))
+      (%composite-integration-fail
+       "Nonfinite or negative composite apex flow" trial e nu j law old-kappa
+       (lambda ()
+         (mc::%diagnostic-object
+          "stage" "flow-validation" "deviator" deviator "plasticIncrement" plastic
+          "apexMultiplier" q "meanPa" mean "capPa" pressure
+          "shearPa" shear "bulkPa" bulk "stressTolerancePa" tolerance))))
     (let* ((multipliers (%nonnegative-shear-representation deviator))
            (shear-flow (make-array 3 :initial-element 0d0))
            (returned (map 'vector #'- trial (mc::d-times plastic shear bulk)))
@@ -81,7 +100,43 @@ in stress units before accepting the candidate."
                    (<= (abs (- work (* pressure q))) work-tolerance)
                    (mc::finite-real-p energy-release)
                    (>= (- energy-release work) (- work-tolerance)))
-        (mc::integration-fail "Composite apex compliance, flow, yield or work identity failed"))
+        (%composite-integration-fail
+         "Composite apex compliance, flow, yield or work identity failed"
+         trial e nu j law old-kappa
+         (lambda ()
+           ;; Diagnostic reconstruction runs only after the unchanged guard rejects.
+           ;; Its failure cannot replace the original material condition.
+           (flet ((metric (name value operator limit)
+                    (mc::%diagnostic-object "name" name "value" value
+                                            "operator" operator "limit" limit)))
+             (mc::%diagnostic-object
+              "stage" "identity-validation" "meanPa" mean "capPa" pressure
+              "shearPa" shear "bulkPa" bulk "stressTolerancePa" tolerance
+              "workTolerancePa" work-tolerance "deviator" deviator
+              "plasticIncrement" plastic "apexMultiplier" q
+              "returnedKirchhoffPa" returned "tauKirchhoffPa" tau
+              "shearMultipliers" multipliers "reconstructedShearFlow" shear-flow
+              "yieldResidualsPa" residuals "candidateKappa" (mc:projection-kappa result)
+              "workPa" work "energyReleasePa" energy-release
+              "signedWorkIdentityResidualPa" (- work (* pressure q))
+              "checks"
+              (vector
+               (mc::%diagnostic-object
+                "name" "admissible-candidate" "outcome"
+                (if (mc::admissible-candidate-p result 0d0 tolerance) "PASS" "FAIL"))
+               (metric "minimum-multiplier" (reduce #'min multipliers) ">=" 0d0)
+               (metric "shear-flow-error-pa"
+                       (* 2d0 shear (mc::max-abs3 (map 'vector #'- shear-flow deviator)))
+                       "<=" tolerance)
+               (metric "compliance-error-pa" (mc::max-abs3 (map 'vector #'- returned tau))
+                       "<=" tolerance)
+               (metric "plastic-volume-error-pa" (* bulk (abs (- (reduce #'+ plastic) q)))
+                       "<=" tolerance)
+               (metric "work-identity-error-pa" (abs (- work (* pressure q)))
+                       "<=" work-tolerance)
+               (mc::%diagnostic-object "name" "finite-energy" "outcome"
+                                      (if (mc::finite-real-p energy-release) "PASS" "FAIL"))
+               (metric "energy-margin-pa" (- energy-release work) ">=" (- work-tolerance))))))))
       result)))
 
 (defun project-principal-with-apex (trial e nu j law old-kappa)
@@ -116,5 +171,5 @@ There is no exception fallback, stress clamp or strength/history replacement."
         (if (> (- mean pressure) allowance)
             (%analytic-apex raw (/ e (* 2d0 (+ 1d0 nu)))
                             (/ e (* 3d0 (- 1d0 (* 2d0 nu))))
-                            j c phi old-kappa pressure mean tolerance)
+                            j c phi old-kappa pressure mean tolerance e nu law)
             (mc:project-principal trial e nu j law old-kappa))))))
