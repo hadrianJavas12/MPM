@@ -25,7 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[unnotched-mc-gravity]] — fine002 numerical sliding onset, coarse negative/runout0; early saved plasticity is near the bottom but faint on fixed colour scale; kappa is not Joss damage, mesh convergence unestablished
+- [[unnotched-mc-gravity]] — completed fine002 MC sliding; new requested40deg/actual Joss damage/longer study preparing separately, kappa is not damage and mesh convergence unestablished
 - [[unnotched-landslide-method-selection]] — primary journal methods for intact-slope failure; separate MC gravity/SSR control selected, no new full run or landslide claim
 - [[wang2017-residual-history-scope]] —100mm history-guard failure, one replay with unchanged residual strength, explicit opt-in scope and native/integration gates
 - [[wang2017-apex-60mm-review]] — complete61-state apex trial, no verified landslide;100mm input gate passed and same-material endpoint trial running13:52WIB

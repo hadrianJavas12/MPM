@@ -8,6 +8,19 @@ updated: 2026-10-26
 
 # Unnotched MC gravity scenario and native gates
 
+## Separate new request: slope40 with damage
+
+Human requests40degrees, actual damage, a longer run and token economy.
+New branchcodex/slope40-damage prepares an isolated Joss damage/chalk
+adaptation because current perfect MC has no damage. This changes material;
+kappa is not relabeled. Straight40/H10/crest12/no notch/base1/h0.5 planned,
+60s inherited staged clock/12hwallbudget; Joss mass scaling/resets remain
+declared, not natural creep/calibrated timing. Native gate and4s smoke must
+precede full run; preparation NOT_RUN, no solver active at initial note.
+The public schema40to45 clamp needs a tested owned40-only adapter, no global
+schema/UI/default change. See docs/benchmarks/SLOPE40_DAMAGE_STUDY.md.
+Old completed MC experiment stays closed; human model preference may steer.
+
 ## Mesh, plasticity and older damage displays
 
 The human follow-up asks whether mesh is too coarse and why a crack appears

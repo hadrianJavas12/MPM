@@ -1,5 +1,19 @@
 # AI Engineering Handover — CL-MPM
 
+## NEW26October human request: slope40 and actual damage
+
+User requests40deg, real damage display, longer run and token economy. New
+branch `codex/slope40-damage` fromc2cd4069; see
+[new experiment](benchmarks/SLOPE40_DAMAGE_STUDY.md). Existing MC has no damage;
+stated working assumption reuses existing Joss damage/chalk rather than
+relabeling kappa. Human model preference was asked asynchronously and can steer
+this new work. Straight40deg/H10/crest12/no notch/protected base1/h0.5,
+60s staged target/12h wall budget planned. Public Joss schema clamps40to45:
+owned optional adapter/gate must preserve actual40 without UI/default changes.
+New source, focused gate,4s smoke and full run NOT_RUN at this planning entry;
+no solver active. Old completed scope below remains closed. Do not revive old
+PIDs/tests/monitors. Native/equilibrium/material/media failures stay distinct.
+
 26October human mesh/crack follow-up: descriptive saved-data query only finds
 first saved positive kappa at0.7s, max2.1341e-5 near y0.374846m; lower-body
 plasticity is almost invisible on the fixed full-run scale about0.966. See

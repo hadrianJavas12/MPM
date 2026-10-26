@@ -92,3 +92,9 @@
   :serial t
   :components ((:file "materials/adapters/mc-composite-apex")
                (:file "scenarios/gravity-slope/mc-composite-apex-adapter")))
+
+(asdf:defsystem "cl-mpm-framework/damage-slope40"
+  :description "Optional straight 40 degree slope using unchanged native Joss delayed damage"
+  :depends-on ("cl-mpm-framework")
+  :serial t
+  :components ((:file "scenarios/damage-slope40/adapter")))
