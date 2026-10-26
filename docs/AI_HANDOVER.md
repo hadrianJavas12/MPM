@@ -10,8 +10,12 @@ relabeling kappa. Human model preference was asked asynchronously and can steer
 this new work. Straight40deg/H10/crest12/no notch/protected base1/h0.5,
 60s staged target/12h wall budget planned. Public Joss schema clamps40to45:
 owned optional adapter/gate must preserve actual40 without UI/default changes.
-New source, focused gate,4s smoke and full run NOT_RUN at this planning entry;
-no solver active. Old completed scope below remains closed. Do not revive old
+FIRST3focused native groups now PASS/exit0 onf3f0e141:4168MP/960base,
+2native updates/damagepasses,8336accepted material/6416enabled damage calls.
+Root291sources/DLL verified; actual tiny damage0, no equilibrium/collapse
+claim. Packet docs/evidence/slope40-damage-2026-10-26/controls-001. Node check/
+36tests PASS; wrapper parsing/Python syntax only. Fresh4s smoke and full60s
+NOT_RUN pending preparation. Old completed scope below remains closed. Do not revive old
 PIDs/tests/monitors. Native/equilibrium/material/media failures stay distinct.
 
 26October human mesh/crack follow-up: descriptive saved-data query only finds

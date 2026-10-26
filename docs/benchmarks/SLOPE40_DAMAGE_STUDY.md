@@ -67,6 +67,19 @@ bounds, foundation protection and observed movement. Damage is not a measured
 crack opening, and neither a red band nor a long native completion proves
 landslide or scientific validation. Stable/no-damage results are retained.
 
-Current state: source preparation in progress; new native gates/smoke/full run
-NOT_RUN. No solver is active at this initial planning checkpoint. No automatic
+FIRST native controls on sourcef3f0e141 PASS/exit0: three new groups,
+4168particles/960protected-base particles, exactly2native updates/2damage
+passes,8336accepted material calls/6416enabled native damage calls. Actual
+40-degree/no-notch geometry, inherited effective parameters, positive finite
+state/F/J, base protection and real native VTK damage fields pass. Tiny-gate
+maximum damage0 is not onset or equilibrium evidence. Root verifies291frozen
+files and the stored mapped DLL. The
+[control packet](../evidence/slope40-damage-2026-10-26/controls-001/index.json)
+retains actual sources/runtime/results/commands. Required Node baseline check
+and36tests also pass; these do not validate damage physics. New wrappers pass
+PowerShell parsing; reviewer passes Python syntax compilation only. The full
+saved-data workflow is NOT_RUN until actual smoke output exists.
+
+Next is a fresh4s smoke through the unchanged strict equilibrium/activation
+path. Full60s remains NOT_RUN until that actual smoke succeeds. No automatic
 strength/angle/mesh/time escalation after this requested experiment.

@@ -1068,3 +1068,7 @@ New descriptive saved-data query only: first saved positive kappa at0.7s, maximu
 ## [2026-10-26] plan | Requested40degree actual damage experiment
 
 User authorizes40degree slope, actual damage, longer run and token economy. Newcodex/slope40-damage prepares existing Joss damage/chalk as stated assumption pending alternate human preference; explicitly different material from completed MC. Straightface/H10/crest12/no notch/base1/h0.5,60s staged clock/12h wallbudget planned. Preserve inherited mass scaling/phase resets and all material constants; no claim natural creep/calibrated timing. Exact40 must bypass public45minimum in owned optional adapter without changing defaults/UI. New focused native gate then4s smoke before full launch; all NOT_RUN at planning, no solver active. See docs/benchmarks/SLOPE40_DAMAGE_STUDY.md. [[unnotched-mc-gravity]].
+
+## [2026-10-26] verify | First40degree native damage controls
+
+Sourcef3f0e141 FIRST3new groups PASS/exit0:4168MP960protectedbase,2actual nativeupdates/2damagepasses,8336acceptedmaterial/6416enableddamagecalls. True40geometry/no notch/effective inherited material/finiteFJ/base0/native damage VTK pass; tiny actual damage0, no equilibrium/onset/collapse claim. Root291frozenfiles/mappedDLL verify and packet retains actual command/source/runtime. Node check/36testsPASS, wrapperPSparse/reviewerPythonsyntax only. Fresh4ssmoke/full60s pending, no old native/research/render reruns. [[unnotched-mc-gravity]].

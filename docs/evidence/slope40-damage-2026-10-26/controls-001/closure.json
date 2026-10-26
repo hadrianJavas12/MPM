@@ -1,0 +1,19 @@
+{
+  "scope": "FIRST new native gate only; no equilibrium or collapse validation",
+  "sourceFilesVerified": 291,
+  "nativeGroups": [
+    "exact40-straight-unnotched-input-and-rejections",
+    "native-damage-initialization-and-protected-base",
+    "two-real-native-damage-enabled-usf-updates-and-vtk"
+  ],
+  "nativeExit": 0,
+  "updates": 2,
+  "damagePasses": 2,
+  "mappedDLLVerified": true,
+  "nodeBaseline": {
+    "checkExit": 0,
+    "testExit": 0,
+    "tests": 36,
+    "provenance": "Observed command outputs transcribed after execution; no simulation validation"
+  }
+}

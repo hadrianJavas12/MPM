@@ -112,7 +112,9 @@ def main():
     draw(*states[-1], times[-1], records[-1]['phase'], bounds, output / 'damage-final.png')
     if args.video:
         frames = output / 'frames'; frames.mkdir()
-        for i, ((points, fields), record) in enumerate(zip(states, records)):
+        initial_points, initial_fields, _ = check(first)
+        draw(initial_points, initial_fields, 0., 'post-equilibrium, before damage', bounds, frames / 'frame_00000.png')
+        for i, ((points, fields), record) in enumerate(zip(states, records), start=1):
             draw(points, fields, record['timeS'], record['phase'], bounds, frames / f'frame_{i:05d}.png')
         ffmpeg = shutil.which('ffmpeg')
         if not ffmpeg:
@@ -125,7 +127,7 @@ def main():
                            check=True, stdout=stream, stderr=subprocess.STDOUT)
             subprocess.run([ffmpeg, '-nostdin', '-v', 'error', '-i', str(output / 'damage-actual.mp4'), '-f', 'null', '-'],
                            check=True, stdout=stream, stderr=subprocess.STDOUT)
-        result['video'] = {'frames': len(states), 'fps': 4, 'fullDecodeExit': 0,
+        result['video'] = {'frames': len(states) + 1, 'fps': 4, 'fullDecodeExit': 0,
                            'timeConvention': 'One actual saved state per frame; unequal native time intervals labelled explicitly'}
         (output / 'review.json').write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps({'integrity': 'PASS', 'frames': len(records), 'final': records[-1], 'output': str(output)}))
