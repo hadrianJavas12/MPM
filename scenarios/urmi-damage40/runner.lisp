@@ -38,10 +38,19 @@
        "initialVtk" "vtk/initial.vtk" "drainedVtk" "vtk/drained.vtk" "dynamicVtkPattern" "vtk/particles_%04d.vtk"
        "transferLedgerFile" "transfer-ledger.json"
        "scope" "New Urmi-inspired S1 normalized strength law and parameter/history transfer adaptation; not literal paper calibration or validated failure time; stable/no-damage outcomes retained"))
-(defun run (material config directory)
+(defun run (material config directory &key approximate-preparation-duration)
   (let* ((output (uiop:ensure-directory-pathname directory)) (vtk (merge-pathnames "vtk/" output))
          (manifest (make-manifest config)) (manifest-path (merge-pathnames "manifest.json" output))
          (sim nil) (context nil) (preparation-updates 0) (dynamic-updates 0) (saved 0))
+    (when approximate-preparation-duration
+      (unless (= approximate-preparation-duration 3d0) (error "Rapid preparation must be declared3s."))
+      (setf (gethash "scenario" manifest) "urmi-damage40-rapid"
+            (gethash "requestedDynamicDurationS" manifest) (value config "duration")
+            (gethash "approximateDemo" manifest) t
+            (gethash "equilibriumVerified" manifest) 'yason:false
+            (gethash "initialization" manifest) "RAPID DEMO: fixed3s drained gravity ramp/relaxation, NOT measured equilibrium; no field resets"
+            (gethash "equilibriumCriterion" manifest) "NOT ENFORCED in explicitly user-authorized rough demonstration"
+            (gethash "scope" manifest) "RAPID DEMO ONLY: h2m/PPC1/105MP, fixed3s approximate preparation then20s requested dynamics; mesh-sensitive uncalibrated Urmi-like law, no scientific accuracy claim"))
     (ensure-directories-exist vtk) (write-json manifest-path manifest)
     (labels ((progress (phase)
                (setf (gethash "phase" manifest) phase (gethash "updates" manifest) (+ preparation-updates dynamic-updates)
@@ -78,13 +87,16 @@
             (setf (gethash "particleCount" manifest) (length (cl-mpm:sim-mps sim))
                   (gethash "initialMassKgPerM" manifest) (gs::reference-state-mass (observation-context-reference context)))
             (cl-mpm/output:save-vtk-mesh (merge-pathnames "mesh.vtk" vtk) sim)
-            (with-open-file (prep-state (merge-pathnames "preparation-states.csv" output) :direction :output :if-exists :error)
-              (with-open-file (prep-mp (merge-pathnames "preparation-material-state.csv" output) :direction :output :if-exists :error)
+            (cl-mpm/scenario/urmi-damage40/output-streams:with-retained-output-file (prep-state (merge-pathnames "preparation-states.csv" output))
+              (cl-mpm/scenario/urmi-damage40/output-streams:with-retained-output-file (prep-mp (merge-pathnames "preparation-material-state.csv" output))
                 (write-headers prep-state prep-mp)
                 (save-state sim context config (merge-pathnames "initial.vtk" vtk) 0 0 0 prep-state prep-mp)
                 (progress "drained-ramp-and-relaxation")
-                (with-open-file (history (merge-pathnames "preparation-history.csv" output) :direction :output :if-exists :error)
+                (cl-mpm/scenario/urmi-damage40/output-streams:with-retained-output-file (history (merge-pathnames "preparation-history.csv" output))
                   (format history "updates,native_time_s,force_defined,RF,free_force_numerator2,free_force_denominator2,free_KE,free_nodal_mass,RK,prior_consecutive,prior_hold,damping~%")
+                  (if approximate-preparation-duration
+                      (loop while (< (cl-mpm::sim-time sim) approximate-preparation-duration) do
+                        (prep-step "approximate-drained-preparation" history 0 0))
                   (let ((consecutive 0) (start nil))
                     (loop until (and (>= consecutive (value config "consecutiveChecks")) start
                                      (>= (- (cl-mpm::sim-time sim) start) (value config "consecutiveDurationS"))) do
@@ -98,7 +110,8 @@
                       (loop until (and (>= hold (value config "undampedHoldUpdates"))
                                        (>= (- (cl-mpm::sim-time sim) hold-start) (value config "undampedHoldDurationS"))) do
                         (prep-step "drained-undamped-hold" history consecutive hold) (incf hold)
-                        (unless (equilibrium-p sim config) (error "Measured drained equilibrium failed its undamped hold."))))))
+                        (unless (equilibrium-p sim config) (error "Measured drained equilibrium failed its undamped hold.")))))))
+                (when approximate-preparation-duration (setf (cl-mpm:sim-damping-factor sim) 0d0))
                 (setf (observation-context-preparation-updates context) preparation-updates)
                 (save-state sim context config (merge-pathnames "drained.vtk" vtk) 1 1 preparation-updates prep-state prep-mp)))
             (progress "material-transfer")
@@ -109,8 +122,8 @@
                      "scope" "Actual instantaneous material switch/release; energy proxies and native plastic work separately retained"))
               (rebind-reference-after-transfer sim context ledger)
               (setf (gethash "transferNativeTimeS" manifest) clock))
-            (with-open-file (history (merge-pathnames "history.csv" output) :direction :output :if-exists :error)
-              (with-open-file (particles (merge-pathnames "material-state.csv" output) :direction :output :if-exists :error)
+            (cl-mpm/scenario/urmi-damage40/output-streams:with-retained-output-file (history (merge-pathnames "history.csv" output))
+              (cl-mpm/scenario/urmi-damage40/output-streams:with-retained-output-file (particles (merge-pathnames "material-state.csv" output))
                 (write-headers history particles)
                 (save-state sim context config (merge-pathnames "particles_0000.vtk" vtk) 0 2 preparation-updates history particles)
                 (incf saved) (progress "undrained-dynamic")

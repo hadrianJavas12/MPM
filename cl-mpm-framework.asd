@@ -100,9 +100,15 @@
   :components ((:file "scenarios/urmi-damage40/package")
                (:file "scenarios/urmi-damage40/transfer")))
 
+(asdf:defsystem "cl-mpm-framework/urmi-output-streams"
+  :description "Owned fresh Urmi output retention during errors; no engine dependencies"
+  :serial t
+  :components ((:file "scenarios/urmi-damage40/output-streams")))
+
 (asdf:defsystem "cl-mpm-framework/urmi-damage40"
   :description "Owned40-degree soil MC drained equilibrium and undrained strength-damage experiment"
-  :depends-on ("cl-mpm-framework" "cl-mpm-framework/urmi-strength-transfer" "cl-mpm/models/urmi-strength-damage")
+  :depends-on ("cl-mpm-framework" "cl-mpm-framework/urmi-strength-transfer" "cl-mpm/models/urmi-strength-damage"
+               "cl-mpm-framework/urmi-output-streams")
   :serial t
   :components ((:file "scenarios/urmi-damage40/recipe-package")
                (:file "scenarios/urmi-damage40/configuration")
@@ -110,3 +116,9 @@
                (:file "scenarios/urmi-damage40/output")
                (:file "scenarios/urmi-damage40/runner")
                (:file "scenarios/urmi-damage40/adapter")))
+
+(asdf:defsystem "cl-mpm-framework/urmi-damage40-rapid"
+  :description "Explicit coarse approximate Urmi-like 40-degree visual demonstration"
+  :depends-on ("cl-mpm-framework/urmi-damage40")
+  :serial t
+  :components ((:file "scenarios/urmi-damage40/rapid")))
