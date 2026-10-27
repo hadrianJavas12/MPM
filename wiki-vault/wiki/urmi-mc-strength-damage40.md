@@ -8,6 +8,17 @@ updated: 2026-10-27
 
 # Urmi inspired MC strength damage at40degrees
 
+## Extended run with paired movies,27October22:17WIB
+
+Userauthorizesrunapprovedpreview and requestsbothneutralmotion/Ds movies.
+extended-left12-base8-001/native78a91c34 ACTIVE219MP,22:17:53→23:47:53wallcap,
+same40deg/H10/h2/PPC1/MC law, crest24/base8/domain72x24. Nativealreadyreached
+dynamics/0–1s3frames. Fixed3sapproxprep, noequilibriumclaim; sameguards.
+Originalcohort14/10 andvisualshift12/8;4observerhelpers frozenprelaunch.
+RUN/paired-review-001 willholdrough-motion.mp4/rough-strength-damage.mp4,
+actualsameframes/equalmetres/nointerp/Ds0–1. Firstsavedworkflowstillpending.
+New15minquietmonitor extended-mc-two-videos; no oldsolver/gate/review repeat.
+
 ## Geometry preview after the rapid demo
 
 Human approves12m extensionLEFT and base4→8m, previewFIRST. Original40deg/H10

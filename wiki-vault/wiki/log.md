@@ -1113,3 +1113,7 @@ BC/static packet30indexed+manifest/3ZIP991members/root31Gitblobs, native305sourc
 ## [2026-10-27] ingest | Approved left12m and base8m geometry preview
 
 Humanapproved12mLEFT andfoundation4→8m, previewFIRST. Rootgenerated/inspectedgeometry+particlePNGs; independentarithmetic/sourcecheckagrees40deg/H10/face-toe-rightunchanged,width72/base8/positiveproposalcrest24/domain72x24. Sameh2/PPC1layout105→219(all105oldworldpointspreserved,114added). No native/material/MPM/executablecasechange/monitor. Coloursmarkaddedsoil,notdamage/materialchange;no previousfailurefixclaim. [[urmi-mc-strength-damage40]].
+
+## [2026-10-27] ingest | Extended219MP launch and requested paired videos
+
+Humanasksrunapprovedleft12/base8preview+secondDsvideo. Native78a91c34 extended-left12-base8-001 starts22:17:53WIB/90minwallcap23:47:53,219MP/h2/PPC1/same40H10MC/CFL/strength; fixed3sapproxprep then20s41states, noeqclaim. Actualdynamics3states0–1s. Cohort14/10/display12/8/prelaunch4observerhelpers; twoactualmotion/Dsmovies finalRUN/paired-review-001, workflowpending. Addedfailure-onlyexactguardvaluescapture, no guardrelaxation. Newquiet15minmonitor extended-mc-two-videos. [[urmi-mc-strength-damage40]].

@@ -25,7 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[urmi-mc-strength-damage40]] — rough collapse video retained; new approved preview extends12m left and foundation4→8m,219point layout; no new solver or executable geometry change
+- [[urmi-mc-strength-damage40]] — extended219MP demo now running from22:17WIB with approvedleft12/base8 geometry; neutral-motion and strength-damage movies requested; oldroughvideo retained
 - [[unnotched-mc-gravity]] — completed fine002; new requested40deg/Urmi-like soil MC strength-damage/longer run under development, no new solver yet; unused Joss prototype stopped
 - [[unnotched-landslide-method-selection]] — primary journal methods for intact-slope failure; separate MC gravity/SSR control selected, no new full run or landslide claim
 - [[wang2017-residual-history-scope]] —100mm history-guard failure, one replay with unchanged residual strength, explicit opt-in scope and native/integration gates

@@ -1,5 +1,17 @@
 # Urmi-inspired MC strength damage, 40-degree slope
 
+## Extended demo launched27October22:17WIB
+
+Human explicitly requests run approved+12mLEFT/base8m and two videos. New
+extended-left12-base8-001/native78a91c34 starts22:17:53WIB,90minwallcap23:47:53.
+219MP/h2/PPC1/crest24/base8/domain72x24/40degH10, sameMCUrmi law/strength/
+mass1/CFL.2. Fixed3sapproxprep then20s/41states; noequilibriumclaim. Actual
+native reached dynamics/3states0–1s. Newobserver/cohort14/10 and displayshift
+12/8 agreewithpreview; observer4files frozen beforelaunch, savedworkflow not
+executed yet. Finalpaired-review-001 inside runfolder will contain
+rough-motion.mp4 and rough-strength-damage.mp4. Failure-only exactguard
+diagnostic added without changing guard. No UI/main/defaultphysics changes.
+
 ## Approved geometry preview:12m left extension,8m foundation
 
 Human requests preview before another run and approves12m extra left plus

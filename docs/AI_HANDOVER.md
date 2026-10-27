@@ -1,5 +1,41 @@
 # AI Engineering Handover — CL-MPM
 
+## LIVE27October22:17WIB — extended219MP demo and TWO requested videos
+
+Human now explicitly requests RUN approvedpreview(+12mLEFT/base8m) and TWO
+videos: motion plus MC strength-damage magnitude. Native source78a91c34,
+run output/urmi-mc-damage40-2026-10-27/extended-left12-base8-001. Started
+22:17:53.719224WIB;1.5h WALLcap23:47:53.719224WIB, not ETA. Worker27516/
+wrapper30496/cmd14392/SBCL57984 Session11, exactcreation in adjacentstatus.
+Latest checkedNATIVE_RUNNING/undrained-dynamic,219MP,3states0–1s. Firstvideo
+target22:28–22:38WIB estimated, not promised. Healthy: status/manifest/ONEtail
+only; no activepoll/PIDquery/duplicate solver. New automation
+extended-mc-two-videos ACTIVE15min, previousmonitor remains deleted.
+
+Nativepositivegeometry crest24/base8/domain72x24/H10/40deg/h2/PPC1, sameMC/
+Urmi law/strength/CFL.2/mass1/workers1. Fixed3s approximateprep,NOequilibrium
+claim; damping0beforeatomictransfer; target20s/41states/.5s. Originalphysical
+cohortnative initialx>14/y>10(30MP); display shift−12x/−8y matchespreview.
+No physics/root/tolerance relaxation. Failure-only output-state-failure.json
+captures actualnamedguardvalues BEFORE originalerror; not restart/material
+trialcapsule. Both oldstrict/rapiddefaultprofiles preserved.
+
+All4 observer/helper files frozen BEFORElaunch in RUN-launch-preparation/
+analysis,9supportrecords hashbound preparation.json. Use frozen
+review-urmi-extended.py --run-dir RUN --output-dir FRESH --video. Complete→
+RUN/paired-review-001; failedterminal add --allow-partial. Ifhealthy>=5saved
+states, one --live-prefix earlyvideo may use RUN/paired-preview-001. Source/
+ASTreview onlysofar; actualsavedreview/renderer NOTEXECUTED. Outputs:
+rough-motion.mp4 and rough-strength-damage.mp4, sameactualstates/1fps/common
+bounds/allMP/nointerp/equalmetres/Ds0–1. Inspect BOTH summaryPNGs beforedelivery.
+User told finalfolder RUN/paired-review-001. Do not call old105/6714contract.
+No foundation-confounded runout: newcohort newlypasttoe metric only. Onerror
+fixsavedanalysis/media, not solverrepeat. Read actualguarddiagnostic ifpresent,
+no inventedmissingstate or automaticrestart. Show twoactualvideos promptly;
+archive native/source/runtime/raw/media once atterminal, Gitblobverify and
+checkpointdocs/wiki. No UI/mainmerge/rawsettings changes. Currentno need for
+oldgate/static/research/review reruns. Nativefailure is not scientificPASS.
+
 ## PREVIEW ONLY — approved left extension12m and foundation8m
 
 Latest human asks extend model LEFT and thicken the soil foundation, check
