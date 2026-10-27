@@ -1,0 +1,46 @@
+{
+  "scenario": "gravity-slope",
+  "status": "NATIVE_RUNNING",
+  "startedUtc": "2026-10-27T03:33:58.3667077Z",
+  "output": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001",
+  "case": "D:\\MPM\\cases\\benchmarks\\urmi-damage40.lisp",
+  "sourceCommit": "3acf468f2b573c77cddee1d295dcd7bc89f72625",
+  "maxWallHours": 48.0,
+  "wallDeadlineUtc": "2026-10-29T03:33:58.3667077Z",
+  "caseSha256": "F86D2FD95B7FEC76510D335591E420968D8F83B06D7A8EA0EA73704E6653DF8F",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "processIdentity": {
+    "sbcl": {
+      "pid": 23556,
+      "name": "sbcl",
+      "sessionId": 11,
+      "createdUtc": "2026-10-27T03:33:59.0286910Z"
+    },
+    "wrapper": {
+      "pid": 35864,
+      "name": "pwsh",
+      "sessionId": 11,
+      "createdUtc": "2026-10-27T03:33:57.6698241Z"
+    },
+    "nativeCommand": {
+      "pid": 58544,
+      "name": "cmd",
+      "sessionId": 11,
+      "createdUtc": "2026-10-27T03:33:58.6075681Z"
+    }
+  },
+  "nativeExitCode": null,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {
+    "timeS": 0.0,
+    "particleCount": 6714,
+    "updates": 200,
+    "complete": false,
+    "phase": "drained-ramp-and-relaxation",
+    "status": "running",
+    "savedFrames": 0
+  },
+  "heartbeatUtc": "2026-10-27T03:37:59.3242706Z"
+}

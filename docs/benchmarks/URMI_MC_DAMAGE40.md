@@ -111,3 +111,11 @@ is a bound, not a completion promise. Do not claim preceding Joss controls
 test this MC model.
 Do not repeat completed oldMC/Joss gates, solver/replay/research/rendering.
 No automatic geometry/strength/beta/psi/tolerance changes to force collapse.
+
+## LIVE27October10:33WIB — full001 ACTIVE
+
+Run output/urmi-mc-damage40-2026-10-27/full-001 source3acf468f2b573c77cddee1d295dcd7bc89f72625 starts27Oct10:33:58.3667077WIB;48h wallcap29Oct10:33:58.3667077WIB(not ETA). Worker61020/wrapper35864/cmd58544/SBCL23556 Session11. Exact actual300source/DLL/prelaunch binding and ONE live provider-aware creation/session/parent proof PASS. Launch packet27indexed/483sourceZIPmembers. First helper compared GetProcess100ns against CIMmicrosecond and rejected1tick difference; retained, then exact same-provider timestamps/integer quantization prove identity. No solver or physics change. Capture still drained preparation~.2s/200updates, no equilibrium/full60s claim. Wrapper labelgravity-slope is harness family; actualnative urmi-damage40.
+
+Prepared analysis/review-urmi-damage40.py with prepared protocol/contract.json must review terminal saveddata ONCE using freshoutput and --video. --allow-partial only actual terminalfailure. Full orchestration not tested by tinygate. One sourceZIP already archived; reference it at terminal, do not duplicate. Same quiet15minautomation urmi-mc-40-native-trial monitors; no healthyPIDquery/activepoll/oldtests/render repeat. Raw/private/settings intact; WMI session not immune to sleep/logoff/reboot.
+
+Human trigger question: plastic deformation still drives strength softening, Ds evolves from acceptedkappa rather than elapsedtime. Initial drained-to-undrained materialcondition change is declared Urmi-inspired loading, not simulated rainfall/porepressure. Wangdriver prescribed displacement; last unnotchedcomposite used gravity+SRF1.6. No forced displacement in this case.

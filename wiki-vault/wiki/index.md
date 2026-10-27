@@ -25,7 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[urmi-mc-strength-damage40]] — Urmi-inspired40degree soil MC strength damage; point5/transfer4/MPM4groups and saved audit PASS; full60s pending
+- [[urmi-mc-strength-damage40]] — Urmi-inspired40degree soil MC strength damage; point5/transfer4/MPM4groups and saved audit PASS; full60s native running from27Oct10:33WIB
 - [[unnotched-mc-gravity]] — completed fine002; new requested40deg/Urmi-like soil MC strength-damage/longer run under development, no new solver yet; unused Joss prototype stopped
 - [[unnotched-landslide-method-selection]] — primary journal methods for intact-slope failure; separate MC gravity/SSR control selected, no new full run or landslide claim
 - [[wang2017-residual-history-scope]] —100mm history-guard failure, one replay with unchanged residual strength, explicit opt-in scope and native/integration gates
@@ -48,3 +48,4 @@
 - [[joss-reference-reproduction]] — experimental reference path, visually accepted actual DP collapse, preserved evidence and quantitative limits in D:\MPM
 - [[joss-reference-reproduction#Workspace and latest state, 2026-10-15|Windows native rerun guide]] — fresh-start config, command-line run, VTK rendering and checks in docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md
 - [[joss-damage-diagnosis-2026-10-15]] — accepted 40 s DP collapse/run-out, measured mismatch, completed no-collapse 40 kPa case and paused continuation
+

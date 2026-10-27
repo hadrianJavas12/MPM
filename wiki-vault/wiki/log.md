@@ -1085,3 +1085,7 @@ FIRST material5groups/84pure/3nativeattempts2accepted and transfer4groups/6nativ
 ## [2026-10-27] ingest | First full geometry bounded pipeline and saved output controls
 
 Pipeline96f0c7d6 native0/4groups/4USF/6714MP/3840activefoundation/3VTK/20142rows. Saved002audit0/source302/DLL/FJ/V0/material identities PASS; root actualscale1geometry inspected. Incorrect earlybadfixture and missingreleaseorigin audit harness failures preserved; selective helper repair and saved-data-only correction PASS, no native rerun. Beforefullrun revise wallcap12h to48h from actual.873s/step anddt.000623793, not ETA or physics tuning. Full60s NOT_RUN. [[urmi-mc-strength-damage40]].
+
+## [2026-10-27] ingest | MC40 full001 native launch
+
+Full001 native3acf468f starts10:33:58WIB,48hwallcap29Oct10:33:58WIB/notETA; worker61020/wrapper35864/cmd58544/SBCL23556 Session11. Actual300sources/DLL/preparation/livecreation-parent proof PASS, launch27indexed/483members. Helper CIM/GetProcess100ns precision mismatch retained then exact provider-aware identity proven; nativeunchanged. Still drainedprep atcapture, full60s notPASS. Quiet15minautomation urmi-mc-40-native-trial; old monitor notresurrected. Triggerclarification saved: plasticstrain drives strengthsoftening, initialmaterialchange declared, no imposeddriver/rainfall/porepressure. [[urmi-mc-strength-damage40]].

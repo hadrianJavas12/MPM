@@ -1,6 +1,50 @@
 # AI Engineering Handover — CL-MPM
 
-## ACTIVE27October: human selects Urmi-like soil MC, slope40, strength damage
+## LIVE27October10:33WIB: Urmi-like MC40degree full trial ACTIVE
+
+Branchcodex/urmi-mc-damage-slope40. Run
+`output/urmi-mc-damage40-2026-10-27/full-001`, native source
+`3acf468f2b573c77cddee1d295dcd7bc89f72625`. Started27Oct10:33:58.3667077WIB;
+48h WALLcap29Oct10:33:58.3667077WIB, not ETA. Worker61020/wrapper35864/
+cmd58544/SBCL23556 Session11. ONE actual live creation/session/parent proof,
+300native sourcepayloads/DLL and prelaunch binding PASS. Closed launch packet
+27indexed/483sourceZIPmembers. Initial helper rejected100ns CIM/GetProcess
+clock precision difference; original retained. Exact same-provider timestamps
+and integer microsecond quantization then pass; no native/physics change.
+No repeat capture/package. At capture still drained-ramp-and-relaxation,
+~.2s/200updates; no equilibrium/transfer/full60s claim.
+
+Automation `urmi-mc-40-native-trial` ACTIVE15min quiet. Wakeup ONLY adjacent
+status/progress/heartbeat, manifestphase/time/complete and ONEstdouttail.
+Healthy NATIVE_RUNNING endquiet; no activepoll/PIDquery/tests/native/replay/
+analysis/render/archive repeats. Stale needs actual identity/exit reconciliation.
+WMI session not proven sleep/logoff/reboot immune. Wrapperfamily label
+gravity-slope; ACTUAL native scenario urmi-damage40. Read currentguide.
+
+Terminal actualnative/workerexit+complete, then ONE saved review using
+PREPARED full-001-launch-preparation/analysis/review-urmi-damage40.py and
+prepared protocol/contract.json, FRESH output,--video. --allow-partial only
+terminal failed. Fix media/analysis from SAVED data, no native restart.
+Inspectscale1/allMP/FJ/globalV0/IDs/mass/yield/law/Ds/workvolume/KE/coherent
+uppermotion/persistence/boundary/runout; complete/colour not scientificPASS.
+Fullorchestration/review not validated by tiny controls. New actual capsule:
+ONE replay with matching drainedstrict vs ownedHS API/schema/frozenbytes,
+independent diagnosis/scopedrepairgates before any freshattempt; no invented
+state/identicalrestart/root/clamp/strength/psi/tolerance remedy for collapse.
+Archive actual source ONCE: reference closedlaunchZIP rather than duplicate.
+Preserve allraw/runtime/adjacentlogs/preparation/media/negative; force-track
+indexedmedia and verifyGitblobs. Updateguide/testing/wiki/index/appendlog,
+cohesivecommitpush. Terminal without new justifiedsolver→sameautomation5h;
+delete only finite goaltrulycomplete or genuinely inputblocked/obsolete.
+No automatic mesh/SRF/time extension. Honor latest humanstop/pause.
+
+Human trigger clarification: plasticdeformation drives later strength
+softening, D_s depends on acceptedkappa rather than elapsedtime. Initial
+drained→undrained materialcondition change is a declared Urmi-inspired
+experiment, not rain/porepressure or imposed displacement. Wangdriver forced
+displacement; last unnotchedcomposite run used gravity+SRF1.6. Do not conflate.
+
+## Completed preparation27October (live block above supersedes status below)
 
 Latest user: retain soil MC and develop damage; model likeUrmi;40deg/longer
 run/token economy;27October sayscontinue. Work branch

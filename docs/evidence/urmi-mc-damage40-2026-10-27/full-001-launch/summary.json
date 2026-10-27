@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "capturedUtc": "2026-10-27T03:38:39.329869+00:00",
+  "nativeFiles": 300,
+  "completeNativeSourceArchiveMembers": 483,
+  "nativeBackend": {
+    "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/full-001/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  },
+  "nativeSourceCommit": "3acf468f2b573c77cddee1d295dcd7bc89f72625",
+  "liveIdentity": {
+    "passed": true,
+    "capturedUtc": "2026-10-27T03:37:47.5894197Z",
+    "processes": [
+      {
+        "role": "worker",
+        "pid": 61020,
+        "parentPid": 57620,
+        "sessionId": 11,
+        "cimCreationUtc": "2026-10-27T03:33:56.2977590Z",
+        "getProcessCreationUtc": "2026-10-27T03:33:56.2977597Z",
+        "exactOriginalProviderMatch": true,
+        "cimMatchesGetProcessAtMicrosecondPrecision": true
+      },
+      {
+        "role": "wrapper",
+        "pid": 35864,
+        "parentPid": 61020,
+        "sessionId": 11,
+        "cimCreationUtc": "2026-10-27T03:33:57.6698240Z",
+        "getProcessCreationUtc": "2026-10-27T03:33:57.6698241Z",
+        "exactOriginalProviderMatch": true,
+        "cimMatchesGetProcessAtMicrosecondPrecision": true
+      },
+      {
+        "role": "nativeCommand",
+        "pid": 58544,
+        "parentPid": 35864,
+        "sessionId": 11,
+        "cimCreationUtc": "2026-10-27T03:33:58.6075680Z",
+        "getProcessCreationUtc": "2026-10-27T03:33:58.6075681Z",
+        "exactOriginalProviderMatch": true,
+        "cimMatchesGetProcessAtMicrosecondPrecision": true
+      },
+      {
+        "role": "sbcl",
+        "pid": 23556,
+        "parentPid": 58544,
+        "sessionId": 11,
+        "cimCreationUtc": "2026-10-27T03:33:59.0286910Z",
+        "getProcessCreationUtc": "2026-10-27T03:33:59.0286910Z",
+        "exactOriginalProviderMatch": true,
+        "cimMatchesGetProcessAtMicrosecondPrecision": true
+      }
+    ],
+    "clockScope": "Exact same-provider timestamp match; CIM has6 fractional digits and GetProcess7, reconciled by integer tick truncation to microseconds",
+    "nativeOrSolverChange": false,
+    "scope": "ONE successful live creation/session/parent proof after retained capture-helper clock rejection; not sleep/logoff/reboot immunity"
+  },
+  "scope": "Exact actual native source/DLL, before-launch binding and ONE live parent/clock proof. Early phase capture is not equilibrium, damage onset or full-run validation.",
+  "limitations": [
+    "Wrapper scenario label gravity-slope is harness family; native actual urmi-damage40",
+    "CIM/GetProcess timestamp precision helper rejection retained; no native/physics change",
+    "Session not proven immune to sleep, reboot or logoff; logs captured only at this timestamp"
+  ]
+}

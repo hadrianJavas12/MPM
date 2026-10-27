@@ -1,0 +1,43 @@
+{
+  "capturedUtc": "2026-10-27T03:37:21.4297950Z",
+  "kind": "First capture-helper rejection, no native failure",
+  "reason": "Exact CIM timestamp compared against GetProcess recorded start time; reconcile provider clock precision",
+  "records": [
+    {
+      "role": "wrapper",
+      "pid": 35864,
+      "expectedType": "DateTime",
+      "expectedUtc": "2026-10-27T03:33:57.6698241Z",
+      "cimUtc": "2026-10-27T03:33:57.6698240Z",
+      "dotnetUtc": "2026-10-27T03:33:57.6698241Z",
+      "cimTicks": 639286688376698240,
+      "dotnetTicks": 639286688376698241,
+      "expectedTicks": 639286688376698241,
+      "session": 11
+    },
+    {
+      "role": "nativeCommand",
+      "pid": 58544,
+      "expectedType": "DateTime",
+      "expectedUtc": "2026-10-27T03:33:58.6075681Z",
+      "cimUtc": "2026-10-27T03:33:58.6075680Z",
+      "dotnetUtc": "2026-10-27T03:33:58.6075681Z",
+      "cimTicks": 639286688386075680,
+      "dotnetTicks": 639286688386075681,
+      "expectedTicks": 639286688386075681,
+      "session": 11
+    },
+    {
+      "role": "sbcl",
+      "pid": 23556,
+      "expectedType": "DateTime",
+      "expectedUtc": "2026-10-27T03:33:59.0286910Z",
+      "cimUtc": "2026-10-27T03:33:59.0286910Z",
+      "dotnetUtc": "2026-10-27T03:33:59.0286910Z",
+      "cimTicks": 639286688390286910,
+      "dotnetTicks": 639286688390286910,
+      "expectedTicks": 639286688390286910,
+      "session": 11
+    }
+  ]
+}
