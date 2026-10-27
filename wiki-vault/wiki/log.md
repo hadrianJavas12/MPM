@@ -1117,3 +1117,11 @@ Humanapproved12mLEFT andfoundation4→8m, previewFIRST. Rootgenerated/inspectedg
 ## [2026-10-27] ingest | Extended219MP launch and requested paired videos
 
 Humanasksrunapprovedleft12/base8preview+secondDsvideo. Native78a91c34 extended-left12-base8-001 starts22:17:53WIB/90minwallcap23:47:53,219MP/h2/PPC1/same40H10MC/CFL/strength; fixed3sapproxprep then20s41states, noeqclaim. Actualdynamics3states0–1s. Cohort14/10/display12/8/prelaunch4observerhelpers; twoactualmotion/Dsmovies finalRUN/paired-review-001, workflowpending. Addedfailure-onlyexactguardvaluescapture, no guardrelaxation. Newquiet15minmonitor extended-mc-two-videos. [[urmi-mc-strength-damage40]].
+
+## [2026-10-27] ingest | Extended paired motion and damage movies ready
+
+FIRSTpairedreview001 expectedexit2/PASSsource305/DLL/FJ/V0/mass/law/219MP/5actual0–2s states. Both5frame1fpsmoviesdecode0/commonworldbounds/nointerp; BOTHactualPNGs inspected. Original30MPcohort(+2.257645,−2.349904)m/connectedmoving100%,Dsmax.910416. Native22:23:41stopsattempt2.5s;newactualguardtupleID138domainY=−.091355967mfalse, allotherguards/J/yieldpass. NotMCrootfailure/negativephysicalvolume,20s incomplete. No solver/replay/rerender;obsolete extendedmonitordeleted. [[urmi-mc-strength-damage40]].
+
+## [2026-10-27] ingest | Extended immutable paired-result closure
+
+Extendedpacket24indexed+manifest/3ZIP583members,source305/FASL185/DLL/currentdifferences0/root25Gitblobs;twoPNG/twoMP4andactualID138negativeYtuple retained. No solver/review/render repeat,monitordeleted. [[urmi-mc-strength-damage40]].

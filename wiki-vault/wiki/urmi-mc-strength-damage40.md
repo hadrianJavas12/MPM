@@ -8,6 +8,17 @@ updated: 2026-10-27
 
 # Urmi inspired MC strength damage at40degrees
 
+## Extended paired videos ready,27October22:36WIB
+
+219MP extendeddemo retains5actual0–2s states. Firstpairedreview001 PASS/
+expectedexit2/source305/DLL/FJ/V0/law. Motion andDs videos each5frames/1fps/
+decode0, allMP/commonworldbounds/nointerp; bothPNGs inspected. Original30MP
+cohort centroid(+2.257645,−2.349904)m/connectedmovingmass100%; Dsmax.910416.
+Native stops at attempted2.5s/ID138: genuinecapturenowprovesdomainYnegative
+−.091355967m; otherguards/J/yieldpass. Computationaldomain distortion, not
+negativephysicalvolume or MCrootfailure.20s incomplete, no newsolver.
+Movies are in RUN/paired-review-001; obsolete extendedmonitor deleted.
+
 ## Extended run with paired movies,27October22:17WIB
 
 Userauthorizesrunapprovedpreview and requestsbothneutralmotion/Ds movies.

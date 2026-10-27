@@ -1,5 +1,21 @@
 # Urmi-inspired MC strength damage, 40-degree slope
 
+## Extended paired-video result27October22:36WIB
+
+Actual requested motion and Ds movies are ready in extended-left12-base8-001/
+paired-review-001. FIRST savedreview expectedexit2/savedIntegrityPASS verifies
+305sourcepayloads/DLL/219MP/FJ/globalV0/mass/law and5actualstates0–2s. Both
+5frame movies use1fps/commonbounds/allMP/equalmetres/no interpolation, both
+actualPNG endpoints inspected. Originalcohort centroid(+2.257645,−2.349904)m,
+connectedmovingmass100%, maxDs.910416/minJ.970105 at2s. Roughdemoonly.
+
+Native stopped22:23:41WIB at attempted2.5s;20s incomplete. New failure-only
+diagnostic proves ID138 computationaldomainSizeY=−.091355967m is the failed
+predicate, while allotherrecordedguards pass andJ=.9935994>0. No MCrootfailed
+or negativephysicalvolume claim, no absenttrial replay. Actualfailedtuple
+preserved; no new run, guardrelaxation or clamp. Obsolete monitor deleted
+after paired movies became ready. Archive/checkpoint closure pending.
+
 ## Extended demo launched27October22:17WIB
 
 Human explicitly requests run approved+12mLEFT/base8m and two videos. New

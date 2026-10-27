@@ -1274,6 +1274,15 @@ PENDING while hold-20s-001 runs; do not call preparation checks that regression.
 
 ### Urmi-inspired MC strength damage,27October2026
 
+Extended219MP run78a91c34 reaches5saveddynamicstates0–2s; FIRSTpairedsaved
+review001 expectedexit2/savedIntegrityPASS/305sources/DLL/FJ/globalV0/mass/
+IDs/law/yield. BothactualsummaryPNGs inspected; two5frame1fpsmoviesdecode0,
+identicalactualstates/commonbounds/nointerp. Nativefailedattempt2.5s on
+ID138domainYPositive=false (−.091355967m); exactfailure-onlytuplewritten,
+allothernamedguardsPASS/Jpositive. This exercises genuinefailurecapture
+withoutchangingguardlogic, not MCconstitutivefailure/replay.20s incomplete,
+no fullscientificPASS. No oldtests/native/review/render repeated.
+
 Rapid002 FIRST saved partial review001 expectedexit2/savedIntegrityPASS:
 303actualfrozen sources/DLL,105MP/5dynamic states0–2s, FJ/globalV0/mass/IDs/
 law/yield. Actual PNG root-inspected, coherent downslope collapse visible.
@@ -1310,3 +1319,5 @@ source. Actual preflight NOT_READY/0frames/no preview directory. Full active
 prefix workflow NOT_EXECUTED; original terminal reviewer unchanged.
 
 Final retained packets: full001failure40indexed+manifest/17ZIPmembers/root41Gitblobs; rapidpartial23indexed+manifest/4ZIP594members/root24blobs; BC/static30indexed+manifest/3ZIP991members/root31blobs. BC0024groups0material/MPM/1initialP2G;001readerfailure preserved. EachBC305source/183FASLverified. Static3sources unchanged,3978alreadycomputedcandidates retained without rerun; negativeNormals preventphysicalFoS claim. No old tests/review/render/native repeated for packaging.
+
+Extendedpartialpacketclosed24indexed+manifest/3ZIP583members/source305/FASL185/mappedDLL/currentdifferences0/root25Gitblobs. Direct2PNG+2MP4/exactID138negativeYdiagnostic preserved. Collector0, no native/review/render repeat.

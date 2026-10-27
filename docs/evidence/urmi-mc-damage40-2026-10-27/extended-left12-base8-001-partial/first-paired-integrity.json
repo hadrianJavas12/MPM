@@ -1,0 +1,542 @@
+{
+  "schema": "cl-mpm.urmi-extended.saved-review.v1",
+  "createdUtc": "2026-10-27T15:36:01.654640+00:00",
+  "scope": "ROUGH_NUMERICAL_DEMO_NOT_SCIENTIFIC_VALIDATION",
+  "savedIntegrity": "PASS",
+  "nativeStatus": "failed",
+  "nativePhase": "undrained-dynamic",
+  "nativeComplete": false,
+  "sourceProof": {
+    "status": "PASS",
+    "sourceFilesVerified": 305,
+    "actualMappedDll": {
+      "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/extended-left12-base8-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "case": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\source\\case.lisp",
+      "bytes": 1129,
+      "sha256": "8f88c55be72c3f3767f025bce0b6db308bd49ecaafa55402a50b468d30a39a2c"
+    },
+    "manifest": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\source\\source-manifest.json",
+      "bytes": 63545,
+      "sha256": "72360ee448bb69c7b8a01987f18cd891ce07d84e966036bc66cf840509b376c0"
+    },
+    "runtimeProvenance": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\source-provenance.json",
+      "bytes": 707096,
+      "sha256": "87a8bed6e2c10dd626253a85a7c940235a74bad59ade0439d216b042577264ec"
+    }
+  },
+  "actualConfig": {
+    "height": 10.0,
+    "crestLength": 24.0,
+    "slope": 40.0,
+    "baseHeight": 8.0,
+    "domainWidth": 72.0,
+    "domainHeight": 24.0,
+    "meshSize": 2.0,
+    "mpsPerCell": 1,
+    "workers": 1,
+    "timeStepScale": 0.2,
+    "gravity": -9.80665,
+    "unitWeightNPerM3": 17000.0,
+    "gravityRampDuration": 2.0,
+    "settleDampingAlpha": 0.4,
+    "forceTolerance": 0.0001,
+    "kineticTolerance": 1e-08,
+    "consecutiveChecks": 50,
+    "consecutiveDurationS": 1.0,
+    "undampedHoldUpdates": 100,
+    "undampedHoldDurationS": 1.0,
+    "maxPreparationUpdates": 5000,
+    "maxPreparationTimeS": 3.0,
+    "duration": 20.0,
+    "frames": 41,
+    "maxDynamicUpdates": 20000,
+    "drainedE": 10773000.0,
+    "drainedNu": 0.33,
+    "drainedCohesionPa": 3700.0,
+    "drainedFrictionDeg": 30.6,
+    "drainedDilationDeg": 0.0,
+    "density": 1733.5175620624782,
+    "toeX": 35.917535925942104,
+    "settleDamping": 15.766460339818156,
+    "undrainedE": 11745000.0,
+    "undrainedNu": 0.45,
+    "observerInitialXGreater": 14.0,
+    "observerInitialYGreater": 10.0,
+    "displayOriginX": 12.0,
+    "displayOriginY": 8.0,
+    "rapidScenarioName": "urmi-damage40-extended",
+    "geometryLabel": "Approved+12m LEFT/base8m: crest24/toe35.9175359/H10/40deg; domain72x24; no notch; same active soil"
+  },
+  "particleCount": 219,
+  "preparationSnapshots": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "nativeTimeS": 0.0,
+      "phaseCode": 0,
+      "particles": 219,
+      "massKgPerM": 1518561.3843667312,
+      "minJ": 1.0,
+      "maximumStrengthDamage": 0.0,
+      "minimumCohesionPa": 3700.0,
+      "maximumKappa": 0.0,
+      "kineticJPerM": 0.0,
+      "vtk": {
+        "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\saved-inputs\\vtk\\initial.vtk",
+        "bytes": 84726,
+        "sha256": "e2ca861f9cff3357b639f1a32eb0ec3b3b1275f98cefcbf58dee29e4dd1045fb"
+      },
+      "plasticWorkCurrentVolumeProxyJPerM": 0.0,
+      "minimumDomainMarginM": 0.0,
+      "centerOutsideDomainMassFraction": 0.0,
+      "maximumYieldResidualPa": -6369.490999829183,
+      "maximumNativeYieldTolerancePa": 1.00001e-06
+    },
+    {
+      "frame": 1,
+      "timeS": 0.0,
+      "nativeTimeS": 3.0,
+      "phaseCode": 1,
+      "particles": 219,
+      "massKgPerM": 1518561.3843667312,
+      "minJ": 0.9825261713534597,
+      "maximumStrengthDamage": 0.0,
+      "minimumCohesionPa": 3700.0,
+      "maximumKappa": 0.01500408931256347,
+      "kineticJPerM": 110.6146157731493,
+      "vtk": {
+        "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\saved-inputs\\vtk\\drained.vtk",
+        "bytes": 84726,
+        "sha256": "56bb095dfe61fca3ad560c074c5e457ed1e31f6c0d6fae4baf003b1c9d575a79"
+      },
+      "plasticWorkCurrentVolumeProxyJPerM": 5492.910989750583,
+      "minimumDomainMarginM": -6.69848389195371e-05,
+      "centerOutsideDomainMassFraction": 0.0,
+      "maximumYieldResidualPa": 1.1823431123048067e-11,
+      "maximumNativeYieldTolerancePa": 3.82246865405095e-06
+    }
+  ],
+  "states": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "nativeTimeS": 3.0,
+      "phaseCode": 2,
+      "particles": 219,
+      "massKgPerM": 1518561.3843667312,
+      "minJ": 0.9825261713534597,
+      "maximumStrengthDamage": 0.5918524435539785,
+      "minimumCohesionPa": 16529.97603606387,
+      "maximumKappa": 0.01500408931256347,
+      "kineticJPerM": 110.6146157731493,
+      "vtk": {
+        "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\saved-inputs\\vtk\\particles_0000.vtk",
+        "bytes": 84726,
+        "sha256": "cd02d4838b6d2e750d721afda2d697544d590159729fe1d85e1e95b962c58a4a"
+      },
+      "plasticWorkCurrentVolumeProxyJPerM": 76046.87613456804,
+      "minimumDomainMarginM": -6.69848389195371e-05,
+      "centerOutsideDomainMassFraction": 0.0,
+      "maximumYieldResidualPa": 8.731149137020111e-11,
+      "maximumNativeYieldTolerancePa": 3.822468654050947e-06,
+      "maximumDisplacementFromReleaseM": 0.0,
+      "upperCohortCentroidDisplacementM": [
+        0.0,
+        0.0
+      ],
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreCount": 0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreMassFraction": 0.0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreLogicalIds": [],
+      "originalUpperCohortMaximumToeExcessM": 0,
+      "fixedComponentVelocityInterval": {
+        "status": "NOT_DETECTED"
+      }
+    },
+    {
+      "frame": 1,
+      "timeS": 0.5,
+      "nativeTimeS": 3.5,
+      "phaseCode": 3,
+      "particles": 219,
+      "massKgPerM": 1518561.3843667312,
+      "minJ": 0.9805009145412541,
+      "maximumStrengthDamage": 0.9049964871040818,
+      "minimumCohesionPa": 3847.642272284689,
+      "maximumKappa": 0.10272687634228207,
+      "kineticJPerM": 253555.2183687468,
+      "vtk": {
+        "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\saved-inputs\\vtk\\particles_0001.vtk",
+        "bytes": 84726,
+        "sha256": "66d0faba30f3530da3568d85ba27f732984e0c3fd905180d3a0f11b380dd3386"
+      },
+      "plasticWorkCurrentVolumeProxyJPerM": 278439.41270719736,
+      "minimumDomainMarginM": -0.000313882890255357,
+      "centerOutsideDomainMassFraction": 0.0,
+      "maximumYieldResidualPa": 1.1095835361629725e-10,
+      "maximumNativeYieldTolerancePa": 3.7747636468469943e-06,
+      "maximumDisplacementFromReleaseM": 0.31005565509979266,
+      "upperCohortCentroidDisplacementM": [
+        0.07476451765790468,
+        -0.14007498573626104
+      ],
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreCount": 0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreMassFraction": 0.0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreLogicalIds": [],
+      "originalUpperCohortMaximumToeExcessM": 0,
+      "fixedComponentVelocityInterval": {
+        "status": "NOT_DETECTED"
+      }
+    },
+    {
+      "frame": 2,
+      "timeS": 1.0,
+      "nativeTimeS": 4.0,
+      "phaseCode": 3,
+      "particles": 219,
+      "massKgPerM": 1518561.3843667312,
+      "minJ": 0.9795397519384917,
+      "maximumStrengthDamage": 0.905,
+      "minimumCohesionPa": 3847.5,
+      "maximumKappa": 0.3851384141837397,
+      "kineticJPerM": 1374829.509409438,
+      "vtk": {
+        "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\saved-inputs\\vtk\\particles_0002.vtk",
+        "bytes": 84726,
+        "sha256": "fd7fea3912b435723117ee0ec1e410ea98799e76849812cb19b365e3bf50c16c"
+      },
+      "plasticWorkCurrentVolumeProxyJPerM": 570599.653844649,
+      "minimumDomainMarginM": -0.0011607662948645014,
+      "centerOutsideDomainMassFraction": 0.0,
+      "maximumYieldResidualPa": 1.191438059322536e-10,
+      "maximumNativeYieldTolerancePa": 4.11386612355285e-06,
+      "maximumDisplacementFromReleaseM": 1.296273970750146,
+      "upperCohortCentroidDisplacementM": [
+        0.444410726487532,
+        -0.601700218648478
+      ],
+      "connectedMovingFractionOfUpperCohortMass": 0.7999999999999999,
+      "originalUpperCohortNewlyPastToePlusHalfMetreCount": 0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreMassFraction": 0.0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreLogicalIds": [],
+      "originalUpperCohortMaximumToeExcessM": 0,
+      "fixedComponentVelocityInterval": {
+        "status": "PASS",
+        "startTimeS": 0.0,
+        "endTimeS": 1.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.003952883774784506
+      }
+    },
+    {
+      "frame": 3,
+      "timeS": 1.5,
+      "nativeTimeS": 4.5,
+      "phaseCode": 3,
+      "particles": 219,
+      "massKgPerM": 1518561.3843667312,
+      "minJ": 0.9792767925269363,
+      "maximumStrengthDamage": 0.905,
+      "minimumCohesionPa": 3847.5,
+      "maximumKappa": 0.8102183028917138,
+      "kineticJPerM": 3073979.7672045864,
+      "vtk": {
+        "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\saved-inputs\\vtk\\particles_0003.vtk",
+        "bytes": 84726,
+        "sha256": "6e1dc16f80f9b8769a816f2db91d03f3a5a80fbaf7e43fa08f9008fc5d2b159e"
+      },
+      "plasticWorkCurrentVolumeProxyJPerM": 997031.5838479425,
+      "minimumDomainMarginM": -0.0032558308313814788,
+      "centerOutsideDomainMassFraction": 0.0,
+      "maximumYieldResidualPa": 1.1550582712516189e-10,
+      "maximumNativeYieldTolerancePa": 5.61065994075717e-06,
+      "maximumDisplacementFromReleaseM": 3.0280577645576168,
+      "upperCohortCentroidDisplacementM": [
+        1.1771665946253373,
+        -1.3626050073954548
+      ],
+      "connectedMovingFractionOfUpperCohortMass": 0.9666666666666667,
+      "originalUpperCohortNewlyPastToePlusHalfMetreCount": 0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreMassFraction": 0.0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreLogicalIds": [],
+      "originalUpperCohortMaximumToeExcessM": 0,
+      "fixedComponentVelocityInterval": {
+        "status": "PASS",
+        "startTimeS": 0.0,
+        "endTimeS": 1.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.003919760775592063
+      }
+    },
+    {
+      "frame": 4,
+      "timeS": 2.0,
+      "nativeTimeS": 5.0,
+      "phaseCode": 3,
+      "particles": 219,
+      "massKgPerM": 1518561.3843667312,
+      "minJ": 0.9701045816876197,
+      "maximumStrengthDamage": 0.9104161085619703,
+      "minimumCohesionPa": 3628.147603240201,
+      "maximumKappa": 1.3801494719263103,
+      "kineticJPerM": 4990840.389682027,
+      "vtk": {
+        "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\saved-inputs\\vtk\\particles_0004.vtk",
+        "bytes": 84726,
+        "sha256": "2e3b9643525e839092ccb5320286ad6fcdd5c2acf57626292881fc4f202892a6"
+      },
+      "plasticWorkCurrentVolumeProxyJPerM": 1607193.7055386244,
+      "minimumDomainMarginM": -0.020902948260382193,
+      "centerOutsideDomainMassFraction": 0.0,
+      "maximumYieldResidualPa": 3.1377567211166024e-10,
+      "maximumNativeYieldTolerancePa": 9.765738495301141e-06,
+      "maximumDisplacementFromReleaseM": 5.255202788337864,
+      "upperCohortCentroidDisplacementM": [
+        2.2576445637748015,
+        -2.3499044418708195
+      ],
+      "connectedMovingFractionOfUpperCohortMass": 1.0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreCount": 0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreMassFraction": 0.0,
+      "originalUpperCohortNewlyPastToePlusHalfMetreLogicalIds": [],
+      "originalUpperCohortMaximumToeExcessM": 0,
+      "fixedComponentVelocityInterval": {
+        "status": "PASS",
+        "startTimeS": 0.0,
+        "endTimeS": 1.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.00375207128871139
+      }
+    }
+  ],
+  "actualDynamicSavedFrames": 5,
+  "actualLastDynamicTimeS": 2.0,
+  "preparation": "Fixed3s:2s gravity ramp+1s relaxation; NOT measured equilibrium; no field reset",
+  "observer": {
+    "initialXGreaterM": 14.0,
+    "initialYGreaterM": 10.0,
+    "particles": 30,
+    "cohort": "Original30MP physical upper cohort; added left/foundation MPs excluded",
+    "runoutDefinition": "Current original-cohort MPs newly past original toe+0.5m; initial-past-threshold MPs excluded; fraction of original upper cohort mass",
+    "runoutScientificValidation": false
+  },
+  "transfer": {
+    "status": "PASS",
+    "particles": 219,
+    "nativeMaterialCalls": 219,
+    "mpmUpdates": 0,
+    "ledger": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\saved-inputs\\transfer-ledger.json",
+      "bytes": 271207,
+      "sha256": "03ed7313a8d027241d194074ab55e99f42fd23fdca6db290d7d5468127e2cfeb"
+    },
+    "materialSwitchProxyDifferenceJPerM": -250794.81715769626,
+    "instantaneousReleaseProxyDifferenceJPerM": -137192.01180705577,
+    "scope": "Actual cloned dt0 material release, not clock advance, whole-MPM restart, or closed energy budget"
+  },
+  "qualitativeMotionCandidates": [
+    {
+      "frame": 2,
+      "timeS": 1.0,
+      "logicalIds": [
+        77,
+        78,
+        79,
+        86,
+        87,
+        88,
+        89,
+        95,
+        96,
+        97,
+        98,
+        104,
+        105,
+        106,
+        107,
+        113,
+        114,
+        115,
+        122,
+        123,
+        124,
+        130,
+        131,
+        137
+      ],
+      "fractionOfUpperCohortMass": 0.7999999999999999,
+      "fixedComponentVelocityInterval": {
+        "status": "PASS",
+        "startTimeS": 0.0,
+        "endTimeS": 1.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.003952883774784506
+      }
+    },
+    {
+      "frame": 3,
+      "timeS": 1.5,
+      "logicalIds": [
+        68,
+        69,
+        70,
+        77,
+        78,
+        79,
+        80,
+        86,
+        87,
+        88,
+        89,
+        95,
+        96,
+        97,
+        98,
+        104,
+        105,
+        106,
+        107,
+        113,
+        114,
+        115,
+        116,
+        122,
+        123,
+        124,
+        130,
+        131,
+        137
+      ],
+      "fractionOfUpperCohortMass": 0.9666666666666667,
+      "fixedComponentVelocityInterval": {
+        "status": "PASS",
+        "startTimeS": 0.0,
+        "endTimeS": 1.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.003919760775592063
+      }
+    },
+    {
+      "frame": 4,
+      "timeS": 2.0,
+      "logicalIds": [
+        68,
+        69,
+        70,
+        71,
+        77,
+        78,
+        79,
+        80,
+        86,
+        87,
+        88,
+        89,
+        95,
+        96,
+        97,
+        98,
+        104,
+        105,
+        106,
+        107,
+        113,
+        114,
+        115,
+        116,
+        122,
+        123,
+        124,
+        130,
+        131,
+        137
+      ],
+      "fractionOfUpperCohortMass": 1.0,
+      "fixedComponentVelocityInterval": {
+        "status": "PASS",
+        "startTimeS": 0.0,
+        "endTimeS": 1.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.00375207128871139
+      }
+    }
+  ],
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "manualSpatialReviewRequired": true,
+  "limits": [
+    "Coarse h2m/PPC1 rough demonstration; not convergence, calibrated runout, or exact Urmi reproduction",
+    "Fixed preparation is not an equilibrium test; dynamics include material release and preparation transients",
+    "Native finite/J/mass/law checks do not by themselves prove coherent landsliding",
+    "All saved MPs shown including boundary exits/outliers; no particle filtering or displacement amplification",
+    "Only completed saved states; unsaved/partial tail or missing restart state is not invented",
+    "D_s is constitutive strength loss; elastic stiffness unchanged; no fracture opening/pore-pressure solution"
+  ],
+  "inputBinding": {
+    "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\input-copy-binding.json",
+    "bytes": 10555,
+    "sha256": "4e9a8592133abef615df35dd49ff014f91de113663ef157b94aec7d247796eb7"
+  },
+  "analysisBinding": {
+    "createdUtc": "2026-10-27T15:35:59.318271+00:00",
+    "records": [
+      {
+        "original": {
+          "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001-launch-preparation\\analysis\\review-urmi-extended.py",
+          "bytes": 33328,
+          "sha256": "d8ded432e430fed52bc9589e029fbc51cbd11065e5f444d01ca0c44caffbb125"
+        },
+        "copy": {
+          "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\analysis-source\\review-urmi-extended.py",
+          "bytes": 33328,
+          "sha256": "d8ded432e430fed52bc9589e029fbc51cbd11065e5f444d01ca0c44caffbb125"
+        }
+      },
+      {
+        "original": {
+          "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001-launch-preparation\\analysis\\plot_m5_cliff_comparison.py",
+          "bytes": 23581,
+          "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+        },
+        "copy": {
+          "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\analysis-source\\plot_m5_cliff_comparison.py",
+          "bytes": 23581,
+          "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+        }
+      },
+      {
+        "original": {
+          "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001-launch-preparation\\analysis\\review-urmi-damage40.py",
+          "bytes": 41472,
+          "sha256": "3f48dc592a311132c8acabc736b548f3ce61aed253a61c481ce182d696a53a7b"
+        },
+        "copy": {
+          "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\analysis-source\\review-urmi-damage40.py",
+          "bytes": 41472,
+          "sha256": "3f48dc592a311132c8acabc736b548f3ce61aed253a61c481ce182d696a53a7b"
+        }
+      },
+      {
+        "original": {
+          "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001-launch-preparation\\analysis\\preview-urmi-damage40.py",
+          "bytes": 21761,
+          "sha256": "16beaba885a3154e7bc9e7602ac51c2aa247975b2312593408f162c783bf8a50"
+        },
+        "copy": {
+          "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\extended-left12-base8-001\\paired-review-001\\analysis-source\\preview-urmi-damage40.py",
+          "bytes": 21761,
+          "sha256": "16beaba885a3154e7bc9e7602ac51c2aa247975b2312593408f162c783bf8a50"
+        }
+      }
+    ],
+    "scope": "Copied before review child execution; no pre-native analysis timing claim without separate launch evidence"
+  }
+}

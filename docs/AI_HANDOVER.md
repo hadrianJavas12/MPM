@@ -1,5 +1,40 @@
 # AI Engineering Handover — CL-MPM
 
+## TERMINAL27October22:23WIB — extended demo paired videos READY
+
+extended-left12-base8-001/native78a91c34 FAILED_NATIVE1 at22:23:41WIB while
+saving attempted dynamic2.5s/native5.5s,1735updates.219MP/5complete dynamic
+states0–2s remain. No solver active, no oldPIDquery/restart. Target20s NOT
+complete. NEW actual output-state-failure.json identifies exact stop: ID138
+domainYPositive=false, domainSizeY=−.09135596708695834m/X=8.432472174769387m.
+AllothernamedguardchecksTRUE: logicalID,V=JV0,kappa/work history,yield. Actual
+J=.99359940357, volumeerror1.73e-14, residual3.55e-11Pa belowtol1.92e-6Pa.
+This is recorded numerical particle-domain distortion, NOT MC-root failure,
+negativeJ or proof the soil itself has negative physical volume. Do not
+invent/replay an absent constitutive trial or bypass domain positivity.
+
+FIRST prelaunch-frozen paired-review-001 CLOSED expectedexit2/savedIntegrity
+PASS,305actualsourcepayloads/mappedDLL,219MP/5dynamicstates/FJ/originalV0/
+mass/IDs/law/yield. Both movies5actualframes/1fps/5s/decode0, commonworldbounds,
+allparticles/equalmetres/nointerp. Root inspected BOTH actualsummaryPNGs;
+coherent upperbody downslope motion remains visible. At2s original30MPcohort
+centroid(+2.257645,−2.349904)m, connectedmovingmass100%, maxdisplacement5.2552m,
+maxDs.910416/minJ.970105. Rough numerical demo, not calibratedvalidation.
+
+PROMISED FILES actually exist inside RUN/paired-review-001/:
+rough-motion.mp4 and rough-strength-damage.mp4; matching summaryPNGs.
+Preparation9records/fourfrozenhelpers hashmatch beforefirstreview. Valid
+partialreview exit2 is not an analysis/native failure. No prior solver/gates/
+review/render repeated. extended_source_review owns one immutable newattempt
+source/raw/runtime/detached/preparation/diagnostic/pairedmedia packet; inspect
+actualclosure before duplicate packaging. Packet now CLOSED24indexed+manifest,
+3ZIP/583decodedmembers (source/cache491, native/runtime42, pairedreview50),
+305native sourcepayloads/185loadedFASLinputs/mappedDLL verified; currentoriginal
+differences0. Direct2PNG+2MP4 and exactdiagnostic retained, root25Gitblobs equal.
+No duplicate native/source archive or analysis needed. Final checkpoint follows.
+Obsolete automation extended-mc-two-videos DELETED: native ended and paired
+movies ready for delivery. No automatic further run/geometry/tolerance change.
+
 ## LIVE27October22:17WIB — extended219MP demo and TWO requested videos
 
 Human now explicitly requests RUN approvedpreview(+12mLEFT/base8m) and TWO
