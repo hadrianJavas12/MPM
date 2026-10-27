@@ -116,3 +116,7 @@ notch, driver, root preference, clamp or postfailure parameter tuning.
 ## LIVE27October10:33WIB
 
 Full001 source3acf468f now ACTIVE,48hwallcap/notETA; still drainedpreparation atcapture, not equilibrium/full60sPASS. Exact300native source/DLL/prelaunchbinding/liveidentity proof archived27indexed/483members. First clockprovider helper rejection retained, no nativecode change. Quietautomation urmi-mc-40-native-trial15min; terminal ONEprepared savedreview, no solverrerun for media/readerfailure. Initial drained-to-undrained change is declared; subsequent plasticdeformation drives Ds softening, no imposeddisplacement/porepressure/rainfall claim.
+
+
+## Main trial28October
+[[urmi-mc-proper-main]] launched01:39WIB with human-selected h1/PPC2x2 and measured preparation. Two filled-patch movies auto-export; oldrough failures preserved, main outcome pending.

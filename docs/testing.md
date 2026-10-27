@@ -1321,3 +1321,7 @@ prefix workflow NOT_EXECUTED; original terminal reviewer unchanged.
 Final retained packets: full001failure40indexed+manifest/17ZIPmembers/root41Gitblobs; rapidpartial23indexed+manifest/4ZIP594members/root24blobs; BC/static30indexed+manifest/3ZIP991members/root31blobs. BC0024groups0material/MPM/1initialP2G;001readerfailure preserved. EachBC305source/183FASLverified. Static3sources unchanged,3978alreadycomputedcandidates retained without rerun; negativeNormals preventphysicalFoS claim. No old tests/review/render/native repeated for packaging.
 
 Extendedpartialpacketclosed24indexed+manifest/3ZIP583members/source305/FASL185/mappedDLL/currentdifferences0/root25Gitblobs. Direct2PNG+2MP4/exactID138negativeYdiagnostic preserved. Collector0, no native/review/render repeat.
+
+
+### 28October: proper h1/PPC2 numerical profile
+New Windows SBCL controls002:6groups/48USFupdates actualworker volume-domain PASS; profile0024groups/0MPM PASS. Prior001worker-mode limitation and helper-arity negative retained. Filled initial3503MP renderer002 two full encode/decode PASS, INITIALIZATION ONLY;001optionalimport negative retained. Studio check and36tests PASS. Mainc805d549 launched; full saved observer pending. See [protocol](benchmarks/URMI_MC_PROPER.md).

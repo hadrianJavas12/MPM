@@ -1125,3 +1125,6 @@ FIRSTpairedreview001 expectedexit2/PASSsource305/DLL/FJ/V0/mass/law/219MP/5actua
 ## [2026-10-27] ingest | Extended immutable paired-result closure
 
 Extendedpacket24indexed+manifest/3ZIP583members,source305/FASL185/DLL/currentdifferences0/root25Gitblobs;twoPNG/twoMP4andactualID138negativeYtuple retained. No solver/review/render repeat,monitordeleted. [[urmi-mc-strength-damage40]].
+
+## [2026-10-28] ingest | Proper main native trial launched
+Added [[urmi-mc-proper-main]], linked [[urmi-mc-strength-damage40]] and index. Sourcec805d549; measuredprep/volume-domain guards, actualnewcontrols and initialfilledmedia distinguished from pending fullrun. Raw/settings untouched.

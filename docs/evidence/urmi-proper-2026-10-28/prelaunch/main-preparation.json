@@ -1,0 +1,62 @@
+{
+  "createdUtc": "2026-10-27T18:38:58.1726256Z",
+  "sourceCommit": "c805d5491334ea74c9946fc1e48009eacf3289b1",
+  "scenario": "urmi-damage40-proper",
+  "nativeBudgetHours": 22,
+  "mediaReserveHours": 2,
+  "records": [
+    {
+      "path": "D:\\MPM\\scripts\\review-urmi-proper.py",
+      "sha256": "468F6D350DF5AC99E3B51C8C287363E6EAE497972D99076DCBDD0A4024FC64EC"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001-launch-preparation\\analysis\\review-urmi-proper.py",
+      "sha256": "468F6D350DF5AC99E3B51C8C287363E6EAE497972D99076DCBDD0A4024FC64EC"
+    },
+    {
+      "path": "D:\\MPM\\scripts\\review-urmi-damage40.py",
+      "sha256": "3F48DC592A311132C8ACABC736B548F3CE61AED253A61C481CE182D696A53A7B"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001-launch-preparation\\analysis\\review-urmi-damage40.py",
+      "sha256": "3F48DC592A311132C8ACABC736B548F3CE61AED253A61C481CE182D696A53A7B"
+    },
+    {
+      "path": "D:\\MPM\\scripts\\preview-urmi-damage40.py",
+      "sha256": "16BEABA885A3154E7BC9E7602AC51C2AA247975B2312593408F162C783BF8A50"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001-launch-preparation\\analysis\\preview-urmi-damage40.py",
+      "sha256": "16BEABA885A3154E7BC9E7602AC51C2AA247975B2312593408F162C783BF8A50"
+    },
+    {
+      "path": "D:\\MPM\\scripts\\plot_m5_cliff_comparison.py",
+      "sha256": "1C254E7BC1490F284C1722536E6C442C4A3E033C06949D8372F9D9D38C3277E8"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001-launch-preparation\\analysis\\plot_m5_cliff_comparison.py",
+      "sha256": "1C254E7BC1490F284C1722536E6C442C4A3E033C06949D8372F9D9D38C3277E8"
+    },
+    {
+      "path": "D:\\MPM\\cases\\benchmarks\\urmi-damage40-proper.lisp",
+      "sha256": "4A004D4DCF89E338AD29E1A2065E5D8295555685997A9AC1FC82A294161CAF0B"
+    },
+    {
+      "path": "D:\\MPM\\studio\\reference\\urmi-damage40-proper.json",
+      "sha256": "B27BA7310505055FA2AC84958206FF395CEB509A74D5884597773661F456ECF6"
+    },
+    {
+      "path": "D:\\MPM\\scenarios\\urmi-damage40\\proper.lisp",
+      "sha256": "9B370935FAEC45CBC7B7360E475734138564A7619F2B84EAB2638BEA96A4F3F0"
+    },
+    {
+      "path": "D:\\MPM\\scripts\\run-gravity-slope-trial.ps1",
+      "sha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32"
+    },
+    {
+      "path": "D:\\MPM\\scripts\\run-urmi-proper-pipeline.ps1",
+      "sha256": "CB02A7A5BCD6EB5B85A484F562923DA19AC0D2B8E665499FB20E568CF3340A9E"
+    }
+  ],
+  "scope": "Frozen before main native launch and before any main saved observer execution; full observer workflow not yet executed"
+}

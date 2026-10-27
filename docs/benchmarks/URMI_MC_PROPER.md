@@ -33,7 +33,7 @@ binding invisible to workers; its coupled part did NOT prove the new mode,
 although its direct mathematical domain probes passed. Retained, superseded by002.
 Profile controls002:4groups PASS,0MPM: exact case compile, Cundall force,
 default-hook delegation, actual initial CSV/VTK.001 failed a test-helper arity
-before that check; source/error retained. No native production attempt yet here.
+before that check; source/error retained. Main production sourcec805d549 launched28October01:39:01WIB; native wall deadline23:39:01WIB.
 Studio check+36tests PASS. No prior material/transfer/oldrun gates repeated.
 
 Filled rendering convects each original .5m square by actual physical F, checks

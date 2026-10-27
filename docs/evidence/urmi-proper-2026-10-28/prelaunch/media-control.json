@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "scope": "INITIALIZATION_ONLY_NOT_DYNAMIC_SIMULATION_OR_FULL_OBSERVER_VALIDATION",
+  "actualMovieStates": 1,
+  "allParticlesShown": true,
+  "coordinateScale": 1,
+  "colourRange": [
+    0,
+    1
+  ],
+  "interpolation": false,
+  "plotBoundsWorldM": [
+    -13.44,
+    61.44,
+    -9.44,
+    17.44
+  ],
+  "renderGeometry": "Actual F convects each original square patch; numerical quadrature domains distinct; overlaps/gaps retained",
+  "sameActualStateSequenceAndTimingForBothMovies": true,
+  "movies": {
+    "motion": {
+      "video": {
+        "path": "D:\\MPM\\output\\urmi-proper-2026-10-27\\filled-initial-control-002\\soil-motion.mp4",
+        "bytes": 14672,
+        "sha256": "490979d6c7e5481457e36d1f30791fec105a01f3ebdeb48bfaf8fdc8bc8b3db6"
+      },
+      "decodedFrames": 1,
+      "framesPerSecond": 5
+    },
+    "damage": {
+      "video": {
+        "path": "D:\\MPM\\output\\urmi-proper-2026-10-27\\filled-initial-control-002\\strength-damage.mp4",
+        "bytes": 15911,
+        "sha256": "ee6dbda8977e205ee39749cc618ff50c7b583b9738742b370ae8d78b1b5b477d"
+      },
+      "decodedFrames": 1,
+      "framesPerSecond": 5
+    }
+  }
+}

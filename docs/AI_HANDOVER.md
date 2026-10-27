@@ -1,5 +1,66 @@
 # AI Engineering Handover — CL-MPM
 
+## LIVE28October01:39WIB � MAIN h1/PPC2x2 run launched, automatic FILLED movies
+
+Latest human explicitly says MAIN RUN NOW; do not delay with more studies.
+Branch codex/urmi-proper-mesh1, native sourcec805d5491334ea74c9946fc1e48009eacf3289b1.
+RUN output/urmi-proper-2026-10-28/main-001, started28Oct01:39:01.1823952WIB.
+Native wallcap22h until28Oct23:39:01WIB, plus<=2h reserved automatic media;
+budget is NOT guarantee of equilibrium/full20s completion. User permits off
+after actual launch. Detached worker49268, outerpipeline23024, innerwrapper32108,
+cmd53920, SBCL58452,Session11; recorded exactcreation/native parent proof.
+WMI is not proven sleep/logoff/reboot immune. No UI/mainmerge.
+
+Native status NATIVE_RUNNING; actual3503MP drained preparation observed at
+400updates/native0.833100s, RF.1615666/RK4.99446e-5, before2s ramp completion;
+NO equilibrium/dynamic result claimed. Pipeline also NATIVE_RUNNING. Read ONLY adjacent status/progress/heartbeat, pipeline,
+manifest complete/phase/time/native/savedFrames and ONEtail at wakeup. Healthy
+unchanged: quiet, no activepoll/PIDquery/duplicate native/tests/research/render/
+packaging. Existing automation lanjutkan-branch-mpm-studio updated to this
+finite mainrun, hourly quiet monitoring; no oldmonitor revived. Weekly95% used
+atlaunch,5h reset is NOT weekly reset. Sourcecommit staysc805 despite docHEAD.
+
+Geometry40deg/H10/crest24/base8/domain72x24, h1/PPC2x2,3503MP/473physicalupper
+cohort. Same soil law/strength/E/nu/phi/psi,FLIP/USF,CFL.2,mass1/workers1.
+Measured RF<1e-4/RK<1e-8 postramp50checks/1s, then100undampedchecks/1s ALL
+passing before true atomic switch. Prep local Cundall.75/hold0/dynamic.02;
+prep cap60000updates/60native seconds.20dynamicseconds/101states/.2s requested.
+Opt-in volume-based cpGIMP domain l_i=l_i0 sqrt(J), J/domainpositivityguarded,
+F/globalV0/history NOT reset. This published numerical-domain alternative
+replaces only this profile's signed polar domain; no clamp/abs/root/tolerance/
+strength changes. Native diagnostic BC union constructed serially. See
+URMI_MC_PROPER.md for citations and explicit mesh-sensitive local-law limits.
+
+NEW controls CLOSED: proper0026groupsPASS/3503MP/24drained+24undrained updates,
+actual worker volume-domain identity asserted;001coupled dynamicbinding did
+NOT propagate to workers, directmath passed, retained as superseded. Profile002
+4groupsPASS/0MPM actualcasecompile/Cundall/defaultdelegate/initialCSVVTK;
+001test-helper arityfailure retained. Studio check+36testsPASS. No old suites.
+Filled renderer002 actual native INITIAL-state3503patches/2movies encode+full
+decodePASS; root inspected actualdamagePNG, not dynamicresult.001failed optional
+Pythonimport afterPNG, fixed saveddata/renderer only, negative preserved.
+Prelaunch evidence docs/evidence/urmi-proper-2026-10-28/prelaunch holds allnew
+controls/negatives and initialmedia once. Full main savedobserver NOTEXECUTED.
+
+13prelaunch records bound by RUN-launch-preparation/preparation.json, including
+4frozenobserver/helpers, actualnativecase/config/mode and wrappers. Pipeline
+scripts/run-urmi-proper-pipeline.ps1 invokes native22h harness then frozen
+review-urmi-proper.py automatically; do NOT duplicate savedreview while exporting.
+Expected final RUN/filled-review-001/soil-motion.mp4 and strength-damage.mp4,
+proper-motion-result.png/proper-damage-result.png. Actual F convects original
+.5m squarepatches; allshown/equalmetres/commonbounds/nointerpolation; validate
+quadarea=J*V0, gaps/overlaps retained, not physicalcrackgeometry. Ds=1-c/40500.
+On terminal inspect BOTH actualPNGs/reviewJSON and deliver BOTH actualMP4 promptly,
+with complete/partial/preparation/motion scope. Complete/colour is not calibrated
+physicalvalidation. Media/analysisfailure: retainfrozenbytes/stages/logs and fix
+SAVEDDATA ONLY, no solverrestart. Wallcap native manifest may remainrunning;
+--stopped-wrapper requires authoritative STOPPED_WALL_BUDGET proof, no falsified
+nativecompletion. Newnativefailure: diagnoseactualguards, no automaticescalation.
+Archive actualmain source/runtime/raw/preparation/media once ATTERMINAL (not
+whilewriting), force-track indexedignoredmedia/Gitblobverify, checkpointdocs/wiki.
+Delete finite monitor when delivered/closed. Preserve raw/private/settings.
+
+
 ## TERMINAL27October22:23WIB — extended demo paired videos READY
 
 extended-left12-base8-001/native78a91c34 FAILED_NATIVE1 at22:23:41WIB while

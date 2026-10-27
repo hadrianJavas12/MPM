@@ -212,3 +212,7 @@ AllMP, scale1, Ds0–1, no interpolation; partial active scope with scientific/
 landslide flags false. Three NEW Python controls pass002; initial invocation
 failed before source opened. Actual preflight NOT_READY/0frames/no output.
 Full active-prefix audit/media still NOT_EXECUTED. No native repeat.
+
+
+## 28October: main h1/PPC2 run
+Human now requests more proper preparation and filled-field movies. Main run launched01:39:01WIB, branch codex/urmi-proper-mesh1, sourcec805d549. See [proper protocol](URMI_MC_PROPER.md), measured equilibrium and explicit volume-domain numerical update; target20s,22h nativebudget plus2h media, not completion promise. Oldrough/strict protocols remain preserved.

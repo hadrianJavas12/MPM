@@ -49,3 +49,5 @@
 - [[joss-reference-reproduction#Workspace and latest state, 2026-10-15|Windows native rerun guide]] — fresh-start config, command-line run, VTK rendering and checks in docs/RUN_ACCEPTED_COLLAPSE_WINDOWS.md
 - [[joss-damage-diagnosis-2026-10-15]] — accepted 40 s DP collapse/run-out, measured mismatch, completed no-collapse 40 kPa case and paused continuation
 
+
+- [[urmi-mc-proper-main]] � launched h1/PPC2x2 measured-preparation main trial; automatic filled motion/strength-damage movies pending
