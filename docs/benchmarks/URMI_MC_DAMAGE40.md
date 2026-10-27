@@ -119,3 +119,23 @@ Run output/urmi-mc-damage40-2026-10-27/full-001 source3acf468f2b573c77cddee1d295
 Prepared analysis/review-urmi-damage40.py with prepared protocol/contract.json must review terminal saveddata ONCE using freshoutput and --video. --allow-partial only actual terminalfailure. Full orchestration not tested by tinygate. One sourceZIP already archived; reference it at terminal, do not duplicate. Same quiet15minautomation urmi-mc-40-native-trial monitors; no healthyPIDquery/activepoll/oldtests/render repeat. Raw/private/settings intact; WMI session not immune to sleep/logoff/reboot.
 
 Human trigger question: plastic deformation still drives strength softening, Ds evolves from acceptedkappa rather than elapsedtime. Initial drained-to-undrained materialcondition change is declared Urmi-inspired loading, not simulated rainfall/porepressure. Wangdriver prescribed displacement; last unnotchedcomposite used gravity+SRF1.6. No forced displacement in this case.
+
+## First-result deadline and acceleration study,27October12:50WIB
+
+Human requests first result in1–2h; target short actual preview by14:36WIB,
+not promised collapse/full60s completion. Serialfull001 stays unchanged in
+drained preparation, native11.495278s/0dynamicframes at last observation.
+FIRST sourceb273ae4b1vs4worker benchmarks each pass4groups/20USF/6714MP and
+72plastic points. Observed update ratios2.69/2.21 are workload timing only.
+Fixed1e-11 saved comparison FAILED: stressmaxdelta4.74315e-8Pa and free nodal
+mass/RF differ. ONE saved diagnosis retained; no production parallel approval
+or tolerance change. Source-only overlapping-BC mask hypothesis remains
+unproven for a specific node. External math thread counts unavailable.
+
+New preview552246c1 waits for>=6 completed dynamicframes and snapshots6–11
+actual states/allMP/exactrawCSVprefix/closedVTK. It freezes original prepared
+helpers/protocol and checks source/DLL/prep/transfer/FJ/globalV0/law/Ds/yield.
+AllMP, scale1, Ds0–1, no interpolation; partial active scope with scientific/
+landslide flags false. Three NEW Python controls pass002; initial invocation
+failed before source opened. Actual preflight NOT_READY/0frames/no output.
+Full active-prefix audit/media still NOT_EXECUTED. No native repeat.

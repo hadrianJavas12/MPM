@@ -1089,3 +1089,7 @@ Pipeline96f0c7d6 native0/4groups/4USF/6714MP/3840activefoundation/3VTK/20142rows
 ## [2026-10-27] ingest | MC40 full001 native launch
 
 Full001 native3acf468f starts10:33:58WIB,48hwallcap29Oct10:33:58WIB/notETA; worker61020/wrapper35864/cmd58544/SBCL23556 Session11. Actual300sources/DLL/preparation/livecreation-parent proof PASS, launch27indexed/483members. Helper CIM/GetProcess100ns precision mismatch retained then exact provider-aware identity proven; nativeunchanged. Still drainedprep atcapture, full60s notPASS. Quiet15minautomation urmi-mc-40-native-trial; old monitor notresurrected. Triggerclarification saved: plasticstrain drives strengthsoftening, initialmaterialchange declared, no imposeddriver/rainfall/porepressure. [[urmi-mc-strength-damage40]].
+
+## [2026-10-27] ingest | Urgent first preview and failed worker parity
+
+Human sets1–2h first-result target, acknowledged12:36WIB; aim short actual preview by14:36WIB, no slide/full60s promise. Full001 remains healthy serial/drained/0dynamicframes. FIRST1vs4worker benchmarks pass4groups/20USF each, but fixed saved parity FAILS stress/free nodal mass/RF; one saved diagnosis retained, no production switch. Observed2.69x/2.21x is workload timing only. Preview552246c1 FIRST3synthetic controls PASS002; initial invocation failed before source opened, retained. Actual preflight NOT_READY/no folder; full prefix workflow pending>=6actualframes. No old tests/native/render repeats. [[urmi-mc-strength-damage40]].

@@ -1,0 +1,116 @@
+{
+  "createdUtc": "2026-10-27T08:27:21.469336+00:00",
+  "scope": "NEW bounded worker/control evidence only; full001 native/source/terminal review belongs to its separate packet; no full-preview/media execution",
+  "nativeRuns": {
+    "workers1-001": {
+      "status": "PASS",
+      "sourceFilesVerified": 302,
+      "uniqueLoadedFaslInputsVerified": 182,
+      "actualMappedDll": {
+        "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/workers1-001/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "currentOriginalDifferences": [],
+      "sourceBeforeAfterAndManifestIdentical": true,
+      "openblasThreadsRecorded": null,
+      "ompThreadsRecorded": null,
+      "externalMathThreadLimitClaim": "UNAVAILABLE: benchmark provenance values are null; no single-thread assertion inferred",
+      "nativeGroups": 4,
+      "genuineUSFUpdates": 20,
+      "particleCount": 6714,
+      "counters": [
+        {
+          "stage": "drained",
+          "attempted": 67140,
+          "accepted": 67140
+        },
+        {
+          "stage": "transfer",
+          "attempted": 6714,
+          "accepted": 6714
+        },
+        {
+          "stage": "undrained",
+          "attempted": 67140,
+          "accepted": 67140
+        },
+        {
+          "stage": "plastic-native",
+          "attempted": 72,
+          "accepted": 72
+        },
+        {
+          "stage": "expected-failure",
+          "attempted": 1,
+          "accepted": 0
+        }
+      ]
+    },
+    "workers4-001": {
+      "status": "PASS",
+      "sourceFilesVerified": 302,
+      "uniqueLoadedFaslInputsVerified": 182,
+      "actualMappedDll": {
+        "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/workers4-001/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "currentOriginalDifferences": [],
+      "sourceBeforeAfterAndManifestIdentical": true,
+      "openblasThreadsRecorded": null,
+      "ompThreadsRecorded": null,
+      "externalMathThreadLimitClaim": "UNAVAILABLE: benchmark provenance values are null; no single-thread assertion inferred",
+      "nativeGroups": 4,
+      "genuineUSFUpdates": 20,
+      "particleCount": 6714,
+      "counters": [
+        {
+          "stage": "drained",
+          "attempted": 67140,
+          "accepted": 67140
+        },
+        {
+          "stage": "transfer",
+          "attempted": 6714,
+          "accepted": 6714
+        },
+        {
+          "stage": "undrained",
+          "attempted": 67140,
+          "accepted": 67140
+        },
+        {
+          "stage": "plastic-native",
+          "attempted": 72,
+          "accepted": 72
+        },
+        {
+          "stage": "expected-failure",
+          "attempted": 1,
+          "accepted": 0
+        }
+      ]
+    }
+  },
+  "sourcePayloadsByteIdentical": true,
+  "firstStrictWorkerEquivalence": "FAIL preserved: particleCSV/sig_xx_pa; no tolerance relaxation or production switch",
+  "diagnosis": "ONE saved discrepancy analysis, exit0; original negative comparator remains authoritative",
+  "previewControls": "FIRST invocation error2 before test source opened; corrected fresh002 exactly3NEW synthetic controls PASS/exit0; 0native/MPM",
+  "firstActualPreview": "Preflight exit0 NOT_READY/drained/savedFrames0/no preview directory; full workflow NOT_EXECUTED",
+  "sourceArchives": 2,
+  "sourceFilesOriginalVerified": 604,
+  "archiveMemberCount": 1038,
+  "artifactsExcludedFromAnalysisArchive": "Only generated __pycache__ files; original raw folders unchanged",
+  "mediaFiles": 0,
+  "gitStaged": false,
+  "gitBlobVerification": "NOT_EXECUTED: parent owns staging and exact Git blob verification",
+  "collectionActualExitCode": 0,
+  "collectionLogs": [
+    "collection-exit.json",
+    "collection-stdout.log",
+    "collection-stderr.log"
+  ]
+}

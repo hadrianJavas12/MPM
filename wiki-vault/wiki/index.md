@@ -25,7 +25,7 @@
 - [[joss-reference-inputs-2026-10-14]] — immutable paper/video identities, user clarification and author-example starting point
 
 ## Synthesis
-- [[urmi-mc-strength-damage40]] — Urmi-inspired40degree soil MC strength damage; point5/transfer4/MPM4groups and saved audit PASS; full60s native running from27Oct10:33WIB
+- [[urmi-mc-strength-damage40]] — full60s serial trial active; human first-preview target14:36WIB; bounded worker controls pass but saved parallel parity fails; short-prefix preview prepared, dynamic frames pending
 - [[unnotched-mc-gravity]] — completed fine002; new requested40deg/Urmi-like soil MC strength-damage/longer run under development, no new solver yet; unused Joss prototype stopped
 - [[unnotched-landslide-method-selection]] — primary journal methods for intact-slope failure; separate MC gravity/SSR control selected, no new full run or landslide claim
 - [[wang2017-residual-history-scope]] —100mm history-guard failure, one replay with unchanged residual strength, explicit opt-in scope and native/integration gates

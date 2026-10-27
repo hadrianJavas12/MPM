@@ -1,0 +1,61 @@
+{
+  "allFieldCounts": {
+    "material-state.csv": 54,
+    "history.csv": 51,
+    "native-state-extra.csv": 30
+  },
+  "failingFields": {
+    "material-state.csv": [
+      "sig_xx_pa",
+      "sig_yy_pa",
+      "sig_zz_pa",
+      "sig_xy_pa",
+      "native_projection_trial_scale_pa"
+    ],
+    "history.csv": [
+      "free_residual_ratio",
+      "free_force_numerator2",
+      "free_force_denominator2",
+      "free_nodal_mass_kg_per_m",
+      "free_ke_ratio"
+    ],
+    "native-state-extra.csv": [
+      "tau_0",
+      "tau_1",
+      "tau_2",
+      "tau_5"
+    ]
+  },
+  "jsonNumericDeltaCounts": {
+    "plastic-inputs-before.json": 0,
+    "plastic-results.json": 0,
+    "expected-rejection-input-before.json": 0,
+    "expected-rejection-capsule.json": 0
+  },
+  "jsonStructuralDeltaCounts": {
+    "plastic-inputs-before.json": 0,
+    "plastic-results.json": 0,
+    "expected-rejection-input-before.json": 0,
+    "expected-rejection-capsule.json": 0
+  },
+  "timingsNotAcceptance": [
+    {
+      "workload": "drained",
+      "serialSeconds": 6.693459,
+      "parallelSeconds": 2.4862539999999997,
+      "observedRatio": 2.6921863172467497
+    },
+    {
+      "workload": "undrained",
+      "serialSeconds": 8.409421,
+      "parallelSeconds": 3.800345,
+      "observedRatio": 2.212804626948343
+    },
+    {
+      "workload": "syntheticNativePlastic72",
+      "serialSeconds": 0.23466,
+      "parallelSeconds": 0.079373,
+      "observedRatio": 2.9564209491892712
+    }
+  ]
+}

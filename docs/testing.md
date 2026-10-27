@@ -1279,3 +1279,12 @@ FIRST native point controls source961c17a8 exit0/PASS5groups,84pure projector en
 FIRST owned pipeline96f0c7d6 exit0/PASS4groups:4USF updates/6714MP/3840activefoundation,13428drained+6714dt0transfer+13428undrained accepted calls. Independent saved002audit PASS302sources/DLL/3VTK/20142CSVrows; initial KeyError harness assumes absent release state, retained and repaired from saved data only. First Python9helpers8PASS/1incorrectfixtureFAIL; selective fixture1PASS, production observer unchanged. Both failure packets retained. No fullprep/full60s validation. Evidence under docs/evidence/urmi-mc-damage40-2026-10-27.
 
 Full001 launched27Oct10:33:58WIB source3acf468f,48hwallcap, nativehealthy preparation atcapture; not fullsimulationPASS. Launch300actualsource/DLL/beforelaunch binding and provider-aware live identities verified,27indexed/483sourceZIPmembers. Capture-helper clock precision rejection retained, no native/physics change. Prepared fullsaved reviewer still awaits terminal data.
+
+NEW sourceb273ae4b FIRST1vs4worker native processes both0/PASS4groups/20USF/
+6714MP/72plastic points,302sourcepayloads/DLL match. Fixed saved comparison001
+FAIL: stress4.74315e-8Pa maxdelta and nodal free mass/RF also differ. ONE saved
+diagnosis retained; no rerun/tolerance change/production parallel approval.
+Observed2.69x/2.21x ratios are workload timing only. Preview552246c1 FIRST3NEW
+synthetic prefix controls PASS002;001 invocation failed before Python opened
+source. Actual preflight NOT_READY/0frames/no preview directory. Full active
+prefix workflow NOT_EXECUTED; original terminal reviewer unchanged.

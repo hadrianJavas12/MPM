@@ -8,6 +8,19 @@ updated: 2026-10-27
 
 # Urmi inspired MC strength damage at40degrees
 
+## First-result deadline,27October12:50WIB
+
+Human needs first result within1–2h; target actual short preview by14:36WIB,
+not promised slide/full60s. Full001 stays serial and healthy in drained prep,
+0dynamicframes. NEW bounded1vs4worker native controls pass, but fixed saved
+parity FAILS stress/free nodal mass/RF. Timing2.69x/2.21x is not production
+approval. ONE saved diagnosis and source-only BC-mask hypothesis retained.
+Preview552246c1 has3NEW synthetic controls PASS; preflight NOT_READY without
+creating output. Full active-prefix workflow awaits>=6 completed frames.
+AllMP/scale1/Ds0–1/unchanged prepared law checks; explicitly partial scope.
+No restart, convergence relaxation or fake dynamic state. See guide/handover
+and [[urmi-legacy-comparison]] for distinct historical experiments.
+
 Human retains soil MC, requests40degrees/no notch/longer run and damage.
 Branchcodex/urmi-mc-damage-slope40 fromc2cd4069. Provisional Joss prototype
 is preserved but not the requested material. [[urmi-legacy-comparison]] and

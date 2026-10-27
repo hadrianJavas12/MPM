@@ -1,5 +1,68 @@
 # AI Engineering Handover — CL-MPM
 
+## TERMINAL27October14:31WIB — full001 preparation cap, no dynamic states
+
+Latest human15:25WIB asks continue running/status. Actual full001 FAILED_NATIVE1
+at27Oct14:31:08WIB (07:31:08Z), native20s/19320updates, drained preparation,
+dynamic0s/savedFrames0. RF=.00013149719037753823, RK~9.1103e-12; error
+"Owned drained equilibrium update cap reached". Not a material return failure
+or evidence of landslide. No solver active; do not query oldPID23556/restart
+identically or waive equilibrium. First-preview target14:36WIB MISSED and
+human informed15:25; no later repeated deadline notifications needed.
+
+Actual retained raw has ONLY manifest/source-provenance/source/initialVTK/
+meshVTK plus adjacentlogs. All three declared preparation CSVs ABSENT. Do not
+invent/reconstruct their19krows or a final MPstate from stdout. Source suggests
+with-open-file error unwind aborts/deletes newly created CSVs; causal native
+control pending. Prepared terminal fullreview NOT_EXECUTED because required
+inputs absent. damage40_execution owns missing-input preflight and ONE scoped
+initialVTK/source/DLL/scale1 review, not dynamic video/fullintegrityPASS.
+
+speed_benchmark_plan owns FIRST new0MPM nodal BC-mask diagnostic from frozen
+source. Prior overlapping-mask hypothesis is not proved for the failed full
+state (no nodal checkpoint). Root will review relevant repair before a new
+run; no automatic prep-duration/strength/tolerance/mesh escalation.
+Acceleration-preview packet now CLOSED28indexed/29files/4ZIP1038members,
+604originalsourcebytes plus copies/364loadedFASLhashes verified; fixed parallel
+comparison still FAIL. No production4worker authorization. Root Gitblob proof
+and checkpoint push pending. Preserve unrelated tmp/ and Obsidian settings.
+
+## LIVE27October12:50WIB — first-result deadline and worker comparison failure
+
+Human requires FIRST RESULT within1–2h, acknowledged12:36WIB: target an honest
+short preview by14:36WIB, not promised collapse/full60s completion. Full001
+remains healthy SERIAL, native source3acf468f and original identities below.
+Latest observation: native11.495278s/11100updates, dynamic0s/savedFrames0,
+drained preparation; RF~2.0193e-4 above1e-4. No hotpatch/restart/PIDquery.
+VTK cannot migrate progress; native save/load are stubs.
+
+NEW worker sourceb273ae4b: FIRST1vs4worker processes each0/PASS4groups/20USF/
+6714MP/72plastic points;302 frozen sources/DLL match. Observed update ratios
+2.69drained/2.21undrained are workload timing, not ETA. External math thread
+environment unavailable, not assumed1; background full001/thermal effects
+limit extrapolation. FIRST fixed1e-11 saved comparison001 FAILED. ONE saved
+diagnosis: frame1normalstress maxdelta4.74315e-8Pa (72normal/18shear rows exceed
+limits); free nodal mass differs108.34484879kg/m andRF alreadyframe0. Points/
+capsule/kappa/c/D/work/V/J/mass exact. Do not relax limits or use4workers in
+production. SOURCEONLY hypothesis: overlapping BCs initialize node-bcs only
+whenNIL without merging masks, so parallel firstwriter can affect free-axis
+diagnostics despite mutex-protected physical constraints. Not proved for a
+specific node; source-only note retained. No native repeats or broad repair.
+
+Preview source552246c1 scripts/preview-urmi-damage40.py waits for>=6 completed
+dynamic frames; copies6–11 actual states/all6714MP/rawCSVprefix/closedVTK,
+freezes original prepared helper/reader/contract and checks source/DLL/prep/
+transfer/FJ/globalV0/mass/law/Ds/yield. Scale1/Ds0–1, no interpolation, explicit
+ACTIVE_PARTIAL_NOT_FULL_VALIDATION. FIRST3NEW Python controls PASS002;001
+PowerShell argument failure BEFORE Python opened source retained. Actual
+preflight001 exit0 NOT_READY/drained/0frames/no preview directory. Full prefix
+workflow NOT_EXECUTED. No controls/preflight repeats. At>=6dynamicframes run
+ONCE --run-dir full001 --output-dir sibling full-001-preview-001 --video,
+inspectPNG and deliver actualvideo with partialscope. Frame0 is instantaneous
+material release. If no preview by14:36WIB, notify ONCE with actual phase and
+record the notice. Same15min automation updated; no active polling. Terminal
+prepared fullreview remains separate; reference existing launchsourceZIP.
+
 ## LIVE27October10:33WIB: Urmi-like MC40degree full trial ACTIVE
 
 Branchcodex/urmi-mc-damage-slope40. Run
