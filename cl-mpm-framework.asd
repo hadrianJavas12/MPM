@@ -128,3 +128,9 @@
   :depends-on ("cl-mpm-framework/urmi-damage40-rapid")
   :serial t
   :components ((:file "scenarios/urmi-damage40/extended")))
+
+(asdf:defsystem "cl-mpm-framework/urmi-damage40-proper"
+  :description "Opt-in measured-equilibrium h1/PPC2 volume-domain Urmi numerical trial"
+  :depends-on ("cl-mpm-framework/urmi-damage40")
+  :serial t
+  :components ((:file "scenarios/urmi-damage40/proper")))

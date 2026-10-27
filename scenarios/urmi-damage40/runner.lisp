@@ -38,7 +38,9 @@
        "initialVtk" "vtk/initial.vtk" "drainedVtk" "vtk/drained.vtk" "dynamicVtkPattern" "vtk/particles_%04d.vtk"
        "transferLedgerFile" "transfer-ledger.json"
        "scope" "New Urmi-inspired S1 normalized strength law and parameter/history transfer adaptation; not literal paper calibration or validated failure time; stable/no-damage outcomes retained"))
-(defun run (material config directory &key approximate-preparation-duration)
+(defun run (material config directory &key approximate-preparation-duration
+            (sim-type 'urmi-damage40-sim) (setup-sim #'identity)
+            (dynamic-damping 0d0) (manifest-customizer #'identity))
   (let* ((output (uiop:ensure-directory-pathname directory)) (vtk (merge-pathnames "vtk/" output))
          (manifest (make-manifest config)) (manifest-path (merge-pathnames "manifest.json" output))
          (sim nil) (context nil) (preparation-updates 0) (dynamic-updates 0) (saved 0))
@@ -56,6 +58,7 @@
             (gethash "geometry" manifest) (gethash "geometryLabel" config)
             (gethash "freeUpperSubset" manifest) "Original physical region translated to native coordinates: initial x>14m,y>10m"
             (gethash "scope" manifest) "EXTENDED ROUGH DEMO:219MP/h2/PPC1; fixed3s approximate preparation then20s requested dynamics; two real-state motion/strength-damage movies; no scientific accuracy claim"))
+    (funcall manifest-customizer manifest)
     (ensure-directories-exist vtk) (write-json manifest-path manifest)
     (labels ((progress (phase)
                (setf (gethash "phase" manifest) phase (gethash "updates" manifest) (+ preparation-updates dynamic-updates)
@@ -87,7 +90,10 @@
                          phase preparation-updates (cl-mpm::sim-time sim) (force-ratio sim) (kinetic-ratio sim config)) (finish-output))))
       (handler-case
           (progn
-            (cl-mpm/utils:set-workers 1) (setf sim (build-slope material config) context (capture-reference sim config))
+            (cl-mpm/utils:set-workers 1)
+            (setf sim (build-slope material config :sim-type sim-type))
+            (funcall setup-sim sim)
+            (setf context (capture-reference sim config))
             (setf (observation-context-failure-directory context) output)
             (configure-output sim)
             (setf (gethash "particleCount" manifest) (length (cl-mpm:sim-mps sim))
@@ -120,6 +126,9 @@
                 (when approximate-preparation-duration (setf (cl-mpm:sim-damping-factor sim) 0d0))
                 (setf (observation-context-preparation-updates context) preparation-updates)
                 (save-state sim context config (merge-pathnames "drained.vtk" vtk) 1 1 preparation-updates prep-state prep-mp)))
+            (unless approximate-preparation-duration
+              (setf (gethash "equilibriumVerified" manifest) t))
+            (setf (cl-mpm:sim-damping-factor sim) dynamic-damping)
             (progress "material-transfer")
             (let* ((clock (cl-mpm::sim-time sim)) (ledger (tr:transfer! sim)))
               (unless (= clock (cl-mpm::sim-time sim)) (error "Material switch changed native clock."))

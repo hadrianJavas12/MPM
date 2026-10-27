@@ -45,12 +45,12 @@
   (+ (value config "baseHeight")
      (max 0d0 (- (value config "height") (* (tan (* pi (/ (value config "slope") 180d0)))
                                                     (max 0d0 (- x (value config "crestLength"))))))))
-(defun build-slope (material config)
+(defun build-slope (material config &key (sim-type 'urmi-damage40-sim))
   (let* ((h (value config "meshSize")) (width (value config "domainWidth"))
          (top (+ (value config "baseHeight") (value config "height")))
          (ppc (value config "mpsPerCell"))
          (sim (cl-mpm/setup:make-simple-sim h (list (round width h) (round (value config "domainHeight") h))
-                :sim-type 'urmi-damage40-sim :args-list (list :enable-fbar nil :enable-damage nil
+                :sim-type sim-type :args-list (list :enable-fbar nil :enable-damage nil
                   :ghost-factor nil :enable-split nil :mp-removal-size nil)))
          (mps (apply #'cl-mpm/setup:make-block-mps '(0d0 0d0) (list width top)
                 (list (* (round width h) ppc) (* (round top h) ppc)) (value config "density")

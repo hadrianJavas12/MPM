@@ -1,0 +1,127 @@
+;;;; FIRST owned point controls only; no MPM, old suites or physical validation.
+;;;; windows\cl-mpm.cmd tests\benchmarks\urmi-damage40-pipeline-controls.lisp output\FRESH
+(in-package :cl-user)
+(require :asdf)
+(setf *read-default-float-format* 'double-float)
+(defvar *up-frozen* nil) (defvar *up-directory* nil) (defvar *up-exit* 1)
+(unless *up-frozen* (load (cl-mpm-path "scripts/lisp/native-source-snapshot.lisp")))
+(unless *up-frozen*
+  (let* ((argument (first (cl-mpm-script-args)))
+         (directory (and argument (uiop:ensure-directory-pathname (merge-pathnames argument)))))
+    (unless directory (error "Provide fresh point-control output."))
+    (when (and (probe-file directory) (or (uiop:directory-files directory) (uiop:subdirectories directory)))
+      (error "Preserve existing point evidence."))
+    (snapshot-require-fresh-runtime)
+    (multiple-value-bind (copied records) (snapshot-case-sources directory *load-truename*)
+      (dolist (relative '("research/notes/urmi-mc-damage40-2026-10-26/recipe-plan.md"
+                          "cases/benchmarks/urmi-damage40.lisp"))
+        (let* ((from (cl-mpm-path relative)) (to (merge-pathnames (concatenate 'string "source/inputs/" relative) directory))
+               (bytes (case-source-bytes from)))
+          (ensure-directories-exist to) (uiop:copy-file from to)
+          (assert (equalp bytes (case-source-bytes to))) (push to copied)
+          (push (snapshot-object "path" (enough-namestring to directory) "originalPath" (namestring (truename from))
+                 "bytes" (length bytes) "sha256" (snapshot-sha256-bytes bytes)) records)))
+      (dolist (required '("source/materials/models/plastic/urmi-strength-damage/package.lisp"
+                          "source/materials/models/plastic/urmi-strength-damage/law.lisp"
+                          "source/materials/models/plastic/urmi-strength-damage/particle.lisp"
+                          "source/scenarios/urmi-damage40/package.lisp"
+                          "source/scenarios/urmi-damage40/transfer.lisp"
+                          "source/scenarios/urmi-damage40/runner.lisp"
+                          "source/inputs/studio/reference/urmi-damage40.json"
+                          "source/inputs/cases/benchmarks/urmi-damage40.lisp"))
+        (assert (find required records :key (lambda (row) (gethash "path" row)) :test #'string=)))
+      (snapshot-write-json (merge-pathnames "source/source-manifest.json" directory)
+       (snapshot-object "scope" "New optional S1 bounded native pipeline controls and recipe plan; all selected first-party/DLL bytes frozen before load"
+                        "files" (coerce records 'vector)))
+      (let ((*native-snapshot-context* (snapshot-register-native directory records))
+            (*up-frozen* t) (*up-directory* directory))
+        (snapshot-check-plan "cl-mpm/settings") (ql:quickload :cl-mpm/settings :silent t)
+        (setf (symbol-value (find-symbol "*OPTIMISE-SETTING*" "CL-MPM/SETTINGS"))
+              '(optimize (speed 3) (safety 1) (debug 1) (compilation-speed 0)))
+        (dolist (system '("yason" "cl-mpm" "cl-mpm-framework/urmi-damage40-proper"))
+          (snapshot-check-plan system) (ql:quickload system :silent t))
+        (snapshot-native-proof)
+        (write-case-source-provenance directory copied nil)
+        (rename-file (merge-pathnames "source-provenance.json" directory)
+                     (merge-pathnames "source-provenance-before.json" directory))
+        (flet ((proof (name)
+                 (snapshot-write-json (merge-pathnames name directory)
+                  (snapshot-object "files" (coerce (mapcar (lambda (path)
+                    (snapshot-object "path" (enough-namestring path directory) "sha256" (snapshot-sha256 path))) copied) 'vector)))))
+          (proof "source-proof-before.json")
+          (snapshot-verify-file (merge-pathnames "source/case.lisp" directory))
+          (load (merge-pathnames "source/case.lisp" directory))
+          (dolist (path copied) (snapshot-verify-file path))
+          (write-case-source-provenance directory copied nil)
+          (proof "source-proof-after.json")))))
+  (uiop:quit *up-exit*))
+
+
+(in-package :cl-mpm/scenario/urmi-damage40)
+(defun proper-assert (x message) (unless x (error "Proper control: ~A" message)))
+(let* ((cfg (make-hash-table :test #'equal))
+       (material (fw:make-material :native :youngs-modulus 10773000d0 :poisson-ratio .33d0
+                   :density (/ 17000d0 9.80665d0) :particle-class 'mc:particle-mc-evolution
+                   :initargs (list :evolution-law (drained-law))))
+       (groups 0) (started (get-internal-real-time)))
+  (dolist (entry +proper-inputs+) (setf (gethash (car entry) cfg) (cdr entry)))
+  (setf (gethash "density" cfg) (/ 17000d0 9.80665d0) (gethash "settleDamping" cfg) .75d0)
+  (cl-mpm/utils:set-workers 1)
+  (let* ((sim (proper-setup (build-slope material cfg :sim-type 'urmi-proper-sim)))
+         (mesh (cl-mpm:sim-mesh sim)) (mp (aref (cl-mpm:sim-mps sim) 0))
+         (f (cl-mpm/particle::mp-deformation-gradient mp)) (d (cl-mpm/particle::mp-domain-size mp)))
+    (proper-assert (not *proper-volume-domain*) "default opt-in must be disabled")
+    (format t "~&PROPER actualMP=~D~%" (length (cl-mpm:sim-mps sim)))
+    ;; Rotation, large simple shear (including old signed-domain failure class),
+    ;; compression and expansion retain positive quadrature area and original F.
+    (dolist (tuple '((1d0 0d0 0d0 1d0) (0d0 -1d0 1d0 0d0)
+                     (1d0 8d0 0d0 1d0) (.8d0 0d0 0d0 .9d0) (2d0 0d0 0d0 3d0)))
+      (setf (magicl:tref f 0 0) (first tuple) (magicl:tref f 0 1) (second tuple)
+            (magicl:tref f 1 0) (third tuple) (magicl:tref f 1 1) (fourth tuple))
+      (let ((before (magicl:deep-copy-tensor f)) (j (cl-mpm/fastmaths:det-3x3 f)))
+        (proper-domain-update mesh mp)
+        (proper-assert (< (abs (- (* (component d 0) (component d 1)) (* .25d0 j))) 1d-12) "domain area=J*area0")
+        (dotimes (i 3) (dotimes (k 3) (proper-assert (= (magicl:tref before i k) (magicl:tref f i k)) "F preserved")))))
+    (incf groups)
+    (setf (magicl:tref f 0 0) -1d0 (magicl:tref f 0 1) 0d0 (magicl:tref f 1 0) 0d0 (magicl:tref f 1 1) 1d0)
+    (proper-assert (handler-case (progn (proper-domain-update mesh mp) nil) (error () t)) "negativeJ must fail")
+    (incf groups)
+    ;; Rebuild fresh: mathematical probes above must not enter MPM trajectory.
+    (setf sim (proper-setup (build-slope material cfg :sim-type 'urmi-proper-sim)) mesh (cl-mpm:sim-mesh sim))
+    (loop for bc across (cl-mpm:sim-bcs sim) do
+      (let ((mask (cl-mpm/mesh::node-bcs (cl-mpm/mesh:get-node mesh (cl-mpm/bc:bc-index bc)))))
+        (loop for v in (cl-mpm/bc:bc-value bc) for i from 0 when v do
+          (proper-assert (= (component mask i) 0d0) "overlapping BC union"))))
+    (incf groups)
+    (setf *proper-volume-domain* t)
+    (let ((clock (get-internal-real-time)))
+      (dotimes (i 24) (preparation-step sim cfg))
+      (proper-assert (force-ratio sim) "inherited rawforce :after hook executes")
+      (let ((drained-seconds (/ (- (get-internal-real-time) clock) internal-time-units-per-second)))
+        (format t "~&PROPER drained24 wall=~,6F native=~,8F RF=~S~%" drained-seconds (cl-mpm::sim-time sim) (force-ratio sim))
+        (incf groups)
+        (let ((native (cl-mpm::sim-time sim)))
+          (tr:transfer! sim)
+          (proper-assert (= native (cl-mpm::sim-time sim)) "transfer cannot reset clock"))
+        (setf (cl-mpm:sim-damping-factor sim) .02d0 (cl-mpm:sim-gravity sim) (value cfg "gravity"))
+        (setf clock (get-internal-real-time))
+        (dotimes (i 24) (setf (cl-mpm:sim-dt sim) (stable-dt sim cfg)) (cl-mpm:update-sim sim))
+        (let ((seconds (/ (- (get-internal-real-time) clock) internal-time-units-per-second)))
+          (format t "~&PROPER undrained24 wall=~,6F dt=~,9F extrapolated20sHours=~,4F (benign control, NOT forecast)~%"
+            seconds (cl-mpm:sim-dt sim) (/ (* seconds (/ 20d0 (* 24 (cl-mpm:sim-dt sim)))) 3600d0))
+          (incf groups)
+          (let ((ctx (capture-reference sim cfg)))
+            (declare (ignore ctx))
+            (loop for p across (cl-mpm:sim-mps sim) do
+              (proper-assert (> (cl-mpm/fastmaths:det-3x3 (cl-mpm/particle::mp-deformation-gradient p)) 0d0) "USF positiveJ")
+              (proper-assert (> (component (cl-mpm/particle::mp-domain-size p) 1) 0d0) "USF positiveDomain")
+              (proper-assert (< (abs (- (component (cl-mpm/particle::mp-domain-size p) 0)
+                 (* .5d0 (sqrt (cl-mpm/fastmaths:det-3x3 (cl-mpm/particle::mp-deformation-gradient p)))))) 1d-12) "actual worker uses volume domain")))
+          (incf groups)
+          (write-json (merge-pathnames "proper-controls.json" cl-user::*up-directory*)
+            (obj "status" "PASS" "groups" groups "particles" (length (cl-mpm:sim-mps sim))
+              "drainedUpdates" 24 "undrainedUpdates" 24 "drainedWallSeconds" drained-seconds
+              "undrainedWallSeconds" seconds "undrainedDt" (cl-mpm:sim-dt sim)
+              "scope" "New numerical-profile controls, not equilibrium/landslide/production-runtime validation"))))))
+  (format t "~&PROPER NEW controls PASS groups=~D totalWall=~F~%" groups (/ (- (get-internal-real-time) started) internal-time-units-per-second))
+  (setf cl-user::*up-exit* 0))

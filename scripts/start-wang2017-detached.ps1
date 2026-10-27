@@ -4,7 +4,7 @@ param(
   [double]$MaxWallHours = 8,
   [string]$EvidenceDirectory = '',
   [ValidateRange(1,60)][int]$StartupTimeoutSeconds = 30,
-  [ValidateSet('wang2017','gravity-slope')][string]$Runner = 'wang2017',
+  [ValidateSet('wang2017','gravity-slope','urmi-proper')][string]$Runner = 'wang2017',
   [switch]$LaunchControlFixture
 )
 $ErrorActionPreference = 'Stop'
@@ -34,7 +34,11 @@ foreach ($taskPath in @($taskOutput,$taskLaunchDirectory,($taskOutput+'-launch.j
   if (Test-Path -LiteralPath $taskPath) { throw ('Refusing duplicate attempt: ' + $taskPath) }
 }
 $taskCase = Resolve-TaskPath $Case
-$taskWrapperRelative = if ($Runner -eq 'gravity-slope') { 'scripts/run-gravity-slope-trial.ps1' } else { 'scripts/run-wang2017-trial.ps1' }
+$taskWrapperRelative = switch ($Runner) {
+  'gravity-slope' { 'scripts/run-gravity-slope-trial.ps1' }
+  'urmi-proper' { 'scripts/run-urmi-proper-pipeline.ps1' }
+  default { 'scripts/run-wang2017-trial.ps1' }
+}
 $taskWrapper = Join-Path $taskRepo $taskWrapperRelative
 $taskFixture = Join-Path $taskRepo 'tests/windows/fixtures/detached-exit-fixture.ps1'
 if (-not (Test-Path -LiteralPath $taskWrapper -PathType Leaf)) { throw 'Trusted native trial wrapper missing.' }
