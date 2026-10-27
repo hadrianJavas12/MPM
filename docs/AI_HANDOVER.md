@@ -1,5 +1,51 @@
 # AI Engineering Handover — CL-MPM
 
+## LIVE27October15:55WIB — HUMAN AUTHORIZES ROUGH RAPID DEMO; new run launched
+
+LATEST HUMAN explicitly only wants to see whether sliding occurs in1–2 wall
+hours and does NOT care about accuracy. This supersedes strict equilibrium/
+mesh-validation prerequisites for this SEPARATE approximation. Do not resume
+long research/gates before running the requested demo. Branch now
+codex/urmi-mc-damage40-rapid, native source2d76848d. User informed15:55 run
+started, presently solver loading. Run rapid-h2-002 under output/urmi-mc-
+damage40-2026-10-27; started15:55:08.4260039WIB,1.5h WALLcap until17:25:08WIB,
+not completion promise. Worker59368/wrapper52636/cmd54432/SBCL60560 Session11;
+exact creation timestamps recorded in status. No healthy PIDquery/restart.
+001 launch failed BEFORE wrapper/native due unsupported EvidenceDirectory
+argument; retained.002 omits that argument, SAME source/physics.
+
+Approximate demo:105MP/h2m/PPC1, same40deg/H10/crest12/4msoilbase/domain60x20,
+sameE/nu/MC/Urmi strength law/beta/psi/CFL.2/mass1; no notch/driver/reset or
+additional weakening. Fixed3s drained ramp/relaxation (2+1), NO measured
+equilibrium claim, then damping0 and actual atomic material switch. Native
+clock/F/history/velocities preserved. Request20dynamic seconds/41states/.5s,
+max20000dynamic updates. Coarse sampling and nonequilibrium initialization
+are explicit new assumptions; user accepts accuracy tradeoff. Material/root/
+finite/positiveJ rejection stays authoritative; do not manufacture a slide.
+Plan research/notes/urmi-mc-damage40-2026-10-26/rapid-demo-plan.md.
+
+New retention macro FIRST6pureWindowsSBCL controls PASS0 inretention-controls-
+001,7frozen sources/0engine/material/MPM. It proves legacy abortdeletion vs
+retained actual bytes, nestedstreams/nonlocal/existingfile/cleanup errors.
+No old controls repeated. Strict runner default uses NIL rapid keyword;
+only new :urmi-damage40-rapid chooses approximate preparation. Optional
+compiler explicitly exposes overrides and validates unchanged material and
+geometry through strict validation; no global fixed-input mutation.
+
+speed_thread_safety owns NEW scripts/review-urmi-rapid.py, still being authored
+after launch; freeze exact observer/helper bytes BEFORE saved execution and
+record postlaunch timing honestly. Do NOT call old strict prep/full inspector
+or its6714MP/301frame contract on this demo. Read actualcount105/newscenario;
+allparticles/equalmetres/Ds0–1/nointerpolation. Newrough graph radius2.02m
+declared before result. Source/DLL dynamiccount, finite/FJ/mass/IDs/law and
+actual connectedmotion/KE/displacement/runout; no calibrated/scientificPASS.
+If terminalfailure/wallcap, use only actual saved prefix, retain all failures,
+no identicalrestart. One saved review/movie, inspectactualPNG and deliver
+actual video promptly. Full001 failure/oldstrict gate data remain untouched.
+Same automation should monitor this run quietly15min, meaningfulresult only;
+terminal without new justifiedrun→5h. Update guide/testing/wiki/appendlog and
+cohesivecommitpush, preserve raw/settings. Main unchanged; no UI/main merge.
+
 ## TERMINAL27October14:31WIB — full001 preparation cap, no dynamic states
 
 Latest human15:25WIB asks continue running/status. Actual full001 FAILED_NATIVE1
