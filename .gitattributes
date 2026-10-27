@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Evidence payloads retain exact original bytes for indexed SHA-256 verification.
+docs/evidence/urmi-proper-2026-10-28/prelaunch/** -text
