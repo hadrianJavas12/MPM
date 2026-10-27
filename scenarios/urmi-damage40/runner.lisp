@@ -51,6 +51,11 @@
             (gethash "initialization" manifest) "RAPID DEMO: fixed3s drained gravity ramp/relaxation, NOT measured equilibrium; no field resets"
             (gethash "equilibriumCriterion" manifest) "NOT ENFORCED in explicitly user-authorized rough demonstration"
             (gethash "scope" manifest) "RAPID DEMO ONLY: h2m/PPC1/105MP, fixed3s approximate preparation then20s requested dynamics; mesh-sensitive uncalibrated Urmi-like law, no scientific accuracy claim"))
+    (when (gethash "rapidScenarioName" config)
+      (setf (gethash "scenario" manifest) (gethash "rapidScenarioName" config)
+            (gethash "geometry" manifest) (gethash "geometryLabel" config)
+            (gethash "freeUpperSubset" manifest) "Original physical region translated to native coordinates: initial x>14m,y>10m"
+            (gethash "scope" manifest) "EXTENDED ROUGH DEMO:219MP/h2/PPC1; fixed3s approximate preparation then20s requested dynamics; two real-state motion/strength-damage movies; no scientific accuracy claim"))
     (ensure-directories-exist vtk) (write-json manifest-path manifest)
     (labels ((progress (phase)
                (setf (gethash "phase" manifest) phase (gethash "updates" manifest) (+ preparation-updates dynamic-updates)
@@ -83,6 +88,7 @@
       (handler-case
           (progn
             (cl-mpm/utils:set-workers 1) (setf sim (build-slope material config) context (capture-reference sim config))
+            (setf (observation-context-failure-directory context) output)
             (configure-output sim)
             (setf (gethash "particleCount" manifest) (length (cl-mpm:sim-mps sim))
                   (gethash "initialMassKgPerM" manifest) (gs::reference-state-mass (observation-context-reference context)))

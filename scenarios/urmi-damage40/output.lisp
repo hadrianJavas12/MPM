@@ -1,9 +1,10 @@
 (in-package :cl-mpm/scenario/urmi-damage40)
 (defstruct (observation-context (:constructor %context))
-  reference initial-kappa initial-work switch-positions switch-kappa switch-work switch-native-time ledger (preparation-updates 0))
+  reference initial-kappa initial-work switch-positions switch-kappa switch-work switch-native-time ledger (preparation-updates 0) failure-directory)
 (defun capture-reference (sim config)
   (let* ((reference (gs::capture-reference-state sim config))
-         (mask (map 'vector (lambda (p) (and (> (component p 0) 2d0) (> (component p 1) 6d0)))
+         (mask (map 'vector (lambda (p) (and (> (component p 0) (or (gethash "observerInitialXGreater" config) 2d0))
+                                             (> (component p 1) (or (gethash "observerInitialYGreater" config) 6d0))))
                     (gs::reference-state-positions reference)))
          (masses (gs::reference-state-masses reference)))
     (setf (gs::reference-state-upper-p reference) mask
@@ -66,6 +67,34 @@
 (defun kinetic-ratio (sim config)
   (when (> (free-nodal-mass sim) 0d0)
     (/ (free-ke sim) (* (free-nodal-mass sim) (- (value config "gravity")) (value config "height")))))
+(defun capture-output-failure (mp id context config j volume v0 size residual)
+  "Failure-only raw output guard values; neither a restart nor a material replay capsule."
+  (when (observation-context-failure-directory context)
+    (handler-case
+      (let* ((initial-kappa (aref (observation-context-initial-kappa context) id))
+             (initial-work (aref (observation-context-initial-work context) id))
+             (kappa (mc:particle-kappa mp)) (work (mc:particle-plastic-work mp))
+             (tol (native-yield-tolerance mp)) (volume-error (abs (- volume (* j v0))))
+             (bound (* 1d-10 (max 1d0 volume))))
+        (write-json (merge-pathnames "output-state-failure.json" (observation-context-failure-directory context))
+          (obj "schema" "cl-mpm.owned-output-guard.v1"
+            "scope" "Actual output-state values captured on failure; NOT a restart or constitutive trial capsule"
+            "particleId" id "config" config "position" (copy-seq (cl-mpm/utils:fast-storage (cl-mpm/particle:mp-position mp)))
+            "F" (copy-seq (cl-mpm/utils:fast-storage (cl-mpm/particle:mp-deformation-gradient mp)))
+            "volume" volume "J" j "originalV0" v0 "volumeError" volume-error "volumeErrorBound" bound
+            "domainSize" (copy-seq (cl-mpm/utils:fast-storage size))
+            "kappa" kappa "initialKappa" initial-kappa "work" work "initialWork" initial-work
+            "yieldResidual" residual "nativeYieldTolerance" tol
+            "checks" (obj
+              "logicalId" (if (= (cl-mpm/particle::mp-unique-index mp) id) t 'yason:false)
+              "volumeIdentity" (if (<= volume-error bound) t 'yason:false)
+              "domainXPositive" (if (> (component size 0) 0d0) t 'yason:false)
+              "domainYPositive" (if (> (component size 1) 0d0) t 'yason:false)
+              "kappaAtLeastInitial" (if (>= kappa initial-kappa) t 'yason:false)
+              "workAtLeastInitial" (if (>= work (- initial-work 1d-8)) t 'yason:false)
+              "yieldWithinNativeTolerance" (if (<= residual tol) t 'yason:false)))))
+      (error (condition)
+        (ignore-errors (format *error-output* "~&Output failure capture unavailable: ~A~%" condition))))))
 (defun audit-state (sim context config)
   (let* ((reference (observation-context-reference context))
          (stats (gs::measure-state sim (make-instance 'fw::mc-evolution-material-diagnostics) reference config))
@@ -87,6 +116,7 @@
                      (>= (mc:particle-kappa mp) (aref (observation-context-initial-kappa context) id))
                      (>= (mc:particle-plastic-work mp) (- (aref (observation-context-initial-work context) id) 1d-8))
                      (<= residual (native-yield-tolerance mp)))
+          (capture-output-failure mp id context config j volume v0 size residual)
           (error "Owned frame violates V=J*V0, domain/history/work/yield at ID~D." id))
         (when (damage-active-p mp)
           (unless (and (observation-context-switch-native-time context)

@@ -122,3 +122,9 @@
   :depends-on ("cl-mpm-framework/urmi-damage40")
   :serial t
   :components ((:file "scenarios/urmi-damage40/rapid")))
+
+(asdf:defsystem "cl-mpm-framework/urmi-damage40-extended"
+  :description "Approved12m left extension and8m foundation rough MC damage demo"
+  :depends-on ("cl-mpm-framework/urmi-damage40-rapid")
+  :serial t
+  :components ((:file "scenarios/urmi-damage40/extended")))
