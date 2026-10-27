@@ -1,0 +1,23 @@
+{
+  "scope": "FIRST restricted dry Bishop diagnostic for the actual declared 40-degree drained geometry; not global FoS, MPM validation or a reason to force equilibrium",
+  "fullTrial": "output/urmi-mc-damage40-2026-10-27/full-001",
+  "baseY": 0.0,
+  "height": 10.0,
+  "baseHeight": 4.0,
+  "crestLength": 12.0,
+  "slopeDegrees": 40.0,
+  "domainWidth": 60.0,
+  "unitWeightNPerM3": 17000.0,
+  "cohesionPa": 3700.0,
+  "frictionDegrees": 30.6,
+  "entryRangeM": [0.0, 12.0],
+  "entryCount": 9,
+  "exitStartM": 12.5,
+  "exitEndBeyondToeM": 12.0,
+  "exitCount": 17,
+  "rhoRange": [0.25, 4.0],
+  "rhoCount": 13,
+  "sliceCounts": [200, 400],
+  "normalPolicy": "Keep raw negative normals/counts/minimum stress. Never clamp or reject a root to obtain desired stability. Report minimum over all formal roots and separately the subset with nonnegative normals, without calling either physical/global validation.",
+  "decisionLimit": "Inconclusive or formal F near/below1 means do not assume drained stable equilibrium or blindly extend prep. F above1 in this restricted family does not prove global stability. No parameter changes or full solver launch follow automatically."
+}
