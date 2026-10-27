@@ -1,0 +1,278 @@
+{
+  "passed": true,
+  "indexedGitBlobsVerified": 54,
+  "zipMembersDecoded": 1361,
+  "files": [
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/.gitattributes",
+      "bytes": 10,
+      "sha256": "4ce4b6e6b8435f8c3a8387387732964a2ebf0183e8d77b8247ae8061b033e462"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/.gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/collect.py",
+      "bytes": 15353,
+      "sha256": "249b00d1ba3974e67827c9e97bfb1aacc8d72faa36e1ae2af02aac613d76cb6c"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/collection-execution.json",
+      "bytes": 536,
+      "sha256": "3e19da7d4463ec17f8d50ab8fa996afc9f6b1db7accdd1a2b07f7cfe0c710b4f"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/collector-attempt-001.json",
+      "bytes": 866,
+      "sha256": "be75431d38cb9fb988556d5ad5bfac5cd00ebff8955e60f1f25217738212f570"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/copy-verification.json",
+      "bytes": 7329,
+      "sha256": "968fff84782c9de4d4b878c136f0eda660231e830aecbc4b80f2d7695369f54c"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/evidence-manifest.json",
+      "bytes": 6729,
+      "sha256": "40fdcef50435305180b0ab908c87359890272bd1804a83cf3bfb45c7ae82aa07"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/git-attribute-verification.json",
+      "bytes": 5074,
+      "sha256": "21b5209c7412e2af03912dda4b364a4f7868e0b4de05df2c7db0f96dbadc72e0"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/node-baseline-001/check.log",
+      "bytes": 199,
+      "sha256": "ef445b10cde3731a5b5215225895261bdd996b37947569fb0ee27d3c05ba158f"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/node-baseline-001/check.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/node-baseline-001/exit.json",
+      "bytes": 155,
+      "sha256": "c19405de77922809f194c19f6d2cfd8cf2219dc75cae026e3b3dd99010c987c5"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/node-baseline-001/test.log",
+      "bytes": 3348,
+      "sha256": "88b3cf5dffd11cbcd8a89ca64418f06288f3d1413c9f80a1c5dcaeba1a5c8f00"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/node-baseline-001/test.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/archive-members.json",
+      "bytes": 75918,
+      "sha256": "551e8922cf62ce0670e70e63779076947306890ec0d68cdff2975ea665234e9e"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/native.command.txt",
+      "bytes": 107,
+      "sha256": "4c6cb310e284f2b94343f6ff6c56dc9a56e586444f920ad7aba4b3ea8d3dd7de"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/native.exit.json",
+      "bytes": 185,
+      "sha256": "da06ba9c2e4211fda667e443b69fa8a0e8d3a99b4e14ec0c62cae0c6db17ea8a"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/native.stdout.log",
+      "bytes": 293,
+      "sha256": "20d2795eb3149c6d953339b3d9f3d2eac02c071cb4b1870588a2802c07301764"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/planned-point-fixtures.json",
+      "bytes": 19080,
+      "sha256": "9540d9037715ae40be7fe262d0ad68bfe71637060d8e4874e6776da7de6ecb34"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/result.json",
+      "bytes": 16251,
+      "sha256": "552f9523b24f0093cade25c1f49c102981c17d2bdde1df337d3190a2c09278a4"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/source-and-private-cache.zip",
+      "bytes": 1965689,
+      "sha256": "2c1c85301d451128191071db4c20064318e7007031648e4f402864b84e41f610"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/source-manifest.json",
+      "bytes": 61333,
+      "sha256": "c514cce7452c9f23b589c3230590342fdf2b1ce2b0a5a571c6e520eeedad6e5b"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/source-proof-after.json",
+      "bytes": 39042,
+      "sha256": "eda33f81aa95b342f4e1ded77744adee4990278f8055c2208a6031ca36746081"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/source-proof-before.json",
+      "bytes": 39042,
+      "sha256": "eda33f81aa95b342f4e1ded77744adee4990278f8055c2208a6031ca36746081"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/source-provenance-before.json",
+      "bytes": 368065,
+      "sha256": "cfa0a3200bc42dffd466ecbb8c6a893c5dd8e5d5e785e25bf85129870eb8a8d0"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/source-provenance.json",
+      "bytes": 368065,
+      "sha256": "cfa0a3200bc42dffd466ecbb8c6a893c5dd8e5d5e785e25bf85129870eb8a8d0"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/SYNTHETIC-owned-replay-input.json",
+      "bytes": 1754,
+      "sha256": "cad899c18a56ea6da86dc1fc7a7e2d2e5ce79210771d250afdcd545c5339e06d"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/point-001/verification.json",
+      "bytes": 532189,
+      "sha256": "88c15381dcfd41b970e2be10ba78be9ed775628afd95e23c569c66e06c715284"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/summary.json",
+      "bytes": 5627,
+      "sha256": "aaf7191f862137e42445146fa932e6e21f8d129eef8f4c10a4866412fd8ba1b4"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/archive-members.json",
+      "bytes": 102770,
+      "sha256": "073b4db7d7b8715360936e4fc95e2943c4e439fdfe48caef892ee5c5285a5c71"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/native.command.txt",
+      "bytes": 122,
+      "sha256": "ed1822d2a562a040db4008bfa572d3f8f56339041f544d2f449858b09c1ff1d5"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/native.exit.json",
+      "bytes": 185,
+      "sha256": "d1080feafcbbadfdbedc26c2e5c7d73ab76c67009a29605fa039969a2e164b78"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/native.stdout.log",
+      "bytes": 284,
+      "sha256": "71a8fa8fd184d065a9e7915914e89b4fc718958f73bdbafeb9f59493a5f6c695"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/result.json",
+      "bytes": 4360,
+      "sha256": "41739b7cec9f5ff872225a7dfa5fc101f9d69e2d8bc240f6bb3d70ab9e2e7f38"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/source-and-private-cache.zip",
+      "bytes": 2884046,
+      "sha256": "c639b5d87d09cade2c92a9dc64934583a50fbc6b4b5988b950c4b79d07c47922"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/source-manifest.json",
+      "bytes": 61355,
+      "sha256": "e6aa9b79b0adcbbfe6b56bf3ac6de6c53490a3cf754bad7b05de23c30f90095f"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/source-proof-after.json",
+      "bytes": 39036,
+      "sha256": "52093e76e5cdfbbbd8b247cc95114ecccb717215620c00524bd07e1ba2587d65"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/source-proof-before.json",
+      "bytes": 39036,
+      "sha256": "52093e76e5cdfbbbd8b247cc95114ecccb717215620c00524bd07e1ba2587d65"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/source-provenance-before.json",
+      "bytes": 668573,
+      "sha256": "a417a6fa0c9a44fca28c3848d9223fd14343adecdb29781e7193af8ca2cf77a0"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/source-provenance.json",
+      "bytes": 668573,
+      "sha256": "a417a6fa0c9a44fca28c3848d9223fd14343adecdb29781e7193af8ca2cf77a0"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/transfer-001/verification.json",
+      "bytes": 816364,
+      "sha256": "94da90290235ff385836ab588a77e34a086c81d219c8cc794d3b7f0589e0ce15"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/.gitattributes",
+      "bytes": 10,
+      "sha256": "4ce4b6e6b8435f8c3a8387387732964a2ebf0183e8d77b8247ae8061b033e462"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/actual-initial-geometry.png",
+      "bytes": 281137,
+      "sha256": "1964ad3a5210f378fd9e4801138a4126e1ae901828a7a112fff13df376a39d19"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/analysis-attempts.zip",
+      "bytes": 622665,
+      "sha256": "0b162108674749148bd54224f48a4d8f749a623de9aed383b1ea31f57396e5a0"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/archive-members.json",
+      "bytes": 107772,
+      "sha256": "06c47a8171060bf884731d07008e5067f16cf9bf43f85f7f96955be3eb7d07f2"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/closure.json",
+      "bytes": 1183,
+      "sha256": "8119b77a98e9b6eb4b93d8457b29e19d36a28f293c9802d676c1c48c4a311fab"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/collector.py",
+      "bytes": 5132,
+      "sha256": "4b97470f362926d05b8babe0d4c322b5520b263c6d9954b461b794cad4df5406"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/evidence-manifest.json",
+      "bytes": 1871,
+      "sha256": "74250b63618e92861d004f3c47a7de7c82f003287769e258856ae731c9598094"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/native-output-and-invocation.zip",
+      "bytes": 1027455,
+      "sha256": "06b31ffa9475960b52e1b9d67d0c62dcb78af196467759d0dfa6d75d0e9c08f3"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/native-source-and-cache.zip",
+      "bytes": 2950499,
+      "sha256": "f7283683a1fb847e72d2ce501178e49d9c9e5ff54ffdd9ba37abfd436026e667"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/result.json",
+      "bytes": 6495297,
+      "sha256": "afb74371daa3536b8a0d3d56ac2f95375831a46692c66c8b4a0fdd31ee2739ee"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/saved-pipeline-review.json",
+      "bytes": 4466,
+      "sha256": "46a32ec7b7bd25697db65d6d421a0c118293d365464bb13738b662006a2fb484"
+    },
+    {
+      "path": "docs/evidence/urmi-mc-damage40-2026-10-27/pipeline-and-review-controls/source-provenance.json",
+      "bytes": 679779,
+      "sha256": "e40ae69f3afe131f3eac4e478d6c823de4de433b48f24a0c6f9762de3619a103"
+    }
+  ],
+  "scope": "Exact staged blob and archive verification; no solver/test/render"
+}

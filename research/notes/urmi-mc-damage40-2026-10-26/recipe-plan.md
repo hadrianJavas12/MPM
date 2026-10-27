@@ -18,8 +18,11 @@ the gravity ramp, then >=1s and >=100updates undamped with EVERY check passing.
 Preparation cap60000updates AND20native seconds; dynamic target60s/301frames,
 max200000updates. No velocities/stress/history/nativeclock reset. Failure
 preserves the result and stops without strength/geometry/tolerance tuning.
-Current recipe/pipeline/full slope still NOT_RUN; this paragraph supersedes
-the earlier numerical proposal below rather than rewriting past evidence.
+FIRST pipeline96f0c7d6 now passes4USF/6714MP/3VTK/20142rows and saved audit;
+full slope NOT_RUN. Its two benign undrained steps take1.746216s with stable
+dt.000623792672s. Before full launch revise wallcap12h→48h (~23.3h dynamic
+extrapolation alone, not ETA); physics/update caps unchanged. This paragraph
+supersedes the earlier numerical proposal below rather than rewriting evidence.
 
 27 October 2026. Branch `codex/urmi-mc-damage-slope40`; plan only. No new
 scenario/runner, transfer implementation, test or solver execution is implied.

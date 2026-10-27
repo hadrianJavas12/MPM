@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "actualFrames": 3,
+  "particleRows": 20142,
+  "particleCount": 6714,
+  "sourceProof": {
+    "status": "PASS",
+    "frozenSourcesVerified": 302,
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/pipeline-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "sourceManifest": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\pipeline-001\\source\\source-manifest.json",
+      "bytes": 63016,
+      "sha256": "a68a0cde0a51756987f112f3e2da617fd2211a8a029be2fc7d6b5b5bdeb15ee0"
+    },
+    "provenance": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\pipeline-001\\source-provenance.json",
+      "bytes": 679779,
+      "sha256": "e40ae69f3afe131f3eac4e478d6c823de4de433b48f24a0c6f9762de3619a103"
+    },
+    "lawSource": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\pipeline-001\\source\\materials\\models\\plastic\\urmi-strength-damage\\law.lisp",
+      "bytes": 11704,
+      "sha256": "9781414be59704d5a75d8e269c2147890a9ce1864ba6b42e4bb46a7a2aab9b33"
+    },
+    "projectionSource": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\pipeline-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+      "bytes": 23352,
+      "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1"
+    },
+    "constants": {
+      "stress-atol": 1e-06,
+      "stress-rtol": 1e-11,
+      "kappa-tol": 1e-13
+    }
+  },
+  "tableBoundPa": 81.90069727192657,
+  "states": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "nativeTimeS": 0.0,
+      "phaseCode": 0,
+      "particleCount": 6714,
+      "massKgPerM": 727427.3069804675,
+      "minJ": 1.0,
+      "maximumYieldResidualPa": -6369.490999829183,
+      "maximumNativeTolerancePa": 1.00001e-06,
+      "maximumStrengthDamage": 0.0,
+      "maximumKappa": 0.0,
+      "minimumCohesionPa": 3700.0,
+      "kineticJPerM": 0.0,
+      "minimumDomainMarginM": 0.0,
+      "touchingDomainMassFraction": 0.046172177539469755,
+      "plasticWorkCurrentVolumeProxyJPerM": 0.0,
+      "vtk": {
+        "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\pipeline-001\\particles_0000.vtk",
+        "bytes": 2526848,
+        "sha256": "ce421d70575b4d7b5f9a8e988da16abb1f04a3b0c0997304119eb85bd90b8665"
+      }
+    },
+    {
+      "frame": 1,
+      "timeS": 0.0,
+      "nativeTimeS": 0.0020842685062631506,
+      "phaseCode": 1,
+      "particleCount": 6714,
+      "massKgPerM": 727427.3069804675,
+      "minJ": 0.9999999999859078,
+      "maximumYieldResidualPa": -6369.490999829183,
+      "maximumNativeTolerancePa": 1.00001e-06,
+      "maximumStrengthDamage": 0.0,
+      "maximumKappa": 0.0,
+      "minimumCohesionPa": 3700.0,
+      "kineticJPerM": 5.824278016094121e-10,
+      "minimumDomainMarginM": -1.066717547626439e-11,
+      "touchingDomainMassFraction": 0.046172177539469755,
+      "plasticWorkCurrentVolumeProxyJPerM": 0.0,
+      "vtk": {
+        "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\pipeline-001\\particles_0001.vtk",
+        "bytes": 2526848,
+        "sha256": "e738d0de50590fe58ff06d48ed26a342284390f23a5e000ef1a08166874b3e28"
+      }
+    },
+    {
+      "frame": 2,
+      "timeS": 0.0012475853443662493,
+      "nativeTimeS": 0.0033318538506294,
+      "phaseCode": 3,
+      "particleCount": 6714,
+      "massKgPerM": 727427.3069804675,
+      "minJ": 0.9999937989896078,
+      "maximumYieldResidualPa": -80949.26937824834,
+      "maximumNativeTolerancePa": 1.0027625546663389e-06,
+      "maximumStrengthDamage": 0.0,
+      "maximumKappa": 0.0,
+      "minimumCohesionPa": 40500.0,
+      "kineticJPerM": 51.65956753681367,
+      "minimumDomainMarginM": -1.8841190950885656e-06,
+      "touchingDomainMassFraction": 0.046172177539469755,
+      "plasticWorkCurrentVolumeProxyJPerM": 0.0,
+      "vtk": {
+        "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\pipeline-001\\particles_0002.vtk",
+        "bytes": 2526848,
+        "sha256": "d78ab752921ab66dd2f13060ef3c1f9e45ce53d60fb8f2e2bf3e3a3bcd7ce955"
+      }
+    }
+  ],
+  "scientificValidation": false,
+  "scope": "Bounded saved output only; no actual equilibrium, full orchestration, damage onset or slope validation"
+}

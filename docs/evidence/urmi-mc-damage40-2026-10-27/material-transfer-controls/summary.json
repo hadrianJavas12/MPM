@@ -1,0 +1,129 @@
+{
+  "scope": "Closure only of actual FIRST point-001, transfer-001 and Node baseline; no solver/tests rerun",
+  "gates": [
+    {
+      "gate": "point-001",
+      "sourceCommit": "961c17a8992b056c30409f4b670c60d802e51b61",
+      "exit": {
+        "finishedUtc": "2026-10-26T22:29:13.2447635Z",
+        "sourceCommit": "961c17a8992b056c30409f4b670c60d802e51b61",
+        "startedUtc": "2026-10-26T22:28:32.9843558Z",
+        "exitCode": 0
+      },
+      "result": {
+        "passed": true,
+        "passedGroups": [
+          "fixed-units-continuous-endpoints-owned-zero-peak",
+          "deterministic-table-error-budget-and-ownership",
+          "pure-face-two-edges-six-permutations-four-current-J",
+          "native-history-origin-strength-damage-read-only-and-rollback",
+          "large-J-outcomes-and-owned-synthetic-principal-replay"
+        ],
+        "failures": [],
+        "purePrincipalCallsAttempted": 84,
+        "nativeConstitutiveCallsAttempted": 3,
+        "nativeConstitutiveCallsAccepted": 2,
+        "ownedReplayAttempts": 3,
+        "syntheticValidOwnedReplayProjectorCalls": 1,
+        "nativeProjectorCalls": 2,
+        "physicalUpdateAttempts": 0,
+        "oldControlsCalled": 0,
+        "nativeBackend": {
+          "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/point-001/source/libs/kirchoff.dll",
+          "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+          "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+          "nativeMcEntryPresent": true
+        },
+        "scope": "New optional uncalibrated Urmi-inspired S1 MC strength-damage point controls; zero MPM, no drained transfer/full slope/fracture/scientific validation; current-J outcomes are not global root uniqueness"
+      },
+      "sourcePayloads": 294,
+      "archive": {
+        "path": "point-001/source-and-private-cache.zip",
+        "sha256": "2c1c85301d451128191071db4c20064318e7007031648e4f402864b84e41f610",
+        "members": 352,
+        "privateCacheFiles": 57,
+        "rawBytes": 7638340
+      },
+      "openblasThreads": "1",
+      "ompThreads": "1",
+      "compilerPolicy": "(OPTIMIZE (SPEED 3) (SAFETY 1) (DEBUG 1) (COMPILATION-SPEED 0))",
+      "storedGitVersionFile": "INVALID COMMIT DATA, SETUP HOOKS\r\n",
+      "gitAttributionCounts": {
+        "exact-raw-bytes": 54,
+        "line-endings-only": 240,
+        "different": 0,
+        "not-in-attributed-commit": 0
+      }
+    },
+    {
+      "gate": "transfer-001",
+      "sourceCommit": "946dbce7d572a8cf9d610a32d6e02cc633c7612c",
+      "exit": {
+        "finishedUtc": "2026-10-26T22:32:13.9645313Z",
+        "exitCode": 0,
+        "startedUtc": "2026-10-26T22:31:28.1172263Z",
+        "sourceCommit": "946dbce7d572a8cf9d610a32d6e02cc633c7612c"
+      },
+      "result": {
+        "passed": true,
+        "passedGroups": [
+          "elastic-full-compliance-current-J-origin-and-atomic-vector-commit",
+          "instantaneous-native-plastic-release-law-damage-and-energy-accounting",
+          "late-candidate-failure-preserves-all-originals-and-simulation",
+          "new-caches-committed-reset-baseline-and-stale-batch-rejection"
+        ],
+        "failures": [],
+        "nativeMaterialAttempts": 6,
+        "nativeMaterialAccepted": 6,
+        "mpmUpdatesAttempted": 0,
+        "physicalTimeAdvancedS": 0.0,
+        "nativeBackend": {
+          "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/transfer-001/source/libs/kirchoff.dll",
+          "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+          "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+          "nativeMcEntryPresent": true
+        },
+        "scope": "FIRST synthetic point/cohort transfer only; real dt0 material returns, no equilibrium/MPM/full slope/scientific validation"
+      },
+      "sourcePayloads": 294,
+      "archive": {
+        "path": "transfer-001/source-and-private-cache.zip",
+        "sha256": "c639b5d87d09cade2c92a9dc64934583a50fbc6b4b5988b950c4b79d07c47922",
+        "members": 471,
+        "privateCacheFiles": 176,
+        "rawBytes": 9741593
+      },
+      "openblasThreads": "1",
+      "ompThreads": "1",
+      "compilerPolicy": "(OPTIMIZE (SPEED 3) (SAFETY 1) (DEBUG 1) (COMPILATION-SPEED 0))",
+      "storedGitVersionFile": "INVALID COMMIT DATA, SETUP HOOKS\r\n",
+      "gitAttributionCounts": {
+        "exact-raw-bytes": 53,
+        "line-endings-only": 241,
+        "different": 0,
+        "not-in-attributed-commit": 0
+      }
+    }
+  ],
+  "nodeBaseline": {
+    "exit": {
+      "checkExit": 0,
+      "sourceCommit": "961c17a8992b056c30409f4b670c60d802e51b61",
+      "finishedUtc": "2026-10-26T22:28:41.2825444Z",
+      "testExit": 0
+    },
+    "tests": 36,
+    "passed": 36,
+    "failed": 0,
+    "actualSbclContractGroupsInNodeLog": 3,
+    "commandEvidence": "npm check/test script commands are printed in saved stdout; no separate original invocation record",
+    "provenanceLimits": "No saved Node version or pre-run Node source/runtime snapshot. Source commit attribution is the original exit.json; no stronger source-freeze claim."
+  },
+  "limits": [
+    "Point and transfer gates execute zero MPM updates; no equilibrium/full slope/scientific validation.",
+    "Private first-party FASLs are archived; third-party dependencies remain external and have recorded current hash checks.",
+    "Stored native Git version text is invalid; loaded source identity is the frozen SHA256 manifest and launch commit attribution.",
+    "SYNTHETIC replay is not an actual failure replay; large-J returns do not prove global uniqueness."
+  ],
+  "originalOutputUntouched": true
+}

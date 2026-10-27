@@ -69,7 +69,7 @@ or new hydrostatic apex mode is authorized.
    the new undrained degradation mechanism. Transfer needs its own frozen
    native ownership/rollback/current-J controls before a slope launch.
 5. Bounded native/CSV/VTK smoke, then one fresh initial-state full run targeting
-  60s dynamic time after preparation, mass1, dtScale.2,12h wall budget (not ETA).
+  60s dynamic time after preparation, mass1, dtScale.2,48h wall budget (not ETA).
    Freeze case, protocol, postprocessors, source/DLL before launch. Runout,
    positiveJ/mass/finite fields/strength-D identity/coherent motion need actual
    review. Show actual D_s with a fixed0–1 scale and actual metre coordinates.
@@ -86,7 +86,28 @@ batch rejection. New particles are prepared off-simulation and committed with
 one order-preserving vector swap; original objects survive any failure.
 The material switch and genuine native zero-time return have separate energy
 proxies; this is not a closed energy balance. Nodecheck/36tests also pass.
-Owned recipe/smoke/full60s remain NOT_RUN. No full solver active. Do not claim
-that preceding Joss native controls test this MC model.
+Owned FIRST pipeline96f0c7d6 passes4groups/4USF:6714MPs including3840same
+active soilfoundation,13428drained+6714dt0transfer+13428undrained accepted
+material calls,3VTK/20142CSVrows. Independent saved-data002audit PASS verifies
+302frozen sources/mappedDLL and all actualCSV/VTK/F9/J/V0/law/phase identities.
+Root inspects actual initial scale1geometry:40deg/no notch/fullsoilfoundation.
+This tiny benign gate does not test full preparation convergence or damage
+onset. All original raw/source bytes preserved. Material/transfer packet has
+40indexed files/823ZIPmembers; pipeline/review packet11indexed/538members.
+
+FIRST Python helper9tests has8PASS plus one incorrect fixture failure: an
+early bad convergence check may legitimately recover. The fixture now changes
+the LAST damped check; selective one-test repair PASS. Production observer
+unchanged. FIRST saved-pipeline audit harness assumed a separate phase2 frame
+which the tiny gate does not save; KeyError retained. Corrected harness binds
+actual native origin ledger, and saved-only002audit PASS. No native rerun or
+threshold change. Full60s remains NOT_RUN; no full solver active yet.
+
+Runtime proposal revised BEFORE launch: actual two benign undrained USF steps
+take1.746216s at stable dt0.000623792672s. Extrapolating that cost to60s gives
+about23.3h for dynamics alone; nonlinear flow may be slower. Use48h wallcap
+instead of initial12h, with all physical inputs/update caps unchanged. This
+is a bound, not a completion promise. Do not claim preceding Joss controls
+test this MC model.
 Do not repeat completed oldMC/Joss gates, solver/replay/research/rendering.
 No automatic geometry/strength/beta/psi/tolerance changes to force collapse.

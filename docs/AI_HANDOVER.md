@@ -7,10 +7,13 @@ run/token economy;27October sayscontinue. Work branch
 `codex/urmi-mc-damage-slope40` fromc2cd4069. Read
 [current scope](benchmarks/URMI_MC_DAMAGE40.md) and
 research/notes/urmi-mc-damage40-2026-10-26/constitutive-plan.md.
-No full solver active. Optional material and atomic transfer FIRST native
-controls are now PASS (sources961c17a8/946dbce7); owned MPM recipe/output
-controls and60s slope remain NOT_RUN. Old complete result below stays closed
-and is not this experiment.
+No full solver active yet. FIRST material/transfer gates PASS (961c17a8/
+946dbce7); FIRST owned MPM pipeline96f0c7d6 nowPASS4groups/4USF updates,
+6714MPs (3840active soilfoundation),13428drained+6714dt0transfer+13428
+undrained accepted material calls,3VTK/20142CSVrows. FIRST saved-output
+audit002PASS/source302/DLLverified; initial scale1native geometry inspected.
+It is a bounded benign output gate, not equilibrium/plastic slope validation.
+New60s full slope NOT_RUN; old complete result below stays closed.
 
 Joss was only a provisional assumption. Human explicitly rejects that material;
 prototype branchcodex/slope40-damage retained/pushedb36e79f1. Its3tiny native
@@ -30,9 +33,18 @@ FIRST transfer4groups PASS:6nativeattempts/6accepted,0MPM. Owned clone-all
 then atomic vectorswap preserves original particles until every candidate
 passes. Compliance changes and genuine dt0 material release are separately
 logged; nativeclock/kappa/F are not reset. Nodecheck+36tests PASS.
-Raw point-001/transfer-001 underoutput/urmi-mc-damage40-2026-10-27; evidence
-closure inprogress. Do not repeat them. BoundedMPM/CSV/VTK and measured
-drained equilibrium still required before60s. No full solver active.
+Raw point-001/transfer-001 underoutput/urmi-mc-damage40-2026-10-27. Evidence
+material-transfer-controls CLOSED40indexed/2ZIP823members/294sources each.
+Pipeline-and-review-controls CLOSED11indexed/3ZIP538members/source302.
+No native reruns. FIRST Python9helpers:8PASS and1incorrectfixtureFAIL;
+selective fixture repair1PASS, production observer unchanged. FIRST pipeline
+saved audit harness missingoriginFAIL retained, saved-only corrected002PASS.
+Never use tiny gate as drained equilibrium. Measured prep is next: RF<1e-4/
+RK<1e-8 >=50checksAND1s, then >=100updatesAND1s undamped, caps20s/60000.
+Target60dynamicseconds/301states, nativeclockcontinuous. Actual tinyelastic
+timing .873s/update and dt.000623793 imply~23.3h dynamic at that benign rate,
+not ETA; plastic cost/deformation may differ. Prelaunch wallcap48h replaces
+initial12h proposal without changing physics/update caps. No full solver yet.
 No clamps/rootpreference/tolerance/strength tuning; no old native/test repeats.
 
 26October human mesh/crack follow-up: descriptive saved-data query only finds

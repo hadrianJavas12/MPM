@@ -1081,3 +1081,7 @@ no old native/tests/render/research repeats. See docs/benchmarks/URMI_MC_DAMAGE4
 ## [2026-10-27] ingest | First MC strength damage and atomic transfer native controls
 
 FIRST material5groups/84pure/3nativeattempts2accepted and transfer4groups/6nativeaccepted PASS,0MPM. Exact native results/source/runtime retained; source961c17a8 and946dbce7. Actual26segment law within101.25Pa chord budget. New clone-all atomic transfer preserves original simulation on late failure; compliance change and native dt0 release are explicit events. Node36pass. Recipe/full60s pending; no old solver/gate/render repeated. [[urmi-mc-strength-damage40]], [[unnotched-mc-gravity]].
+
+## [2026-10-27] ingest | First full geometry bounded pipeline and saved output controls
+
+Pipeline96f0c7d6 native0/4groups/4USF/6714MP/3840activefoundation/3VTK/20142rows. Saved002audit0/source302/DLL/FJ/V0/material identities PASS; root actualscale1geometry inspected. Incorrect earlybadfixture and missingreleaseorigin audit harness failures preserved; selective helper repair and saved-data-only correction PASS, no native rerun. Beforefullrun revise wallcap12h to48h from actual.873s/step anddt.000623793, not ETA or physics tuning. Full60s NOT_RUN. [[urmi-mc-strength-damage40]].

@@ -93,8 +93,12 @@ class UrmiSavedReviewControls(unittest.TestCase):
                 for index in range(200):
                     writer.writerow([index + 1, 2 + index * 0.02, 1, 1e-6, 1e-12, 1, 0, 1, 0, 50, index, 0 if index >= 100 else 1])
             self.assertEqual(review.preparation_check(path, CONTRACT, True)["status"], "PASS")
-            text = path.read_text().replace("1,1e-06,1e-12,1", "0,0,0,0", 1)
-            path.write_text(text)
+            # An early failed check may legitimately recover. Invalidate the
+            # LAST damped check so no qualifying window precedes the hold.
+            rows = list(csv.reader(path.read_text().splitlines()))
+            rows[100][2:6] = ["0", "0", "0", "0"]
+            with path.open("w", newline="") as stream:
+                csv.writer(stream).writerows(rows)
             with self.assertRaises(ValueError):
                 review.preparation_check(path, CONTRACT, True)
 

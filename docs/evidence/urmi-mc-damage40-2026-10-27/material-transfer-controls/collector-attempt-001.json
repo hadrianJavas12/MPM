@@ -1,0 +1,11 @@
+{
+  "scope": "First read/copy/hash collector invocation; no native/test rerun",
+  "command": "C:/Users/ASUS/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe docs/evidence/urmi-mc-damage40-2026-10-27/material-transfer-controls/collect.py",
+  "exitCode": 1,
+  "capturedToolResult": "TypeError: '<' not supported between instances of 'str' and 'NoneType' at verify_loaded_paths, sorted(inputs.items()).",
+  "cause": "Collector mixed planned ASDF load inputs with null hashes and actual performing load inputs. The original provenance records distinguish those events.",
+  "repair": "Only performing load-op input hashes are runtime-load verification inputs. Planned null-hash inputs are retained as explicitly unverified plan metadata.",
+  "beforeArtifactCopies": true,
+  "nativeOrNodeTestsRepeated": false,
+  "originalOutputChanged": false
+}

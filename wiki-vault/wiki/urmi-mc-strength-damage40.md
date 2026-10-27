@@ -28,7 +28,14 @@ owned clones, preserves globalF/history/nativeclock and swaps only after all
 candidates pass. New compliance and native dt0 material release are explicit
 distinct events; energy proxies are not an energy balance. Nodecheck/36pass.
 
-Recipe/CSV/VTK pipeline and full60s slope remain NOT_RUN. Stable drained
+FIRST recipe96f0c7d6 pipeline PASS4groups/4USF/6714MP(3840soilfoundation),
+13428drained+6714instantaneous transfer+13428undrained accepted calls,
+3VTK/20142CSVrows. Independent saved002audit/source302/DLLPASS, root actual
+scale1geometry inspected. Python8unchangedhelpers+1selectivefixture repair
+PASS; initial incorrectfixture and initial missingorigin audit harness failure
+retained. No solver repeat. Full60s slope remains NOT_RUN. Actual benign timing
+suggests~23.3h dynamics, not ETA; prelaunch wallcap48h instead of initial12h.
+Stable drained
 ELASTOPLASTIC gravity initialization needs measured free-force/free-KE
 convergence and undamped persistence. No elastic-only initialization/reset,
 notch, driver, root preference, clamp or postfailure parameter tuning.
