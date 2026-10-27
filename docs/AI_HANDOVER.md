@@ -29,7 +29,10 @@ no native/test/oldreview rerun. Root inspected actualRF/RK diagnosticPNG.
 Terminalpacket docs/evidence/urmi-proper-2026-10-28/main-001-terminal archives
 all actualsource/cache/runtime/raw/adjacent/detached/preparation/originalfailed
 review and newdiagnosis ONCE. Prelaunchpacket remains closed, not repackaged.
-Stop/delete finite monitor after this failure notification/closure. No solver
+Finite monitor lanjutkan-branch-mpm-studio DELETED after this terminalclosure.
+Root8Gitblobs exactly equal indexed originals (7SHA256records+manifest);
+549ZIPmembers decoded. EvidenceCRLF preserved; whitespacecheck configured
+cr-at-eol for this immutable packet only. No solver
 active and no automatic mesh/strength/psi/tolerance/time escalation. Mainmerge/
 UI/raw/private/settings untouched. Sourcecommit stillc805; newerHEAD is docs/
 saveddiagnosis only. User must not keep waiting for24h or expect dynamicvideos.
