@@ -1109,3 +1109,7 @@ DeliveredactualslowMP4from5savedstates0–2s/5splayback, nointerpolation. Rapidp
 ## [2026-10-27] ingest | Remaining diagnostic archive closure
 
 BC/static packet30indexed+manifest/3ZIP991members/root31Gitblobs, native305source/183FASLeach, old001readernegative/0024groups0MPM retained. Static3978alreadycomputedcandidates/3frozensources retained, negativeNormals/nonphysicalglobalFoS limits explicit. Allthreefinalpackets96Gitblobsverified;no newsolver/analysis/render. [[urmi-mc-strength-damage40]].
+
+## [2026-10-27] ingest | Approved left12m and base8m geometry preview
+
+Humanapproved12mLEFT andfoundation4→8m, previewFIRST. Rootgenerated/inspectedgeometry+particlePNGs; independentarithmetic/sourcecheckagrees40deg/H10/face-toe-rightunchanged,width72/base8/positiveproposalcrest24/domain72x24. Sameh2/PPC1layout105→219(all105oldworldpointspreserved,114added). No native/material/MPM/executablecasechange/monitor. Coloursmarkaddedsoil,notdamage/materialchange;no previousfailurefixclaim. [[urmi-mc-strength-damage40]].

@@ -8,6 +8,16 @@ updated: 2026-10-27
 
 # Urmi inspired MC strength damage at40degrees
 
+## Geometry preview after the rapid demo
+
+Human approves12m extensionLEFT and base4→8m, previewFIRST. Original40deg/H10
+face/toe/rightedge remain fixed. Worldextent−12..60/bottom−8m; proposed
+positivegeometry crestLength24/base8/domain72x24. Existingh2/PPC1 sampling
+105→219points with allold105retained. Formula/source arithmetic independent
+check and bothPNGs inspected. See docs/benchmarks/previews/urmi-left12-base8/.
+No solver/material/nativeupdate or executablecasechange; colours show added
+geometry only. This does not claim to repair the earlier distortion failure.
+
 ## Actual rough result27October15:58WIB
 
 Actual video delivered; no solver active and obsolete monitor deleted. The

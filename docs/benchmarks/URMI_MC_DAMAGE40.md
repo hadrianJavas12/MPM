@@ -1,5 +1,17 @@
 # Urmi-inspired MC strength damage, 40-degree slope
 
+## Approved geometry preview:12m left extension,8m foundation
+
+Human requests preview before another run and approves12m extra left plus
+base4→8m. Preview in previews/urmi-left12-base8/ keeps40deg/H10 and original
+physical face/toe/rightedge. Totalwidth72m; positivecoordinate proposal would
+crestLength24/base8/domain72x24. Sameh2/PPC1 initialsampling105→219points;
+alloldpoints preserved and114added. Shape/lattice formulas and independent
+arithmetic checked, both actualPNGs visually inspected. This is a geometry
+proposal only: no MPM/material/nativecall, no runtimecase change or newsolver.
+The colours mark addedsoil, not damage or a material change. Geometry alone
+does not establish that the prior domain-deformation failure is repaired.
+
 ## Rapid result27October15:58WIB
 
 Video now delivered from archived genuine MP4; obsolete monitor deleted,

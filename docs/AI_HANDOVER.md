@@ -1,5 +1,29 @@
 # AI Engineering Handover — CL-MPM
 
+## PREVIEW ONLY — approved left extension12m and foundation8m
+
+Latest human asks extend model LEFT and thicken the soil foundation, check
+preview FIRST. Async answer explicitly approves +12m left and total8m base
+(was4m). Geometry preview generated and root visually inspected both PNGs:
+docs/benchmarks/previews/urmi-left12-base8/geometry-preview.png and
+particle-preview.png. No native/material/MPM call, actualcase untouched.
+Slope40deg and relief10m, physical crest/toe and rightedge stay fixed. World
+reference left0→−12m, bottom−4→−8m, right60m; totalwidth72m. Positive-engine
+proposal would be crestLength24/base8/domain72x24 (same6mheadroom).
+Analyticarea419.5876796→875.5876796m2; sameh2/PPC1 layout105→219MP, including
+114newpoints, all105oldworldpoints preserved. Independent source/arithmetic
+review agrees; this is geometry/sampling only, not an engine-tested case or
+a repair for the previous large-deformation failure. Colours mark added
+geometry, NOT different material/damage. Immutable raw/settings preserved.
+
+Input proposal research/notes/urmi-mc-damage40-2026-10-26/geometry-preview-
+extended-left-base8.json; script scripts/preview-urmi-extended-geometry.py;
+computedsummary besidePNGs. Proposal deliberately NOTEXECUTABLE: existing
+rapidcompiler requires oldgeometry. Future requested run needs coherent case/
+geometry/metadata/cohort changes, not substituting this JSON. For unchanged
+oldphysicalcohort, translatedengine cutoffs would x>14/y>10. No simulation
+or monitor launched; wait for human steering after preview.
+
 ## CLOSED QUICK VISUAL DEMO — latest human followup27October
 
 The requested rough demonstration/video has been delivered. NO SOLVER ACTIVE;
