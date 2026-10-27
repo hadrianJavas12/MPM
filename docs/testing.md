@@ -1274,6 +1274,14 @@ PENDING while hold-20s-001 runs; do not call preparation checks that regression.
 
 ### Urmi-inspired MC strength damage,27October2026
 
+Latest human accuracy waiver: separate rapid-h2-002 source2d76848d is now
+running105MP/h2/PPC1/fixed3s approximate preparation then20s/41states. Actual
+native reached material transfer/dynamic phase. No claim of scientificPASS.
+FIRST6pure output-retention controls PASS,7sources/0engine/material/MPM;
+legacy abort deletion vs retained genuine bytes proved. Rapid observer AST
+only checked, actual saved audit/media NOT_RUN. Unsupported EvidenceDirectory
+launch001 failed before wrapper/native; fresh002 fixes invocation only.
+
 FIRST native point controls source961c17a8 exit0/PASS5groups,84pure projector entries,3native attempts/2accepted,0MPM. Actual26segments: certified chord bound81.900697Pa, sampled75.428741Pa, budget101.25Pa. FIRST transfer controls source946dbce7 exit0/PASS4groups,6native attempts/6accepted,0MPM; current-J compliance/owned origin/actual dt0 release/late failure/caches and native reset covered. Nodecheck and36tests exit0. Raw output/urmi-mc-damage40-2026-10-27/point-001 andtransfer-001 preserved. BoundedMPM/CSV/VTK/full60s NOT_RUN; do not repeat these passed controls. Read benchmarks/URMI_MC_DAMAGE40.md for explicit material adaptation and limits.
 
 FIRST owned pipeline96f0c7d6 exit0/PASS4groups:4USF updates/6714MP/3840activefoundation,13428drained+6714dt0transfer+13428undrained accepted calls. Independent saved002audit PASS302sources/DLL/3VTK/20142CSVrows; initial KeyError harness assumes absent release state, retained and repaired from saved data only. First Python9helpers8PASS/1incorrectfixtureFAIL; selective fixture1PASS, production observer unchanged. Both failure packets retained. No fullprep/full60s validation. Evidence under docs/evidence/urmi-mc-damage40-2026-10-27.

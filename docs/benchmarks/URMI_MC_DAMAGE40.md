@@ -1,5 +1,21 @@
 # Urmi-inspired MC strength damage, 40-degree slope
 
+## Latest human scope27October: rapid visual demo, accuracy waived
+
+Human explicitly wants to see whether sliding occurs in1–2 wall hours and
+does not require accuracy. Separate branch codex/urmi-mc-damage40-rapid/run
+rapid-h2-002 launched15:55:08WIB, native2d76848d, wallcap17:25:08WIB.
+105MP/h2/PPC1, fixed3s drained preparation WITHOUT equilibrium claim, then
+damping0/actual atomic material switch;20s dynamic target/41actual states.
+Same40deg/no-notch/soilbase/MC strength-D law/material/CFL/mass1. Mesh,
+sampling and nonequilibrium initialization are explicit approximations;
+old strict experiment remains preserved. No hidden strength change/reset.
+See rapid-demo-plan.md. User accepts visual-demo scope, not fabricated data.
+Actual native has reached undrained dynamics with105MP and initial release
+frame. New rough saved observer frozen AFTER launch/before execution; AST
+only checked, full saved workflow still pending. Do not use strict old prep
+acceptance or6714MP contract to reject this separately authorized demo.
+
 Human request26October, resumed27October2026. Branch
 `codex/urmi-mc-damage-slope40` starts from `c2cd4069`.
 The user explicitly chooses to retain soil MC, develop damage, and use a model

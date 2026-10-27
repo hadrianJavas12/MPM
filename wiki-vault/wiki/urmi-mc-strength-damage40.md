@@ -8,6 +8,18 @@ updated: 2026-10-27
 
 # Urmi inspired MC strength damage at40degrees
 
+## Latest scope: rapid rough demo,27October15:55WIB
+
+Human explicitly waives accuracy and prioritizes seeing sliding within1–2wall
+hours. New branch codex/urmi-mc-damage40-rapid runs rapid-h2-002 source2d76848d:
+105MP/h2/PPC1, same40deg/no-notch/MC-D law, fixed3s approximate preparation
+without equilibrium claim, then20dynamic seconds/41states. Wallcap17:25WIB,
+not ETA. Actual run reached undrained dynamics. Same material strengths and
+native guards; no reset/driver/weakseed. Coarse/nonequilibrium result is a
+visual demonstration, not calibrated failure prediction. New rough observer
+frozen afterlaunch/before saved execution; actual movie pending. Old full001
+failed prep20s and is preserved. Six new pure output-retention controls pass.
+
 ## First-result deadline,27October12:50WIB
 
 Human needs first result within1–2h; target actual short preview by14:36WIB,
