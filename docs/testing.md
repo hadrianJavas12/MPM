@@ -1274,6 +1274,18 @@ PENDING while hold-20s-001 runs; do not call preparation checks that regression.
 
 ### Urmi-inspired MC strength damage,27October2026
 
+Rapid002 FIRST saved partial review001 expectedexit2/savedIntegrityPASS:
+303actualfrozen sources/DLL,105MP/5dynamic states0–2s, FJ/globalV0/mass/IDs/
+law/yield. Actual PNG root-inspected, coherent downslope collapse visible.
+Five actual movieframes decode0; media-only1fps slowversion5s/decode0, no
+interpolation or new states. Native stopped at attempted2.5s on owned frame
+audit/ID55 BEFORE failedstateexport, exact failed subpredicate unavailable.
+20s not complete. One saved diagnosis verifies all priorID55guards pass and
+records missing2.5state honestly; domain-size trend is a hypothesis only.
+No new solver/test/replay for this partial demonstration. Runout metric
+confounded by originalfoundation is not used as evidence. Obsolete monitor
+deleted after actual video delivery; no solver active.
+
 Latest human accuracy waiver: separate rapid-h2-002 source2d76848d is now
 running105MP/h2/PPC1/fixed3s approximate preparation then20s/41states. Actual
 native reached material transfer/dynamic phase. No claim of scientificPASS.
@@ -1296,3 +1308,5 @@ Observed2.69x/2.21x ratios are workload timing only. Preview552246c1 FIRST3NEW
 synthetic prefix controls PASS002;001 invocation failed before Python opened
 source. Actual preflight NOT_READY/0frames/no preview directory. Full active
 prefix workflow NOT_EXECUTED; original terminal reviewer unchanged.
+
+Final retained packets: full001failure40indexed+manifest/17ZIPmembers/root41Gitblobs; rapidpartial23indexed+manifest/4ZIP594members/root24blobs; BC/static30indexed+manifest/3ZIP991members/root31blobs. BC0024groups0material/MPM/1initialP2G;001readerfailure preserved. EachBC305source/183FASLverified. Static3sources unchanged,3978alreadycomputedcandidates retained without rerun; negativeNormals preventphysicalFoS claim. No old tests/review/render/native repeated for packaging.

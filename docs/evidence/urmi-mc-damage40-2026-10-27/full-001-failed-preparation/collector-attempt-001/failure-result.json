@@ -1,0 +1,11 @@
+{
+  "exitCode": 1,
+  "failure": "AssertionError at assert len(members) == 17",
+  "location": "capture-terminal-packet.py:104",
+  "toolOutputSource": "Actual exec_command output from first saved-only packet capture",
+  "cause": "Glob full-001.* selected2 dot-named logs and omitted4 dash-named adjacent records",
+  "rawArchiveCreated": false,
+  "observerRerun": false,
+  "nativeSolverRerun": false,
+  "repair": "Select file names beginning full-001, preserve exact existing copied bytes without overwriting, then create the only raw-data archive"
+}

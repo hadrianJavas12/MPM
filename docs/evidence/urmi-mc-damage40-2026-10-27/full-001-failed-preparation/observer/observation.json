@@ -1,0 +1,187 @@
+{
+  "status": "PASS_SCOPED_INITIAL_VTK_ONLY",
+  "observedUtc": "2026-10-27T08:31:49.195559+00:00",
+  "preparedFullReviewExecuted": false,
+  "preflight": {
+    "createdUtc": "2026-10-27T08:31:14.7849471Z",
+    "status": "NOT_EXECUTED_MISSING_REQUIRED_SAVED_INPUTS",
+    "preparedFullReviewExecuted": false,
+    "missingInputs": [
+      "preparation-states.csv",
+      "preparation-material-state.csv",
+      "preparation-history.csv",
+      "history.csv",
+      "material-state.csv",
+      "transfer-ledger.json"
+    ],
+    "intendedArguments": [
+      "--run-dir",
+      "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001",
+      "--output-dir",
+      "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001-terminal-review-001",
+      "--contract",
+      "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001-launch-preparation\\protocol\\contract.json",
+      "--allow-partial",
+      "--video"
+    ],
+    "decision": "Full CSV review cannot validate absent files. A separate initial-VTK-only observer will retain this limitation; no invented CSV/dynamic state."
+  },
+  "terminal": {
+    "sourceCommit": "3acf468f2b573c77cddee1d295dcd7bc89f72625",
+    "nativeExitCode": 1,
+    "workerExitCode": 1,
+    "startedUtc": "2026-10-27T03:33:58.3667077Z",
+    "endedUtc": "2026-10-27T07:31:08.1535718Z",
+    "workerFinishedUtc": "2026-10-27T07:31:08.5856892Z",
+    "phase": "drained-ramp-and-relaxation",
+    "nativeTimeS": 20.0,
+    "updates": 19320,
+    "dynamicTimeS": 0.0,
+    "dynamicUpdates": 0,
+    "dynamicSavedFrames": 0,
+    "error": "Owned drained equilibrium update cap reached; no parameter tuning/restart applied.",
+    "lastManifestRF": 0.00013149719037753823,
+    "requiredRFStrictlyBelow": 0.0001,
+    "lastManifestRK": 9.110302500426883e-12,
+    "materialIntegrationFailure": false
+  },
+  "sources": {
+    "status": "PASS",
+    "frozenSourcesVerified": 300,
+    "nativeBackend": {
+      "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/full-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "sourceManifest": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001\\source\\source-manifest.json",
+      "bytes": 62461,
+      "sha256": "3ecc74e4394f26a31d50673f084311a883af809483b401c6d2972cd1f755fe03"
+    },
+    "provenance": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001\\source-provenance.json",
+      "bytes": 673091,
+      "sha256": "2c010a7b7666015a0eaf44e44664f3779399a08f6be46ac914161780701ef0fd"
+    },
+    "lawSource": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001\\source\\materials\\models\\plastic\\urmi-strength-damage\\law.lisp",
+      "bytes": 11704,
+      "sha256": "9781414be59704d5a75d8e269c2147890a9ce1864ba6b42e4bb46a7a2aab9b33"
+    },
+    "projectionSource": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+      "bytes": 23352,
+      "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1"
+    },
+    "constants": {
+      "stress-atol": 1e-06,
+      "stress-rtol": 1e-11,
+      "kappa-tol": 1e-13
+    }
+  },
+  "prelaunchNativePayloadsMatched": 300,
+  "prelaunchSupportCopiesVerified": 7,
+  "sourceArchiveReference": {
+    "path": "D:\\MPM\\docs\\evidence\\urmi-mc-damage40-2026-10-27\\full-001-launch\\executed-source-and-cache.zip",
+    "bytes": 2939931,
+    "sha256": "ef112b77b1edd3335772223089a1a48a937a8c655a27bf6ff85e725d058e0199"
+  },
+  "savedState": {
+    "file": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001\\vtk\\initial.vtk",
+      "bytes": 2526848,
+      "sha256": "ce421d70575b4d7b5f9a8e988da16abb1f04a3b0c0997304119eb85bd90b8665"
+    },
+    "kind": "initial only",
+    "particles": 6714,
+    "scalarFields": 44,
+    "scalarFieldNames": [
+      "acc_x",
+      "acc_y",
+      "disp_x",
+      "disp_y",
+      "eps_xx",
+      "eps_xy",
+      "eps_yy",
+      "fric-contact",
+      "fric-normal",
+      "index",
+      "mass",
+      "mc-cohesion-pa",
+      "mc-damage-active",
+      "mc-dilation-rad",
+      "mc-friction-deg",
+      "mc-friction-rad",
+      "mc-kappa",
+      "mc-kappa-max",
+      "mc-kappa-origin",
+      "mc-logical-id",
+      "mc-native-yield-tolerance-pa",
+      "mc-plastic-strain-native",
+      "mc-plastic-volume",
+      "mc-plastic-work-j-m3",
+      "mc-projection-trial-scale-pa",
+      "mc-softened-indicator",
+      "mc-strength-damage",
+      "mc-yield-residual-kirchhoff-pa",
+      "mpi-index",
+      "p-wave-modulus",
+      "sig_xx",
+      "sig_xy",
+      "sig_yy",
+      "size_x",
+      "size_xx",
+      "size_xy",
+      "size_y",
+      "size_yx",
+      "size_yy",
+      "split-depth",
+      "unique-id",
+      "vel_x",
+      "vel_y",
+      "volume"
+    ],
+    "allSavedFieldsFinite": true,
+    "positiveMassVolumeDomain": true,
+    "massKgPerM": 727427.3069804675,
+    "foundationParticles": 3840,
+    "maxStrengthDamage": 0.0,
+    "damageActive": false,
+    "maxKappa": 0.0,
+    "cohesionPa": 3700,
+    "boundsMinM": [
+      0.125,
+      0.125,
+      0.0
+    ],
+    "boundsMaxM": [
+      59.875,
+      13.875,
+      0.0
+    ]
+  },
+  "media": {
+    "png": {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001-terminal-saved-observer-001\\initial-only-scale1.png",
+      "bytes": 74391,
+      "sha256": "bc0be04fe3a27bf3e743edac00d88bca9032f49733bbf7239c09b54396f0b8c4"
+    },
+    "coordinateScale": 1,
+    "colourRange": [
+      0,
+      1
+    ],
+    "interpolation": false,
+    "video": "NOT_PRODUCED_SINGLE_INITIAL_STATE"
+  },
+  "limitations": [
+    "All preparation CSV absent; no full preparation-history audit or CSV/VTK pairing is possible.",
+    "No drained-equilibrium, transfer, or dynamic particle snapshot survived; native20s is not a saved state.",
+    "F9/J/global V=J*V0 cannot be independently audited from surviving fields without CSV; not asserted.",
+    "No time evolution, damage onset, coherent sliding, runout, or scientific validation is established."
+  ],
+  "nativeSolverRerun": false,
+  "csvReconstructed": false,
+  "landslideVerified": false
+}

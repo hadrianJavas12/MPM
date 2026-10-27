@@ -1,0 +1,122 @@
+{
+  "status": "CLOSED_TERMINAL_PREPARATION_FAILURE_WITH_SCOPED_INITIAL_OBSERVER",
+  "capturedUtc": "2026-10-27T08:37:45.527595+00:00",
+  "nativeTerminal": {
+    "sourceCommit": "3acf468f2b573c77cddee1d295dcd7bc89f72625",
+    "nativeExitCode": 1,
+    "workerExitCode": 1,
+    "startedUtc": "2026-10-27T03:33:58.3667077Z",
+    "endedUtc": "2026-10-27T07:31:08.1535718Z",
+    "workerFinishedUtc": "2026-10-27T07:31:08.5856892Z",
+    "phase": "drained-ramp-and-relaxation",
+    "nativeTimeS": 20.0,
+    "updates": 19320,
+    "dynamicTimeS": 0.0,
+    "dynamicUpdates": 0,
+    "dynamicSavedFrames": 0,
+    "error": "Owned drained equilibrium update cap reached; no parameter tuning/restart applied.",
+    "lastManifestRF": 0.00013149719037753823,
+    "requiredRFStrictlyBelow": 0.0001,
+    "lastManifestRK": 9.110302500426883e-12,
+    "materialIntegrationFailure": false
+  },
+  "nativeStatus": "FAILED_NATIVE",
+  "workerStatus": "WORKER_EXITED",
+  "preparationFailureIsMaterialIntegrationFailure": false,
+  "remainingRawArchive": {
+    "path": "D:\\MPM\\docs\\evidence\\urmi-mc-damage40-2026-10-27\\full-001-failed-preparation\\terminal-retained-data-and-records.zip",
+    "bytes": 165355,
+    "sha256": "86f0a0655fc27950cd35c755444b635b9ed291618034e8f55c28a5c6380bbb35"
+  },
+  "archiveMembers": 17,
+  "survivingRunDataFiles": 4,
+  "adjacentModernRecords": 6,
+  "detachedRecords": 7,
+  "copiedObserverAndPreparedRecords": 25,
+  "preparedFullReviewExecuted": false,
+  "initialObserver": {
+    "exitCode": 0,
+    "status": "PASS_SCOPED_INITIAL_VTK_ONLY",
+    "particles": 6714,
+    "scalarFields": 44,
+    "initialVtkStates": 1,
+    "evolvedStates": 0,
+    "dynamicSavedFrames": 0,
+    "png": "observer/initial-only-scale1.png"
+  },
+  "sparseStdout": {
+    "samples": 193,
+    "acceptedUpdatesFromTerminalManifest": 19320,
+    "lastLoggedUpdates": 19300,
+    "unprintedTailAcceptedUpdates": 20,
+    "minimumRF": {
+      "phase": "drained-ramp-and-relaxation",
+      "updates": 16500,
+      "nativeTimeS": 17.082793,
+      "RF": 0.00012652095995674303,
+      "RK": 7.200889968032164e-11
+    },
+    "maximumRF": {
+      "phase": "drained-ramp-and-relaxation",
+      "updates": 100,
+      "nativeTimeS": 0.104213,
+      "RF": 0.7824346243003402,
+      "RK": 2.8236192880461284e-09
+    },
+    "last": {
+      "phase": "drained-ramp-and-relaxation",
+      "updates": 19300,
+      "nativeTimeS": 19.980023,
+      "RF": 0.0001328287857836794,
+      "RK": 8.125602852883516e-11
+    },
+    "minimumRK": {
+      "phase": "drained-ramp-and-relaxation",
+      "updates": 16700,
+      "nativeTimeS": 17.289738,
+      "RF": 0.0001327697905048494,
+      "RK": 7.122768306482042e-11
+    },
+    "maximumRK": {
+      "phase": "drained-ramp-and-relaxation",
+      "updates": 1400,
+      "nativeTimeS": 1.457062,
+      "RF": 0.26621864099915976,
+      "RK": 5.890900137940748e-06
+    },
+    "postRampLoggedSamplesRFStrictlyBelow1e4": 0,
+    "postRampLoggedSamplesBothCriteria": 0,
+    "RFThresholdCrossingsBetweenSparseSamples": []
+  },
+  "sourceVerification": {
+    "frozenPayloads": 300,
+    "prelaunchMatched": 300,
+    "supportCopies": 7,
+    "backend": {
+      "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/full-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    }
+  },
+  "fullSourceZipReference": {
+    "path": "D:\\MPM\\docs\\evidence\\urmi-mc-damage40-2026-10-27\\full-001-launch\\executed-source-and-cache.zip",
+    "bytes": 2939931,
+    "sha256": "ef112b77b1edd3335772223089a1a48a937a8c655a27bf6ff85e725d058e0199"
+  },
+  "savedOnlyCollectorFailureRetained": "collector-attempt-001/failure-result.json",
+  "collectorRepair": "Adjacent record selection corrected after first prearchive assertion; existing copied bytes verified without overwrite. Only one raw-data archive created. Initial observer/source verification not repeated.",
+  "limitations": [
+    "All preparation CSV absent; no full preparation-history audit or CSV/VTK pairing is possible.",
+    "No drained-equilibrium, transfer, or dynamic particle snapshot survived; native20s is not a saved state.",
+    "F9/J/global V=J*V0 cannot be independently audited from surviving fields without CSV; not asserted.",
+    "No time evolution, damage onset, coherent sliding, runout, or scientific validation is established.",
+    "Unsampled updates are unavailable; crossing intervals cannot establish50consecutive updates over1s or100undamped updates over1s."
+  ],
+  "nativeSolverRerun": false,
+  "replay": false,
+  "oldPidQuery": false,
+  "csvReconstructed": false,
+  "landslideVerified": false,
+  "scientificValidation": false
+}

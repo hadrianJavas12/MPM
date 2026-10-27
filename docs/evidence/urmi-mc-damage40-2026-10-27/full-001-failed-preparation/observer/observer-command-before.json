@@ -1,0 +1,47 @@
+{
+  "createdBeforeExecutionUtc": "2026-10-27T08:31:41.1660226Z",
+  "executable": "D:\\MPM\\toolchain\\analysis-venv\\Scripts\\python.exe",
+  "arguments": [
+    "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001-terminal-saved-observer-001\\observe-initial-only.py"
+  ],
+  "workdir": "D:\\MPM",
+  "scriptSha256": "10e207a01d5e647a135dd60d3b09c42fdbf54c609a1e89fd07af9a2669a07d7b",
+  "inputs": [
+    {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001-status.json",
+      "bytes": 1456,
+      "sha256": "408713c4b34890abee400ff0457d2ca61c62a9308b2d92538cb488776cca3e0d"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001-detached\\worker-exit.json",
+      "bytes": 126,
+      "sha256": "27f69bfbd7681c897b44303bb3c972b3f8d3ad1ba15472a0c748001fdf16ff8e"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001\\manifest.json",
+      "bytes": 7056,
+      "sha256": "a3ba330de42a8c56bbe20ce0d17fe76a490be2a21861eb925d34ead27f903398"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001\\source-provenance.json",
+      "bytes": 673091,
+      "sha256": "2c010a7b7666015a0eaf44e44664f3779399a08f6be46ac914161780701ef0fd"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001\\source\\source-manifest.json",
+      "bytes": 62461,
+      "sha256": "3ecc74e4394f26a31d50673f084311a883af809483b401c6d2972cd1f755fe03"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001\\vtk\\initial.vtk",
+      "bytes": 2526848,
+      "sha256": "ce421d70575b4d7b5f9a8e988da16abb1f04a3b0c0997304119eb85bd90b8665"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001-launch-preparation\\preparation.json",
+      "bytes": 59475,
+      "sha256": "63f387862d7718bd4e2e0304d09c29bd92e703a350dca39f6746025233148452"
+    }
+  ],
+  "scope": "ONE terminal initial-VTK-only saved observer. Prepared full CSV review NOT EXECUTED; source/DLL/prelaunch checks and initial plot only."
+}

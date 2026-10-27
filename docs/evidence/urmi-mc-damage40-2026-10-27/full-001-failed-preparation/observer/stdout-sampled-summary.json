@@ -1,0 +1,60 @@
+{
+  "scope": "Sparse actual100-step stdout samples only; not reconstructed CSV, per-update convergence proof or final particle state",
+  "source": {
+    "path": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001.stdout.log",
+    "bytes": 23941,
+    "sha256": "a101003eac99cf27acd0adc4e455b1b865cac44cd3beb8e459ffc057a389f168"
+  },
+  "samples": 193,
+  "acceptedUpdatesFromTerminalManifest": 19320,
+  "lastLoggedUpdates": 19300,
+  "unprintedTailAcceptedUpdates": 20,
+  "first": {
+    "phase": "drained-ramp-and-relaxation",
+    "updates": 100,
+    "nativeTimeS": 0.104213,
+    "RF": 0.7824346243003402,
+    "RK": 2.8236192880461284e-09
+  },
+  "last": {
+    "phase": "drained-ramp-and-relaxation",
+    "updates": 19300,
+    "nativeTimeS": 19.980023,
+    "RF": 0.0001328287857836794,
+    "RK": 8.125602852883516e-11
+  },
+  "minimumRF": {
+    "phase": "drained-ramp-and-relaxation",
+    "updates": 16500,
+    "nativeTimeS": 17.082793,
+    "RF": 0.00012652095995674303,
+    "RK": 7.200889968032164e-11
+  },
+  "maximumRF": {
+    "phase": "drained-ramp-and-relaxation",
+    "updates": 100,
+    "nativeTimeS": 0.104213,
+    "RF": 0.7824346243003402,
+    "RK": 2.8236192880461284e-09
+  },
+  "minimumRK": {
+    "phase": "drained-ramp-and-relaxation",
+    "updates": 16700,
+    "nativeTimeS": 17.289738,
+    "RF": 0.0001327697905048494,
+    "RK": 7.122768306482042e-11
+  },
+  "maximumRK": {
+    "phase": "drained-ramp-and-relaxation",
+    "updates": 1400,
+    "nativeTimeS": 1.457062,
+    "RF": 0.26621864099915976,
+    "RK": 5.890900137940748e-06
+  },
+  "postRampLoggedSamplesRFStrictlyBelow1e4": 0,
+  "postRampLoggedSamplesBothCriteria": 0,
+  "RFThresholdCrossingsBetweenSparseSamples": [],
+  "csvReconstructed": false,
+  "nativeSolverRerun": false,
+  "limitation": "Unsampled updates are unavailable; crossing intervals cannot establish50consecutive updates over1s or100undamped updates over1s."
+}

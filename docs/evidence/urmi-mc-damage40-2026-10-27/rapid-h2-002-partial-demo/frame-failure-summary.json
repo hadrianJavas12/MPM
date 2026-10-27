@@ -1,0 +1,136 @@
+{
+  "failure": "Owned frame violates V=J*V0, domain/history/work/yield at ID55.",
+  "failedState": {
+    "frame": 5,
+    "dynamicTimeS": 2.5,
+    "nativeTimeS": 5.5,
+    "vtkExists": false,
+    "csvRowExists": false,
+    "exactFailingPredicate": "NOT_DETERMINABLE_FROM_ABSENT_FAILED_TUPLE",
+    "failedF9": "NOT_RECORDED",
+    "failedDomainSizeXY": "NOT_RECORDED",
+    "failedV_J_V0_kappa_work_residualTolerance": "NOT_RECORDED"
+  },
+  "savedID55": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "x": 17.00649841658638,
+      "y": 0.9901346963950878,
+      "J": 0.9902520961579231,
+      "sizeX": 2.0002378798555225,
+      "sizeY": 1.9802946821413376,
+      "kappa": 0.002721009110571041,
+      "Ds": 0.21246652653512665,
+      "workPa": 166.9841433027954,
+      "volumeError": 2.930988785010413e-14,
+      "nativeResidualPa": 0.0,
+      "nativeTolPa": 2.6677584453604126e-06,
+      "availableSavedGuardPredicates": {
+        "logicalID": true,
+        "V_equals_J_V0": true,
+        "sizeXPositive": true,
+        "sizeYPositive": true,
+        "kappaGeInitial": true,
+        "workGeInitialMinus1eMinus8": true,
+        "nativeSavedResidualLeTolerance": true
+      }
+    },
+    {
+      "frame": 1,
+      "timeS": 0.5,
+      "x": 17.136748003315727,
+      "y": 0.9859289188724172,
+      "J": 0.9882565579933493,
+      "sizeX": 2.0185053663755683,
+      "sizeY": 1.9678968541974982,
+      "kappa": 0.08371518077315826,
+      "Ds": 0.9049943790084785,
+      "workPa": 1107.3864530402536,
+      "volumeError": 3.064215547965432e-14,
+      "nativeResidualPa": -5.4569682106375694e-11,
+      "nativeTolPa": 2.8766841661019737e-06,
+      "availableSavedGuardPredicates": {
+        "logicalID": true,
+        "V_equals_J_V0": true,
+        "sizeXPositive": true,
+        "sizeYPositive": true,
+        "kappaGeInitial": true,
+        "workGeInitialMinus1eMinus8": true,
+        "nativeSavedResidualLeTolerance": true
+      }
+    },
+    {
+      "frame": 2,
+      "timeS": 1.0,
+      "x": 17.63082607226134,
+      "y": 0.9634960557686374,
+      "J": 0.9893592150171707,
+      "sizeX": 2.3578576701696696,
+      "sizeY": 1.836740525453812,
+      "kappa": 0.38667249811761883,
+      "Ds": 0.905,
+      "workPa": 3126.323644382794,
+      "volumeError": 2.398081733190338e-14,
+      "nativeResidualPa": 0.0,
+      "nativeTolPa": 2.5697718812332054e-06,
+      "availableSavedGuardPredicates": {
+        "logicalID": true,
+        "V_equals_J_V0": true,
+        "sizeXPositive": true,
+        "sizeYPositive": true,
+        "kappaGeInitial": true,
+        "workGeInitialMinus1eMinus8": true,
+        "nativeSavedResidualLeTolerance": true
+      }
+    },
+    {
+      "frame": 3,
+      "timeS": 1.5,
+      "x": 18.446793444183385,
+      "y": 0.926355258521987,
+      "J": 0.9948707483233414,
+      "sizeX": 3.6838442249881105,
+      "sizeY": 1.3634674283120718,
+      "kappa": 0.898113996742141,
+      "Ds": 0.905,
+      "workPa": 6540.617460099946,
+      "volumeError": 2.6645352591003757e-14,
+      "nativeResidualPa": 3.3651303965598345e-11,
+      "nativeTolPa": 2.030692022379089e-06,
+      "availableSavedGuardPredicates": {
+        "logicalID": true,
+        "V_equals_J_V0": true,
+        "sizeXPositive": true,
+        "sizeYPositive": true,
+        "kappaGeInitial": true,
+        "workGeInitialMinus1eMinus8": true,
+        "nativeSavedResidualLeTolerance": true
+      }
+    },
+    {
+      "frame": 4,
+      "timeS": 2.0,
+      "x": 19.329075589616377,
+      "y": 0.7689374368114573,
+      "J": 0.9707465875108574,
+      "sizeX": 6.070587709856558,
+      "sizeY": 0.43368682272282494,
+      "kappa": 1.5237337577676562,
+      "Ds": 0.912693538033039,
+      "workPa": 10615.866831949996,
+      "volumeError": 2.708944180085382e-14,
+      "nativeResidualPa": -5.184119800105691e-11,
+      "nativeTolPa": 9.912881197793724e-06,
+      "availableSavedGuardPredicates": {
+        "logicalID": true,
+        "V_equals_J_V0": true,
+        "sizeXPositive": true,
+        "sizeYPositive": true,
+        "kappaGeInitial": true,
+        "workGeInitialMinus1eMinus8": true,
+        "nativeSavedResidualLeTolerance": true
+      }
+    }
+  ]
+}

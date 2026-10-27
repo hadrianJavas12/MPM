@@ -8,6 +8,22 @@ updated: 2026-10-27
 
 # Urmi inspired MC strength damage at40degrees
 
+## Actual rough result27October15:58WIB
+
+Actual video delivered; no solver active and obsolete monitor deleted. The
+rapid packet preserves23indexed+manifest/4ZIP594members and303source/184FASL/
+DLL hashes, root24Gitblobs. Slow video uses exactly5native states/5s playback.
+Old full001 failure packet separately closed40indexed/17ZIPmembers/root41blobs;
+missing preparation CSVs remain missing, not reconstructed. No new solver.
+
+Five saved dynamic states0–2s show coherent bulk downslope collapse in the
+user-authorized coarse demo. All105MP, source/DLL/FJ/globalV0/mass/law/yield
+checks pass for this prefix; root inspected actual image. Upper centroid
+moves(+2.375,-2.078)m, maxDs.91443, minJ.970747. Native stops at2.5s on a
+frame-export check/ID55;20s was not completed, exact unsaved predicate unknown.
+Actual video is available; rough numerical demonstration, not calibrated
+physical prediction. No runout claim from the foundation-confounded metric.
+
 ## Latest scope: rapid rough demo,27October15:55WIB
 
 Human explicitly waives accuracy and prioritizes seeing sliding within1–2wall

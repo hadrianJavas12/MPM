@@ -1,5 +1,22 @@
 # Urmi-inspired MC strength damage, 40-degree slope
 
+## Rapid result27October15:58WIB
+
+Video now delivered from archived genuine MP4; obsolete monitor deleted,
+no solver active. Rapid packet23indexed+manifest/4ZIP594members,303sources/
+184FASL/DLL verified; root24Gitblobs equal. Slow5frame video shows physical
+0–2s over5s playback with no interpolation. All raw/source/runtime/negative
+and output-guard stop evidence retained. No automatic new experiment.
+
+Actual coarse numerical collapse is visible in5saved dynamic states0–2s:
+all105MP retained, upper centroid(+2.375,-2.078)m,96.67%cohort moving in one
+connected component, maxDs.91443/minJ.970747. FIRST partial saved review001
+PASS/expectedexit2, actualPNG root-inspected. No calibrated accuracy claim.
+Native stopped on a frame-export check at2.5s/ID55;20s target not completed,
+failed unsaved state/predicate unknown. Existing totalmass-past-toe metric
+includes originalfoundation and is not claimed as runout. Actual video is
+saved under rapid-h2-002-review-001; media-only slowdown preserves all5states.
+
 ## Latest human scope27October: rapid visual demo, accuracy waived
 
 Human explicitly wants to see whether sliding occurs in1–2 wall hours and

@@ -1097,3 +1097,15 @@ Human sets1–2h first-result target, acknowledged12:36WIB; aim short actual pre
 ## [2026-10-27] ingest | Human-authorized rapid rough MC damage demonstration
 
 Human explicitly says accuracy does not matter; wants whether sliding occurs in1–2wall hours. Separate branch codex/urmi-mc-damage40-rapid, native2d76848d/rapid-h2-002 launched15:55:08WIB with1.5h wallcap17:25WIB.105MP/h2/PPC1/fixed3s approximate preparation WITHOUT equilibrium claim then20s/41states, same40deg/no-notch/MC-D law/strength/CFL/mass1; no reset. Actual native reached undrained dynamics. New observer frozen afterlaunch/before execution, movie pending. Six NEW pure retention controls PASS; initial unsupported EvidenceDirectory launchfailed before native retained. No old tests/research repeated. [[urmi-mc-strength-damage40]].
+
+## [2026-10-27] ingest | Actual rapid coarse collapse video
+
+rapid-h2-002 saved5actualstates0–2s/105MP; FIRSTpartialreview001 savedIntegrityPASS expectedexit2/sourceDLL/FJ/mass/law. RootactualPNGshowsbulkdownslope collapse: uppercentroid(+2.375,-2.078)m,connectedmovingmass96.67%,Dsmax.91443,minJ.970747. Native failed2.5s exportcheck/ID55;20s incomplete,unsavedpredicateunknown. No runout/scientificaccuracyclaim. Actual5frameMP4available; slowerplaybackusesexactstateswithoutinterpolation. [[urmi-mc-strength-damage40]].
+
+## [2026-10-27] ingest | Rapid movie delivery and immutable result closure
+
+DeliveredactualslowMP4from5savedstates0–2s/5splayback, nointerpolation. Rapidpacket23indexed+manifest/4ZIP594members/source303/FASL184/DLL verified, root24Gitblobs; oldfull001failurepacket40indexed+manifest/17ZIPmembers/sourceZIPreference/root41blobs. Native002failed2.5exportguard;20s incomplete,exactfailedtupleabsent. Roughvisiblecollapseonly,noscientific/runoutclaim. Obsoletemonitordeleted,no solveractive,no automaticrestart. [[urmi-mc-strength-damage40]].
+
+## [2026-10-27] ingest | Remaining diagnostic archive closure
+
+BC/static packet30indexed+manifest/3ZIP991members/root31Gitblobs, native305source/183FASLeach, old001readernegative/0024groups0MPM retained. Static3978alreadycomputedcandidates/3frozensources retained, negativeNormals/nonphysicalglobalFoS limits explicit. Allthreefinalpackets96Gitblobsverified;no newsolver/analysis/render. [[urmi-mc-strength-damage40]].

@@ -1,0 +1,23 @@
+{
+  "checkedUtc": "2026-10-27T08:37:45.514734+00:00",
+  "runDirectory": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001",
+  "survivingNonSourceRunFiles": [
+    "manifest.json",
+    "source-provenance.json",
+    "vtk/initial.vtk",
+    "vtk/mesh.vtk"
+  ],
+  "absent": [
+    "preparation-states.csv",
+    "preparation-material-state.csv",
+    "preparation-history.csv",
+    "history.csv",
+    "material-state.csv",
+    "transfer-ledger.json"
+  ],
+  "preparedFullReviewExecuted": false,
+  "decision": "NOT_EXECUTED_MISSING_REQUIRED_SAVED_INPUTS",
+  "csvReconstructed": false,
+  "noSavedDrainedTransferOrDynamicState": true,
+  "sourceSupportedExplanation": "Runner with-open-file scopes use :if-exists :error. Error unwind may close newly created CSVs with :abort T and delete them, despite flushing. Causal native preservation control remains pending; this is not a reproduced experiment."
+}

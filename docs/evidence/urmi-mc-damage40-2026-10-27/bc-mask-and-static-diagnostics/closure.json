@@ -1,0 +1,230 @@
+{
+  "createdUtc": "2026-10-27T13:39:40.035308+00:00",
+  "scope": "Close archival of existing BC001reader failure/002nodal diagnostic and restricted static3978candidate search; no native/test/analysis/research repeated",
+  "nativeAttempts": {
+    "bc-mask-001": {
+      "sourceRecordsVerified": 305,
+      "uniqueLoadedFaslInputsVerified": 183,
+      "mappedDll": {
+        "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/bc-mask-001/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "currentOriginalDifferences": [
+        "D:\\MPM\\scenarios\\urmi-damage40\\runner.lisp",
+        "D:\\MPM\\cl-mpm-framework.asd",
+        "D:\\MPM\\tests\\benchmarks\\urmi-damage40-bc-mask-diagnostic.lisp"
+      ],
+      "nativeExit": {
+        "exitCode": 1,
+        "startedUtc": "2026-10-27T08:34:34.3522629Z",
+        "finishedUtc": "2026-10-27T08:35:31.8877738Z",
+        "sourceCommit": "b99718e6e62d8c2e9f309867532508b2e1d99f3f",
+        "scope": "FIRST NEW frozen nodal BC diagnostic only;0MPM/material,oneinitialP2G;notlastfullnode state"
+      },
+      "sourceAfterProofPresent": false,
+      "status": "RETAINED_READER_FAILURE_BEFORE_DIAGNOSTIC_INVOCATION",
+      "acceptedDiagnosticGroups": 0,
+      "counters": "NOT_PRODUCED: diagnostic body not executed; no after-proof invented"
+    },
+    "bc-mask-002": {
+      "sourceRecordsVerified": 305,
+      "uniqueLoadedFaslInputsVerified": 183,
+      "mappedDll": {
+        "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/bc-mask-002/source/libs/kirchoff.dll",
+        "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+        "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+        "nativeMcEntryPresent": true
+      },
+      "currentOriginalDifferences": [
+        "D:\\MPM\\scenarios\\urmi-damage40\\runner.lisp",
+        "D:\\MPM\\cl-mpm-framework.asd"
+      ],
+      "nativeExit": {
+        "exitCode": 0,
+        "startedUtc": "2026-10-27T08:36:55.3447531Z",
+        "finishedUtc": "2026-10-27T08:37:51.6247173Z",
+        "sourceCommit": "b99718e6e62d8c2e9f309867532508b2e1d99f3f",
+        "scope": "Selective harness package-qualification repair;FIRST executed native nodal BC diagnostic;0MPM/material,oneinitialP2G;notlastfullnode state"
+      },
+      "sourceAfterProofPresent": true,
+      "status": "PASS_FIRST_EXECUTED_NODAL_DIAGNOSTIC",
+      "acceptedDiagnosticGroups": 4,
+      "mpmCalls": 0,
+      "materialCalls": 0,
+      "initialP2gCalls": 1,
+      "oldFullRelevantSourceHashIdentity": [
+        "source/src/boundaries/constraints/bc.lisp",
+        "source/src/core/simulation-base.lisp",
+        "source/src/core/mesh-base.lisp",
+        "source/src/numerics/tensors/utils.lisp",
+        "source/scenarios/urmi-damage40/geometry.lisp",
+        "source/scenarios/urmi-damage40/configuration.lisp"
+      ],
+      "limits": "Initial P2G/controlled nodal fixtures only; does not establish cause of serial full00120s cap"
+    }
+  },
+  "static": {
+    "status": "EXISTING_STATIC_SEARCH_BYTES_VERIFIED_NO_REEXECUTION",
+    "frozenBeforeAfterCurrentSourcesVerified": 3,
+    "attemptedCandidatesAlreadyRecorded": 3978,
+    "summaries": [
+      {
+        "slices": 200,
+        "attempted": 1989,
+        "formalRoots": 1079,
+        "rejections": {
+          "ARC_OUTSIDE_SOIL": 837,
+          "ARC_BELOW_BASE": 28,
+          "CENTER_BELOW_ENDPOINT": 45
+        },
+        "negativeNormalCandidates": 963,
+        "minimumAllFormal": {
+          "entry": 10.5,
+          "exit": 22.74517196759967,
+          "rho": 1.1875,
+          "slices": 200,
+          "status": "FORMAL_ROOT",
+          "geometry": {
+            "centerX": 27.329406412802165,
+            "centerY": 24.033006794049946,
+            "radius": 19.593114748214973,
+            "arcMinimumX": 22.74517196759967,
+            "arcMinimumY": 4.98373016505067,
+            "baseRoundoffDeficitM": 0.0
+          },
+          "result": {
+            "formalFactor": 1.103814050713949,
+            "iterations": 35,
+            "factorBracketWidth": 7.462230833255035e-11,
+            "domainBarrier": 0.0,
+            "equilibriumResidualNPerM": -4.977919161319733e-07,
+            "drivingNPerM": 222614.86725314189,
+            "minimumMAlpha": 0.9740457227082843,
+            "negativeNormalCount": 4,
+            "minimumNormalForceNPerM": -296.3111602538343,
+            "minimumNormalStressPa": -2490.8651498303316,
+            "normalForcesNonnegative": false,
+            "physicalAdmissibility": false,
+            "scientificallyValidated": false
+          }
+        },
+        "minimumNonnegativeNormalSubset": {
+          "entry": 0.0,
+          "exit": 18.354383981485526,
+          "rho": 0.25,
+          "slices": 200,
+          "status": "FORMAL_ROOT",
+          "geometry": {
+            "centerX": 10.510182304548593,
+            "centerY": 15.922615367759722,
+            "radius": 10.684586184181034,
+            "arcMinimumX": 10.510182304548593,
+            "arcMinimumY": 5.238029183578687,
+            "baseRoundoffDeficitM": 0.0
+          },
+          "result": {
+            "formalFactor": 4.837761241575505,
+            "iterations": 36,
+            "factorBracketWidth": 8.746336987996983e-11,
+            "domainBarrier": 0.6314330813468997,
+            "equilibriumResidualNPerM": -1.5918631106615067e-06,
+            "drivingNPerM": 278242.8951751301,
+            "minimumMAlpha": 0.3217406941441233,
+            "negativeNormalCount": 0,
+            "minimumNormalForceNPerM": 85.917046229397,
+            "minimumNormalStressPa": 189.12666295202953,
+            "normalForcesNonnegative": true,
+            "physicalAdmissibility": false,
+            "scientificallyValidated": false
+          }
+        },
+        "minimumRawNormalStressPa": -4138.6890000155145
+      },
+      {
+        "slices": 400,
+        "attempted": 1989,
+        "formalRoots": 1079,
+        "rejections": {
+          "ARC_OUTSIDE_SOIL": 837,
+          "ARC_BELOW_BASE": 28,
+          "CENTER_BELOW_ENDPOINT": 45
+        },
+        "negativeNormalCandidates": 1010,
+        "minimumAllFormal": {
+          "entry": 10.5,
+          "exit": 22.74517196759967,
+          "rho": 1.1875,
+          "slices": 400,
+          "status": "FORMAL_ROOT",
+          "geometry": {
+            "centerX": 27.329406412802165,
+            "centerY": 24.033006794049946,
+            "radius": 19.593114748214973,
+            "arcMinimumX": 22.74517196759967,
+            "arcMinimumY": 4.98373016505067,
+            "baseRoundoffDeficitM": 0.0
+          },
+          "result": {
+            "formalFactor": 1.1038285691535936,
+            "iterations": 35,
+            "factorBracketWidth": 7.46227524217602e-11,
+            "domainBarrier": 0.0,
+            "equilibriumResidualNPerM": -5.23572089150548e-06,
+            "drivingNPerM": 222607.80852128298,
+            "minimumMAlpha": 0.9731545949415406,
+            "negativeNormalCount": 9,
+            "minimumNormalForceNPerM": -162.5548726141103,
+            "minimumNormalStressPa": -2726.030873789956,
+            "normalForcesNonnegative": false,
+            "physicalAdmissibility": false,
+            "scientificallyValidated": false
+          }
+        },
+        "minimumNonnegativeNormalSubset": {
+          "entry": 0.0,
+          "exit": 13.963595995371382,
+          "rho": 0.5625,
+          "slices": 400,
+          "status": "FORMAL_ROOT",
+          "geometry": {
+            "centerX": 7.908602627652928,
+            "centerY": 21.030696409647746,
+            "radius": 10.581903776105342,
+            "arcMinimumX": 7.908602627652928,
+            "arcMinimumY": 10.448792633542404,
+            "baseRoundoffDeficitM": 0.0
+          },
+          "result": {
+            "formalFactor": 13.69511860770897,
+            "iterations": 38,
+            "factorBracketWidth": 5.363176569517236e-11,
+            "domainBarrier": 0.4108612881157846,
+            "equilibriumResidualNPerM": 4.373578121885657e-08,
+            "drivingNPerM": 31761.570867774073,
+            "minimumMAlpha": 0.6984609050489856,
+            "negativeNormalCount": 0,
+            "minimumNormalForceNPerM": 1.5271004954256178,
+            "minimumNormalStressPa": 29.145598741028486,
+            "normalForcesNonnegative": true,
+            "physicalAdmissibility": false,
+            "scientificallyValidated": false
+          }
+        },
+        "minimumRawNormalStressPa": -4444.62911270507
+      }
+    ],
+    "limits": "Restricted dry Bishop circle family with retained negative normals; neither physical/global FoS nor proof of MPM stability/instability"
+  },
+  "archiveCount": 3,
+  "verifiedDecodedArchiveMembers": 991,
+  "productionChanges": "NONE by this collector; uncommitted test/plan/result preserved for root checkpoint",
+  "limits": [
+    "BC fixtures do not prove cause of serial full001 preparation cap",
+    "Static formal roots with negative normal forces are not a physical/global FoS",
+    "No failed001after-proof or runtime counters invented"
+  ],
+  "artifactCountIncludingManifest": 31,
+  "artifactHashesOmitManifestSelfHash": true
+}

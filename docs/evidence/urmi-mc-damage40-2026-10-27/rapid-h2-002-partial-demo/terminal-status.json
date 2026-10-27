@@ -1,0 +1,47 @@
+{
+  "scenario": "gravity-slope",
+  "status": "FAILED_NATIVE",
+  "startedUtc": "2026-10-27T08:55:08.4260039Z",
+  "output": "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\rapid-h2-002",
+  "case": "D:\\MPM\\cases\\benchmarks\\urmi-damage40-rapid.lisp",
+  "sourceCommit": "2d76848d708056a4b0de91d4bee93ae3e6a9cb74",
+  "maxWallHours": 1.5,
+  "wallDeadlineUtc": "2026-10-27T10:25:08.4260039Z",
+  "caseSha256": "A6A651652F918CA76BDA951E0C7B1247059E36318B99E045AD6A2FBA9DA60CC9",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "processIdentity": {
+    "nativeCommand": {
+      "pid": 54432,
+      "name": "cmd",
+      "sessionId": 11,
+      "createdUtc": "2026-10-27T08:55:08.6358521Z"
+    },
+    "sbcl": {
+      "pid": 60560,
+      "name": "sbcl",
+      "sessionId": 11,
+      "createdUtc": "2026-10-27T08:55:09.0062066Z"
+    },
+    "wrapper": {
+      "pid": 52636,
+      "name": "pwsh",
+      "sessionId": 11,
+      "createdUtc": "2026-10-27T08:55:07.7346425Z"
+    }
+  },
+  "nativeExitCode": 1,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {
+    "savedFrames": 5,
+    "phase": "undrained-dynamic",
+    "status": "failed",
+    "updates": 1732,
+    "particleCount": 105,
+    "timeS": 2.5,
+    "complete": false
+  },
+  "heartbeatUtc": "2026-10-27T08:58:01.0631094Z",
+  "endedUtc": "2026-10-27T08:58:01.0537135Z"
+}

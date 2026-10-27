@@ -1,5 +1,70 @@
 # AI Engineering Handover — CL-MPM
 
+## CLOSED QUICK VISUAL DEMO — latest human followup27October
+
+The requested rough demonstration/video has been delivered. NO SOLVER ACTIVE;
+do not restart or escalate automatically. Human waived accuracy to see whether
+sliding appears; the105MP approximate case visibly collapses downslope in its
+saved0–2s prefix. This is not a complete20s run or scientific validation.
+Obsolete automation urmi-mc-40-native-trial DELETED after delivery.
+
+Rapid packet CLOSED docs/evidence/urmi-mc-damage40-2026-10-27/rapid-h2-002-
+partial-demo:23indexed+manifest,4ZIP/594decodedmembers,303native sources/
+184loadedFASLhashes/DLL verified,3indexed PNG/MP4 genuinebytes. Root24staged
+Gitblobs match. Slow video5actualframes/1fps/5s playback/physical0–2s/decode0,
+no interpolation. Negative launch001, terminal002, partialreviewexpectedexit2
+and one actualavailable-stateID55diagnosis retained. Exact failed2.5state
+not available; no inferred/substituted failed tuple or root workaround.
+
+Old full001 terminal packet also CLOSED40indexed+manifest/17ZIPmembers;
+root41Gitblobs match, existing300source launchZIP referenced without duplicate.
+Only initial/meshVTK survive; allprepCSV absent and fullreviewNOT_EXECUTED.
+Oldcollector glob failure retained then packaging repaired without analysis
+repeat. BC/static packet CLOSED30indexed+manifest/3ZIP991members/root31blobs;
+each305native source records/183loadedFASL, negative001reader failure retained.
+Static3frozen sources/3978existing candidates preserved without recalculation;
+formal negative-normal results not physical/globalFoS. Original/current code
+differences are listed honestly; immutable loaded payloads match their proofs.
+Keep raw/private/Obsidian settings untouched, no UI/main merge. Final coherent
+checkpoint/push follows. Three closed packets total96verifiedGitblobs, with
+three separate root proof files. No old solver/review/render/gates repeated.
+
+## TERMINAL RAPID DEMO27October15:58WIB — actual coherent downslope collapse saved
+
+Human's latest goal is a quick rough demonstration, accuracy waived. New
+rapid-h2-002 native2d76848d FAILED_NATIVE1 at15:58:01WIB while saving dynamic
+2.5s/native5.5s: "Owned frame violates V=J*V0, domain/history/work/yield at
+ID55". Save audit runs BEFORE VTK/CSV, so failed2.5s MPstate is NOT retained
+and exact failing subpredicate is not known. Do not invent failed state or
+call this native material rejection; earlier aggregate finite/positiveJ/
+mass/center checks passed. No solver active; no fresh restart needed to show
+the requested coarse motion. Target20s was NOT completed.
+
+FIRST rapid partial saved review001 expectedexit2, savedIntegrityPASS:
+105MP/5actual dynamic states0–2s, source/DLL/FJ/globalV0/mass/IDs/law/yield,
+video5frames/decode0/no interpolation/equalmetres. Root and observer agent
+inspect actualPNG: broad upper body lowers and spreads right coherently.
+At2s upper cohort centroid(+2.375,-2.078)m, max displacement5.412m,
+connectedmovingcohort mass96.67%, maxDs.91443, minJ.970747. This is observed
+coarse numerical collapse under declared approximate initialization, NOT
+calibrated physical validation, complete20s or literal Urmi reproduction.
+Do NOT claim runout from the current totalmass-past-toe metric: foundation
+already extends pasttoe initially (34.29%). No runout conclusion made.
+
+Actual movie/PNG in rapid-h2-002-review-001. Original5frames at6fps=.833s;
+media-only1fps slow version CLOSED:5s playback from the SAME5frames, decode0,
+no added states/interpolation. Root delivered slow video during the latest
+human followup after quota delay. Actual native computation stopped15:58, not an active
+long-running job. Obsolete automation urmi-mc-40-native-trial now DELETED;
+no duplicate solver/review/render or repeated terminal notifications.
+303frozen native sources/mappedDLL verified by the closed partial review.
+speed_thread_safety owns
+one immutable rapid result/source/raw/runtime/review/media packet; readactual
+artifacts before duplicate packaging. No more solver/gates/research needed
+for this finite rough-demo result. Preserve all old failures and sources.
+Source-only BCdiagnostic/oldfull001packet may be incomplete; label pending,
+do not report closed without artifacts. Main unchanged; no UI/merge.
+
 ## LIVE27October15:55WIB — HUMAN AUTHORIZES ROUGH RAPID DEMO; new run launched
 
 LATEST HUMAN explicitly only wants to see whether sliding occurs in1–2 wall

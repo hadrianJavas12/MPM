@@ -1,0 +1,24 @@
+{
+  "createdUtc": "2026-10-27T08:31:14.7849471Z",
+  "status": "NOT_EXECUTED_MISSING_REQUIRED_SAVED_INPUTS",
+  "preparedFullReviewExecuted": false,
+  "missingInputs": [
+    "preparation-states.csv",
+    "preparation-material-state.csv",
+    "preparation-history.csv",
+    "history.csv",
+    "material-state.csv",
+    "transfer-ledger.json"
+  ],
+  "intendedArguments": [
+    "--run-dir",
+    "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001",
+    "--output-dir",
+    "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001-terminal-review-001",
+    "--contract",
+    "D:\\MPM\\output\\urmi-mc-damage40-2026-10-27\\full-001-launch-preparation\\protocol\\contract.json",
+    "--allow-partial",
+    "--video"
+  ],
+  "decision": "Full CSV review cannot validate absent files. A separate initial-VTK-only observer will retain this limitation; no invented CSV/dynamic state."
+}

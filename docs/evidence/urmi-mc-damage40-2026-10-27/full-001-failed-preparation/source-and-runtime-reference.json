@@ -1,0 +1,23 @@
+{
+  "nativeSourceCommit": "3acf468f2b573c77cddee1d295dcd7bc89f72625",
+  "closedLaunchSourceArchive": {
+    "path": "D:\\MPM\\docs\\evidence\\urmi-mc-damage40-2026-10-27\\full-001-launch\\executed-source-and-cache.zip",
+    "bytes": 2939931,
+    "sha256": "ef112b77b1edd3335772223089a1a48a937a8c655a27bf6ff85e725d058e0199"
+  },
+  "terminalVerification": "observer/observation.json",
+  "terminalVerificationCommandBefore": "observer/observer-command-before.json",
+  "terminalVerificationExit": "observer/observer-exit.json",
+  "terminalVerificationCount": 1,
+  "frozenNativePayloads": 300,
+  "prelaunchPayloadsMatched": 300,
+  "prelaunchSupportCopies": 7,
+  "actualMappedBackend": {
+    "modulePath": "D:/MPM/output/urmi-mc-damage40-2026-10-27/full-001/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  },
+  "basis": "Persisted actual native loader provenance plus frozen bytes and prelaunch bindings; no new DLL load/native projection/process query.",
+  "sourceCacheArchiveRecreated": false
+}
