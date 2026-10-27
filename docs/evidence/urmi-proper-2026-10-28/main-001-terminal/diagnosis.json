@@ -1,0 +1,116 @@
+{
+  "scope": "TERMINAL_FAILED_PREPARATION_ONLY_NO_DYNAMICS",
+  "nativeError": "Measured drained equilibrium failed its undamped hold.",
+  "nativeComplete": false,
+  "equilibriumVerified": false,
+  "dynamicFrames": 0,
+  "materialSwitchOccurred": false,
+  "savedNormIdentityAudit": "PASS",
+  "initialStateIntegrity": "PASS",
+  "initialStateAudit": {
+    "frame": 0,
+    "timeS": 0.0,
+    "nativeTimeS": 0.0,
+    "phaseCode": 0,
+    "particles": 3503,
+    "massKgPerM": 1518128.0049762155,
+    "minJ": 1.0,
+    "maximumStrengthDamage": 0.0,
+    "minimumCohesionPa": 3700.0,
+    "maximumKappa": 0.0,
+    "kineticJPerM": 0.0,
+    "vtk": {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\filled-review-001\\saved-inputs\\vtk\\initial.vtk",
+      "bytes": 1319512,
+      "sha256": "27b09e73e5583545b608349737cf2e3a34d9c592cb1abb95990beeebeffc2bce"
+    },
+    "plasticWorkCurrentVolumeProxyJPerM": 0.0,
+    "minimumDomainMarginM": 0.0,
+    "centerOutsideDomainMassFraction": 0.0,
+    "maximumYieldResidualPa": -6369.490999829183,
+    "maximumNativeYieldTolerancePa": 1.00001e-06
+  },
+  "sourceProof": {
+    "status": "PASS",
+    "sourceFilesVerified": 307,
+    "actualMappedDll": {
+      "modulePath": "D:/MPM/output/urmi-proper-2026-10-28/main-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "case": {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\source\\case.lisp",
+      "bytes": 1142,
+      "sha256": "4a004d4dcf89e338ad29e1a2065e5d8295555685997a9ac1fc82a294161caf0b"
+    },
+    "manifest": {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\source\\source-manifest.json",
+      "bytes": 63969,
+      "sha256": "1c1ea729099e5c1f69be922a2ccf8c81fbfd65dea1c1a5e836e0be9e087fabb6"
+    },
+    "runtimeProvenance": {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\source-provenance.json",
+      "bytes": 668783,
+      "sha256": "27a3c713ea68a2821395fe2708d851e56ebba3b02c5128429efbeca9c012a447"
+    }
+  },
+  "preparationUpdates": 5243,
+  "nativeTimeS": 10.83754421323437,
+  "dampedPassingChecks": 486,
+  "dampedPassingDurationS": 1.0016904883822075,
+  "undampedChecks": 118,
+  "undampedDurationS": 0.24371027790183497,
+  "forceLimit": 0.0001,
+  "kineticLimit": 1e-08,
+  "actualFailure": {
+    "updates": 5243.0,
+    "native_time_s": 10.83754421323437,
+    "force_defined": 1.0,
+    "RF": 0.00010007057383767617,
+    "free_force_numerator2": 2374.589263520735,
+    "free_force_denominator2": 237124113075.1539,
+    "free_KE": 0.01590754940256969,
+    "free_nodal_mass": 1454948.0209992381,
+    "RK": 1.1148979757646039e-10,
+    "prior_consecutive": 486.0,
+    "prior_hold": 117.0,
+    "damping": 0.0
+  },
+  "forceExcessPercent": 0.07057383767616887,
+  "nativeSolverReruns": 0,
+  "dynamicMoviesAvailable": false,
+  "limits": "Only initial particle field survived; final full particle tuple was not saved. RF crossing proves this protocol failed, not material/root failure, physical instability, or whether sliding would occur.",
+  "bindings": [
+    {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\manifest.json",
+      "bytes": 7338,
+      "sha256": "124ac6b3034ecf32018011cc23be702cbabc2d2609963be61c9d0706831cd714"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\preparation-diagnosis-001\\preparation-history.csv",
+      "bytes": 989662,
+      "sha256": "81c4ee9dbdd6a7084d9ff941325c3baf0cd922664418bb30944b8bf5ecafc3ff"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\preparation-diagnosis-001\\diagnose-urmi-proper-preparation.py",
+      "bytes": 6426,
+      "sha256": "6047cfac381957a8b93a1052558fa7288c1d633f7edac504089d40c873fe2bc6"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\preparation-diagnosis-001\\plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\preparation-diagnosis-001\\review-urmi-damage40.py",
+      "bytes": 41472,
+      "sha256": "3f48dc592a311132c8acabc736b548f3ce61aed253a61c481ce182d696a53a7b"
+    },
+    {
+      "path": "D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\preparation-diagnosis-001\\review-urmi-proper.py",
+      "bytes": 35495,
+      "sha256": "468f6d350df5ac99e3b51c8c287363e6eae497972d99076dcbdd0a4024fc64ec"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "stage": "quick-saved-state-audit",
+  "error": "An undamped saved preparation check failed",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\filled-review-001\\analysis-source\\review-urmi-proper.py\", line 498, in main\n    report = inspect(run, output, manifest, data, preparation, helper, reader.read_cliff_vtk)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\filled-review-001\\analysis-source\\review-urmi-proper.py\", line 263, in inspect\n    prep_check = helper.preparation_check(data / \"preparation-history.csv\", {\"configuration\": manifest[\"config\"]}, bool(manifest[\"savedFrames\"]))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\filled-review-001\\analysis-source\\review-urmi-damage40.py\", line 393, in preparation_check\n    require(passed, \"An undamped saved preparation check failed\")\n  File \"D:\\MPM\\output\\urmi-proper-2026-10-28\\main-001\\filled-review-001\\analysis-source\\review-urmi-damage40.py\", line 47, in require\n    raise ValueError(message)\nValueError: An undamped saved preparation check failed\n",
+  "nativeSolverRerun": false,
+  "savedInputsPreserved": true,
+  "scope": "IMPROVED_NUMERICAL_TRIAL_NOT_CALIBRATED_VALIDATION"
+}

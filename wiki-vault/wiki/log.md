@@ -1128,3 +1128,6 @@ Extendedpacket24indexed+manifest/3ZIP583members,source305/FASL185/DLL/currentdif
 
 ## [2026-10-28] ingest | Proper main native trial launched
 Added [[urmi-mc-proper-main]], linked [[urmi-mc-strength-damage40]] and index. Sourcec805d549; measuredprep/volume-domain guards, actualnewcontrols and initialfilledmedia distinguished from pending fullrun. Raw/settings untouched.
+
+## [2026-10-28] ingest | Main001 terminal preparation failure
+Updated [[urmi-mc-proper-main]] and index: firstundamped RF breach at.243710s, no switch/dynamics. Preserved originalobserver failure and one saved-only diagnosis/307sourceproof/archive; no solverrestart or raw/settings edits.

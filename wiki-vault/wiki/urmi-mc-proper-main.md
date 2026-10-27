@@ -22,3 +22,10 @@ native controls and INITIALIZATION-only paired movie controls passed; full
 main saved observer remains pending. Detached pipeline exports automatically,
 quiet hourly monitor watches meaningful terminal changes. See [[urmi-mc-strength-damage40]]
 and [[unnotched-mc-gravity]]. No automatic solver restart/escalation.
+
+## Terminal28October01:59WIB
+Main001 stopped during undampedhold: RF.00010007057384 just exceeds1e-4;
+RK stillpasses. Only.243710s of1s hold reached. No atomicmaterialswitch or
+dynamicframes; no movie. Native5243updates/10.837544s. Saved-only diagnosis
+verified norms and initialstate/source307/DLL, not equilibrium or physical
+slide. Terminalpacket preserves entire attempt once. No automaticrestart.

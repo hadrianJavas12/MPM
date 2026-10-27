@@ -51,3 +51,5 @@
 
 
 - [[urmi-mc-proper-main]] — launched h1/PPC2x2 measured-preparation main trial; automatic filled motion/strength-damage movies pending
+
+- [[urmi-mc-proper-main#Terminal28October01:59WIB]] - main001 failed undamped preparation hold; no dynamics/videos, saved diagnosis retained

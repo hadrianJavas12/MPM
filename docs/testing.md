@@ -1325,3 +1325,14 @@ Extendedpartialpacketclosed24indexed+manifest/3ZIP583members/source305/FASL185/m
 
 ### 28October: proper h1/PPC2 numerical profile
 New Windows SBCL controls002:6groups/48USFupdates actualworker volume-domain PASS; profile0024groups/0MPM PASS. Prior001worker-mode limitation and helper-arity negative retained. Filled initial3503MP renderer002 two full encode/decode PASS, INITIALIZATION ONLY;001optionalimport negative retained. Studio check and36tests PASS. Mainc805d549 launched; full saved observer pending. See [protocol](benchmarks/URMI_MC_PROPER.md).
+
+
+## Terminal28October: main001 stopped before dynamics
+Native ended01:59WIB at5243updates/10.837544native seconds. Damped persistence
+passed486checks/1.001690s; undamped hold stopped at118checks/.243710s because
+RF=.00010007057384 exceeded1e-4 by.0705738%; RK=1.1149e-10 still passed1e-8.
+No material switch/dynamic states or videos. Frozen fullobserver failed on the
+realfailed hold; saved-only diagnosis independently validated all5243norm
+rows and initial3503MP/source307/DLL evidence, explicitly not equilibriumPASS.
+All originalfailure/source/raw retained in main001terminalpacket; no solver
+rerun/tolerance change. Initial-only video is not a substitute for dynamics.

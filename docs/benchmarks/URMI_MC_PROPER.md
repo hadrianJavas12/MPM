@@ -49,3 +49,14 @@ including honest partial output on failure/wallcap; no solver restart. Output
 folder `output/urmi-proper-2026-10-28/main-001/filled-review-001/` will hold
 `soil-motion.mp4` and `strength-damage.mp4`. WMI avoids caller parentage but
 is not proven immune to sleep/logoff/reboot. Keep the machine awake.
+
+
+## Terminal28October: main001 stopped before dynamics
+Native ended01:59WIB at5243updates/10.837544native seconds. Damped persistence
+passed486checks/1.001690s; undamped hold stopped at118checks/.243710s because
+RF=.00010007057384 exceeded1e-4 by.0705738%; RK=1.1149e-10 still passed1e-8.
+No material switch/dynamic states or videos. Frozen fullobserver failed on the
+realfailed hold; saved-only diagnosis independently validated all5243norm
+rows and initial3503MP/source307/DLL evidence, explicitly not equilibriumPASS.
+All originalfailure/source/raw retained in main001terminalpacket; no solver
+rerun/tolerance change. Initial-only video is not a substitute for dynamics.

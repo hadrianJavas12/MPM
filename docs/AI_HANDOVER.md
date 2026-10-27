@@ -1,5 +1,40 @@
 # AI Engineering Handover â€” CL-MPM
 
+## TERMINAL28October01:59WIB - main001 FAILED PREPARATION; NO DYNAMICS
+
+Actual files override older LIVE section. Main001/sourcec805d549 native1,
+worker1 ended01:59:11/01:59:21WIB, not stillrunning.5243updates/native10.837544s,
+3503MP. Measured damped RF/RK passed486checks/1.001690s, then first RF breach
+at undampedcheck118/duration.243710s: RF.00010007057383767617 >=1e-4
+(excess.0705738%), RK1.1148979758e-10 <1e-8. Preregistered hold required1s,
+so original guard correctly stopped before atomictransfer. No material/root/
+positiveJ/domainfailure proven, no undrained switch, savedFrames0. This says
+nothing about whether physical sliding would occur. Do not relax tolerance or
+restart automatically. Future work must address preparation continuity/hold
+protocol explicitly, not simply force the switch or claim24h of progress.
+
+Automatic frozen filled-review001 ran ONCE and failedsavedpreparation_check
+because partial history includes this actualfailed undamped check. All original
+inputs/stages/logs/frozenbytes preserved. No dynamicMP4 exists; only initial
+particle state/initialVTK plus full5243row preparationhistory survived. Final
+full particle state was NOT saved; do not reconstruct/invent it. Do not render
+another initial-only static movie and call it a simulation result.
+
+NEW saved-only preparation-diagnosis001 CLOSED PASS for norm-identities and
+initial-state integrity ONLY; explicitly FAIL preparation/no materialtransfer/
+no dynamics.307actualsourcepayloads/mappedDLL verified. Initialactual3503MP
+CSV/VTK/FJ/mass/IDs/yield/law audited once for THIS nativeattempt. New script
+scripts/diagnose-urmi-proper-preparation.py and frozenoriginalhelpers retained;
+no native/test/oldreview rerun. Root inspected actualRF/RK diagnosticPNG.
+Terminalpacket docs/evidence/urmi-proper-2026-10-28/main-001-terminal archives
+all actualsource/cache/runtime/raw/adjacent/detached/preparation/originalfailed
+review and newdiagnosis ONCE. Prelaunchpacket remains closed, not repackaged.
+Stop/delete finite monitor after this failure notification/closure. No solver
+active and no automatic mesh/strength/psi/tolerance/time escalation. Mainmerge/
+UI/raw/private/settings untouched. Sourcecommit stillc805; newerHEAD is docs/
+saveddiagnosis only. User must not keep waiting for24h or expect dynamicvideos.
+
+
 ## LIVE28October01:39WIB — MAIN h1/PPC2x2 run launched, automatic FILLED movies
 
 Latest human explicitly says MAIN RUN NOW; do not delay with more studies.

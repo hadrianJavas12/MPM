@@ -216,3 +216,14 @@ Full active-prefix audit/media still NOT_EXECUTED. No native repeat.
 
 ## 28October: main h1/PPC2 run
 Human now requests more proper preparation and filled-field movies. Main run launched01:39:01WIB, branch codex/urmi-proper-mesh1, sourcec805d549. See [proper protocol](URMI_MC_PROPER.md), measured equilibrium and explicit volume-domain numerical update; target20s,22h nativebudget plus2h media, not completion promise. Oldrough/strict protocols remain preserved.
+
+
+## Terminal28October: main001 stopped before dynamics
+Native ended01:59WIB at5243updates/10.837544native seconds. Damped persistence
+passed486checks/1.001690s; undamped hold stopped at118checks/.243710s because
+RF=.00010007057384 exceeded1e-4 by.0705738%; RK=1.1149e-10 still passed1e-8.
+No material switch/dynamic states or videos. Frozen fullobserver failed on the
+realfailed hold; saved-only diagnosis independently validated all5243norm
+rows and initial3503MP/source307/DLL evidence, explicitly not equilibriumPASS.
+All originalfailure/source/raw retained in main001terminalpacket; no solver
+rerun/tolerance change. Initial-only video is not a substitute for dynamics.

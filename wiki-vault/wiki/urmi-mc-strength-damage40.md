@@ -120,3 +120,4 @@ Full001 source3acf468f now ACTIVE,48hwallcap/notETA; still drainedpreparation at
 
 ## Main trial28October
 [[urmi-mc-proper-main]] launched01:39WIB with human-selected h1/PPC2x2 and measured preparation. Two filled-patch movies auto-export; oldrough failures preserved, main outcome pending.
+Main001 terminal28Oct01:59WIB: failed undamped preparation RF hold, no material switch/dynamicframes/video. See [[urmi-mc-proper-main#Terminal28October01:59WIB]].
