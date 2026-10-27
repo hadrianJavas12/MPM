@@ -7,8 +7,10 @@ run/token economy;27October sayscontinue. Work branch
 `codex/urmi-mc-damage-slope40` fromc2cd4069. Read
 [current scope](benchmarks/URMI_MC_DAMAGE40.md) and
 research/notes/urmi-mc-damage40-2026-10-26/constitutive-plan.md.
-No solver active. New optional material/point controls are source preparation,
-NOT_RUN; old complete result below stays closed and is not this experiment.
+No full solver active. Optional material and atomic transfer FIRST native
+controls are now PASS (sources961c17a8/946dbce7); owned MPM recipe/output
+controls and60s slope remain NOT_RUN. Old complete result below stays closed
+and is not this experiment.
 
 Joss was only a provisional assumption. Human explicitly rejects that material;
 prototype branchcodex/slope40-damage retained/pushedb36e79f1. Its3tiny native
@@ -22,9 +24,15 @@ Normalized curve in postpeakTOTAL DSSincrement then unloading correction
 q=s+(sup-c)/G and κ=q/sqrt3. Root+independent mathreview acceptlocalmapping,
 withfiniteJ/edge limits; no exactpaper/calibration claim. Directplasticcurve
 and singularpeakconnector rejected. Tableerror<=101.25Pa/64segments.
-FIRST frozenpoint/ownership/currentJ/edgecontrols must precede stage-transfer
-and boundedMPM/VTKaudit before60s. Stable drainedelastoplastic initialization
-and stress/history/cache transfer remain separate unresolved recipe contracts.
+FIRST point5groups PASS:84pureprojectorentries,3nativeattempts/2accepted,
+0MPM;26segments, certifiedchordbound81.900697Pa/samplemax75.428741Pa.
+FIRST transfer4groups PASS:6nativeattempts/6accepted,0MPM. Owned clone-all
+then atomic vectorswap preserves original particles until every candidate
+passes. Compliance changes and genuine dt0 material release are separately
+logged; nativeclock/kappa/F are not reset. Nodecheck+36tests PASS.
+Raw point-001/transfer-001 underoutput/urmi-mc-damage40-2026-10-27; evidence
+closure inprogress. Do not repeat them. BoundedMPM/CSV/VTK and measured
+drained equilibrium still required before60s. No full solver active.
 No clamps/rootpreference/tolerance/strength tuning; no old native/test repeats.
 
 26October human mesh/crack follow-up: descriptive saved-data query only finds

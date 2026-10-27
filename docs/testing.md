@@ -1271,3 +1271,7 @@ contact/work self-comparison and expected different-loading rejection.15 hashes
 retain these preparation checks. The explicit increased-budget flag does not
 relax VTK/creep/loading CSV byte checks. Actual20s before/after prefix remains
 PENDING while hold-20s-001 runs; do not call preparation checks that regression.
+
+### Urmi-inspired MC strength damage,27October2026
+
+FIRST native point controls source961c17a8 exit0/PASS5groups,84pure projector entries,3native attempts/2accepted,0MPM. Actual26segments: certified chord bound81.900697Pa, sampled75.428741Pa, budget101.25Pa. FIRST transfer controls source946dbce7 exit0/PASS4groups,6native attempts/6accepted,0MPM; current-J compliance/owned origin/actual dt0 release/late failure/caches and native reset covered. Nodecheck and36tests exit0. Raw output/urmi-mc-damage40-2026-10-27/point-001 andtransfer-001 preserved. BoundedMPM/CSV/VTK/full60s NOT_RUN; do not repeat these passed controls. Read benchmarks/URMI_MC_DAMAGE40.md for explicit material adaptation and limits.

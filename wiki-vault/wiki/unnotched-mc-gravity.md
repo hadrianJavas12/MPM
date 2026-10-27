@@ -3,7 +3,7 @@ title: Unnotched MC gravity scenario and native gates
 type: synthesis
 tags: [mpm, unnotched, gravity, strength-reduction, windows-native]
 sources: [docs/benchmarks/UNNOTCHED_MC_GRAVITY.md, docs/benchmarks/UNNOTCHED_STATIC_DIAGNOSTIC.md, research/references/unnotched-mc-ssr/contract.json, docs/testing.md]
-updated: 2026-10-26
+updated: 2026-10-27
 ---
 
 # Unnotched MC gravity scenario and native gates
@@ -15,8 +15,10 @@ run/damage and sayscontinue. Branchcodex/urmi-mc-damage-slope40 fromc2cd4069.
 New model is declared normalized Urmi-inspired S1 cohesion degradation with
 phi0 and D_s=1-su/sup; elasticstiffness unchanged, not Joss crack/damage.
 Corrected total-DSS to equivalentplastic mapping is source/math reviewed;
-native point/edge/currentJ/transaction tests and actualrecipe/transfer remain
-NOT_RUN. No solver active. Original completedMC below stays closed. Preserve
+FIRST point/edge/currentJ/transaction5groups and atomic transfer4groups now
+PASS, with0MPM. Actualrecipe/pipeline/full60s remain NOT_RUN. No full solver
+active. See [[urmi-mc-strength-damage40]] for exact counts and scope.
+Original completedMC below stays closed. Preserve
 unused Joss prototypebranch and failed pre-native launcher; do not launch it.
 See docs/benchmarks/URMI_MC_DAMAGE40.md and research/notes/urmi-mc-damage40-2026-10-26/constitutive-plan.md.
 [[urmi-legacy-comparison]] distinguishes the older notched/filtered result.

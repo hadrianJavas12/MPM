@@ -1077,3 +1077,7 @@ point/currentJ/transaction controls pending; strictdrainedelastoplasticeq and
 stress/history/cachetransfer need ownedrecipe before60s. No solver active,
 no old native/tests/render/research repeats. See docs/benchmarks/URMI_MC_DAMAGE40.md.
 [[unnotched-mc-gravity]], [[urmi-legacy-comparison]].
+
+## [2026-10-27] ingest | First MC strength damage and atomic transfer native controls
+
+FIRST material5groups/84pure/3nativeattempts2accepted and transfer4groups/6nativeaccepted PASS,0MPM. Exact native results/source/runtime retained; source961c17a8 and946dbce7. Actual26segment law within101.25Pa chord budget. New clone-all atomic transfer preserves original simulation on late failure; compliance change and native dt0 release are explicit events. Node36pass. Recipe/full60s pending; no old solver/gate/render repeated. [[urmi-mc-strength-damage40]], [[unnotched-mc-gravity]].

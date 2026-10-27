@@ -74,8 +74,19 @@ or new hydrostatic apex mode is authorized.
    positiveJ/mass/finite fields/strength-D identity/coherent motion need actual
    review. Show actual D_s with a fixed0–1 scale and actual metre coordinates.
 
-Current state27October: corrected material plan approved for implementation;
-material code/point controls/transfer/recipe/smoke/full60s NOT_RUN. No solver
-active. Do not claim that the preceding Joss native controls test this MC model.
+Current state27October: owned optional material committed961c17a8 and transfer
+controls checkpoint946dbce7. FIRST point controls exit0/PASS5groups with84pure
+projectorentries,3nativeconstitutiveattempts/2accepted (one expected preflight
+rejection),0MPM. The deterministic table has26segments; certified maximum
+chord error81.900697Pa, sampled error75.428741Pa within101.25Pa budget.
+FIRST transfer controls exit0/PASS4groups,6nativeattempts/6accepted,0MPM.
+They cover current-J full compliance, preserved nonzero history/origin,
+dt0 material release, late-candidate failure, ownership/caches/reset and stale
+batch rejection. New particles are prepared off-simulation and committed with
+one order-preserving vector swap; original objects survive any failure.
+The material switch and genuine native zero-time return have separate energy
+proxies; this is not a closed energy balance. Nodecheck/36tests also pass.
+Owned recipe/smoke/full60s remain NOT_RUN. No full solver active. Do not claim
+that preceding Joss native controls test this MC model.
 Do not repeat completed oldMC/Joss gates, solver/replay/research/rendering.
 No automatic geometry/strength/beta/psi/tolerance changes to force collapse.

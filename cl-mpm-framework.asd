@@ -99,3 +99,14 @@
   :serial t
   :components ((:file "scenarios/urmi-damage40/package")
                (:file "scenarios/urmi-damage40/transfer")))
+
+(asdf:defsystem "cl-mpm-framework/urmi-damage40"
+  :description "Owned40-degree soil MC drained equilibrium and undrained strength-damage experiment"
+  :depends-on ("cl-mpm-framework" "cl-mpm-framework/urmi-strength-transfer" "cl-mpm/models/urmi-strength-damage")
+  :serial t
+  :components ((:file "scenarios/urmi-damage40/recipe-package")
+               (:file "scenarios/urmi-damage40/configuration")
+               (:file "scenarios/urmi-damage40/geometry")
+               (:file "scenarios/urmi-damage40/output")
+               (:file "scenarios/urmi-damage40/runner")
+               (:file "scenarios/urmi-damage40/adapter")))

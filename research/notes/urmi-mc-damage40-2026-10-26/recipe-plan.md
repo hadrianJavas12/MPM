@@ -1,5 +1,26 @@
 # Source-only recipe contract: drained equilibrium to undrained strength damage
 
+## Superseding implementation decision27October, before any MPM recipe result
+
+The initial proposal below is retained as design history, not the executable
+contract. Owned point961c17a8/transfer946dbce7 gates now pass. The transfer
+uses reviewed scratch clones and ONE atomic all-particle vector swap, preserving
+logical IDs by order rather than original object identity. Full native dt0
+material return on each clone is part of the declared instantaneous switch;
+compliance-change and plastic-release energy proxies are separated. Nothing
+is reset to fake equilibrium or erase accumulated native history.
+
+Before the first MPM gate, freeze exact recipe constants: damping
+0.4*sqrt(Ed/rho)/h in1/s, RF<=1e-4 and free-nodal
+RK=KE_free/(free_nodal_mass*abs(g)*10m)<=1e-8, nonzero denominator required.
+Require consecutive qualifying checks spanning at least1native second after
+the gravity ramp, then >=1s and >=100updates undamped with EVERY check passing.
+Preparation cap60000updates AND20native seconds; dynamic target60s/301frames,
+max200000updates. No velocities/stress/history/nativeclock reset. Failure
+preserves the result and stops without strength/geometry/tolerance tuning.
+Current recipe/pipeline/full slope still NOT_RUN; this paragraph supersedes
+the earlier numerical proposal below rather than rewriting past evidence.
+
 27 October 2026. Branch `codex/urmi-mc-damage-slope40`; plan only. No new
 scenario/runner, transfer implementation, test or solver execution is implied.
 The [material plan](constitutive-plan.md) is a separate prerequisite. This is

@@ -1,0 +1,41 @@
+{
+  "schema": "cl-mpm.urmi-strength-damage40.saved-review.v1",
+  "scope": "New Urmi-inspired normalized strength degradation, not literal Eq2 calibration, stiffness damage, fracture, or a guaranteed landslide",
+  "scenario": "urmi-damage40",
+  "referencePdfSha256": "3f6aa9f5ba914564df3031aa8d6853ffef91b045a433446126e49316c150785a",
+  "serialization": {"absolute": 1e-11, "relative": 1e-11, "timeAbsolute": 1e-10, "timeRelative": 1e-10},
+  "configuration": {
+    "height": 10, "crestLength": 12, "slope": 40, "baseHeight": 4,
+    "domainWidth": 60, "domainHeight": 20, "meshSize": 0.5,
+    "mpsPerCell": 2, "workers": 1, "timeStepScale": 0.2,
+    "gravity": -9.80665, "unitWeightNPerM3": 17000, "gravityRampDuration": 2,
+    "settleDampingAlpha": 0.4, "forceTolerance": 0.0001, "kineticTolerance": 1e-8,
+    "consecutiveChecks": 50, "consecutiveDurationS": 1, "undampedHoldUpdates": 100,
+    "undampedHoldDurationS": 1, "maxPreparationUpdates": 60000, "maxPreparationTimeS": 20,
+    "duration": 60, "frames": 301, "maxDynamicUpdates": 200000,
+    "drainedE": 10773000, "drainedNu": 0.33, "drainedCohesionPa": 3700,
+    "drainedFrictionDeg": 30.6, "drainedDilationDeg": 0,
+    "undrainedE": 11745000, "undrainedNu": 0.45
+  },
+  "material": {
+    "peakStrengthPa": 40500, "transitionStrengthPa": 3847.5, "remoldedStrengthPa": 1000,
+    "shearModulusPa": 4050000, "youngsModulusPa": 11745000, "poissonRatio": 0.45,
+    "gammaPeak": 0.01, "gammaTransition": 1.8, "gammaRemolded": 9.477, "beta": 105,
+    "tableTolerancePa": 101.25, "maximumSegments": 64, "actualSegments": 26,
+    "roundingAllowancePa": 1e-7,
+    "history": "kappa-origin; q=sqrt(3)*(kappa-origin); piecewise linear native table after normalized TOTAL DSS curve and unloading correction",
+    "damage": "D_s=1-cohesion/40500; true constitutive strength loss, not plastic kappa, stiffness damage or crack opening"
+  },
+  "observer": {
+    "reference": "actual transfer-release positions; fixed original cohort and original-coordinate graph",
+    "cohortInitialXGreaterM": 2, "cohortInitialYGreaterM": 6,
+    "adjacencyM": 1.01, "minimumDxM": 0.25, "minimumDownslopeM": 0.5,
+    "minimumConnectedFractionOfCohortMass": 0.1, "minimumPositiveDxFractionOfComponentMass": 0.75,
+    "minimumSustainedVxMPerS": 0.001, "minimumSustainedDurationS": 1,
+    "toeOffsetM": 0.5, "minimumRunoutFractionOfTotalMass": 0.01,
+    "selection": "Largest connected threshold-qualified component by mass, tie by smallest logical ID; same component IDs for all saved velocities in its reported interval"
+  },
+  "media": {"field": "mc-strength-damage", "colourMinimum": 0, "colourMaximum": 1, "framesPerSecond": 10, "interpolation": false, "coordinateScale": 1},
+  "verdict": {"automaticScientificValidation": false, "automaticLandslideVerification": false, "manualSpatialReviewRequired": true},
+  "limits": ["No arbitrary-J uniqueness claim", "Local softening and mesh dependence", "Fixed bottom and side rollers are not calibrated runout boundaries", "No pore pressure or physical fracture opening", "Partial saved states never establish full-run completion"]
+}

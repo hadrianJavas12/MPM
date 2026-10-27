@@ -1,0 +1,5 @@
+(in-package :cl-mpm/framework)
+(defmethod compile-scenario ((scenario (eql :urmi-damage40)) (case simulation))
+  (cl-mpm/scenario/urmi-damage40:compile-configuration case))
+(defmethod execute-scenario ((scenario (eql :urmi-damage40)) (case simulation) config directory)
+  (declare (ignore scenario)) (cl-mpm/scenario/urmi-damage40:run (simulation-material case) config directory))
