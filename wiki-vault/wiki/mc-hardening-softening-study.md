@@ -68,3 +68,6 @@ for complete equations, numerical tables, plots, and side-by-side `.mp4` animati
 - `L-URMI-LONG-HS` (Model HS): undergoes 3 retrogressive collapse surges ($t = 0.25\text{ s}$, $0.8\text{–}2.0\text{ s}$, and $5.2\text{–}6.1\text{ s}$), reaching continuum $|u|_{\max} = 13.5387\text{ m}$ (**$+70.46\%$**), toe runout $13.0667\text{ m}$ (**$+68.22\%$**), crest settlement $7.7317\text{ m}$ (**$+39.55\%$**), and $\kappa_{\max} = 7.5377$ (**$1.53\times$**, $\kappa_{\text{mean}} = 0.1756$, $+98.9\%$).
 - Artifacts: `research/cliff/m5_urmi_long_summary.json`, `research/cliff/plots/m5_urmi_long_dashboard.png`, `research/cliff/plots/m5_urmi_long_spatial_localization.png`, `research/cliff/videos/5_cliff_urmi_long_hardening_lh.mp4`, `research/cliff/videos/6_cliff_urmi_long_softening_lhs.mp4`, and `research/cliff/videos/cliff_urmi_long_h_vs_hs.mp4`.
 
+
+## Human-approved clay slope28October
+New h.5/PPC2x2/14010MP native run started08:44WIB. Human chose peak-initial phi33.99 (originalphi0 hardening intentionally replaced), positive quartertanphi residual9.568deg, Dphi<=.75. No Urmi material switch or CUclaim. Gravityramp recorded, no geostaticequilibriumclaim. Main outcomes pending; see [[urmi-mc-proper-main]] for olderfailedattempt, not thisnewmaterial.

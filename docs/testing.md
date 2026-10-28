@@ -1336,3 +1336,7 @@ realfailed hold; saved-only diagnosis independently validated all5243norm
 rows and initial3503MP/source307/DLL evidence, explicitly not equilibriumPASS.
 All originalfailure/source/raw retained in main001terminalpacket; no solver
 rerun/tolerance change. Initial-only video is not a substitute for dynamics.
+
+
+### 28October clay-quarter h05 native launch
+User-approved peak-initial phi33.99/quarterresidualtanphi, mesh.5/PPC2/14010MP. New native modules actually compiled/frame0saved; run stillactive, no terminal/scientificPASS. Savedobserver/watcherAST only, fullworkflowpending. Studio check+36testsPASS. See benchmarks/RESIDUAL_CLAY_QUARTER.md.

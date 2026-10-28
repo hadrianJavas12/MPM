@@ -1,5 +1,58 @@
 # AI Engineering Handover — CL-MPM
 
+## LIVE28October08:44WIB - RUNNING finer clay, PEAK INITIAL + QUARTER RESIDUAL
+
+Latesthuman RUN NOW; actualnative source82bce9b49642f919151f3f65904ded47e696c60e,
+branch codex/resende-slope-material. RUN output/residual-clay-quarter-2026-10-28/main-h05-001.
+Started28Oct08:44:10.788599WIB;22h wallcap29Oct06:44:10WIB plus<=2h automatic
+savedmedia, not ETA. Native NATIVE_RUNNING, actual14010MP/frame0saved; only
+initialization proven, no materialrun/landslide/scientificPASS claimed.
+No oldsolver/gate/research/review repeats. Human permits off afterlaunch.
+
+HUMAN explicitly chose peakstrengthfromstart, then softening to quarterpeak.
+E20MPa/nu.2/rho2000/c0/psi0 fromprior3D triaxial CLAY (source residualsoil).
+phi33.99at kappa0 (NOT originalphi0, explicitlyhumanapproved), plateau to.037,
+phi25.3537628704at.1,residual9.56804127284at.2. tanphi_res/tanphi_peak=.25;
+Dphi=1-tanphi/tanphi_peak<=.75, not cohesion/stiffnessdamage/crack. No Urmi
+c40500formula/undrainedswitch or100kPa cellload on slope. Originalsource law
+andpriornegatives preserved. Mesh.5/PPC2x2/14010MP,40deg/H10/crest24/base8/
+domain72x24. Target20native seconds INCLUDING2s gravityramp/41states. Zero
+initial stress/kappa and no resets/preload. Allmotion duringgravityramp is
+recorded; NO geostaticequilibriumclaim, no forcing an unstableslope to pass
+oldholdgate. Localdamping.75ramp/.02after,oneworker/mass1/USF/FLIP/CFL.2,
+volume-basedcpGIMP/strictpositiveJ/domain/root/tolerances unchanged.
+
+Nativeworker45936/wrapper11732/cmd22224/SBCL34936,Session11; one exactcreation/
+parent proof saved RUN-launch-preparation/one-process-identity-proof.json.
+Separate hidden WMI saved-mediawatcher46344, WAITING_NATIVE. WMI notproven
+logoff/sleep/rebootimmune. Source automaticcapture BEFOREprojectload. Four
+observer/helpers frozen AFTERlaunch BEFOREfirstreview, timinghonest. New
+observerPythonAST/watcherPowerShellAST only; fullsavedworkflow NOTEXECUTED.
+Studio check+36testsPASS. scripts/review-residual-clay-quarter.py savedonly,
+no native rerun. Watcher records media-status and automaticallyexports after
+nativeexit; DON'T duplicate review/render. It allows truthfulpartialprefix
+onlywith actualfailednative orstoppedwrapper proof. Nativefields/law/floor/
+IDs/finite/FJ/mass/V0/yield/work/motion/KE/runout checked bysavedauditor.
+
+Expected RUN/filled-review-001/soil-motion.mp4 + strength-damage.mp4 andactual
+proper-motion-result.png/proper-damage-result.png; allF-convectedfilledpatches/
+equalmetres/nointerpolation/filtering, Dphi0..1legend. Inspect BOTH actualPNGs
+andreviewJSON beforedelivering bothmovies. Complete/colour notscientificPASS.
+Savedanalysis/mediafailures retainstages/frozenoriginals andfixSAVEDDATAONLY;
+no identicalrestart/hiddenstrength/psi/root/clamp/tolerance tweak. Preserve
+allnegatives/raw/private/settings; noUI/mainmerge. No automaticfurthermesh/
+time/weakeningescalation. Archive thisactualattempt source/runtime/raw/adjacent/
+detached/preparation/media onceATTERMINAL, indexedignoredmedia/Gitblobverify.
+
+Automation pantau-clay-mesh-0-5-m ACTIVEhourly. Wakeup ONLY adjacentstatus/
+progress/heartbeat +media-status +manifest complete/phase/time/native/savedFrames
+andONEstdouttail. Healthy unchanged DONT_NOTIFY; no activepoll/PIDquery/tests/
+research/reviews/renders/archives. Stale reconcileactualidentity/exit, no
+inventedrunning/materialfailure. Terminal/change readthisTOP and
+RESIDUAL_CLAY_QUARTER.md; actualfiles overrideprompt. Notify meaningful
+completion/failure/input only; deletefinite monitor whendelivered/closed.
+
+
 ## HUMAN28October - use prior TRIAXIAL CLAY data, not Urmi/pasir
 
 Human requests prior3D MC-H/MC-HS soil and corrects assistant: CLAY, not sand.

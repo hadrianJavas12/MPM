@@ -1134,3 +1134,6 @@ Updated [[urmi-mc-proper-main]] and index: firstundamped RF breach at.243710s, n
 
 ## [2026-10-28] query | Correct residual-clay identity and record material selection
 Re-read source PDF pages6-7/hash and original T100 H/HS caseinputs. Corrected unsupported sand label; recorded exact prior material table with sourcehashes, density discrepancy and no hiddenpreload/CUclaim. No native run or immutable raw edits.
+
+## [2026-10-28] ingest | Finer quarter-strength clay mainrun launched
+Human approved peak-initialphi and quarterresidual. New source82bce9b4 actualSBCL/frame0/14010MP; no terminalPASS. Recorded afterlaunch savedobserverfreeze and automaticmediawatcher/hourlyquietmonitor, no oldsolverrepeats/rawedits.

@@ -55,3 +55,5 @@
 - [[urmi-mc-proper-main#Terminal28October01:59WIB]] - main001 failed undamped preparation hold; no dynamics/videos, saved diagnosis retained
 
 - [[mc-hardening-softening-study#Native Mohr-Coulomb hardening and softening study]] - correction: user identifies residual clay; old sand label unsupported, source/case density distinction preserved
+
+- [[mc-hardening-softening-study#Human-approved clay slope28October]] - active finer14010MP clay trial, human-approved peak initial/quarter residualstrength, filledmedia pending
