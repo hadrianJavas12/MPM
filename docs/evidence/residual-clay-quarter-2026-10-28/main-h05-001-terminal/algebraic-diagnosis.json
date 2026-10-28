@@ -1,0 +1,49 @@
+{
+  "scope": "Independent actual-capsule algebra, not an MPM restart",
+  "capsuleSha256": "277208599d559c8cf981a3a504db21f7915b82d194a9978ebbf901343471d8cd",
+  "trialKirchhoffPa": [
+    -12.955315666960626,
+    -1.1433208400756665,
+    17.134711588252358
+  ],
+  "sumTrialPa": 3.0360750812160657,
+  "meanTrialPa": 1.012025027072022,
+  "minimumLawFrictionDeg": 9.568041272839212,
+  "sixPlaneResidualSumLowerBoundPa": 2.018610383053201,
+  "explanation": "psi0 flow normals have trace0; isotropic elasticity preserves trace during their corrections. For c0 and phi>0 the sum of all6 MC plane values is4*sin(phi)*trace(tau). Positive preserved trial trace makes all6<=0 impossible; no admissible classical return without a distinct volumetric/tensile constitutive mechanism.",
+  "sourceByteProofBeforeReplay": [
+    {
+      "frozen": "output\\residual-clay-quarter-2026-10-28\\main-h05-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\diagnostics.lisp",
+      "replayLoadedPath": "materials\\models\\plastic\\mohr-coulomb-evolution\\diagnostics.lisp",
+      "sha256": "10fc3d6170b04adbb153fe2afd562d51daefc9d1976a3059ba046c1b8223d0eb"
+    },
+    {
+      "frozen": "output\\residual-clay-quarter-2026-10-28\\main-h05-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\law.lisp",
+      "replayLoadedPath": "materials\\models\\plastic\\mohr-coulomb-evolution\\law.lisp",
+      "sha256": "505207b3bcbbd0c87625d16c96cb436436f71562ded9349aa2126ed7dac6796a"
+    },
+    {
+      "frozen": "output\\residual-clay-quarter-2026-10-28\\main-h05-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\material.lisp",
+      "replayLoadedPath": "materials\\models\\plastic\\mohr-coulomb-evolution\\material.lisp",
+      "sha256": "376bb5465ae7e1553dfb23d0f3ea26b125fbd6430724fcac0ee5233125302aeb"
+    },
+    {
+      "frozen": "output\\residual-clay-quarter-2026-10-28\\main-h05-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\package.lisp",
+      "replayLoadedPath": "materials\\models\\plastic\\mohr-coulomb-evolution\\package.lisp",
+      "sha256": "3ec1f8ccbbf15732ab450708413728987aa843d89b1e2eeefdc6773a4930b028"
+    },
+    {
+      "frozen": "output\\residual-clay-quarter-2026-10-28\\main-h05-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+      "replayLoadedPath": "materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+      "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1"
+    },
+    {
+      "frozen": "output\\residual-clay-quarter-2026-10-28\\main-h05-001\\source\\materials\\models\\plastic\\mohr-coulomb-evolution\\state.lisp",
+      "replayLoadedPath": "materials\\models\\plastic\\mohr-coulomb-evolution\\state.lisp",
+      "sha256": "d9311639dae10064985d5ff2fabfef189ff7bf07cb85699c1fd54355d6f83fd4"
+    }
+  ],
+  "nativeSolverReruns": 0,
+  "sourceByteProofAfterReplay": "All original6MCmodel files unchanged and byte-equal to actual frozen native source",
+  "pureReplay": "ONE strict-schema exactcapsule replay reproduced identical failure payload,0MPMupdates"
+}

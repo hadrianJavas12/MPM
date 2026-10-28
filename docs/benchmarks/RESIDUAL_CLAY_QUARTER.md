@@ -66,3 +66,14 @@ retests/rerenders/research/archives. On meaningful terminal inspect BOTH actual
 PNGs and deliver bothactualmovies honestly. Archive this source/raw/runtime/
 preparation/media onceATTERMINAL and Gitblobverify, not whilewriting. No
 UI/mainmerge/private/raw/settings change. No automatic further escalation.
+
+
+## Terminal28October11:51WIB
+Native1 at attempted.60901049s/643updates;2complete actualstates0/.5s.
+Savedreview001PASS for integrity313source/DLL/14010MP/2states andpairedmedia,
+expectedexit2 partial, NOT scientific/landslidePASS. Maxmotion8.518mm,
+Dphi0/phi33.99 unchanged. MC actualcapsule strictschema1 replayed ONCE,
+identicalfailure/0MPM, original6modelbytes verifiedbefore/after. Positive
+trialtrace3.036075Pa cannot satisfy c0/positivephi MC using tracefreepsi0flow;
+no root or tolerance/clamp remedy applied. BothactualMP4/PNG retained, one
+terminal source/raw/runtime/media packet; no solverrestart. Monitor deleted.

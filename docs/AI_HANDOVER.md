@@ -1,5 +1,52 @@
 # AI Engineering Handover — CL-MPM
 
+## TERMINAL28October11:51WIB - clay h05 FAILED MC RETURN, partial paired videos READY
+
+Actualfiles override LIVE. Native main-h05-001/source82bce9b4 exited1 at
+11:51:54WIB after643completedupdates, attemptednative.6090104918664533s.
+Two complete actualstates0/.5s,14010MP retained; target20sNOTcomplete.
+Auto frozen savedreview001 CLOSED exit2/PARTIAL_VIDEOS_READY11:52:23WIB,
+not analysisfailure.313sourcepayloads/mappedDLL verified;28020MP rows/2VTK,
+FJ/V0/mass/IDs/actualphi/law/quarterfloor/yield/history/work and bothmovies
+encoded/fulldecoded. Both2frames/5fps/.4splayback, allactualF-convectedfilled
+patches/equalmetres/nointerp/filter. Root inspected BOTH actualPNGs. At.5s
+maxdisplacement.008518464m, uppercentroid(+.000007259,-.008052963)m,
+minJ.998737417, KE1207.50366J/m, Dphi0/phi33.99 everywhere; no softening,
+no coherent-slidecandidate or runout. Partialearlygravityresponse only.
+
+Files RUN/filled-review-001/soil-motion.mp4 and strength-damage.mp4 ready
+for paired delivery. Do NOT render/review/encode again or call these a slide.
+OriginalPNGs actual.5s, damagezero; initial-only appearance is real, not missing
+colour. No field was hidden or magnified. No solver active, no identicalrestart.
+
+Actual mc-integration-failure.json strict principal-failure schema1 captured:
+trialKirchhoff[-12.955315667,-1.143320840,+17.134711588]Pa, J1.00000009108,
+oldkappa.00005305306, E20MPa/nu.2, c0/psi0, positivephi entirelaw. Exactreason:
+No admissible coupled active-set solution;208evaluations; NO apexclamp/floor
+remedy applied. Not a domain/Jfailure or evidence residualquarter was reached.
+ONE scripts/replay-mc-failure.lisp actualcapsulereplay CLOSED PASS/identical
+failurepayload/0MPMupdates. Replayroot6model files before/after byte-equal
+actualfrozennativeprojector; loading provenance scope documented honestly.
+No repeated fullnative/tests/oldfailedcase/research. No syntheticmissingtuple.
+
+Independent actualcapsule algebra: trace(trial)=+3.036075081Pa, mean+1.012025027.
+psi0 flow normals have trace0; isotropicelastic corrections preserve trace.
+Forc0 MC sum6planevalues=4sin(phi)trace(tau)>0; minphi9.568 giveslowerbound
+2.018610383Pa, so all6planes cannot be admissible at preservedpositivetrace.
+A physicallydeclared tension/apexvolumetric mechanism is required to handle
+such trials; NOT a tolerance/rootpreference/clamp/hiddenstrength tweak. No
+constitutive extension or newsolver is authorized automatically by monitor.
+
+ONE terminalpacket docs/evidence/residual-clay-quarter-2026-10-28/main-h05-001-terminal
+preserves actualsource/cache/runtime/raw/adjacent/detached/preparation/frozen
+observer/actualcapsule/replay/algebra/pairedmedia. Do not duplicatearchive.
+Finite automation pantau-clay-mesh-0-5-m DELETED because actualrun ended and
+pairedresult/failure ready. User must not keepwaiting24h. No automaticmesh/
+time/strength/psi/root/tolerance escalation. NoUI/mainmerge/raw/private/settings
+change. Sourcecommit stays82bc despite newdocHEAD. Weekly100%atclosure;5h
+resetnotweeklyreset. Futurework diagnoseconstitutivefoundation explicitly.
+
+
 ## LIVE28October08:44WIB - RUNNING finer clay, PEAK INITIAL + QUARTER RESIDUAL
 
 Latesthuman RUN NOW; actualnative source82bce9b49642f919151f3f65904ded47e696c60e,

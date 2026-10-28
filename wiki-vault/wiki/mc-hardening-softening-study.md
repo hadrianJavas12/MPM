@@ -71,3 +71,9 @@ for complete equations, numerical tables, plots, and side-by-side `.mp4` animati
 
 ## Human-approved clay slope28October
 New h.5/PPC2x2/14010MP native run started08:44WIB. Human chose peak-initial phi33.99 (originalphi0 hardening intentionally replaced), positive quartertanphi residual9.568deg, Dphi<=.75. No Urmi material switch or CUclaim. Gravityramp recorded, no geostaticequilibriumclaim. Main outcomes pending; see [[urmi-mc-proper-main]] for olderfailedattempt, not thisnewmaterial.
+
+### Quarter-strength slope terminal28October11:51WIB
+Native stopped at.609s, saved0/.5s withDphi0/8.5mmmaximumdisplacement.
+No verifiedslide. Actualtensiletrial+trace withc0/psi0 has no admissible
+classicalMCreturn; oneexactcapsulepure replay reproducedfailure/0MPM.
+Pairedfilledmovies andsource313/raw/runtime archivedonce; no automaticrestart.

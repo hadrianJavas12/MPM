@@ -1137,3 +1137,6 @@ Re-read source PDF pages6-7/hash and original T100 H/HS caseinputs. Corrected un
 
 ## [2026-10-28] ingest | Finer quarter-strength clay mainrun launched
 Human approved peak-initialphi and quarterresidual. New source82bce9b4 actualSBCL/frame0/14010MP; no terminalPASS. Recorded afterlaunch savedobserverfreeze and automaticmediawatcher/hourlyquietmonitor, no oldsolverrepeats/rawedits.
+
+## [2026-10-28] ingest | Clay quarter h05 terminal MC failure and paired media
+Recorded actual0/.5s states/Dphi0/no slide; strictcapturedtrial replayONCE and trace-invariance diagnosis,0MPM. BothfilledPNGs inspected, media/source/rawpacket retainedonce; finite monitor deleted, no physics tweak/restart.

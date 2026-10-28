@@ -1340,3 +1340,14 @@ rerun/tolerance change. Initial-only video is not a substitute for dynamics.
 
 ### 28October clay-quarter h05 native launch
 User-approved peak-initial phi33.99/quarterresidualtanphi, mesh.5/PPC2/14010MP. New native modules actually compiled/frame0saved; run stillactive, no terminal/scientificPASS. Savedobserver/watcherAST only, fullworkflowpending. Studio check+36testsPASS. See benchmarks/RESIDUAL_CLAY_QUARTER.md.
+
+
+## Terminal28October11:51WIB
+Native1 at attempted.60901049s/643updates;2complete actualstates0/.5s.
+Savedreview001PASS for integrity313source/DLL/14010MP/2states andpairedmedia,
+expectedexit2 partial, NOT scientific/landslidePASS. Maxmotion8.518mm,
+Dphi0/phi33.99 unchanged. MC actualcapsule strictschema1 replayed ONCE,
+identicalfailure/0MPM, original6modelbytes verifiedbefore/after. Positive
+trialtrace3.036075Pa cannot satisfy c0/positivephi MC using tracefreepsi0flow;
+no root or tolerance/clamp remedy applied. BothactualMP4/PNG retained, one
+terminal source/raw/runtime/media packet; no solverrestart. Monitor deleted.

@@ -1,0 +1,177 @@
+{
+  "scope": "PEAK_INITIAL_CLAY_QUARTER_STRENGTH_NUMERICAL_TRIAL_NOT_CALIBRATED_VALIDATION",
+  "savedIntegrity": "PASS",
+  "nativeComplete": false,
+  "nativeStatus": "failed",
+  "actualConfig": {
+    "height": 10.0,
+    "crestLength": 24.0,
+    "slope": 40.0,
+    "baseHeight": 8.0,
+    "domainWidth": 72.0,
+    "domainHeight": 24.0,
+    "meshSize": 0.5,
+    "mpsPerCell": 2,
+    "workers": 1,
+    "timeStepScale": 0.2,
+    "gravity": -9.80665,
+    "gravityRampDuration": 2.0,
+    "density": 2000.0,
+    "settleDamping": 0.75,
+    "duration": 20.0,
+    "frames": 41,
+    "maxDynamicUpdates": 80000,
+    "observerInitialXGreater": 14.0,
+    "observerInitialYGreater": 10.0,
+    "displayOriginX": 12.0,
+    "displayOriginY": 8.0,
+    "toeX": 35.917535925942104,
+    "youngsModulusPa": 20000000.0,
+    "poissonRatio": 0.2,
+    "cohesionPa": 0.0,
+    "dilationDeg": 0.0,
+    "peakKappa": 0.037,
+    "peakFrictionDeg": 33.99,
+    "residualStrengthRatio": 0.25,
+    "frictionTable": [
+      [
+        0.0,
+        33.99
+      ],
+      [
+        0.037,
+        33.99
+      ],
+      [
+        0.1,
+        25.353762870428053
+      ],
+      [
+        0.2,
+        9.568041272839212
+      ]
+    ]
+  },
+  "sourceProof": {
+    "status": "PASS",
+    "sourceFilesVerified": 313,
+    "actualMappedDll": {
+      "modulePath": "D:/MPM/output/residual-clay-quarter-2026-10-28/main-h05-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "case": {
+      "path": "D:\\MPM\\output\\residual-clay-quarter-2026-10-28\\main-h05-001\\source\\case.lisp",
+      "bytes": 1033,
+      "sha256": "5bd72b8ddce24b5322573c178019529eb0cf40a9d82ea6017180b3d0007461ef"
+    },
+    "manifest": {
+      "path": "D:\\MPM\\output\\residual-clay-quarter-2026-10-28\\main-h05-001\\source\\source-manifest.json",
+      "bytes": 65324,
+      "sha256": "5db217a29750d91ce3421e5bad1ec85e945920c3cea2bc3f0a8e511be143725d"
+    },
+    "runtimeProvenance": {
+      "path": "D:\\MPM\\output\\residual-clay-quarter-2026-10-28\\main-h05-001\\source-provenance.json",
+      "bytes": 698062,
+      "sha256": "89457cf2d8af8681f3661c9014be398128973cb71b0a66955e4afcd0fc49a3d6"
+    }
+  },
+  "particleCount": 14010,
+  "states": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "nativeTimeS": 0.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\residual-clay-quarter-2026-10-28\\main-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0000.vtk",
+        "bytes": 5270146,
+        "sha256": "4d44aba893f39ebaf77ec16b9619bd617d9664e7cca454d9e7cf8fce15d22a2c"
+      },
+      "minJ": 1.0,
+      "maximumStrengthLoss": 0.0,
+      "minimumFrictionDeg": 33.99,
+      "kineticJPerM": 0.0,
+      "maximumDisplacementM": 0.0,
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "upperCohortCentroidDisplacementM": [
+        0.0,
+        0.0
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 1,
+      "timeS": 0.5,
+      "nativeTimeS": 0.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\residual-clay-quarter-2026-10-28\\main-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0001.vtk",
+        "bytes": 5270146,
+        "sha256": "f7d993529a3613b7d0ebe7edd5c1e10088d0d2f99d42fc5878fb5316b2f64399"
+      },
+      "minJ": 0.9987374165296842,
+      "maximumStrengthLoss": 0.0,
+      "minimumFrictionDeg": 33.99,
+      "kineticJPerM": 1207.5036603642106,
+      "maximumDisplacementM": 0.008518464262138536,
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "upperCohortCentroidDisplacementM": [
+        7.258873384487651e-06,
+        -0.008052962718147517
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 14010
+    }
+  ],
+  "preparationSnapshots": [],
+  "actualDynamicSavedFrames": 2,
+  "actualLastDynamicTimeS": 0.5,
+  "qualitativeMotionCandidates": [],
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "initialization": "Human-approved peak initial strength, zero initial stress/kappa,2s gravity ramp, NO geostatic equilibrium claim; no model switch",
+  "damageMeaning": "D_phi=1-tan(phi)/tan(phi_peak), floor strength25%, not crack/stiffness/cohesion damage",
+  "media": {
+    "status": "PASS",
+    "scope": "PEAK_INITIAL_CLAY_QUARTER_STRENGTH_NUMERICAL_TRIAL_NOT_CALIBRATED_VALIDATION",
+    "actualMovieStates": 2,
+    "allParticlesShown": true,
+    "coordinateScale": 1,
+    "colourRange": [
+      0,
+      1
+    ],
+    "interpolation": false,
+    "plotBoundsWorldM": [
+      -13.44,
+      61.44,
+      -9.44000107261031,
+      17.44
+    ],
+    "renderGeometry": "Actual F convects each original square patch; numerical quadrature domains distinct; overlaps/gaps retained",
+    "sameActualStateSequenceAndTimingForBothMovies": true,
+    "movies": {
+      "motion": {
+        "video": {
+          "path": "D:\\MPM\\output\\residual-clay-quarter-2026-10-28\\main-h05-001\\filled-review-001\\soil-motion.mp4",
+          "bytes": 17919,
+          "sha256": "4973d2528ddfcbfa3d41efc4a00ec512cc4b8086febe97b9b410115b5715adcb"
+        },
+        "decodedFrames": 2,
+        "framesPerSecond": 5
+      },
+      "damage": {
+        "video": {
+          "path": "D:\\MPM\\output\\residual-clay-quarter-2026-10-28\\main-h05-001\\filled-review-001\\strength-damage.mp4",
+          "bytes": 19243,
+          "sha256": "9c43d52c70e988b275ace0331b64a1c9f9c777c3607226988d1d099c9a7bad78"
+        },
+        "decodedFrames": 2,
+        "framesPerSecond": 5
+      }
+    }
+  }
+}
