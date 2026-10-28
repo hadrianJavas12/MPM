@@ -1,0 +1,49 @@
+{
+  "height": 10.0,
+  "crestLength": 24.0,
+  "slope": 40.0,
+  "baseHeight": 8.0,
+  "domainWidth": 72.0,
+  "domainHeight": 24.0,
+  "meshSize": 0.5,
+  "mpsPerCell": 2,
+  "workers": 1,
+  "timeStepScale": 0.2,
+  "gravity": -9.80665,
+  "gravityRampDuration": 2.0,
+  "density": 2000.0,
+  "settleDamping": 0.75,
+  "duration": 20.0,
+  "frames": 41,
+  "maxDynamicUpdates": 80000,
+  "observerInitialXGreater": 14.0,
+  "observerInitialYGreater": 10.0,
+  "displayOriginX": 12.0,
+  "displayOriginY": 8.0,
+  "toeX": 35.917535925942104,
+  "youngsModulusPa": 20000000.0,
+  "poissonRatio": 0.2,
+  "cohesionPa": 0.0,
+  "dilationDeg": 0.0,
+  "peakKappa": 0.037,
+  "peakFrictionDeg": 33.99,
+  "residualStrengthRatio": 0.25,
+  "frictionTable": [
+    [
+      0.0,
+      33.99
+    ],
+    [
+      0.037,
+      33.99
+    ],
+    [
+      0.1,
+      25.353762870428053
+    ],
+    [
+      0.2,
+      9.568041272839212
+    ]
+  ]
+}

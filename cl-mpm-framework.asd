@@ -134,3 +134,11 @@
   :depends-on ("cl-mpm-framework/urmi-damage40")
   :serial t
   :components ((:file "scenarios/urmi-damage40/proper")))
+
+(asdf:defsystem "cl-mpm-framework/residual-clay-slope"
+  :description "Human-approved peak-initial residual clay, quarter residual frictional strength"
+  :depends-on ("cl-mpm-framework/urmi-damage40-proper")
+  :serial t
+  :components ((:file "scenarios/residual-clay-slope/package")
+               (:file "scenarios/residual-clay-slope/output")
+               (:file "scenarios/residual-clay-slope/runner")))

@@ -1,0 +1,79 @@
+{
+  "schema": "cl-mpm.residual-clay.quarter-strength.v1",
+  "materialName": "Residual clay from the prior T-100-H/T-100-HS comparison",
+  "classificationBasis": "Human identifies clay; source PDF calls it residual soil. The former report label Resende sand is unsupported.",
+  "selectedVariant": "hs",
+  "youngsModulusPa": 20000000.0,
+  "poissonRatio": 0.2,
+  "densityKgM3": 2000.0,
+  "cohesionPa": 0.0,
+  "dilationDeg": 0.0,
+  "stressMeasure": "cauchy",
+  "peakKappa": 0.037,
+  "frictionTable_kappa_phiDeg": [
+    [
+      0.0,
+      33.99
+    ],
+    [
+      0.037,
+      33.99
+    ],
+    [
+      0.1,
+      25.353762870428053
+    ],
+    [
+      0.2,
+      9.568041272839212
+    ]
+  ],
+  "hardeningVariant": "Same table until kappa=.037 then plateau phi=33.99deg",
+  "softeningVariant": "Peak-initial plateau phi33.99deg through kappa.037; positive quarter-strength residual phi9.568041272839212deg at kappa.20",
+  "strainAxisScale": 1.0,
+  "densityProvenance": "2000kg/m3 is the actual prior MPM case setting, NOT a conversion of the PDF unit weight.",
+  "sourcePdfUnitWeightNPerM3": 16830.0,
+  "triaxialCellPressurePa": 100000.0,
+  "applyTriaxialCellPressureToSlope": false,
+  "urmiUndrainedMaterialSwitch": false,
+  "urmiStrengthDamageFormulaApplicable": false,
+  "initializationWarning": "Original table starts c=0,phi=0 at kappa=0; no silently preloaded kappa or altered friction. Slope initialization still needs an explicit protocol.",
+  "state": "Configured native slope-quarter case; launch pending, no successful native/runtime validation claimed yet",
+  "sources": [
+    {
+      "path": "cases/triaxial/triaxial-mc-h-100.lisp",
+      "sha256": "da6633ef7199ce3ccc89ee09b040468c6f7100885de664fffc73e3bf7a9221b6"
+    },
+    {
+      "path": "cases/triaxial/triaxial-mc-hs-100.lisp",
+      "sha256": "6aa0d44215a907e2e1cdd5785a1f2d661516fdad0111ce78d439072c1e178c55"
+    }
+  ],
+  "parentPreset": "calibration/residual-clay-slope-material.json",
+  "postpeakResidualStrengthRatio": 0.25,
+  "residualFrictionDeg": 9.568041272839212,
+  "originalTable_kappa_phiDeg": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0068,
+      27.1
+    ],
+    [
+      0.037,
+      33.99
+    ],
+    [
+      0.1,
+      27.62
+    ],
+    [
+      0.2,
+      16.34
+    ]
+  ],
+  "strengthRatioDefinition": "At a fixed positive normal effective stress: tau_residual/tau_peak=tan(phi_residual)/tan(phi_peak)=0.25, since c=0; not phi_peak/4.",
+  "initializationChoice": "Human explicitly selected peak strength at kappa0, then softening to quarter peak. No kappa preload/reset; modified initial curve declared."
+}
