@@ -1,5 +1,13 @@
 # Final Comparative Study: Mohr–Coulomb Strain Hardening (Model H) vs Strain Hardening–Softening (Model HS) in CL-MPM
 
+> **Material naming correction,28October2026:** The user identifies the main
+> residual-soil triaxial dataset as clay. The primary provided PDF calls it
+> residual soil (pages6-7); the previous label "Resende sand" is unsupported
+> for this dataset. Treat its c=0 as the selected MC-HS parameterization, not
+> a grain-size classification. Original numerical results/curves are unchanged.
+> Actual MPM density2000kg/m3 differs from source PDF unitweight16.83kN/m3.
+
+
  > **Scope clarification,26October2026:** Section5.4 Urmi-long bulk metrics use
 > domain/displacement/frame-speed exclusions and conditional KE substitution.
 > Raw HS output includes severe numerical outliers; the tables are not whole-run

@@ -1131,3 +1131,6 @@ Added [[urmi-mc-proper-main]], linked [[urmi-mc-strength-damage40]] and index. S
 
 ## [2026-10-28] ingest | Main001 terminal preparation failure
 Updated [[urmi-mc-proper-main]] and index: firstundamped RF breach at.243710s, no switch/dynamics. Preserved originalobserver failure and one saved-only diagnosis/307sourceproof/archive; no solverrestart or raw/settings edits.
+
+## [2026-10-28] query | Correct residual-clay identity and record material selection
+Re-read source PDF pages6-7/hash and original T100 H/HS caseinputs. Corrected unsupported sand label; recorded exact prior material table with sourcehashes, density discrepancy and no hiddenpreload/CUclaim. No native run or immutable raw edits.

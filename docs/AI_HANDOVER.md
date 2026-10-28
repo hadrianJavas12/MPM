@@ -1,5 +1,24 @@
 # AI Engineering Handover — CL-MPM
 
+## HUMAN28October - use prior TRIAXIAL CLAY data, not Urmi/pasir
+
+Human requests prior3D MC-H/MC-HS soil and corrects assistant: CLAY, not sand.
+Primary PDF hashacd60b...f3979 re-read locally, pages6-7: residualsoil, E20MPa,
+nu.2,c0(MC-HS), phi table0/.0068/.037/.1/.2 ->0/27.1/33.99/27.62/16.34deg.
+Prior actual T100cases density2000kg/m3; source PDF unitweight16.83kN/m3
+is a DIFFERENT value, not equal by conversion. Preserve that distinction.
+Assistant's Resende sand label was unsupported and report correction added.
+Material selection recorded calibration/residual-clay-slope-material.json,
+selectedHS with exact oldtable/parameters and sourcehashes. Metadata/static
+source checks ONLY; no new native material/slope/solver execution. No current
+run. Branch codex/resende-slope-material. OldUrmi outputs/protocols intact.
+For next slope integration REMOVE Urmi undrainedswitch/c40500 damageformula,
+which does not apply to frictionevolution/c0. Original phi0 initial point
+needs explicit physical initialization; no hidden preloading/reset/parameter
+change or100kPa laboratorycellpressure on slope. Do not claim the newpreset
+is already an operational slope simulation or a fullycoupled CU clay model.
+
+
 ## TERMINAL28October01:59WIB - main001 FAILED PREPARATION; NO DYNAMICS
 
 Actual files override older LIVE section. Main001/sourcec805d549 native1,

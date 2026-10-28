@@ -8,6 +8,14 @@ updated: 2026-10-17
 
 # Native Mohr-Coulomb hardening and softening study
 
+> [!correction] Material identity28October
+> User identifies this residual-soil triaxial dataset as clay. Source PDF
+> pages6-7 says residualsoil; earlier "Resende sand" label is unsupported.
+> c=0 in the MC-HS idealization does not classify soil as sand. Original
+> reference case density2000kg/m3 differs from PDF gamma16.83kN/m3.
+> New slope-material selection is recorded; no new slope simulation started.
+
+
 Milestones **M0 through M6** of the Mohr–Coulomb strain-hardening (**Model H**, `:mc-h`) and
 strain-hardening–softening (**Model HS**, `:mc-hs`) comparative study are **100% COMPLETE**
 on branch `codex/mc-hardening-softening-study` (branched from `origin/main` at `e6f9abe`
