@@ -1146,3 +1146,6 @@ Human authorizes continued unnotched slide work. Explicit volumetric apex/quarte
 
 ## [2026-10-29] ingest | HS-apex clay main attempt started
 Actual source8c62e3b6/14010MP/frame0,16:03WIB;22hcap plus<=2h auto twofilledmovies. Frozenobserver beforelaunch, quiet15minmonitor; no slide proof yet.
+
+## [2026-10-30] ingest | HS-apex clay partial numerical sliding outcome
+Native failed incrementalDF at6.07249s, thirteenactualstates/twofilledmovies delivered. BothsummaryPNGs and early3/4sframes inspected; newpostramp CSV-only diagnostic supports connectedslidingonset3s, no full20s/physicalvalidation. LateFstreaks and missingfailedtuple explicit. One terminalpacket, no solverrestart/rawedits.

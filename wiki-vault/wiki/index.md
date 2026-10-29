@@ -61,3 +61,5 @@
 - [[mc-hardening-softening-study#Quarter-strength slope terminal28October11:51WIB]] - failedMCreturn before softening; two actualpartialstates/videos and one purecapsulereplay preserved
 
 - [[clay-hs-apex-unnotched]] - explicit HS apex extension; quarter-strength clay fresh gravity trial.
+
+- [[clay-hs-apex-unnotched#Terminal outcome]] - partial unnotched numerical sliding observed; lateFdistortion/nativeguard failure, twoactualvideos preserved.

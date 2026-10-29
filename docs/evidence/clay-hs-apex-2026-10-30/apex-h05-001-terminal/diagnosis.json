@@ -1,0 +1,275 @@
+{
+  "scope": "SAVED_ONLY_POST_RAMP_MOTION_AND_F_DISTORTION_DIAGNOSIS_NOT_PHYSICAL_VALIDATION",
+  "solverUpdates": 0,
+  "reviewReruns": 0,
+  "renderReruns": 0,
+  "originalReviewerUnchanged": true,
+  "criteria": "Existing .25m horizontal/.5m downhill/10% connected upper cohort, persistence vx>.001m/s for1s; here restricted to times>=2s and displacement relative to saved2s state; posthoc diagnostic, not preregistered calibration",
+  "numericalSlidingSupportedByPostRampMotion": true,
+  "firstSupportedSavedTimeS": 3.0,
+  "nativeComplete": false,
+  "scientificallyValidated": false,
+  "failure": {
+    "condition": "CL-MPM/ERRORS:ERROR-DF-NEGATIVE",
+    "meaningFromFrozenSource": "det(I+stretchTensor)<0 guarded before deformation update (fbar disabled); NOT proof saved total J was negative",
+    "failedParticleTupleAvailable": false,
+    "exactFailureReplayPossible": false,
+    "noSyntheticReplacement": true
+  },
+  "interpretation": "Visible unnotched downslope mass motion precedes late severely elongated F-convected patches. Final streaks are retained numerical distortion, not a validated long-distance runout/crack surface. Full20s remains incomplete.",
+  "states": [
+    {
+      "frame": 0,
+      "nativeTimeS": 0.0,
+      "maximumSingularStretch": 1.0,
+      "minimumSingularStretch": 1.0,
+      "stretch99Percentile": 1.0,
+      "countStretchAbove10": 0,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": 0.0,
+      "postRampConnectedMovingUpperMassFraction": 0,
+      "postRampPersistence": {
+        "status": "NOT_EVALUATED"
+      }
+    },
+    {
+      "frame": 1,
+      "nativeTimeS": 0.5,
+      "maximumSingularStretch": 1.0003600843384117,
+      "minimumSingularStretch": 0.9987374165296842,
+      "stretch99Percentile": 1.0000697932498035,
+      "countStretchAbove10": 0,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -7.97708378528772e-05,
+      "postRampConnectedMovingUpperMassFraction": 0,
+      "postRampPersistence": {
+        "status": "NOT_EVALUATED"
+      }
+    },
+    {
+      "frame": 2,
+      "nativeTimeS": 1.0,
+      "maximumSingularStretch": 1.004756316053789,
+      "minimumSingularStretch": 0.9918616653167249,
+      "stretch99Percentile": 1.0031935139337165,
+      "countStretchAbove10": 0,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -0.0005101972366337443,
+      "postRampConnectedMovingUpperMassFraction": 0,
+      "postRampPersistence": {
+        "status": "NOT_EVALUATED"
+      }
+    },
+    {
+      "frame": 3,
+      "nativeTimeS": 1.5,
+      "maximumSingularStretch": 1.0234645738220225,
+      "minimumSingularStretch": 0.9772865334324387,
+      "stretch99Percentile": 1.0151573114685992,
+      "countStretchAbove10": 0,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -0.0008072412368728826,
+      "postRampConnectedMovingUpperMassFraction": 0,
+      "postRampPersistence": {
+        "status": "NOT_EVALUATED"
+      }
+    },
+    {
+      "frame": 4,
+      "nativeTimeS": 2.0,
+      "maximumSingularStretch": 1.0635378872573162,
+      "minimumSingularStretch": 0.9403329384167428,
+      "stretch99Percentile": 1.041380550524818,
+      "countStretchAbove10": 0,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -0.0010323786301184162,
+      "postRampConnectedMovingUpperMassFraction": 0,
+      "postRampPersistence": {
+        "status": "NOT_EVALUATED"
+      },
+      "postRampUpperCentroidDisplacementM": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "frame": 5,
+      "nativeTimeS": 2.5,
+      "maximumSingularStretch": 1.20111677307675,
+      "minimumSingularStretch": 0.8316467409409884,
+      "stretch99Percentile": 1.1244885305150982,
+      "countStretchAbove10": 0,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -0.0010090509787097496,
+      "postRampConnectedMovingUpperMassFraction": 0,
+      "postRampPersistence": {
+        "status": "NOT_EVALUATED"
+      },
+      "postRampUpperCentroidDisplacementM": [
+        0.029682279849652778,
+        -0.01817302669277062
+      ]
+    },
+    {
+      "frame": 6,
+      "nativeTimeS": 3.0,
+      "maximumSingularStretch": 1.8048935364965262,
+      "minimumSingularStretch": 0.5557947911941505,
+      "stretch99Percentile": 1.521814817750529,
+      "countStretchAbove10": 0,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -0.0009827089218314572,
+      "postRampConnectedMovingUpperMassFraction": 0.1041776837652036,
+      "postRampPersistence": {
+        "status": "PASS",
+        "startTimeS": 2.0,
+        "endTimeS": 3.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.1469211671297826
+      },
+      "postRampUpperCentroidDisplacementM": [
+        0.10806411491364605,
+        -0.06779800284157053
+      ]
+    },
+    {
+      "frame": 7,
+      "nativeTimeS": 3.5,
+      "maximumSingularStretch": 2.894057977466828,
+      "minimumSingularStretch": 0.3489446773047144,
+      "stretch99Percentile": 2.506541213992391,
+      "countStretchAbove10": 0,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -0.0010034274545207833,
+      "postRampConnectedMovingUpperMassFraction": 0.165520888418826,
+      "postRampPersistence": {
+        "status": "PASS",
+        "startTimeS": 2.0,
+        "endTimeS": 3.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.11188032918767372
+      },
+      "postRampUpperCentroidDisplacementM": [
+        0.28840550378755836,
+        -0.18153898751629186
+      ]
+    },
+    {
+      "frame": 8,
+      "nativeTimeS": 4.0,
+      "maximumSingularStretch": 6.4608748067344965,
+      "minimumSingularStretch": 0.18629352339773608,
+      "stretch99Percentile": 4.039656290773146,
+      "countStretchAbove10": 0,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -0.0010267236302946153,
+      "postRampConnectedMovingUpperMassFraction": 0.19672131147540983,
+      "postRampPersistence": {
+        "status": "PASS",
+        "startTimeS": 2.0,
+        "endTimeS": 3.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.09849547729702532
+      },
+      "postRampUpperCentroidDisplacementM": [
+        0.5801751069046133,
+        -0.35426690255876436
+      ]
+    },
+    {
+      "frame": 9,
+      "nativeTimeS": 4.5,
+      "maximumSingularStretch": 18.90908718861791,
+      "minimumSingularStretch": 0.09417262667494061,
+      "stretch99Percentile": 5.958953416298716,
+      "countStretchAbove10": 16,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -0.0010025468481143496,
+      "postRampConnectedMovingUpperMassFraction": 0.21734531993654152,
+      "postRampPersistence": {
+        "status": "PASS",
+        "startTimeS": 2.0,
+        "endTimeS": 3.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.09062096582026538
+      },
+      "postRampUpperCentroidDisplacementM": [
+        0.977917335535053,
+        -0.5370353108156444
+      ]
+    },
+    {
+      "frame": 10,
+      "nativeTimeS": 5.0,
+      "maximumSingularStretch": 57.07635193886292,
+      "minimumSingularStretch": 0.04486288619282074,
+      "stretch99Percentile": 8.003273322103952,
+      "countStretchAbove10": 60,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -0.0009897258270554626,
+      "postRampConnectedMovingUpperMassFraction": 0.2390269698572184,
+      "postRampPersistence": {
+        "status": "PASS",
+        "startTimeS": 2.0,
+        "endTimeS": 3.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.08321614469575943
+      },
+      "postRampUpperCentroidDisplacementM": [
+        1.4527891618686504,
+        -0.6962490704725122
+      ]
+    },
+    {
+      "frame": 11,
+      "nativeTimeS": 5.5,
+      "maximumSingularStretch": 233.49597229589148,
+      "minimumSingularStretch": 0.011522034810925086,
+      "stretch99Percentile": 10.068816661334159,
+      "countStretchAbove10": 143,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -0.0010099400197468161,
+      "postRampConnectedMovingUpperMassFraction": 0.2596509783183501,
+      "postRampPersistence": {
+        "status": "PASS",
+        "startTimeS": 2.0,
+        "endTimeS": 3.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.07703408319864857
+      },
+      "postRampUpperCentroidDisplacementM": [
+        1.9747782092151271,
+        -0.8346606575549963
+      ]
+    },
+    {
+      "frame": 12,
+      "nativeTimeS": 6.0,
+      "maximumSingularStretch": 390.7254740475738,
+      "minimumSingularStretch": 0.007587809032351439,
+      "stretch99Percentile": 12.989609758497856,
+      "countStretchAbove10": 232,
+      "centresInsideDomain": true,
+      "minimumDomainMarginM": -0.0010105759805530828,
+      "postRampConnectedMovingUpperMassFraction": 0.2792173453199365,
+      "postRampPersistence": {
+        "status": "PASS",
+        "startTimeS": 2.0,
+        "endTimeS": 3.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.07182302934286991
+      },
+      "postRampUpperCentroidDisplacementM": [
+        2.525806725257783,
+        -0.9541716219915058
+      ]
+    }
+  ],
+  "bindings": {
+    "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\review.json": "731af4de5283df5f7ef02140030baa2adb8a6b426020e79bc5a26480272f8ce2",
+    "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\analysis-source\\review-urmi-damage40.py": "3f48dc592a311132c8acabc736b548f3ce61aed253a61c481ce182d696a53a7b",
+    "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\material-state.csv": "424e461879df0deb00902835c448c9ddde806318196b5f52464eba0f20abe777",
+    "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\source\\src\\core\\stress-update.lisp": "7014b54e59be3b4f8f4b0fc4ddfea750795f71dd3011d5c3fd50b325a628d2e1",
+    "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\manifest.json": "76fa3cdab8d4da7825c2b6352785cb4c6eebc3ec65084a6083ca5df2cb4abc8b"
+  }
+}

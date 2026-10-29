@@ -1,5 +1,15 @@
 # Native framework and Studio verification
 
+## 30October HS-apex clay terminal partial
+
+Native FAILED at6.0724875s/6451updates on incremental deformation determinant
+guard. Frozen savedreview PASS for314source/DLL/13VTK182130rows and two13frame
+movies, expectedpartialexit2. New saved-only postramp/Fdistortion diagnosis
+executed once,0MPM/review/render reruns. No new native or oldsuite rerun.
+Qualitative numerical sliding onset supported, full20s/convergence/physical
+validation remainfalse. See benchmarks/CLAY_HS_APEX_UNNOTCHED.md.
+
+
 ## 29October optional HS apex controls
 
 28pure returns/two rejected unsupported laws and6native tensor/commit calls PASS.

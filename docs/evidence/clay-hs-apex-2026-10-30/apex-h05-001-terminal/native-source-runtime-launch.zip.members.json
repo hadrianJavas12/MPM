@@ -1,0 +1,2672 @@
+[
+  {
+    "path": "native/source/.native-cache/materials/adapters/chalk.fasl",
+    "bytes": 7225,
+    "sha256": "67fd10d024ace6343d3f379ac5406bad2a4e71cb7f5b72664e2819f7f2c4736c"
+  },
+  {
+    "path": "native/source/.native-cache/materials/adapters/cliff.fasl",
+    "bytes": 3093,
+    "sha256": "77ab6e74c9a00df5d09bf4db7a5895517853f046574fc8392d92aa1bebd1a62a"
+  },
+  {
+    "path": "native/source/.native-cache/materials/adapters/damage-output.fasl",
+    "bytes": 5094,
+    "sha256": "033f6631780154a9e6b2d761e6319e867d37725fa7c72190c3fd46881f2a79c3"
+  },
+  {
+    "path": "native/source/.native-cache/materials/adapters/diagnostics-call.fasl",
+    "bytes": 2126,
+    "sha256": "90b1f62f6ebf71e630251c0e6d7b8eec18f404c6cea28e71f610712c5c36f3f3"
+  },
+  {
+    "path": "native/source/.native-cache/materials/adapters/legacy-triaxial.fasl",
+    "bytes": 9391,
+    "sha256": "4d6675f4e3b10035872ee5605b724f7d14e5fa81eb79cbc3bb8fbab55bc43cf2"
+  },
+  {
+    "path": "native/source/.native-cache/materials/adapters/native.fasl",
+    "bytes": 13324,
+    "sha256": "ff13f69eb8edb7292ad98699211ed4fc6548ff7eb19875108ff270c1f13341d3"
+  },
+  {
+    "path": "native/source/.native-cache/materials/adapters/triaxial.fasl",
+    "bytes": 2031,
+    "sha256": "02f65210764d8a615b18a0fea297738caa88365a73c2b5193a64c5ea511eabb1"
+  },
+  {
+    "path": "native/source/.native-cache/materials/adapters/wang2017-apex.fasl",
+    "bytes": 15579,
+    "sha256": "b688ae42802d537189d206096742ddd668f03c2b00481d51f8d288f285ced5b4"
+  },
+  {
+    "path": "native/source/.native-cache/materials/adapters/wang2017.fasl",
+    "bytes": 21514,
+    "sha256": "8bb9fbaa7c341f326675ba85795d79f7b8222c382c70ed76087512572f85455d"
+  },
+  {
+    "path": "native/source/.native-cache/materials/backends/cpp/legacy-transaction.fasl",
+    "bytes": 35493,
+    "sha256": "26c9a13eebedcf06dc866662e443f2bfc4c3926d9a9cc80b43d731b578008f44"
+  },
+  {
+    "path": "native/source/.native-cache/materials/core/constitutive-package.fasl",
+    "bytes": 1483,
+    "sha256": "fae9ed691f9ad91e8d2514b4eb968b4a2f595571830d37279a45fe6023df96e2"
+  },
+  {
+    "path": "native/source/.native-cache/materials/core/definition.fasl",
+    "bytes": 2324,
+    "sha256": "0e4ec4bc28498208b9e508d4846c44a6e613b2f0e1ff06365839eb8c37e2337e"
+  },
+  {
+    "path": "native/source/.native-cache/materials/core/diagnostics-interface.fasl",
+    "bytes": 5619,
+    "sha256": "134c72f9197b50109c8ca4779456cfc5f89bdeb5cdf894886653d587d93a04dc"
+  },
+  {
+    "path": "native/source/.native-cache/materials/core/plastic-state.fasl",
+    "bytes": 9910,
+    "sha256": "e8a8d8ddcf2f0ceb1f5f0875441376367f695c1070bc720fd0fabd78792dbed8"
+  },
+  {
+    "path": "native/source/.native-cache/materials/diagnostics/chalk-reference.fasl",
+    "bytes": 3283,
+    "sha256": "eff16495268924d916ccc631b1aa5cdb269019ee0a5e6fd02a44a586ef4034d9"
+  },
+  {
+    "path": "native/source/.native-cache/materials/diagnostics/native.fasl",
+    "bytes": 39194,
+    "sha256": "5e78f85e16c3f6c99982d749a15bc69b90cdaab35a0dccab7b454e27f5b4bc98"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/chalk/evolution/softening.fasl",
+    "bytes": 4755,
+    "sha256": "c601a02f3c9bfb5bbf8e88b7c3086a4c5f792cfdd7af34c90cdffa201eb4aacd"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/chalk/joss-reference.fasl",
+    "bytes": 9231,
+    "sha256": "846fa7feb0f3f7605e2d84fc2a95c28371682a547c9d2b76d42a50f01dad36d6"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/chalk/legacy.fasl",
+    "bytes": 40668,
+    "sha256": "892b594957acb0e4ffdc531c2a98c59056939d389ee36bf48ea35bb36afef233"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/concrete/evolution/native-hooks.fasl",
+    "bytes": 6664,
+    "sha256": "9cd2acd828896dc0234669cdb50e0505ad1d8d275ddb72a04fed3faf9b42af13"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/concrete/evolution/softening.fasl",
+    "bytes": 4154,
+    "sha256": "89c73385daaebaae4aaba6ef3efddc2db2251b880ab18352290e2d5952244038"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/concrete/legacy.fasl",
+    "bytes": 8134,
+    "sha256": "943384acdc414dd66955f1e6a7c660c8bc63ab2934d9bca11f552c0effb5b45d"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/damage/constitutive.fasl",
+    "bytes": 21068,
+    "sha256": "5b89ba80e1f55b4b7a371be9730556278c04bd0b5ae10a38ca9979a1a45191ab"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/damage/criteria.fasl",
+    "bytes": 74861,
+    "sha256": "3dfb5d54cae501fc730b8b6ddcddd92d23c923a4657feb88657be00ff2d6f529"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/damage/evolution/degradation.fasl",
+    "bytes": 49454,
+    "sha256": "7922a2ec7873643715662ce1a0319444724a9bcfb0cbebf995c818daa8d7d3a5"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/damage/evolution/delayed-rate.fasl",
+    "bytes": 3571,
+    "sha256": "0cf2d199002570155488351e881c3e30857c78ca8c223a5d6e6d0299206dfd65"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/damage/evolution/responses.fasl",
+    "bytes": 17092,
+    "sha256": "8ec0afa1a99040bb6d6aa75d189dd17c31afd996d698ec06158afa89e7af189a"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/damage/legacy-particles.fasl",
+    "bytes": 71749,
+    "sha256": "032a6b733e1cd2e70b62360933d32cdf5a55080ba11041867da3eb1b581b605a"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/damage/legacy-state-evolution.fasl",
+    "bytes": 35471,
+    "sha256": "00bc959f1e45c9bdb847f0381780ec03dcc1414127336136c95136ecbb0ad91d"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/damage/particle.fasl",
+    "bytes": 16742,
+    "sha256": "7a96d7c6d7ac5891bbc8428eeb743edd0103a6194dffb1c17700958c72182049"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/elastic/constitutive.fasl",
+    "bytes": 8123,
+    "sha256": "db09474691740e626ea2dcf6be32c037b88908267982abee0194ec23b35027c3"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/elastic/particle.fasl",
+    "bytes": 27460,
+    "sha256": "e59012a2faf7a2e81f4bdb58ddfa43db59d096a728792083a042bb9197136c79"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/fluid/constitutive.fasl",
+    "bytes": 5182,
+    "sha256": "c007901f8cf9e42c54dc375198a6955e7a0961b8e249dbf6f3ba3074ee2b1f42"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/fluid/particle.fasl",
+    "bytes": 5395,
+    "sha256": "8bfc08d06c9d0bfe0229ad0b2d5aca59b0e0e1a43b9f5870bfcf244a855b58ef"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/frictional-damage/legacy.fasl",
+    "bytes": 22036,
+    "sha256": "3c7287316d74d409f9e45264cfec9e86f4e541ac73abaa804f80aa9329db4d18"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/drucker-prager/constitutive.fasl",
+    "bytes": 51565,
+    "sha256": "04f109f9276046b4b09d52ba06e46a94d462d46347eeef43707dfb46359ecdf6"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/drucker-prager/particle.fasl",
+    "bytes": 13288,
+    "sha256": "11999700c4d7d58ff9dd063b35faafc64625cc6f95e04795d89eae54a81cdd18"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mc-composite-apex/diagnostics.fasl",
+    "bytes": 13255,
+    "sha256": "8f9a96aa460b1f91af10b6022a186521a865128ddca742117485975de97de42d"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mc-composite-apex/native.fasl",
+    "bytes": 12172,
+    "sha256": "8755865734f82e39b69b6512d58aa1371df997fe6198b8aa89d815744e27e8c9"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mc-composite-apex/package.fasl",
+    "bytes": 1135,
+    "sha256": "7546ab37b488e0b816183eb8755c2e9260c3dd7090256f5dd17820e1056322bc"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mc-composite-apex/projection.fasl",
+    "bytes": 39617,
+    "sha256": "0dfa0d891f8794869a9b850169bb38fd189a769e0a416baa65f8c0288dcb4373"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mc-hs-apex.fasl",
+    "bytes": 13425,
+    "sha256": "bc273c0dfb08b46dc772068d150ddc77a10f610658bc4dba39ed318d24f6c2e6"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mohr-coulomb/constitutive.fasl",
+    "bytes": 32447,
+    "sha256": "d199905a7315fb0690c714ab515296057e7a1d448e91f3970bb8982d8f87f561"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mohr-coulomb/particle.fasl",
+    "bytes": 13978,
+    "sha256": "9f8813277c55485db586e5f80210f297b92be9a7979a4e8d9011f1b2935d47f8"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/diagnostics.fasl",
+    "bytes": 11849,
+    "sha256": "2bd59f47d9108f1d5e5f76eb79331b116254c0c5e07cf6d785888401b1012fd4"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/law.fasl",
+    "bytes": 29719,
+    "sha256": "171e35297b617672358404d66e3052f85d8209361359017120a3d1f54098c89b"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/material.fasl",
+    "bytes": 40507,
+    "sha256": "fa1e9bbceecda7ce8a65ac9c187a7d7a1b4b8b85be8fb1e75e5ddec61a7a5277"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/package.fasl",
+    "bytes": 6477,
+    "sha256": "2d0f95cfaa07bd3ab97f3142a367d1da225a0a22787b76c1fa41bd32760aa8b7"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/projection.fasl",
+    "bytes": 79998,
+    "sha256": "77ad23e6eb28487c80746b9ed79a4df0f185b7ffb095677e8ac788d7f1bd8e0b"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/state.fasl",
+    "bytes": 35357,
+    "sha256": "32fc2d1bf0ee06eaf32b6f5256ac321d4dab32cab2c779b1d2d763a7227ab09b"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/urmi-strength-damage/law.fasl",
+    "bytes": 28892,
+    "sha256": "e2e15166cb995f3a27540092e5655d9d0759367bcd63d9dede875577b197bdea"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/urmi-strength-damage/package.fasl",
+    "bytes": 1752,
+    "sha256": "ca4c71db0f02f2893c34f3e8e81d6155956a9932f825611a682427500bb6730d"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/urmi-strength-damage/particle.fasl",
+    "bytes": 13934,
+    "sha256": "3a7de194620d626072bd16932ab3a1cfdff790f20f3a229f9c9a1cde5d7c686f"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/von-mises/constitutive.fasl",
+    "bytes": 30133,
+    "sha256": "a57867a423ae6124c52fd195640a3d33d0c108762dc471c60ca92aa99de40d51"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/von-mises/evolution/secant-hardening.fasl",
+    "bytes": 2765,
+    "sha256": "fe1223157c51070edd320c4bd084ba210ea526ea478e168199549987404f906b"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/von-mises/particle.fasl",
+    "bytes": 18152,
+    "sha256": "70ea7462b869d1e3da9851ae8533b261deb25111bde039a4e966af84506a2924"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/apex-native.fasl",
+    "bytes": 8285,
+    "sha256": "7bb56532fdf8335baf77fadeeafc16b1d4c436cc2a22488b570c6214334460dc"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/apex-package.fasl",
+    "bytes": 1537,
+    "sha256": "0a9e35f7d17a19e0cf3a703a76458b4ff19ab551c075cdd0b59e1889e895320a"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/apex-projection.fasl",
+    "bytes": 19039,
+    "sha256": "c46e830ee380e0050bfb0c879ab8cfd60362cf3e38239f99c53496b605a49f46"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/apex-residual-history.fasl",
+    "bytes": 12214,
+    "sha256": "f55d995a23dd4bdffe68db2cb9fb1bad4d85c3c6e3d9cbbbf3b2c540fe283197"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/history.fasl",
+    "bytes": 10861,
+    "sha256": "c98459209ce23a374984553870843a95c59545838c1b5199411e380af77f03fe"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/law.fasl",
+    "bytes": 2868,
+    "sha256": "f9f50389ef5d0a1511dd3dc63047d3578a84be83ddd5f8e87286fb8f0f93f3e2"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/material.fasl",
+    "bytes": 53130,
+    "sha256": "6c58bbd8f2ca4375205a0a713ebe26f1dbfadb4492c623edfb647d2a2a8dd17d"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/native-package.fasl",
+    "bytes": 1822,
+    "sha256": "257a004ac3febeeefe4ac8d7b9d67154fedb9c7e38b7acf1ec87f0e79dacc41c"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/package.fasl",
+    "bytes": 1352,
+    "sha256": "4ff0747716040ad6145187b3bd3f7ecc58e542a72a6a0bab8a8dad3c143e6ed0"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/point-projection.fasl",
+    "bytes": 46105,
+    "sha256": "0ce484366ce54841f19a65d7d521bd93fca0f1aa81e8793340d67277b5288892"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/state.fasl",
+    "bytes": 22146,
+    "sha256": "7b212c423f63427a1b9d9fb470422d33cebb55e5c9ee4673c640f3ee96e2d683"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/plastic/wang2017/transport.fasl",
+    "bytes": 14035,
+    "sha256": "31ed9963782e7a83db9edb351733834f77d5691185df12b3669f770a250fea54"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/viscoelastic/maxwell/constitutive.fasl",
+    "bytes": 37802,
+    "sha256": "1038b59af195fdaef3cd4b8742377b99f7fb3150a765797862c6d36fc4c056eb"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/viscoelastic/particle.fasl",
+    "bytes": 4116,
+    "sha256": "6c430dd6eac162d17fe582f7d88748def3fe79e0dd593f5d5f3cafb20d7e684f"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/viscoplastic/clay-creep/law.fasl",
+    "bytes": 33077,
+    "sha256": "04c42625edbc6d2c3c605188db6a55e33a75cb66404d5d208732013dfaf8732b"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/viscoplastic/clay-creep/package.fasl",
+    "bytes": 1518,
+    "sha256": "100a1211bd66331a926cccfa022741c815c506d37b810b05590f5b584b1ec433"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/viscoplastic/clay-creep/particle.fasl",
+    "bytes": 30913,
+    "sha256": "7376bd43fad99100f1fa991c9c23e185f952b837ae127694bd2342eeb2aa2756"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/viscoplastic/glen/constitutive.fasl",
+    "bytes": 34290,
+    "sha256": "d100b351876a5dc6e332abd0fe03824d55abd89b6785c346bce3e42dfd3f3cd1"
+  },
+  {
+    "path": "native/source/.native-cache/materials/models/viscoplastic/particle.fasl",
+    "bytes": 7932,
+    "sha256": "4b47825cefd73e1d5b3a58ead85b850e748395a802f1ccd5a60279f4251f0ec8"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/cliff/adapter.fasl",
+    "bytes": 10039,
+    "sha256": "635173f931726f1651b8047ae3e96744ded1f4c23980e99875d783dc5e05e3a1"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/cliff/build.fasl",
+    "bytes": 4789,
+    "sha256": "32f51ab75e98c5635b0baa682f939391c9f6ac48dad1f5b528618bc67f120b00"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/cliff/execute.fasl",
+    "bytes": 40576,
+    "sha256": "b63413e62973afcf49e8f1ef652f88cd920677d7e973bb95d00ddd190f6df65d"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/cliff/geometry.fasl",
+    "bytes": 6530,
+    "sha256": "d75eb98cb43b599c2de1a80f00713935b81fba031858a71b35f8a4d4292a725e"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/cliff/run.fasl",
+    "bytes": 9340,
+    "sha256": "c9a55a05ef710a18b5406993e52788ef99ca795582044cea08544867860f4e62"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/cliff/settings.fasl",
+    "bytes": 1231,
+    "sha256": "4919c0ead57fdaddf8ef39d733a55ca68cfddffa5f86dd5c1f83eedcc81b3e4c"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/cliff/solver.fasl",
+    "bytes": 4114,
+    "sha256": "b00a05b275efdc388c1a4e9aa4af68d68a5b7b771d154f696f99bfbe6bb4bcfd"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/gravity-slope/adapter.fasl",
+    "bytes": 4209,
+    "sha256": "bfd5348d0c095c635baa25be2d4202351a4866ef562ef041bd2fb147f49c7043"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/gravity-slope/configuration.fasl",
+    "bytes": 17372,
+    "sha256": "35627629df2f377dd984e7e58dd8bff72e30386963d06568c5c589fed0b99e9e"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/gravity-slope/geometry.fasl",
+    "bytes": 9941,
+    "sha256": "0161591da9fad9baa64649b99369239db85cf10ba572d6252d8d32b826f4c6d5"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/gravity-slope/measurements.fasl",
+    "bytes": 33560,
+    "sha256": "12c8364771cad3091bd6a4aeea3390c0678f6f5178644eae6de1d37cd1074662"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/gravity-slope/package.fasl",
+    "bytes": 4768,
+    "sha256": "4a52ade19e855d35a197450205dd4751df4f28804ce01ab457cbc9a68584e2b7"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/gravity-slope/runner.fasl",
+    "bytes": 21430,
+    "sha256": "4660616a4132e57ab1a66e57906fe92bff73e0d6ede0a638071f8ef239233e02"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/joss/build.fasl",
+    "bytes": 8722,
+    "sha256": "af2d3a62138f3bd2c99721816d280cffb52ea0691549881b764a485dbb394161"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/joss/classes.fasl",
+    "bytes": 1576,
+    "sha256": "585bd868ce71f36f0d750a7697af110a32d2ab53a3b41c64513ec10c61092f48"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/joss/geometry.fasl",
+    "bytes": 9263,
+    "sha256": "3d9673509f566bfbbc602202bb8ae90d644757cb781070b65bc205a2f6753c1b"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/joss/measurements.fasl",
+    "bytes": 1812,
+    "sha256": "04839f58c6be8da9c55239d99548e07e982fd897d15262a4f86822594bae7f87"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/joss/output.fasl",
+    "bytes": 4999,
+    "sha256": "2c6da6b60459b9265816f2b701439e7706a76096361b372df3067741ea09135f"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/joss/phases.fasl",
+    "bytes": 6142,
+    "sha256": "8427c4a82b6e7695746675a854e4bc71d420099a6dea0a881599ac679784c3a3"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/joss/run.fasl",
+    "bytes": 25941,
+    "sha256": "5f0686a78139d422964e3ba1c00e03c911fc2eef77c5b432c3f147326ecbfba9"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/joss/statistics.fasl",
+    "bytes": 15663,
+    "sha256": "dc7ff35faea5b02cb2750b204f9eea6cfea67b2dd4c89c5a8c8fcb956c00771e"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/joss/validation.fasl",
+    "bytes": 3976,
+    "sha256": "d0ca43a56e7be1926ade85faf3b726f53951ec0e872d5c76d4ac7a03031cfd0b"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/residual-clay-slope/output.fasl",
+    "bytes": 53819,
+    "sha256": "14cd46d7da95553c0fe09810121d50d17d70526d604edec499c206fde304ebc4"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/residual-clay-slope/package.fasl",
+    "bytes": 1125,
+    "sha256": "62966b154c826cffed8fd7d7e2f279310d0ca90aacb3cb981aa64e7b1430a1df"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/residual-clay-slope/runner.fasl",
+    "bytes": 24888,
+    "sha256": "4c79555d7cf8c6ef1aa6e5c5c0363635ae95c9e0541fdf51254b9d72c1b61bf5"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-creep/adapter.fasl",
+    "bytes": 4201,
+    "sha256": "cf8d58fb1870b705ba81f8b61f8398fc8ea1e886edb786a9f80c52c5e59abc51"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-creep/configuration.fasl",
+    "bytes": 11008,
+    "sha256": "840d7567fae2d58f992e91888c29285f77c9da7ba4f9cad8f97f04b751001027"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-creep/loading-output.fasl",
+    "bytes": 6286,
+    "sha256": "ab85e7faa5581dde604181c02f6a49a94089d493a9d8364795091f0c9953bd96"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-creep/loading.fasl",
+    "bytes": 22131,
+    "sha256": "5eb1e09222f50342a4722f2d817e5af3e4974adeaca1be1b1f169ef5270f63d6"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-creep/measurements.fasl",
+    "bytes": 16083,
+    "sha256": "43af5762951b19be5af14d4875cc1ed68c4b9b8ce575a1c99a3d64f499d75656"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-creep/package.fasl",
+    "bytes": 998,
+    "sha256": "accbaf58840911ebc3851b5628f2bd5b756f90c66c9701df24c773634baf13ae"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-creep/runner.fasl",
+    "bytes": 27478,
+    "sha256": "4754c38525308f0f99babadd3a9d7397a2c788881d3f278b4d0234c9fbbf04b7"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-descent/adapter.fasl",
+    "bytes": 4209,
+    "sha256": "2dec731d74243a5bad8b7addac0d4849551c991be45f0527f836d6fdb0a96d82"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-descent/boundary.fasl",
+    "bytes": 22994,
+    "sha256": "799dcb3c231d1428b39067cd3419e27df84da150222aca4bfba7c6c9918984e8"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-descent/configuration.fasl",
+    "bytes": 11523,
+    "sha256": "177bf521e2c2c15a73593a8025e29619aec4f0df6a13489c94a2b63f208e163f"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-descent/geometry.fasl",
+    "bytes": 15400,
+    "sha256": "28c2a72d26b6ce08c192da24bf8ae6f4a0254bee95999c0653a56ff6340b9192"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-descent/package.fasl",
+    "bytes": 5284,
+    "sha256": "5811daf28ecb0576bb505bcbb404e010b88715d6ce95a685f36187d44a193cbd"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-descent/runner.fasl",
+    "bytes": 49161,
+    "sha256": "61db50039a1689ed006ad324ecafa9b07798e6f06d022a26480b55d387127a72"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/slope-descent/wang2017-output.fasl",
+    "bytes": 23499,
+    "sha256": "ab95fc25eb297bf2359b8dce127e95acde1ee1dd5a53edaac9361a5faa1969ed"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/triaxial/adapter.fasl",
+    "bytes": 8770,
+    "sha256": "b4129f97a43fe4a4812404ef63ce2d3135a48bfc2ca7234b73afe2d6aa517f6a"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/triaxial/config.fasl",
+    "bytes": 7762,
+    "sha256": "0a76bcbdcbbf3ddd5208dc4502d5ab10804bcdc97e8fe8ac82daddf200134894"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/triaxial/controls.fasl",
+    "bytes": 10512,
+    "sha256": "b9edb79ad53914fdcccbdec9141b44b5a6ff02e0338a613100438f8ad4d22b59"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/triaxial/geometry.fasl",
+    "bytes": 11516,
+    "sha256": "478a1cc770554c554db1d6a1d46da525d959ab6b0396028dbc8f40cc2e1e26fd"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/triaxial/homogeneous.fasl",
+    "bytes": 7740,
+    "sha256": "05c7e5a168b92b3f72bdf76b6e3a3d81fa7240e0c58eb6c9b742ff85a5885d96"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/triaxial/measurements.fasl",
+    "bytes": 22772,
+    "sha256": "0ca80ea908adf41a2bd6d04a87e474ecfc3c71b81bfa205b60d99b873efa86d1"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/triaxial/mpm.fasl",
+    "bytes": 8985,
+    "sha256": "99ae36144323d8f59c681453e52588cbd47d3c21c34250ad45d079f5daba746c"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/triaxial/runner.fasl",
+    "bytes": 15425,
+    "sha256": "d5134fe5af2050ddb4dc1eb21329ae2f0061e2e3f9126acc05a7d2416fe06c1e"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/triaxial/state.fasl",
+    "bytes": 1405,
+    "sha256": "c4d403e03c2e49d704ca1be886f9eb79d0a77be074203cb96a50826e82d2e97f"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/triaxial/stress-measures.fasl",
+    "bytes": 1469,
+    "sha256": "11065e9c446b8058c5dc623ffffc987fe81d95a3a993c305bdd6dd362c096771"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/urmi-damage40/adapter.fasl",
+    "bytes": 4209,
+    "sha256": "5f1ae0ce1b46fa89ec9b57fb7ac70029010eb10fed5e88793a619ee7d0b6e6eb"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/urmi-damage40/configuration.fasl",
+    "bytes": 7738,
+    "sha256": "9452c7212624516364f3b94ffe1363174fabeef0185dabf49784d47fb4201b78"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/urmi-damage40/geometry.fasl",
+    "bytes": 21604,
+    "sha256": "2e826ee23ff2797401153c3d099b56b595992c79d998ff6e9214cdf517117d82"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/urmi-damage40/output-streams.fasl",
+    "bytes": 7043,
+    "sha256": "0a988b67ba892c967386a0727823d6e995af113099fd5d420d2fef8a54b0301b"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/urmi-damage40/output.fasl",
+    "bytes": 54069,
+    "sha256": "58eca03608eb8cd4f770072a586e82cfe7eb82cd529439f9156d0fd410feb0ea"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/urmi-damage40/package.fasl",
+    "bytes": 1449,
+    "sha256": "7f47a7c377a77424e501051239c49a5e95939115089b148e6c2b06ae9512b36c"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/urmi-damage40/proper.fasl",
+    "bytes": 23802,
+    "sha256": "c394f313a5a680e09af974cb79dc2584d417decad12034c77a18e9ee0ba12619"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/urmi-damage40/recipe-package.fasl",
+    "bytes": 3281,
+    "sha256": "6257dfe50bef691bba28c2d6d68ba3ad1e8004515390aed797bef131213c6ba7"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/urmi-damage40/runner.fasl",
+    "bytes": 34611,
+    "sha256": "6a92e6c6ad5afbbf6f5a773f067e2da6a0b5478fd0a6f805944e916dc4442422"
+  },
+  {
+    "path": "native/source/.native-cache/scenarios/urmi-damage40/transfer.fasl",
+    "bytes": 48636,
+    "sha256": "d3a08deadcf145316908bed835ad3fb2e11171f3c812cea827d3a6268ca04b50"
+  },
+  {
+    "path": "native/source/.native-cache/src/boundaries/constraints/bc.fasl",
+    "bytes": 62058,
+    "sha256": "af03cd3815bbf1cced55f422db5bc646b7aa5a085f3640a01dfb6e58fa1e111f"
+  },
+  {
+    "path": "native/source/.native-cache/src/boundaries/penalty/penalty.fasl",
+    "bytes": 201596,
+    "sha256": "610517028b7b8d6d7b335d140b2a7cd20a29bad409097c62ddd1362e0ec2a9f7"
+  },
+  {
+    "path": "native/source/.native-cache/src/boundaries/pressure/isotropic.fasl",
+    "bytes": 5404,
+    "sha256": "158856724922744fe4b18c0b57f25f5893dde0a4172a25bfb1d550af5bc21eed"
+  },
+  {
+    "path": "native/source/.native-cache/src/core/iterate.fasl",
+    "bytes": 132480,
+    "sha256": "48ae7cb834c190548282f97407eaf4a01319e93f010f958a6f0dc14f225f195b"
+  },
+  {
+    "path": "native/source/.native-cache/src/core/mesh-base.fasl",
+    "bytes": 135177,
+    "sha256": "be7f2c4048d6aa072a93a95039d8db81e9e811b2c404455f5077eba0c686e3df"
+  },
+  {
+    "path": "native/source/.native-cache/src/core/package.fasl",
+    "bytes": 38488,
+    "sha256": "aabedc08bd2cf2921102bd425087da54ef542c0794b2a0545519f595f18f1b40"
+  },
+  {
+    "path": "native/source/.native-cache/src/core/particle-base.fasl",
+    "bytes": 52229,
+    "sha256": "46db7a7a5a23676affffda2e6b9bc1ebef90da74d202fe025862bf70f53bd492"
+  },
+  {
+    "path": "native/source/.native-cache/src/core/particle-protocols.fasl",
+    "bytes": 18531,
+    "sha256": "1c0197a99aa562010a742d82d2aebc86634627ca25edbc8eda6f9811494cbf86"
+  },
+  {
+    "path": "native/source/.native-cache/src/core/settings.fasl",
+    "bytes": 1688,
+    "sha256": "d902027f5d28ed75008eb2fdb14001af2826970538c6f705d167afb067c00ac3"
+  },
+  {
+    "path": "native/source/.native-cache/src/core/simulation-base.fasl",
+    "bytes": 166593,
+    "sha256": "256b1f5c018e9f7b290f2be69f77f2f01d68591dbadc69af4224df9742a45239"
+  },
+  {
+    "path": "native/source/.native-cache/src/core/stress-update.fasl",
+    "bytes": 48198,
+    "sha256": "2721d462cebc048cc75d8c5fef21813f49e37d380ed46543a6237e8105591b51"
+  },
+  {
+    "path": "native/source/.native-cache/src/damage/nonlocal/ekl.fasl",
+    "bytes": 20412,
+    "sha256": "794696e0f07e2addda2574d23613fce41b4ef95ce5a7f5111f6c7f67d5a48a10"
+  },
+  {
+    "path": "native/source/.native-cache/src/damage/nonlocal/legacy.fasl",
+    "bytes": 74588,
+    "sha256": "5348c6c6d0e50dcdbb5d014dc1f949ff5b3565711ea57967de3890ad68192fae"
+  },
+  {
+    "path": "native/source/.native-cache/src/damage/package.fasl",
+    "bytes": 8050,
+    "sha256": "ab3b169de77cc3ea40bedef013e3b1d6fbbfea3a21c53f06fddd148e931d46fe"
+  },
+  {
+    "path": "native/source/.native-cache/src/damage/solver/solver.fasl",
+    "bytes": 15629,
+    "sha256": "c1c014c2074270ea13df2bf59dba492f9af8a3e65e67d4fe08c7f77df4cb63f4"
+  },
+  {
+    "path": "native/source/.native-cache/src/discretization/domain-update/domain-update.fasl",
+    "bytes": 46365,
+    "sha256": "3fd2576474d4ffd95e0e4ed39e511d94b4c16112cafe4b0756be946d810d6ee0"
+  },
+  {
+    "path": "native/source/.native-cache/src/discretization/ghost-nodes/ghost.fasl",
+    "bytes": 103417,
+    "sha256": "3e8442767771446bbbe55e5fffc0ea530dd92a9f62cc5c435fad311fdec2347d"
+  },
+  {
+    "path": "native/source/.native-cache/src/discretization/shape-functions/shape-function.fasl",
+    "bytes": 31312,
+    "sha256": "f9393803f71288750c4ea8d835cbe3519aa2696c0f755d47ef3733b824fcf963"
+  },
+  {
+    "path": "native/source/.native-cache/src/discretization/splitting/splitting.fasl",
+    "bytes": 41469,
+    "sha256": "683569629ab22eb42755045b0936f17510398e6c0f9a7e06d6f17c888d61eb31"
+  },
+  {
+    "path": "native/source/.native-cache/src/geometry/setup.fasl",
+    "bytes": 100699,
+    "sha256": "fa03ead54a80a38c5bffc4c07613d6ae3b730275105f3d82fb389a2efc61897c"
+  },
+  {
+    "path": "native/source/.native-cache/src/measurements/legacy-particle.fasl",
+    "bytes": 1930,
+    "sha256": "d7dccdc7e68ad87531933e57613cf25fc378a7a5827936452143576b1ac8cb95"
+  },
+  {
+    "path": "native/source/.native-cache/src/measurements/legacy-stress.fasl",
+    "bytes": 2112,
+    "sha256": "861d11df8bb0fb867a9652b7f8d8a9651d86fcf7bff13e90386ff05bfb32b5b9"
+  },
+  {
+    "path": "native/source/.native-cache/src/measurements/material-output.fasl",
+    "bytes": 9374,
+    "sha256": "8f39baf01f0ae21e8bc800c4590238fb541eb2d04b76c4ef55e62b5d3d8473b7"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/angles.fasl",
+    "bytes": 1145,
+    "sha256": "e93b0b7cd2cb4175a819f2e037f987a3c72b39301e022e3e5cd94babf57d423e"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/error-handling/errors.fasl",
+    "bytes": 2247,
+    "sha256": "d5c0ac610b87186a4d3ed31b5c4bba14ce6f12efc0f49b8d6c137774b0387f0e"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/fastmaths/fastmaths.fasl",
+    "bytes": 108310,
+    "sha256": "a47dd9b372e070eeccb79dbb463e37e563d0ec22d30d96bb9382d09567dc55d8"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/integration/delayed-steppers.fasl",
+    "bytes": 8195,
+    "sha256": "afe1ddaeb8a8023154eb20b0a79c77dc336d0008e8aa778799c0acd4d2fb1590"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/integration/finite-difference-tangent.fasl",
+    "bytes": 4033,
+    "sha256": "8e73ce62de0c82995c1f2bc80d0def762b9dbc130e7712c7c376b403d91e7625"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/legacy-tensors.fasl",
+    "bytes": 2111,
+    "sha256": "236fa9fb31136c2277fadaf513355ae447aecc2d0bcfeeef693e526bd9e59456"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/native-bridge/cpp.fasl",
+    "bytes": 5969,
+    "sha256": "cd21f690d60478b3656fe056ec7e184dceda7f3d0d4f2d63b75b6057478aec8f"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/tensors/constitutive-primitives.fasl",
+    "bytes": 21443,
+    "sha256": "9125d39b8ac614b90a13b0706b13cf92a0725a2223ed77a67ad3aaa7b7e00925"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/tensors/damage-primitives.fasl",
+    "bytes": 4385,
+    "sha256": "b729e46e4fac4aef1145385a1353a3d9d973a8fc8e405dcfe000ce7e949b6b4c"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/tensors/particle-objectivity.fasl",
+    "bytes": 12384,
+    "sha256": "d1107a181ff3c2cb9f1dea2b5ddffe3ee3b23c420ea65ccf8c6b30953e774796"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/tensors/principal-strains.fasl",
+    "bytes": 4806,
+    "sha256": "b40b43f7789ef58849e0b697253a681762559be8ce6271ea172ffa05589a25a7"
+  },
+  {
+    "path": "native/source/.native-cache/src/numerics/tensors/utils.fasl",
+    "bytes": 168165,
+    "sha256": "79152591e93705aeac84d0594e9d8c4158ff9f9e6330d180f48f3377a92da85b"
+  },
+  {
+    "path": "native/source/.native-cache/src/output/legacy-triaxial-json.fasl",
+    "bytes": 2579,
+    "sha256": "bd0f86ddce23fb765d68dd4f263e2ec8b070dd6193bf1fd95a746b9139e955d1"
+  },
+  {
+    "path": "native/source/.native-cache/src/output/plotting/legacy-particle.fasl",
+    "bytes": 10245,
+    "sha256": "dc2b082f273eb1b20ffa403824ec012dfce145fa1fdb70ed11fd14c22c0a0a83"
+  },
+  {
+    "path": "native/source/.native-cache/src/output/plotting/plotter.fasl",
+    "bytes": 11075,
+    "sha256": "be346888020916fd20c13c0e2f7f71d6cb72abe11f4ecae3d62123e49bd5b554"
+  },
+  {
+    "path": "native/source/.native-cache/src/output/retained-history.fasl",
+    "bytes": 3973,
+    "sha256": "9fe753bee0f90e58411f2ae5a09a22ac68322da9c5f238f806441cac19a26c02"
+  },
+  {
+    "path": "native/source/.native-cache/src/output/vtk.fasl",
+    "bytes": 96385,
+    "sha256": "55d364050b63df2fc8a33c3e8fc87cb9e5dfa080bd62acc3364ace50fcd07fc8"
+  },
+  {
+    "path": "native/source/.native-cache/src/parallel/damage-communication-state.fasl",
+    "bytes": 5735,
+    "sha256": "f6966c4109366d4ec61b9d7ab8717995afe3fa28b8e8604d1ed4d8705dfd44f3"
+  },
+  {
+    "path": "native/source/.native-cache/src/simulation/compatibility/triaxial-package.fasl",
+    "bytes": 890,
+    "sha256": "1eff23d4d9a328cb9891a3e2c9b5465dff9933b6f420680904fc3869be2184f1"
+  },
+  {
+    "path": "native/source/.native-cache/src/simulation/components/base.fasl",
+    "bytes": 4431,
+    "sha256": "050f9d67c7c98a567462e74f68a60b5288fc7bb6c8ae2351694af727ad939da8"
+  },
+  {
+    "path": "native/source/.native-cache/src/simulation/components/geometry.fasl",
+    "bytes": 2856,
+    "sha256": "3f8eddbac26b8d4fb1c10b09ecd67c13ec797b6f0e9b895b6217498822d9ec12"
+  },
+  {
+    "path": "native/source/.native-cache/src/simulation/components/specifications.fasl",
+    "bytes": 11072,
+    "sha256": "a7db41b4810a8860eb0601e70c54515730780cb654d48dc01039703ec080c86b"
+  },
+  {
+    "path": "native/source/.native-cache/src/simulation/config/legacy-triaxial-values.fasl",
+    "bytes": 2731,
+    "sha256": "83177b09fff2f1ce61f519de4807dfb19dcc1463feb5418fb5d9832bad0386f1"
+  },
+  {
+    "path": "native/source/.native-cache/src/simulation/config/package.fasl",
+    "bytes": 937,
+    "sha256": "76bb9143ca2640c87b3c752c81ed0319b4314d7b2beea52fceefdc208729c259"
+  },
+  {
+    "path": "native/source/.native-cache/src/simulation/config/parameters.fasl",
+    "bytes": 12679,
+    "sha256": "8d5910649f3a1bfb09d31b22d9d7324081293525ee6eaa9f4e12fb187f1ba1cf"
+  },
+  {
+    "path": "native/source/.native-cache/src/simulation/lifecycle.fasl",
+    "bytes": 12218,
+    "sha256": "377ce06d5e3c89835d196b45f392c23cd09db66be0e8605b2fc6b060bae4b6d9"
+  },
+  {
+    "path": "native/source/.native-cache/src/simulation/package.fasl",
+    "bytes": 2243,
+    "sha256": "79ce9173f67180afd2aed59d7e78a07398289df560c2de7ed98fc13c0f615584"
+  },
+  {
+    "path": "native/source/.native-cache/src/solvers/explicit/musl.fasl",
+    "bytes": 5989,
+    "sha256": "ba1d0158f528a4863844f6714563bbe38dacf4a92485ed06566857efecbea238"
+  },
+  {
+    "path": "native/source/.native-cache/src/solvers/explicit/usf.fasl",
+    "bytes": 10290,
+    "sha256": "8328f3032a9a26f8a7b1bed864a9bc3638354d8656d038246c6c9a2032f516a7"
+  },
+  {
+    "path": "native/source/.native-cache/src/solvers/explicit/usl.fasl",
+    "bytes": 5296,
+    "sha256": "77b896b630a85c6fdc4a6934040bc4e958a3719131cac9da5b9bb7cefc429cf5"
+  },
+  {
+    "path": "native/source/.native-cache/src/solvers/linear-systems/linear-solver.fasl",
+    "bytes": 84985,
+    "sha256": "e26b5b497ec076653e03a06e32e83b7a0771e92cab4e4ae0a6b17bc0ead8c424"
+  },
+  {
+    "path": "native/source/.native-cache/src/stabilization/aggregate/aggregate.fasl",
+    "bytes": 126271,
+    "sha256": "0d06fe0869ed25c66b177a8cbcbf4bfa1f00c1cfcf7646b1530550872fe02a95"
+  },
+  {
+    "path": "native/source/.native-cache/src/transfer/forces.fasl",
+    "bytes": 16383,
+    "sha256": "4b7dc8a7f3aeb8c8e4ca05dc1646632f3c034a181a6d06b4ced7aa865aa2b965"
+  },
+  {
+    "path": "native/source/.native-cache/src/transfer/g2p.fasl",
+    "bytes": 49866,
+    "sha256": "0fdb60048d1fc94350767f6afdd12b2604890d29041c9cf7dba28228545e208e"
+  },
+  {
+    "path": "native/source/.native-cache/src/transfer/p2g.fasl",
+    "bytes": 57924,
+    "sha256": "018b64a1719d7c1a4ca2b8f543025ec579ebd38d2505de36f6604073449694eb"
+  },
+  {
+    "path": "native/source/bootstrap/windows/cl-mpm.cmd",
+    "bytes": 1121,
+    "sha256": "0b328d24ebc18fc6c7960a5044efc3e93c04752d1be50daece09c575ef86c536"
+  },
+  {
+    "path": "native/source/bootstrap/windows/env.cmd",
+    "bytes": 2833,
+    "sha256": "20719f3bbef22a95f9b68fd0d794184118fb2c43f266284d21f52d263eb2b7e8"
+  },
+  {
+    "path": "native/source/bootstrap/windows/init.lisp",
+    "bytes": 2925,
+    "sha256": "dd68bc9bcecb6abd66b8c03ee9eb2d24141488a257e84b22a47ca6266ed39218"
+  },
+  {
+    "path": "native/source/case.lisp",
+    "bytes": 1214,
+    "sha256": "b704539f761e700bfcd7366f7d3af70b51f979da4ad5ab76d306467c91ef31b9"
+  },
+  {
+    "path": "native/source/cl-mpm-framework.asd",
+    "bytes": 9209,
+    "sha256": "8a4547bd58a3208d6680cd6e421f2fe4656d5b0e6cb09b1a72c738a79b7402ed"
+  },
+  {
+    "path": "native/source/cl-mpm.asd",
+    "bytes": 40738,
+    "sha256": "51804cad122bac40f47b9c656df27c5abef2cc38765c3ce6eed3b5c062fc1dee"
+  },
+  {
+    "path": "native/source/config/git-commit-version.txt",
+    "bytes": 34,
+    "sha256": "7aa5da4c3df0df35d0f7959783dd37a85710b93cd898530e41470e9f51804ea6"
+  },
+  {
+    "path": "native/source/inputs/calibration/residual-clay-quarter-strength.json",
+    "bytes": 2670,
+    "sha256": "1d9394e254dbdb5d4591b1131eaa85457efde7eeb021a71fa2818b4afc568b41"
+  },
+  {
+    "path": "native/source/inputs/calibration/residual-clay-slope-material.json",
+    "bytes": 1896,
+    "sha256": "a2602d8eb0498a161d87ec420950762447f6a2087cdc1541469dd2b0fc5794ac"
+  },
+  {
+    "path": "native/source/inputs/calibration/triaxial-2d.json",
+    "bytes": 525,
+    "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35"
+  },
+  {
+    "path": "native/source/inputs/calibration/triaxial-controls.json",
+    "bytes": 268,
+    "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861"
+  },
+  {
+    "path": "native/source/inputs/calibration/triaxial-demo.json",
+    "bytes": 498,
+    "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0"
+  },
+  {
+    "path": "native/source/inputs/calibration/triaxial-homogeneous.json",
+    "bytes": 370,
+    "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17"
+  },
+  {
+    "path": "native/source/inputs/studio/reference/joss-bay-accepted-collapse.json",
+    "bytes": 1256,
+    "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0"
+  },
+  {
+    "path": "native/source/inputs/studio/reference/joss-bay-prose.json",
+    "bytes": 1726,
+    "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b"
+  },
+  {
+    "path": "native/source/inputs/studio/reference/joss-bay-table.json",
+    "bytes": 1721,
+    "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88"
+  },
+  {
+    "path": "native/source/inputs/studio/reference/joss-bay-video-candidate.json",
+    "bytes": 2575,
+    "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b"
+  },
+  {
+    "path": "native/source/inputs/studio/reference/residual-clay-slope-quarter.json",
+    "bytes": 950,
+    "sha256": "87d854a242b1a9b577cbdf236c79a084f21cfdabc9d6f25bcc8a05e2f456fbbf"
+  },
+  {
+    "path": "native/source/inputs/studio/reference/urmi-damage40-extended.json",
+    "bytes": 795,
+    "sha256": "aea766ec963c7c54fe2a9a5ee918323455ff7204a997c2afe2e6a45480f68c38"
+  },
+  {
+    "path": "native/source/inputs/studio/reference/urmi-damage40-proper.json",
+    "bytes": 799,
+    "sha256": "b27ba7310505055fa2ac84958206ff395ceb509a74d5884597773661f456ecf6"
+  },
+  {
+    "path": "native/source/inputs/studio/reference/urmi-damage40-rapid.json",
+    "bytes": 795,
+    "sha256": "e924e7c5aedeac7e7dbda9382df4996423d727af347c92c77bb81f5bfc8f979f"
+  },
+  {
+    "path": "native/source/inputs/studio/reference/urmi-damage40.json",
+    "bytes": 679,
+    "sha256": "e9ec8814b9fe2852de99bca76fa9ae26ecebe0bd7b29fd1a71faac9fc618548b"
+  },
+  {
+    "path": "native/source/inputs/studio/schema.json",
+    "bytes": 9059,
+    "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9"
+  },
+  {
+    "path": "native/source/libs/kirchoff.dll",
+    "bytes": 2885169,
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f"
+  },
+  {
+    "path": "native/source/materials/adapters/chalk.lisp",
+    "bytes": 2538,
+    "sha256": "f38e20f2f3f70139954f5c861dd7f7abc9e06ef0b0c6826a1753fe505938a265"
+  },
+  {
+    "path": "native/source/materials/adapters/cliff.lisp",
+    "bytes": 641,
+    "sha256": "a4ac33ef2cdfda963285059ef2cddd67eede5859d63c53003b706434d2256ad3"
+  },
+  {
+    "path": "native/source/materials/adapters/damage-output.lisp",
+    "bytes": 21614,
+    "sha256": "e449445ed45405670a6841972854969b312f55e9ff7d42e21bae673fb35c782b"
+  },
+  {
+    "path": "native/source/materials/adapters/diagnostics-call.lisp",
+    "bytes": 473,
+    "sha256": "232965022a96a2e11536f577944ef969fa115ab396f123cdf3e0622017ff1381"
+  },
+  {
+    "path": "native/source/materials/adapters/legacy-triaxial.lisp",
+    "bytes": 3883,
+    "sha256": "127c346c4682b85418d396b75c7be75a638ced5d88f0cacc954d0ec5370772b1"
+  },
+  {
+    "path": "native/source/materials/adapters/mc-composite-apex.lisp",
+    "bytes": 2240,
+    "sha256": "1b0d90c211e9a20054d6361c54a2680e3c4fb5dd44183612c42a2d87c6db6514"
+  },
+  {
+    "path": "native/source/materials/adapters/native.lisp",
+    "bytes": 5402,
+    "sha256": "56bb3083976f0303d273f9167d20d0ca29464553a4df86a75e21e95db9c08673"
+  },
+  {
+    "path": "native/source/materials/adapters/triaxial.lisp",
+    "bytes": 485,
+    "sha256": "f3d20fd721a65a72ea24c6b07ec487ca1bd6e922cd6861ef152c1c84387d6fb4"
+  },
+  {
+    "path": "native/source/materials/adapters/wang2017-apex.lisp",
+    "bytes": 3533,
+    "sha256": "d6c09f6a6c6832c200c3198bdf7a728d489869152cc13fabe572af4d69d4a820"
+  },
+  {
+    "path": "native/source/materials/adapters/wang2017.lisp",
+    "bytes": 7102,
+    "sha256": "eadea18e1b93c46e625475980b59583d711b2669a86ef2dad7d85a426d4cd344"
+  },
+  {
+    "path": "native/source/materials/backends/cpp/legacy-transaction.lisp",
+    "bytes": 10369,
+    "sha256": "cff14534f13f687e85d4ce262a4a8635c9b8273879d332f846f60abae2bdd924"
+  },
+  {
+    "path": "native/source/materials/cl-mpm-materials.asd",
+    "bytes": 472,
+    "sha256": "babf46b087d75b95c4a513f906cffd5debb8cdad295d356832e56741f2b8cc12"
+  },
+  {
+    "path": "native/source/materials/core/constitutive-package.lisp",
+    "bytes": 364,
+    "sha256": "681fb05352f6c689560e2de4f93b571c865566cb0a12750b90306b5e159e4d30"
+  },
+  {
+    "path": "native/source/materials/core/definition.lisp",
+    "bytes": 925,
+    "sha256": "77e250e35380de2e9d69c6b1358f17fc7552aa03e272df87d4e13d1588b76832"
+  },
+  {
+    "path": "native/source/materials/core/diagnostics-interface.lisp",
+    "bytes": 1130,
+    "sha256": "dd764532680ed3d9b07946502b9148a0a2e75265e061159ddf4a5e770b13e6db"
+  },
+  {
+    "path": "native/source/materials/core/factory.lisp",
+    "bytes": 175,
+    "sha256": "0d442cf66705ab1f57cdf05c2a325fb3ece9eaa63505de6cfbef1cd8855b422a"
+  },
+  {
+    "path": "native/source/materials/core/interface.lisp",
+    "bytes": 177,
+    "sha256": "bc8ecddd2a71c141aed94f7b0ce42bd2795c491b37d261420413067c51997669"
+  },
+  {
+    "path": "native/source/materials/core/parameters.lisp",
+    "bytes": 178,
+    "sha256": "c4584b76ef8c8ed411329de08bd984bb36a92e7481da6bdec779c4fa0900ae9a"
+  },
+  {
+    "path": "native/source/materials/core/plastic-state.lisp",
+    "bytes": 1793,
+    "sha256": "146e0847313ee3c74f82b37f5599b0574ecfe7a93a6df8f591845f0da24e6af2"
+  },
+  {
+    "path": "native/source/materials/core/registry.lisp",
+    "bytes": 176,
+    "sha256": "f0c161decd170795ca611ad6999f8b451fddb34db7cf8dd90293b71fcd7635cd"
+  },
+  {
+    "path": "native/source/materials/core/state-interface.lisp",
+    "bytes": 194,
+    "sha256": "6efc47a8fba4e0980d2ca2e0586397eff5f78ad9415cd631d67a977b3943aa87"
+  },
+  {
+    "path": "native/source/materials/core/validation.lisp",
+    "bytes": 178,
+    "sha256": "0d98c86ba08f8dbfd68ea82ec7119ed3cdcc60c65f756122764e04dd65734484"
+  },
+  {
+    "path": "native/source/materials/core/visco-package.lisp",
+    "bytes": 182,
+    "sha256": "8cfcf703f5491d98327864a45fde29658e19c05f5dd05caa84f99170ee6df495"
+  },
+  {
+    "path": "native/source/materials/diagnostics/chalk-reference.lisp",
+    "bytes": 1371,
+    "sha256": "2ab3ca7cfff08cb05ceebc9f5c2412cf02c1a99a3ca4e04e044090cb13d0adac"
+  },
+  {
+    "path": "native/source/materials/diagnostics/native.lisp",
+    "bytes": 11955,
+    "sha256": "451b09f6c83801bf4f65cd32cf7231af7b44035af650f87169ead424244128dc"
+  },
+  {
+    "path": "native/source/materials/models/chalk/constitutive.lisp",
+    "bytes": 198,
+    "sha256": "84c059a2dd680976c95c3340c01341e431ed6854fc17ac99546233d6956f5ec7"
+  },
+  {
+    "path": "native/source/materials/models/chalk/evolution/softening.lisp",
+    "bytes": 1059,
+    "sha256": "ab4d31e6728e944766d0df06092a0de5b9fc7cea95015ba06b69601f008b595d"
+  },
+  {
+    "path": "native/source/materials/models/chalk/joss-reference.lisp",
+    "bytes": 2091,
+    "sha256": "bb05c72cf895a586e983e5015cfb2a6c5fdf24384344bf880537b8be23d8f552"
+  },
+  {
+    "path": "native/source/materials/models/chalk/legacy.lisp",
+    "bytes": 61023,
+    "sha256": "257225c99b45c758d066dae11c1792f61b19e7601a3466cd15e9ee2b612a7db5"
+  },
+  {
+    "path": "native/source/materials/models/chalk/state.lisp",
+    "bytes": 186,
+    "sha256": "22b6c226dc7e98ff45f3a35ab688f0408979904820ebcfb8031e1f43dbe232c3"
+  },
+  {
+    "path": "native/source/materials/models/concrete/evolution/native-hooks.lisp",
+    "bytes": 4186,
+    "sha256": "95c44eefcef45cfa8d4cb2602a4df90723d162e19504d07b008c9038f530696e"
+  },
+  {
+    "path": "native/source/materials/models/concrete/evolution/softening.lisp",
+    "bytes": 847,
+    "sha256": "0d6aebe20d43e42e39c06cfd872f9ad6507bc23960897f1b2e4f04a24d9f7403"
+  },
+  {
+    "path": "native/source/materials/models/concrete/legacy.lisp",
+    "bytes": 4100,
+    "sha256": "8224b9bbe474fc2898c1145cf3b82671f885bd633483b3f7dcdda2177546fc59"
+  },
+  {
+    "path": "native/source/materials/models/damage/constitutive.lisp",
+    "bytes": 8247,
+    "sha256": "5ee75605b1cfafda3d59367fac25ecb466420e41ee1ba2f3080f9673d049a53f"
+  },
+  {
+    "path": "native/source/materials/models/damage/criteria.lisp",
+    "bytes": 21031,
+    "sha256": "ab574dbb03b8a8ee2bd60e92f6fedaaefc07fa1d30a336b13a7df21dc4c6463e"
+  },
+  {
+    "path": "native/source/materials/models/damage/evolution/degradation.lisp",
+    "bytes": 17274,
+    "sha256": "3e473fa389a6d0994a0046ff3b4ec741922b90acfc4244f8ab7b968064dfe288"
+  },
+  {
+    "path": "native/source/materials/models/damage/evolution/delayed-rate.lisp",
+    "bytes": 9889,
+    "sha256": "47a84f8e9ea12ffb4e092d25d548d87eacb6c859a6ddef10dcf984ac814c15c6"
+  },
+  {
+    "path": "native/source/materials/models/damage/evolution/responses.lisp",
+    "bytes": 6640,
+    "sha256": "f26542cc6f2246f1eecc590fa53fd1a967a3756163c2a713af639cb31622f8bf"
+  },
+  {
+    "path": "native/source/materials/models/damage/legacy-particles.lisp",
+    "bytes": 27294,
+    "sha256": "e4cbd050ca74f763a95b17d70dcfbd10aa9c0a241b2c493b1990ffaeecfbad0c"
+  },
+  {
+    "path": "native/source/materials/models/damage/legacy-state-evolution.lisp",
+    "bytes": 15814,
+    "sha256": "63e624ca8c62d81d92398e1a56225f8aaf4664854cd18367668978b1118658dc"
+  },
+  {
+    "path": "native/source/materials/models/damage/particle.lisp",
+    "bytes": 4205,
+    "sha256": "9ea0abec8e17a05735eed4a57af25fea12f7fb0c64d29e28db255db16ab0829c"
+  },
+  {
+    "path": "native/source/materials/models/elastic/constitutive.lisp",
+    "bytes": 2726,
+    "sha256": "385f803c7b3a8a9482ced32c55ae304006eeb62761c48a7854e73373df1e264e"
+  },
+  {
+    "path": "native/source/materials/models/elastic/linear-elastic/package.lisp",
+    "bytes": 130,
+    "sha256": "0accd221eab1441b071fbab926ed97b837655beae52f2ba74fa9ae6cce090b1c"
+  },
+  {
+    "path": "native/source/materials/models/elastic/particle.lisp",
+    "bytes": 9002,
+    "sha256": "4f2357047f838c54e29da14d9ecde21c626d440252b3cec57f6b8a9a12d2e9e4"
+  },
+  {
+    "path": "native/source/materials/models/fluid/constitutive.lisp",
+    "bytes": 844,
+    "sha256": "f5bd1e970e8d1779ac455e377eff45ffb342ad135d76f23e7d566fe0778548c1"
+  },
+  {
+    "path": "native/source/materials/models/fluid/particle.lisp",
+    "bytes": 1073,
+    "sha256": "6a8fd3990f10345dc5005441d23dcbba713ea4d55b1796db26b8b6d68b71f8bf"
+  },
+  {
+    "path": "native/source/materials/models/frictional-damage/legacy.lisp",
+    "bytes": 8129,
+    "sha256": "81ab1297bb8113cfd7333e3912418dc3b15de87b91d8c8c71958e370a8892db8"
+  },
+  {
+    "path": "native/source/materials/models/ice/legacy.lisp",
+    "bytes": 40657,
+    "sha256": "9c698a5e07fd9ced64ffeef2dc4659d61c6548fdb0076fc2be696ce8aac2e5ed"
+  },
+  {
+    "path": "native/source/materials/models/limestone/legacy.lisp",
+    "bytes": 7179,
+    "sha256": "c663f6c0c82814da2308adb7fd74e79b761d39feffa6e24fbfdf805ee9cda023"
+  },
+  {
+    "path": "native/source/materials/models/plastic/drucker-prager/constitutive.lisp",
+    "bytes": 11637,
+    "sha256": "db96248bf72353d302ec6613d6b4914714dc97ab14f09a2ab636899e4cf5cf92"
+  },
+  {
+    "path": "native/source/materials/models/plastic/drucker-prager/particle.lisp",
+    "bytes": 3737,
+    "sha256": "6a5a5228d0277e65a894a0a554c6f302f295d331a0cce85e984a4d42e6db7bfd"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mc-composite-apex/diagnostics.lisp",
+    "bytes": 6077,
+    "sha256": "6fe2771fc156e25ae13380f537e232bd4875a91a77d960a0290877068f23b360"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mc-composite-apex/native.lisp",
+    "bytes": 2405,
+    "sha256": "85c90f4b8a4eac515498ed77cedf583ee147b80b79387cc3de391b562d7c1069"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mc-composite-apex/package.lisp",
+    "bytes": 468,
+    "sha256": "fa96f836cc01faec4f18c9852e450ab2b8957e8be9108b22777bf3a053d39eb5"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mc-composite-apex/projection.lisp",
+    "bytes": 10339,
+    "sha256": "eb16237ecda3b08c17632e84c782f99f71a223eaf49b83bc2df63ebeaad1dd6d"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mc-hs-apex.lisp",
+    "bytes": 3639,
+    "sha256": "5961ecac5ed77cdbc8917c0d2eb2da174730e187b7289b9d82a3455a24b9004f"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb/constitutive.lisp",
+    "bytes": 24271,
+    "sha256": "784ed026c5fb7b211948e2f83d4578d25be7bad1e62e41ed61505cde2acdd66d"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb/evolution/hardening-softening.lisp",
+    "bytes": 240,
+    "sha256": "c1e9adf74ad08f3be7f4a8a6e07190abec7e2b6326d344ee3c633ec41392e6c9"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb/evolution/hardening.lisp",
+    "bytes": 230,
+    "sha256": "a454e7dcde029ef9a6d85e03908c113bd3f794798980b75a990874705cf380dd"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb/evolution/perfect-plastic.lisp",
+    "bytes": 236,
+    "sha256": "76ddf9770602432da28128ee51d982fe26c19983f6d527e0d08579260dda490e"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb/particle.lisp",
+    "bytes": 5530,
+    "sha256": "43d773e7cef70b6a448c06f723efea6de43f545b2eaea4a574235b7a386f9110"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb/plastic-potential.lisp",
+    "bytes": 236,
+    "sha256": "c36cd6f1eceb92c1b29d1e393bce92f7396be3ad9e81cab3b0077a81a9b66b86"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb/return-mapping.lisp",
+    "bytes": 233,
+    "sha256": "574433429c982167978a4c426af17d2c6606216bee789b8916ed700263c0f09e"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb/state.lisp",
+    "bytes": 216,
+    "sha256": "d6a24a75858826cbd2cf034b6fc1b7baceb76131a10dfcb081f8db3b1be6a6ed"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb/yield-function.lisp",
+    "bytes": 233,
+    "sha256": "889a469b62b52ce43833e2bf947a46c444b036e7f7f1ad6cd1de368ad1d438a9"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb-evolution/diagnostics.lisp",
+    "bytes": 4746,
+    "sha256": "10fc3d6170b04adbb153fe2afd562d51daefc9d1976a3059ba046c1b8223d0eb"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb-evolution/law.lisp",
+    "bytes": 8393,
+    "sha256": "505207b3bcbbd0c87625d16c96cb436436f71562ded9349aa2126ed7dac6796a"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb-evolution/material.lisp",
+    "bytes": 9155,
+    "sha256": "376bb5465ae7e1553dfb23d0f3ea26b125fbd6430724fcac0ee5233125302aeb"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb-evolution/package.lisp",
+    "bytes": 2441,
+    "sha256": "3ec1f8ccbbf15732ab450708413728987aa843d89b1e2eeefdc6773a4930b028"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp",
+    "bytes": 23352,
+    "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1"
+  },
+  {
+    "path": "native/source/materials/models/plastic/mohr-coulomb-evolution/state.lisp",
+    "bytes": 11424,
+    "sha256": "d9311639dae10064985d5ff2fabfef189ff7bf07cb85699c1fd54355d6f83fd4"
+  },
+  {
+    "path": "native/source/materials/models/plastic/urmi-strength-damage/law.lisp",
+    "bytes": 11704,
+    "sha256": "9781414be59704d5a75d8e269c2147890a9ce1864ba6b42e4bb46a7a2aab9b33"
+  },
+  {
+    "path": "native/source/materials/models/plastic/urmi-strength-damage/package.lisp",
+    "bytes": 799,
+    "sha256": "3aebae0eefb40df968932cec0cf3373530bfeb1188879cde87d45e8bd95a9149"
+  },
+  {
+    "path": "native/source/materials/models/plastic/urmi-strength-damage/particle.lisp",
+    "bytes": 3179,
+    "sha256": "70af48d98e5353ae64d5e2ae6280462a0e594a3fa5650162206a4fb16fefc9af"
+  },
+  {
+    "path": "native/source/materials/models/plastic/von-mises/constitutive.lisp",
+    "bytes": 9758,
+    "sha256": "41e16eb202d3584b55f1895c0b165fd153783fb8d321475bb433325011dfc702"
+  },
+  {
+    "path": "native/source/materials/models/plastic/von-mises/evolution/secant-hardening.lisp",
+    "bytes": 1753,
+    "sha256": "ffc6204dc65439dd8ffa1ce1188bbff6e3444fe2089c848ce3623e97c07e41e3"
+  },
+  {
+    "path": "native/source/materials/models/plastic/von-mises/particle.lisp",
+    "bytes": 8298,
+    "sha256": "487093df140e692a8826bef85f8e8143b1699b46261013cb529de58b6ed637bb"
+  },
+  {
+    "path": "native/source/materials/models/plastic/von-mises/state.lisp",
+    "bytes": 210,
+    "sha256": "142147708c7c8dc8fb959b7735a2fdbc4b11bea313775e2b2055df6afc3e26f2"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/apex-native.lisp",
+    "bytes": 1364,
+    "sha256": "b87f642c8f995c10b35427efe790186ff57e4950532b98df300d9c6da7f3bb82"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/apex-package.lisp",
+    "bytes": 659,
+    "sha256": "895c8a58ce520c5692bdd4415aac1807426064ba96799970bf01c6f8f6fc8185"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/apex-projection.lisp",
+    "bytes": 6864,
+    "sha256": "6c6abaefa78e2a90f076a4fd9556df489727a9704e079caad40a04126f5370b0"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/apex-residual-history.lisp",
+    "bytes": 2552,
+    "sha256": "6bb463d741f749967d90aaab00667a54214b4a96c6f74e5788071220511bba98"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/history.lisp",
+    "bytes": 3185,
+    "sha256": "28c3a6b9f2f0ca9bf30f40a722ceb9c9aaf931e859f17416dceccfb323e857a6"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/law.lisp",
+    "bytes": 593,
+    "sha256": "039efbcd85aa334dfdd1b00e3a5cb8ddebc725994b92cbc8da0064fa3c09aeaa"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/material.lisp",
+    "bytes": 13299,
+    "sha256": "7217e93a7d657d0dbfe6d71f7d3217c6df889d00cb37b9e8497cb5e6b0a54b15"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/native-package.lisp",
+    "bytes": 936,
+    "sha256": "c3b519759df364208140b15c6bc58d915f8c5cb343be40a4803718740ac6d917"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/package.lisp",
+    "bytes": 374,
+    "sha256": "a2acf539faccb920a8314ca1a8e273126dde1d33dc224541133e63727e3a04e7"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/point-projection.lisp",
+    "bytes": 15126,
+    "sha256": "c852770744c265705a828b24d550440343ad93466b1ffea72b11a1514a4d320a"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/state.lisp",
+    "bytes": 5567,
+    "sha256": "f9caaad2cffecca5dae54405b0fd1cec4dcc30d3c68f9236452ae706476d3a53"
+  },
+  {
+    "path": "native/source/materials/models/plastic/wang2017/transport.lisp",
+    "bytes": 2121,
+    "sha256": "0eeac6948b6e0ad938d41635c221a8938c3eacc45cb62a5804c9b04105df86dc"
+  },
+  {
+    "path": "native/source/materials/models/viscoelastic/finite-strain/legacy.lisp",
+    "bytes": 29348,
+    "sha256": "c40e712e6acfd2e120d49b104b98ef7898e98bd114b5a82d6382564c08a79782"
+  },
+  {
+    "path": "native/source/materials/models/viscoelastic/maxwell/constitutive.lisp",
+    "bytes": 7171,
+    "sha256": "629ed67e46ea7e10e441662475749e158f132ace27f0d35db5a722bcd1c6a81d"
+  },
+  {
+    "path": "native/source/materials/models/viscoelastic/particle.lisp",
+    "bytes": 776,
+    "sha256": "63104b7ffae5479daeaf5bb3cd6522c5690ede369f015c359a1971ab83e604a4"
+  },
+  {
+    "path": "native/source/materials/models/viscoplastic/clay-creep/law.lisp",
+    "bytes": 7212,
+    "sha256": "4573621e6522b487aac0ac10df91fdb5f93b91e3850d056b0184100efdb6fcb3"
+  },
+  {
+    "path": "native/source/materials/models/viscoplastic/clay-creep/package.lisp",
+    "bytes": 839,
+    "sha256": "f5a29159c46e6b9ec9fba872f2981f81aa32f611ff8a6ac1a07570a376722794"
+  },
+  {
+    "path": "native/source/materials/models/viscoplastic/clay-creep/particle.lisp",
+    "bytes": 10660,
+    "sha256": "5f1cede2a3ad9df9b7d81c4a1bcb07e518bbea0b824cc7567fc9b40b3e1e1515"
+  },
+  {
+    "path": "native/source/materials/models/viscoplastic/glen/constitutive.lisp",
+    "bytes": 8087,
+    "sha256": "55598a7174cd908704123c9646227a49314e94a04193e2ad4ffc2f32fe1c70b2"
+  },
+  {
+    "path": "native/source/materials/models/viscoplastic/particle.lisp",
+    "bytes": 2219,
+    "sha256": "790b0ddce5edd69b6953ec9f143bd521e98a00a9e33a83011761c9d8139f1908"
+  },
+  {
+    "path": "native/source/run-case.lisp",
+    "bytes": 4588,
+    "sha256": "26d0ae574b00e66da6dca605735fa9abab047c71e479b5e5129f10bd17e7a1f9"
+  },
+  {
+    "path": "native/source/scenarios/cliff/adapter.lisp",
+    "bytes": 3419,
+    "sha256": "a00e7b5f4a2a0fa6158bba37404d93a3f084814a27667692ed0417a8b3effa32"
+  },
+  {
+    "path": "native/source/scenarios/cliff/boundaries.lisp",
+    "bytes": 181,
+    "sha256": "d8aa12bd6b9f315ca2c769493f98a3f8c2685e48b2830032468e803d23f177d4"
+  },
+  {
+    "path": "native/source/scenarios/cliff/build.lisp",
+    "bytes": 2097,
+    "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac"
+  },
+  {
+    "path": "native/source/scenarios/cliff/execute.lisp",
+    "bytes": 16551,
+    "sha256": "59f0c151960b68c58c92c99dda27dfc5c24cd91f406e9c83894216df7eb0bf37"
+  },
+  {
+    "path": "native/source/scenarios/cliff/geometry.lisp",
+    "bytes": 3294,
+    "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999"
+  },
+  {
+    "path": "native/source/scenarios/cliff/initial-conditions.lisp",
+    "bytes": 189,
+    "sha256": "df2417378ea3bcfcaace99f0efcf58a9c7a0b4e3e770e64f2fb386be4ba54cde"
+  },
+  {
+    "path": "native/source/scenarios/cliff/loading.lisp",
+    "bytes": 178,
+    "sha256": "ba770dd2f75667248a99f1cf964e517545afb59d4e638bbfa548a721d1f2bce4"
+  },
+  {
+    "path": "native/source/scenarios/cliff/measurements.lisp",
+    "bytes": 181,
+    "sha256": "f5306ad09ca14f0c13e62a95b235dde94ee32a5bdc597842ce8d14f1ac7a732b"
+  },
+  {
+    "path": "native/source/scenarios/cliff/notch.lisp",
+    "bytes": 179,
+    "sha256": "40db6c51ae5ee8fd5f83c09dc3ddc065c8f6e032633ec5125b8250f29b1ff0e5"
+  },
+  {
+    "path": "native/source/scenarios/cliff/run.lisp",
+    "bytes": 2470,
+    "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c"
+  },
+  {
+    "path": "native/source/scenarios/cliff/settings.lisp",
+    "bytes": 268,
+    "sha256": "4467b347b00c8e5102ce9b7d2ad9c842180aa62d6d19c274cfb0dd7314d60440"
+  },
+  {
+    "path": "native/source/scenarios/cliff/solver.lisp",
+    "bytes": 1397,
+    "sha256": "1d11bcd99794f6440e39b9cdead22be55f3a29b88ea6cc0a606939689f6ba930"
+  },
+  {
+    "path": "native/source/scenarios/gravity-slope/adapter.lisp",
+    "bytes": 385,
+    "sha256": "385e29bf7a5fe5fb6c0195687a04f80172876578f6bb69b608c1b26e0f6b8af0"
+  },
+  {
+    "path": "native/source/scenarios/gravity-slope/configuration.lisp",
+    "bytes": 8076,
+    "sha256": "b9d078c27d896a1a4aa325345eefcbd0cec3fc4db463a5755adfc89a4527243b"
+  },
+  {
+    "path": "native/source/scenarios/gravity-slope/geometry.lisp",
+    "bytes": 3351,
+    "sha256": "434e457f40ff912c1308a8291419a316f50138ca067272094b9a40680c28bd47"
+  },
+  {
+    "path": "native/source/scenarios/gravity-slope/mc-composite-apex-adapter.lisp",
+    "bytes": 2070,
+    "sha256": "cc12cc0d7666c984010b12f5f5d4607cba8e94abe5e7b3da701483e7e35b8c0f"
+  },
+  {
+    "path": "native/source/scenarios/gravity-slope/measurements.lisp",
+    "bytes": 10758,
+    "sha256": "f23f0337bcc519954d94e1a06193ac8d6bda113ce8b60d7ced2886ec1a1ed0b5"
+  },
+  {
+    "path": "native/source/scenarios/gravity-slope/package.lisp",
+    "bytes": 956,
+    "sha256": "5a40608bcde4f7d9b2173bffe87795c1c0710b2ce1940586d6975092afb62c33"
+  },
+  {
+    "path": "native/source/scenarios/gravity-slope/runner.lisp",
+    "bytes": 9211,
+    "sha256": "dc235f18f1153c0f1e70245d4ae8d4780e3c37221afd56bebed39b1693bc95b7"
+  },
+  {
+    "path": "native/source/scenarios/joss/build.lisp",
+    "bytes": 3187,
+    "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e"
+  },
+  {
+    "path": "native/source/scenarios/joss/classes.lisp",
+    "bytes": 429,
+    "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd"
+  },
+  {
+    "path": "native/source/scenarios/joss/geometry.lisp",
+    "bytes": 2956,
+    "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d"
+  },
+  {
+    "path": "native/source/scenarios/joss/measurements.lisp",
+    "bytes": 332,
+    "sha256": "4556047f2058577e8906f1036e72f8323df98343a757232dc1121c533763a27d"
+  },
+  {
+    "path": "native/source/scenarios/joss/output.lisp",
+    "bytes": 1176,
+    "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641"
+  },
+  {
+    "path": "native/source/scenarios/joss/phases.lisp",
+    "bytes": 1395,
+    "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91"
+  },
+  {
+    "path": "native/source/scenarios/joss/run.lisp",
+    "bytes": 11888,
+    "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684"
+  },
+  {
+    "path": "native/source/scenarios/joss/stages.lisp",
+    "bytes": 176,
+    "sha256": "afb2bed0e9fea39cb37f85478a6d8f22383d8469ac1166fe3dc0ea91828ec143"
+  },
+  {
+    "path": "native/source/scenarios/joss/statistics.lisp",
+    "bytes": 6450,
+    "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec"
+  },
+  {
+    "path": "native/source/scenarios/joss/validation.lisp",
+    "bytes": 1249,
+    "sha256": "ff38516f64c0a75eeef5347331a0619bbab690cccfe0aae1f27133d30fa47fc1"
+  },
+  {
+    "path": "native/source/scenarios/residual-clay-slope/output.lisp",
+    "bytes": 15423,
+    "sha256": "389312a542fa1719363200f8efc31219020beecd46b313a3eb7de715a10a3b27"
+  },
+  {
+    "path": "native/source/scenarios/residual-clay-slope/package.lisp",
+    "bytes": 424,
+    "sha256": "d27867f8e4ee8b154557c92aadcc3116f315c5bc7099e3dd01bdbde3a79daabf"
+  },
+  {
+    "path": "native/source/scenarios/residual-clay-slope/runner.lisp",
+    "bytes": 8749,
+    "sha256": "a8561dd02a9dce1d8ff0062d0f3f6497ad4ea93f742f790487e5c8ccc9425f6d"
+  },
+  {
+    "path": "native/source/scenarios/slope-creep/adapter.lisp",
+    "bytes": 378,
+    "sha256": "c037c1fa86d265024b65feb53e81fe75bbfc66f730be55585a87e16b04ac935c"
+  },
+  {
+    "path": "native/source/scenarios/slope-creep/configuration.lisp",
+    "bytes": 5886,
+    "sha256": "ff8a6ff624d98698c09794716e2334fe9f84b41849acee0369fb023c2cbcaf18"
+  },
+  {
+    "path": "native/source/scenarios/slope-creep/loading-output.lisp",
+    "bytes": 1611,
+    "sha256": "4f05fcdd8c921420622ca593af4455fb39bff93bfc39fb19f20a3be1647e3b8e"
+  },
+  {
+    "path": "native/source/scenarios/slope-creep/loading.lisp",
+    "bytes": 8317,
+    "sha256": "3ca017c2fb804e0202bdd9421a3d716a59a4784e6e0b7c5a58390422ecd81a7e"
+  },
+  {
+    "path": "native/source/scenarios/slope-creep/measurements.lisp",
+    "bytes": 4999,
+    "sha256": "c190c1ceb12e3eee9398be20996741ba5643e28135b8dad80d33898c3905e475"
+  },
+  {
+    "path": "native/source/scenarios/slope-creep/package.lisp",
+    "bytes": 367,
+    "sha256": "ed440aa878bb11dc80214db3b07bf92a4a4999d192e0dc7bc9b69f01ad31208c"
+  },
+  {
+    "path": "native/source/scenarios/slope-creep/runner.lisp",
+    "bytes": 10085,
+    "sha256": "4435eb595750354a0f48ceac14bc53d986cd92cbcd14856cfcf0a45a8e56e938"
+  },
+  {
+    "path": "native/source/scenarios/slope-descent/adapter.lisp",
+    "bytes": 385,
+    "sha256": "2a469c90d2f3a662e4c095a261e03cdbf2e15a152fa085445766431dadeadade"
+  },
+  {
+    "path": "native/source/scenarios/slope-descent/boundary.lisp",
+    "bytes": 4468,
+    "sha256": "b6145bc1c3860cd47c6baf7c636b260c134e9c175f36c6d3137855858b49206c"
+  },
+  {
+    "path": "native/source/scenarios/slope-descent/configuration.lisp",
+    "bytes": 7147,
+    "sha256": "2ce37f1c510d3425e0ef36fd0ca0d9f4d02969926fef314ddfbffb3aebd588b4"
+  },
+  {
+    "path": "native/source/scenarios/slope-descent/geometry.lisp",
+    "bytes": 3941,
+    "sha256": "92c3100d3ea18aa6fe8370b256fab7321a095466bb838a0ec3aecf2a36fe14b1"
+  },
+  {
+    "path": "native/source/scenarios/slope-descent/package.lisp",
+    "bytes": 1133,
+    "sha256": "0f09d670173492c62fb87319a7ec863f1e62ca9dad23333b86de4fb2897f4478"
+  },
+  {
+    "path": "native/source/scenarios/slope-descent/runner.lisp",
+    "bytes": 18544,
+    "sha256": "4425f3e8ed3640a9f234fd5b55c90d3e03eec2aec8f2aac3f270229ae23fd8f8"
+  },
+  {
+    "path": "native/source/scenarios/slope-descent/wang2017-output.lisp",
+    "bytes": 7853,
+    "sha256": "d5b8a642536de89c070cb734617cc160abe1bf6012ce57a2118ee80214f8c36e"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/adapter.lisp",
+    "bytes": 4076,
+    "sha256": "92b3ffee405aa0d68fe55d253a6177579462728009a538730b0ca0ac098a4d70"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/boundaries.lisp",
+    "bytes": 207,
+    "sha256": "5c922c21bf89d35ccfc971e187ee1ce5679b90ea12b683cd2d2193675bf053de"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/build.lisp",
+    "bytes": 186,
+    "sha256": "1a7b73a8e97d1186e1693c5664ca13387e1b7f886e478800cb9d084f0f481852"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/config.lisp",
+    "bytes": 3157,
+    "sha256": "1eee11c1bec5af052d1c06473c8484bbfa96dfd301cf4e7aa852d4a8ce80809c"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/controls.lisp",
+    "bytes": 4294,
+    "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/geometry.lisp",
+    "bytes": 3589,
+    "sha256": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/homogeneous.lisp",
+    "bytes": 3220,
+    "sha256": "542285f6d5ca253259bb385b7e48f3d86297609aa0f2e7c07c1485cbf35d32f3"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/initial-conditions.lisp",
+    "bytes": 207,
+    "sha256": "77554f72ee147ac3190fa630271a43848243de5080d2fb0892a21398163e5eb8"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/loading.lisp",
+    "bytes": 204,
+    "sha256": "74a2e03fbd97b8f48fd03d4cb578b194c39bcb9d228362d4fb7eb3c17f448dcc"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/measurements.lisp",
+    "bytes": 6658,
+    "sha256": "5702f1c392ae52f1216b98a2562ccd589ef4a2654abb5428c922e068a2710454"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/mpm.lisp",
+    "bytes": 3570,
+    "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/runner.lisp",
+    "bytes": 7743,
+    "sha256": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/stages.lisp",
+    "bytes": 184,
+    "sha256": "6605c0348ca60e4626e54997cdabdd4395cbd7dac4464e043762ed1502ba19b9"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/state.lisp",
+    "bytes": 237,
+    "sha256": "46bfb37ea16004a0c13affcde1bca8bf952d64b1db130f26c3927b087c60cd20"
+  },
+  {
+    "path": "native/source/scenarios/triaxial/stress-measures.lisp",
+    "bytes": 168,
+    "sha256": "10b2ca8702641d4deffce31efb652ff7bcbe008039c5eceafcc46dd56c95d6f3"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/adapter.lisp",
+    "bytes": 381,
+    "sha256": "81311581d3fa21ab6af87f846df8710058a242e3e603fbe016e94999b55a08f7"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/configuration.lisp",
+    "bytes": 3755,
+    "sha256": "3a69e69ac5787676f5b294be125f09421d40297f915cd06aa6d7ac7f2e78a3fc"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/extended.lisp",
+    "bytes": 3026,
+    "sha256": "e7c3764eb4838e25b3784140b30eab9373fa841300d123128e62c51b99aec57c"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/geometry.lisp",
+    "bytes": 5255,
+    "sha256": "d032b5eff83d7e2ffcc21c547271e5c6315e900e12c7e1a51762c9a71d6768ae"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/output-streams.lisp",
+    "bytes": 2063,
+    "sha256": "e92317270d28e70783e69173318c2ca4769b16f1aa17f87f4a3d4bd9e65c67a0"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/output.lisp",
+    "bytes": 15448,
+    "sha256": "566fd668e25406462fb55ad86420d58e2b0ad25c891ca635a9cd03a188a2263d"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/package.lisp",
+    "bytes": 518,
+    "sha256": "d57abacc1bfb2ce5c6c2ae446db738a24929446422927891db49fc1d35e5e058"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/proper.lisp",
+    "bytes": 7379,
+    "sha256": "9b370935faec45cbc7b7360e475734138564a7619f2b84eab2638bea96a4f3f0"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/rapid.lisp",
+    "bytes": 2820,
+    "sha256": "4c1323abe803ad6e1e522de4e043a28ca6571d6f4a190fbdf88a7c5889e92ee3"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/recipe-package.lisp",
+    "bytes": 936,
+    "sha256": "0e879012be8d383777f803d2303c594f792e0ea5b3cbc294ac5c54ddc81ca6a9"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/runner.lisp",
+    "bytes": 15160,
+    "sha256": "dfaa7fca239c87c7de1db2d27d929f3ece5ea162f7abbf0a8d26ae5497214892"
+  },
+  {
+    "path": "native/source/scenarios/urmi-damage40/transfer.lisp",
+    "bytes": 16603,
+    "sha256": "6d06283be72b5b444fa6d697a80f0af9a8a58056eedf67b55324ddb38cb8abb7"
+  },
+  {
+    "path": "native/source/scripts/lisp/native-source-snapshot.lisp",
+    "bytes": 20460,
+    "sha256": "1c863bc9eb94cc62134c18b3ff7b9f67d793f0991a2e6785cbab475cd6de02ce"
+  },
+  {
+    "path": "native/source/source-manifest.json",
+    "bytes": 65531,
+    "sha256": "26c8d7766c46470ef3bdc9d0de49fa22b6cc0aeb7300460aea2e73e6123e6fea"
+  },
+  {
+    "path": "native/source/src/boundaries/buoyancy/buoyancy.lisp",
+    "bytes": 78231,
+    "sha256": "a9318298ab971141f344c46f634156639a2de859e09123ff672aece032fadba9"
+  },
+  {
+    "path": "native/source/src/boundaries/constraints/bc.lisp",
+    "bytes": 21899,
+    "sha256": "00a722288bc7e7baad930cdb349a325a90c8b4c864c6a387eec26ecff579c0fa"
+  },
+  {
+    "path": "native/source/src/boundaries/erosion/dr-erosion.lisp",
+    "bytes": 881,
+    "sha256": "1e6ac4b978a0bab15da7f24b856cff477fbc339a6f3afcbac33490ad0e5cba1f"
+  },
+  {
+    "path": "native/source/src/boundaries/erosion/erosion.lisp",
+    "bytes": 5558,
+    "sha256": "db394ab4ba4e747626ae1523d2447ba5f7d69a7a8e8027026ec97b480a5fba85"
+  },
+  {
+    "path": "native/source/src/boundaries/inflow/inflow.lisp",
+    "bytes": 3342,
+    "sha256": "d9119416720cf986c91d3ea9488c0e9bab5015663a92e72cbb3f862ac4f3de2a"
+  },
+  {
+    "path": "native/source/src/boundaries/penalty/penalty.lisp",
+    "bytes": 63098,
+    "sha256": "f24eb709210e127f357d66f494091f770ef0a5a309b7463f75e3b3e39fbfcbb3"
+  },
+  {
+    "path": "native/source/src/boundaries/pressure/isotropic.lisp",
+    "bytes": 891,
+    "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13"
+  },
+  {
+    "path": "native/source/src/core/domain-state.lisp",
+    "bytes": 163,
+    "sha256": "1a6cef77f8ff1c538f87118f6243d93d51d5ff4f205bf88bdd979102016432ba"
+  },
+  {
+    "path": "native/source/src/core/iterate-test.lisp",
+    "bytes": 5860,
+    "sha256": "ee36f0ec55a97ec6dbb07cbb7f7bab09fa448b2cc33da7bb5229f9ad883e2984"
+  },
+  {
+    "path": "native/source/src/core/iterate.lisp",
+    "bytes": 82697,
+    "sha256": "39c0e79ee1d3e25db71d22c413b609ff12208598e50bdbe40fbf50a6c4722e2d"
+  },
+  {
+    "path": "native/source/src/core/mesh-base.lisp",
+    "bytes": 51125,
+    "sha256": "57bd47f0b8a9932e9d2042173d0b20fb5fd75037c16725cdbf626ccca8570eba"
+  },
+  {
+    "path": "native/source/src/core/package.lisp",
+    "bytes": 7473,
+    "sha256": "54c2c4e068fd81bc2b2d79d0ba3835e695e1d0de9f8c0ed6a8ac8513983b92c1"
+  },
+  {
+    "path": "native/source/src/core/particle-base.lisp",
+    "bytes": 10894,
+    "sha256": "5e8fdaa9b6b312b30565239e72f3add2773b190d3808d42937c93dc08cc5285d"
+  },
+  {
+    "path": "native/source/src/core/particle-protocols.lisp",
+    "bytes": 7004,
+    "sha256": "ea55acd4fa27cbec3530a2c5eceb67d3a050953490d028cc37232d05433ee506"
+  },
+  {
+    "path": "native/source/src/core/settings.lisp",
+    "bytes": 492,
+    "sha256": "97307ee66180541a6ea3c3155c2da24f20669420e9e59f8747776253e0e0b710"
+  },
+  {
+    "path": "native/source/src/core/simulation-base.lisp",
+    "bytes": 52544,
+    "sha256": "90f6ad05fc51456410df291e7782e9acde2f124fa2f16cc5044891238514c1b0"
+  },
+  {
+    "path": "native/source/src/core/stress-update.lisp",
+    "bytes": 25523,
+    "sha256": "7014b54e59be3b4f8f4b0fc4ddfea750795f71dd3011d5c3fd50b325a628d2e1"
+  },
+  {
+    "path": "native/source/src/core/timestep.lisp",
+    "bytes": 151,
+    "sha256": "946029c9ccaf05b8e071f1c5b236e835cda6fdc20ae7a6957f79c07709c82537"
+  },
+  {
+    "path": "native/source/src/damage/eigenerosion/eigenerosion.lisp",
+    "bytes": 12320,
+    "sha256": "3396b21038537944ef0572653fc75c7b14ba070a29257a3c61f12a8169a0c0b7"
+  },
+  {
+    "path": "native/source/src/damage/nonlocal/ekl.lisp",
+    "bytes": 7162,
+    "sha256": "f3ea1ed92c931f1dfb2437118374806d675a4e37839dd2ac55b858026811e671"
+  },
+  {
+    "path": "native/source/src/damage/nonlocal/legacy.lisp",
+    "bytes": 42911,
+    "sha256": "fe26d093a1e911beee8fdbe67a53c10f0c619f44eea5a3eaa25c410d42c8337f"
+  },
+  {
+    "path": "native/source/src/damage/nonlocal/nonlocal-stress-based.lisp",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "native/source/src/damage/package.lisp",
+    "bytes": 1972,
+    "sha256": "0983111fb3acf696939d7ee54d948ed9345cfbd94ec9c529e84e9e528ddb08ef"
+  },
+  {
+    "path": "native/source/src/damage/solver/solver.lisp",
+    "bytes": 7492,
+    "sha256": "16117cbb17fae425c1e1ea058a29ed7077e087cd7e63862797e5edbd590bdab1"
+  },
+  {
+    "path": "native/source/src/discretization/domain-update/domain-update.lisp",
+    "bytes": 31495,
+    "sha256": "7cf4a1d2ad39b5076ccb322ea19896754c32893d1657b98cb5af4c662bfa7026"
+  },
+  {
+    "path": "native/source/src/discretization/ghost-nodes/ghost.lisp",
+    "bytes": 49776,
+    "sha256": "e74fb0200ba0f0f6edbfb77cb0e9821cdc532c718808a89a0d92cef806276e44"
+  },
+  {
+    "path": "native/source/src/discretization/shape-functions/shape-function.lisp",
+    "bytes": 23457,
+    "sha256": "91fbe2afc519fa5eb0728d54630a8f5f0c47b03ebfda73371076a58a3458452f"
+  },
+  {
+    "path": "native/source/src/discretization/splitting/splitting.lisp",
+    "bytes": 15070,
+    "sha256": "26e57f4399dcc6e87a74b1910c60b3ecc9c6467f551b983a7332171d037436b3"
+  },
+  {
+    "path": "native/source/src/formulations/octree/buoyancy.lisp",
+    "bytes": 18341,
+    "sha256": "f0eab46ca3f2e510a516ddbf24991d5a70a739c7005489d47048074f25392e78"
+  },
+  {
+    "path": "native/source/src/formulations/octree/penalty.lisp",
+    "bytes": 6365,
+    "sha256": "b2c1993fef297d6efcc887da5fea440a7e6be1ffbc7361ce0ce5ca01dd80602e"
+  },
+  {
+    "path": "native/source/src/formulations/ssa/mesh.lisp",
+    "bytes": 58,
+    "sha256": "bb3af7f3bd5c55b79b142bd997bfa34906d263355aae190686431eefbfd49063"
+  },
+  {
+    "path": "native/source/src/formulations/ssa/p2g.lisp",
+    "bytes": 4814,
+    "sha256": "dafd5769cf207aa6f46049b1d8fc939cc6053d9966ffdfda9bbbbdd5715161c0"
+  },
+  {
+    "path": "native/source/src/formulations/ssa/package.lisp",
+    "bytes": 228,
+    "sha256": "dee67a4760e9f82162ced9533e5316ee3f350f36e5b7e3b360cec02e4908feb8"
+  },
+  {
+    "path": "native/source/src/formulations/ssa/particles.lisp",
+    "bytes": 3133,
+    "sha256": "2f72160e9723bcc5a176d7634d46135a0dcbf629df8250f541b5055a586e2c0f"
+  },
+  {
+    "path": "native/source/src/formulations/ssa/solvers.lisp",
+    "bytes": 1838,
+    "sha256": "0f15f7124f900f8cd406e1ac470e335a8cc823a003c7627394c74d123a231423"
+  },
+  {
+    "path": "native/source/src/geometry/setup.lisp",
+    "bytes": 36567,
+    "sha256": "0bd74167f9125a16b53fc55d6747039525943adffe6746004632781eec62b057"
+  },
+  {
+    "path": "native/source/src/loading/displacement.lisp",
+    "bytes": 192,
+    "sha256": "5b69184b836299e6302f8fb09ae26b70a4d25e8dec01c520a14e8f22fc8f4f05"
+  },
+  {
+    "path": "native/source/src/loading/force.lisp",
+    "bytes": 185,
+    "sha256": "b8008de11ea20434fdac96f37e00c21874aca584c1c64e501b5e806d43c4bbb1"
+  },
+  {
+    "path": "native/source/src/loading/gravity.lisp",
+    "bytes": 187,
+    "sha256": "4a2412609df8c572d81d3759430c7d57a8b585a510065245eadbd0ad5ded5225"
+  },
+  {
+    "path": "native/source/src/loading/pressure.lisp",
+    "bytes": 181,
+    "sha256": "066b63638de05017d0fc0228f111a97b9a31c4727fd696d776af7433db5a40d7"
+  },
+  {
+    "path": "native/source/src/loading/sequences.lisp",
+    "bytes": 189,
+    "sha256": "1e8217f94f8758e7ff65ac895f3a8be0efd52725272861b235cd16d0438bf529"
+  },
+  {
+    "path": "native/source/src/loading/time-functions.lisp",
+    "bytes": 194,
+    "sha256": "194c047ff36c9b4164ee8c6297644ba646451c4fd7b8dcfc039a081126c3e82b"
+  },
+  {
+    "path": "native/source/src/measurements/displacement.lisp",
+    "bytes": 198,
+    "sha256": "0051a1406ec11ab54cfcef0478c956b21d95179a7080b0289d07d1a5495ba7fd"
+  },
+  {
+    "path": "native/source/src/measurements/energy.lisp",
+    "bytes": 192,
+    "sha256": "30c343bb3103ec4c60d1d09eaaef0fb65bf4d62b941b67d6b3e426d1ddbb57b7"
+  },
+  {
+    "path": "native/source/src/measurements/legacy-particle.lisp",
+    "bytes": 139,
+    "sha256": "e3173eb888b753f1770628a612552ea24848e62c120bd351e4db942577f674b6"
+  },
+  {
+    "path": "native/source/src/measurements/legacy-stress.lisp",
+    "bytes": 173,
+    "sha256": "95e88e09e19a36d810e9a682f7d9e4bf6575cb8e6e4bedbc24dd9bb461ad30d0"
+  },
+  {
+    "path": "native/source/src/measurements/mass-balance.lisp",
+    "bytes": 198,
+    "sha256": "3d3773e63657152fe044f94314e943dc723c2494d02036861d893c93f67bec6c"
+  },
+  {
+    "path": "native/source/src/measurements/material-output.lisp",
+    "bytes": 3158,
+    "sha256": "61c3b5aed49ef1965bb2ca8800f454310b35ff5f4e71f7202b5a0527e4132019"
+  },
+  {
+    "path": "native/source/src/measurements/stress-strain.lisp",
+    "bytes": 197,
+    "sha256": "3c658f7042cbe0e9003f048090e73248145ee35ed710de919d081111992cb9a5"
+  },
+  {
+    "path": "native/source/src/measurements/volume.lisp",
+    "bytes": 192,
+    "sha256": "63daa4d5a1939a576b5ea0882b9ba7a2d750c2739fec2e2744d50237541475b6"
+  },
+  {
+    "path": "native/source/src/numerics/angles.lisp",
+    "bytes": 85,
+    "sha256": "4edf2316d646f21dcd67bae6ee87abf3c5d14d58a4b8a8256b006888ac467c12"
+  },
+  {
+    "path": "native/source/src/numerics/error-handling/errors.lisp",
+    "bytes": 443,
+    "sha256": "e857aa6fae6d4385f571d52903d9755799e39d384547f4fb3622eb7759914bcb"
+  },
+  {
+    "path": "native/source/src/numerics/fastmaths/fastmaths.lisp",
+    "bytes": 79025,
+    "sha256": "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d"
+  },
+  {
+    "path": "native/source/src/numerics/integration/delayed-steppers.lisp",
+    "bytes": 5269,
+    "sha256": "95271a7b90f61780a5d2c2e2705a77be5a9a40f2d30e3a11eb8523543f36443d"
+  },
+  {
+    "path": "native/source/src/numerics/integration/finite-difference-tangent.lisp",
+    "bytes": 1310,
+    "sha256": "e566c19c99889fd6f41b28beb35b0dfffdd4f95826a00f57bcad2f5a879caaa9"
+  },
+  {
+    "path": "native/source/src/numerics/legacy-tensors.lisp",
+    "bytes": 251,
+    "sha256": "4738b0b9a66506b54b743539fbc78c8371d16b6b9d6a6adc7f80becb6d0b3cba"
+  },
+  {
+    "path": "native/source/src/numerics/linear-algebra/symbolic-derivation.lisp",
+    "bytes": 5093,
+    "sha256": "f707ec327b569f93f504ff08dfec333a0684b2df99b5b80028fc7f4f18516928"
+  },
+  {
+    "path": "native/source/src/numerics/native-bridge/cpp.lisp",
+    "bytes": 5705,
+    "sha256": "3b3c47ef825a28a4d3da7cce9051857460d2d93cb7b985ac253a431b13430e7b"
+  },
+  {
+    "path": "native/source/src/numerics/tensors/constitutive-primitives.lisp",
+    "bytes": 5737,
+    "sha256": "e9897f81b3ed9ecd206b46fa12fefa09d3a04cb49555c7aa31cb37a834dfcf95"
+  },
+  {
+    "path": "native/source/src/numerics/tensors/damage-primitives.lisp",
+    "bytes": 1710,
+    "sha256": "3ed032ad1782ba8310b40b4544e3a7b262d6dd8ac04e5527d5eb447766262196"
+  },
+  {
+    "path": "native/source/src/numerics/tensors/particle-objectivity.lisp",
+    "bytes": 5181,
+    "sha256": "aa5c713ade5833c0b4525e64a6b9339619597b44db2e68ecb20c4dd4847fcbaf"
+  },
+  {
+    "path": "native/source/src/numerics/tensors/principal-strains.lisp",
+    "bytes": 1298,
+    "sha256": "054eb75fe8a1e36f94e43cba7b1bda635f88b9859b8260a0a8b419a154c31593"
+  },
+  {
+    "path": "native/source/src/numerics/tensors/utils.lisp",
+    "bytes": 57848,
+    "sha256": "8ed1bfb0d0662107c8d56694b5388e571c41944cda07448337ebef1665015f57"
+  },
+  {
+    "path": "native/source/src/numerics/tensors/voigt-2d.lisp",
+    "bytes": 285,
+    "sha256": "bbd1cf217257f1f6530fab141d5f75286bd6a06086da038b5a341c7940156bab"
+  },
+  {
+    "path": "native/source/src/output/checkpoints.lisp",
+    "bytes": 161,
+    "sha256": "dfac7a3bc187707b79905488b697489781d25ed6adf72e9f414c463e9e024fa4"
+  },
+  {
+    "path": "native/source/src/output/csv.lisp",
+    "bytes": 153,
+    "sha256": "ac19340a880f20f1f8ff0027cb18d85e671bd18f3284b1d5c599e1e8088ce62a"
+  },
+  {
+    "path": "native/source/src/output/legacy-triaxial-json.lisp",
+    "bytes": 338,
+    "sha256": "c26f7e820344d1f7b949a0efe57ba82d0a071226627cc1f9701dc3f2bbdac31c"
+  },
+  {
+    "path": "native/source/src/output/metadata.lisp",
+    "bytes": 175,
+    "sha256": "fb821fe38513daf8d8e27175fe0932a4371830990a87b8ed7f78e5a3dba87f57"
+  },
+  {
+    "path": "native/source/src/output/plotting/legacy-particle.lisp",
+    "bytes": 2391,
+    "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba"
+  },
+  {
+    "path": "native/source/src/output/plotting/plotter.lisp",
+    "bytes": 5128,
+    "sha256": "88ba44d5bebd69ddd8a8e80902787997b3c4e036608168f254ccbcb210c68caa"
+  },
+  {
+    "path": "native/source/src/output/plotting.lisp",
+    "bytes": 172,
+    "sha256": "b2497939ad4d4ac8b049ca91442b87a72dd0fd1590879a4589d4a708e278aadb"
+  },
+  {
+    "path": "native/source/src/output/provenance.lisp",
+    "bytes": 177,
+    "sha256": "2cff3ceb567dbca3003ca0a22582c7a92cbbf37dfe25819d1dad42dddd5d936a"
+  },
+  {
+    "path": "native/source/src/output/retained-history.lisp",
+    "bytes": 1134,
+    "sha256": "0868b129c7f565b88e765594bac1a4b9d5c740b492af600b42621ce09b698a03"
+  },
+  {
+    "path": "native/source/src/output/vtk.lisp",
+    "bytes": 44215,
+    "sha256": "479a747f01a5e1015be69934f0489378751e462b62b5a954ddadd04adf74971a"
+  },
+  {
+    "path": "native/source/src/parallel/damage-communication-state.lisp",
+    "bytes": 1148,
+    "sha256": "0d6f4a271354e4d7874f1c0b46ec539600ea8ecf18758a4af7d2ef65bede7b37"
+  },
+  {
+    "path": "native/source/src/parallel/mpi/damage-stub.lisp",
+    "bytes": 26,
+    "sha256": "ddea8f5abcf32496f6204b41c3c3232e73e54ae1d8813dcbf565a169c8e6d0a6"
+  },
+  {
+    "path": "native/source/src/parallel/mpi/damage.lisp",
+    "bytes": 2578,
+    "sha256": "7d58a28779311ac70514dcebe1431c75e31410eaecde37abc71371c0663ba7ef"
+  },
+  {
+    "path": "native/source/src/parallel/mpi/domain.lisp",
+    "bytes": 25818,
+    "sha256": "d4c057480d124cb24782eec31a69a77c9a11c3421a68c5f7427a3217450767dd"
+  },
+  {
+    "path": "native/source/src/parallel/mpi/dr-solvers.lisp",
+    "bytes": 13394,
+    "sha256": "a6c5feb9e8269cfe48bdd71373d7ec38fef1a7b7a509b2296ace79de1c677bce"
+  },
+  {
+    "path": "native/source/src/parallel/mpi/dr.lisp",
+    "bytes": 2722,
+    "sha256": "63b112fb0c02f0df46803d39bc4a94c0f9308478fef543c8a0edcd7117d8b23a"
+  },
+  {
+    "path": "native/source/src/parallel/mpi/legacy-mpi.lisp",
+    "bytes": 100388,
+    "sha256": "7936696762e57e14f16bff0c2f93ce09c248f4741d36752dbba0450d18b6eb2c"
+  },
+  {
+    "path": "native/source/src/parallel/mpi/mpi.lisp",
+    "bytes": 13033,
+    "sha256": "ba3ed1eb2ef7b261d3870643c90ce7971e3e22828fac105169e01efd3f8fe657"
+  },
+  {
+    "path": "native/source/src/parallel/mpi/package.lisp",
+    "bytes": 7981,
+    "sha256": "23e9f74d42da9ca4af15df60fdc4893e71d73c0c1a9d25fec5843fe95f8ec923"
+  },
+  {
+    "path": "native/source/src/parallel/mpi/sync.lisp",
+    "bytes": 37612,
+    "sha256": "4d181e0d032494984dca997bd90a7993d966c2a6523a43954eca8431ed15cd26"
+  },
+  {
+    "path": "native/source/src/parallel/serial/serial.lisp",
+    "bytes": 3677,
+    "sha256": "4941b42947f196dca693901d9fda73d18e6b653d743e73acac6643fd8b1c2c3c"
+  },
+  {
+    "path": "native/source/src/parallel/serial/serialise.lisp",
+    "bytes": 7210,
+    "sha256": "64f4b75622833d0b4cbcd8e32f99859b710b60e17d00dca2099147e1612babbe"
+  },
+  {
+    "path": "native/source/src/simulation/builder.lisp",
+    "bytes": 174,
+    "sha256": "5087da3146032eeffb12b4b8d190937a28116a1f9614d317168178ff251ee6ec"
+  },
+  {
+    "path": "native/source/src/simulation/compatibility/triaxial-package.lisp",
+    "bytes": 109,
+    "sha256": "1d5c90cddff8cb5d81b3b3f91576dd8fd01ee8f31063c3b44fcf829dab3e009d"
+  },
+  {
+    "path": "native/source/src/simulation/components/base.lisp",
+    "bytes": 934,
+    "sha256": "0ca404e1ad941223ce91a6214dba77a6eb2013267ac7ecce584928f209a0b302"
+  },
+  {
+    "path": "native/source/src/simulation/components/geometry.lisp",
+    "bytes": 377,
+    "sha256": "039dba870ec44b1ae7eadcf04f60130da27c81470db729241463068982dd87d5"
+  },
+  {
+    "path": "native/source/src/simulation/components/specifications.lisp",
+    "bytes": 3227,
+    "sha256": "136a3f21922ef4b1cb788dbe7f675fb5ffb9667a5a87cc0e76fb1be6652b785e"
+  },
+  {
+    "path": "native/source/src/simulation/config/legacy-triaxial-values.lisp",
+    "bytes": 522,
+    "sha256": "a808236f0015a187838036c4dbf19c7973b86cd8be72cc8b72fdb53c457533be"
+  },
+  {
+    "path": "native/source/src/simulation/config/package.lisp",
+    "bytes": 204,
+    "sha256": "221838a3c3746928e4cf1da9fe492e77a37e8013ce0d4ba0a6b78a615331c9f2"
+  },
+  {
+    "path": "native/source/src/simulation/config/parameters.lisp",
+    "bytes": 4101,
+    "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86"
+  },
+  {
+    "path": "native/source/src/simulation/controller.lisp",
+    "bytes": 177,
+    "sha256": "5fa1a99284320b48de5d1dde9a89aa957f564eab7a59fdde1e64f2399ba67fad"
+  },
+  {
+    "path": "native/source/src/simulation/lifecycle.lisp",
+    "bytes": 3702,
+    "sha256": "df8d91fe4b5e5c3f72800ca65fd3abf6d58bc5d294029a4cc3e6a9fb9eeca22f"
+  },
+  {
+    "path": "native/source/src/simulation/material-assignment.lisp",
+    "bytes": 187,
+    "sha256": "ad5f3e87b3b1a9142556135d62f1168e0f39af9a2429555f1ba25ae3aca2a0cf"
+  },
+  {
+    "path": "native/source/src/simulation/package.lisp",
+    "bytes": 1459,
+    "sha256": "dde2bb5d241d9f30050cb1c980f88e51df775a606d3df0a644491fd6d8d7acc7"
+  },
+  {
+    "path": "native/source/src/simulation/stages.lisp",
+    "bytes": 173,
+    "sha256": "95875895498d5cdc3504f164567ee173bf82fd49926fb471947a0c91a28867a1"
+  },
+  {
+    "path": "native/source/src/simulation/validation.lisp",
+    "bytes": 192,
+    "sha256": "8edbae27ea5dd891278af24535a608dc305fb856f206c59bb0141d28ae56a1fd"
+  },
+  {
+    "path": "native/source/src/solvers/dynamic-relaxation/algorithms.lisp",
+    "bytes": 95842,
+    "sha256": "b0552b31151c7bd1a4da664f426715dcef0898e8005397885c7012462ae0b6bf"
+  },
+  {
+    "path": "native/source/src/solvers/dynamic-relaxation/convergence/criteria.lisp",
+    "bytes": 45579,
+    "sha256": "ae74b9f93db587f39df7de627494baa115d0967c75bfd0257cbd36a650b6342a"
+  },
+  {
+    "path": "native/source/src/solvers/dynamic-relaxation/dynamic/dynamic.lisp",
+    "bytes": 18899,
+    "sha256": "581cf8f2f0c2d66cbba0891e27e3c19c79fcc54ce18afee043d15d0b4abc2681"
+  },
+  {
+    "path": "native/source/src/solvers/dynamic-relaxation/dynamic-relaxation.lisp",
+    "bytes": 18096,
+    "sha256": "c5827ab6c324ee2d74dd10d1f27d87f01281100616c68d1840278705f3c2a10a"
+  },
+  {
+    "path": "native/source/src/solvers/dynamic-relaxation/multigrid/multigrid.lisp",
+    "bytes": 97808,
+    "sha256": "ef9858a372fab83ae1355bded25db37673591cdf2ffc0651a616472211153251"
+  },
+  {
+    "path": "native/source/src/solvers/dynamic-relaxation/package.lisp",
+    "bytes": 2959,
+    "sha256": "e9950da927acf0eace931c02a2814226109428c9943065d8ea499fb84e848b99"
+  },
+  {
+    "path": "native/source/src/solvers/dynamic-relaxation/quasi-static/quasi-static.lisp",
+    "bytes": 32054,
+    "sha256": "96c785c5b1981b09cdba1cdddc0e75dce7cdb25164462d44bd1f2f6bd42aee58"
+  },
+  {
+    "path": "native/source/src/solvers/explicit/musl.lisp",
+    "bytes": 2302,
+    "sha256": "37e58cfc2a43957b259f89e8f27d8fd20adb87fdeed0b6e2b3c4cfe3fc886639"
+  },
+  {
+    "path": "native/source/src/solvers/explicit/usf.lisp",
+    "bytes": 4540,
+    "sha256": "7cefb3fe86a9124715392ad73de19ec34ef6939bf824b0170394c1e312c8120e"
+  },
+  {
+    "path": "native/source/src/solvers/explicit/usl.lisp",
+    "bytes": 2651,
+    "sha256": "fabc02dda085ce46545d2843456455a5a6fe45c6396463432dd946e5338921b2"
+  },
+  {
+    "path": "native/source/src/solvers/implicit/implicit.lisp",
+    "bytes": 83220,
+    "sha256": "ed262829375b11f92f70148ee4d421dd1ac9f9abe221795399e9436b6b49b357"
+  },
+  {
+    "path": "native/source/src/solvers/linear-systems/linear-solver.lisp",
+    "bytes": 31152,
+    "sha256": "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011"
+  },
+  {
+    "path": "native/source/src/stabilization/aggregate/aggregate.lisp",
+    "bytes": 46719,
+    "sha256": "8308aaa8b8e01133828d1215eb8d2a754a8bef8208f8d67d9fb7cb21b1e303bd"
+  },
+  {
+    "path": "native/source/src/transfer/forces.lisp",
+    "bytes": 14831,
+    "sha256": "938207f2951a1edd7113155bf1c59a3e667629497020507fab78912c750ca80f"
+  },
+  {
+    "path": "native/source/src/transfer/g2p.lisp",
+    "bytes": 12586,
+    "sha256": "b969f82a01f8fab4d13cf62b34783fc17fdb49c82efb0c66ceb99c413651530e"
+  },
+  {
+    "path": "native/source/src/transfer/momentum.lisp",
+    "bytes": 155,
+    "sha256": "14c53751a132d228550242bfa6238fb83eefa9faf2a0e3ffc178c5254d21b594"
+  },
+  {
+    "path": "native/source/src/transfer/p2g.lisp",
+    "bytes": 14584,
+    "sha256": "1faedbbfe015f201414773a5d5cdb7314cd0d9de8b21bf4f89b41846daa3bfbc"
+  },
+  {
+    "path": "native/source-provenance.json",
+    "bytes": 692451,
+    "sha256": "b91e5f385368c54543cfd7980f29f7dfec57b1b0c0dac17540c4302bfde221d4"
+  },
+  {
+    "path": "apex-h05-001-detached/launch-proof.json",
+    "bytes": 1039,
+    "sha256": "650715e2082249aa8d34eda33eeae90898112d8af4173d8d808d78b4ba3c251b"
+  },
+  {
+    "path": "apex-h05-001-detached/launch-request.json",
+    "bytes": 1351,
+    "sha256": "b6596c20da55056ee3bddae8b96df3dcae86f7efbb5098ce37491ea785614503"
+  },
+  {
+    "path": "apex-h05-001-detached/launch-request.ps1",
+    "bytes": 2266,
+    "sha256": "def3267a766cfcfaeea69f4ae369dbb71a5d4b240f9f851e20dbd2b5cbf7c4e0"
+  },
+  {
+    "path": "apex-h05-001-detached/worker-exit.json",
+    "bytes": 126,
+    "sha256": "d79c4abb60f633cd34ac72319cb0918b8dda609256fb1aedeaf879856e973c27"
+  },
+  {
+    "path": "apex-h05-001-detached/worker-start.json",
+    "bytes": 260,
+    "sha256": "cdec39667625f010f0beebd70d99f1f33137c2fb6d34289304f43bc4cb19d4d6"
+  },
+  {
+    "path": "apex-h05-001-detached/wrapper.stderr.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "apex-h05-001-detached/wrapper.stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "apex-h05-001-launch-preparation/analysis/analysis-freeze.json",
+    "bytes": 1101,
+    "sha256": "21a732c0cd72b07fbb22bb681bb206976ef33458cba41e0f88d4584cc3af0a9e"
+  },
+  {
+    "path": "apex-h05-001-launch-preparation/analysis/plot_m5_cliff_comparison.py",
+    "bytes": 23581,
+    "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+  },
+  {
+    "path": "apex-h05-001-launch-preparation/analysis/preview-urmi-damage40.py",
+    "bytes": 21761,
+    "sha256": "16beaba885a3154e7bc9e7602ac51c2aa247975b2312593408f162c783bf8a50"
+  },
+  {
+    "path": "apex-h05-001-launch-preparation/analysis/review-residual-clay-quarter.py",
+    "bytes": 20845,
+    "sha256": "1cbb44a8e61434eefd5a0b6906d05e1f47f8e13cc64c0a2322dbd7a7653af124"
+  },
+  {
+    "path": "apex-h05-001-launch-preparation/analysis/review-urmi-damage40.py",
+    "bytes": 41472,
+    "sha256": "3f48dc592a311132c8acabc736b548f3ce61aed253a61c481ce182d696a53a7b"
+  },
+  {
+    "path": "apex-h05-001-launch-preparation/media-launch-proof.json",
+    "bytes": 76,
+    "sha256": "f45a308c9097bd4240d93329117f60613b3d75ed1c619d4ede86629dd71423c4"
+  },
+  {
+    "path": "apex-h05-001-launch-preparation/media-request.json",
+    "bytes": 154,
+    "sha256": "f028d0d011a9c4f67216fdda6d62bb679e0972a4d641a1e9c8212a70aac1c30d"
+  },
+  {
+    "path": "apex-h05-001-launch-preparation/one-process-identity-proof.json",
+    "bytes": 845,
+    "sha256": "0479089e81610d777f34f71068355277267f7af64b081194a21d6824536a8dee"
+  },
+  {
+    "path": "apex-h05-001-launch-preparation/watch-media.ps1",
+    "bytes": 3375,
+    "sha256": "939baec15909b0954903f8c905f28aff7205d3203f8eb836197e95229d02e1e6"
+  },
+  {
+    "path": "adjacent/apex-h05-001-launch-git-proof.json",
+    "bytes": 4272,
+    "sha256": "39e1a265331e1cf5271a28e60cb2ee346815a0fe3d45f184f08082ffeaa8e988"
+  },
+  {
+    "path": "adjacent/apex-h05-001-launch.json",
+    "bytes": 926,
+    "sha256": "dfab748eb3b2c2c425ef62ff8bb9b752f4b8da234ed7ad1f5f134e62749c3baf"
+  },
+  {
+    "path": "adjacent/apex-h05-001-media-status.json",
+    "bytes": 363,
+    "sha256": "a687fe5c8b8faa48ded07948b52a8b5aeb10b5a10e199164ec612d22563dc653"
+  },
+  {
+    "path": "adjacent/apex-h05-001-review-command.json",
+    "bytes": 340,
+    "sha256": "c0117b1208951cdb67fd287769bb5fd3afa8e90810f6f8d65f2ca46ba9bd5fa2"
+  },
+  {
+    "path": "adjacent/apex-h05-001-review.stderr.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "adjacent/apex-h05-001-review.stdout.log",
+    "bytes": 156,
+    "sha256": "f81b994d82fff38de0862f56e4d329584f84bfc3a92cbc885ff062b2fb6cbcad"
+  },
+  {
+    "path": "adjacent/apex-h05-001-status.json",
+    "bytes": 1462,
+    "sha256": "385794c9e0c48ac2ad6098b3ff5091c859d69e722f0018b2bba2733b8061a3be"
+  },
+  {
+    "path": "adjacent/apex-h05-001-terminal-diagnosis.stdout.log",
+    "bytes": 652,
+    "sha256": "87776ed3cbb028b1e416a5ccd1bd2b14aabebefe07c35bba88582ab7573ad8b2"
+  },
+  {
+    "path": "adjacent/apex-h05-001.stderr.log",
+    "bytes": 9614,
+    "sha256": "8854d9b8d1cec0ebe006b742488fad59c69ab09abdf6a7688d11c444df209b9d"
+  },
+  {
+    "path": "adjacent/apex-h05-001.stdout.log",
+    "bytes": 765,
+    "sha256": "70b5bbcf4d90b520f2e989d3eb8399ab23c6f3bb23e535dfec4da1247ad8bca7"
+  }
+]

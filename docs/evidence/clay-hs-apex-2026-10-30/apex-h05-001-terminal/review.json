@@ -1,0 +1,517 @@
+{
+  "scope": "PEAK_INITIAL_CLAY_QUARTER_STRENGTH_NUMERICAL_TRIAL_NOT_CALIBRATED_VALIDATION",
+  "savedIntegrity": "PASS",
+  "nativeComplete": false,
+  "nativeStatus": "failed",
+  "actualConfig": {
+    "height": 10.0,
+    "crestLength": 24.0,
+    "slope": 40.0,
+    "baseHeight": 8.0,
+    "domainWidth": 72.0,
+    "domainHeight": 24.0,
+    "meshSize": 0.5,
+    "mpsPerCell": 2,
+    "workers": 1,
+    "timeStepScale": 0.2,
+    "gravity": -9.80665,
+    "gravityRampDuration": 2.0,
+    "density": 2000.0,
+    "settleDamping": 0.75,
+    "duration": 20.0,
+    "frames": 41,
+    "maxDynamicUpdates": 80000,
+    "observerInitialXGreater": 14.0,
+    "observerInitialYGreater": 10.0,
+    "displayOriginX": 12.0,
+    "displayOriginY": 8.0,
+    "toeX": 35.917535925942104,
+    "youngsModulusPa": 20000000.0,
+    "poissonRatio": 0.2,
+    "cohesionPa": 0.0,
+    "dilationDeg": 0.0,
+    "peakKappa": 0.037,
+    "peakFrictionDeg": 33.99,
+    "residualStrengthRatio": 0.25,
+    "frictionTable": [
+      [
+        0.0,
+        33.99
+      ],
+      [
+        0.037,
+        33.99
+      ],
+      [
+        0.1,
+        25.353762870428053
+      ],
+      [
+        0.2,
+        9.568041272839212
+      ]
+    ],
+    "explicitHsApex": true
+  },
+  "sourceProof": {
+    "status": "PASS",
+    "sourceFilesVerified": 314,
+    "actualMappedDll": {
+      "modulePath": "D:/MPM/output/clay-hs-apex-2026-10-29/apex-h05-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "case": {
+      "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\source\\case.lisp",
+      "bytes": 1214,
+      "sha256": "b704539f761e700bfcd7366f7d3af70b51f979da4ad5ab76d306467c91ef31b9"
+    },
+    "manifest": {
+      "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\source\\source-manifest.json",
+      "bytes": 65531,
+      "sha256": "26c8d7766c46470ef3bdc9d0de49fa22b6cc0aeb7300460aea2e73e6123e6fea"
+    },
+    "runtimeProvenance": {
+      "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\source-provenance.json",
+      "bytes": 692451,
+      "sha256": "b91e5f385368c54543cfd7980f29f7dfec57b1b0c0dac17540c4302bfde221d4"
+    }
+  },
+  "apexConvention": "Explicit additional gA=p volumetric flow at zero-stress apex; evolving friction/c0/regular psi0 retained, NOT strict MC in tension",
+  "particleCount": 14010,
+  "states": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "nativeTimeS": 0.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0000.vtk",
+        "bytes": 5270146,
+        "sha256": "4d44aba893f39ebaf77ec16b9619bd617d9664e7cca454d9e7cf8fce15d22a2c"
+      },
+      "minJ": 1.0,
+      "maximumStrengthLoss": 0.0,
+      "minimumFrictionDeg": 33.99,
+      "kineticJPerM": 0.0,
+      "maximumDisplacementM": 0.0,
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "upperCohortCentroidDisplacementM": [
+        0.0,
+        0.0
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 1,
+      "timeS": 0.5,
+      "nativeTimeS": 0.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0001.vtk",
+        "bytes": 5270146,
+        "sha256": "f7d993529a3613b7d0ebe7edd5c1e10088d0d2f99d42fc5878fb5316b2f64399"
+      },
+      "minJ": 0.9987374165296842,
+      "maximumStrengthLoss": 0.0,
+      "minimumFrictionDeg": 33.99,
+      "kineticJPerM": 1207.5036603642106,
+      "maximumDisplacementM": 0.008518464262138536,
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "upperCohortCentroidDisplacementM": [
+        7.258873384487651e-06,
+        -0.008052962718147517
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 2,
+      "timeS": 1.0,
+      "nativeTimeS": 1.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0002.vtk",
+        "bytes": 5270146,
+        "sha256": "381ae4031204af3aa134d0fe6291f66b9f2fead24cfa654b60dc0edca90e1556"
+      },
+      "minJ": 0.9918615630440252,
+      "maximumStrengthLoss": 0.0,
+      "minimumFrictionDeg": 33.99,
+      "kineticJPerM": 7654.04708688695,
+      "maximumDisplacementM": 0.07554870273258667,
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "upperCohortCentroidDisplacementM": [
+        0.00011448844319593447,
+        -0.06511315881589042
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 3,
+      "timeS": 1.5,
+      "nativeTimeS": 1.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0003.vtk",
+        "bytes": 5270146,
+        "sha256": "e0e642f365fe40ffe7d303db26decf33ac1953b27f130493420c9902605b2a36"
+      },
+      "minJ": 0.9870843580779665,
+      "maximumStrengthLoss": 0.0,
+      "minimumFrictionDeg": 33.99,
+      "kineticJPerM": 1800.912502726495,
+      "maximumDisplacementM": 0.15703707650450124,
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "upperCohortCentroidDisplacementM": [
+        0.0030991646648967823,
+        -0.10546246684652531
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 4,
+      "timeS": 2.0,
+      "nativeTimeS": 2.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0004.vtk",
+        "bytes": 5270146,
+        "sha256": "7e1e7deb8a2fc38825de5bb43b6b9d45759f1c38e12f57f71e08534d8e9ecd97"
+      },
+      "minJ": 0.9834437862014289,
+      "maximumStrengthLoss": 0.16743484693618205,
+      "minimumFrictionDeg": 29.308150382824298,
+      "kineticJPerM": 509.5848153268073,
+      "maximumDisplacementM": 0.3017704580141621,
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "upperCohortCentroidDisplacementM": [
+        0.010530285125787743,
+        -0.14040636681181434
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 5,
+      "timeS": 2.5,
+      "nativeTimeS": 2.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0005.vtk",
+        "bytes": 5270146,
+        "sha256": "9c6a7948fde4705ddf3d1109dfad0694a779e52accd648c4cc9fc90f1baa25d3"
+      },
+      "minJ": 0.9838384913738984,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 12291.24178716603,
+      "maximumDisplacementM": 0.6926833606509413,
+      "connectedMovingFractionOfUpperCohortMass": 0.024854574299312534,
+      "upperCohortCentroidDisplacementM": [
+        0.04021256497544047,
+        -0.15857939350458458
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 6,
+      "timeS": 3.0,
+      "nativeTimeS": 3.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0006.vtk",
+        "bytes": 5270146,
+        "sha256": "211d6e1fd97b8ccb5fc158dd7f1a1ba66d729d24c194574d1b0364dd38352fa2"
+      },
+      "minJ": 0.9830120872901283,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 86161.29676818414,
+      "maximumDisplacementM": 1.9018178092126778,
+      "connectedMovingFractionOfUpperCohortMass": 0.12057112638815441,
+      "upperCohortCentroidDisplacementM": [
+        0.1185944000394339,
+        -0.20820436965338476
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 7,
+      "timeS": 3.5,
+      "nativeTimeS": 3.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0007.vtk",
+        "bytes": 5270146,
+        "sha256": "04b97925fde03262d57544e2498d627864c11e8fdfeecb597af7991cf260d785"
+      },
+      "minJ": 0.9787540066451027,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 256368.55233888148,
+      "maximumDisplacementM": 4.169806034605296,
+      "connectedMovingFractionOfUpperCohortMass": 0.1723955579058699,
+      "upperCohortCentroidDisplacementM": [
+        0.29893578891334555,
+        -0.3219453543281064
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 8,
+      "timeS": 4.0,
+      "nativeTimeS": 4.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0008.vtk",
+        "bytes": 5270146,
+        "sha256": "a394be88f9c3acc6b76afd22264684d852d4c72590bda92abf6e4f94fb8f8cad"
+      },
+      "minJ": 0.9746605724198228,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 507412.42715254845,
+      "maximumDisplacementM": 7.317184517287966,
+      "connectedMovingFractionOfUpperCohortMass": 0.19936541512427286,
+      "upperCohortCentroidDisplacementM": [
+        0.5907053920304003,
+        -0.49467326937057843
+      ],
+      "newlyPastToeCohortMassFraction": 0.0037017451084082496,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 9,
+      "timeS": 4.5,
+      "nativeTimeS": 4.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0009.vtk",
+        "bytes": 5270146,
+        "sha256": "6074033784a35343ddedbbfbb2fa4aedca0bcb0dbc20c79689ebc45576cc01d2"
+      },
+      "minJ": 0.9782046326773232,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 683943.3708408547,
+      "maximumDisplacementM": 11.156290813099892,
+      "connectedMovingFractionOfUpperCohortMass": 0.22104706504494975,
+      "upperCohortCentroidDisplacementM": [
+        0.9884476206608398,
+        -0.67744167762746
+      ],
+      "newlyPastToeCohortMassFraction": 0.034902168164992066,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 10,
+      "timeS": 5.0,
+      "nativeTimeS": 5.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0010.vtk",
+        "bytes": 5270146,
+        "sha256": "797a67a0cc6d105a5a78dabb67c1e892c3313f8baa37eb6d53001f70dda64741"
+      },
+      "minJ": 0.9740213631077327,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 775012.9456321264,
+      "maximumDisplacementM": 14.921677732623525,
+      "connectedMovingFractionOfUpperCohortMass": 0.24431517715494447,
+      "upperCohortCentroidDisplacementM": [
+        1.463319446994436,
+        -0.8366554372843271
+      ],
+      "newlyPastToeCohortMassFraction": 0.06980433632998413,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 11,
+      "timeS": 5.5,
+      "nativeTimeS": 5.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0011.vtk",
+        "bytes": 5270146,
+        "sha256": "4e5e54aba21fb4670d8cf9d0e97e785eb5c36fdf46c4bb7ca76f595c006ebf88"
+      },
+      "minJ": 0.9768976911348015,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 786662.1812680273,
+      "maximumDisplacementM": 18.993179534069885,
+      "connectedMovingFractionOfUpperCohortMass": 0.2659968270756214,
+      "upperCohortCentroidDisplacementM": [
+        1.9853084943409145,
+        -0.9750670243668097
+      ],
+      "newlyPastToeCohortMassFraction": 0.09730301427815971,
+      "actualParticles": 14010
+    },
+    {
+      "frame": 12,
+      "timeS": 6.0,
+      "nativeTimeS": 6.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0012.vtk",
+        "bytes": 5270146,
+        "sha256": "50fecad1b87df45ec14076c836a71c39ae99d77d2614bb1c4c0187b91991f9df"
+      },
+      "minJ": 0.9806905443718387,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 772542.2358184576,
+      "maximumDisplacementM": 23.72554972586938,
+      "connectedMovingFractionOfUpperCohortMass": 0.2850343733474352,
+      "upperCohortCentroidDisplacementM": [
+        2.5363370103835745,
+        -1.0945779888033202
+      ],
+      "newlyPastToeCohortMassFraction": 0.12321523003701745,
+      "actualParticles": 14010
+    }
+  ],
+  "preparationSnapshots": [],
+  "actualDynamicSavedFrames": 13,
+  "actualLastDynamicTimeS": 6.0,
+  "qualitativeMotionCandidates": [
+    {
+      "frame": 6,
+      "timeS": 3.0,
+      "fractionOfUpperCohortMass": 0.12057112638815441,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 1.0,
+        "endTimeS": 2.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.011883549914940636
+      }
+    },
+    {
+      "frame": 7,
+      "timeS": 3.5,
+      "fractionOfUpperCohortMass": 0.1723955579058699,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 1.0,
+        "endTimeS": 2.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.009585462536369079
+      }
+    },
+    {
+      "frame": 8,
+      "timeS": 4.0,
+      "fractionOfUpperCohortMass": 0.19936541512427286,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 1.0,
+        "endTimeS": 2.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.008189720028781532
+      }
+    },
+    {
+      "frame": 9,
+      "timeS": 4.5,
+      "fractionOfUpperCohortMass": 0.22104706504494975,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 1.0,
+        "endTimeS": 2.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.006990286664310073
+      }
+    },
+    {
+      "frame": 10,
+      "timeS": 5.0,
+      "fractionOfUpperCohortMass": 0.24431517715494447,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 1.0,
+        "endTimeS": 2.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.005933789779606111
+      }
+    },
+    {
+      "frame": 11,
+      "timeS": 5.5,
+      "fractionOfUpperCohortMass": 0.2659968270756214,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 1.0,
+        "endTimeS": 2.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.005102939334034743
+      }
+    },
+    {
+      "frame": 12,
+      "timeS": 6.0,
+      "fractionOfUpperCohortMass": 0.2850343733474352,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 1.0,
+        "endTimeS": 2.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.00447103280814168
+      }
+    }
+  ],
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "initialization": "Human-approved peak initial strength, zero initial stress/kappa,2s gravity ramp, NO geostatic equilibrium claim; no model switch",
+  "damageMeaning": "D_phi=1-tan(phi)/tan(phi_peak), floor strength25%, not crack/stiffness/cohesion damage",
+  "media": {
+    "status": "PASS",
+    "scope": "PEAK_INITIAL_CLAY_QUARTER_STRENGTH_NUMERICAL_TRIAL_NOT_CALIBRATED_VALIDATION",
+    "actualMovieStates": 13,
+    "allParticlesShown": true,
+    "coordinateScale": 1,
+    "colourRange": [
+      0,
+      1
+    ],
+    "interpolation": false,
+    "plotBoundsWorldM": [
+      -29.604269280230323,
+      111.49028246569661,
+      -10.713388858662205,
+      18.71335676434475
+    ],
+    "renderGeometry": "Actual F convects each original square patch; numerical quadrature domains distinct; overlaps/gaps retained",
+    "sameActualStateSequenceAndTimingForBothMovies": true,
+    "movies": {
+      "motion": {
+        "video": {
+          "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\soil-motion.mp4",
+          "bytes": 35857,
+          "sha256": "d2ba7d94fff7c0bf71808b59188e0308ef5ddbdd59ad86794f7325ffd2608e96"
+        },
+        "decodedFrames": 13,
+        "framesPerSecond": 5
+      },
+      "damage": {
+        "video": {
+          "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\strength-damage.mp4",
+          "bytes": 43459,
+          "sha256": "40f440824b5f9428514636f52b19d8cb3a93fe420293287bd0737958e2069eb7"
+        },
+        "decodedFrames": 13,
+        "framesPerSecond": 5
+      }
+    }
+  }
+}

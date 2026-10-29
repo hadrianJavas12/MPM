@@ -1,0 +1,70 @@
+{
+  "scope": "MANUAL_QUALITATIVE_NUMERICAL_UNNOTCHED_SLIDING_ONSET_IN_PARTIAL_TRIAL",
+  "qualitativeUnnotchedSlidingOnsetObserved": true,
+  "nativeComplete": false,
+  "scientificallyValidated": false,
+  "convergenceClaim": false,
+  "full20SecondsAchieved": false,
+  "lateRunoutValidated": false,
+  "actualNativeSource": "8c62e3b609c9485061fcf42f17181ff46988d2c8",
+  "basis": "Actual filled-motion frames at3/4s and both final summary PNGs inspected; original13frame video encoded/decoded and both real movies delivered. Independent saved-only post-ramp motion observation supports connecteddownslope motion from3s. No interpolation/filtering/amplification.",
+  "earlyPostRampObservation": {
+    "frame": 6,
+    "nativeTimeS": 3.0,
+    "maximumSingularStretch": 1.8048935364965262,
+    "minimumSingularStretch": 0.5557947911941505,
+    "stretch99Percentile": 1.521814817750529,
+    "countStretchAbove10": 0,
+    "centresInsideDomain": true,
+    "minimumDomainMarginM": -0.0009827089218314572,
+    "postRampConnectedMovingUpperMassFraction": 0.1041776837652036,
+    "postRampPersistence": {
+      "status": "PASS",
+      "startTimeS": 2.0,
+      "endTimeS": 3.0,
+      "savedStates": 3,
+      "minimumMeanVxMPerS": 0.1469211671297826
+    },
+    "postRampUpperCentroidDisplacementM": [
+      0.10806411491364605,
+      -0.06779800284157053
+    ]
+  },
+  "lateDistortionObservation": {
+    "frame": 12,
+    "nativeTimeS": 6.0,
+    "maximumSingularStretch": 390.7254740475738,
+    "minimumSingularStretch": 0.007587809032351439,
+    "stretch99Percentile": 12.989609758497856,
+    "countStretchAbove10": 232,
+    "centresInsideDomain": true,
+    "minimumDomainMarginM": -0.0010105759805530828,
+    "postRampConnectedMovingUpperMassFraction": 0.2792173453199365,
+    "postRampPersistence": {
+      "status": "PASS",
+      "startTimeS": 2.0,
+      "endTimeS": 3.0,
+      "savedStates": 3,
+      "minimumMeanVxMPerS": 0.07182302934286991
+    },
+    "postRampUpperCentroidDisplacementM": [
+      2.525806725257783,
+      -0.9541716219915058
+    ]
+  },
+  "limitations": [
+    "Zero-stress gravity initialization, no measured geostatic equilibrium",
+    "Declared additional volumetric apex flow, not exact Urmi/Wang clay reproduction",
+    "Locally enormous F stretch late in run; streaks are numerical distortion, not calibratedrunout/cracks",
+    "Failed incremental dF/particle tuple absent; exactfailedstate replay unavailable",
+    "No convergence orphysicalvalidation; native failedat6.072487504221641s after6451updates"
+  ],
+  "bindings": {
+    "output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\review.json": "731af4de5283df5f7ef02140030baa2adb8a6b426020e79bc5a26480272f8ce2",
+    "output\\clay-hs-apex-2026-10-29\\apex-h05-001\\terminal-diagnosis-001\\diagnosis.json": "0b49899f2884bb10c9f007a9634f3cbd17b0d4863c001e394992a31b60aff8b5",
+    "output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\proper-motion-result.png": "f6b870f72d982ae6049091038d66cfe4662836b35fa671520260342f877dfb2d",
+    "output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\proper-damage-result.png": "f8fe15776ea9ebe89382674a6f9d7317cc2e2a79b9850c738cf9cfa24b3639fe",
+    "output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\soil-motion.mp4": "d2ba7d94fff7c0bf71808b59188e0308ef5ddbdd59ad86794f7325ffd2608e96",
+    "output\\clay-hs-apex-2026-10-29\\apex-h05-001\\filled-review-001\\strength-damage.mp4": "40f440824b5f9428514636f52b19d8cb3a93fe420293287bd0737958e2069eb7"
+  }
+}

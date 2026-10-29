@@ -1,5 +1,47 @@
 # AI Engineering Handover — CL-MPM
 
+## TERMINAL30October03:43WIB - HS-apex clay PARTIAL, numerical sliding observed
+
+RUN output/clay-hs-apex-2026-10-29/apex-h05-001/source8c62e3b6 exitednative1/worker1
+at30Oct03:43:21/22WIB after6451completedupdates, attempted6.072487504221641s.
+13complete actualstates0..6s/14010MP. No solver active, no identicalrestart.
+Frozen automaticreview CLOSED exit2/PARTIAL_VIDEOS_READY03:45:17WIB, integrity
+314sources/mappedDLL/13VTK182130rows/FJ/originalV0/mass/IDs/law/quarterfloor/
+yield/work PASS; bothactualmovies13frames5fps2.6s fullydecoded. Root inspected
+BOTHactualsummaryPNGs plus actualmotion3/4sframes, delivered bothrealMP4.
+Movies RUN/filled-review-001/soil-motion.mp4 and strength-damage.mp4. Native
+complete/scientific/convergence/full20s flags remain FALSE.
+
+Actual condition CL-MPM/ERRORS:ERROR-DF-NEGATIVE: frozen calculate-df guards
+det(I+stretchTensor)<0; Fbar disabled. SavedtotalJ stillpositive (min.98069054
+at6s), NOT a savednegativeJ/materialreturn failure. Actualfailedparticle/dF
+tuple absent, no failurecapsule, no inventedexactreplay. LastsavedF severely
+distorted: maxsingularstretch390.725,232MPstretch>10; centresinside domain,
+materialpatches extend far beyond due extremeF. Retainallstreaks; do NOT claim
+late streaks as calibratedrunout/cracks. Supportmarginminimum about-1mm atbase;
+2.06%mass supporttouchesdomain at6s; no strictboundaryindependence claim.
+
+Originalreview qualitativecandidates first3s but persistence searched1..2s
+(ramp). NEW saved-only terminal-diagnosis-001 (0MPM/review/render reruns)
+restricts displacementreference/persistence to>=2s, SAME.25m/.5m/10%/1s/vx.001
+criteria. At3s connectedmovinguppermass10.4178%, positivevx2..3s;at3.5s16.5521%.
+Actual3/4s pictures showdownslope mass, before severe late streaks. At6s
+postrampconnectedmass27.9217%, cohortcentroid(+2.52581,-.95417)m; Dmax.75,
+residualphi9.56804, no belowquarterstrength. Manual interpretation ONLY
+qualitative numerical unnotchedsliding ONSET in partial trial, not a complete
+20srun orphysicalvalidation. OriginalreviewJSON remains immutable/flagsfalse.
+Do NOT rerun oldcontrols/native/review/render/archive.
+
+One terminal source/runtime/raw/adjacent/detached/preparation/review/media/
+diagnostic packet docs/evidence/clay-hs-apex-2026-10-30/apex-h05-001-terminal.
+Exact duplicate savedinput paths have hashverified aliases to canonical raw
+archive, no data invented/dropped. RootGitblobproof follows checkpoint.
+No fresh solver/mesh/time/weakening/root/clamp/tolerance escalation. Robust
+20srun, extremeF treatment and detailedfailedincrement remain OPEN futurework;
+not needed to keep this completed run's monitoralive. Finite runmonitor will
+be deleted after delivery/archiveclosure. NoUI/main/private/settings change.
+
+
 ## LIVE29October16:03WIB - fresh HS-apex clay native started
 
 Actual RUN output/clay-hs-apex-2026-10-29/apex-h05-001,source8c62e3b609c9485061fcf42f17181ff46988d2c8.

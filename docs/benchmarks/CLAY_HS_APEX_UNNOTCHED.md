@@ -44,3 +44,30 @@ Inspect both summary PNGs/review JSON before claiming coherent motion.
 Completion/colour alone is insufficient. Repair media from saved data only.
 
 Actual launch29Oct16:03:11WIB, source8c62e3b6; frame0/14010MP saved, native running. Worker33708/wrapper35116/cmd33564/SBCL5520 Session3, mediawatcher33448. ONE identity proof recorded. Finite monitor pantau-longsor-clay-tanpa-notch ACTIVE15min; no initial-state landslide claim.
+
+## Terminal30October03:43WIB: partial sliding demonstration
+
+Native/worker1,6451updates,attempted6.072487504221641s;13savedstates0..6s.
+Actual `ERROR-DF-NEGATIVE` guards negative incremental det(I+stretchTensor),
+not a recorded negative savedtotalJ. No actualfailedtuple/capsule; exact
+replay unavailable. No native/material strength/tolerance rescue or restart.
+
+Automatic frozenreview exit2 expected partial;314source/DLL/13VTK182130rows
+integrityPASS, twoactual13frame/5fps videos fullydecoded. Root inspected both
+summaryPNGs and actualmotion frames3/4s, delivered bothrealMP4. Late extreme
+F stretches390.725 at6s generate longpatch streaks; retain visibly, not valid
+calibratedrunout/crack evidence. At6s allcentresinside, minJ.98069054, support
+margin about-1mm and2.06%mass supports touchdomain; boundaryindependence unproven.
+
+New saved-only diagnostic restricts motion/persistence to postramp times>=2s.
+At3s connectedmovinguppermass10.4178%, at3.5s16.5521%; maxsingularstretch
+1.805/2.894 respectively. This and actualfilledframes support qualitative
+NUMERICAL unnotchedsliding onset before late distortion. At6s postrampcohort
+centroid(+2.52581,-.95417)m, connectedfraction27.9217%, Dmax.75/phi9.56804.
+Original frozenreview remains unchanged; manualinterpretation clearlyseparate,
+posthocdiagnostic not preregistered calibration. Complete20s/scientific/
+convergence/late-runoutvalidation FALSE. No automaticnewsolver.
+
+One terminalpacket under docs/evidence/clay-hs-apex-2026-10-30/apex-h05-001-terminal
+preserves source/cache/raw/runtime/preparation/media/diagnostic. Verified
+byte-identical savedinput duplicates use explicit archivealiases; norawdrop.
