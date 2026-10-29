@@ -1,0 +1,88 @@
+{
+  "newSources": [
+    {
+      "path": "materials/models/plastic/mc-hs-apex.lisp",
+      "sha256": "5961ecac5ed77cdbc8917c0d2eb2da174730e187b7289b9d82a3455a24b9004f"
+    },
+    {
+      "path": "tests/materials/mc-hs-apex.lisp",
+      "sha256": "7e5c721788165ccc5734fb313a3a1f822f5f89a6bd0d2d3f0a74c1aa80c9a042"
+    },
+    {
+      "path": "tests/materials/mc-hs-apex-native.lisp",
+      "sha256": "5be35ce996c3e60f1a9465022f01f9aadb67ebde1cd35fec00256a30192c239d"
+    },
+    {
+      "path": "cases/benchmarks/residual-clay-hs-apex.lisp",
+      "sha256": "b704539f761e700bfcd7366f7d3af70b51f979da4ad5ab76d306467c91ef31b9"
+    },
+    {
+      "path": "scenarios/residual-clay-slope/runner.lisp",
+      "sha256": "a8561dd02a9dce1d8ff0062d0f3f6497ad4ea93f742f790487e5c8ccc9425f6d"
+    },
+    {
+      "path": "scripts/review-residual-clay-quarter.py",
+      "sha256": "1cbb44a8e61434eefd5a0b6906d05e1f47f8e13cc64c0a2322dbd7a7653af124"
+    }
+  ],
+  "strictOriginalSources": [
+    {
+      "path": "materials\\models\\plastic\\mohr-coulomb-evolution\\diagnostics.lisp",
+      "unchangedAgainstPriorFailedNative": true,
+      "sha256": "10fc3d6170b04adbb153fe2afd562d51daefc9d1976a3059ba046c1b8223d0eb"
+    },
+    {
+      "path": "materials\\models\\plastic\\mohr-coulomb-evolution\\law.lisp",
+      "unchangedAgainstPriorFailedNative": true,
+      "sha256": "505207b3bcbbd0c87625d16c96cb436436f71562ded9349aa2126ed7dac6796a"
+    },
+    {
+      "path": "materials\\models\\plastic\\mohr-coulomb-evolution\\material.lisp",
+      "unchangedAgainstPriorFailedNative": true,
+      "sha256": "376bb5465ae7e1553dfb23d0f3ea26b125fbd6430724fcac0ee5233125302aeb"
+    },
+    {
+      "path": "materials\\models\\plastic\\mohr-coulomb-evolution\\package.lisp",
+      "unchangedAgainstPriorFailedNative": true,
+      "sha256": "3ec1f8ccbbf15732ab450708413728987aa843d89b1e2eeefdc6773a4930b028"
+    },
+    {
+      "path": "materials\\models\\plastic\\mohr-coulomb-evolution\\projection.lisp",
+      "unchangedAgainstPriorFailedNative": true,
+      "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1"
+    },
+    {
+      "path": "materials\\models\\plastic\\mohr-coulomb-evolution\\state.lisp",
+      "unchangedAgainstPriorFailedNative": true,
+      "sha256": "d9311639dae10064985d5ff2fabfef189ff7bf07cb85699c1fd54355d6f83fd4"
+    }
+  ],
+  "pureAcceptedCalls": 28,
+  "rejectedLaws": 2,
+  "nativeConstitutiveCalls": 6,
+  "mpmUpdates": 0,
+  "nodeTestsPassed": 36,
+  "scientificValidation": false,
+  "analysisFreeze": [
+    {
+      "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001-launch-preparation\\analysis\\review-residual-clay-quarter.py",
+      "bytes": 20845,
+      "sha256": "1cbb44a8e61434eefd5a0b6906d05e1f47f8e13cc64c0a2322dbd7a7653af124"
+    },
+    {
+      "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001-launch-preparation\\analysis\\review-urmi-damage40.py",
+      "bytes": 41472,
+      "sha256": "3f48dc592a311132c8acabc736b548f3ce61aed253a61c481ce182d696a53a7b"
+    },
+    {
+      "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001-launch-preparation\\analysis\\plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8"
+    },
+    {
+      "path": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001-launch-preparation\\analysis\\preview-urmi-damage40.py",
+      "bytes": 21761,
+      "sha256": "16beaba885a3154e7bc9e7602ac51c2aa247975b2312593408f162c783bf8a50"
+    }
+  ]
+}

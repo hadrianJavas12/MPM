@@ -1140,3 +1140,6 @@ Human approved peak-initialphi and quarterresidual. New source82bce9b4 actualSBC
 
 ## [2026-10-28] ingest | Clay quarter h05 terminal MC failure and paired media
 Recorded actual0/.5s states/Dphi0/no slide; strictcapturedtrial replayONCE and trace-invariance diagnosis,0MPM. BothfilledPNGs inspected, media/source/rawpacket retainedonce; finite monitor deleted, no physics tweak/restart.
+
+## [2026-10-29] ingest | Optional HS clay apex trial
+Human authorizes continued unnotched slide work. Explicit volumetric apex/quarter floor, new pure28/native6 controls; no slope result yet. Prior negatives preserved.

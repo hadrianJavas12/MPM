@@ -1,5 +1,13 @@
 # Native framework and Studio verification
 
+## 29October optional HS apex controls
+
+28pure returns/two rejected unsupported laws and6native tensor/commit calls PASS.
+Native test001 readerEOF before material calls retained; corrected002PASS.
+Studio check+36Node testsPASS. No full MPM/scientific claim from material controls.
+See benchmarks/CLAY_HS_APEX_UNNOTCHED.md.
+
+
 ## Complete numerical sliding result,26October2026
 
 Full002 native source139005c2 exits0/worker0 at16:09WIB:6s61states3520MP15470updates.

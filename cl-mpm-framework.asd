@@ -142,3 +142,7 @@
   :components ((:file "scenarios/residual-clay-slope/package")
                (:file "scenarios/residual-clay-slope/output")
                (:file "scenarios/residual-clay-slope/runner")))
+
+(asdf:defsystem "cl-mpm-framework/residual-clay-hs-apex"
+  :description "Explicit opt-in HS clay apex extension, no-notch gravity slope"
+  :depends-on ("cl-mpm-framework/residual-clay-slope" "cl-mpm/models/mc-hs-apex"))

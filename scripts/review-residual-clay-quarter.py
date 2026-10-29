@@ -79,6 +79,9 @@ def source_proof(run):
     for key in ("scenarios/residual-clay-slope/package.lisp",
                 "scenarios/residual-clay-slope/output.lisp", "scenarios/residual-clay-slope/runner.lisp"):
         require(key in files and (source / key).resolve() in loaded, f"Required actual owned source not loaded: {key}")
+    if load(run/'manifest.json')['config'].get('explicitHsApex'):
+        key='materials/models/plastic/mc-hs-apex.lisp'
+        require(key in files and (source/key).resolve() in loaded,'Explicit HS apex implementation not frozen and loaded')
     return {"status": "PASS", "sourceFilesVerified": len(files), "actualMappedDll": dll,
             "case": files["case.lisp"], "manifest": record(source / "source-manifest.json"),
             "runtimeProvenance": record(run / "source-provenance.json")}
@@ -146,6 +149,7 @@ def render(report, output, read_vtk, video):
             ax.set(xlim=bounds[:2],ylim=bounds[2:],xlabel="world x (m)",ylabel="world y (m)")
             ax.set_aspect("equal",adjustable="box"); ax.grid(alpha=.12)
             event={0:"initial soil",1:"measured drained equilibrium",2:"instantaneous material switch",3:"gravity-driven MC motion"}[state["phaseCode"]]
+            if cfg.get('explicitHsApex'): event += ' | explicit volumetric apex flow'
             status="COMPLETE 20 s GRAVITY TRIAL" if report["nativeComplete"] else "PARTIAL TRIAL"
             channel="Soil motion (original depth colours)" if kind=="motion" else "MC frictional strength loss"
             fig.suptitle(f"{channel} | {status}\n{event}; dynamic t={state['timeS']:.2f} s, native t={state['nativeTimeS']:.5f} s",fontsize=12)
@@ -231,6 +235,7 @@ def inspect(run,output,manifest,data,helper,reader):
     require(len(states)==manifest['savedFrames'],'Saved frame count differs')
     if manifest['complete']:require(len(states)==41 and states[-1]['timeS']==20,'Native complete lacks20s/41states')
     return {'scope':SCOPE,'savedIntegrity':'PASS','nativeComplete':manifest['complete'],'nativeStatus':manifest['status'],'actualConfig':cfg,'sourceProof':proof,
+            'apexConvention':manifest.get('apexConvention','Strict MC; no additional volumetric apex flow'),
             'particleCount':14010,'states':states,'preparationSnapshots':[],'actualDynamicSavedFrames':len(states),'actualLastDynamicTimeS':states[-1]['timeS'] if states else 0,
             'qualitativeMotionCandidates':candidates,'landslideVerified':False,'scientificallyValidated':False,
             'initialization':'Human-approved peak initial strength, zero initial stress/kappa,2s gravity ramp, NO geostatic equilibrium claim; no model switch',

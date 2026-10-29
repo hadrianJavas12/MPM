@@ -1,5 +1,18 @@
 # AI Engineering Handover — CL-MPM
 
+## READY29October - continued unnotched clay slide work authorized
+
+Branch codex/clay-hs-apex-unnotched. See docs/benchmarks/CLAY_HS_APEX_UNNOTCHED.md.
+Optional cohesionless HS apex adds explicit volumetric gA=p; strict regular
+shear unchanged. Quarter residual/clay/mesh/geometry retained; no clamp,
+tolerance/root rescue, notch/reset/load/hiddenweakening. New pure28/native6
+material calls PASS,0MPMupdates; native-test001readerEOF retained,002PASS.
+Studio check+36Node testsPASS. Fresh intended RUN output/clay-hs-apex-2026-10-29/
+apex-h05-001,22hwall+<=2hmedia. Gravity first because stable equilibrium cannot
+be assumed at40deg>peakphi33.99,c0. No new slope result yet. Both filledmovies
+from saveddata required. No main/UI/private/raw change.
+
+
 ## TERMINAL28October11:51WIB - clay h05 FAILED MC RETURN, partial paired videos READY
 
 Actualfiles override LIVE. Native main-h05-001/source82bce9b4 exited1 at

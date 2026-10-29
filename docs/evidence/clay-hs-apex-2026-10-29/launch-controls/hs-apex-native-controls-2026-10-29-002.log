@@ -1,0 +1,79 @@
+
+; file: D:/MPM/tests/materials/mc-hs-apex-native.lisp
+; in:
+;      LET* ((LAW
+;         (MC:MAKE-EVOLUTION-LAW :VARIANT :HS :POINTS
+;                                '((0.0d0 33.99d0) (0.037d0 33.99d0)
+;                                  (0.1d0 25.353762870428053d0)
+;                                  (0.2d0 9.568041272839212d0))
+;                                :COHESION 0.0d0 :PSI 0.0d0 :STRAIN-ASSUMPTION
+;                                "Native HS apex controls"))
+;        (CALLS 0))
+;     (DOTIMES (CL-MPM/TESTS/HS-APEX-NATIVE::REPEAT 2)
+;       (DECLARE (IGNORE CL-MPM/TESTS/HS-APEX-NATIVE::REPEAT))
+;       (LET* ((CL-MPM/TESTS/HS-APEX-NATIVE::TRIAL
+;               #(-1000000.0d0 0.0d0 2000000.0d0))
+;              (CL-MPM/TESTS/HS-APEX-NATIVE::STRAIN
+;               (CL-MPM/UTILS:VOIGT-FROM-LIST #))
+;              (CL-MPM/TESTS/HS-APEX-NATIVE::TAU
+;               (CL-MPM/PARTICLE:CONSTITUTIVE-MODEL CL-MPM/TESTS/HS-APEX-NATIVE::MP
+;                                                   CL-MPM/TESTS/HS-APEX-NATIVE::STRAIN
+;                                                   1.0d-4)))
+;         (INCF CL-MPM/TESTS/HS-APEX-NATIVE::CALLS)
+;         (ASSERT (< (REDUCE #'MAX #) 1.0d-6))
+;         (ASSERT
+;          (>
+;           (CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-KAPPA
+;            CL-MPM/TESTS/HS-APEX-NATIVE::MP)
+;           (CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-KAPPA-COMMITTED
+;            CL-MPM/TESTS/HS-APEX-NATIVE::MP)))
+;         (ASSERT
+;          (>
+;           (CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-PLASTIC-VOLUME
+;            CL-MPM/TESTS/HS-APEX-NATIVE::MP)
+;           (CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-PLASTIC-VOLUME-COMMITTED
+;            CL-MPM/TESTS/HS-APEX-NATIVE::MP)))
+;         (MULTIPLE-VALUE-BIND
+;             (CL-MPM/TESTS/HS-APEX-NATIVE::C CL-MPM/TESTS/HS-APEX-NATIVE::PHI
+;              CL-MPM/TESTS/HS-APEX-NATIVE::PSI)
+;             (CL-MPM/MODELS/MC-EVOLUTION:LAW-VALUES
+;              CL-MPM/TESTS/HS-APEX-NATIVE::LAW
+;              (CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-KAPPA
+;               CL-MPM/TESTS/HS-APEX-NATIVE::MP))
+;           (ASSERT (= CL-MPM/TESTS/HS-APEX-NATIVE::PHI #))
+;           (ASSERT (= CL-MPM/TESTS/HS-APEX-NATIVE::C 0.0d0))
+;           (ASSERT (= CL-MPM/TESTS/HS-APEX-NATIVE::PSI 0.0d0)))
+;         (CL-MPM/PARTICLE::NEW-LOADSTEP-MP CL-MPM/TESTS/HS-APEX-NATIVE::MP)
+;         (ASSERT
+;          (=
+;           (CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-KAPPA
+;            CL-MPM/TESTS/HS-APEX-NATIVE::MP)
+;           (CL-MPM/MODELS/MC-EVOLUTION:PARTICLE-KAPPA-COMMITTED
+;            CL-MPM/TESTS/HS-APEX-NATIVE::MP)))))
+; --> BLOCK LET TAGBODY PSETQ PROGN 
+; ==>
+;   (SETQ CL-MPM/TESTS/HS-APEX-NATIVE::REPEAT
+;           (1+ CL-MPM/TESTS/HS-APEX-NATIVE::REPEAT))
+; 
+; caught STYLE-WARNING:
+;   REPEAT is being set even though it was declared to be ignored.
+
+; --> BLOCK LET TAGBODY PSETQ PROGN SETQ THE 1+ 
+; ==>
+;   1
+; 
+; caught STYLE-WARNING:
+;   reading an ignored variable: REPEAT
+
+; --> BLOCK LET TAGBODY UNLESS IF >= 
+; ==>
+;   CL-MPM/TESTS/HS-APEX-NATIVE::REPEAT
+; 
+; caught STYLE-WARNING:
+;   reading an ignored variable: REPEAT
+; 
+; compilation unit finished
+;   caught 3 STYLE-WARNING conditions
+HS-APEX NATIVE PASS: 2 constitutive calls with tensor reconstruction, evolved law and loadstep commit; no MPM updates.
+HS-APEX NATIVE PASS: 4 constitutive calls with tensor reconstruction, evolved law and loadstep commit; no MPM updates.
+HS-APEX NATIVE PASS: 6 constitutive calls with tensor reconstruction, evolved law and loadstep commit; no MPM updates.

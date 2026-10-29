@@ -1,0 +1,29 @@
+Unhandled SB-C::INPUT-ERROR-IN-LOAD in thread #<SB-THREAD:THREAD tid=34356 "main thread" RUNNING
+                                                 {1100C88083}>:
+  READ error during LOAD:
+
+    end of file on #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\materials\\mc-hs-apex-native.lisp" {1101BD4863}>
+
+    (in form starting at line: 6, column: 0, position: 266)
+
+Backtrace for: #<SB-THREAD:THREAD tid=34356 "main thread" RUNNING {1100C88083}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<SB-C::INPUT-ERROR-IN-LOAD {110C0DCB23}> #<unused argument> :QUIT T)
+1: (SB-DEBUG::RUN-HOOK SB-EXT:*INVOKE-DEBUGGER-HOOK* #<SB-C::INPUT-ERROR-IN-LOAD {110C0DCB23}>)
+2: (INVOKE-DEBUGGER #<SB-C::INPUT-ERROR-IN-LOAD {110C0DCB23}>)
+3: (ERROR #<SB-C::INPUT-ERROR-IN-LOAD {110C0DCB23}>)
+4: (SB-C:COMPILER-ERROR SB-C::INPUT-ERROR-IN-LOAD :CONDITION #<END-OF-FILE {110C0DCB03}> :POSITION 266 :LINE/COL (6 . 0) :STREAM #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\materials\\mc-hs-apex-native.lisp" {1101BD4863}>)
+5: (SB-C::%DO-FORMS-FROM-INFO #<FUNCTION (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {5FEFEB}> #<SB-C::SOURCE-INFO {1101B775E3}> SB-C::INPUT-ERROR-IN-LOAD)
+6: (SB-INT:LOAD-AS-SOURCE #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\materials\\mc-hs-apex-native.lisp" {1101BD4863}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+7: ((LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\materials\\mc-hs-apex-native.lisp" {1101BD4863}> NIL)
+8: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<FUNCTION (LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) {5FF49B}> #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\materials\\mc-hs-apex-native.lisp" {1101BD4863}> NIL #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\materials\\mc-hs-apex-native.lisp" {1101BD4863}>)
+9: ((LABELS SB-FASL::LOAD-STREAM :IN LOAD) #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\materials\\mc-hs-apex-native.lisp" {1101BD4863}> NIL)
+10: (LOAD #P"D:/MPM/tests/materials/mc-hs-apex-native.lisp" :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST :ERROR :EXTERNAL-FORMAT :DEFAULT)
+11: (SB-IMPL::PROCESS-EVAL/LOAD-OPTIONS ((:LOAD . "D:\\MPM\\windows\\init.lisp") (:LOAD . "D:\\MPM\\tests\\materials\\mc-hs-apex-native.lisp") (:QUIT)))
+12: (SB-IMPL::TOPLEVEL-INIT)
+13: ((FLET SB-UNIX::BODY :IN SB-IMPL::START-LISP))
+14: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::START-LISP))
+15: (SB-IMPL::%START-LISP)
+16: ("foreign function: #x140048B39")
+17: ("foreign function: #x14000B260")
+
+unhandled condition in --disable-debugger mode, quitting

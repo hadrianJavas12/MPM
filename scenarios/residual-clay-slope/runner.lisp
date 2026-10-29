@@ -16,7 +16,10 @@
                      ("youngsModulusPa" . 20000000d0) ("poissonRatio" . .2d0)
                      ("cohesionPa" . 0d0) ("dilationDeg" . 0d0) ("residualStrengthRatio" . .25d0)))
       (unless (= (value cfg (car entry)) (cdr entry)) (error "Residual clay config differs:~A" (car entry))))
-    (unless (and (eq (fw:material-particle-class material) 'mc:particle-mc-evolution)
+    (unless (and (if (gethash "explicitHsApex" cfg)
+                    (eq (fw:material-particle-class material)
+                        (find-symbol "PARTICLE-MC-HS-APEX" "CL-MPM/MODELS/MC-HS-APEX"))
+                    (eq (fw:material-particle-class material) 'mc:particle-mc-evolution))
                  (= (getf args :E) 20d6) (= (getf args :nu) .2d0)
                  (= (fw:option material :density) 2000d0)
                  (equalp (getf args :evolution-law) (make-law cfg)))
@@ -44,6 +47,11 @@
            "damageDefinition" "D_phi=1-tan(phi)/tan(phi_peak), frictional strength loss at fixed positive normal stress, bounded0..0.75; not cohesion/stiffness/crack damage"
            "historyFile" "history.csv" "particleFile" "material-state.csv" "dynamicVtkPattern" "vtk/particles_%04d.vtk"
            "scientificallyValidated" 'yason:false "landslideVerified" 'yason:false)))
+    (when (gethash "explicitHsApex" cfg)
+      (setf (gethash "apexConvention" manifest)
+            "Explicit additional gA=p volumetric flow at zero-stress apex; evolving friction/c0/regular psi0 retained, NOT strict MC in tension"
+            (gethash "material" manifest)
+            "Prior triaxial clay HS, quarter residual friction PLUS declared volumetric apex extension; gravity-only unnotched trial"))
     (ensure-directories-exist vtk)
     (labels ((progress (phase)
                (setf (gethash "phase" manifest) phase (gethash "savedFrames" manifest) saved

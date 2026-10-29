@@ -881,6 +881,11 @@
                 :serial t
                 :components ((:file "package") (:file "diagnostics") (:file "projection") (:file "native")))))
 
+(defsystem "cl-mpm/models/mc-hs-apex"
+  :description "Opt-in cohesionless HS clay with explicit volumetric apex flow"
+  :depends-on ("cl-mpm/models/mc-composite-apex")
+  :components ((:file "materials/models/plastic/mc-hs-apex")))
+
 (defsystem "cl-mpm/examples/ice-visco"
   :depends-on ("cl-mpm/example"
                "cl-mpm/erosion"
