@@ -71,3 +71,5 @@ convergence/late-runoutvalidation FALSE. No automaticnewsolver.
 One terminalpacket under docs/evidence/clay-hs-apex-2026-10-30/apex-h05-001-terminal
 preserves source/cache/raw/runtime/preparation/media/diagnostic. Verified
 byte-identical savedinput duplicates use explicit archivealiases; norawdrop.
+
+Closure: one terminalpacket15indexed/16rootGitblobs exact atfd733628;605decodedZIPmembers,15verified savedinputaliases. Commit pushed. Finite runmonitor deleted after pairedvideo delivery; no solver active. Robust full20s remains unresolved.

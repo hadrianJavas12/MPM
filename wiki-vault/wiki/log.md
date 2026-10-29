@@ -1149,3 +1149,6 @@ Actual source8c62e3b6/14010MP/frame0,16:03WIB;22hcap plus<=2h auto twofilledmovi
 
 ## [2026-10-30] ingest | HS-apex clay partial numerical sliding outcome
 Native failed incrementalDF at6.07249s, thirteenactualstates/twofilledmovies delivered. BothsummaryPNGs and early3/4sframes inspected; newpostramp CSV-only diagnostic supports connectedslidingonset3s, no full20s/physicalvalidation. LateFstreaks and missingfailedtuple explicit. One terminalpacket, no solverrestart/rawedits.
+
+## [2026-10-30] ingest | HS-apex terminal evidence closure
+Packet15indexed/16exactGitblobs/605ZIPmembers with15verified savedinputaliases pushedfd733628. Twoactualvideos delivered; obsolete finite runmonitor deleted. No solver active or newattempt launched. Full20s/physicalvalidation remainopen.
