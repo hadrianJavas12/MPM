@@ -42,3 +42,5 @@ produces `filled-review-001/soil-motion.mp4` and `strength-damage.mp4`.
 All actual material patches/F/equal metres, no filtering/interpolation.
 Inspect both summary PNGs/review JSON before claiming coherent motion.
 Completion/colour alone is insufficient. Repair media from saved data only.
+
+Actual launch29Oct16:03:11WIB, source8c62e3b6; frame0/14010MP saved, native running. Worker33708/wrapper35116/cmd33564/SBCL5520 Session3, mediawatcher33448. ONE identity proof recorded. Finite monitor pantau-longsor-clay-tanpa-notch ACTIVE15min; no initial-state landslide claim.

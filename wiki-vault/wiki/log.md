@@ -1143,3 +1143,6 @@ Recorded actual0/.5s states/Dphi0/no slide; strictcapturedtrial replayONCE and t
 
 ## [2026-10-29] ingest | Optional HS clay apex trial
 Human authorizes continued unnotched slide work. Explicit volumetric apex/quarter floor, new pure28/native6 controls; no slope result yet. Prior negatives preserved.
+
+## [2026-10-29] ingest | HS-apex clay main attempt started
+Actual source8c62e3b6/14010MP/frame0,16:03WIB;22hcap plus<=2h auto twofilledmovies. Frozenobserver beforelaunch, quiet15minmonitor; no slide proof yet.

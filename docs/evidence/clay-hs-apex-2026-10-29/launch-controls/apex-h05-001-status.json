@@ -1,0 +1,46 @@
+{
+  "scenario": "gravity-slope",
+  "status": "NATIVE_RUNNING",
+  "startedUtc": "2026-10-29T09:03:11.3124847Z",
+  "output": "D:\\MPM\\output\\clay-hs-apex-2026-10-29\\apex-h05-001",
+  "case": "D:\\MPM\\cases\\benchmarks\\residual-clay-hs-apex.lisp",
+  "sourceCommit": "8c62e3b609c9485061fcf42f17181ff46988d2c8",
+  "maxWallHours": 22.0,
+  "wallDeadlineUtc": "2026-10-30T07:03:11.3124847Z",
+  "caseSha256": "B704539F761E700BFCD7366F7D3AF70B51F979DA4AD5AB76D306467C91EF31B9",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "processIdentity": {
+    "wrapper": {
+      "pid": 35116,
+      "name": "pwsh",
+      "sessionId": 3,
+      "createdUtc": "2026-10-29T09:03:10.7239239Z"
+    },
+    "sbcl": {
+      "pid": 5520,
+      "name": "sbcl",
+      "sessionId": 3,
+      "createdUtc": "2026-10-29T09:03:11.8019590Z"
+    },
+    "nativeCommand": {
+      "pid": 33564,
+      "name": "cmd",
+      "sessionId": 3,
+      "createdUtc": "2026-10-29T09:03:11.5057896Z"
+    }
+  },
+  "nativeExitCode": null,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {
+    "savedFrames": 1,
+    "phase": "gravity-ramp",
+    "particleCount": 14010,
+    "status": "running",
+    "timeS": 0.0,
+    "complete": false,
+    "updates": 0
+  },
+  "heartbeatUtc": "2026-10-29T09:05:12.1627961Z"
+}

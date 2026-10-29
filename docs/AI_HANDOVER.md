@@ -1,5 +1,24 @@
 # AI Engineering Handover — CL-MPM
 
+## LIVE29October16:03WIB - fresh HS-apex clay native started
+
+Actual RUN output/clay-hs-apex-2026-10-29/apex-h05-001,source8c62e3b609c9485061fcf42f17181ff46988d2c8.
+Started29Oct16:03:11.312485WIB,22hwallcap30Oct14:03:11WIB plus<=2h savedmedia
+(budget NOT ETA). Actual14010MP/frame0saved, NATIVE_RUNNING; no dynamics/slide
+PASS frominitialization. Worker33708/wrapper35116/cmd33564/SBCL5520 Session3;
+ONE exact creation/parent proof saved RUN-launch-preparation/one-process-identity-proof.json.
+Mediawatcher33448 WAITING_NATIVE,prelaunchfrozen4helpers in analysis/. It automatically
+exports filled-review-001/soil-motion.mp4 and strength-damage.mp4 after actual
+exit; no duplicate review/render while healthy. No logoff/sleep/reboot immunity.
+New heartbeat pantau-longsor-clay-tanpa-notch ACTIVE15min, quiethealthy. Read
+adjacentstatus/mediastatus/manifest andONEstdouttail ONLY eachwake; noPIDpoll.
+Terminal inspect both actualPNGs/reviewJSON before delivered movies/slideclaim;
+fix savedanalysis/media only. Source/raw/runtimearchive ONCE atterminal.
+Human askscontinue toward verifiedunnotchedslide, not blind parameter/root/
+tolerance/weakening/restart loop. Physics and extension in benchmarkguide below.
+Latestquota5h59%,weekly10% (oldweekly100 stale);5hresetnotweeklyreset.
+
+
 ## READY29October - continued unnotched clay slide work authorized
 
 Branch codex/clay-hs-apex-unnotched. See docs/benchmarks/CLAY_HS_APEX_UNNOTCHED.md.
