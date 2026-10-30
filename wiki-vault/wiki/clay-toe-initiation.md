@@ -24,3 +24,6 @@ focused onsetcomparison, not completion of old20s target. Record actualoutcome.
 
 ## Human geometry correction
 Human requests oneconstantangle. Restore40deg, stop/retaintwoangleinitial-onlyattempt byexplicitintent; no materialfailureclaim. Keepquarterclay andthreechannelobserver. This is not a lateDFstabilityfix or toeinitiationguarantee.
+
+## Latest singleangle60deg
+Human corrects Wangscenario1to60deg; earlier40initial-onlyrun stopped/retained byhumansteering. ONE60face nowselected; samepriorquarterclay/gravityonly, NOT fullWangmodel/loading. Threechannels retained.

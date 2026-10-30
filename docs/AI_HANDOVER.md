@@ -1,5 +1,24 @@
 # AI Engineering Handover — CL-MPM
 
+## READY30October - human Wanganglecorrection: ONE60deg,40run superseded
+
+Branch codex/clay-single-slope60. See docs/benchmarks/CLAY_SINGLE_SLOPE60.md.
+HumanpointsWangscenario1uses60deg; interpret latestgeometrycorrection as
+oneconstant60degreeface. Prior40main/watcherstopped withverifiedcreation
+identities;human-angle-stop.json givesauthority. Wrapperexit-1notmaterial
+failure. Onlyframe0/clock0,allrawpreservedonce;oldmonitor deleted,no export.
+NewintendedRUN output/clay-single-slope60-2026-10-30/main-h05-001.
+H10/crest24/base8/domain72x24/h.5/PPC2x2/13517MP,toex29.7735;no secondangle.
+Samepriorclayc0/phi33.99/quarterresidual andexplicitHSapex,gravityonly.
+NOTfullWang(c30kPa/phi35/nu.25/crestloading), ONLYanglefollowsWangFig2.
+Target8s17frames/22hwall+<=2hmedia,budgetnotETA. No geostaticequilibrium/
+toeorigin/completion guarantee. New577surface matches/nativeinitial13517
+IDs/J1/kappa0PASS0physicalupdates;Studio36Node/checkPASS. No oldpassedgates
+repeat. Threechannel observerfrozenBEFORElaunch, terminalworkflowpending.
+OriginalDFguard unchanged,no claimedlateDFfix;failureobserver capturesactual
+newtupleifneeded. No notch/driver/weakzone/reset/strengthtweak.
+
+
 ## LIVE30October10:40WIB - ONE constant40degree clay replacement RUNNING
 
 ActualRUN output/clay-single-slope40-2026-10-30/main-h05-001, source080d535aa69c93068976da8e6996386474bf510e.

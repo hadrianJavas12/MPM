@@ -1380,3 +1380,6 @@ terminal source/raw/runtime/media packet; no solverrestart. Monitor deleted.
 
 ## 30October single40degree replacement
 New577surface exactmatches tooriginal40deg function and14010nativeinitialMP/IDs/J1/kappa0 checksPASS,0physicalupdates. Studio check+36Node testsPASS. Two-angle runstoppedbyhumanrequest, not materialfailure. No passedoldcontrol repetitions.
+
+## 30October single60degree correction
+577exactsurface matches and13517nativeinitialMP/IDs/J1/kappa0PASS0physicalupdates. Studio check+36Node testsPASS; no priorpassedMPM/material/rendercontrolreruns. Usergeometrycorrectionstop of40degree run is notmaterialfailure.

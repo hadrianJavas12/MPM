@@ -28,12 +28,13 @@
                                        (/ 3d0 (tan (* pi (/ 40d0 180d0))))))
     cfg))
 
-(defun single-slope-config ()
+(defun single-slope-config (&optional (angle 40d0))
+  (unless (member angle '(40d0 60d0) :test #'=) (error "Single-angle case must declare40or60deg."))
   (let ((cfg (toe-config)))
     (dolist (key '("upperSlopeDeg" "lowerSlopeDeg" "lowerFaceHeight" "toeProfile"))
       (remhash key cfg))
-    (setf (gethash "singleSlope" cfg) t
-          (gethash "toeX" cfg) (+ 24d0 (/ 10d0 (tan (* pi (/ 40d0 180d0))))))
+    (setf (gethash "singleSlope" cfg) t (gethash "slope" cfg) angle
+          (gethash "toeX" cfg) (+ 24d0 (/ 10d0 (tan (* pi (/ angle 180d0))))))
     cfg))
 
 (defun build-toe-slope (material cfg)
@@ -123,7 +124,7 @@
     (ensure-directories-exist vtk)
     (when (gethash "singleSlope" cfg)
       (setf (gethash "scenario" manifest) "clay-single-slope"
-            (gethash "geometry" manifest) "ONE constant40degree face, H10/base8/crest24/domain72x24; no second angle or notch"))
+            (gethash "geometry" manifest) (format nil "ONE constant~,1Fdegree face, H10/base8/crest24/domain72x24; no second angle or notch" (value cfg "slope"))))
     (labels ((progress (phase)
                (setf (gethash "phase" manifest) phase (gethash "savedFrames" manifest) saved
                      (gethash "updates" manifest) updates)
@@ -141,7 +142,8 @@
                   (observation-context-switch-kappa ctx) (map 'vector #'mc:particle-kappa (cl-mpm:sim-mps sim))
                   (observation-context-switch-work ctx) (map 'vector #'mc:particle-plastic-work (cl-mpm:sim-mps sim)))
             (setf (gethash "particleCount" manifest) (length (cl-mpm:sim-mps sim)))
-            (unless (= (length (cl-mpm:sim-mps sim)) (if (gethash "singleSlope" cfg) 14010 15143))
+            (unless (= (length (cl-mpm:sim-mps sim))
+                       (if (gethash "singleSlope" cfg) (if (= (value cfg "slope") 60d0) 13517 14010) 15143))
               (error "Declared center-clip particle count differs."))
             (configure-output sim)
             (cl-mpm/output:save-vtk-mesh (merge-pathnames "mesh.vtk" vtk) sim)
@@ -188,5 +190,13 @@
     (unless (equalp cfg (cl-mpm/scenario/residual-clay-slope::single-slope-config))
       (error "Single40degree recipe differs from declared config.")) cfg))
 (defmethod execute-scenario ((scenario (eql :clay-single-slope)) (case simulation) config directory)
+  (declare (ignore scenario))
+  (cl-mpm/scenario/residual-clay-slope::run-toe-profile (simulation-material case) config directory))
+
+(defmethod compile-scenario ((scenario (eql :clay-single-slope60)) (case simulation))
+  (let ((cfg (simulation-parameters case)))
+    (unless (equalp cfg (cl-mpm/scenario/residual-clay-slope::single-slope-config 60d0))
+      (error "Single60degree recipe differs from declared config.")) cfg))
+(defmethod execute-scenario ((scenario (eql :clay-single-slope60)) (case simulation) config directory)
   (declare (ignore scenario))
   (cl-mpm/scenario/residual-clay-slope::run-toe-profile (simulation-material case) config directory))

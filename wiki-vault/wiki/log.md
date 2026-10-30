@@ -1164,3 +1164,6 @@ Exactidentity-native/watcherstops, no dynamics and no materialfailureclaim; allr
 
 ## [2026-10-30] ingest | Single40degree replacement running
 Source080d535a/actual14010MP/frame0 at10:40WIB. No secondface; samequarterclay,threeautomaticmovies. Newquietmonitoractive,oldtwoangleclosedbyhumanrequest,notmaterialfailure. No full8s/stabilityfixclaim.
+
+## [2026-10-30] ingest | Human corrects constantangletoWang60deg
+Exactidentitystop of40initial-onlyrun andmedia; raw preservedonce,notmaterialfailure. ONE60face/13517MP newinitialgeometrycontrolsPASS0updates; sameclayfloor/gravity,NOTfullWangreproduction.
