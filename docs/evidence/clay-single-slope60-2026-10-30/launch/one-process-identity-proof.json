@@ -1,0 +1,37 @@
+[
+  {
+    "ProcessId": 37076,
+    "ParentProcessId": 8984,
+    "Name": "pwsh.exe",
+    "SessionId": 4,
+    "createdUtc": "2026-10-30T03:46:21.2575640Z"
+  },
+  {
+    "ProcessId": 43400,
+    "ParentProcessId": 37076,
+    "Name": "pwsh.exe",
+    "SessionId": 4,
+    "createdUtc": "2026-10-30T03:46:21.9759940Z"
+  },
+  {
+    "ProcessId": 32760,
+    "ParentProcessId": 8984,
+    "Name": "pwsh.exe",
+    "SessionId": 4,
+    "createdUtc": "2026-10-30T03:46:22.8353730Z"
+  },
+  {
+    "ProcessId": 18380,
+    "ParentProcessId": 43400,
+    "Name": "cmd.exe",
+    "SessionId": 4,
+    "createdUtc": "2026-10-30T03:46:22.6499930Z"
+  },
+  {
+    "ProcessId": 44532,
+    "ParentProcessId": 18380,
+    "Name": "sbcl.exe",
+    "SessionId": 4,
+    "createdUtc": "2026-10-30T03:46:22.9801860Z"
+  }
+]

@@ -28,3 +28,6 @@ AllactualFpatches/equalmetres/nointerp/filter: soil-motion.mp4,
 strength-damage.mp4,plastic-shear-strain.mp4 atRUN/filled-review-001.
 Failure-only actualDFobserver retains originalguard/no retry/clamp/tolerance
 change. LateDFdistortion ofprior40run is not claimedfixed.
+
+## Actual launch
+Sourcefcf5d5f4/RUNmain-h05-001,30Oct10:46:22WIB;actual13517MP/frame0,NATIVE_RUNNING.22hwallcap31Oct08:46:22WIB plus<=2h automaticthreevideos. Worker37076/wrapper43400/media32760Session4,oneidentityproof. Newquiet15minmonitoractive. Onlyinitializationproved,fullreview/mainoutcome pending.

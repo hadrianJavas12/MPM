@@ -1,0 +1,27 @@
+{
+  "scenario": "gravity-slope",
+  "status": "STARTING",
+  "startedUtc": "2026-10-30T03:46:22.4650563Z",
+  "output": "D:\\MPM\\output\\clay-single-slope60-2026-10-30\\main-h05-001",
+  "case": "D:\\MPM\\cases\\benchmarks\\clay-single-slope60.lisp",
+  "sourceCommit": "fcf5d5f49a51435f2a2912f26b02643cc75086df",
+  "maxWallHours": 22.0,
+  "wallDeadlineUtc": "2026-10-31T01:46:22.4650563Z",
+  "caseSha256": "48A71B9D010D4AE5A65C30802D9425D6715464095CBE1B0A0441B401529DD613",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "processIdentity": {
+    "nativeCommand": null,
+    "wrapper": {
+      "pid": 43400,
+      "name": "pwsh",
+      "sessionId": 4,
+      "createdUtc": "2026-10-30T03:46:21.9759944Z"
+    },
+    "sbcl": null
+  },
+  "nativeExitCode": null,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {}
+}
