@@ -31,3 +31,18 @@ change. LateDFdistortion ofprior40run is not claimedfixed.
 
 ## Actual launch
 Sourcefcf5d5f4/RUNmain-h05-001,30Oct10:46:22WIB;actual13517MP/frame0,NATIVE_RUNNING.22hwallcap31Oct08:46:22WIB plus<=2h automaticthreevideos. Worker37076/wrapper43400/media32760Session4,oneidentityproof. Newquiet15minmonitoractive. Onlyinitializationproved,fullreview/mainoutcome pending.
+## LIVE30October12:13WIB — original native preserved; monitor recovered
+
+Original wrapper43400 failed04:59UTC on status JSON sharing violation; original
+media32760 failed05:00UTC because no native terminal proof. NOT material failure.
+Exact original cmd18380/SBCL44532 creation times and parent chain verified alive;
+no native restart. Progress200updates/native0.189735s/one initial frame.
+Recovery monitor40048 attaches original cmd process HANDLE and enforces ORIGINAL
+31Oct08:46WIB deadline; bounded status IO retries. Replacement media28140 invokes
+ORIGINAL prelaunch frozen watch-media.ps1, status WAITING_NATIVE confirmed.
+Adjacent status.monitorRecovery records identities. Preserve RUN-monitor-recovery-001
+(original statuses, failed first datetime conversion, corrected recover.ps1/logs).
+No source physics/observer bytes changed; no review/render/tests/native rerun.
+Do not repeat recovery/PID checks while healthy. Include recovery artifacts in
+terminal archive. Automatic three-video export still pending actual native exit.
+

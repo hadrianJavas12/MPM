@@ -65,3 +65,5 @@
 - [[clay-hs-apex-unnotched#Terminal outcome]] - partial unnotched numerical sliding observed; lateFdistortion/nativeguard failure, twoactualvideos preserved.
 
 - [[clay-toe-initiation]] - oldtoe plasticity precedescrest damage; separate strainvideo and declared20/40degreecomparison.
+
+- [[clay60-monitor-recovery]] — original native preserved after status IO failure; monitor and media waiting restored.

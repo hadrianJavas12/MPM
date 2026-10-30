@@ -1,5 +1,21 @@
 # AI Engineering Handover — CL-MPM
 
+## LIVE30October12:13WIB — original native preserved; monitor recovered
+
+Original wrapper43400 failed04:59UTC on status JSON sharing violation; original
+media32760 failed05:00UTC because no native terminal proof. NOT material failure.
+Exact original cmd18380/SBCL44532 creation times and parent chain verified alive;
+no native restart. Progress200updates/native0.189735s/one initial frame.
+Recovery monitor40048 attaches original cmd process HANDLE and enforces ORIGINAL
+31Oct08:46WIB deadline; bounded status IO retries. Replacement media28140 invokes
+ORIGINAL prelaunch frozen watch-media.ps1, status WAITING_NATIVE confirmed.
+Adjacent status.monitorRecovery records identities. Preserve RUN-monitor-recovery-001
+(original statuses, failed first datetime conversion, corrected recover.ps1/logs).
+No source physics/observer bytes changed; no review/render/tests/native rerun.
+Do not repeat recovery/PID checks while healthy. Include recovery artifacts in
+terminal archive. Automatic three-video export still pending actual native exit.
+
+
 ## LIVE30October10:46WIB - ONE60degree slope RUNNING (LATEST HUMAN CORRECTION)
 
 RUN output/clay-single-slope60-2026-10-30/main-h05-001/sourcefcf5d5f49a51435f2a2912f26b02643cc75086df.
@@ -385,7 +401,7 @@ UI/raw/private/settings untouched. Sourcecommit stillc805; newerHEAD is docs/
 saveddiagnosis only. User must not keep waiting for24h or expect dynamicvideos.
 
 
-## LIVE28October01:39WIB � MAIN h1/PPC2x2 run launched, automatic FILLED movies
+## LIVE28October01:39WIB � MAIN h1/PPC2x2 run launched, automatic FILLED movies
 
 Latest human explicitly says MAIN RUN NOW; do not delay with more studies.
 Branch codex/urmi-proper-mesh1, native sourcec805d5491334ea74c9946fc1e48009eacf3289b1.
@@ -3302,5 +3318,6 @@ Following explicit user direction (`"pokoknya ikuti struktur folder di dokemen f
 - **Benchmark 2 — Progressive bottom-to-top chalk cliff failure (`tests/cases/joss-serial-integration.lisp` and `cases/benchmarks/joss-collapse.lisp`)**:
   - `section2-benchmarks/joss-serial-4s` (`exit 0`): 1,658 equilibration steps + 4.0 s physical time; `initial.vtk`, `mesh.vtk`, `equilibrium.vtk`, `sim_00001.vtk`, and `sim_00002.vtk` are byte-identical (`SHA-256` match) to `joss-bounded/before-003` (`max_position_difference_m = 0.0`), initiating lower notch/toe damage ($y = 3.625\text{ m} \le 4\text{ m}$, `lower_max_damage = 0.3336`) while upper cliff damage ($y \ge 9\text{ m}$) is `0.0`.
   - `section2-benchmarks/joss-collapse`: `audit-particle-damage.py` confirms undamaged equilibrium (`t = 0..2.0 s`), bottom toe/notch initiation at `t = 4.0 s` (`sim_00002.vtk`, `lower_max_damage = 0.3336`, `upper_max_damage = 0.0`), upward propagation across `t = 4.1..5.0 s` (`sim_00003.vtk`..`sim_00012.vtk`), and arrival at the upper cliff face ($y \ge 9\text{ m}$) across `t = 7.0..7.7 s` (`sim_00013.vtk`..`sim_00020.vtk`, `lower_max_damage = 0.6572 -> 0.7150`, `upper_max_damage = 0.0005 -> 0.0772 > 0.05`) with `all_fields_finite = true` and `mass_change_fraction = 0.0`.
+
 
 
