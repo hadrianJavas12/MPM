@@ -1385,3 +1385,5 @@ New577surface exactmatches tooriginal40deg function and14010nativeinitialMP/IDs/
 577exactsurface matches and13517nativeinitialMP/IDs/J1/kappa0PASS0physicalupdates. Studio check+36Node testsPASS; no priorpassedMPM/material/rendercontrolreruns. Usergeometrycorrectionstop of40degree run is notmaterialfailure.
 
 30Oct2026 clay60 monitor recovery: original cmd/SBCL timestamps and parent chain reconciled; recovery status NATIVE_RUNNING/media WAITING_NATIVE observed. No physics tests, solver repeats, or saved reviews executed. Failed first recovery datetime conversion retained; corrected typed DateTime comparison succeeded.
+
+30Oct19:13WIB deadline extension verified in actual running status:34h deadline13:46UTC31Oct, replacement monitor/media active, exact original cmd/SBCL timestamps unchanged. No physics tests/reruns.

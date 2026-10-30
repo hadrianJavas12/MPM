@@ -21,3 +21,6 @@ See [[cl-mpm]] and repository handover for authoritative run paths.
 
 30Oct18:42WIB recovery004: monitor11228 absent/reused by unrelated conhost with newer creation, media43652 absent; cause unrecorded. Original cmd18380/SBCL44532 exact identities alive. Unchanged recover.ps1 launched via Win32_Process.Create return0, monitor7060/media20700; NATIVE_RUNNING/WAITING_NATIVE confirmed. Original deadline retained, zero native reruns. WMI avoids tool parent ancestry, not proven session/sleep immunity. Preserve before-recovery004 and WMI launch receipt.
 
+
+30Oct19:13WIB HUMAN hibernation extension: +12h, NEW wall deadline31Oct20:46:22WIB/13:46UTC (34h total), not ETA. Original cmd18380/SBCL44532 start timestamps unchanged, zero native stops/restarts. Verified old monitor7060/media20700 stopped individually; new WMI monitor44944/media3592 confirmed NATIVE_RUNNING/WAITING_NATIVE. RUN-deadline-extension-001 preserves prior statuses/identity and extension/launch; monitor reads new deadline, watcher copy waits36h using unchanged prelaunch frozen analysis helpers. Initial attempted monitor verification aborted safely before any stop (DateTime comparison); subsequent exact timestamp-string verification succeeded. Include extension and all recovery artifacts in terminal packet.
+
