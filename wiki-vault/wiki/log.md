@@ -1188,3 +1188,6 @@ Six saved states0..2.5s, negative domainX guard at3s,3actualvideos inspected/del
 
 ## [2026-10-31] ingest | Clay60 worker domain correction
 Recorded actual worker binding defect, five tensor/two USF controls,13 monitor controls and six-state three-video colour verification. New run pending; old raw evidence retained.
+
+## [2026-10-31] ingest | Corrected clay60 launch
+Recorded d428e1a2 run, actual13517MP/frame0/sourceDLL proof, frozen kappa-coloured media and finite heartbeat. Full8s outcome pending.

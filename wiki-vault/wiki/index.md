@@ -77,3 +77,5 @@ Human deadline extension +12h recorded in [[clay60-monitor-recovery]].
 Clay60 partial terminal videos and actual negative domain guard: [[clay60-monitor-recovery]].
 
 - [[clay60-worker-domain]] — worker dispatch correction and plastic strain colours; fresh8s run pending.
+
+Corrected clay60 run launched; verified initialization only: [[clay60-worker-domain]].

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "sourceFilesVerified": 315,
+  "actualMappedDll": {
+    "modulePath": "D:/MPM/output/clay-single-slope60-2026-10-31/worker-domain-h05-001/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  },
+  "case": {
+    "path": "D:\\MPM\\output\\clay-single-slope60-2026-10-31\\worker-domain-h05-001\\source\\case.lisp",
+    "bytes": 1108,
+    "sha256": "48a71b9d010d4ae5a65c30802d9425d6715464095cbe1b0a0441b401529dd613"
+  },
+  "manifest": {
+    "path": "D:\\MPM\\output\\clay-single-slope60-2026-10-31\\worker-domain-h05-001\\source\\source-manifest.json",
+    "bytes": 65755,
+    "sha256": "45218fab6fc17960964baf0419ca2b8d14b62f3366ae02fc112dc3b6a8964306"
+  },
+  "runtimeProvenance": {
+    "path": "D:\\MPM\\output\\clay-single-slope60-2026-10-31\\worker-domain-h05-001\\source-provenance.json",
+    "bytes": 722184,
+    "sha256": "c658702564f1b33773c43af80f087838cfd866e4378b9fca47c7abf372b5d836"
+  },
+  "initialParticles": 13517,
+  "initialFrame": 0,
+  "initialJ": 1,
+  "initialKappa": 0,
+  "vtkSha256": "1eb4c96c5ca54b5b646b4ddd3e398ff975ba5453f8991367875d7e80597b2aa6",
+  "scope": "Actual initialization and loaded-source proof only; not target completion",
+  "collectorCorrections": [
+    "First check rejected Lisp d exponent; corrected numeric parser",
+    "Second check treated binary VTK as text; corrected header byte check; no native/data change"
+  ]
+}
