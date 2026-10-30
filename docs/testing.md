@@ -1,5 +1,13 @@
 # Native framework and Studio verification
 
+## 30October toe profile scoped controls
+
+See benchmarks/CLAY_TOE_PROFILE.md:577geometry/15143MP/2USFstage pass;
+initial no-workers and later syntheticfolder capture failures retained.
+Capture-only003PASS0MPM; 3channel actual2-state render/decodePASS, not main
+physicalvalidation. Studio check+36Node testsPASS. No oldsolver/gate repeats.
+
+
 ## 30October HS-apex clay terminal partial
 
 Native FAILED at6.0724875s/6451updates on incremental deformation determinant

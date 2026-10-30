@@ -1,0 +1,20 @@
+(in-package :cl-user)
+(ql:quickload '(:cl-mpm-framework/clay-toe-profile :yason) :silent t)
+(in-package :cl-mpm/scenario/residual-clay-slope)
+(let* ((*toe-failure-directory* (uiop:ensure-directory-pathname (merge-pathnames (first (cl-user::cl-mpm-script-args)))))
+       (mp (make-instance 'particle-clay-toe :E 20d6 :nu .2d0 :evolution-law (make-law (toe-config)) :enable-plasticity t))
+       (signalled nil))
+  (when (probe-file *toe-failure-directory*) (error "Fresh synthetic capture directory required."))
+  (setf (cl-mpm/particle::mp-unique-index mp) 42
+        (magicl:tref (cl-mpm/particle::mp-stretch-tensor mp) 0 0) -2d0)
+  (handler-case
+      (handler-bind ((cl-mpm/errors:error-dF-negative
+                      (lambda (c) (declare (ignore c))
+                        (capture-toe-increment-failure mp 1d-4 nil "SYNTHETIC observer control ONLY; not actual old failed tuple/replay"))))
+        (error 'cl-mpm/errors:error-dF-negative))
+    (cl-mpm/errors:error-dF-negative () (setf signalled t)))
+  (assert signalled)
+  (let ((r (with-open-file (stream (merge-pathnames "actual-df-failure.json" *toe-failure-directory*)) (yason:parse stream))))
+    (assert (= (gethash "detDF" r) -1d0)) (assert (= (gethash "particleId" r) 42)))
+  (format t "~&TOE CAPTURE PASS:synthetic detDF=-1/ID42,original condition propagated;0MPMupdates.~%"))
+(uiop:quit 0)

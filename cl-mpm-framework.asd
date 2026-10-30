@@ -146,3 +146,8 @@
 (asdf:defsystem "cl-mpm-framework/residual-clay-hs-apex"
   :description "Explicit opt-in HS clay apex extension, no-notch gravity slope"
   :depends-on ("cl-mpm-framework/residual-clay-slope" "cl-mpm/models/mc-hs-apex"))
+
+(asdf:defsystem "cl-mpm-framework/clay-toe-profile"
+  :description "Explicit two-angle no-notch clay geometry comparison with separate strain/damage observation"
+  :depends-on ("cl-mpm-framework/residual-clay-hs-apex")
+  :components ((:file "scenarios/residual-clay-slope/toe-profile")))

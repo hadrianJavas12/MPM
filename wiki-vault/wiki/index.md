@@ -63,3 +63,5 @@
 - [[clay-hs-apex-unnotched]] - explicit HS apex extension; quarter-strength clay fresh gravity trial.
 
 - [[clay-hs-apex-unnotched#Terminal outcome]] - partial unnotched numerical sliding observed; lateFdistortion/nativeguard failure, twoactualvideos preserved.
+
+- [[clay-toe-initiation]] - oldtoe plasticity precedescrest damage; separate strainvideo and declared20/40degreecomparison.

@@ -1152,3 +1152,6 @@ Native failed incrementalDF at6.07249s, thirteenactualstates/twofilledmovies del
 
 ## [2026-10-30] ingest | HS-apex terminal evidence closure
 Packet15indexed/16exactGitblobs/605ZIPmembers with15verified savedinputaliases pushedfd733628. Twoactualvideos delivered; obsolete finite runmonitor deleted. No solver active or newattempt launched. Full20s/physicalvalidation remainopen.
+
+## [2026-10-30] query | Toe plasticity versus damage and reference comparison
+Re-readUrmi primarypages4-9/actualfigures andWang2017authorPDF. Oldtoe plastifiesat0.5s,crestDphifirstsaved2s dueplateau. Newexplicit20/40profile/quarterclay andthreechannels; scopedcontrols/negativeevidence retained, no exactpaper/toeguarantee. No immutable raw/settings changes.

@@ -1,5 +1,28 @@
 # AI Engineering Handover — CL-MPM
 
+## READY30October - human requests toe-origin comparison, oldtoe plasticity confirmed
+
+Branch codex/clay-toe-profile. Read docs/benchmarks/CLAY_TOE_PROFILE.md.
+IMPORTANT: oldrun firstsaved0.5s maxkappa.000418 nearTOE,345toeMPplastified,
+butDphi0 untilkappa.037. FirstsavedDphi2snearcrest. UrmiFig11showsdeviatoric
+strain, NOT strengthdamage; do not equate quantities or claimoldrunnevertoe.
+UrmiSaintJude40degtoe/12-20upper, layeredclay/stableDrained->undrained;
+Wang2017fieldtoe onset afterexcavation, separatebenchmarkcrestloading.
+New finitehypothesis upper20deg/lower40deg/H10 (lower3mchosenadaptation),
+crest24/base8/domain72x24/h.5/PPC2x2/15143MP, exactoldclay+quarterfloor,
+explicitHSapex,gravityfromzerostress2sramp; NOstableequilibrium/paperreproduction
+claim. No notch/driver/weakzone/reset/extraweakening. Target8s17states,22hwall
+plus<=2h savedexport, NOT old20s completion/ETA. IntendedRUN
+output/clay-toe-profile-2026-10-30/profile-h05-001; not launched yet.
+Newthree-channel frozenobserver: motion/Dphi/plastickappa,actualFfilledpatches.
+Newfailure-only DFcapture observesactualfailedparticle before originalerror;
+no clamp/retry. Controls577geometry/15143MP/2USFstagePASS;001harnessnoworkers
+0updates,002laterfailedsyntheticfoldercapture aftersuccessfulnative stage.
+IO-onlyfix+capture003PASS0MPM,syntheticnotoldreplay. Renderer3movies2actual
+states eachencode/decodePASS, motion/strainPNGinspected; notfullsavedreview.
+Studio check+36Node testsPASS. No oldgates/native repeats. No main/UI/private.
+
+
 ## TERMINAL30October03:43WIB - HS-apex clay PARTIAL, numerical sliding observed
 
 RUN output/clay-hs-apex-2026-10-29/apex-h05-001/source8c62e3b6 exitednative1/worker1

@@ -1,0 +1,56 @@
+{
+  "scope": "Actual newgeometry2USFstates, renderer-only control; NOT full saved reviewer/native main/landslide validation",
+  "nativeGeometryEqualsIndependentFullGrid": true,
+  "geometrySamplesPassedBeforeCaptureFailure": 577,
+  "actualParticles": 15143,
+  "actualMPMUpdates": 2,
+  "media": {
+    "status": "PASS",
+    "scope": "TWO_ANGLE_CLAY_TOE_PROFILE_COMPARISON_NOT_URMI_REPRODUCTION",
+    "actualMovieStates": 2,
+    "allParticlesShown": true,
+    "coordinateScale": 1,
+    "colourRange": [
+      0,
+      1
+    ],
+    "interpolation": false,
+    "plotBoundsWorldM": [
+      -13.44,
+      61.44,
+      -9.440000000031247,
+      17.44
+    ],
+    "renderGeometry": "Actual F convects each original square patch; numerical quadrature domains distinct; overlaps/gaps retained",
+    "sameActualStateSequenceAndTimingForBothMovies": true,
+    "movies": {
+      "motion": {
+        "video": {
+          "path": "D:\\MPM\\output\\toe-initiation-2026-10-30\\render-controls-001\\soil-motion.mp4",
+          "bytes": 18642,
+          "sha256": "d347bbe2cb4cc11992481a53468511b58c49c845732fe0445e2f97706b2aac5c"
+        },
+        "decodedFrames": 2,
+        "framesPerSecond": 5
+      },
+      "damage": {
+        "video": {
+          "path": "D:\\MPM\\output\\toe-initiation-2026-10-30\\render-controls-001\\strength-damage.mp4",
+          "bytes": 19827,
+          "sha256": "6159a7c32e8277031b1ff1b19184b41a38659d322eac423a0e227949d907d412"
+        },
+        "decodedFrames": 2,
+        "framesPerSecond": 5
+      },
+      "plastic-strain": {
+        "video": {
+          "path": "D:\\MPM\\output\\toe-initiation-2026-10-30\\render-controls-001\\plastic-shear-strain.mp4",
+          "bytes": 23496,
+          "sha256": "79890f651e63cdb19bb093e214695d4f4e12261be54ce4a04319c0df8d294ab4"
+        },
+        "decodedFrames": 2,
+        "framesPerSecond": 5
+      }
+    }
+  }
+}
