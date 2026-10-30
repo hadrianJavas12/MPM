@@ -1,5 +1,33 @@
 # AI Engineering Handover — CL-MPM
 
+## LIVE30October10:40WIB - ONE constant40degree clay replacement RUNNING
+
+ActualRUN output/clay-single-slope40-2026-10-30/main-h05-001, source080d535aa69c93068976da8e6996386474bf510e.
+Started30Oct10:40:41.031836WIB,22hwallcap31Oct08:40:41WIB plus<=2h savedexport
+(budgetNOTETA;hibernatecounts elapsedwall). Actual14010MP/frame0saved;
+NATIVE_RUNNING, initializationonly notmotion/landslide/fullreviewPASS. ONE
+constant40deg face verified, upper/loweranglekeys absent, no secondface/notch.
+Worker20576/wrapper39212/media30172 Session4,fullnativecmd/SBCL/parentcreation
+proof saved RUN-launch-preparation/one-process-identity-proof.json. Don't
+repeathealthyPIDqueries. WMI notimmune logoff/sleep/reboot. Fourhelpers
+frozenBEFORElaunch; mediawatcher automaticallysavedreview atnativeexit,
+RUN/filled-review-001/soil-motion.mp4,strength-damage.mp4,plastic-shear-strain.mp4.
+Don'tduplicate. Newheartbeat pantau-clay-satu-kemiringan40 ACTIVE15min,
+healthyquiet: adjacentstatus/mediastatus/manifest andONEstdouttailonly.
+
+Human requestsoneconstantangle,prior40chosen. Allclay/quarterfloor/numerics
+retained,8s17states target. This restoresearlier40degphysics, NOT afixof
+lateDFdistortion; originalguard remains,newobservercapturesactualtupleif
+recurs. No guarantee8scomplete/toeorigin. Don'troot/clamp/tolerance/strength
+rescue/restart. Firstplastic versusDphi distinction remainsimportant.
+Oldtwoangleattempt stoppedONLYbyhumanrequest,exit-1notmaterialfailure,
+onlyframe0/time0. Allraw preserved, oneoldattemptarchive540members/5exact
+Gitblobs verified; oldmonitor/mediawatcherstopped, no oldinitial-onlyrender.
+Onnewterminal inspectall3PNGs/reviewJSON, then deliver actualmovies with
+complete/partialscope. Savedmediafailurefixonly. ArchiveactualnewattemptONCE
+terminal; no oldcontrols/research/native repeats. NoUI/main/private changes.
+
+
 ## READY30October10:38WIB - HUMAN replaces two angles with ONE constant40deg
 
 Branch codex/clay-single-slope40. Prior40deg selection used; human explicitly

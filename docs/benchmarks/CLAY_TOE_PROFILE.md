@@ -85,3 +85,6 @@ and36Node tests PASS. No old longnative/gates/renders/replays repeated.
 
 ## Superseded by human: one constant angle
 30Oct10:37WIB human requests ONE face. Two-angle initial-only native andwatcher explicitly stopped withexactcreation checks, no materialfailure inferred from wrapperexit-1. No dynamics/no export needed. Replacementuses originalsingle40deg geometry, samequarterclay/capture/threechannels/8starget. New577surface matches and14010nativeinitialchecksPASS0updates; no claimlateDFrepair. Olddataarchivedonce, monitor deleted.
+
+### Actual single-angle replacement launch
+RUN output/clay-single-slope40-2026-10-30/main-h05-001/source080d535a,30Oct10:40:41WIB. Actual14010MP/frame0,NATIVE_RUNNING; one40degface with no upper/loweranglekeys.22hwallcap31Oct08:40:41WIB plus<=2hmedia. Frozen4helpers/3movies/watchermedia30172,worker20576/wrapper39212 Session4, oneidentityproof. Newquiet15minmonitoractive. Initializationonly; no newslide/fullreviewPASS or lateDFfix claimed.

@@ -1161,3 +1161,6 @@ Sourceef695faf actual15143MP/frame0,30Oct10:30WIB;22hwallcap31Oct08:30WIB then<=
 
 ## [2026-10-30] ingest | Human replaces two-angle run with single40deg
 Exactidentity-native/watcherstops, no dynamics and no materialfailureclaim; allrawpreserved/onearchive. Newsingle40face constructor and577exactgeometrychecks/14010nativeinitialMP PASS0updates, sameclay/floor/3channels.
+
+## [2026-10-30] ingest | Single40degree replacement running
+Source080d535a/actual14010MP/frame0 at10:40WIB. No secondface; samequarterclay,threeautomaticmovies. Newquietmonitoractive,oldtwoangleclosedbyhumanrequest,notmaterialfailure. No full8s/stabilityfixclaim.
