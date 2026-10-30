@@ -1,0 +1,27 @@
+{
+  "scenario": "gravity-slope",
+  "status": "STARTING",
+  "startedUtc": "2026-10-30T03:30:13.2500337Z",
+  "output": "D:\\MPM\\output\\clay-toe-profile-2026-10-30\\profile-h05-001",
+  "case": "D:\\MPM\\cases\\benchmarks\\clay-toe-profile.lisp",
+  "sourceCommit": "ef695fafceb4e56c2a2bb39758f2d8640ceac644",
+  "maxWallHours": 22.0,
+  "wallDeadlineUtc": "2026-10-31T01:30:13.2500337Z",
+  "caseSha256": "26CF662F35798A89C0359E4B0C9149E559C00ABB242E4A3CC55FD3FA4733AF10",
+  "wrapperSha256": "A92F3BAEFD7EE19D54A75FAAFD451F15CE039E7CF2DD6D296D8CE4FDC8028C32",
+  "processIdentity": {
+    "wrapper": {
+      "pid": 14324,
+      "name": "pwsh",
+      "sessionId": 4,
+      "createdUtc": "2026-10-30T03:30:12.6663505Z"
+    },
+    "nativeCommand": null,
+    "sbcl": null
+  },
+  "nativeExitCode": null,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {}
+}

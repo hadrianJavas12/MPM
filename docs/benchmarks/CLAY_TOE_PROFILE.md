@@ -79,3 +79,6 @@ geometry independently matches fullPython clip. Three-channel renderer-only
 control PASS,2realstates each/encode+full decode; actualmotion/strainPNGs
 inspected. NOT full terminalreview/mainrun/landslide validation. Studio check
 and36Node tests PASS. No old longnative/gates/renders/replays repeated.
+
+## Actual launch
+30Oct10:30:13WIB/sourceef695faf,actual15143MP/frame0,NATIVE_RUNNING. Wallcap31Oct08:30:13WIB then<=2h savedmedia. Worker27036/wrapper14324/cmd19120/SBCL27868/media2660 Session4,oneidentityproof. Threefrozenhelperschannels autoexport atterminal, no duplicates. New15minquietmonitor active. No toeinitiation/maincompletion claim yet. Prelaunch7exactGitblobs/54ZIPmembers verified.

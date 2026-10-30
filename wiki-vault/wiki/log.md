@@ -1155,3 +1155,6 @@ Packet15indexed/16exactGitblobs/605ZIPmembers with15verified savedinputaliases p
 
 ## [2026-10-30] query | Toe plasticity versus damage and reference comparison
 Re-readUrmi primarypages4-9/actualfigures andWang2017authorPDF. Oldtoe plastifiesat0.5s,crestDphifirstsaved2s dueplateau. Newexplicit20/40profile/quarterclay andthreechannels; scopedcontrols/negativeevidence retained, no exactpaper/toeguarantee. No immutable raw/settings changes.
+
+## [2026-10-30] ingest | Two-angle toe comparison mainrun started
+Sourceef695faf actual15143MP/frame0,30Oct10:30WIB;22hwallcap31Oct08:30WIB then<=2h threechannelautoexport. Initialstateonly, no toeoutcome. Newquiet15minmonitor; rawprivate/settings preserved.
