@@ -69,3 +69,5 @@
 - [[clay60-monitor-recovery]] — original native preserved after status IO failure; monitor and media waiting restored.
 
 Recovery003 at16:44WIB recorded in [[clay60-monitor-recovery]]; original solver retained.
+
+Recovery004 WMI launch recorded in [[clay60-monitor-recovery]].

@@ -49,3 +49,6 @@ terminal archive. Automatic three-video export still pending actual native exit.
 
 30Oct16:44WIB: stale heartbeat09:27UTC reconciled; recovery40048/media28140 absent, no exit cause recorded. Exact original cmd18380/SBCL44532 remain alive. Unchanged recovery script attached as11228 and media43652; NATIVE_RUNNING/WAITING_NATIVE confirmed, no native rerun, original deadline retained. Before-recovery003 statuses/logs preserved in existing recovery directory. No repeated healthy identity checks.
 
+
+30Oct18:42WIB recovery004: monitor11228 absent/reused by unrelated conhost with newer creation, media43652 absent; cause unrecorded. Original cmd18380/SBCL44532 exact identities alive. Unchanged recover.ps1 launched via Win32_Process.Create return0, monitor7060/media20700; NATIVE_RUNNING/WAITING_NATIVE confirmed. Original deadline retained, zero native reruns. WMI avoids tool parent ancestry, not proven session/sleep immunity. Preserve before-recovery004 and WMI launch receipt.
+
