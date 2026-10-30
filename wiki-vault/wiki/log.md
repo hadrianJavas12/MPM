@@ -1182,3 +1182,6 @@ WMI detached unchanged monitor7060/media20700 restored; exact original solver re
 
 ## [2026-10-30] ingest | Human deadline extension
 +12h to31Oct20:46WIB applied to live monitor, original native uninterrupted. [[clay60-monitor-recovery]]
+
+## [2026-10-30] ingest | Clay60 partial terminal
+Six saved states0..2.5s, negative domainX guard at3s,3actualvideos inspected/delivered; no calibrated validation. [[clay60-monitor-recovery]]
