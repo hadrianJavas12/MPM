@@ -15,3 +15,6 @@ replacement media28140 waits on native exit using frozen observer bytes.
 Zero solver reruns, no material failure inferred. Original failures and corrected
 recovery script retained in RUN-monitor-recovery-001. Three videos pending.
 See [[cl-mpm]] and repository handover for authoritative run paths.
+
+30Oct16:44WIB: stale heartbeat09:27UTC reconciled; recovery40048/media28140 absent, no exit cause recorded. Exact original cmd18380/SBCL44532 remain alive. Unchanged recovery script attached as11228 and media43652; NATIVE_RUNNING/WAITING_NATIVE confirmed, no native rerun, original deadline retained. Before-recovery003 statuses/logs preserved in existing recovery directory. No repeated healthy identity checks.
+

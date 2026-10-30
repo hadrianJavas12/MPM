@@ -46,3 +46,6 @@ No source physics/observer bytes changed; no review/render/tests/native rerun.
 Do not repeat recovery/PID checks while healthy. Include recovery artifacts in
 terminal archive. Automatic three-video export still pending actual native exit.
 
+
+30Oct16:44WIB: stale heartbeat09:27UTC reconciled; recovery40048/media28140 absent, no exit cause recorded. Exact original cmd18380/SBCL44532 remain alive. Unchanged recovery script attached as11228 and media43652; NATIVE_RUNNING/WAITING_NATIVE confirmed, no native rerun, original deadline retained. Before-recovery003 statuses/logs preserved in existing recovery directory. No repeated healthy identity checks.
+
