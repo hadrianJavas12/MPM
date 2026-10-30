@@ -34,7 +34,16 @@ function Save-TaskStatus {
       catch { $taskStatus.identityReadError = $_.Exception.Message }
     }
   }
-  $taskStatus | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath ($taskOutput+'-status.json') -Encoding utf8
+  $taskJson = $taskStatus | ConvertTo-Json -Depth 10
+  for ($taskRetry=0; $taskRetry -lt 20; $taskRetry++) {
+    try {
+      [IO.File]::WriteAllText(($taskOutput+'-status.json'),$taskJson,[Text.UTF8Encoding]::new($false))
+      return
+    } catch [IO.IOException] {
+      if ($taskRetry -eq 19) { throw }
+      Start-Sleep -Milliseconds 100
+    }
+  }
 }
 $taskOutput = (Resolve-TaskPath $OutputDirectory).TrimEnd('\','/')
 $taskCase = Resolve-TaskPath $Case

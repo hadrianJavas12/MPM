@@ -138,29 +138,29 @@ def render(report, output, read_vtk, video):
     margin=max(1,.02*max(hi-lo)); bounds=[lo[0]-margin,hi[0]+margin,lo[1]-margin,hi[1]+margin]
     directories={kind:output/f"actual-{kind}-frames" for kind in ("motion","damage","plastic-strain")}
     for directory in directories.values(): directory.mkdir()
-    soil=LinearSegmentedColormap.from_list("soil",["#67432f","#b87943","#ecd6a3"])
+    plastic_max=max(.2,max(float(v["mc_kappa"].max()) for v in values))
     for index,(state,v,verts) in enumerate(zip(displayed,values,patches)):
         for kind,directory in directories.items():
             fig=plt.figure(figsize=(14,6)); ax=fig.add_axes([.07,.15,.81,.67])
-            colours=v["initial_y_m"] if kind=="motion" else (v["mc_kappa"] if kind=="plastic-strain" else v["strength_damage"])
+            colours=v["strength_damage"] if kind=="damage" else v["mc_kappa"]
             collection=PolyCollection(verts,edgecolors="none",linewidths=0,antialiaseds=False,
-                cmap=soil if kind=="motion" else "inferno",
-                norm=Normalize(0,cfg["baseHeight"]+cfg["height"]) if kind=="motion" else Normalize(0,.2 if kind=="plastic-strain" else 1))
+                cmap="inferno",
+                norm=Normalize(0,1 if kind=="damage" else plastic_max))
             collection.set_array(colours); ax.add_collection(collection)
             ax.set(xlim=bounds[:2],ylim=bounds[2:],xlabel="world x (m)",ylabel="world y (m)")
             ax.set_aspect("equal",adjustable="box"); ax.grid(alpha=.12)
             event={0:"initial soil",1:"measured drained equilibrium",2:"instantaneous material switch",3:"gravity-driven MC motion"}[state["phaseCode"]]
             if cfg.get('explicitHsApex'): event += ' | explicit volumetric apex flow'
             status="COMPLETE 8 s PROFILE TRIAL" if report["nativeComplete"] else "PARTIAL TRIAL"
-            channel={"motion":"Soil motion (original depth colours)","damage":"MC frictional strength loss", "plastic-strain":"Accumulated equivalent plastic shear strain (NOT damage)"}[kind]
+            channel={"motion":"Soil motion coloured by accumulated plastic strain","damage":"MC frictional strength loss", "plastic-strain":"Accumulated equivalent plastic shear strain (NOT damage)"}[kind]
             fig.suptitle(f"{channel} | {status}\nONE constant60deg face; no notch; native t={state['nativeTimeS']:.2f} s\nExplicit volumetric apex flow; gravity from zero stress",fontsize=11)
             fig.text(.07,.035,f"All {report['particleCount']} material patches from actual F; equal metres; overlaps/gaps retained; no calibrated validation",fontsize=9)
-            if kind!="motion": fig.colorbar(collection,cax=fig.add_axes([.915,.24,.018,.43]),label="kappa (colour capped at0.2; values retained)" if kind=="plastic-strain" else "D_phi = 1 - tan(phi) / tan(phi_peak)")
+            fig.colorbar(collection,cax=fig.add_axes([.915,.24,.018,.43]),label="D_phi = 1 - tan(phi) / tan(phi_peak)" if kind=="damage" else "kappa (accumulated equivalent J2 plastic strain)")
             fig.savefig(directory/f"frame_{index:04d}.png",dpi=100)
             if index==len(displayed)-1: fig.savefig(output/f"proper-{kind}-result.png",dpi=140)
             plt.close(fig)
     media={"status":"PASS","scope":SCOPE,"actualMovieStates":len(displayed),"allParticlesShown":True,
-           "coordinateScale":1,"colourRanges":{"damage":[0,1],"plastic-strain":[0,.2]},"interpolation":False,"plotBoundsWorldM":bounds,
+           "coordinateScale":1,"colourRanges":{"damage":[0,1],"plastic-strain":[0,plastic_max],"motion":[0,plastic_max]},"motionColourField":"mc_kappa","fixedColourScaleAcrossStates":True,"interpolation":False,"plotBoundsWorldM":bounds,
            "renderGeometry":"Actual F convects each original square patch; numerical quadrature domains distinct; overlaps/gaps retained",
            "sameActualStateSequenceAndTimingForAllMovies":True,"movies":{}}
     if video:

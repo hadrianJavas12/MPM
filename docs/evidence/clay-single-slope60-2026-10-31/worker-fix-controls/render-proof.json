@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "scope": "SINGLE_CONSTANT60_CLAY_THREE_CHANNEL_TRIAL_NOT_CALIBRATED_VALIDATION",
+  "actualMovieStates": 6,
+  "allParticlesShown": true,
+  "coordinateScale": 1,
+  "colourRanges": {
+    "damage": [
+      0,
+      1
+    ],
+    "plastic-strain": [
+      0,
+      1.33219115201485
+    ],
+    "motion": [
+      0,
+      1.33219115201485
+    ]
+  },
+  "motionColourField": "mc_kappa",
+  "fixedColourScaleAcrossStates": true,
+  "interpolation": false,
+  "plotBoundsWorldM": [
+    -13.440001163217588,
+    61.44000024778588,
+    -9.44001034595893,
+    17.440000027134683
+  ],
+  "renderGeometry": "Actual F convects each original square patch; numerical quadrature domains distinct; overlaps/gaps retained",
+  "sameActualStateSequenceAndTimingForAllMovies": true,
+  "movies": {
+    "motion": {
+      "video": {
+        "path": "D:\\MPM\\output\\clay-single-slope60-2026-10-31\\controls\\plastic-render-001\\soil-motion.mp4",
+        "bytes": 28898,
+        "sha256": "22a988f4c4d60fc48a0d3eff02071e4be7c975095b6c41c65a22bda3ce740629"
+      },
+      "decodedFrames": 6,
+      "framesPerSecond": 5
+    },
+    "damage": {
+      "video": {
+        "path": "D:\\MPM\\output\\clay-single-slope60-2026-10-31\\controls\\plastic-render-001\\strength-damage.mp4",
+        "bytes": 27853,
+        "sha256": "a06ad3b8259b11adc99de67f5eb2272ceca80d1899f168b74ec44ee91d28d965"
+      },
+      "decodedFrames": 6,
+      "framesPerSecond": 5
+    },
+    "plastic-strain": {
+      "video": {
+        "path": "D:\\MPM\\output\\clay-single-slope60-2026-10-31\\controls\\plastic-render-001\\plastic-shear-strain.mp4",
+        "bytes": 29622,
+        "sha256": "65f2c91fab81211e50ba33230787a11ce3c4d493bdd9e288196c88f5baa7a9d5"
+      },
+      "decodedFrames": 6,
+      "framesPerSecond": 5
+    }
+  }
+}

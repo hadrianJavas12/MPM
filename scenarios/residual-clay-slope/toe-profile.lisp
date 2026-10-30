@@ -1,7 +1,13 @@
 ;;;; Explicit comparison: gentle upper face and steep lower toe, no weak seed.
 (in-package :cl-mpm/scenario/residual-clay-slope)
 (defparameter *toe-failure-directory* nil)
-(defclass particle-clay-toe (cl-mpm/models/mc-hs-apex:particle-mc-hs-apex) ())
+(defclass particle-clay-toe (cl-mpm/models/mc-hs-apex:particle-mc-hs-apex)
+  ((failure-directory :initform nil :accessor toe-particle-failure-directory)))
+;; Scenario-owned dispatch must not depend on a special binding in the caller:
+;; iterate-over-mps executes on SBCL worker threads, even with one worker.
+(defmethod cl-mpm::update-particle :around (mesh (mp particle-clay-toe) dt)
+  (cl-mpm::update-particle-kirchoff mesh mp dt)
+  (u::proper-domain-update mesh mp))
 (defun toe-surface (cfg x)
   (when (gethash "singleSlope" cfg)
     (return-from toe-surface
@@ -87,9 +93,10 @@
             "guard" "Original calculate-df rejects det(I+stretchTensor)<0; no clamp/retry")))
       (error (c) (format *error-output* "~&Failure context capture failed: ~A~%" c)))))
 (defmethod cl-mpm::update-stress-mp :around (mesh (mp particle-clay-toe) dt fbar)
-  (handler-bind ((cl-mpm/errors:error-dF-negative
+  (let ((*toe-failure-directory* (toe-particle-failure-directory mp)))
+   (handler-bind ((cl-mpm/errors:error-dF-negative
                    (lambda (c) (declare (ignore c)) (capture-toe-increment-failure mp dt fbar))))
-    (call-next-method)))
+    (call-next-method))))
 
 (defun toe-onset (sim ctx cfg)
   (let ((plastified 0) (damaged 0) (toe-plastic 0) (toe-damage 0)
@@ -118,6 +125,7 @@
            "trigger" "Gravity only, no notch/load/weakzone; same homogeneous prior-triaxial clay and positive quarter residual"
            "initialization" "Zero stress/kappa,2s gravity ramp; no geostatic equilibrium claim, no field reset or undrained switch"
            "apexConvention" "Explicit c0 HS gA=p volumetric apex extension, strict regular shear psi0"
+           "domainUpdate" "Scenario particle dispatch: l_i=l_i0*sqrt(J), independent of caller thread bindings"
            "damageDefinition" "D_phi=1-tan(phi)/tan(33.99deg),0..0.75; plastic kappa is separate, no strength loss before kappa.037"
            "historyFile" "history.csv" "particleFile" "material-state.csv" "dynamicVtkPattern" "vtk/particles_%04d.vtk"
            "scientificallyValidated" 'yason:false "landslideVerified" 'yason:false)))
@@ -141,6 +149,8 @@
                   (observation-context-switch-positions ctx) (map 'vector (lambda (p) (cl-mpm/utils:vector-copy (cl-mpm/particle:mp-position p))) (cl-mpm:sim-mps sim))
                   (observation-context-switch-kappa ctx) (map 'vector #'mc:particle-kappa (cl-mpm:sim-mps sim))
                   (observation-context-switch-work ctx) (map 'vector #'mc:particle-plastic-work (cl-mpm:sim-mps sim)))
+            (loop for mp across (cl-mpm:sim-mps sim) do
+              (setf (toe-particle-failure-directory mp) out))
             (setf (gethash "particleCount" manifest) (length (cl-mpm:sim-mps sim)))
             (unless (= (length (cl-mpm:sim-mps sim))
                        (if (gethash "singleSlope" cfg) (if (= (value cfg "slope") 60d0) 13517 14010) 15143))
