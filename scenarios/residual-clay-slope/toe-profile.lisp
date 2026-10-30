@@ -3,6 +3,12 @@
 (defparameter *toe-failure-directory* nil)
 (defclass particle-clay-toe (cl-mpm/models/mc-hs-apex:particle-mc-hs-apex) ())
 (defun toe-surface (cfg x)
+  (when (gethash "singleSlope" cfg)
+    (return-from toe-surface
+      (+ (value cfg "baseHeight")
+         (max 0d0 (- (value cfg "height")
+                      (* (tan (* pi (/ (value cfg "slope") 180d0)))
+                         (max 0d0 (- x (value cfg "crestLength")))))))))
   (let* ((crest (value cfg "crestLength")) (base (value cfg "baseHeight"))
          (height (value cfg "height")) (lower (value cfg "lowerFaceHeight"))
          (upper-tan (tan (* pi (/ (value cfg "upperSlopeDeg") 180d0))))
@@ -20,6 +26,14 @@
           (gethash "toeProfile" cfg) t
           (gethash "toeX" cfg) (+ 24d0 (/ 7d0 (tan (* pi (/ 20d0 180d0))))
                                        (/ 3d0 (tan (* pi (/ 40d0 180d0))))))
+    cfg))
+
+(defun single-slope-config ()
+  (let ((cfg (toe-config)))
+    (dolist (key '("upperSlopeDeg" "lowerSlopeDeg" "lowerFaceHeight" "toeProfile"))
+      (remhash key cfg))
+    (setf (gethash "singleSlope" cfg) t
+          (gethash "toeX" cfg) (+ 24d0 (/ 10d0 (tan (* pi (/ 40d0 180d0))))))
     cfg))
 
 (defun build-toe-slope (material cfg)
@@ -107,6 +121,9 @@
            "historyFile" "history.csv" "particleFile" "material-state.csv" "dynamicVtkPattern" "vtk/particles_%04d.vtk"
            "scientificallyValidated" 'yason:false "landslideVerified" 'yason:false)))
     (ensure-directories-exist vtk)
+    (when (gethash "singleSlope" cfg)
+      (setf (gethash "scenario" manifest) "clay-single-slope"
+            (gethash "geometry" manifest) "ONE constant40degree face, H10/base8/crest24/domain72x24; no second angle or notch"))
     (labels ((progress (phase)
                (setf (gethash "phase" manifest) phase (gethash "savedFrames" manifest) saved
                      (gethash "updates" manifest) updates)
@@ -124,7 +141,8 @@
                   (observation-context-switch-kappa ctx) (map 'vector #'mc:particle-kappa (cl-mpm:sim-mps sim))
                   (observation-context-switch-work ctx) (map 'vector #'mc:particle-plastic-work (cl-mpm:sim-mps sim)))
             (setf (gethash "particleCount" manifest) (length (cl-mpm:sim-mps sim)))
-            (unless (= (length (cl-mpm:sim-mps sim)) 15143) (error "Two-angle center-clip count must equal15143."))
+            (unless (= (length (cl-mpm:sim-mps sim)) (if (gethash "singleSlope" cfg) 14010 15143))
+              (error "Declared center-clip particle count differs."))
             (configure-output sim)
             (cl-mpm/output:save-vtk-mesh (merge-pathnames "mesh.vtk" vtk) sim)
             (cl-mpm/scenario/urmi-damage40/output-streams:with-retained-output-file (history (merge-pathnames "history.csv" out))
@@ -162,5 +180,13 @@
                 'cl-mpm/scenario/residual-clay-slope::particle-clay-toe)
       (error "Wrong toe-profile material class.")) cfg))
 (defmethod execute-scenario ((scenario (eql :clay-toe-profile)) (case simulation) config directory)
+  (declare (ignore scenario))
+  (cl-mpm/scenario/residual-clay-slope::run-toe-profile (simulation-material case) config directory))
+
+(defmethod compile-scenario ((scenario (eql :clay-single-slope)) (case simulation))
+  (let ((cfg (simulation-parameters case)))
+    (unless (equalp cfg (cl-mpm/scenario/residual-clay-slope::single-slope-config))
+      (error "Single40degree recipe differs from declared config.")) cfg))
+(defmethod execute-scenario ((scenario (eql :clay-single-slope)) (case simulation) config directory)
   (declare (ignore scenario))
   (cl-mpm/scenario/residual-clay-slope::run-toe-profile (simulation-material case) config directory))

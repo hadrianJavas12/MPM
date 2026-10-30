@@ -1158,3 +1158,6 @@ Re-readUrmi primarypages4-9/actualfigures andWang2017authorPDF. Oldtoe plastifie
 
 ## [2026-10-30] ingest | Two-angle toe comparison mainrun started
 Sourceef695faf actual15143MP/frame0,30Oct10:30WIB;22hwallcap31Oct08:30WIB then<=2h threechannelautoexport. Initialstateonly, no toeoutcome. Newquiet15minmonitor; rawprivate/settings preserved.
+
+## [2026-10-30] ingest | Human replaces two-angle run with single40deg
+Exactidentity-native/watcherstops, no dynamics and no materialfailureclaim; allrawpreserved/onearchive. Newsingle40face constructor and577exactgeometrychecks/14010nativeinitialMP PASS0updates, sameclay/floor/3channels.

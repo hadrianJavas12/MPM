@@ -21,3 +21,6 @@ is introduced here. Newdeclared hypothesis retains clay/quarterstrength,
 changes profile toupper20deg/lower40deg/H10, introduces no weakzone/notch.
 No equilibrium/faithfulpaperreproduction/toe-onset guarantee. Target8s is a
 focused onsetcomparison, not completion of old20s target. Record actualoutcome.
+
+## Human geometry correction
+Human requests oneconstantangle. Restore40deg, stop/retaintwoangleinitial-onlyattempt byexplicitintent; no materialfailureclaim. Keepquarterclay andthreechannelobserver. This is not a lateDFstabilityfix or toeinitiationguarantee.

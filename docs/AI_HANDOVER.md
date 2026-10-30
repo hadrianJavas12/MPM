@@ -1,5 +1,31 @@
 # AI Engineering Handover — CL-MPM
 
+## READY30October10:38WIB - HUMAN replaces two angles with ONE constant40deg
+
+Branch codex/clay-single-slope40. Prior40deg selection used; human explicitly
+requests oneconstant face, no newclarificationneeded. Oldtwoangle RUN
+output/clay-toe-profile-2026-10-30/profile-h05-001 was STOPPED BY HUMAN GEOMETRY
+REPLACEMENT: exactverifiedmedia2660 andnativecmd19120 trees stopped, wrapper
+records exit-1/FAILED_NATIVE; this is NOT a materialfailure. Nativehad only
+frame0/15143MP/time0, no dynamics. Originalmanifest stillrunning untouched;
+adjacent human-geometry-stop.json recordsauthority. Oldmonitor deleted, no
+initial-only movie rerender. One actualoldattempt archive in
+docs/evidence/clay-single-slope40-2026-10-30/replacement. Preservealloriginals.
+
+NewintendedRUN output/clay-single-slope40-2026-10-30/main-h05-001. Single40deg
+face/H10/crest24/base8/domain72x24/h.5/PPC2x2/14010MP, priorclayE20MPa/nu.2/
+rho2000/c0/regularpsi0/peakphi33.99/plateauto.037/quartertanphi residual.
+SameexplicitHSapex/USF/FLIP/mass1/CFL.2/oneworker/2sgravityramp/local.75then.02/
+volume-cpGIMP/no notch/driver/reset/weakzone. Target8s17states/22hwall+<=2hmedia.
+This restores previous40deg physics and may reproduce oldDFdistortion; no
+claim of fixingthat instep orguaranteedtoeonset. Newfailureobserver records
+actualparticle ifrecurs, no clamp/retry/strength/root/tolerance change.
+577exact matches to originalstraight40surface and14010nativeinitialIDs/J1/
+kappa0 PASS,0physicalupdates; no old2USF/material/rendergates repeated.
+Studio check+36Node testsPASS. Separatefrozen3channel observer BEFORElaunch,
+fullsavedreview NOTyetexecuted. Allmotion/Dphi/kappa filledactualpatches.
+
+
 ## LIVE30October10:30WIB - toe profile native RUNNING, three automatic videos
 
 RUN output/clay-toe-profile-2026-10-30/profile-h05-001/sourceef695fafceb4e56c2a2bb39758f2d8640ceac644.

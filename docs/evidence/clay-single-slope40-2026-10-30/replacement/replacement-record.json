@@ -1,0 +1,15 @@
+{
+  "reason": "Human requests ONE constant angle; choose prior40deg",
+  "oldNativeStatusMeaning": "Wrapper FAILED_NATIVE/exit-1 caused by explicit verifiedhuman process-tree stop, NOT materialfailure",
+  "oldNativeClockLastSavedS": 0,
+  "oldFrames": 1,
+  "oldDynamicResultClaim": false,
+  "oldMediaWatcher": "Intentionally stopped before native; no pointless initial-only movie export",
+  "oldMonitorDeleted": true,
+  "archiveMembers": 540,
+  "newGeometryChecks": 577,
+  "newActualNativeInitialParticles": 14010,
+  "newPhysicalTestUpdates": 0,
+  "newCase": "cases/benchmarks/clay-single-slope40.lisp",
+  "knownRisk": "Restores prior40degree geometry/physics that failedlateDF; no inventedstability repair. Newguardobserver retainsactualfailedtuple ifrecurs; do not guarantee8s or bottominitiation."
+}

@@ -1,0 +1,19 @@
+{
+  "reason": "HUMAN_SUPERSEDED_TWO_ANGLE_PROFILE_WITH_SINGLE_CONSTANT_SLOPE",
+  "requestedUtc": "2026-10-30T03:37:36.1849389Z",
+  "actions": [
+    {
+      "creationUtc": "2026-10-30T03:30:13.5074971Z",
+      "pid": 2660,
+      "name": "pwsh",
+      "action": "Human-authorized exact process-tree stop"
+    },
+    {
+      "creationUtc": "2026-10-30T03:30:13.4733916Z",
+      "pid": 19120,
+      "name": "cmd",
+      "action": "Human-authorized exact process-tree stop"
+    }
+  ],
+  "materialFailureClaim": false
+}

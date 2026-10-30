@@ -82,3 +82,6 @@ and36Node tests PASS. No old longnative/gates/renders/replays repeated.
 
 ## Actual launch
 30Oct10:30:13WIB/sourceef695faf,actual15143MP/frame0,NATIVE_RUNNING. Wallcap31Oct08:30:13WIB then<=2h savedmedia. Worker27036/wrapper14324/cmd19120/SBCL27868/media2660 Session4,oneidentityproof. Threefrozenhelperschannels autoexport atterminal, no duplicates. New15minquietmonitor active. No toeinitiation/maincompletion claim yet. Prelaunch7exactGitblobs/54ZIPmembers verified.
+
+## Superseded by human: one constant angle
+30Oct10:37WIB human requests ONE face. Two-angle initial-only native andwatcher explicitly stopped withexactcreation checks, no materialfailure inferred from wrapperexit-1. No dynamics/no export needed. Replacementuses originalsingle40deg geometry, samequarterclay/capture/threechannels/8starget. New577surface matches and14010nativeinitialchecksPASS0updates; no claimlateDFrepair. Olddataarchivedonce, monitor deleted.

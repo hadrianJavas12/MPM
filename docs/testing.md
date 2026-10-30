@@ -1377,3 +1377,6 @@ identicalfailure/0MPM, original6modelbytes verifiedbefore/after. Positive
 trialtrace3.036075Pa cannot satisfy c0/positivephi MC using tracefreepsi0flow;
 no root or tolerance/clamp remedy applied. BothactualMP4/PNG retained, one
 terminal source/raw/runtime/media packet; no solverrestart. Monitor deleted.
+
+## 30October single40degree replacement
+New577surface exactmatches tooriginal40deg function and14010nativeinitialMP/IDs/J1/kappa0 checksPASS,0physicalupdates. Studio check+36Node testsPASS. Two-angle runstoppedbyhumanrequest, not materialfailure. No passedoldcontrol repetitions.
