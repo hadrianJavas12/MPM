@@ -1191,3 +1191,6 @@ Recorded actual worker binding defect, five tensor/two USF controls,13 monitor c
 
 ## [2026-10-31] ingest | Corrected clay60 launch
 Recorded d428e1a2 run, actual13517MP/frame0/sourceDLL proof, frozen kappa-coloured media and finite heartbeat. Full8s outcome pending.
+
+## [2026-10-31] ingest | Corrected clay60 partial terminal
+Recorded5.3041sDFnegative failure,11savedstates/3deliveredmovies,315sourceDLL/savedintegrityPASS and severeFdistortion/boundary caveat. No native rerun;terminalarchive/exactGitproof close this attempt.

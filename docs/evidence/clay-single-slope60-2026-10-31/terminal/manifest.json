@@ -1,0 +1,3802 @@
+{
+  "scope": "Partial60degree corrected volume-domain numerical trial; no calibrated validation",
+  "nativeExit": 1,
+  "attemptedTimeS": 5.304099700671356,
+  "savedTimesS": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0
+  ],
+  "particles": 13517,
+  "failure": "Actual incremental deformation guard: ID7699,detDF=-14.712183890520901,position[71.02259078524499,2.062026228389697]; severe F distortion,not negative numerical domain",
+  "sourceCommit": "d428e1a2d103beb6774e9a2c67f75e3597542cd0",
+  "archiveRecords": [
+    {
+      "path": "worker-domain-h05-001/actual-df-failure.json",
+      "bytes": 808,
+      "sha256": "a2536ea1e51aa70d0e801d4a94912b767d1a90807de09edb8113b5f50aaf7b6a",
+      "canonical": "worker-domain-h05-001/actual-df-failure.json"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0000.png",
+      "bytes": 40825,
+      "sha256": "8006ab23d5f7f4ce2b83de420ae7d0e7d431d2de1ee456161924ed25d15bea6d",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0000.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0001.png",
+      "bytes": 40977,
+      "sha256": "1318a30b4920dcd5ff1c78e29ad1894d7eecc9154555d0560e7a277d794d6b43",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0001.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0002.png",
+      "bytes": 40941,
+      "sha256": "388478e51c512f74513d230985af572878ffc1da2ed3b1d8d95f752b70f79b1a",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0002.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0003.png",
+      "bytes": 42200,
+      "sha256": "b45900235a907e587d1a47c00e323cfa94a33979555388dbe1b2a79847026f2b",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0003.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0004.png",
+      "bytes": 43751,
+      "sha256": "e3329304e5b775a04807802aa1495f159436763c696d0d6ba6bd15c9d0c7c507",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0004.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0005.png",
+      "bytes": 42783,
+      "sha256": "b3e884c25f79b6d87d38e8b84522ce13a2f836bfdbf44b44660f3998a7a15c9a",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0005.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0006.png",
+      "bytes": 42205,
+      "sha256": "fef921764f856e51def9bc845d7d5db2d6f1cd53262b2a2a1ba9352212a6f93e",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0006.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0007.png",
+      "bytes": 42376,
+      "sha256": "b1ba05a4abe6dd5a6290f4eba45d400d986f63b86097b5fe9a7986e1a7a01adc",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0007.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0008.png",
+      "bytes": 42561,
+      "sha256": "23e106c0f0e5735e7ce3940b45bbf1725fc58d5313949d8c3cc828b99c8cc5ea",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0008.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0009.png",
+      "bytes": 42916,
+      "sha256": "2dea1133bcba2bedf7468f0e1460ab45d94e9963e2732fe432e480f37e763595",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0009.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0010.png",
+      "bytes": 43391,
+      "sha256": "cc64ff242525d49ae8b802aadc58e878c2b1c1b73538cd27842c09e1c1059f89",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-damage-frames/frame_0010.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0000.png",
+      "bytes": 43807,
+      "sha256": "94ba57153ffabc87ff7cb102c0192592bdb5b2d89ea5cf010ad1c7baf52f366b",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0000.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0001.png",
+      "bytes": 43963,
+      "sha256": "44995341be87687afef2bee49887a8d52a30a7fc72ad14cb699347a0d38a1170",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0001.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0002.png",
+      "bytes": 43922,
+      "sha256": "3e9d50f1bde9f309ae814c2c527538851d9fb50c4016ee3da34a2b4c2fdb8231",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0002.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0003.png",
+      "bytes": 44105,
+      "sha256": "f190fbdac3185d5354c70ff24e530196b40b89b4c198c3abd6f6281e482b81ae",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0003.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0004.png",
+      "bytes": 44436,
+      "sha256": "3b7c9efd71eb47216f2ee1cbb330c70907f351af4582291c348ee99aafdbe140",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0004.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0005.png",
+      "bytes": 45581,
+      "sha256": "ad170c44acc1b53d021b38a02101692b11b28d202f60494162dbe13fa841a558",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0005.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0006.png",
+      "bytes": 46419,
+      "sha256": "713d77717a43fbe8025beb0fda458a017da56e4fe050d619dd00f3742a76d7cc",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0006.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0007.png",
+      "bytes": 47493,
+      "sha256": "138acb8c8525308938f42cef9d9b73822d17c50acd2b5618346d81d6d3b02f07",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0007.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0008.png",
+      "bytes": 48172,
+      "sha256": "bcb323349ef3c5154cec28f1c005f00114a95ef9bc7025d1484bd660a1d5f26f",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0008.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0009.png",
+      "bytes": 48721,
+      "sha256": "8120e23b31b2cd2e0ec653a41be2aeb28eaeff5c491d36a0e70511d29b6687e0",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0009.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0010.png",
+      "bytes": 49748,
+      "sha256": "e5cc7f965b4fdb83c4b3c606ec426d39542f599338218a288689be1895858fcd",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-motion-frames/frame_0010.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0000.png",
+      "bytes": 44224,
+      "sha256": "fd4be8976e1aa9a66e78141de839869c9d0239dc8e2c5848e183742db20e9af2",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0000.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0001.png",
+      "bytes": 44380,
+      "sha256": "f9bbc15d355a3983c16438facc1d7bde64e63bb3f1afd4272c4d5ca569e921c9",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0001.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0002.png",
+      "bytes": 44335,
+      "sha256": "0be31a7302dc976a996475610a7bd6c158f63d149a8f7cc78bfc204a934dfe43",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0002.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0003.png",
+      "bytes": 44520,
+      "sha256": "f1613a63da474063effe828a66e911b307e768561fb326308236f65555796d26",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0003.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0004.png",
+      "bytes": 44849,
+      "sha256": "3bab1cb88f388a08313fcab357ed5632f5a1e9fc1d8c0217112aa868c7103319",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0004.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0005.png",
+      "bytes": 45997,
+      "sha256": "77c7e13a71d20378c5583990fd99acb3615b689e4764c8c9474ef37fd25b4c69",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0005.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0006.png",
+      "bytes": 46836,
+      "sha256": "a152af83e7ef5194eb4bb229412d997da6c829acbd4e04a328dd5f956398cb6a",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0006.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0007.png",
+      "bytes": 47899,
+      "sha256": "c221d16389d0ab67e8c68446385b10807d2606354122b09c17d8e529ad041e7e",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0007.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0008.png",
+      "bytes": 48595,
+      "sha256": "f85f8df7f20afb69e53e0f463e63e7da10ef02fbaad62998ce55cc290c7f4caa",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0008.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0009.png",
+      "bytes": 49140,
+      "sha256": "556d7b7905cf7717e4146016404be193dec9610c2a58b7c505685de0a9dfcddb",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0009.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0010.png",
+      "bytes": 50167,
+      "sha256": "070577260c657701aa74422dee2ff611751679fee093fb3c86c8bc156538f164",
+      "canonical": "worker-domain-h05-001/filled-review-001/actual-plastic-strain-frames/frame_0010.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/analysis-freeze.json",
+      "bytes": 1246,
+      "sha256": "296bb923dad1a8d190c7dac533adce346ad0164ac99611f50078720ee5bbf5f7",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-freeze.json"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/analysis-source/__pycache__/plot_m5_cliff_comparison.cpython-312.pyc",
+      "bytes": 35676,
+      "sha256": "65fcf992f3dbbe4372f36491005fbd380f117d7875cec54888cfbe30a514b6a4",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-source/__pycache__/plot_m5_cliff_comparison.cpython-312.pyc"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/analysis-source/__pycache__/preview-urmi-damage40.cpython-312.pyc",
+      "bytes": 30252,
+      "sha256": "0509ba57d9345aa4e978536dba700690ff08be6eabf1448bbdcbf8b85cac566a",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-source/__pycache__/preview-urmi-damage40.cpython-312.pyc"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/analysis-source/__pycache__/review-urmi-damage40.cpython-312.pyc",
+      "bytes": 61010,
+      "sha256": "d38a484ca88601e0fa71b82e12e0eb9bd9481d95f31e567596c5f8c9284a33e5",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-source/__pycache__/review-urmi-damage40.cpython-312.pyc"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/analysis-source/plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-source/plot_m5_cliff_comparison.py"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/analysis-source/preview-urmi-damage40.py",
+      "bytes": 21761,
+      "sha256": "16beaba885a3154e7bc9e7602ac51c2aa247975b2312593408f162c783bf8a50",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-source/preview-urmi-damage40.py"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/analysis-source/review-clay-single-slope60.py",
+      "bytes": 22675,
+      "sha256": "f4d530dd13da06978a1ebfc52a31238d580b3d8aaf7c8638eda79748ab653a32",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-source/review-clay-single-slope60.py"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/analysis-source/review-urmi-damage40.py",
+      "bytes": 41472,
+      "sha256": "3f48dc592a311132c8acabc736b548f3ce61aed253a61c481ce182d696a53a7b",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-source/review-urmi-damage40.py"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/damage-decode.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-decode.stderr.log"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/damage-decode.stdout.log",
+      "bytes": 192,
+      "sha256": "5d907005f23d43e8468caa778ee1a0801f460b4bcd9d09728d7588db2cd02c45",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-decode.stdout.log"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/damage-video-command.json",
+      "bytes": 508,
+      "sha256": "293e0a0ce12fd90cef895bc59fb20238f24eecd041cb388acf55684202e01f52",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-video-command.json"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/damage-video.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-decode.stderr.log"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/input-copy-binding.json",
+      "bytes": 10789,
+      "sha256": "6b1b691e5ef7293ec06524fc79b893e5f5a954b001c1045769600320c39fa30c",
+      "canonical": "worker-domain-h05-001/filled-review-001/input-copy-binding.json"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/integrity.json",
+      "bytes": 19205,
+      "sha256": "04f99efcafc62d606f7b0ccc79ec5a1cd3668336c67567f328a938675d23bbe1",
+      "canonical": "worker-domain-h05-001/filled-review-001/integrity.json"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/motion-decode.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-decode.stderr.log"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/motion-decode.stdout.log",
+      "bytes": 192,
+      "sha256": "5bca1f99ba1b888b11373a4c8cc6e26bf10f1eae30356b0868bf9fc830e6663d",
+      "canonical": "worker-domain-h05-001/filled-review-001/motion-decode.stdout.log"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/motion-video-command.json",
+      "bytes": 504,
+      "sha256": "9d092cbb547c9bab41a3b14110d403bc11fbabd1319078a56702e04dc59594e4",
+      "canonical": "worker-domain-h05-001/filled-review-001/motion-video-command.json"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/motion-video.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-decode.stderr.log"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/observed-native-manifest.json",
+      "bytes": 1855,
+      "sha256": "8cfa25692f459bb32907f30a8c73a535a0a28e6399f2706d525bd0bf4cb6597b",
+      "canonical": "worker-domain-h05-001/filled-review-001/observed-native-manifest.json"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/plastic-shear-strain.mp4",
+      "bytes": 34424,
+      "sha256": "47ad3b419dfd097405a5e27800a7eb664a387377b8fdf11c837c6b326db60285",
+      "canonical": "worker-domain-h05-001/filled-review-001/plastic-shear-strain.mp4"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/plastic-strain-decode.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-decode.stderr.log"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/plastic-strain-decode.stdout.log",
+      "bytes": 192,
+      "sha256": "95a0a8a9964a16a7910649c6ed082e5c2743a3055d596e0b05d467ad80429283",
+      "canonical": "worker-domain-h05-001/filled-review-001/plastic-strain-decode.stdout.log"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/plastic-strain-video-command.json",
+      "bytes": 521,
+      "sha256": "57a014be7b08d17daf618096859fa84e79b2e7870180a9494af911bd779402a6",
+      "canonical": "worker-domain-h05-001/filled-review-001/plastic-strain-video-command.json"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/plastic-strain-video.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-decode.stderr.log"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/proper-damage-result.png",
+      "bytes": 66551,
+      "sha256": "f80e2b8714cd05e09a0d38777083cb0e163d72a5d82bf5976094e2eea4405f3a",
+      "canonical": "worker-domain-h05-001/filled-review-001/proper-damage-result.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/proper-motion-result.png",
+      "bytes": 76245,
+      "sha256": "20454d48e174202b11abc0f29e53357b956fa9e5cb52f3fd15a3b2915fd8a856",
+      "canonical": "worker-domain-h05-001/filled-review-001/proper-motion-result.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/proper-plastic-strain-result.png",
+      "bytes": 77024,
+      "sha256": "4aae26b2bb5c42703ad61e1c5361715351e80f4a6b2b68caf5aaef5ef51f6226",
+      "canonical": "worker-domain-h05-001/filled-review-001/proper-plastic-strain-result.png"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/review.json",
+      "bytes": 21236,
+      "sha256": "3f544665a4f389c73e3a4ca70d077a1281e615c13675c07314b7e21a1776b2e2",
+      "canonical": "worker-domain-h05-001/filled-review-001/review.json"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/history.csv",
+      "bytes": 11596,
+      "sha256": "cb02d13529d08dd2a0dd370c8202cffbb7b7637df0a439002902cf1a74763b16",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/history.csv"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/material-state.csv",
+      "bytes": 163493972,
+      "sha256": "4c49492d620ac1315f0c16b7c6b06241a90cb7c7aefd168fef872e0b96b4048d",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/material-state.csv"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0000.vtk",
+      "bytes": 5084778,
+      "sha256": "1eb4c96c5ca54b5b646b4ddd3e398ff975ba5453f8991367875d7e80597b2aa6",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0000.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0001.vtk",
+      "bytes": 5084778,
+      "sha256": "1b3eb1c490a0640a9a33032b86abc3bd503b9a60729208b869c1d6a8a634b8cd",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0001.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0002.vtk",
+      "bytes": 5084778,
+      "sha256": "76d37e3b84ec38c6c8dc26a1d0ecfd746617f2e2d161f391089eb6349142ff69",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0002.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0003.vtk",
+      "bytes": 5084778,
+      "sha256": "b241d957935e8ef80a704db23336889ed7de1ecb1e8703f5ad76255b1f50cbc0",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0003.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0004.vtk",
+      "bytes": 5084778,
+      "sha256": "2222456e102e16e3f28fc3fd967296827e7b3a86a3bac8204beb1c2d1cce842b",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0004.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0005.vtk",
+      "bytes": 5084778,
+      "sha256": "4c4f9e146fee29b6056af6e9544a11f9f51e027db8a9d3345bb1afd86e9b857f",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0005.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0006.vtk",
+      "bytes": 5084778,
+      "sha256": "7723e1e3ba8e50b525c75b4f869f5637efee53ff087c51555de11296042e1f76",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0006.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0007.vtk",
+      "bytes": 5084778,
+      "sha256": "49402fc62d65bfcf1e98c81c364d2cf89bb01730eb19732f4c7fe81b0bcc49df",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0007.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0008.vtk",
+      "bytes": 5084778,
+      "sha256": "dc42f36fa61f6d0de75d1e18daf851f6a535277b64e14fb1aad45df9419fccad",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0008.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0009.vtk",
+      "bytes": 5084778,
+      "sha256": "ff0d3a7297c237738342dbe9d9fd151e3e6d80dd6d5b3057d8fc3c2ed80769a8",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0009.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0010.vtk",
+      "bytes": 5084778,
+      "sha256": "8644f65967c3777ae50b45af3af517e47e28913ceeaa7f5300cadb781a1d1d34",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0010.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/soil-motion.mp4",
+      "bytes": 33977,
+      "sha256": "24d88f0209a04f4937081e135f94f8e6adb6585af080f8a724e94cce88d9b211",
+      "canonical": "worker-domain-h05-001/filled-review-001/soil-motion.mp4"
+    },
+    {
+      "path": "worker-domain-h05-001/filled-review-001/strength-damage.mp4",
+      "bytes": 33144,
+      "sha256": "20f67585deef88af5889e3c0b8613b8774202dc4e70d0b6b384f9d0945f12142",
+      "canonical": "worker-domain-h05-001/filled-review-001/strength-damage.mp4"
+    },
+    {
+      "path": "worker-domain-h05-001/history.csv",
+      "bytes": 11596,
+      "sha256": "cb02d13529d08dd2a0dd370c8202cffbb7b7637df0a439002902cf1a74763b16",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/history.csv"
+    },
+    {
+      "path": "worker-domain-h05-001/manifest.json",
+      "bytes": 1855,
+      "sha256": "8cfa25692f459bb32907f30a8c73a535a0a28e6399f2706d525bd0bf4cb6597b",
+      "canonical": "worker-domain-h05-001/filled-review-001/observed-native-manifest.json"
+    },
+    {
+      "path": "worker-domain-h05-001/material-state.csv",
+      "bytes": 163493972,
+      "sha256": "4c49492d620ac1315f0c16b7c6b06241a90cb7c7aefd168fef872e0b96b4048d",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/material-state.csv"
+    },
+    {
+      "path": "worker-domain-h05-001/onset-history.json",
+      "bytes": 2578,
+      "sha256": "a8e5a551142c9196f8f560c84696fe360d4f86f8e5e80b3e56d7352116aec452",
+      "canonical": "worker-domain-h05-001/onset-history.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/adapters/chalk.fasl",
+      "bytes": 7257,
+      "sha256": "fda7565c40d81d94cb2052a038583c49ab82b8d3fc2cbb5dd8a1f64f9be5e458",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/adapters/chalk.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/adapters/cliff.fasl",
+      "bytes": 3125,
+      "sha256": "5739f8769426f604064ebc6f3509a674fe2734d3d4b1675f1eab16cd0b5b89b4",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/adapters/cliff.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/adapters/damage-output.fasl",
+      "bytes": 5126,
+      "sha256": "d91173c7fe83704a2de77e49f6f3484f262cf0419d3783929204f11f64dcb036",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/adapters/damage-output.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/adapters/diagnostics-call.fasl",
+      "bytes": 2158,
+      "sha256": "0862ce79910bd0e99d50f2cf3eb40ca8adfc407a07fe44dcb58b17842f734cc5",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/adapters/diagnostics-call.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/adapters/legacy-triaxial.fasl",
+      "bytes": 9423,
+      "sha256": "5febb5cd4f28d67c4f61940819e9e1c0034d74e34679985e8d54e66a1a07e048",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/adapters/legacy-triaxial.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/adapters/native.fasl",
+      "bytes": 13356,
+      "sha256": "908bc2336b8bc08821e934625a8f2c4329db3977421b2bc8486cf49424d15f5a",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/adapters/native.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/adapters/triaxial.fasl",
+      "bytes": 2063,
+      "sha256": "781a7d22ed6a306916dae3e622b645af927aa11e55460271c55f98521792de21",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/adapters/triaxial.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/adapters/wang2017-apex.fasl",
+      "bytes": 15611,
+      "sha256": "8aca4bbe289553e9d4f995a28e7a875303b05a957b4ddfca719ffd2736d1dc03",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/adapters/wang2017-apex.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/adapters/wang2017.fasl",
+      "bytes": 21546,
+      "sha256": "2b9bf488c400ed3aa44b86456819dedbfef18f97861643520ecee966e5e29a8c",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/adapters/wang2017.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/backends/cpp/legacy-transaction.fasl",
+      "bytes": 35525,
+      "sha256": "3c4a7270ca2c1bc3b3125895013f7a1624c1b81fa71b7d1888286d089bd6deea",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/backends/cpp/legacy-transaction.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/core/constitutive-package.fasl",
+      "bytes": 1515,
+      "sha256": "e6cbe72f564d00401255c3d49b00b2252da5601503ae2860d869b67bfc1c2ec0",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/core/constitutive-package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/core/definition.fasl",
+      "bytes": 2356,
+      "sha256": "f581d5e762ae333ab109d877fd66bf96df9fd694716b9abdd9a7eea749e149d6",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/core/definition.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/core/diagnostics-interface.fasl",
+      "bytes": 5651,
+      "sha256": "4450640981f777dfec8eb4179dda5b826ed7c127750a9eb615d20ac3cf94d5cc",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/core/diagnostics-interface.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/core/plastic-state.fasl",
+      "bytes": 9942,
+      "sha256": "3f60a88aa4776bd92f523eb1d983bc6c3351ebfbd701eb052e7534aeeb90d479",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/core/plastic-state.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/diagnostics/chalk-reference.fasl",
+      "bytes": 3315,
+      "sha256": "5003abaed79e5fae3ede7ba7fe2863b88f55aa73a40a7a02ef8bceaea3881ab8",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/diagnostics/chalk-reference.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/diagnostics/native.fasl",
+      "bytes": 39226,
+      "sha256": "fc06a725cc98fbda9957c2aac9a46156086cd2755b818b0b050e9ab59ba02259",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/diagnostics/native.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/chalk/evolution/softening.fasl",
+      "bytes": 4787,
+      "sha256": "ff355733634e2084fd685157585b06cf210390bc966fbf41dd2f7d8ecbd678ed",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/chalk/evolution/softening.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/chalk/joss-reference.fasl",
+      "bytes": 9263,
+      "sha256": "8c491be70fcff88e765d5ed72bb6aefd9eb2623d34a39cd9f229f78e0653bd28",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/chalk/joss-reference.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/chalk/legacy.fasl",
+      "bytes": 40700,
+      "sha256": "a6acd1ec11443f84b16b17bb0dc50a0f4bb0139fc7b04a9072d7c6e941133cc3",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/chalk/legacy.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/concrete/evolution/native-hooks.fasl",
+      "bytes": 6696,
+      "sha256": "f7990c6ee66b0f2cebd51f88aa8cdff182fc5777467db00f449771951db23a67",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/concrete/evolution/native-hooks.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/concrete/evolution/softening.fasl",
+      "bytes": 4186,
+      "sha256": "03600c465a1b9c405828e5e530bf901e0e49c833432215e6a63cf08ab541d24b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/concrete/evolution/softening.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/concrete/legacy.fasl",
+      "bytes": 8166,
+      "sha256": "b37251c45157f61dd16cd100e358d9ce41d5be3e35c788f4b055a4ad20c12f69",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/concrete/legacy.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/damage/constitutive.fasl",
+      "bytes": 21100,
+      "sha256": "198f476eda54d89955a8816aacc105252806ccbd90ea461a77f2b5e5ca3b9f02",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/damage/constitutive.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/damage/criteria.fasl",
+      "bytes": 74893,
+      "sha256": "1922d6799c32becc3fa7b3d39836f784558ceb5b18e4f5639e29fcd30e50e4b0",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/damage/criteria.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/damage/evolution/degradation.fasl",
+      "bytes": 49486,
+      "sha256": "368ea6284058de0b5d359b990f521f6253f5bb2e6486749e515a66cc65993d3b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/damage/evolution/degradation.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/damage/evolution/delayed-rate.fasl",
+      "bytes": 3603,
+      "sha256": "177db84cda73bda7f852b68b7916976ffd793f65fc5314e92185e432d134b9f2",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/damage/evolution/delayed-rate.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/damage/evolution/responses.fasl",
+      "bytes": 17124,
+      "sha256": "24fecfb6b4b918885586d4bbc8f1c61643438dcb7729469065b40ffe026c4296",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/damage/evolution/responses.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/damage/legacy-particles.fasl",
+      "bytes": 71781,
+      "sha256": "0dfca08b0e64e719614c619214c060e49d4da87c435a4c399dbb000c03e9bbc1",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/damage/legacy-particles.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/damage/legacy-state-evolution.fasl",
+      "bytes": 35503,
+      "sha256": "3d84d63a2b70ea0e3a430c1a90b022ae319929bb1dd1bdbf15421761e934f210",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/damage/legacy-state-evolution.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/damage/particle.fasl",
+      "bytes": 16774,
+      "sha256": "065375c4e52ee21ffbbbe0fc364a5df410cc80d66bff4e26160cefee7e75455f",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/damage/particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/elastic/constitutive.fasl",
+      "bytes": 8155,
+      "sha256": "0bcaa31d8adc162fda18e2691be388530f9c4966ec48daa29eb2d9149c56a677",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/elastic/constitutive.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/elastic/particle.fasl",
+      "bytes": 27492,
+      "sha256": "43f568c1ec3618e87ad3e2d08adeaf17a2830342f5ba625af15e3f6d666d2dd9",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/elastic/particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/fluid/constitutive.fasl",
+      "bytes": 5214,
+      "sha256": "e904fb113f587a14d071d000a14d2fa82b7faa9ccd2268ee009d6ddeb4b36815",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/fluid/constitutive.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/fluid/particle.fasl",
+      "bytes": 5427,
+      "sha256": "d9e044d7407524aa2131f8dc1bb66daa939c933f66ae7dd410bfaea8153b3250",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/fluid/particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/frictional-damage/legacy.fasl",
+      "bytes": 22068,
+      "sha256": "a373e21927e7522dbff6155535f87b6df727ba1fbb9ad934603121801682f70a",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/frictional-damage/legacy.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/drucker-prager/constitutive.fasl",
+      "bytes": 51598,
+      "sha256": "3e58d0718945ccd3b72da7598fb3e3cecbc4096a95565b0c60e4f64406e3ac7e",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/drucker-prager/constitutive.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/drucker-prager/particle.fasl",
+      "bytes": 13320,
+      "sha256": "746a06a16e8ad533cb887154c0bb57a2caed969da4dc32fde182eb9c2ce7db53",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/drucker-prager/particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mc-composite-apex/diagnostics.fasl",
+      "bytes": 13288,
+      "sha256": "11e93691b6272b0064541cf2b11b7531c422beb9e3f15fb741d695be1fafa8f9",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mc-composite-apex/diagnostics.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mc-composite-apex/native.fasl",
+      "bytes": 12205,
+      "sha256": "6d10da870c543d412dfbf7d422f74f0015056ca633e93e4694c9ca678fea7d8e",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mc-composite-apex/native.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mc-composite-apex/package.fasl",
+      "bytes": 1168,
+      "sha256": "9b2ad16baa9bf0da4ef2ec1f3187d6ae9043188369a8a314454b7d3529680756",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mc-composite-apex/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mc-composite-apex/projection.fasl",
+      "bytes": 39650,
+      "sha256": "c4b908ff8a2aedd15ab028486e73240fc83915d800a40aaef0b4fec8b72f46c5",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mc-composite-apex/projection.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mc-hs-apex.fasl",
+      "bytes": 13457,
+      "sha256": "da8889223bbbd30650d44546aaa98887f56407f3a66745271666532d48e59879",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mc-hs-apex.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb/constitutive.fasl",
+      "bytes": 32480,
+      "sha256": "d09fbe0b45d439e421c3c3c1493bf108ef5c3ca88a9a88708adcdaf947a174ce",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb/constitutive.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb/particle.fasl",
+      "bytes": 14010,
+      "sha256": "4c8f1171bf345226eeef66ef8a8ec5d43916b3f9cb8b84b6666ed3e2d52dd591",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb/particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/diagnostics.fasl",
+      "bytes": 11882,
+      "sha256": "48019686176f9c5652fcdc2027af8fe3ab586ebe8f6802a4bd3588747aab8ce8",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/diagnostics.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/law.fasl",
+      "bytes": 29752,
+      "sha256": "5d1be9765d1fd6142a2b885b69cdb392e74d8e3f9b78add732bfc665258a16e3",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/law.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/material.fasl",
+      "bytes": 40540,
+      "sha256": "2480ddb02ce3e802f6dcace1c59ab45b6b5ac6e960e59ba540a8ebd2ec8bf4e7",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/material.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/package.fasl",
+      "bytes": 6510,
+      "sha256": "10ce0a6a53764ee0de2e333c3214d367c2ab944da3ffb3badfca7de61729d7b7",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/projection.fasl",
+      "bytes": 80031,
+      "sha256": "a9c764f69a7438b74e722936d751b8bdb3d965f20c0e15f32df2903d0c5aaffe",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/projection.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/state.fasl",
+      "bytes": 35389,
+      "sha256": "74dad5c7cfcc63e9bc9c3c4647394eeb847fab7f3973b64ac01f185c8cd806dc",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/mohr-coulomb-evolution/state.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/urmi-strength-damage/law.fasl",
+      "bytes": 28925,
+      "sha256": "62b6ea3e3588cc423077d8a994fddea18016c213a9477c2f62412b2b61fc3d1d",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/urmi-strength-damage/law.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/urmi-strength-damage/package.fasl",
+      "bytes": 1785,
+      "sha256": "6a8d571c0c3732a4670ca0a4be6cbd716903b773d486ae71f2de6fecc9c4bfb0",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/urmi-strength-damage/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/urmi-strength-damage/particle.fasl",
+      "bytes": 13967,
+      "sha256": "65c7e2747e4b0bc0b6b0c9fe3c84542c7a9e23e92eef648fc2ba3ccb9f39229b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/urmi-strength-damage/particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/von-mises/constitutive.fasl",
+      "bytes": 30165,
+      "sha256": "f8fd4ebc5788129d5ef62962c484ce65ca58dce02ab72602f17aa3075337beb3",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/von-mises/constitutive.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/von-mises/evolution/secant-hardening.fasl",
+      "bytes": 2798,
+      "sha256": "28ad61875b9a4269103c7fb26b6a78651b64783dc2bbbae09feaf02c6c508ce6",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/von-mises/evolution/secant-hardening.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/von-mises/particle.fasl",
+      "bytes": 18184,
+      "sha256": "2facc26555b62bf610a1a94ddbc576f00a900902b8375d14072d7fd6f6ff0042",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/von-mises/particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/apex-native.fasl",
+      "bytes": 8317,
+      "sha256": "63144639d8903fc38fc47acc06924f27623a0cd70d49cefc1c3c4689f5049468",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/apex-native.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/apex-package.fasl",
+      "bytes": 1569,
+      "sha256": "cb6199fb35a5bdd4553842fe24537a6a1ecc2c9df6b9164953d072d9b8f6431d",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/apex-package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/apex-projection.fasl",
+      "bytes": 19072,
+      "sha256": "fc4212f6aae49e2a41351dc5f1c91be084f7e7569c71c04f95e310a2cbe3731e",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/apex-projection.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/apex-residual-history.fasl",
+      "bytes": 12247,
+      "sha256": "3d0f2dcc86f61a28293bd50c5ab7834bfb730c04c05c9244d294ec56c8b92972",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/apex-residual-history.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/history.fasl",
+      "bytes": 10893,
+      "sha256": "ee9187213d616b45722dfbf6d113a601f275e358bacbf27f06ada6df6acf9c40",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/history.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/law.fasl",
+      "bytes": 2900,
+      "sha256": "f7f4e7918eb201b348ff770774beb3a20c4f14d19f5f5109fe5b5fa06e31b1c1",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/law.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/material.fasl",
+      "bytes": 53162,
+      "sha256": "425e7ca5e7e6ad098387f42c630122d9d9bed81b820fda1be6a7a876f8bee570",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/material.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/native-package.fasl",
+      "bytes": 1854,
+      "sha256": "be1403164426ea676f5034993c0bc34097d70dcde7b31636406a49e0d38ed62a",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/native-package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/package.fasl",
+      "bytes": 1384,
+      "sha256": "e1d230393eab19546c49b70570a551c0a2cb8e8902bd6fd423ed06a5b14c9a58",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/point-projection.fasl",
+      "bytes": 46138,
+      "sha256": "7366090090394abb148a0abe6651ea3303ecca01f1187e811c29e1a22360c25a",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/point-projection.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/state.fasl",
+      "bytes": 22178,
+      "sha256": "429898262ec88b74cd4cce64655123df8c17b6c889dba79a4711609a6cd3caaf",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/state.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/transport.fasl",
+      "bytes": 14067,
+      "sha256": "44125fab40480b64dd0f30431ac7c1971a017bd4832aadcfabd166e1bc6a3e12",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/plastic/wang2017/transport.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/viscoelastic/maxwell/constitutive.fasl",
+      "bytes": 37835,
+      "sha256": "e5cc142c6240f7dbb132c74793f4ddc64f9f0df63433d99fb6ac610d26b8fa0b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/viscoelastic/maxwell/constitutive.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/viscoelastic/particle.fasl",
+      "bytes": 4148,
+      "sha256": "f0c3e8cbc53a95b886573846c5768693b0543de16b3f1d2bfdbf9c10c353d74f",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/viscoelastic/particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/viscoplastic/clay-creep/law.fasl",
+      "bytes": 33109,
+      "sha256": "b0ee0f26c56d9509890fd883c06f0cd00c6f8614f675dcc6e5174f99c2a6edd7",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/viscoplastic/clay-creep/law.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/viscoplastic/clay-creep/package.fasl",
+      "bytes": 1550,
+      "sha256": "f15573b91d5201dfd39cf1286f5c24f273c75bfa6484a5ed3284964c52ea0f88",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/viscoplastic/clay-creep/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/viscoplastic/clay-creep/particle.fasl",
+      "bytes": 30945,
+      "sha256": "a056df131f7654253cf61c39154fc745d46b15f51836a620fadadf71653dc0ad",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/viscoplastic/clay-creep/particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/viscoplastic/glen/constitutive.fasl",
+      "bytes": 34322,
+      "sha256": "33f75c11fb116d5153c355c75d19c73bf981b601c53e1cfd8bf0c7a1a28c6f78",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/viscoplastic/glen/constitutive.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/materials/models/viscoplastic/particle.fasl",
+      "bytes": 7964,
+      "sha256": "36b257d68495079d038736213ffa0904679f2831b2a681ab9f8f16cc957f0f84",
+      "canonical": "worker-domain-h05-001/source/.native-cache/materials/models/viscoplastic/particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/adapter.fasl",
+      "bytes": 10071,
+      "sha256": "6e63ef7de30f2174a1583f81e46b58b6aafca218a06b7e6a411f1d087b777146",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/adapter.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/build.fasl",
+      "bytes": 4821,
+      "sha256": "b62669bf552f820493d886bcf8d26fa661d172a16f9a7fe3dd477856ae2eeab1",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/build.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/execute.fasl",
+      "bytes": 40608,
+      "sha256": "10d83466854d6777c170c0843457b6d59060fed9e4c1ba12c3bcf4d3520921d9",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/execute.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/geometry.fasl",
+      "bytes": 6562,
+      "sha256": "ec75c029198c9bd318699472331e8dca9935b670ba02ca8da482bc2ef32aa659",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/geometry.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/run.fasl",
+      "bytes": 9372,
+      "sha256": "e40f46f5f213309312add2472a3c95103a45a5c50572707274ce982bbd4f1ec0",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/run.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/settings.fasl",
+      "bytes": 1263,
+      "sha256": "28b6fcd9cd2eedbea8c26ba370789de8a57babaa0e93c9d36f77c0750df24490",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/settings.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/solver.fasl",
+      "bytes": 4146,
+      "sha256": "6e9d3bb0703f144c0a85db60cf0fb89d788279815f1b433073487af8c07d26fb",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/cliff/solver.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/adapter.fasl",
+      "bytes": 4241,
+      "sha256": "a3d61a9fc3079ce4ed43832384e33501b7f183ad37a6557de33a30e156554133",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/adapter.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/configuration.fasl",
+      "bytes": 17404,
+      "sha256": "1b0daa7a61040826ebc3d181cdc5edb2de29eb8a5af78c982692b9cff924379a",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/configuration.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/geometry.fasl",
+      "bytes": 9973,
+      "sha256": "e1ad9ec3e7e4226705b9228858d89cc5bc4a1189dd87fd2f794f7baa7c2bfcf4",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/geometry.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/measurements.fasl",
+      "bytes": 33592,
+      "sha256": "032cb426ef8556d03aaf53d7be2d3e0bcf0c8880d7208e5779bb5d96642b0206",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/measurements.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/package.fasl",
+      "bytes": 4800,
+      "sha256": "5bee42d62cc8394a703a58939504bcfc4bfd19e1a292d706cfee5edbebc3c244",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/runner.fasl",
+      "bytes": 21462,
+      "sha256": "d3eb76ffd0538f171c4e123a846337b6d7d709eefb73be711d029db631be787b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/gravity-slope/runner.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/joss/build.fasl",
+      "bytes": 8754,
+      "sha256": "58e3198a8ffceae38a958c819a5a67d23185a1a60f37bcc9ca74dcefa3ed941b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/joss/build.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/joss/classes.fasl",
+      "bytes": 1608,
+      "sha256": "13714ce8b4bf81d6a5a20c1135affb5fbb80725782a8ea43ee39f999fed23d93",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/joss/classes.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/joss/geometry.fasl",
+      "bytes": 9295,
+      "sha256": "93870490d329e255838a8442d430b8fc2e69e9ebe525031f62e0006bc4e6f224",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/joss/geometry.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/joss/measurements.fasl",
+      "bytes": 1844,
+      "sha256": "260b823114bcf83dc295e53be883890063b7e6be80d20cef56d405472e58e605",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/joss/measurements.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/joss/output.fasl",
+      "bytes": 5031,
+      "sha256": "e6f0b48b6139867a210b8253fef770944ebb3697a9895d3ba007c0d01e8608f9",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/joss/output.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/joss/phases.fasl",
+      "bytes": 6174,
+      "sha256": "d1240bf6502d3458fd6ab6f23d0f55a87368e39d28e32af3cb95354b914eec16",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/joss/phases.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/joss/run.fasl",
+      "bytes": 25973,
+      "sha256": "b38cdfcc826ce9947bc13394d2ca294a98c101d7780897f6edb441b007292e4a",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/joss/run.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/joss/statistics.fasl",
+      "bytes": 15695,
+      "sha256": "815451efd96555787dfab72e44444b8aba50a5bc337bac646f709b5d433d0f71",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/joss/statistics.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/joss/validation.fasl",
+      "bytes": 4008,
+      "sha256": "dbc021d4408c7dd25e18af1574df773c50474b2b08c6eabc67b18c4adb6d7ea7",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/joss/validation.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/residual-clay-slope/output.fasl",
+      "bytes": 53851,
+      "sha256": "116d3c14584d23e0cf4804d8f5b4b14e270afb885d8bb8b7574d0554f54bdf01",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/residual-clay-slope/output.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/residual-clay-slope/package.fasl",
+      "bytes": 1157,
+      "sha256": "89dd623be4cf70612d08e638a99599b8205ab5a4be210b8cf311adb870f3432e",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/residual-clay-slope/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/residual-clay-slope/runner.fasl",
+      "bytes": 24920,
+      "sha256": "a15f979a009a388120b2fe8d2990c5c748ea7d9dba1f41cd746c93cf961fae2b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/residual-clay-slope/runner.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/residual-clay-slope/toe-profile.fasl",
+      "bytes": 53215,
+      "sha256": "1c127785586a294e1f4e2f105320a554c603dd760ad73d778f20ca89b128f640",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/residual-clay-slope/toe-profile.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/adapter.fasl",
+      "bytes": 4233,
+      "sha256": "72eaa58fc321138fe51cc716a4f517fac7ff3f89d8bb571f39bf22185008215b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/adapter.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/configuration.fasl",
+      "bytes": 11040,
+      "sha256": "6964806b346386578248f5cbe1038b96fa293f4e59959fa363ca8bfe7d5f3af5",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/configuration.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/loading-output.fasl",
+      "bytes": 6318,
+      "sha256": "0a64d84564a07dd7bdc0bbbdff79ccbde79d4b2a3de635b95f309c1852b8690a",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/loading-output.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/loading.fasl",
+      "bytes": 22163,
+      "sha256": "c73f6ab8d0fd960b0488cf877d83ddbe7e185868d1ed9a43055ed21c6e851fca",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/loading.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/measurements.fasl",
+      "bytes": 16115,
+      "sha256": "24ffea9f3a5f678813649492f72ae70c1b55ecdec45281844aab418efdeb8420",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/measurements.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/package.fasl",
+      "bytes": 1030,
+      "sha256": "796f807744034c97d01f24e06720efc3418d2048ac6c57b29b2fd0c7902c4578",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/runner.fasl",
+      "bytes": 27510,
+      "sha256": "dd6e9aad3feb8c00c4eb09f811ca48b4f7e778f66ddb882df51887cfea11de2f",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-creep/runner.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/adapter.fasl",
+      "bytes": 4241,
+      "sha256": "77d1ad294249fd46234b2c19627ad505d940c6665cf96cde73f4ce49257fe199",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/adapter.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/boundary.fasl",
+      "bytes": 23026,
+      "sha256": "df893c927160bbbd1a594e5e12009d875df8bd08e80f15c5d7ce47c4bef086d6",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/boundary.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/configuration.fasl",
+      "bytes": 11555,
+      "sha256": "2514f96adc0d74a25649ccce057f4c20e1f860d3fd6501b1162c694631451f5d",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/configuration.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/geometry.fasl",
+      "bytes": 15432,
+      "sha256": "7bd55568e71fe307e7d32e0dd044489b193c600f6c1534b4fac57427b1a006ed",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/geometry.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/package.fasl",
+      "bytes": 5316,
+      "sha256": "561c82a7c3e6050e52ff6d3405b04a52eb7d866116bf87d0369c210fea2b945c",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/runner.fasl",
+      "bytes": 49193,
+      "sha256": "b521eb9cfff570396c1ae2607b3717b072a49aeca552baba35d819774c73393d",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/runner.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/wang2017-output.fasl",
+      "bytes": 23531,
+      "sha256": "35160d7b26641e720221e4136dd5339ae850531cf366dd2451f4f92ef0e543f0",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/slope-descent/wang2017-output.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/adapter.fasl",
+      "bytes": 8802,
+      "sha256": "53f0a29ffa29f0ed1a5d87837145967e795fa86e06db72e1a0d112e133c79bf7",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/adapter.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/config.fasl",
+      "bytes": 7794,
+      "sha256": "be78dca655ffa4045f66e6f102f23b8f2d0d02bce8d8d365e2d4e2aa7fc40084",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/config.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/controls.fasl",
+      "bytes": 10544,
+      "sha256": "07768cd5f72f7e95c0d72106cee0dc6a7f44da45e876e9ef60d703d1b0a376bd",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/controls.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/geometry.fasl",
+      "bytes": 11548,
+      "sha256": "0aa605ff0f90892ef5a43e586c6504da9ac92c3b213586e2730d0f585c86faee",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/geometry.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/homogeneous.fasl",
+      "bytes": 7772,
+      "sha256": "4402a3908cbb2cbf9f755a95be7b349223bf689a94ceda845e985408334a81e7",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/homogeneous.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/measurements.fasl",
+      "bytes": 22804,
+      "sha256": "4d3a6d06ad1376aca0a9c6cb4bd5d819be635752eebdd1cd5959fddfad25c3ce",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/measurements.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/mpm.fasl",
+      "bytes": 9017,
+      "sha256": "7d27fdea2399a46abf8fc7c968a0e0a2f10bcb68cf645e29928dc18e89ab9711",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/mpm.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/runner.fasl",
+      "bytes": 15457,
+      "sha256": "d09e35ca16ffa3442d729accaa755bce9e36e8ac1568ad8c2308918b5f54a7c3",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/runner.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/state.fasl",
+      "bytes": 1437,
+      "sha256": "5b5ad7b263df3e880bc06d7d5ea71fea05a6d380f38bfcf29b3bf826a2a32a86",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/state.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/stress-measures.fasl",
+      "bytes": 1501,
+      "sha256": "4690c6cd9ef625d70b771334bfd21817211487b84eaad394050c1b950aaeb27c",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/triaxial/stress-measures.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/adapter.fasl",
+      "bytes": 4241,
+      "sha256": "c999d83851f9be1b898e80a80d07af1d9e667980c93b40f4b7387d78e7c23a1e",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/adapter.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/configuration.fasl",
+      "bytes": 7770,
+      "sha256": "8ad6db54a5619d011e59c1110d95e7a62e0518cd1002cb6d12f63fe028302867",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/configuration.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/geometry.fasl",
+      "bytes": 21636,
+      "sha256": "9442f8818a1e6c2dfe63af0a3dd9cebe6b70891a80a5bdc8a9c695c31c1c924b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/geometry.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/output-streams.fasl",
+      "bytes": 7075,
+      "sha256": "79b39e50ce26ceefa91568b9f646bc2142eecada536466af5e4775d774e1c715",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/output-streams.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/output.fasl",
+      "bytes": 54101,
+      "sha256": "af085e1f496656083cfdaea9cbabf482483c9876ac415a5b9b65a124bb41833e",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/output.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/package.fasl",
+      "bytes": 1481,
+      "sha256": "2da2b8b8002fec9ddfdb8dffb544ed58775e828c726c0d3680d2805c99f1bc44",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/proper.fasl",
+      "bytes": 23834,
+      "sha256": "b76b138c9dfcbf9a5e95b3ae427f73e95eeb49178fc5e939a3fcf2fd0e60032d",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/proper.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/recipe-package.fasl",
+      "bytes": 3313,
+      "sha256": "be49ba8ca2c787436f8687d5af25913f732ad4763b2ca080ef1f0006c1bd4021",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/recipe-package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/runner.fasl",
+      "bytes": 34643,
+      "sha256": "27db76b30d30ebde39b3279fccd99f369f98a8c8e4823b6ac2918f206be67142",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/runner.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/transfer.fasl",
+      "bytes": 48668,
+      "sha256": "035b4b5bd8651203c09dc7d7cd7b91f2da4d61e47e4e05dd4c0b970e7c9bf6f6",
+      "canonical": "worker-domain-h05-001/source/.native-cache/scenarios/urmi-damage40/transfer.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/boundaries/constraints/bc.fasl",
+      "bytes": 62090,
+      "sha256": "542c484311ea84051f08002a47947e4b379da3b8ceaef769624cb43cf51b8620",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/boundaries/constraints/bc.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/boundaries/penalty/penalty.fasl",
+      "bytes": 201628,
+      "sha256": "8f7af2b5d5dd82e4bcc6332c06b05d08f51fa4175379337b6e61e10642c99ba1",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/boundaries/penalty/penalty.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/boundaries/pressure/isotropic.fasl",
+      "bytes": 5436,
+      "sha256": "57b1e30cf4c0c7e17c7226789f1f60c55861bd80b310e45acbef00925d532ae8",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/boundaries/pressure/isotropic.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/core/iterate.fasl",
+      "bytes": 132512,
+      "sha256": "8f02afd04d693c9c2361835676382393f42dffdef563faca540e9f6d7ce05a03",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/core/iterate.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/core/mesh-base.fasl",
+      "bytes": 135209,
+      "sha256": "0701bd3343b41af71eba3bd8c575a24b95aefd18dc18e3fe3e46465fd3029b13",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/core/mesh-base.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/core/package.fasl",
+      "bytes": 38520,
+      "sha256": "2720fd7c7014ff75c995716ff7db4eecf605973f7d4bb7bc24bc664d27ea1197",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/core/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/core/particle-base.fasl",
+      "bytes": 52261,
+      "sha256": "8c10911d2133645b52edebc6ddcfd4ffe1424cab3bc01503b9206b5037903ed0",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/core/particle-base.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/core/particle-protocols.fasl",
+      "bytes": 18563,
+      "sha256": "9f4d315341d2c1261687fd75bcf0e18171726497a8708dda47eab29f991d3255",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/core/particle-protocols.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/core/settings.fasl",
+      "bytes": 1720,
+      "sha256": "af197d25da32c02a0b52993b2e326a4ccf09e79f4512256f1c95d0bc1ae3b6b1",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/core/settings.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/core/simulation-base.fasl",
+      "bytes": 166625,
+      "sha256": "242e42ff741dbdb56717dbe2dcf190915fdf31faa2293009e4cadd463e738722",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/core/simulation-base.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/core/stress-update.fasl",
+      "bytes": 48230,
+      "sha256": "df5ddb207e2f8f710d1fcc28906d8fa0b216b62707d193ce87487123995c6a39",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/core/stress-update.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/damage/nonlocal/ekl.fasl",
+      "bytes": 20444,
+      "sha256": "c2dce4caff0c362b1bb756261b3fab594d959bc53ddee02829defe602f996bf8",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/damage/nonlocal/ekl.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/damage/nonlocal/legacy.fasl",
+      "bytes": 74620,
+      "sha256": "14107eaeae9d69859ca216c7443937b33e84fa0f1a68e586ab8f9ad292ed64c7",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/damage/nonlocal/legacy.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/damage/package.fasl",
+      "bytes": 8082,
+      "sha256": "7c74da510b38013364d818e7c906d3f119d5a0791993dc799e7abf8564bb1e45",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/damage/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/damage/solver/solver.fasl",
+      "bytes": 15661,
+      "sha256": "f3ca44d2469c2460722c62e3afefe65e01388a94ddb527a1833a3556d4f04292",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/damage/solver/solver.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/discretization/domain-update/domain-update.fasl",
+      "bytes": 46397,
+      "sha256": "fc89f031d84da71ba07b635b9c55723b0e0fb8224d2ffe0b969a4aa6fa07cd98",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/discretization/domain-update/domain-update.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/discretization/ghost-nodes/ghost.fasl",
+      "bytes": 103449,
+      "sha256": "fc72da286e0bf7ca01ac0c19163e55528e63136a34e98ec57a9938f0ededb163",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/discretization/ghost-nodes/ghost.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/discretization/shape-functions/shape-function.fasl",
+      "bytes": 31345,
+      "sha256": "e1812146c16215cd7c5168a0fa52224d8751d50d31b0b357a53e033260db2989",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/discretization/shape-functions/shape-function.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/discretization/splitting/splitting.fasl",
+      "bytes": 41501,
+      "sha256": "936615cf1727e4b59a213198f776d460da866f9bd8ec56ea1ca5255786cec1ed",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/discretization/splitting/splitting.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/geometry/setup.fasl",
+      "bytes": 100731,
+      "sha256": "9cc2ab15347da0b4bacf80959d7860f43b657794787fd7005429a945df6460c2",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/geometry/setup.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/measurements/legacy-particle.fasl",
+      "bytes": 1962,
+      "sha256": "a1d611334667f515e061400d43c799efc614f4f395a9041ff0eee96afbeb55f2",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/measurements/legacy-particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/measurements/legacy-stress.fasl",
+      "bytes": 2144,
+      "sha256": "3e54748eb5304a0cf6739ab3ffef1e1c13210c4972499ac49e805d4c6eab1eea",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/measurements/legacy-stress.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/measurements/material-output.fasl",
+      "bytes": 9406,
+      "sha256": "5d617ffbb099cb3da88a32623cdf88d58c546fe44440b5c48b608511bbd34909",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/measurements/material-output.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/angles.fasl",
+      "bytes": 1177,
+      "sha256": "6b711f4c3ee9849e2627a5292bd5202c913cbefe52bb69b50c700d2cc8fbb01a",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/angles.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/error-handling/errors.fasl",
+      "bytes": 2279,
+      "sha256": "4e63e3bc436cb973f7b65d5803f190e646af293b4f3b7424f98e7f9bc2b09b45",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/error-handling/errors.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/fastmaths/fastmaths.fasl",
+      "bytes": 108342,
+      "sha256": "5eba159b713dcd13b203a14e8749ec8150be596361475ab547ac0274de4e07c1",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/fastmaths/fastmaths.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/integration/delayed-steppers.fasl",
+      "bytes": 8227,
+      "sha256": "27cdb45723457ddea804fc2ee45b0c5dae726366e15b36edb05e69dda4264688",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/integration/delayed-steppers.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/integration/finite-difference-tangent.fasl",
+      "bytes": 4066,
+      "sha256": "764b8f7ba4f8e601ba8c4c82c753e08452c0eefe15d747cf0eb6862d17c552ad",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/integration/finite-difference-tangent.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/legacy-tensors.fasl",
+      "bytes": 2143,
+      "sha256": "c2edf6b66742eb435437c755203d6252c5ecf328bbc937913bd2fa46d3325ab0",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/legacy-tensors.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/native-bridge/cpp.fasl",
+      "bytes": 6001,
+      "sha256": "b51979ffe6716795214e3db98f6a6e47d28a29508b1f8390216fb61091810f6b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/native-bridge/cpp.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/tensors/constitutive-primitives.fasl",
+      "bytes": 21475,
+      "sha256": "1528adbdc40411a5640ba782ec6a07bc9e771bd39893520a84ecd1d27fb6b3e6",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/tensors/constitutive-primitives.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/tensors/damage-primitives.fasl",
+      "bytes": 4417,
+      "sha256": "e6fa206bf2a42d0bbba907c4a4074a92746958ae5f75bd5497ce33bbf05a624b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/tensors/damage-primitives.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/tensors/particle-objectivity.fasl",
+      "bytes": 12416,
+      "sha256": "f6ccaa18a868643f62ddde867962dbb562c33c455659944fea8d44265483ab7b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/tensors/particle-objectivity.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/tensors/principal-strains.fasl",
+      "bytes": 4838,
+      "sha256": "3d8934077dd6dacc98bf6327b8f05ba4828e18154329a524b37e508f34d19de8",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/tensors/principal-strains.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/numerics/tensors/utils.fasl",
+      "bytes": 168197,
+      "sha256": "12aebac5f06ad63a8476acee49a717e9e9937e88e9c06e16a8ee50f9e3d4e425",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/numerics/tensors/utils.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/output/legacy-triaxial-json.fasl",
+      "bytes": 2611,
+      "sha256": "345ff06f1f8d70f7676c9fb43846658b0962e6f7e795dbe091a711b79120b384",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/output/legacy-triaxial-json.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/output/plotting/legacy-particle.fasl",
+      "bytes": 10277,
+      "sha256": "85f2b1f108d9cfa313e3caed56a10913805eff02f816d3e3c44d7cb7ec956672",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/output/plotting/legacy-particle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/output/plotting/plotter.fasl",
+      "bytes": 11107,
+      "sha256": "4a49c8b7e71ff1997dfab71b500eca2f7ec9835f4f25c8e5a663c42e80d1549f",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/output/plotting/plotter.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/output/retained-history.fasl",
+      "bytes": 4005,
+      "sha256": "d5868a4589bf43f552d1cf2b856ca275fcdb4fdec346fb4eb4b9fbb942ebbf40",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/output/retained-history.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/output/vtk.fasl",
+      "bytes": 96417,
+      "sha256": "b05a051dc8af6c9ef1b5016f22a1a7f20048366cbe6e0caa24dabdf52df899ff",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/output/vtk.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/parallel/damage-communication-state.fasl",
+      "bytes": 5767,
+      "sha256": "2694cf67b743a851b32f05ddb5258808d9b243bd12c38ad8f918377b2f829a00",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/parallel/damage-communication-state.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/simulation/compatibility/triaxial-package.fasl",
+      "bytes": 922,
+      "sha256": "99d78189f2f53b80d85d2c80d71ded211042d8218036c8be415dcdf9f7ed17dc",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/simulation/compatibility/triaxial-package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/simulation/components/base.fasl",
+      "bytes": 4463,
+      "sha256": "f66f000438e9575ef84f09023a17a5818a0d16721891f10a008ca7908a918ce8",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/simulation/components/base.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/simulation/components/geometry.fasl",
+      "bytes": 2888,
+      "sha256": "c3bc75012231949213bd46b4cd082314d411e8feab196590ab419dbd23752752",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/simulation/components/geometry.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/simulation/components/specifications.fasl",
+      "bytes": 11104,
+      "sha256": "3824a4c3bb93ae7a033abe6aba56e91428b3236af3dc98e5957b40b7583e2010",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/simulation/components/specifications.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/simulation/config/legacy-triaxial-values.fasl",
+      "bytes": 2763,
+      "sha256": "a12c074645f9cf3c28d1a461f4b91227de17a269ec257a7719b7e9c34bc58ae7",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/simulation/config/legacy-triaxial-values.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/simulation/config/package.fasl",
+      "bytes": 969,
+      "sha256": "5cabbfa22075c45359b0269e4d2a82f76cefd7bcc0c847b1a385b549ee45e257",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/simulation/config/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/simulation/config/parameters.fasl",
+      "bytes": 12711,
+      "sha256": "b56a3f862101d96743976a270fb0c265225bbe6c5913bc69d11357dc5edf0cb7",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/simulation/config/parameters.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/simulation/lifecycle.fasl",
+      "bytes": 12250,
+      "sha256": "50e7e7158428e91c024e8b7034de05e8deac88d996f47d1c4922427808950704",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/simulation/lifecycle.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/simulation/package.fasl",
+      "bytes": 2275,
+      "sha256": "29c87184659546b56eac5b89193759bbd76d3fc959757ec3fb9518446968bdaf",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/simulation/package.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/solvers/explicit/musl.fasl",
+      "bytes": 6021,
+      "sha256": "95dbc2038272b88ebf7b9dc5bccf380bb3dca49c5bc7be340d36da6221c36e2b",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/solvers/explicit/musl.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/solvers/explicit/usf.fasl",
+      "bytes": 10322,
+      "sha256": "05f3f8def47ca93b233e3e26fbca7069befc547ed9e29fc2472e4da9eacea495",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/solvers/explicit/usf.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/solvers/explicit/usl.fasl",
+      "bytes": 5328,
+      "sha256": "5951fc8cf865c518469284b0e95ce797d840552f67a3c637790c4bdbe16e3b61",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/solvers/explicit/usl.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/solvers/linear-systems/linear-solver.fasl",
+      "bytes": 85017,
+      "sha256": "601f4b9448054ca86489ad05c1ba35316855a21ee27917cc884673bf0d92b303",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/solvers/linear-systems/linear-solver.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/stabilization/aggregate/aggregate.fasl",
+      "bytes": 126303,
+      "sha256": "6a49624acff5e4e9c5eac452be22e84318b09160d2c7e5a535a319615e6e518e",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/stabilization/aggregate/aggregate.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/transfer/forces.fasl",
+      "bytes": 16415,
+      "sha256": "2fd85d0b8417aa938227fd9645ecb549779f011fee8ed4fcff0816b1ebd3ea66",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/transfer/forces.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/transfer/g2p.fasl",
+      "bytes": 49898,
+      "sha256": "ded15df728b71308d5f9893ded540675026620d130da1be1ca08168b2fb8d7a9",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/transfer/g2p.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/.native-cache/src/transfer/p2g.fasl",
+      "bytes": 57956,
+      "sha256": "aa283995c66d4a98e93ab87a82da57dc7edff7c46012966df3929a6ee1c10e88",
+      "canonical": "worker-domain-h05-001/source/.native-cache/src/transfer/p2g.fasl"
+    },
+    {
+      "path": "worker-domain-h05-001/source/bootstrap/windows/cl-mpm.cmd",
+      "bytes": 1121,
+      "sha256": "0b328d24ebc18fc6c7960a5044efc3e93c04752d1be50daece09c575ef86c536",
+      "canonical": "worker-domain-h05-001/source/bootstrap/windows/cl-mpm.cmd"
+    },
+    {
+      "path": "worker-domain-h05-001/source/bootstrap/windows/env.cmd",
+      "bytes": 2833,
+      "sha256": "20719f3bbef22a95f9b68fd0d794184118fb2c43f266284d21f52d263eb2b7e8",
+      "canonical": "worker-domain-h05-001/source/bootstrap/windows/env.cmd"
+    },
+    {
+      "path": "worker-domain-h05-001/source/bootstrap/windows/init.lisp",
+      "bytes": 2925,
+      "sha256": "dd68bc9bcecb6abd66b8c03ee9eb2d24141488a257e84b22a47ca6266ed39218",
+      "canonical": "worker-domain-h05-001/source/bootstrap/windows/init.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/case.lisp",
+      "bytes": 1108,
+      "sha256": "48a71b9d010d4ae5a65c30802d9425d6715464095cbe1b0a0441b401529dd613",
+      "canonical": "worker-domain-h05-001/source/case.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/cl-mpm-framework.asd",
+      "bytes": 9503,
+      "sha256": "5502ddd5f41f2073413d0bba2c9e2f4dacfb96c33af99859a5ee67706e1e35de",
+      "canonical": "worker-domain-h05-001/source/cl-mpm-framework.asd"
+    },
+    {
+      "path": "worker-domain-h05-001/source/cl-mpm.asd",
+      "bytes": 40738,
+      "sha256": "51804cad122bac40f47b9c656df27c5abef2cc38765c3ce6eed3b5c062fc1dee",
+      "canonical": "worker-domain-h05-001/source/cl-mpm.asd"
+    },
+    {
+      "path": "worker-domain-h05-001/source/config/git-commit-version.txt",
+      "bytes": 34,
+      "sha256": "7aa5da4c3df0df35d0f7959783dd37a85710b93cd898530e41470e9f51804ea6",
+      "canonical": "worker-domain-h05-001/source/config/git-commit-version.txt"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/calibration/residual-clay-quarter-strength.json",
+      "bytes": 2670,
+      "sha256": "1d9394e254dbdb5d4591b1131eaa85457efde7eeb021a71fa2818b4afc568b41",
+      "canonical": "worker-domain-h05-001/source/inputs/calibration/residual-clay-quarter-strength.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/calibration/residual-clay-slope-material.json",
+      "bytes": 1896,
+      "sha256": "a2602d8eb0498a161d87ec420950762447f6a2087cdc1541469dd2b0fc5794ac",
+      "canonical": "worker-domain-h05-001/source/inputs/calibration/residual-clay-slope-material.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/calibration/triaxial-2d.json",
+      "bytes": 525,
+      "sha256": "d3f8a60bb04679748eb25691757ace25f79b78f8e1ba7494c3f5647d7e84fd35",
+      "canonical": "worker-domain-h05-001/source/inputs/calibration/triaxial-2d.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/calibration/triaxial-controls.json",
+      "bytes": 268,
+      "sha256": "ba9d8ae07f9dbb78d55a91c7ba4d2a3ca5130d269e8909a9b21d0d655b6a6861",
+      "canonical": "worker-domain-h05-001/source/inputs/calibration/triaxial-controls.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/calibration/triaxial-demo.json",
+      "bytes": 498,
+      "sha256": "3ec933b370a88a0069390117dca4ebac741126be50ee66efd48d50b39516d9d0",
+      "canonical": "worker-domain-h05-001/source/inputs/calibration/triaxial-demo.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/calibration/triaxial-homogeneous.json",
+      "bytes": 370,
+      "sha256": "4d0ebc6b6f7c05f8d2520da20dcf893df0ab844d8eb8cc89338cc8caa24e4a17",
+      "canonical": "worker-domain-h05-001/source/inputs/calibration/triaxial-homogeneous.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/studio/reference/joss-bay-accepted-collapse.json",
+      "bytes": 1256,
+      "sha256": "8e5014f277be0ca5c8ae3e785a5f644b035e2af937b5907fa66eb57bc7bc04a0",
+      "canonical": "worker-domain-h05-001/source/inputs/studio/reference/joss-bay-accepted-collapse.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/studio/reference/joss-bay-prose.json",
+      "bytes": 1726,
+      "sha256": "85cabeb3adaa69c282d51740083c5cc7952f7faa6a8c2862aca5468bc4c2c84b",
+      "canonical": "worker-domain-h05-001/source/inputs/studio/reference/joss-bay-prose.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/studio/reference/joss-bay-table.json",
+      "bytes": 1721,
+      "sha256": "0d663126b33ccd98c9e50fc0737ae8fd33f87829633f78d358d470a5cb18ac88",
+      "canonical": "worker-domain-h05-001/source/inputs/studio/reference/joss-bay-table.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/studio/reference/joss-bay-video-candidate.json",
+      "bytes": 2575,
+      "sha256": "56e4aed6f9dce05f652befda4754eda26c7b1d2674f4282d4ce16c43a71a676b",
+      "canonical": "worker-domain-h05-001/source/inputs/studio/reference/joss-bay-video-candidate.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/studio/reference/residual-clay-slope-quarter.json",
+      "bytes": 950,
+      "sha256": "87d854a242b1a9b577cbdf236c79a084f21cfdabc9d6f25bcc8a05e2f456fbbf",
+      "canonical": "worker-domain-h05-001/source/inputs/studio/reference/residual-clay-slope-quarter.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/studio/reference/urmi-damage40-extended.json",
+      "bytes": 795,
+      "sha256": "aea766ec963c7c54fe2a9a5ee918323455ff7204a997c2afe2e6a45480f68c38",
+      "canonical": "worker-domain-h05-001/source/inputs/studio/reference/urmi-damage40-extended.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/studio/reference/urmi-damage40-proper.json",
+      "bytes": 799,
+      "sha256": "b27ba7310505055fa2ac84958206ff395ceb509a74d5884597773661f456ecf6",
+      "canonical": "worker-domain-h05-001/source/inputs/studio/reference/urmi-damage40-proper.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/studio/reference/urmi-damage40-rapid.json",
+      "bytes": 795,
+      "sha256": "e924e7c5aedeac7e7dbda9382df4996423d727af347c92c77bb81f5bfc8f979f",
+      "canonical": "worker-domain-h05-001/source/inputs/studio/reference/urmi-damage40-rapid.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/studio/reference/urmi-damage40.json",
+      "bytes": 679,
+      "sha256": "e9ec8814b9fe2852de99bca76fa9ae26ecebe0bd7b29fd1a71faac9fc618548b",
+      "canonical": "worker-domain-h05-001/source/inputs/studio/reference/urmi-damage40.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/inputs/studio/schema.json",
+      "bytes": 9059,
+      "sha256": "da7d703b6f99b8b9a401f4cab4dcbcd76e4d90b070a96a81fd7e8178d592e7b9",
+      "canonical": "worker-domain-h05-001/source/inputs/studio/schema.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/libs/kirchoff.dll",
+      "bytes": 2885169,
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "canonical": "worker-domain-h05-001/source/libs/kirchoff.dll"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/adapters/chalk.lisp",
+      "bytes": 2538,
+      "sha256": "f38e20f2f3f70139954f5c861dd7f7abc9e06ef0b0c6826a1753fe505938a265",
+      "canonical": "worker-domain-h05-001/source/materials/adapters/chalk.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/adapters/cliff.lisp",
+      "bytes": 641,
+      "sha256": "a4ac33ef2cdfda963285059ef2cddd67eede5859d63c53003b706434d2256ad3",
+      "canonical": "worker-domain-h05-001/source/materials/adapters/cliff.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/adapters/damage-output.lisp",
+      "bytes": 21614,
+      "sha256": "e449445ed45405670a6841972854969b312f55e9ff7d42e21bae673fb35c782b",
+      "canonical": "worker-domain-h05-001/source/materials/adapters/damage-output.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/adapters/diagnostics-call.lisp",
+      "bytes": 473,
+      "sha256": "232965022a96a2e11536f577944ef969fa115ab396f123cdf3e0622017ff1381",
+      "canonical": "worker-domain-h05-001/source/materials/adapters/diagnostics-call.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/adapters/legacy-triaxial.lisp",
+      "bytes": 3883,
+      "sha256": "127c346c4682b85418d396b75c7be75a638ced5d88f0cacc954d0ec5370772b1",
+      "canonical": "worker-domain-h05-001/source/materials/adapters/legacy-triaxial.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/adapters/mc-composite-apex.lisp",
+      "bytes": 2240,
+      "sha256": "1b0d90c211e9a20054d6361c54a2680e3c4fb5dd44183612c42a2d87c6db6514",
+      "canonical": "worker-domain-h05-001/source/materials/adapters/mc-composite-apex.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/adapters/native.lisp",
+      "bytes": 5402,
+      "sha256": "56bb3083976f0303d273f9167d20d0ca29464553a4df86a75e21e95db9c08673",
+      "canonical": "worker-domain-h05-001/source/materials/adapters/native.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/adapters/triaxial.lisp",
+      "bytes": 485,
+      "sha256": "f3d20fd721a65a72ea24c6b07ec487ca1bd6e922cd6861ef152c1c84387d6fb4",
+      "canonical": "worker-domain-h05-001/source/materials/adapters/triaxial.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/adapters/wang2017-apex.lisp",
+      "bytes": 3533,
+      "sha256": "d6c09f6a6c6832c200c3198bdf7a728d489869152cc13fabe572af4d69d4a820",
+      "canonical": "worker-domain-h05-001/source/materials/adapters/wang2017-apex.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/adapters/wang2017.lisp",
+      "bytes": 7102,
+      "sha256": "eadea18e1b93c46e625475980b59583d711b2669a86ef2dad7d85a426d4cd344",
+      "canonical": "worker-domain-h05-001/source/materials/adapters/wang2017.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/backends/cpp/legacy-transaction.lisp",
+      "bytes": 10369,
+      "sha256": "cff14534f13f687e85d4ce262a4a8635c9b8273879d332f846f60abae2bdd924",
+      "canonical": "worker-domain-h05-001/source/materials/backends/cpp/legacy-transaction.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/cl-mpm-materials.asd",
+      "bytes": 472,
+      "sha256": "babf46b087d75b95c4a513f906cffd5debb8cdad295d356832e56741f2b8cc12",
+      "canonical": "worker-domain-h05-001/source/materials/cl-mpm-materials.asd"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/core/constitutive-package.lisp",
+      "bytes": 364,
+      "sha256": "681fb05352f6c689560e2de4f93b571c865566cb0a12750b90306b5e159e4d30",
+      "canonical": "worker-domain-h05-001/source/materials/core/constitutive-package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/core/definition.lisp",
+      "bytes": 925,
+      "sha256": "77e250e35380de2e9d69c6b1358f17fc7552aa03e272df87d4e13d1588b76832",
+      "canonical": "worker-domain-h05-001/source/materials/core/definition.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/core/diagnostics-interface.lisp",
+      "bytes": 1130,
+      "sha256": "dd764532680ed3d9b07946502b9148a0a2e75265e061159ddf4a5e770b13e6db",
+      "canonical": "worker-domain-h05-001/source/materials/core/diagnostics-interface.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/core/factory.lisp",
+      "bytes": 175,
+      "sha256": "0d442cf66705ab1f57cdf05c2a325fb3ece9eaa63505de6cfbef1cd8855b422a",
+      "canonical": "worker-domain-h05-001/source/materials/core/factory.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/core/interface.lisp",
+      "bytes": 177,
+      "sha256": "bc8ecddd2a71c141aed94f7b0ce42bd2795c491b37d261420413067c51997669",
+      "canonical": "worker-domain-h05-001/source/materials/core/interface.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/core/parameters.lisp",
+      "bytes": 178,
+      "sha256": "c4584b76ef8c8ed411329de08bd984bb36a92e7481da6bdec779c4fa0900ae9a",
+      "canonical": "worker-domain-h05-001/source/materials/core/parameters.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/core/plastic-state.lisp",
+      "bytes": 1793,
+      "sha256": "146e0847313ee3c74f82b37f5599b0574ecfe7a93a6df8f591845f0da24e6af2",
+      "canonical": "worker-domain-h05-001/source/materials/core/plastic-state.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/core/registry.lisp",
+      "bytes": 176,
+      "sha256": "f0c161decd170795ca611ad6999f8b451fddb34db7cf8dd90293b71fcd7635cd",
+      "canonical": "worker-domain-h05-001/source/materials/core/registry.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/core/state-interface.lisp",
+      "bytes": 194,
+      "sha256": "6efc47a8fba4e0980d2ca2e0586397eff5f78ad9415cd631d67a977b3943aa87",
+      "canonical": "worker-domain-h05-001/source/materials/core/state-interface.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/core/validation.lisp",
+      "bytes": 178,
+      "sha256": "0d98c86ba08f8dbfd68ea82ec7119ed3cdcc60c65f756122764e04dd65734484",
+      "canonical": "worker-domain-h05-001/source/materials/core/validation.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/core/visco-package.lisp",
+      "bytes": 182,
+      "sha256": "8cfcf703f5491d98327864a45fde29658e19c05f5dd05caa84f99170ee6df495",
+      "canonical": "worker-domain-h05-001/source/materials/core/visco-package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/diagnostics/chalk-reference.lisp",
+      "bytes": 1371,
+      "sha256": "2ab3ca7cfff08cb05ceebc9f5c2412cf02c1a99a3ca4e04e044090cb13d0adac",
+      "canonical": "worker-domain-h05-001/source/materials/diagnostics/chalk-reference.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/diagnostics/native.lisp",
+      "bytes": 11955,
+      "sha256": "451b09f6c83801bf4f65cd32cf7231af7b44035af650f87169ead424244128dc",
+      "canonical": "worker-domain-h05-001/source/materials/diagnostics/native.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/chalk/constitutive.lisp",
+      "bytes": 198,
+      "sha256": "84c059a2dd680976c95c3340c01341e431ed6854fc17ac99546233d6956f5ec7",
+      "canonical": "worker-domain-h05-001/source/materials/models/chalk/constitutive.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/chalk/evolution/softening.lisp",
+      "bytes": 1059,
+      "sha256": "ab4d31e6728e944766d0df06092a0de5b9fc7cea95015ba06b69601f008b595d",
+      "canonical": "worker-domain-h05-001/source/materials/models/chalk/evolution/softening.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/chalk/joss-reference.lisp",
+      "bytes": 2091,
+      "sha256": "bb05c72cf895a586e983e5015cfb2a6c5fdf24384344bf880537b8be23d8f552",
+      "canonical": "worker-domain-h05-001/source/materials/models/chalk/joss-reference.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/chalk/legacy.lisp",
+      "bytes": 61023,
+      "sha256": "257225c99b45c758d066dae11c1792f61b19e7601a3466cd15e9ee2b612a7db5",
+      "canonical": "worker-domain-h05-001/source/materials/models/chalk/legacy.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/chalk/state.lisp",
+      "bytes": 186,
+      "sha256": "22b6c226dc7e98ff45f3a35ab688f0408979904820ebcfb8031e1f43dbe232c3",
+      "canonical": "worker-domain-h05-001/source/materials/models/chalk/state.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/concrete/evolution/native-hooks.lisp",
+      "bytes": 4186,
+      "sha256": "95c44eefcef45cfa8d4cb2602a4df90723d162e19504d07b008c9038f530696e",
+      "canonical": "worker-domain-h05-001/source/materials/models/concrete/evolution/native-hooks.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/concrete/evolution/softening.lisp",
+      "bytes": 847,
+      "sha256": "0d6aebe20d43e42e39c06cfd872f9ad6507bc23960897f1b2e4f04a24d9f7403",
+      "canonical": "worker-domain-h05-001/source/materials/models/concrete/evolution/softening.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/concrete/legacy.lisp",
+      "bytes": 4100,
+      "sha256": "8224b9bbe474fc2898c1145cf3b82671f885bd633483b3f7dcdda2177546fc59",
+      "canonical": "worker-domain-h05-001/source/materials/models/concrete/legacy.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/damage/constitutive.lisp",
+      "bytes": 8247,
+      "sha256": "5ee75605b1cfafda3d59367fac25ecb466420e41ee1ba2f3080f9673d049a53f",
+      "canonical": "worker-domain-h05-001/source/materials/models/damage/constitutive.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/damage/criteria.lisp",
+      "bytes": 21031,
+      "sha256": "ab574dbb03b8a8ee2bd60e92f6fedaaefc07fa1d30a336b13a7df21dc4c6463e",
+      "canonical": "worker-domain-h05-001/source/materials/models/damage/criteria.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/damage/evolution/degradation.lisp",
+      "bytes": 17274,
+      "sha256": "3e473fa389a6d0994a0046ff3b4ec741922b90acfc4244f8ab7b968064dfe288",
+      "canonical": "worker-domain-h05-001/source/materials/models/damage/evolution/degradation.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/damage/evolution/delayed-rate.lisp",
+      "bytes": 9889,
+      "sha256": "47a84f8e9ea12ffb4e092d25d548d87eacb6c859a6ddef10dcf984ac814c15c6",
+      "canonical": "worker-domain-h05-001/source/materials/models/damage/evolution/delayed-rate.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/damage/evolution/responses.lisp",
+      "bytes": 6640,
+      "sha256": "f26542cc6f2246f1eecc590fa53fd1a967a3756163c2a713af639cb31622f8bf",
+      "canonical": "worker-domain-h05-001/source/materials/models/damage/evolution/responses.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/damage/legacy-particles.lisp",
+      "bytes": 27294,
+      "sha256": "e4cbd050ca74f763a95b17d70dcfbd10aa9c0a241b2c493b1990ffaeecfbad0c",
+      "canonical": "worker-domain-h05-001/source/materials/models/damage/legacy-particles.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/damage/legacy-state-evolution.lisp",
+      "bytes": 15814,
+      "sha256": "63e624ca8c62d81d92398e1a56225f8aaf4664854cd18367668978b1118658dc",
+      "canonical": "worker-domain-h05-001/source/materials/models/damage/legacy-state-evolution.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/damage/particle.lisp",
+      "bytes": 4205,
+      "sha256": "9ea0abec8e17a05735eed4a57af25fea12f7fb0c64d29e28db255db16ab0829c",
+      "canonical": "worker-domain-h05-001/source/materials/models/damage/particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/elastic/constitutive.lisp",
+      "bytes": 2726,
+      "sha256": "385f803c7b3a8a9482ced32c55ae304006eeb62761c48a7854e73373df1e264e",
+      "canonical": "worker-domain-h05-001/source/materials/models/elastic/constitutive.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/elastic/linear-elastic/package.lisp",
+      "bytes": 130,
+      "sha256": "0accd221eab1441b071fbab926ed97b837655beae52f2ba74fa9ae6cce090b1c",
+      "canonical": "worker-domain-h05-001/source/materials/models/elastic/linear-elastic/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/elastic/particle.lisp",
+      "bytes": 9002,
+      "sha256": "4f2357047f838c54e29da14d9ecde21c626d440252b3cec57f6b8a9a12d2e9e4",
+      "canonical": "worker-domain-h05-001/source/materials/models/elastic/particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/fluid/constitutive.lisp",
+      "bytes": 844,
+      "sha256": "f5bd1e970e8d1779ac455e377eff45ffb342ad135d76f23e7d566fe0778548c1",
+      "canonical": "worker-domain-h05-001/source/materials/models/fluid/constitutive.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/fluid/particle.lisp",
+      "bytes": 1073,
+      "sha256": "6a8fd3990f10345dc5005441d23dcbba713ea4d55b1796db26b8b6d68b71f8bf",
+      "canonical": "worker-domain-h05-001/source/materials/models/fluid/particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/frictional-damage/legacy.lisp",
+      "bytes": 8129,
+      "sha256": "81ab1297bb8113cfd7333e3912418dc3b15de87b91d8c8c71958e370a8892db8",
+      "canonical": "worker-domain-h05-001/source/materials/models/frictional-damage/legacy.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/ice/legacy.lisp",
+      "bytes": 40657,
+      "sha256": "9c698a5e07fd9ced64ffeef2dc4659d61c6548fdb0076fc2be696ce8aac2e5ed",
+      "canonical": "worker-domain-h05-001/source/materials/models/ice/legacy.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/limestone/legacy.lisp",
+      "bytes": 7179,
+      "sha256": "c663f6c0c82814da2308adb7fd74e79b761d39feffa6e24fbfdf805ee9cda023",
+      "canonical": "worker-domain-h05-001/source/materials/models/limestone/legacy.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/drucker-prager/constitutive.lisp",
+      "bytes": 11637,
+      "sha256": "db96248bf72353d302ec6613d6b4914714dc97ab14f09a2ab636899e4cf5cf92",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/drucker-prager/constitutive.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/drucker-prager/particle.lisp",
+      "bytes": 3737,
+      "sha256": "6a5a5228d0277e65a894a0a554c6f302f295d331a0cce85e984a4d42e6db7bfd",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/drucker-prager/particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mc-composite-apex/diagnostics.lisp",
+      "bytes": 6077,
+      "sha256": "6fe2771fc156e25ae13380f537e232bd4875a91a77d960a0290877068f23b360",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mc-composite-apex/diagnostics.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mc-composite-apex/native.lisp",
+      "bytes": 2405,
+      "sha256": "85c90f4b8a4eac515498ed77cedf583ee147b80b79387cc3de391b562d7c1069",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mc-composite-apex/native.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mc-composite-apex/package.lisp",
+      "bytes": 468,
+      "sha256": "fa96f836cc01faec4f18c9852e450ab2b8957e8be9108b22777bf3a053d39eb5",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mc-composite-apex/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mc-composite-apex/projection.lisp",
+      "bytes": 10339,
+      "sha256": "eb16237ecda3b08c17632e84c782f99f71a223eaf49b83bc2df63ebeaad1dd6d",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mc-composite-apex/projection.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mc-hs-apex.lisp",
+      "bytes": 3639,
+      "sha256": "5961ecac5ed77cdbc8917c0d2eb2da174730e187b7289b9d82a3455a24b9004f",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mc-hs-apex.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/constitutive.lisp",
+      "bytes": 24271,
+      "sha256": "784ed026c5fb7b211948e2f83d4578d25be7bad1e62e41ed61505cde2acdd66d",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/constitutive.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/evolution/hardening-softening.lisp",
+      "bytes": 240,
+      "sha256": "c1e9adf74ad08f3be7f4a8a6e07190abec7e2b6326d344ee3c633ec41392e6c9",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/evolution/hardening-softening.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/evolution/hardening.lisp",
+      "bytes": 230,
+      "sha256": "a454e7dcde029ef9a6d85e03908c113bd3f794798980b75a990874705cf380dd",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/evolution/hardening.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/evolution/perfect-plastic.lisp",
+      "bytes": 236,
+      "sha256": "76ddf9770602432da28128ee51d982fe26c19983f6d527e0d08579260dda490e",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/evolution/perfect-plastic.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/particle.lisp",
+      "bytes": 5530,
+      "sha256": "43d773e7cef70b6a448c06f723efea6de43f545b2eaea4a574235b7a386f9110",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/plastic-potential.lisp",
+      "bytes": 236,
+      "sha256": "c36cd6f1eceb92c1b29d1e393bce92f7396be3ad9e81cab3b0077a81a9b66b86",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/plastic-potential.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/return-mapping.lisp",
+      "bytes": 233,
+      "sha256": "574433429c982167978a4c426af17d2c6606216bee789b8916ed700263c0f09e",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/return-mapping.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/state.lisp",
+      "bytes": 216,
+      "sha256": "d6a24a75858826cbd2cf034b6fc1b7baceb76131a10dfcb081f8db3b1be6a6ed",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/state.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/yield-function.lisp",
+      "bytes": 233,
+      "sha256": "889a469b62b52ce43833e2bf947a46c444b036e7f7f1ad6cd1de368ad1d438a9",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb/yield-function.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/diagnostics.lisp",
+      "bytes": 4746,
+      "sha256": "10fc3d6170b04adbb153fe2afd562d51daefc9d1976a3059ba046c1b8223d0eb",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/diagnostics.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/law.lisp",
+      "bytes": 8393,
+      "sha256": "505207b3bcbbd0c87625d16c96cb436436f71562ded9349aa2126ed7dac6796a",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/law.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/material.lisp",
+      "bytes": 9155,
+      "sha256": "376bb5465ae7e1553dfb23d0f3ea26b125fbd6430724fcac0ee5233125302aeb",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/material.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/package.lisp",
+      "bytes": 2441,
+      "sha256": "3ec1f8ccbbf15732ab450708413728987aa843d89b1e2eeefdc6773a4930b028",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp",
+      "bytes": 23352,
+      "sha256": "e26b736914a8fa2cc3f4eb7f6619c1331e787f72d365d5bb7c0a5b3f4d8ceda1",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/projection.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/state.lisp",
+      "bytes": 11424,
+      "sha256": "d9311639dae10064985d5ff2fabfef189ff7bf07cb85699c1fd54355d6f83fd4",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/mohr-coulomb-evolution/state.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/urmi-strength-damage/law.lisp",
+      "bytes": 11704,
+      "sha256": "9781414be59704d5a75d8e269c2147890a9ce1864ba6b42e4bb46a7a2aab9b33",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/urmi-strength-damage/law.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/urmi-strength-damage/package.lisp",
+      "bytes": 799,
+      "sha256": "3aebae0eefb40df968932cec0cf3373530bfeb1188879cde87d45e8bd95a9149",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/urmi-strength-damage/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/urmi-strength-damage/particle.lisp",
+      "bytes": 3179,
+      "sha256": "70af48d98e5353ae64d5e2ae6280462a0e594a3fa5650162206a4fb16fefc9af",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/urmi-strength-damage/particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/von-mises/constitutive.lisp",
+      "bytes": 9758,
+      "sha256": "41e16eb202d3584b55f1895c0b165fd153783fb8d321475bb433325011dfc702",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/von-mises/constitutive.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/von-mises/evolution/secant-hardening.lisp",
+      "bytes": 1753,
+      "sha256": "ffc6204dc65439dd8ffa1ce1188bbff6e3444fe2089c848ce3623e97c07e41e3",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/von-mises/evolution/secant-hardening.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/von-mises/particle.lisp",
+      "bytes": 8298,
+      "sha256": "487093df140e692a8826bef85f8e8143b1699b46261013cb529de58b6ed637bb",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/von-mises/particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/von-mises/state.lisp",
+      "bytes": 210,
+      "sha256": "142147708c7c8dc8fb959b7735a2fdbc4b11bea313775e2b2055df6afc3e26f2",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/von-mises/state.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/apex-native.lisp",
+      "bytes": 1364,
+      "sha256": "b87f642c8f995c10b35427efe790186ff57e4950532b98df300d9c6da7f3bb82",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/apex-native.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/apex-package.lisp",
+      "bytes": 659,
+      "sha256": "895c8a58ce520c5692bdd4415aac1807426064ba96799970bf01c6f8f6fc8185",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/apex-package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/apex-projection.lisp",
+      "bytes": 6864,
+      "sha256": "6c6abaefa78e2a90f076a4fd9556df489727a9704e079caad40a04126f5370b0",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/apex-projection.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/apex-residual-history.lisp",
+      "bytes": 2552,
+      "sha256": "6bb463d741f749967d90aaab00667a54214b4a96c6f74e5788071220511bba98",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/apex-residual-history.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/history.lisp",
+      "bytes": 3185,
+      "sha256": "28c3a6b9f2f0ca9bf30f40a722ceb9c9aaf931e859f17416dceccfb323e857a6",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/history.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/law.lisp",
+      "bytes": 593,
+      "sha256": "039efbcd85aa334dfdd1b00e3a5cb8ddebc725994b92cbc8da0064fa3c09aeaa",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/law.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/material.lisp",
+      "bytes": 13299,
+      "sha256": "7217e93a7d657d0dbfe6d71f7d3217c6df889d00cb37b9e8497cb5e6b0a54b15",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/material.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/native-package.lisp",
+      "bytes": 936,
+      "sha256": "c3b519759df364208140b15c6bc58d915f8c5cb343be40a4803718740ac6d917",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/native-package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/package.lisp",
+      "bytes": 374,
+      "sha256": "a2acf539faccb920a8314ca1a8e273126dde1d33dc224541133e63727e3a04e7",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/point-projection.lisp",
+      "bytes": 15126,
+      "sha256": "c852770744c265705a828b24d550440343ad93466b1ffea72b11a1514a4d320a",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/point-projection.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/state.lisp",
+      "bytes": 5567,
+      "sha256": "f9caaad2cffecca5dae54405b0fd1cec4dcc30d3c68f9236452ae706476d3a53",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/state.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/plastic/wang2017/transport.lisp",
+      "bytes": 2121,
+      "sha256": "0eeac6948b6e0ad938d41635c221a8938c3eacc45cb62a5804c9b04105df86dc",
+      "canonical": "worker-domain-h05-001/source/materials/models/plastic/wang2017/transport.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/viscoelastic/finite-strain/legacy.lisp",
+      "bytes": 29348,
+      "sha256": "c40e712e6acfd2e120d49b104b98ef7898e98bd114b5a82d6382564c08a79782",
+      "canonical": "worker-domain-h05-001/source/materials/models/viscoelastic/finite-strain/legacy.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/viscoelastic/maxwell/constitutive.lisp",
+      "bytes": 7171,
+      "sha256": "629ed67e46ea7e10e441662475749e158f132ace27f0d35db5a722bcd1c6a81d",
+      "canonical": "worker-domain-h05-001/source/materials/models/viscoelastic/maxwell/constitutive.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/viscoelastic/particle.lisp",
+      "bytes": 776,
+      "sha256": "63104b7ffae5479daeaf5bb3cd6522c5690ede369f015c359a1971ab83e604a4",
+      "canonical": "worker-domain-h05-001/source/materials/models/viscoelastic/particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/viscoplastic/clay-creep/law.lisp",
+      "bytes": 7212,
+      "sha256": "4573621e6522b487aac0ac10df91fdb5f93b91e3850d056b0184100efdb6fcb3",
+      "canonical": "worker-domain-h05-001/source/materials/models/viscoplastic/clay-creep/law.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/viscoplastic/clay-creep/package.lisp",
+      "bytes": 839,
+      "sha256": "f5a29159c46e6b9ec9fba872f2981f81aa32f611ff8a6ac1a07570a376722794",
+      "canonical": "worker-domain-h05-001/source/materials/models/viscoplastic/clay-creep/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/viscoplastic/clay-creep/particle.lisp",
+      "bytes": 10660,
+      "sha256": "5f1cede2a3ad9df9b7d81c4a1bcb07e518bbea0b824cc7567fc9b40b3e1e1515",
+      "canonical": "worker-domain-h05-001/source/materials/models/viscoplastic/clay-creep/particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/viscoplastic/glen/constitutive.lisp",
+      "bytes": 8087,
+      "sha256": "55598a7174cd908704123c9646227a49314e94a04193e2ad4ffc2f32fe1c70b2",
+      "canonical": "worker-domain-h05-001/source/materials/models/viscoplastic/glen/constitutive.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/materials/models/viscoplastic/particle.lisp",
+      "bytes": 2219,
+      "sha256": "790b0ddce5edd69b6953ec9f143bd521e98a00a9e33a83011761c9d8139f1908",
+      "canonical": "worker-domain-h05-001/source/materials/models/viscoplastic/particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/run-case.lisp",
+      "bytes": 4588,
+      "sha256": "26d0ae574b00e66da6dca605735fa9abab047c71e479b5e5129f10bd17e7a1f9",
+      "canonical": "worker-domain-h05-001/source/run-case.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/adapter.lisp",
+      "bytes": 3419,
+      "sha256": "a00e7b5f4a2a0fa6158bba37404d93a3f084814a27667692ed0417a8b3effa32",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/adapter.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/boundaries.lisp",
+      "bytes": 181,
+      "sha256": "d8aa12bd6b9f315ca2c769493f98a3f8c2685e48b2830032468e803d23f177d4",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/boundaries.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/build.lisp",
+      "bytes": 2097,
+      "sha256": "c790b5ce4ccc186fb38122ca113b1317ec9dc4a268b6145cecace0f285cb06ac",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/build.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/execute.lisp",
+      "bytes": 16551,
+      "sha256": "59f0c151960b68c58c92c99dda27dfc5c24cd91f406e9c83894216df7eb0bf37",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/execute.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/geometry.lisp",
+      "bytes": 3294,
+      "sha256": "e135bc76cacc127b5d9842372d9d7442fb26ac62ebc6542ae0297eab7ff49999",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/geometry.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/initial-conditions.lisp",
+      "bytes": 189,
+      "sha256": "df2417378ea3bcfcaace99f0efcf58a9c7a0b4e3e770e64f2fb386be4ba54cde",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/initial-conditions.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/loading.lisp",
+      "bytes": 178,
+      "sha256": "ba770dd2f75667248a99f1cf964e517545afb59d4e638bbfa548a721d1f2bce4",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/loading.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/measurements.lisp",
+      "bytes": 181,
+      "sha256": "f5306ad09ca14f0c13e62a95b235dde94ee32a5bdc597842ce8d14f1ac7a732b",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/measurements.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/notch.lisp",
+      "bytes": 179,
+      "sha256": "40db6c51ae5ee8fd5f83c09dc3ddc065c8f6e032633ec5125b8250f29b1ff0e5",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/notch.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/run.lisp",
+      "bytes": 2470,
+      "sha256": "f69e529991ad2fe58d4035731868526ba56b4eee669ee8da25061ea9a299330c",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/run.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/settings.lisp",
+      "bytes": 268,
+      "sha256": "4467b347b00c8e5102ce9b7d2ad9c842180aa62d6d19c274cfb0dd7314d60440",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/settings.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/cliff/solver.lisp",
+      "bytes": 1397,
+      "sha256": "1d11bcd99794f6440e39b9cdead22be55f3a29b88ea6cc0a606939689f6ba930",
+      "canonical": "worker-domain-h05-001/source/scenarios/cliff/solver.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/gravity-slope/adapter.lisp",
+      "bytes": 385,
+      "sha256": "385e29bf7a5fe5fb6c0195687a04f80172876578f6bb69b608c1b26e0f6b8af0",
+      "canonical": "worker-domain-h05-001/source/scenarios/gravity-slope/adapter.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/gravity-slope/configuration.lisp",
+      "bytes": 8076,
+      "sha256": "b9d078c27d896a1a4aa325345eefcbd0cec3fc4db463a5755adfc89a4527243b",
+      "canonical": "worker-domain-h05-001/source/scenarios/gravity-slope/configuration.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/gravity-slope/geometry.lisp",
+      "bytes": 3351,
+      "sha256": "434e457f40ff912c1308a8291419a316f50138ca067272094b9a40680c28bd47",
+      "canonical": "worker-domain-h05-001/source/scenarios/gravity-slope/geometry.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/gravity-slope/mc-composite-apex-adapter.lisp",
+      "bytes": 2070,
+      "sha256": "cc12cc0d7666c984010b12f5f5d4607cba8e94abe5e7b3da701483e7e35b8c0f",
+      "canonical": "worker-domain-h05-001/source/scenarios/gravity-slope/mc-composite-apex-adapter.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/gravity-slope/measurements.lisp",
+      "bytes": 10758,
+      "sha256": "f23f0337bcc519954d94e1a06193ac8d6bda113ce8b60d7ced2886ec1a1ed0b5",
+      "canonical": "worker-domain-h05-001/source/scenarios/gravity-slope/measurements.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/gravity-slope/package.lisp",
+      "bytes": 956,
+      "sha256": "5a40608bcde4f7d9b2173bffe87795c1c0710b2ce1940586d6975092afb62c33",
+      "canonical": "worker-domain-h05-001/source/scenarios/gravity-slope/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/gravity-slope/runner.lisp",
+      "bytes": 9211,
+      "sha256": "dc235f18f1153c0f1e70245d4ae8d4780e3c37221afd56bebed39b1693bc95b7",
+      "canonical": "worker-domain-h05-001/source/scenarios/gravity-slope/runner.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/joss/build.lisp",
+      "bytes": 3187,
+      "sha256": "8b16ad9c1b2eb3dd7b97a8fd14955b95979b2588d30201ac44cae46764e6b48e",
+      "canonical": "worker-domain-h05-001/source/scenarios/joss/build.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/joss/classes.lisp",
+      "bytes": 429,
+      "sha256": "9cb439ee8b2026c194c0a074a5d812ab7cb743a68b15d33d915b816e7bf193bd",
+      "canonical": "worker-domain-h05-001/source/scenarios/joss/classes.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/joss/geometry.lisp",
+      "bytes": 2956,
+      "sha256": "6bf654fe8bed89e2cdd7cc903c1509dea39984e30641f51f632b974508e47f6d",
+      "canonical": "worker-domain-h05-001/source/scenarios/joss/geometry.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/joss/measurements.lisp",
+      "bytes": 332,
+      "sha256": "4556047f2058577e8906f1036e72f8323df98343a757232dc1121c533763a27d",
+      "canonical": "worker-domain-h05-001/source/scenarios/joss/measurements.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/joss/output.lisp",
+      "bytes": 1176,
+      "sha256": "39080e5eb7b5968ce8fb651804373dbba84919b44b793b9d5a87b15932f88641",
+      "canonical": "worker-domain-h05-001/source/scenarios/joss/output.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/joss/phases.lisp",
+      "bytes": 1395,
+      "sha256": "59514e8a97f5a8621a26fb0e37e4c4fc16bc13b0d208459bbf8f9ac735518c91",
+      "canonical": "worker-domain-h05-001/source/scenarios/joss/phases.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/joss/run.lisp",
+      "bytes": 11888,
+      "sha256": "33265c845ea20e22110e81577274adaa1fb4f8bec29a1b94293b980025441684",
+      "canonical": "worker-domain-h05-001/source/scenarios/joss/run.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/joss/stages.lisp",
+      "bytes": 176,
+      "sha256": "afb2bed0e9fea39cb37f85478a6d8f22383d8469ac1166fe3dc0ea91828ec143",
+      "canonical": "worker-domain-h05-001/source/scenarios/joss/stages.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/joss/statistics.lisp",
+      "bytes": 6450,
+      "sha256": "e6a5b0662ab15e4a7216dab768bd6887ef04a90cae7c1664b44bac25e789d4ec",
+      "canonical": "worker-domain-h05-001/source/scenarios/joss/statistics.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/joss/validation.lisp",
+      "bytes": 1249,
+      "sha256": "ff38516f64c0a75eeef5347331a0619bbab690cccfe0aae1f27133d30fa47fc1",
+      "canonical": "worker-domain-h05-001/source/scenarios/joss/validation.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/residual-clay-slope/output.lisp",
+      "bytes": 15423,
+      "sha256": "389312a542fa1719363200f8efc31219020beecd46b313a3eb7de715a10a3b27",
+      "canonical": "worker-domain-h05-001/source/scenarios/residual-clay-slope/output.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/residual-clay-slope/package.lisp",
+      "bytes": 424,
+      "sha256": "d27867f8e4ee8b154557c92aadcc3116f315c5bc7099e3dd01bdbde3a79daabf",
+      "canonical": "worker-domain-h05-001/source/scenarios/residual-clay-slope/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/residual-clay-slope/runner.lisp",
+      "bytes": 8749,
+      "sha256": "a8561dd02a9dce1d8ff0062d0f3f6497ad4ea93f742f790487e5c8ccc9425f6d",
+      "canonical": "worker-domain-h05-001/source/scenarios/residual-clay-slope/runner.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/residual-clay-slope/toe-profile.lisp",
+      "bytes": 15288,
+      "sha256": "18eb2fb8885c74f63d62274f89a19848b203635230244300a655f2e5717e3051",
+      "canonical": "worker-domain-h05-001/source/scenarios/residual-clay-slope/toe-profile.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-creep/adapter.lisp",
+      "bytes": 378,
+      "sha256": "c037c1fa86d265024b65feb53e81fe75bbfc66f730be55585a87e16b04ac935c",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-creep/adapter.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-creep/configuration.lisp",
+      "bytes": 5886,
+      "sha256": "ff8a6ff624d98698c09794716e2334fe9f84b41849acee0369fb023c2cbcaf18",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-creep/configuration.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-creep/loading-output.lisp",
+      "bytes": 1611,
+      "sha256": "4f05fcdd8c921420622ca593af4455fb39bff93bfc39fb19f20a3be1647e3b8e",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-creep/loading-output.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-creep/loading.lisp",
+      "bytes": 8317,
+      "sha256": "3ca017c2fb804e0202bdd9421a3d716a59a4784e6e0b7c5a58390422ecd81a7e",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-creep/loading.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-creep/measurements.lisp",
+      "bytes": 4999,
+      "sha256": "c190c1ceb12e3eee9398be20996741ba5643e28135b8dad80d33898c3905e475",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-creep/measurements.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-creep/package.lisp",
+      "bytes": 367,
+      "sha256": "ed440aa878bb11dc80214db3b07bf92a4a4999d192e0dc7bc9b69f01ad31208c",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-creep/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-creep/runner.lisp",
+      "bytes": 10085,
+      "sha256": "4435eb595750354a0f48ceac14bc53d986cd92cbcd14856cfcf0a45a8e56e938",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-creep/runner.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-descent/adapter.lisp",
+      "bytes": 385,
+      "sha256": "2a469c90d2f3a662e4c095a261e03cdbf2e15a152fa085445766431dadeadade",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-descent/adapter.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-descent/boundary.lisp",
+      "bytes": 4468,
+      "sha256": "b6145bc1c3860cd47c6baf7c636b260c134e9c175f36c6d3137855858b49206c",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-descent/boundary.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-descent/configuration.lisp",
+      "bytes": 7147,
+      "sha256": "2ce37f1c510d3425e0ef36fd0ca0d9f4d02969926fef314ddfbffb3aebd588b4",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-descent/configuration.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-descent/geometry.lisp",
+      "bytes": 3941,
+      "sha256": "92c3100d3ea18aa6fe8370b256fab7321a095466bb838a0ec3aecf2a36fe14b1",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-descent/geometry.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-descent/package.lisp",
+      "bytes": 1133,
+      "sha256": "0f09d670173492c62fb87319a7ec863f1e62ca9dad23333b86de4fb2897f4478",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-descent/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-descent/runner.lisp",
+      "bytes": 18544,
+      "sha256": "4425f3e8ed3640a9f234fd5b55c90d3e03eec2aec8f2aac3f270229ae23fd8f8",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-descent/runner.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/slope-descent/wang2017-output.lisp",
+      "bytes": 7853,
+      "sha256": "d5b8a642536de89c070cb734617cc160abe1bf6012ce57a2118ee80214f8c36e",
+      "canonical": "worker-domain-h05-001/source/scenarios/slope-descent/wang2017-output.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/adapter.lisp",
+      "bytes": 4076,
+      "sha256": "92b3ffee405aa0d68fe55d253a6177579462728009a538730b0ca0ac098a4d70",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/adapter.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/boundaries.lisp",
+      "bytes": 207,
+      "sha256": "5c922c21bf89d35ccfc971e187ee1ce5679b90ea12b683cd2d2193675bf053de",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/boundaries.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/build.lisp",
+      "bytes": 186,
+      "sha256": "1a7b73a8e97d1186e1693c5664ca13387e1b7f886e478800cb9d084f0f481852",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/build.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/config.lisp",
+      "bytes": 3157,
+      "sha256": "1eee11c1bec5af052d1c06473c8484bbfa96dfd301cf4e7aa852d4a8ce80809c",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/config.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/controls.lisp",
+      "bytes": 4294,
+      "sha256": "8a7c9db049fb481953d36d669ff6812edbbdd024929a1d6136e4da724688a948",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/controls.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/geometry.lisp",
+      "bytes": 3589,
+      "sha256": "fd3f00450c847e6687421d1268ab612a0b217e2d07d4bc1c74055249a79ce0cc",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/geometry.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/homogeneous.lisp",
+      "bytes": 3220,
+      "sha256": "542285f6d5ca253259bb385b7e48f3d86297609aa0f2e7c07c1485cbf35d32f3",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/homogeneous.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/initial-conditions.lisp",
+      "bytes": 207,
+      "sha256": "77554f72ee147ac3190fa630271a43848243de5080d2fb0892a21398163e5eb8",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/initial-conditions.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/loading.lisp",
+      "bytes": 204,
+      "sha256": "74a2e03fbd97b8f48fd03d4cb578b194c39bcb9d228362d4fb7eb3c17f448dcc",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/loading.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/measurements.lisp",
+      "bytes": 6658,
+      "sha256": "5702f1c392ae52f1216b98a2562ccd589ef4a2654abb5428c922e068a2710454",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/measurements.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/mpm.lisp",
+      "bytes": 3570,
+      "sha256": "5fc869b968935e524c8533c1a56a86dfbef3fe0fe134ddc2449d4e8de87ed518",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/mpm.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/runner.lisp",
+      "bytes": 7743,
+      "sha256": "63d29109dd71f1b478952cc1a92cb776af84f95cd0663bf8a2f90582b82a7a96",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/runner.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/stages.lisp",
+      "bytes": 184,
+      "sha256": "6605c0348ca60e4626e54997cdabdd4395cbd7dac4464e043762ed1502ba19b9",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/stages.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/state.lisp",
+      "bytes": 237,
+      "sha256": "46bfb37ea16004a0c13affcde1bca8bf952d64b1db130f26c3927b087c60cd20",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/state.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/triaxial/stress-measures.lisp",
+      "bytes": 168,
+      "sha256": "10b2ca8702641d4deffce31efb652ff7bcbe008039c5eceafcc46dd56c95d6f3",
+      "canonical": "worker-domain-h05-001/source/scenarios/triaxial/stress-measures.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/adapter.lisp",
+      "bytes": 381,
+      "sha256": "81311581d3fa21ab6af87f846df8710058a242e3e603fbe016e94999b55a08f7",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/adapter.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/configuration.lisp",
+      "bytes": 3755,
+      "sha256": "3a69e69ac5787676f5b294be125f09421d40297f915cd06aa6d7ac7f2e78a3fc",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/configuration.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/extended.lisp",
+      "bytes": 3026,
+      "sha256": "e7c3764eb4838e25b3784140b30eab9373fa841300d123128e62c51b99aec57c",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/extended.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/geometry.lisp",
+      "bytes": 5255,
+      "sha256": "d032b5eff83d7e2ffcc21c547271e5c6315e900e12c7e1a51762c9a71d6768ae",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/geometry.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/output-streams.lisp",
+      "bytes": 2063,
+      "sha256": "e92317270d28e70783e69173318c2ca4769b16f1aa17f87f4a3d4bd9e65c67a0",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/output-streams.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/output.lisp",
+      "bytes": 15448,
+      "sha256": "566fd668e25406462fb55ad86420d58e2b0ad25c891ca635a9cd03a188a2263d",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/output.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/package.lisp",
+      "bytes": 518,
+      "sha256": "d57abacc1bfb2ce5c6c2ae446db738a24929446422927891db49fc1d35e5e058",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/proper.lisp",
+      "bytes": 7379,
+      "sha256": "9b370935faec45cbc7b7360e475734138564a7619f2b84eab2638bea96a4f3f0",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/proper.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/rapid.lisp",
+      "bytes": 2820,
+      "sha256": "4c1323abe803ad6e1e522de4e043a28ca6571d6f4a190fbdf88a7c5889e92ee3",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/rapid.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/recipe-package.lisp",
+      "bytes": 936,
+      "sha256": "0e879012be8d383777f803d2303c594f792e0ea5b3cbc294ac5c54ddc81ca6a9",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/recipe-package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/runner.lisp",
+      "bytes": 15160,
+      "sha256": "dfaa7fca239c87c7de1db2d27d929f3ece5ea162f7abbf0a8d26ae5497214892",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/runner.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scenarios/urmi-damage40/transfer.lisp",
+      "bytes": 16603,
+      "sha256": "6d06283be72b5b444fa6d697a80f0af9a8a58056eedf67b55324ddb38cb8abb7",
+      "canonical": "worker-domain-h05-001/source/scenarios/urmi-damage40/transfer.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/scripts/lisp/native-source-snapshot.lisp",
+      "bytes": 20460,
+      "sha256": "1c863bc9eb94cc62134c18b3ff7b9f67d793f0991a2e6785cbab475cd6de02ce",
+      "canonical": "worker-domain-h05-001/source/scripts/lisp/native-source-snapshot.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/source-manifest.json",
+      "bytes": 65755,
+      "sha256": "45218fab6fc17960964baf0419ca2b8d14b62f3366ae02fc112dc3b6a8964306",
+      "canonical": "worker-domain-h05-001/source/source-manifest.json"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/boundaries/buoyancy/buoyancy.lisp",
+      "bytes": 78231,
+      "sha256": "a9318298ab971141f344c46f634156639a2de859e09123ff672aece032fadba9",
+      "canonical": "worker-domain-h05-001/source/src/boundaries/buoyancy/buoyancy.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/boundaries/constraints/bc.lisp",
+      "bytes": 21899,
+      "sha256": "00a722288bc7e7baad930cdb349a325a90c8b4c864c6a387eec26ecff579c0fa",
+      "canonical": "worker-domain-h05-001/source/src/boundaries/constraints/bc.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/boundaries/erosion/dr-erosion.lisp",
+      "bytes": 881,
+      "sha256": "1e6ac4b978a0bab15da7f24b856cff477fbc339a6f3afcbac33490ad0e5cba1f",
+      "canonical": "worker-domain-h05-001/source/src/boundaries/erosion/dr-erosion.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/boundaries/erosion/erosion.lisp",
+      "bytes": 5558,
+      "sha256": "db394ab4ba4e747626ae1523d2447ba5f7d69a7a8e8027026ec97b480a5fba85",
+      "canonical": "worker-domain-h05-001/source/src/boundaries/erosion/erosion.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/boundaries/inflow/inflow.lisp",
+      "bytes": 3342,
+      "sha256": "d9119416720cf986c91d3ea9488c0e9bab5015663a92e72cbb3f862ac4f3de2a",
+      "canonical": "worker-domain-h05-001/source/src/boundaries/inflow/inflow.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/boundaries/penalty/penalty.lisp",
+      "bytes": 63098,
+      "sha256": "f24eb709210e127f357d66f494091f770ef0a5a309b7463f75e3b3e39fbfcbb3",
+      "canonical": "worker-domain-h05-001/source/src/boundaries/penalty/penalty.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/boundaries/pressure/isotropic.lisp",
+      "bytes": 891,
+      "sha256": "f80e73b6052ba53ba9131f967125f3eb36e22fad7f2d7f469a21acf85d64be13",
+      "canonical": "worker-domain-h05-001/source/src/boundaries/pressure/isotropic.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/core/domain-state.lisp",
+      "bytes": 163,
+      "sha256": "1a6cef77f8ff1c538f87118f6243d93d51d5ff4f205bf88bdd979102016432ba",
+      "canonical": "worker-domain-h05-001/source/src/core/domain-state.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/core/iterate-test.lisp",
+      "bytes": 5860,
+      "sha256": "ee36f0ec55a97ec6dbb07cbb7f7bab09fa448b2cc33da7bb5229f9ad883e2984",
+      "canonical": "worker-domain-h05-001/source/src/core/iterate-test.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/core/iterate.lisp",
+      "bytes": 82697,
+      "sha256": "39c0e79ee1d3e25db71d22c413b609ff12208598e50bdbe40fbf50a6c4722e2d",
+      "canonical": "worker-domain-h05-001/source/src/core/iterate.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/core/mesh-base.lisp",
+      "bytes": 51125,
+      "sha256": "57bd47f0b8a9932e9d2042173d0b20fb5fd75037c16725cdbf626ccca8570eba",
+      "canonical": "worker-domain-h05-001/source/src/core/mesh-base.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/core/package.lisp",
+      "bytes": 7473,
+      "sha256": "54c2c4e068fd81bc2b2d79d0ba3835e695e1d0de9f8c0ed6a8ac8513983b92c1",
+      "canonical": "worker-domain-h05-001/source/src/core/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/core/particle-base.lisp",
+      "bytes": 10894,
+      "sha256": "5e8fdaa9b6b312b30565239e72f3add2773b190d3808d42937c93dc08cc5285d",
+      "canonical": "worker-domain-h05-001/source/src/core/particle-base.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/core/particle-protocols.lisp",
+      "bytes": 7004,
+      "sha256": "ea55acd4fa27cbec3530a2c5eceb67d3a050953490d028cc37232d05433ee506",
+      "canonical": "worker-domain-h05-001/source/src/core/particle-protocols.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/core/settings.lisp",
+      "bytes": 492,
+      "sha256": "97307ee66180541a6ea3c3155c2da24f20669420e9e59f8747776253e0e0b710",
+      "canonical": "worker-domain-h05-001/source/src/core/settings.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/core/simulation-base.lisp",
+      "bytes": 52544,
+      "sha256": "90f6ad05fc51456410df291e7782e9acde2f124fa2f16cc5044891238514c1b0",
+      "canonical": "worker-domain-h05-001/source/src/core/simulation-base.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/core/stress-update.lisp",
+      "bytes": 25523,
+      "sha256": "7014b54e59be3b4f8f4b0fc4ddfea750795f71dd3011d5c3fd50b325a628d2e1",
+      "canonical": "worker-domain-h05-001/source/src/core/stress-update.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/core/timestep.lisp",
+      "bytes": 151,
+      "sha256": "946029c9ccaf05b8e071f1c5b236e835cda6fdc20ae7a6957f79c07709c82537",
+      "canonical": "worker-domain-h05-001/source/src/core/timestep.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/damage/eigenerosion/eigenerosion.lisp",
+      "bytes": 12320,
+      "sha256": "3396b21038537944ef0572653fc75c7b14ba070a29257a3c61f12a8169a0c0b7",
+      "canonical": "worker-domain-h05-001/source/src/damage/eigenerosion/eigenerosion.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/damage/nonlocal/ekl.lisp",
+      "bytes": 7162,
+      "sha256": "f3ea1ed92c931f1dfb2437118374806d675a4e37839dd2ac55b858026811e671",
+      "canonical": "worker-domain-h05-001/source/src/damage/nonlocal/ekl.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/damage/nonlocal/legacy.lisp",
+      "bytes": 42911,
+      "sha256": "fe26d093a1e911beee8fdbe67a53c10f0c619f44eea5a3eaa25c410d42c8337f",
+      "canonical": "worker-domain-h05-001/source/src/damage/nonlocal/legacy.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/damage/nonlocal/nonlocal-stress-based.lisp",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-decode.stderr.log"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/damage/package.lisp",
+      "bytes": 1972,
+      "sha256": "0983111fb3acf696939d7ee54d948ed9345cfbd94ec9c529e84e9e528ddb08ef",
+      "canonical": "worker-domain-h05-001/source/src/damage/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/damage/solver/solver.lisp",
+      "bytes": 7492,
+      "sha256": "16117cbb17fae425c1e1ea058a29ed7077e087cd7e63862797e5edbd590bdab1",
+      "canonical": "worker-domain-h05-001/source/src/damage/solver/solver.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/discretization/domain-update/domain-update.lisp",
+      "bytes": 31495,
+      "sha256": "7cf4a1d2ad39b5076ccb322ea19896754c32893d1657b98cb5af4c662bfa7026",
+      "canonical": "worker-domain-h05-001/source/src/discretization/domain-update/domain-update.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/discretization/ghost-nodes/ghost.lisp",
+      "bytes": 49776,
+      "sha256": "e74fb0200ba0f0f6edbfb77cb0e9821cdc532c718808a89a0d92cef806276e44",
+      "canonical": "worker-domain-h05-001/source/src/discretization/ghost-nodes/ghost.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/discretization/shape-functions/shape-function.lisp",
+      "bytes": 23457,
+      "sha256": "91fbe2afc519fa5eb0728d54630a8f5f0c47b03ebfda73371076a58a3458452f",
+      "canonical": "worker-domain-h05-001/source/src/discretization/shape-functions/shape-function.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/discretization/splitting/splitting.lisp",
+      "bytes": 15070,
+      "sha256": "26e57f4399dcc6e87a74b1910c60b3ecc9c6467f551b983a7332171d037436b3",
+      "canonical": "worker-domain-h05-001/source/src/discretization/splitting/splitting.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/formulations/octree/buoyancy.lisp",
+      "bytes": 18341,
+      "sha256": "f0eab46ca3f2e510a516ddbf24991d5a70a739c7005489d47048074f25392e78",
+      "canonical": "worker-domain-h05-001/source/src/formulations/octree/buoyancy.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/formulations/octree/penalty.lisp",
+      "bytes": 6365,
+      "sha256": "b2c1993fef297d6efcc887da5fea440a7e6be1ffbc7361ce0ce5ca01dd80602e",
+      "canonical": "worker-domain-h05-001/source/src/formulations/octree/penalty.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/formulations/ssa/mesh.lisp",
+      "bytes": 58,
+      "sha256": "bb3af7f3bd5c55b79b142bd997bfa34906d263355aae190686431eefbfd49063",
+      "canonical": "worker-domain-h05-001/source/src/formulations/ssa/mesh.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/formulations/ssa/p2g.lisp",
+      "bytes": 4814,
+      "sha256": "dafd5769cf207aa6f46049b1d8fc939cc6053d9966ffdfda9bbbbdd5715161c0",
+      "canonical": "worker-domain-h05-001/source/src/formulations/ssa/p2g.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/formulations/ssa/package.lisp",
+      "bytes": 228,
+      "sha256": "dee67a4760e9f82162ced9533e5316ee3f350f36e5b7e3b360cec02e4908feb8",
+      "canonical": "worker-domain-h05-001/source/src/formulations/ssa/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/formulations/ssa/particles.lisp",
+      "bytes": 3133,
+      "sha256": "2f72160e9723bcc5a176d7634d46135a0dcbf629df8250f541b5055a586e2c0f",
+      "canonical": "worker-domain-h05-001/source/src/formulations/ssa/particles.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/formulations/ssa/solvers.lisp",
+      "bytes": 1838,
+      "sha256": "0f15f7124f900f8cd406e1ac470e335a8cc823a003c7627394c74d123a231423",
+      "canonical": "worker-domain-h05-001/source/src/formulations/ssa/solvers.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/geometry/setup.lisp",
+      "bytes": 36567,
+      "sha256": "0bd74167f9125a16b53fc55d6747039525943adffe6746004632781eec62b057",
+      "canonical": "worker-domain-h05-001/source/src/geometry/setup.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/loading/displacement.lisp",
+      "bytes": 192,
+      "sha256": "5b69184b836299e6302f8fb09ae26b70a4d25e8dec01c520a14e8f22fc8f4f05",
+      "canonical": "worker-domain-h05-001/source/src/loading/displacement.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/loading/force.lisp",
+      "bytes": 185,
+      "sha256": "b8008de11ea20434fdac96f37e00c21874aca584c1c64e501b5e806d43c4bbb1",
+      "canonical": "worker-domain-h05-001/source/src/loading/force.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/loading/gravity.lisp",
+      "bytes": 187,
+      "sha256": "4a2412609df8c572d81d3759430c7d57a8b585a510065245eadbd0ad5ded5225",
+      "canonical": "worker-domain-h05-001/source/src/loading/gravity.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/loading/pressure.lisp",
+      "bytes": 181,
+      "sha256": "066b63638de05017d0fc0228f111a97b9a31c4727fd696d776af7433db5a40d7",
+      "canonical": "worker-domain-h05-001/source/src/loading/pressure.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/loading/sequences.lisp",
+      "bytes": 189,
+      "sha256": "1e8217f94f8758e7ff65ac895f3a8be0efd52725272861b235cd16d0438bf529",
+      "canonical": "worker-domain-h05-001/source/src/loading/sequences.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/loading/time-functions.lisp",
+      "bytes": 194,
+      "sha256": "194c047ff36c9b4164ee8c6297644ba646451c4fd7b8dcfc039a081126c3e82b",
+      "canonical": "worker-domain-h05-001/source/src/loading/time-functions.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/measurements/displacement.lisp",
+      "bytes": 198,
+      "sha256": "0051a1406ec11ab54cfcef0478c956b21d95179a7080b0289d07d1a5495ba7fd",
+      "canonical": "worker-domain-h05-001/source/src/measurements/displacement.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/measurements/energy.lisp",
+      "bytes": 192,
+      "sha256": "30c343bb3103ec4c60d1d09eaaef0fb65bf4d62b941b67d6b3e426d1ddbb57b7",
+      "canonical": "worker-domain-h05-001/source/src/measurements/energy.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/measurements/legacy-particle.lisp",
+      "bytes": 139,
+      "sha256": "e3173eb888b753f1770628a612552ea24848e62c120bd351e4db942577f674b6",
+      "canonical": "worker-domain-h05-001/source/src/measurements/legacy-particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/measurements/legacy-stress.lisp",
+      "bytes": 173,
+      "sha256": "95e88e09e19a36d810e9a682f7d9e4bf6575cb8e6e4bedbc24dd9bb461ad30d0",
+      "canonical": "worker-domain-h05-001/source/src/measurements/legacy-stress.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/measurements/mass-balance.lisp",
+      "bytes": 198,
+      "sha256": "3d3773e63657152fe044f94314e943dc723c2494d02036861d893c93f67bec6c",
+      "canonical": "worker-domain-h05-001/source/src/measurements/mass-balance.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/measurements/material-output.lisp",
+      "bytes": 3158,
+      "sha256": "61c3b5aed49ef1965bb2ca8800f454310b35ff5f4e71f7202b5a0527e4132019",
+      "canonical": "worker-domain-h05-001/source/src/measurements/material-output.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/measurements/stress-strain.lisp",
+      "bytes": 197,
+      "sha256": "3c658f7042cbe0e9003f048090e73248145ee35ed710de919d081111992cb9a5",
+      "canonical": "worker-domain-h05-001/source/src/measurements/stress-strain.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/measurements/volume.lisp",
+      "bytes": 192,
+      "sha256": "63daa4d5a1939a576b5ea0882b9ba7a2d750c2739fec2e2744d50237541475b6",
+      "canonical": "worker-domain-h05-001/source/src/measurements/volume.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/angles.lisp",
+      "bytes": 85,
+      "sha256": "4edf2316d646f21dcd67bae6ee87abf3c5d14d58a4b8a8256b006888ac467c12",
+      "canonical": "worker-domain-h05-001/source/src/numerics/angles.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/error-handling/errors.lisp",
+      "bytes": 443,
+      "sha256": "e857aa6fae6d4385f571d52903d9755799e39d384547f4fb3622eb7759914bcb",
+      "canonical": "worker-domain-h05-001/source/src/numerics/error-handling/errors.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/fastmaths/fastmaths.lisp",
+      "bytes": 79025,
+      "sha256": "7064966d022714f47eff01056aa3982c219f148e0db4889224a787f41ac5396d",
+      "canonical": "worker-domain-h05-001/source/src/numerics/fastmaths/fastmaths.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/integration/delayed-steppers.lisp",
+      "bytes": 5269,
+      "sha256": "95271a7b90f61780a5d2c2e2705a77be5a9a40f2d30e3a11eb8523543f36443d",
+      "canonical": "worker-domain-h05-001/source/src/numerics/integration/delayed-steppers.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/integration/finite-difference-tangent.lisp",
+      "bytes": 1310,
+      "sha256": "e566c19c99889fd6f41b28beb35b0dfffdd4f95826a00f57bcad2f5a879caaa9",
+      "canonical": "worker-domain-h05-001/source/src/numerics/integration/finite-difference-tangent.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/legacy-tensors.lisp",
+      "bytes": 251,
+      "sha256": "4738b0b9a66506b54b743539fbc78c8371d16b6b9d6a6adc7f80becb6d0b3cba",
+      "canonical": "worker-domain-h05-001/source/src/numerics/legacy-tensors.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/linear-algebra/symbolic-derivation.lisp",
+      "bytes": 5093,
+      "sha256": "f707ec327b569f93f504ff08dfec333a0684b2df99b5b80028fc7f4f18516928",
+      "canonical": "worker-domain-h05-001/source/src/numerics/linear-algebra/symbolic-derivation.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/native-bridge/cpp.lisp",
+      "bytes": 5705,
+      "sha256": "3b3c47ef825a28a4d3da7cce9051857460d2d93cb7b985ac253a431b13430e7b",
+      "canonical": "worker-domain-h05-001/source/src/numerics/native-bridge/cpp.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/tensors/constitutive-primitives.lisp",
+      "bytes": 5737,
+      "sha256": "e9897f81b3ed9ecd206b46fa12fefa09d3a04cb49555c7aa31cb37a834dfcf95",
+      "canonical": "worker-domain-h05-001/source/src/numerics/tensors/constitutive-primitives.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/tensors/damage-primitives.lisp",
+      "bytes": 1710,
+      "sha256": "3ed032ad1782ba8310b40b4544e3a7b262d6dd8ac04e5527d5eb447766262196",
+      "canonical": "worker-domain-h05-001/source/src/numerics/tensors/damage-primitives.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/tensors/particle-objectivity.lisp",
+      "bytes": 5181,
+      "sha256": "aa5c713ade5833c0b4525e64a6b9339619597b44db2e68ecb20c4dd4847fcbaf",
+      "canonical": "worker-domain-h05-001/source/src/numerics/tensors/particle-objectivity.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/tensors/principal-strains.lisp",
+      "bytes": 1298,
+      "sha256": "054eb75fe8a1e36f94e43cba7b1bda635f88b9859b8260a0a8b419a154c31593",
+      "canonical": "worker-domain-h05-001/source/src/numerics/tensors/principal-strains.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/tensors/utils.lisp",
+      "bytes": 57848,
+      "sha256": "8ed1bfb0d0662107c8d56694b5388e571c41944cda07448337ebef1665015f57",
+      "canonical": "worker-domain-h05-001/source/src/numerics/tensors/utils.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/numerics/tensors/voigt-2d.lisp",
+      "bytes": 285,
+      "sha256": "bbd1cf217257f1f6530fab141d5f75286bd6a06086da038b5a341c7940156bab",
+      "canonical": "worker-domain-h05-001/source/src/numerics/tensors/voigt-2d.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/output/checkpoints.lisp",
+      "bytes": 161,
+      "sha256": "dfac7a3bc187707b79905488b697489781d25ed6adf72e9f414c463e9e024fa4",
+      "canonical": "worker-domain-h05-001/source/src/output/checkpoints.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/output/csv.lisp",
+      "bytes": 153,
+      "sha256": "ac19340a880f20f1f8ff0027cb18d85e671bd18f3284b1d5c599e1e8088ce62a",
+      "canonical": "worker-domain-h05-001/source/src/output/csv.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/output/legacy-triaxial-json.lisp",
+      "bytes": 338,
+      "sha256": "c26f7e820344d1f7b949a0efe57ba82d0a071226627cc1f9701dc3f2bbdac31c",
+      "canonical": "worker-domain-h05-001/source/src/output/legacy-triaxial-json.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/output/metadata.lisp",
+      "bytes": 175,
+      "sha256": "fb821fe38513daf8d8e27175fe0932a4371830990a87b8ed7f78e5a3dba87f57",
+      "canonical": "worker-domain-h05-001/source/src/output/metadata.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/output/plotting/legacy-particle.lisp",
+      "bytes": 2391,
+      "sha256": "790548bec869de103b5e526cc4d3c941ee4d80a0d896f32742e7a626b37827ba",
+      "canonical": "worker-domain-h05-001/source/src/output/plotting/legacy-particle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/output/plotting/plotter.lisp",
+      "bytes": 5128,
+      "sha256": "88ba44d5bebd69ddd8a8e80902787997b3c4e036608168f254ccbcb210c68caa",
+      "canonical": "worker-domain-h05-001/source/src/output/plotting/plotter.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/output/plotting.lisp",
+      "bytes": 172,
+      "sha256": "b2497939ad4d4ac8b049ca91442b87a72dd0fd1590879a4589d4a708e278aadb",
+      "canonical": "worker-domain-h05-001/source/src/output/plotting.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/output/provenance.lisp",
+      "bytes": 177,
+      "sha256": "2cff3ceb567dbca3003ca0a22582c7a92cbbf37dfe25819d1dad42dddd5d936a",
+      "canonical": "worker-domain-h05-001/source/src/output/provenance.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/output/retained-history.lisp",
+      "bytes": 1134,
+      "sha256": "0868b129c7f565b88e765594bac1a4b9d5c740b492af600b42621ce09b698a03",
+      "canonical": "worker-domain-h05-001/source/src/output/retained-history.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/output/vtk.lisp",
+      "bytes": 44215,
+      "sha256": "479a747f01a5e1015be69934f0489378751e462b62b5a954ddadd04adf74971a",
+      "canonical": "worker-domain-h05-001/source/src/output/vtk.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/damage-communication-state.lisp",
+      "bytes": 1148,
+      "sha256": "0d6f4a271354e4d7874f1c0b46ec539600ea8ecf18758a4af7d2ef65bede7b37",
+      "canonical": "worker-domain-h05-001/source/src/parallel/damage-communication-state.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/mpi/damage-stub.lisp",
+      "bytes": 26,
+      "sha256": "ddea8f5abcf32496f6204b41c3c3232e73e54ae1d8813dcbf565a169c8e6d0a6",
+      "canonical": "worker-domain-h05-001/source/src/parallel/mpi/damage-stub.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/mpi/damage.lisp",
+      "bytes": 2578,
+      "sha256": "7d58a28779311ac70514dcebe1431c75e31410eaecde37abc71371c0663ba7ef",
+      "canonical": "worker-domain-h05-001/source/src/parallel/mpi/damage.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/mpi/domain.lisp",
+      "bytes": 25818,
+      "sha256": "d4c057480d124cb24782eec31a69a77c9a11c3421a68c5f7427a3217450767dd",
+      "canonical": "worker-domain-h05-001/source/src/parallel/mpi/domain.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/mpi/dr-solvers.lisp",
+      "bytes": 13394,
+      "sha256": "a6c5feb9e8269cfe48bdd71373d7ec38fef1a7b7a509b2296ace79de1c677bce",
+      "canonical": "worker-domain-h05-001/source/src/parallel/mpi/dr-solvers.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/mpi/dr.lisp",
+      "bytes": 2722,
+      "sha256": "63b112fb0c02f0df46803d39bc4a94c0f9308478fef543c8a0edcd7117d8b23a",
+      "canonical": "worker-domain-h05-001/source/src/parallel/mpi/dr.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/mpi/legacy-mpi.lisp",
+      "bytes": 100388,
+      "sha256": "7936696762e57e14f16bff0c2f93ce09c248f4741d36752dbba0450d18b6eb2c",
+      "canonical": "worker-domain-h05-001/source/src/parallel/mpi/legacy-mpi.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/mpi/mpi.lisp",
+      "bytes": 13033,
+      "sha256": "ba3ed1eb2ef7b261d3870643c90ce7971e3e22828fac105169e01efd3f8fe657",
+      "canonical": "worker-domain-h05-001/source/src/parallel/mpi/mpi.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/mpi/package.lisp",
+      "bytes": 7981,
+      "sha256": "23e9f74d42da9ca4af15df60fdc4893e71d73c0c1a9d25fec5843fe95f8ec923",
+      "canonical": "worker-domain-h05-001/source/src/parallel/mpi/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/mpi/sync.lisp",
+      "bytes": 37612,
+      "sha256": "4d181e0d032494984dca997bd90a7993d966c2a6523a43954eca8431ed15cd26",
+      "canonical": "worker-domain-h05-001/source/src/parallel/mpi/sync.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/serial/serial.lisp",
+      "bytes": 3677,
+      "sha256": "4941b42947f196dca693901d9fda73d18e6b653d743e73acac6643fd8b1c2c3c",
+      "canonical": "worker-domain-h05-001/source/src/parallel/serial/serial.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/parallel/serial/serialise.lisp",
+      "bytes": 7210,
+      "sha256": "64f4b75622833d0b4cbcd8e32f99859b710b60e17d00dca2099147e1612babbe",
+      "canonical": "worker-domain-h05-001/source/src/parallel/serial/serialise.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/builder.lisp",
+      "bytes": 174,
+      "sha256": "5087da3146032eeffb12b4b8d190937a28116a1f9614d317168178ff251ee6ec",
+      "canonical": "worker-domain-h05-001/source/src/simulation/builder.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/compatibility/triaxial-package.lisp",
+      "bytes": 109,
+      "sha256": "1d5c90cddff8cb5d81b3b3f91576dd8fd01ee8f31063c3b44fcf829dab3e009d",
+      "canonical": "worker-domain-h05-001/source/src/simulation/compatibility/triaxial-package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/components/base.lisp",
+      "bytes": 934,
+      "sha256": "0ca404e1ad941223ce91a6214dba77a6eb2013267ac7ecce584928f209a0b302",
+      "canonical": "worker-domain-h05-001/source/src/simulation/components/base.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/components/geometry.lisp",
+      "bytes": 377,
+      "sha256": "039dba870ec44b1ae7eadcf04f60130da27c81470db729241463068982dd87d5",
+      "canonical": "worker-domain-h05-001/source/src/simulation/components/geometry.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/components/specifications.lisp",
+      "bytes": 3227,
+      "sha256": "136a3f21922ef4b1cb788dbe7f675fb5ffb9667a5a87cc0e76fb1be6652b785e",
+      "canonical": "worker-domain-h05-001/source/src/simulation/components/specifications.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/config/legacy-triaxial-values.lisp",
+      "bytes": 522,
+      "sha256": "a808236f0015a187838036c4dbf19c7973b86cd8be72cc8b72fdb53c457533be",
+      "canonical": "worker-domain-h05-001/source/src/simulation/config/legacy-triaxial-values.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/config/package.lisp",
+      "bytes": 204,
+      "sha256": "221838a3c3746928e4cf1da9fe492e77a37e8013ce0d4ba0a6b78a615331c9f2",
+      "canonical": "worker-domain-h05-001/source/src/simulation/config/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/config/parameters.lisp",
+      "bytes": 4101,
+      "sha256": "ca1d16e45c554553622533497d5c706662294384a347aed8ddc67f28c699ba86",
+      "canonical": "worker-domain-h05-001/source/src/simulation/config/parameters.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/controller.lisp",
+      "bytes": 177,
+      "sha256": "5fa1a99284320b48de5d1dde9a89aa957f564eab7a59fdde1e64f2399ba67fad",
+      "canonical": "worker-domain-h05-001/source/src/simulation/controller.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/lifecycle.lisp",
+      "bytes": 3702,
+      "sha256": "df8d91fe4b5e5c3f72800ca65fd3abf6d58bc5d294029a4cc3e6a9fb9eeca22f",
+      "canonical": "worker-domain-h05-001/source/src/simulation/lifecycle.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/material-assignment.lisp",
+      "bytes": 187,
+      "sha256": "ad5f3e87b3b1a9142556135d62f1168e0f39af9a2429555f1ba25ae3aca2a0cf",
+      "canonical": "worker-domain-h05-001/source/src/simulation/material-assignment.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/package.lisp",
+      "bytes": 1459,
+      "sha256": "dde2bb5d241d9f30050cb1c980f88e51df775a606d3df0a644491fd6d8d7acc7",
+      "canonical": "worker-domain-h05-001/source/src/simulation/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/stages.lisp",
+      "bytes": 173,
+      "sha256": "95875895498d5cdc3504f164567ee173bf82fd49926fb471947a0c91a28867a1",
+      "canonical": "worker-domain-h05-001/source/src/simulation/stages.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/simulation/validation.lisp",
+      "bytes": 192,
+      "sha256": "8edbae27ea5dd891278af24535a608dc305fb856f206c59bb0141d28ae56a1fd",
+      "canonical": "worker-domain-h05-001/source/src/simulation/validation.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/algorithms.lisp",
+      "bytes": 95842,
+      "sha256": "b0552b31151c7bd1a4da664f426715dcef0898e8005397885c7012462ae0b6bf",
+      "canonical": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/algorithms.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/convergence/criteria.lisp",
+      "bytes": 45579,
+      "sha256": "ae74b9f93db587f39df7de627494baa115d0967c75bfd0257cbd36a650b6342a",
+      "canonical": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/convergence/criteria.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/dynamic/dynamic.lisp",
+      "bytes": 18899,
+      "sha256": "581cf8f2f0c2d66cbba0891e27e3c19c79fcc54ce18afee043d15d0b4abc2681",
+      "canonical": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/dynamic/dynamic.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/dynamic-relaxation.lisp",
+      "bytes": 18096,
+      "sha256": "c5827ab6c324ee2d74dd10d1f27d87f01281100616c68d1840278705f3c2a10a",
+      "canonical": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/dynamic-relaxation.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/multigrid/multigrid.lisp",
+      "bytes": 97808,
+      "sha256": "ef9858a372fab83ae1355bded25db37673591cdf2ffc0651a616472211153251",
+      "canonical": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/multigrid/multigrid.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/package.lisp",
+      "bytes": 2959,
+      "sha256": "e9950da927acf0eace931c02a2814226109428c9943065d8ea499fb84e848b99",
+      "canonical": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/package.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/quasi-static/quasi-static.lisp",
+      "bytes": 32054,
+      "sha256": "96c785c5b1981b09cdba1cdddc0e75dce7cdb25164462d44bd1f2f6bd42aee58",
+      "canonical": "worker-domain-h05-001/source/src/solvers/dynamic-relaxation/quasi-static/quasi-static.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/explicit/musl.lisp",
+      "bytes": 2302,
+      "sha256": "37e58cfc2a43957b259f89e8f27d8fd20adb87fdeed0b6e2b3c4cfe3fc886639",
+      "canonical": "worker-domain-h05-001/source/src/solvers/explicit/musl.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/explicit/usf.lisp",
+      "bytes": 4540,
+      "sha256": "7cefb3fe86a9124715392ad73de19ec34ef6939bf824b0170394c1e312c8120e",
+      "canonical": "worker-domain-h05-001/source/src/solvers/explicit/usf.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/explicit/usl.lisp",
+      "bytes": 2651,
+      "sha256": "fabc02dda085ce46545d2843456455a5a6fe45c6396463432dd946e5338921b2",
+      "canonical": "worker-domain-h05-001/source/src/solvers/explicit/usl.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/implicit/implicit.lisp",
+      "bytes": 83220,
+      "sha256": "ed262829375b11f92f70148ee4d421dd1ac9f9abe221795399e9436b6b49b357",
+      "canonical": "worker-domain-h05-001/source/src/solvers/implicit/implicit.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/solvers/linear-systems/linear-solver.lisp",
+      "bytes": 31152,
+      "sha256": "4f6d48cc8cba0808834c89102421d9ae4f50cd8843320a982c34c241bde18011",
+      "canonical": "worker-domain-h05-001/source/src/solvers/linear-systems/linear-solver.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/stabilization/aggregate/aggregate.lisp",
+      "bytes": 46719,
+      "sha256": "8308aaa8b8e01133828d1215eb8d2a754a8bef8208f8d67d9fb7cb21b1e303bd",
+      "canonical": "worker-domain-h05-001/source/src/stabilization/aggregate/aggregate.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/transfer/forces.lisp",
+      "bytes": 14831,
+      "sha256": "938207f2951a1edd7113155bf1c59a3e667629497020507fab78912c750ca80f",
+      "canonical": "worker-domain-h05-001/source/src/transfer/forces.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/transfer/g2p.lisp",
+      "bytes": 12586,
+      "sha256": "b969f82a01f8fab4d13cf62b34783fc17fdb49c82efb0c66ceb99c413651530e",
+      "canonical": "worker-domain-h05-001/source/src/transfer/g2p.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/transfer/momentum.lisp",
+      "bytes": 155,
+      "sha256": "14c53751a132d228550242bfa6238fb83eefa9faf2a0e3ffc178c5254d21b594",
+      "canonical": "worker-domain-h05-001/source/src/transfer/momentum.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source/src/transfer/p2g.lisp",
+      "bytes": 14584,
+      "sha256": "1faedbbfe015f201414773a5d5cdb7314cd0d9de8b21bf4f89b41846daa3bfbc",
+      "canonical": "worker-domain-h05-001/source/src/transfer/p2g.lisp"
+    },
+    {
+      "path": "worker-domain-h05-001/source-provenance.json",
+      "bytes": 722184,
+      "sha256": "c658702564f1b33773c43af80f087838cfd866e4378b9fca47c7abf372b5d836",
+      "canonical": "worker-domain-h05-001/source-provenance.json"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/mesh.vtk",
+      "bytes": 323272,
+      "sha256": "4db28c704a90459f703c64efba5d2f4d64954da8ad593a9cee485615ac314218",
+      "canonical": "worker-domain-h05-001/vtk/mesh.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/particles_0000.vtk",
+      "bytes": 5084778,
+      "sha256": "1eb4c96c5ca54b5b646b4ddd3e398ff975ba5453f8991367875d7e80597b2aa6",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0000.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/particles_0001.vtk",
+      "bytes": 5084778,
+      "sha256": "1b3eb1c490a0640a9a33032b86abc3bd503b9a60729208b869c1d6a8a634b8cd",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0001.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/particles_0002.vtk",
+      "bytes": 5084778,
+      "sha256": "76d37e3b84ec38c6c8dc26a1d0ecfd746617f2e2d161f391089eb6349142ff69",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0002.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/particles_0003.vtk",
+      "bytes": 5084778,
+      "sha256": "b241d957935e8ef80a704db23336889ed7de1ecb1e8703f5ad76255b1f50cbc0",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0003.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/particles_0004.vtk",
+      "bytes": 5084778,
+      "sha256": "2222456e102e16e3f28fc3fd967296827e7b3a86a3bac8204beb1c2d1cce842b",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0004.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/particles_0005.vtk",
+      "bytes": 5084778,
+      "sha256": "4c4f9e146fee29b6056af6e9544a11f9f51e027db8a9d3345bb1afd86e9b857f",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0005.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/particles_0006.vtk",
+      "bytes": 5084778,
+      "sha256": "7723e1e3ba8e50b525c75b4f869f5637efee53ff087c51555de11296042e1f76",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0006.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/particles_0007.vtk",
+      "bytes": 5084778,
+      "sha256": "49402fc62d65bfcf1e98c81c364d2cf89bb01730eb19732f4c7fe81b0bcc49df",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0007.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/particles_0008.vtk",
+      "bytes": 5084778,
+      "sha256": "dc42f36fa61f6d0de75d1e18daf851f6a535277b64e14fb1aad45df9419fccad",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0008.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/particles_0009.vtk",
+      "bytes": 5084778,
+      "sha256": "ff0d3a7297c237738342dbe9d9fd151e3e6d80dd6d5b3057d8fc3c2ed80769a8",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0009.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001/vtk/particles_0010.vtk",
+      "bytes": 5084778,
+      "sha256": "8644f65967c3777ae50b45af3af517e47e28913ceeaa7f5300cadb781a1d1d34",
+      "canonical": "worker-domain-h05-001/filled-review-001/saved-inputs/vtk/particles_0010.vtk"
+    },
+    {
+      "path": "worker-domain-h05-001-detached/launch-proof.json",
+      "bytes": 1056,
+      "sha256": "138a830f0ced49f1473aaec33e1fe2d0c05623b861715907efb9b433065b6c67",
+      "canonical": "worker-domain-h05-001-detached/launch-proof.json"
+    },
+    {
+      "path": "worker-domain-h05-001-detached/launch-request.json",
+      "bytes": 1397,
+      "sha256": "f31a4834f30d446793a25e5c810c5e199f8e2acfb821a443abfe38bce4e302ac",
+      "canonical": "worker-domain-h05-001-detached/launch-request.json"
+    },
+    {
+      "path": "worker-domain-h05-001-detached/launch-request.ps1",
+      "bytes": 2266,
+      "sha256": "def3267a766cfcfaeea69f4ae369dbb71a5d4b240f9f851e20dbd2b5cbf7c4e0",
+      "canonical": "worker-domain-h05-001-detached/launch-request.ps1"
+    },
+    {
+      "path": "worker-domain-h05-001-detached/worker-exit.json",
+      "bytes": 126,
+      "sha256": "21358f55c2a7b183ec41d48917d56ac46d53b9da3aa8d022e2e411c0ef1177a4",
+      "canonical": "worker-domain-h05-001-detached/worker-exit.json"
+    },
+    {
+      "path": "worker-domain-h05-001-detached/worker-start.json",
+      "bytes": 261,
+      "sha256": "e98bba32f66ffd7ccadead0190c4be2386e122a522fe8440830fe2707206619a",
+      "canonical": "worker-domain-h05-001-detached/worker-start.json"
+    },
+    {
+      "path": "worker-domain-h05-001-detached/wrapper.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-decode.stderr.log"
+    },
+    {
+      "path": "worker-domain-h05-001-detached/wrapper.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-decode.stderr.log"
+    },
+    {
+      "path": "worker-domain-h05-001-launch-preparation/analysis/__pycache__/review-clay-single-slope60.cpython-312.pyc",
+      "bytes": 40278,
+      "sha256": "06d44720ed5d43367b8d17ec557a79b4ec0028a8c041287086ade21d4b814abd",
+      "canonical": "worker-domain-h05-001-launch-preparation/analysis/__pycache__/review-clay-single-slope60.cpython-312.pyc"
+    },
+    {
+      "path": "worker-domain-h05-001-launch-preparation/analysis/analysis-freeze.json",
+      "bytes": 1146,
+      "sha256": "4b388449799f40584f1dd29f3954a8cb746f86ddfa4f0119f452e109b586c4ce",
+      "canonical": "worker-domain-h05-001-launch-preparation/analysis/analysis-freeze.json"
+    },
+    {
+      "path": "worker-domain-h05-001-launch-preparation/analysis/plot_m5_cliff_comparison.py",
+      "bytes": 23581,
+      "sha256": "1c254e7bc1490f284c1722536e6c442c4a3e033c06949d8372f9d9d38c3277e8",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-source/plot_m5_cliff_comparison.py"
+    },
+    {
+      "path": "worker-domain-h05-001-launch-preparation/analysis/preview-urmi-damage40.py",
+      "bytes": 21761,
+      "sha256": "16beaba885a3154e7bc9e7602ac51c2aa247975b2312593408f162c783bf8a50",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-source/preview-urmi-damage40.py"
+    },
+    {
+      "path": "worker-domain-h05-001-launch-preparation/analysis/review-clay-single-slope60.py",
+      "bytes": 22675,
+      "sha256": "f4d530dd13da06978a1ebfc52a31238d580b3d8aaf7c8638eda79748ab653a32",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-source/review-clay-single-slope60.py"
+    },
+    {
+      "path": "worker-domain-h05-001-launch-preparation/analysis/review-urmi-damage40.py",
+      "bytes": 41472,
+      "sha256": "3f48dc592a311132c8acabc736b548f3ce61aed253a61c481ce182d696a53a7b",
+      "canonical": "worker-domain-h05-001/filled-review-001/analysis-source/review-urmi-damage40.py"
+    },
+    {
+      "path": "worker-domain-h05-001-launch-preparation/media-launch-proof.json",
+      "bytes": 76,
+      "sha256": "475597e301520d8d3d68029107c10c187fd0a709a7f58157c38f2e8955657544",
+      "canonical": "worker-domain-h05-001-launch-preparation/media-launch-proof.json"
+    },
+    {
+      "path": "worker-domain-h05-001-launch-preparation/media-request.json",
+      "bytes": 133,
+      "sha256": "786f8bd6035cbee4cb68ccf39f1a36db9da65985f75e83b71b7e6ea1d541270b",
+      "canonical": "worker-domain-h05-001-launch-preparation/media-request.json"
+    },
+    {
+      "path": "worker-domain-h05-001-launch-preparation/startup-proof.json",
+      "bytes": 1561,
+      "sha256": "444bdabf857214a2f17a0ca148beaedb333af7f4c1b550a1178269932f447a30",
+      "canonical": "worker-domain-h05-001-launch-preparation/startup-proof.json"
+    },
+    {
+      "path": "worker-domain-h05-001-launch-preparation/watch-media.ps1",
+      "bytes": 3769,
+      "sha256": "538b6c3588cf3b8486fc19006162a707b86bb949f5cbdd84ed9574d0ec3572de",
+      "canonical": "worker-domain-h05-001-launch-preparation/watch-media.ps1"
+    },
+    {
+      "path": "worker-domain-h05-001-launch.json",
+      "bytes": 940,
+      "sha256": "1f1db08c15c8c6fb9670d48ddef929737ca99a79a6f3d0c402a310c4faf2591d",
+      "canonical": "worker-domain-h05-001-launch.json"
+    },
+    {
+      "path": "worker-domain-h05-001-media-status.json",
+      "bytes": 377,
+      "sha256": "f93ad1721a80ade5927370fd3af7b96f86d7c1f0b35fa822223d3eb9abc242c6",
+      "canonical": "worker-domain-h05-001-media-status.json"
+    },
+    {
+      "path": "worker-domain-h05-001-review-command.json",
+      "bytes": 386,
+      "sha256": "cf52439f015191c220411a750a08f620964eee87ffd14bc08def8f7d937ea99a",
+      "canonical": "worker-domain-h05-001-review-command.json"
+    },
+    {
+      "path": "worker-domain-h05-001-review.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "canonical": "worker-domain-h05-001/filled-review-001/damage-decode.stderr.log"
+    },
+    {
+      "path": "worker-domain-h05-001-review.stdout.log",
+      "bytes": 148,
+      "sha256": "8187f968632ff07dbb358ea9270b75bbc112511ed626cc125d5b87640803e439",
+      "canonical": "worker-domain-h05-001-review.stdout.log"
+    },
+    {
+      "path": "worker-domain-h05-001-status.json",
+      "bytes": 1483,
+      "sha256": "77f0a2ff00e2bb45a00a13305afc9225e54c92dc424cc164a8320ca33c8e10d3",
+      "canonical": "worker-domain-h05-001-status.json"
+    },
+    {
+      "path": "worker-domain-h05-001.stderr.log",
+      "bytes": 9642,
+      "sha256": "06b026c7bafdfe67a3efe4b60bc7db083c8892d42ed5ca284257ddf62383a425",
+      "canonical": "worker-domain-h05-001.stderr.log"
+    },
+    {
+      "path": "worker-domain-h05-001.stdout.log",
+      "bytes": 690,
+      "sha256": "05725e2ddc622c61cb3702c7e2ae15eae8407206939dc7557b32c5508e34796f",
+      "canonical": "worker-domain-h05-001.stdout.log"
+    },
+    {
+      "path": "terminal-observation.json",
+      "bytes": 6251,
+      "sha256": "0237eceef1d5cbfce8f6e1636a73ec1655dc870082d549a5faddba6cdca890b5",
+      "canonical": "terminal-observation.json"
+    }
+  ],
+  "uniqueZipMembers": 602,
+  "noSolverReruns": true,
+  "interpretation": "Saved integrity PASS; initial domain bug corrected but late F distortion remains. Physical runout/8s completion not verified. Full patches extend beyond grid despite centers remaining inside; do not treat their tips as runout.",
+  "additionalAudit": "terminal-observation.json inside ZIP",
+  "mediaDelivered": "All3 actual0..5s movies delivered in this chat"
+}

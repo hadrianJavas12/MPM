@@ -79,3 +79,5 @@ Clay60 partial terminal videos and actual negative domain guard: [[clay60-monito
 - [[clay60-worker-domain]] — worker dispatch correction and plastic strain colours; fresh8s run pending.
 
 Corrected clay60 run launched; verified initialization only: [[clay60-worker-domain]].
+
+Corrected clay60 terminal:11states0..5s/3movies delivered;severeFdistortion and incrementalDFnegative5.304s,not full8s/validatedrunout: [[clay60-worker-domain]].
