@@ -1194,3 +1194,6 @@ Recorded d428e1a2 run, actual13517MP/frame0/sourceDLL proof, frozen kappa-colour
 
 ## [2026-10-31] ingest | Corrected clay60 partial terminal
 Recorded5.3041sDFnegative failure,11savedstates/3deliveredmovies,315sourceDLL/savedintegrityPASS and severeFdistortion/boundary caveat. No native rerun;terminalarchive/exactGitproof close this attempt.
+
+## [2026-10-31] ingest | Corrected clay60 archive closure
+Terminal737838a4 pushed;10exactrootGitblobs verified;finite monitor deleted after delivery/archive.
