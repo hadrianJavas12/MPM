@@ -152,4 +152,5 @@
   :depends-on ("cl-mpm-framework/residual-clay-hs-apex")
     :serial t
     :components ((:file "scenarios/residual-clay-slope/toe-profile")
-                 (:file "scenarios/residual-clay-slope/adaptive-kinematics")))
+                 (:file "scenarios/residual-clay-slope/adaptive-kinematics")
+                 (:file "scenarios/residual-clay-slope/integrated-gimp")))

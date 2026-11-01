@@ -87,3 +87,5 @@ Corrected clay60 terminal:11states0..5s/3movies delivered;severeFdistortion and 
 Adaptive clay60 launched;verified initial state/source/DLL only,fulltarget pending: [[clay60-adaptive-kinematics]].
 
 Adaptive clay60 terminal:grid escape at5.5s,11states0..5s/3movies delivered,not full8s/physicalvalidation: [[clay60-adaptive-kinematics]].
+
+- [[clay60-integrated-gimp]] - Urmi comparison, proven enlarged-domain weight defect, opt-in tested correction and fresh trial.

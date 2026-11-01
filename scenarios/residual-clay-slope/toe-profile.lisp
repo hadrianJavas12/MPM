@@ -48,7 +48,9 @@
          (top (+ (value cfg "baseHeight") (value cfg "height")))
          (ppc (value cfg "mpsPerCell"))
          (sim (cl-mpm/setup:make-simple-sim h (list (round width h) (round (value cfg "domainHeight") h))
-                :sim-type (if (gethash "adaptiveKinematics" cfg) 'clay-adaptive-sim 'u::urmi-proper-sim) :args-list (list :enable-fbar nil :enable-damage nil
+                :sim-type (cond ((gethash "integratedGimp" cfg) 'clay-integrated-gimp-sim)
+                                ((gethash "adaptiveKinematics" cfg) 'clay-adaptive-sim)
+                                (t 'u::urmi-proper-sim)) :args-list (list :enable-fbar nil :enable-damage nil
                   :ghost-factor nil :enable-split nil :mp-removal-size nil)))
          (mps (apply #'cl-mpm/setup:make-block-mps '(0d0 0d0) (list width top)
                 (list (* (round width h) ppc) (* (round top h) ppc)) (value cfg "density")

@@ -1209,3 +1209,6 @@ Recorded5.5s particle7699 grid escape,missing failedstate capsule,11savedstates/
 
 ## [2026-11-02] ingest | Adaptive clay60 archive closure
 Terminal edb7ede0 pushed,10exactrootGitblobs verified;finite monitor deleted after delivery/archive. Full8s remains unachieved;no native rerun.
+
+## [2026-11-02] ingest | Clay60 integrated GIMP
+Recorded actual Urmi comparison, native enlarged-domain cache defect and tested correction in [[clay60-integrated-gimp]]. Raw sources and prior closed archives unchanged. Fresh target8s trial next.
