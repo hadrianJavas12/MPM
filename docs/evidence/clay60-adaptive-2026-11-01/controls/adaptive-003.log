@@ -1,0 +1,24 @@
+FAILED-TENSOR dtOld=9.414093885362295d-4 dtNew=3.2546358097411233d-6 detNew=0.9438697271105685d0
+
+; file: D:/MPM/tests/benchmarks/clay-adaptive-kinematics.lisp
+; in:
+;      LET* ((CFG (ADAPTIVE-CLAY-CONFIG))
+;        (MAT
+;         (FW:MAKE-MATERIAL :NATIVE :YOUNGS-MODULUS 2.0d7 :POISSON-RATIO 0.2d0
+;                           :DENSITY 2000.0d0 :PARTICLE-CLASS 'PARTICLE-CLAY-TOE
+;                           :INITARGS
+;                           (LIST :EVOLUTION-LAW (MAKE-LAW CFG)
+;                                 :ENABLE-PLASTICITY T)))
+;        (SIM (BUILD-TOE-SLOPE MAT CFG)) (MESH (CL-MPM:SIM-MESH SIM)))
+;     (CL-MPM::CALCULATE-STRAIN-RATE-DISP CL-MPM/SCENARIO/RESIDUAL-CLAY-SLOPE::MESH
+;                                         CL-MPM/SCENARIO/RESIDUAL-CLAY-SLOPE::MP
+;                                         CL-MPM/SCENARIO/RESIDUAL-CLAY-SLOPE::SELECTED
+;                                         NIL)
+; 
+; caught STYLE-WARNING:
+;   The variable CL-MPM::DT is defined but never used.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+NATIVE-GRID dt=2.5d-4 actualIncrementNorm=0.10000000000000002d0 position/history untouched
+ADAPTIVE CLAY PASS:actual failure tensor;zero/advective/invalid bounds;manufactured halving convergence;native13517MP gradient bound;one selection per step;paired4USF parity.

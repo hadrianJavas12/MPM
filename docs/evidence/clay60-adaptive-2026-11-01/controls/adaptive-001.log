@@ -1,0 +1,32 @@
+FAILED-TENSOR dtOld=9.414093885362295d-4 dtNew=3.2546358097411233d-6 detNew=0.9438697271105685d0
+Unhandled SB-C::INPUT-ERROR-IN-LOAD in thread #<SB-THREAD:THREAD tid=10796 "main thread" RUNNING
+                                                 {1100C88083}>:
+  READ error during LOAD:
+
+    The symbol "NODE-POSITION" is not external in the CL-MPM/MESH package.
+
+      Line: 38, Column: 42, File-Position: 2335
+
+      Stream: #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}>
+
+Backtrace for: #<SB-THREAD:THREAD tid=10796 "main thread" RUNNING {1100C88083}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<SB-C::INPUT-ERROR-IN-LOAD {110DC7E9F3}> #<unused argument> :QUIT T)
+1: (SB-DEBUG::RUN-HOOK SB-EXT:*INVOKE-DEBUGGER-HOOK* #<SB-C::INPUT-ERROR-IN-LOAD {110DC7E9F3}>)
+2: (INVOKE-DEBUGGER #<SB-C::INPUT-ERROR-IN-LOAD {110DC7E9F3}>)
+3: (ERROR #<SB-C::INPUT-ERROR-IN-LOAD {110DC7E9F3}>)
+4: (SB-C:COMPILER-ERROR SB-C::INPUT-ERROR-IN-LOAD :CONDITION #<SB-INT:SIMPLE-READER-PACKAGE-ERROR "The symbol ~S is not external in the ~A package." {110DC7E9A3}> :STREAM #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}>)
+5: (SB-C::%DO-FORMS-FROM-INFO #<FUNCTION (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {5FEFEB}> #<SB-C::SOURCE-INFO {1101B775E3}> SB-C::INPUT-ERROR-IN-LOAD)
+6: (SB-INT:LOAD-AS-SOURCE #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+7: ((LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}> NIL)
+8: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<FUNCTION (LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) {5FF49B}> #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}> NIL #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}>)
+9: ((LABELS SB-FASL::LOAD-STREAM :IN LOAD) #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}> NIL)
+10: (LOAD #P"D:/MPM/tests/benchmarks/clay-adaptive-kinematics.lisp" :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST :ERROR :EXTERNAL-FORMAT :DEFAULT)
+11: (SB-IMPL::PROCESS-EVAL/LOAD-OPTIONS ((:LOAD . "D:\\MPM\\windows\\init.lisp") (:LOAD . "D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp") (:QUIT)))
+12: (SB-IMPL::TOPLEVEL-INIT)
+13: ((FLET SB-UNIX::BODY :IN SB-IMPL::START-LISP))
+14: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::START-LISP))
+15: (SB-IMPL::%START-LISP)
+16: ("foreign function: #x140048B39")
+17: ("foreign function: #x14000B260")
+
+unhandled condition in --disable-debugger mode, quitting

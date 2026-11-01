@@ -1,0 +1,52 @@
+FAILED-TENSOR dtOld=9.414093885362295d-4 dtNew=3.2546358097411233d-6 detNew=0.9438697271105685d0
+
+; file: D:/MPM/tests/benchmarks/clay-adaptive-kinematics.lisp
+; in:
+;      LET* ((CFG (ADAPTIVE-CLAY-CONFIG))
+;        (MAT
+;         (FW:MAKE-MATERIAL :NATIVE :YOUNGS-MODULUS 2.0d7 :POISSON-RATIO 0.2d0
+;                           :DENSITY 2000.0d0 :PARTICLE-CLASS 'PARTICLE-CLAY-TOE
+;                           :INITARGS
+;                           (LIST :EVOLUTION-LAW (MAKE-LAW CFG)
+;                                 :ENABLE-PLASTICITY T)))
+;        (SIM (BUILD-TOE-SLOPE MAT CFG)) (MESH (CL-MPM:SIM-MESH SIM)))
+;     (CL-MPM::CALCULATE-STRAIN-RATE-DISP CL-MPM/SCENARIO/RESIDUAL-CLAY-SLOPE::MESH
+;                                         CL-MPM/SCENARIO/RESIDUAL-CLAY-SLOPE::MP
+;                                         CL-MPM/SCENARIO/RESIDUAL-CLAY-SLOPE::SELECTED
+;                                         NIL)
+; 
+; caught STYLE-WARNING:
+;   The variable CL-MPM::DT is defined but never used.
+; 
+; compilation unit finished
+;   caught 1 STYLE-WARNING condition
+NATIVE-GRID dt=2.5d-4 actualIncrementNorm=0.10000000000000002d0 position/history untouched
+Unhandled SB-C::INPUT-ERROR-IN-LOAD in thread #<SB-THREAD:THREAD tid=39516 "main thread" RUNNING
+                                                 {1100C78003}>:
+  READ error during LOAD:
+
+    end of file on #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}>
+
+    (in form starting at line: 68, column: 0, position: 4146)
+
+Backtrace for: #<SB-THREAD:THREAD tid=39516 "main thread" RUNNING {1100C78003}>
+0: (SB-DEBUG::DEBUGGER-DISABLED-HOOK #<SB-C::INPUT-ERROR-IN-LOAD {11079CD403}> #<unused argument> :QUIT T)
+1: (SB-DEBUG::RUN-HOOK SB-EXT:*INVOKE-DEBUGGER-HOOK* #<SB-C::INPUT-ERROR-IN-LOAD {11079CD403}>)
+2: (INVOKE-DEBUGGER #<SB-C::INPUT-ERROR-IN-LOAD {11079CD403}>)
+3: (ERROR #<SB-C::INPUT-ERROR-IN-LOAD {11079CD403}>)
+4: (SB-C:COMPILER-ERROR SB-C::INPUT-ERROR-IN-LOAD :CONDITION #<END-OF-FILE {11079CD3E3}> :POSITION 4146 :LINE/COL (68 . 0) :STREAM #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}>)
+5: (SB-C::%DO-FORMS-FROM-INFO #<FUNCTION (LAMBDA (SB-KERNEL:FORM &KEY :CURRENT-INDEX &ALLOW-OTHER-KEYS) :IN SB-INT:LOAD-AS-SOURCE) {5FEFEB}> #<SB-C::SOURCE-INFO {1101B775E3}> SB-C::INPUT-ERROR-IN-LOAD)
+6: (SB-INT:LOAD-AS-SOURCE #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}> :VERBOSE NIL :PRINT NIL :CONTEXT "loading")
+7: ((LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}> NIL)
+8: (SB-FASL::CALL-WITH-LOAD-BINDINGS #<FUNCTION (LABELS SB-FASL::LOAD-STREAM-1 :IN LOAD) {5FF49B}> #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}> NIL #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}>)
+9: ((LABELS SB-FASL::LOAD-STREAM :IN LOAD) #<SB-INT:FORM-TRACKING-STREAM for "file D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp" {1101BD4A13}> NIL)
+10: (LOAD #P"D:/MPM/tests/benchmarks/clay-adaptive-kinematics.lisp" :VERBOSE NIL :PRINT NIL :IF-DOES-NOT-EXIST :ERROR :EXTERNAL-FORMAT :DEFAULT)
+11: (SB-IMPL::PROCESS-EVAL/LOAD-OPTIONS ((:LOAD . "D:\\MPM\\windows\\init.lisp") (:LOAD . "D:\\MPM\\tests\\benchmarks\\clay-adaptive-kinematics.lisp") (:QUIT)))
+12: (SB-IMPL::TOPLEVEL-INIT)
+13: ((FLET SB-UNIX::BODY :IN SB-IMPL::START-LISP))
+14: ((FLET "WITHOUT-INTERRUPTS-BODY-3" :IN SB-IMPL::START-LISP))
+15: (SB-IMPL::%START-LISP)
+16: ("foreign function: #x140048B39")
+17: ("foreign function: #x14000B260")
+
+unhandled condition in --disable-debugger mode, quitting

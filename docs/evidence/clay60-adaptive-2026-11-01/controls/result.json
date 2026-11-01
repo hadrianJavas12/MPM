@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "nativeFinalLog": "adaptive-005.log",
+  "actualUSFUpdates": 6,
+  "testScopes": [
+    "actual failed incremental tensor selectedDt3.2546358097411233e-6/detNew.9438697271105685; pure arithmetic not restart",
+    "native13517MP current-grid gradient cap at.1; secondupdate-nodes does not select dt again",
+    "paired4USF tiny-step original/adaptive position/kappa/time parity",
+    "2high-speed nativeUSF Jpositive/Videntity/incrementnorm/timeUsesSelectedDt",
+    "manufactured constant compression halving improves analytic solution error; not full slope convergence"
+  ],
+  "negativeTestHarnessAttempts": {
+    "001": "nonexported node-position reader symbol",
+    "002": "test harness reader EOF",
+    "004": "added high-speed test reader EOF"
+  },
+  "nodeChecks": "check and all36tests PASS in execution trace",
+  "physicsValidation": false
+}

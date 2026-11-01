@@ -150,4 +150,6 @@
 (asdf:defsystem "cl-mpm-framework/clay-toe-profile"
   :description "Explicit two-angle no-notch clay geometry comparison with separate strain/damage observation"
   :depends-on ("cl-mpm-framework/residual-clay-hs-apex")
-  :components ((:file "scenarios/residual-clay-slope/toe-profile")))
+    :serial t
+    :components ((:file "scenarios/residual-clay-slope/toe-profile")
+                 (:file "scenarios/residual-clay-slope/adaptive-kinematics")))

@@ -48,7 +48,7 @@
          (top (+ (value cfg "baseHeight") (value cfg "height")))
          (ppc (value cfg "mpsPerCell"))
          (sim (cl-mpm/setup:make-simple-sim h (list (round width h) (round (value cfg "domainHeight") h))
-                :sim-type 'u::urmi-proper-sim :args-list (list :enable-fbar nil :enable-damage nil
+                :sim-type (if (gethash "adaptiveKinematics" cfg) 'clay-adaptive-sim 'u::urmi-proper-sim) :args-list (list :enable-fbar nil :enable-damage nil
                   :ghost-factor nil :enable-split nil :mp-removal-size nil)))
          (mps (apply #'cl-mpm/setup:make-block-mps '(0d0 0d0) (list width top)
                 (list (* (round width h) ppc) (* (round top h) ppc)) (value cfg "density")
@@ -70,6 +70,7 @@
       (lambda (i) (cl-mpm/bc:make-bc-fixed i '(0 0 nil)))
       (lambda (i) (cl-mpm/bc:make-bc-fixed i '(nil nil 0)))
       (lambda (i) (cl-mpm/bc:make-bc-fixed i '(nil nil 0)))))
+    (when (gethash "adaptiveKinematics" cfg) (setf (adaptive-config sim) cfg))
     (u::proper-setup sim) sim))
 
 (defun capture-toe-increment-failure (mp dt fbar &optional (scope "Actual failing particle context; observed before unchanged condition propagates, not a restart"))
@@ -138,6 +139,8 @@
                      (gethash "updates" manifest) updates)
                (when sim (setf (gethash "timeS" manifest) (cl-mpm::sim-time sim)
                                (gethash "nativeTimeS" manifest) (cl-mpm::sim-time sim)))
+               (when (and sim (gethash "adaptiveKinematics" cfg))
+                 (setf (gethash "adaptiveStep" manifest) (adaptive-step-record sim)))
                (write-json (merge-pathnames "manifest.json" out) manifest)))
       (let ((u::*proper-volume-domain* t) (*toe-failure-directory* out))
         (handler-case
