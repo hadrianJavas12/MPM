@@ -1,0 +1,38 @@
+{
+  "status": "STARTUP_PASS_ONLY",
+  "run": "D:\\MPM\\output\\clay60-integrated-2026-11-02\\integrated-h05-001",
+  "sourceProof": {
+    "status": "PASS",
+    "sourceFilesVerified": 317,
+    "actualMappedDll": {
+      "modulePath": "D:/MPM/output/clay60-integrated-2026-11-02/integrated-h05-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "case": {
+      "path": "D:\\MPM\\output\\clay60-integrated-2026-11-02\\integrated-h05-001\\source\\case.lisp",
+      "bytes": 1117,
+      "sha256": "0c5276dcc2f31f741d1f768483ab881ffb0db2c735f4035c075f7825a411dff7"
+    },
+    "manifest": {
+      "path": "D:\\MPM\\output\\clay60-integrated-2026-11-02\\integrated-h05-001\\source\\source-manifest.json",
+      "bytes": 66241,
+      "sha256": "6c340b6512c60ea7914184c2e2fc177cd6e93c5541510b85cab9f54795121eab"
+    },
+    "runtimeProvenance": {
+      "path": "D:\\MPM\\output\\clay60-integrated-2026-11-02\\integrated-h05-001\\source-provenance.json",
+      "bytes": 717625,
+      "sha256": "3c0582b16fd817f3ead61a28885567e1ba37672ced6dbb6fe84b7a54ae31964f"
+    }
+  },
+  "newIntegratedFileActuallyLoaded": true,
+  "initialCsv": "D:\\MPM\\output\\clay60-integrated-2026-11-02\\integrated-h05-001\\material-state.csv",
+  "initialVtk": "D:\\MPM\\output\\clay60-integrated-2026-11-02\\integrated-h05-001\\vtk\\particles_0000.vtk",
+  "particles": 13517,
+  "uniqueIds": 13517,
+  "allInitialJ": 1,
+  "allInitialKappa": 0,
+  "scientificValidation": false,
+  "full8sPending": true
+}

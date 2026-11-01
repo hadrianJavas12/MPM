@@ -1212,3 +1212,6 @@ Terminal edb7ede0 pushed,10exactrootGitblobs verified;finite monitor deleted aft
 
 ## [2026-11-02] ingest | Clay60 integrated GIMP
 Recorded actual Urmi comparison, native enlarged-domain cache defect and tested correction in [[clay60-integrated-gimp]]. Raw sources and prior closed archives unchanged. Fresh target8s trial next.
+
+## [2026-11-02] ingest | Integrated clay60 launch
+Recorded sourceeea21e93 detached launch,actual13517MP/frame0/317source/newGIMPload/DLL startup proof and finite quiet monitor in [[clay60-integrated-gimp]]. Scientific/full8s outcome pending.

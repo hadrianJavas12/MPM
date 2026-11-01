@@ -89,3 +89,5 @@ Adaptive clay60 launched;verified initial state/source/DLL only,fulltarget pendi
 Adaptive clay60 terminal:grid escape at5.5s,11states0..5s/3movies delivered,not full8s/physicalvalidation: [[clay60-adaptive-kinematics]].
 
 - [[clay60-integrated-gimp]] - Urmi comparison, proven enlarged-domain weight defect, opt-in tested correction and fresh trial.
+
+Integrated GIMP clay60 launched;actual initial/source/DLL proof PASS,full8s pending: [[clay60-integrated-gimp]].

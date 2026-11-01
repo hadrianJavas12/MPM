@@ -1,0 +1,10 @@
+{
+  "integratedGimp": true,
+  "adaptiveKinematics": true,
+  "maximumGradientIncrement": 0.1,
+  "targetTimeS": 8,
+  "maxUpdates": 80000,
+  "wallBudgetHours": 34,
+  "mediaBudgetHours": 2,
+  "scope": "Exact box integration for large numerical domains; no material/domain/clamp/guard/default change"
+}
