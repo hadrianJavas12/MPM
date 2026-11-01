@@ -1,0 +1,46 @@
+{
+  "scenario": "gravity-slope",
+  "status": "NATIVE_RUNNING",
+  "startedUtc": "2026-11-01T10:23:45.7793165Z",
+  "output": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001",
+  "case": "D:\\MPM\\cases\\benchmarks\\clay-single-slope60-adaptive.lisp",
+  "sourceCommit": "8fc1da88382def5dbed3c7c0e8330f5161a24aba",
+  "maxWallHours": 34.0,
+  "wallDeadlineUtc": "2026-11-02T20:23:45.7793165Z",
+  "caseSha256": "2CCB15EA10A95C2FF4B7BA82A33F1414EA0BF1BC48126EC27EDC77087D254161",
+  "wrapperSha256": "1793F0403A20513F5BBC76EBFC550E6442001CD0B7093B98C56A4213CD4AC4AC",
+  "processIdentity": {
+    "nativeCommand": {
+      "pid": 12708,
+      "name": "cmd",
+      "sessionId": 4,
+      "createdUtc": "2026-11-01T10:23:46.0468058Z"
+    },
+    "wrapper": {
+      "pid": 43260,
+      "name": "pwsh",
+      "sessionId": 4,
+      "createdUtc": "2026-11-01T10:23:45.0145364Z"
+    },
+    "sbcl": {
+      "pid": 21364,
+      "name": "sbcl",
+      "sessionId": 4,
+      "createdUtc": "2026-11-01T10:23:46.4853158Z"
+    }
+  },
+  "nativeExitCode": null,
+  "nativeComplete": false,
+  "scientificValidation": false,
+  "landslideVerified": false,
+  "progress": {
+    "phase": "gravity-ramp",
+    "updates": 0,
+    "timeS": 0.0,
+    "complete": false,
+    "status": "running",
+    "savedFrames": 1,
+    "particleCount": 13517
+  },
+  "heartbeatUtc": "2026-11-01T10:25:46.9801391Z"
+}

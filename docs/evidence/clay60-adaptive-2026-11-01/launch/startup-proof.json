@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "sourceFilesVerified": 316,
+  "actualMappedDll": {
+    "modulePath": "D:/MPM/output/clay60-adaptive-2026-11-01/adaptive-h05-001/source/libs/kirchoff.dll",
+    "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+    "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+    "nativeMcEntryPresent": true
+  },
+  "case": {
+    "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\source\\case.lisp",
+    "bytes": 1113,
+    "sha256": "2ccb15ea10a95c2ff4b7ba82a33f1414ea0bf1bc48126ec27edc77087d254161"
+  },
+  "manifest": {
+    "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\source\\source-manifest.json",
+    "bytes": 66005,
+    "sha256": "3cd791dc44b829b8a10081955e913b74dd2bca1ac6a11092e1ccc05565f8a473"
+  },
+  "runtimeProvenance": {
+    "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\source-provenance.json",
+    "bytes": 708585,
+    "sha256": "8c1b47f4be727d9f9284bf605eaf907896cf31f7c13c63f2f91beb87fc93d529"
+  },
+  "initialParticles": 13517,
+  "initialFrame": 0,
+  "initialJ": 1,
+  "initialKappa": 0,
+  "adaptiveFileLoaded": true,
+  "adaptiveFileSha256": "269d443a291a75729b84794d5d9daebb8e5d1270f1e8e6ec96cec2e80940595e",
+  "vtkSha256": "1eb4c96c5ca54b5b646b4ddd3e398ff975ba5453f8991367875d7e80597b2aa6",
+  "scope": "Actual initialization/loaded source only; not full8s/scientific PASS"
+}

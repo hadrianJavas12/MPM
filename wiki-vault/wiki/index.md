@@ -83,3 +83,5 @@ Corrected clay60 run launched; verified initialization only: [[clay60-worker-dom
 Corrected clay60 terminal:11states0..5s/3movies delivered;severeFdistortion and incrementalDFnegative5.304s,not full8s/validatedrunout: [[clay60-worker-domain]].
 
 - [[clay60-adaptive-kinematics]] - current-gradient/velocity adaptive timestep;tested opt-in8s trial next.
+
+Adaptive clay60 launched;verified initial state/source/DLL only,fulltarget pending: [[clay60-adaptive-kinematics]].

@@ -1,0 +1,19 @@
+{
+  "requestedUtc": "2026-11-01T10:23:43.4235546Z",
+  "method": "local Win32_Process.Create / CIM",
+  "commandLine": "\"C:\\Users\\ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoProfile -NonInteractive -WindowStyle Hidden -File \"D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001-detached\\launch-request.ps1\"",
+  "currentDirectory": "D:\\MPM",
+  "showWindow": 0,
+  "callerProcessId": 44260,
+  "callerSessionId": 4,
+  "requestSha256": "8C97F4772ED75D388CC1901FA348E01FB3BA88E8DEE6D17C183ACE8EA1244A25",
+  "workerScriptSha256": "DEF3267A766CFCFAEEA69F4AE369DBB71A5D4B240F9F851E20DBD2B5CBF7C4E0",
+  "workerProcessId": 40316,
+  "returnValue": 0,
+  "startupObserved": true,
+  "limitation": "Local WMI creation avoids direct caller parentage. Provider jobs, logoff, sleep, reboot and policy may still stop the run.",
+  "workerSessionId": 4,
+  "workerParentProcessId": 19480,
+  "workerCreationUtc": "2026-11-01T10:23:43.6255920Z",
+  "startupWaitSeconds": 1.0555078
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "Opt-in clay60 USF step selection before first update-nodes,after mapped velocities and BC,not constitutive retry",
+  "maximumGradientIncrement": 0.1,
+  "selection": "min(requested, CFL*h/(CFL*h/elasticDt + nodalSpeedInfinity), .1/maxParticleGradientInfinity)",
+  "defaultEngineChanged": false,
+  "physicalModelChanged": false,
+  "guardsRelaxed": false,
+  "requestedDurationS": 8,
+  "requestedStates": 17
+}
