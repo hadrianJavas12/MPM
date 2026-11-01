@@ -1206,3 +1206,6 @@ Recorded8fc1da88 run,13517MP/frame0/316sourceDLL/adaptiveASDFload proof,34hbudge
 
 ## [2026-11-02] ingest | Adaptive clay60 partial terminal
 Recorded5.5s particle7699 grid escape,missing failedstate capsule,11savedstates/3deliveredmovies,316sourceDLL/savedintegrityPASS and severeFdistortion. No solverrerun;archive and finite monitor closure.
+
+## [2026-11-02] ingest | Adaptive clay60 archive closure
+Terminal edb7ede0 pushed,10exactrootGitblobs verified;finite monitor deleted after delivery/archive. Full8s remains unachieved;no native rerun.
