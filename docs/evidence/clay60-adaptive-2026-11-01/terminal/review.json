@@ -1,0 +1,677 @@
+{
+  "scope": "SINGLE_CONSTANT60_CLAY_THREE_CHANNEL_TRIAL_NOT_CALIBRATED_VALIDATION",
+  "savedIntegrity": "PASS",
+  "nativeComplete": false,
+  "nativeStatus": "failed",
+  "actualConfig": {
+    "height": 10.0,
+    "crestLength": 24.0,
+    "slope": 60.0,
+    "baseHeight": 8.0,
+    "domainWidth": 72.0,
+    "domainHeight": 24.0,
+    "meshSize": 0.5,
+    "mpsPerCell": 2,
+    "workers": 1,
+    "timeStepScale": 0.2,
+    "gravity": -9.80665,
+    "gravityRampDuration": 2.0,
+    "density": 2000.0,
+    "settleDamping": 0.75,
+    "duration": 8.0,
+    "frames": 17,
+    "maxDynamicUpdates": 80000,
+    "observerInitialXGreater": 14.0,
+    "observerInitialYGreater": 10.0,
+    "displayOriginX": 12.0,
+    "displayOriginY": 8.0,
+    "toeX": 29.773502691896258,
+    "youngsModulusPa": 20000000.0,
+    "poissonRatio": 0.2,
+    "cohesionPa": 0.0,
+    "dilationDeg": 0.0,
+    "peakKappa": 0.037,
+    "peakFrictionDeg": 33.99,
+    "residualStrengthRatio": 0.25,
+    "frictionTable": [
+      [
+        0.0,
+        33.99
+      ],
+      [
+        0.037,
+        33.99
+      ],
+      [
+        0.1,
+        25.353762870428053
+      ],
+      [
+        0.2,
+        9.568041272839212
+      ]
+    ],
+    "maximumGradientIncrement": 0.1,
+    "adaptiveKinematics": true,
+    "explicitHsApex": true,
+    "singleSlope": true
+  },
+  "sourceProof": {
+    "status": "PASS",
+    "sourceFilesVerified": 316,
+    "actualMappedDll": {
+      "modulePath": "D:/MPM/output/clay60-adaptive-2026-11-01/adaptive-h05-001/source/libs/kirchoff.dll",
+      "sha256": "57c4c9a6cedb1ade1202914074dab942afc2f15abb114637619ca3cb5d9f074f",
+      "verifiedBy": "GetModuleHandleW/GetModuleFileNameW",
+      "nativeMcEntryPresent": true
+    },
+    "case": {
+      "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\source\\case.lisp",
+      "bytes": 1113,
+      "sha256": "2ccb15ea10a95c2ff4b7ba82a33f1414ea0bf1bc48126ec27edc77087d254161"
+    },
+    "manifest": {
+      "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\source\\source-manifest.json",
+      "bytes": 66005,
+      "sha256": "3cd791dc44b829b8a10081955e913b74dd2bca1ac6a11092e1ccc05565f8a473"
+    },
+    "runtimeProvenance": {
+      "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\source-provenance.json",
+      "bytes": 708585,
+      "sha256": "8c1b47f4be727d9f9284bf605eaf907896cf31f7c13c63f2f91beb87fc93d529"
+    }
+  },
+  "apexConvention": "Explicit c0 HS gA=p volumetric apex extension, strict regular shear psi0",
+  "particleCount": 13517,
+  "states": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "nativeTimeS": 0.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0000.vtk",
+        "bytes": 5084778,
+        "sha256": "1eb4c96c5ca54b5b646b4ddd3e398ff975ba5453f8991367875d7e80597b2aa6"
+      },
+      "minJ": 1.0,
+      "maximumStrengthLoss": 0.0,
+      "minimumFrictionDeg": 33.99,
+      "kineticJPerM": 0.0,
+      "maximumDisplacementM": 0.0,
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "upperCohortCentroidDisplacementM": [
+        0.0,
+        0.0
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 13517,
+      "onsetObservation": {
+        "plastifiedMPs": 0,
+        "damagedMPs": 0,
+        "toePlastifiedMPs": 0,
+        "toeDamagedMPs": 0,
+        "maximumKappa": 0.0,
+        "maximumKappaInitialXY": [
+          0.125,
+          0.125
+        ],
+        "maximumDamageInitialXY": [
+          0.125,
+          0.125
+        ]
+      }
+    },
+    {
+      "frame": 1,
+      "timeS": 0.5,
+      "nativeTimeS": 0.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0001.vtk",
+        "bytes": 5084778,
+        "sha256": "81cd8f9ab39d87c14c3d3e6b59a81e26a126346ec4307f24fc25309c6fb64987"
+      },
+      "minJ": 0.9987374153899133,
+      "maximumStrengthLoss": 0.0,
+      "minimumFrictionDeg": 33.99,
+      "kineticJPerM": 1109.1615402141533,
+      "maximumDisplacementM": 0.008546805831309215,
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "upperCohortCentroidDisplacementM": [
+        1.9158911248828038e-05,
+        -0.008107680009354683
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 13517,
+      "onsetObservation": {
+        "plastifiedMPs": 13517,
+        "damagedMPs": 0,
+        "toePlastifiedMPs": 391,
+        "toeDamagedMPs": 0,
+        "maximumKappa": 0.0009273597221176376,
+        "maximumKappaInitialXY": [
+          29.625,
+          8.125
+        ],
+        "maximumDamageInitialXY": [
+          0.125,
+          0.125
+        ]
+      }
+    },
+    {
+      "frame": 2,
+      "timeS": 1.0,
+      "nativeTimeS": 1.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0002.vtk",
+        "bytes": 5084778,
+        "sha256": "acca6bf8322238d0bc7e296b09f6ebcae3d4f109b3ba42192b69fe8e7a7ed1b1"
+      },
+      "minJ": 0.9918605059720315,
+      "maximumStrengthLoss": 0.0,
+      "minimumFrictionDeg": 33.99,
+      "kineticJPerM": 7887.713079773239,
+      "maximumDisplacementM": 0.09344705653232777,
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "upperCohortCentroidDisplacementM": [
+        0.0021210056012204736,
+        -0.06914344723140922
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 13517,
+      "onsetObservation": {
+        "plastifiedMPs": 13517,
+        "damagedMPs": 0,
+        "toePlastifiedMPs": 391,
+        "toeDamagedMPs": 0,
+        "maximumKappa": 0.01778207927470236,
+        "maximumKappaInitialXY": [
+          29.125,
+          8.875
+        ],
+        "maximumDamageInitialXY": [
+          0.125,
+          0.125
+        ]
+      }
+    },
+    {
+      "frame": 3,
+      "timeS": 1.5,
+      "nativeTimeS": 1.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0003.vtk",
+        "bytes": 5084778,
+        "sha256": "f354a656859288896c4e175696fba7397eef9ce785967450800569c85c829e56"
+      },
+      "minJ": 0.986973326209274,
+      "maximumStrengthLoss": 0.19492112719176957,
+      "minimumFrictionDeg": 28.494355092304133,
+      "kineticJPerM": 6056.549937440966,
+      "maximumDisplacementM": 0.3147254419592183,
+      "connectedMovingFractionOfUpperCohortMass": 0,
+      "upperCohortCentroidDisplacementM": [
+        0.02117940021371789,
+        -0.13213103909493348
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 13517,
+      "onsetObservation": {
+        "plastifiedMPs": 13517,
+        "damagedMPs": 325,
+        "toePlastifiedMPs": 391,
+        "toeDamagedMPs": 72,
+        "maximumKappa": 0.07708987062192911,
+        "maximumKappaInitialXY": [
+          29.125,
+          8.875
+        ],
+        "maximumDamageInitialXY": [
+          29.125,
+          8.875
+        ]
+      }
+    },
+    {
+      "frame": 4,
+      "timeS": 2.0,
+      "nativeTimeS": 2.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0004.vtk",
+        "bytes": 5084778,
+        "sha256": "9f4727aac6d63f56c05ecc5336097d6a1657224664048497b75ca68b9730de5b"
+      },
+      "minJ": 0.9834030307031076,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 17886.559609009342,
+      "maximumDisplacementM": 0.78141154979903,
+      "connectedMovingFractionOfUpperCohortMass": 0.1073015873015873,
+      "upperCohortCentroidDisplacementM": [
+        0.06736737474210465,
+        -0.21508060372732407
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 13517,
+      "onsetObservation": {
+        "plastifiedMPs": 13517,
+        "damagedMPs": 591,
+        "toePlastifiedMPs": 391,
+        "toeDamagedMPs": 82,
+        "maximumKappa": 0.27824618483240904,
+        "maximumKappaInitialXY": [
+          28.875,
+          9.375
+        ],
+        "maximumDamageInitialXY": [
+          26.125,
+          11.375
+        ]
+      }
+    },
+    {
+      "frame": 5,
+      "timeS": 2.5,
+      "nativeTimeS": 2.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0005.vtk",
+        "bytes": 5084778,
+        "sha256": "667df455f01af49b97efaf6406f1ee11594b083d90bcd2ff12f9c911fc454c98"
+      },
+      "minJ": 0.980187321004437,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 273745.3822275279,
+      "maximumDisplacementM": 2.148095416925617,
+      "connectedMovingFractionOfUpperCohortMass": 0.2146031746031746,
+      "upperCohortCentroidDisplacementM": [
+        0.20845629620240422,
+        -0.37567530210059913
+      ],
+      "newlyPastToeCohortMassFraction": 0.0,
+      "actualParticles": 13517,
+      "onsetObservation": {
+        "plastifiedMPs": 13517,
+        "damagedMPs": 610,
+        "toePlastifiedMPs": 391,
+        "toeDamagedMPs": 95,
+        "maximumKappa": 1.275416950647463,
+        "maximumKappaInitialXY": [
+          29.375,
+          8.625
+        ],
+        "maximumDamageInitialXY": [
+          20.625,
+          17.625
+        ]
+      }
+    },
+    {
+      "frame": 6,
+      "timeS": 3.0,
+      "nativeTimeS": 3.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0006.vtk",
+        "bytes": 5084778,
+        "sha256": "635659aa4d68d0ed6978cb8254117fef15cb2a635bb4fa43b57d47a9d2bf39c4"
+      },
+      "minJ": 0.9643480622054375,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 681777.3534083194,
+      "maximumDisplacementM": 5.230773410459679,
+      "connectedMovingFractionOfUpperCohortMass": 0.25396825396825395,
+      "upperCohortCentroidDisplacementM": [
+        0.5567803549981284,
+        -0.6903307618461376
+      ],
+      "newlyPastToeCohortMassFraction": 0.025396825396825397,
+      "actualParticles": 13517,
+      "onsetObservation": {
+        "plastifiedMPs": 13517,
+        "damagedMPs": 664,
+        "toePlastifiedMPs": 391,
+        "toeDamagedMPs": 123,
+        "maximumKappa": 4.468964022823293,
+        "maximumKappaInitialXY": [
+          29.375,
+          8.625
+        ],
+        "maximumDamageInitialXY": [
+          20.125,
+          17.625
+        ]
+      }
+    },
+    {
+      "frame": 7,
+      "timeS": 3.5,
+      "nativeTimeS": 3.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0007.vtk",
+        "bytes": 5084778,
+        "sha256": "3081d36604f1246df5a2fa3c4032ac064b14648e4a90e9266a52a235c8fd649b"
+      },
+      "minJ": 0.9722558306472903,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 950585.3557885487,
+      "maximumDisplacementM": 9.570018629328645,
+      "connectedMovingFractionOfUpperCohortMass": 0.2819047619047619,
+      "upperCohortCentroidDisplacementM": [
+        1.1021912510240874,
+        -1.0081501805013167
+      ],
+      "newlyPastToeCohortMassFraction": 0.08698412698412698,
+      "actualParticles": 13517,
+      "onsetObservation": {
+        "plastifiedMPs": 13517,
+        "damagedMPs": 727,
+        "toePlastifiedMPs": 391,
+        "toeDamagedMPs": 125,
+        "maximumKappa": 7.471274582162307,
+        "maximumKappaInitialXY": [
+          29.375,
+          8.625
+        ],
+        "maximumDamageInitialXY": [
+          19.625,
+          17.625
+        ]
+      }
+    },
+    {
+      "frame": 8,
+      "timeS": 4.0,
+      "nativeTimeS": 4.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0008.vtk",
+        "bytes": 5084778,
+        "sha256": "b823562fac32dba2b016142152a74b5c065a7c77af3277434c2288a0b8755dcd"
+      },
+      "minJ": 0.9789379796642877,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 1063741.436542232,
+      "maximumDisplacementM": 14.905743251249875,
+      "connectedMovingFractionOfUpperCohortMass": 0.3073015873015873,
+      "upperCohortCentroidDisplacementM": [
+        1.7834436498442203,
+        -1.2556514984875475
+      ],
+      "newlyPastToeCohortMassFraction": 0.1403174603174603,
+      "actualParticles": 13517,
+      "onsetObservation": {
+        "plastifiedMPs": 13517,
+        "damagedMPs": 801,
+        "toePlastifiedMPs": 391,
+        "toeDamagedMPs": 128,
+        "maximumKappa": 11.156855391070138,
+        "maximumKappaInitialXY": [
+          28.875,
+          9.375
+        ],
+        "maximumDamageInitialXY": [
+          19.125,
+          17.875
+        ]
+      }
+    },
+    {
+      "frame": 9,
+      "timeS": 4.5,
+      "nativeTimeS": 4.5,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0009.vtk",
+        "bytes": 5084778,
+        "sha256": "52f64de0c0b8a9efca4fe0bd890f1880676f2b2972cedf8250a1ecdfdd404471"
+      },
+      "minJ": 0.9810150490796876,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 1069291.8272329115,
+      "maximumDisplacementM": 20.80066502106496,
+      "connectedMovingFractionOfUpperCohortMass": 0.3326984126984127,
+      "upperCohortCentroidDisplacementM": [
+        2.533971897328624,
+        -1.4518187648611938
+      ],
+      "newlyPastToeCohortMassFraction": 0.18031746031746032,
+      "actualParticles": 13517,
+      "onsetObservation": {
+        "plastifiedMPs": 13517,
+        "damagedMPs": 896,
+        "toePlastifiedMPs": 391,
+        "toeDamagedMPs": 132,
+        "maximumKappa": 14.080491147177355,
+        "maximumKappaInitialXY": [
+          28.875,
+          9.375
+        ],
+        "maximumDamageInitialXY": [
+          18.625,
+          17.875
+        ]
+      }
+    },
+    {
+      "frame": 10,
+      "timeS": 5.0,
+      "nativeTimeS": 5.0,
+      "phaseCode": 3,
+      "vtk": {
+        "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\saved-inputs\\vtk\\particles_0010.vtk",
+        "bytes": 5084778,
+        "sha256": "d42d426d4d1e9a087abddc68f2efc2d14571e57785316c3e92f54af27cf401ce"
+      },
+      "minJ": 0.9813879875934043,
+      "maximumStrengthLoss": 0.75,
+      "minimumFrictionDeg": 9.568041272839212,
+      "kineticJPerM": 1027258.16205068,
+      "maximumDisplacementM": 25.947783671437474,
+      "connectedMovingFractionOfUpperCohortMass": 0.36,
+      "upperCohortCentroidDisplacementM": [
+        3.314507332280855,
+        -1.622660970113206
+      ],
+      "newlyPastToeCohortMassFraction": 0.2146031746031746,
+      "actualParticles": 13517,
+      "onsetObservation": {
+        "plastifiedMPs": 13517,
+        "damagedMPs": 993,
+        "toePlastifiedMPs": 391,
+        "toeDamagedMPs": 134,
+        "maximumKappa": 17.19331608266358,
+        "maximumKappaInitialXY": [
+          28.625,
+          9.875
+        ],
+        "maximumDamageInitialXY": [
+          18.125,
+          17.875
+        ]
+      }
+    }
+  ],
+  "preparationSnapshots": [],
+  "actualDynamicSavedFrames": 11,
+  "actualLastDynamicTimeS": 5.0,
+  "qualitativeMotionCandidates": [
+    {
+      "frame": 4,
+      "timeS": 2.0,
+      "fractionOfUpperCohortMass": 0.1073015873015873,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 0.5,
+        "endTimeS": 1.5,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.00210979843663873
+      }
+    },
+    {
+      "frame": 5,
+      "timeS": 2.5,
+      "fractionOfUpperCohortMass": 0.2146031746031746,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 0.5,
+        "endTimeS": 1.5,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.0015817091794790392
+      }
+    },
+    {
+      "frame": 6,
+      "timeS": 3.0,
+      "fractionOfUpperCohortMass": 0.25396825396825395,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 0.5,
+        "endTimeS": 1.5,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.0013496887639185412
+      }
+    },
+    {
+      "frame": 7,
+      "timeS": 3.5,
+      "fractionOfUpperCohortMass": 0.2819047619047619,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 0.5,
+        "endTimeS": 1.5,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.0012110254084495382
+      }
+    },
+    {
+      "frame": 8,
+      "timeS": 4.0,
+      "fractionOfUpperCohortMass": 0.3073015873015873,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 0.5,
+        "endTimeS": 1.5,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.001106786385027523
+      }
+    },
+    {
+      "frame": 9,
+      "timeS": 4.5,
+      "fractionOfUpperCohortMass": 0.3326984126984127,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 0.5,
+        "endTimeS": 1.5,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.001020138635586954
+      }
+    },
+    {
+      "frame": 10,
+      "timeS": 5.0,
+      "fractionOfUpperCohortMass": 0.36,
+      "interval": {
+        "status": "PASS",
+        "startTimeS": 1.0,
+        "endTimeS": 2.0,
+        "savedStates": 3,
+        "minimumMeanVxMPerS": 0.03927103683356591
+      }
+    }
+  ],
+  "landslideVerified": false,
+  "scientificallyValidated": false,
+  "initialization": "Human-approved peak initial strength, zero initial stress/kappa,2s gravity ramp, NO geostatic equilibrium claim; no model switch",
+  "damageMeaning": "D_phi strength loss, plateau to kappa.037, floor strength25%; separate kappa video is accumulated J2 plastic strain, NOT exact Urmi deviatoric-strain convention",
+  "firstDamagedSavedState": {
+    "plastifiedMPs": 13517,
+    "damagedMPs": 325,
+    "toePlastifiedMPs": 391,
+    "toeDamagedMPs": 72,
+    "maximumKappa": 0.07708987062192911,
+    "maximumKappaInitialXY": [
+      29.125,
+      8.875
+    ],
+    "maximumDamageInitialXY": [
+      29.125,
+      8.875
+    ],
+    "timeS": 1.5
+  },
+  "toeInitiationGuaranteed": false,
+  "media": {
+    "status": "PASS",
+    "scope": "SINGLE_CONSTANT60_CLAY_THREE_CHANNEL_TRIAL_NOT_CALIBRATED_VALIDATION",
+    "actualMovieStates": 11,
+    "allParticlesShown": true,
+    "coordinateScale": 1,
+    "colourRanges": {
+      "damage": [
+        0,
+        1
+      ],
+      "plastic-strain": [
+        0,
+        17.19331608266358
+      ],
+      "motion": [
+        0,
+        17.19331608266358
+      ]
+    },
+    "motionColourField": "mc_kappa",
+    "fixedColourScaleAcrossStates": true,
+    "interpolation": false,
+    "plotBoundsWorldM": [
+      -84.49543242492075,
+      153.8371691678564,
+      -16.017555932346212,
+      20.58331926139956
+    ],
+    "renderGeometry": "Actual F convects each original square patch; numerical quadrature domains distinct; overlaps/gaps retained",
+    "sameActualStateSequenceAndTimingForAllMovies": true,
+    "movies": {
+      "motion": {
+        "video": {
+          "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\soil-motion.mp4",
+          "bytes": 34571,
+          "sha256": "a602291ab76a179b0a04d07466d4a5483c5155289d4103875650732c19a86193"
+        },
+        "decodedFrames": 11,
+        "framesPerSecond": 5
+      },
+      "damage": {
+        "video": {
+          "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\strength-damage.mp4",
+          "bytes": 33784,
+          "sha256": "826176405044022e4e265736389b477f92c72b2f6b55e5d22bd6c438359a9135"
+        },
+        "decodedFrames": 11,
+        "framesPerSecond": 5
+      },
+      "plastic-strain": {
+        "video": {
+          "path": "D:\\MPM\\output\\clay60-adaptive-2026-11-01\\adaptive-h05-001\\filled-review-001\\plastic-shear-strain.mp4",
+          "bytes": 35064,
+          "sha256": "f7919282d92766116b94b8761a64268759b0d00420954563fddb2c9cf46b25b9"
+        },
+        "decodedFrames": 11,
+        "framesPerSecond": 5
+      }
+    }
+  }
+}

@@ -85,3 +85,5 @@ Corrected clay60 terminal:11states0..5s/3movies delivered;severeFdistortion and 
 - [[clay60-adaptive-kinematics]] - current-gradient/velocity adaptive timestep;tested opt-in8s trial next.
 
 Adaptive clay60 launched;verified initial state/source/DLL only,fulltarget pending: [[clay60-adaptive-kinematics]].
+
+Adaptive clay60 terminal:grid escape at5.5s,11states0..5s/3movies delivered,not full8s/physicalvalidation: [[clay60-adaptive-kinematics]].

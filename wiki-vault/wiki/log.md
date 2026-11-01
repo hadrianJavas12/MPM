@@ -1203,3 +1203,6 @@ Recorded current-grid gradient/advection timestep policy,actual failure tensor d
 
 ## [2026-11-01] ingest | Adaptive clay60 launch
 Recorded8fc1da88 run,13517MP/frame0/316sourceDLL/adaptiveASDFload proof,34hbudget+2hmedia and finite quietmonitor. Full8s/physicalvalidity pending.
+
+## [2026-11-02] ingest | Adaptive clay60 partial terminal
+Recorded5.5s particle7699 grid escape,missing failedstate capsule,11savedstates/3deliveredmovies,316sourceDLL/savedintegrityPASS and severeFdistortion. No solverrerun;archive and finite monitor closure.
