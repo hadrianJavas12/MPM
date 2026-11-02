@@ -1218,3 +1218,6 @@ Recorded sourceeea21e93 detached launch,actual13517MP/frame0/317source/newGIMPlo
 
 ## [2026-11-02] ingest | Integrated clay60 terminal
 Recorded actual7.5s volumeguard/failureF,strict saved audit failures and all3diagnostic15state0..7s movies in [[clay60-integrated-gimp]]. Raw/frozen originals preserved;no native rerun. Longer duration is not scientificPASS.
+
+## [2026-11-02] ingest | Integrated clay60 closure
+Terminal archive pushed and10rootGitblobs verified;finite monitor deleted after3diagnostic videos delivered. Full8s remains unachieved;see [[clay60-integrated-gimp]].
