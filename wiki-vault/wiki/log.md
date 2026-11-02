@@ -1215,3 +1215,6 @@ Recorded actual Urmi comparison, native enlarged-domain cache defect and tested 
 
 ## [2026-11-02] ingest | Integrated clay60 launch
 Recorded sourceeea21e93 detached launch,actual13517MP/frame0/317source/newGIMPload/DLL startup proof and finite quiet monitor in [[clay60-integrated-gimp]]. Scientific/full8s outcome pending.
+
+## [2026-11-02] ingest | Integrated clay60 terminal
+Recorded actual7.5s volumeguard/failureF,strict saved audit failures and all3diagnostic15state0..7s movies in [[clay60-integrated-gimp]]. Raw/frozen originals preserved;no native rerun. Longer duration is not scientificPASS.

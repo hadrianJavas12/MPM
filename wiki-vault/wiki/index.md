@@ -91,3 +91,5 @@ Adaptive clay60 terminal:grid escape at5.5s,11states0..5s/3movies delivered,not 
 - [[clay60-integrated-gimp]] - Urmi comparison, proven enlarged-domain weight defect, opt-in tested correction and fresh trial.
 
 Integrated GIMP clay60 launched;actual initial/source/DLL proof PASS,full8s pending: [[clay60-integrated-gimp]].
+
+Integrated clay60 terminal:15states0..7s,output-volume guard at7.5s;3diagnostic movies delivered with INTEGRITY FAILED: [[clay60-integrated-gimp]].
